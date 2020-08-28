@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aliyun</groupId>
     <artifactId>facebody20191230</artifactId>
-    <version>0.2.11</version>
+    <version>0.2.10</version>
     <packaging>jar</packaging>
     <name>facebody20191230</name>
     <description>Alibaba Cloud facebody (20191230) SDK for Java

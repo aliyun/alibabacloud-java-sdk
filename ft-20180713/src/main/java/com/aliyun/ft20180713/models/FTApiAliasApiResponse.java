@@ -17,20 +17,4 @@ public class FTApiAliasApiResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public FTApiAliasApiResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public FTApiAliasApiResponse setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
 }

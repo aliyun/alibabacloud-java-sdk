@@ -1,0 +1,20 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vpc20160428.models;
+
+import com.aliyun.tea.*;
+
+public class CreateIpv6EgressOnlyRuleResponse extends TeaModel {
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Ipv6EgressRuleId")
+    @Validation(required = true)
+    public String ipv6EgressRuleId;
+
+    public static CreateIpv6EgressOnlyRuleResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateIpv6EgressOnlyRuleResponse self = new CreateIpv6EgressOnlyRuleResponse();
+        return TeaModel.build(map, self);
+    }
+
+}
