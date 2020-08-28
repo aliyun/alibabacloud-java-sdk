@@ -12,12 +12,4 @@ public class FtEagleEyeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public FtEagleEyeRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
 }

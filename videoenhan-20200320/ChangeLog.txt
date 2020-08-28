@@ -1,0 +1,17 @@
+2020-07-30 Version: 0.0.6
+- Add ChangeVideoSize.
+
+2020-04-27 Version: 0.0.5
+1. Release version 0.0.5
+
+2020-04-21 Version: 0.0.4
+1. Release version 0.0.4
+
+2020-04-16 Version: 0.0.3
+1. Release version 0.0.3
+
+2020-04-13 Version: 0.0.2
+1. Release version 0.0.2
+
+2020-04-13 Version: 0.0.1
+1. Release version 0.0.1

@@ -1,0 +1,16 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.polardb20170801.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeDBClusterMigrationRequest extends TeaModel {
+    @NameInMap("DBClusterId")
+    @Validation(required = true)
+    public String DBClusterId;
+
+    public static DescribeDBClusterMigrationRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBClusterMigrationRequest self = new DescribeDBClusterMigrationRequest();
+        return TeaModel.build(map, self);
+    }
+
+}

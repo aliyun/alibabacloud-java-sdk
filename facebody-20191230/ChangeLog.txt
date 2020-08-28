@@ -1,3 +1,48 @@
-2020-08-27 Version: 0.2.11
-- Add ExtractPedestrianFeatureAttr.
+2020-08-25 Version: 0.2.10
+- Release ExtractPedestrianFeatureAttribute and BlurFace.
+
+2020-08-24 Version: 0.2.10
+- Release ExtractPedestrianFeatureAttribute and BlurFace.
+
+2020-08-24 Version: 0.2.10
+- Release ExtractPedestrianFeatureAttribute and BlurFace.
+
+2020-08-24 Version: 0.2.10
+- Release ExtractPedestrianFeatureAttribute and BlurFace.
+
+2020-08-24 Version: 0.2.10
+- Release ExtractPedestrianFeatureAttribute and BlurFace.
+
+2020-08-17 Version: 0.2.10
+- Supported API DetectIPCPedestrian.
+
+2020-08-03 Version: 0.2.9
+- Add ExtractPedestrianFeatureAttribute.
+
+2020-07-31 Version: 0.2.8
+- Update DetectCelebrity.
+
+2020-07-30 Version: 0.2.7
+- Add DetectCelebrity Too.
+
+2020-07-29 Version: 0.2.7
+- Add DetectCelebrity.
+
+2020-07-03 Version: 0.2.6
+- Sdk for 026.
+
+2020-07-02 Version: 0.2.6
+- Sdk for 026.
+
+2020-07-02 Version: 0.2.6
+- Sdk for 026.
+
+2020-07-02 Version: 0.2.6
+- Sdk for 026.
+
+2020-07-02 Version: 0.0.6
+- Sdk for 006.
+
+2020-07-02 Version: 0.0.6
+- Sdk for 006.
 
