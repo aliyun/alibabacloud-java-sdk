@@ -1,0 +1,31 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vpc20160428.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeSslVpnServersRequest extends TeaModel {
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    public String regionId;
+
+    @NameInMap("SslVpnServerId")
+    public String sslVpnServerId;
+
+    @NameInMap("VpnGatewayId")
+    public String vpnGatewayId;
+
+    @NameInMap("Name")
+    public String name;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    public static DescribeSslVpnServersRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSslVpnServersRequest self = new DescribeSslVpnServersRequest();
+        return TeaModel.build(map, self);
+    }
+
+}

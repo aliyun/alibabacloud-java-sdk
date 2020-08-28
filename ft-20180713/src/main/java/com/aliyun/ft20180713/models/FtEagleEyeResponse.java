@@ -21,28 +21,4 @@ public class FtEagleEyeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public FtEagleEyeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public FtEagleEyeResponse setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public FtEagleEyeResponse setEagleEyeTraceId(String eagleEyeTraceId) {
-        this.eagleEyeTraceId = eagleEyeTraceId;
-        return this;
-    }
-    public String getEagleEyeTraceId() {
-        return this.eagleEyeTraceId;
-    }
-
 }

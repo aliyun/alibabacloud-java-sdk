@@ -1,0 +1,29 @@
+2020-08-08 Version: 0.2.5
+- Update SearchImage.
+
+2020-08-07 Version: 0.2.4
+- Update SearchImage.
+
+2020-04-21 Version: 0.2.3
+1. Release version 0.2.3
+
+2020-04-16 Version: 0.2.2
+1. Release version 0.2.2
+
+2020-04-16 Version: 0.2.1
+1. Release version 0.2.1
+
+2020-04-13 Version: 0.2.0
+1. Delete namespace imgsearch
+
+2020-04-13 Version: 0.1.1
+1. Update dependency
+
+2020-04-10 Version: 0.1.0
+1. Update dependency
+
+2020-04-07 Version: 0.0.1
+1. Change namesapce
+
+2020-03-23 Version: 0.0.1
+1. Release version 0.0.1

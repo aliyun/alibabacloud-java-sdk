@@ -17,20 +17,4 @@ public class TestHttpApiResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public TestHttpApiResponse setParams(String params) {
-        this.params = params;
-        return this;
-    }
-    public String getParams() {
-        return this.params;
-    }
-
-    public TestHttpApiResponse setServiceRpcSign(String serviceRpcSign) {
-        this.serviceRpcSign = serviceRpcSign;
-        return this;
-    }
-    public String getServiceRpcSign() {
-        return this.serviceRpcSign;
-    }
-
 }
