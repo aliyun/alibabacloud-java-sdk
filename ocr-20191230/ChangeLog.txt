@@ -1,0 +1,6 @@
+2020-08-04 Version: 0.0.5
+- Update RecognizeTable.
+
+2020-08-04 Version: 0.0.5
+- Update RecognizeTable.
+

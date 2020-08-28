@@ -1,0 +1,16 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ecs20140526.models;
+
+import com.aliyun.tea.*;
+
+public class RemoveTagsResponse extends TeaModel {
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    public static RemoveTagsResponse build(java.util.Map<String, ?> map) throws Exception {
+        RemoveTagsResponse self = new RemoveTagsResponse();
+        return TeaModel.build(map, self);
+    }
+
+}

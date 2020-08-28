@@ -1,0 +1,35 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ros20190910.models;
+
+import com.aliyun.tea.*;
+
+public class SignalResourceRequest extends TeaModel {
+    @NameInMap("StackId")
+    @Validation(required = true)
+    public String stackId;
+
+    @NameInMap("Status")
+    @Validation(required = true)
+    public String status;
+
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    public String regionId;
+
+    @NameInMap("UniqueId")
+    @Validation(required = true)
+    public String uniqueId;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("LogicalResourceId")
+    @Validation(required = true)
+    public String logicalResourceId;
+
+    public static SignalResourceRequest build(java.util.Map<String, ?> map) throws Exception {
+        SignalResourceRequest self = new SignalResourceRequest();
+        return TeaModel.build(map, self);
+    }
+
+}

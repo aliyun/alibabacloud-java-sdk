@@ -12,12 +12,4 @@ public class FtGatedLaunchPolicy4Request extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public FtGatedLaunchPolicy4Request setIsGatedLaunch(String isGatedLaunch) {
-        this.isGatedLaunch = isGatedLaunch;
-        return this;
-    }
-    public String getIsGatedLaunch() {
-        return this.isGatedLaunch;
-    }
-
 }

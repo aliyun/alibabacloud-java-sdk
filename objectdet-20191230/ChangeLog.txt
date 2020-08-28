@@ -1,0 +1,41 @@
+2020-04-21 Version: 0.0.4
+1. Release version 0.0.4
+
+2020-04-16 Version: 0.0.3
+1. Release version 0.0.3
+
+2020-04-13 Version: 0.0.2
+1. Release version 0.0.2
+
+2020-04-13 Version: 0.0.1
+1. Release version 0.0.1
+
+2020-03-23 Version: 1.0.4
+1. Release version 1.0.4
+
+2020-03-19 Version: 1.0.3
+1. Release version 1.0.3
+
+2020-03-11 Version: 1.0.2
+1. Release version 1.0.2
+
+2020-03-07 Version: 1.0.1
+1. Release version 1.0.1
+
+2020-03-06 Version: 1.0.0
+1. Release version 1.0.0
+
+2020-02-28 Version: 0.0.5
+1. Release version 0.0.5
+
+2020-02-20 Version: 0.0.4
+1. Release version 0.0.4
+
+2020-02-13 Version: 0.0.3
+1. Release version 0.0.3
+
+2020-02-13 Version: 0.0.2
+1. Release version 0.0.2
+
+2020-02-03 Version: 0.0.1
+1. Release version 0.0.1
