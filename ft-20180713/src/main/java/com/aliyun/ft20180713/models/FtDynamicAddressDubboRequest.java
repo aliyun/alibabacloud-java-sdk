@@ -15,4 +15,20 @@ public class FtDynamicAddressDubboRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FtDynamicAddressDubboRequest setIntValue(Integer intValue) {
+        this.intValue = intValue;
+        return this;
+    }
+    public Integer getIntValue() {
+        return this.intValue;
+    }
+
+    public FtDynamicAddressDubboRequest setStringValue(String stringValue) {
+        this.stringValue = stringValue;
+        return this;
+    }
+    public String getStringValue() {
+        return this.stringValue;
+    }
+
 }

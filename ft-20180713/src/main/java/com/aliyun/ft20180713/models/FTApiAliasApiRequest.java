@@ -12,4 +12,12 @@ public class FTApiAliasApiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FTApiAliasApiRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
 }

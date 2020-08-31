@@ -21,4 +21,28 @@ public class FtDynamicAddressDubboResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FtDynamicAddressDubboResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public FtDynamicAddressDubboResponse setStringValue(String stringValue) {
+        this.stringValue = stringValue;
+        return this;
+    }
+    public String getStringValue() {
+        return this.stringValue;
+    }
+
+    public FtDynamicAddressDubboResponse setIntValue(Integer intValue) {
+        this.intValue = intValue;
+        return this;
+    }
+    public Integer getIntValue() {
+        return this.intValue;
+    }
+
 }

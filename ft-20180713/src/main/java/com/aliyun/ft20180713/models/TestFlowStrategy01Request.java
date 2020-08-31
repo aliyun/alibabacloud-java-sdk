@@ -12,4 +12,12 @@ public class TestFlowStrategy01Request extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TestFlowStrategy01Request setNames(java.util.Map<String, ?> names) {
+        this.names = names;
+        return this;
+    }
+    public java.util.Map<String, ?> getNames() {
+        return this.names;
+    }
+
 }

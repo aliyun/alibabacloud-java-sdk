@@ -17,4 +17,20 @@ public class FtGatedLaunchPolicy4Response extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FtGatedLaunchPolicy4Response setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public FtGatedLaunchPolicy4Response setIsGatedLaunch(String isGatedLaunch) {
+        this.isGatedLaunch = isGatedLaunch;
+        return this;
+    }
+    public String getIsGatedLaunch() {
+        return this.isGatedLaunch;
+    }
+
 }
