@@ -12,4 +12,12 @@ public class FtIpFlowControlRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FtIpFlowControlRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
 }

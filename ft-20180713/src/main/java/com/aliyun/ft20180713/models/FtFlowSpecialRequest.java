@@ -12,4 +12,12 @@ public class FtFlowSpecialRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FtFlowSpecialRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
 }

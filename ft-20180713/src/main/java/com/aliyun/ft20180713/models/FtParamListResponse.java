@@ -17,4 +17,20 @@ public class FtParamListResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FtParamListResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public FtParamListResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
 }

@@ -17,4 +17,20 @@ public class FtFlowSpecialResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public FtFlowSpecialResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public FtFlowSpecialResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
 }
