@@ -20,4 +20,28 @@ public class CancelPhysicalConnectionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelPhysicalConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CancelPhysicalConnectionRequest setPhysicalConnectionId(String physicalConnectionId) {
+        this.physicalConnectionId = physicalConnectionId;
+        return this;
+    }
+    public String getPhysicalConnectionId() {
+        return this.physicalConnectionId;
+    }
+
+    public CancelPhysicalConnectionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

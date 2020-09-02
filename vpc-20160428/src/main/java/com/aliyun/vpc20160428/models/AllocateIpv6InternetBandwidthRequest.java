@@ -31,4 +31,52 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AllocateIpv6InternetBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setIpv6GatewayId(String ipv6GatewayId) {
+        this.ipv6GatewayId = ipv6GatewayId;
+        return this;
+    }
+    public String getIpv6GatewayId() {
+        return this.ipv6GatewayId;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setIpv6AddressId(String ipv6AddressId) {
+        this.ipv6AddressId = ipv6AddressId;
+        return this;
+    }
+    public String getIpv6AddressId() {
+        return this.ipv6AddressId;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setInternetChargeType(String internetChargeType) {
+        this.internetChargeType = internetChargeType;
+        return this;
+    }
+    public String getInternetChargeType() {
+        return this.internetChargeType;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

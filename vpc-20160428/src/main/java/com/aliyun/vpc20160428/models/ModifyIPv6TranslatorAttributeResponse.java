@@ -13,4 +13,12 @@ public class ModifyIPv6TranslatorAttributeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIPv6TranslatorAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

@@ -32,4 +32,52 @@ public class GrantInstanceToCenRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GrantInstanceToCenRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GrantInstanceToCenRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GrantInstanceToCenRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public GrantInstanceToCenRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
+    }
+
+    public GrantInstanceToCenRequest setCenOwnerId(Long cenOwnerId) {
+        this.cenOwnerId = cenOwnerId;
+        return this;
+    }
+    public Long getCenOwnerId() {
+        return this.cenOwnerId;
+    }
+
+    public GrantInstanceToCenRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

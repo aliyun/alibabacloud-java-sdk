@@ -13,4 +13,12 @@ public class DeleteCommonBandwidthPackageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteCommonBandwidthPackageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

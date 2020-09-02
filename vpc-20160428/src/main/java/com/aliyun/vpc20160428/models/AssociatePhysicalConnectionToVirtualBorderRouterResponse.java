@@ -13,4 +13,12 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterResponse extends Te
         return TeaModel.build(map, self);
     }
 
+    public AssociatePhysicalConnectionToVirtualBorderRouterResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

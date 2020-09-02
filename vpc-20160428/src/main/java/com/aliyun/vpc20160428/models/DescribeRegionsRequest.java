@@ -12,4 +12,12 @@ public class DescribeRegionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRegionsRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
 }

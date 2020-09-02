@@ -13,4 +13,12 @@ public class ModifyIpv6GatewaySpecResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIpv6GatewaySpecResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

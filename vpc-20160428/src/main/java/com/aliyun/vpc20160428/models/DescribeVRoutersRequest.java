@@ -22,4 +22,36 @@ public class DescribeVRoutersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeVRoutersRequest setVRouterId(String VRouterId) {
+        this.VRouterId = VRouterId;
+        return this;
+    }
+    public String getVRouterId() {
+        return this.VRouterId;
+    }
+
+    public DescribeVRoutersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVRoutersRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeVRoutersRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

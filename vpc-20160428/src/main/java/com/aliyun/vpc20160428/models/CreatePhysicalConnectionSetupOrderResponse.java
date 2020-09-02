@@ -23,4 +23,28 @@ public class CreatePhysicalConnectionSetupOrderResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreatePhysicalConnectionSetupOrderResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreatePhysicalConnectionSetupOrderResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    public CreatePhysicalConnectionSetupOrderResponse setPhysicalConnectionId(String physicalConnectionId) {
+        this.physicalConnectionId = physicalConnectionId;
+        return this;
+    }
+    public String getPhysicalConnectionId() {
+        return this.physicalConnectionId;
+    }
+
 }

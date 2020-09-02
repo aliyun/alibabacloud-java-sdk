@@ -17,4 +17,20 @@ public class CreateBgpPeerResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateBgpPeerResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateBgpPeerResponse setBgpPeerId(String bgpPeerId) {
+        this.bgpPeerId = bgpPeerId;
+        return this;
+    }
+    public String getBgpPeerId() {
+        return this.bgpPeerId;
+    }
+
 }

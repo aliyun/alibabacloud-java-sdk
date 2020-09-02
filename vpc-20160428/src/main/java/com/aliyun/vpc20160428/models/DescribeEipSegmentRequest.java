@@ -25,4 +25,44 @@ public class DescribeEipSegmentRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeEipSegmentRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DescribeEipSegmentRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeEipSegmentRequest setSegmentInstanceId(String segmentInstanceId) {
+        this.segmentInstanceId = segmentInstanceId;
+        return this;
+    }
+    public String getSegmentInstanceId() {
+        return this.segmentInstanceId;
+    }
+
+    public DescribeEipSegmentRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeEipSegmentRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

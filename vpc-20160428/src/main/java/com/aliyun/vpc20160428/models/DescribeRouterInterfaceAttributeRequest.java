@@ -17,4 +17,20 @@ public class DescribeRouterInterfaceAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRouterInterfaceAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeRouterInterfaceAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
 }

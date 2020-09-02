@@ -33,6 +33,54 @@ public class DescribeFlowLogsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeFlowLogsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeFlowLogsResponse setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
+    public DescribeFlowLogsResponse setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeFlowLogsResponse setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeFlowLogsResponse setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeFlowLogsResponse setFlowLogs(DescribeFlowLogsResponseFlowLogs flowLogs) {
+        this.flowLogs = flowLogs;
+        return this;
+    }
+    public DescribeFlowLogsResponseFlowLogs getFlowLogs() {
+        return this.flowLogs;
+    }
+
     public static class DescribeFlowLogsResponseFlowLogsFlowLog extends TeaModel {
         @NameInMap("FlowLogId")
         @Validation(required = true)
@@ -83,6 +131,94 @@ public class DescribeFlowLogsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeFlowLogsResponseFlowLogsFlowLog setFlowLogId(String flowLogId) {
+            this.flowLogId = flowLogId;
+            return this;
+        }
+        public String getFlowLogId() {
+            return this.flowLogId;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setFlowLogName(String flowLogName) {
+            this.flowLogName = flowLogName;
+            return this;
+        }
+        public String getFlowLogName() {
+            return this.flowLogName;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setLogStoreName(String logStoreName) {
+            this.logStoreName = logStoreName;
+            return this;
+        }
+        public String getLogStoreName() {
+            return this.logStoreName;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setTrafficType(String trafficType) {
+            this.trafficType = trafficType;
+            return this;
+        }
+        public String getTrafficType() {
+            return this.trafficType;
+        }
+
+        public DescribeFlowLogsResponseFlowLogsFlowLog setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
     }
 
     public static class DescribeFlowLogsResponseFlowLogs extends TeaModel {
@@ -93,6 +229,14 @@ public class DescribeFlowLogsResponse extends TeaModel {
         public static DescribeFlowLogsResponseFlowLogs build(java.util.Map<String, ?> map) throws Exception {
             DescribeFlowLogsResponseFlowLogs self = new DescribeFlowLogsResponseFlowLogs();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowLogsResponseFlowLogs setFlowLog(java.util.List<DescribeFlowLogsResponseFlowLogsFlowLog> flowLog) {
+            this.flowLog = flowLog;
+            return this;
+        }
+        public java.util.List<DescribeFlowLogsResponseFlowLogsFlowLog> getFlowLog() {
+            return this.flowLog;
         }
 
     }

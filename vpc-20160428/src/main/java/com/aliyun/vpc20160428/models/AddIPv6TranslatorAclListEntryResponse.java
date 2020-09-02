@@ -17,4 +17,20 @@ public class AddIPv6TranslatorAclListEntryResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AddIPv6TranslatorAclListEntryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AddIPv6TranslatorAclListEntryResponse setAclEntryId(String aclEntryId) {
+        this.aclEntryId = aclEntryId;
+        return this;
+    }
+    public String getAclEntryId() {
+        return this.aclEntryId;
+    }
+
 }

@@ -21,4 +21,28 @@ public class ModifySslVpnClientCertResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifySslVpnClientCertResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifySslVpnClientCertResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifySslVpnClientCertResponse setSslVpnClientCertId(String sslVpnClientCertId) {
+        this.sslVpnClientCertId = sslVpnClientCertId;
+        return this;
+    }
+    public String getSslVpnClientCertId() {
+        return this.sslVpnClientCertId;
+    }
+
 }

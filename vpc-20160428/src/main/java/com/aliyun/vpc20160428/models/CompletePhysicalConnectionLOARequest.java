@@ -33,4 +33,44 @@ public class CompletePhysicalConnectionLOARequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CompletePhysicalConnectionLOARequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CompletePhysicalConnectionLOARequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CompletePhysicalConnectionLOARequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CompletePhysicalConnectionLOARequest setLineCode(String lineCode) {
+        this.lineCode = lineCode;
+        return this;
+    }
+    public String getLineCode() {
+        return this.lineCode;
+    }
+
+    public CompletePhysicalConnectionLOARequest setLineLabel(String lineLabel) {
+        this.lineLabel = lineLabel;
+        return this;
+    }
+    public String getLineLabel() {
+        return this.lineLabel;
+    }
+
 }

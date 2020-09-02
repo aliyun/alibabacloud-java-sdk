@@ -37,4 +37,60 @@ public class DescribeCustomerGatewayResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCustomerGatewayResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCustomerGatewayResponse setCustomerGatewayId(String customerGatewayId) {
+        this.customerGatewayId = customerGatewayId;
+        return this;
+    }
+    public String getCustomerGatewayId() {
+        return this.customerGatewayId;
+    }
+
+    public DescribeCustomerGatewayResponse setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    public String getIpAddress() {
+        return this.ipAddress;
+    }
+
+    public DescribeCustomerGatewayResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeCustomerGatewayResponse setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public DescribeCustomerGatewayResponse setCreateTime(Long createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Long getCreateTime() {
+        return this.createTime;
+    }
+
+    public DescribeCustomerGatewayResponse setAsn(Integer asn) {
+        this.asn = asn;
+        return this;
+    }
+    public Integer getAsn() {
+        return this.asn;
+    }
+
 }

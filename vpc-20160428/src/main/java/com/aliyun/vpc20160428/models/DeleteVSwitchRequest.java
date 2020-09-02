@@ -16,4 +16,20 @@ public class DeleteVSwitchRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteVSwitchRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public DeleteVSwitchRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

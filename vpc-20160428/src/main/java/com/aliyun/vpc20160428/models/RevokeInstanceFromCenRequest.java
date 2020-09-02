@@ -32,4 +32,52 @@ public class RevokeInstanceFromCenRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RevokeInstanceFromCenRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RevokeInstanceFromCenRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public RevokeInstanceFromCenRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public RevokeInstanceFromCenRequest setCenId(String cenId) {
+        this.cenId = cenId;
+        return this;
+    }
+    public String getCenId() {
+        return this.cenId;
+    }
+
+    public RevokeInstanceFromCenRequest setCenOwnerId(Long cenOwnerId) {
+        this.cenOwnerId = cenOwnerId;
+        return this;
+    }
+    public Long getCenOwnerId() {
+        return this.cenOwnerId;
+    }
+
+    public RevokeInstanceFromCenRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

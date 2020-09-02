@@ -24,4 +24,36 @@ public class RemoveIPv6TranslatorAclListEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveIPv6TranslatorAclListEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public RemoveIPv6TranslatorAclListEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RemoveIPv6TranslatorAclListEntryRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
+    }
+
+    public RemoveIPv6TranslatorAclListEntryRequest setAclEntryId(String aclEntryId) {
+        this.aclEntryId = aclEntryId;
+        return this;
+    }
+    public String getAclEntryId() {
+        return this.aclEntryId;
+    }
+
 }

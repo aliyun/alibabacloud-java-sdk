@@ -13,4 +13,12 @@ public class CancelCommonBandwidthPackageIpBandwidthResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelCommonBandwidthPackageIpBandwidthResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

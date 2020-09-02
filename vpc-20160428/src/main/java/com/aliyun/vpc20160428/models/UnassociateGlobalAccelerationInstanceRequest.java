@@ -20,4 +20,28 @@ public class UnassociateGlobalAccelerationInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UnassociateGlobalAccelerationInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UnassociateGlobalAccelerationInstanceRequest setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
+        this.globalAccelerationInstanceId = globalAccelerationInstanceId;
+        return this;
+    }
+    public String getGlobalAccelerationInstanceId() {
+        return this.globalAccelerationInstanceId;
+    }
+
+    public UnassociateGlobalAccelerationInstanceRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
 }

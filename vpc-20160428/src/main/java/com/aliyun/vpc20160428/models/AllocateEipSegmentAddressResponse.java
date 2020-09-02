@@ -21,4 +21,28 @@ public class AllocateEipSegmentAddressResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AllocateEipSegmentAddressResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AllocateEipSegmentAddressResponse setEipSegmentInstanceId(String eipSegmentInstanceId) {
+        this.eipSegmentInstanceId = eipSegmentInstanceId;
+        return this;
+    }
+    public String getEipSegmentInstanceId() {
+        return this.eipSegmentInstanceId;
+    }
+
+    public AllocateEipSegmentAddressResponse setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
 }

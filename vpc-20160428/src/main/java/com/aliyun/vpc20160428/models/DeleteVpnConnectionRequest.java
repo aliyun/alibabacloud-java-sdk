@@ -20,4 +20,28 @@ public class DeleteVpnConnectionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteVpnConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteVpnConnectionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteVpnConnectionRequest setVpnConnectionId(String vpnConnectionId) {
+        this.vpnConnectionId = vpnConnectionId;
+        return this;
+    }
+    public String getVpnConnectionId() {
+        return this.vpnConnectionId;
+    }
+
 }

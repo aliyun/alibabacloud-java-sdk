@@ -25,4 +25,36 @@ public class ModifyIPv6TranslatorAclListEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIPv6TranslatorAclListEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyIPv6TranslatorAclListEntryRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
+    }
+
+    public ModifyIPv6TranslatorAclListEntryRequest setAclEntryId(String aclEntryId) {
+        this.aclEntryId = aclEntryId;
+        return this;
+    }
+    public String getAclEntryId() {
+        return this.aclEntryId;
+    }
+
+    public ModifyIPv6TranslatorAclListEntryRequest setAclEntryComment(String aclEntryComment) {
+        this.aclEntryComment = aclEntryComment;
+        return this;
+    }
+    public String getAclEntryComment() {
+        return this.aclEntryComment;
+    }
+
 }

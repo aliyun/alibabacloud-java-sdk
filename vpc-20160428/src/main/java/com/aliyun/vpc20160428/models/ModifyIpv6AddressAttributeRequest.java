@@ -23,4 +23,36 @@ public class ModifyIpv6AddressAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIpv6AddressAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyIpv6AddressAttributeRequest setIpv6AddressId(String ipv6AddressId) {
+        this.ipv6AddressId = ipv6AddressId;
+        return this;
+    }
+    public String getIpv6AddressId() {
+        return this.ipv6AddressId;
+    }
+
+    public ModifyIpv6AddressAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyIpv6AddressAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

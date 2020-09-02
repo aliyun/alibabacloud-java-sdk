@@ -25,4 +25,36 @@ public class MoveResourceGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public MoveResourceGroupRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public MoveResourceGroupRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public MoveResourceGroupRequest setNewResourceGroupId(String newResourceGroupId) {
+        this.newResourceGroupId = newResourceGroupId;
+        return this;
+    }
+    public String getNewResourceGroupId() {
+        return this.newResourceGroupId;
+    }
+
+    public MoveResourceGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

@@ -29,4 +29,44 @@ public class CreateIPv6TranslatorResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateIPv6TranslatorResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateIPv6TranslatorResponse setIpv6TranslatorId(String ipv6TranslatorId) {
+        this.ipv6TranslatorId = ipv6TranslatorId;
+        return this;
+    }
+    public String getIpv6TranslatorId() {
+        return this.ipv6TranslatorId;
+    }
+
+    public CreateIPv6TranslatorResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateIPv6TranslatorResponse setSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    public String getSpec() {
+        return this.spec;
+    }
+
+    public CreateIPv6TranslatorResponse setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
 }

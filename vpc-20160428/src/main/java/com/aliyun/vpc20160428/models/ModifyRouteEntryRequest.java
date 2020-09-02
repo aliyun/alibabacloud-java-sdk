@@ -23,4 +23,36 @@ public class ModifyRouteEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyRouteEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyRouteEntryRequest setRouteEntryName(String routeEntryName) {
+        this.routeEntryName = routeEntryName;
+        return this;
+    }
+    public String getRouteEntryName() {
+        return this.routeEntryName;
+    }
+
+    public ModifyRouteEntryRequest setRouteEntryId(String routeEntryId) {
+        this.routeEntryId = routeEntryId;
+        return this;
+    }
+    public String getRouteEntryId() {
+        return this.routeEntryId;
+    }
+
+    public ModifyRouteEntryRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

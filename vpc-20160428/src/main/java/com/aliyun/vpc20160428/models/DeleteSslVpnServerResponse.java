@@ -13,4 +13,12 @@ public class DeleteSslVpnServerResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteSslVpnServerResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

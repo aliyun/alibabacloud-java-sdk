@@ -17,4 +17,20 @@ public class CreateDhcpOptionsSetResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDhcpOptionsSetResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDhcpOptionsSetResponse setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
+        return this;
+    }
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
 }

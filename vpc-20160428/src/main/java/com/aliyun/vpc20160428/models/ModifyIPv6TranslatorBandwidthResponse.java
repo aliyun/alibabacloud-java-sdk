@@ -17,4 +17,20 @@ public class ModifyIPv6TranslatorBandwidthResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIPv6TranslatorBandwidthResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyIPv6TranslatorBandwidthResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
 }

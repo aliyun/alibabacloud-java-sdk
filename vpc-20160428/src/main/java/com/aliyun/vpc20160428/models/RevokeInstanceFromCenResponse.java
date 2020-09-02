@@ -13,4 +13,12 @@ public class RevokeInstanceFromCenResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RevokeInstanceFromCenResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

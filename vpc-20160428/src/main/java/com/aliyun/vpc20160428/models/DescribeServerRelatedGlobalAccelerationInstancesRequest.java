@@ -20,4 +20,28 @@ public class DescribeServerRelatedGlobalAccelerationInstancesRequest extends Tea
         return TeaModel.build(map, self);
     }
 
+    public DescribeServerRelatedGlobalAccelerationInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeServerRelatedGlobalAccelerationInstancesRequest setServerId(String serverId) {
+        this.serverId = serverId;
+        return this;
+    }
+    public String getServerId() {
+        return this.serverId;
+    }
+
+    public DescribeServerRelatedGlobalAccelerationInstancesRequest setServerType(String serverType) {
+        this.serverType = serverType;
+        return this;
+    }
+    public String getServerType() {
+        return this.serverType;
+    }
+
 }

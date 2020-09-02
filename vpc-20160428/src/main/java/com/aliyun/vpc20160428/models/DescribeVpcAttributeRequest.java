@@ -23,4 +23,36 @@ public class DescribeVpcAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeVpcAttributeRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public DescribeVpcAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVpcAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public DescribeVpcAttributeRequest setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
 }

@@ -17,4 +17,20 @@ public class ModifyFlowLogAttributeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyFlowLogAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyFlowLogAttributeResponse setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
 }

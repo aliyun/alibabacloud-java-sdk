@@ -38,6 +38,78 @@ public class CreateRouteEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateRouteEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateRouteEntryRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
+    public CreateRouteEntryRequest setDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
+    public String getDestinationCidrBlock() {
+        return this.destinationCidrBlock;
+    }
+
+    public CreateRouteEntryRequest setNextHopId(String nextHopId) {
+        this.nextHopId = nextHopId;
+        return this;
+    }
+    public String getNextHopId() {
+        return this.nextHopId;
+    }
+
+    public CreateRouteEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateRouteEntryRequest setRouteEntryName(String routeEntryName) {
+        this.routeEntryName = routeEntryName;
+        return this;
+    }
+    public String getRouteEntryName() {
+        return this.routeEntryName;
+    }
+
+    public CreateRouteEntryRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateRouteEntryRequest setNextHopType(String nextHopType) {
+        this.nextHopType = nextHopType;
+        return this;
+    }
+    public String getNextHopType() {
+        return this.nextHopType;
+    }
+
+    public CreateRouteEntryRequest setNextHopList(java.util.List<CreateRouteEntryRequestNextHopList> nextHopList) {
+        this.nextHopList = nextHopList;
+        return this;
+    }
+    public java.util.List<CreateRouteEntryRequestNextHopList> getNextHopList() {
+        return this.nextHopList;
+    }
+
     public static class CreateRouteEntryRequestNextHopList extends TeaModel {
         @NameInMap("NextHopType")
         @Validation(required = true)
@@ -54,6 +126,30 @@ public class CreateRouteEntryRequest extends TeaModel {
         public static CreateRouteEntryRequestNextHopList build(java.util.Map<String, ?> map) throws Exception {
             CreateRouteEntryRequestNextHopList self = new CreateRouteEntryRequestNextHopList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateRouteEntryRequestNextHopList setNextHopType(String nextHopType) {
+            this.nextHopType = nextHopType;
+            return this;
+        }
+        public String getNextHopType() {
+            return this.nextHopType;
+        }
+
+        public CreateRouteEntryRequestNextHopList setNextHopId(String nextHopId) {
+            this.nextHopId = nextHopId;
+            return this;
+        }
+        public String getNextHopId() {
+            return this.nextHopId;
+        }
+
+        public CreateRouteEntryRequestNextHopList setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }

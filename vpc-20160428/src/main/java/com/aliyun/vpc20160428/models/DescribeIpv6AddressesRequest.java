@@ -46,4 +46,100 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeIpv6AddressesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeIpv6AddressesRequest setIpv6AddressId(String ipv6AddressId) {
+        this.ipv6AddressId = ipv6AddressId;
+        return this;
+    }
+    public String getIpv6AddressId() {
+        return this.ipv6AddressId;
+    }
+
+    public DescribeIpv6AddressesRequest setIpv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+    public String getIpv6Address() {
+        return this.ipv6Address;
+    }
+
+    public DescribeIpv6AddressesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeIpv6AddressesRequest setAssociatedInstanceId(String associatedInstanceId) {
+        this.associatedInstanceId = associatedInstanceId;
+        return this;
+    }
+    public String getAssociatedInstanceId() {
+        return this.associatedInstanceId;
+    }
+
+    public DescribeIpv6AddressesRequest setAssociatedInstanceType(String associatedInstanceType) {
+        this.associatedInstanceType = associatedInstanceType;
+        return this;
+    }
+    public String getAssociatedInstanceType() {
+        return this.associatedInstanceType;
+    }
+
+    public DescribeIpv6AddressesRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    public DescribeIpv6AddressesRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public DescribeIpv6AddressesRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public DescribeIpv6AddressesRequest setIpv6InternetBandwidthId(String ipv6InternetBandwidthId) {
+        this.ipv6InternetBandwidthId = ipv6InternetBandwidthId;
+        return this;
+    }
+    public String getIpv6InternetBandwidthId() {
+        return this.ipv6InternetBandwidthId;
+    }
+
+    public DescribeIpv6AddressesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeIpv6AddressesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

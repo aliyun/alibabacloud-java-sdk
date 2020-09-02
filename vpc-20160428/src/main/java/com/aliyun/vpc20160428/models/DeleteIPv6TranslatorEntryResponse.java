@@ -13,4 +13,12 @@ public class DeleteIPv6TranslatorEntryResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteIPv6TranslatorEntryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

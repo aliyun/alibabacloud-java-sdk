@@ -58,6 +58,16 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public ListPhysicalConnectionFeaturesResponse listPhysicalConnectionFeaturesWithOptions(ListPhysicalConnectionFeaturesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListPhysicalConnectionFeatures", "HTTPS", "POST", "2016-04-28", "AK", null, TeaModel.buildMap(request), runtime), new ListPhysicalConnectionFeaturesResponse());
+    }
+
+    public ListPhysicalConnectionFeaturesResponse listPhysicalConnectionFeatures(ListPhysicalConnectionFeaturesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPhysicalConnectionFeaturesWithOptions(request, runtime);
+    }
+
     public ListNatGatewayEcsMetricResponse listNatGatewayEcsMetricWithOptions(ListNatGatewayEcsMetricRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListNatGatewayEcsMetric", "HTTPS", "POST", "2016-04-28", "AK", null, TeaModel.buildMap(request), runtime), new ListNatGatewayEcsMetricResponse());

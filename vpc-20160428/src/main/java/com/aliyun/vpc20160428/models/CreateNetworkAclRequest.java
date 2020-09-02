@@ -26,4 +26,44 @@ public class CreateNetworkAclRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateNetworkAclRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateNetworkAclRequest setNetworkAclName(String networkAclName) {
+        this.networkAclName = networkAclName;
+        return this;
+    }
+    public String getNetworkAclName() {
+        return this.networkAclName;
+    }
+
+    public CreateNetworkAclRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateNetworkAclRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateNetworkAclRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

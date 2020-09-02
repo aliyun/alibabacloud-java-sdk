@@ -20,4 +20,28 @@ public class ModifyExpressCloudConnectionBandwidthRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyExpressCloudConnectionBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyExpressCloudConnectionBandwidthRequest setBandwidth(String bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public String getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public ModifyExpressCloudConnectionBandwidthRequest setEccId(String eccId) {
+        this.eccId = eccId;
+        return this;
+    }
+    public String getEccId() {
+        return this.eccId;
+    }
+
 }

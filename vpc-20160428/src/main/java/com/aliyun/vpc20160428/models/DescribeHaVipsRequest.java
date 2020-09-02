@@ -22,6 +22,38 @@ public class DescribeHaVipsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeHaVipsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeHaVipsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeHaVipsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeHaVipsRequest setFilter(java.util.List<DescribeHaVipsRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeHaVipsRequestFilter> getFilter() {
+        return this.filter;
+    }
+
     public static class DescribeHaVipsRequestFilter extends TeaModel {
         @NameInMap("Key")
         @Validation(required = true)
@@ -34,6 +66,22 @@ public class DescribeHaVipsRequest extends TeaModel {
         public static DescribeHaVipsRequestFilter build(java.util.Map<String, ?> map) throws Exception {
             DescribeHaVipsRequestFilter self = new DescribeHaVipsRequestFilter();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHaVipsRequestFilter setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeHaVipsRequestFilter setValue(java.util.List<String> value) {
+            this.value = value;
+            return this;
+        }
+        public java.util.List<String> getValue() {
+            return this.value;
         }
 
     }

@@ -33,4 +33,52 @@ public class ModifyCustomerGatewayAttributeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyCustomerGatewayAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyCustomerGatewayAttributeResponse setCustomerGatewayId(String customerGatewayId) {
+        this.customerGatewayId = customerGatewayId;
+        return this;
+    }
+    public String getCustomerGatewayId() {
+        return this.customerGatewayId;
+    }
+
+    public ModifyCustomerGatewayAttributeResponse setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    public String getIpAddress() {
+        return this.ipAddress;
+    }
+
+    public ModifyCustomerGatewayAttributeResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyCustomerGatewayAttributeResponse setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyCustomerGatewayAttributeResponse setCreateTime(Long createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Long getCreateTime() {
+        return this.createTime;
+    }
+
 }

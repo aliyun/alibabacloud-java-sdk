@@ -21,4 +21,28 @@ public class RemoveGlobalAccelerationInstanceIpRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveGlobalAccelerationInstanceIpRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RemoveGlobalAccelerationInstanceIpRequest setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
+        this.globalAccelerationInstanceId = globalAccelerationInstanceId;
+        return this;
+    }
+    public String getGlobalAccelerationInstanceId() {
+        return this.globalAccelerationInstanceId;
+    }
+
+    public RemoveGlobalAccelerationInstanceIpRequest setIpInstanceId(String ipInstanceId) {
+        this.ipInstanceId = ipInstanceId;
+        return this;
+    }
+    public String getIpInstanceId() {
+        return this.ipInstanceId;
+    }
+
 }

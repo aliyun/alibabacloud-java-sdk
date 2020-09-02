@@ -55,4 +55,124 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeIPv6TranslatorEntriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setIpv6TranslatorId(String ipv6TranslatorId) {
+        this.ipv6TranslatorId = ipv6TranslatorId;
+        return this;
+    }
+    public String getIpv6TranslatorId() {
+        return this.ipv6TranslatorId;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setIpv6TranslatorEntryId(String ipv6TranslatorEntryId) {
+        this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
+        return this;
+    }
+    public String getIpv6TranslatorEntryId() {
+        return this.ipv6TranslatorEntryId;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setEntryName(String entryName) {
+        this.entryName = entryName;
+        return this;
+    }
+    public String getEntryName() {
+        return this.entryName;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setAllocateIpv6Addr(String allocateIpv6Addr) {
+        this.allocateIpv6Addr = allocateIpv6Addr;
+        return this;
+    }
+    public String getAllocateIpv6Addr() {
+        return this.allocateIpv6Addr;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setAllocateIpv6Port(Integer allocateIpv6Port) {
+        this.allocateIpv6Port = allocateIpv6Port;
+        return this;
+    }
+    public Integer getAllocateIpv6Port() {
+        return this.allocateIpv6Port;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setBackendIpv4Addr(String backendIpv4Addr) {
+        this.backendIpv4Addr = backendIpv4Addr;
+        return this;
+    }
+    public String getBackendIpv4Addr() {
+        return this.backendIpv4Addr;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setBackendIpv4Port(Integer backendIpv4Port) {
+        this.backendIpv4Port = backendIpv4Port;
+        return this;
+    }
+    public Integer getBackendIpv4Port() {
+        return this.backendIpv4Port;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setTransProtocol(String transProtocol) {
+        this.transProtocol = transProtocol;
+        return this;
+    }
+    public String getTransProtocol() {
+        return this.transProtocol;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setAclStatus(String aclStatus) {
+        this.aclStatus = aclStatus;
+        return this;
+    }
+    public String getAclStatus() {
+        return this.aclStatus;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setAclType(String aclType) {
+        this.aclType = aclType;
+        return this;
+    }
+    public String getAclType() {
+        return this.aclType;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeIPv6TranslatorEntriesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

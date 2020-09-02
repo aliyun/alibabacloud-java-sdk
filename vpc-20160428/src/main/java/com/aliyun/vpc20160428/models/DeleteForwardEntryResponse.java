@@ -13,4 +13,12 @@ public class DeleteForwardEntryResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteForwardEntryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

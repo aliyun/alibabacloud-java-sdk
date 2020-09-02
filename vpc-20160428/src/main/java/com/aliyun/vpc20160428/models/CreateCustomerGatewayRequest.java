@@ -29,4 +29,52 @@ public class CreateCustomerGatewayRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateCustomerGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateCustomerGatewayRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateCustomerGatewayRequest setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    public String getIpAddress() {
+        return this.ipAddress;
+    }
+
+    public CreateCustomerGatewayRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateCustomerGatewayRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateCustomerGatewayRequest setAsn(String asn) {
+        this.asn = asn;
+        return this;
+    }
+    public String getAsn() {
+        return this.asn;
+    }
+
 }

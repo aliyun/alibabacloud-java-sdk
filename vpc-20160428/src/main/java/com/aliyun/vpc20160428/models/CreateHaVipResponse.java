@@ -21,4 +21,28 @@ public class CreateHaVipResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateHaVipResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateHaVipResponse setHaVipId(String haVipId) {
+        this.haVipId = haVipId;
+        return this;
+    }
+    public String getHaVipId() {
+        return this.haVipId;
+    }
+
+    public CreateHaVipResponse setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    public String getIpAddress() {
+        return this.ipAddress;
+    }
+
 }

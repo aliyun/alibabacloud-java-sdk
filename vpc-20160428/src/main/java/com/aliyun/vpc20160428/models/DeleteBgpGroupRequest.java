@@ -20,4 +20,28 @@ public class DeleteBgpGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteBgpGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteBgpGroupRequest setBgpGroupId(String bgpGroupId) {
+        this.bgpGroupId = bgpGroupId;
+        return this;
+    }
+    public String getBgpGroupId() {
+        return this.bgpGroupId;
+    }
+
+    public DeleteBgpGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

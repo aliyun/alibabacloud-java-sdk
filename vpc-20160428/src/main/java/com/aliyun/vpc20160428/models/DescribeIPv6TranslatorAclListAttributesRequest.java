@@ -23,4 +23,36 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeIPv6TranslatorAclListAttributesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeIPv6TranslatorAclListAttributesRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
+    }
+
+    public DescribeIPv6TranslatorAclListAttributesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeIPv6TranslatorAclListAttributesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

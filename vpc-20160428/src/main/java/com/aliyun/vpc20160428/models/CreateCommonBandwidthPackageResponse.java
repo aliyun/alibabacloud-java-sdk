@@ -21,4 +21,28 @@ public class CreateCommonBandwidthPackageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateCommonBandwidthPackageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateCommonBandwidthPackageResponse setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    public CreateCommonBandwidthPackageResponse setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
 }

@@ -17,4 +17,20 @@ public class CreateSnatEntryResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSnatEntryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateSnatEntryResponse setSnatEntryId(String snatEntryId) {
+        this.snatEntryId = snatEntryId;
+        return this;
+    }
+    public String getSnatEntryId() {
+        return this.snatEntryId;
+    }
+
 }

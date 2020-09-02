@@ -13,4 +13,12 @@ public class RemoveGlobalAccelerationInstanceIpResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveGlobalAccelerationInstanceIpResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

@@ -21,6 +21,30 @@ public class CreateNetworkAclResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateNetworkAclResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateNetworkAclResponse setNetworkAclId(String networkAclId) {
+        this.networkAclId = networkAclId;
+        return this;
+    }
+    public String getNetworkAclId() {
+        return this.networkAclId;
+    }
+
+    public CreateNetworkAclResponse setNetworkAclAttribute(CreateNetworkAclResponseNetworkAclAttribute networkAclAttribute) {
+        this.networkAclAttribute = networkAclAttribute;
+        return this;
+    }
+    public CreateNetworkAclResponseNetworkAclAttribute getNetworkAclAttribute() {
+        return this.networkAclAttribute;
+    }
+
     public static class CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry extends TeaModel {
         @NameInMap("NetworkAclEntryId")
         @Validation(required = true)
@@ -59,6 +83,70 @@ public class CreateNetworkAclResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry setNetworkAclEntryId(String networkAclEntryId) {
+            this.networkAclEntryId = networkAclEntryId;
+            return this;
+        }
+        public String getNetworkAclEntryId() {
+            return this.networkAclEntryId;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry setSourceCidrIp(String sourceCidrIp) {
+            this.sourceCidrIp = sourceCidrIp;
+            return this;
+        }
+        public String getSourceCidrIp() {
+            return this.sourceCidrIp;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry setEntryType(String entryType) {
+            this.entryType = entryType;
+            return this;
+        }
+        public String getEntryType() {
+            return this.entryType;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry setNetworkAclEntryName(String networkAclEntryName) {
+            this.networkAclEntryName = networkAclEntryName;
+            return this;
+        }
+        public String getNetworkAclEntryName() {
+            return this.networkAclEntryName;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
     }
 
     public static class CreateNetworkAclResponseNetworkAclAttributeIngressAclEntries extends TeaModel {
@@ -69,6 +157,14 @@ public class CreateNetworkAclResponse extends TeaModel {
         public static CreateNetworkAclResponseNetworkAclAttributeIngressAclEntries build(java.util.Map<String, ?> map) throws Exception {
             CreateNetworkAclResponseNetworkAclAttributeIngressAclEntries self = new CreateNetworkAclResponseNetworkAclAttributeIngressAclEntries();
             return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntries setIngressAclEntry(java.util.List<CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry> ingressAclEntry) {
+            this.ingressAclEntry = ingressAclEntry;
+            return this;
+        }
+        public java.util.List<CreateNetworkAclResponseNetworkAclAttributeIngressAclEntriesIngressAclEntry> getIngressAclEntry() {
+            return this.ingressAclEntry;
         }
 
     }
@@ -111,6 +207,70 @@ public class CreateNetworkAclResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry setNetworkAclEntryId(String networkAclEntryId) {
+            this.networkAclEntryId = networkAclEntryId;
+            return this;
+        }
+        public String getNetworkAclEntryId() {
+            return this.networkAclEntryId;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry setDestinationCidrIp(String destinationCidrIp) {
+            this.destinationCidrIp = destinationCidrIp;
+            return this;
+        }
+        public String getDestinationCidrIp() {
+            return this.destinationCidrIp;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry setEntryType(String entryType) {
+            this.entryType = entryType;
+            return this;
+        }
+        public String getEntryType() {
+            return this.entryType;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry setNetworkAclEntryName(String networkAclEntryName) {
+            this.networkAclEntryName = networkAclEntryName;
+            return this;
+        }
+        public String getNetworkAclEntryName() {
+            return this.networkAclEntryName;
+        }
+
     }
 
     public static class CreateNetworkAclResponseNetworkAclAttributeEgressAclEntries extends TeaModel {
@@ -121,6 +281,14 @@ public class CreateNetworkAclResponse extends TeaModel {
         public static CreateNetworkAclResponseNetworkAclAttributeEgressAclEntries build(java.util.Map<String, ?> map) throws Exception {
             CreateNetworkAclResponseNetworkAclAttributeEgressAclEntries self = new CreateNetworkAclResponseNetworkAclAttributeEgressAclEntries();
             return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntries setEgressAclEntry(java.util.List<CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry> egressAclEntry) {
+            this.egressAclEntry = egressAclEntry;
+            return this;
+        }
+        public java.util.List<CreateNetworkAclResponseNetworkAclAttributeEgressAclEntriesEgressAclEntry> getEgressAclEntry() {
+            return this.egressAclEntry;
         }
 
     }
@@ -143,6 +311,30 @@ public class CreateNetworkAclResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateNetworkAclResponseNetworkAclAttributeResourcesResource setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeResourcesResource setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeResourcesResource setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class CreateNetworkAclResponseNetworkAclAttributeResources extends TeaModel {
@@ -153,6 +345,14 @@ public class CreateNetworkAclResponse extends TeaModel {
         public static CreateNetworkAclResponseNetworkAclAttributeResources build(java.util.Map<String, ?> map) throws Exception {
             CreateNetworkAclResponseNetworkAclAttributeResources self = new CreateNetworkAclResponseNetworkAclAttributeResources();
             return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttributeResources setResource(java.util.List<CreateNetworkAclResponseNetworkAclAttributeResourcesResource> resource) {
+            this.resource = resource;
+            return this;
+        }
+        public java.util.List<CreateNetworkAclResponseNetworkAclAttributeResourcesResource> getResource() {
+            return this.resource;
         }
 
     }
@@ -201,6 +401,86 @@ public class CreateNetworkAclResponse extends TeaModel {
         public static CreateNetworkAclResponseNetworkAclAttribute build(java.util.Map<String, ?> map) throws Exception {
             CreateNetworkAclResponseNetworkAclAttribute self = new CreateNetworkAclResponseNetworkAclAttribute();
             return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setNetworkAclId(String networkAclId) {
+            this.networkAclId = networkAclId;
+            return this;
+        }
+        public String getNetworkAclId() {
+            return this.networkAclId;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setNetworkAclName(String networkAclName) {
+            this.networkAclName = networkAclName;
+            return this;
+        }
+        public String getNetworkAclName() {
+            return this.networkAclName;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setIngressAclEntries(CreateNetworkAclResponseNetworkAclAttributeIngressAclEntries ingressAclEntries) {
+            this.ingressAclEntries = ingressAclEntries;
+            return this;
+        }
+        public CreateNetworkAclResponseNetworkAclAttributeIngressAclEntries getIngressAclEntries() {
+            return this.ingressAclEntries;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setEgressAclEntries(CreateNetworkAclResponseNetworkAclAttributeEgressAclEntries egressAclEntries) {
+            this.egressAclEntries = egressAclEntries;
+            return this;
+        }
+        public CreateNetworkAclResponseNetworkAclAttributeEgressAclEntries getEgressAclEntries() {
+            return this.egressAclEntries;
+        }
+
+        public CreateNetworkAclResponseNetworkAclAttribute setResources(CreateNetworkAclResponseNetworkAclAttributeResources resources) {
+            this.resources = resources;
+            return this;
+        }
+        public CreateNetworkAclResponseNetworkAclAttributeResources getResources() {
+            return this.resources;
         }
 
     }

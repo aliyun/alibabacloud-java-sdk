@@ -17,4 +17,20 @@ public class CreateIpv6GatewayResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateIpv6GatewayResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateIpv6GatewayResponse setIpv6GatewayId(String ipv6GatewayId) {
+        this.ipv6GatewayId = ipv6GatewayId;
+        return this;
+    }
+    public String getIpv6GatewayId() {
+        return this.ipv6GatewayId;
+    }
+
 }

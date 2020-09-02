@@ -49,4 +49,108 @@ public class DescribeFlowLogsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeFlowLogsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeFlowLogsRequest setFlowLogName(String flowLogName) {
+        this.flowLogName = flowLogName;
+        return this;
+    }
+    public String getFlowLogName() {
+        return this.flowLogName;
+    }
+
+    public DescribeFlowLogsRequest setFlowLogId(String flowLogId) {
+        this.flowLogId = flowLogId;
+        return this;
+    }
+    public String getFlowLogId() {
+        return this.flowLogId;
+    }
+
+    public DescribeFlowLogsRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public DescribeFlowLogsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public DescribeFlowLogsRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public DescribeFlowLogsRequest setTrafficType(String trafficType) {
+        this.trafficType = trafficType;
+        return this;
+    }
+    public String getTrafficType() {
+        return this.trafficType;
+    }
+
+    public DescribeFlowLogsRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public DescribeFlowLogsRequest setLogStoreName(String logStoreName) {
+        this.logStoreName = logStoreName;
+        return this;
+    }
+    public String getLogStoreName() {
+        return this.logStoreName;
+    }
+
+    public DescribeFlowLogsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeFlowLogsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeFlowLogsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeFlowLogsRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
 }

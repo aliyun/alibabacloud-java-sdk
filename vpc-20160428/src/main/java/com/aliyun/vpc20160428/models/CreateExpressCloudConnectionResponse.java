@@ -17,4 +17,20 @@ public class CreateExpressCloudConnectionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateExpressCloudConnectionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateExpressCloudConnectionResponse setEccId(String eccId) {
+        this.eccId = eccId;
+        return this;
+    }
+    public String getEccId() {
+        return this.eccId;
+    }
+
 }

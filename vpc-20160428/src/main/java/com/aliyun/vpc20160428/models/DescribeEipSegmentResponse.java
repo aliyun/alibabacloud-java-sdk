@@ -29,6 +29,46 @@ public class DescribeEipSegmentResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeEipSegmentResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeEipSegmentResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeEipSegmentResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeEipSegmentResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeEipSegmentResponse setEipSegments(DescribeEipSegmentResponseEipSegments eipSegments) {
+        this.eipSegments = eipSegments;
+        return this;
+    }
+    public DescribeEipSegmentResponseEipSegments getEipSegments() {
+        return this.eipSegments;
+    }
+
     public static class DescribeEipSegmentResponseEipSegmentsEipSegment extends TeaModel {
         @NameInMap("InstanceId")
         @Validation(required = true)
@@ -67,6 +107,70 @@ public class DescribeEipSegmentResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeEipSegmentResponseEipSegmentsEipSegment setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeEipSegmentResponseEipSegmentsEipSegment setSegment(String segment) {
+            this.segment = segment;
+            return this;
+        }
+        public String getSegment() {
+            return this.segment;
+        }
+
+        public DescribeEipSegmentResponseEipSegmentsEipSegment setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeEipSegmentResponseEipSegmentsEipSegment setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeEipSegmentResponseEipSegmentsEipSegment setIpCount(String ipCount) {
+            this.ipCount = ipCount;
+            return this;
+        }
+        public String getIpCount() {
+            return this.ipCount;
+        }
+
+        public DescribeEipSegmentResponseEipSegmentsEipSegment setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeEipSegmentResponseEipSegmentsEipSegment setDescritpion(String descritpion) {
+            this.descritpion = descritpion;
+            return this;
+        }
+        public String getDescritpion() {
+            return this.descritpion;
+        }
+
+        public DescribeEipSegmentResponseEipSegmentsEipSegment setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
     }
 
     public static class DescribeEipSegmentResponseEipSegments extends TeaModel {
@@ -77,6 +181,14 @@ public class DescribeEipSegmentResponse extends TeaModel {
         public static DescribeEipSegmentResponseEipSegments build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipSegmentResponseEipSegments self = new DescribeEipSegmentResponseEipSegments();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEipSegmentResponseEipSegments setEipSegment(java.util.List<DescribeEipSegmentResponseEipSegmentsEipSegment> eipSegment) {
+            this.eipSegment = eipSegment;
+            return this;
+        }
+        public java.util.List<DescribeEipSegmentResponseEipSegmentsEipSegment> getEipSegment() {
+            return this.eipSegment;
         }
 
     }

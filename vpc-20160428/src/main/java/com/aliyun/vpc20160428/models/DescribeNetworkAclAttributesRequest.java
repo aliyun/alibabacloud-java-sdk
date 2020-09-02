@@ -20,4 +20,28 @@ public class DescribeNetworkAclAttributesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeNetworkAclAttributesRequest setNetworkAclId(String networkAclId) {
+        this.networkAclId = networkAclId;
+        return this;
+    }
+    public String getNetworkAclId() {
+        return this.networkAclId;
+    }
+
+    public DescribeNetworkAclAttributesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeNetworkAclAttributesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

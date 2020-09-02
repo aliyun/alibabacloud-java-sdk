@@ -14,4 +14,12 @@ public class CompletePhysicalConnectionLOAResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CompletePhysicalConnectionLOAResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

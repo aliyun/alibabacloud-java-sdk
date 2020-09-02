@@ -69,4 +69,124 @@ public class ModifyVpnGatewayAttributeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyVpnGatewayAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setVpnGatewayId(String vpnGatewayId) {
+        this.vpnGatewayId = vpnGatewayId;
+        return this;
+    }
+    public String getVpnGatewayId() {
+        return this.vpnGatewayId;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setInternetIp(String internetIp) {
+        this.internetIp = internetIp;
+        return this;
+    }
+    public String getInternetIp() {
+        return this.internetIp;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setIntranetIp(String intranetIp) {
+        this.intranetIp = intranetIp;
+        return this;
+    }
+    public String getIntranetIp() {
+        return this.intranetIp;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setCreateTime(Long createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Long getCreateTime() {
+        return this.createTime;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    public String getSpec() {
+        return this.spec;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setBusinessStatus(String businessStatus) {
+        this.businessStatus = businessStatus;
+        return this;
+    }
+    public String getBusinessStatus() {
+        return this.businessStatus;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setEnableBgp(Boolean enableBgp) {
+        this.enableBgp = enableBgp;
+        return this;
+    }
+    public Boolean getEnableBgp() {
+        return this.enableBgp;
+    }
+
+    public ModifyVpnGatewayAttributeResponse setAutoPropagate(Boolean autoPropagate) {
+        this.autoPropagate = autoPropagate;
+        return this;
+    }
+    public Boolean getAutoPropagate() {
+        return this.autoPropagate;
+    }
+
 }

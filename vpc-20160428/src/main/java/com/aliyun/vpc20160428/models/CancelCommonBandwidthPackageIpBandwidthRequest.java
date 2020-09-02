@@ -21,4 +21,28 @@ public class CancelCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelCommonBandwidthPackageIpBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CancelCommonBandwidthPackageIpBandwidthRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    public CancelCommonBandwidthPackageIpBandwidthRequest setEipId(String eipId) {
+        this.eipId = eipId;
+        return this;
+    }
+    public String getEipId() {
+        return this.eipId;
+    }
+
 }

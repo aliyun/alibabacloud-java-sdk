@@ -28,4 +28,52 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListDhcpOptionsSetsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListDhcpOptionsSetsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListDhcpOptionsSetsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListDhcpOptionsSetsRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public ListDhcpOptionsSetsRequest setDhcpOptionsSetId(java.util.List<String> dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
+        return this;
+    }
+    public java.util.List<String> getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
+    public ListDhcpOptionsSetsRequest setDhcpOptionsSetName(String dhcpOptionsSetName) {
+        this.dhcpOptionsSetName = dhcpOptionsSetName;
+        return this;
+    }
+    public String getDhcpOptionsSetName() {
+        return this.dhcpOptionsSetName;
+    }
+
 }

@@ -19,6 +19,22 @@ public class DescribePhysicalConnectionLOAResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribePhysicalConnectionLOAResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribePhysicalConnectionLOAResponse setPhysicalConnectionLOAType(DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType physicalConnectionLOAType) {
+        this.physicalConnectionLOAType = physicalConnectionLOAType;
+        return this;
+    }
+    public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType getPhysicalConnectionLOAType() {
+        return this.physicalConnectionLOAType;
+    }
+
     public static class DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfoPMInfo extends TeaModel {
         // description: The name of the data center cable installation technician or representative. ; 
         @NameInMap("PMName")
@@ -50,6 +66,46 @@ public class DescribePhysicalConnectionLOAResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfoPMInfo setPMName(String PMName) {
+            this.PMName = PMName;
+            return this;
+        }
+        public String getPMName() {
+            return this.PMName;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfoPMInfo setPMContactInfo(String PMContactInfo) {
+            this.PMContactInfo = PMContactInfo;
+            return this;
+        }
+        public String getPMContactInfo() {
+            return this.PMContactInfo;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfoPMInfo setPMCertificateType(String PMCertificateType) {
+            this.PMCertificateType = PMCertificateType;
+            return this;
+        }
+        public String getPMCertificateType() {
+            return this.PMCertificateType;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfoPMInfo setPMCertificateNo(String PMCertificateNo) {
+            this.PMCertificateNo = PMCertificateNo;
+            return this;
+        }
+        public String getPMCertificateNo() {
+            return this.PMCertificateNo;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfoPMInfo setPMGender(String PMGender) {
+            this.PMGender = PMGender;
+            return this;
+        }
+        public String getPMGender() {
+            return this.PMGender;
+        }
+
     }
 
     public static class DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfo extends TeaModel {
@@ -60,6 +116,14 @@ public class DescribePhysicalConnectionLOAResponse extends TeaModel {
         public static DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfo self = new DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfo setPMInfo(java.util.List<DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfoPMInfo> PMInfo) {
+            this.PMInfo = PMInfo;
+            return this;
+        }
+        public java.util.List<DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfoPMInfo> getPMInfo() {
+            return this.PMInfo;
         }
 
     }
@@ -123,6 +187,94 @@ public class DescribePhysicalConnectionLOAResponse extends TeaModel {
         public static DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType build(java.util.Map<String, ?> map) throws Exception {
             DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType self = new DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setCompanyName(String companyName) {
+            this.companyName = companyName;
+            return this;
+        }
+        public String getCompanyName() {
+            return this.companyName;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setCompanyLocalizedName(String companyLocalizedName) {
+            this.companyLocalizedName = companyLocalizedName;
+            return this;
+        }
+        public String getCompanyLocalizedName() {
+            return this.companyLocalizedName;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setLineType(String lineType) {
+            this.lineType = lineType;
+            return this;
+        }
+        public String getLineType() {
+            return this.lineType;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setLineCode(String lineCode) {
+            this.lineCode = lineCode;
+            return this;
+        }
+        public String getLineCode() {
+            return this.lineCode;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setLineLabel(String lineLabel) {
+            this.lineLabel = lineLabel;
+            return this;
+        }
+        public String getLineLabel() {
+            return this.lineLabel;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setConstructionTime(String constructionTime) {
+            this.constructionTime = constructionTime;
+            return this;
+        }
+        public String getConstructionTime() {
+            return this.constructionTime;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setLoaUrl(String loaUrl) {
+            this.loaUrl = loaUrl;
+            return this;
+        }
+        public String getLoaUrl() {
+            return this.loaUrl;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setSI(String SI) {
+            this.SI = SI;
+            return this;
+        }
+        public String getSI() {
+            return this.SI;
+        }
+
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOAType setPMInfo(DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfo PMInfo) {
+            this.PMInfo = PMInfo;
+            return this;
+        }
+        public DescribePhysicalConnectionLOAResponsePhysicalConnectionLOATypePMInfo getPMInfo() {
+            return this.PMInfo;
         }
 
     }

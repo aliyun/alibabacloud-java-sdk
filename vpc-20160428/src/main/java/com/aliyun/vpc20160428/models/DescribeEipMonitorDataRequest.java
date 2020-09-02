@@ -27,4 +27,44 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeEipMonitorDataRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeEipMonitorDataRequest setAllocationId(String allocationId) {
+        this.allocationId = allocationId;
+        return this;
+    }
+    public String getAllocationId() {
+        return this.allocationId;
+    }
+
+    public DescribeEipMonitorDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeEipMonitorDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeEipMonitorDataRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
 }

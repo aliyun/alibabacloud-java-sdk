@@ -24,4 +24,36 @@ public class UnassociatePhysicalConnectionFromVirtualBorderRouterRequest extends
         return TeaModel.build(map, self);
     }
 
+    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setVbrId(String vbrId) {
+        this.vbrId = vbrId;
+        return this;
+    }
+    public String getVbrId() {
+        return this.vbrId;
+    }
+
+    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setPhysicalConnectionId(String physicalConnectionId) {
+        this.physicalConnectionId = physicalConnectionId;
+        return this;
+    }
+    public String getPhysicalConnectionId() {
+        return this.physicalConnectionId;
+    }
+
+    public UnassociatePhysicalConnectionFromVirtualBorderRouterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

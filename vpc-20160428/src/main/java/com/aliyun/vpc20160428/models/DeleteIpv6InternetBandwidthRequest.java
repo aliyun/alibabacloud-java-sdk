@@ -19,4 +19,28 @@ public class DeleteIpv6InternetBandwidthRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteIpv6InternetBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteIpv6InternetBandwidthRequest setIpv6AddressId(String ipv6AddressId) {
+        this.ipv6AddressId = ipv6AddressId;
+        return this;
+    }
+    public String getIpv6AddressId() {
+        return this.ipv6AddressId;
+    }
+
+    public DeleteIpv6InternetBandwidthRequest setIpv6InternetBandwidthId(String ipv6InternetBandwidthId) {
+        this.ipv6InternetBandwidthId = ipv6InternetBandwidthId;
+        return this;
+    }
+    public String getIpv6InternetBandwidthId() {
+        return this.ipv6InternetBandwidthId;
+    }
+
 }
