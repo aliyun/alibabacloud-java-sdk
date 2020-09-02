@@ -20,4 +20,28 @@ public class DeleteSslVpnClientCertRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteSslVpnClientCertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteSslVpnClientCertRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteSslVpnClientCertRequest setSslVpnClientCertId(String sslVpnClientCertId) {
+        this.sslVpnClientCertId = sslVpnClientCertId;
+        return this;
+    }
+    public String getSslVpnClientCertId() {
+        return this.sslVpnClientCertId;
+    }
+
 }

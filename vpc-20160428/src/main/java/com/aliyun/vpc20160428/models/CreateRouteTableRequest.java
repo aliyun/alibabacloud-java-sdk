@@ -26,4 +26,44 @@ public class CreateRouteTableRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateRouteTableRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateRouteTableRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateRouteTableRequest setRouteTableName(String routeTableName) {
+        this.routeTableName = routeTableName;
+        return this;
+    }
+    public String getRouteTableName() {
+        return this.routeTableName;
+    }
+
+    public CreateRouteTableRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateRouteTableRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

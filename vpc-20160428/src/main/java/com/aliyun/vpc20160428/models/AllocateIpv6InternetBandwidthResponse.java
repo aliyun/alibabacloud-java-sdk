@@ -21,4 +21,28 @@ public class AllocateIpv6InternetBandwidthResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AllocateIpv6InternetBandwidthResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AllocateIpv6InternetBandwidthResponse setIpv6AddressId(String ipv6AddressId) {
+        this.ipv6AddressId = ipv6AddressId;
+        return this;
+    }
+    public String getIpv6AddressId() {
+        return this.ipv6AddressId;
+    }
+
+    public AllocateIpv6InternetBandwidthResponse setInternetBandwidthId(String internetBandwidthId) {
+        this.internetBandwidthId = internetBandwidthId;
+        return this;
+    }
+    public String getInternetBandwidthId() {
+        return this.internetBandwidthId;
+    }
+
 }

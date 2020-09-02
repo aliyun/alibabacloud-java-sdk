@@ -20,4 +20,28 @@ public class DeleteBandwidthPackageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteBandwidthPackageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteBandwidthPackageRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    public DeleteBandwidthPackageRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
+    }
+
 }

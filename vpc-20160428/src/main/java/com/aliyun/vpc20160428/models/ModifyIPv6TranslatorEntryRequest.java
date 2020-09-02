@@ -47,4 +47,100 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIPv6TranslatorEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setIpv6TranslatorEntryId(String ipv6TranslatorEntryId) {
+        this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
+        return this;
+    }
+    public String getIpv6TranslatorEntryId() {
+        return this.ipv6TranslatorEntryId;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setEntryName(String entryName) {
+        this.entryName = entryName;
+        return this;
+    }
+    public String getEntryName() {
+        return this.entryName;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setEntryDescription(String entryDescription) {
+        this.entryDescription = entryDescription;
+        return this;
+    }
+    public String getEntryDescription() {
+        return this.entryDescription;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setAllocateIpv6Port(Integer allocateIpv6Port) {
+        this.allocateIpv6Port = allocateIpv6Port;
+        return this;
+    }
+    public Integer getAllocateIpv6Port() {
+        return this.allocateIpv6Port;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setBackendIpv4Addr(String backendIpv4Addr) {
+        this.backendIpv4Addr = backendIpv4Addr;
+        return this;
+    }
+    public String getBackendIpv4Addr() {
+        return this.backendIpv4Addr;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setBackendIpv4Port(Integer backendIpv4Port) {
+        this.backendIpv4Port = backendIpv4Port;
+        return this;
+    }
+    public Integer getBackendIpv4Port() {
+        return this.backendIpv4Port;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setTransProtocol(String transProtocol) {
+        this.transProtocol = transProtocol;
+        return this;
+    }
+    public String getTransProtocol() {
+        return this.transProtocol;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setEntryBandwidth(Integer entryBandwidth) {
+        this.entryBandwidth = entryBandwidth;
+        return this;
+    }
+    public Integer getEntryBandwidth() {
+        return this.entryBandwidth;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setAclStatus(String aclStatus) {
+        this.aclStatus = aclStatus;
+        return this;
+    }
+    public String getAclStatus() {
+        return this.aclStatus;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setAclType(String aclType) {
+        this.aclType = aclType;
+        return this;
+    }
+    public String getAclType() {
+        return this.aclType;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setAclId(String aclId) {
+        this.aclId = aclId;
+        return this;
+    }
+    public String getAclId() {
+        return this.aclId;
+    }
+
 }

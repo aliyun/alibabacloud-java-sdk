@@ -20,4 +20,28 @@ public class DeleteIpv6EgressOnlyRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteIpv6EgressOnlyRuleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteIpv6EgressOnlyRuleRequest setIpv6EgressOnlyRuleId(String ipv6EgressOnlyRuleId) {
+        this.ipv6EgressOnlyRuleId = ipv6EgressOnlyRuleId;
+        return this;
+    }
+    public String getIpv6EgressOnlyRuleId() {
+        return this.ipv6EgressOnlyRuleId;
+    }
+
+    public DeleteIpv6EgressOnlyRuleRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

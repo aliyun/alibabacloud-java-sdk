@@ -37,4 +37,76 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateIPv6TranslatorRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateIPv6TranslatorRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateIPv6TranslatorRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateIPv6TranslatorRequest setSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    public String getSpec() {
+        return this.spec;
+    }
+
+    public CreateIPv6TranslatorRequest setPayType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+    public String getPayType() {
+        return this.payType;
+    }
+
+    public CreateIPv6TranslatorRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
+    }
+
+    public CreateIPv6TranslatorRequest setDuration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Integer getDuration() {
+        return this.duration;
+    }
+
+    public CreateIPv6TranslatorRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public CreateIPv6TranslatorRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
 }

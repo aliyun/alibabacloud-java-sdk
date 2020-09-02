@@ -20,4 +20,28 @@ public class EnableNatGatewayEcsMetricRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public EnableNatGatewayEcsMetricRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public EnableNatGatewayEcsMetricRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public EnableNatGatewayEcsMetricRequest setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
 }

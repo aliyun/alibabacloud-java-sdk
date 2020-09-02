@@ -13,4 +13,12 @@ public class UnassociateHaVipResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UnassociateHaVipResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

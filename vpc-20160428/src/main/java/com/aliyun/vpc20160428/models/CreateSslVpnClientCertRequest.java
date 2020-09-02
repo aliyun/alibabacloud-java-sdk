@@ -23,4 +23,36 @@ public class CreateSslVpnClientCertRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSslVpnClientCertRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateSslVpnClientCertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateSslVpnClientCertRequest setSslVpnServerId(String sslVpnServerId) {
+        this.sslVpnServerId = sslVpnServerId;
+        return this;
+    }
+    public String getSslVpnServerId() {
+        return this.sslVpnServerId;
+    }
+
+    public CreateSslVpnClientCertRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
 }

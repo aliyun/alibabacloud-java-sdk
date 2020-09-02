@@ -20,4 +20,28 @@ public class CreateIPv6TranslatorAclListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateIPv6TranslatorAclListRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateIPv6TranslatorAclListRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateIPv6TranslatorAclListRequest setAclName(String aclName) {
+        this.aclName = aclName;
+        return this;
+    }
+    public String getAclName() {
+        return this.aclName;
+    }
+
 }

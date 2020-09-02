@@ -23,4 +23,36 @@ public class DeleteDhcpOptionsSetRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteDhcpOptionsSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteDhcpOptionsSetRequest setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
+        return this;
+    }
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
+    public DeleteDhcpOptionsSetRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteDhcpOptionsSetRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
 }

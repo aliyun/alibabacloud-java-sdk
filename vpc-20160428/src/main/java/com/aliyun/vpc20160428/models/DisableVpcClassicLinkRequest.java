@@ -20,4 +20,28 @@ public class DisableVpcClassicLinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DisableVpcClassicLinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DisableVpcClassicLinkRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public DisableVpcClassicLinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

@@ -17,4 +17,20 @@ public class RenewInstanceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RenewInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RenewInstanceResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
 }

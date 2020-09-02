@@ -22,6 +22,38 @@ public class DescribeExpressCloudConnectionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeExpressCloudConnectionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeExpressCloudConnectionsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeExpressCloudConnectionsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeExpressCloudConnectionsRequest setFilter(java.util.List<DescribeExpressCloudConnectionsRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeExpressCloudConnectionsRequestFilter> getFilter() {
+        return this.filter;
+    }
+
     public static class DescribeExpressCloudConnectionsRequestFilter extends TeaModel {
         @NameInMap("Key")
         @Validation(required = true)
@@ -34,6 +66,22 @@ public class DescribeExpressCloudConnectionsRequest extends TeaModel {
         public static DescribeExpressCloudConnectionsRequestFilter build(java.util.Map<String, ?> map) throws Exception {
             DescribeExpressCloudConnectionsRequestFilter self = new DescribeExpressCloudConnectionsRequestFilter();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeExpressCloudConnectionsRequestFilter setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeExpressCloudConnectionsRequestFilter setValue(java.util.List<String> value) {
+            this.value = value;
+            return this;
+        }
+        public java.util.List<String> getValue() {
+            return this.value;
         }
 
     }

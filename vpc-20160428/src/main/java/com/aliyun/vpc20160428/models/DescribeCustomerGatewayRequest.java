@@ -17,4 +17,20 @@ public class DescribeCustomerGatewayRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCustomerGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeCustomerGatewayRequest setCustomerGatewayId(String customerGatewayId) {
+        this.customerGatewayId = customerGatewayId;
+        return this;
+    }
+    public String getCustomerGatewayId() {
+        return this.customerGatewayId;
+    }
+
 }

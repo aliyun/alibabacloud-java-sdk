@@ -17,4 +17,20 @@ public class DescribeVpnConnectionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeVpnConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVpnConnectionRequest setVpnConnectionId(String vpnConnectionId) {
+        this.vpnConnectionId = vpnConnectionId;
+        return this;
+    }
+    public String getVpnConnectionId() {
+        return this.vpnConnectionId;
+    }
+
 }

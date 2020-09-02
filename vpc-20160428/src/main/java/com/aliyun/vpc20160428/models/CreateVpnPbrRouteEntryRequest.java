@@ -46,4 +46,84 @@ public class CreateVpnPbrRouteEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateVpnPbrRouteEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateVpnPbrRouteEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateVpnPbrRouteEntryRequest setVpnGatewayId(String vpnGatewayId) {
+        this.vpnGatewayId = vpnGatewayId;
+        return this;
+    }
+    public String getVpnGatewayId() {
+        return this.vpnGatewayId;
+    }
+
+    public CreateVpnPbrRouteEntryRequest setRouteSource(String routeSource) {
+        this.routeSource = routeSource;
+        return this;
+    }
+    public String getRouteSource() {
+        return this.routeSource;
+    }
+
+    public CreateVpnPbrRouteEntryRequest setRouteDest(String routeDest) {
+        this.routeDest = routeDest;
+        return this;
+    }
+    public String getRouteDest() {
+        return this.routeDest;
+    }
+
+    public CreateVpnPbrRouteEntryRequest setNextHop(String nextHop) {
+        this.nextHop = nextHop;
+        return this;
+    }
+    public String getNextHop() {
+        return this.nextHop;
+    }
+
+    public CreateVpnPbrRouteEntryRequest setWeight(Integer weight) {
+        this.weight = weight;
+        return this;
+    }
+    public Integer getWeight() {
+        return this.weight;
+    }
+
+    public CreateVpnPbrRouteEntryRequest setPublishVpc(Boolean publishVpc) {
+        this.publishVpc = publishVpc;
+        return this;
+    }
+    public Boolean getPublishVpc() {
+        return this.publishVpc;
+    }
+
+    public CreateVpnPbrRouteEntryRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateVpnPbrRouteEntryRequest setOverlayMode(String overlayMode) {
+        this.overlayMode = overlayMode;
+        return this;
+    }
+    public String getOverlayMode() {
+        return this.overlayMode;
+    }
+
 }

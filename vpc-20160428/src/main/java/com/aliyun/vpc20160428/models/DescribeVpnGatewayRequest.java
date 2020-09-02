@@ -20,4 +20,28 @@ public class DescribeVpnGatewayRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeVpnGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVpnGatewayRequest setVpnGatewayId(String vpnGatewayId) {
+        this.vpnGatewayId = vpnGatewayId;
+        return this;
+    }
+    public String getVpnGatewayId() {
+        return this.vpnGatewayId;
+    }
+
+    public DescribeVpnGatewayRequest setIncludeReservationData(Boolean includeReservationData) {
+        this.includeReservationData = includeReservationData;
+        return this;
+    }
+    public Boolean getIncludeReservationData() {
+        return this.includeReservationData;
+    }
+
 }

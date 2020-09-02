@@ -23,4 +23,36 @@ public class ModifyGlobalAccelerationInstanceAttributesRequest extends TeaModel 
         return TeaModel.build(map, self);
     }
 
+    public ModifyGlobalAccelerationInstanceAttributesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyGlobalAccelerationInstanceAttributesRequest setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
+        this.globalAccelerationInstanceId = globalAccelerationInstanceId;
+        return this;
+    }
+    public String getGlobalAccelerationInstanceId() {
+        return this.globalAccelerationInstanceId;
+    }
+
+    public ModifyGlobalAccelerationInstanceAttributesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyGlobalAccelerationInstanceAttributesRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

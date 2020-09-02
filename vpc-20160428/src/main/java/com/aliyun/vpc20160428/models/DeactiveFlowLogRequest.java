@@ -17,4 +17,20 @@ public class DeactiveFlowLogRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeactiveFlowLogRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeactiveFlowLogRequest setFlowLogId(String flowLogId) {
+        this.flowLogId = flowLogId;
+        return this;
+    }
+    public String getFlowLogId() {
+        return this.flowLogId;
+    }
+
 }

@@ -17,4 +17,20 @@ public class CreateBandwidthPackageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateBandwidthPackageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateBandwidthPackageResponse setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
 }

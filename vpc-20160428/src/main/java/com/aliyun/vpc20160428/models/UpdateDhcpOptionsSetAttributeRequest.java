@@ -35,4 +35,68 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateDhcpOptionsSetAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
+        return this;
+    }
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setDomainNameServers(String domainNameServers) {
+        this.domainNameServers = domainNameServers;
+        return this;
+    }
+    public String getDomainNameServers() {
+        return this.domainNameServers;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setDhcpOptionsSetName(String dhcpOptionsSetName) {
+        this.dhcpOptionsSetName = dhcpOptionsSetName;
+        return this;
+    }
+    public String getDhcpOptionsSetName() {
+        return this.dhcpOptionsSetName;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setDhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
+        this.dhcpOptionsSetDescription = dhcpOptionsSetDescription;
+        return this;
+    }
+    public String getDhcpOptionsSetDescription() {
+        return this.dhcpOptionsSetDescription;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
 }

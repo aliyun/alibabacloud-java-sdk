@@ -36,4 +36,60 @@ public class PublishVpnRouteEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PublishVpnRouteEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public PublishVpnRouteEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public PublishVpnRouteEntryRequest setVpnGatewayId(String vpnGatewayId) {
+        this.vpnGatewayId = vpnGatewayId;
+        return this;
+    }
+    public String getVpnGatewayId() {
+        return this.vpnGatewayId;
+    }
+
+    public PublishVpnRouteEntryRequest setRouteDest(String routeDest) {
+        this.routeDest = routeDest;
+        return this;
+    }
+    public String getRouteDest() {
+        return this.routeDest;
+    }
+
+    public PublishVpnRouteEntryRequest setNextHop(String nextHop) {
+        this.nextHop = nextHop;
+        return this;
+    }
+    public String getNextHop() {
+        return this.nextHop;
+    }
+
+    public PublishVpnRouteEntryRequest setRouteType(String routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+    public String getRouteType() {
+        return this.routeType;
+    }
+
+    public PublishVpnRouteEntryRequest setPublishVpc(Boolean publishVpc) {
+        this.publishVpc = publishVpc;
+        return this;
+    }
+    public Boolean getPublishVpc() {
+        return this.publishVpc;
+    }
+
 }

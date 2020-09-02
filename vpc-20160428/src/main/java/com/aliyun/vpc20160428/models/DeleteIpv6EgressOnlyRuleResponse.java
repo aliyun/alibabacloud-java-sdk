@@ -13,4 +13,12 @@ public class DeleteIpv6EgressOnlyRuleResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteIpv6EgressOnlyRuleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

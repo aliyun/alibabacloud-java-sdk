@@ -35,4 +35,60 @@ public class DeleteVpnRouteEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteVpnRouteEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteVpnRouteEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteVpnRouteEntryRequest setVpnGatewayId(String vpnGatewayId) {
+        this.vpnGatewayId = vpnGatewayId;
+        return this;
+    }
+    public String getVpnGatewayId() {
+        return this.vpnGatewayId;
+    }
+
+    public DeleteVpnRouteEntryRequest setRouteDest(String routeDest) {
+        this.routeDest = routeDest;
+        return this;
+    }
+    public String getRouteDest() {
+        return this.routeDest;
+    }
+
+    public DeleteVpnRouteEntryRequest setNextHop(String nextHop) {
+        this.nextHop = nextHop;
+        return this;
+    }
+    public String getNextHop() {
+        return this.nextHop;
+    }
+
+    public DeleteVpnRouteEntryRequest setWeight(Integer weight) {
+        this.weight = weight;
+        return this;
+    }
+    public Integer getWeight() {
+        return this.weight;
+    }
+
+    public DeleteVpnRouteEntryRequest setOverlayMode(String overlayMode) {
+        this.overlayMode = overlayMode;
+        return this;
+    }
+    public String getOverlayMode() {
+        return this.overlayMode;
+    }
+
 }

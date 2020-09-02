@@ -17,4 +17,20 @@ public class CreateIpv6EgressOnlyRuleResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateIpv6EgressOnlyRuleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateIpv6EgressOnlyRuleResponse setIpv6EgressRuleId(String ipv6EgressRuleId) {
+        this.ipv6EgressRuleId = ipv6EgressRuleId;
+        return this;
+    }
+    public String getIpv6EgressRuleId() {
+        return this.ipv6EgressRuleId;
+    }
+
 }

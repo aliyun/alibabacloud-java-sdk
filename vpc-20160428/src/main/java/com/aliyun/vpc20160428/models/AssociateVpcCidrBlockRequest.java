@@ -20,4 +20,28 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AssociateVpcCidrBlockRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AssociateVpcCidrBlockRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public AssociateVpcCidrBlockRequest setSecondaryCidrBlock(String secondaryCidrBlock) {
+        this.secondaryCidrBlock = secondaryCidrBlock;
+        return this;
+    }
+    public String getSecondaryCidrBlock() {
+        return this.secondaryCidrBlock;
+    }
+
 }

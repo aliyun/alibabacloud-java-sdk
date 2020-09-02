@@ -17,4 +17,20 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeactivateRouterInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeactivateRouterInterfaceRequest setRouterInterfaceId(String routerInterfaceId) {
+        this.routerInterfaceId = routerInterfaceId;
+        return this;
+    }
+    public String getRouterInterfaceId() {
+        return this.routerInterfaceId;
+    }
+
 }

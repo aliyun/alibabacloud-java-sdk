@@ -17,4 +17,20 @@ public class DeactiveFlowLogResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeactiveFlowLogResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeactiveFlowLogResponse setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
 }

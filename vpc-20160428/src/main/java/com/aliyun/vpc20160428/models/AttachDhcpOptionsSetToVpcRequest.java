@@ -27,4 +27,44 @@ public class AttachDhcpOptionsSetToVpcRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AttachDhcpOptionsSetToVpcRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AttachDhcpOptionsSetToVpcRequest setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
+        return this;
+    }
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
+    public AttachDhcpOptionsSetToVpcRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public AttachDhcpOptionsSetToVpcRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public AttachDhcpOptionsSetToVpcRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
 }

@@ -35,4 +35,68 @@ public class DescribeVpnSslServerLogsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeVpnSslServerLogsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVpnSslServerLogsRequest setVpnSslServerId(String vpnSslServerId) {
+        this.vpnSslServerId = vpnSslServerId;
+        return this;
+    }
+    public String getVpnSslServerId() {
+        return this.vpnSslServerId;
+    }
+
+    public DescribeVpnSslServerLogsRequest setSslVpnClientCertId(String sslVpnClientCertId) {
+        this.sslVpnClientCertId = sslVpnClientCertId;
+        return this;
+    }
+    public String getSslVpnClientCertId() {
+        return this.sslVpnClientCertId;
+    }
+
+    public DescribeVpnSslServerLogsRequest setFrom(Integer from) {
+        this.from = from;
+        return this;
+    }
+    public Integer getFrom() {
+        return this.from;
+    }
+
+    public DescribeVpnSslServerLogsRequest setTo(Integer to) {
+        this.to = to;
+        return this;
+    }
+    public Integer getTo() {
+        return this.to;
+    }
+
+    public DescribeVpnSslServerLogsRequest setMinutePeriod(Integer minutePeriod) {
+        this.minutePeriod = minutePeriod;
+        return this;
+    }
+    public Integer getMinutePeriod() {
+        return this.minutePeriod;
+    }
+
+    public DescribeVpnSslServerLogsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeVpnSslServerLogsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

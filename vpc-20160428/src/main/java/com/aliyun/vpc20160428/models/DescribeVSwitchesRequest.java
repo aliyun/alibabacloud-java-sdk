@@ -45,4 +45,100 @@ public class DescribeVSwitchesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeVSwitchesRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public DescribeVSwitchesRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public DescribeVSwitchesRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public DescribeVSwitchesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVSwitchesRequest setVSwitchName(String vSwitchName) {
+        this.vSwitchName = vSwitchName;
+        return this;
+    }
+    public String getVSwitchName() {
+        return this.vSwitchName;
+    }
+
+    public DescribeVSwitchesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public DescribeVSwitchesRequest setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
+    public DescribeVSwitchesRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
+    public DescribeVSwitchesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeVSwitchesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeVSwitchesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeVSwitchesRequest setVSwitchOwnerId(Long vSwitchOwnerId) {
+        this.vSwitchOwnerId = vSwitchOwnerId;
+        return this;
+    }
+    public Long getVSwitchOwnerId() {
+        return this.vSwitchOwnerId;
+    }
+
 }

@@ -29,6 +29,46 @@ public class DescribeCustomerGatewaysResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCustomerGatewaysResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCustomerGatewaysResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeCustomerGatewaysResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeCustomerGatewaysResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeCustomerGatewaysResponse setCustomerGateways(DescribeCustomerGatewaysResponseCustomerGateways customerGateways) {
+        this.customerGateways = customerGateways;
+        return this;
+    }
+    public DescribeCustomerGatewaysResponseCustomerGateways getCustomerGateways() {
+        return this.customerGateways;
+    }
+
     public static class DescribeCustomerGatewaysResponseCustomerGatewaysCustomerGateway extends TeaModel {
         @NameInMap("CustomerGatewayId")
         @Validation(required = true)
@@ -59,6 +99,54 @@ public class DescribeCustomerGatewaysResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeCustomerGatewaysResponseCustomerGatewaysCustomerGateway setCustomerGatewayId(String customerGatewayId) {
+            this.customerGatewayId = customerGatewayId;
+            return this;
+        }
+        public String getCustomerGatewayId() {
+            return this.customerGatewayId;
+        }
+
+        public DescribeCustomerGatewaysResponseCustomerGatewaysCustomerGateway setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeCustomerGatewaysResponseCustomerGatewaysCustomerGateway setIpAddress(String ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public String getIpAddress() {
+            return this.ipAddress;
+        }
+
+        public DescribeCustomerGatewaysResponseCustomerGatewaysCustomerGateway setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeCustomerGatewaysResponseCustomerGatewaysCustomerGateway setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeCustomerGatewaysResponseCustomerGatewaysCustomerGateway setAsn(Integer asn) {
+            this.asn = asn;
+            return this;
+        }
+        public Integer getAsn() {
+            return this.asn;
+        }
+
     }
 
     public static class DescribeCustomerGatewaysResponseCustomerGateways extends TeaModel {
@@ -69,6 +157,14 @@ public class DescribeCustomerGatewaysResponse extends TeaModel {
         public static DescribeCustomerGatewaysResponseCustomerGateways build(java.util.Map<String, ?> map) throws Exception {
             DescribeCustomerGatewaysResponseCustomerGateways self = new DescribeCustomerGatewaysResponseCustomerGateways();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCustomerGatewaysResponseCustomerGateways setCustomerGateway(java.util.List<DescribeCustomerGatewaysResponseCustomerGatewaysCustomerGateway> customerGateway) {
+            this.customerGateway = customerGateway;
+            return this;
+        }
+        public java.util.List<DescribeCustomerGatewaysResponseCustomerGatewaysCustomerGateway> getCustomerGateway() {
+            return this.customerGateway;
         }
 
     }

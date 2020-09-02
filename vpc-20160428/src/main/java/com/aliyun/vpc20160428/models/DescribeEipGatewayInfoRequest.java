@@ -17,4 +17,20 @@ public class DescribeEipGatewayInfoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeEipGatewayInfoRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeEipGatewayInfoRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

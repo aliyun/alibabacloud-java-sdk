@@ -39,4 +39,60 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreatePhysicalConnectionOccupancyOrderRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreatePhysicalConnectionOccupancyOrderRequest setPhysicalConnectionId(String physicalConnectionId) {
+        this.physicalConnectionId = physicalConnectionId;
+        return this;
+    }
+    public String getPhysicalConnectionId() {
+        return this.physicalConnectionId;
+    }
+
+    public CreatePhysicalConnectionOccupancyOrderRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public CreatePhysicalConnectionOccupancyOrderRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    public CreatePhysicalConnectionOccupancyOrderRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public CreatePhysicalConnectionOccupancyOrderRequest setPricingCycle(String pricingCycle) {
+        this.pricingCycle = pricingCycle;
+        return this;
+    }
+    public String getPricingCycle() {
+        return this.pricingCycle;
+    }
+
+    public CreatePhysicalConnectionOccupancyOrderRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

@@ -13,4 +13,12 @@ public class ModifyBgpGroupAttributeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyBgpGroupAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

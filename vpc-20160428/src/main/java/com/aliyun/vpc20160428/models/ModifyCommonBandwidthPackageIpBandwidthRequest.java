@@ -25,4 +25,36 @@ public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setEipId(String eipId) {
+        this.eipId = eipId;
+        return this;
+    }
+    public String getEipId() {
+        return this.eipId;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setBandwidth(String bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public String getBandwidth() {
+        return this.bandwidth;
+    }
+
 }

@@ -40,4 +40,84 @@ public class DescribeVpcsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeVpcsRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public DescribeVpcsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeVpcsRequest setVpcName(String vpcName) {
+        this.vpcName = vpcName;
+        return this;
+    }
+    public String getVpcName() {
+        return this.vpcName;
+    }
+
+    public DescribeVpcsRequest setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
+    public DescribeVpcsRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public DescribeVpcsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeVpcsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeVpcsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeVpcsRequest setVpcOwnerId(Long vpcOwnerId) {
+        this.vpcOwnerId = vpcOwnerId;
+        return this;
+    }
+    public Long getVpcOwnerId() {
+        return this.vpcOwnerId;
+    }
+
+    public DescribeVpcsRequest setDhcpOptionsSetId(String dhcpOptionsSetId) {
+        this.dhcpOptionsSetId = dhcpOptionsSetId;
+        return this;
+    }
+    public String getDhcpOptionsSetId() {
+        return this.dhcpOptionsSetId;
+    }
+
 }

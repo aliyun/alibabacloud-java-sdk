@@ -17,4 +17,20 @@ public class CreateIPv6TranslatorEntryResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateIPv6TranslatorEntryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateIPv6TranslatorEntryResponse setIpv6TranslatorEntryId(String ipv6TranslatorEntryId) {
+        this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
+        return this;
+    }
+    public String getIpv6TranslatorEntryId() {
+        return this.ipv6TranslatorEntryId;
+    }
+
 }

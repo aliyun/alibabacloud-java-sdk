@@ -24,4 +24,36 @@ public class DeleteSnatEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteSnatEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteSnatEntryRequest setSnatTableId(String snatTableId) {
+        this.snatTableId = snatTableId;
+        return this;
+    }
+    public String getSnatTableId() {
+        return this.snatTableId;
+    }
+
+    public DeleteSnatEntryRequest setSnatEntryId(String snatEntryId) {
+        this.snatEntryId = snatEntryId;
+        return this;
+    }
+    public String getSnatEntryId() {
+        return this.snatEntryId;
+    }
+
+    public DeleteSnatEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

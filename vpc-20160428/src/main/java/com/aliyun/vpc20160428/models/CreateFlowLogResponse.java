@@ -21,4 +21,28 @@ public class CreateFlowLogResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateFlowLogResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateFlowLogResponse setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
+    public CreateFlowLogResponse setFlowLogId(String flowLogId) {
+        this.flowLogId = flowLogId;
+        return this;
+    }
+    public String getFlowLogId() {
+        return this.flowLogId;
+    }
+
 }

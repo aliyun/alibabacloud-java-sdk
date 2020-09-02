@@ -21,4 +21,28 @@ public class CreateRouterInterfaceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateRouterInterfaceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateRouterInterfaceResponse setRouterInterfaceId(String routerInterfaceId) {
+        this.routerInterfaceId = routerInterfaceId;
+        return this;
+    }
+    public String getRouterInterfaceId() {
+        return this.routerInterfaceId;
+    }
+
+    public CreateRouterInterfaceResponse setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
 }

@@ -31,4 +31,60 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDhcpOptionsSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateDhcpOptionsSetRequest setDomainNameServers(String domainNameServers) {
+        this.domainNameServers = domainNameServers;
+        return this;
+    }
+    public String getDomainNameServers() {
+        return this.domainNameServers;
+    }
+
+    public CreateDhcpOptionsSetRequest setDhcpOptionsSetName(String dhcpOptionsSetName) {
+        this.dhcpOptionsSetName = dhcpOptionsSetName;
+        return this;
+    }
+    public String getDhcpOptionsSetName() {
+        return this.dhcpOptionsSetName;
+    }
+
+    public CreateDhcpOptionsSetRequest setDhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
+        this.dhcpOptionsSetDescription = dhcpOptionsSetDescription;
+        return this;
+    }
+    public String getDhcpOptionsSetDescription() {
+        return this.dhcpOptionsSetDescription;
+    }
+
+    public CreateDhcpOptionsSetRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public CreateDhcpOptionsSetRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateDhcpOptionsSetRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
 }

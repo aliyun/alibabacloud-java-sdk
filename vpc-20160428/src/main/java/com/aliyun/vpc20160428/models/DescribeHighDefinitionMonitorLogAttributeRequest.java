@@ -20,4 +20,28 @@ public class DescribeHighDefinitionMonitorLogAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeHighDefinitionMonitorLogAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeHighDefinitionMonitorLogAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeHighDefinitionMonitorLogAttributeRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
 }

@@ -16,4 +16,20 @@ public class ReleaseEipAddressRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ReleaseEipAddressRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ReleaseEipAddressRequest setAllocationId(String allocationId) {
+        this.allocationId = allocationId;
+        return this;
+    }
+    public String getAllocationId() {
+        return this.allocationId;
+    }
+
 }

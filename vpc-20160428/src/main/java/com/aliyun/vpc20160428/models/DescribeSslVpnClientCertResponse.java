@@ -57,4 +57,100 @@ public class DescribeSslVpnClientCertResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSslVpnClientCertResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSslVpnClientCertResponse setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSslVpnClientCertResponse setSslVpnClientCertId(String sslVpnClientCertId) {
+        this.sslVpnClientCertId = sslVpnClientCertId;
+        return this;
+    }
+    public String getSslVpnClientCertId() {
+        return this.sslVpnClientCertId;
+    }
+
+    public DescribeSslVpnClientCertResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeSslVpnClientCertResponse setSslVpnServerId(String sslVpnServerId) {
+        this.sslVpnServerId = sslVpnServerId;
+        return this;
+    }
+    public String getSslVpnServerId() {
+        return this.sslVpnServerId;
+    }
+
+    public DescribeSslVpnClientCertResponse setCaCert(String caCert) {
+        this.caCert = caCert;
+        return this;
+    }
+    public String getCaCert() {
+        return this.caCert;
+    }
+
+    public DescribeSslVpnClientCertResponse setClientCert(String clientCert) {
+        this.clientCert = clientCert;
+        return this;
+    }
+    public String getClientCert() {
+        return this.clientCert;
+    }
+
+    public DescribeSslVpnClientCertResponse setClientKey(String clientKey) {
+        this.clientKey = clientKey;
+        return this;
+    }
+    public String getClientKey() {
+        return this.clientKey;
+    }
+
+    public DescribeSslVpnClientCertResponse setClientConfig(String clientConfig) {
+        this.clientConfig = clientConfig;
+        return this;
+    }
+    public String getClientConfig() {
+        return this.clientConfig;
+    }
+
+    public DescribeSslVpnClientCertResponse setCreateTime(Long createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public Long getCreateTime() {
+        return this.createTime;
+    }
+
+    public DescribeSslVpnClientCertResponse setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeSslVpnClientCertResponse setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
 }

@@ -22,4 +22,36 @@ public class DescribeCustomerGatewaysRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCustomerGatewaysRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeCustomerGatewaysRequest setCustomerGatewayId(String customerGatewayId) {
+        this.customerGatewayId = customerGatewayId;
+        return this;
+    }
+    public String getCustomerGatewayId() {
+        return this.customerGatewayId;
+    }
+
+    public DescribeCustomerGatewaysRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeCustomerGatewaysRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

@@ -27,4 +27,44 @@ public class ModifyIPv6TranslatorBandwidthRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIPv6TranslatorBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyIPv6TranslatorBandwidthRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyIPv6TranslatorBandwidthRequest setIpv6TranslatorId(String ipv6TranslatorId) {
+        this.ipv6TranslatorId = ipv6TranslatorId;
+        return this;
+    }
+    public String getIpv6TranslatorId() {
+        return this.ipv6TranslatorId;
+    }
+
+    public ModifyIPv6TranslatorBandwidthRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public ModifyIPv6TranslatorBandwidthRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
 }

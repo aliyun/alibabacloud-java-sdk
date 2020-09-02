@@ -31,4 +31,60 @@ public class ModifyVpcAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyVpcAttributeRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public ModifyVpcAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyVpcAttributeRequest setVpcName(String vpcName) {
+        this.vpcName = vpcName;
+        return this;
+    }
+    public String getVpcName() {
+        return this.vpcName;
+    }
+
+    public ModifyVpcAttributeRequest setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
+        return this;
+    }
+    public String getCidrBlock() {
+        return this.cidrBlock;
+    }
+
+    public ModifyVpcAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyVpcAttributeRequest setEnableIPv6(Boolean enableIPv6) {
+        this.enableIPv6 = enableIPv6;
+        return this;
+    }
+    public Boolean getEnableIPv6() {
+        return this.enableIPv6;
+    }
+
+    public ModifyVpcAttributeRequest setIpv6CidrBlock(String ipv6CidrBlock) {
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        return this;
+    }
+    public String getIpv6CidrBlock() {
+        return this.ipv6CidrBlock;
+    }
+
 }

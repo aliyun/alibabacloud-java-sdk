@@ -17,4 +17,20 @@ public class ConvertBandwidthPackageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ConvertBandwidthPackageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ConvertBandwidthPackageResponse setConvertInstanceId(String convertInstanceId) {
+        this.convertInstanceId = convertInstanceId;
+        return this;
+    }
+    public String getConvertInstanceId() {
+        return this.convertInstanceId;
+    }
+
 }

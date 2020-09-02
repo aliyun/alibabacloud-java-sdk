@@ -17,4 +17,20 @@ public class DescribeSslVpnClientCertRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSslVpnClientCertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSslVpnClientCertRequest setSslVpnClientCertId(String sslVpnClientCertId) {
+        this.sslVpnClientCertId = sslVpnClientCertId;
+        return this;
+    }
+    public String getSslVpnClientCertId() {
+        return this.sslVpnClientCertId;
+    }
+
 }

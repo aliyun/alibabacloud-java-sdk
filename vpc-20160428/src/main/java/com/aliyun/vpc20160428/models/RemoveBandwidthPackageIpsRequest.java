@@ -24,4 +24,36 @@ public class RemoveBandwidthPackageIpsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveBandwidthPackageIpsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RemoveBandwidthPackageIpsRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    public RemoveBandwidthPackageIpsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public RemoveBandwidthPackageIpsRequest setRemovedIpAddresses(java.util.List<String> removedIpAddresses) {
+        this.removedIpAddresses = removedIpAddresses;
+        return this;
+    }
+    public java.util.List<String> getRemovedIpAddresses() {
+        return this.removedIpAddresses;
+    }
+
 }

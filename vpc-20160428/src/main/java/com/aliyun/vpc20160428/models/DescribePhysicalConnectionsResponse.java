@@ -34,6 +34,46 @@ public class DescribePhysicalConnectionsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribePhysicalConnectionsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribePhysicalConnectionsResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribePhysicalConnectionsResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribePhysicalConnectionsResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribePhysicalConnectionsResponse setPhysicalConnectionSet(DescribePhysicalConnectionsResponsePhysicalConnectionSet physicalConnectionSet) {
+        this.physicalConnectionSet = physicalConnectionSet;
+        return this;
+    }
+    public DescribePhysicalConnectionsResponsePhysicalConnectionSet getPhysicalConnectionSet() {
+        return this.physicalConnectionSet;
+    }
+
     public static class DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType extends TeaModel {
         // description: The ID of the physical connection; 
         @NameInMap("PhysicalConnectionId")
@@ -165,6 +205,206 @@ public class DescribePhysicalConnectionsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setPhysicalConnectionId(String physicalConnectionId) {
+            this.physicalConnectionId = physicalConnectionId;
+            return this;
+        }
+        public String getPhysicalConnectionId() {
+            return this.physicalConnectionId;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setAccessPointId(String accessPointId) {
+            this.accessPointId = accessPointId;
+            return this;
+        }
+        public String getAccessPointId() {
+            return this.accessPointId;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setEnabledTime(String enabledTime) {
+            this.enabledTime = enabledTime;
+            return this;
+        }
+        public String getEnabledTime() {
+            return this.enabledTime;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setLineOperator(String lineOperator) {
+            this.lineOperator = lineOperator;
+            return this;
+        }
+        public String getLineOperator() {
+            return this.lineOperator;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setSpec(String spec) {
+            this.spec = spec;
+            return this;
+        }
+        public String getSpec() {
+            return this.spec;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setPeerLocation(String peerLocation) {
+            this.peerLocation = peerLocation;
+            return this;
+        }
+        public String getPeerLocation() {
+            return this.peerLocation;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setPortType(String portType) {
+            this.portType = portType;
+            return this;
+        }
+        public String getPortType() {
+            return this.portType;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setRedundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
+            this.redundantPhysicalConnectionId = redundantPhysicalConnectionId;
+            return this;
+        }
+        public String getRedundantPhysicalConnectionId() {
+            return this.redundantPhysicalConnectionId;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setAdLocation(String adLocation) {
+            this.adLocation = adLocation;
+            return this;
+        }
+        public String getAdLocation() {
+            return this.adLocation;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setPortNumber(String portNumber) {
+            this.portNumber = portNumber;
+            return this;
+        }
+        public String getPortNumber() {
+            return this.portNumber;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setCircuitCode(String circuitCode) {
+            this.circuitCode = circuitCode;
+            return this;
+        }
+        public String getCircuitCode() {
+            return this.circuitCode;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setBandwidth(Long bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Long getBandwidth() {
+            return this.bandwidth;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setLoaStatus(String loaStatus) {
+            this.loaStatus = loaStatus;
+            return this;
+        }
+        public String getLoaStatus() {
+            return this.loaStatus;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setHasReservationData(String hasReservationData) {
+            this.hasReservationData = hasReservationData;
+            return this;
+        }
+        public String getHasReservationData() {
+            return this.hasReservationData;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setReservationInternetChargeType(String reservationInternetChargeType) {
+            this.reservationInternetChargeType = reservationInternetChargeType;
+            return this;
+        }
+        public String getReservationInternetChargeType() {
+            return this.reservationInternetChargeType;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setReservationActiveTime(String reservationActiveTime) {
+            this.reservationActiveTime = reservationActiveTime;
+            return this;
+        }
+        public String getReservationActiveTime() {
+            return this.reservationActiveTime;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setReservationOrderType(String reservationOrderType) {
+            this.reservationOrderType = reservationOrderType;
+            return this;
+        }
+        public String getReservationOrderType() {
+            return this.reservationOrderType;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
     }
 
     public static class DescribePhysicalConnectionsResponsePhysicalConnectionSet extends TeaModel {
@@ -175,6 +415,14 @@ public class DescribePhysicalConnectionsResponse extends TeaModel {
         public static DescribePhysicalConnectionsResponsePhysicalConnectionSet build(java.util.Map<String, ?> map) throws Exception {
             DescribePhysicalConnectionsResponsePhysicalConnectionSet self = new DescribePhysicalConnectionsResponsePhysicalConnectionSet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePhysicalConnectionsResponsePhysicalConnectionSet setPhysicalConnectionType(java.util.List<DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType> physicalConnectionType) {
+            this.physicalConnectionType = physicalConnectionType;
+            return this;
+        }
+        public java.util.List<DescribePhysicalConnectionsResponsePhysicalConnectionSetPhysicalConnectionType> getPhysicalConnectionType() {
+            return this.physicalConnectionType;
         }
 
     }

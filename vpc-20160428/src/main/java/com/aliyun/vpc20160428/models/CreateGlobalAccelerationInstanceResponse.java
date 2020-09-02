@@ -21,4 +21,28 @@ public class CreateGlobalAccelerationInstanceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateGlobalAccelerationInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateGlobalAccelerationInstanceResponse setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
+        this.globalAccelerationInstanceId = globalAccelerationInstanceId;
+        return this;
+    }
+    public String getGlobalAccelerationInstanceId() {
+        return this.globalAccelerationInstanceId;
+    }
+
+    public CreateGlobalAccelerationInstanceResponse setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    public String getIpAddress() {
+        return this.ipAddress;
+    }
+
 }

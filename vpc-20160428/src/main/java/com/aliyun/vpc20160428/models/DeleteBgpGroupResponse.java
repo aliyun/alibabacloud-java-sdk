@@ -13,4 +13,12 @@ public class DeleteBgpGroupResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteBgpGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

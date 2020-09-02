@@ -21,6 +21,30 @@ public class ListTagResourcesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListTagResourcesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListTagResourcesResponse setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagResourcesResponse setTagResources(ListTagResourcesResponseTagResources tagResources) {
+        this.tagResources = tagResources;
+        return this;
+    }
+    public ListTagResourcesResponseTagResources getTagResources() {
+        return this.tagResources;
+    }
+
     public static class ListTagResourcesResponseTagResourcesTagResource extends TeaModel {
         @NameInMap("TagKey")
         @Validation(required = true)
@@ -47,6 +71,46 @@ public class ListTagResourcesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListTagResourcesResponseTagResourcesTagResource setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListTagResourcesResponseTagResourcesTagResource setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public ListTagResourcesResponseTagResourcesTagResource setResourcId(String resourcId) {
+            this.resourcId = resourcId;
+            return this;
+        }
+        public String getResourcId() {
+            return this.resourcId;
+        }
+
+        public ListTagResourcesResponseTagResourcesTagResource setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListTagResourcesResponseTagResourcesTagResource setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
     }
 
     public static class ListTagResourcesResponseTagResources extends TeaModel {
@@ -57,6 +121,14 @@ public class ListTagResourcesResponse extends TeaModel {
         public static ListTagResourcesResponseTagResources build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesResponseTagResources self = new ListTagResourcesResponseTagResources();
             return TeaModel.build(map, self);
+        }
+
+        public ListTagResourcesResponseTagResources setTagResource(java.util.List<ListTagResourcesResponseTagResourcesTagResource> tagResource) {
+            this.tagResource = tagResource;
+            return this;
+        }
+        public java.util.List<ListTagResourcesResponseTagResourcesTagResource> getTagResource() {
+            return this.tagResource;
         }
 
     }

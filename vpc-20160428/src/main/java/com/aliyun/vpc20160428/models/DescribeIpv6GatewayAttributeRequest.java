@@ -17,4 +17,20 @@ public class DescribeIpv6GatewayAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeIpv6GatewayAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeIpv6GatewayAttributeRequest setIpv6GatewayId(String ipv6GatewayId) {
+        this.ipv6GatewayId = ipv6GatewayId;
+        return this;
+    }
+    public String getIpv6GatewayId() {
+        return this.ipv6GatewayId;
+    }
+
 }

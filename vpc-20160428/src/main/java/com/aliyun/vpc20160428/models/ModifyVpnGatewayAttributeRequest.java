@@ -29,4 +29,52 @@ public class ModifyVpnGatewayAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyVpnGatewayAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyVpnGatewayAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyVpnGatewayAttributeRequest setVpnGatewayId(String vpnGatewayId) {
+        this.vpnGatewayId = vpnGatewayId;
+        return this;
+    }
+    public String getVpnGatewayId() {
+        return this.vpnGatewayId;
+    }
+
+    public ModifyVpnGatewayAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyVpnGatewayAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyVpnGatewayAttributeRequest setAutoPropagate(Boolean autoPropagate) {
+        this.autoPropagate = autoPropagate;
+        return this;
+    }
+    public Boolean getAutoPropagate() {
+        return this.autoPropagate;
+    }
+
 }

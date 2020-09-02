@@ -25,4 +25,36 @@ public class ModifyCommonBandwidthPackagePayTypeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyCommonBandwidthPackagePayTypeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyCommonBandwidthPackagePayTypeResponse setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    public ModifyCommonBandwidthPackagePayTypeResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ModifyCommonBandwidthPackagePayTypeResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
 }

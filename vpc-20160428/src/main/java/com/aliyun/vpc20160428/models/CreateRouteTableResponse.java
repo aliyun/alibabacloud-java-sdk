@@ -17,4 +17,20 @@ public class CreateRouteTableResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateRouteTableResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateRouteTableResponse setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
 }

@@ -17,4 +17,20 @@ public class DeleteRouteTableRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteRouteTableRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteRouteTableRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
 }

@@ -17,6 +17,22 @@ public class DescribeEipMonitorDataResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeEipMonitorDataResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeEipMonitorDataResponse setEipMonitorDatas(DescribeEipMonitorDataResponseEipMonitorDatas eipMonitorDatas) {
+        this.eipMonitorDatas = eipMonitorDatas;
+        return this;
+    }
+    public DescribeEipMonitorDataResponseEipMonitorDatas getEipMonitorDatas() {
+        return this.eipMonitorDatas;
+    }
+
     public static class DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData extends TeaModel {
         @NameInMap("EipRX")
         @Validation(required = true)
@@ -47,6 +63,54 @@ public class DescribeEipMonitorDataResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData setEipRX(Long eipRX) {
+            this.eipRX = eipRX;
+            return this;
+        }
+        public Long getEipRX() {
+            return this.eipRX;
+        }
+
+        public DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData setEipTX(Long eipTX) {
+            this.eipTX = eipTX;
+            return this;
+        }
+        public Long getEipTX() {
+            return this.eipTX;
+        }
+
+        public DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData setEipFlow(Integer eipFlow) {
+            this.eipFlow = eipFlow;
+            return this;
+        }
+        public Integer getEipFlow() {
+            return this.eipFlow;
+        }
+
+        public DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData setEipBandwidth(Integer eipBandwidth) {
+            this.eipBandwidth = eipBandwidth;
+            return this;
+        }
+        public Integer getEipBandwidth() {
+            return this.eipBandwidth;
+        }
+
+        public DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData setEipPackets(Integer eipPackets) {
+            this.eipPackets = eipPackets;
+            return this;
+        }
+        public Integer getEipPackets() {
+            return this.eipPackets;
+        }
+
+        public DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
+        }
+
     }
 
     public static class DescribeEipMonitorDataResponseEipMonitorDatas extends TeaModel {
@@ -57,6 +121,14 @@ public class DescribeEipMonitorDataResponse extends TeaModel {
         public static DescribeEipMonitorDataResponseEipMonitorDatas build(java.util.Map<String, ?> map) throws Exception {
             DescribeEipMonitorDataResponseEipMonitorDatas self = new DescribeEipMonitorDataResponseEipMonitorDatas();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEipMonitorDataResponseEipMonitorDatas setEipMonitorData(java.util.List<DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData> eipMonitorData) {
+            this.eipMonitorData = eipMonitorData;
+            return this;
+        }
+        public java.util.List<DescribeEipMonitorDataResponseEipMonitorDatasEipMonitorData> getEipMonitorData() {
+            return this.eipMonitorData;
         }
 
     }

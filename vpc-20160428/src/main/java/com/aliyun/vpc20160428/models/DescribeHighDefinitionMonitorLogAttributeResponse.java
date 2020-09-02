@@ -33,4 +33,52 @@ public class DescribeHighDefinitionMonitorLogAttributeResponse extends TeaModel 
         return TeaModel.build(map, self);
     }
 
+    public DescribeHighDefinitionMonitorLogAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeHighDefinitionMonitorLogAttributeResponse setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
+    public DescribeHighDefinitionMonitorLogAttributeResponse setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeHighDefinitionMonitorLogAttributeResponse setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public DescribeHighDefinitionMonitorLogAttributeResponse setLogProject(String logProject) {
+        this.logProject = logProject;
+        return this;
+    }
+    public String getLogProject() {
+        return this.logProject;
+    }
+
+    public DescribeHighDefinitionMonitorLogAttributeResponse setLogStore(String logStore) {
+        this.logStore = logStore;
+        return this;
+    }
+    public String getLogStore() {
+        return this.logStore;
+    }
+
 }

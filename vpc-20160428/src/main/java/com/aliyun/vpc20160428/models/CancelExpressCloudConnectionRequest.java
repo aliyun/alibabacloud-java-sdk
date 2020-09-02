@@ -17,4 +17,20 @@ public class CancelExpressCloudConnectionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelExpressCloudConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CancelExpressCloudConnectionRequest setEccId(String eccId) {
+        this.eccId = eccId;
+        return this;
+    }
+    public String getEccId() {
+        return this.eccId;
+    }
+
 }

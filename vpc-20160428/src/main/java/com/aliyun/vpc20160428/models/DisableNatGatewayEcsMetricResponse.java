@@ -13,4 +13,12 @@ public class DisableNatGatewayEcsMetricResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DisableNatGatewayEcsMetricResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

@@ -21,4 +21,28 @@ public class CreateSslVpnServerResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSslVpnServerResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateSslVpnServerResponse setSslVpnServerId(String sslVpnServerId) {
+        this.sslVpnServerId = sslVpnServerId;
+        return this;
+    }
+    public String getSslVpnServerId() {
+        return this.sslVpnServerId;
+    }
+
+    public CreateSslVpnServerResponse setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
 }

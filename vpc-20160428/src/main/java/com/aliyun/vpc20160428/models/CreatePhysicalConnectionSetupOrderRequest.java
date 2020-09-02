@@ -40,4 +40,60 @@ public class CreatePhysicalConnectionSetupOrderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreatePhysicalConnectionSetupOrderRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreatePhysicalConnectionSetupOrderRequest setAccessPointId(String accessPointId) {
+        this.accessPointId = accessPointId;
+        return this;
+    }
+    public String getAccessPointId() {
+        return this.accessPointId;
+    }
+
+    public CreatePhysicalConnectionSetupOrderRequest setLineOperator(String lineOperator) {
+        this.lineOperator = lineOperator;
+        return this;
+    }
+    public String getLineOperator() {
+        return this.lineOperator;
+    }
+
+    public CreatePhysicalConnectionSetupOrderRequest setPortType(String portType) {
+        this.portType = portType;
+        return this;
+    }
+    public String getPortType() {
+        return this.portType;
+    }
+
+    public CreatePhysicalConnectionSetupOrderRequest setRedundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
+        this.redundantPhysicalConnectionId = redundantPhysicalConnectionId;
+        return this;
+    }
+    public String getRedundantPhysicalConnectionId() {
+        return this.redundantPhysicalConnectionId;
+    }
+
+    public CreatePhysicalConnectionSetupOrderRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public CreatePhysicalConnectionSetupOrderRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

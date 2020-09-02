@@ -54,6 +54,86 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ApplyPhysicalConnectionLOARequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ApplyPhysicalConnectionLOARequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ApplyPhysicalConnectionLOARequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public ApplyPhysicalConnectionLOARequest setPeerLocation(String peerLocation) {
+        this.peerLocation = peerLocation;
+        return this;
+    }
+    public String getPeerLocation() {
+        return this.peerLocation;
+    }
+
+    public ApplyPhysicalConnectionLOARequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ApplyPhysicalConnectionLOARequest setCompanyName(String companyName) {
+        this.companyName = companyName;
+        return this;
+    }
+    public String getCompanyName() {
+        return this.companyName;
+    }
+
+    public ApplyPhysicalConnectionLOARequest setLineType(String lineType) {
+        this.lineType = lineType;
+        return this;
+    }
+    public String getLineType() {
+        return this.lineType;
+    }
+
+    public ApplyPhysicalConnectionLOARequest setSi(String si) {
+        this.si = si;
+        return this;
+    }
+    public String getSi() {
+        return this.si;
+    }
+
+    public ApplyPhysicalConnectionLOARequest setConstructionTime(String constructionTime) {
+        this.constructionTime = constructionTime;
+        return this;
+    }
+    public String getConstructionTime() {
+        return this.constructionTime;
+    }
+
+    public ApplyPhysicalConnectionLOARequest setPMInfo(java.util.List<ApplyPhysicalConnectionLOARequestPMInfo> PMInfo) {
+        this.PMInfo = PMInfo;
+        return this;
+    }
+    public java.util.List<ApplyPhysicalConnectionLOARequestPMInfo> getPMInfo() {
+        return this.PMInfo;
+    }
+
     public static class ApplyPhysicalConnectionLOARequestPMInfo extends TeaModel {
         @NameInMap("PMName")
         @Validation(required = true)
@@ -78,6 +158,46 @@ public class ApplyPhysicalConnectionLOARequest extends TeaModel {
         public static ApplyPhysicalConnectionLOARequestPMInfo build(java.util.Map<String, ?> map) throws Exception {
             ApplyPhysicalConnectionLOARequestPMInfo self = new ApplyPhysicalConnectionLOARequestPMInfo();
             return TeaModel.build(map, self);
+        }
+
+        public ApplyPhysicalConnectionLOARequestPMInfo setPMName(String PMName) {
+            this.PMName = PMName;
+            return this;
+        }
+        public String getPMName() {
+            return this.PMName;
+        }
+
+        public ApplyPhysicalConnectionLOARequestPMInfo setPMContactInfo(String PMContactInfo) {
+            this.PMContactInfo = PMContactInfo;
+            return this;
+        }
+        public String getPMContactInfo() {
+            return this.PMContactInfo;
+        }
+
+        public ApplyPhysicalConnectionLOARequestPMInfo setPMCertificateType(String PMCertificateType) {
+            this.PMCertificateType = PMCertificateType;
+            return this;
+        }
+        public String getPMCertificateType() {
+            return this.PMCertificateType;
+        }
+
+        public ApplyPhysicalConnectionLOARequestPMInfo setPMCertificateNo(String PMCertificateNo) {
+            this.PMCertificateNo = PMCertificateNo;
+            return this;
+        }
+        public String getPMCertificateNo() {
+            return this.PMCertificateNo;
+        }
+
+        public ApplyPhysicalConnectionLOARequestPMInfo setPMGender(String PMGender) {
+            this.PMGender = PMGender;
+            return this;
+        }
+        public String getPMGender() {
+            return this.PMGender;
         }
 
     }

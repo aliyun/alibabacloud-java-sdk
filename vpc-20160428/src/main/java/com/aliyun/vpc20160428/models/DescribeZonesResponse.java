@@ -17,6 +17,22 @@ public class DescribeZonesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeZonesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeZonesResponse setZones(DescribeZonesResponseZones zones) {
+        this.zones = zones;
+        return this;
+    }
+    public DescribeZonesResponseZones getZones() {
+        return this.zones;
+    }
+
     public static class DescribeZonesResponseZonesZone extends TeaModel {
         @NameInMap("ZoneId")
         @Validation(required = true)
@@ -31,6 +47,22 @@ public class DescribeZonesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeZonesResponseZonesZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeZonesResponseZonesZone setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
     }
 
     public static class DescribeZonesResponseZones extends TeaModel {
@@ -41,6 +73,14 @@ public class DescribeZonesResponse extends TeaModel {
         public static DescribeZonesResponseZones build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseZones self = new DescribeZonesResponseZones();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeZonesResponseZones setZone(java.util.List<DescribeZonesResponseZonesZone> zone) {
+            this.zone = zone;
+            return this;
+        }
+        public java.util.List<DescribeZonesResponseZonesZone> getZone() {
+            return this.zone;
         }
 
     }

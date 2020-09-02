@@ -26,4 +26,44 @@ public class ModifyIpv6InternetBandwidthRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyIpv6InternetBandwidthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyIpv6InternetBandwidthRequest setIpv6AddressId(String ipv6AddressId) {
+        this.ipv6AddressId = ipv6AddressId;
+        return this;
+    }
+    public String getIpv6AddressId() {
+        return this.ipv6AddressId;
+    }
+
+    public ModifyIpv6InternetBandwidthRequest setIpv6InternetBandwidthId(String ipv6InternetBandwidthId) {
+        this.ipv6InternetBandwidthId = ipv6InternetBandwidthId;
+        return this;
+    }
+    public String getIpv6InternetBandwidthId() {
+        return this.ipv6InternetBandwidthId;
+    }
+
+    public ModifyIpv6InternetBandwidthRequest setBandwidth(Long bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Long getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public ModifyIpv6InternetBandwidthRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

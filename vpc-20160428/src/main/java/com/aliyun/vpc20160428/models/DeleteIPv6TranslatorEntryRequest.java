@@ -22,4 +22,36 @@ public class DeleteIPv6TranslatorEntryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteIPv6TranslatorEntryRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteIPv6TranslatorEntryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteIPv6TranslatorEntryRequest setIpv6TranslatorEntryId(String ipv6TranslatorEntryId) {
+        this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
+        return this;
+    }
+    public String getIpv6TranslatorEntryId() {
+        return this.ipv6TranslatorEntryId;
+    }
+
+    public DeleteIPv6TranslatorEntryRequest setIpv6TranslatorId(String ipv6TranslatorId) {
+        this.ipv6TranslatorId = ipv6TranslatorId;
+        return this;
+    }
+    public String getIpv6TranslatorId() {
+        return this.ipv6TranslatorId;
+    }
+
 }

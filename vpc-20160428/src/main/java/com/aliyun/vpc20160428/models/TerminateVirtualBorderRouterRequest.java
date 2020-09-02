@@ -20,4 +20,28 @@ public class TerminateVirtualBorderRouterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TerminateVirtualBorderRouterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public TerminateVirtualBorderRouterRequest setVbrId(String vbrId) {
+        this.vbrId = vbrId;
+        return this;
+    }
+    public String getVbrId() {
+        return this.vbrId;
+    }
+
+    public TerminateVirtualBorderRouterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

@@ -27,4 +27,44 @@ public class ModifyNatGatewaySpecRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyNatGatewaySpecRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyNatGatewaySpecRequest setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
+    public ModifyNatGatewaySpecRequest setSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    public String getSpec() {
+        return this.spec;
+    }
+
+    public ModifyNatGatewaySpecRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public ModifyNatGatewaySpecRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }
