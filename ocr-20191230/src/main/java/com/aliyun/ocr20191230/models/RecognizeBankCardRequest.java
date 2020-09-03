@@ -13,4 +13,12 @@ public class RecognizeBankCardRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeBankCardRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

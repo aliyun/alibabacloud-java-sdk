@@ -21,4 +21,28 @@ public class TrimDocumentRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TrimDocumentRequest setFileURL(String fileURL) {
+        this.fileURL = fileURL;
+        return this;
+    }
+    public String getFileURL() {
+        return this.fileURL;
+    }
+
+    public TrimDocumentRequest setFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    public String getFileType() {
+        return this.fileType;
+    }
+
+    public TrimDocumentRequest setOutputType(String outputType) {
+        this.outputType = outputType;
+        return this;
+    }
+    public String getOutputType() {
+        return this.outputType;
+    }
+
 }

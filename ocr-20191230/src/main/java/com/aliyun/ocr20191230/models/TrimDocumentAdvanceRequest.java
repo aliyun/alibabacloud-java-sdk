@@ -21,4 +21,28 @@ public class TrimDocumentAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TrimDocumentAdvanceRequest setFileURLObject(java.io.InputStream fileURLObject) {
+        this.fileURLObject = fileURLObject;
+        return this;
+    }
+    public java.io.InputStream getFileURLObject() {
+        return this.fileURLObject;
+    }
+
+    public TrimDocumentAdvanceRequest setFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    public String getFileType() {
+        return this.fileType;
+    }
+
+    public TrimDocumentAdvanceRequest setOutputType(String outputType) {
+        this.outputType = outputType;
+        return this;
+    }
+    public String getOutputType() {
+        return this.outputType;
+    }
+
 }

@@ -17,6 +17,22 @@ public class RecognizeVerificationcodeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeVerificationcodeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RecognizeVerificationcodeResponse setData(RecognizeVerificationcodeResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public RecognizeVerificationcodeResponseData getData() {
+        return this.data;
+    }
+
     public static class RecognizeVerificationcodeResponseData extends TeaModel {
         @NameInMap("Content")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class RecognizeVerificationcodeResponse extends TeaModel {
         public static RecognizeVerificationcodeResponseData build(java.util.Map<String, ?> map) throws Exception {
             RecognizeVerificationcodeResponseData self = new RecognizeVerificationcodeResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public RecognizeVerificationcodeResponseData setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
         }
 
     }

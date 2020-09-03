@@ -17,6 +17,22 @@ public class TrimDocumentResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TrimDocumentResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public TrimDocumentResponse setData(TrimDocumentResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public TrimDocumentResponseData getData() {
+        return this.data;
+    }
+
     public static class TrimDocumentResponseData extends TeaModel {
         @NameInMap("Content")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class TrimDocumentResponse extends TeaModel {
         public static TrimDocumentResponseData build(java.util.Map<String, ?> map) throws Exception {
             TrimDocumentResponseData self = new TrimDocumentResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public TrimDocumentResponseData setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
         }
 
     }

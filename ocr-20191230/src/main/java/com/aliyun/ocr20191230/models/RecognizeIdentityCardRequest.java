@@ -17,4 +17,20 @@ public class RecognizeIdentityCardRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeIdentityCardRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
+    public RecognizeIdentityCardRequest setSide(String side) {
+        this.side = side;
+        return this;
+    }
+    public String getSide() {
+        return this.side;
+    }
+
 }

@@ -13,4 +13,12 @@ public class RecognizeChinapassportRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeChinapassportRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

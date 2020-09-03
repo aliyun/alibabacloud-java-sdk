@@ -21,4 +21,28 @@ public class RecognizeCharacterAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeCharacterAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
+    public RecognizeCharacterAdvanceRequest setMinHeight(Integer minHeight) {
+        this.minHeight = minHeight;
+        return this;
+    }
+    public Integer getMinHeight() {
+        return this.minHeight;
+    }
+
+    public RecognizeCharacterAdvanceRequest setOutputProbability(Boolean outputProbability) {
+        this.outputProbability = outputProbability;
+        return this;
+    }
+    public Boolean getOutputProbability() {
+        return this.outputProbability;
+    }
+
 }

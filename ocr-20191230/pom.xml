@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ocr20191230</artifactId>
-  <version>0.0.5</version>
+  <version>0.0.6</version>
   <packaging>jar</packaging>
   <name>ocr20191230</name>
   <description>Aliyun OCR SDK for Java
@@ -96,7 +96,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-rpc</artifactId>
-      <version>0.0.13</version>
+      <version>0.0.14</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>
