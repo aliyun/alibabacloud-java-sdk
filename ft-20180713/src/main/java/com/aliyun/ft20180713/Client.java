@@ -61,8 +61,14 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
-    public TestFlowStrategy01Response testFlowStrategy01WithOptions(TestFlowStrategy01Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public TestFlowStrategy01Response testFlowStrategy01WithOptions(TestFlowStrategy01Request tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        TestFlowStrategy01ShrinkRequest request = new TestFlowStrategy01ShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.names)) {
+            request.namesShrink = com.aliyun.teautil.Common.toJSONString(tmp.names);
+        }
+
         return TeaModel.toModel(this.doRequest("TestFlowStrategy01", "HTTPS", "PUT", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new TestFlowStrategy01Response());
     }
 
@@ -71,8 +77,22 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.testFlowStrategy01WithOptions(request, runtime);
     }
 
-    public TestHttpApiResponse testHttpApiWithOptions(TestHttpApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public TestHttpApiResponse testHttpApiWithOptions(TestHttpApiRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        TestHttpApiShrinkRequest request = new TestHttpApiShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.stringValue)) {
+            request.stringValueShrink = com.aliyun.teautil.Common.toJSONString(tmp.stringValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.defaultValue)) {
+            request.defaultValueShrink = com.aliyun.teautil.Common.toJSONString(tmp.defaultValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.otherParam)) {
+            request.otherParamShrink = com.aliyun.teautil.Common.toJSONString(tmp.otherParam);
+        }
+
         return TeaModel.toModel(this.doRequest("TestHttpApi", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new TestHttpApiResponse());
     }
 
