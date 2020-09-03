@@ -21,4 +21,28 @@ public class RecognizeCharacterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeCharacterRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
+    public RecognizeCharacterRequest setMinHeight(Integer minHeight) {
+        this.minHeight = minHeight;
+        return this;
+    }
+    public Integer getMinHeight() {
+        return this.minHeight;
+    }
+
+    public RecognizeCharacterRequest setOutputProbability(Boolean outputProbability) {
+        this.outputProbability = outputProbability;
+        return this;
+    }
+    public Boolean getOutputProbability() {
+        return this.outputProbability;
+    }
+
 }

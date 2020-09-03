@@ -13,6 +13,14 @@ public class RecognizeQrCodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeQrCodeRequest setTasks(java.util.List<RecognizeQrCodeRequestTasks> tasks) {
+        this.tasks = tasks;
+        return this;
+    }
+    public java.util.List<RecognizeQrCodeRequestTasks> getTasks() {
+        return this.tasks;
+    }
+
     public static class RecognizeQrCodeRequestTasks extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -21,6 +29,14 @@ public class RecognizeQrCodeRequest extends TeaModel {
         public static RecognizeQrCodeRequestTasks build(java.util.Map<String, ?> map) throws Exception {
             RecognizeQrCodeRequestTasks self = new RecognizeQrCodeRequestTasks();
             return TeaModel.build(map, self);
+        }
+
+        public RecognizeQrCodeRequestTasks setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }

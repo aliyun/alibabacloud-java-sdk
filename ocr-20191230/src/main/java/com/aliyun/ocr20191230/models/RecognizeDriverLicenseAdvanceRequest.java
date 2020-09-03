@@ -17,4 +17,20 @@ public class RecognizeDriverLicenseAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeDriverLicenseAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
+    public RecognizeDriverLicenseAdvanceRequest setSide(String side) {
+        this.side = side;
+        return this;
+    }
+    public String getSide() {
+        return this.side;
+    }
+
 }

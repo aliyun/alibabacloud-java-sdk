@@ -13,4 +13,12 @@ public class RecognizeTaxiInvoiceAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeTaxiInvoiceAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
 }

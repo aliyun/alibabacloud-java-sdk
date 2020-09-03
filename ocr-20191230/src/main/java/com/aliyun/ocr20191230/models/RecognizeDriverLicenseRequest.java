@@ -17,4 +17,20 @@ public class RecognizeDriverLicenseRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeDriverLicenseRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
+    public RecognizeDriverLicenseRequest setSide(String side) {
+        this.side = side;
+        return this;
+    }
+    public String getSide() {
+        return this.side;
+    }
+
 }

@@ -17,4 +17,20 @@ public class RecognizeVATInvoiceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeVATInvoiceRequest setFileURL(String fileURL) {
+        this.fileURL = fileURL;
+        return this;
+    }
+    public String getFileURL() {
+        return this.fileURL;
+    }
+
+    public RecognizeVATInvoiceRequest setFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    public String getFileType() {
+        return this.fileType;
+    }
+
 }

@@ -13,4 +13,12 @@ public class RecognizeTakeoutOrderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeTakeoutOrderRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

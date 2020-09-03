@@ -13,4 +13,12 @@ public class RecognizeBusinessCardRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeBusinessCardRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }
