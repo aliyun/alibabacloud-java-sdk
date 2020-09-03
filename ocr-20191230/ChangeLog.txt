@@ -1,3 +1,6 @@
+2020-09-03 Version: 0.0.7
+- Fix ocr-business java sdk bug.
+
 2020-09-03 Version: 0.0.6
 - Fix ocr-business java sdk bug.
 
