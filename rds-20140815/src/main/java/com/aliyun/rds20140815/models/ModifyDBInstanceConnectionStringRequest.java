@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -32,12 +20,41 @@ public class ModifyDBInstanceConnectionStringRequest extends TeaModel {
     @Validation(required = true)
     public String port;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ModifyDBInstanceConnectionStringRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConnectionStringRequest self = new ModifyDBInstanceConnectionStringRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setCurrentConnectionString(String currentConnectionString) {
+        this.currentConnectionString = currentConnectionString;
+        return this;
+    }
+    public String getCurrentConnectionString() {
+        return this.currentConnectionString;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setConnectionStringPrefix(String connectionStringPrefix) {
+        this.connectionStringPrefix = connectionStringPrefix;
+        return this;
+    }
+    public String getConnectionStringPrefix() {
+        return this.connectionStringPrefix;
+    }
+
+    public ModifyDBInstanceConnectionStringRequest setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
     }
 
 }

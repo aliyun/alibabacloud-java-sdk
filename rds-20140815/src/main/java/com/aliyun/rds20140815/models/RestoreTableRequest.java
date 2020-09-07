@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RestoreTableRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -29,9 +17,6 @@ public class RestoreTableRequest extends TeaModel {
     @NameInMap("RestoreTime")
     public String restoreTime;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("TableMeta")
     @Validation(required = true)
     public String tableMeta;
@@ -39,6 +24,46 @@ public class RestoreTableRequest extends TeaModel {
     public static RestoreTableRequest build(java.util.Map<String, ?> map) throws Exception {
         RestoreTableRequest self = new RestoreTableRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RestoreTableRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public RestoreTableRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public RestoreTableRequest setBackupId(String backupId) {
+        this.backupId = backupId;
+        return this;
+    }
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    public RestoreTableRequest setRestoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
+        return this;
+    }
+    public String getRestoreTime() {
+        return this.restoreTime;
+    }
+
+    public RestoreTableRequest setTableMeta(String tableMeta) {
+        this.tableMeta = tableMeta;
+        return this;
+    }
+    public String getTableMeta() {
+        return this.tableMeta;
     }
 
 }

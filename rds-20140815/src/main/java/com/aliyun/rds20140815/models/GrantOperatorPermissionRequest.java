@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class GrantOperatorPermissionRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -28,12 +16,33 @@ public class GrantOperatorPermissionRequest extends TeaModel {
     @Validation(required = true)
     public String privileges;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static GrantOperatorPermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantOperatorPermissionRequest self = new GrantOperatorPermissionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GrantOperatorPermissionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public GrantOperatorPermissionRequest setExpiredTime(String expiredTime) {
+        this.expiredTime = expiredTime;
+        return this;
+    }
+    public String getExpiredTime() {
+        return this.expiredTime;
+    }
+
+    public GrantOperatorPermissionRequest setPrivileges(String privileges) {
+        this.privileges = privileges;
+        return this;
+    }
+    public String getPrivileges() {
+        return this.privileges;
     }
 
 }

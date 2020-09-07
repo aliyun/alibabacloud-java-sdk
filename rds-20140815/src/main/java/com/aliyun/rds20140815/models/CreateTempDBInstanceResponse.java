@@ -17,4 +17,20 @@ public class CreateTempDBInstanceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateTempDBInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateTempDBInstanceResponse setTempDBInstanceId(String tempDBInstanceId) {
+        this.tempDBInstanceId = tempDBInstanceId;
+        return this;
+    }
+    public String getTempDBInstanceId() {
+        return this.tempDBInstanceId;
+    }
+
 }

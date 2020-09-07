@@ -21,4 +21,28 @@ public class CopyDatabaseResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CopyDatabaseResponse setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    public CopyDatabaseResponse setDBStatus(String DBStatus) {
+        this.DBStatus = DBStatus;
+        return this;
+    }
+    public String getDBStatus() {
+        return this.DBStatus;
+    }
+
+    public CopyDatabaseResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
 }

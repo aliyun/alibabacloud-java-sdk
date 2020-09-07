@@ -21,4 +21,28 @@ public class DescribeSQLCollectorPolicyResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSQLCollectorPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSQLCollectorPolicyResponse setSQLCollectorStatus(String SQLCollectorStatus) {
+        this.SQLCollectorStatus = SQLCollectorStatus;
+        return this;
+    }
+    public String getSQLCollectorStatus() {
+        return this.SQLCollectorStatus;
+    }
+
+    public DescribeSQLCollectorPolicyResponse setStoragePeriod(Integer storagePeriod) {
+        this.storagePeriod = storagePeriod;
+        return this;
+    }
+    public Integer getStoragePeriod() {
+        return this.storagePeriod;
+    }
+
 }

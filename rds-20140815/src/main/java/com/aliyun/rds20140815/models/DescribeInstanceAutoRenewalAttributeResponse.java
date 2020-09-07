@@ -29,6 +29,46 @@ public class DescribeInstanceAutoRenewalAttributeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceAutoRenewalAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeInstanceAutoRenewalAttributeResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeInstanceAutoRenewalAttributeResponse setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public DescribeInstanceAutoRenewalAttributeResponse setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeInstanceAutoRenewalAttributeResponse setItems(DescribeInstanceAutoRenewalAttributeResponseItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeInstanceAutoRenewalAttributeResponseItems getItems() {
+        return this.items;
+    }
+
     public static class DescribeInstanceAutoRenewalAttributeResponseItemsItem extends TeaModel {
         @NameInMap("DBInstanceId")
         @Validation(required = true)
@@ -55,6 +95,46 @@ public class DescribeInstanceAutoRenewalAttributeResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstanceAutoRenewalAttributeResponseItemsItem setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeInstanceAutoRenewalAttributeResponseItemsItem setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeInstanceAutoRenewalAttributeResponseItemsItem setDuration(Integer duration) {
+            this.duration = duration;
+            return this;
+        }
+        public Integer getDuration() {
+            return this.duration;
+        }
+
+        public DescribeInstanceAutoRenewalAttributeResponseItemsItem setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeInstanceAutoRenewalAttributeResponseItemsItem setAutoRenew(String autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public String getAutoRenew() {
+            return this.autoRenew;
+        }
+
     }
 
     public static class DescribeInstanceAutoRenewalAttributeResponseItems extends TeaModel {
@@ -65,6 +145,14 @@ public class DescribeInstanceAutoRenewalAttributeResponse extends TeaModel {
         public static DescribeInstanceAutoRenewalAttributeResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAutoRenewalAttributeResponseItems self = new DescribeInstanceAutoRenewalAttributeResponseItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAutoRenewalAttributeResponseItems setItem(java.util.List<DescribeInstanceAutoRenewalAttributeResponseItemsItem> item) {
+            this.item = item;
+            return this;
+        }
+        public java.util.List<DescribeInstanceAutoRenewalAttributeResponseItemsItem> getItem() {
+            return this.item;
         }
 
     }

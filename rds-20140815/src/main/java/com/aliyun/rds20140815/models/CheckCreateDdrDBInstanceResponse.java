@@ -17,4 +17,20 @@ public class CheckCreateDdrDBInstanceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CheckCreateDdrDBInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CheckCreateDdrDBInstanceResponse setIsValid(String isValid) {
+        this.isValid = isValid;
+        return this;
+    }
+    public String getIsValid() {
+        return this.isValid;
+    }
+
 }

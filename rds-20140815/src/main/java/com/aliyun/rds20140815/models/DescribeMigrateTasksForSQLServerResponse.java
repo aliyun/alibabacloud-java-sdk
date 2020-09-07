@@ -45,6 +45,78 @@ public class DescribeMigrateTasksForSQLServerResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeMigrateTasksForSQLServerResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeMigrateTasksForSQLServerResponse setDBInstanceID(String DBInstanceID) {
+        this.DBInstanceID = DBInstanceID;
+        return this;
+    }
+    public String getDBInstanceID() {
+        return this.DBInstanceID;
+    }
+
+    public DescribeMigrateTasksForSQLServerResponse setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public DescribeMigrateTasksForSQLServerResponse setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeMigrateTasksForSQLServerResponse setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeMigrateTasksForSQLServerResponse setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public DescribeMigrateTasksForSQLServerResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeMigrateTasksForSQLServerResponse setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeMigrateTasksForSQLServerResponse setItems(DescribeMigrateTasksForSQLServerResponseItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeMigrateTasksForSQLServerResponseItems getItems() {
+        return this.items;
+    }
+
     public static class DescribeMigrateTasksForSQLServerResponseItemsMigrateTask extends TeaModel {
         @NameInMap("DBName")
         @Validation(required = true)
@@ -83,6 +155,70 @@ public class DescribeMigrateTasksForSQLServerResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeMigrateTasksForSQLServerResponseItemsMigrateTask setDBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        public DescribeMigrateTasksForSQLServerResponseItemsMigrateTask setMigrateIaskId(String migrateIaskId) {
+            this.migrateIaskId = migrateIaskId;
+            return this;
+        }
+        public String getMigrateIaskId() {
+            return this.migrateIaskId;
+        }
+
+        public DescribeMigrateTasksForSQLServerResponseItemsMigrateTask setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeMigrateTasksForSQLServerResponseItemsMigrateTask setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeMigrateTasksForSQLServerResponseItemsMigrateTask setTaskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public String getTaskType() {
+            return this.taskType;
+        }
+
+        public DescribeMigrateTasksForSQLServerResponseItemsMigrateTask setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeMigrateTasksForSQLServerResponseItemsMigrateTask setIsDBReplaced(String isDBReplaced) {
+            this.isDBReplaced = isDBReplaced;
+            return this;
+        }
+        public String getIsDBReplaced() {
+            return this.isDBReplaced;
+        }
+
+        public DescribeMigrateTasksForSQLServerResponseItemsMigrateTask setDesc(String desc) {
+            this.desc = desc;
+            return this;
+        }
+        public String getDesc() {
+            return this.desc;
+        }
+
     }
 
     public static class DescribeMigrateTasksForSQLServerResponseItems extends TeaModel {
@@ -93,6 +229,14 @@ public class DescribeMigrateTasksForSQLServerResponse extends TeaModel {
         public static DescribeMigrateTasksForSQLServerResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeMigrateTasksForSQLServerResponseItems self = new DescribeMigrateTasksForSQLServerResponseItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMigrateTasksForSQLServerResponseItems setMigrateTask(java.util.List<DescribeMigrateTasksForSQLServerResponseItemsMigrateTask> migrateTask) {
+            this.migrateTask = migrateTask;
+            return this;
+        }
+        public java.util.List<DescribeMigrateTasksForSQLServerResponseItemsMigrateTask> getMigrateTask() {
+            return this.migrateTask;
         }
 
     }

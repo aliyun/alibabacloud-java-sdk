@@ -7,21 +7,6 @@ public class DescribeReadDBInstanceDelayRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -33,6 +18,30 @@ public class DescribeReadDBInstanceDelayRequest extends TeaModel {
     public static DescribeReadDBInstanceDelayRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeReadDBInstanceDelayRequest self = new DescribeReadDBInstanceDelayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeReadDBInstanceDelayRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeReadDBInstanceDelayRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeReadDBInstanceDelayRequest setReadInstanceId(String readInstanceId) {
+        this.readInstanceId = readInstanceId;
+        return this;
+    }
+    public String getReadInstanceId() {
+        return this.readInstanceId;
     }
 
 }

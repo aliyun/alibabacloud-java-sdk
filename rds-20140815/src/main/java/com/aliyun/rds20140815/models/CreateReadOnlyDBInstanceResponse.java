@@ -29,4 +29,44 @@ public class CreateReadOnlyDBInstanceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateReadOnlyDBInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateReadOnlyDBInstanceResponse setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public CreateReadOnlyDBInstanceResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    public CreateReadOnlyDBInstanceResponse setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
+    }
+
+    public CreateReadOnlyDBInstanceResponse setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
+    }
+
 }

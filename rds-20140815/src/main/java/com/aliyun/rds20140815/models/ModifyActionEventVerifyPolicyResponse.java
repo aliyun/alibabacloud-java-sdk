@@ -21,4 +21,28 @@ public class ModifyActionEventVerifyPolicyResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyActionEventVerifyPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyActionEventVerifyPolicyResponse setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyActionEventVerifyPolicyResponse setServerPublicKey(String serverPublicKey) {
+        this.serverPublicKey = serverPublicKey;
+        return this;
+    }
+    public String getServerPublicKey() {
+        return this.serverPublicKey;
+    }
+
 }

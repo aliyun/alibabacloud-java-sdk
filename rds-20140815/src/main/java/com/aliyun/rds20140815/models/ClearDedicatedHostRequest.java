@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ClearDedicatedHostRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -30,6 +18,30 @@ public class ClearDedicatedHostRequest extends TeaModel {
     public static ClearDedicatedHostRequest build(java.util.Map<String, ?> map) throws Exception {
         ClearDedicatedHostRequest self = new ClearDedicatedHostRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ClearDedicatedHostRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ClearDedicatedHostRequest setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
+    }
+
+    public ClearDedicatedHostRequest setFailoverMode(String failoverMode) {
+        this.failoverMode = failoverMode;
+        return this;
+    }
+    public String getFailoverMode() {
+        return this.failoverMode;
     }
 
 }

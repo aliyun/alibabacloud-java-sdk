@@ -17,6 +17,22 @@ public class DescribeDedicatedHostImageCategoriesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDedicatedHostImageCategoriesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDedicatedHostImageCategoriesResponse setImages(DescribeDedicatedHostImageCategoriesResponseImages images) {
+        this.images = images;
+        return this;
+    }
+    public DescribeDedicatedHostImageCategoriesResponseImages getImages() {
+        return this.images;
+    }
+
     public static class DescribeDedicatedHostImageCategoriesResponseImagesImages extends TeaModel {
         @NameInMap("ImageName")
         @Validation(required = true)
@@ -31,6 +47,22 @@ public class DescribeDedicatedHostImageCategoriesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDedicatedHostImageCategoriesResponseImagesImages setImageName(String imageName) {
+            this.imageName = imageName;
+            return this;
+        }
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        public DescribeDedicatedHostImageCategoriesResponseImagesImages setImageCode(String imageCode) {
+            this.imageCode = imageCode;
+            return this;
+        }
+        public String getImageCode() {
+            return this.imageCode;
+        }
+
     }
 
     public static class DescribeDedicatedHostImageCategoriesResponseImages extends TeaModel {
@@ -41,6 +73,14 @@ public class DescribeDedicatedHostImageCategoriesResponse extends TeaModel {
         public static DescribeDedicatedHostImageCategoriesResponseImages build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostImageCategoriesResponseImages self = new DescribeDedicatedHostImageCategoriesResponseImages();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostImageCategoriesResponseImages setImages(java.util.List<DescribeDedicatedHostImageCategoriesResponseImagesImages> images) {
+            this.images = images;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedHostImageCategoriesResponseImagesImages> getImages() {
+            return this.images;
         }
 
     }

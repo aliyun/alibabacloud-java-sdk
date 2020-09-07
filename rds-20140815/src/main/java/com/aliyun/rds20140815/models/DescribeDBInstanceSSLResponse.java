@@ -29,4 +29,44 @@ public class DescribeDBInstanceSSLResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBInstanceSSLResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBInstanceSSLResponse setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
+    }
+
+    public DescribeDBInstanceSSLResponse setSSLExpireTime(String SSLExpireTime) {
+        this.SSLExpireTime = SSLExpireTime;
+        return this;
+    }
+    public String getSSLExpireTime() {
+        return this.SSLExpireTime;
+    }
+
+    public DescribeDBInstanceSSLResponse setRequireUpdate(String requireUpdate) {
+        this.requireUpdate = requireUpdate;
+        return this;
+    }
+    public String getRequireUpdate() {
+        return this.requireUpdate;
+    }
+
+    public DescribeDBInstanceSSLResponse setRequireUpdateReason(String requireUpdateReason) {
+        this.requireUpdateReason = requireUpdateReason;
+        return this;
+    }
+    public String getRequireUpdateReason() {
+        return this.requireUpdateReason;
+    }
+
 }

@@ -29,6 +29,46 @@ public class DescribeDBInstancesByPerformanceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBInstancesByPerformanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBInstancesByPerformanceResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDBInstancesByPerformanceResponse setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public DescribeDBInstancesByPerformanceResponse setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeDBInstancesByPerformanceResponse setItems(DescribeDBInstancesByPerformanceResponseItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeDBInstancesByPerformanceResponseItems getItems() {
+        return this.items;
+    }
+
     public static class DescribeDBInstancesByPerformanceResponseItemsDBInstancePerformance extends TeaModel {
         @NameInMap("CPUUsage")
         @Validation(required = true)
@@ -59,6 +99,54 @@ public class DescribeDBInstancesByPerformanceResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDBInstancesByPerformanceResponseItemsDBInstancePerformance setCPUUsage(String CPUUsage) {
+            this.CPUUsage = CPUUsage;
+            return this;
+        }
+        public String getCPUUsage() {
+            return this.CPUUsage;
+        }
+
+        public DescribeDBInstancesByPerformanceResponseItemsDBInstancePerformance setIOPSUsage(String IOPSUsage) {
+            this.IOPSUsage = IOPSUsage;
+            return this;
+        }
+        public String getIOPSUsage() {
+            return this.IOPSUsage;
+        }
+
+        public DescribeDBInstancesByPerformanceResponseItemsDBInstancePerformance setDiskUsage(String diskUsage) {
+            this.diskUsage = diskUsage;
+            return this;
+        }
+        public String getDiskUsage() {
+            return this.diskUsage;
+        }
+
+        public DescribeDBInstancesByPerformanceResponseItemsDBInstancePerformance setSessionUsage(String sessionUsage) {
+            this.sessionUsage = sessionUsage;
+            return this;
+        }
+        public String getSessionUsage() {
+            return this.sessionUsage;
+        }
+
+        public DescribeDBInstancesByPerformanceResponseItemsDBInstancePerformance setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeDBInstancesByPerformanceResponseItemsDBInstancePerformance setDBInstanceDescription(String DBInstanceDescription) {
+            this.DBInstanceDescription = DBInstanceDescription;
+            return this;
+        }
+        public String getDBInstanceDescription() {
+            return this.DBInstanceDescription;
+        }
+
     }
 
     public static class DescribeDBInstancesByPerformanceResponseItems extends TeaModel {
@@ -69,6 +157,14 @@ public class DescribeDBInstancesByPerformanceResponse extends TeaModel {
         public static DescribeDBInstancesByPerformanceResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesByPerformanceResponseItems self = new DescribeDBInstancesByPerformanceResponseItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesByPerformanceResponseItems setDBInstancePerformance(java.util.List<DescribeDBInstancesByPerformanceResponseItemsDBInstancePerformance> DBInstancePerformance) {
+            this.DBInstancePerformance = DBInstancePerformance;
+            return this;
+        }
+        public java.util.List<DescribeDBInstancesByPerformanceResponseItemsDBInstancePerformance> getDBInstancePerformance() {
+            return this.DBInstancePerformance;
         }
 
     }

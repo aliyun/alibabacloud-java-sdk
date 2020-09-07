@@ -37,6 +37,62 @@ public class DescribeBackupsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeBackupsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeBackupsResponse setTotalRecordCount(String totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public String getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public DescribeBackupsResponse setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeBackupsResponse setPageRecordCount(String pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public String getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeBackupsResponse setTotalBackupSize(Long totalBackupSize) {
+        this.totalBackupSize = totalBackupSize;
+        return this;
+    }
+    public Long getTotalBackupSize() {
+        return this.totalBackupSize;
+    }
+
+    public DescribeBackupsResponse setTotalEcsSnapshotSize(Long totalEcsSnapshotSize) {
+        this.totalEcsSnapshotSize = totalEcsSnapshotSize;
+        return this;
+    }
+    public Long getTotalEcsSnapshotSize() {
+        return this.totalEcsSnapshotSize;
+    }
+
+    public DescribeBackupsResponse setItems(DescribeBackupsResponseItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeBackupsResponseItems getItems() {
+        return this.items;
+    }
+
     public static class DescribeBackupsResponseItemsBackup extends TeaModel {
         @NameInMap("BackupId")
         @Validation(required = true)
@@ -134,9 +190,213 @@ public class DescribeBackupsResponse extends TeaModel {
         @Validation(required = true)
         public String storageClass;
 
+        @NameInMap("IsAvail")
+        @Validation(required = true)
+        public Integer isAvail;
+
         public static DescribeBackupsResponseItemsBackup build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseItemsBackup self = new DescribeBackupsResponseItemsBackup();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupId(String backupId) {
+            this.backupId = backupId;
+            return this;
+        }
+        public String getBackupId() {
+            return this.backupId;
+        }
+
+        public DescribeBackupsResponseItemsBackup setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupStatus(String backupStatus) {
+            this.backupStatus = backupStatus;
+            return this;
+        }
+        public String getBackupStatus() {
+            return this.backupStatus;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupStartTime(String backupStartTime) {
+            this.backupStartTime = backupStartTime;
+            return this;
+        }
+        public String getBackupStartTime() {
+            return this.backupStartTime;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupEndTime(String backupEndTime) {
+            this.backupEndTime = backupEndTime;
+            return this;
+        }
+        public String getBackupEndTime() {
+            return this.backupEndTime;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupType(String backupType) {
+            this.backupType = backupType;
+            return this;
+        }
+        public String getBackupType() {
+            return this.backupType;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupMode(String backupMode) {
+            this.backupMode = backupMode;
+            return this;
+        }
+        public String getBackupMode() {
+            return this.backupMode;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupMethod(String backupMethod) {
+            this.backupMethod = backupMethod;
+            return this;
+        }
+        public String getBackupMethod() {
+            return this.backupMethod;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupDownloadURL(String backupDownloadURL) {
+            this.backupDownloadURL = backupDownloadURL;
+            return this;
+        }
+        public String getBackupDownloadURL() {
+            return this.backupDownloadURL;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupIntranetDownloadURL(String backupIntranetDownloadURL) {
+            this.backupIntranetDownloadURL = backupIntranetDownloadURL;
+            return this;
+        }
+        public String getBackupIntranetDownloadURL() {
+            return this.backupIntranetDownloadURL;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupLocation(String backupLocation) {
+            this.backupLocation = backupLocation;
+            return this;
+        }
+        public String getBackupLocation() {
+            return this.backupLocation;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupExtractionStatus(String backupExtractionStatus) {
+            this.backupExtractionStatus = backupExtractionStatus;
+            return this;
+        }
+        public String getBackupExtractionStatus() {
+            return this.backupExtractionStatus;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupScale(String backupScale) {
+            this.backupScale = backupScale;
+            return this;
+        }
+        public String getBackupScale() {
+            return this.backupScale;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupDBNames(String backupDBNames) {
+            this.backupDBNames = backupDBNames;
+            return this;
+        }
+        public String getBackupDBNames() {
+            return this.backupDBNames;
+        }
+
+        public DescribeBackupsResponseItemsBackup setTotalBackupSize(Long totalBackupSize) {
+            this.totalBackupSize = totalBackupSize;
+            return this;
+        }
+        public Long getTotalBackupSize() {
+            return this.totalBackupSize;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupSize(Long backupSize) {
+            this.backupSize = backupSize;
+            return this;
+        }
+        public Long getBackupSize() {
+            return this.backupSize;
+        }
+
+        public DescribeBackupsResponseItemsBackup setHostInstanceID(String hostInstanceID) {
+            this.hostInstanceID = hostInstanceID;
+            return this;
+        }
+        public String getHostInstanceID() {
+            return this.hostInstanceID;
+        }
+
+        public DescribeBackupsResponseItemsBackup setStoreStatus(String storeStatus) {
+            this.storeStatus = storeStatus;
+            return this;
+        }
+        public String getStoreStatus() {
+            return this.storeStatus;
+        }
+
+        public DescribeBackupsResponseItemsBackup setMetaStatus(String metaStatus) {
+            this.metaStatus = metaStatus;
+            return this;
+        }
+        public String getMetaStatus() {
+            return this.metaStatus;
+        }
+
+        public DescribeBackupsResponseItemsBackup setSlaveStatus(String slaveStatus) {
+            this.slaveStatus = slaveStatus;
+            return this;
+        }
+        public String getSlaveStatus() {
+            return this.slaveStatus;
+        }
+
+        public DescribeBackupsResponseItemsBackup setConsistentTime(Long consistentTime) {
+            this.consistentTime = consistentTime;
+            return this;
+        }
+        public Long getConsistentTime() {
+            return this.consistentTime;
+        }
+
+        public DescribeBackupsResponseItemsBackup setBackupInitiator(String backupInitiator) {
+            this.backupInitiator = backupInitiator;
+            return this;
+        }
+        public String getBackupInitiator() {
+            return this.backupInitiator;
+        }
+
+        public DescribeBackupsResponseItemsBackup setCopyOnlyBackup(String copyOnlyBackup) {
+            this.copyOnlyBackup = copyOnlyBackup;
+            return this;
+        }
+        public String getCopyOnlyBackup() {
+            return this.copyOnlyBackup;
+        }
+
+        public DescribeBackupsResponseItemsBackup setStorageClass(String storageClass) {
+            this.storageClass = storageClass;
+            return this;
+        }
+        public String getStorageClass() {
+            return this.storageClass;
+        }
+
+        public DescribeBackupsResponseItemsBackup setIsAvail(Integer isAvail) {
+            this.isAvail = isAvail;
+            return this;
+        }
+        public Integer getIsAvail() {
+            return this.isAvail;
         }
 
     }
@@ -149,6 +409,14 @@ public class DescribeBackupsResponse extends TeaModel {
         public static DescribeBackupsResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseItems self = new DescribeBackupsResponseItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupsResponseItems setBackup(java.util.List<DescribeBackupsResponseItemsBackup> backup) {
+            this.backup = backup;
+            return this;
+        }
+        public java.util.List<DescribeBackupsResponseItemsBackup> getBackup() {
+            return this.backup;
         }
 
     }

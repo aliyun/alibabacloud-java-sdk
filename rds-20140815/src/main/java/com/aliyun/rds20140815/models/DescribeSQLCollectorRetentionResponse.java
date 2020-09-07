@@ -17,4 +17,20 @@ public class DescribeSQLCollectorRetentionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSQLCollectorRetentionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSQLCollectorRetentionResponse setConfigValue(String configValue) {
+        this.configValue = configValue;
+        return this;
+    }
+    public String getConfigValue() {
+        return this.configValue;
+    }
+
 }

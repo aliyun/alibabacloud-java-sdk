@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceConnectionModeRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -24,12 +12,25 @@ public class ModifyDBInstanceConnectionModeRequest extends TeaModel {
     @Validation(required = true)
     public String connectionMode;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static ModifyDBInstanceConnectionModeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceConnectionModeRequest self = new ModifyDBInstanceConnectionModeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceConnectionModeRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceConnectionModeRequest setConnectionMode(String connectionMode) {
+        this.connectionMode = connectionMode;
+        return this;
+    }
+    public String getConnectionMode() {
+        return this.connectionMode;
     }
 
 }

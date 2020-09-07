@@ -58,6 +58,116 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public DescribeDBInstanceDetailResponse describeDBInstanceDetailWithOptions(DescribeDBInstanceDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeDBInstanceDetail", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new DescribeDBInstanceDetailResponse());
+    }
+
+    public DescribeDBInstanceDetailResponse describeDBInstanceDetail(DescribeDBInstanceDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBInstanceDetailWithOptions(request, runtime);
+    }
+
+    public ModifyLicenseInfoResponse modifyLicenseInfoWithOptions(ModifyLicenseInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyLicenseInfo", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new ModifyLicenseInfoResponse());
+    }
+
+    public ModifyLicenseInfoResponse modifyLicenseInfo(ModifyLicenseInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyLicenseInfoWithOptions(request, runtime);
+    }
+
+    public DeleteDBProxyEndpointAddressResponse deleteDBProxyEndpointAddressWithOptions(DeleteDBProxyEndpointAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DeleteDBProxyEndpointAddress", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new DeleteDBProxyEndpointAddressResponse());
+    }
+
+    public DeleteDBProxyEndpointAddressResponse deleteDBProxyEndpointAddress(DeleteDBProxyEndpointAddressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDBProxyEndpointAddressWithOptions(request, runtime);
+    }
+
+    public CreateDBProxyEndpointAddressResponse createDBProxyEndpointAddressWithOptions(CreateDBProxyEndpointAddressRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateDBProxyEndpointAddress", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new CreateDBProxyEndpointAddressResponse());
+    }
+
+    public CreateDBProxyEndpointAddressResponse createDBProxyEndpointAddress(CreateDBProxyEndpointAddressRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDBProxyEndpointAddressWithOptions(request, runtime);
+    }
+
+    public DescribeDasInstanceConfigResponse describeDasInstanceConfigWithOptions(DescribeDasInstanceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeDasInstanceConfig", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new DescribeDasInstanceConfigResponse());
+    }
+
+    public DescribeDasInstanceConfigResponse describeDasInstanceConfig(DescribeDasInstanceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDasInstanceConfigWithOptions(request, runtime);
+    }
+
+    public ModifyDasInstanceConfigResponse modifyDasInstanceConfigWithOptions(ModifyDasInstanceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyDasInstanceConfig", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new ModifyDasInstanceConfigResponse());
+    }
+
+    public ModifyDasInstanceConfigResponse modifyDasInstanceConfig(ModifyDasInstanceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDasInstanceConfigWithOptions(request, runtime);
+    }
+
+    public DescribeRdsResourceSettingsResponse describeRdsResourceSettingsWithOptions(DescribeRdsResourceSettingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeRdsResourceSettings", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new DescribeRdsResourceSettingsResponse());
+    }
+
+    public DescribeRdsResourceSettingsResponse describeRdsResourceSettings(DescribeRdsResourceSettingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeRdsResourceSettingsWithOptions(request, runtime);
+    }
+
+    public DeleteHostAccountResponse deleteHostAccountWithOptions(DeleteHostAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DeleteHostAccount", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new DeleteHostAccountResponse());
+    }
+
+    public DeleteHostAccountResponse deleteHostAccount(DeleteHostAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteHostAccountWithOptions(request, runtime);
+    }
+
+    public DescribeHostAccountsResponse describeHostAccountsWithOptions(DescribeHostAccountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeHostAccounts", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new DescribeHostAccountsResponse());
+    }
+
+    public DescribeHostAccountsResponse describeHostAccounts(DescribeHostAccountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHostAccountsWithOptions(request, runtime);
+    }
+
+    public ResetHostAccountPasswordResponse resetHostAccountPasswordWithOptions(ResetHostAccountPasswordRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ResetHostAccountPassword", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new ResetHostAccountPasswordResponse());
+    }
+
+    public ResetHostAccountPasswordResponse resetHostAccountPassword(ResetHostAccountPasswordRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.resetHostAccountPasswordWithOptions(request, runtime);
+    }
+
+    public CreateHostAccountResponse createHostAccountWithOptions(CreateHostAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateHostAccount", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new CreateHostAccountResponse());
+    }
+
+    public CreateHostAccountResponse createHostAccount(CreateHostAccountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createHostAccountWithOptions(request, runtime);
+    }
+
     public DescribeDedicatedHostImageCategoriesResponse describeDedicatedHostImageCategoriesWithOptions(DescribeDedicatedHostImageCategoriesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeDedicatedHostImageCategories", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new DescribeDedicatedHostImageCategoriesResponse());
@@ -166,6 +276,16 @@ public class Client extends com.aliyun.tearpc.Client {
     public ModifyDedicatedHostAccountResponse modifyDedicatedHostAccount(ModifyDedicatedHostAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyDedicatedHostAccountWithOptions(request, runtime);
+    }
+
+    public TransformDBInstancePayTypeResponse transformDBInstancePayTypeWithOptions(TransformDBInstancePayTypeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("TransformDBInstancePayType", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new TransformDBInstancePayTypeResponse());
+    }
+
+    public TransformDBInstancePayTypeResponse transformDBInstancePayType(TransformDBInstancePayTypeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.transformDBInstancePayTypeWithOptions(request, runtime);
     }
 
     public CreateDedicatedHostUserResponse createDedicatedHostUserWithOptions(CreateDedicatedHostUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1060,6 +1180,16 @@ public class Client extends com.aliyun.tearpc.Client {
     public DescribeCrossRegionBackupsResponse describeCrossRegionBackups(DescribeCrossRegionBackupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCrossRegionBackupsWithOptions(request, runtime);
+    }
+
+    public CheckCloudResourceAuthorizedResponse checkCloudResourceAuthorizedWithOptions(CheckCloudResourceAuthorizedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CheckCloudResourceAuthorized", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new CheckCloudResourceAuthorizedResponse());
+    }
+
+    public CheckCloudResourceAuthorizedResponse checkCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkCloudResourceAuthorizedWithOptions(request, runtime);
     }
 
     public DescribeReadDBInstanceDelayResponse describeReadDBInstanceDelayWithOptions(DescribeReadDBInstanceDelayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -2543,8 +2673,8 @@ public class Client extends com.aliyun.tearpc.Client {
             return endpoint;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get("regionId"))) {
-            return endpointMap.get("regionId");
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);

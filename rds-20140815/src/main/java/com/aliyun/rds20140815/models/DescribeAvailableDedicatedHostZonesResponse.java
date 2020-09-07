@@ -17,6 +17,22 @@ public class DescribeAvailableDedicatedHostZonesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAvailableDedicatedHostZonesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAvailableDedicatedHostZonesResponse setZones(DescribeAvailableDedicatedHostZonesResponseZones zones) {
+        this.zones = zones;
+        return this;
+    }
+    public DescribeAvailableDedicatedHostZonesResponseZones getZones() {
+        return this.zones;
+    }
+
     public static class DescribeAvailableDedicatedHostZonesResponseZonesDedicatedHostZones extends TeaModel {
         @NameInMap("ZoneId")
         @Validation(required = true)
@@ -31,6 +47,22 @@ public class DescribeAvailableDedicatedHostZonesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAvailableDedicatedHostZonesResponseZonesDedicatedHostZones setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeAvailableDedicatedHostZonesResponseZonesDedicatedHostZones setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
     }
 
     public static class DescribeAvailableDedicatedHostZonesResponseZones extends TeaModel {
@@ -41,6 +73,14 @@ public class DescribeAvailableDedicatedHostZonesResponse extends TeaModel {
         public static DescribeAvailableDedicatedHostZonesResponseZones build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableDedicatedHostZonesResponseZones self = new DescribeAvailableDedicatedHostZonesResponseZones();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableDedicatedHostZonesResponseZones setDedicatedHostZones(java.util.List<DescribeAvailableDedicatedHostZonesResponseZonesDedicatedHostZones> dedicatedHostZones) {
+            this.dedicatedHostZones = dedicatedHostZones;
+            return this;
+        }
+        public java.util.List<DescribeAvailableDedicatedHostZonesResponseZonesDedicatedHostZones> getDedicatedHostZones() {
+            return this.dedicatedHostZones;
         }
 
     }

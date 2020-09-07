@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CheckDBNameAvailableRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -27,12 +15,33 @@ public class CheckDBNameAvailableRequest extends TeaModel {
     @Validation(required = true)
     public String DBName;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static CheckDBNameAvailableRequest build(java.util.Map<String, ?> map) throws Exception {
         CheckDBNameAvailableRequest self = new CheckDBNameAvailableRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CheckDBNameAvailableRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CheckDBNameAvailableRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public CheckDBNameAvailableRequest setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
     }
 
 }

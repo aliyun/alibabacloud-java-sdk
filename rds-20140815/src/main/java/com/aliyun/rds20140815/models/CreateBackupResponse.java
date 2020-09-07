@@ -17,4 +17,20 @@ public class CreateBackupResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateBackupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateBackupResponse setBackupJobId(String backupJobId) {
+        this.backupJobId = backupJobId;
+        return this;
+    }
+    public String getBackupJobId() {
+        return this.backupJobId;
+    }
+
 }

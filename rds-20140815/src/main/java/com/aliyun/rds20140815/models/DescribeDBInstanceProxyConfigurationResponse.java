@@ -25,4 +25,36 @@ public class DescribeDBInstanceProxyConfigurationResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBInstanceProxyConfigurationResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBInstanceProxyConfigurationResponse setTransparentSwitchConfiguration(String transparentSwitchConfiguration) {
+        this.transparentSwitchConfiguration = transparentSwitchConfiguration;
+        return this;
+    }
+    public String getTransparentSwitchConfiguration() {
+        return this.transparentSwitchConfiguration;
+    }
+
+    public DescribeDBInstanceProxyConfigurationResponse setPersistentConnectionsConfiguration(String persistentConnectionsConfiguration) {
+        this.persistentConnectionsConfiguration = persistentConnectionsConfiguration;
+        return this;
+    }
+    public String getPersistentConnectionsConfiguration() {
+        return this.persistentConnectionsConfiguration;
+    }
+
+    public DescribeDBInstanceProxyConfigurationResponse setAttacksProtectionConfiguration(String attacksProtectionConfiguration) {
+        this.attacksProtectionConfiguration = attacksProtectionConfiguration;
+        return this;
+    }
+    public String getAttacksProtectionConfiguration() {
+        return this.attacksProtectionConfiguration;
+    }
+
 }

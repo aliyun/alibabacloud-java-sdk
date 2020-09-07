@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteParameterGroupRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("RegionId")
     @Validation(required = true)
     public String regionId;
@@ -27,6 +15,22 @@ public class DeleteParameterGroupRequest extends TeaModel {
     public static DeleteParameterGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteParameterGroupRequest self = new DeleteParameterGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteParameterGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteParameterGroupRequest setParameterGroupId(String parameterGroupId) {
+        this.parameterGroupId = parameterGroupId;
+        return this;
+    }
+    public String getParameterGroupId() {
+        return this.parameterGroupId;
     }
 
 }

@@ -17,4 +17,20 @@ public class CreateDedicatedHostGroupResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDedicatedHostGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDedicatedHostGroupResponse setDedicatedHostGroupId(String dedicatedHostGroupId) {
+        this.dedicatedHostGroupId = dedicatedHostGroupId;
+        return this;
+    }
+    public String getDedicatedHostGroupId() {
+        return this.dedicatedHostGroupId;
+    }
+
 }

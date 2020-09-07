@@ -4,23 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyResourceGroupRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     @NameInMap("DBInstanceId")
     @Validation(required = true)
@@ -33,6 +18,30 @@ public class ModifyResourceGroupRequest extends TeaModel {
     public static ModifyResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyResourceGroupRequest self = new ModifyResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyResourceGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyResourceGroupRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyResourceGroupRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

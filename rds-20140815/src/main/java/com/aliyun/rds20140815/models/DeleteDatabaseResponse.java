@@ -13,4 +13,12 @@ public class DeleteDatabaseResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteDatabaseResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

@@ -13,4 +13,12 @@ public class CreateParameterGroupResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateParameterGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

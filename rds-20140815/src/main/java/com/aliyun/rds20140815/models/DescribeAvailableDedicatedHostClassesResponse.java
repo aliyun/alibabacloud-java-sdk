@@ -17,6 +17,22 @@ public class DescribeAvailableDedicatedHostClassesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAvailableDedicatedHostClassesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAvailableDedicatedHostClassesResponse setHostClasses(DescribeAvailableDedicatedHostClassesResponseHostClasses hostClasses) {
+        this.hostClasses = hostClasses;
+        return this;
+    }
+    public DescribeAvailableDedicatedHostClassesResponseHostClasses getHostClasses() {
+        return this.hostClasses;
+    }
+
     public static class DescribeAvailableDedicatedHostClassesResponseHostClassesHostClasses extends TeaModel {
         @NameInMap("HostClassName")
         @Validation(required = true)
@@ -31,6 +47,22 @@ public class DescribeAvailableDedicatedHostClassesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAvailableDedicatedHostClassesResponseHostClassesHostClasses setHostClassName(String hostClassName) {
+            this.hostClassName = hostClassName;
+            return this;
+        }
+        public String getHostClassName() {
+            return this.hostClassName;
+        }
+
+        public DescribeAvailableDedicatedHostClassesResponseHostClassesHostClasses setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
     }
 
     public static class DescribeAvailableDedicatedHostClassesResponseHostClasses extends TeaModel {
@@ -41,6 +73,14 @@ public class DescribeAvailableDedicatedHostClassesResponse extends TeaModel {
         public static DescribeAvailableDedicatedHostClassesResponseHostClasses build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableDedicatedHostClassesResponseHostClasses self = new DescribeAvailableDedicatedHostClassesResponseHostClasses();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableDedicatedHostClassesResponseHostClasses setHostClasses(java.util.List<DescribeAvailableDedicatedHostClassesResponseHostClassesHostClasses> hostClasses) {
+            this.hostClasses = hostClasses;
+            return this;
+        }
+        public java.util.List<DescribeAvailableDedicatedHostClassesResponseHostClassesHostClasses> getHostClasses() {
+            return this.hostClasses;
         }
 
     }

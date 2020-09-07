@@ -25,4 +25,36 @@ public class UpgradeDBInstanceKernelVersionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpgradeDBInstanceKernelVersionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpgradeDBInstanceKernelVersionResponse setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public UpgradeDBInstanceKernelVersionResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public UpgradeDBInstanceKernelVersionResponse setTargetMinorVersion(String targetMinorVersion) {
+        this.targetMinorVersion = targetMinorVersion;
+        return this;
+    }
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
+    }
+
 }

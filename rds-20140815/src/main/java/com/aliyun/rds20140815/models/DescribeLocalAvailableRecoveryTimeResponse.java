@@ -25,4 +25,36 @@ public class DescribeLocalAvailableRecoveryTimeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeLocalAvailableRecoveryTimeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLocalAvailableRecoveryTimeResponse setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeLocalAvailableRecoveryTimeResponse setRecoveryBeginTime(String recoveryBeginTime) {
+        this.recoveryBeginTime = recoveryBeginTime;
+        return this;
+    }
+    public String getRecoveryBeginTime() {
+        return this.recoveryBeginTime;
+    }
+
+    public DescribeLocalAvailableRecoveryTimeResponse setRecoveryEndTime(String recoveryEndTime) {
+        this.recoveryEndTime = recoveryEndTime;
+        return this;
+    }
+    public String getRecoveryEndTime() {
+        return this.recoveryEndTime;
+    }
+
 }

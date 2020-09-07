@@ -17,6 +17,22 @@ public class DescribeAvailableZonesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAvailableZonesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAvailableZonesResponse setAvailableZones(java.util.List<DescribeAvailableZonesResponseAvailableZones> availableZones) {
+        this.availableZones = availableZones;
+        return this;
+    }
+    public java.util.List<DescribeAvailableZonesResponseAvailableZones> getAvailableZones() {
+        return this.availableZones;
+    }
+
     public static class DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes extends TeaModel {
         @NameInMap("StorageType")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class DescribeAvailableZonesResponse extends TeaModel {
         public static DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes self = new DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
     }
@@ -43,6 +67,22 @@ public class DescribeAvailableZonesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys setSupportedStorageTypes(java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes> supportedStorageTypes) {
+            this.supportedStorageTypes = supportedStorageTypes;
+            return this;
+        }
+        public java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes> getSupportedStorageTypes() {
+            return this.supportedStorageTypes;
+        }
+
     }
 
     public static class DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersions extends TeaModel {
@@ -59,6 +99,22 @@ public class DescribeAvailableZonesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersions setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+        public DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersions setSupportedCategorys(java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> supportedCategorys) {
+            this.supportedCategorys = supportedCategorys;
+            return this;
+        }
+        public java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> getSupportedCategorys() {
+            return this.supportedCategorys;
+        }
+
     }
 
     public static class DescribeAvailableZonesResponseAvailableZonesSupportedEngines extends TeaModel {
@@ -73,6 +129,22 @@ public class DescribeAvailableZonesResponse extends TeaModel {
         public static DescribeAvailableZonesResponseAvailableZonesSupportedEngines build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableZonesResponseAvailableZonesSupportedEngines self = new DescribeAvailableZonesResponseAvailableZonesSupportedEngines();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableZonesResponseAvailableZonesSupportedEngines setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeAvailableZonesResponseAvailableZonesSupportedEngines setSupportedEngineVersions(java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersions> supportedEngineVersions) {
+            this.supportedEngineVersions = supportedEngineVersions;
+            return this;
+        }
+        public java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEnginesSupportedEngineVersions> getSupportedEngineVersions() {
+            return this.supportedEngineVersions;
         }
 
     }
@@ -97,6 +169,38 @@ public class DescribeAvailableZonesResponse extends TeaModel {
         public static DescribeAvailableZonesResponseAvailableZones build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableZonesResponseAvailableZones self = new DescribeAvailableZonesResponseAvailableZones();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAvailableZonesResponseAvailableZones setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeAvailableZonesResponseAvailableZones setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeAvailableZonesResponseAvailableZones setNetworkTypes(String networkTypes) {
+            this.networkTypes = networkTypes;
+            return this;
+        }
+        public String getNetworkTypes() {
+            return this.networkTypes;
+        }
+
+        public DescribeAvailableZonesResponseAvailableZones setSupportedEngines(java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEngines> supportedEngines) {
+            this.supportedEngines = supportedEngines;
+            return this;
+        }
+        public java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEngines> getSupportedEngines() {
+            return this.supportedEngines;
         }
 
     }

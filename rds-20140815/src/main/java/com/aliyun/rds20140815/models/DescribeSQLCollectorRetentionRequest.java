@@ -4,23 +4,8 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLCollectorRetentionRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SecurityToken")
     public String securityToken;
-
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
 
     @NameInMap("DBInstanceId")
     @Validation(required = true)
@@ -32,6 +17,30 @@ public class DescribeSQLCollectorRetentionRequest extends TeaModel {
     public static DescribeSQLCollectorRetentionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLCollectorRetentionRequest self = new DescribeSQLCollectorRetentionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSQLCollectorRetentionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeSQLCollectorRetentionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeSQLCollectorRetentionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

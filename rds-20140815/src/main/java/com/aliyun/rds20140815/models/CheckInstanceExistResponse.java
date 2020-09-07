@@ -17,4 +17,20 @@ public class CheckInstanceExistResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CheckInstanceExistResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CheckInstanceExistResponse setIsExistInstance(Boolean isExistInstance) {
+        this.isExistInstance = isExistInstance;
+        return this;
+    }
+    public Boolean getIsExistInstance() {
+        return this.isExistInstance;
+    }
+
 }

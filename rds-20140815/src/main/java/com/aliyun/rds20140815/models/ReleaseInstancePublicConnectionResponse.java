@@ -13,4 +13,12 @@ public class ReleaseInstancePublicConnectionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ReleaseInstancePublicConnectionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

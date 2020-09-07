@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescibeImportsFromDatabaseRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -44,12 +32,73 @@ public class DescibeImportsFromDatabaseRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescibeImportsFromDatabaseRequest build(java.util.Map<String, ?> map) throws Exception {
         DescibeImportsFromDatabaseRequest self = new DescibeImportsFromDatabaseRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescibeImportsFromDatabaseRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DescibeImportsFromDatabaseRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescibeImportsFromDatabaseRequest setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public DescibeImportsFromDatabaseRequest setImportId(Integer importId) {
+        this.importId = importId;
+        return this;
+    }
+    public Integer getImportId() {
+        return this.importId;
+    }
+
+    public DescibeImportsFromDatabaseRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescibeImportsFromDatabaseRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescibeImportsFromDatabaseRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescibeImportsFromDatabaseRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
 }

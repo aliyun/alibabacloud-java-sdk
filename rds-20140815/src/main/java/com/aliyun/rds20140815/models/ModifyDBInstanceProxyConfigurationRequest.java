@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -31,6 +19,30 @@ public class ModifyDBInstanceProxyConfigurationRequest extends TeaModel {
     public static ModifyDBInstanceProxyConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceProxyConfigurationRequest self = new ModifyDBInstanceProxyConfigurationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBInstanceProxyConfigurationRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyDBInstanceProxyConfigurationRequest setProxyConfigurationKey(String proxyConfigurationKey) {
+        this.proxyConfigurationKey = proxyConfigurationKey;
+        return this;
+    }
+    public String getProxyConfigurationKey() {
+        return this.proxyConfigurationKey;
+    }
+
+    public ModifyDBInstanceProxyConfigurationRequest setProxyConfigurationValue(String proxyConfigurationValue) {
+        this.proxyConfigurationValue = proxyConfigurationValue;
+        return this;
+    }
+    public String getProxyConfigurationValue() {
+        return this.proxyConfigurationValue;
     }
 
 }

@@ -21,6 +21,30 @@ public class CreateDedicatedHostResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDedicatedHostResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDedicatedHostResponse setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    public CreateDedicatedHostResponse setDedicateHostList(CreateDedicatedHostResponseDedicateHostList dedicateHostList) {
+        this.dedicateHostList = dedicateHostList;
+        return this;
+    }
+    public CreateDedicatedHostResponseDedicateHostList getDedicateHostList() {
+        return this.dedicateHostList;
+    }
+
     public static class CreateDedicatedHostResponseDedicateHostListDedicateHostList extends TeaModel {
         @NameInMap("DedicatedHostId")
         @Validation(required = true)
@@ -29,6 +53,14 @@ public class CreateDedicatedHostResponse extends TeaModel {
         public static CreateDedicatedHostResponseDedicateHostListDedicateHostList build(java.util.Map<String, ?> map) throws Exception {
             CreateDedicatedHostResponseDedicateHostListDedicateHostList self = new CreateDedicatedHostResponseDedicateHostListDedicateHostList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDedicatedHostResponseDedicateHostListDedicateHostList setDedicatedHostId(String dedicatedHostId) {
+            this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+        public String getDedicatedHostId() {
+            return this.dedicatedHostId;
         }
 
     }
@@ -41,6 +73,14 @@ public class CreateDedicatedHostResponse extends TeaModel {
         public static CreateDedicatedHostResponseDedicateHostList build(java.util.Map<String, ?> map) throws Exception {
             CreateDedicatedHostResponseDedicateHostList self = new CreateDedicatedHostResponseDedicateHostList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDedicatedHostResponseDedicateHostList setDedicateHostList(java.util.List<CreateDedicatedHostResponseDedicateHostListDedicateHostList> dedicateHostList) {
+            this.dedicateHostList = dedicateHostList;
+            return this;
+        }
+        public java.util.List<CreateDedicatedHostResponseDedicateHostListDedicateHostList> getDedicateHostList() {
+            return this.dedicateHostList;
         }
 
     }

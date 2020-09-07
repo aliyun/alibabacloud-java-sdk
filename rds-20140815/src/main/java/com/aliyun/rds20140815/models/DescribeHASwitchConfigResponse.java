@@ -21,4 +21,28 @@ public class DescribeHASwitchConfigResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeHASwitchConfigResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeHASwitchConfigResponse setHAConfig(String HAConfig) {
+        this.HAConfig = HAConfig;
+        return this;
+    }
+    public String getHAConfig() {
+        return this.HAConfig;
+    }
+
+    public DescribeHASwitchConfigResponse setManualHATime(String manualHATime) {
+        this.manualHATime = manualHATime;
+        return this;
+    }
+    public String getManualHATime() {
+        return this.manualHATime;
+    }
+
 }

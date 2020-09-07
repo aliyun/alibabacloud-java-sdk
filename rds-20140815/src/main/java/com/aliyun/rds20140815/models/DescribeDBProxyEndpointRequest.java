@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBProxyEndpointRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -33,6 +21,38 @@ public class DescribeDBProxyEndpointRequest extends TeaModel {
     public static DescribeDBProxyEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBProxyEndpointRequest self = new DescribeDBProxyEndpointRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDBProxyEndpointRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeDBProxyEndpointRequest setDBProxyEndpointId(String DBProxyEndpointId) {
+        this.DBProxyEndpointId = DBProxyEndpointId;
+        return this;
+    }
+    public String getDBProxyEndpointId() {
+        return this.DBProxyEndpointId;
+    }
+
+    public DescribeDBProxyEndpointRequest setDBProxyConnectString(String DBProxyConnectString) {
+        this.DBProxyConnectString = DBProxyConnectString;
+        return this;
+    }
+    public String getDBProxyConnectString() {
+        return this.DBProxyConnectString;
+    }
+
+    public DescribeDBProxyEndpointRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

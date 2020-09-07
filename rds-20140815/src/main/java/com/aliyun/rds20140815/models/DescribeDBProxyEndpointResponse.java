@@ -45,4 +45,76 @@ public class DescribeDBProxyEndpointResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBProxyEndpointResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBProxyEndpointResponse setDBProxyEndpointId(String DBProxyEndpointId) {
+        this.DBProxyEndpointId = DBProxyEndpointId;
+        return this;
+    }
+    public String getDBProxyEndpointId() {
+        return this.DBProxyEndpointId;
+    }
+
+    public DescribeDBProxyEndpointResponse setDBProxyConnectString(String DBProxyConnectString) {
+        this.DBProxyConnectString = DBProxyConnectString;
+        return this;
+    }
+    public String getDBProxyConnectString() {
+        return this.DBProxyConnectString;
+    }
+
+    public DescribeDBProxyEndpointResponse setDBProxyConnectStringPort(String DBProxyConnectStringPort) {
+        this.DBProxyConnectStringPort = DBProxyConnectStringPort;
+        return this;
+    }
+    public String getDBProxyConnectStringPort() {
+        return this.DBProxyConnectStringPort;
+    }
+
+    public DescribeDBProxyEndpointResponse setDBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
+        this.DBProxyConnectStringNetType = DBProxyConnectStringNetType;
+        return this;
+    }
+    public String getDBProxyConnectStringNetType() {
+        return this.DBProxyConnectStringNetType;
+    }
+
+    public DescribeDBProxyEndpointResponse setDBProxyFeatures(String DBProxyFeatures) {
+        this.DBProxyFeatures = DBProxyFeatures;
+        return this;
+    }
+    public String getDBProxyFeatures() {
+        return this.DBProxyFeatures;
+    }
+
+    public DescribeDBProxyEndpointResponse setReadOnlyInstanceMaxDelayTime(String readOnlyInstanceMaxDelayTime) {
+        this.readOnlyInstanceMaxDelayTime = readOnlyInstanceMaxDelayTime;
+        return this;
+    }
+    public String getReadOnlyInstanceMaxDelayTime() {
+        return this.readOnlyInstanceMaxDelayTime;
+    }
+
+    public DescribeDBProxyEndpointResponse setReadOnlyInstanceDistributionType(String readOnlyInstanceDistributionType) {
+        this.readOnlyInstanceDistributionType = readOnlyInstanceDistributionType;
+        return this;
+    }
+    public String getReadOnlyInstanceDistributionType() {
+        return this.readOnlyInstanceDistributionType;
+    }
+
+    public DescribeDBProxyEndpointResponse setReadOnlyInstanceWeight(String readOnlyInstanceWeight) {
+        this.readOnlyInstanceWeight = readOnlyInstanceWeight;
+        return this;
+    }
+    public String getReadOnlyInstanceWeight() {
+        return this.readOnlyInstanceWeight;
+    }
+
 }
