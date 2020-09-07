@@ -7,11 +7,21 @@ import com.aliyun.mhub20170825.models.*;
 public class Client extends com.aliyun.tearpc.Client {
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("mhub", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
+
+    public OpenEmasServiceResponse openEmasServiceWithOptions(OpenEmasServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("OpenEmasService", "HTTPS", "POST", "2017-08-25", "AK,APP,PrivateKey,BearerToken", null, TeaModel.buildMap(request), runtime), new OpenEmasServiceResponse());
+    }
+
+    public OpenEmasServiceResponse openEmasService(OpenEmasServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.openEmasServiceWithOptions(request, runtime);
+    }
 
     public ListAppsByOwnerResponse listAppsByOwnerWithOptions(ListAppsByOwnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
