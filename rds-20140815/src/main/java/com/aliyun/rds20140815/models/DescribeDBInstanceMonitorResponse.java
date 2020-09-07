@@ -17,4 +17,20 @@ public class DescribeDBInstanceMonitorResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBInstanceMonitorResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBInstanceMonitorResponse setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
 }

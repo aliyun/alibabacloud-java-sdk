@@ -21,4 +21,28 @@ public class DescribeActionEventPolicyResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeActionEventPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeActionEventPolicyResponse setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeActionEventPolicyResponse setEnableEventLog(String enableEventLog) {
+        this.enableEventLog = enableEventLog;
+        return this;
+    }
+    public String getEnableEventLog() {
+        return this.enableEventLog;
+    }
+
 }

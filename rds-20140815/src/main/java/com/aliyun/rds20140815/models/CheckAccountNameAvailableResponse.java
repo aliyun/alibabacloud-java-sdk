@@ -13,4 +13,12 @@ public class CheckAccountNameAvailableResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CheckAccountNameAvailableResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

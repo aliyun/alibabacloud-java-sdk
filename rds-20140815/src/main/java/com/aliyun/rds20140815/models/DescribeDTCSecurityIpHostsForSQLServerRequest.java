@@ -4,28 +4,15 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
+    // description: 实例ID。; 
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
 
+    // description: 地域ID，可以通过接口[DescribeRegions](~~26243~~)查看。; 
     @NameInMap("RegionId")
     @Validation(required = true)
     public String regionId;
@@ -33,6 +20,30 @@ public class DescribeDTCSecurityIpHostsForSQLServerRequest extends TeaModel {
     public static DescribeDTCSecurityIpHostsForSQLServerRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDTCSecurityIpHostsForSQLServerRequest self = new DescribeDTCSecurityIpHostsForSQLServerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDTCSecurityIpHostsForSQLServerRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeDTCSecurityIpHostsForSQLServerRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeDTCSecurityIpHostsForSQLServerRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

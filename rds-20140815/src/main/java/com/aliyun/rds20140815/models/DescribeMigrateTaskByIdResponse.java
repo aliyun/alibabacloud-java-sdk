@@ -49,4 +49,84 @@ public class DescribeMigrateTaskByIdResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeMigrateTaskByIdResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeMigrateTaskByIdResponse setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public DescribeMigrateTaskByIdResponse setDBName(String DBName) {
+        this.DBName = DBName;
+        return this;
+    }
+    public String getDBName() {
+        return this.DBName;
+    }
+
+    public DescribeMigrateTaskByIdResponse setMigrateTaskId(String migrateTaskId) {
+        this.migrateTaskId = migrateTaskId;
+        return this;
+    }
+    public String getMigrateTaskId() {
+        return this.migrateTaskId;
+    }
+
+    public DescribeMigrateTaskByIdResponse setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public DescribeMigrateTaskByIdResponse setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeMigrateTaskByIdResponse setBackupMode(String backupMode) {
+        this.backupMode = backupMode;
+        return this;
+    }
+    public String getBackupMode() {
+        return this.backupMode;
+    }
+
+    public DescribeMigrateTaskByIdResponse setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeMigrateTaskByIdResponse setIsDBReplaced(String isDBReplaced) {
+        this.isDBReplaced = isDBReplaced;
+        return this;
+    }
+    public String getIsDBReplaced() {
+        return this.isDBReplaced;
+    }
+
+    public DescribeMigrateTaskByIdResponse setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

@@ -17,6 +17,22 @@ public class DeleteBackupFileResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteBackupFileResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeleteBackupFileResponse setDeletedBaksetIds(DeleteBackupFileResponseDeletedBaksetIds deletedBaksetIds) {
+        this.deletedBaksetIds = deletedBaksetIds;
+        return this;
+    }
+    public DeleteBackupFileResponseDeletedBaksetIds getDeletedBaksetIds() {
+        return this.deletedBaksetIds;
+    }
+
     public static class DeleteBackupFileResponseDeletedBaksetIds extends TeaModel {
         @NameInMap("DeletedBaksetIds")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class DeleteBackupFileResponse extends TeaModel {
         public static DeleteBackupFileResponseDeletedBaksetIds build(java.util.Map<String, ?> map) throws Exception {
             DeleteBackupFileResponseDeletedBaksetIds self = new DeleteBackupFileResponseDeletedBaksetIds();
             return TeaModel.build(map, self);
+        }
+
+        public DeleteBackupFileResponseDeletedBaksetIds setDeletedBaksetIds(java.util.List<Integer> deletedBaksetIds) {
+            this.deletedBaksetIds = deletedBaksetIds;
+            return this;
+        }
+        public java.util.List<Integer> getDeletedBaksetIds() {
+            return this.deletedBaksetIds;
         }
 
     }

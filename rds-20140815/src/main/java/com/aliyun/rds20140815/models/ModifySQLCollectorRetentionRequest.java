@@ -7,21 +7,6 @@ public class ModifySQLCollectorRetentionRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -36,6 +21,38 @@ public class ModifySQLCollectorRetentionRequest extends TeaModel {
     public static ModifySQLCollectorRetentionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySQLCollectorRetentionRequest self = new ModifySQLCollectorRetentionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySQLCollectorRetentionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public ModifySQLCollectorRetentionRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifySQLCollectorRetentionRequest setConfigValue(String configValue) {
+        this.configValue = configValue;
+        return this;
+    }
+    public String getConfigValue() {
+        return this.configValue;
+    }
+
+    public ModifySQLCollectorRetentionRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

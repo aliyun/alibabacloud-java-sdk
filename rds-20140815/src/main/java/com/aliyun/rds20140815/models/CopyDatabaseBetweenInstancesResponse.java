@@ -17,4 +17,20 @@ public class CopyDatabaseBetweenInstancesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CopyDatabaseBetweenInstancesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CopyDatabaseBetweenInstancesResponse setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
 }

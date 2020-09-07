@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class RebuildDBInstanceRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -33,6 +21,38 @@ public class RebuildDBInstanceRequest extends TeaModel {
     public static RebuildDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RebuildDBInstanceRequest self = new RebuildDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RebuildDBInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RebuildDBInstanceRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
+        this.dedicatedHostGroupId = dedicatedHostGroupId;
+        return this;
+    }
+    public String getDedicatedHostGroupId() {
+        return this.dedicatedHostGroupId;
+    }
+
+    public RebuildDBInstanceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public RebuildDBInstanceRequest setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
     }
 
 }

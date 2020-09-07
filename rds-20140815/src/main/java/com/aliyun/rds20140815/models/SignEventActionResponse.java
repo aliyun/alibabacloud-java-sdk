@@ -21,4 +21,28 @@ public class SignEventActionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SignEventActionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SignEventActionResponse setEventId(String eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public String getEventId() {
+        return this.eventId;
+    }
+
+    public SignEventActionResponse setEventRcpt(String eventRcpt) {
+        this.eventRcpt = eventRcpt;
+        return this;
+    }
+    public String getEventRcpt() {
+        return this.eventRcpt;
+    }
+
 }

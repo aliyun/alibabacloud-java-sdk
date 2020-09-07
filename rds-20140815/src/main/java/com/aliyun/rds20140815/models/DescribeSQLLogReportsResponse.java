@@ -29,6 +29,46 @@ public class DescribeSQLLogReportsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSQLLogReportsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSQLLogReportsResponse setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public DescribeSQLLogReportsResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSQLLogReportsResponse setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeSQLLogReportsResponse setItems(DescribeSQLLogReportsResponseItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeSQLLogReportsResponseItems getItems() {
+        return this.items;
+    }
+
     public static class DescribeSQLLogReportsResponseItemsItemLatencyTopNItemsLatencyTopNItem extends TeaModel {
         @NameInMap("SQLText")
         @Validation(required = true)
@@ -47,6 +87,30 @@ public class DescribeSQLLogReportsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeSQLLogReportsResponseItemsItemLatencyTopNItemsLatencyTopNItem setSQLText(String SQLText) {
+            this.SQLText = SQLText;
+            return this;
+        }
+        public String getSQLText() {
+            return this.SQLText;
+        }
+
+        public DescribeSQLLogReportsResponseItemsItemLatencyTopNItemsLatencyTopNItem setAvgLatency(Long avgLatency) {
+            this.avgLatency = avgLatency;
+            return this;
+        }
+        public Long getAvgLatency() {
+            return this.avgLatency;
+        }
+
+        public DescribeSQLLogReportsResponseItemsItemLatencyTopNItemsLatencyTopNItem setSQLExecuteTimes(Long SQLExecuteTimes) {
+            this.SQLExecuteTimes = SQLExecuteTimes;
+            return this;
+        }
+        public Long getSQLExecuteTimes() {
+            return this.SQLExecuteTimes;
+        }
+
     }
 
     public static class DescribeSQLLogReportsResponseItemsItemLatencyTopNItems extends TeaModel {
@@ -57,6 +121,14 @@ public class DescribeSQLLogReportsResponse extends TeaModel {
         public static DescribeSQLLogReportsResponseItemsItemLatencyTopNItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLLogReportsResponseItemsItemLatencyTopNItems self = new DescribeSQLLogReportsResponseItemsItemLatencyTopNItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSQLLogReportsResponseItemsItemLatencyTopNItems setLatencyTopNItem(java.util.List<DescribeSQLLogReportsResponseItemsItemLatencyTopNItemsLatencyTopNItem> latencyTopNItem) {
+            this.latencyTopNItem = latencyTopNItem;
+            return this;
+        }
+        public java.util.List<DescribeSQLLogReportsResponseItemsItemLatencyTopNItemsLatencyTopNItem> getLatencyTopNItem() {
+            return this.latencyTopNItem;
         }
 
     }
@@ -75,6 +147,22 @@ public class DescribeSQLLogReportsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeSQLLogReportsResponseItemsItemQPSTopNItemsQPSTopNItem setSQLText(String SQLText) {
+            this.SQLText = SQLText;
+            return this;
+        }
+        public String getSQLText() {
+            return this.SQLText;
+        }
+
+        public DescribeSQLLogReportsResponseItemsItemQPSTopNItemsQPSTopNItem setSQLExecuteTimes(Long SQLExecuteTimes) {
+            this.SQLExecuteTimes = SQLExecuteTimes;
+            return this;
+        }
+        public Long getSQLExecuteTimes() {
+            return this.SQLExecuteTimes;
+        }
+
     }
 
     public static class DescribeSQLLogReportsResponseItemsItemQPSTopNItems extends TeaModel {
@@ -85,6 +173,14 @@ public class DescribeSQLLogReportsResponse extends TeaModel {
         public static DescribeSQLLogReportsResponseItemsItemQPSTopNItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLLogReportsResponseItemsItemQPSTopNItems self = new DescribeSQLLogReportsResponseItemsItemQPSTopNItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSQLLogReportsResponseItemsItemQPSTopNItems setQPSTopNItem(java.util.List<DescribeSQLLogReportsResponseItemsItemQPSTopNItemsQPSTopNItem> QPSTopNItem) {
+            this.QPSTopNItem = QPSTopNItem;
+            return this;
+        }
+        public java.util.List<DescribeSQLLogReportsResponseItemsItemQPSTopNItemsQPSTopNItem> getQPSTopNItem() {
+            return this.QPSTopNItem;
         }
 
     }
@@ -107,6 +203,30 @@ public class DescribeSQLLogReportsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeSQLLogReportsResponseItemsItem setReportTime(String reportTime) {
+            this.reportTime = reportTime;
+            return this;
+        }
+        public String getReportTime() {
+            return this.reportTime;
+        }
+
+        public DescribeSQLLogReportsResponseItemsItem setLatencyTopNItems(DescribeSQLLogReportsResponseItemsItemLatencyTopNItems latencyTopNItems) {
+            this.latencyTopNItems = latencyTopNItems;
+            return this;
+        }
+        public DescribeSQLLogReportsResponseItemsItemLatencyTopNItems getLatencyTopNItems() {
+            return this.latencyTopNItems;
+        }
+
+        public DescribeSQLLogReportsResponseItemsItem setQPSTopNItems(DescribeSQLLogReportsResponseItemsItemQPSTopNItems QPSTopNItems) {
+            this.QPSTopNItems = QPSTopNItems;
+            return this;
+        }
+        public DescribeSQLLogReportsResponseItemsItemQPSTopNItems getQPSTopNItems() {
+            return this.QPSTopNItems;
+        }
+
     }
 
     public static class DescribeSQLLogReportsResponseItems extends TeaModel {
@@ -117,6 +237,14 @@ public class DescribeSQLLogReportsResponse extends TeaModel {
         public static DescribeSQLLogReportsResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLLogReportsResponseItems self = new DescribeSQLLogReportsResponseItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSQLLogReportsResponseItems setItem(java.util.List<DescribeSQLLogReportsResponseItemsItem> item) {
+            this.item = item;
+            return this;
+        }
+        public java.util.List<DescribeSQLLogReportsResponseItemsItem> getItem() {
+            return this.item;
         }
 
     }

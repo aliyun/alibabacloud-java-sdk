@@ -21,6 +21,30 @@ public class DescribeDBInstanceTDEResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBInstanceTDEResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBInstanceTDEResponse setTDEStatus(String TDEStatus) {
+        this.TDEStatus = TDEStatus;
+        return this;
+    }
+    public String getTDEStatus() {
+        return this.TDEStatus;
+    }
+
+    public DescribeDBInstanceTDEResponse setDatabases(DescribeDBInstanceTDEResponseDatabases databases) {
+        this.databases = databases;
+        return this;
+    }
+    public DescribeDBInstanceTDEResponseDatabases getDatabases() {
+        return this.databases;
+    }
+
     public static class DescribeDBInstanceTDEResponseDatabasesDatabase extends TeaModel {
         @NameInMap("DBName")
         @Validation(required = true)
@@ -35,6 +59,22 @@ public class DescribeDBInstanceTDEResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDBInstanceTDEResponseDatabasesDatabase setDBName(String DBName) {
+            this.DBName = DBName;
+            return this;
+        }
+        public String getDBName() {
+            return this.DBName;
+        }
+
+        public DescribeDBInstanceTDEResponseDatabasesDatabase setTDEStatus(String TDEStatus) {
+            this.TDEStatus = TDEStatus;
+            return this;
+        }
+        public String getTDEStatus() {
+            return this.TDEStatus;
+        }
+
     }
 
     public static class DescribeDBInstanceTDEResponseDatabases extends TeaModel {
@@ -45,6 +85,14 @@ public class DescribeDBInstanceTDEResponse extends TeaModel {
         public static DescribeDBInstanceTDEResponseDatabases build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceTDEResponseDatabases self = new DescribeDBInstanceTDEResponseDatabases();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceTDEResponseDatabases setDatabase(java.util.List<DescribeDBInstanceTDEResponseDatabasesDatabase> database) {
+            this.database = database;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceTDEResponseDatabasesDatabase> getDatabase() {
+            return this.database;
         }
 
     }

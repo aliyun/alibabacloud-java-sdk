@@ -25,4 +25,36 @@ public class UpgradeDBProxyInstanceKernelVersionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpgradeDBProxyInstanceKernelVersionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpgradeDBProxyInstanceKernelVersionResponse setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public UpgradeDBProxyInstanceKernelVersionResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public UpgradeDBProxyInstanceKernelVersionResponse setTargetMinorVersion(String targetMinorVersion) {
+        this.targetMinorVersion = targetMinorVersion;
+        return this;
+    }
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
+    }
+
 }

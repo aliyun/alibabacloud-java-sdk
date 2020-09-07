@@ -25,4 +25,36 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponse extends TeaModel
         return TeaModel.build(map, self);
     }
 
+    public ModifyReadonlyInstanceDelayReplicationTimeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyReadonlyInstanceDelayReplicationTimeResponse setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyReadonlyInstanceDelayReplicationTimeResponse setReadSQLReplicationTime(String readSQLReplicationTime) {
+        this.readSQLReplicationTime = readSQLReplicationTime;
+        return this;
+    }
+    public String getReadSQLReplicationTime() {
+        return this.readSQLReplicationTime;
+    }
+
+    public ModifyReadonlyInstanceDelayReplicationTimeResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
 }

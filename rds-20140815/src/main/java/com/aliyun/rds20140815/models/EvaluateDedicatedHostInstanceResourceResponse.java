@@ -21,4 +21,28 @@ public class EvaluateDedicatedHostInstanceResourceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public EvaluateDedicatedHostInstanceResourceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public EvaluateDedicatedHostInstanceResourceResponse setDBInstanceClass(String DBInstanceClass) {
+        this.DBInstanceClass = DBInstanceClass;
+        return this;
+    }
+    public String getDBInstanceClass() {
+        return this.DBInstanceClass;
+    }
+
+    public EvaluateDedicatedHostInstanceResourceResponse setAvailable(Integer available) {
+        this.available = available;
+        return this;
+    }
+    public Integer getAvailable() {
+        return this.available;
+    }
+
 }

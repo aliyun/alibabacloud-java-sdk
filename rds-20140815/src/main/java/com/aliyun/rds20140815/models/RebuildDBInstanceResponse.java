@@ -21,4 +21,28 @@ public class RebuildDBInstanceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RebuildDBInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RebuildDBInstanceResponse setTaskId(Integer taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Integer getTaskId() {
+        return this.taskId;
+    }
+
+    public RebuildDBInstanceResponse setMigrationId(Integer migrationId) {
+        this.migrationId = migrationId;
+        return this;
+    }
+    public Integer getMigrationId() {
+        return this.migrationId;
+    }
+
 }

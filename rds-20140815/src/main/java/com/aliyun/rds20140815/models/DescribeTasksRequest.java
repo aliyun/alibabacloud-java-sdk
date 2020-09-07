@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -38,12 +26,65 @@ public class DescribeTasksRequest extends TeaModel {
     @NameInMap("TaskAction")
     public String taskAction;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTasksRequest self = new DescribeTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTasksRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeTasksRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeTasksRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeTasksRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeTasksRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeTasksRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeTasksRequest setTaskAction(String taskAction) {
+        this.taskAction = taskAction;
+        return this;
+    }
+    public String getTaskAction() {
+        return this.taskAction;
     }
 
 }

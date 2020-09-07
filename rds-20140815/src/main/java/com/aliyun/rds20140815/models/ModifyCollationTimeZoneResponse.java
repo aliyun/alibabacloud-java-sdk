@@ -29,4 +29,44 @@ public class ModifyCollationTimeZoneResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyCollationTimeZoneResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyCollationTimeZoneResponse setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyCollationTimeZoneResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public ModifyCollationTimeZoneResponse setTimezone(String timezone) {
+        this.timezone = timezone;
+        return this;
+    }
+    public String getTimezone() {
+        return this.timezone;
+    }
+
+    public ModifyCollationTimeZoneResponse setCollation(String collation) {
+        this.collation = collation;
+        return this;
+    }
+    public String getCollation() {
+        return this.collation;
+    }
+
 }

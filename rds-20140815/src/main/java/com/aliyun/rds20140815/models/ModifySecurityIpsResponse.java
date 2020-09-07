@@ -17,4 +17,20 @@ public class ModifySecurityIpsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifySecurityIpsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifySecurityIpsResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
 }

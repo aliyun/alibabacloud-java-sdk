@@ -13,4 +13,12 @@ public class CreateDedicatedHostUserResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDedicatedHostUserResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

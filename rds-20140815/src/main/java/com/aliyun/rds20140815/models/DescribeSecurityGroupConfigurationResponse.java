@@ -21,6 +21,30 @@ public class DescribeSecurityGroupConfigurationResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSecurityGroupConfigurationResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSecurityGroupConfigurationResponse setDBInstanceName(String DBInstanceName) {
+        this.DBInstanceName = DBInstanceName;
+        return this;
+    }
+    public String getDBInstanceName() {
+        return this.DBInstanceName;
+    }
+
+    public DescribeSecurityGroupConfigurationResponse setItems(DescribeSecurityGroupConfigurationResponseItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeSecurityGroupConfigurationResponseItems getItems() {
+        return this.items;
+    }
+
     public static class DescribeSecurityGroupConfigurationResponseItemsEcsSecurityGroupRelation extends TeaModel {
         @NameInMap("RegionId")
         @Validation(required = true)
@@ -39,6 +63,30 @@ public class DescribeSecurityGroupConfigurationResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeSecurityGroupConfigurationResponseItemsEcsSecurityGroupRelation setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeSecurityGroupConfigurationResponseItemsEcsSecurityGroupRelation setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public DescribeSecurityGroupConfigurationResponseItemsEcsSecurityGroupRelation setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
     }
 
     public static class DescribeSecurityGroupConfigurationResponseItems extends TeaModel {
@@ -49,6 +97,14 @@ public class DescribeSecurityGroupConfigurationResponse extends TeaModel {
         public static DescribeSecurityGroupConfigurationResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupConfigurationResponseItems self = new DescribeSecurityGroupConfigurationResponseItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityGroupConfigurationResponseItems setEcsSecurityGroupRelation(java.util.List<DescribeSecurityGroupConfigurationResponseItemsEcsSecurityGroupRelation> ecsSecurityGroupRelation) {
+            this.ecsSecurityGroupRelation = ecsSecurityGroupRelation;
+            return this;
+        }
+        public java.util.List<DescribeSecurityGroupConfigurationResponseItemsEcsSecurityGroupRelation> getEcsSecurityGroupRelation() {
+            return this.ecsSecurityGroupRelation;
         }
 
     }

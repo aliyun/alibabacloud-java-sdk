@@ -21,4 +21,28 @@ public class CheckRecoveryConditionsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CheckRecoveryConditionsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CheckRecoveryConditionsResponse setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public CheckRecoveryConditionsResponse setRecoveryStatus(String recoveryStatus) {
+        this.recoveryStatus = recoveryStatus;
+        return this;
+    }
+    public String getRecoveryStatus() {
+        return this.recoveryStatus;
+    }
+
 }

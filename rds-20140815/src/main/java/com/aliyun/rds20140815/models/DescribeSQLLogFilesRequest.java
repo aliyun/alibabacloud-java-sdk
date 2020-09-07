@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeSQLLogFilesRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -29,12 +17,41 @@ public class DescribeSQLLogFilesRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DescribeSQLLogFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLLogFilesRequest self = new DescribeSQLLogFilesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSQLLogFilesRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DescribeSQLLogFilesRequest setFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    public DescribeSQLLogFilesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSQLLogFilesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
 }

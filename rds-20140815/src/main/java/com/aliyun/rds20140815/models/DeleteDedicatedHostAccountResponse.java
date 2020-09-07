@@ -13,4 +13,12 @@ public class DeleteDedicatedHostAccountResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteDedicatedHostAccountResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

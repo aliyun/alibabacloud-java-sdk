@@ -4,23 +4,10 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("DedicatedHostGroupId")
-    @Validation(required = true)
     public String dedicatedHostGroupId;
 
     @NameInMap("OrderId")
@@ -29,9 +16,85 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("HostType")
     public String hostType;
 
+    @NameInMap("HostStatus")
+    public String hostStatus;
+
+    @NameInMap("AllocationStatus")
+    public String allocationStatus;
+
+    @NameInMap("ZoneId")
+    public String zoneId;
+
+    @NameInMap("DedicatedHostId")
+    public String dedicatedHostId;
+
     public static DescribeDedicatedHostsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostsRequest self = new DescribeDedicatedHostsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDedicatedHostsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDedicatedHostsRequest setDedicatedHostGroupId(String dedicatedHostGroupId) {
+        this.dedicatedHostGroupId = dedicatedHostGroupId;
+        return this;
+    }
+    public String getDedicatedHostGroupId() {
+        return this.dedicatedHostGroupId;
+    }
+
+    public DescribeDedicatedHostsRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    public DescribeDedicatedHostsRequest setHostType(String hostType) {
+        this.hostType = hostType;
+        return this;
+    }
+    public String getHostType() {
+        return this.hostType;
+    }
+
+    public DescribeDedicatedHostsRequest setHostStatus(String hostStatus) {
+        this.hostStatus = hostStatus;
+        return this;
+    }
+    public String getHostStatus() {
+        return this.hostStatus;
+    }
+
+    public DescribeDedicatedHostsRequest setAllocationStatus(String allocationStatus) {
+        this.allocationStatus = allocationStatus;
+        return this;
+    }
+    public String getAllocationStatus() {
+        return this.allocationStatus;
+    }
+
+    public DescribeDedicatedHostsRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public DescribeDedicatedHostsRequest setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
     }
 
 }

@@ -21,6 +21,30 @@ public class DescribeCharacterSetNameResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCharacterSetNameResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCharacterSetNameResponse setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
+    }
+
+    public DescribeCharacterSetNameResponse setCharacterSetNameItems(DescribeCharacterSetNameResponseCharacterSetNameItems characterSetNameItems) {
+        this.characterSetNameItems = characterSetNameItems;
+        return this;
+    }
+    public DescribeCharacterSetNameResponseCharacterSetNameItems getCharacterSetNameItems() {
+        return this.characterSetNameItems;
+    }
+
     public static class DescribeCharacterSetNameResponseCharacterSetNameItems extends TeaModel {
         @NameInMap("CharacterSetName")
         @Validation(required = true)
@@ -29,6 +53,14 @@ public class DescribeCharacterSetNameResponse extends TeaModel {
         public static DescribeCharacterSetNameResponseCharacterSetNameItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeCharacterSetNameResponseCharacterSetNameItems self = new DescribeCharacterSetNameResponseCharacterSetNameItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCharacterSetNameResponseCharacterSetNameItems setCharacterSetName(java.util.List<String> characterSetName) {
+            this.characterSetName = characterSetName;
+            return this;
+        }
+        public java.util.List<String> getCharacterSetName() {
+            return this.characterSetName;
         }
 
     }

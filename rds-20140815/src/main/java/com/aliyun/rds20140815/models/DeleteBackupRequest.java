@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DeleteBackupRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -24,12 +12,25 @@ public class DeleteBackupRequest extends TeaModel {
     @Validation(required = true)
     public String backupId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DeleteBackupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteBackupRequest self = new DeleteBackupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteBackupRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public DeleteBackupRequest setBackupId(String backupId) {
+        this.backupId = backupId;
+        return this;
+    }
+    public String getBackupId() {
+        return this.backupId;
     }
 
 }

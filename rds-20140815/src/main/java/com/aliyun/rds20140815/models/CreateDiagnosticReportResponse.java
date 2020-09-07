@@ -17,4 +17,20 @@ public class CreateDiagnosticReportResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDiagnosticReportResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDiagnosticReportResponse setReportId(String reportId) {
+        this.reportId = reportId;
+        return this;
+    }
+    public String getReportId() {
+        return this.reportId;
+    }
+
 }

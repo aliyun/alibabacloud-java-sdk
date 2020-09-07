@@ -17,6 +17,22 @@ public class DescribeDBInstancesOverviewResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBInstancesOverviewResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBInstancesOverviewResponse setRegions(DescribeDBInstancesOverviewResponseRegions regions) {
+        this.regions = regions;
+        return this;
+    }
+    public DescribeDBInstancesOverviewResponseRegions getRegions() {
+        return this.regions;
+    }
+
     public static class DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel extends TeaModel {
         @NameInMap("DBInstanceId")
         @Validation(required = true)
@@ -59,6 +75,78 @@ public class DescribeDBInstancesOverviewResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel setDBInstanceId(String DBInstanceId) {
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel setExpireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public String getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel setLockMode(String lockMode) {
+            this.lockMode = lockMode;
+            return this;
+        }
+        public String getLockMode() {
+            return this.lockMode;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel setDBInstanceStatus(String DBInstanceStatus) {
+            this.DBInstanceStatus = DBInstanceStatus;
+            return this;
+        }
+        public String getDBInstanceStatus() {
+            return this.DBInstanceStatus;
+        }
+
     }
 
     public static class DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModels extends TeaModel {
@@ -69,6 +157,14 @@ public class DescribeDBInstancesOverviewResponse extends TeaModel {
         public static DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModels build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModels self = new DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModels();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModels setInstanceModel(java.util.List<DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel> instanceModel) {
+            this.instanceModel = instanceModel;
+            return this;
+        }
+        public java.util.List<DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModelsInstanceModel> getInstanceModel() {
+            return this.instanceModel;
         }
 
     }
@@ -91,6 +187,30 @@ public class DescribeDBInstancesOverviewResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModel setInstanceDateType(String instanceDateType) {
+            this.instanceDateType = instanceDateType;
+            return this;
+        }
+        public String getInstanceDateType() {
+            return this.instanceDateType;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModel setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModel setInstanceModels(DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModels instanceModels) {
+            this.instanceModels = instanceModels;
+            return this;
+        }
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModelInstanceModels getInstanceModels() {
+            return this.instanceModels;
+        }
+
     }
 
     public static class DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModels extends TeaModel {
@@ -101,6 +221,14 @@ public class DescribeDBInstancesOverviewResponse extends TeaModel {
         public static DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModels build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModels self = new DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModels();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModels setTypeModel(java.util.List<DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModel> typeModel) {
+            this.typeModel = typeModel;
+            return this;
+        }
+        public java.util.List<DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModelsTypeModel> getTypeModel() {
+            return this.typeModel;
         }
 
     }
@@ -127,6 +255,38 @@ public class DescribeDBInstancesOverviewResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDBInstancesOverviewResponseRegionsRegionModel setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModel setEngineCount(String engineCount) {
+            this.engineCount = engineCount;
+            return this;
+        }
+        public String getEngineCount() {
+            return this.engineCount;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModel setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public DescribeDBInstancesOverviewResponseRegionsRegionModel setTypeModels(DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModels typeModels) {
+            this.typeModels = typeModels;
+            return this;
+        }
+        public DescribeDBInstancesOverviewResponseRegionsRegionModelTypeModels getTypeModels() {
+            return this.typeModels;
+        }
+
     }
 
     public static class DescribeDBInstancesOverviewResponseRegions extends TeaModel {
@@ -137,6 +297,14 @@ public class DescribeDBInstancesOverviewResponse extends TeaModel {
         public static DescribeDBInstancesOverviewResponseRegions build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesOverviewResponseRegions self = new DescribeDBInstancesOverviewResponseRegions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesOverviewResponseRegions setRegionModel(java.util.List<DescribeDBInstancesOverviewResponseRegionsRegionModel> regionModel) {
+            this.regionModel = regionModel;
+            return this;
+        }
+        public java.util.List<DescribeDBInstancesOverviewResponseRegionsRegionModel> getRegionModel() {
+            return this.regionModel;
         }
 
     }

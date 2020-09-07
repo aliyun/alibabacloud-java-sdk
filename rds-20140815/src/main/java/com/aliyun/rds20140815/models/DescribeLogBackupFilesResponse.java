@@ -33,6 +33,54 @@ public class DescribeLogBackupFilesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeLogBackupFilesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLogBackupFilesResponse setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
+    public DescribeLogBackupFilesResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeLogBackupFilesResponse setPageRecordCount(Integer pageRecordCount) {
+        this.pageRecordCount = pageRecordCount;
+        return this;
+    }
+    public Integer getPageRecordCount() {
+        return this.pageRecordCount;
+    }
+
+    public DescribeLogBackupFilesResponse setTotalFileSize(Long totalFileSize) {
+        this.totalFileSize = totalFileSize;
+        return this;
+    }
+    public Long getTotalFileSize() {
+        return this.totalFileSize;
+    }
+
+    public DescribeLogBackupFilesResponse setItems(DescribeLogBackupFilesResponseItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeLogBackupFilesResponseItems getItems() {
+        return this.items;
+    }
+
     public static class DescribeLogBackupFilesResponseItemsBinLogFile extends TeaModel {
         @NameInMap("FileSize")
         @Validation(required = true)
@@ -63,6 +111,54 @@ public class DescribeLogBackupFilesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeLogBackupFilesResponseItemsBinLogFile setFileSize(Long fileSize) {
+            this.fileSize = fileSize;
+            return this;
+        }
+        public Long getFileSize() {
+            return this.fileSize;
+        }
+
+        public DescribeLogBackupFilesResponseItemsBinLogFile setLogBeginTime(String logBeginTime) {
+            this.logBeginTime = logBeginTime;
+            return this;
+        }
+        public String getLogBeginTime() {
+            return this.logBeginTime;
+        }
+
+        public DescribeLogBackupFilesResponseItemsBinLogFile setLogEndTime(String logEndTime) {
+            this.logEndTime = logEndTime;
+            return this;
+        }
+        public String getLogEndTime() {
+            return this.logEndTime;
+        }
+
+        public DescribeLogBackupFilesResponseItemsBinLogFile setDownloadLink(String downloadLink) {
+            this.downloadLink = downloadLink;
+            return this;
+        }
+        public String getDownloadLink() {
+            return this.downloadLink;
+        }
+
+        public DescribeLogBackupFilesResponseItemsBinLogFile setIntranetDownloadLink(String intranetDownloadLink) {
+            this.intranetDownloadLink = intranetDownloadLink;
+            return this;
+        }
+        public String getIntranetDownloadLink() {
+            return this.intranetDownloadLink;
+        }
+
+        public DescribeLogBackupFilesResponseItemsBinLogFile setLinkExpiredTime(String linkExpiredTime) {
+            this.linkExpiredTime = linkExpiredTime;
+            return this;
+        }
+        public String getLinkExpiredTime() {
+            return this.linkExpiredTime;
+        }
+
     }
 
     public static class DescribeLogBackupFilesResponseItems extends TeaModel {
@@ -73,6 +169,14 @@ public class DescribeLogBackupFilesResponse extends TeaModel {
         public static DescribeLogBackupFilesResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeLogBackupFilesResponseItems self = new DescribeLogBackupFilesResponseItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLogBackupFilesResponseItems setBinLogFile(java.util.List<DescribeLogBackupFilesResponseItemsBinLogFile> binLogFile) {
+            this.binLogFile = binLogFile;
+            return this;
+        }
+        public java.util.List<DescribeLogBackupFilesResponseItemsBinLogFile> getBinLogFile() {
+            return this.binLogFile;
         }
 
     }

@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DestroyDBInstanceRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -23,12 +11,25 @@ public class DestroyDBInstanceRequest extends TeaModel {
     @Validation(required = true)
     public String DBInstanceId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     public static DestroyDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DestroyDBInstanceRequest self = new DestroyDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DestroyDBInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DestroyDBInstanceRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
 }

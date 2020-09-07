@@ -17,4 +17,20 @@ public class ImportDatabaseBetweenInstancesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImportDatabaseBetweenInstancesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ImportDatabaseBetweenInstancesResponse setImportId(String importId) {
+        this.importId = importId;
+        return this;
+    }
+    public String getImportId() {
+        return this.importId;
+    }
+
 }

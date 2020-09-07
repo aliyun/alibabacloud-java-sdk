@@ -21,6 +21,30 @@ public class DescribeInstanceKeywordsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceKeywordsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeInstanceKeywordsResponse setKey(String key) {
+        this.key = key;
+        return this;
+    }
+    public String getKey() {
+        return this.key;
+    }
+
+    public DescribeInstanceKeywordsResponse setWords(DescribeInstanceKeywordsResponseWords words) {
+        this.words = words;
+        return this;
+    }
+    public DescribeInstanceKeywordsResponseWords getWords() {
+        return this.words;
+    }
+
     public static class DescribeInstanceKeywordsResponseWords extends TeaModel {
         @NameInMap("word")
         @Validation(required = true)
@@ -29,6 +53,14 @@ public class DescribeInstanceKeywordsResponse extends TeaModel {
         public static DescribeInstanceKeywordsResponseWords build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceKeywordsResponseWords self = new DescribeInstanceKeywordsResponseWords();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceKeywordsResponseWords setWord(java.util.List<String> word) {
+            this.word = word;
+            return this;
+        }
+        public java.util.List<String> getWord() {
+            return this.word;
         }
 
     }

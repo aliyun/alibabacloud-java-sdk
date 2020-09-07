@@ -17,4 +17,20 @@ public class DescribeBackupDatabaseResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeBackupDatabaseResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeBackupDatabaseResponse setDatabaseNames(String databaseNames) {
+        this.databaseNames = databaseNames;
+        return this;
+    }
+    public String getDatabaseNames() {
+        return this.databaseNames;
+    }
+
 }

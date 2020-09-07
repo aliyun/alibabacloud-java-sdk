@@ -17,6 +17,22 @@ public class DescribeDBInstanceIPArrayListResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDBInstanceIPArrayListResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDBInstanceIPArrayListResponse setItems(DescribeDBInstanceIPArrayListResponseItems items) {
+        this.items = items;
+        return this;
+    }
+    public DescribeDBInstanceIPArrayListResponseItems getItems() {
+        return this.items;
+    }
+
     public static class DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray extends TeaModel {
         @NameInMap("DBInstanceIPArrayName")
         @Validation(required = true)
@@ -43,6 +59,46 @@ public class DescribeDBInstanceIPArrayListResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray setDBInstanceIPArrayName(String DBInstanceIPArrayName) {
+            this.DBInstanceIPArrayName = DBInstanceIPArrayName;
+            return this;
+        }
+        public String getDBInstanceIPArrayName() {
+            return this.DBInstanceIPArrayName;
+        }
+
+        public DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray setDBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
+            this.DBInstanceIPArrayAttribute = DBInstanceIPArrayAttribute;
+            return this;
+        }
+        public String getDBInstanceIPArrayAttribute() {
+            return this.DBInstanceIPArrayAttribute;
+        }
+
+        public DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray setSecurityIPType(String securityIPType) {
+            this.securityIPType = securityIPType;
+            return this;
+        }
+        public String getSecurityIPType() {
+            return this.securityIPType;
+        }
+
+        public DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray setSecurityIPList(String securityIPList) {
+            this.securityIPList = securityIPList;
+            return this;
+        }
+        public String getSecurityIPList() {
+            return this.securityIPList;
+        }
+
+        public DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray setWhitelistNetworkType(String whitelistNetworkType) {
+            this.whitelistNetworkType = whitelistNetworkType;
+            return this;
+        }
+        public String getWhitelistNetworkType() {
+            return this.whitelistNetworkType;
+        }
+
     }
 
     public static class DescribeDBInstanceIPArrayListResponseItems extends TeaModel {
@@ -53,6 +109,14 @@ public class DescribeDBInstanceIPArrayListResponse extends TeaModel {
         public static DescribeDBInstanceIPArrayListResponseItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceIPArrayListResponseItems self = new DescribeDBInstanceIPArrayListResponseItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceIPArrayListResponseItems setDBInstanceIPArray(java.util.List<DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray> DBInstanceIPArray) {
+            this.DBInstanceIPArray = DBInstanceIPArray;
+            return this;
+        }
+        public java.util.List<DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray> getDBInstanceIPArray() {
+            return this.DBInstanceIPArray;
         }
 
     }

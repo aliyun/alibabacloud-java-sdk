@@ -17,6 +17,22 @@ public class DescribeRegionsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRegionsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeRegionsResponse setRegions(DescribeRegionsResponseRegions regions) {
+        this.regions = regions;
+        return this;
+    }
+    public DescribeRegionsResponseRegions getRegions() {
+        return this.regions;
+    }
+
     public static class DescribeRegionsResponseRegionsRDSRegion extends TeaModel {
         @NameInMap("RegionId")
         @Validation(required = true)
@@ -31,6 +47,22 @@ public class DescribeRegionsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeRegionsResponseRegionsRDSRegion setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeRegionsResponseRegionsRDSRegion setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
     }
 
     public static class DescribeRegionsResponseRegions extends TeaModel {
@@ -41,6 +73,14 @@ public class DescribeRegionsResponse extends TeaModel {
         public static DescribeRegionsResponseRegions build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseRegions self = new DescribeRegionsResponseRegions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseRegions setRDSRegion(java.util.List<DescribeRegionsResponseRegionsRDSRegion> RDSRegion) {
+            this.RDSRegion = RDSRegion;
+            return this;
+        }
+        public java.util.List<DescribeRegionsResponseRegionsRDSRegion> getRDSRegion() {
+            return this.RDSRegion;
         }
 
     }

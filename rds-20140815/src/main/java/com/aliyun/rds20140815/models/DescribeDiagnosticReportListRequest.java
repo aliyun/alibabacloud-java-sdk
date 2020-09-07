@@ -4,9 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportListRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -14,6 +11,14 @@ public class DescribeDiagnosticReportListRequest extends TeaModel {
     public static DescribeDiagnosticReportListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiagnosticReportListRequest self = new DescribeDiagnosticReportListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDiagnosticReportListRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
     }
 
 }

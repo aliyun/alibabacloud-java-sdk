@@ -4,18 +4,6 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class ModifyHASwitchConfigRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     public String DBInstanceId;
@@ -33,6 +21,38 @@ public class ModifyHASwitchConfigRequest extends TeaModel {
     public static ModifyHASwitchConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHASwitchConfigRequest self = new ModifyHASwitchConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyHASwitchConfigRequest setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+        return this;
+    }
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    public ModifyHASwitchConfigRequest setHAConfig(String HAConfig) {
+        this.HAConfig = HAConfig;
+        return this;
+    }
+    public String getHAConfig() {
+        return this.HAConfig;
+    }
+
+    public ModifyHASwitchConfigRequest setManualHATime(String manualHATime) {
+        this.manualHATime = manualHATime;
+        return this;
+    }
+    public String getManualHATime() {
+        return this.manualHATime;
+    }
+
+    public ModifyHASwitchConfigRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

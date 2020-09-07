@@ -21,4 +21,28 @@ public class ReplaceDedicatedHostResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ReplaceDedicatedHostResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ReplaceDedicatedHostResponse setTaskId(Integer taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Integer getTaskId() {
+        return this.taskId;
+    }
+
+    public ReplaceDedicatedHostResponse setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
+    }
+
 }

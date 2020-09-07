@@ -17,6 +17,22 @@ public class DescribeDiagnosticReportListResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDiagnosticReportListResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDiagnosticReportListResponse setReportList(java.util.List<DescribeDiagnosticReportListResponseReportList> reportList) {
+        this.reportList = reportList;
+        return this;
+    }
+    public java.util.List<DescribeDiagnosticReportListResponseReportList> getReportList() {
+        return this.reportList;
+    }
+
     public static class DescribeDiagnosticReportListResponseReportList extends TeaModel {
         @NameInMap("DiagnosticTime")
         @Validation(required = true)
@@ -41,6 +57,46 @@ public class DescribeDiagnosticReportListResponse extends TeaModel {
         public static DescribeDiagnosticReportListResponseReportList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDiagnosticReportListResponseReportList self = new DescribeDiagnosticReportListResponseReportList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDiagnosticReportListResponseReportList setDiagnosticTime(String diagnosticTime) {
+            this.diagnosticTime = diagnosticTime;
+            return this;
+        }
+        public String getDiagnosticTime() {
+            return this.diagnosticTime;
+        }
+
+        public DescribeDiagnosticReportListResponseReportList setScore(Integer score) {
+            this.score = score;
+            return this;
+        }
+        public Integer getScore() {
+            return this.score;
+        }
+
+        public DescribeDiagnosticReportListResponseReportList setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeDiagnosticReportListResponseReportList setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public DescribeDiagnosticReportListResponseReportList setDownloadURL(String downloadURL) {
+            this.downloadURL = downloadURL;
+            return this;
+        }
+        public String getDownloadURL() {
+            return this.downloadURL;
         }
 
     }

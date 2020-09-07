@@ -13,4 +13,12 @@ public class CreateOnlineDatabaseTaskResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateOnlineDatabaseTaskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }
