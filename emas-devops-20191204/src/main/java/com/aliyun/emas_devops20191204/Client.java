@@ -13,6 +13,16 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public ListPipelineDefinitionsResponse listPipelineDefinitionsWithOptions(ListPipelineDefinitionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListPipelineDefinitions", "HTTPS", "POST", "2019-12-04", "AK", null, TeaModel.buildMap(request), runtime), new ListPipelineDefinitionsResponse());
+    }
+
+    public ListPipelineDefinitionsResponse listPipelineDefinitions(ListPipelineDefinitionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPipelineDefinitionsWithOptions(request, runtime);
+    }
+
     public DescribePublishRecommendVersionResponse describePublishRecommendVersionWithOptions(DescribePublishRecommendVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribePublishRecommendVersion", "HTTPS", "POST", "2019-12-04", "AK", null, TeaModel.buildMap(request), runtime), new DescribePublishRecommendVersionResponse());
@@ -101,6 +111,22 @@ public class Client extends com.aliyun.tearpc.Client {
     public ModifyPipelineEnvVariablesResponse modifyPipelineEnvVariables(ModifyPipelineEnvVariablesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPipelineEnvVariablesWithOptions(request, runtime);
+    }
+
+    public TriggerPipelineResponse triggerPipelineWithOptions(TriggerPipelineRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        TriggerPipelineShrinkRequest request = new TriggerPipelineShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.runtimeEnvVariables)) {
+            request.runtimeEnvVariablesShrink = com.aliyun.teautil.Common.toJSONString(tmp.runtimeEnvVariables);
+        }
+
+        return TeaModel.toModel(this.doRequest("TriggerPipeline", "HTTPS", "POST", "2019-12-04", "AK", null, TeaModel.buildMap(request), runtime), new TriggerPipelineResponse());
+    }
+
+    public TriggerPipelineResponse triggerPipeline(TriggerPipelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.triggerPipelineWithOptions(request, runtime);
     }
 
     public ListPipelineTemplatesResponse listPipelineTemplatesWithOptions(ListPipelineTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
