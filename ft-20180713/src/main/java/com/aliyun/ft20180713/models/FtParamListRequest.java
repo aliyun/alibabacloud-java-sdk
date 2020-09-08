@@ -33,11 +33,9 @@ public class FtParamListRequest extends TeaModel {
 
     public static class FtParamListRequestDisk extends TeaModel {
         @NameInMap("Size")
-        @Validation(required = true)
         public java.util.List<String> size;
 
         @NameInMap("Type")
-        @Validation(required = true)
         public java.util.List<String> type;
 
         public static FtParamListRequestDisk build(java.util.Map<String, ?> map) throws Exception {
