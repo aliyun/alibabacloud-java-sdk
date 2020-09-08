@@ -1,3 +1,6 @@
+2020-09-08 Version: 1.0.3
+- Support adding or removing vm app to mesh.
+
 2020-09-08 Version: 1.0.2
 - Support adding or removing vm app to mesh.
 
