@@ -17,4 +17,20 @@ public class RunDiagnosisResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RunDiagnosisResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RunDiagnosisResponse setResult(String result) {
+        this.result = result;
+        return this;
+    }
+    public String getResult() {
+        return this.result;
+    }
+
 }

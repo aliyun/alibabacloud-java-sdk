@@ -17,4 +17,20 @@ public class GetRegisteredServiceNamespacesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetRegisteredServiceNamespacesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetRegisteredServiceNamespacesResponse setNamespaces(java.util.List<String> namespaces) {
+        this.namespaces = namespaces;
+        return this;
+    }
+    public java.util.List<String> getNamespaces() {
+        return this.namespaces;
+    }
+
 }

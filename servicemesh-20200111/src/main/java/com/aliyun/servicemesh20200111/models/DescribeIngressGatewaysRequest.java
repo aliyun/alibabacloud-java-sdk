@@ -12,4 +12,12 @@ public class DescribeIngressGatewaysRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeIngressGatewaysRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
 }

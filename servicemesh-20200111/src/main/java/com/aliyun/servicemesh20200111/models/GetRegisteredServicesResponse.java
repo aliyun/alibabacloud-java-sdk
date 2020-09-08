@@ -17,4 +17,20 @@ public class GetRegisteredServicesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetRegisteredServicesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetRegisteredServicesResponse setServices(java.util.List<String> services) {
+        this.services = services;
+        return this;
+    }
+    public java.util.List<String> getServices() {
+        return this.services;
+    }
+
 }

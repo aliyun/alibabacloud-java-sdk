@@ -13,4 +13,12 @@ public class UpdateMeshFeatureResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateMeshFeatureResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

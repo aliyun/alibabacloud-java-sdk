@@ -17,4 +17,20 @@ public class DescribeCensResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCensResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCensResponse setClusters(java.util.List<String> clusters) {
+        this.clusters = clusters;
+        return this;
+    }
+    public java.util.List<String> getClusters() {
+        return this.clusters;
+    }
+
 }

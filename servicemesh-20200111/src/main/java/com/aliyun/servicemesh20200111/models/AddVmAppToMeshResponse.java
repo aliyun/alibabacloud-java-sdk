@@ -17,4 +17,20 @@ public class AddVmAppToMeshResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AddVmAppToMeshResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AddVmAppToMeshResponse setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
 }

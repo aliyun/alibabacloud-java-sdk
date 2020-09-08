@@ -21,4 +21,28 @@ public class GetRegisteredServiceEndpointsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetRegisteredServiceEndpointsRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
+    public GetRegisteredServiceEndpointsRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public GetRegisteredServiceEndpointsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
 }

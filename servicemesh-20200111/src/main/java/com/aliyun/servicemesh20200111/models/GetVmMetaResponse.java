@@ -17,6 +17,22 @@ public class GetVmMetaResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetVmMetaResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetVmMetaResponse setVmMetaInfo(GetVmMetaResponseVmMetaInfo vmMetaInfo) {
+        this.vmMetaInfo = vmMetaInfo;
+        return this;
+    }
+    public GetVmMetaResponseVmMetaInfo getVmMetaInfo() {
+        return this.vmMetaInfo;
+    }
+
     public static class GetVmMetaResponseVmMetaInfo extends TeaModel {
         @NameInMap("RootCertPath")
         @Validation(required = true)
@@ -61,6 +77,86 @@ public class GetVmMetaResponse extends TeaModel {
         public static GetVmMetaResponseVmMetaInfo build(java.util.Map<String, ?> map) throws Exception {
             GetVmMetaResponseVmMetaInfo self = new GetVmMetaResponseVmMetaInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetVmMetaResponseVmMetaInfo setRootCertPath(String rootCertPath) {
+            this.rootCertPath = rootCertPath;
+            return this;
+        }
+        public String getRootCertPath() {
+            return this.rootCertPath;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setRootCertContent(String rootCertContent) {
+            this.rootCertContent = rootCertContent;
+            return this;
+        }
+        public String getRootCertContent() {
+            return this.rootCertContent;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setKeyPath(String keyPath) {
+            this.keyPath = keyPath;
+            return this;
+        }
+        public String getKeyPath() {
+            return this.keyPath;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setKeyContent(String keyContent) {
+            this.keyContent = keyContent;
+            return this;
+        }
+        public String getKeyContent() {
+            return this.keyContent;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setCertChainPath(String certChainPath) {
+            this.certChainPath = certChainPath;
+            return this;
+        }
+        public String getCertChainPath() {
+            return this.certChainPath;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setCertChainContent(String certChainContent) {
+            this.certChainContent = certChainContent;
+            return this;
+        }
+        public String getCertChainContent() {
+            return this.certChainContent;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setEnvoyEnvPath(String envoyEnvPath) {
+            this.envoyEnvPath = envoyEnvPath;
+            return this;
+        }
+        public String getEnvoyEnvPath() {
+            return this.envoyEnvPath;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setEnvoyEnvContent(String envoyEnvContent) {
+            this.envoyEnvContent = envoyEnvContent;
+            return this;
+        }
+        public String getEnvoyEnvContent() {
+            return this.envoyEnvContent;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setHostsPath(String hostsPath) {
+            this.hostsPath = hostsPath;
+            return this;
+        }
+        public String getHostsPath() {
+            return this.hostsPath;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setHostsContent(String hostsContent) {
+            this.hostsContent = hostsContent;
+            return this;
+        }
+        public String getHostsContent() {
+            return this.hostsContent;
         }
 
     }

@@ -13,4 +13,12 @@ public class DescribeGuestClusterAccessLogDashboardsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeGuestClusterAccessLogDashboardsRequest setK8sClusterId(String k8sClusterId) {
+        this.k8sClusterId = k8sClusterId;
+        return this;
+    }
+    public String getK8sClusterId() {
+        return this.k8sClusterId;
+    }
+
 }

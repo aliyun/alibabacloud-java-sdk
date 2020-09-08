@@ -17,4 +17,20 @@ public class RemoveVmAppFromMeshResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveVmAppFromMeshResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RemoveVmAppFromMeshResponse setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
 }

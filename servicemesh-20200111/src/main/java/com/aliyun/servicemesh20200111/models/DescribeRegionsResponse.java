@@ -17,4 +17,20 @@ public class DescribeRegionsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRegionsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeRegionsResponse setBusinessLocations(String businessLocations) {
+        this.businessLocations = businessLocations;
+        return this;
+    }
+    public String getBusinessLocations() {
+        return this.businessLocations;
+    }
+
 }
