@@ -17,6 +17,22 @@ public class DescribeClusterGrafanaResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeClusterGrafanaResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeClusterGrafanaResponse setDashboards(java.util.List<DescribeClusterGrafanaResponseDashboards> dashboards) {
+        this.dashboards = dashboards;
+        return this;
+    }
+    public java.util.List<DescribeClusterGrafanaResponseDashboards> getDashboards() {
+        return this.dashboards;
+    }
+
     public static class DescribeClusterGrafanaResponseDashboards extends TeaModel {
         @NameInMap("Url")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class DescribeClusterGrafanaResponse extends TeaModel {
         public static DescribeClusterGrafanaResponseDashboards build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterGrafanaResponseDashboards self = new DescribeClusterGrafanaResponseDashboards();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterGrafanaResponseDashboards setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public DescribeClusterGrafanaResponseDashboards setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
     }

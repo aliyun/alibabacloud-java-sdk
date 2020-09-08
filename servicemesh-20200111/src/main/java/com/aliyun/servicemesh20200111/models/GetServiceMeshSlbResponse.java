@@ -17,6 +17,22 @@ public class GetServiceMeshSlbResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetServiceMeshSlbResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetServiceMeshSlbResponse setData(java.util.List<GetServiceMeshSlbResponseData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetServiceMeshSlbResponseData> getData() {
+        return this.data;
+    }
+
     public static class GetServiceMeshSlbResponseData extends TeaModel {
         @NameInMap("LoadBalancerId")
         @Validation(required = true)
@@ -33,6 +49,30 @@ public class GetServiceMeshSlbResponse extends TeaModel {
         public static GetServiceMeshSlbResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetServiceMeshSlbResponseData self = new GetServiceMeshSlbResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetServiceMeshSlbResponseData setLoadBalancerId(String loadBalancerId) {
+            this.loadBalancerId = loadBalancerId;
+            return this;
+        }
+        public String getLoadBalancerId() {
+            return this.loadBalancerId;
+        }
+
+        public GetServiceMeshSlbResponseData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetServiceMeshSlbResponseData setServerHealthStatus(String serverHealthStatus) {
+            this.serverHealthStatus = serverHealthStatus;
+            return this;
+        }
+        public String getServerHealthStatus() {
+            return this.serverHealthStatus;
         }
 
     }

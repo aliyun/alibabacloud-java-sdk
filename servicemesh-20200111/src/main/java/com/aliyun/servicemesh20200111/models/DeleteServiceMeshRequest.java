@@ -16,4 +16,20 @@ public class DeleteServiceMeshRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteServiceMeshRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
+    public DeleteServiceMeshRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
+    }
+
 }

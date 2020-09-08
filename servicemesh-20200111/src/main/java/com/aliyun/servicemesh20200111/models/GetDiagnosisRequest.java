@@ -13,4 +13,12 @@ public class GetDiagnosisRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetDiagnosisRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
 }

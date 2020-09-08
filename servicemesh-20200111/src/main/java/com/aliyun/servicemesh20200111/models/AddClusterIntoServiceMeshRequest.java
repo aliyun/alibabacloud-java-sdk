@@ -17,4 +17,20 @@ public class AddClusterIntoServiceMeshRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AddClusterIntoServiceMeshRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
+    public AddClusterIntoServiceMeshRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
 }

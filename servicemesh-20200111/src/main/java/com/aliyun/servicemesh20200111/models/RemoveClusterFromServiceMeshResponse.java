@@ -21,4 +21,28 @@ public class RemoveClusterFromServiceMeshResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveClusterFromServiceMeshResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RemoveClusterFromServiceMeshResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public RemoveClusterFromServiceMeshResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
 }

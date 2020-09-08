@@ -16,4 +16,20 @@ public class DescribeServiceMeshKubeconfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeServiceMeshKubeconfigRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
+    public DescribeServiceMeshKubeconfigRequest setPrivateIpAddress(Boolean privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public Boolean getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
 }

@@ -17,4 +17,20 @@ public class CreateServiceMeshResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateServiceMeshResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateServiceMeshResponse setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
 }

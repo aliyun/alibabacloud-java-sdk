@@ -17,6 +17,22 @@ public class GetRegisteredServiceEndpointsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetRegisteredServiceEndpointsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetRegisteredServiceEndpointsResponse setServiceEndpoints(java.util.List<GetRegisteredServiceEndpointsResponseServiceEndpoints> serviceEndpoints) {
+        this.serviceEndpoints = serviceEndpoints;
+        return this;
+    }
+    public java.util.List<GetRegisteredServiceEndpointsResponseServiceEndpoints> getServiceEndpoints() {
+        return this.serviceEndpoints;
+    }
+
     public static class GetRegisteredServiceEndpointsResponseServiceEndpoints extends TeaModel {
         @NameInMap("Address")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class GetRegisteredServiceEndpointsResponse extends TeaModel {
         public static GetRegisteredServiceEndpointsResponseServiceEndpoints build(java.util.Map<String, ?> map) throws Exception {
             GetRegisteredServiceEndpointsResponseServiceEndpoints self = new GetRegisteredServiceEndpointsResponseServiceEndpoints();
             return TeaModel.build(map, self);
+        }
+
+        public GetRegisteredServiceEndpointsResponseServiceEndpoints setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
+        }
+
+        public GetRegisteredServiceEndpointsResponseServiceEndpoints setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
     }

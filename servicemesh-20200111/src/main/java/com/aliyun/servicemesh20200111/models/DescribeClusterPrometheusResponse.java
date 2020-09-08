@@ -17,4 +17,20 @@ public class DescribeClusterPrometheusResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeClusterPrometheusResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeClusterPrometheusResponse setPrometheus(String prometheus) {
+        this.prometheus = prometheus;
+        return this;
+    }
+    public String getPrometheus() {
+        return this.prometheus;
+    }
+
 }

@@ -17,4 +17,20 @@ public class RemoveClusterFromServiceMeshRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveClusterFromServiceMeshRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
+    public RemoveClusterFromServiceMeshRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
 }

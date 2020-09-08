@@ -21,4 +21,28 @@ public class RemoveVmAppFromMeshRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveVmAppFromMeshRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
+    public RemoveVmAppFromMeshRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public RemoveVmAppFromMeshRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
 }

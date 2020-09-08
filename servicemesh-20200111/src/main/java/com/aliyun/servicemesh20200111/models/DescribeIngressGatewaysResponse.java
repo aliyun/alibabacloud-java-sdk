@@ -17,4 +17,20 @@ public class DescribeIngressGatewaysResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeIngressGatewaysResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeIngressGatewaysResponse setIngressGateways(java.util.List<java.util.Map<String, ?>> ingressGateways) {
+        this.ingressGateways = ingressGateways;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getIngressGateways() {
+        return this.ingressGateways;
+    }
+
 }

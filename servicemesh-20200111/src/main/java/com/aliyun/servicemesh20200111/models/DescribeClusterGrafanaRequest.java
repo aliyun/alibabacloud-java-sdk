@@ -15,4 +15,20 @@ public class DescribeClusterGrafanaRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeClusterGrafanaRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
+    public DescribeClusterGrafanaRequest setK8sClusterId(String k8sClusterId) {
+        this.k8sClusterId = k8sClusterId;
+        return this;
+    }
+    public String getK8sClusterId() {
+        return this.k8sClusterId;
+    }
+
 }

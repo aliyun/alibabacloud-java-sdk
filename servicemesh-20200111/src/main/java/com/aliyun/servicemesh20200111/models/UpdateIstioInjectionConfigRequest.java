@@ -21,4 +21,28 @@ public class UpdateIstioInjectionConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateIstioInjectionConfigRequest setServiceMeshId(String serviceMeshId) {
+        this.serviceMeshId = serviceMeshId;
+        return this;
+    }
+    public String getServiceMeshId() {
+        return this.serviceMeshId;
+    }
+
+    public UpdateIstioInjectionConfigRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public UpdateIstioInjectionConfigRequest setEnableIstioInjection(Boolean enableIstioInjection) {
+        this.enableIstioInjection = enableIstioInjection;
+        return this;
+    }
+    public Boolean getEnableIstioInjection() {
+        return this.enableIstioInjection;
+    }
+
 }
