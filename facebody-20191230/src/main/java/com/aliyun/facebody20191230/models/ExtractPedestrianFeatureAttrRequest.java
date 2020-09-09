@@ -8,6 +8,9 @@ public class ExtractPedestrianFeatureAttrRequest extends TeaModel {
     @Validation(required = true)
     public String imageURL;
 
+    @NameInMap("Mode")
+    public String mode;
+
     public static ExtractPedestrianFeatureAttrRequest build(java.util.Map<String, ?> map) throws Exception {
         ExtractPedestrianFeatureAttrRequest self = new ExtractPedestrianFeatureAttrRequest();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class ExtractPedestrianFeatureAttrRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
+    }
+
+    public ExtractPedestrianFeatureAttrRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
 }
