@@ -13,4 +13,12 @@ public class GetAsyncJobResultRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetAsyncJobResultRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
+    }
+
 }

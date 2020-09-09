@@ -21,4 +21,28 @@ public class TranslateMedRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TranslateMedRequest setFromLanguage(String fromLanguage) {
+        this.fromLanguage = fromLanguage;
+        return this;
+    }
+    public String getFromLanguage() {
+        return this.fromLanguage;
+    }
+
+    public TranslateMedRequest setToLanguage(String toLanguage) {
+        this.toLanguage = toLanguage;
+        return this;
+    }
+    public String getToLanguage() {
+        return this.toLanguage;
+    }
+
+    public TranslateMedRequest setText(String text) {
+        this.text = text;
+        return this;
+    }
+    public String getText() {
+        return this.text;
+    }
+
 }
