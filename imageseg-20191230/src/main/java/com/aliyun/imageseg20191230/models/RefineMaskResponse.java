@@ -17,6 +17,22 @@ public class RefineMaskResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RefineMaskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RefineMaskResponse setData(RefineMaskResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public RefineMaskResponseData getData() {
+        return this.data;
+    }
+
     public static class RefineMaskResponseDataElements extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class RefineMaskResponse extends TeaModel {
         public static RefineMaskResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
             RefineMaskResponseDataElements self = new RefineMaskResponseDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public RefineMaskResponseDataElements setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }
@@ -37,6 +61,14 @@ public class RefineMaskResponse extends TeaModel {
         public static RefineMaskResponseData build(java.util.Map<String, ?> map) throws Exception {
             RefineMaskResponseData self = new RefineMaskResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public RefineMaskResponseData setElements(java.util.List<RefineMaskResponseDataElements> elements) {
+            this.elements = elements;
+            return this;
+        }
+        public java.util.List<RefineMaskResponseDataElements> getElements() {
+            return this.elements;
         }
 
     }

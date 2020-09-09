@@ -13,4 +13,12 @@ public class SegmentHeadRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentHeadRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

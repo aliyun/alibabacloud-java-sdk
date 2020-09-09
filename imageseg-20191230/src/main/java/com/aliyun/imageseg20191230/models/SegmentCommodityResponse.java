@@ -17,6 +17,22 @@ public class SegmentCommodityResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentCommodityResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SegmentCommodityResponse setData(SegmentCommodityResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public SegmentCommodityResponseData getData() {
+        return this.data;
+    }
+
     public static class SegmentCommodityResponseData extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class SegmentCommodityResponse extends TeaModel {
         public static SegmentCommodityResponseData build(java.util.Map<String, ?> map) throws Exception {
             SegmentCommodityResponseData self = new SegmentCommodityResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentCommodityResponseData setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }

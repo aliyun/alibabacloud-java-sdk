@@ -13,4 +13,12 @@ public class SegmentClothRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentClothRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

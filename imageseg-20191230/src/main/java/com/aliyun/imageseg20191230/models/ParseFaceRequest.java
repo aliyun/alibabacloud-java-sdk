@@ -13,4 +13,12 @@ public class ParseFaceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ParseFaceRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

@@ -16,4 +16,20 @@ public class SegmentBodyAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentBodyAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
+    public SegmentBodyAdvanceRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
+    }
+
 }

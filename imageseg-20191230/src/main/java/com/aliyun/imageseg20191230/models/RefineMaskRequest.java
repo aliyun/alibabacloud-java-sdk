@@ -17,4 +17,20 @@ public class RefineMaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RefineMaskRequest setMaskImageURL(String maskImageURL) {
+        this.maskImageURL = maskImageURL;
+        return this;
+    }
+    public String getMaskImageURL() {
+        return this.maskImageURL;
+    }
+
+    public RefineMaskRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

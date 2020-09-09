@@ -17,6 +17,22 @@ public class SegmentHeadResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentHeadResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SegmentHeadResponse setData(SegmentHeadResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public SegmentHeadResponseData getData() {
+        return this.data;
+    }
+
     public static class SegmentHeadResponseDataElements extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -43,6 +59,46 @@ public class SegmentHeadResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public SegmentHeadResponseDataElements setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
+        }
+
+        public SegmentHeadResponseDataElements setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public SegmentHeadResponseDataElements setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+        public SegmentHeadResponseDataElements setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public SegmentHeadResponseDataElements setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
     }
 
     public static class SegmentHeadResponseData extends TeaModel {
@@ -53,6 +109,14 @@ public class SegmentHeadResponse extends TeaModel {
         public static SegmentHeadResponseData build(java.util.Map<String, ?> map) throws Exception {
             SegmentHeadResponseData self = new SegmentHeadResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentHeadResponseData setElements(java.util.List<SegmentHeadResponseDataElements> elements) {
+            this.elements = elements;
+            return this;
+        }
+        public java.util.List<SegmentHeadResponseDataElements> getElements() {
+            return this.elements;
         }
 
     }
