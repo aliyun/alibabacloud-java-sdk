@@ -17,6 +17,22 @@ public class TranslateMedResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TranslateMedResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public TranslateMedResponse setData(TranslateMedResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public TranslateMedResponseData getData() {
+        return this.data;
+    }
+
     public static class TranslateMedResponseData extends TeaModel {
         @NameInMap("Text")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class TranslateMedResponse extends TeaModel {
         public static TranslateMedResponseData build(java.util.Map<String, ?> map) throws Exception {
             TranslateMedResponseData self = new TranslateMedResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public TranslateMedResponseData setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public TranslateMedResponseData setWords(Long words) {
+            this.words = words;
+            return this;
+        }
+        public Long getWords() {
+            return this.words;
         }
 
     }

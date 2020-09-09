@@ -13,6 +13,14 @@ public class DetectCovid19CadRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetectCovid19CadRequest setURLList(java.util.List<DetectCovid19CadRequestURLList> URLList) {
+        this.URLList = URLList;
+        return this;
+    }
+    public java.util.List<DetectCovid19CadRequestURLList> getURLList() {
+        return this.URLList;
+    }
+
     public static class DetectCovid19CadRequestURLList extends TeaModel {
         @NameInMap("URL")
         @Validation(required = true)
@@ -21,6 +29,14 @@ public class DetectCovid19CadRequest extends TeaModel {
         public static DetectCovid19CadRequestURLList build(java.util.Map<String, ?> map) throws Exception {
             DetectCovid19CadRequestURLList self = new DetectCovid19CadRequestURLList();
             return TeaModel.build(map, self);
+        }
+
+        public DetectCovid19CadRequestURLList setURL(String URL) {
+            this.URL = URL;
+            return this;
+        }
+        public String getURL() {
+            return this.URL;
         }
 
     }

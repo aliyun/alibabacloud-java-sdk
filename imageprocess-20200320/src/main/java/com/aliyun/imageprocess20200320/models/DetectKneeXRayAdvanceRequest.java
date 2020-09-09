@@ -17,4 +17,20 @@ public class DetectKneeXRayAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetectKneeXRayAdvanceRequest setUrlObject(java.io.InputStream urlObject) {
+        this.urlObject = urlObject;
+        return this;
+    }
+    public java.io.InputStream getUrlObject() {
+        return this.urlObject;
+    }
+
+    public DetectKneeXRayAdvanceRequest setDataFormat(String dataFormat) {
+        this.dataFormat = dataFormat;
+        return this;
+    }
+    public String getDataFormat() {
+        return this.dataFormat;
+    }
+
 }
