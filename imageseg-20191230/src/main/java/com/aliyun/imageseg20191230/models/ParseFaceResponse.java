@@ -17,6 +17,22 @@ public class ParseFaceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ParseFaceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ParseFaceResponse setData(ParseFaceResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ParseFaceResponseData getData() {
+        return this.data;
+    }
+
     public static class ParseFaceResponseDataElements extends TeaModel {
         @NameInMap("Name")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class ParseFaceResponse extends TeaModel {
         public static ParseFaceResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
             ParseFaceResponseDataElements self = new ParseFaceResponseDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public ParseFaceResponseDataElements setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ParseFaceResponseDataElements setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }
@@ -45,6 +77,22 @@ public class ParseFaceResponse extends TeaModel {
         public static ParseFaceResponseData build(java.util.Map<String, ?> map) throws Exception {
             ParseFaceResponseData self = new ParseFaceResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ParseFaceResponseData setOriginImageURL(String originImageURL) {
+            this.originImageURL = originImageURL;
+            return this;
+        }
+        public String getOriginImageURL() {
+            return this.originImageURL;
+        }
+
+        public ParseFaceResponseData setElements(java.util.List<ParseFaceResponseDataElements> elements) {
+            this.elements = elements;
+            return this;
+        }
+        public java.util.List<ParseFaceResponseDataElements> getElements() {
+            return this.elements;
         }
 
     }

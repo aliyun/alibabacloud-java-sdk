@@ -17,6 +17,22 @@ public class SegmentClothResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentClothResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SegmentClothResponse setData(SegmentClothResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public SegmentClothResponseData getData() {
+        return this.data;
+    }
+
     public static class SegmentClothResponseDataElements extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class SegmentClothResponse extends TeaModel {
         public static SegmentClothResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
             SegmentClothResponseDataElements self = new SegmentClothResponseDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentClothResponseDataElements setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }
@@ -37,6 +61,14 @@ public class SegmentClothResponse extends TeaModel {
         public static SegmentClothResponseData build(java.util.Map<String, ?> map) throws Exception {
             SegmentClothResponseData self = new SegmentClothResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentClothResponseData setElements(java.util.List<SegmentClothResponseDataElements> elements) {
+            this.elements = elements;
+            return this;
+        }
+        public java.util.List<SegmentClothResponseDataElements> getElements() {
+            return this.elements;
         }
 
     }

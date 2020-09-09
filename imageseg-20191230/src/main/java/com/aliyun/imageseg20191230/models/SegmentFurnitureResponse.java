@@ -17,6 +17,22 @@ public class SegmentFurnitureResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentFurnitureResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SegmentFurnitureResponse setData(SegmentFurnitureResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public SegmentFurnitureResponseData getData() {
+        return this.data;
+    }
+
     public static class SegmentFurnitureResponseDataElements extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class SegmentFurnitureResponse extends TeaModel {
         public static SegmentFurnitureResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
             SegmentFurnitureResponseDataElements self = new SegmentFurnitureResponseDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentFurnitureResponseDataElements setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }
@@ -37,6 +61,14 @@ public class SegmentFurnitureResponse extends TeaModel {
         public static SegmentFurnitureResponseData build(java.util.Map<String, ?> map) throws Exception {
             SegmentFurnitureResponseData self = new SegmentFurnitureResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentFurnitureResponseData setElements(java.util.List<SegmentFurnitureResponseDataElements> elements) {
+            this.elements = elements;
+            return this;
+        }
+        public java.util.List<SegmentFurnitureResponseDataElements> getElements() {
+            return this.elements;
         }
 
     }

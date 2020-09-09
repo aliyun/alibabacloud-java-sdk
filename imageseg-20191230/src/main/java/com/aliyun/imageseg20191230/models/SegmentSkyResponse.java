@@ -17,6 +17,22 @@ public class SegmentSkyResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentSkyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SegmentSkyResponse setData(SegmentSkyResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public SegmentSkyResponseData getData() {
+        return this.data;
+    }
+
     public static class SegmentSkyResponseData extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class SegmentSkyResponse extends TeaModel {
         public static SegmentSkyResponseData build(java.util.Map<String, ?> map) throws Exception {
             SegmentSkyResponseData self = new SegmentSkyResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public SegmentSkyResponseData setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }

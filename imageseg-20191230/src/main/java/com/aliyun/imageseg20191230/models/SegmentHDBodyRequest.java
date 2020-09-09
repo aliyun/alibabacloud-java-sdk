@@ -13,4 +13,12 @@ public class SegmentHDBodyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentHDBodyRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

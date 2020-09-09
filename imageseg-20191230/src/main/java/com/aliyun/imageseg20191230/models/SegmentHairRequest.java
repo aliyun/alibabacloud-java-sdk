@@ -13,4 +13,12 @@ public class SegmentHairRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SegmentHairRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

@@ -17,4 +17,20 @@ public class RefineMaskAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RefineMaskAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
+    public RefineMaskAdvanceRequest setMaskImageURL(String maskImageURL) {
+        this.maskImageURL = maskImageURL;
+        return this;
+    }
+    public String getMaskImageURL() {
+        return this.maskImageURL;
+    }
+
 }
