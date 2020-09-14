@@ -14,6 +14,9 @@ public class ListAppsRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("OsType")
+    public Integer osType;
+
     public static ListAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAppsRequest self = new ListAppsRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class ListAppsRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public ListAppsRequest setOsType(Integer osType) {
+        this.osType = osType;
+        return this;
+    }
+    public Integer getOsType() {
+        return this.osType;
     }
 
 }
