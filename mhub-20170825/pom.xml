@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>mhub20170825</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>mhub20170825</name>
   <description>Alibaba Cloud Mhub (20170825) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-rpc</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.2</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>
