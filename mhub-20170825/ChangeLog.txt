@@ -1,3 +1,6 @@
+2020-09-14 Version: 1.0.2
+- Fix query by OsType for ListApps, 1 for IOS and 2 for Android.
+
 2020-09-14 Version: 1.0.1
 - Supported query by OsType for ListApps, 1 for IOS and 2 for Android.
 
