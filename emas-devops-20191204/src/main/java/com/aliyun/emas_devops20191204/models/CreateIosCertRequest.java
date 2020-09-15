@@ -22,7 +22,7 @@ public class CreateIosCertRequest extends TeaModel {
 
     @NameInMap("MobileProvisionList")
     @Validation(required = true)
-    public java.util.Map<String, ?> mobileProvisionList;
+    public String mobileProvisionList;
 
     public static CreateIosCertRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateIosCertRequest self = new CreateIosCertRequest();
@@ -61,11 +61,11 @@ public class CreateIosCertRequest extends TeaModel {
         return this.credential;
     }
 
-    public CreateIosCertRequest setMobileProvisionList(java.util.Map<String, ?> mobileProvisionList) {
+    public CreateIosCertRequest setMobileProvisionList(String mobileProvisionList) {
         this.mobileProvisionList = mobileProvisionList;
         return this;
     }
-    public java.util.Map<String, ?> getMobileProvisionList() {
+    public String getMobileProvisionList() {
         return this.mobileProvisionList;
     }
 

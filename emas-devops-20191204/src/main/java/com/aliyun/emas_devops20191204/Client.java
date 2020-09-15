@@ -321,14 +321,8 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.terminateBatchWithOptions(request, runtime);
     }
 
-    public CreateIosCertResponse createIosCertWithOptions(CreateIosCertRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmp);
-        CreateIosCertShrinkRequest request = new CreateIosCertShrinkRequest();
-        com.aliyun.common.Common.convert(tmp, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmp.mobileProvisionList)) {
-            request.mobileProvisionListShrink = com.aliyun.teautil.Common.toJSONString(tmp.mobileProvisionList);
-        }
-
+    public CreateIosCertResponse createIosCertWithOptions(CreateIosCertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateIosCert", "HTTPS", "POST", "2019-12-04", "AK", null, TeaModel.buildMap(request), runtime), new CreateIosCertResponse());
     }
 

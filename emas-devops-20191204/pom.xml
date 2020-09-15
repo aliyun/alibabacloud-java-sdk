@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>emas_devops20191204</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>emas_devops20191204</name>
   <description>Alibaba Cloud emas-devops (20191204) SDK for Java
@@ -46,17 +46,17 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-rpc-util</artifactId>
-      <version>0.1.1</version>
+      <version>0.1.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-rpc</artifactId>
-      <version>0.1.0</version>
+      <version>0.1.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.5</version>
+      <version>0.0.6</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

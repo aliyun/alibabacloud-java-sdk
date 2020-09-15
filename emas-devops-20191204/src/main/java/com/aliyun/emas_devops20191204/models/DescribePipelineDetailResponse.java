@@ -190,6 +190,10 @@ public class DescribePipelineDetailResponse extends TeaModel {
         @Validation(required = true)
         public Long updateTime;
 
+        @NameInMap("Ext")
+        @Validation(required = true)
+        public java.util.Map<String, ?> ext;
+
         public static DescribePipelineDetailResponsePipelineArtifacts build(java.util.Map<String, ?> map) throws Exception {
             DescribePipelineDetailResponsePipelineArtifacts self = new DescribePipelineDetailResponsePipelineArtifacts();
             return TeaModel.build(map, self);
@@ -291,6 +295,14 @@ public class DescribePipelineDetailResponse extends TeaModel {
             return this.updateTime;
         }
 
+        public DescribePipelineDetailResponsePipelineArtifacts setExt(java.util.Map<String, ?> ext) {
+            this.ext = ext;
+            return this;
+        }
+        public java.util.Map<String, ?> getExt() {
+            return this.ext;
+        }
+
     }
 
     public static class DescribePipelineDetailResponseJobDetailsArtifacts extends TeaModel {
@@ -341,6 +353,10 @@ public class DescribePipelineDetailResponse extends TeaModel {
         @NameInMap("UpdateTime")
         @Validation(required = true)
         public Long updateTime;
+
+        @NameInMap("Ext")
+        @Validation(required = true)
+        public java.util.Map<String, ?> ext;
 
         public static DescribePipelineDetailResponseJobDetailsArtifacts build(java.util.Map<String, ?> map) throws Exception {
             DescribePipelineDetailResponseJobDetailsArtifacts self = new DescribePipelineDetailResponseJobDetailsArtifacts();
@@ -441,6 +457,14 @@ public class DescribePipelineDetailResponse extends TeaModel {
         }
         public Long getUpdateTime() {
             return this.updateTime;
+        }
+
+        public DescribePipelineDetailResponseJobDetailsArtifacts setExt(java.util.Map<String, ?> ext) {
+            this.ext = ext;
+            return this;
+        }
+        public java.util.Map<String, ?> getExt() {
+            return this.ext;
         }
 
     }
