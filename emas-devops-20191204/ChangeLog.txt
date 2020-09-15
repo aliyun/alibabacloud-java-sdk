@@ -1,6 +1,9 @@
 2020-09-15 Version: 1.0.4
 - Update CreateIosCertRequest.
 
+2020-09-15 Version: 1.0.4
+- Update CreateIosCertRequest.
+
 2020-09-07 Version: 1.0.3
 - Add ListPipelineDefinitions.
 - TriggerPipeline supports runtime envs.
