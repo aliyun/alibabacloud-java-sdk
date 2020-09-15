@@ -114,6 +114,10 @@ public class ListPipelineInstancesByAppKeyResponse extends TeaModel {
         @Validation(required = true)
         public Long updateTime;
 
+        @NameInMap("Ext")
+        @Validation(required = true)
+        public java.util.Map<String, ?> ext;
+
         public static ListPipelineInstancesByAppKeyResponseItemsPipelineArtifacts build(java.util.Map<String, ?> map) throws Exception {
             ListPipelineInstancesByAppKeyResponseItemsPipelineArtifacts self = new ListPipelineInstancesByAppKeyResponseItemsPipelineArtifacts();
             return TeaModel.build(map, self);
@@ -205,6 +209,14 @@ public class ListPipelineInstancesByAppKeyResponse extends TeaModel {
         }
         public Long getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListPipelineInstancesByAppKeyResponseItemsPipelineArtifacts setExt(java.util.Map<String, ?> ext) {
+            this.ext = ext;
+            return this;
+        }
+        public java.util.Map<String, ?> getExt() {
+            return this.ext;
         }
 
     }
