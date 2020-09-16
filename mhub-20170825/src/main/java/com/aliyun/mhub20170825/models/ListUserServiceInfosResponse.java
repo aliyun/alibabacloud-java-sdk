@@ -56,7 +56,7 @@ public class ListUserServiceInfosResponse extends TeaModel {
 
         @NameInMap("ProductId")
         @Validation(required = true)
-        public String productId;
+        public Integer productId;
 
         @NameInMap("ModifyTime")
         @Validation(required = true)
@@ -95,11 +95,11 @@ public class ListUserServiceInfosResponse extends TeaModel {
             return this.service;
         }
 
-        public ListUserServiceInfosResponseServiceInfos setProductId(String productId) {
+        public ListUserServiceInfosResponseServiceInfos setProductId(Integer productId) {
             this.productId = productId;
             return this;
         }
-        public String getProductId() {
+        public Integer getProductId() {
             return this.productId;
         }
 

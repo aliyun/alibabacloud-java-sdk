@@ -60,7 +60,7 @@ public class ListProductsResponse extends TeaModel {
     public static class ListProductsResponseProductInfosProductInfo extends TeaModel {
         @NameInMap("ProductId")
         @Validation(required = true)
-        public String productId;
+        public Integer productId;
 
         @NameInMap("Name")
         @Validation(required = true)
@@ -87,11 +87,11 @@ public class ListProductsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListProductsResponseProductInfosProductInfo setProductId(String productId) {
+        public ListProductsResponseProductInfosProductInfo setProductId(Integer productId) {
             this.productId = productId;
             return this;
         }
-        public String getProductId() {
+        public Integer getProductId() {
             return this.productId;
         }
 
