@@ -36,7 +36,7 @@ public class CreateAppResponse extends TeaModel {
     public static class CreateAppResponseAppInfo extends TeaModel {
         @NameInMap("ProductId")
         @Validation(required = true)
-        public String productId;
+        public Integer productId;
 
         @NameInMap("AppKey")
         @Validation(required = true)
@@ -75,11 +75,11 @@ public class CreateAppResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateAppResponseAppInfo setProductId(String productId) {
+        public CreateAppResponseAppInfo setProductId(Integer productId) {
             this.productId = productId;
             return this;
         }
-        public String getProductId() {
+        public Integer getProductId() {
             return this.productId;
         }
 

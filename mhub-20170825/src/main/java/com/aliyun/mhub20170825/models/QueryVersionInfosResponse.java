@@ -44,7 +44,7 @@ public class QueryVersionInfosResponse extends TeaModel {
 
         @NameInMap("ProductID")
         @Validation(required = true)
-        public String productID;
+        public Integer productID;
 
         @NameInMap("CreateTime")
         @Validation(required = true)
@@ -75,11 +75,11 @@ public class QueryVersionInfosResponse extends TeaModel {
             return this.version;
         }
 
-        public QueryVersionInfosResponseVersionInfosVersionInfo setProductID(String productID) {
+        public QueryVersionInfosResponseVersionInfosVersionInfo setProductID(Integer productID) {
             this.productID = productID;
             return this;
         }
-        public String getProductID() {
+        public Integer getProductID() {
             return this.productID;
         }
 
