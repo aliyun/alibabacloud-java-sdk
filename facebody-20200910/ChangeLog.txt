@@ -1,0 +1,3 @@
+2020-09-16 Version: 1.1.9.ROA
+- Add api DetectIPCPedestrianOptimized.
+
