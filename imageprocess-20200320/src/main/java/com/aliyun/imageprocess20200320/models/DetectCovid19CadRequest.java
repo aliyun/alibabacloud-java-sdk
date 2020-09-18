@@ -8,6 +8,18 @@ public class DetectCovid19CadRequest extends TeaModel {
     @Validation(required = true)
     public java.util.List<DetectCovid19CadRequestURLList> URLList;
 
+    @NameInMap("DataFormat")
+    @Validation(required = true)
+    public String dataFormat;
+
+    @NameInMap("OrgName")
+    @Validation(required = true)
+    public String orgName;
+
+    @NameInMap("OrgId")
+    @Validation(required = true)
+    public String orgId;
+
     public static DetectCovid19CadRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectCovid19CadRequest self = new DetectCovid19CadRequest();
         return TeaModel.build(map, self);
@@ -19,6 +31,30 @@ public class DetectCovid19CadRequest extends TeaModel {
     }
     public java.util.List<DetectCovid19CadRequestURLList> getURLList() {
         return this.URLList;
+    }
+
+    public DetectCovid19CadRequest setDataFormat(String dataFormat) {
+        this.dataFormat = dataFormat;
+        return this;
+    }
+    public String getDataFormat() {
+        return this.dataFormat;
+    }
+
+    public DetectCovid19CadRequest setOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    public String getOrgName() {
+        return this.orgName;
+    }
+
+    public DetectCovid19CadRequest setOrgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    public String getOrgId() {
+        return this.orgId;
     }
 
     public static class DetectCovid19CadRequestURLList extends TeaModel {

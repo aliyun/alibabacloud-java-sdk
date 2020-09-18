@@ -8,6 +8,18 @@ public class DetectLungNoduleRequest extends TeaModel {
     @Validation(required = true)
     public java.util.List<DetectLungNoduleRequestURLList> URLList;
 
+    @NameInMap("DataFormat")
+    @Validation(required = true)
+    public String dataFormat;
+
+    @NameInMap("OrgName")
+    @Validation(required = true)
+    public String orgName;
+
+    @NameInMap("OrgId")
+    @Validation(required = true)
+    public String orgId;
+
     public static DetectLungNoduleRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectLungNoduleRequest self = new DetectLungNoduleRequest();
         return TeaModel.build(map, self);
@@ -19,6 +31,30 @@ public class DetectLungNoduleRequest extends TeaModel {
     }
     public java.util.List<DetectLungNoduleRequestURLList> getURLList() {
         return this.URLList;
+    }
+
+    public DetectLungNoduleRequest setDataFormat(String dataFormat) {
+        this.dataFormat = dataFormat;
+        return this;
+    }
+    public String getDataFormat() {
+        return this.dataFormat;
+    }
+
+    public DetectLungNoduleRequest setOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    public String getOrgName() {
+        return this.orgName;
+    }
+
+    public DetectLungNoduleRequest setOrgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    public String getOrgId() {
+        return this.orgId;
     }
 
     public static class DetectLungNoduleRequestURLList extends TeaModel {

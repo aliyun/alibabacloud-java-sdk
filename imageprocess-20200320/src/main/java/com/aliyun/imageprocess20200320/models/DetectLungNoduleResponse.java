@@ -66,6 +66,18 @@ public class DetectLungNoduleResponse extends TeaModel {
         @Validation(required = true)
         public Float y;
 
+        @NameInMap("ImageX")
+        @Validation(required = true)
+        public Float imageX;
+
+        @NameInMap("ImageY")
+        @Validation(required = true)
+        public Float imageY;
+
+        @NameInMap("ImageZ")
+        @Validation(required = true)
+        public Float imageZ;
+
         public static DetectLungNoduleResponseDataSeriesElements build(java.util.Map<String, ?> map) throws Exception {
             DetectLungNoduleResponseDataSeriesElements self = new DetectLungNoduleResponseDataSeriesElements();
             return TeaModel.build(map, self);
@@ -135,6 +147,30 @@ public class DetectLungNoduleResponse extends TeaModel {
             return this.y;
         }
 
+        public DetectLungNoduleResponseDataSeriesElements setImageX(Float imageX) {
+            this.imageX = imageX;
+            return this;
+        }
+        public Float getImageX() {
+            return this.imageX;
+        }
+
+        public DetectLungNoduleResponseDataSeriesElements setImageY(Float imageY) {
+            this.imageY = imageY;
+            return this;
+        }
+        public Float getImageY() {
+            return this.imageY;
+        }
+
+        public DetectLungNoduleResponseDataSeriesElements setImageZ(Float imageZ) {
+            this.imageZ = imageZ;
+            return this;
+        }
+        public Float getImageZ() {
+            return this.imageZ;
+        }
+
     }
 
     public static class DetectLungNoduleResponseDataSeries extends TeaModel {
@@ -145,6 +181,14 @@ public class DetectLungNoduleResponse extends TeaModel {
         @NameInMap("Elements")
         @Validation(required = true)
         public java.util.List<DetectLungNoduleResponseDataSeriesElements> elements;
+
+        @NameInMap("Origin")
+        @Validation(required = true)
+        public java.util.List<Float> origin;
+
+        @NameInMap("Spacing")
+        @Validation(required = true)
+        public java.util.List<Float> spacing;
 
         public static DetectLungNoduleResponseDataSeries build(java.util.Map<String, ?> map) throws Exception {
             DetectLungNoduleResponseDataSeries self = new DetectLungNoduleResponseDataSeries();
@@ -165,6 +209,22 @@ public class DetectLungNoduleResponse extends TeaModel {
         }
         public java.util.List<DetectLungNoduleResponseDataSeriesElements> getElements() {
             return this.elements;
+        }
+
+        public DetectLungNoduleResponseDataSeries setOrigin(java.util.List<Float> origin) {
+            this.origin = origin;
+            return this;
+        }
+        public java.util.List<Float> getOrigin() {
+            return this.origin;
+        }
+
+        public DetectLungNoduleResponseDataSeries setSpacing(java.util.List<Float> spacing) {
+            this.spacing = spacing;
+            return this;
+        }
+        public java.util.List<Float> getSpacing() {
+            return this.spacing;
         }
 
     }
