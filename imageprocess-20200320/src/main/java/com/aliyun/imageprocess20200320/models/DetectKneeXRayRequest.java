@@ -12,6 +12,14 @@ public class DetectKneeXRayRequest extends TeaModel {
     @Validation(required = true)
     public String dataFormat;
 
+    @NameInMap("OrgName")
+    @Validation(required = true)
+    public String orgName;
+
+    @NameInMap("OrgId")
+    @Validation(required = true)
+    public String orgId;
+
     public static DetectKneeXRayRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectKneeXRayRequest self = new DetectKneeXRayRequest();
         return TeaModel.build(map, self);
@@ -31,6 +39,22 @@ public class DetectKneeXRayRequest extends TeaModel {
     }
     public String getDataFormat() {
         return this.dataFormat;
+    }
+
+    public DetectKneeXRayRequest setOrgName(String orgName) {
+        this.orgName = orgName;
+        return this;
+    }
+    public String getOrgName() {
+        return this.orgName;
+    }
+
+    public DetectKneeXRayRequest setOrgId(String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+    public String getOrgId() {
+        return this.orgId;
     }
 
 }
