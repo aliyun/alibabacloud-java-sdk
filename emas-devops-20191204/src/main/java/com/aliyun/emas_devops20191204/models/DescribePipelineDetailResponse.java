@@ -30,11 +30,11 @@ public class DescribePipelineDetailResponse extends TeaModel {
 
     @NameInMap("StartTime")
     @Validation(required = true)
-    public String startTime;
+    public Long startTime;
 
     @NameInMap("EndTime")
     @Validation(required = true)
-    public String endTime;
+    public Long endTime;
 
     @NameInMap("PipelineDefinitionName")
     @Validation(required = true)
@@ -101,19 +101,19 @@ public class DescribePipelineDetailResponse extends TeaModel {
         return this.operator;
     }
 
-    public DescribePipelineDetailResponse setStartTime(String startTime) {
+    public DescribePipelineDetailResponse setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
-    public String getStartTime() {
+    public Long getStartTime() {
         return this.startTime;
     }
 
-    public DescribePipelineDetailResponse setEndTime(String endTime) {
+    public DescribePipelineDetailResponse setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
-    public String getEndTime() {
+    public Long getEndTime() {
         return this.endTime;
     }
 
@@ -192,7 +192,7 @@ public class DescribePipelineDetailResponse extends TeaModel {
 
         @NameInMap("Ext")
         @Validation(required = true)
-        public java.util.Map<String, ?> ext;
+        public String ext;
 
         public static DescribePipelineDetailResponsePipelineArtifacts build(java.util.Map<String, ?> map) throws Exception {
             DescribePipelineDetailResponsePipelineArtifacts self = new DescribePipelineDetailResponsePipelineArtifacts();
@@ -295,11 +295,11 @@ public class DescribePipelineDetailResponse extends TeaModel {
             return this.updateTime;
         }
 
-        public DescribePipelineDetailResponsePipelineArtifacts setExt(java.util.Map<String, ?> ext) {
+        public DescribePipelineDetailResponsePipelineArtifacts setExt(String ext) {
             this.ext = ext;
             return this;
         }
-        public java.util.Map<String, ?> getExt() {
+        public String getExt() {
             return this.ext;
         }
 
@@ -356,7 +356,7 @@ public class DescribePipelineDetailResponse extends TeaModel {
 
         @NameInMap("Ext")
         @Validation(required = true)
-        public java.util.Map<String, ?> ext;
+        public String ext;
 
         public static DescribePipelineDetailResponseJobDetailsArtifacts build(java.util.Map<String, ?> map) throws Exception {
             DescribePipelineDetailResponseJobDetailsArtifacts self = new DescribePipelineDetailResponseJobDetailsArtifacts();
@@ -459,11 +459,11 @@ public class DescribePipelineDetailResponse extends TeaModel {
             return this.updateTime;
         }
 
-        public DescribePipelineDetailResponseJobDetailsArtifacts setExt(java.util.Map<String, ?> ext) {
+        public DescribePipelineDetailResponseJobDetailsArtifacts setExt(String ext) {
             this.ext = ext;
             return this;
         }
-        public java.util.Map<String, ?> getExt() {
+        public String getExt() {
             return this.ext;
         }
 
