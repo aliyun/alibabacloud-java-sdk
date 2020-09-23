@@ -8,13 +8,17 @@ public class PauseComponentUpgradeResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    public PauseComponentUpgradeResponseBody body;
-
     public static PauseComponentUpgradeResponse build(java.util.Map<String, ?> map) throws Exception {
         PauseComponentUpgradeResponse self = new PauseComponentUpgradeResponse();
         return TeaModel.build(map, self);
+    }
+
+    public PauseComponentUpgradeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
 }

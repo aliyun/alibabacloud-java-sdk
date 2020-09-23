@@ -17,4 +17,20 @@ public class DescribeClusterDetailResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeClusterDetailResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeClusterDetailResponse setBody(DescribeClusterDetailResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeClusterDetailResponseBody getBody() {
+        return this.body;
+    }
+
 }

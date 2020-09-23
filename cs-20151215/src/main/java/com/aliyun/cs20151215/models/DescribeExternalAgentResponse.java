@@ -17,4 +17,20 @@ public class DescribeExternalAgentResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeExternalAgentResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeExternalAgentResponse setBody(DescribeExternalAgentResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeExternalAgentResponseBody getBody() {
+        return this.body;
+    }
+
 }

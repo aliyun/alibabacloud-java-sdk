@@ -13,4 +13,12 @@ public class InstallClusterAddonsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public InstallClusterAddonsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
 }

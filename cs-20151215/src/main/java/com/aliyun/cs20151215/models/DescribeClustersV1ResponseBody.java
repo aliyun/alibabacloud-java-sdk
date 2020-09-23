@@ -3,38 +3,38 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeClustersResponse extends TeaModel {
-    @NameInMap("headers")
-    @Validation(required = true)
-    public java.util.Map<String, String> headers;
+public class DescribeClustersV1ResponseBody extends TeaModel {
+    // 集群详情列表。
+    @NameInMap("clusters")
+    public java.util.List<DescribeClustersV1ResponseBodyClusters> clusters;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    public java.util.List<DescribeClustersResponseBody> body;
+    // 分页信息。
+    @NameInMap("page_info")
+    public DescribeClustersV1ResponseBodyPageInfo pageInfo;
 
-    public static DescribeClustersResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeClustersResponse self = new DescribeClustersResponse();
+    public static DescribeClustersV1ResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeClustersV1ResponseBody self = new DescribeClustersV1ResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClustersResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeClustersV1ResponseBody setClusters(java.util.List<DescribeClustersV1ResponseBodyClusters> clusters) {
+        this.clusters = clusters;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public java.util.List<DescribeClustersV1ResponseBodyClusters> getClusters() {
+        return this.clusters;
     }
 
-    public DescribeClustersResponse setBody(java.util.List<DescribeClustersResponseBody> body) {
-        this.body = body;
+    public DescribeClustersV1ResponseBody setPageInfo(DescribeClustersV1ResponseBodyPageInfo pageInfo) {
+        this.pageInfo = pageInfo;
         return this;
     }
-    public java.util.List<DescribeClustersResponseBody> getBody() {
-        return this.body;
+    public DescribeClustersV1ResponseBodyPageInfo getPageInfo() {
+        return this.pageInfo;
     }
 
-    public static class DescribeClustersResponseBodyTags extends TeaModel {
-        // 标签名。
+    public static class DescribeClustersV1ResponseBodyClustersTags extends TeaModel {
+        // 标签键。
         @NameInMap("key")
         public String key;
 
@@ -42,12 +42,12 @@ public class DescribeClustersResponse extends TeaModel {
         @NameInMap("value")
         public String value;
 
-        public static DescribeClustersResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClustersResponseBodyTags self = new DescribeClustersResponseBodyTags();
+        public static DescribeClustersV1ResponseBodyClustersTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersV1ResponseBodyClustersTags self = new DescribeClustersV1ResponseBodyClustersTags();
             return TeaModel.build(map, self);
         }
 
-        public DescribeClustersResponseBodyTags setKey(String key) {
+        public DescribeClustersV1ResponseBodyClustersTags setKey(String key) {
             this.key = key;
             return this;
         }
@@ -55,7 +55,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.key;
         }
 
-        public DescribeClustersResponseBodyTags setValue(String value) {
+        public DescribeClustersV1ResponseBodyClustersTags setValue(String value) {
             this.value = value;
             return this;
         }
@@ -65,7 +65,11 @@ public class DescribeClustersResponse extends TeaModel {
 
     }
 
-    public static class DescribeClustersResponseBody extends TeaModel {
+    public static class DescribeClustersV1ResponseBodyClusters extends TeaModel {
+        // 集群健康状态。
+        @NameInMap("cluster_healthy")
+        public String clusterHealthy;
+
         // 集群ID。
         @NameInMap("cluster_id")
         public String clusterId;
@@ -82,11 +86,11 @@ public class DescribeClustersResponse extends TeaModel {
         @NameInMap("current_version")
         public String currentVersion;
 
-        // 节点系统盘类型。
+        // 数据盘类型。
         @NameInMap("data_disk_category")
         public String dataDiskCategory;
 
-        // 节点系统盘大小。
+        // 数据盘大小。
         @NameInMap("data_disk_size")
         public Long dataDiskSize;
 
@@ -94,23 +98,23 @@ public class DescribeClustersResponse extends TeaModel {
         @NameInMap("deletion_protection")
         public Boolean deletionProtection;
 
-        // 容器运行时版本。
+        // 集群使用的Docker版本。
         @NameInMap("docker_version")
         public String dockerVersion;
 
-        // 集群Ingerss SLB实例的ID。
+        // 集群Ingress对应的SLB的地址。
         @NameInMap("external_loadbalancer_id")
         public String externalLoadbalancerId;
 
-        // 集群创建时版本。
+        // 集群初始化版本。
         @NameInMap("init_version")
         public String initVersion;
 
-        // 集群的endpoint地址。
+        // 集群访问的端点信息。
         @NameInMap("master_url")
         public String masterUrl;
 
-        // 集群元数据。
+        // 集群元数据信息。
         @NameInMap("meta_data")
         public String metaData;
 
@@ -118,19 +122,23 @@ public class DescribeClustersResponse extends TeaModel {
         @NameInMap("name")
         public String name;
 
-        // 集群使用的网络类型。
+        // 集群使用的网络类型，例如：VPC网络。
         @NameInMap("network_mode")
         public String networkMode;
 
-        // 集群是否开启Private Zone，默认false。
+        // 节点状态。
+        @NameInMap("node_status")
+        public String nodeStatus;
+
+        // 集群是否开启Private Zone。
         @NameInMap("private_zone")
         public Boolean privateZone;
 
-        // 集群标识，区分是否为边缘托管版。
+        // 边缘集群表示，用于区分边缘托管版集群。
         @NameInMap("profile")
         public String profile;
 
-        // 集群所在地域ID。
+        // 地域ID。
         @NameInMap("region_id")
         public String regionId;
 
@@ -142,7 +150,7 @@ public class DescribeClustersResponse extends TeaModel {
         @NameInMap("security_group_id")
         public String securityGroupId;
 
-        // 集群内实例数量。
+        // 集群节点数。
         @NameInMap("size")
         public Long size;
 
@@ -150,44 +158,52 @@ public class DescribeClustersResponse extends TeaModel {
         @NameInMap("state")
         public String state;
 
-        // POD网络。
+        // POD网段地址。
         @NameInMap("subnet_cidr")
         public String subnetCidr;
 
         // 集群标签。
         @NameInMap("tags")
-        public java.util.List<DescribeClustersResponseBodyTags> tags;
+        public java.util.List<DescribeClustersV1ResponseBodyClustersTags> tags;
 
         // 集群更新时间。
         @NameInMap("updated")
         public String updated;
 
-        // 集群使用的VPC ID。
+        // 集群所在的VPC ID。
         @NameInMap("vpc_id")
         public String vpcId;
 
-        // 虚拟交换机网络ID。
+        // 虚拟交换机CIDR。
         @NameInMap("vswitch_cidr")
         public String vswitchCidr;
 
-        // 节点使用的Vswitch ID。
+        // 集群使用的虚拟交换ID。
         @NameInMap("vswitch_id")
         public String vswitchId;
 
-        // 集群Worker节点RAM角色名称。
+        // 集群Worker RAM角色。
         @NameInMap("worker_ram_role_name")
         public String workerRamRoleName;
 
-        // 集群所在Region内的区域ID。
+        // 可用区ID。
         @NameInMap("zone_id")
         public String zoneId;
 
-        public static DescribeClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClustersResponseBody self = new DescribeClustersResponseBody();
+        public static DescribeClustersV1ResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersV1ResponseBodyClusters self = new DescribeClustersV1ResponseBodyClusters();
             return TeaModel.build(map, self);
         }
 
-        public DescribeClustersResponseBody setClusterId(String clusterId) {
+        public DescribeClustersV1ResponseBodyClusters setClusterHealthy(String clusterHealthy) {
+            this.clusterHealthy = clusterHealthy;
+            return this;
+        }
+        public String getClusterHealthy() {
+            return this.clusterHealthy;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
@@ -195,7 +211,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.clusterId;
         }
 
-        public DescribeClustersResponseBody setClusterType(String clusterType) {
+        public DescribeClustersV1ResponseBodyClusters setClusterType(String clusterType) {
             this.clusterType = clusterType;
             return this;
         }
@@ -203,7 +219,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.clusterType;
         }
 
-        public DescribeClustersResponseBody setCreated(String created) {
+        public DescribeClustersV1ResponseBodyClusters setCreated(String created) {
             this.created = created;
             return this;
         }
@@ -211,7 +227,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.created;
         }
 
-        public DescribeClustersResponseBody setCurrentVersion(String currentVersion) {
+        public DescribeClustersV1ResponseBodyClusters setCurrentVersion(String currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
@@ -219,7 +235,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.currentVersion;
         }
 
-        public DescribeClustersResponseBody setDataDiskCategory(String dataDiskCategory) {
+        public DescribeClustersV1ResponseBodyClusters setDataDiskCategory(String dataDiskCategory) {
             this.dataDiskCategory = dataDiskCategory;
             return this;
         }
@@ -227,7 +243,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.dataDiskCategory;
         }
 
-        public DescribeClustersResponseBody setDataDiskSize(Long dataDiskSize) {
+        public DescribeClustersV1ResponseBodyClusters setDataDiskSize(Long dataDiskSize) {
             this.dataDiskSize = dataDiskSize;
             return this;
         }
@@ -235,7 +251,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.dataDiskSize;
         }
 
-        public DescribeClustersResponseBody setDeletionProtection(Boolean deletionProtection) {
+        public DescribeClustersV1ResponseBodyClusters setDeletionProtection(Boolean deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
@@ -243,7 +259,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.deletionProtection;
         }
 
-        public DescribeClustersResponseBody setDockerVersion(String dockerVersion) {
+        public DescribeClustersV1ResponseBodyClusters setDockerVersion(String dockerVersion) {
             this.dockerVersion = dockerVersion;
             return this;
         }
@@ -251,7 +267,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.dockerVersion;
         }
 
-        public DescribeClustersResponseBody setExternalLoadbalancerId(String externalLoadbalancerId) {
+        public DescribeClustersV1ResponseBodyClusters setExternalLoadbalancerId(String externalLoadbalancerId) {
             this.externalLoadbalancerId = externalLoadbalancerId;
             return this;
         }
@@ -259,7 +275,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.externalLoadbalancerId;
         }
 
-        public DescribeClustersResponseBody setInitVersion(String initVersion) {
+        public DescribeClustersV1ResponseBodyClusters setInitVersion(String initVersion) {
             this.initVersion = initVersion;
             return this;
         }
@@ -267,7 +283,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.initVersion;
         }
 
-        public DescribeClustersResponseBody setMasterUrl(String masterUrl) {
+        public DescribeClustersV1ResponseBodyClusters setMasterUrl(String masterUrl) {
             this.masterUrl = masterUrl;
             return this;
         }
@@ -275,7 +291,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.masterUrl;
         }
 
-        public DescribeClustersResponseBody setMetaData(String metaData) {
+        public DescribeClustersV1ResponseBodyClusters setMetaData(String metaData) {
             this.metaData = metaData;
             return this;
         }
@@ -283,7 +299,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.metaData;
         }
 
-        public DescribeClustersResponseBody setName(String name) {
+        public DescribeClustersV1ResponseBodyClusters setName(String name) {
             this.name = name;
             return this;
         }
@@ -291,7 +307,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.name;
         }
 
-        public DescribeClustersResponseBody setNetworkMode(String networkMode) {
+        public DescribeClustersV1ResponseBodyClusters setNetworkMode(String networkMode) {
             this.networkMode = networkMode;
             return this;
         }
@@ -299,7 +315,15 @@ public class DescribeClustersResponse extends TeaModel {
             return this.networkMode;
         }
 
-        public DescribeClustersResponseBody setPrivateZone(Boolean privateZone) {
+        public DescribeClustersV1ResponseBodyClusters setNodeStatus(String nodeStatus) {
+            this.nodeStatus = nodeStatus;
+            return this;
+        }
+        public String getNodeStatus() {
+            return this.nodeStatus;
+        }
+
+        public DescribeClustersV1ResponseBodyClusters setPrivateZone(Boolean privateZone) {
             this.privateZone = privateZone;
             return this;
         }
@@ -307,7 +331,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.privateZone;
         }
 
-        public DescribeClustersResponseBody setProfile(String profile) {
+        public DescribeClustersV1ResponseBodyClusters setProfile(String profile) {
             this.profile = profile;
             return this;
         }
@@ -315,7 +339,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.profile;
         }
 
-        public DescribeClustersResponseBody setRegionId(String regionId) {
+        public DescribeClustersV1ResponseBodyClusters setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -323,7 +347,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeClustersResponseBody setResourceGroupId(String resourceGroupId) {
+        public DescribeClustersV1ResponseBodyClusters setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -331,7 +355,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeClustersResponseBody setSecurityGroupId(String securityGroupId) {
+        public DescribeClustersV1ResponseBodyClusters setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
@@ -339,7 +363,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.securityGroupId;
         }
 
-        public DescribeClustersResponseBody setSize(Long size) {
+        public DescribeClustersV1ResponseBodyClusters setSize(Long size) {
             this.size = size;
             return this;
         }
@@ -347,7 +371,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.size;
         }
 
-        public DescribeClustersResponseBody setState(String state) {
+        public DescribeClustersV1ResponseBodyClusters setState(String state) {
             this.state = state;
             return this;
         }
@@ -355,7 +379,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.state;
         }
 
-        public DescribeClustersResponseBody setSubnetCidr(String subnetCidr) {
+        public DescribeClustersV1ResponseBodyClusters setSubnetCidr(String subnetCidr) {
             this.subnetCidr = subnetCidr;
             return this;
         }
@@ -363,15 +387,15 @@ public class DescribeClustersResponse extends TeaModel {
             return this.subnetCidr;
         }
 
-        public DescribeClustersResponseBody setTags(java.util.List<DescribeClustersResponseBodyTags> tags) {
+        public DescribeClustersV1ResponseBodyClusters setTags(java.util.List<DescribeClustersV1ResponseBodyClustersTags> tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeClustersResponseBodyTags> getTags() {
+        public java.util.List<DescribeClustersV1ResponseBodyClustersTags> getTags() {
             return this.tags;
         }
 
-        public DescribeClustersResponseBody setUpdated(String updated) {
+        public DescribeClustersV1ResponseBodyClusters setUpdated(String updated) {
             this.updated = updated;
             return this;
         }
@@ -379,7 +403,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.updated;
         }
 
-        public DescribeClustersResponseBody setVpcId(String vpcId) {
+        public DescribeClustersV1ResponseBodyClusters setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -387,7 +411,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeClustersResponseBody setVswitchCidr(String vswitchCidr) {
+        public DescribeClustersV1ResponseBodyClusters setVswitchCidr(String vswitchCidr) {
             this.vswitchCidr = vswitchCidr;
             return this;
         }
@@ -395,7 +419,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.vswitchCidr;
         }
 
-        public DescribeClustersResponseBody setVswitchId(String vswitchId) {
+        public DescribeClustersV1ResponseBodyClusters setVswitchId(String vswitchId) {
             this.vswitchId = vswitchId;
             return this;
         }
@@ -403,7 +427,7 @@ public class DescribeClustersResponse extends TeaModel {
             return this.vswitchId;
         }
 
-        public DescribeClustersResponseBody setWorkerRamRoleName(String workerRamRoleName) {
+        public DescribeClustersV1ResponseBodyClusters setWorkerRamRoleName(String workerRamRoleName) {
             this.workerRamRoleName = workerRamRoleName;
             return this;
         }
@@ -411,12 +435,56 @@ public class DescribeClustersResponse extends TeaModel {
             return this.workerRamRoleName;
         }
 
-        public DescribeClustersResponseBody setZoneId(String zoneId) {
+        public DescribeClustersV1ResponseBodyClusters setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeClustersV1ResponseBodyPageInfo extends TeaModel {
+        // 分页总数。
+        @NameInMap("page_number")
+        public Integer pageNumber;
+
+        // 单页大小。
+        @NameInMap("page_size")
+        public Integer pageSize;
+
+        // 结果总条目数。
+        @NameInMap("total_count")
+        public Integer totalCount;
+
+        public static DescribeClustersV1ResponseBodyPageInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersV1ResponseBodyPageInfo self = new DescribeClustersV1ResponseBodyPageInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClustersV1ResponseBodyPageInfo setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public DescribeClustersV1ResponseBodyPageInfo setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public DescribeClustersV1ResponseBodyPageInfo setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

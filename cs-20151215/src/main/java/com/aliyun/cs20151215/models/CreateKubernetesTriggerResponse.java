@@ -17,4 +17,20 @@ public class CreateKubernetesTriggerResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateKubernetesTriggerResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateKubernetesTriggerResponse setBody(CreateKubernetesTriggerResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateKubernetesTriggerResponseBody getBody() {
+        return this.body;
+    }
+
 }

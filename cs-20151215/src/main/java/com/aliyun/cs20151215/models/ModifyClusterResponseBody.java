@@ -4,21 +4,45 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterResponseBody extends TeaModel {
+    // 集群ID。
     @NameInMap("cluster_id")
-    @Validation(required = true)
     public String clusterId;
 
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    // 请求ID。
+    @NameInMap("request_id")
     public String requestId;
 
+    // 任务ID。
     @NameInMap("task_id")
-    @Validation(required = true)
     public String taskId;
 
     public static ModifyClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterResponseBody self = new ModifyClusterResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyClusterResponseBody setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    public ModifyClusterResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyClusterResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

@@ -17,4 +17,20 @@ public class DescribeClusterAddonsVersionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeClusterAddonsVersionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeClusterAddonsVersionResponse setBody(DescribeClusterAddonsVersionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeClusterAddonsVersionResponseBody getBody() {
+        return this.body;
+    }
+
 }

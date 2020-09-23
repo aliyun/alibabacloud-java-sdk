@@ -13,4 +13,12 @@ public class UpgradeClusterAddonsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpgradeClusterAddonsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
 }
