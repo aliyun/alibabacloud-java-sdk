@@ -23,7 +23,7 @@ public class ListFilesRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("UseType")
-    public Integer useType;
+    public String useType;
 
     @NameInMap("FileTypes")
     public String fileTypes;
@@ -34,6 +34,78 @@ public class ListFilesRequest extends TeaModel {
     public static ListFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFilesRequest self = new ListFilesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFilesRequest setFileFolderPath(String fileFolderPath) {
+        this.fileFolderPath = fileFolderPath;
+        return this;
+    }
+    public String getFileFolderPath() {
+        return this.fileFolderPath;
+    }
+
+    public ListFilesRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ListFilesRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
+    }
+
+    public ListFilesRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public ListFilesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListFilesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListFilesRequest setUseType(String useType) {
+        this.useType = useType;
+        return this;
+    }
+    public String getUseType() {
+        return this.useType;
+    }
+
+    public ListFilesRequest setFileTypes(String fileTypes) {
+        this.fileTypes = fileTypes;
+        return this;
+    }
+    public String getFileTypes() {
+        return this.fileTypes;
+    }
+
+    public ListFilesRequest setOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    public String getOwner() {
+        return this.owner;
     }
 
 }

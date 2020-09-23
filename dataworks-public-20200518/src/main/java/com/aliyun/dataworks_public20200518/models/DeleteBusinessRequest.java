@@ -19,4 +19,28 @@ public class DeleteBusinessRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteBusinessRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public DeleteBusinessRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public DeleteBusinessRequest setBusinessId(Long businessId) {
+        this.businessId = businessId;
+        return this;
+    }
+    public Long getBusinessId() {
+        return this.businessId;
+    }
+
 }

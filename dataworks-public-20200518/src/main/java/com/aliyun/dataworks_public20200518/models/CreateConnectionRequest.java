@@ -35,4 +35,60 @@ public class CreateConnectionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateConnectionRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public CreateConnectionRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateConnectionRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateConnectionRequest setConnectionType(String connectionType) {
+        this.connectionType = connectionType;
+        return this;
+    }
+    public String getConnectionType() {
+        return this.connectionType;
+    }
+
+    public CreateConnectionRequest setSubType(String subType) {
+        this.subType = subType;
+        return this;
+    }
+    public String getSubType() {
+        return this.subType;
+    }
+
+    public CreateConnectionRequest setEnvType(Integer envType) {
+        this.envType = envType;
+        return this;
+    }
+    public Integer getEnvType() {
+        return this.envType;
+    }
+
+    public CreateConnectionRequest setContent(String content) {
+        this.content = content;
+        return this;
+    }
+    public String getContent() {
+        return this.content;
+    }
+
 }

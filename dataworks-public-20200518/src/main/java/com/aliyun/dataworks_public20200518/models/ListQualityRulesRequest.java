@@ -25,4 +25,36 @@ public class ListQualityRulesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListQualityRulesRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public ListQualityRulesRequest setEntityId(Long entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public Long getEntityId() {
+        return this.entityId;
+    }
+
+    public ListQualityRulesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListQualityRulesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

@@ -33,6 +33,54 @@ public class GetDeploymentResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetDeploymentResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetDeploymentResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetDeploymentResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetDeploymentResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetDeploymentResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetDeploymentResponse setData(GetDeploymentResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public GetDeploymentResponseData getData() {
+        return this.data;
+    }
+
     public static class GetDeploymentResponseDataDeployment extends TeaModel {
         @NameInMap("Name")
         @Validation(required = true)
@@ -75,6 +123,78 @@ public class GetDeploymentResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetDeploymentResponseDataDeployment setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetDeploymentResponseDataDeployment setCreatorId(String creatorId) {
+            this.creatorId = creatorId;
+            return this;
+        }
+        public String getCreatorId() {
+            return this.creatorId;
+        }
+
+        public GetDeploymentResponseDataDeployment setHandlerId(String handlerId) {
+            this.handlerId = handlerId;
+            return this;
+        }
+        public String getHandlerId() {
+            return this.handlerId;
+        }
+
+        public GetDeploymentResponseDataDeployment setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetDeploymentResponseDataDeployment setExecuteTime(Long executeTime) {
+            this.executeTime = executeTime;
+            return this;
+        }
+        public Long getExecuteTime() {
+            return this.executeTime;
+        }
+
+        public GetDeploymentResponseDataDeployment setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public GetDeploymentResponseDataDeployment setFromEnvironment(Integer fromEnvironment) {
+            this.fromEnvironment = fromEnvironment;
+            return this;
+        }
+        public Integer getFromEnvironment() {
+            return this.fromEnvironment;
+        }
+
+        public GetDeploymentResponseDataDeployment setToEnvironment(Integer toEnvironment) {
+            this.toEnvironment = toEnvironment;
+            return this;
+        }
+        public Integer getToEnvironment() {
+            return this.toEnvironment;
+        }
+
+        public GetDeploymentResponseDataDeployment setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
     }
 
     public static class GetDeploymentResponseData extends TeaModel {
@@ -85,6 +205,14 @@ public class GetDeploymentResponse extends TeaModel {
         public static GetDeploymentResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetDeploymentResponseData self = new GetDeploymentResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetDeploymentResponseData setDeployment(GetDeploymentResponseDataDeployment deployment) {
+            this.deployment = deployment;
+            return this;
+        }
+        public GetDeploymentResponseDataDeployment getDeployment() {
+            return this.deployment;
         }
 
     }

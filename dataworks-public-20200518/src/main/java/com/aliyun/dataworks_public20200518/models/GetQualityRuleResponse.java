@@ -33,6 +33,54 @@ public class GetQualityRuleResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetQualityRuleResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetQualityRuleResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetQualityRuleResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetQualityRuleResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetQualityRuleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetQualityRuleResponse setData(GetQualityRuleResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public GetQualityRuleResponseData getData() {
+        return this.data;
+    }
+
     public static class GetQualityRuleResponseData extends TeaModel {
         @NameInMap("Id")
         @Validation(required = true)
@@ -125,6 +173,182 @@ public class GetQualityRuleResponse extends TeaModel {
         public static GetQualityRuleResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityRuleResponseData self = new GetQualityRuleResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetQualityRuleResponseData setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetQualityRuleResponseData setEntityId(Long entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public Long getEntityId() {
+            return this.entityId;
+        }
+
+        public GetQualityRuleResponseData setProperty(String property) {
+            this.property = property;
+            return this;
+        }
+        public String getProperty() {
+            return this.property;
+        }
+
+        public GetQualityRuleResponseData setMethodId(Integer methodId) {
+            this.methodId = methodId;
+            return this;
+        }
+        public Integer getMethodId() {
+            return this.methodId;
+        }
+
+        public GetQualityRuleResponseData setMethodName(String methodName) {
+            this.methodName = methodName;
+            return this;
+        }
+        public String getMethodName() {
+            return this.methodName;
+        }
+
+        public GetQualityRuleResponseData setWhereCondition(String whereCondition) {
+            this.whereCondition = whereCondition;
+            return this;
+        }
+        public String getWhereCondition() {
+            return this.whereCondition;
+        }
+
+        public GetQualityRuleResponseData setOnDuty(String onDuty) {
+            this.onDuty = onDuty;
+            return this;
+        }
+        public String getOnDuty() {
+            return this.onDuty;
+        }
+
+        public GetQualityRuleResponseData setRuleType(Integer ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public Integer getRuleType() {
+            return this.ruleType;
+        }
+
+        public GetQualityRuleResponseData setBlockType(Integer blockType) {
+            this.blockType = blockType;
+            return this;
+        }
+        public Integer getBlockType() {
+            return this.blockType;
+        }
+
+        public GetQualityRuleResponseData setTemplateId(Integer templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public Integer getTemplateId() {
+            return this.templateId;
+        }
+
+        public GetQualityRuleResponseData setTemplateName(String templateName) {
+            this.templateName = templateName;
+            return this;
+        }
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public GetQualityRuleResponseData setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
+        }
+
+        public GetQualityRuleResponseData setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public GetQualityRuleResponseData setPredictType(Integer predictType) {
+            this.predictType = predictType;
+            return this;
+        }
+        public Integer getPredictType() {
+            return this.predictType;
+        }
+
+        public GetQualityRuleResponseData setWarningThreshold(String warningThreshold) {
+            this.warningThreshold = warningThreshold;
+            return this;
+        }
+        public String getWarningThreshold() {
+            return this.warningThreshold;
+        }
+
+        public GetQualityRuleResponseData setCriticalThreshold(String criticalThreshold) {
+            this.criticalThreshold = criticalThreshold;
+            return this;
+        }
+        public String getCriticalThreshold() {
+            return this.criticalThreshold;
+        }
+
+        public GetQualityRuleResponseData setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public GetQualityRuleResponseData setExpectValue(String expectValue) {
+            this.expectValue = expectValue;
+            return this;
+        }
+        public String getExpectValue() {
+            return this.expectValue;
+        }
+
+        public GetQualityRuleResponseData setTrend(String trend) {
+            this.trend = trend;
+            return this;
+        }
+        public String getTrend() {
+            return this.trend;
+        }
+
+        public GetQualityRuleResponseData setCheckerName(String checkerName) {
+            this.checkerName = checkerName;
+            return this;
+        }
+        public String getCheckerName() {
+            return this.checkerName;
+        }
+
+        public GetQualityRuleResponseData setChecker(Integer checker) {
+            this.checker = checker;
+            return this;
+        }
+        public Integer getChecker() {
+            return this.checker;
+        }
+
+        public GetQualityRuleResponseData setFixCheck(Boolean fixCheck) {
+            this.fixCheck = fixCheck;
+            return this;
+        }
+        public Boolean getFixCheck() {
+            return this.fixCheck;
         }
 
     }

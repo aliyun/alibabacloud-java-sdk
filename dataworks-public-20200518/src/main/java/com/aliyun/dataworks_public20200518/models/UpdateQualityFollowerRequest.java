@@ -25,4 +25,36 @@ public class UpdateQualityFollowerRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateQualityFollowerRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public UpdateQualityFollowerRequest setFollowerId(Long followerId) {
+        this.followerId = followerId;
+        return this;
+    }
+    public Long getFollowerId() {
+        return this.followerId;
+    }
+
+    public UpdateQualityFollowerRequest setFollower(String follower) {
+        this.follower = follower;
+        return this;
+    }
+    public String getFollower() {
+        return this.follower;
+    }
+
+    public UpdateQualityFollowerRequest setAlarmMode(Integer alarmMode) {
+        this.alarmMode = alarmMode;
+        return this;
+    }
+    public Integer getAlarmMode() {
+        return this.alarmMode;
+    }
+
 }

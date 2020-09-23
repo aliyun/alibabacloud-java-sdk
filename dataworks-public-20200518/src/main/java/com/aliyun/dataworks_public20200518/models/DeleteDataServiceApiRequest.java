@@ -21,4 +21,28 @@ public class DeleteDataServiceApiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteDataServiceApiRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
+    }
+
+    public DeleteDataServiceApiRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public DeleteDataServiceApiRequest setApiId(Long apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    public Long getApiId() {
+        return this.apiId;
+    }
+
 }

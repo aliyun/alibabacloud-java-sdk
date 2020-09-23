@@ -27,4 +27,44 @@ public class ListFoldersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListFoldersRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ListFoldersRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public ListFoldersRequest setParentFolderPath(String parentFolderPath) {
+        this.parentFolderPath = parentFolderPath;
+        return this;
+    }
+    public String getParentFolderPath() {
+        return this.parentFolderPath;
+    }
+
+    public ListFoldersRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListFoldersRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

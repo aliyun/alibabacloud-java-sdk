@@ -33,4 +33,52 @@ public class CreateQualityFollowerResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateQualityFollowerResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public CreateQualityFollowerResponse setData(Integer data) {
+        this.data = data;
+        return this;
+    }
+    public Integer getData() {
+        return this.data;
+    }
+
+    public CreateQualityFollowerResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateQualityFollowerResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateQualityFollowerResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public CreateQualityFollowerResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

@@ -17,4 +17,20 @@ public class GetQualityFollowerRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetQualityFollowerRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public GetQualityFollowerRequest setEntityId(Long entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public Long getEntityId() {
+        return this.entityId;
+    }
+
 }

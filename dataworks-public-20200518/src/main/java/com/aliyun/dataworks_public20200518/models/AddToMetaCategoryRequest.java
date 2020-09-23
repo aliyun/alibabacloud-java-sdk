@@ -17,4 +17,20 @@ public class AddToMetaCategoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AddToMetaCategoryRequest setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Long getCategoryId() {
+        return this.categoryId;
+    }
+
+    public AddToMetaCategoryRequest setTableGuid(String tableGuid) {
+        this.tableGuid = tableGuid;
+        return this;
+    }
+    public String getTableGuid() {
+        return this.tableGuid;
+    }
+
 }

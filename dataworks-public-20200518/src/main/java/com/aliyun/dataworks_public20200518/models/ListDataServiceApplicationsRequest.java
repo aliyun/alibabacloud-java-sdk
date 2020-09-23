@@ -23,4 +23,36 @@ public class ListDataServiceApplicationsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListDataServiceApplicationsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListDataServiceApplicationsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListDataServiceApplicationsRequest setProjectIdList(String projectIdList) {
+        this.projectIdList = projectIdList;
+        return this;
+    }
+    public String getProjectIdList() {
+        return this.projectIdList;
+    }
+
+    public ListDataServiceApplicationsRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
+    }
+
 }

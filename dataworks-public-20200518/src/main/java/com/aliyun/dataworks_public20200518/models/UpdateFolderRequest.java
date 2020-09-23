@@ -23,4 +23,36 @@ public class UpdateFolderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateFolderRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public UpdateFolderRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public UpdateFolderRequest setFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    public String getFolderId() {
+        return this.folderId;
+    }
+
+    public UpdateFolderRequest setFolderName(String folderName) {
+        this.folderName = folderName;
+        return this;
+    }
+    public String getFolderName() {
+        return this.folderName;
+    }
+
 }

@@ -23,4 +23,36 @@ public class GetFileVersionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetFileVersionRequest setFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public Long getFileId() {
+        return this.fileId;
+    }
+
+    public GetFileVersionRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public GetFileVersionRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public GetFileVersionRequest setFileVersion(Integer fileVersion) {
+        this.fileVersion = fileVersion;
+        return this;
+    }
+    public Integer getFileVersion() {
+        return this.fileVersion;
+    }
+
 }

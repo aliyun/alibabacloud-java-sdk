@@ -19,4 +19,28 @@ public class UpdateMetaCategoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateMetaCategoryRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public UpdateMetaCategoryRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
+    }
+
+    public UpdateMetaCategoryRequest setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Long getCategoryId() {
+        return this.categoryId;
+    }
+
 }

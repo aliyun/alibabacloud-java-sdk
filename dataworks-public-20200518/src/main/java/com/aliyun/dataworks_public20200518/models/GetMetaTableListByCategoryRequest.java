@@ -19,4 +19,28 @@ public class GetMetaTableListByCategoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetMetaTableListByCategoryRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public GetMetaTableListByCategoryRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public GetMetaTableListByCategoryRequest setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Long getCategoryId() {
+        return this.categoryId;
+    }
+
 }

@@ -10,7 +10,7 @@ public class DeleteQualityEntityResponse extends TeaModel {
 
     @NameInMap("ErrorCode")
     @Validation(required = true)
-    public Boolean errorCode;
+    public String errorCode;
 
     @NameInMap("ErrorMessage")
     @Validation(required = true)
@@ -31,6 +31,54 @@ public class DeleteQualityEntityResponse extends TeaModel {
     public static DeleteQualityEntityResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteQualityEntityResponse self = new DeleteQualityEntityResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteQualityEntityResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DeleteQualityEntityResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public DeleteQualityEntityResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public DeleteQualityEntityResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public DeleteQualityEntityResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
+    }
+
+    public DeleteQualityEntityResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

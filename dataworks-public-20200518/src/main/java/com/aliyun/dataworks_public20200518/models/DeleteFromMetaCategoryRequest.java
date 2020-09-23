@@ -17,4 +17,20 @@ public class DeleteFromMetaCategoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteFromMetaCategoryRequest setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Long getCategoryId() {
+        return this.categoryId;
+    }
+
+    public DeleteFromMetaCategoryRequest setTableGuid(String tableGuid) {
+        this.tableGuid = tableGuid;
+        return this;
+    }
+    public String getTableGuid() {
+        return this.tableGuid;
+    }
+
 }

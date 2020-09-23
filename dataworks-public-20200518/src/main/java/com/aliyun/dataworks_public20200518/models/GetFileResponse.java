@@ -33,6 +33,54 @@ public class GetFileResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetFileResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetFileResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetFileResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetFileResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetFileResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetFileResponse setData(GetFileResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public GetFileResponseData getData() {
+        return this.data;
+    }
+
     public static class GetFileResponseDataFile extends TeaModel {
         @NameInMap("ConnectionName")
         @Validation(required = true)
@@ -72,7 +120,7 @@ public class GetFileResponse extends TeaModel {
 
         @NameInMap("UseType")
         @Validation(required = true)
-        public Integer useType;
+        public String useType;
 
         @NameInMap("FileDescription")
         @Validation(required = true)
@@ -111,6 +159,150 @@ public class GetFileResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetFileResponseDataFile setConnectionName(String connectionName) {
+            this.connectionName = connectionName;
+            return this;
+        }
+        public String getConnectionName() {
+            return this.connectionName;
+        }
+
+        public GetFileResponseDataFile setParentId(Long parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public Long getParentId() {
+            return this.parentId;
+        }
+
+        public GetFileResponseDataFile setIsMaxCompute(Boolean isMaxCompute) {
+            this.isMaxCompute = isMaxCompute;
+            return this;
+        }
+        public Boolean getIsMaxCompute() {
+            return this.isMaxCompute;
+        }
+
+        public GetFileResponseDataFile setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetFileResponseDataFile setCreateUser(String createUser) {
+            this.createUser = createUser;
+            return this;
+        }
+        public String getCreateUser() {
+            return this.createUser;
+        }
+
+        public GetFileResponseDataFile setBizId(Long bizId) {
+            this.bizId = bizId;
+            return this;
+        }
+        public Long getBizId() {
+            return this.bizId;
+        }
+
+        public GetFileResponseDataFile setFileFolderId(String fileFolderId) {
+            this.fileFolderId = fileFolderId;
+            return this;
+        }
+        public String getFileFolderId() {
+            return this.fileFolderId;
+        }
+
+        public GetFileResponseDataFile setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public GetFileResponseDataFile setFileType(Integer fileType) {
+            this.fileType = fileType;
+            return this;
+        }
+        public Integer getFileType() {
+            return this.fileType;
+        }
+
+        public GetFileResponseDataFile setUseType(String useType) {
+            this.useType = useType;
+            return this;
+        }
+        public String getUseType() {
+            return this.useType;
+        }
+
+        public GetFileResponseDataFile setFileDescription(String fileDescription) {
+            this.fileDescription = fileDescription;
+            return this;
+        }
+        public String getFileDescription() {
+            return this.fileDescription;
+        }
+
+        public GetFileResponseDataFile setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public GetFileResponseDataFile setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public Long getNodeId() {
+            return this.nodeId;
+        }
+
+        public GetFileResponseDataFile setCurrentVersion(Integer currentVersion) {
+            this.currentVersion = currentVersion;
+            return this;
+        }
+        public Integer getCurrentVersion() {
+            return this.currentVersion;
+        }
+
+        public GetFileResponseDataFile setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetFileResponseDataFile setLastEditUser(String lastEditUser) {
+            this.lastEditUser = lastEditUser;
+            return this;
+        }
+        public String getLastEditUser() {
+            return this.lastEditUser;
+        }
+
+        public GetFileResponseDataFile setLastEditTime(Long lastEditTime) {
+            this.lastEditTime = lastEditTime;
+            return this;
+        }
+        public Long getLastEditTime() {
+            return this.lastEditTime;
+        }
+
+        public GetFileResponseDataFile setCommitStatus(Integer commitStatus) {
+            this.commitStatus = commitStatus;
+            return this;
+        }
+        public Integer getCommitStatus() {
+            return this.commitStatus;
+        }
+
     }
 
     public static class GetFileResponseDataNodeConfigurationInputList extends TeaModel {
@@ -121,6 +313,14 @@ public class GetFileResponse extends TeaModel {
         public static GetFileResponseDataNodeConfigurationInputList build(java.util.Map<String, ?> map) throws Exception {
             GetFileResponseDataNodeConfigurationInputList self = new GetFileResponseDataNodeConfigurationInputList();
             return TeaModel.build(map, self);
+        }
+
+        public GetFileResponseDataNodeConfigurationInputList setInput(String input) {
+            this.input = input;
+            return this;
+        }
+        public String getInput() {
+            return this.input;
         }
 
     }
@@ -139,16 +339,32 @@ public class GetFileResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetFileResponseDataNodeConfigurationOutputList setOutput(String output) {
+            this.output = output;
+            return this;
+        }
+        public String getOutput() {
+            return this.output;
+        }
+
+        public GetFileResponseDataNodeConfigurationOutputList setRefTableName(String refTableName) {
+            this.refTableName = refTableName;
+            return this;
+        }
+        public String getRefTableName() {
+            return this.refTableName;
+        }
+
     }
 
     public static class GetFileResponseDataNodeConfiguration extends TeaModel {
-        @NameInMap("TaskRerunTime")
+        @NameInMap("AutoRerunTimes")
         @Validation(required = true)
-        public Integer taskRerunTime;
+        public Integer autoRerunTimes;
 
-        @NameInMap("TaskRerunIntervalMillis")
+        @NameInMap("AutoRerunIntervalMillis")
         @Validation(required = true)
-        public Integer taskRerunIntervalMillis;
+        public Integer autoRerunIntervalMillis;
 
         @NameInMap("RerunMode")
         @Validation(required = true)
@@ -186,6 +402,10 @@ public class GetFileResponse extends TeaModel {
         @Validation(required = true)
         public String dependentNodeIdList;
 
+        @NameInMap("ResourceGroupId")
+        @Validation(required = true)
+        public Long resourceGroupId;
+
         @NameInMap("InputList")
         @Validation(required = true)
         public java.util.List<GetFileResponseDataNodeConfigurationInputList> inputList;
@@ -197,6 +417,118 @@ public class GetFileResponse extends TeaModel {
         public static GetFileResponseDataNodeConfiguration build(java.util.Map<String, ?> map) throws Exception {
             GetFileResponseDataNodeConfiguration self = new GetFileResponseDataNodeConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public GetFileResponseDataNodeConfiguration setAutoRerunTimes(Integer autoRerunTimes) {
+            this.autoRerunTimes = autoRerunTimes;
+            return this;
+        }
+        public Integer getAutoRerunTimes() {
+            return this.autoRerunTimes;
+        }
+
+        public GetFileResponseDataNodeConfiguration setAutoRerunIntervalMillis(Integer autoRerunIntervalMillis) {
+            this.autoRerunIntervalMillis = autoRerunIntervalMillis;
+            return this;
+        }
+        public Integer getAutoRerunIntervalMillis() {
+            return this.autoRerunIntervalMillis;
+        }
+
+        public GetFileResponseDataNodeConfiguration setRerunMode(String rerunMode) {
+            this.rerunMode = rerunMode;
+            return this;
+        }
+        public String getRerunMode() {
+            return this.rerunMode;
+        }
+
+        public GetFileResponseDataNodeConfiguration setStop(Boolean stop) {
+            this.stop = stop;
+            return this;
+        }
+        public Boolean getStop() {
+            return this.stop;
+        }
+
+        public GetFileResponseDataNodeConfiguration setParaValue(String paraValue) {
+            this.paraValue = paraValue;
+            return this;
+        }
+        public String getParaValue() {
+            return this.paraValue;
+        }
+
+        public GetFileResponseDataNodeConfiguration setStartEffectDate(Long startEffectDate) {
+            this.startEffectDate = startEffectDate;
+            return this;
+        }
+        public Long getStartEffectDate() {
+            return this.startEffectDate;
+        }
+
+        public GetFileResponseDataNodeConfiguration setEndEffectDate(Long endEffectDate) {
+            this.endEffectDate = endEffectDate;
+            return this;
+        }
+        public Long getEndEffectDate() {
+            return this.endEffectDate;
+        }
+
+        public GetFileResponseDataNodeConfiguration setCronExpress(String cronExpress) {
+            this.cronExpress = cronExpress;
+            return this;
+        }
+        public String getCronExpress() {
+            return this.cronExpress;
+        }
+
+        public GetFileResponseDataNodeConfiguration setCycleType(String cycleType) {
+            this.cycleType = cycleType;
+            return this;
+        }
+        public String getCycleType() {
+            return this.cycleType;
+        }
+
+        public GetFileResponseDataNodeConfiguration setDependentType(String dependentType) {
+            this.dependentType = dependentType;
+            return this;
+        }
+        public String getDependentType() {
+            return this.dependentType;
+        }
+
+        public GetFileResponseDataNodeConfiguration setDependentNodeIdList(String dependentNodeIdList) {
+            this.dependentNodeIdList = dependentNodeIdList;
+            return this;
+        }
+        public String getDependentNodeIdList() {
+            return this.dependentNodeIdList;
+        }
+
+        public GetFileResponseDataNodeConfiguration setResourceGroupId(Long resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public Long getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public GetFileResponseDataNodeConfiguration setInputList(java.util.List<GetFileResponseDataNodeConfigurationInputList> inputList) {
+            this.inputList = inputList;
+            return this;
+        }
+        public java.util.List<GetFileResponseDataNodeConfigurationInputList> getInputList() {
+            return this.inputList;
+        }
+
+        public GetFileResponseDataNodeConfiguration setOutputList(java.util.List<GetFileResponseDataNodeConfigurationOutputList> outputList) {
+            this.outputList = outputList;
+            return this;
+        }
+        public java.util.List<GetFileResponseDataNodeConfigurationOutputList> getOutputList() {
+            return this.outputList;
         }
 
     }
@@ -213,6 +545,22 @@ public class GetFileResponse extends TeaModel {
         public static GetFileResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetFileResponseData self = new GetFileResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetFileResponseData setFile(GetFileResponseDataFile file) {
+            this.file = file;
+            return this;
+        }
+        public GetFileResponseDataFile getFile() {
+            return this.file;
+        }
+
+        public GetFileResponseData setNodeConfiguration(GetFileResponseDataNodeConfiguration nodeConfiguration) {
+            this.nodeConfiguration = nodeConfiguration;
+            return this;
+        }
+        public GetFileResponseDataNodeConfiguration getNodeConfiguration() {
+            return this.nodeConfiguration;
         }
 
     }

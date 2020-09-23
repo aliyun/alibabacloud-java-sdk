@@ -16,4 +16,20 @@ public class GetMetaTableIntroWikiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetMetaTableIntroWikiRequest setTableGuid(String tableGuid) {
+        this.tableGuid = tableGuid;
+        return this;
+    }
+    public String getTableGuid() {
+        return this.tableGuid;
+    }
+
+    public GetMetaTableIntroWikiRequest setWikiVersion(Long wikiVersion) {
+        this.wikiVersion = wikiVersion;
+        return this;
+    }
+    public Long getWikiVersion() {
+        return this.wikiVersion;
+    }
+
 }

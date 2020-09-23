@@ -33,6 +33,54 @@ public class ListBusinessResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListBusinessResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListBusinessResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListBusinessResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListBusinessResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ListBusinessResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListBusinessResponse setData(ListBusinessResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ListBusinessResponseData getData() {
+        return this.data;
+    }
+
     public static class ListBusinessResponseDataBusiness extends TeaModel {
         @NameInMap("BusinessId")
         @Validation(required = true)
@@ -63,6 +111,54 @@ public class ListBusinessResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListBusinessResponseDataBusiness setBusinessId(Long businessId) {
+            this.businessId = businessId;
+            return this;
+        }
+        public Long getBusinessId() {
+            return this.businessId;
+        }
+
+        public ListBusinessResponseDataBusiness setBusinessName(String businessName) {
+            this.businessName = businessName;
+            return this;
+        }
+        public String getBusinessName() {
+            return this.businessName;
+        }
+
+        public ListBusinessResponseDataBusiness setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public ListBusinessResponseDataBusiness setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public ListBusinessResponseDataBusiness setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListBusinessResponseDataBusiness setUseType(String useType) {
+            this.useType = useType;
+            return this;
+        }
+        public String getUseType() {
+            return this.useType;
+        }
+
     }
 
     public static class ListBusinessResponseData extends TeaModel {
@@ -85,6 +181,38 @@ public class ListBusinessResponse extends TeaModel {
         public static ListBusinessResponseData build(java.util.Map<String, ?> map) throws Exception {
             ListBusinessResponseData self = new ListBusinessResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ListBusinessResponseData setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public ListBusinessResponseData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListBusinessResponseData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public ListBusinessResponseData setBusiness(java.util.List<ListBusinessResponseDataBusiness> business) {
+            this.business = business;
+            return this;
+        }
+        public java.util.List<ListBusinessResponseDataBusiness> getBusiness() {
+            return this.business;
         }
 
     }

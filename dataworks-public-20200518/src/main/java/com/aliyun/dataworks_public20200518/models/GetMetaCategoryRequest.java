@@ -18,4 +18,28 @@ public class GetMetaCategoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetMetaCategoryRequest setParentCategoryId(Long parentCategoryId) {
+        this.parentCategoryId = parentCategoryId;
+        return this;
+    }
+    public Long getParentCategoryId() {
+        return this.parentCategoryId;
+    }
+
+    public GetMetaCategoryRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public GetMetaCategoryRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

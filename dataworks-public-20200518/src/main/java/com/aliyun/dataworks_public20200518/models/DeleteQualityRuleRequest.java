@@ -17,4 +17,20 @@ public class DeleteQualityRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteQualityRuleRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public DeleteQualityRuleRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
+    }
+
 }

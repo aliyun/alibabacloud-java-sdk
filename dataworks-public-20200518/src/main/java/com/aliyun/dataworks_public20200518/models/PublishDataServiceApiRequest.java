@@ -21,4 +21,28 @@ public class PublishDataServiceApiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PublishDataServiceApiRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
+    }
+
+    public PublishDataServiceApiRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public PublishDataServiceApiRequest setApiId(Long apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    public Long getApiId() {
+        return this.apiId;
+    }
+
 }

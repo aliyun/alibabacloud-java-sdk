@@ -17,4 +17,20 @@ public class RestartInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RestartInstanceRequest setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public Long getInstanceId() {
+        return this.instanceId;
+    }
+
+    public RestartInstanceRequest setProjectEnv(String projectEnv) {
+        this.projectEnv = projectEnv;
+        return this;
+    }
+    public String getProjectEnv() {
+        return this.projectEnv;
+    }
+
 }

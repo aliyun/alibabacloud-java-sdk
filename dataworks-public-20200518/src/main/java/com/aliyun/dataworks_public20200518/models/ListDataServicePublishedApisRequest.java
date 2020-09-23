@@ -32,4 +32,60 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListDataServicePublishedApisRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListDataServicePublishedApisRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListDataServicePublishedApisRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ListDataServicePublishedApisRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
+    }
+
+    public ListDataServicePublishedApisRequest setApiNameKeyword(String apiNameKeyword) {
+        this.apiNameKeyword = apiNameKeyword;
+        return this;
+    }
+    public String getApiNameKeyword() {
+        return this.apiNameKeyword;
+    }
+
+    public ListDataServicePublishedApisRequest setApiPathKeyword(String apiPathKeyword) {
+        this.apiPathKeyword = apiPathKeyword;
+        return this;
+    }
+    public String getApiPathKeyword() {
+        return this.apiPathKeyword;
+    }
+
+    public ListDataServicePublishedApisRequest setCreatorId(String creatorId) {
+        this.creatorId = creatorId;
+        return this;
+    }
+    public String getCreatorId() {
+        return this.creatorId;
+    }
+
 }

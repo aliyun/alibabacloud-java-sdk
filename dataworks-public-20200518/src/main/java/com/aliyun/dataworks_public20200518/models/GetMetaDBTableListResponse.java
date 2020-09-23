@@ -8,22 +8,6 @@ public class GetMetaDBTableListResponse extends TeaModel {
     @Validation(required = true)
     public String requestId;
 
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("HttpStatusCode")
-    @Validation(required = true)
-    public Integer httpStatusCode;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
     @NameInMap("Data")
     @Validation(required = true)
     public GetMetaDBTableListResponseData data;
@@ -31,6 +15,22 @@ public class GetMetaDBTableListResponse extends TeaModel {
     public static GetMetaDBTableListResponse build(java.util.Map<String, ?> map) throws Exception {
         GetMetaDBTableListResponse self = new GetMetaDBTableListResponse();
         return TeaModel.build(map, self);
+    }
+
+    public GetMetaDBTableListResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetMetaDBTableListResponse setData(GetMetaDBTableListResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public GetMetaDBTableListResponseData getData() {
+        return this.data;
     }
 
     public static class GetMetaDBTableListResponseDataTableEntityList extends TeaModel {
@@ -42,9 +42,37 @@ public class GetMetaDBTableListResponse extends TeaModel {
         @Validation(required = true)
         public String tableGuid;
 
+        @NameInMap("DatabaseName")
+        @Validation(required = true)
+        public String databaseName;
+
         public static GetMetaDBTableListResponseDataTableEntityList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaDBTableListResponseDataTableEntityList self = new GetMetaDBTableListResponseDataTableEntityList();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaDBTableListResponseDataTableEntityList setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public GetMetaDBTableListResponseDataTableEntityList setTableGuid(String tableGuid) {
+            this.tableGuid = tableGuid;
+            return this;
+        }
+        public String getTableGuid() {
+            return this.tableGuid;
+        }
+
+        public GetMetaDBTableListResponseDataTableEntityList setDatabaseName(String databaseName) {
+            this.databaseName = databaseName;
+            return this;
+        }
+        public String getDatabaseName() {
+            return this.databaseName;
         }
 
     }
@@ -69,6 +97,38 @@ public class GetMetaDBTableListResponse extends TeaModel {
         public static GetMetaDBTableListResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaDBTableListResponseData self = new GetMetaDBTableListResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetMetaDBTableListResponseData setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public GetMetaDBTableListResponseData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public GetMetaDBTableListResponseData setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+        public GetMetaDBTableListResponseData setTableEntityList(java.util.List<GetMetaDBTableListResponseDataTableEntityList> tableEntityList) {
+            this.tableEntityList = tableEntityList;
+            return this;
+        }
+        public java.util.List<GetMetaDBTableListResponseDataTableEntityList> getTableEntityList() {
+            return this.tableEntityList;
         }
 
     }

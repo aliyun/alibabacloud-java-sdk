@@ -16,4 +16,20 @@ public class ListResourceGroupsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListResourceGroupsRequest setResourceGroupType(Integer resourceGroupType) {
+        this.resourceGroupType = resourceGroupType;
+        return this;
+    }
+    public Integer getResourceGroupType() {
+        return this.resourceGroupType;
+    }
+
+    public ListResourceGroupsRequest setKeyword(String keyword) {
+        this.keyword = keyword;
+        return this;
+    }
+    public String getKeyword() {
+        return this.keyword;
+    }
+
 }
