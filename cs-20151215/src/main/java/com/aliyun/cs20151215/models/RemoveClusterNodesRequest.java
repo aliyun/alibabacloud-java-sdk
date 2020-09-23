@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class RemoveClusterNodesRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 是否同时释放ECS。
     @NameInMap("release_node")
     public Boolean releaseNode;
@@ -23,14 +19,6 @@ public class RemoveClusterNodesRequest extends TeaModel {
     public static RemoveClusterNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveClusterNodesRequest self = new RemoveClusterNodesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveClusterNodesRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public RemoveClusterNodesRequest setReleaseNode(Boolean releaseNode) {

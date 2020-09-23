@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterConfigurationRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 自定配置。
     @NameInMap("customize_config")
     public ModifyClusterConfigurationRequestCustomizeConfig customizeConfig;
@@ -15,14 +11,6 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
     public static ModifyClusterConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterConfigurationRequest self = new ModifyClusterConfigurationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyClusterConfigurationRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public ModifyClusterConfigurationRequest setCustomizeConfig(ModifyClusterConfigurationRequestCustomizeConfig customizeConfig) {

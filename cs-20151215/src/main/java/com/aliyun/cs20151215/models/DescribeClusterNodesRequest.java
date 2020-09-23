@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterNodesRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 每页展示结果数。
     @NameInMap("pageSize")
     public String pageSize;
@@ -27,14 +23,6 @@ public class DescribeClusterNodesRequest extends TeaModel {
     public static DescribeClusterNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterNodesRequest self = new DescribeClusterNodesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeClusterNodesRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public DescribeClusterNodesRequest setPageSize(String pageSize) {

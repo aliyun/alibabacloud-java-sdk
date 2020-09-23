@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 集群是否开启删除保护。
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
@@ -35,14 +31,6 @@ public class ModifyClusterRequest extends TeaModel {
     public static ModifyClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterRequest self = new ModifyClusterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyClusterRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public ModifyClusterRequest setDeletionProtection(Boolean deletionProtection) {

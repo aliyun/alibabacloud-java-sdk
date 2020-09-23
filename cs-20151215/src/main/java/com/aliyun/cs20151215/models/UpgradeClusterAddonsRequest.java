@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpgradeClusterAddonsRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // Request body，类型是对象数组。
     @NameInMap("body")
     public java.util.List<UpgradeClusterAddonsRequestBody> body;
@@ -15,14 +11,6 @@ public class UpgradeClusterAddonsRequest extends TeaModel {
     public static UpgradeClusterAddonsRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeClusterAddonsRequest self = new UpgradeClusterAddonsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradeClusterAddonsRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public UpgradeClusterAddonsRequest setBody(java.util.List<UpgradeClusterAddonsRequestBody> body) {

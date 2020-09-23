@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class GetKubernetesTriggerRequest extends TeaModel {
-    // 集群ID
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 应用所属命名空间。
     @NameInMap("Namespace")
     public String namespace;
@@ -23,14 +19,6 @@ public class GetKubernetesTriggerRequest extends TeaModel {
     public static GetKubernetesTriggerRequest build(java.util.Map<String, ?> map) throws Exception {
         GetKubernetesTriggerRequest self = new GetKubernetesTriggerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetKubernetesTriggerRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public GetKubernetesTriggerRequest setNamespace(String namespace) {

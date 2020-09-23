@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 待添加的实例列表。
     @NameInMap("instances")
     public java.util.List<String> instances;
@@ -63,14 +59,6 @@ public class AttachInstancesRequest extends TeaModel {
     public static AttachInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachInstancesRequest self = new AttachInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AttachInstancesRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public AttachInstancesRequest setInstances(java.util.List<String> instances) {
