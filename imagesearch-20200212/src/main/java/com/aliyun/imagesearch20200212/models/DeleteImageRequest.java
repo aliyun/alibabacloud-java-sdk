@@ -20,4 +20,28 @@ public class DeleteImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteImageRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public DeleteImageRequest setProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    public String getProductId() {
+        return this.productId;
+    }
+
+    public DeleteImageRequest setPicName(String picName) {
+        this.picName = picName;
+        return this;
+    }
+    public String getPicName() {
+        return this.picName;
+    }
+
 }
