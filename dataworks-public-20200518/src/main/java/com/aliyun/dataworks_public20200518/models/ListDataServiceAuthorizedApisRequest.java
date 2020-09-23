@@ -26,4 +26,44 @@ public class ListDataServiceAuthorizedApisRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListDataServiceAuthorizedApisRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ListDataServiceAuthorizedApisRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListDataServiceAuthorizedApisRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListDataServiceAuthorizedApisRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
+    }
+
+    public ListDataServiceAuthorizedApisRequest setApiNameKeyword(String apiNameKeyword) {
+        this.apiNameKeyword = apiNameKeyword;
+        return this;
+    }
+    public String getApiNameKeyword() {
+        return this.apiNameKeyword;
+    }
+
 }

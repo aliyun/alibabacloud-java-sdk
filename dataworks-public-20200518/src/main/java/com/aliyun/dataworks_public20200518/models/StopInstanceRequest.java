@@ -17,4 +17,20 @@ public class StopInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public StopInstanceRequest setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public Long getInstanceId() {
+        return this.instanceId;
+    }
+
+    public StopInstanceRequest setProjectEnv(String projectEnv) {
+        this.projectEnv = projectEnv;
+        return this;
+    }
+    public String getProjectEnv() {
+        return this.projectEnv;
+    }
+
 }

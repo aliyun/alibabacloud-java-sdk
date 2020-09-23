@@ -17,4 +17,20 @@ public class GetNodeCodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetNodeCodeRequest setNodeId(Long nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public Long getNodeId() {
+        return this.nodeId;
+    }
+
+    public GetNodeCodeRequest setProjectEnv(String projectEnv) {
+        this.projectEnv = projectEnv;
+        return this;
+    }
+    public String getProjectEnv() {
+        return this.projectEnv;
+    }
+
 }

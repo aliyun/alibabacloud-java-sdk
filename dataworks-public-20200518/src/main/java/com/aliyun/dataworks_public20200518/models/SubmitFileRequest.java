@@ -22,4 +22,36 @@ public class SubmitFileRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SubmitFileRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public SubmitFileRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public SubmitFileRequest setFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public Long getFileId() {
+        return this.fileId;
+    }
+
+    public SubmitFileRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
+    }
+
 }

@@ -13,4 +13,12 @@ public class GetTopicRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetTopicRequest setTopicId(Long topicId) {
+        this.topicId = topicId;
+        return this;
+    }
+    public Long getTopicId() {
+        return this.topicId;
+    }
+
 }

@@ -17,4 +17,20 @@ public class GetQualityRuleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetQualityRuleRequest setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
+    }
+
+    public GetQualityRuleRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
 }

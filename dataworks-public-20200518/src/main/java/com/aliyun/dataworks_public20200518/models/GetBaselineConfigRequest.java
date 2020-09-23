@@ -13,4 +13,12 @@ public class GetBaselineConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetBaselineConfigRequest setBaselineId(Long baselineId) {
+        this.baselineId = baselineId;
+        return this;
+    }
+    public Long getBaselineId() {
+        return this.baselineId;
+    }
+
 }

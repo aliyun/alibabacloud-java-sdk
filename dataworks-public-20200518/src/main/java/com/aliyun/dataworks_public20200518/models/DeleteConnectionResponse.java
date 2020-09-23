@@ -25,4 +25,36 @@ public class DeleteConnectionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteConnectionResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DeleteConnectionResponse setHttpStatusCode(String httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public String getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public DeleteConnectionResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
+    }
+
+    public DeleteConnectionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

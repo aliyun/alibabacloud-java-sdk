@@ -17,4 +17,20 @@ public class SetSuccessInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SetSuccessInstanceRequest setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public Long getInstanceId() {
+        return this.instanceId;
+    }
+
+    public SetSuccessInstanceRequest setProjectEnv(String projectEnv) {
+        this.projectEnv = projectEnv;
+        return this;
+    }
+    public String getProjectEnv() {
+        return this.projectEnv;
+    }
+
 }

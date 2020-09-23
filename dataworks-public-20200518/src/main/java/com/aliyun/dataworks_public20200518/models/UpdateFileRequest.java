@@ -65,9 +65,180 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("OutputList")
     public String outputList;
 
+    @NameInMap("ResourceGroupIdentifier")
+    public String resourceGroupIdentifier;
+
     public static UpdateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFileRequest self = new UpdateFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateFileRequest setFileFolderPath(String fileFolderPath) {
+        this.fileFolderPath = fileFolderPath;
+        return this;
+    }
+    public String getFileFolderPath() {
+        return this.fileFolderPath;
+    }
+
+    public UpdateFileRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public UpdateFileRequest setFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    public UpdateFileRequest setFileDescription(String fileDescription) {
+        this.fileDescription = fileDescription;
+        return this;
+    }
+    public String getFileDescription() {
+        return this.fileDescription;
+    }
+
+    public UpdateFileRequest setContent(String content) {
+        this.content = content;
+        return this;
+    }
+    public String getContent() {
+        return this.content;
+    }
+
+    public UpdateFileRequest setAutoRerunTimes(Integer autoRerunTimes) {
+        this.autoRerunTimes = autoRerunTimes;
+        return this;
+    }
+    public Integer getAutoRerunTimes() {
+        return this.autoRerunTimes;
+    }
+
+    public UpdateFileRequest setAutoRerunIntervalMillis(Integer autoRerunIntervalMillis) {
+        this.autoRerunIntervalMillis = autoRerunIntervalMillis;
+        return this;
+    }
+    public Integer getAutoRerunIntervalMillis() {
+        return this.autoRerunIntervalMillis;
+    }
+
+    public UpdateFileRequest setRerunMode(String rerunMode) {
+        this.rerunMode = rerunMode;
+        return this;
+    }
+    public String getRerunMode() {
+        return this.rerunMode;
+    }
+
+    public UpdateFileRequest setStop(Boolean stop) {
+        this.stop = stop;
+        return this;
+    }
+    public Boolean getStop() {
+        return this.stop;
+    }
+
+    public UpdateFileRequest setParaValue(String paraValue) {
+        this.paraValue = paraValue;
+        return this;
+    }
+    public String getParaValue() {
+        return this.paraValue;
+    }
+
+    public UpdateFileRequest setStartEffectDate(Long startEffectDate) {
+        this.startEffectDate = startEffectDate;
+        return this;
+    }
+    public Long getStartEffectDate() {
+        return this.startEffectDate;
+    }
+
+    public UpdateFileRequest setEndEffectDate(Long endEffectDate) {
+        this.endEffectDate = endEffectDate;
+        return this;
+    }
+    public Long getEndEffectDate() {
+        return this.endEffectDate;
+    }
+
+    public UpdateFileRequest setCronExpress(String cronExpress) {
+        this.cronExpress = cronExpress;
+        return this;
+    }
+    public String getCronExpress() {
+        return this.cronExpress;
+    }
+
+    public UpdateFileRequest setCycleType(String cycleType) {
+        this.cycleType = cycleType;
+        return this;
+    }
+    public String getCycleType() {
+        return this.cycleType;
+    }
+
+    public UpdateFileRequest setDependentType(String dependentType) {
+        this.dependentType = dependentType;
+        return this;
+    }
+    public String getDependentType() {
+        return this.dependentType;
+    }
+
+    public UpdateFileRequest setDependentNodeIdList(String dependentNodeIdList) {
+        this.dependentNodeIdList = dependentNodeIdList;
+        return this;
+    }
+    public String getDependentNodeIdList() {
+        return this.dependentNodeIdList;
+    }
+
+    public UpdateFileRequest setInputList(String inputList) {
+        this.inputList = inputList;
+        return this;
+    }
+    public String getInputList() {
+        return this.inputList;
+    }
+
+    public UpdateFileRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public UpdateFileRequest setFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public Long getFileId() {
+        return this.fileId;
+    }
+
+    public UpdateFileRequest setOutputList(String outputList) {
+        this.outputList = outputList;
+        return this;
+    }
+    public String getOutputList() {
+        return this.outputList;
+    }
+
+    public UpdateFileRequest setResourceGroupIdentifier(String resourceGroupIdentifier) {
+        this.resourceGroupIdentifier = resourceGroupIdentifier;
+        return this;
+    }
+    public String getResourceGroupIdentifier() {
+        return this.resourceGroupIdentifier;
     }
 
 }

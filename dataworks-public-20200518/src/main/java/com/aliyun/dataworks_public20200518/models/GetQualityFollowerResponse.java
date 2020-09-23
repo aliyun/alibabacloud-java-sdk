@@ -33,6 +33,54 @@ public class GetQualityFollowerResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetQualityFollowerResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetQualityFollowerResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetQualityFollowerResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetQualityFollowerResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetQualityFollowerResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetQualityFollowerResponse setData(java.util.List<GetQualityFollowerResponseData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetQualityFollowerResponseData> getData() {
+        return this.data;
+    }
+
     public static class GetQualityFollowerResponseData extends TeaModel {
         @NameInMap("ProjectName")
         @Validation(required = true)
@@ -61,6 +109,54 @@ public class GetQualityFollowerResponse extends TeaModel {
         public static GetQualityFollowerResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityFollowerResponseData self = new GetQualityFollowerResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetQualityFollowerResponseData setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public GetQualityFollowerResponseData setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public GetQualityFollowerResponseData setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetQualityFollowerResponseData setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public GetQualityFollowerResponseData setFollower(String follower) {
+            this.follower = follower;
+            return this;
+        }
+        public String getFollower() {
+            return this.follower;
+        }
+
+        public GetQualityFollowerResponseData setAlarmMode(Integer alarmMode) {
+            this.alarmMode = alarmMode;
+            return this;
+        }
+        public Integer getAlarmMode() {
+            return this.alarmMode;
         }
 
     }

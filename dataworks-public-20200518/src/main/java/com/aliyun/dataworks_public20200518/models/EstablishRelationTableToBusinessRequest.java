@@ -26,4 +26,44 @@ public class EstablishRelationTableToBusinessRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public EstablishRelationTableToBusinessRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public EstablishRelationTableToBusinessRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public EstablishRelationTableToBusinessRequest setBusinessId(String businessId) {
+        this.businessId = businessId;
+        return this;
+    }
+    public String getBusinessId() {
+        return this.businessId;
+    }
+
+    public EstablishRelationTableToBusinessRequest setTableGuid(String tableGuid) {
+        this.tableGuid = tableGuid;
+        return this;
+    }
+    public String getTableGuid() {
+        return this.tableGuid;
+    }
+
+    public EstablishRelationTableToBusinessRequest setFolderId(String folderId) {
+        this.folderId = folderId;
+        return this;
+    }
+    public String getFolderId() {
+        return this.folderId;
+    }
+
 }

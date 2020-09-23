@@ -17,4 +17,20 @@ public class DeleteQualityFollowerRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteQualityFollowerRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public DeleteQualityFollowerRequest setFollowerId(Long followerId) {
+        this.followerId = followerId;
+        return this;
+    }
+    public Long getFollowerId() {
+        return this.followerId;
+    }
+
 }

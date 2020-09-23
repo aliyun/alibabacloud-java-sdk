@@ -17,4 +17,20 @@ public class ResumeInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ResumeInstanceRequest setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public Long getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ResumeInstanceRequest setProjectEnv(String projectEnv) {
+        this.projectEnv = projectEnv;
+        return this;
+    }
+    public String getProjectEnv() {
+        return this.projectEnv;
+    }
+
 }

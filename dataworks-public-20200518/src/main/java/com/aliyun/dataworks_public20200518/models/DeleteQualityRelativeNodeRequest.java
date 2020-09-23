@@ -41,4 +41,68 @@ public class DeleteQualityRelativeNodeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteQualityRelativeNodeRequest setEnvType(String envType) {
+        this.envType = envType;
+        return this;
+    }
+    public String getEnvType() {
+        return this.envType;
+    }
+
+    public DeleteQualityRelativeNodeRequest setMatchExpression(String matchExpression) {
+        this.matchExpression = matchExpression;
+        return this;
+    }
+    public String getMatchExpression() {
+        return this.matchExpression;
+    }
+
+    public DeleteQualityRelativeNodeRequest setNodeId(Long nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public Long getNodeId() {
+        return this.nodeId;
+    }
+
+    public DeleteQualityRelativeNodeRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public DeleteQualityRelativeNodeRequest setTargetNodeProjectName(String targetNodeProjectName) {
+        this.targetNodeProjectName = targetNodeProjectName;
+        return this;
+    }
+    public String getTargetNodeProjectName() {
+        return this.targetNodeProjectName;
+    }
+
+    public DeleteQualityRelativeNodeRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public DeleteQualityRelativeNodeRequest setTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    public String getTableName() {
+        return this.tableName;
+    }
+
+    public DeleteQualityRelativeNodeRequest setTargetNodeProjectId(Long targetNodeProjectId) {
+        this.targetNodeProjectId = targetNodeProjectId;
+        return this;
+    }
+    public Long getTargetNodeProjectId() {
+        return this.targetNodeProjectId;
+    }
+
 }

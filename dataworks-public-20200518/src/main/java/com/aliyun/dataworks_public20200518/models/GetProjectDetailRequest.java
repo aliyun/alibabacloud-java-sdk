@@ -13,4 +13,12 @@ public class GetProjectDetailRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetProjectDetailRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
 }

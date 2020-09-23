@@ -21,4 +21,28 @@ public class GetDataServiceApplicationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetDataServiceApplicationRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
+    }
+
+    public GetDataServiceApplicationRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public GetDataServiceApplicationRequest setApplicationId(Long applicationId) {
+        this.applicationId = applicationId;
+        return this;
+    }
+    public Long getApplicationId() {
+        return this.applicationId;
+    }
+
 }

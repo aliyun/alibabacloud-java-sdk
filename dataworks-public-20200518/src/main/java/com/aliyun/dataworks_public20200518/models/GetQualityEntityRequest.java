@@ -24,4 +24,36 @@ public class GetQualityEntityRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetQualityEntityRequest setProjectName(String projectName) {
+        this.projectName = projectName;
+        return this;
+    }
+    public String getProjectName() {
+        return this.projectName;
+    }
+
+    public GetQualityEntityRequest setTableName(String tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    public String getTableName() {
+        return this.tableName;
+    }
+
+    public GetQualityEntityRequest setEnvType(String envType) {
+        this.envType = envType;
+        return this;
+    }
+    public String getEnvType() {
+        return this.envType;
+    }
+
+    public GetQualityEntityRequest setMatchExpression(String matchExpression) {
+        this.matchExpression = matchExpression;
+        return this;
+    }
+    public String getMatchExpression() {
+        return this.matchExpression;
+    }
+
 }

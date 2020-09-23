@@ -5,12 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetMetaDBInfoRequest extends TeaModel {
     @NameInMap("AppGuid")
-    @Validation(required = true)
     public String appGuid;
+
+    @NameInMap("ClusterId")
+    public String clusterId;
+
+    @NameInMap("DatabaseName")
+    public String databaseName;
+
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
 
     public static GetMetaDBInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMetaDBInfoRequest self = new GetMetaDBInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetMetaDBInfoRequest setAppGuid(String appGuid) {
+        this.appGuid = appGuid;
+        return this;
+    }
+    public String getAppGuid() {
+        return this.appGuid;
+    }
+
+    public GetMetaDBInfoRequest setClusterId(String clusterId) {
+        this.clusterId = clusterId;
+        return this;
+    }
+    public String getClusterId() {
+        return this.clusterId;
+    }
+
+    public GetMetaDBInfoRequest setDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+        return this;
+    }
+    public String getDatabaseName() {
+        return this.databaseName;
+    }
+
+    public GetMetaDBInfoRequest setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
+        return this;
+    }
+    public String getDataSourceType() {
+        return this.dataSourceType;
     }
 
 }

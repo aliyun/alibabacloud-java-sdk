@@ -33,6 +33,54 @@ public class GetBusinessResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetBusinessResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetBusinessResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetBusinessResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetBusinessResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetBusinessResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetBusinessResponse setData(GetBusinessResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public GetBusinessResponseData getData() {
+        return this.data;
+    }
+
     public static class GetBusinessResponseData extends TeaModel {
         @NameInMap("BusinessId")
         @Validation(required = true)
@@ -61,6 +109,54 @@ public class GetBusinessResponse extends TeaModel {
         public static GetBusinessResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetBusinessResponseData self = new GetBusinessResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetBusinessResponseData setBusinessId(Long businessId) {
+            this.businessId = businessId;
+            return this;
+        }
+        public Long getBusinessId() {
+            return this.businessId;
+        }
+
+        public GetBusinessResponseData setBusinessName(String businessName) {
+            this.businessName = businessName;
+            return this;
+        }
+        public String getBusinessName() {
+            return this.businessName;
+        }
+
+        public GetBusinessResponseData setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public GetBusinessResponseData setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetBusinessResponseData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetBusinessResponseData setUseType(String useType) {
+            this.useType = useType;
+            return this;
+        }
+        public String getUseType() {
+            return this.useType;
         }
 
     }

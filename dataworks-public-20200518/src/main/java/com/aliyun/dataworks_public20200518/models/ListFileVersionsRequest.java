@@ -25,4 +25,44 @@ public class ListFileVersionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListFileVersionsRequest setFileId(Long fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public Long getFileId() {
+        return this.fileId;
+    }
+
+    public ListFileVersionsRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ListFileVersionsRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public ListFileVersionsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListFileVersionsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

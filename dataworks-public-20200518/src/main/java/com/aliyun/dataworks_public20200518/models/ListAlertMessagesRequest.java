@@ -37,4 +37,68 @@ public class ListAlertMessagesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListAlertMessagesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListAlertMessagesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListAlertMessagesRequest setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
+        return this;
+    }
+    public String getBeginTime() {
+        return this.beginTime;
+    }
+
+    public ListAlertMessagesRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public ListAlertMessagesRequest setRemindId(Long remindId) {
+        this.remindId = remindId;
+        return this;
+    }
+    public Long getRemindId() {
+        return this.remindId;
+    }
+
+    public ListAlertMessagesRequest setAlertMethods(String alertMethods) {
+        this.alertMethods = alertMethods;
+        return this;
+    }
+    public String getAlertMethods() {
+        return this.alertMethods;
+    }
+
+    public ListAlertMessagesRequest setAlertUser(String alertUser) {
+        this.alertUser = alertUser;
+        return this;
+    }
+    public String getAlertUser() {
+        return this.alertUser;
+    }
+
+    public ListAlertMessagesRequest setAlertRuleTypes(String alertRuleTypes) {
+        this.alertRuleTypes = alertRuleTypes;
+        return this;
+    }
+    public String getAlertRuleTypes() {
+        return this.alertRuleTypes;
+    }
+
 }

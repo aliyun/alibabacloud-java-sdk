@@ -29,4 +29,52 @@ public class ListCalcEnginesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListCalcEnginesRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public ListCalcEnginesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ListCalcEnginesRequest setCalcEngineType(String calcEngineType) {
+        this.calcEngineType = calcEngineType;
+        return this;
+    }
+    public String getCalcEngineType() {
+        return this.calcEngineType;
+    }
+
+    public ListCalcEnginesRequest setEnvType(String envType) {
+        this.envType = envType;
+        return this;
+    }
+    public String getEnvType() {
+        return this.envType;
+    }
+
+    public ListCalcEnginesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListCalcEnginesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
 }

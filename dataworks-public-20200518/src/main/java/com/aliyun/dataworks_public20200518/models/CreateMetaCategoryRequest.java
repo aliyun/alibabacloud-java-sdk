@@ -19,4 +19,28 @@ public class CreateMetaCategoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateMetaCategoryRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateMetaCategoryRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
+    }
+
+    public CreateMetaCategoryRequest setParentId(Long parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public Long getParentId() {
+        return this.parentId;
+    }
+
 }

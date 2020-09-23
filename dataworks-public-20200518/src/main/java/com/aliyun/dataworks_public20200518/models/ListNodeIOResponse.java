@@ -33,6 +33,54 @@ public class ListNodeIOResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListNodeIOResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListNodeIOResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListNodeIOResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ListNodeIOResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public ListNodeIOResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListNodeIOResponse setData(java.util.List<ListNodeIOResponseData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListNodeIOResponseData> getData() {
+        return this.data;
+    }
+
     public static class ListNodeIOResponseData extends TeaModel {
         @NameInMap("TableName")
         @Validation(required = true)
@@ -45,6 +93,22 @@ public class ListNodeIOResponse extends TeaModel {
         public static ListNodeIOResponseData build(java.util.Map<String, ?> map) throws Exception {
             ListNodeIOResponseData self = new ListNodeIOResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ListNodeIOResponseData setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public ListNodeIOResponseData setData(String data) {
+            this.data = data;
+            return this;
+        }
+        public String getData() {
+            return this.data;
         }
 
     }

@@ -21,4 +21,28 @@ public class GetBaselineKeyPathRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetBaselineKeyPathRequest setBaselineId(Long baselineId) {
+        this.baselineId = baselineId;
+        return this;
+    }
+    public Long getBaselineId() {
+        return this.baselineId;
+    }
+
+    public GetBaselineKeyPathRequest setBizdate(String bizdate) {
+        this.bizdate = bizdate;
+        return this;
+    }
+    public String getBizdate() {
+        return this.bizdate;
+    }
+
+    public GetBaselineKeyPathRequest setInGroupId(Integer inGroupId) {
+        this.inGroupId = inGroupId;
+        return this;
+    }
+    public Integer getInGroupId() {
+        return this.inGroupId;
+    }
+
 }

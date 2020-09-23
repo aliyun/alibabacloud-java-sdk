@@ -19,4 +19,28 @@ public class GetDeploymentRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetDeploymentRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public GetDeploymentRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public GetDeploymentRequest setDeploymentId(Long deploymentId) {
+        this.deploymentId = deploymentId;
+        return this;
+    }
+    public Long getDeploymentId() {
+        return this.deploymentId;
+    }
+
 }

@@ -19,4 +19,28 @@ public class GetBusinessRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetBusinessRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public GetBusinessRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public GetBusinessRequest setBusinessId(Long businessId) {
+        this.businessId = businessId;
+        return this;
+    }
+    public Long getBusinessId() {
+        return this.businessId;
+    }
+
 }

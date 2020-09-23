@@ -19,4 +19,28 @@ public class CreateFolderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateFolderRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public CreateFolderRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+    public CreateFolderRequest setFolderPath(String folderPath) {
+        this.folderPath = folderPath;
+        return this;
+    }
+    public String getFolderPath() {
+        return this.folderPath;
+    }
+
 }

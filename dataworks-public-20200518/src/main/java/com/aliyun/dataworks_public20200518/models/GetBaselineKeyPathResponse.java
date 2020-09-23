@@ -33,6 +33,54 @@ public class GetBaselineKeyPathResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetBaselineKeyPathResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetBaselineKeyPathResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetBaselineKeyPathResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetBaselineKeyPathResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetBaselineKeyPathResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetBaselineKeyPathResponse setData(java.util.List<GetBaselineKeyPathResponseData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetBaselineKeyPathResponseData> getData() {
+        return this.data;
+    }
+
     public static class GetBaselineKeyPathResponseDataRuns extends TeaModel {
         @NameInMap("AbsTime")
         @Validation(required = true)
@@ -103,6 +151,134 @@ public class GetBaselineKeyPathResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetBaselineKeyPathResponseDataRuns setAbsTime(Long absTime) {
+            this.absTime = absTime;
+            return this;
+        }
+        public Long getAbsTime() {
+            return this.absTime;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setBeginCast(Long beginCast) {
+            this.beginCast = beginCast;
+            return this;
+        }
+        public Long getBeginCast() {
+            return this.beginCast;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setBeginRunningTime(Long beginRunningTime) {
+            this.beginRunningTime = beginRunningTime;
+            return this;
+        }
+        public Long getBeginRunningTime() {
+            return this.beginRunningTime;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setBeginWaitResTime(Long beginWaitResTime) {
+            this.beginWaitResTime = beginWaitResTime;
+            return this;
+        }
+        public Long getBeginWaitResTime() {
+            return this.beginWaitResTime;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setBeginWaitTimeTime(Long beginWaitTimeTime) {
+            this.beginWaitTimeTime = beginWaitTimeTime;
+            return this;
+        }
+        public Long getBeginWaitTimeTime() {
+            return this.beginWaitTimeTime;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setBizdate(Long bizdate) {
+            this.bizdate = bizdate;
+            return this;
+        }
+        public Long getBizdate() {
+            return this.bizdate;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setCycTime(Long cycTime) {
+            this.cycTime = cycTime;
+            return this;
+        }
+        public Long getCycTime() {
+            return this.cycTime;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setEndCast(Long endCast) {
+            this.endCast = endCast;
+            return this;
+        }
+        public Long getEndCast() {
+            return this.endCast;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setFinishTime(Long finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public Long getFinishTime() {
+            return this.finishTime;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setInGroupId(Integer inGroupId) {
+            this.inGroupId = inGroupId;
+            return this;
+        }
+        public Integer getInGroupId() {
+            return this.inGroupId;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public Long getNodeId() {
+            return this.nodeId;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public GetBaselineKeyPathResponseDataRuns setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class GetBaselineKeyPathResponseDataTopics extends TeaModel {
@@ -125,6 +301,38 @@ public class GetBaselineKeyPathResponse extends TeaModel {
         public static GetBaselineKeyPathResponseDataTopics build(java.util.Map<String, ?> map) throws Exception {
             GetBaselineKeyPathResponseDataTopics self = new GetBaselineKeyPathResponseDataTopics();
             return TeaModel.build(map, self);
+        }
+
+        public GetBaselineKeyPathResponseDataTopics setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        public GetBaselineKeyPathResponseDataTopics setTopicId(Long topicId) {
+            this.topicId = topicId;
+            return this;
+        }
+        public Long getTopicId() {
+            return this.topicId;
+        }
+
+        public GetBaselineKeyPathResponseDataTopics setTopicName(Long topicName) {
+            this.topicName = topicName;
+            return this;
+        }
+        public Long getTopicName() {
+            return this.topicName;
+        }
+
+        public GetBaselineKeyPathResponseDataTopics setAddTime(Long addTime) {
+            this.addTime = addTime;
+            return this;
+        }
+        public Long getAddTime() {
+            return this.addTime;
         }
 
     }
@@ -173,6 +381,86 @@ public class GetBaselineKeyPathResponse extends TeaModel {
         public static GetBaselineKeyPathResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetBaselineKeyPathResponseData self = new GetBaselineKeyPathResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetBaselineKeyPathResponseData setInstanceId(Long instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public Long getInstanceId() {
+            return this.instanceId;
+        }
+
+        public GetBaselineKeyPathResponseData setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public GetBaselineKeyPathResponseData setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public Long getNodeId() {
+            return this.nodeId;
+        }
+
+        public GetBaselineKeyPathResponseData setNodeName(String nodeName) {
+            this.nodeName = nodeName;
+            return this;
+        }
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        public GetBaselineKeyPathResponseData setBizdate(Long bizdate) {
+            this.bizdate = bizdate;
+            return this;
+        }
+        public Long getBizdate() {
+            return this.bizdate;
+        }
+
+        public GetBaselineKeyPathResponseData setInGroupId(Integer inGroupId) {
+            this.inGroupId = inGroupId;
+            return this;
+        }
+        public Integer getInGroupId() {
+            return this.inGroupId;
+        }
+
+        public GetBaselineKeyPathResponseData setOwner(String owner) {
+            this.owner = owner;
+            return this;
+        }
+        public String getOwner() {
+            return this.owner;
+        }
+
+        public GetBaselineKeyPathResponseData setPrgType(Integer prgType) {
+            this.prgType = prgType;
+            return this;
+        }
+        public Integer getPrgType() {
+            return this.prgType;
+        }
+
+        public GetBaselineKeyPathResponseData setRuns(java.util.List<GetBaselineKeyPathResponseDataRuns> runs) {
+            this.runs = runs;
+            return this;
+        }
+        public java.util.List<GetBaselineKeyPathResponseDataRuns> getRuns() {
+            return this.runs;
+        }
+
+        public GetBaselineKeyPathResponseData setTopics(java.util.List<GetBaselineKeyPathResponseDataTopics> topics) {
+            this.topics = topics;
+            return this;
+        }
+        public java.util.List<GetBaselineKeyPathResponseDataTopics> getTopics() {
+            return this.topics;
         }
 
     }

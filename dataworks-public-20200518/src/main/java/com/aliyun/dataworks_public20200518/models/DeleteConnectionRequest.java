@@ -13,4 +13,12 @@ public class DeleteConnectionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteConnectionRequest setConnectionId(Long connectionId) {
+        this.connectionId = connectionId;
+        return this;
+    }
+    public Long getConnectionId() {
+        return this.connectionId;
+    }
+
 }
