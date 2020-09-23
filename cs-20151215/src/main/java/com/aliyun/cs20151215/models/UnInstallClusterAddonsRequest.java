@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UnInstallClusterAddonsRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 卸载组件列表。
     @NameInMap("addons")
     public java.util.List<UnInstallClusterAddonsRequestAddons> addons;
@@ -15,14 +11,6 @@ public class UnInstallClusterAddonsRequest extends TeaModel {
     public static UnInstallClusterAddonsRequest build(java.util.Map<String, ?> map) throws Exception {
         UnInstallClusterAddonsRequest self = new UnInstallClusterAddonsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UnInstallClusterAddonsRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public UnInstallClusterAddonsRequest setAddons(java.util.List<UnInstallClusterAddonsRequestAddons> addons) {

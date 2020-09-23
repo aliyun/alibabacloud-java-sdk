@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterAttachScriptsRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 节点CPU架构,支持amd64、arm、arm64。
     @NameInMap("arch")
     public String arch;
@@ -19,14 +15,6 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public static DescribeClusterAttachScriptsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterAttachScriptsRequest self = new DescribeClusterAttachScriptsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeClusterAttachScriptsRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public DescribeClusterAttachScriptsRequest setArch(String arch) {

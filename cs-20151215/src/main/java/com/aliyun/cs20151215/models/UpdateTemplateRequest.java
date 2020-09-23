@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class UpdateTemplateRequest extends TeaModel {
-    // 部署模板ID。
-    @NameInMap("TemplateId")
-    public String templateId;
-
     // 部署模板名称。
     @NameInMap("name")
     public String name;
@@ -31,14 +27,6 @@ public class UpdateTemplateRequest extends TeaModel {
     public static UpdateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTemplateRequest self = new UpdateTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTemplateRequest setTemplateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-    public String getTemplateId() {
-        return this.templateId;
     }
 
     public UpdateTemplateRequest setName(String name) {

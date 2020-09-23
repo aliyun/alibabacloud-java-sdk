@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterTagsRequest extends TeaModel {
-    // 汲取ID
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 标签列表。
     @NameInMap("body")
     public java.util.List<ModifyClusterTagsRequestBody> body;
@@ -15,14 +11,6 @@ public class ModifyClusterTagsRequest extends TeaModel {
     public static ModifyClusterTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterTagsRequest self = new ModifyClusterTagsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyClusterTagsRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public ModifyClusterTagsRequest setBody(java.util.List<ModifyClusterTagsRequestBody> body) {

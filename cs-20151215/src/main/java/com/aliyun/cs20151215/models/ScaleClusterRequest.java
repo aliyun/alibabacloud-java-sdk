@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ScaleClusterRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // 扩容节点数。
     @NameInMap("count")
     public Long count;
@@ -87,14 +83,6 @@ public class ScaleClusterRequest extends TeaModel {
     public static ScaleClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ScaleClusterRequest self = new ScaleClusterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ScaleClusterRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public ScaleClusterRequest setCount(Long count) {

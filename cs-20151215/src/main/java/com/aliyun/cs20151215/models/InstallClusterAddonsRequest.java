@@ -4,10 +4,6 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class InstallClusterAddonsRequest extends TeaModel {
-    // 集群ID。
-    @NameInMap("ClusterId")
-    public String clusterId;
-
     // Addon列表。
     @NameInMap("body")
     public java.util.List<InstallClusterAddonsRequestBody> body;
@@ -15,14 +11,6 @@ public class InstallClusterAddonsRequest extends TeaModel {
     public static InstallClusterAddonsRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallClusterAddonsRequest self = new InstallClusterAddonsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public InstallClusterAddonsRequest setClusterId(String clusterId) {
-        this.clusterId = clusterId;
-        return this;
-    }
-    public String getClusterId() {
-        return this.clusterId;
     }
 
     public InstallClusterAddonsRequest setBody(java.util.List<InstallClusterAddonsRequestBody> body) {
