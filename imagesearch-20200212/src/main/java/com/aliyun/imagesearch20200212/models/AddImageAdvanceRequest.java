@@ -43,4 +43,84 @@ public class AddImageAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AddImageAdvanceRequest setPicContentObject(java.io.InputStream picContentObject) {
+        this.picContentObject = picContentObject;
+        return this;
+    }
+    public java.io.InputStream getPicContentObject() {
+        return this.picContentObject;
+    }
+
+    public AddImageAdvanceRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public AddImageAdvanceRequest setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Integer getCategoryId() {
+        return this.categoryId;
+    }
+
+    public AddImageAdvanceRequest setProductId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+    public String getProductId() {
+        return this.productId;
+    }
+
+    public AddImageAdvanceRequest setPicName(String picName) {
+        this.picName = picName;
+        return this;
+    }
+    public String getPicName() {
+        return this.picName;
+    }
+
+    public AddImageAdvanceRequest setCrop(Boolean crop) {
+        this.crop = crop;
+        return this;
+    }
+    public Boolean getCrop() {
+        return this.crop;
+    }
+
+    public AddImageAdvanceRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
+    }
+
+    public AddImageAdvanceRequest setCustomContent(String customContent) {
+        this.customContent = customContent;
+        return this;
+    }
+    public String getCustomContent() {
+        return this.customContent;
+    }
+
+    public AddImageAdvanceRequest setIntAttr(Integer intAttr) {
+        this.intAttr = intAttr;
+        return this;
+    }
+    public Integer getIntAttr() {
+        return this.intAttr;
+    }
+
+    public AddImageAdvanceRequest setStrAttr(String strAttr) {
+        this.strAttr = strAttr;
+        return this;
+    }
+    public String getStrAttr() {
+        return this.strAttr;
+    }
+
 }
