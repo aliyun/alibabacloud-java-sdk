@@ -17,4 +17,20 @@ public class ScaleOutClusterResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ScaleOutClusterResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ScaleOutClusterResponse setBody(ScaleOutClusterResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ScaleOutClusterResponseBody getBody() {
+        return this.body;
+    }
+
 }

@@ -8,13 +8,17 @@ public class ModifyClusterTagsResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    public ModifyClusterTagsResponseBody body;
-
     public static ModifyClusterTagsResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterTagsResponse self = new ModifyClusterTagsResponse();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyClusterTagsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
 }

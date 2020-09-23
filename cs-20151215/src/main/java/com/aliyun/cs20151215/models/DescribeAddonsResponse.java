@@ -17,4 +17,20 @@ public class DescribeAddonsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAddonsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeAddonsResponse setBody(DescribeAddonsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeAddonsResponseBody getBody() {
+        return this.body;
+    }
+
 }

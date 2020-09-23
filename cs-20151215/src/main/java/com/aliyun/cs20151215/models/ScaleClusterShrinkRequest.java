@@ -3,7 +3,7 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class ScaleClusterRequest extends TeaModel {
+public class ScaleClusterShrinkRequest extends TeaModel {
     // 集群ID。
     @NameInMap("ClusterId")
     public String clusterId;
@@ -74,22 +74,22 @@ public class ScaleClusterRequest extends TeaModel {
 
     // Worker数据盘类型、大小等配置的组合。
     @NameInMap("worker_data_disks")
-    public java.util.List<ScaleClusterRequestWorkerDataDisks> workerDataDisks;
+    public java.util.List<ScaleClusterShrinkRequestWorkerDataDisks> workerDataDisks;
 
     // 集群标签。
     @NameInMap("tags")
-    public java.util.List<ScaleClusterRequestTags> tags;
+    public java.util.List<ScaleClusterShrinkRequestTags> tags;
 
     // 节点污点标记。
     @NameInMap("taints")
-    public java.util.List<ScaleClusterRequestTaints> taints;
+    public String taintsShrink;
 
-    public static ScaleClusterRequest build(java.util.Map<String, ?> map) throws Exception {
-        ScaleClusterRequest self = new ScaleClusterRequest();
+    public static ScaleClusterShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ScaleClusterShrinkRequest self = new ScaleClusterShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ScaleClusterRequest setClusterId(String clusterId) {
+    public ScaleClusterShrinkRequest setClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
@@ -97,7 +97,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.clusterId;
     }
 
-    public ScaleClusterRequest setCount(Long count) {
+    public ScaleClusterShrinkRequest setCount(Long count) {
         this.count = count;
         return this;
     }
@@ -105,7 +105,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.count;
     }
 
-    public ScaleClusterRequest setKeyPair(String keyPair) {
+    public ScaleClusterShrinkRequest setKeyPair(String keyPair) {
         this.keyPair = keyPair;
         return this;
     }
@@ -113,7 +113,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.keyPair;
     }
 
-    public ScaleClusterRequest setLoginPassword(String loginPassword) {
+    public ScaleClusterShrinkRequest setLoginPassword(String loginPassword) {
         this.loginPassword = loginPassword;
         return this;
     }
@@ -121,7 +121,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.loginPassword;
     }
 
-    public ScaleClusterRequest setWorkerDataDisk(Boolean workerDataDisk) {
+    public ScaleClusterShrinkRequest setWorkerDataDisk(Boolean workerDataDisk) {
         this.workerDataDisk = workerDataDisk;
         return this;
     }
@@ -129,7 +129,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.workerDataDisk;
     }
 
-    public ScaleClusterRequest setWorkerInstanceTypes(java.util.List<String> workerInstanceTypes) {
+    public ScaleClusterShrinkRequest setWorkerInstanceTypes(java.util.List<String> workerInstanceTypes) {
         this.workerInstanceTypes = workerInstanceTypes;
         return this;
     }
@@ -137,7 +137,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.workerInstanceTypes;
     }
 
-    public ScaleClusterRequest setWorkerInstanceChargeType(String workerInstanceChargeType) {
+    public ScaleClusterShrinkRequest setWorkerInstanceChargeType(String workerInstanceChargeType) {
         this.workerInstanceChargeType = workerInstanceChargeType;
         return this;
     }
@@ -145,7 +145,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.workerInstanceChargeType;
     }
 
-    public ScaleClusterRequest setWorkerPeriod(Long workerPeriod) {
+    public ScaleClusterShrinkRequest setWorkerPeriod(Long workerPeriod) {
         this.workerPeriod = workerPeriod;
         return this;
     }
@@ -153,7 +153,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.workerPeriod;
     }
 
-    public ScaleClusterRequest setWorkerPeriodUnit(String workerPeriodUnit) {
+    public ScaleClusterShrinkRequest setWorkerPeriodUnit(String workerPeriodUnit) {
         this.workerPeriodUnit = workerPeriodUnit;
         return this;
     }
@@ -161,7 +161,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.workerPeriodUnit;
     }
 
-    public ScaleClusterRequest setWorkerAutoRenew(Boolean workerAutoRenew) {
+    public ScaleClusterShrinkRequest setWorkerAutoRenew(Boolean workerAutoRenew) {
         this.workerAutoRenew = workerAutoRenew;
         return this;
     }
@@ -169,7 +169,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.workerAutoRenew;
     }
 
-    public ScaleClusterRequest setWorkerAutoRenewPeriod(Long workerAutoRenewPeriod) {
+    public ScaleClusterShrinkRequest setWorkerAutoRenewPeriod(Long workerAutoRenewPeriod) {
         this.workerAutoRenewPeriod = workerAutoRenewPeriod;
         return this;
     }
@@ -177,7 +177,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.workerAutoRenewPeriod;
     }
 
-    public ScaleClusterRequest setWorkerSystemDiskCategory(String workerSystemDiskCategory) {
+    public ScaleClusterShrinkRequest setWorkerSystemDiskCategory(String workerSystemDiskCategory) {
         this.workerSystemDiskCategory = workerSystemDiskCategory;
         return this;
     }
@@ -185,7 +185,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.workerSystemDiskCategory;
     }
 
-    public ScaleClusterRequest setWorkerSystemDiskSize(Long workerSystemDiskSize) {
+    public ScaleClusterShrinkRequest setWorkerSystemDiskSize(Long workerSystemDiskSize) {
         this.workerSystemDiskSize = workerSystemDiskSize;
         return this;
     }
@@ -193,7 +193,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.workerSystemDiskSize;
     }
 
-    public ScaleClusterRequest setCloudMonitorFlags(Boolean cloudMonitorFlags) {
+    public ScaleClusterShrinkRequest setCloudMonitorFlags(Boolean cloudMonitorFlags) {
         this.cloudMonitorFlags = cloudMonitorFlags;
         return this;
     }
@@ -201,7 +201,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.cloudMonitorFlags;
     }
 
-    public ScaleClusterRequest setCpuPolicy(String cpuPolicy) {
+    public ScaleClusterShrinkRequest setCpuPolicy(String cpuPolicy) {
         this.cpuPolicy = cpuPolicy;
         return this;
     }
@@ -209,7 +209,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.cpuPolicy;
     }
 
-    public ScaleClusterRequest setDisableRollback(Boolean disableRollback) {
+    public ScaleClusterShrinkRequest setDisableRollback(Boolean disableRollback) {
         this.disableRollback = disableRollback;
         return this;
     }
@@ -217,7 +217,7 @@ public class ScaleClusterRequest extends TeaModel {
         return this.disableRollback;
     }
 
-    public ScaleClusterRequest setVswitchIds(java.util.List<String> vswitchIds) {
+    public ScaleClusterShrinkRequest setVswitchIds(java.util.List<String> vswitchIds) {
         this.vswitchIds = vswitchIds;
         return this;
     }
@@ -225,31 +225,31 @@ public class ScaleClusterRequest extends TeaModel {
         return this.vswitchIds;
     }
 
-    public ScaleClusterRequest setWorkerDataDisks(java.util.List<ScaleClusterRequestWorkerDataDisks> workerDataDisks) {
+    public ScaleClusterShrinkRequest setWorkerDataDisks(java.util.List<ScaleClusterShrinkRequestWorkerDataDisks> workerDataDisks) {
         this.workerDataDisks = workerDataDisks;
         return this;
     }
-    public java.util.List<ScaleClusterRequestWorkerDataDisks> getWorkerDataDisks() {
+    public java.util.List<ScaleClusterShrinkRequestWorkerDataDisks> getWorkerDataDisks() {
         return this.workerDataDisks;
     }
 
-    public ScaleClusterRequest setTags(java.util.List<ScaleClusterRequestTags> tags) {
+    public ScaleClusterShrinkRequest setTags(java.util.List<ScaleClusterShrinkRequestTags> tags) {
         this.tags = tags;
         return this;
     }
-    public java.util.List<ScaleClusterRequestTags> getTags() {
+    public java.util.List<ScaleClusterShrinkRequestTags> getTags() {
         return this.tags;
     }
 
-    public ScaleClusterRequest setTaints(java.util.List<ScaleClusterRequestTaints> taints) {
-        this.taints = taints;
+    public ScaleClusterShrinkRequest setTaintsShrink(String taintsShrink) {
+        this.taintsShrink = taintsShrink;
         return this;
     }
-    public java.util.List<ScaleClusterRequestTaints> getTaints() {
-        return this.taints;
+    public String getTaintsShrink() {
+        return this.taintsShrink;
     }
 
-    public static class ScaleClusterRequestWorkerDataDisks extends TeaModel {
+    public static class ScaleClusterShrinkRequestWorkerDataDisks extends TeaModel {
         // 数据盘类型。
         @NameInMap("category")
         public String category;
@@ -262,12 +262,12 @@ public class ScaleClusterRequest extends TeaModel {
         @NameInMap("size")
         public String size;
 
-        public static ScaleClusterRequestWorkerDataDisks build(java.util.Map<String, ?> map) throws Exception {
-            ScaleClusterRequestWorkerDataDisks self = new ScaleClusterRequestWorkerDataDisks();
+        public static ScaleClusterShrinkRequestWorkerDataDisks build(java.util.Map<String, ?> map) throws Exception {
+            ScaleClusterShrinkRequestWorkerDataDisks self = new ScaleClusterShrinkRequestWorkerDataDisks();
             return TeaModel.build(map, self);
         }
 
-        public ScaleClusterRequestWorkerDataDisks setCategory(String category) {
+        public ScaleClusterShrinkRequestWorkerDataDisks setCategory(String category) {
             this.category = category;
             return this;
         }
@@ -275,7 +275,7 @@ public class ScaleClusterRequest extends TeaModel {
             return this.category;
         }
 
-        public ScaleClusterRequestWorkerDataDisks setEncrypted(String encrypted) {
+        public ScaleClusterShrinkRequestWorkerDataDisks setEncrypted(String encrypted) {
             this.encrypted = encrypted;
             return this;
         }
@@ -283,7 +283,7 @@ public class ScaleClusterRequest extends TeaModel {
             return this.encrypted;
         }
 
-        public ScaleClusterRequestWorkerDataDisks setSize(String size) {
+        public ScaleClusterShrinkRequestWorkerDataDisks setSize(String size) {
             this.size = size;
             return this;
         }
@@ -293,66 +293,22 @@ public class ScaleClusterRequest extends TeaModel {
 
     }
 
-    public static class ScaleClusterRequestTags extends TeaModel {
+    public static class ScaleClusterShrinkRequestTags extends TeaModel {
         // 标签值。
         @NameInMap("key")
         public String key;
 
-        public static ScaleClusterRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ScaleClusterRequestTags self = new ScaleClusterRequestTags();
+        public static ScaleClusterShrinkRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ScaleClusterShrinkRequestTags self = new ScaleClusterShrinkRequestTags();
             return TeaModel.build(map, self);
         }
 
-        public ScaleClusterRequestTags setKey(String key) {
+        public ScaleClusterShrinkRequestTags setKey(String key) {
             this.key = key;
             return this;
         }
         public String getKey() {
             return this.key;
-        }
-
-    }
-
-    public static class ScaleClusterRequestTaints extends TeaModel {
-        // 污点生效策略。
-        @NameInMap("effect")
-        public String effect;
-
-        // 污点键。
-        @NameInMap("key")
-        public String key;
-
-        // 污点值。
-        @NameInMap("value")
-        public String value;
-
-        public static ScaleClusterRequestTaints build(java.util.Map<String, ?> map) throws Exception {
-            ScaleClusterRequestTaints self = new ScaleClusterRequestTaints();
-            return TeaModel.build(map, self);
-        }
-
-        public ScaleClusterRequestTaints setEffect(String effect) {
-            this.effect = effect;
-            return this;
-        }
-        public String getEffect() {
-            return this.effect;
-        }
-
-        public ScaleClusterRequestTaints setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ScaleClusterRequestTaints setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
     }

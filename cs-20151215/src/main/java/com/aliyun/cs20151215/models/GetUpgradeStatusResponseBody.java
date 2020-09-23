@@ -4,25 +4,57 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class GetUpgradeStatusResponseBody extends TeaModel {
-    @NameInMap("status")
-    @Validation(required = true)
-    public String status;
+    // 错误信息描述。
+    @NameInMap("error_message")
+    public String errorMessage;
 
+    // 预检查返回ID。
     @NameInMap("precheck_report_id")
-    @Validation(required = true)
     public String precheckReportId;
 
-    @NameInMap("upgrade_step")
-    @Validation(required = true)
-    public String upgradeStep;
+    // 升级状态。
+    @NameInMap("status")
+    public String status;
 
-    @NameInMap("error_message")
-    @Validation(required = true)
-    public String errorMessage;
+    // 升级任务执行到哪一步了。
+    @NameInMap("upgrade_step")
+    public String upgradeStep;
 
     public static GetUpgradeStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUpgradeStatusResponseBody self = new GetUpgradeStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetUpgradeStatusResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetUpgradeStatusResponseBody setPrecheckReportId(String precheckReportId) {
+        this.precheckReportId = precheckReportId;
+        return this;
+    }
+    public String getPrecheckReportId() {
+        return this.precheckReportId;
+    }
+
+    public GetUpgradeStatusResponseBody setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public GetUpgradeStatusResponseBody setUpgradeStep(String upgradeStep) {
+        this.upgradeStep = upgradeStep;
+        return this;
+    }
+    public String getUpgradeStep() {
+        return this.upgradeStep;
     }
 
 }

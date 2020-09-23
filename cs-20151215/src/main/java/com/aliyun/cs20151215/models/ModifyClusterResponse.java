@@ -17,4 +17,20 @@ public class ModifyClusterResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyClusterResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyClusterResponse setBody(ModifyClusterResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyClusterResponseBody getBody() {
+        return this.body;
+    }
+
 }

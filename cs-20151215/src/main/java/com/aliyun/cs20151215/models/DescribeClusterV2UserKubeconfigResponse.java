@@ -17,4 +17,20 @@ public class DescribeClusterV2UserKubeconfigResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeClusterV2UserKubeconfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeClusterV2UserKubeconfigResponse setBody(DescribeClusterV2UserKubeconfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeClusterV2UserKubeconfigResponseBody getBody() {
+        return this.body;
+    }
+
 }

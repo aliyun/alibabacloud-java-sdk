@@ -3,21 +3,21 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class GetUpgradeStatusResponse extends TeaModel {
+public class DescribeClustersV1Response extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetUpgradeStatusResponseBody body;
+    public DescribeClustersV1ResponseBody body;
 
-    public static GetUpgradeStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetUpgradeStatusResponse self = new GetUpgradeStatusResponse();
+    public static DescribeClustersV1Response build(java.util.Map<String, ?> map) throws Exception {
+        DescribeClustersV1Response self = new DescribeClustersV1Response();
         return TeaModel.build(map, self);
     }
 
-    public GetUpgradeStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeClustersV1Response setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetUpgradeStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetUpgradeStatusResponse setBody(GetUpgradeStatusResponseBody body) {
+    public DescribeClustersV1Response setBody(DescribeClustersV1ResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetUpgradeStatusResponseBody getBody() {
+    public DescribeClustersV1ResponseBody getBody() {
         return this.body;
     }
 
