@@ -16,4 +16,20 @@ public class SetResellerUserAlarmThresholdRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SetResellerUserAlarmThresholdRequest setAlarmType(String alarmType) {
+        this.alarmType = alarmType;
+        return this;
+    }
+    public String getAlarmType() {
+        return this.alarmType;
+    }
+
+    public SetResellerUserAlarmThresholdRequest setAlarmThresholds(String alarmThresholds) {
+        this.alarmThresholds = alarmThresholds;
+        return this;
+    }
+    public String getAlarmThresholds() {
+        return this.alarmThresholds;
+    }
+
 }

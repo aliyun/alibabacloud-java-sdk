@@ -12,6 +12,14 @@ public class ModifyCostUnitRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyCostUnitRequest setUnitEntityList(java.util.List<ModifyCostUnitRequestUnitEntityList> unitEntityList) {
+        this.unitEntityList = unitEntityList;
+        return this;
+    }
+    public java.util.List<ModifyCostUnitRequestUnitEntityList> getUnitEntityList() {
+        return this.unitEntityList;
+    }
+
     public static class ModifyCostUnitRequestUnitEntityList extends TeaModel {
         @NameInMap("OwnerUid")
         @Validation(required = true)
@@ -28,6 +36,30 @@ public class ModifyCostUnitRequest extends TeaModel {
         public static ModifyCostUnitRequestUnitEntityList build(java.util.Map<String, ?> map) throws Exception {
             ModifyCostUnitRequestUnitEntityList self = new ModifyCostUnitRequestUnitEntityList();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyCostUnitRequestUnitEntityList setOwnerUid(Long ownerUid) {
+            this.ownerUid = ownerUid;
+            return this;
+        }
+        public Long getOwnerUid() {
+            return this.ownerUid;
+        }
+
+        public ModifyCostUnitRequestUnitEntityList setUnitId(Long unitId) {
+            this.unitId = unitId;
+            return this;
+        }
+        public Long getUnitId() {
+            return this.unitId;
+        }
+
+        public ModifyCostUnitRequestUnitEntityList setNewUnitName(String newUnitName) {
+            this.newUnitName = newUnitName;
+            return this;
+        }
+        public String getNewUnitName() {
+            return this.newUnitName;
         }
 
     }

@@ -18,4 +18,28 @@ public class UpgradeResourcePackageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpgradeResourcePackageRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public UpgradeResourcePackageRequest setEffectiveDate(String effectiveDate) {
+        this.effectiveDate = effectiveDate;
+        return this;
+    }
+    public String getEffectiveDate() {
+        return this.effectiveDate;
+    }
+
+    public UpgradeResourcePackageRequest setSpecification(String specification) {
+        this.specification = specification;
+        return this;
+    }
+    public String getSpecification() {
+        return this.specification;
+    }
+
 }

@@ -29,6 +29,46 @@ public class DeleteCostUnitResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteCostUnitResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeleteCostUnitResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DeleteCostUnitResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteCostUnitResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DeleteCostUnitResponse setData(DeleteCostUnitResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteCostUnitResponseData getData() {
+        return this.data;
+    }
+
     public static class DeleteCostUnitResponseData extends TeaModel {
         @NameInMap("OwnerUid")
         @Validation(required = true)
@@ -45,6 +85,30 @@ public class DeleteCostUnitResponse extends TeaModel {
         public static DeleteCostUnitResponseData build(java.util.Map<String, ?> map) throws Exception {
             DeleteCostUnitResponseData self = new DeleteCostUnitResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public DeleteCostUnitResponseData setOwnerUid(Long ownerUid) {
+            this.ownerUid = ownerUid;
+            return this;
+        }
+        public Long getOwnerUid() {
+            return this.ownerUid;
+        }
+
+        public DeleteCostUnitResponseData setUnitId(Long unitId) {
+            this.unitId = unitId;
+            return this;
+        }
+        public Long getUnitId() {
+            return this.unitId;
+        }
+
+        public DeleteCostUnitResponseData setIsSuccess(Boolean isSuccess) {
+            this.isSuccess = isSuccess;
+            return this;
+        }
+        public Boolean getIsSuccess() {
+            return this.isSuccess;
         }
 
     }

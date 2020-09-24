@@ -12,6 +12,14 @@ public class CreateCostUnitRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateCostUnitRequest setUnitEntityList(java.util.List<CreateCostUnitRequestUnitEntityList> unitEntityList) {
+        this.unitEntityList = unitEntityList;
+        return this;
+    }
+    public java.util.List<CreateCostUnitRequestUnitEntityList> getUnitEntityList() {
+        return this.unitEntityList;
+    }
+
     public static class CreateCostUnitRequestUnitEntityList extends TeaModel {
         @NameInMap("OwnerUid")
         @Validation(required = true)
@@ -28,6 +36,30 @@ public class CreateCostUnitRequest extends TeaModel {
         public static CreateCostUnitRequestUnitEntityList build(java.util.Map<String, ?> map) throws Exception {
             CreateCostUnitRequestUnitEntityList self = new CreateCostUnitRequestUnitEntityList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateCostUnitRequestUnitEntityList setOwnerUid(Long ownerUid) {
+            this.ownerUid = ownerUid;
+            return this;
+        }
+        public Long getOwnerUid() {
+            return this.ownerUid;
+        }
+
+        public CreateCostUnitRequestUnitEntityList setParentUnitId(Long parentUnitId) {
+            this.parentUnitId = parentUnitId;
+            return this;
+        }
+        public Long getParentUnitId() {
+            return this.parentUnitId;
+        }
+
+        public CreateCostUnitRequestUnitEntityList setUnitName(String unitName) {
+            this.unitName = unitName;
+            return this;
+        }
+        public String getUnitName() {
+            return this.unitName;
         }
 
     }

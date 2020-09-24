@@ -22,4 +22,36 @@ public class SubscribeBillToOSSRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SubscribeBillToOSSRequest setSubscribeBucket(String subscribeBucket) {
+        this.subscribeBucket = subscribeBucket;
+        return this;
+    }
+    public String getSubscribeBucket() {
+        return this.subscribeBucket;
+    }
+
+    public SubscribeBillToOSSRequest setSubscribeType(String subscribeType) {
+        this.subscribeType = subscribeType;
+        return this;
+    }
+    public String getSubscribeType() {
+        return this.subscribeType;
+    }
+
+    public SubscribeBillToOSSRequest setMultAccountRelSubscribe(String multAccountRelSubscribe) {
+        this.multAccountRelSubscribe = multAccountRelSubscribe;
+        return this;
+    }
+    public String getMultAccountRelSubscribe() {
+        return this.multAccountRelSubscribe;
+    }
+
+    public SubscribeBillToOSSRequest setBucketOwnerId(Long bucketOwnerId) {
+        this.bucketOwnerId = bucketOwnerId;
+        return this;
+    }
+    public Long getBucketOwnerId() {
+        return this.bucketOwnerId;
+    }
+
 }

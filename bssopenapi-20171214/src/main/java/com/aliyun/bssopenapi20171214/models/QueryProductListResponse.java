@@ -29,6 +29,46 @@ public class QueryProductListResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryProductListResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryProductListResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public QueryProductListResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryProductListResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryProductListResponse setData(QueryProductListResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryProductListResponseData getData() {
+        return this.data;
+    }
+
     public static class QueryProductListResponseDataProductListProduct extends TeaModel {
         @NameInMap("ProductCode")
         @Validation(required = true)
@@ -51,6 +91,38 @@ public class QueryProductListResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public QueryProductListResponseDataProductListProduct setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public QueryProductListResponseDataProductListProduct setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
+        }
+
+        public QueryProductListResponseDataProductListProduct setProductType(String productType) {
+            this.productType = productType;
+            return this;
+        }
+        public String getProductType() {
+            return this.productType;
+        }
+
+        public QueryProductListResponseDataProductListProduct setSubscriptionType(String subscriptionType) {
+            this.subscriptionType = subscriptionType;
+            return this;
+        }
+        public String getSubscriptionType() {
+            return this.subscriptionType;
+        }
+
     }
 
     public static class QueryProductListResponseDataProductList extends TeaModel {
@@ -61,6 +133,14 @@ public class QueryProductListResponse extends TeaModel {
         public static QueryProductListResponseDataProductList build(java.util.Map<String, ?> map) throws Exception {
             QueryProductListResponseDataProductList self = new QueryProductListResponseDataProductList();
             return TeaModel.build(map, self);
+        }
+
+        public QueryProductListResponseDataProductList setProduct(java.util.List<QueryProductListResponseDataProductListProduct> product) {
+            this.product = product;
+            return this;
+        }
+        public java.util.List<QueryProductListResponseDataProductListProduct> getProduct() {
+            return this.product;
         }
 
     }
@@ -85,6 +165,38 @@ public class QueryProductListResponse extends TeaModel {
         public static QueryProductListResponseData build(java.util.Map<String, ?> map) throws Exception {
             QueryProductListResponseData self = new QueryProductListResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryProductListResponseData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public QueryProductListResponseData setPageNum(Integer pageNum) {
+            this.pageNum = pageNum;
+            return this;
+        }
+        public Integer getPageNum() {
+            return this.pageNum;
+        }
+
+        public QueryProductListResponseData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public QueryProductListResponseData setProductList(QueryProductListResponseDataProductList productList) {
+            this.productList = productList;
+            return this;
+        }
+        public QueryProductListResponseDataProductList getProductList() {
+            return this.productList;
         }
 
     }

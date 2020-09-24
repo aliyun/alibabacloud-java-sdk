@@ -24,4 +24,44 @@ public class QueryResourcePackageInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryResourcePackageInstancesRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    public QueryResourcePackageInstancesRequest setExpiryTimeStart(String expiryTimeStart) {
+        this.expiryTimeStart = expiryTimeStart;
+        return this;
+    }
+    public String getExpiryTimeStart() {
+        return this.expiryTimeStart;
+    }
+
+    public QueryResourcePackageInstancesRequest setExpiryTimeEnd(String expiryTimeEnd) {
+        this.expiryTimeEnd = expiryTimeEnd;
+        return this;
+    }
+    public String getExpiryTimeEnd() {
+        return this.expiryTimeEnd;
+    }
+
+    public QueryResourcePackageInstancesRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public QueryResourcePackageInstancesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

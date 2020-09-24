@@ -12,4 +12,12 @@ public class DescribeResourcePackageProductRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeResourcePackageProductRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
 }

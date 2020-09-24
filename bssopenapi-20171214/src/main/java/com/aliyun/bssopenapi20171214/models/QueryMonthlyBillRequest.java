@@ -13,4 +13,12 @@ public class QueryMonthlyBillRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryMonthlyBillRequest setBillingCycle(String billingCycle) {
+        this.billingCycle = billingCycle;
+        return this;
+    }
+    public String getBillingCycle() {
+        return this.billingCycle;
+    }
+
 }

@@ -29,6 +29,46 @@ public class ConvertChargeTypeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ConvertChargeTypeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ConvertChargeTypeResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ConvertChargeTypeResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ConvertChargeTypeResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ConvertChargeTypeResponse setData(ConvertChargeTypeResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ConvertChargeTypeResponseData getData() {
+        return this.data;
+    }
+
     public static class ConvertChargeTypeResponseData extends TeaModel {
         @NameInMap("OrderId")
         @Validation(required = true)
@@ -37,6 +77,14 @@ public class ConvertChargeTypeResponse extends TeaModel {
         public static ConvertChargeTypeResponseData build(java.util.Map<String, ?> map) throws Exception {
             ConvertChargeTypeResponseData self = new ConvertChargeTypeResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ConvertChargeTypeResponseData setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
         }
 
     }

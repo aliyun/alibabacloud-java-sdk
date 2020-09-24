@@ -17,4 +17,20 @@ public class DeleteCostUnitRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteCostUnitRequest setOwnerUid(Long ownerUid) {
+        this.ownerUid = ownerUid;
+        return this;
+    }
+    public Long getOwnerUid() {
+        return this.ownerUid;
+    }
+
+    public DeleteCostUnitRequest setUnitId(Long unitId) {
+        this.unitId = unitId;
+        return this;
+    }
+    public Long getUnitId() {
+        return this.unitId;
+    }
+
 }

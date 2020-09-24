@@ -30,4 +30,60 @@ public class QueryAccountTransactionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryAccountTransactionsRequest setTransactionNumber(String transactionNumber) {
+        this.transactionNumber = transactionNumber;
+        return this;
+    }
+    public String getTransactionNumber() {
+        return this.transactionNumber;
+    }
+
+    public QueryAccountTransactionsRequest setRecordID(String recordID) {
+        this.recordID = recordID;
+        return this;
+    }
+    public String getRecordID() {
+        return this.recordID;
+    }
+
+    public QueryAccountTransactionsRequest setTransactionChannelSN(String transactionChannelSN) {
+        this.transactionChannelSN = transactionChannelSN;
+        return this;
+    }
+    public String getTransactionChannelSN() {
+        return this.transactionChannelSN;
+    }
+
+    public QueryAccountTransactionsRequest setCreateTimeStart(String createTimeStart) {
+        this.createTimeStart = createTimeStart;
+        return this;
+    }
+    public String getCreateTimeStart() {
+        return this.createTimeStart;
+    }
+
+    public QueryAccountTransactionsRequest setCreateTimeEnd(String createTimeEnd) {
+        this.createTimeEnd = createTimeEnd;
+        return this;
+    }
+    public String getCreateTimeEnd() {
+        return this.createTimeEnd;
+    }
+
+    public QueryAccountTransactionsRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public QueryAccountTransactionsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

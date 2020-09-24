@@ -12,4 +12,12 @@ public class QueryResellerAvailableQuotaRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryResellerAvailableQuotaRequest setItemCodes(String itemCodes) {
+        this.itemCodes = itemCodes;
+        return this;
+    }
+    public String getItemCodes() {
+        return this.itemCodes;
+    }
+
 }

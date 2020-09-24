@@ -23,4 +23,36 @@ public class QueryCostUnitResourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryCostUnitResourceRequest setOwnerUid(Long ownerUid) {
+        this.ownerUid = ownerUid;
+        return this;
+    }
+    public Long getOwnerUid() {
+        return this.ownerUid;
+    }
+
+    public QueryCostUnitResourceRequest setUnitId(Long unitId) {
+        this.unitId = unitId;
+        return this;
+    }
+    public Long getUnitId() {
+        return this.unitId;
+    }
+
+    public QueryCostUnitResourceRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public QueryCostUnitResourceRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

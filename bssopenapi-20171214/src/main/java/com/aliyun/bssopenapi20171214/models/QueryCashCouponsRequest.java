@@ -18,4 +18,28 @@ public class QueryCashCouponsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryCashCouponsRequest setExpiryTimeEnd(String expiryTimeEnd) {
+        this.expiryTimeEnd = expiryTimeEnd;
+        return this;
+    }
+    public String getExpiryTimeEnd() {
+        return this.expiryTimeEnd;
+    }
+
+    public QueryCashCouponsRequest setExpiryTimeStart(String expiryTimeStart) {
+        this.expiryTimeStart = expiryTimeStart;
+        return this;
+    }
+    public String getExpiryTimeStart() {
+        return this.expiryTimeStart;
+    }
+
+    public QueryCashCouponsRequest setEffectiveOrNot(Boolean effectiveOrNot) {
+        this.effectiveOrNot = effectiveOrNot;
+        return this;
+    }
+    public Boolean getEffectiveOrNot() {
+        return this.effectiveOrNot;
+    }
+
 }

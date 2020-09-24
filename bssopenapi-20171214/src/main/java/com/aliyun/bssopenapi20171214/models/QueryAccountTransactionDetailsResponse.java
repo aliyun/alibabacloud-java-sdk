@@ -3,7 +3,7 @@ package com.aliyun.bssopenapi20171214.models;
 
 import com.aliyun.tea.*;
 
-public class QueryAccountTransactionsResponse extends TeaModel {
+public class QueryAccountTransactionDetailsResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
@@ -22,14 +22,14 @@ public class QueryAccountTransactionsResponse extends TeaModel {
 
     @NameInMap("Data")
     @Validation(required = true)
-    public QueryAccountTransactionsResponseData data;
+    public QueryAccountTransactionDetailsResponseData data;
 
-    public static QueryAccountTransactionsResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryAccountTransactionsResponse self = new QueryAccountTransactionsResponse();
+    public static QueryAccountTransactionDetailsResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryAccountTransactionDetailsResponse self = new QueryAccountTransactionDetailsResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryAccountTransactionsResponse setRequestId(String requestId) {
+    public QueryAccountTransactionDetailsResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -37,7 +37,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
         return this.requestId;
     }
 
-    public QueryAccountTransactionsResponse setSuccess(Boolean success) {
+    public QueryAccountTransactionDetailsResponse setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -45,7 +45,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
         return this.success;
     }
 
-    public QueryAccountTransactionsResponse setCode(String code) {
+    public QueryAccountTransactionDetailsResponse setCode(String code) {
         this.code = code;
         return this;
     }
@@ -53,7 +53,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
         return this.code;
     }
 
-    public QueryAccountTransactionsResponse setMessage(String message) {
+    public QueryAccountTransactionDetailsResponse setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -61,15 +61,15 @@ public class QueryAccountTransactionsResponse extends TeaModel {
         return this.message;
     }
 
-    public QueryAccountTransactionsResponse setData(QueryAccountTransactionsResponseData data) {
+    public QueryAccountTransactionDetailsResponse setData(QueryAccountTransactionDetailsResponseData data) {
         this.data = data;
         return this;
     }
-    public QueryAccountTransactionsResponseData getData() {
+    public QueryAccountTransactionDetailsResponseData getData() {
         return this.data;
     }
 
-    public static class QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList extends TeaModel {
+    public static class QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList extends TeaModel {
         @NameInMap("TransactionNumber")
         @Validation(required = true)
         public String transactionNumber;
@@ -122,12 +122,12 @@ public class QueryAccountTransactionsResponse extends TeaModel {
         @Validation(required = true)
         public String transactionAccount;
 
-        public static QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList build(java.util.Map<String, ?> map) throws Exception {
-            QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList self = new QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList();
+        public static QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList build(java.util.Map<String, ?> map) throws Exception {
+            QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList self = new QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList();
             return TeaModel.build(map, self);
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setTransactionNumber(String transactionNumber) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setTransactionNumber(String transactionNumber) {
             this.transactionNumber = transactionNumber;
             return this;
         }
@@ -135,7 +135,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.transactionNumber;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setTransactionTime(String transactionTime) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setTransactionTime(String transactionTime) {
             this.transactionTime = transactionTime;
             return this;
         }
@@ -143,7 +143,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.transactionTime;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setTransactionFlow(String transactionFlow) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setTransactionFlow(String transactionFlow) {
             this.transactionFlow = transactionFlow;
             return this;
         }
@@ -151,7 +151,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.transactionFlow;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setTransactionType(String transactionType) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setTransactionType(String transactionType) {
             this.transactionType = transactionType;
             return this;
         }
@@ -159,7 +159,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.transactionType;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setTransactionChannel(String transactionChannel) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setTransactionChannel(String transactionChannel) {
             this.transactionChannel = transactionChannel;
             return this;
         }
@@ -167,7 +167,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.transactionChannel;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setTransactionChannelSN(String transactionChannelSN) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setTransactionChannelSN(String transactionChannelSN) {
             this.transactionChannelSN = transactionChannelSN;
             return this;
         }
@@ -175,7 +175,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.transactionChannelSN;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setFundType(String fundType) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setFundType(String fundType) {
             this.fundType = fundType;
             return this;
         }
@@ -183,7 +183,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.fundType;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setRecordID(String recordID) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setRecordID(String recordID) {
             this.recordID = recordID;
             return this;
         }
@@ -191,7 +191,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.recordID;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setRemarks(String remarks) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setRemarks(String remarks) {
             this.remarks = remarks;
             return this;
         }
@@ -199,7 +199,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.remarks;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setBillingCycle(String billingCycle) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setBillingCycle(String billingCycle) {
             this.billingCycle = billingCycle;
             return this;
         }
@@ -207,7 +207,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.billingCycle;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setAmount(String amount) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setAmount(String amount) {
             this.amount = amount;
             return this;
         }
@@ -215,7 +215,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.amount;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setBalance(String balance) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setBalance(String balance) {
             this.balance = balance;
             return this;
         }
@@ -223,7 +223,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.balance;
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList setTransactionAccount(String transactionAccount) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList setTransactionAccount(String transactionAccount) {
             this.transactionAccount = transactionAccount;
             return this;
         }
@@ -233,27 +233,27 @@ public class QueryAccountTransactionsResponse extends TeaModel {
 
     }
 
-    public static class QueryAccountTransactionsResponseDataAccountTransactionsList extends TeaModel {
+    public static class QueryAccountTransactionDetailsResponseDataAccountTransactionsList extends TeaModel {
         @NameInMap("AccountTransactionsList")
         @Validation(required = true)
-        public java.util.List<QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList> accountTransactionsList;
+        public java.util.List<QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList> accountTransactionsList;
 
-        public static QueryAccountTransactionsResponseDataAccountTransactionsList build(java.util.Map<String, ?> map) throws Exception {
-            QueryAccountTransactionsResponseDataAccountTransactionsList self = new QueryAccountTransactionsResponseDataAccountTransactionsList();
+        public static QueryAccountTransactionDetailsResponseDataAccountTransactionsList build(java.util.Map<String, ?> map) throws Exception {
+            QueryAccountTransactionDetailsResponseDataAccountTransactionsList self = new QueryAccountTransactionDetailsResponseDataAccountTransactionsList();
             return TeaModel.build(map, self);
         }
 
-        public QueryAccountTransactionsResponseDataAccountTransactionsList setAccountTransactionsList(java.util.List<QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList> accountTransactionsList) {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsList setAccountTransactionsList(java.util.List<QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList> accountTransactionsList) {
             this.accountTransactionsList = accountTransactionsList;
             return this;
         }
-        public java.util.List<QueryAccountTransactionsResponseDataAccountTransactionsListAccountTransactionsList> getAccountTransactionsList() {
+        public java.util.List<QueryAccountTransactionDetailsResponseDataAccountTransactionsListAccountTransactionsList> getAccountTransactionsList() {
             return this.accountTransactionsList;
         }
 
     }
 
-    public static class QueryAccountTransactionsResponseData extends TeaModel {
+    public static class QueryAccountTransactionDetailsResponseData extends TeaModel {
         @NameInMap("AccountName")
         @Validation(required = true)
         public String accountName;
@@ -262,24 +262,24 @@ public class QueryAccountTransactionsResponse extends TeaModel {
         @Validation(required = true)
         public Integer totalCount;
 
-        @NameInMap("PageNum")
+        @NameInMap("NextToken")
         @Validation(required = true)
-        public Integer pageNum;
+        public String nextToken;
 
-        @NameInMap("PageSize")
+        @NameInMap("MaxResults")
         @Validation(required = true)
-        public Integer pageSize;
+        public Integer maxResults;
 
         @NameInMap("AccountTransactionsList")
         @Validation(required = true)
-        public QueryAccountTransactionsResponseDataAccountTransactionsList accountTransactionsList;
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsList accountTransactionsList;
 
-        public static QueryAccountTransactionsResponseData build(java.util.Map<String, ?> map) throws Exception {
-            QueryAccountTransactionsResponseData self = new QueryAccountTransactionsResponseData();
+        public static QueryAccountTransactionDetailsResponseData build(java.util.Map<String, ?> map) throws Exception {
+            QueryAccountTransactionDetailsResponseData self = new QueryAccountTransactionDetailsResponseData();
             return TeaModel.build(map, self);
         }
 
-        public QueryAccountTransactionsResponseData setAccountName(String accountName) {
+        public QueryAccountTransactionDetailsResponseData setAccountName(String accountName) {
             this.accountName = accountName;
             return this;
         }
@@ -287,7 +287,7 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.accountName;
         }
 
-        public QueryAccountTransactionsResponseData setTotalCount(Integer totalCount) {
+        public QueryAccountTransactionDetailsResponseData setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
@@ -295,27 +295,27 @@ public class QueryAccountTransactionsResponse extends TeaModel {
             return this.totalCount;
         }
 
-        public QueryAccountTransactionsResponseData setPageNum(Integer pageNum) {
-            this.pageNum = pageNum;
+        public QueryAccountTransactionDetailsResponseData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
-        public Integer getPageNum() {
-            return this.pageNum;
+        public String getNextToken() {
+            return this.nextToken;
         }
 
-        public QueryAccountTransactionsResponseData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public QueryAccountTransactionDetailsResponseData setMaxResults(Integer maxResults) {
+            this.maxResults = maxResults;
             return this;
         }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public Integer getMaxResults() {
+            return this.maxResults;
         }
 
-        public QueryAccountTransactionsResponseData setAccountTransactionsList(QueryAccountTransactionsResponseDataAccountTransactionsList accountTransactionsList) {
+        public QueryAccountTransactionDetailsResponseData setAccountTransactionsList(QueryAccountTransactionDetailsResponseDataAccountTransactionsList accountTransactionsList) {
             this.accountTransactionsList = accountTransactionsList;
             return this;
         }
-        public QueryAccountTransactionsResponseDataAccountTransactionsList getAccountTransactionsList() {
+        public QueryAccountTransactionDetailsResponseDataAccountTransactionsList getAccountTransactionsList() {
             return this.accountTransactionsList;
         }
 

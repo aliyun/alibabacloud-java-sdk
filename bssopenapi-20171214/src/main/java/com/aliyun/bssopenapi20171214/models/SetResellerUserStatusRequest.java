@@ -17,4 +17,20 @@ public class SetResellerUserStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SetResellerUserStatusRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public SetResellerUserStatusRequest setBusinessType(String businessType) {
+        this.businessType = businessType;
+        return this;
+    }
+    public String getBusinessType() {
+        return this.businessType;
+    }
+
 }

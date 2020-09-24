@@ -28,4 +28,52 @@ public class QueryInstanceGaapCostRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryInstanceGaapCostRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public QueryInstanceGaapCostRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public QueryInstanceGaapCostRequest setBillingCycle(String billingCycle) {
+        this.billingCycle = billingCycle;
+        return this;
+    }
+    public String getBillingCycle() {
+        return this.billingCycle;
+    }
+
+    public QueryInstanceGaapCostRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    public QueryInstanceGaapCostRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
+    }
+
+    public QueryInstanceGaapCostRequest setSubscriptionType(String subscriptionType) {
+        this.subscriptionType = subscriptionType;
+        return this;
+    }
+    public String getSubscriptionType() {
+        return this.subscriptionType;
+    }
+
 }
