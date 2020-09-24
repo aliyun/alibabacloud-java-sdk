@@ -1,3 +1,6 @@
+2020-09-24 Version: 0.2.14
+- Update ExtractPedestrianFeatureAttr.
+
 2020-09-09 Version: 0.2.13
 - Release DetectChefCap.
 
