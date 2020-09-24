@@ -27,4 +27,44 @@ public class ConvertChargeTypeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ConvertChargeTypeRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
+    }
+
+    public ConvertChargeTypeRequest setSubscriptionType(String subscriptionType) {
+        this.subscriptionType = subscriptionType;
+        return this;
+    }
+    public String getSubscriptionType() {
+        return this.subscriptionType;
+    }
+
+    public ConvertChargeTypeRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public ConvertChargeTypeRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    public ConvertChargeTypeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
 }

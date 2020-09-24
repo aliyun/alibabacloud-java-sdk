@@ -25,4 +25,36 @@ public class SubscribeBillToOSSResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SubscribeBillToOSSResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SubscribeBillToOSSResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SubscribeBillToOSSResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public SubscribeBillToOSSResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
 }

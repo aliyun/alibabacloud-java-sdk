@@ -13,4 +13,12 @@ public class EnableBillGenerationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public EnableBillGenerationRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
 }

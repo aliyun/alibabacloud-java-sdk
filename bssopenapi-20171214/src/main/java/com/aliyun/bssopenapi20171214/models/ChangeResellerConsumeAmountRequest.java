@@ -36,4 +36,60 @@ public class ChangeResellerConsumeAmountRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ChangeResellerConsumeAmountRequest setAdjustType(String adjustType) {
+        this.adjustType = adjustType;
+        return this;
+    }
+    public String getAdjustType() {
+        return this.adjustType;
+    }
+
+    public ChangeResellerConsumeAmountRequest setAmount(String amount) {
+        this.amount = amount;
+        return this;
+    }
+    public String getAmount() {
+        return this.amount;
+    }
+
+    public ChangeResellerConsumeAmountRequest setCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    public String getCurrency() {
+        return this.currency;
+    }
+
+    public ChangeResellerConsumeAmountRequest setBusinessType(String businessType) {
+        this.businessType = businessType;
+        return this;
+    }
+    public String getBusinessType() {
+        return this.businessType;
+    }
+
+    public ChangeResellerConsumeAmountRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
+    }
+
+    public ChangeResellerConsumeAmountRequest setOutBizId(String outBizId) {
+        this.outBizId = outBizId;
+        return this;
+    }
+    public String getOutBizId() {
+        return this.outBizId;
+    }
+
+    public ChangeResellerConsumeAmountRequest setExtendMap(String extendMap) {
+        this.extendMap = extendMap;
+        return this;
+    }
+    public String getExtendMap() {
+        return this.extendMap;
+    }
+
 }

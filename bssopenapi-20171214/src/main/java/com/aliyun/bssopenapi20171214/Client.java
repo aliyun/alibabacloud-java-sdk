@@ -69,6 +69,26 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public QueryAccountTransactionDetailsResponse queryAccountTransactionDetailsWithOptions(QueryAccountTransactionDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("QueryAccountTransactionDetails", "HTTPS", "POST", "2017-12-14", "AK", null, TeaModel.buildMap(request), runtime), new QueryAccountTransactionDetailsResponse());
+    }
+
+    public QueryAccountTransactionDetailsResponse queryAccountTransactionDetails(QueryAccountTransactionDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryAccountTransactionDetailsWithOptions(request, runtime);
+    }
+
+    public QuerySettleBillResponse querySettleBillWithOptions(QuerySettleBillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("QuerySettleBill", "HTTPS", "POST", "2017-12-14", "AK", null, TeaModel.buildMap(request), runtime), new QuerySettleBillResponse());
+    }
+
+    public QuerySettleBillResponse querySettleBill(QuerySettleBillRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.querySettleBillWithOptions(request, runtime);
+    }
+
     public QuerySplitItemBillResponse querySplitItemBillWithOptions(QuerySplitItemBillRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("QuerySplitItemBill", "HTTPS", "POST", "2017-12-14", "AK", null, TeaModel.buildMap(request), runtime), new QuerySplitItemBillResponse());
@@ -654,8 +674,8 @@ public class Client extends com.aliyun.tearpc.Client {
             return endpoint;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get("regionId"))) {
-            return endpointMap.get("regionId");
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);

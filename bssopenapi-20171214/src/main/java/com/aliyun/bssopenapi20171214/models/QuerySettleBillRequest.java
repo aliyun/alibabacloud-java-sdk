@@ -3,7 +3,7 @@ package com.aliyun.bssopenapi20171214.models;
 
 import com.aliyun.tea.*;
 
-public class QueryBillRequest extends TeaModel {
+public class QuerySettleBillRequest extends TeaModel {
     @NameInMap("BillingCycle")
     @Validation(required = true)
     public String billingCycle;
@@ -26,21 +26,21 @@ public class QueryBillRequest extends TeaModel {
     @NameInMap("IsDisplayLocalCurrency")
     public Boolean isDisplayLocalCurrency;
 
-    @NameInMap("PageNum")
-    public Integer pageNum;
+    @NameInMap("NextToken")
+    public String nextToken;
 
-    @NameInMap("PageSize")
-    public Integer pageSize;
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
-    public static QueryBillRequest build(java.util.Map<String, ?> map) throws Exception {
-        QueryBillRequest self = new QueryBillRequest();
+    public static QuerySettleBillRequest build(java.util.Map<String, ?> map) throws Exception {
+        QuerySettleBillRequest self = new QuerySettleBillRequest();
         return TeaModel.build(map, self);
     }
 
-    public QueryBillRequest setBillingCycle(String billingCycle) {
+    public QuerySettleBillRequest setBillingCycle(String billingCycle) {
         this.billingCycle = billingCycle;
         return this;
     }
@@ -48,7 +48,7 @@ public class QueryBillRequest extends TeaModel {
         return this.billingCycle;
     }
 
-    public QueryBillRequest setType(String type) {
+    public QuerySettleBillRequest setType(String type) {
         this.type = type;
         return this;
     }
@@ -56,7 +56,7 @@ public class QueryBillRequest extends TeaModel {
         return this.type;
     }
 
-    public QueryBillRequest setProductCode(String productCode) {
+    public QuerySettleBillRequest setProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }
@@ -64,7 +64,7 @@ public class QueryBillRequest extends TeaModel {
         return this.productCode;
     }
 
-    public QueryBillRequest setProductType(String productType) {
+    public QuerySettleBillRequest setProductType(String productType) {
         this.productType = productType;
         return this;
     }
@@ -72,7 +72,7 @@ public class QueryBillRequest extends TeaModel {
         return this.productType;
     }
 
-    public QueryBillRequest setSubscriptionType(String subscriptionType) {
+    public QuerySettleBillRequest setSubscriptionType(String subscriptionType) {
         this.subscriptionType = subscriptionType;
         return this;
     }
@@ -80,7 +80,7 @@ public class QueryBillRequest extends TeaModel {
         return this.subscriptionType;
     }
 
-    public QueryBillRequest setIsHideZeroCharge(Boolean isHideZeroCharge) {
+    public QuerySettleBillRequest setIsHideZeroCharge(Boolean isHideZeroCharge) {
         this.isHideZeroCharge = isHideZeroCharge;
         return this;
     }
@@ -88,7 +88,7 @@ public class QueryBillRequest extends TeaModel {
         return this.isHideZeroCharge;
     }
 
-    public QueryBillRequest setIsDisplayLocalCurrency(Boolean isDisplayLocalCurrency) {
+    public QuerySettleBillRequest setIsDisplayLocalCurrency(Boolean isDisplayLocalCurrency) {
         this.isDisplayLocalCurrency = isDisplayLocalCurrency;
         return this;
     }
@@ -96,23 +96,23 @@ public class QueryBillRequest extends TeaModel {
         return this.isDisplayLocalCurrency;
     }
 
-    public QueryBillRequest setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
+    public QuerySettleBillRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public Integer getPageNum() {
-        return this.pageNum;
+    public String getNextToken() {
+        return this.nextToken;
     }
 
-    public QueryBillRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public QuerySettleBillRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
         return this;
     }
-    public Integer getPageSize() {
-        return this.pageSize;
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
-    public QueryBillRequest setBillOwnerId(Long billOwnerId) {
+    public QuerySettleBillRequest setBillOwnerId(Long billOwnerId) {
         this.billOwnerId = billOwnerId;
         return this;
     }

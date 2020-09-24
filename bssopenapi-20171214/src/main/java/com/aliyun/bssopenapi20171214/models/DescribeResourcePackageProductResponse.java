@@ -33,6 +33,54 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeResourcePackageProductResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeResourcePackageProductResponse setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    public DescribeResourcePackageProductResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeResourcePackageProductResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DescribeResourcePackageProductResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DescribeResourcePackageProductResponse setData(DescribeResourcePackageProductResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public DescribeResourcePackageProductResponseData getData() {
+        return this.data;
+    }
+
     public static class DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty extends TeaModel {
         @NameInMap("Name")
         @Validation(required = true)
@@ -47,6 +95,22 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties extends TeaModel {
@@ -57,6 +121,14 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
         public static DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties self = new DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties setProperty(java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty> property) {
+            this.property = property;
+            return this;
+        }
+        public java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypePropertiesProperty> getProperty() {
+            return this.property;
         }
 
     }
@@ -79,6 +151,30 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration setValue(Integer value) {
+            this.value = value;
+            return this;
+        }
+        public Integer getValue() {
+            return this.value;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration setUnit(String unit) {
+            this.unit = unit;
+            return this;
+        }
+        public String getUnit() {
+            return this.unit;
+        }
+
     }
 
     public static class DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations extends TeaModel {
@@ -89,6 +185,14 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
         public static DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations self = new DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations setAvailableDuration(java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration> availableDuration) {
+            this.availableDuration = availableDuration;
+            return this;
+        }
+        public java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurationsAvailableDuration> getAvailableDuration() {
+            return this.availableDuration;
         }
 
     }
@@ -111,6 +215,30 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification setAvailableDurations(DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations availableDurations) {
+            this.availableDurations = availableDurations;
+            return this;
+        }
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecificationAvailableDurations getAvailableDurations() {
+            return this.availableDurations;
+        }
+
     }
 
     public static class DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications extends TeaModel {
@@ -121,6 +249,14 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
         public static DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications self = new DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications setSpecification(java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification> specification) {
+            this.specification = specification;
+            return this;
+        }
+        public java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecificationsSpecification> getSpecification() {
+            return this.specification;
         }
 
     }
@@ -147,6 +283,38 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageType setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageType setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageType setProperties(DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties properties) {
+            this.properties = properties;
+            return this;
+        }
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeProperties getProperties() {
+            return this.properties;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageType setSpecifications(DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications specifications) {
+            this.specifications = specifications;
+            return this;
+        }
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageTypeSpecifications getSpecifications() {
+            return this.specifications;
+        }
+
     }
 
     public static class DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypes extends TeaModel {
@@ -157,6 +325,14 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
         public static DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypes build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypes self = new DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypes setPackageType(java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageType> packageType) {
+            this.packageType = packageType;
+            return this;
+        }
+        public java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypesPackageType> getPackageType() {
+            return this.packageType;
         }
 
     }
@@ -183,6 +359,38 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackage setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackage setProductType(String productType) {
+            this.productType = productType;
+            return this;
+        }
+        public String getProductType() {
+            return this.productType;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackage setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackage setPackageTypes(DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypes packageTypes) {
+            this.packageTypes = packageTypes;
+            return this;
+        }
+        public DescribeResourcePackageProductResponseDataResourcePackagesResourcePackagePackageTypes getPackageTypes() {
+            return this.packageTypes;
+        }
+
     }
 
     public static class DescribeResourcePackageProductResponseDataResourcePackages extends TeaModel {
@@ -195,6 +403,14 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeResourcePackageProductResponseDataResourcePackages setResourcePackage(java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackage> resourcePackage) {
+            this.resourcePackage = resourcePackage;
+            return this;
+        }
+        public java.util.List<DescribeResourcePackageProductResponseDataResourcePackagesResourcePackage> getResourcePackage() {
+            return this.resourcePackage;
+        }
+
     }
 
     public static class DescribeResourcePackageProductResponseData extends TeaModel {
@@ -205,6 +421,14 @@ public class DescribeResourcePackageProductResponse extends TeaModel {
         public static DescribeResourcePackageProductResponseData build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourcePackageProductResponseData self = new DescribeResourcePackageProductResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourcePackageProductResponseData setResourcePackages(DescribeResourcePackageProductResponseDataResourcePackages resourcePackages) {
+            this.resourcePackages = resourcePackages;
+            return this;
+        }
+        public DescribeResourcePackageProductResponseDataResourcePackages getResourcePackages() {
+            return this.resourcePackages;
         }
 
     }

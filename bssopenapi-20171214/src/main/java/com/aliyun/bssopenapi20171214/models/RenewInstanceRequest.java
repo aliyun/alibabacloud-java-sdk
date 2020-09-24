@@ -27,4 +27,44 @@ public class RenewInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RenewInstanceRequest setProductCode(String productCode) {
+        this.productCode = productCode;
+        return this;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    public RenewInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public RenewInstanceRequest setRenewPeriod(Integer renewPeriod) {
+        this.renewPeriod = renewPeriod;
+        return this;
+    }
+    public Integer getRenewPeriod() {
+        return this.renewPeriod;
+    }
+
+    public RenewInstanceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public RenewInstanceRequest setProductType(String productType) {
+        this.productType = productType;
+        return this;
+    }
+    public String getProductType() {
+        return this.productType;
+    }
+
 }

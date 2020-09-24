@@ -33,6 +33,54 @@ public class CreateResourcePackageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateResourcePackageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateResourcePackageResponse setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    public CreateResourcePackageResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateResourcePackageResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateResourcePackageResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CreateResourcePackageResponse setData(CreateResourcePackageResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateResourcePackageResponseData getData() {
+        return this.data;
+    }
+
     public static class CreateResourcePackageResponseData extends TeaModel {
         @NameInMap("OrderId")
         @Validation(required = true)
@@ -45,6 +93,22 @@ public class CreateResourcePackageResponse extends TeaModel {
         public static CreateResourcePackageResponseData build(java.util.Map<String, ?> map) throws Exception {
             CreateResourcePackageResponseData self = new CreateResourcePackageResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public CreateResourcePackageResponseData setOrderId(Long orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public Long getOrderId() {
+            return this.orderId;
+        }
+
+        public CreateResourcePackageResponseData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

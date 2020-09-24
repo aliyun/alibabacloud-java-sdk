@@ -19,4 +19,28 @@ public class QueryProductListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryProductListRequest setQueryTotalCount(Boolean queryTotalCount) {
+        this.queryTotalCount = queryTotalCount;
+        return this;
+    }
+    public Boolean getQueryTotalCount() {
+        return this.queryTotalCount;
+    }
+
+    public QueryProductListRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public QueryProductListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

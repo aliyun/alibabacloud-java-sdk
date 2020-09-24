@@ -29,6 +29,46 @@ public class CancelOrderResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelOrderResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CancelOrderResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CancelOrderResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CancelOrderResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CancelOrderResponse setData(CancelOrderResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public CancelOrderResponseData getData() {
+        return this.data;
+    }
+
     public static class CancelOrderResponseData extends TeaModel {
         @NameInMap("HostId")
         @Validation(required = true)
@@ -37,6 +77,14 @@ public class CancelOrderResponse extends TeaModel {
         public static CancelOrderResponseData build(java.util.Map<String, ?> map) throws Exception {
             CancelOrderResponseData self = new CancelOrderResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public CancelOrderResponseData setHostId(String hostId) {
+            this.hostId = hostId;
+            return this;
+        }
+        public String getHostId() {
+            return this.hostId;
         }
 
     }

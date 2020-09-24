@@ -3,7 +3,7 @@ package com.aliyun.bssopenapi20171214.models;
 
 import com.aliyun.tea.*;
 
-public class QueryBillResponse extends TeaModel {
+public class QuerySettleBillResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
@@ -22,14 +22,14 @@ public class QueryBillResponse extends TeaModel {
 
     @NameInMap("Data")
     @Validation(required = true)
-    public QueryBillResponseData data;
+    public QuerySettleBillResponseData data;
 
-    public static QueryBillResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryBillResponse self = new QueryBillResponse();
+    public static QuerySettleBillResponse build(java.util.Map<String, ?> map) throws Exception {
+        QuerySettleBillResponse self = new QuerySettleBillResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryBillResponse setRequestId(String requestId) {
+    public QuerySettleBillResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -37,7 +37,7 @@ public class QueryBillResponse extends TeaModel {
         return this.requestId;
     }
 
-    public QueryBillResponse setSuccess(Boolean success) {
+    public QuerySettleBillResponse setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -45,7 +45,7 @@ public class QueryBillResponse extends TeaModel {
         return this.success;
     }
 
-    public QueryBillResponse setCode(String code) {
+    public QuerySettleBillResponse setCode(String code) {
         this.code = code;
         return this;
     }
@@ -53,7 +53,7 @@ public class QueryBillResponse extends TeaModel {
         return this.code;
     }
 
-    public QueryBillResponse setMessage(String message) {
+    public QuerySettleBillResponse setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -61,15 +61,15 @@ public class QueryBillResponse extends TeaModel {
         return this.message;
     }
 
-    public QueryBillResponse setData(QueryBillResponseData data) {
+    public QuerySettleBillResponse setData(QuerySettleBillResponseData data) {
         this.data = data;
         return this;
     }
-    public QueryBillResponseData getData() {
+    public QuerySettleBillResponseData getData() {
         return this.data;
     }
 
-    public static class QueryBillResponseDataItemsItem extends TeaModel {
+    public static class QuerySettleBillResponseDataItemsItem extends TeaModel {
         @NameInMap("RecordID")
         @Validation(required = true)
         public String recordID;
@@ -190,12 +190,12 @@ public class QueryBillResponse extends TeaModel {
         @Validation(required = true)
         public String commodityCode;
 
-        public static QueryBillResponseDataItemsItem build(java.util.Map<String, ?> map) throws Exception {
-            QueryBillResponseDataItemsItem self = new QueryBillResponseDataItemsItem();
+        public static QuerySettleBillResponseDataItemsItem build(java.util.Map<String, ?> map) throws Exception {
+            QuerySettleBillResponseDataItemsItem self = new QuerySettleBillResponseDataItemsItem();
             return TeaModel.build(map, self);
         }
 
-        public QueryBillResponseDataItemsItem setRecordID(String recordID) {
+        public QuerySettleBillResponseDataItemsItem setRecordID(String recordID) {
             this.recordID = recordID;
             return this;
         }
@@ -203,7 +203,7 @@ public class QueryBillResponse extends TeaModel {
             return this.recordID;
         }
 
-        public QueryBillResponseDataItemsItem setItem(String item) {
+        public QuerySettleBillResponseDataItemsItem setItem(String item) {
             this.item = item;
             return this;
         }
@@ -211,7 +211,7 @@ public class QueryBillResponse extends TeaModel {
             return this.item;
         }
 
-        public QueryBillResponseDataItemsItem setOwnerID(String ownerID) {
+        public QuerySettleBillResponseDataItemsItem setOwnerID(String ownerID) {
             this.ownerID = ownerID;
             return this;
         }
@@ -219,7 +219,7 @@ public class QueryBillResponse extends TeaModel {
             return this.ownerID;
         }
 
-        public QueryBillResponseDataItemsItem setUsageStartTime(String usageStartTime) {
+        public QuerySettleBillResponseDataItemsItem setUsageStartTime(String usageStartTime) {
             this.usageStartTime = usageStartTime;
             return this;
         }
@@ -227,7 +227,7 @@ public class QueryBillResponse extends TeaModel {
             return this.usageStartTime;
         }
 
-        public QueryBillResponseDataItemsItem setUsageEndTime(String usageEndTime) {
+        public QuerySettleBillResponseDataItemsItem setUsageEndTime(String usageEndTime) {
             this.usageEndTime = usageEndTime;
             return this;
         }
@@ -235,7 +235,7 @@ public class QueryBillResponse extends TeaModel {
             return this.usageEndTime;
         }
 
-        public QueryBillResponseDataItemsItem setPaymentTime(String paymentTime) {
+        public QuerySettleBillResponseDataItemsItem setPaymentTime(String paymentTime) {
             this.paymentTime = paymentTime;
             return this;
         }
@@ -243,7 +243,7 @@ public class QueryBillResponse extends TeaModel {
             return this.paymentTime;
         }
 
-        public QueryBillResponseDataItemsItem setProductCode(String productCode) {
+        public QuerySettleBillResponseDataItemsItem setProductCode(String productCode) {
             this.productCode = productCode;
             return this;
         }
@@ -251,7 +251,7 @@ public class QueryBillResponse extends TeaModel {
             return this.productCode;
         }
 
-        public QueryBillResponseDataItemsItem setProductType(String productType) {
+        public QuerySettleBillResponseDataItemsItem setProductType(String productType) {
             this.productType = productType;
             return this;
         }
@@ -259,7 +259,7 @@ public class QueryBillResponse extends TeaModel {
             return this.productType;
         }
 
-        public QueryBillResponseDataItemsItem setSubscriptionType(String subscriptionType) {
+        public QuerySettleBillResponseDataItemsItem setSubscriptionType(String subscriptionType) {
             this.subscriptionType = subscriptionType;
             return this;
         }
@@ -267,7 +267,7 @@ public class QueryBillResponse extends TeaModel {
             return this.subscriptionType;
         }
 
-        public QueryBillResponseDataItemsItem setProductName(String productName) {
+        public QuerySettleBillResponseDataItemsItem setProductName(String productName) {
             this.productName = productName;
             return this;
         }
@@ -275,7 +275,7 @@ public class QueryBillResponse extends TeaModel {
             return this.productName;
         }
 
-        public QueryBillResponseDataItemsItem setProductDetail(String productDetail) {
+        public QuerySettleBillResponseDataItemsItem setProductDetail(String productDetail) {
             this.productDetail = productDetail;
             return this;
         }
@@ -283,7 +283,7 @@ public class QueryBillResponse extends TeaModel {
             return this.productDetail;
         }
 
-        public QueryBillResponseDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
+        public QuerySettleBillResponseDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
             this.pretaxGrossAmount = pretaxGrossAmount;
             return this;
         }
@@ -291,7 +291,7 @@ public class QueryBillResponse extends TeaModel {
             return this.pretaxGrossAmount;
         }
 
-        public QueryBillResponseDataItemsItem setDeductedByCoupons(Float deductedByCoupons) {
+        public QuerySettleBillResponseDataItemsItem setDeductedByCoupons(Float deductedByCoupons) {
             this.deductedByCoupons = deductedByCoupons;
             return this;
         }
@@ -299,7 +299,7 @@ public class QueryBillResponse extends TeaModel {
             return this.deductedByCoupons;
         }
 
-        public QueryBillResponseDataItemsItem setInvoiceDiscount(Float invoiceDiscount) {
+        public QuerySettleBillResponseDataItemsItem setInvoiceDiscount(Float invoiceDiscount) {
             this.invoiceDiscount = invoiceDiscount;
             return this;
         }
@@ -307,7 +307,7 @@ public class QueryBillResponse extends TeaModel {
             return this.invoiceDiscount;
         }
 
-        public QueryBillResponseDataItemsItem setPretaxAmount(Float pretaxAmount) {
+        public QuerySettleBillResponseDataItemsItem setPretaxAmount(Float pretaxAmount) {
             this.pretaxAmount = pretaxAmount;
             return this;
         }
@@ -315,7 +315,7 @@ public class QueryBillResponse extends TeaModel {
             return this.pretaxAmount;
         }
 
-        public QueryBillResponseDataItemsItem setCurrency(String currency) {
+        public QuerySettleBillResponseDataItemsItem setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -323,7 +323,7 @@ public class QueryBillResponse extends TeaModel {
             return this.currency;
         }
 
-        public QueryBillResponseDataItemsItem setPretaxAmountLocal(Float pretaxAmountLocal) {
+        public QuerySettleBillResponseDataItemsItem setPretaxAmountLocal(Float pretaxAmountLocal) {
             this.pretaxAmountLocal = pretaxAmountLocal;
             return this;
         }
@@ -331,7 +331,7 @@ public class QueryBillResponse extends TeaModel {
             return this.pretaxAmountLocal;
         }
 
-        public QueryBillResponseDataItemsItem setTax(Float tax) {
+        public QuerySettleBillResponseDataItemsItem setTax(Float tax) {
             this.tax = tax;
             return this;
         }
@@ -339,7 +339,7 @@ public class QueryBillResponse extends TeaModel {
             return this.tax;
         }
 
-        public QueryBillResponseDataItemsItem setPaymentAmount(Float paymentAmount) {
+        public QuerySettleBillResponseDataItemsItem setPaymentAmount(Float paymentAmount) {
             this.paymentAmount = paymentAmount;
             return this;
         }
@@ -347,7 +347,7 @@ public class QueryBillResponse extends TeaModel {
             return this.paymentAmount;
         }
 
-        public QueryBillResponseDataItemsItem setDeductedByCashCoupons(Float deductedByCashCoupons) {
+        public QuerySettleBillResponseDataItemsItem setDeductedByCashCoupons(Float deductedByCashCoupons) {
             this.deductedByCashCoupons = deductedByCashCoupons;
             return this;
         }
@@ -355,7 +355,7 @@ public class QueryBillResponse extends TeaModel {
             return this.deductedByCashCoupons;
         }
 
-        public QueryBillResponseDataItemsItem setDeductedByPrepaidCard(Float deductedByPrepaidCard) {
+        public QuerySettleBillResponseDataItemsItem setDeductedByPrepaidCard(Float deductedByPrepaidCard) {
             this.deductedByPrepaidCard = deductedByPrepaidCard;
             return this;
         }
@@ -363,7 +363,7 @@ public class QueryBillResponse extends TeaModel {
             return this.deductedByPrepaidCard;
         }
 
-        public QueryBillResponseDataItemsItem setOutstandingAmount(Float outstandingAmount) {
+        public QuerySettleBillResponseDataItemsItem setOutstandingAmount(Float outstandingAmount) {
             this.outstandingAmount = outstandingAmount;
             return this;
         }
@@ -371,7 +371,7 @@ public class QueryBillResponse extends TeaModel {
             return this.outstandingAmount;
         }
 
-        public QueryBillResponseDataItemsItem setAfterTaxAmount(Float afterTaxAmount) {
+        public QuerySettleBillResponseDataItemsItem setAfterTaxAmount(Float afterTaxAmount) {
             this.afterTaxAmount = afterTaxAmount;
             return this;
         }
@@ -379,7 +379,7 @@ public class QueryBillResponse extends TeaModel {
             return this.afterTaxAmount;
         }
 
-        public QueryBillResponseDataItemsItem setStatus(String status) {
+        public QuerySettleBillResponseDataItemsItem setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -387,7 +387,7 @@ public class QueryBillResponse extends TeaModel {
             return this.status;
         }
 
-        public QueryBillResponseDataItemsItem setPaymentCurrency(String paymentCurrency) {
+        public QuerySettleBillResponseDataItemsItem setPaymentCurrency(String paymentCurrency) {
             this.paymentCurrency = paymentCurrency;
             return this;
         }
@@ -395,7 +395,7 @@ public class QueryBillResponse extends TeaModel {
             return this.paymentCurrency;
         }
 
-        public QueryBillResponseDataItemsItem setPaymentTransactionID(String paymentTransactionID) {
+        public QuerySettleBillResponseDataItemsItem setPaymentTransactionID(String paymentTransactionID) {
             this.paymentTransactionID = paymentTransactionID;
             return this;
         }
@@ -403,7 +403,7 @@ public class QueryBillResponse extends TeaModel {
             return this.paymentTransactionID;
         }
 
-        public QueryBillResponseDataItemsItem setRoundDownDiscount(String roundDownDiscount) {
+        public QuerySettleBillResponseDataItemsItem setRoundDownDiscount(String roundDownDiscount) {
             this.roundDownDiscount = roundDownDiscount;
             return this;
         }
@@ -411,7 +411,7 @@ public class QueryBillResponse extends TeaModel {
             return this.roundDownDiscount;
         }
 
-        public QueryBillResponseDataItemsItem setSubOrderId(String subOrderId) {
+        public QuerySettleBillResponseDataItemsItem setSubOrderId(String subOrderId) {
             this.subOrderId = subOrderId;
             return this;
         }
@@ -419,7 +419,7 @@ public class QueryBillResponse extends TeaModel {
             return this.subOrderId;
         }
 
-        public QueryBillResponseDataItemsItem setPipCode(String pipCode) {
+        public QuerySettleBillResponseDataItemsItem setPipCode(String pipCode) {
             this.pipCode = pipCode;
             return this;
         }
@@ -427,7 +427,7 @@ public class QueryBillResponse extends TeaModel {
             return this.pipCode;
         }
 
-        public QueryBillResponseDataItemsItem setCommodityCode(String commodityCode) {
+        public QuerySettleBillResponseDataItemsItem setCommodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
             return this;
         }
@@ -437,27 +437,27 @@ public class QueryBillResponse extends TeaModel {
 
     }
 
-    public static class QueryBillResponseDataItems extends TeaModel {
+    public static class QuerySettleBillResponseDataItems extends TeaModel {
         @NameInMap("Item")
         @Validation(required = true)
-        public java.util.List<QueryBillResponseDataItemsItem> item;
+        public java.util.List<QuerySettleBillResponseDataItemsItem> item;
 
-        public static QueryBillResponseDataItems build(java.util.Map<String, ?> map) throws Exception {
-            QueryBillResponseDataItems self = new QueryBillResponseDataItems();
+        public static QuerySettleBillResponseDataItems build(java.util.Map<String, ?> map) throws Exception {
+            QuerySettleBillResponseDataItems self = new QuerySettleBillResponseDataItems();
             return TeaModel.build(map, self);
         }
 
-        public QueryBillResponseDataItems setItem(java.util.List<QueryBillResponseDataItemsItem> item) {
+        public QuerySettleBillResponseDataItems setItem(java.util.List<QuerySettleBillResponseDataItemsItem> item) {
             this.item = item;
             return this;
         }
-        public java.util.List<QueryBillResponseDataItemsItem> getItem() {
+        public java.util.List<QuerySettleBillResponseDataItemsItem> getItem() {
             return this.item;
         }
 
     }
 
-    public static class QueryBillResponseData extends TeaModel {
+    public static class QuerySettleBillResponseData extends TeaModel {
         @NameInMap("BillingCycle")
         @Validation(required = true)
         public String billingCycle;
@@ -470,13 +470,13 @@ public class QueryBillResponse extends TeaModel {
         @Validation(required = true)
         public String accountName;
 
-        @NameInMap("PageNum")
+        @NameInMap("NextToken")
         @Validation(required = true)
-        public Integer pageNum;
+        public String nextToken;
 
-        @NameInMap("PageSize")
+        @NameInMap("MaxResults")
         @Validation(required = true)
-        public Integer pageSize;
+        public Integer maxResults;
 
         @NameInMap("TotalCount")
         @Validation(required = true)
@@ -484,14 +484,14 @@ public class QueryBillResponse extends TeaModel {
 
         @NameInMap("Items")
         @Validation(required = true)
-        public QueryBillResponseDataItems items;
+        public QuerySettleBillResponseDataItems items;
 
-        public static QueryBillResponseData build(java.util.Map<String, ?> map) throws Exception {
-            QueryBillResponseData self = new QueryBillResponseData();
+        public static QuerySettleBillResponseData build(java.util.Map<String, ?> map) throws Exception {
+            QuerySettleBillResponseData self = new QuerySettleBillResponseData();
             return TeaModel.build(map, self);
         }
 
-        public QueryBillResponseData setBillingCycle(String billingCycle) {
+        public QuerySettleBillResponseData setBillingCycle(String billingCycle) {
             this.billingCycle = billingCycle;
             return this;
         }
@@ -499,7 +499,7 @@ public class QueryBillResponse extends TeaModel {
             return this.billingCycle;
         }
 
-        public QueryBillResponseData setAccountID(String accountID) {
+        public QuerySettleBillResponseData setAccountID(String accountID) {
             this.accountID = accountID;
             return this;
         }
@@ -507,7 +507,7 @@ public class QueryBillResponse extends TeaModel {
             return this.accountID;
         }
 
-        public QueryBillResponseData setAccountName(String accountName) {
+        public QuerySettleBillResponseData setAccountName(String accountName) {
             this.accountName = accountName;
             return this;
         }
@@ -515,23 +515,23 @@ public class QueryBillResponse extends TeaModel {
             return this.accountName;
         }
 
-        public QueryBillResponseData setPageNum(Integer pageNum) {
-            this.pageNum = pageNum;
+        public QuerySettleBillResponseData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
-        public Integer getPageNum() {
-            return this.pageNum;
+        public String getNextToken() {
+            return this.nextToken;
         }
 
-        public QueryBillResponseData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
+        public QuerySettleBillResponseData setMaxResults(Integer maxResults) {
+            this.maxResults = maxResults;
             return this;
         }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public Integer getMaxResults() {
+            return this.maxResults;
         }
 
-        public QueryBillResponseData setTotalCount(Integer totalCount) {
+        public QuerySettleBillResponseData setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
@@ -539,11 +539,11 @@ public class QueryBillResponse extends TeaModel {
             return this.totalCount;
         }
 
-        public QueryBillResponseData setItems(QueryBillResponseDataItems items) {
+        public QuerySettleBillResponseData setItems(QuerySettleBillResponseDataItems items) {
             this.items = items;
             return this;
         }
-        public QueryBillResponseDataItems getItems() {
+        public QuerySettleBillResponseDataItems getItems() {
             return this.items;
         }
 

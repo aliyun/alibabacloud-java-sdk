@@ -31,4 +31,52 @@ public class QueryUserOmsDataRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryUserOmsDataRequest setTable(String table) {
+        this.table = table;
+        return this;
+    }
+    public String getTable() {
+        return this.table;
+    }
+
+    public QueryUserOmsDataRequest setDataType(String dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+    public String getDataType() {
+        return this.dataType;
+    }
+
+    public QueryUserOmsDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public QueryUserOmsDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public QueryUserOmsDataRequest setMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    public String getMarker() {
+        return this.marker;
+    }
+
+    public QueryUserOmsDataRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

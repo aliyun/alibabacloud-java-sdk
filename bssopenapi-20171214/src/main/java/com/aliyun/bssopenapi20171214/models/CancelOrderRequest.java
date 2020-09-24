@@ -13,4 +13,12 @@ public class CancelOrderRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelOrderRequest setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
 }

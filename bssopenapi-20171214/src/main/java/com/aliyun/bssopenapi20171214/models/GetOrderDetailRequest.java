@@ -13,4 +13,12 @@ public class GetOrderDetailRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetOrderDetailRequest setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
 }

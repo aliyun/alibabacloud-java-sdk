@@ -25,4 +25,36 @@ public class UnsubscribeBillToOSSResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UnsubscribeBillToOSSResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UnsubscribeBillToOSSResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UnsubscribeBillToOSSResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UnsubscribeBillToOSSResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
 }

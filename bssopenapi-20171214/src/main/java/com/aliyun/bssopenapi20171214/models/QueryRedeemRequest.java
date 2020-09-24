@@ -24,4 +24,44 @@ public class QueryRedeemRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public QueryRedeemRequest setExpiryTimeStart(String expiryTimeStart) {
+        this.expiryTimeStart = expiryTimeStart;
+        return this;
+    }
+    public String getExpiryTimeStart() {
+        return this.expiryTimeStart;
+    }
+
+    public QueryRedeemRequest setExpiryTimeEnd(String expiryTimeEnd) {
+        this.expiryTimeEnd = expiryTimeEnd;
+        return this;
+    }
+    public String getExpiryTimeEnd() {
+        return this.expiryTimeEnd;
+    }
+
+    public QueryRedeemRequest setEffectiveOrNot(Boolean effectiveOrNot) {
+        this.effectiveOrNot = effectiveOrNot;
+        return this;
+    }
+    public Boolean getEffectiveOrNot() {
+        return this.effectiveOrNot;
+    }
+
+    public QueryRedeemRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public QueryRedeemRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }
