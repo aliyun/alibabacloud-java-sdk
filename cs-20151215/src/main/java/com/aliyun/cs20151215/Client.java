@@ -652,7 +652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeClusterNodePoolDetail", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools/{NodepoolId}", "none", req, runtime), new DescribeClusterNodePoolDetailResponse());
+        return TeaModel.toModel(this.doROARequest("DescribeClusterNodePoolDetail", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools/{NodepoolId}", "json", req, runtime), new DescribeClusterNodePoolDetailResponse());
     }
 
     public DescribeClusterNodePoolsResponse describeClusterNodePools(String ClusterId) throws Exception {
@@ -985,7 +985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListTagResources", "2015-12-15", "HTTPS", "GET", "AK", "/tags", "none", req, runtime), new ListTagResourcesResponse());
+        return TeaModel.toModel(this.doROARequest("ListTagResources", "2015-12-15", "HTTPS", "GET", "AK", "/tags", "json", req, runtime), new ListTagResourcesResponse());
     }
 
     public ModifyClusterResponse modifyCluster(String ClusterId, ModifyClusterRequest request) throws Exception {

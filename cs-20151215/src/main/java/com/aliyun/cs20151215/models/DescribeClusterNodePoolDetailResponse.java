@@ -8,6 +8,10 @@ public class DescribeClusterNodePoolDetailResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeClusterNodePoolDetailResponseBody body;
+
     public static DescribeClusterNodePoolDetailResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterNodePoolDetailResponse self = new DescribeClusterNodePoolDetailResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class DescribeClusterNodePoolDetailResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeClusterNodePoolDetailResponse setBody(DescribeClusterNodePoolDetailResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeClusterNodePoolDetailResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -8,6 +8,10 @@ public class ListTagResourcesResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public ListTagResourcesResponseBody body;
+
     public static ListTagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesResponse self = new ListTagResourcesResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class ListTagResourcesResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public ListTagResourcesResponse setBody(ListTagResourcesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListTagResourcesResponseBody getBody() {
+        return this.body;
     }
 
 }
