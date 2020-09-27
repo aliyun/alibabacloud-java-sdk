@@ -4,9 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateKubernetesTriggerRequest extends TeaModel {
-    // 地域ID。
-    @NameInMap("RegionId")
-    public String regionId;
+    // 触发器行为。
+    @NameInMap("Action")
+    public String action;
 
     // 集群ID。
     @NameInMap("ClusterId")
@@ -15,6 +15,10 @@ public class CreateKubernetesTriggerRequest extends TeaModel {
     // 项目名称。
     @NameInMap("ProjectId")
     public String projectId;
+
+    // 地域ID。
+    @NameInMap("RegionId")
+    public String regionId;
 
     // 触发器类型。
     @NameInMap("Type")
@@ -25,12 +29,12 @@ public class CreateKubernetesTriggerRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateKubernetesTriggerRequest setRegionId(String regionId) {
-        this.regionId = regionId;
+    public CreateKubernetesTriggerRequest setAction(String action) {
+        this.action = action;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public String getAction() {
+        return this.action;
     }
 
     public CreateKubernetesTriggerRequest setClusterId(String clusterId) {
@@ -47,6 +51,14 @@ public class CreateKubernetesTriggerRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public CreateKubernetesTriggerRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateKubernetesTriggerRequest setType(String type) {

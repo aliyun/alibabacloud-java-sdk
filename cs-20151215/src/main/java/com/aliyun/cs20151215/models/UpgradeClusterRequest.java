@@ -8,13 +8,13 @@ public class UpgradeClusterRequest extends TeaModel {
     @NameInMap("component_name")
     public String componentName;
 
-    // 当前版本。
-    @NameInMap("version")
-    public String version;
-
     // 目标版本。
     @NameInMap("next_version")
     public String nextVersion;
+
+    // 当前版本。
+    @NameInMap("version")
+    public String version;
 
     public static UpgradeClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeClusterRequest self = new UpgradeClusterRequest();
@@ -29,20 +29,20 @@ public class UpgradeClusterRequest extends TeaModel {
         return this.componentName;
     }
 
-    public UpgradeClusterRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
-    }
-
     public UpgradeClusterRequest setNextVersion(String nextVersion) {
         this.nextVersion = nextVersion;
         return this;
     }
     public String getNextVersion() {
         return this.nextVersion;
+    }
+
+    public UpgradeClusterRequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }

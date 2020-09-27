@@ -10,7 +10,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeClusterLogsResponseBody body;
+    public java.util.List<DescribeClusterLogsResponseBody> body;
 
     public static DescribeClusterLogsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterLogsResponse self = new DescribeClusterLogsResponse();
@@ -25,12 +25,92 @@ public class DescribeClusterLogsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeClusterLogsResponse setBody(DescribeClusterLogsResponseBody body) {
+    public DescribeClusterLogsResponse setBody(java.util.List<DescribeClusterLogsResponseBody> body) {
         this.body = body;
         return this;
     }
-    public DescribeClusterLogsResponseBody getBody() {
+    public java.util.List<DescribeClusterLogsResponseBody> getBody() {
         return this.body;
+    }
+
+    public static class DescribeClusterLogsResponseBody extends TeaModel {
+        // 日志ID。
+        @NameInMap("ID")
+        public Long ID;
+
+        // 集群ID。
+        @NameInMap("cluster_id")
+        public String clusterId;
+
+        // 集群日志。
+        @NameInMap("cluster_log")
+        public String clusterLog;
+
+        // 日志创建时间。
+        @NameInMap("created")
+        public String created;
+
+        // 日志等级。
+        @NameInMap("log_level")
+        public String logLevel;
+
+        // 日志更新时间。
+        @NameInMap("updated")
+        public String updated;
+
+        public static DescribeClusterLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterLogsResponseBody self = new DescribeClusterLogsResponseBody();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterLogsResponseBody setID(Long ID) {
+            this.ID = ID;
+            return this;
+        }
+        public Long getID() {
+            return this.ID;
+        }
+
+        public DescribeClusterLogsResponseBody setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeClusterLogsResponseBody setClusterLog(String clusterLog) {
+            this.clusterLog = clusterLog;
+            return this;
+        }
+        public String getClusterLog() {
+            return this.clusterLog;
+        }
+
+        public DescribeClusterLogsResponseBody setCreated(String created) {
+            this.created = created;
+            return this;
+        }
+        public String getCreated() {
+            return this.created;
+        }
+
+        public DescribeClusterLogsResponseBody setLogLevel(String logLevel) {
+            this.logLevel = logLevel;
+            return this;
+        }
+        public String getLogLevel() {
+            return this.logLevel;
+        }
+
+        public DescribeClusterLogsResponseBody setUpdated(String updated) {
+            this.updated = updated;
+            return this;
+        }
+        public String getUpdated() {
+            return this.updated;
+        }
+
     }
 
 }
