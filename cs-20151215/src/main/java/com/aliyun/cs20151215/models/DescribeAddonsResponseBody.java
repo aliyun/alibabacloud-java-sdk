@@ -10,7 +10,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
 
     // 标准组件信息，包含各个组件的描述信息。
     @NameInMap("StandardComponents")
-    public DescribeAddonsResponseBodyStandardComponents standardComponents;
+    public java.util.Map<String, java.util.Map<String, ?>> standardComponents;
 
     public static DescribeAddonsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAddonsResponseBody self = new DescribeAddonsResponseBody();
@@ -25,11 +25,11 @@ public class DescribeAddonsResponseBody extends TeaModel {
         return this.componentGroups;
     }
 
-    public DescribeAddonsResponseBody setStandardComponents(DescribeAddonsResponseBodyStandardComponents standardComponents) {
+    public DescribeAddonsResponseBody setStandardComponents(java.util.Map<String, java.util.Map<String, ?>> standardComponents) {
         this.standardComponents = standardComponents;
         return this;
     }
-    public DescribeAddonsResponseBodyStandardComponents getStandardComponents() {
+    public java.util.Map<String, java.util.Map<String, ?>> getStandardComponents() {
         return this.standardComponents;
     }
 
@@ -141,26 +141,6 @@ public class DescribeAddonsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAddonsResponseBodyComponentGroupsItems> getItems() {
             return this.items;
-        }
-
-    }
-
-    public static class DescribeAddonsResponseBodyStandardComponents extends TeaModel {
-        // 组件名称。
-        @NameInMap("ComponentName")
-        public java.util.Map<String, java.util.Map<String, ?>> componentName;
-
-        public static DescribeAddonsResponseBodyStandardComponents build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAddonsResponseBodyStandardComponents self = new DescribeAddonsResponseBodyStandardComponents();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAddonsResponseBodyStandardComponents setComponentName(java.util.Map<String, java.util.Map<String, ?>> componentName) {
-            this.componentName = componentName;
-            return this;
-        }
-        public java.util.Map<String, java.util.Map<String, ?>> getComponentName() {
-            return this.componentName;
         }
 
     }

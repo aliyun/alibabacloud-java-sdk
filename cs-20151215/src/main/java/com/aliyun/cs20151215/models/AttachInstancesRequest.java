@@ -4,101 +4,61 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
-    // 待添加的实例列表。
-    @NameInMap("instances")
-    public java.util.List<String> instances;
-
-    // 容器运行时。
-    @NameInMap("runtime")
-    public AttachInstancesRequestRuntime runtime;
-
-    // 自定义镜像ID。
-    @NameInMap("image_id")
-    public String imageId;
+    // CPU策略。
+    @NameInMap("cpu_policy")
+    public String cpuPolicy;
 
     // 是否格式化数据盘。
     @NameInMap("format_disk")
     public Boolean formatDisk;
 
-    // 是否保留实例名称。
-    @NameInMap("keep_instance_name")
-    public Boolean keepInstanceName;
+    // 自定义镜像ID。
+    @NameInMap("image_id")
+    public String imageId;
 
-    // CPU策略。
-    @NameInMap("cpu_policy")
-    public String cpuPolicy;
-
-    // key_pair名称，与login_password二选一
-    @NameInMap("key_pair")
-    public String keyPair;
-
-    // password，与key_pair二选一。
-    @NameInMap("password")
-    public String password;
+    // 待添加的实例列表。
+    @NameInMap("instances")
+    public java.util.List<String> instances;
 
     // 是否为边缘节点。
     @NameInMap("is_edge_worker")
     public Boolean isEdgeWorker;
 
-    // 用户自定义数据。
-    @NameInMap("user_data")
-    public String userData;
+    // 是否保留实例名称。
+    @NameInMap("keep_instance_name")
+    public Boolean keepInstanceName;
+
+    // key_pair名称，与login_password二选一
+    @NameInMap("key_pair")
+    public String keyPair;
 
     // 节点池ID，欲将节点添加到哪个节点池中。。
     @NameInMap("nodepool_id")
     public String nodepoolId;
 
+    // password，与key_pair二选一。
+    @NameInMap("password")
+    public String password;
+
     // RDS实例列表。
     @NameInMap("rds_instances")
     public java.util.List<String> rdsInstances;
+
+    // 容器运行时。
+    @NameInMap("runtime")
+    public AttachInstancesRequestRuntime runtime;
 
     // 节点标签。
     @NameInMap("tags")
     public java.util.List<AttachInstancesRequestTags> tags;
 
+    // 用户自定义数据。
+    @NameInMap("user_data")
+    public String userData;
+
     public static AttachInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachInstancesRequest self = new AttachInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AttachInstancesRequest setInstances(java.util.List<String> instances) {
-        this.instances = instances;
-        return this;
-    }
-    public java.util.List<String> getInstances() {
-        return this.instances;
-    }
-
-    public AttachInstancesRequest setRuntime(AttachInstancesRequestRuntime runtime) {
-        this.runtime = runtime;
-        return this;
-    }
-    public AttachInstancesRequestRuntime getRuntime() {
-        return this.runtime;
-    }
-
-    public AttachInstancesRequest setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
-    }
-
-    public AttachInstancesRequest setFormatDisk(Boolean formatDisk) {
-        this.formatDisk = formatDisk;
-        return this;
-    }
-    public Boolean getFormatDisk() {
-        return this.formatDisk;
-    }
-
-    public AttachInstancesRequest setKeepInstanceName(Boolean keepInstanceName) {
-        this.keepInstanceName = keepInstanceName;
-        return this;
-    }
-    public Boolean getKeepInstanceName() {
-        return this.keepInstanceName;
     }
 
     public AttachInstancesRequest setCpuPolicy(String cpuPolicy) {
@@ -109,20 +69,28 @@ public class AttachInstancesRequest extends TeaModel {
         return this.cpuPolicy;
     }
 
-    public AttachInstancesRequest setKeyPair(String keyPair) {
-        this.keyPair = keyPair;
+    public AttachInstancesRequest setFormatDisk(Boolean formatDisk) {
+        this.formatDisk = formatDisk;
         return this;
     }
-    public String getKeyPair() {
-        return this.keyPair;
+    public Boolean getFormatDisk() {
+        return this.formatDisk;
     }
 
-    public AttachInstancesRequest setPassword(String password) {
-        this.password = password;
+    public AttachInstancesRequest setImageId(String imageId) {
+        this.imageId = imageId;
         return this;
     }
-    public String getPassword() {
-        return this.password;
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public AttachInstancesRequest setInstances(java.util.List<String> instances) {
+        this.instances = instances;
+        return this;
+    }
+    public java.util.List<String> getInstances() {
+        return this.instances;
     }
 
     public AttachInstancesRequest setIsEdgeWorker(Boolean isEdgeWorker) {
@@ -133,12 +101,20 @@ public class AttachInstancesRequest extends TeaModel {
         return this.isEdgeWorker;
     }
 
-    public AttachInstancesRequest setUserData(String userData) {
-        this.userData = userData;
+    public AttachInstancesRequest setKeepInstanceName(Boolean keepInstanceName) {
+        this.keepInstanceName = keepInstanceName;
         return this;
     }
-    public String getUserData() {
-        return this.userData;
+    public Boolean getKeepInstanceName() {
+        return this.keepInstanceName;
+    }
+
+    public AttachInstancesRequest setKeyPair(String keyPair) {
+        this.keyPair = keyPair;
+        return this;
+    }
+    public String getKeyPair() {
+        return this.keyPair;
     }
 
     public AttachInstancesRequest setNodepoolId(String nodepoolId) {
@@ -149,6 +125,14 @@ public class AttachInstancesRequest extends TeaModel {
         return this.nodepoolId;
     }
 
+    public AttachInstancesRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
     public AttachInstancesRequest setRdsInstances(java.util.List<String> rdsInstances) {
         this.rdsInstances = rdsInstances;
         return this;
@@ -157,12 +141,28 @@ public class AttachInstancesRequest extends TeaModel {
         return this.rdsInstances;
     }
 
+    public AttachInstancesRequest setRuntime(AttachInstancesRequestRuntime runtime) {
+        this.runtime = runtime;
+        return this;
+    }
+    public AttachInstancesRequestRuntime getRuntime() {
+        return this.runtime;
+    }
+
     public AttachInstancesRequest setTags(java.util.List<AttachInstancesRequestTags> tags) {
         this.tags = tags;
         return this;
     }
     public java.util.List<AttachInstancesRequestTags> getTags() {
         return this.tags;
+    }
+
+    public AttachInstancesRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
     public static class AttachInstancesRequestRuntime extends TeaModel {

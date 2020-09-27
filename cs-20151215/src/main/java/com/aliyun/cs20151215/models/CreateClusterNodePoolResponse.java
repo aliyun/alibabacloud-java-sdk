@@ -3,21 +3,21 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeClusterAddonsVersionResponse extends TeaModel {
+public class CreateClusterNodePoolResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public java.util.Map<String, ?> body;
+    public CreateClusterNodePoolResponseBody body;
 
-    public static DescribeClusterAddonsVersionResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeClusterAddonsVersionResponse self = new DescribeClusterAddonsVersionResponse();
+    public static CreateClusterNodePoolResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateClusterNodePoolResponse self = new CreateClusterNodePoolResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClusterAddonsVersionResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateClusterNodePoolResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribeClusterAddonsVersionResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeClusterAddonsVersionResponse setBody(java.util.Map<String, ?> body) {
+    public CreateClusterNodePoolResponse setBody(CreateClusterNodePoolResponseBody body) {
         this.body = body;
         return this;
     }
-    public java.util.Map<String, ?> getBody() {
+    public CreateClusterNodePoolResponseBody getBody() {
         return this.body;
     }
 

@@ -4,24 +4,36 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterConfigurationRequest extends TeaModel {
-    // 自定配置。
-    @NameInMap("customize_config")
-    public ModifyClusterConfigurationRequestCustomizeConfig customizeConfig;
+    // 配置集合。
+    @NameInMap("configs")
+    public ModifyClusterConfigurationRequestConfigs configs;
+
+    // 配置名称。
+    @NameInMap("name")
+    public String name;
 
     public static ModifyClusterConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterConfigurationRequest self = new ModifyClusterConfigurationRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyClusterConfigurationRequest setCustomizeConfig(ModifyClusterConfigurationRequestCustomizeConfig customizeConfig) {
-        this.customizeConfig = customizeConfig;
+    public ModifyClusterConfigurationRequest setConfigs(ModifyClusterConfigurationRequestConfigs configs) {
+        this.configs = configs;
         return this;
     }
-    public ModifyClusterConfigurationRequestCustomizeConfig getCustomizeConfig() {
-        return this.customizeConfig;
+    public ModifyClusterConfigurationRequestConfigs getConfigs() {
+        return this.configs;
     }
 
-    public static class ModifyClusterConfigurationRequestCustomizeConfigConfigs extends TeaModel {
+    public ModifyClusterConfigurationRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public static class ModifyClusterConfigurationRequestConfigs extends TeaModel {
         // key。
         @NameInMap("key")
         public String key;
@@ -30,12 +42,12 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
         @NameInMap("value")
         public String value;
 
-        public static ModifyClusterConfigurationRequestCustomizeConfigConfigs build(java.util.Map<String, ?> map) throws Exception {
-            ModifyClusterConfigurationRequestCustomizeConfigConfigs self = new ModifyClusterConfigurationRequestCustomizeConfigConfigs();
+        public static ModifyClusterConfigurationRequestConfigs build(java.util.Map<String, ?> map) throws Exception {
+            ModifyClusterConfigurationRequestConfigs self = new ModifyClusterConfigurationRequestConfigs();
             return TeaModel.build(map, self);
         }
 
-        public ModifyClusterConfigurationRequestCustomizeConfigConfigs setKey(String key) {
+        public ModifyClusterConfigurationRequestConfigs setKey(String key) {
             this.key = key;
             return this;
         }
@@ -43,44 +55,12 @@ public class ModifyClusterConfigurationRequest extends TeaModel {
             return this.key;
         }
 
-        public ModifyClusterConfigurationRequestCustomizeConfigConfigs setValue(String value) {
+        public ModifyClusterConfigurationRequestConfigs setValue(String value) {
             this.value = value;
             return this;
         }
         public String getValue() {
             return this.value;
-        }
-
-    }
-
-    public static class ModifyClusterConfigurationRequestCustomizeConfig extends TeaModel {
-        // 配置集合。
-        @NameInMap("configs")
-        public ModifyClusterConfigurationRequestCustomizeConfigConfigs configs;
-
-        // 配置名称。
-        @NameInMap("name")
-        public String name;
-
-        public static ModifyClusterConfigurationRequestCustomizeConfig build(java.util.Map<String, ?> map) throws Exception {
-            ModifyClusterConfigurationRequestCustomizeConfig self = new ModifyClusterConfigurationRequestCustomizeConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyClusterConfigurationRequestCustomizeConfig setConfigs(ModifyClusterConfigurationRequestCustomizeConfigConfigs configs) {
-            this.configs = configs;
-            return this;
-        }
-        public ModifyClusterConfigurationRequestCustomizeConfigConfigs getConfigs() {
-            return this.configs;
-        }
-
-        public ModifyClusterConfigurationRequestCustomizeConfig setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }
