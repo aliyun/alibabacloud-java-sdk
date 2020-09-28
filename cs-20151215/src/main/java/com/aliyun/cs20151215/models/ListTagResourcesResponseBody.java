@@ -4,6 +4,14 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
+    // 下一个查询token。
+    @NameInMap("next_token")
+    public String nextToken;
+
+    // 请求ID。
+    @NameInMap("request_id")
+    public String requestId;
+
     // 资源标签列表。
     @NameInMap("tag_resources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -11,6 +19,22 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static ListTagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesResponseBody self = new ListTagResourcesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagResourcesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public ListTagResourcesResponseBody setTagResources(ListTagResourcesResponseBodyTagResources tagResources) {
@@ -78,14 +102,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
     }
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
-        // 可用版本。
-        @NameInMap("next_token")
-        public String nextToken;
-
-        // 请求ID.
-        @NameInMap("request_id")
-        public String requestId;
-
         // 资源标签。
         @NameInMap("tag_resource")
         public ListTagResourcesResponseBodyTagResourcesTagResource tagResource;
@@ -93,22 +109,6 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public static ListTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesResponseBodyTagResources self = new ListTagResourcesResponseBodyTagResources();
             return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesResponseBodyTagResources setNextToken(String nextToken) {
-            this.nextToken = nextToken;
-            return this;
-        }
-        public String getNextToken() {
-            return this.nextToken;
-        }
-
-        public ListTagResourcesResponseBodyTagResources setRequestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-        public String getRequestId() {
-            return this.requestId;
         }
 
         public ListTagResourcesResponseBodyTagResources setTagResource(ListTagResourcesResponseBodyTagResourcesTagResource tagResource) {

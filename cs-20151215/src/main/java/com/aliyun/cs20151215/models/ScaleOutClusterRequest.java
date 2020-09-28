@@ -404,7 +404,7 @@ public class ScaleOutClusterRequest extends TeaModel {
 
         // 数据盘大小。
         @NameInMap("size")
-        public String size;
+        public Long size;
 
         public static ScaleOutClusterRequestWorkerDataDisks build(java.util.Map<String, ?> map) throws Exception {
             ScaleOutClusterRequestWorkerDataDisks self = new ScaleOutClusterRequestWorkerDataDisks();
@@ -427,11 +427,11 @@ public class ScaleOutClusterRequest extends TeaModel {
             return this.encrypted;
         }
 
-        public ScaleOutClusterRequestWorkerDataDisks setSize(String size) {
+        public ScaleOutClusterRequestWorkerDataDisks setSize(Long size) {
             this.size = size;
             return this;
         }
-        public String getSize() {
+        public Long getSize() {
             return this.size;
         }
 
