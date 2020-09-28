@@ -1,0 +1,60 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.brain_industrial20200920.models;
+
+import com.aliyun.tea.*;
+
+public class UpdatePidLoopResponse extends TeaModel {
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public String success;
+
+    public static UpdatePidLoopResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdatePidLoopResponse self = new UpdatePidLoopResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdatePidLoopResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpdatePidLoopResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public UpdatePidLoopResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdatePidLoopResponse setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
+}
