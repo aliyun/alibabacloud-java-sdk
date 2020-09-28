@@ -8,6 +8,10 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    // 是否多可用区。
+    @NameInMap("MultiAZ")
+    public Boolean multiAZ;
+
     // 集群类型。
     @NameInMap("ClusterType")
     public String clusterType;
@@ -31,6 +35,14 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DescribeKubernetesVersionMetadataRequest setMultiAZ(Boolean multiAZ) {
+        this.multiAZ = multiAZ;
+        return this;
+    }
+    public Boolean getMultiAZ() {
+        return this.multiAZ;
     }
 
     public DescribeKubernetesVersionMetadataRequest setClusterType(String clusterType) {

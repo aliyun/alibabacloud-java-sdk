@@ -665,7 +665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeClusterNodePools", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools", "none", req, runtime), new DescribeClusterNodePoolsResponse());
+        return TeaModel.toModel(this.doROARequest("DescribeClusterNodePools", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools", "json", req, runtime), new DescribeClusterNodePoolsResponse());
     }
 
     public DescribeClusterNodesResponse describeClusterNodes(String ClusterId, DescribeClusterNodesRequest request) throws Exception {
@@ -835,6 +835,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Region", request.region);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.multiAZ)) {
+            query.put("MultiAZ", request.multiAZ);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterType)) {
             query.put("ClusterType", request.clusterType);
         }
@@ -851,7 +855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeKubernetesVersionMetadata", "2015-12-15", "HTTPS", "GET", "AK", "/api/v1/metadata/versions", "none", req, runtime), new DescribeKubernetesVersionMetadataResponse());
+        return TeaModel.toModel(this.doROARequest("DescribeKubernetesVersionMetadata", "2015-12-15", "HTTPS", "GET", "AK", "/api/v1/metadata/versions", "array", req, runtime), new DescribeKubernetesVersionMetadataResponse());
     }
 
     public DescribeTemplateAttributeResponse describeTemplateAttribute(String TemplateId) throws Exception {
@@ -864,7 +868,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeTemplateAttribute", "2015-12-15", "HTTPS", "GET", "AK", "/templates/" + TemplateId + "", "none", req, runtime), new DescribeTemplateAttributeResponse());
+        return TeaModel.toModel(this.doROARequest("DescribeTemplateAttribute", "2015-12-15", "HTTPS", "GET", "AK", "/templates/" + TemplateId + "", "array", req, runtime), new DescribeTemplateAttributeResponse());
     }
 
     public DescribeTemplatesResponse describeTemplates(DescribeTemplatesRequest request) throws Exception {

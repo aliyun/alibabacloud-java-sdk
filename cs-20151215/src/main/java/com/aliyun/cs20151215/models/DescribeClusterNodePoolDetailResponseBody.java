@@ -264,7 +264,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public static class DescribeClusterNodePoolDetailResponseBodyKubernetesConfig extends TeaModel {
         // 是否开启云监控
         @NameInMap("cms_enabled")
-        public String cmsEnabled;
+        public Boolean cmsEnabled;
 
         // CPU管理策略
         @NameInMap("cpu_policy")
@@ -303,11 +303,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig setCmsEnabled(String cmsEnabled) {
+        public DescribeClusterNodePoolDetailResponseBodyKubernetesConfig setCmsEnabled(Boolean cmsEnabled) {
             this.cmsEnabled = cmsEnabled;
             return this;
         }
-        public String getCmsEnabled() {
+        public Boolean getCmsEnabled() {
             return this.cmsEnabled;
         }
 
