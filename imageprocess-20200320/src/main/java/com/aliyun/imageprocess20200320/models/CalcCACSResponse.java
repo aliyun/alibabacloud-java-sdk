@@ -38,6 +38,10 @@ public class CalcCACSResponse extends TeaModel {
         @Validation(required = true)
         public String score;
 
+        @NameInMap("ResultUrl")
+        @Validation(required = true)
+        public String resultUrl;
+
         public static CalcCACSResponseData build(java.util.Map<String, ?> map) throws Exception {
             CalcCACSResponseData self = new CalcCACSResponseData();
             return TeaModel.build(map, self);
@@ -49,6 +53,14 @@ public class CalcCACSResponse extends TeaModel {
         }
         public String getScore() {
             return this.score;
+        }
+
+        public CalcCACSResponseData setResultUrl(String resultUrl) {
+            this.resultUrl = resultUrl;
+            return this;
+        }
+        public String getResultUrl() {
+            return this.resultUrl;
         }
 
     }
