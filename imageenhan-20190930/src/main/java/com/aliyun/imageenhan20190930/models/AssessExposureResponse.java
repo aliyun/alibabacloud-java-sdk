@@ -17,14 +17,38 @@ public class AssessExposureResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AssessExposureResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AssessExposureResponse setData(AssessExposureResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public AssessExposureResponseData getData() {
+        return this.data;
+    }
+
     public static class AssessExposureResponseData extends TeaModel {
         @NameInMap("Exposure")
         @Validation(required = true)
-        public Double exposure;
+        public Float exposure;
 
         public static AssessExposureResponseData build(java.util.Map<String, ?> map) throws Exception {
             AssessExposureResponseData self = new AssessExposureResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public AssessExposureResponseData setExposure(Float exposure) {
+            this.exposure = exposure;
+            return this;
+        }
+        public Float getExposure() {
+            return this.exposure;
         }
 
     }

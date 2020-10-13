@@ -21,4 +21,28 @@ public class EnhanceImageColorAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public EnhanceImageColorAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
+    public EnhanceImageColorAdvanceRequest setOutputFormat(String outputFormat) {
+        this.outputFormat = outputFormat;
+        return this;
+    }
+    public String getOutputFormat() {
+        return this.outputFormat;
+    }
+
+    public EnhanceImageColorAdvanceRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
 }

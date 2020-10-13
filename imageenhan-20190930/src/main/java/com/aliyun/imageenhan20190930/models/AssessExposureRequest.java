@@ -13,4 +13,12 @@ public class AssessExposureRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AssessExposureRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

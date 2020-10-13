@@ -17,6 +17,22 @@ public class RemoveImageSubtitlesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RemoveImageSubtitlesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RemoveImageSubtitlesResponse setData(RemoveImageSubtitlesResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public RemoveImageSubtitlesResponseData getData() {
+        return this.data;
+    }
+
     public static class RemoveImageSubtitlesResponseData extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class RemoveImageSubtitlesResponse extends TeaModel {
         public static RemoveImageSubtitlesResponseData build(java.util.Map<String, ?> map) throws Exception {
             RemoveImageSubtitlesResponseData self = new RemoveImageSubtitlesResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public RemoveImageSubtitlesResponseData setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }

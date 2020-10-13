@@ -17,6 +17,22 @@ public class IntelligentCompositionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public IntelligentCompositionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public IntelligentCompositionResponse setData(IntelligentCompositionResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public IntelligentCompositionResponseData getData() {
+        return this.data;
+    }
+
     public static class IntelligentCompositionResponseDataElements extends TeaModel {
         @NameInMap("MinX")
         @Validation(required = true)
@@ -36,11 +52,51 @@ public class IntelligentCompositionResponse extends TeaModel {
 
         @NameInMap("Score")
         @Validation(required = true)
-        public Double score;
+        public Float score;
 
         public static IntelligentCompositionResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
             IntelligentCompositionResponseDataElements self = new IntelligentCompositionResponseDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public IntelligentCompositionResponseDataElements setMinX(Integer minX) {
+            this.minX = minX;
+            return this;
+        }
+        public Integer getMinX() {
+            return this.minX;
+        }
+
+        public IntelligentCompositionResponseDataElements setMinY(Integer minY) {
+            this.minY = minY;
+            return this;
+        }
+        public Integer getMinY() {
+            return this.minY;
+        }
+
+        public IntelligentCompositionResponseDataElements setMaxX(Integer maxX) {
+            this.maxX = maxX;
+            return this;
+        }
+        public Integer getMaxX() {
+            return this.maxX;
+        }
+
+        public IntelligentCompositionResponseDataElements setMaxY(Integer maxY) {
+            this.maxY = maxY;
+            return this;
+        }
+        public Integer getMaxY() {
+            return this.maxY;
+        }
+
+        public IntelligentCompositionResponseDataElements setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
     }
@@ -53,6 +109,14 @@ public class IntelligentCompositionResponse extends TeaModel {
         public static IntelligentCompositionResponseData build(java.util.Map<String, ?> map) throws Exception {
             IntelligentCompositionResponseData self = new IntelligentCompositionResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public IntelligentCompositionResponseData setElements(java.util.List<IntelligentCompositionResponseDataElements> elements) {
+            this.elements = elements;
+            return this;
+        }
+        public java.util.List<IntelligentCompositionResponseDataElements> getElements() {
+            return this.elements;
         }
 
     }

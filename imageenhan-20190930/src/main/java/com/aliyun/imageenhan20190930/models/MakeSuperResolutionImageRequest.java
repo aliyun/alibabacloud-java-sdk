@@ -13,4 +13,12 @@ public class MakeSuperResolutionImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public MakeSuperResolutionImageRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
+    }
+
 }

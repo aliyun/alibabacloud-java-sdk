@@ -17,6 +17,22 @@ public class ImitatePhotoStyleResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImitatePhotoStyleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ImitatePhotoStyleResponse setData(ImitatePhotoStyleResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ImitatePhotoStyleResponseData getData() {
+        return this.data;
+    }
+
     public static class ImitatePhotoStyleResponseData extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class ImitatePhotoStyleResponse extends TeaModel {
         public static ImitatePhotoStyleResponseData build(java.util.Map<String, ?> map) throws Exception {
             ImitatePhotoStyleResponseData self = new ImitatePhotoStyleResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ImitatePhotoStyleResponseData setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }

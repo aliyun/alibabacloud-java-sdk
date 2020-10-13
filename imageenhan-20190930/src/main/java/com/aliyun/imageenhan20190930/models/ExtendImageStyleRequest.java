@@ -17,4 +17,20 @@ public class ExtendImageStyleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ExtendImageStyleRequest setStyleUrl(String styleUrl) {
+        this.styleUrl = styleUrl;
+        return this;
+    }
+    public String getStyleUrl() {
+        return this.styleUrl;
+    }
+
+    public ExtendImageStyleRequest setMajorUrl(String majorUrl) {
+        this.majorUrl = majorUrl;
+        return this;
+    }
+    public String getMajorUrl() {
+        return this.majorUrl;
+    }
+
 }
