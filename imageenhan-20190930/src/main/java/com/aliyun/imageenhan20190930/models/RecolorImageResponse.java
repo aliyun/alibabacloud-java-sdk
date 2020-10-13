@@ -17,6 +17,22 @@ public class RecolorImageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecolorImageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RecolorImageResponse setData(RecolorImageResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public RecolorImageResponseData getData() {
+        return this.data;
+    }
+
     public static class RecolorImageResponseData extends TeaModel {
         @NameInMap("ImageList")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class RecolorImageResponse extends TeaModel {
         public static RecolorImageResponseData build(java.util.Map<String, ?> map) throws Exception {
             RecolorImageResponseData self = new RecolorImageResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public RecolorImageResponseData setImageList(java.util.List<String> imageList) {
+            this.imageList = imageList;
+            return this;
+        }
+        public java.util.List<String> getImageList() {
+            return this.imageList;
         }
 
     }

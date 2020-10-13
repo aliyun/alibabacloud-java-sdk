@@ -21,4 +21,28 @@ public class ChangeImageSizeAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ChangeImageSizeAdvanceRequest setUrlObject(java.io.InputStream urlObject) {
+        this.urlObject = urlObject;
+        return this;
+    }
+    public java.io.InputStream getUrlObject() {
+        return this.urlObject;
+    }
+
+    public ChangeImageSizeAdvanceRequest setWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    public Integer getWidth() {
+        return this.width;
+    }
+
+    public ChangeImageSizeAdvanceRequest setHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    public Integer getHeight() {
+        return this.height;
+    }
+
 }

@@ -17,6 +17,22 @@ public class ImageBlindPicWatermarkResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImageBlindPicWatermarkResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ImageBlindPicWatermarkResponse setData(ImageBlindPicWatermarkResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ImageBlindPicWatermarkResponseData getData() {
+        return this.data;
+    }
+
     public static class ImageBlindPicWatermarkResponseData extends TeaModel {
         @NameInMap("WatermarkImageURL")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class ImageBlindPicWatermarkResponse extends TeaModel {
         public static ImageBlindPicWatermarkResponseData build(java.util.Map<String, ?> map) throws Exception {
             ImageBlindPicWatermarkResponseData self = new ImageBlindPicWatermarkResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ImageBlindPicWatermarkResponseData setWatermarkImageURL(String watermarkImageURL) {
+            this.watermarkImageURL = watermarkImageURL;
+            return this;
+        }
+        public String getWatermarkImageURL() {
+            return this.watermarkImageURL;
+        }
+
+        public ImageBlindPicWatermarkResponseData setLogoURL(String logoURL) {
+            this.logoURL = logoURL;
+            return this;
+        }
+        public String getLogoURL() {
+            return this.logoURL;
         }
 
     }

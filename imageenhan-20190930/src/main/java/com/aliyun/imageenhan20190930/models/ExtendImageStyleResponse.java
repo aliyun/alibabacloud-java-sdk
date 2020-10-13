@@ -17,6 +17,22 @@ public class ExtendImageStyleResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ExtendImageStyleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ExtendImageStyleResponse setData(ExtendImageStyleResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ExtendImageStyleResponseData getData() {
+        return this.data;
+    }
+
     public static class ExtendImageStyleResponseData extends TeaModel {
         @NameInMap("Url")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class ExtendImageStyleResponse extends TeaModel {
         public static ExtendImageStyleResponseData build(java.util.Map<String, ?> map) throws Exception {
             ExtendImageStyleResponseData self = new ExtendImageStyleResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ExtendImageStyleResponseData setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public ExtendImageStyleResponseData setMajorUrl(String majorUrl) {
+            this.majorUrl = majorUrl;
+            return this;
+        }
+        public String getMajorUrl() {
+            return this.majorUrl;
         }
 
     }

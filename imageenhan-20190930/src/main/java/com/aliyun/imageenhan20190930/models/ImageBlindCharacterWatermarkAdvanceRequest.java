@@ -30,4 +30,52 @@ public class ImageBlindCharacterWatermarkAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImageBlindCharacterWatermarkAdvanceRequest setOriginImageURLObject(java.io.InputStream originImageURLObject) {
+        this.originImageURLObject = originImageURLObject;
+        return this;
+    }
+    public java.io.InputStream getOriginImageURLObject() {
+        return this.originImageURLObject;
+    }
+
+    public ImageBlindCharacterWatermarkAdvanceRequest setFunctionType(String functionType) {
+        this.functionType = functionType;
+        return this;
+    }
+    public String getFunctionType() {
+        return this.functionType;
+    }
+
+    public ImageBlindCharacterWatermarkAdvanceRequest setText(String text) {
+        this.text = text;
+        return this;
+    }
+    public String getText() {
+        return this.text;
+    }
+
+    public ImageBlindCharacterWatermarkAdvanceRequest setWatermarkImageURL(String watermarkImageURL) {
+        this.watermarkImageURL = watermarkImageURL;
+        return this;
+    }
+    public String getWatermarkImageURL() {
+        return this.watermarkImageURL;
+    }
+
+    public ImageBlindCharacterWatermarkAdvanceRequest setOutputFileType(String outputFileType) {
+        this.outputFileType = outputFileType;
+        return this;
+    }
+    public String getOutputFileType() {
+        return this.outputFileType;
+    }
+
+    public ImageBlindCharacterWatermarkAdvanceRequest setQualityFactor(Integer qualityFactor) {
+        this.qualityFactor = qualityFactor;
+        return this;
+    }
+    public Integer getQualityFactor() {
+        return this.qualityFactor;
+    }
+
 }

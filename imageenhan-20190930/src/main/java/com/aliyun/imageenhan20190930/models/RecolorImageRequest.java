@@ -25,6 +25,46 @@ public class RecolorImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecolorImageRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
+    }
+
+    public RecolorImageRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
+    public RecolorImageRequest setRefUrl(String refUrl) {
+        this.refUrl = refUrl;
+        return this;
+    }
+    public String getRefUrl() {
+        return this.refUrl;
+    }
+
+    public RecolorImageRequest setColorCount(Integer colorCount) {
+        this.colorCount = colorCount;
+        return this;
+    }
+    public Integer getColorCount() {
+        return this.colorCount;
+    }
+
+    public RecolorImageRequest setColorTemplate(java.util.List<RecolorImageRequestColorTemplate> colorTemplate) {
+        this.colorTemplate = colorTemplate;
+        return this;
+    }
+    public java.util.List<RecolorImageRequestColorTemplate> getColorTemplate() {
+        return this.colorTemplate;
+    }
+
     public static class RecolorImageRequestColorTemplate extends TeaModel {
         @NameInMap("Color")
         public String color;
@@ -32,6 +72,14 @@ public class RecolorImageRequest extends TeaModel {
         public static RecolorImageRequestColorTemplate build(java.util.Map<String, ?> map) throws Exception {
             RecolorImageRequestColorTemplate self = new RecolorImageRequestColorTemplate();
             return TeaModel.build(map, self);
+        }
+
+        public RecolorImageRequestColorTemplate setColor(String color) {
+            this.color = color;
+            return this;
+        }
+        public String getColor() {
+            return this.color;
         }
 
     }

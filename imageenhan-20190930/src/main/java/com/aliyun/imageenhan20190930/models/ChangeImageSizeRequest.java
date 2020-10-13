@@ -21,4 +21,28 @@ public class ChangeImageSizeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ChangeImageSizeRequest setWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    public Integer getWidth() {
+        return this.width;
+    }
+
+    public ChangeImageSizeRequest setHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    public Integer getHeight() {
+        return this.height;
+    }
+
+    public ChangeImageSizeRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
+    }
+
 }

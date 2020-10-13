@@ -17,6 +17,22 @@ public class ChangeImageSizeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ChangeImageSizeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ChangeImageSizeResponse setData(ChangeImageSizeResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ChangeImageSizeResponseData getData() {
+        return this.data;
+    }
+
     public static class ChangeImageSizeResponseDataRetainLocation extends TeaModel {
         @NameInMap("X")
         @Validation(required = true)
@@ -39,6 +55,38 @@ public class ChangeImageSizeResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ChangeImageSizeResponseDataRetainLocation setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public ChangeImageSizeResponseDataRetainLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+        public ChangeImageSizeResponseDataRetainLocation setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public ChangeImageSizeResponseDataRetainLocation setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
     }
 
     public static class ChangeImageSizeResponseData extends TeaModel {
@@ -53,6 +101,22 @@ public class ChangeImageSizeResponse extends TeaModel {
         public static ChangeImageSizeResponseData build(java.util.Map<String, ?> map) throws Exception {
             ChangeImageSizeResponseData self = new ChangeImageSizeResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ChangeImageSizeResponseData setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public ChangeImageSizeResponseData setRetainLocation(ChangeImageSizeResponseDataRetainLocation retainLocation) {
+            this.retainLocation = retainLocation;
+            return this;
+        }
+        public ChangeImageSizeResponseDataRetainLocation getRetainLocation() {
+            return this.retainLocation;
         }
 
     }

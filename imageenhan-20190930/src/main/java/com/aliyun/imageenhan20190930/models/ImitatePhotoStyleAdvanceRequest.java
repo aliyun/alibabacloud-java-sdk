@@ -17,4 +17,20 @@ public class ImitatePhotoStyleAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImitatePhotoStyleAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
+    public ImitatePhotoStyleAdvanceRequest setStyleUrl(String styleUrl) {
+        this.styleUrl = styleUrl;
+        return this;
+    }
+    public String getStyleUrl() {
+        return this.styleUrl;
+    }
+
 }

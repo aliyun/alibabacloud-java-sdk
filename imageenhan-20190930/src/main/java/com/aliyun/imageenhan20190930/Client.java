@@ -13,6 +13,70 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public GenerateDynamicImageResponse generateDynamicImage(GenerateDynamicImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GenerateDynamicImage", "HTTPS", "POST", "2019-09-30", "AK", null, TeaModel.buildMap(request), runtime), new GenerateDynamicImageResponse());
+    }
+
+    public GenerateDynamicImageResponse generateDynamicImageAdvance(GenerateDynamicImageAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        String accessKeyId = _credential.getAccessKeyId();
+        String accessKeySecret = _credential.getAccessKeySecret();
+        com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+            new TeaPair("product", "imageenhan"),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
+        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        GenerateDynamicImageRequest generateDynamicImagereq = new GenerateDynamicImageRequest();
+        com.aliyun.common.Common.convert(request, generateDynamicImagereq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+            new TeaPair("filename", authResponse.objectKey),
+            new TeaPair("content", request.urlObject),
+            new TeaPair("contentType", "")
+        ));
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", authResponse.accessKeyId),
+            new TeaPair("policy", authResponse.encodedPolicy),
+            new TeaPair("signature", authResponse.signature),
+            new TeaPair("key", authResponse.objectKey),
+            new TeaPair("file", fileObj),
+            new TeaPair("successActionStatus", "201")
+        ));
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+            new TeaPair("bucketName", authResponse.bucket),
+            new TeaPair("header", ossHeader)
+        ));
+        ossClient.postObject(uploadRequest, ossRuntime);
+        generateDynamicImagereq.url = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        GenerateDynamicImageResponse generateDynamicImageResp = this.generateDynamicImage(generateDynamicImagereq, runtime);
+        return generateDynamicImageResp;
+    }
+
     public GetAsyncJobResultResponse getAsyncJobResult(GetAsyncJobResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetAsyncJobResult", "HTTPS", "POST", "2019-09-30", "AK", null, TeaModel.buildMap(request), runtime), new GetAsyncJobResultResponse());
@@ -40,23 +104,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        ImitatePhotoStyleRequest imitatePhotoStylereq = new ImitatePhotoStyleRequest();
+        com.aliyun.common.Common.convert(request, imitatePhotoStylereq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.imageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -64,16 +136,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        ImitatePhotoStyleRequest imitatePhotoStylereq = new ImitatePhotoStyleRequest();
-        com.aliyun.common.Common.convert(request, imitatePhotoStylereq);
         imitatePhotoStylereq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         ImitatePhotoStyleResponse imitatePhotoStyleResp = this.imitatePhotoStyle(imitatePhotoStylereq, runtime);
         return imitatePhotoStyleResp;
@@ -101,23 +168,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        EnhanceImageColorRequest enhanceImageColorreq = new EnhanceImageColorRequest();
+        com.aliyun.common.Common.convert(request, enhanceImageColorreq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.imageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -125,16 +200,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        EnhanceImageColorRequest enhanceImageColorreq = new EnhanceImageColorRequest();
-        com.aliyun.common.Common.convert(request, enhanceImageColorreq);
         enhanceImageColorreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         EnhanceImageColorResponse enhanceImageColorResp = this.enhanceImageColor(enhanceImageColorreq, runtime);
         return enhanceImageColorResp;
@@ -162,23 +232,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        RecolorHDImageRequest recolorHDImagereq = new RecolorHDImageRequest();
+        com.aliyun.common.Common.convert(request, recolorHDImagereq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.urlObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -186,16 +264,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        RecolorHDImageRequest recolorHDImagereq = new RecolorHDImageRequest();
-        com.aliyun.common.Common.convert(request, recolorHDImagereq);
         recolorHDImagereq.url = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         RecolorHDImageResponse recolorHDImageResp = this.recolorHDImage(recolorHDImagereq, runtime);
         return recolorHDImageResp;
@@ -223,23 +296,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        AssessCompositionRequest assessCompositionreq = new AssessCompositionRequest();
+        com.aliyun.common.Common.convert(request, assessCompositionreq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.imageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -247,16 +328,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        AssessCompositionRequest assessCompositionreq = new AssessCompositionRequest();
-        com.aliyun.common.Common.convert(request, assessCompositionreq);
         assessCompositionreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         AssessCompositionResponse assessCompositionResp = this.assessComposition(assessCompositionreq, runtime);
         return assessCompositionResp;
@@ -284,23 +360,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        AssessSharpnessRequest assessSharpnessreq = new AssessSharpnessRequest();
+        com.aliyun.common.Common.convert(request, assessSharpnessreq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.imageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -308,16 +392,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        AssessSharpnessRequest assessSharpnessreq = new AssessSharpnessRequest();
-        com.aliyun.common.Common.convert(request, assessSharpnessreq);
         assessSharpnessreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         AssessSharpnessResponse assessSharpnessResp = this.assessSharpness(assessSharpnessreq, runtime);
         return assessSharpnessResp;
@@ -345,23 +424,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        AssessExposureRequest assessExposurereq = new AssessExposureRequest();
+        com.aliyun.common.Common.convert(request, assessExposurereq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.imageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -369,16 +456,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        AssessExposureRequest assessExposurereq = new AssessExposureRequest();
-        com.aliyun.common.Common.convert(request, assessExposurereq);
         assessExposurereq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         AssessExposureResponse assessExposureResp = this.assessExposure(assessExposurereq, runtime);
         return assessExposureResp;
@@ -406,23 +488,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        ImageBlindCharacterWatermarkRequest imageBlindCharacterWatermarkreq = new ImageBlindCharacterWatermarkRequest();
+        com.aliyun.common.Common.convert(request, imageBlindCharacterWatermarkreq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.originImageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -430,16 +520,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        ImageBlindCharacterWatermarkRequest imageBlindCharacterWatermarkreq = new ImageBlindCharacterWatermarkRequest();
-        com.aliyun.common.Common.convert(request, imageBlindCharacterWatermarkreq);
         imageBlindCharacterWatermarkreq.originImageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         ImageBlindCharacterWatermarkResponse imageBlindCharacterWatermarkResp = this.imageBlindCharacterWatermark(imageBlindCharacterWatermarkreq, runtime);
         return imageBlindCharacterWatermarkResp;
@@ -467,23 +552,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        RemoveImageSubtitlesRequest removeImageSubtitlesreq = new RemoveImageSubtitlesRequest();
+        com.aliyun.common.Common.convert(request, removeImageSubtitlesreq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.imageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -491,16 +584,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        RemoveImageSubtitlesRequest removeImageSubtitlesreq = new RemoveImageSubtitlesRequest();
-        com.aliyun.common.Common.convert(request, removeImageSubtitlesreq);
         removeImageSubtitlesreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         RemoveImageSubtitlesResponse removeImageSubtitlesResp = this.removeImageSubtitles(removeImageSubtitlesreq, runtime);
         return removeImageSubtitlesResp;
@@ -528,23 +616,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        RemoveImageWatermarkRequest removeImageWatermarkreq = new RemoveImageWatermarkRequest();
+        com.aliyun.common.Common.convert(request, removeImageWatermarkreq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.imageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -552,16 +648,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        RemoveImageWatermarkRequest removeImageWatermarkreq = new RemoveImageWatermarkRequest();
-        com.aliyun.common.Common.convert(request, removeImageWatermarkreq);
         removeImageWatermarkreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         RemoveImageWatermarkResponse removeImageWatermarkResp = this.removeImageWatermark(removeImageWatermarkreq, runtime);
         return removeImageWatermarkResp;
@@ -589,23 +680,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        ImageBlindPicWatermarkRequest imageBlindPicWatermarkreq = new ImageBlindPicWatermarkRequest();
+        com.aliyun.common.Common.convert(request, imageBlindPicWatermarkreq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.originImageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -613,16 +712,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        ImageBlindPicWatermarkRequest imageBlindPicWatermarkreq = new ImageBlindPicWatermarkRequest();
-        com.aliyun.common.Common.convert(request, imageBlindPicWatermarkreq);
         imageBlindPicWatermarkreq.originImageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         ImageBlindPicWatermarkResponse imageBlindPicWatermarkResp = this.imageBlindPicWatermark(imageBlindPicWatermarkreq, runtime);
         return imageBlindPicWatermarkResp;
@@ -650,23 +744,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        IntelligentCompositionRequest intelligentCompositionreq = new IntelligentCompositionRequest();
+        com.aliyun.common.Common.convert(request, intelligentCompositionreq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.imageURLObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -674,16 +776,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        IntelligentCompositionRequest intelligentCompositionreq = new IntelligentCompositionRequest();
-        com.aliyun.common.Common.convert(request, intelligentCompositionreq);
         intelligentCompositionreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         IntelligentCompositionResponse intelligentCompositionResp = this.intelligentComposition(intelligentCompositionreq, runtime);
         return intelligentCompositionResp;
@@ -711,23 +808,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        ChangeImageSizeRequest changeImageSizereq = new ChangeImageSizeRequest();
+        com.aliyun.common.Common.convert(request, changeImageSizereq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.urlObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -735,16 +840,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        ChangeImageSizeRequest changeImageSizereq = new ChangeImageSizeRequest();
-        com.aliyun.common.Common.convert(request, changeImageSizereq);
         changeImageSizereq.url = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         ChangeImageSizeResponse changeImageSizeResp = this.changeImageSize(changeImageSizereq, runtime);
         return changeImageSizeResp;
@@ -777,23 +877,31 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("product", "imageenhan"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        // Step 1: request OSS api to upload file
+        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType)),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
-        com.aliyun.fileform.models.FileField fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
+        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
+        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        MakeSuperResolutionImageRequest makeSuperResolutionImagereq = new MakeSuperResolutionImageRequest();
+        com.aliyun.common.Common.convert(request, makeSuperResolutionImagereq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.urlObject),
             new TeaPair("contentType", "")
         ));
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -801,16 +909,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ossClient.postObject(uploadRequest, ossRuntime);
-        // Step 2: request final api
-        MakeSuperResolutionImageRequest makeSuperResolutionImagereq = new MakeSuperResolutionImageRequest();
-        com.aliyun.common.Common.convert(request, makeSuperResolutionImagereq);
         makeSuperResolutionImagereq.url = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         MakeSuperResolutionImageResponse makeSuperResolutionImageResp = this.makeSuperResolutionImage(makeSuperResolutionImagereq, runtime);
         return makeSuperResolutionImageResp;
@@ -826,8 +929,8 @@ public class Client extends com.aliyun.tearpc.Client {
             return endpoint;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get("regionId"))) {
-            return endpointMap.get("regionId");
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);

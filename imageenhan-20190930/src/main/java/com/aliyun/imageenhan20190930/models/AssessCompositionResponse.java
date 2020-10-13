@@ -17,14 +17,38 @@ public class AssessCompositionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AssessCompositionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AssessCompositionResponse setData(AssessCompositionResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public AssessCompositionResponseData getData() {
+        return this.data;
+    }
+
     public static class AssessCompositionResponseData extends TeaModel {
         @NameInMap("Score")
         @Validation(required = true)
-        public Double score;
+        public Float score;
 
         public static AssessCompositionResponseData build(java.util.Map<String, ?> map) throws Exception {
             AssessCompositionResponseData self = new AssessCompositionResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public AssessCompositionResponseData setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
     }
