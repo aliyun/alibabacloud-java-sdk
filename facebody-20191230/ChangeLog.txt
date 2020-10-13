@@ -1,3 +1,6 @@
+2020-10-13 Version: 0.2.15
+- Release GenerateDynamicImage.
+
 2020-09-24 Version: 0.2.14
 - Update ExtractPedestrianFeatureAttr.
 
