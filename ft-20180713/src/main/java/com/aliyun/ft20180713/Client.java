@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.ft20180713.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
+
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
