@@ -70,6 +70,12 @@ public class CreateFileRequest extends TeaModel {
     @NameInMap("ResourceGroupIdentifier")
     public String resourceGroupIdentifier;
 
+    @NameInMap("ResourceGroupId")
+    public Long resourceGroupId;
+
+    @NameInMap("ConnectionName")
+    public String connectionName;
+
     public static CreateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileRequest self = new CreateFileRequest();
         return TeaModel.build(map, self);
@@ -241,6 +247,22 @@ public class CreateFileRequest extends TeaModel {
     }
     public String getResourceGroupIdentifier() {
         return this.resourceGroupIdentifier;
+    }
+
+    public CreateFileRequest setResourceGroupId(Long resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public Long getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateFileRequest setConnectionName(String connectionName) {
+        this.connectionName = connectionName;
+        return this;
+    }
+    public String getConnectionName() {
+        return this.connectionName;
     }
 
 }

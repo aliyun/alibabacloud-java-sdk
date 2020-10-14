@@ -68,6 +68,12 @@ public class UpdateFileRequest extends TeaModel {
     @NameInMap("ResourceGroupIdentifier")
     public String resourceGroupIdentifier;
 
+    @NameInMap("ConnectionName")
+    public String connectionName;
+
+    @NameInMap("Owner")
+    public String owner;
+
     public static UpdateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFileRequest self = new UpdateFileRequest();
         return TeaModel.build(map, self);
@@ -239,6 +245,22 @@ public class UpdateFileRequest extends TeaModel {
     }
     public String getResourceGroupIdentifier() {
         return this.resourceGroupIdentifier;
+    }
+
+    public UpdateFileRequest setConnectionName(String connectionName) {
+        this.connectionName = connectionName;
+        return this;
+    }
+    public String getConnectionName() {
+        return this.connectionName;
+    }
+
+    public UpdateFileRequest setOwner(String owner) {
+        this.owner = owner;
+        return this;
+    }
+    public String getOwner() {
+        return this.owner;
     }
 
 }
