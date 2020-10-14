@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.dataworks_public20200518.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
+
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
@@ -1421,7 +1422,7 @@ public class Client extends com.aliyun.tearpc.Client {
 
     public GetQualityEntityResponse getQualityEntityWithOptions(GetQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("GetQualityEntity", "HTTP", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetQualityEntityResponse());
+        return TeaModel.toModel(this.doRequest("GetQualityEntity", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetQualityEntityResponse());
     }
 
     public GetQualityEntityResponse getQualityEntity(GetQualityEntityRequest request) throws Exception {
@@ -1451,7 +1452,7 @@ public class Client extends com.aliyun.tearpc.Client {
 
     public CreateQualityEntityResponse createQualityEntityWithOptions(CreateQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("CreateQualityEntity", "HTTP", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateQualityEntityResponse());
+        return TeaModel.toModel(this.doRequest("CreateQualityEntity", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateQualityEntityResponse());
     }
 
     public CreateQualityEntityResponse createQualityEntity(CreateQualityEntityRequest request) throws Exception {
