@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.openanalytics_open20200928.models.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
+
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
@@ -81,8 +82,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AddPartitionsResponse addPartitionsWithOptions(AddPartitionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public AddPartitionsResponse addPartitionsWithOptions(AddPartitionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddPartitionsShrinkRequest request = new AddPartitionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.partition)) {
+            request.partitionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.partition, "Partition", "json");
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
@@ -308,8 +315,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTableWithOptions(request, runtime);
     }
 
-    public GrantPrivilegesResponse grantPrivilegesWithOptions(GrantPrivilegesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GrantPrivilegesResponse grantPrivilegesWithOptions(GrantPrivilegesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GrantPrivilegesShrinkRequest request = new GrantPrivilegesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.privilegeBag))) {
+            request.privilegeBagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.privilegeBag), "PrivilegeBag", "json");
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
@@ -321,8 +334,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.grantPrivilegesWithOptions(request, runtime);
     }
 
-    public RevokePrivilegesResponse revokePrivilegesWithOptions(RevokePrivilegesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public RevokePrivilegesResponse revokePrivilegesWithOptions(RevokePrivilegesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RevokePrivilegesShrinkRequest request = new RevokePrivilegesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.privilegeBag))) {
+            request.privilegeBagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.privilegeBag), "PrivilegeBag", "json");
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
