@@ -12,4 +12,12 @@ public class GetInventoryRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetInventoryRequest setCommodityCode(String commodityCode) {
+        this.commodityCode = commodityCode;
+        return this;
+    }
+    public String getCommodityCode() {
+        return this.commodityCode;
+    }
+
 }

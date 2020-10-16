@@ -12,4 +12,12 @@ public class GetBodyOptionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetBodyOptionsRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
+    }
+
 }

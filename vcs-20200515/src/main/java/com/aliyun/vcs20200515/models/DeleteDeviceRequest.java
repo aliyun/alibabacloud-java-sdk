@@ -15,4 +15,20 @@ public class DeleteDeviceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteDeviceRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
+    }
+
+    public DeleteDeviceRequest setGbId(String gbId) {
+        this.gbId = gbId;
+        return this;
+    }
+    public String getGbId() {
+        return this.gbId;
+    }
+
 }

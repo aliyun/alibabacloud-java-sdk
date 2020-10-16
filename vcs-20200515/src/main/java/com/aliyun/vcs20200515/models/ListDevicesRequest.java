@@ -24,4 +24,44 @@ public class ListDevicesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListDevicesRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
+    }
+
+    public ListDevicesRequest setGbId(String gbId) {
+        this.gbId = gbId;
+        return this;
+    }
+    public String getGbId() {
+        return this.gbId;
+    }
+
+    public ListDevicesRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
+    }
+
+    public ListDevicesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListDevicesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

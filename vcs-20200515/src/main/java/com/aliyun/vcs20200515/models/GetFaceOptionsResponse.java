@@ -25,6 +25,38 @@ public class GetFaceOptionsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetFaceOptionsResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetFaceOptionsResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetFaceOptionsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetFaceOptionsResponse setData(java.util.List<GetFaceOptionsResponseData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetFaceOptionsResponseData> getData() {
+        return this.data;
+    }
+
     public static class GetFaceOptionsResponseDataOptionList extends TeaModel {
         @NameInMap("Key")
         @Validation(required = true)
@@ -37,6 +69,22 @@ public class GetFaceOptionsResponse extends TeaModel {
         public static GetFaceOptionsResponseDataOptionList build(java.util.Map<String, ?> map) throws Exception {
             GetFaceOptionsResponseDataOptionList self = new GetFaceOptionsResponseDataOptionList();
             return TeaModel.build(map, self);
+        }
+
+        public GetFaceOptionsResponseDataOptionList setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetFaceOptionsResponseDataOptionList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
     }
@@ -57,6 +105,30 @@ public class GetFaceOptionsResponse extends TeaModel {
         public static GetFaceOptionsResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetFaceOptionsResponseData self = new GetFaceOptionsResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetFaceOptionsResponseData setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetFaceOptionsResponseData setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetFaceOptionsResponseData setOptionList(java.util.List<GetFaceOptionsResponseDataOptionList> optionList) {
+            this.optionList = optionList;
+            return this;
+        }
+        public java.util.List<GetFaceOptionsResponseDataOptionList> getOptionList() {
+            return this.optionList;
         }
 
     }
