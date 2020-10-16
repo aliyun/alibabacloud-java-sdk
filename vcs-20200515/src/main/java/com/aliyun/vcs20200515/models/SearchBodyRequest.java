@@ -35,4 +35,60 @@ public class SearchBodyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SearchBodyRequest setCorpId(String corpId) {
+        this.corpId = corpId;
+        return this;
+    }
+    public String getCorpId() {
+        return this.corpId;
+    }
+
+    public SearchBodyRequest setGbId(String gbId) {
+        this.gbId = gbId;
+        return this;
+    }
+    public String getGbId() {
+        return this.gbId;
+    }
+
+    public SearchBodyRequest setStartTimeStamp(Long startTimeStamp) {
+        this.startTimeStamp = startTimeStamp;
+        return this;
+    }
+    public Long getStartTimeStamp() {
+        return this.startTimeStamp;
+    }
+
+    public SearchBodyRequest setEndTimeStamp(Long endTimeStamp) {
+        this.endTimeStamp = endTimeStamp;
+        return this;
+    }
+    public Long getEndTimeStamp() {
+        return this.endTimeStamp;
+    }
+
+    public SearchBodyRequest setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public Integer getPageNo() {
+        return this.pageNo;
+    }
+
+    public SearchBodyRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public SearchBodyRequest setOptionList(java.util.Map<String, ?> optionList) {
+        this.optionList = optionList;
+        return this;
+    }
+    public java.util.Map<String, ?> getOptionList() {
+        return this.optionList;
+    }
+
 }

@@ -25,6 +25,38 @@ public class SearchBodyResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SearchBodyResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public SearchBodyResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public SearchBodyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SearchBodyResponse setData(SearchBodyResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public SearchBodyResponseData getData() {
+        return this.data;
+    }
+
     public static class SearchBodyResponseDataRecords extends TeaModel {
         @NameInMap("GbId")
         @Validation(required = true)
@@ -36,23 +68,23 @@ public class SearchBodyResponse extends TeaModel {
 
         @NameInMap("LeftTopX")
         @Validation(required = true)
-        public Double leftTopX;
+        public Float leftTopX;
 
         @NameInMap("LeftTopY")
         @Validation(required = true)
-        public Double leftTopY;
+        public Float leftTopY;
 
         @NameInMap("RightBottomX")
         @Validation(required = true)
-        public Double rightBottomX;
+        public Float rightBottomX;
 
         @NameInMap("RightBottomY")
         @Validation(required = true)
-        public Double rightBottomY;
+        public Float rightBottomY;
 
         @NameInMap("Score")
         @Validation(required = true)
-        public Double score;
+        public Float score;
 
         @NameInMap("TargetImageUrl")
         @Validation(required = true)
@@ -61,6 +93,70 @@ public class SearchBodyResponse extends TeaModel {
         public static SearchBodyResponseDataRecords build(java.util.Map<String, ?> map) throws Exception {
             SearchBodyResponseDataRecords self = new SearchBodyResponseDataRecords();
             return TeaModel.build(map, self);
+        }
+
+        public SearchBodyResponseDataRecords setGbId(String gbId) {
+            this.gbId = gbId;
+            return this;
+        }
+        public String getGbId() {
+            return this.gbId;
+        }
+
+        public SearchBodyResponseDataRecords setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        public SearchBodyResponseDataRecords setLeftTopX(Float leftTopX) {
+            this.leftTopX = leftTopX;
+            return this;
+        }
+        public Float getLeftTopX() {
+            return this.leftTopX;
+        }
+
+        public SearchBodyResponseDataRecords setLeftTopY(Float leftTopY) {
+            this.leftTopY = leftTopY;
+            return this;
+        }
+        public Float getLeftTopY() {
+            return this.leftTopY;
+        }
+
+        public SearchBodyResponseDataRecords setRightBottomX(Float rightBottomX) {
+            this.rightBottomX = rightBottomX;
+            return this;
+        }
+        public Float getRightBottomX() {
+            return this.rightBottomX;
+        }
+
+        public SearchBodyResponseDataRecords setRightBottomY(Float rightBottomY) {
+            this.rightBottomY = rightBottomY;
+            return this;
+        }
+        public Float getRightBottomY() {
+            return this.rightBottomY;
+        }
+
+        public SearchBodyResponseDataRecords setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
+        }
+
+        public SearchBodyResponseDataRecords setTargetImageUrl(String targetImageUrl) {
+            this.targetImageUrl = targetImageUrl;
+            return this;
+        }
+        public String getTargetImageUrl() {
+            return this.targetImageUrl;
         }
 
     }
@@ -89,6 +185,46 @@ public class SearchBodyResponse extends TeaModel {
         public static SearchBodyResponseData build(java.util.Map<String, ?> map) throws Exception {
             SearchBodyResponseData self = new SearchBodyResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public SearchBodyResponseData setPageNo(Integer pageNo) {
+            this.pageNo = pageNo;
+            return this;
+        }
+        public Integer getPageNo() {
+            return this.pageNo;
+        }
+
+        public SearchBodyResponseData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public SearchBodyResponseData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public SearchBodyResponseData setTotalPage(Integer totalPage) {
+            this.totalPage = totalPage;
+            return this;
+        }
+        public Integer getTotalPage() {
+            return this.totalPage;
+        }
+
+        public SearchBodyResponseData setRecords(java.util.List<SearchBodyResponseDataRecords> records) {
+            this.records = records;
+            return this;
+        }
+        public java.util.List<SearchBodyResponseDataRecords> getRecords() {
+            return this.records;
         }
 
     }
