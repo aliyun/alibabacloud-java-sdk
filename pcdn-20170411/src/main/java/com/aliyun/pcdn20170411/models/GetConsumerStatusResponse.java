@@ -34,7 +34,7 @@ public class GetConsumerStatusResponse extends TeaModel {
 
     @NameInMap("BusinessType")
     @Validation(required = true)
-    public Boolean businessType;
+    public String businessType;
 
     @NameInMap("Audit")
     @Validation(required = true)
@@ -113,11 +113,11 @@ public class GetConsumerStatusResponse extends TeaModel {
         return this.cdnUrlRedirectFlag;
     }
 
-    public GetConsumerStatusResponse setBusinessType(Boolean businessType) {
+    public GetConsumerStatusResponse setBusinessType(String businessType) {
         this.businessType = businessType;
         return this;
     }
-    public Boolean getBusinessType() {
+    public String getBusinessType() {
         return this.businessType;
     }
 
