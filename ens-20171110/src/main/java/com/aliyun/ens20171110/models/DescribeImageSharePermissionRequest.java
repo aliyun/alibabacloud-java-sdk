@@ -14,6 +14,9 @@ public class DescribeImageSharePermissionRequest extends TeaModel {
     @NameInMap("PageSize")
     public String pageSize;
 
+    @NameInMap("AliyunId")
+    public Long aliyunId;
+
     public static DescribeImageSharePermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageSharePermissionRequest self = new DescribeImageSharePermissionRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class DescribeImageSharePermissionRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeImageSharePermissionRequest setAliyunId(Long aliyunId) {
+        this.aliyunId = aliyunId;
+        return this;
+    }
+    public Long getAliyunId() {
+        return this.aliyunId;
     }
 
 }
