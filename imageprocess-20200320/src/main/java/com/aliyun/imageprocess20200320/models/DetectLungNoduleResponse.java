@@ -78,6 +78,10 @@ public class DetectLungNoduleResponse extends TeaModel {
         @Validation(required = true)
         public Float imageZ;
 
+        @NameInMap("SOPInstanceUID")
+        @Validation(required = true)
+        public String SOPInstanceUID;
+
         public static DetectLungNoduleResponseDataSeriesElements build(java.util.Map<String, ?> map) throws Exception {
             DetectLungNoduleResponseDataSeriesElements self = new DetectLungNoduleResponseDataSeriesElements();
             return TeaModel.build(map, self);
@@ -169,6 +173,14 @@ public class DetectLungNoduleResponse extends TeaModel {
         }
         public Float getImageZ() {
             return this.imageZ;
+        }
+
+        public DetectLungNoduleResponseDataSeriesElements setSOPInstanceUID(String SOPInstanceUID) {
+            this.SOPInstanceUID = SOPInstanceUID;
+            return this;
+        }
+        public String getSOPInstanceUID() {
+            return this.SOPInstanceUID;
         }
 
     }
