@@ -210,6 +210,14 @@ public class RecognizeImageResponse extends TeaModel {
         @Validation(required = true)
         public String rightBottomY;
 
+        @NameInMap("Quality")
+        @Validation(required = true)
+        public Float quality;
+
+        @NameInMap("KeyPointQuality")
+        @Validation(required = true)
+        public Float keyPointQuality;
+
         public static RecognizeImageResponseDataFaceList build(java.util.Map<String, ?> map) throws Exception {
             RecognizeImageResponseDataFaceList self = new RecognizeImageResponseDataFaceList();
             return TeaModel.build(map, self);
@@ -285,6 +293,22 @@ public class RecognizeImageResponse extends TeaModel {
         }
         public String getRightBottomY() {
             return this.rightBottomY;
+        }
+
+        public RecognizeImageResponseDataFaceList setQuality(Float quality) {
+            this.quality = quality;
+            return this;
+        }
+        public Float getQuality() {
+            return this.quality;
+        }
+
+        public RecognizeImageResponseDataFaceList setKeyPointQuality(Float keyPointQuality) {
+            this.keyPointQuality = keyPointQuality;
+            return this;
+        }
+        public Float getKeyPointQuality() {
+            return this.keyPointQuality;
         }
 
     }

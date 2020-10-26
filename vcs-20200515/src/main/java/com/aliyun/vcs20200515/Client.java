@@ -14,6 +14,66 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public UnsubscribeDeviceEventResponse unsubscribeDeviceEventWithOptions(UnsubscribeDeviceEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("UnsubscribeDeviceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, TeaModel.buildMap(request), runtime), new UnsubscribeDeviceEventResponse());
+    }
+
+    public UnsubscribeDeviceEventResponse unsubscribeDeviceEvent(UnsubscribeDeviceEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unsubscribeDeviceEventWithOptions(request, runtime);
+    }
+
+    public ListSubscribeDeviceResponse listSubscribeDeviceWithOptions(ListSubscribeDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListSubscribeDevice", "HTTPS", "POST", "2020-05-15", "AK", null, TeaModel.buildMap(request), runtime), new ListSubscribeDeviceResponse());
+    }
+
+    public ListSubscribeDeviceResponse listSubscribeDevice(ListSubscribeDeviceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listSubscribeDeviceWithOptions(request, runtime);
+    }
+
+    public SubscribeDeviceEventResponse subscribeDeviceEventWithOptions(SubscribeDeviceEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SubscribeDeviceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, TeaModel.buildMap(request), runtime), new SubscribeDeviceEventResponse());
+    }
+
+    public SubscribeDeviceEventResponse subscribeDeviceEvent(SubscribeDeviceEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.subscribeDeviceEventWithOptions(request, runtime);
+    }
+
+    public SubscribeSpaceEventResponse subscribeSpaceEventWithOptions(SubscribeSpaceEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SubscribeSpaceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, TeaModel.buildMap(request), runtime), new SubscribeSpaceEventResponse());
+    }
+
+    public SubscribeSpaceEventResponse subscribeSpaceEvent(SubscribeSpaceEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.subscribeSpaceEventWithOptions(request, runtime);
+    }
+
+    public UnsubscribeSpaceEventResponse unsubscribeSpaceEventWithOptions(UnsubscribeSpaceEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("UnsubscribeSpaceEvent", "HTTPS", "POST", "2020-05-15", "AK", null, TeaModel.buildMap(request), runtime), new UnsubscribeSpaceEventResponse());
+    }
+
+    public UnsubscribeSpaceEventResponse unsubscribeSpaceEvent(UnsubscribeSpaceEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.unsubscribeSpaceEventWithOptions(request, runtime);
+    }
+
+    public ListPersonTraceDetailsResponse listPersonTraceDetailsWithOptions(ListPersonTraceDetailsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListPersonTraceDetails", "HTTPS", "POST", "2020-05-15", "AK,APP", null, TeaModel.buildMap(request), runtime), new ListPersonTraceDetailsResponse());
+    }
+
+    public ListPersonTraceDetailsResponse listPersonTraceDetails(ListPersonTraceDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPersonTraceDetailsWithOptions(request, runtime);
+    }
+
     public GetMonitorListResponse getMonitorListWithOptions(GetMonitorListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMonitorList", "HTTPS", "POST", "2020-05-15", "AK", null, TeaModel.buildMap(request), runtime), new GetMonitorListResponse());
