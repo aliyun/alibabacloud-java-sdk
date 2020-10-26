@@ -8,6 +8,10 @@ public class CreateProductResponse extends TeaModel {
     @Validation(required = true)
     public String requestId;
 
+    @NameInMap("ProductId")
+    @Validation(required = true)
+    public Long productId;
+
     public static CreateProductResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateProductResponse self = new CreateProductResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class CreateProductResponse extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateProductResponse setProductId(Long productId) {
+        this.productId = productId;
+        return this;
+    }
+    public Long getProductId() {
+        return this.productId;
     }
 
 }

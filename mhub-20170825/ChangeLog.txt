@@ -1,3 +1,6 @@
+2020-10-26 Version: 1.0.4
+- Add productId on the response of CreateProduct api.
+
 2020-09-16 Version: 1.0.3
 - Fix productId type, change to Integer.
 
