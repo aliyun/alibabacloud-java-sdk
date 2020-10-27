@@ -13,4 +13,12 @@ public class DeleteDiskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteDiskRequest setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
 }

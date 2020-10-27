@@ -20,4 +20,28 @@ public class DetachDiskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetachDiskRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DetachDiskRequest setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    public DetachDiskRequest setDeleteWithInstance(Boolean deleteWithInstance) {
+        this.deleteWithInstance = deleteWithInstance;
+        return this;
+    }
+    public Boolean getDeleteWithInstance() {
+        return this.deleteWithInstance;
+    }
+
 }

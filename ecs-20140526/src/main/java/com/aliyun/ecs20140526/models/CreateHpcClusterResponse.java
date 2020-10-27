@@ -17,4 +17,20 @@ public class CreateHpcClusterResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateHpcClusterResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateHpcClusterResponse setHpcClusterId(String hpcClusterId) {
+        this.hpcClusterId = hpcClusterId;
+        return this;
+    }
+    public String getHpcClusterId() {
+        return this.hpcClusterId;
+    }
+
 }

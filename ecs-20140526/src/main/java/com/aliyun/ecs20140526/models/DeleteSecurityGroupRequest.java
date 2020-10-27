@@ -17,4 +17,20 @@ public class DeleteSecurityGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteSecurityGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteSecurityGroupRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
 }

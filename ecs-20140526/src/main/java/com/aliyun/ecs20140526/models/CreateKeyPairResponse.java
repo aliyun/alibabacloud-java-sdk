@@ -29,4 +29,44 @@ public class CreateKeyPairResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateKeyPairResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateKeyPairResponse setKeyPairId(String keyPairId) {
+        this.keyPairId = keyPairId;
+        return this;
+    }
+    public String getKeyPairId() {
+        return this.keyPairId;
+    }
+
+    public CreateKeyPairResponse setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    public CreateKeyPairResponse setKeyPairFingerPrint(String keyPairFingerPrint) {
+        this.keyPairFingerPrint = keyPairFingerPrint;
+        return this;
+    }
+    public String getKeyPairFingerPrint() {
+        return this.keyPairFingerPrint;
+    }
+
+    public CreateKeyPairResponse setPrivateKeyBody(String privateKeyBody) {
+        this.privateKeyBody = privateKeyBody;
+        return this;
+    }
+    public String getPrivateKeyBody() {
+        return this.privateKeyBody;
+    }
+
 }

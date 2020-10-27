@@ -37,4 +37,76 @@ public class DescribeDeploymentSetsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDeploymentSetsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDeploymentSetsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDeploymentSetsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDeploymentSetsRequest setDeploymentSetIds(String deploymentSetIds) {
+        this.deploymentSetIds = deploymentSetIds;
+        return this;
+    }
+    public String getDeploymentSetIds() {
+        return this.deploymentSetIds;
+    }
+
+    public DescribeDeploymentSetsRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    public DescribeDeploymentSetsRequest setStrategy(String strategy) {
+        this.strategy = strategy;
+        return this;
+    }
+    public String getStrategy() {
+        return this.strategy;
+    }
+
+    public DescribeDeploymentSetsRequest setDeploymentSetName(String deploymentSetName) {
+        this.deploymentSetName = deploymentSetName;
+        return this;
+    }
+    public String getDeploymentSetName() {
+        return this.deploymentSetName;
+    }
+
+    public DescribeDeploymentSetsRequest setGranularity(String granularity) {
+        this.granularity = granularity;
+        return this;
+    }
+    public String getGranularity() {
+        return this.granularity;
+    }
+
+    public DescribeDeploymentSetsRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
+    }
+
 }

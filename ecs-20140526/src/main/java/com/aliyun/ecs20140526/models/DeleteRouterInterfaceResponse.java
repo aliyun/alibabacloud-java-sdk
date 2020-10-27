@@ -13,4 +13,12 @@ public class DeleteRouterInterfaceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteRouterInterfaceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

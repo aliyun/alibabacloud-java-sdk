@@ -17,4 +17,20 @@ public class DescribeUserBusinessBehaviorResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeUserBusinessBehaviorResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeUserBusinessBehaviorResponse setStatusValue(String statusValue) {
+        this.statusValue = statusValue;
+        return this;
+    }
+    public String getStatusValue() {
+        return this.statusValue;
+    }
+
 }

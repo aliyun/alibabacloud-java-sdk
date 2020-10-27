@@ -17,4 +17,20 @@ public class ResetDiskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ResetDiskRequest setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    public ResetDiskRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
 }

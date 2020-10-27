@@ -26,4 +26,44 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeForwardTableEntriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeForwardTableEntriesRequest setForwardTableId(String forwardTableId) {
+        this.forwardTableId = forwardTableId;
+        return this;
+    }
+    public String getForwardTableId() {
+        return this.forwardTableId;
+    }
+
+    public DescribeForwardTableEntriesRequest setForwardEntryId(String forwardEntryId) {
+        this.forwardEntryId = forwardEntryId;
+        return this;
+    }
+    public String getForwardEntryId() {
+        return this.forwardEntryId;
+    }
+
+    public DescribeForwardTableEntriesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeForwardTableEntriesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

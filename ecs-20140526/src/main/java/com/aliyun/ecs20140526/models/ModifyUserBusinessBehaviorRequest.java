@@ -20,4 +20,28 @@ public class ModifyUserBusinessBehaviorRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyUserBusinessBehaviorRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyUserBusinessBehaviorRequest setStatusKey(String statusKey) {
+        this.statusKey = statusKey;
+        return this;
+    }
+    public String getStatusKey() {
+        return this.statusKey;
+    }
+
+    public ModifyUserBusinessBehaviorRequest setStatusValue(String statusValue) {
+        this.statusValue = statusValue;
+        return this;
+    }
+    public String getStatusValue() {
+        return this.statusValue;
+    }
+
 }

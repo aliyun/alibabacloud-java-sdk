@@ -17,4 +17,20 @@ public class CreateDeploymentSetResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDeploymentSetResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDeploymentSetResponse setDeploymentSetId(String deploymentSetId) {
+        this.deploymentSetId = deploymentSetId;
+        return this;
+    }
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
+    }
+
 }

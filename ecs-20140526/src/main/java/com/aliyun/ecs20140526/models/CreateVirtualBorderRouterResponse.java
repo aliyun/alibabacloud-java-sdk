@@ -17,4 +17,20 @@ public class CreateVirtualBorderRouterResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateVirtualBorderRouterResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateVirtualBorderRouterResponse setVbrId(String vbrId) {
+        this.vbrId = vbrId;
+        return this;
+    }
+    public String getVbrId() {
+        return this.vbrId;
+    }
+
 }

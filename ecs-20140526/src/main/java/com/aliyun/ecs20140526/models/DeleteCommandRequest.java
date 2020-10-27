@@ -17,4 +17,20 @@ public class DeleteCommandRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteCommandRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteCommandRequest setCommandId(String commandId) {
+        this.commandId = commandId;
+        return this;
+    }
+    public String getCommandId() {
+        return this.commandId;
+    }
+
 }

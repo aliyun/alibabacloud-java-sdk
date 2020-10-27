@@ -29,6 +29,46 @@ public class DescribeAutoSnapshotPolicyExResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAutoSnapshotPolicyExResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAutoSnapshotPolicyExResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeAutoSnapshotPolicyExResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAutoSnapshotPolicyExResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeAutoSnapshotPolicyExResponse setAutoSnapshotPolicies(DescribeAutoSnapshotPolicyExResponseAutoSnapshotPolicies autoSnapshotPolicies) {
+        this.autoSnapshotPolicies = autoSnapshotPolicies;
+        return this;
+    }
+    public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPolicies getAutoSnapshotPolicies() {
+        return this.autoSnapshotPolicies;
+    }
+
     public static class DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag extends TeaModel {
         @NameInMap("TagKey")
         @Validation(required = true)
@@ -43,6 +83,22 @@ public class DescribeAutoSnapshotPolicyExResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
     public static class DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTags extends TeaModel {
@@ -53,6 +109,14 @@ public class DescribeAutoSnapshotPolicyExResponse extends TeaModel {
         public static DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTags build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTags self = new DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTags();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTags setTag(java.util.List<DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTagsTag> getTag() {
+            return this.tag;
         }
 
     }
@@ -119,6 +183,118 @@ public class DescribeAutoSnapshotPolicyExResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setAutoSnapshotPolicyName(String autoSnapshotPolicyName) {
+            this.autoSnapshotPolicyName = autoSnapshotPolicyName;
+            return this;
+        }
+        public String getAutoSnapshotPolicyName() {
+            return this.autoSnapshotPolicyName;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setTimePoints(String timePoints) {
+            this.timePoints = timePoints;
+            return this;
+        }
+        public String getTimePoints() {
+            return this.timePoints;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setRepeatWeekdays(String repeatWeekdays) {
+            this.repeatWeekdays = repeatWeekdays;
+            return this;
+        }
+        public String getRepeatWeekdays() {
+            return this.repeatWeekdays;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setRetentionDays(Integer retentionDays) {
+            this.retentionDays = retentionDays;
+            return this;
+        }
+        public Integer getRetentionDays() {
+            return this.retentionDays;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setDiskNums(Integer diskNums) {
+            this.diskNums = diskNums;
+            return this;
+        }
+        public Integer getDiskNums() {
+            return this.diskNums;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setVolumeNums(Integer volumeNums) {
+            this.volumeNums = volumeNums;
+            return this;
+        }
+        public Integer getVolumeNums() {
+            return this.volumeNums;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setEnableCrossRegionCopy(Boolean enableCrossRegionCopy) {
+            this.enableCrossRegionCopy = enableCrossRegionCopy;
+            return this;
+        }
+        public Boolean getEnableCrossRegionCopy() {
+            return this.enableCrossRegionCopy;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setTargetCopyRegions(String targetCopyRegions) {
+            this.targetCopyRegions = targetCopyRegions;
+            return this;
+        }
+        public String getTargetCopyRegions() {
+            return this.targetCopyRegions;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setCopiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
+            this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
+            return this;
+        }
+        public Integer getCopiedSnapshotsRetentionDays() {
+            return this.copiedSnapshotsRetentionDays;
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy setTags(DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicyTags getTags() {
+            return this.tags;
+        }
+
     }
 
     public static class DescribeAutoSnapshotPolicyExResponseAutoSnapshotPolicies extends TeaModel {
@@ -129,6 +305,14 @@ public class DescribeAutoSnapshotPolicyExResponse extends TeaModel {
         public static DescribeAutoSnapshotPolicyExResponseAutoSnapshotPolicies build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoSnapshotPolicyExResponseAutoSnapshotPolicies self = new DescribeAutoSnapshotPolicyExResponseAutoSnapshotPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoSnapshotPolicyExResponseAutoSnapshotPolicies setAutoSnapshotPolicy(java.util.List<DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy> autoSnapshotPolicy) {
+            this.autoSnapshotPolicy = autoSnapshotPolicy;
+            return this;
+        }
+        public java.util.List<DescribeAutoSnapshotPolicyExResponseAutoSnapshotPoliciesAutoSnapshotPolicy> getAutoSnapshotPolicy() {
+            return this.autoSnapshotPolicy;
         }
 
     }

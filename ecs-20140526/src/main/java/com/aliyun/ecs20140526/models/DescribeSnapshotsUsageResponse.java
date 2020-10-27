@@ -21,4 +21,28 @@ public class DescribeSnapshotsUsageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSnapshotsUsageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSnapshotsUsageResponse setSnapshotCount(Integer snapshotCount) {
+        this.snapshotCount = snapshotCount;
+        return this;
+    }
+    public Integer getSnapshotCount() {
+        return this.snapshotCount;
+    }
+
+    public DescribeSnapshotsUsageResponse setSnapshotSize(Long snapshotSize) {
+        this.snapshotSize = snapshotSize;
+        return this;
+    }
+    public Long getSnapshotSize() {
+        return this.snapshotSize;
+    }
+
 }

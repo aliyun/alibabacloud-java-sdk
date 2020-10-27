@@ -13,4 +13,12 @@ public class ModifyStorageCapacityUnitAttributeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyStorageCapacityUnitAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

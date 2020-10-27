@@ -27,4 +27,44 @@ public class RenewDedicatedHostsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RenewDedicatedHostsRequest setDedicatedHostIds(String dedicatedHostIds) {
+        this.dedicatedHostIds = dedicatedHostIds;
+        return this;
+    }
+    public String getDedicatedHostIds() {
+        return this.dedicatedHostIds;
+    }
+
+    public RenewDedicatedHostsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RenewDedicatedHostsRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public RenewDedicatedHostsRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    public RenewDedicatedHostsRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

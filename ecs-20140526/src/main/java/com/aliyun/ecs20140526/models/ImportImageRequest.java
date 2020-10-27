@@ -46,6 +46,102 @@ public class ImportImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImportImageRequest setDiskDeviceMapping(java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping) {
+        this.diskDeviceMapping = diskDeviceMapping;
+        return this;
+    }
+    public java.util.List<ImportImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
+        return this.diskDeviceMapping;
+    }
+
+    public ImportImageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ImportImageRequest setImageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+    public String getImageName() {
+        return this.imageName;
+    }
+
+    public ImportImageRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ImportImageRequest setArchitecture(String architecture) {
+        this.architecture = architecture;
+        return this;
+    }
+    public String getArchitecture() {
+        return this.architecture;
+    }
+
+    public ImportImageRequest setOSType(String OSType) {
+        this.OSType = OSType;
+        return this;
+    }
+    public String getOSType() {
+        return this.OSType;
+    }
+
+    public ImportImageRequest setPlatform(String platform) {
+        this.platform = platform;
+        return this;
+    }
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    public ImportImageRequest setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+        return this;
+    }
+    public String getBootMode() {
+        return this.bootMode;
+    }
+
+    public ImportImageRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
+    }
+
+    public ImportImageRequest setLicenseType(String licenseType) {
+        this.licenseType = licenseType;
+        return this;
+    }
+    public String getLicenseType() {
+        return this.licenseType;
+    }
+
+    public ImportImageRequest setTag(java.util.List<ImportImageRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ImportImageRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public ImportImageRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static class ImportImageRequestDiskDeviceMapping extends TeaModel {
         @NameInMap("Format")
         public String format;
@@ -70,20 +166,82 @@ public class ImportImageRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ImportImageRequestDiskDeviceMapping setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setOSSBucket(String OSSBucket) {
+            this.OSSBucket = OSSBucket;
+            return this;
+        }
+        public String getOSSBucket() {
+            return this.OSSBucket;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setOSSObject(String OSSObject) {
+            this.OSSObject = OSSObject;
+            return this;
+        }
+        public String getOSSObject() {
+            return this.OSSObject;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setDiskImSize(Integer diskImSize) {
+            this.diskImSize = diskImSize;
+            return this;
+        }
+        public Integer getDiskImSize() {
+            return this.diskImSize;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setDiskImageSize(Integer diskImageSize) {
+            this.diskImageSize = diskImageSize;
+            return this;
+        }
+        public Integer getDiskImageSize() {
+            return this.diskImageSize;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
     }
 
     public static class ImportImageRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static ImportImageRequestTag build(java.util.Map<String, ?> map) throws Exception {
             ImportImageRequestTag self = new ImportImageRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public ImportImageRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ImportImageRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

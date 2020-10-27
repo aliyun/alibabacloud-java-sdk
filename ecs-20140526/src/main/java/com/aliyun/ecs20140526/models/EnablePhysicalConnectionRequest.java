@@ -24,4 +24,36 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public EnablePhysicalConnectionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public EnablePhysicalConnectionRequest setPhysicalConnectionId(String physicalConnectionId) {
+        this.physicalConnectionId = physicalConnectionId;
+        return this;
+    }
+    public String getPhysicalConnectionId() {
+        return this.physicalConnectionId;
+    }
+
+    public EnablePhysicalConnectionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public EnablePhysicalConnectionRequest setUserCidr(String userCidr) {
+        this.userCidr = userCidr;
+        return this;
+    }
+    public String getUserCidr() {
+        return this.userCidr;
+    }
+
 }

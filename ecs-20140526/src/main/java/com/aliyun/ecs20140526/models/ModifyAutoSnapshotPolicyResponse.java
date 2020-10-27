@@ -13,4 +13,12 @@ public class ModifyAutoSnapshotPolicyResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyAutoSnapshotPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

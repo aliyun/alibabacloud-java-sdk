@@ -17,4 +17,20 @@ public class ModifyDiskChargeTypeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyDiskChargeTypeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyDiskChargeTypeResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
 }

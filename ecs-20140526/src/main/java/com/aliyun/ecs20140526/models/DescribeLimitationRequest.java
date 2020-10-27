@@ -13,4 +13,12 @@ public class DescribeLimitationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeLimitationRequest setLimitation(String limitation) {
+        this.limitation = limitation;
+        return this;
+    }
+    public String getLimitation() {
+        return this.limitation;
+    }
+
 }

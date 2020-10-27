@@ -19,4 +19,28 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifySnapshotAttributeRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
+    public ModifySnapshotAttributeRequest setSnapshotName(String snapshotName) {
+        this.snapshotName = snapshotName;
+        return this;
+    }
+    public String getSnapshotName() {
+        return this.snapshotName;
+    }
+
+    public ModifySnapshotAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

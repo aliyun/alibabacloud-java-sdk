@@ -17,4 +17,20 @@ public class ExportSnapshotResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ExportSnapshotResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ExportSnapshotResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
 }

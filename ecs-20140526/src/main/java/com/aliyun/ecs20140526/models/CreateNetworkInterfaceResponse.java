@@ -81,6 +81,150 @@ public class CreateNetworkInterfaceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateNetworkInterfaceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateNetworkInterfaceResponse setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public CreateNetworkInterfaceResponse setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public CreateNetworkInterfaceResponse setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public CreateNetworkInterfaceResponse setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateNetworkInterfaceResponse setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    public CreateNetworkInterfaceResponse setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public CreateNetworkInterfaceResponse setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public CreateNetworkInterfaceResponse setMacAddress(String macAddress) {
+        this.macAddress = macAddress;
+        return this;
+    }
+    public String getMacAddress() {
+        return this.macAddress;
+    }
+
+    public CreateNetworkInterfaceResponse setNetworkInterfaceName(String networkInterfaceName) {
+        this.networkInterfaceName = networkInterfaceName;
+        return this;
+    }
+    public String getNetworkInterfaceName() {
+        return this.networkInterfaceName;
+    }
+
+    public CreateNetworkInterfaceResponse setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateNetworkInterfaceResponse setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateNetworkInterfaceResponse setServiceID(Long serviceID) {
+        this.serviceID = serviceID;
+        return this;
+    }
+    public Long getServiceID() {
+        return this.serviceID;
+    }
+
+    public CreateNetworkInterfaceResponse setServiceManaged(Boolean serviceManaged) {
+        this.serviceManaged = serviceManaged;
+        return this;
+    }
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    public CreateNetworkInterfaceResponse setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateNetworkInterfaceResponse setPrivateIpSets(CreateNetworkInterfaceResponsePrivateIpSets privateIpSets) {
+        this.privateIpSets = privateIpSets;
+        return this;
+    }
+    public CreateNetworkInterfaceResponsePrivateIpSets getPrivateIpSets() {
+        return this.privateIpSets;
+    }
+
+    public CreateNetworkInterfaceResponse setTags(CreateNetworkInterfaceResponseTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public CreateNetworkInterfaceResponseTags getTags() {
+        return this.tags;
+    }
+
+    public CreateNetworkInterfaceResponse setSecurityGroupIds(CreateNetworkInterfaceResponseSecurityGroupIds securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public CreateNetworkInterfaceResponseSecurityGroupIds getSecurityGroupIds() {
+        return this.securityGroupIds;
+    }
+
     public static class CreateNetworkInterfaceResponsePrivateIpSetsPrivateIpSet extends TeaModel {
         @NameInMap("PrivateIpAddress")
         @Validation(required = true)
@@ -95,6 +239,22 @@ public class CreateNetworkInterfaceResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateNetworkInterfaceResponsePrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public CreateNetworkInterfaceResponsePrivateIpSetsPrivateIpSet setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
     }
 
     public static class CreateNetworkInterfaceResponsePrivateIpSets extends TeaModel {
@@ -105,6 +265,14 @@ public class CreateNetworkInterfaceResponse extends TeaModel {
         public static CreateNetworkInterfaceResponsePrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
             CreateNetworkInterfaceResponsePrivateIpSets self = new CreateNetworkInterfaceResponsePrivateIpSets();
             return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceResponsePrivateIpSets setPrivateIpSet(java.util.List<CreateNetworkInterfaceResponsePrivateIpSetsPrivateIpSet> privateIpSet) {
+            this.privateIpSet = privateIpSet;
+            return this;
+        }
+        public java.util.List<CreateNetworkInterfaceResponsePrivateIpSetsPrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
         }
 
     }
@@ -123,6 +291,22 @@ public class CreateNetworkInterfaceResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateNetworkInterfaceResponseTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public CreateNetworkInterfaceResponseTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
     public static class CreateNetworkInterfaceResponseTags extends TeaModel {
@@ -135,6 +319,14 @@ public class CreateNetworkInterfaceResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateNetworkInterfaceResponseTags setTag(java.util.List<CreateNetworkInterfaceResponseTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<CreateNetworkInterfaceResponseTagsTag> getTag() {
+            return this.tag;
+        }
+
     }
 
     public static class CreateNetworkInterfaceResponseSecurityGroupIds extends TeaModel {
@@ -145,6 +337,14 @@ public class CreateNetworkInterfaceResponse extends TeaModel {
         public static CreateNetworkInterfaceResponseSecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
             CreateNetworkInterfaceResponseSecurityGroupIds self = new CreateNetworkInterfaceResponseSecurityGroupIds();
             return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceResponseSecurityGroupIds setSecurityGroupId(java.util.List<String> securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
     }

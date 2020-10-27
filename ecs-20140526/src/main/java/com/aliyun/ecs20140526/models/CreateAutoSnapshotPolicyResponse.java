@@ -17,4 +17,20 @@ public class CreateAutoSnapshotPolicyResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateAutoSnapshotPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateAutoSnapshotPolicyResponse setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+        this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+        return this;
+    }
+    public String getAutoSnapshotPolicyId() {
+        return this.autoSnapshotPolicyId;
+    }
+
 }

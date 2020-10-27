@@ -29,6 +29,46 @@ public class DescribeInstanceMaintenanceAttributesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceMaintenanceAttributesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeInstanceMaintenanceAttributesResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeInstanceMaintenanceAttributesResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeInstanceMaintenanceAttributesResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeInstanceMaintenanceAttributesResponse setMaintenanceAttributes(DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributes maintenanceAttributes) {
+        this.maintenanceAttributes = maintenanceAttributes;
+        return this;
+    }
+    public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributes getMaintenanceAttributes() {
+        return this.maintenanceAttributes;
+    }
+
     public static class DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow extends TeaModel {
         @NameInMap("StartTime")
         @Validation(required = true)
@@ -43,6 +83,22 @@ public class DescribeInstanceMaintenanceAttributesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindows extends TeaModel {
@@ -53,6 +109,14 @@ public class DescribeInstanceMaintenanceAttributesResponse extends TeaModel {
         public static DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindows build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindows self = new DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindows();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindows setMaintenanceWindow(java.util.List<DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow> maintenanceWindow) {
+            this.maintenanceWindow = maintenanceWindow;
+            return this;
+        }
+        public java.util.List<DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow> getMaintenanceWindow() {
+            return this.maintenanceWindow;
         }
 
     }
@@ -66,6 +130,14 @@ public class DescribeInstanceMaintenanceAttributesResponse extends TeaModel {
         public static DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues self = new DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues setSupportedValue(java.util.List<String> supportedValue) {
+            this.supportedValue = supportedValue;
+            return this;
+        }
+        public java.util.List<String> getSupportedValue() {
+            return this.supportedValue;
         }
 
     }
@@ -88,6 +160,30 @@ public class DescribeInstanceMaintenanceAttributesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenance setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenance setDefaultValue(String defaultValue) {
+            this.defaultValue = defaultValue;
+            return this;
+        }
+        public String getDefaultValue() {
+            return this.defaultValue;
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenance setSupportedValues(DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues) {
+            this.supportedValues = supportedValues;
+            return this;
+        }
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues getSupportedValues() {
+            return this.supportedValues;
+        }
+
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttribute extends TeaModel {
@@ -108,6 +204,30 @@ public class DescribeInstanceMaintenanceAttributesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttribute setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttribute setMaintenanceWindows(DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows) {
+            this.maintenanceWindows = maintenanceWindows;
+            return this;
+        }
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeMaintenanceWindows getMaintenanceWindows() {
+            return this.maintenanceWindows;
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttribute setActionOnMaintenance(DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance) {
+            this.actionOnMaintenance = actionOnMaintenance;
+            return this;
+        }
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttributeActionOnMaintenance getActionOnMaintenance() {
+            return this.actionOnMaintenance;
+        }
+
     }
 
     public static class DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributes extends TeaModel {
@@ -118,6 +238,14 @@ public class DescribeInstanceMaintenanceAttributesResponse extends TeaModel {
         public static DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributes build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributes self = new DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributes setMaintenanceAttribute(java.util.List<DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttribute> maintenanceAttribute) {
+            this.maintenanceAttribute = maintenanceAttribute;
+            return this;
+        }
+        public java.util.List<DescribeInstanceMaintenanceAttributesResponseMaintenanceAttributesMaintenanceAttribute> getMaintenanceAttribute() {
+            return this.maintenanceAttribute;
         }
 
     }

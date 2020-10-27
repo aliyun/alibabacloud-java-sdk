@@ -24,4 +24,36 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetachNetworkInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DetachNetworkInterfaceRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public DetachNetworkInterfaceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DetachNetworkInterfaceRequest setTrunkNetworkInstanceId(String trunkNetworkInstanceId) {
+        this.trunkNetworkInstanceId = trunkNetworkInstanceId;
+        return this;
+    }
+    public String getTrunkNetworkInstanceId() {
+        return this.trunkNetworkInstanceId;
+    }
+
 }

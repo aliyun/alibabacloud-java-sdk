@@ -16,4 +16,20 @@ public class RedeployInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RedeployInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public RedeployInstanceRequest setForceStop(Boolean forceStop) {
+        this.forceStop = forceStop;
+        return this;
+    }
+    public Boolean getForceStop() {
+        return this.forceStop;
+    }
+
 }

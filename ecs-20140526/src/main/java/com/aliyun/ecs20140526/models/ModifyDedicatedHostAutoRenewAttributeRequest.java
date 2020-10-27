@@ -29,4 +29,52 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyDedicatedHostAutoRenewAttributeRequest setDedicatedHostIds(String dedicatedHostIds) {
+        this.dedicatedHostIds = dedicatedHostIds;
+        return this;
+    }
+    public String getDedicatedHostIds() {
+        return this.dedicatedHostIds;
+    }
+
+    public ModifyDedicatedHostAutoRenewAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyDedicatedHostAutoRenewAttributeRequest setDuration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Integer getDuration() {
+        return this.duration;
+    }
+
+    public ModifyDedicatedHostAutoRenewAttributeRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    public ModifyDedicatedHostAutoRenewAttributeRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public ModifyDedicatedHostAutoRenewAttributeRequest setRenewalStatus(String renewalStatus) {
+        this.renewalStatus = renewalStatus;
+        return this;
+    }
+    public String getRenewalStatus() {
+        return this.renewalStatus;
+    }
+
 }

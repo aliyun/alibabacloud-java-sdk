@@ -30,4 +30,52 @@ public class ExportImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ExportImageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ExportImageRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public ExportImageRequest setOSSBucket(String OSSBucket) {
+        this.OSSBucket = OSSBucket;
+        return this;
+    }
+    public String getOSSBucket() {
+        return this.OSSBucket;
+    }
+
+    public ExportImageRequest setOSSPrefix(String OSSPrefix) {
+        this.OSSPrefix = OSSPrefix;
+        return this;
+    }
+    public String getOSSPrefix() {
+        return this.OSSPrefix;
+    }
+
+    public ExportImageRequest setImageFormat(String imageFormat) {
+        this.imageFormat = imageFormat;
+        return this;
+    }
+    public String getImageFormat() {
+        return this.imageFormat;
+    }
+
+    public ExportImageRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
+    }
+
 }

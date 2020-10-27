@@ -37,4 +37,68 @@ public class ReportInstancesStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ReportInstancesStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ReportInstancesStatusRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ReportInstancesStatusRequest setDiskId(java.util.List<String> diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public java.util.List<String> getDiskId() {
+        return this.diskId;
+    }
+
+    public ReportInstancesStatusRequest setDevice(java.util.List<String> device) {
+        this.device = device;
+        return this;
+    }
+    public java.util.List<String> getDevice() {
+        return this.device;
+    }
+
+    public ReportInstancesStatusRequest setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
+    }
+
+    public ReportInstancesStatusRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ReportInstancesStatusRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public ReportInstancesStatusRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
 }

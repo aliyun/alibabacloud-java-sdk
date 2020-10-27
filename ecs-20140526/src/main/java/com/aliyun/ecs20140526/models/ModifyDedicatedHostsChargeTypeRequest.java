@@ -38,4 +38,76 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyDedicatedHostsChargeTypeRequest setDedicatedHostIds(String dedicatedHostIds) {
+        this.dedicatedHostIds = dedicatedHostIds;
+        return this;
+    }
+    public String getDedicatedHostIds() {
+        return this.dedicatedHostIds;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setDedicatedHostChargeType(String dedicatedHostChargeType) {
+        this.dedicatedHostChargeType = dedicatedHostChargeType;
+        return this;
+    }
+    public String getDedicatedHostChargeType() {
+        return this.dedicatedHostChargeType;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyDedicatedHostsChargeTypeRequest setDetailFee(Boolean detailFee) {
+        this.detailFee = detailFee;
+        return this;
+    }
+    public Boolean getDetailFee() {
+        return this.detailFee;
+    }
+
 }

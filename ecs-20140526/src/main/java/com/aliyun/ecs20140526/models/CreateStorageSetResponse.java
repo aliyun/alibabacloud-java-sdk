@@ -17,4 +17,20 @@ public class CreateStorageSetResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateStorageSetResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateStorageSetResponse setStorageSetId(String storageSetId) {
+        this.storageSetId = storageSetId;
+        return this;
+    }
+    public String getStorageSetId() {
+        return this.storageSetId;
+    }
+
 }

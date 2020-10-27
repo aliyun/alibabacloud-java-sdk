@@ -33,4 +33,68 @@ public class DescribeRouteTablesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRouteTablesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeRouteTablesRequest setVRouterId(String VRouterId) {
+        this.VRouterId = VRouterId;
+        return this;
+    }
+    public String getVRouterId() {
+        return this.VRouterId;
+    }
+
+    public DescribeRouteTablesRequest setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
+    public DescribeRouteTablesRequest setRouterType(String routerType) {
+        this.routerType = routerType;
+        return this;
+    }
+    public String getRouterType() {
+        return this.routerType;
+    }
+
+    public DescribeRouteTablesRequest setRouterId(String routerId) {
+        this.routerId = routerId;
+        return this;
+    }
+    public String getRouterId() {
+        return this.routerId;
+    }
+
+    public DescribeRouteTablesRequest setRouteTableName(String routeTableName) {
+        this.routeTableName = routeTableName;
+        return this;
+    }
+    public String getRouteTableName() {
+        return this.routeTableName;
+    }
+
+    public DescribeRouteTablesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeRouteTablesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

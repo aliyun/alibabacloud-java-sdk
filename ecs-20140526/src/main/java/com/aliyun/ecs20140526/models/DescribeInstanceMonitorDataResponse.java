@@ -17,6 +17,22 @@ public class DescribeInstanceMonitorDataResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceMonitorDataResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeInstanceMonitorDataResponse setMonitorData(DescribeInstanceMonitorDataResponseMonitorData monitorData) {
+        this.monitorData = monitorData;
+        return this;
+    }
+    public DescribeInstanceMonitorDataResponseMonitorData getMonitorData() {
+        return this.monitorData;
+    }
+
     public static class DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData extends TeaModel {
         @NameInMap("InstanceId")
         @Validation(required = true)
@@ -68,19 +84,19 @@ public class DescribeInstanceMonitorDataResponse extends TeaModel {
 
         @NameInMap("CPUCreditUsage")
         @Validation(required = true)
-        public Double CPUCreditUsage;
+        public Float CPUCreditUsage;
 
         @NameInMap("CPUCreditBalance")
         @Validation(required = true)
-        public Double CPUCreditBalance;
+        public Float CPUCreditBalance;
 
         @NameInMap("CPUAdvanceCreditBalance")
         @Validation(required = true)
-        public Double CPUAdvanceCreditBalance;
+        public Float CPUAdvanceCreditBalance;
 
         @NameInMap("CPUNotpaidSurplusCreditUsage")
         @Validation(required = true)
-        public Double CPUNotpaidSurplusCreditUsage;
+        public Float CPUNotpaidSurplusCreditUsage;
 
         @NameInMap("TimeStamp")
         @Validation(required = true)
@@ -89,6 +105,142 @@ public class DescribeInstanceMonitorDataResponse extends TeaModel {
         public static DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData self = new DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setCPU(Integer CPU) {
+            this.CPU = CPU;
+            return this;
+        }
+        public Integer getCPU() {
+            return this.CPU;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setIntranetRX(Integer intranetRX) {
+            this.intranetRX = intranetRX;
+            return this;
+        }
+        public Integer getIntranetRX() {
+            return this.intranetRX;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setIntranetTX(Integer intranetTX) {
+            this.intranetTX = intranetTX;
+            return this;
+        }
+        public Integer getIntranetTX() {
+            return this.intranetTX;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setIntranetBandwidth(Integer intranetBandwidth) {
+            this.intranetBandwidth = intranetBandwidth;
+            return this;
+        }
+        public Integer getIntranetBandwidth() {
+            return this.intranetBandwidth;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setInternetRX(Integer internetRX) {
+            this.internetRX = internetRX;
+            return this;
+        }
+        public Integer getInternetRX() {
+            return this.internetRX;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setInternetTX(Integer internetTX) {
+            this.internetTX = internetTX;
+            return this;
+        }
+        public Integer getInternetTX() {
+            return this.internetTX;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setInternetBandwidth(Integer internetBandwidth) {
+            this.internetBandwidth = internetBandwidth;
+            return this;
+        }
+        public Integer getInternetBandwidth() {
+            return this.internetBandwidth;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setIOPSRead(Integer IOPSRead) {
+            this.IOPSRead = IOPSRead;
+            return this;
+        }
+        public Integer getIOPSRead() {
+            return this.IOPSRead;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setIOPSWrite(Integer IOPSWrite) {
+            this.IOPSWrite = IOPSWrite;
+            return this;
+        }
+        public Integer getIOPSWrite() {
+            return this.IOPSWrite;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setBPSRead(Integer BPSRead) {
+            this.BPSRead = BPSRead;
+            return this;
+        }
+        public Integer getBPSRead() {
+            return this.BPSRead;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setBPSWrite(Integer BPSWrite) {
+            this.BPSWrite = BPSWrite;
+            return this;
+        }
+        public Integer getBPSWrite() {
+            return this.BPSWrite;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setCPUCreditUsage(Float CPUCreditUsage) {
+            this.CPUCreditUsage = CPUCreditUsage;
+            return this;
+        }
+        public Float getCPUCreditUsage() {
+            return this.CPUCreditUsage;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setCPUCreditBalance(Float CPUCreditBalance) {
+            this.CPUCreditBalance = CPUCreditBalance;
+            return this;
+        }
+        public Float getCPUCreditBalance() {
+            return this.CPUCreditBalance;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setCPUAdvanceCreditBalance(Float CPUAdvanceCreditBalance) {
+            this.CPUAdvanceCreditBalance = CPUAdvanceCreditBalance;
+            return this;
+        }
+        public Float getCPUAdvanceCreditBalance() {
+            return this.CPUAdvanceCreditBalance;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setCPUNotpaidSurplusCreditUsage(Float CPUNotpaidSurplusCreditUsage) {
+            this.CPUNotpaidSurplusCreditUsage = CPUNotpaidSurplusCreditUsage;
+            return this;
+        }
+        public Float getCPUNotpaidSurplusCreditUsage() {
+            return this.CPUNotpaidSurplusCreditUsage;
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }
@@ -101,6 +253,14 @@ public class DescribeInstanceMonitorDataResponse extends TeaModel {
         public static DescribeInstanceMonitorDataResponseMonitorData build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceMonitorDataResponseMonitorData self = new DescribeInstanceMonitorDataResponseMonitorData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMonitorDataResponseMonitorData setInstanceMonitorData(java.util.List<DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData> instanceMonitorData) {
+            this.instanceMonitorData = instanceMonitorData;
+            return this;
+        }
+        public java.util.List<DescribeInstanceMonitorDataResponseMonitorDataInstanceMonitorData> getInstanceMonitorData() {
+            return this.instanceMonitorData;
         }
 
     }

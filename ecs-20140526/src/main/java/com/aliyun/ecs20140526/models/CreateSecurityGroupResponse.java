@@ -17,4 +17,20 @@ public class CreateSecurityGroupResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSecurityGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateSecurityGroupResponse setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
 }

@@ -13,4 +13,12 @@ public class ModifyHpcClusterAttributeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyHpcClusterAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

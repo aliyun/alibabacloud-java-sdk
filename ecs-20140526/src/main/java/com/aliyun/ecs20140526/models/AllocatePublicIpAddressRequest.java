@@ -19,4 +19,28 @@ public class AllocatePublicIpAddressRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AllocatePublicIpAddressRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public AllocatePublicIpAddressRequest setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+        return this;
+    }
+    public String getIpAddress() {
+        return this.ipAddress;
+    }
+
+    public AllocatePublicIpAddressRequest setVlanId(String vlanId) {
+        this.vlanId = vlanId;
+        return this;
+    }
+    public String getVlanId() {
+        return this.vlanId;
+    }
+
 }

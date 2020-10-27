@@ -21,7 +21,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public Boolean terminateInstancesWithExpiration;
 
     @NameInMap("MaxSpotPrice")
-    public Double maxSpotPrice;
+    public Float maxSpotPrice;
 
     @NameInMap("TotalTargetCapacity")
     public String totalTargetCapacity;
@@ -38,6 +38,86 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public static ModifyAutoProvisioningGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAutoProvisioningGroupRequest self = new ModifyAutoProvisioningGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAutoProvisioningGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setAutoProvisioningGroupId(String autoProvisioningGroupId) {
+        this.autoProvisioningGroupId = autoProvisioningGroupId;
+        return this;
+    }
+    public String getAutoProvisioningGroupId() {
+        return this.autoProvisioningGroupId;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setExcessCapacityTerminationPolicy(String excessCapacityTerminationPolicy) {
+        this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
+        return this;
+    }
+    public String getExcessCapacityTerminationPolicy() {
+        return this.excessCapacityTerminationPolicy;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setDefaultTargetCapacityType(String defaultTargetCapacityType) {
+        this.defaultTargetCapacityType = defaultTargetCapacityType;
+        return this;
+    }
+    public String getDefaultTargetCapacityType() {
+        return this.defaultTargetCapacityType;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setTerminateInstancesWithExpiration(Boolean terminateInstancesWithExpiration) {
+        this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
+        return this;
+    }
+    public Boolean getTerminateInstancesWithExpiration() {
+        return this.terminateInstancesWithExpiration;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setMaxSpotPrice(Float maxSpotPrice) {
+        this.maxSpotPrice = maxSpotPrice;
+        return this;
+    }
+    public Float getMaxSpotPrice() {
+        return this.maxSpotPrice;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setTotalTargetCapacity(String totalTargetCapacity) {
+        this.totalTargetCapacity = totalTargetCapacity;
+        return this;
+    }
+    public String getTotalTargetCapacity() {
+        return this.totalTargetCapacity;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setPayAsYouGoTargetCapacity(String payAsYouGoTargetCapacity) {
+        this.payAsYouGoTargetCapacity = payAsYouGoTargetCapacity;
+        return this;
+    }
+    public String getPayAsYouGoTargetCapacity() {
+        return this.payAsYouGoTargetCapacity;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setSpotTargetCapacity(String spotTargetCapacity) {
+        this.spotTargetCapacity = spotTargetCapacity;
+        return this;
+    }
+    public String getSpotTargetCapacity() {
+        return this.spotTargetCapacity;
+    }
+
+    public ModifyAutoProvisioningGroupRequest setAutoProvisioningGroupName(String autoProvisioningGroupName) {
+        this.autoProvisioningGroupName = autoProvisioningGroupName;
+        return this;
+    }
+    public String getAutoProvisioningGroupName() {
+        return this.autoProvisioningGroupName;
     }
 
 }

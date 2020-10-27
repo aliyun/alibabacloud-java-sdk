@@ -23,4 +23,36 @@ public class DeleteRouterInterfaceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteRouterInterfaceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteRouterInterfaceRequest setRouterInterfaceId(String routerInterfaceId) {
+        this.routerInterfaceId = routerInterfaceId;
+        return this;
+    }
+    public String getRouterInterfaceId() {
+        return this.routerInterfaceId;
+    }
+
+    public DeleteRouterInterfaceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteRouterInterfaceRequest setUserCidr(String userCidr) {
+        this.userCidr = userCidr;
+        return this;
+    }
+    public String getUserCidr() {
+        return this.userCidr;
+    }
+
 }

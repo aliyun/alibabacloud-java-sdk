@@ -13,4 +13,12 @@ public class DescribeInstanceAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
 }

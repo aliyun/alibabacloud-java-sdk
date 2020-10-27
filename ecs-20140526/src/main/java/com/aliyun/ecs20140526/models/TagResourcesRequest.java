@@ -25,13 +25,43 @@ public class TagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public TagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
+    }
+
+    public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<TagResourcesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public static class TagResourcesRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static TagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
@@ -39,20 +69,50 @@ public class TagResourcesRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public TagResourcesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public TagResourcesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesRequestTag self = new ListTagResourcesRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public ListTagResourcesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTagResourcesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -68,6 +128,22 @@ public class TagResourcesRequest extends TeaModel {
         public static ListTagResourcesRequestTagFilter build(java.util.Map<String, ?> map) throws Exception {
             ListTagResourcesRequestTagFilter self = new ListTagResourcesRequestTagFilter();
             return TeaModel.build(map, self);
+        }
+
+        public ListTagResourcesRequestTagFilter setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListTagResourcesRequestTagFilter setTagValues(java.util.List<String> tagValues) {
+            this.tagValues = tagValues;
+            return this;
+        }
+        public java.util.List<String> getTagValues() {
+            return this.tagValues;
         }
 
     }

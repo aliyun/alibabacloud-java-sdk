@@ -13,4 +13,12 @@ public class ModifyLaunchTemplateDefaultVersionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyLaunchTemplateDefaultVersionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

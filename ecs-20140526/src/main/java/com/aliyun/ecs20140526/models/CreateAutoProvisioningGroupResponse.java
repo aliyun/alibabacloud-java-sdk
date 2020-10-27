@@ -17,4 +17,20 @@ public class CreateAutoProvisioningGroupResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateAutoProvisioningGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateAutoProvisioningGroupResponse setAutoProvisioningGroupId(String autoProvisioningGroupId) {
+        this.autoProvisioningGroupId = autoProvisioningGroupId;
+        return this;
+    }
+    public String getAutoProvisioningGroupId() {
+        return this.autoProvisioningGroupId;
+    }
+
 }

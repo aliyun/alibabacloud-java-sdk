@@ -17,6 +17,22 @@ public class AssignPrivateIpAddressesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AssignPrivateIpAddressesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AssignPrivateIpAddressesResponse setAssignedPrivateIpAddressesSet(AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
+        this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
+        return this;
+    }
+    public AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSet getAssignedPrivateIpAddressesSet() {
+        return this.assignedPrivateIpAddressesSet;
+    }
+
     public static class AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSetPrivateIpSet extends TeaModel {
         // PrivateIpAddress
         @NameInMap("PrivateIpAddress")
@@ -26,6 +42,14 @@ public class AssignPrivateIpAddressesResponse extends TeaModel {
         public static AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSetPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
             AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSetPrivateIpSet self = new AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSetPrivateIpSet();
             return TeaModel.build(map, self);
+        }
+
+        public AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSetPrivateIpSet setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public java.util.List<String> getPrivateIpAddress() {
+            return this.privateIpAddress;
         }
 
     }
@@ -42,6 +66,22 @@ public class AssignPrivateIpAddressesResponse extends TeaModel {
         public static AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSet build(java.util.Map<String, ?> map) throws Exception {
             AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSet self = new AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSet();
             return TeaModel.build(map, self);
+        }
+
+        public AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSet setNetworkInterfaceId(String networkInterfaceId) {
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
+        }
+
+        public AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSet setPrivateIpSet(AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSetPrivateIpSet privateIpSet) {
+            this.privateIpSet = privateIpSet;
+            return this;
+        }
+        public AssignPrivateIpAddressesResponseAssignedPrivateIpAddressesSetPrivateIpSet getPrivateIpSet() {
+            return this.privateIpSet;
         }
 
     }

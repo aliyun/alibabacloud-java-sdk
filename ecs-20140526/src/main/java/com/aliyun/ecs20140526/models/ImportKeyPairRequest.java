@@ -27,18 +27,72 @@ public class ImportKeyPairRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImportKeyPairRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ImportKeyPairRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    public ImportKeyPairRequest setPublicKeyBody(String publicKeyBody) {
+        this.publicKeyBody = publicKeyBody;
+        return this;
+    }
+    public String getPublicKeyBody() {
+        return this.publicKeyBody;
+    }
+
+    public ImportKeyPairRequest setTag(java.util.List<ImportKeyPairRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ImportKeyPairRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public ImportKeyPairRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static class ImportKeyPairRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static ImportKeyPairRequestTag build(java.util.Map<String, ?> map) throws Exception {
             ImportKeyPairRequestTag self = new ImportKeyPairRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public ImportKeyPairRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ImportKeyPairRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

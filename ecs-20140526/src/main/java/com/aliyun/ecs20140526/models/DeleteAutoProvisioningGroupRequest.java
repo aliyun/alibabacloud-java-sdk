@@ -21,4 +21,28 @@ public class DeleteAutoProvisioningGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteAutoProvisioningGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteAutoProvisioningGroupRequest setAutoProvisioningGroupId(String autoProvisioningGroupId) {
+        this.autoProvisioningGroupId = autoProvisioningGroupId;
+        return this;
+    }
+    public String getAutoProvisioningGroupId() {
+        return this.autoProvisioningGroupId;
+    }
+
+    public DeleteAutoProvisioningGroupRequest setTerminateInstances(Boolean terminateInstances) {
+        this.terminateInstances = terminateInstances;
+        return this;
+    }
+    public Boolean getTerminateInstances() {
+        return this.terminateInstances;
+    }
+
 }

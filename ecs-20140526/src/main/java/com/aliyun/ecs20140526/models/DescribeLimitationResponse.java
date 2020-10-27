@@ -21,4 +21,28 @@ public class DescribeLimitationResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeLimitationResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLimitationResponse setLimitation(String limitation) {
+        this.limitation = limitation;
+        return this;
+    }
+    public String getLimitation() {
+        return this.limitation;
+    }
+
+    public DescribeLimitationResponse setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
+    }
+
 }

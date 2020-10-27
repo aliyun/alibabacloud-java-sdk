@@ -20,4 +20,28 @@ public class DeleteHaVipRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteHaVipRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteHaVipRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteHaVipRequest setHaVipId(String haVipId) {
+        this.haVipId = haVipId;
+        return this;
+    }
+    public String getHaVipId() {
+        return this.haVipId;
+    }
+
 }

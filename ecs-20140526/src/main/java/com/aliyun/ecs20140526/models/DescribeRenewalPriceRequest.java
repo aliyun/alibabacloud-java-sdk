@@ -26,4 +26,44 @@ public class DescribeRenewalPriceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRenewalPriceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeRenewalPriceRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public DescribeRenewalPriceRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public DescribeRenewalPriceRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public DescribeRenewalPriceRequest setPriceUnit(String priceUnit) {
+        this.priceUnit = priceUnit;
+        return this;
+    }
+    public String getPriceUnit() {
+        return this.priceUnit;
+    }
+
 }

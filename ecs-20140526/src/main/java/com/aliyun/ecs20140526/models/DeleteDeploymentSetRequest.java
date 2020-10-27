@@ -17,4 +17,20 @@ public class DeleteDeploymentSetRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteDeploymentSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteDeploymentSetRequest setDeploymentSetId(String deploymentSetId) {
+        this.deploymentSetId = deploymentSetId;
+        return this;
+    }
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
+    }
+
 }

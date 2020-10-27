@@ -17,6 +17,22 @@ public class DescribeSnapshotMonitorDataResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSnapshotMonitorDataResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSnapshotMonitorDataResponse setMonitorData(DescribeSnapshotMonitorDataResponseMonitorData monitorData) {
+        this.monitorData = monitorData;
+        return this;
+    }
+    public DescribeSnapshotMonitorDataResponseMonitorData getMonitorData() {
+        return this.monitorData;
+    }
+
     public static class DescribeSnapshotMonitorDataResponseMonitorDataDataPoint extends TeaModel {
         @NameInMap("TimeStamp")
         @Validation(required = true)
@@ -31,6 +47,22 @@ public class DescribeSnapshotMonitorDataResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeSnapshotMonitorDataResponseMonitorDataDataPoint setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
+        }
+
+        public DescribeSnapshotMonitorDataResponseMonitorDataDataPoint setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
     }
 
     public static class DescribeSnapshotMonitorDataResponseMonitorData extends TeaModel {
@@ -41,6 +73,14 @@ public class DescribeSnapshotMonitorDataResponse extends TeaModel {
         public static DescribeSnapshotMonitorDataResponseMonitorData build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotMonitorDataResponseMonitorData self = new DescribeSnapshotMonitorDataResponseMonitorData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotMonitorDataResponseMonitorData setDataPoint(java.util.List<DescribeSnapshotMonitorDataResponseMonitorDataDataPoint> dataPoint) {
+            this.dataPoint = dataPoint;
+            return this;
+        }
+        public java.util.List<DescribeSnapshotMonitorDataResponseMonitorDataDataPoint> getDataPoint() {
+            return this.dataPoint;
         }
 
     }

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.ecs20140526.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
+
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
@@ -56,6 +57,166 @@ public class Client extends com.aliyun.tearpc.Client {
         this._endpoint = this.getEndpoint("ecs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
+
+    public ReleaseCapacityReservationResponse releaseCapacityReservationWithOptions(ReleaseCapacityReservationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ReleaseCapacityReservation", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new ReleaseCapacityReservationResponse());
+    }
+
+    public ReleaseCapacityReservationResponse releaseCapacityReservation(ReleaseCapacityReservationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.releaseCapacityReservationWithOptions(request, runtime);
+    }
+
+    public DescribeCapacityReservationsResponse describeCapacityReservationsWithOptions(DescribeCapacityReservationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeCapacityReservations", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new DescribeCapacityReservationsResponse());
+    }
+
+    public DescribeCapacityReservationsResponse describeCapacityReservations(DescribeCapacityReservationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCapacityReservationsWithOptions(request, runtime);
+    }
+
+    public DescribeCapacityReservationInstancesResponse describeCapacityReservationInstancesWithOptions(DescribeCapacityReservationInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeCapacityReservationInstances", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new DescribeCapacityReservationInstancesResponse());
+    }
+
+    public DescribeCapacityReservationInstancesResponse describeCapacityReservationInstances(DescribeCapacityReservationInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCapacityReservationInstancesWithOptions(request, runtime);
+    }
+
+    public CreateCapacityReservationResponse createCapacityReservationWithOptions(CreateCapacityReservationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateCapacityReservation", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new CreateCapacityReservationResponse());
+    }
+
+    public CreateCapacityReservationResponse createCapacityReservation(CreateCapacityReservationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCapacityReservationWithOptions(request, runtime);
+    }
+
+    public StartElasticityAssuranceResponse startElasticityAssuranceWithOptions(StartElasticityAssuranceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("StartElasticityAssurance", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new StartElasticityAssuranceResponse());
+    }
+
+    public StartElasticityAssuranceResponse startElasticityAssurance(StartElasticityAssuranceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startElasticityAssuranceWithOptions(request, runtime);
+    }
+
+    public ModifyInstanceAttachmentAttributesResponse modifyInstanceAttachmentAttributesWithOptions(ModifyInstanceAttachmentAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyInstanceAttachmentAttributes", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new ModifyInstanceAttachmentAttributesResponse());
+    }
+
+    public ModifyInstanceAttachmentAttributesResponse modifyInstanceAttachmentAttributes(ModifyInstanceAttachmentAttributesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceAttachmentAttributesWithOptions(request, runtime);
+    }
+
+    public DescribeInstanceAttachmentAttributesResponse describeInstanceAttachmentAttributesWithOptions(DescribeInstanceAttachmentAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeInstanceAttachmentAttributes", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new DescribeInstanceAttachmentAttributesResponse());
+    }
+
+    public DescribeInstanceAttachmentAttributesResponse describeInstanceAttachmentAttributes(DescribeInstanceAttachmentAttributesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeInstanceAttachmentAttributesWithOptions(request, runtime);
+    }
+
+    public DescribeElasticityAssurancesResponse describeElasticityAssurancesWithOptions(DescribeElasticityAssurancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeElasticityAssurances", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new DescribeElasticityAssurancesResponse());
+    }
+
+    public DescribeElasticityAssurancesResponse describeElasticityAssurances(DescribeElasticityAssurancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeElasticityAssurancesWithOptions(request, runtime);
+    }
+
+    public DescribeElasticityAssuranceInstancesResponse describeElasticityAssuranceInstancesWithOptions(DescribeElasticityAssuranceInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeElasticityAssuranceInstances", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new DescribeElasticityAssuranceInstancesResponse());
+    }
+
+    public DescribeElasticityAssuranceInstancesResponse describeElasticityAssuranceInstances(DescribeElasticityAssuranceInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeElasticityAssuranceInstancesWithOptions(request, runtime);
+    }
+
+    public CreateElasticityAssuranceResponse createElasticityAssuranceWithOptions(CreateElasticityAssuranceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateElasticityAssurance", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new CreateElasticityAssuranceResponse());
+    }
+
+    public CreateElasticityAssuranceResponse createElasticityAssurance(CreateElasticityAssuranceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createElasticityAssuranceWithOptions(request, runtime);
+    }
+
+    public SendFileResponse sendFileWithOptions(SendFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SendFile", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new SendFileResponse());
+    }
+
+    public SendFileResponse sendFile(SendFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendFileWithOptions(request, runtime);
+    }
+
+    public DescribeSendFileResultsResponse describeSendFileResultsWithOptions(DescribeSendFileResultsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeSendFileResults", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new DescribeSendFileResultsResponse());
+    }
+
+    public DescribeSendFileResultsResponse describeSendFileResults(DescribeSendFileResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSendFileResultsWithOptions(request, runtime);
+    }
+
+    public ModifyDedicatedHostClusterAttributeResponse modifyDedicatedHostClusterAttributeWithOptions(ModifyDedicatedHostClusterAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyDedicatedHostClusterAttribute", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new ModifyDedicatedHostClusterAttributeResponse());
+    }
+
+    public ModifyDedicatedHostClusterAttributeResponse modifyDedicatedHostClusterAttribute(ModifyDedicatedHostClusterAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDedicatedHostClusterAttributeWithOptions(request, runtime);
+    }
+
+    public DescribeDedicatedHostClustersResponse describeDedicatedHostClustersWithOptions(DescribeDedicatedHostClustersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeDedicatedHostClusters", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new DescribeDedicatedHostClustersResponse());
+    }
+
+    public DescribeDedicatedHostClustersResponse describeDedicatedHostClusters(DescribeDedicatedHostClustersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDedicatedHostClustersWithOptions(request, runtime);
+    }
+
+    public DeleteDedicatedHostClusterResponse deleteDedicatedHostClusterWithOptions(DeleteDedicatedHostClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DeleteDedicatedHostCluster", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new DeleteDedicatedHostClusterResponse());
+    }
+
+    public DeleteDedicatedHostClusterResponse deleteDedicatedHostCluster(DeleteDedicatedHostClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDedicatedHostClusterWithOptions(request, runtime);
+    }
+
+    public CreateDedicatedHostClusterResponse createDedicatedHostClusterWithOptions(CreateDedicatedHostClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateDedicatedHostCluster", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new CreateDedicatedHostClusterResponse());
+    }
+
+    public CreateDedicatedHostClusterResponse createDedicatedHostCluster(CreateDedicatedHostClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDedicatedHostClusterWithOptions(request, runtime);
+    }
 
     public DescribeDeploymentSetSupportedInstanceTypeFamilyResponse describeDeploymentSetSupportedInstanceTypeFamilyWithOptions(DescribeDeploymentSetSupportedInstanceTypeFamilyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -237,8 +398,14 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.describeStorageCapacityUnitsWithOptions(request, runtime);
     }
 
-    public RunCommandResponse runCommandWithOptions(RunCommandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public RunCommandResponse runCommandWithOptions(RunCommandRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        RunCommandShrinkRequest request = new RunCommandShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.parameters)) {
+            request.parametersShrink = com.aliyun.teautil.Common.toJSONString(tmp.parameters);
+        }
+
         return TeaModel.toModel(this.doRequest("RunCommand", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new RunCommandResponse());
     }
 
@@ -1027,8 +1194,14 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.modifyCommandWithOptions(request, runtime);
     }
 
-    public InvokeCommandResponse invokeCommandWithOptions(InvokeCommandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public InvokeCommandResponse invokeCommandWithOptions(InvokeCommandRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        InvokeCommandShrinkRequest request = new InvokeCommandShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.parameters)) {
+            request.parametersShrink = com.aliyun.teautil.Common.toJSONString(tmp.parameters);
+        }
+
         return TeaModel.toModel(this.doRequest("InvokeCommand", "HTTPS", "POST", "2014-05-26", "AK", null, TeaModel.buildMap(request), runtime), new InvokeCommandResponse());
     }
 

@@ -23,4 +23,36 @@ public class ModifyStorageCapacityUnitAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyStorageCapacityUnitAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyStorageCapacityUnitAttributeRequest setStorageCapacityUnitId(String storageCapacityUnitId) {
+        this.storageCapacityUnitId = storageCapacityUnitId;
+        return this;
+    }
+    public String getStorageCapacityUnitId() {
+        return this.storageCapacityUnitId;
+    }
+
+    public ModifyStorageCapacityUnitAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public ModifyStorageCapacityUnitAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

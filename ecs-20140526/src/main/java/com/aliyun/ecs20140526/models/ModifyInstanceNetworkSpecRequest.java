@@ -37,4 +37,76 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyInstanceNetworkSpecRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceNetworkSpecRequest setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+        this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+        return this;
+    }
+    public Integer getInternetMaxBandwidthOut() {
+        return this.internetMaxBandwidthOut;
+    }
+
+    public ModifyInstanceNetworkSpecRequest setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+        this.internetMaxBandwidthIn = internetMaxBandwidthIn;
+        return this;
+    }
+    public Integer getInternetMaxBandwidthIn() {
+        return this.internetMaxBandwidthIn;
+    }
+
+    public ModifyInstanceNetworkSpecRequest setNetworkChargeType(String networkChargeType) {
+        this.networkChargeType = networkChargeType;
+        return this;
+    }
+    public String getNetworkChargeType() {
+        return this.networkChargeType;
+    }
+
+    public ModifyInstanceNetworkSpecRequest setAllocatePublicIp(Boolean allocatePublicIp) {
+        this.allocatePublicIp = allocatePublicIp;
+        return this;
+    }
+    public Boolean getAllocatePublicIp() {
+        return this.allocatePublicIp;
+    }
+
+    public ModifyInstanceNetworkSpecRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public ModifyInstanceNetworkSpecRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public ModifyInstanceNetworkSpecRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public ModifyInstanceNetworkSpecRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

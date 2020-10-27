@@ -25,6 +25,38 @@ public class DescribeImageSupportInstanceTypesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeImageSupportInstanceTypesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeImageSupportInstanceTypesResponse setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeImageSupportInstanceTypesResponse setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public DescribeImageSupportInstanceTypesResponse setInstanceTypes(DescribeImageSupportInstanceTypesResponseInstanceTypes instanceTypes) {
+        this.instanceTypes = instanceTypes;
+        return this;
+    }
+    public DescribeImageSupportInstanceTypesResponseInstanceTypes getInstanceTypes() {
+        return this.instanceTypes;
+    }
+
     public static class DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType extends TeaModel {
         @NameInMap("InstanceTypeId")
         @Validation(required = true)
@@ -36,7 +68,7 @@ public class DescribeImageSupportInstanceTypesResponse extends TeaModel {
 
         @NameInMap("MemorySize")
         @Validation(required = true)
-        public Double memorySize;
+        public Float memorySize;
 
         @NameInMap("InstanceTypeFamily")
         @Validation(required = true)
@@ -45,6 +77,38 @@ public class DescribeImageSupportInstanceTypesResponse extends TeaModel {
         public static DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType self = new DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType setInstanceTypeId(String instanceTypeId) {
+            this.instanceTypeId = instanceTypeId;
+            return this;
+        }
+        public String getInstanceTypeId() {
+            return this.instanceTypeId;
+        }
+
+        public DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType setCpuCoreCount(Integer cpuCoreCount) {
+            this.cpuCoreCount = cpuCoreCount;
+            return this;
+        }
+        public Integer getCpuCoreCount() {
+            return this.cpuCoreCount;
+        }
+
+        public DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType setMemorySize(Float memorySize) {
+            this.memorySize = memorySize;
+            return this;
+        }
+        public Float getMemorySize() {
+            return this.memorySize;
+        }
+
+        public DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType setInstanceTypeFamily(String instanceTypeFamily) {
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+        public String getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
         }
 
     }
@@ -57,6 +121,14 @@ public class DescribeImageSupportInstanceTypesResponse extends TeaModel {
         public static DescribeImageSupportInstanceTypesResponseInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageSupportInstanceTypesResponseInstanceTypes self = new DescribeImageSupportInstanceTypesResponseInstanceTypes();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImageSupportInstanceTypesResponseInstanceTypes setInstanceType(java.util.List<DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType> instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public java.util.List<DescribeImageSupportInstanceTypesResponseInstanceTypesInstanceType> getInstanceType() {
+            return this.instanceType;
         }
 
     }

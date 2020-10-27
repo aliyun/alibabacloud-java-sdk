@@ -23,4 +23,36 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyHaVipAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyHaVipAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyHaVipAttributeRequest setHaVipId(String haVipId) {
+        this.haVipId = haVipId;
+        return this;
+    }
+    public String getHaVipId() {
+        return this.haVipId;
+    }
+
+    public ModifyHaVipAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

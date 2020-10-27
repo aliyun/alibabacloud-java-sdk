@@ -24,7 +24,6 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     public String eventType;
 
     @NameInMap("EventTime")
-    @Validation(required = true)
     public DescribeDisksFullStatusRequestEventTime eventTime;
 
     @NameInMap("PageNumber")
@@ -38,6 +37,78 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDisksFullStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDisksFullStatusRequest setDiskId(java.util.List<String> diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public java.util.List<String> getDiskId() {
+        return this.diskId;
+    }
+
+    public DescribeDisksFullStatusRequest setEventId(java.util.List<String> eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public java.util.List<String> getEventId() {
+        return this.eventId;
+    }
+
+    public DescribeDisksFullStatusRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeDisksFullStatusRequest setHealthStatus(String healthStatus) {
+        this.healthStatus = healthStatus;
+        return this;
+    }
+    public String getHealthStatus() {
+        return this.healthStatus;
+    }
+
+    public DescribeDisksFullStatusRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    public DescribeDisksFullStatusRequest setEventTime(DescribeDisksFullStatusRequestEventTime eventTime) {
+        this.eventTime = eventTime;
+        return this;
+    }
+    public DescribeDisksFullStatusRequestEventTime getEventTime() {
+        return this.eventTime;
+    }
+
+    public DescribeDisksFullStatusRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDisksFullStatusRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public static class DescribeDisksFullStatusRequestEventTime extends TeaModel {
         @NameInMap("Start")
         public String start;
@@ -48,6 +119,22 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         public static DescribeDisksFullStatusRequestEventTime build(java.util.Map<String, ?> map) throws Exception {
             DescribeDisksFullStatusRequestEventTime self = new DescribeDisksFullStatusRequestEventTime();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksFullStatusRequestEventTime setStart(String start) {
+            this.start = start;
+            return this;
+        }
+        public String getStart() {
+            return this.start;
+        }
+
+        public DescribeDisksFullStatusRequestEventTime setEnd(String end) {
+            this.end = end;
+            return this;
+        }
+        public String getEnd() {
+            return this.end;
         }
 
     }

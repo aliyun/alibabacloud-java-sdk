@@ -44,6 +44,12 @@ public class DescribeDisksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("DiskName")
     public String diskName;
 
@@ -63,7 +69,6 @@ public class DescribeDisksRequest extends TeaModel {
     public String lockReason;
 
     @NameInMap("Filter")
-    @Validation(required = true)
     public java.util.List<DescribeDisksRequestFilter> filter;
 
     @NameInMap("Tag")
@@ -92,6 +97,238 @@ public class DescribeDisksRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDisksRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDisksRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public DescribeDisksRequest setDiskIds(String diskIds) {
+        this.diskIds = diskIds;
+        return this;
+    }
+    public String getDiskIds() {
+        return this.diskIds;
+    }
+
+    public DescribeDisksRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeDisksRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
+    }
+
+    public DescribeDisksRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
+    }
+
+    public DescribeDisksRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeDisksRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
+    public DescribeDisksRequest setPortable(Boolean portable) {
+        this.portable = portable;
+        return this;
+    }
+    public Boolean getPortable() {
+        return this.portable;
+    }
+
+    public DescribeDisksRequest setDeleteWithInstance(Boolean deleteWithInstance) {
+        this.deleteWithInstance = deleteWithInstance;
+        return this;
+    }
+    public Boolean getDeleteWithInstance() {
+        return this.deleteWithInstance;
+    }
+
+    public DescribeDisksRequest setDeleteAutoSnapshot(Boolean deleteAutoSnapshot) {
+        this.deleteAutoSnapshot = deleteAutoSnapshot;
+        return this;
+    }
+    public Boolean getDeleteAutoSnapshot() {
+        return this.deleteAutoSnapshot;
+    }
+
+    public DescribeDisksRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDisksRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDisksRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public DescribeDisksRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeDisksRequest setDiskName(String diskName) {
+        this.diskName = diskName;
+        return this;
+    }
+    public String getDiskName() {
+        return this.diskName;
+    }
+
+    public DescribeDisksRequest setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+        this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+        return this;
+    }
+    public String getAutoSnapshotPolicyId() {
+        return this.autoSnapshotPolicyId;
+    }
+
+    public DescribeDisksRequest setEnableAutoSnapshot(Boolean enableAutoSnapshot) {
+        this.enableAutoSnapshot = enableAutoSnapshot;
+        return this;
+    }
+    public Boolean getEnableAutoSnapshot() {
+        return this.enableAutoSnapshot;
+    }
+
+    public DescribeDisksRequest setEnableAutomatedSnapshotPolicy(Boolean enableAutomatedSnapshotPolicy) {
+        this.enableAutomatedSnapshotPolicy = enableAutomatedSnapshotPolicy;
+        return this;
+    }
+    public Boolean getEnableAutomatedSnapshotPolicy() {
+        return this.enableAutomatedSnapshotPolicy;
+    }
+
+    public DescribeDisksRequest setDiskChargeType(String diskChargeType) {
+        this.diskChargeType = diskChargeType;
+        return this;
+    }
+    public String getDiskChargeType() {
+        return this.diskChargeType;
+    }
+
+    public DescribeDisksRequest setLockReason(String lockReason) {
+        this.lockReason = lockReason;
+        return this;
+    }
+    public String getLockReason() {
+        return this.lockReason;
+    }
+
+    public DescribeDisksRequest setFilter(java.util.List<DescribeDisksRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeDisksRequestFilter> getFilter() {
+        return this.filter;
+    }
+
+    public DescribeDisksRequest setTag(java.util.List<DescribeDisksRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDisksRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public DescribeDisksRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeDisksRequest setEnableShared(Boolean enableShared) {
+        this.enableShared = enableShared;
+        return this;
+    }
+    public Boolean getEnableShared() {
+        return this.enableShared;
+    }
+
+    public DescribeDisksRequest setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    public Boolean getEncrypted() {
+        return this.encrypted;
+    }
+
+    public DescribeDisksRequest setAdditionalAttributes(java.util.List<String> additionalAttributes) {
+        this.additionalAttributes = additionalAttributes;
+        return this;
+    }
+    public java.util.List<String> getAdditionalAttributes() {
+        return this.additionalAttributes;
+    }
+
+    public DescribeDisksRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public DescribeDisksRequest setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
+        return this;
+    }
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
+    }
+
     public static class DescribeDisksRequestFilter extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -104,20 +341,50 @@ public class DescribeDisksRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDisksRequestFilter setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDisksRequestFilter setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class DescribeDisksRequestTag extends TeaModel {
         @NameInMap("value")
-        @Validation(required = true)
         public String value;
 
         @NameInMap("key")
-        @Validation(required = true)
         public String key;
 
         public static DescribeDisksRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeDisksRequestTag self = new DescribeDisksRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public DescribeDisksRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }

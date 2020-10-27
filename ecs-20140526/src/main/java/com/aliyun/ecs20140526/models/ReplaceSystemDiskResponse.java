@@ -17,4 +17,20 @@ public class ReplaceSystemDiskResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ReplaceSystemDiskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ReplaceSystemDiskResponse setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
 }

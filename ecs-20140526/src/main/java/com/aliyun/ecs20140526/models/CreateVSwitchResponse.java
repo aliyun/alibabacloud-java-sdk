@@ -17,4 +17,20 @@ public class CreateVSwitchResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateVSwitchResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateVSwitchResponse setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
 }

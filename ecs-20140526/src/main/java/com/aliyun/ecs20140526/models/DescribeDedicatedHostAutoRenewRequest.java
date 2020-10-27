@@ -17,4 +17,20 @@ public class DescribeDedicatedHostAutoRenewRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDedicatedHostAutoRenewRequest setDedicatedHostIds(String dedicatedHostIds) {
+        this.dedicatedHostIds = dedicatedHostIds;
+        return this;
+    }
+    public String getDedicatedHostIds() {
+        return this.dedicatedHostIds;
+    }
+
+    public DescribeDedicatedHostAutoRenewRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

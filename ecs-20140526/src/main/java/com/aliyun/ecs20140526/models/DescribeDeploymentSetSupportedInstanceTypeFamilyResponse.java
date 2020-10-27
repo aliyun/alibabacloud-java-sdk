@@ -17,4 +17,20 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponse extends Te
         return TeaModel.build(map, self);
     }
 
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponse setInstanceTypeFamilies(String instanceTypeFamilies) {
+        this.instanceTypeFamilies = instanceTypeFamilies;
+        return this;
+    }
+    public String getInstanceTypeFamilies() {
+        return this.instanceTypeFamilies;
+    }
+
 }

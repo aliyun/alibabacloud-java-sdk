@@ -17,4 +17,20 @@ public class ModifyPrepayInstanceSpecResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyPrepayInstanceSpecResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyPrepayInstanceSpecResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
 }

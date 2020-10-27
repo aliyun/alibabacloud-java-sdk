@@ -24,4 +24,36 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifySecurityGroupPolicyRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public ModifySecurityGroupPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifySecurityGroupPolicyRequest setInnerAccessPolicy(String innerAccessPolicy) {
+        this.innerAccessPolicy = innerAccessPolicy;
+        return this;
+    }
+    public String getInnerAccessPolicy() {
+        return this.innerAccessPolicy;
+    }
+
+    public ModifySecurityGroupPolicyRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

@@ -31,4 +31,52 @@ public class DescribeEniMonitorDataRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeEniMonitorDataRequest setEniId(String eniId) {
+        this.eniId = eniId;
+        return this;
+    }
+    public String getEniId() {
+        return this.eniId;
+    }
+
+    public DescribeEniMonitorDataRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeEniMonitorDataRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeEniMonitorDataRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeEniMonitorDataRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeEniMonitorDataRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
 }

@@ -19,4 +19,28 @@ public class DescribeAccountAttributesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAccountAttributesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeAccountAttributesRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public DescribeAccountAttributesRequest setAttributeName(java.util.List<String> attributeName) {
+        this.attributeName = attributeName;
+        return this;
+    }
+    public java.util.List<String> getAttributeName() {
+        return this.attributeName;
+    }
+
 }

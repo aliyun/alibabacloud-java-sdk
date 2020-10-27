@@ -25,4 +25,36 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateNetworkInterfacePermissionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateNetworkInterfacePermissionRequest setAccountId(Long accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public Long getAccountId() {
+        return this.accountId;
+    }
+
+    public CreateNetworkInterfacePermissionRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public CreateNetworkInterfacePermissionRequest setPermission(String permission) {
+        this.permission = permission;
+        return this;
+    }
+    public String getPermission() {
+        return this.permission;
+    }
+
 }

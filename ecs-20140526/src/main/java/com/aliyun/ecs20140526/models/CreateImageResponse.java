@@ -17,4 +17,20 @@ public class CreateImageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateImageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateImageResponse setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
 }

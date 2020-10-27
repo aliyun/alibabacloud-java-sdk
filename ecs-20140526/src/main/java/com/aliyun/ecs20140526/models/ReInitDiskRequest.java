@@ -25,4 +25,44 @@ public class ReInitDiskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ReInitDiskRequest setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    public ReInitDiskRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public ReInitDiskRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    public ReInitDiskRequest setAutoStartInstance(Boolean autoStartInstance) {
+        this.autoStartInstance = autoStartInstance;
+        return this;
+    }
+    public Boolean getAutoStartInstance() {
+        return this.autoStartInstance;
+    }
+
+    public ReInitDiskRequest setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
+        this.securityEnhancementStrategy = securityEnhancementStrategy;
+        return this;
+    }
+    public String getSecurityEnhancementStrategy() {
+        return this.securityEnhancementStrategy;
+    }
+
 }

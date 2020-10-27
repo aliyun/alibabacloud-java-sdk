@@ -53,4 +53,100 @@ public class CreateDemandRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDemandRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateDemandRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateDemandRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public CreateDemandRequest setDemandName(String demandName) {
+        this.demandName = demandName;
+        return this;
+    }
+    public String getDemandName() {
+        return this.demandName;
+    }
+
+    public CreateDemandRequest setDemandDescription(String demandDescription) {
+        this.demandDescription = demandDescription;
+        return this;
+    }
+    public String getDemandDescription() {
+        return this.demandDescription;
+    }
+
+    public CreateDemandRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public CreateDemandRequest setAmount(Integer amount) {
+        this.amount = amount;
+        return this;
+    }
+    public Integer getAmount() {
+        return this.amount;
+    }
+
+    public CreateDemandRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    public CreateDemandRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public CreateDemandRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    public CreateDemandRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public CreateDemandRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
 }

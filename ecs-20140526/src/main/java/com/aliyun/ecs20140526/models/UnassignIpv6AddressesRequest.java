@@ -21,4 +21,28 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UnassignIpv6AddressesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UnassignIpv6AddressesRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public UnassignIpv6AddressesRequest setIpv6Address(java.util.List<String> ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+    public java.util.List<String> getIpv6Address() {
+        return this.ipv6Address;
+    }
+
 }

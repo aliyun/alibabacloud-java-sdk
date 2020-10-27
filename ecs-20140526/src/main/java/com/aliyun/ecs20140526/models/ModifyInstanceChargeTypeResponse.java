@@ -21,6 +21,30 @@ public class ModifyInstanceChargeTypeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyInstanceChargeTypeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyInstanceChargeTypeResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    public ModifyInstanceChargeTypeResponse setFeeOfInstances(ModifyInstanceChargeTypeResponseFeeOfInstances feeOfInstances) {
+        this.feeOfInstances = feeOfInstances;
+        return this;
+    }
+    public ModifyInstanceChargeTypeResponseFeeOfInstances getFeeOfInstances() {
+        return this.feeOfInstances;
+    }
+
     public static class ModifyInstanceChargeTypeResponseFeeOfInstancesFeeOfInstance extends TeaModel {
         @NameInMap("InstanceId")
         @Validation(required = true)
@@ -39,6 +63,30 @@ public class ModifyInstanceChargeTypeResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ModifyInstanceChargeTypeResponseFeeOfInstancesFeeOfInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ModifyInstanceChargeTypeResponseFeeOfInstancesFeeOfInstance setFee(String fee) {
+            this.fee = fee;
+            return this;
+        }
+        public String getFee() {
+            return this.fee;
+        }
+
+        public ModifyInstanceChargeTypeResponseFeeOfInstancesFeeOfInstance setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
     }
 
     public static class ModifyInstanceChargeTypeResponseFeeOfInstances extends TeaModel {
@@ -49,6 +97,14 @@ public class ModifyInstanceChargeTypeResponse extends TeaModel {
         public static ModifyInstanceChargeTypeResponseFeeOfInstances build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceChargeTypeResponseFeeOfInstances self = new ModifyInstanceChargeTypeResponseFeeOfInstances();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyInstanceChargeTypeResponseFeeOfInstances setFeeOfInstance(java.util.List<ModifyInstanceChargeTypeResponseFeeOfInstancesFeeOfInstance> feeOfInstance) {
+            this.feeOfInstance = feeOfInstance;
+            return this;
+        }
+        public java.util.List<ModifyInstanceChargeTypeResponseFeeOfInstancesFeeOfInstance> getFeeOfInstance() {
+            return this.feeOfInstance;
         }
 
     }

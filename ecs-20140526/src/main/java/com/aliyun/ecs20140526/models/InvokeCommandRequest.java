@@ -30,4 +30,52 @@ public class InvokeCommandRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public InvokeCommandRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public InvokeCommandRequest setCommandId(String commandId) {
+        this.commandId = commandId;
+        return this;
+    }
+    public String getCommandId() {
+        return this.commandId;
+    }
+
+    public InvokeCommandRequest setTimed(Boolean timed) {
+        this.timed = timed;
+        return this;
+    }
+    public Boolean getTimed() {
+        return this.timed;
+    }
+
+    public InvokeCommandRequest setFrequency(String frequency) {
+        this.frequency = frequency;
+        return this;
+    }
+    public String getFrequency() {
+        return this.frequency;
+    }
+
+    public InvokeCommandRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public InvokeCommandRequest setParameters(java.util.Map<String, ?> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.Map<String, ?> getParameters() {
+        return this.parameters;
+    }
+
 }

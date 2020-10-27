@@ -17,4 +17,20 @@ public class ModifyRouterInterfaceSpecResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyRouterInterfaceSpecResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyRouterInterfaceSpecResponse setSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    public String getSpec() {
+        return this.spec;
+    }
+
 }

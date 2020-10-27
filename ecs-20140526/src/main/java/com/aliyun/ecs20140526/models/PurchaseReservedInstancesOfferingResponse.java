@@ -17,6 +17,22 @@ public class PurchaseReservedInstancesOfferingResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PurchaseReservedInstancesOfferingResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public PurchaseReservedInstancesOfferingResponse setReservedInstanceIdSets(PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets reservedInstanceIdSets) {
+        this.reservedInstanceIdSets = reservedInstanceIdSets;
+        return this;
+    }
+    public PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets getReservedInstanceIdSets() {
+        return this.reservedInstanceIdSets;
+    }
+
     public static class PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets extends TeaModel {
         @NameInMap("ReservedInstanceId")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class PurchaseReservedInstancesOfferingResponse extends TeaModel {
         public static PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets build(java.util.Map<String, ?> map) throws Exception {
             PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets self = new PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets();
             return TeaModel.build(map, self);
+        }
+
+        public PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets setReservedInstanceId(java.util.List<String> reservedInstanceId) {
+            this.reservedInstanceId = reservedInstanceId;
+            return this;
+        }
+        public java.util.List<String> getReservedInstanceId() {
+            return this.reservedInstanceId;
         }
 
     }
