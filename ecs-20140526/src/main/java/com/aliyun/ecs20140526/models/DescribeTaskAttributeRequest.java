@@ -17,4 +17,20 @@ public class DescribeTaskAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeTaskAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeTaskAttributeRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
 }

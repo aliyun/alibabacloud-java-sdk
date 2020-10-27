@@ -17,4 +17,20 @@ public class CreateDemandResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDemandResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDemandResponse setDemandId(String demandId) {
+        this.demandId = demandId;
+        return this;
+    }
+    public String getDemandId() {
+        return this.demandId;
+    }
+
 }

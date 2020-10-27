@@ -25,4 +25,44 @@ public class DescribeNatGatewaysRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeNatGatewaysRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeNatGatewaysRequest setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
+    }
+
+    public DescribeNatGatewaysRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public DescribeNatGatewaysRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeNatGatewaysRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

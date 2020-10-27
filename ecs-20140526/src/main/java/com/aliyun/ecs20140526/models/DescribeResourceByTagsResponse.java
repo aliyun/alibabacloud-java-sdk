@@ -29,6 +29,46 @@ public class DescribeResourceByTagsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeResourceByTagsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeResourceByTagsResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeResourceByTagsResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeResourceByTagsResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeResourceByTagsResponse setResources(DescribeResourceByTagsResponseResources resources) {
+        this.resources = resources;
+        return this;
+    }
+    public DescribeResourceByTagsResponseResources getResources() {
+        return this.resources;
+    }
+
     public static class DescribeResourceByTagsResponseResourcesResource extends TeaModel {
         @NameInMap("ResourceId")
         @Validation(required = true)
@@ -47,6 +87,30 @@ public class DescribeResourceByTagsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeResourceByTagsResponseResourcesResource setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public DescribeResourceByTagsResponseResourcesResource setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public DescribeResourceByTagsResponseResourcesResource setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
     }
 
     public static class DescribeResourceByTagsResponseResources extends TeaModel {
@@ -57,6 +121,14 @@ public class DescribeResourceByTagsResponse extends TeaModel {
         public static DescribeResourceByTagsResponseResources build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceByTagsResponseResources self = new DescribeResourceByTagsResponseResources();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourceByTagsResponseResources setResource(java.util.List<DescribeResourceByTagsResponseResourcesResource> resource) {
+            this.resource = resource;
+            return this;
+        }
+        public java.util.List<DescribeResourceByTagsResponseResourcesResource> getResource() {
+            return this.resource;
         }
 
     }

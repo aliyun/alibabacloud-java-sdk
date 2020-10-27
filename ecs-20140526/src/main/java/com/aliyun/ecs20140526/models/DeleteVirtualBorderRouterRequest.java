@@ -23,4 +23,36 @@ public class DeleteVirtualBorderRouterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteVirtualBorderRouterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteVirtualBorderRouterRequest setVbrId(String vbrId) {
+        this.vbrId = vbrId;
+        return this;
+    }
+    public String getVbrId() {
+        return this.vbrId;
+    }
+
+    public DeleteVirtualBorderRouterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteVirtualBorderRouterRequest setUserCidr(String userCidr) {
+        this.userCidr = userCidr;
+        return this;
+    }
+    public String getUserCidr() {
+        return this.userCidr;
+    }
+
 }

@@ -19,4 +19,28 @@ public class DescribeDedicatedHostTypesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDedicatedHostTypesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDedicatedHostTypesRequest setDedicatedHostType(String dedicatedHostType) {
+        this.dedicatedHostType = dedicatedHostType;
+        return this;
+    }
+    public String getDedicatedHostType() {
+        return this.dedicatedHostType;
+    }
+
+    public DescribeDedicatedHostTypesRequest setSupportedInstanceTypeFamily(String supportedInstanceTypeFamily) {
+        this.supportedInstanceTypeFamily = supportedInstanceTypeFamily;
+        return this;
+    }
+    public String getSupportedInstanceTypeFamily() {
+        return this.supportedInstanceTypeFamily;
+    }
+
 }

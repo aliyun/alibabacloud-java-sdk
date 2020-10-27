@@ -25,4 +25,44 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceAutoRenewAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setRenewalStatus(String renewalStatus) {
+        this.renewalStatus = renewalStatus;
+        return this;
+    }
+    public String getRenewalStatus() {
+        return this.renewalStatus;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
 }

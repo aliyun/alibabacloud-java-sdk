@@ -20,6 +20,10 @@ public class DescribeDisksResponse extends TeaModel {
     @Validation(required = true)
     public Integer pageSize;
 
+    @NameInMap("NextToken")
+    @Validation(required = true)
+    public String nextToken;
+
     @NameInMap("Disks")
     @Validation(required = true)
     public DescribeDisksResponseDisks disks;
@@ -27,6 +31,54 @@ public class DescribeDisksResponse extends TeaModel {
     public static DescribeDisksResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDisksResponse self = new DescribeDisksResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDisksResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDisksResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeDisksResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDisksResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDisksResponse setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public DescribeDisksResponse setDisks(DescribeDisksResponseDisks disks) {
+        this.disks = disks;
+        return this;
+    }
+    public DescribeDisksResponseDisks getDisks() {
+        return this.disks;
     }
 
     public static class DescribeDisksResponseDisksDiskOperationLocksOperationLock extends TeaModel {
@@ -39,6 +91,14 @@ public class DescribeDisksResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDisksResponseDisksDiskOperationLocksOperationLock setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
+        }
+
     }
 
     public static class DescribeDisksResponseDisksDiskOperationLocks extends TeaModel {
@@ -49,6 +109,14 @@ public class DescribeDisksResponse extends TeaModel {
         public static DescribeDisksResponseDisksDiskOperationLocks build(java.util.Map<String, ?> map) throws Exception {
             DescribeDisksResponseDisksDiskOperationLocks self = new DescribeDisksResponseDisksDiskOperationLocks();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseDisksDiskOperationLocks setOperationLock(java.util.List<DescribeDisksResponseDisksDiskOperationLocksOperationLock> operationLock) {
+            this.operationLock = operationLock;
+            return this;
+        }
+        public java.util.List<DescribeDisksResponseDisksDiskOperationLocksOperationLock> getOperationLock() {
+            return this.operationLock;
         }
 
     }
@@ -71,6 +139,30 @@ public class DescribeDisksResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDisksResponseDisksDiskMountInstancesMountInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeDisksResponseDisksDiskMountInstancesMountInstance setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
+        public DescribeDisksResponseDisksDiskMountInstancesMountInstance setAttachedTime(String attachedTime) {
+            this.attachedTime = attachedTime;
+            return this;
+        }
+        public String getAttachedTime() {
+            return this.attachedTime;
+        }
+
     }
 
     public static class DescribeDisksResponseDisksDiskMountInstances extends TeaModel {
@@ -81,6 +173,14 @@ public class DescribeDisksResponse extends TeaModel {
         public static DescribeDisksResponseDisksDiskMountInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeDisksResponseDisksDiskMountInstances self = new DescribeDisksResponseDisksDiskMountInstances();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseDisksDiskMountInstances setMountInstance(java.util.List<DescribeDisksResponseDisksDiskMountInstancesMountInstance> mountInstance) {
+            this.mountInstance = mountInstance;
+            return this;
+        }
+        public java.util.List<DescribeDisksResponseDisksDiskMountInstancesMountInstance> getMountInstance() {
+            return this.mountInstance;
         }
 
     }
@@ -99,6 +199,22 @@ public class DescribeDisksResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDisksResponseDisksDiskTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeDisksResponseDisksDiskTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
     }
 
     public static class DescribeDisksResponseDisksDiskTags extends TeaModel {
@@ -109,6 +225,14 @@ public class DescribeDisksResponse extends TeaModel {
         public static DescribeDisksResponseDisksDiskTags build(java.util.Map<String, ?> map) throws Exception {
             DescribeDisksResponseDisksDiskTags self = new DescribeDisksResponseDisksDiskTags();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseDisksDiskTags setTag(java.util.List<DescribeDisksResponseDisksDiskTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeDisksResponseDisksDiskTagsTag> getTag() {
+            return this.tag;
         }
 
     }
@@ -279,6 +403,326 @@ public class DescribeDisksResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDisksResponseDisksDisk setDiskId(String diskId) {
+            this.diskId = diskId;
+            return this;
+        }
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        public DescribeDisksResponseDisksDisk setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeDisksResponseDisksDisk setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeDisksResponseDisksDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        public DescribeDisksResponseDisksDisk setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeDisksResponseDisksDisk setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeDisksResponseDisksDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeDisksResponseDisksDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public DescribeDisksResponseDisksDisk setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public DescribeDisksResponseDisksDisk setSourceSnapshotId(String sourceSnapshotId) {
+            this.sourceSnapshotId = sourceSnapshotId;
+            return this;
+        }
+        public String getSourceSnapshotId() {
+            return this.sourceSnapshotId;
+        }
+
+        public DescribeDisksResponseDisksDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        public DescribeDisksResponseDisksDisk setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public DescribeDisksResponseDisksDisk setPortable(Boolean portable) {
+            this.portable = portable;
+            return this;
+        }
+        public Boolean getPortable() {
+            return this.portable;
+        }
+
+        public DescribeDisksResponseDisksDisk setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeDisksResponseDisksDisk setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeDisksResponseDisksDisk setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
+        public DescribeDisksResponseDisksDisk setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        public DescribeDisksResponseDisksDisk setDeleteAutoSnapshot(Boolean deleteAutoSnapshot) {
+            this.deleteAutoSnapshot = deleteAutoSnapshot;
+            return this;
+        }
+        public Boolean getDeleteAutoSnapshot() {
+            return this.deleteAutoSnapshot;
+        }
+
+        public DescribeDisksResponseDisksDisk setEnableAutoSnapshot(Boolean enableAutoSnapshot) {
+            this.enableAutoSnapshot = enableAutoSnapshot;
+            return this;
+        }
+        public Boolean getEnableAutoSnapshot() {
+            return this.enableAutoSnapshot;
+        }
+
+        public DescribeDisksResponseDisksDisk setEnableAutomatedSnapshotPolicy(Boolean enableAutomatedSnapshotPolicy) {
+            this.enableAutomatedSnapshotPolicy = enableAutomatedSnapshotPolicy;
+            return this;
+        }
+        public Boolean getEnableAutomatedSnapshotPolicy() {
+            return this.enableAutomatedSnapshotPolicy;
+        }
+
+        public DescribeDisksResponseDisksDisk setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeDisksResponseDisksDisk setAttachedTime(String attachedTime) {
+            this.attachedTime = attachedTime;
+            return this;
+        }
+        public String getAttachedTime() {
+            return this.attachedTime;
+        }
+
+        public DescribeDisksResponseDisksDisk setDetachedTime(String detachedTime) {
+            this.detachedTime = detachedTime;
+            return this;
+        }
+        public String getDetachedTime() {
+            return this.detachedTime;
+        }
+
+        public DescribeDisksResponseDisksDisk setDiskChargeType(String diskChargeType) {
+            this.diskChargeType = diskChargeType;
+            return this;
+        }
+        public String getDiskChargeType() {
+            return this.diskChargeType;
+        }
+
+        public DescribeDisksResponseDisksDisk setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
+        }
+
+        public DescribeDisksResponseDisksDisk setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeDisksResponseDisksDisk setEncrypted(Boolean encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        public DescribeDisksResponseDisksDisk setStorageSetId(String storageSetId) {
+            this.storageSetId = storageSetId;
+            return this;
+        }
+        public String getStorageSetId() {
+            return this.storageSetId;
+        }
+
+        public DescribeDisksResponseDisksDisk setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
+            this.storageSetPartitionNumber = storageSetPartitionNumber;
+            return this;
+        }
+        public Integer getStorageSetPartitionNumber() {
+            return this.storageSetPartitionNumber;
+        }
+
+        public DescribeDisksResponseDisksDisk setMountInstanceNum(Integer mountInstanceNum) {
+            this.mountInstanceNum = mountInstanceNum;
+            return this;
+        }
+        public Integer getMountInstanceNum() {
+            return this.mountInstanceNum;
+        }
+
+        public DescribeDisksResponseDisksDisk setIOPS(Integer IOPS) {
+            this.IOPS = IOPS;
+            return this;
+        }
+        public Integer getIOPS() {
+            return this.IOPS;
+        }
+
+        public DescribeDisksResponseDisksDisk setIOPSRead(Integer IOPSRead) {
+            this.IOPSRead = IOPSRead;
+            return this;
+        }
+        public Integer getIOPSRead() {
+            return this.IOPSRead;
+        }
+
+        public DescribeDisksResponseDisksDisk setIOPSWrite(Integer IOPSWrite) {
+            this.IOPSWrite = IOPSWrite;
+            return this;
+        }
+        public Integer getIOPSWrite() {
+            return this.IOPSWrite;
+        }
+
+        public DescribeDisksResponseDisksDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        public DescribeDisksResponseDisksDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public DescribeDisksResponseDisksDisk setBdfId(String bdfId) {
+            this.bdfId = bdfId;
+            return this;
+        }
+        public String getBdfId() {
+            return this.bdfId;
+        }
+
+        public DescribeDisksResponseDisksDisk setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        public DescribeDisksResponseDisksDisk setOperationLocks(DescribeDisksResponseDisksDiskOperationLocks operationLocks) {
+            this.operationLocks = operationLocks;
+            return this;
+        }
+        public DescribeDisksResponseDisksDiskOperationLocks getOperationLocks() {
+            return this.operationLocks;
+        }
+
+        public DescribeDisksResponseDisksDisk setMountInstances(DescribeDisksResponseDisksDiskMountInstances mountInstances) {
+            this.mountInstances = mountInstances;
+            return this;
+        }
+        public DescribeDisksResponseDisksDiskMountInstances getMountInstances() {
+            return this.mountInstances;
+        }
+
+        public DescribeDisksResponseDisksDisk setTags(DescribeDisksResponseDisksDiskTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeDisksResponseDisksDiskTags getTags() {
+            return this.tags;
+        }
+
     }
 
     public static class DescribeDisksResponseDisks extends TeaModel {
@@ -289,6 +733,14 @@ public class DescribeDisksResponse extends TeaModel {
         public static DescribeDisksResponseDisks build(java.util.Map<String, ?> map) throws Exception {
             DescribeDisksResponseDisks self = new DescribeDisksResponseDisks();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseDisks setDisk(java.util.List<DescribeDisksResponseDisksDisk> disk) {
+            this.disk = disk;
+            return this;
+        }
+        public java.util.List<DescribeDisksResponseDisksDisk> getDisk() {
+            return this.disk;
         }
 
     }

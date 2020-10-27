@@ -21,4 +21,28 @@ public class ExportImageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ExportImageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ExportImageResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public ExportImageResponse setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

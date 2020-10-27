@@ -29,6 +29,46 @@ public class DescribeAutoProvisioningGroupHistoryResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAutoProvisioningGroupHistoryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeAutoProvisioningGroupHistoryResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeAutoProvisioningGroupHistoryResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAutoProvisioningGroupHistoryResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeAutoProvisioningGroupHistoryResponse setAutoProvisioningGroupHistories(DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistories autoProvisioningGroupHistories) {
+        this.autoProvisioningGroupHistories = autoProvisioningGroupHistories;
+        return this;
+    }
+    public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistories getAutoProvisioningGroupHistories() {
+        return this.autoProvisioningGroupHistories;
+    }
+
     public static class DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail extends TeaModel {
         @NameInMap("Detail")
         @Validation(required = true)
@@ -43,6 +83,22 @@ public class DescribeAutoProvisioningGroupHistoryResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail setDetail(String detail) {
+            this.detail = detail;
+            return this;
+        }
+        public String getDetail() {
+            return this.detail;
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails extends TeaModel {
@@ -53,6 +109,14 @@ public class DescribeAutoProvisioningGroupHistoryResponse extends TeaModel {
         public static DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails self = new DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails setActivityDetail(java.util.List<DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail> activityDetail) {
+            this.activityDetail = activityDetail;
+            return this;
+        }
+        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail> getActivityDetail() {
+            return this.activityDetail;
         }
 
     }
@@ -83,6 +147,46 @@ public class DescribeAutoProvisioningGroupHistoryResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setLastEventTime(String lastEventTime) {
+            this.lastEventTime = lastEventTime;
+            return this;
+        }
+        public String getLastEventTime() {
+            return this.lastEventTime;
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setActivityDetails(DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails activityDetails) {
+            this.activityDetails = activityDetails;
+            return this;
+        }
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails getActivityDetails() {
+            return this.activityDetails;
+        }
+
     }
 
     public static class DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistories extends TeaModel {
@@ -93,6 +197,14 @@ public class DescribeAutoProvisioningGroupHistoryResponse extends TeaModel {
         public static DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistories build(java.util.Map<String, ?> map) throws Exception {
             DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistories self = new DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistories();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistories setAutoProvisioningGroupHistory(java.util.List<DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory> autoProvisioningGroupHistory) {
+            this.autoProvisioningGroupHistory = autoProvisioningGroupHistory;
+            return this;
+        }
+        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory> getAutoProvisioningGroupHistory() {
+            return this.autoProvisioningGroupHistory;
         }
 
     }

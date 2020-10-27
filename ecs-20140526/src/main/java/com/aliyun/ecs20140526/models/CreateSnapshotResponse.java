@@ -17,4 +17,20 @@ public class CreateSnapshotResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSnapshotResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateSnapshotResponse setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
 }

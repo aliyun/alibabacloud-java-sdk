@@ -16,4 +16,20 @@ public class ReleasePublicIpAddressRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ReleasePublicIpAddressRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ReleasePublicIpAddressRequest setPublicIpAddress(String publicIpAddress) {
+        this.publicIpAddress = publicIpAddress;
+        return this;
+    }
+    public String getPublicIpAddress() {
+        return this.publicIpAddress;
+    }
+
 }

@@ -19,4 +19,28 @@ public class RebootInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RebootInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public RebootInstanceRequest setForceStop(Boolean forceStop) {
+        this.forceStop = forceStop;
+        return this;
+    }
+    public Boolean getForceStop() {
+        return this.forceStop;
+    }
+
+    public RebootInstanceRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
 }

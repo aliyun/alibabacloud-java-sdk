@@ -46,18 +46,128 @@ public class DescribeDemandsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDemandsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeDemandsRequest setTag(java.util.List<DescribeDemandsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDemandsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public DescribeDemandsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDemandsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeDemandsRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public DescribeDemandsRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
+    public DescribeDemandsRequest setDemandId(String demandId) {
+        this.demandId = demandId;
+        return this;
+    }
+    public String getDemandId() {
+        return this.demandId;
+    }
+
+    public DescribeDemandsRequest setInstanceTypeFamily(String instanceTypeFamily) {
+        this.instanceTypeFamily = instanceTypeFamily;
+        return this;
+    }
+    public String getInstanceTypeFamily() {
+        return this.instanceTypeFamily;
+    }
+
+    public DescribeDemandsRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public DescribeDemandsRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    public DescribeDemandsRequest setDemandType(String demandType) {
+        this.demandType = demandType;
+        return this;
+    }
+    public String getDemandType() {
+        return this.demandType;
+    }
+
+    public DescribeDemandsRequest setDemandStatus(java.util.List<String> demandStatus) {
+        this.demandStatus = demandStatus;
+        return this;
+    }
+    public java.util.List<String> getDemandStatus() {
+        return this.demandStatus;
+    }
+
     public static class DescribeDemandsRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static DescribeDemandsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeDemandsRequestTag self = new DescribeDemandsRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDemandsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDemandsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

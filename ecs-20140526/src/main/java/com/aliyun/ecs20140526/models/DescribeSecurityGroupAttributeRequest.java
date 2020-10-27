@@ -23,4 +23,36 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSecurityGroupAttributeRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public DescribeSecurityGroupAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSecurityGroupAttributeRequest setNicType(String nicType) {
+        this.nicType = nicType;
+        return this;
+    }
+    public String getNicType() {
+        return this.nicType;
+    }
+
+    public DescribeSecurityGroupAttributeRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
+    }
+
 }

@@ -25,4 +25,44 @@ public class DescribeInstanceRamRoleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceRamRoleRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeInstanceRamRoleRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeInstanceRamRoleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstanceRamRoleRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public DescribeInstanceRamRoleRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
 }

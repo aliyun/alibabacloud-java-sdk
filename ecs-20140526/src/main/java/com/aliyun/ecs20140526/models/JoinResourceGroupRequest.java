@@ -21,4 +21,36 @@ public class JoinResourceGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public JoinResourceGroupRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public JoinResourceGroupRequest setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public String getResourceId() {
+        return this.resourceId;
+    }
+
+    public JoinResourceGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public JoinResourceGroupRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
 }

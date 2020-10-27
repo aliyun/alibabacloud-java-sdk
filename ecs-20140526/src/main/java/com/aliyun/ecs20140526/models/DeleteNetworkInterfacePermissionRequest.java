@@ -20,4 +20,28 @@ public class DeleteNetworkInterfacePermissionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteNetworkInterfacePermissionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteNetworkInterfacePermissionRequest setNetworkInterfacePermissionId(String networkInterfacePermissionId) {
+        this.networkInterfacePermissionId = networkInterfacePermissionId;
+        return this;
+    }
+    public String getNetworkInterfacePermissionId() {
+        return this.networkInterfacePermissionId;
+    }
+
+    public DeleteNetworkInterfacePermissionRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
+    }
+
 }

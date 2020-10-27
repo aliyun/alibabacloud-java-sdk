@@ -22,4 +22,36 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyVRouterAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyVRouterAttributeRequest setVRouterId(String VRouterId) {
+        this.VRouterId = VRouterId;
+        return this;
+    }
+    public String getVRouterId() {
+        return this.VRouterId;
+    }
+
+    public ModifyVRouterAttributeRequest setVRouterName(String VRouterName) {
+        this.VRouterName = VRouterName;
+        return this;
+    }
+    public String getVRouterName() {
+        return this.VRouterName;
+    }
+
+    public ModifyVRouterAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

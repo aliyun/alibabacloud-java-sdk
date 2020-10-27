@@ -17,4 +17,20 @@ public class DescribeInstanceVncPasswdResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceVncPasswdResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeInstanceVncPasswdResponse setVncPasswd(String vncPasswd) {
+        this.vncPasswd = vncPasswd;
+        return this;
+    }
+    public String getVncPasswd() {
+        return this.vncPasswd;
+    }
+
 }

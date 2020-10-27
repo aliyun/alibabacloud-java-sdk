@@ -13,4 +13,12 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Tea
         return TeaModel.build(map, self);
     }
 
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

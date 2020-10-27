@@ -20,4 +20,28 @@ public class DeleteHpcClusterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteHpcClusterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteHpcClusterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteHpcClusterRequest setHpcClusterId(String hpcClusterId) {
+        this.hpcClusterId = hpcClusterId;
+        return this;
+    }
+    public String getHpcClusterId() {
+        return this.hpcClusterId;
+    }
+
 }

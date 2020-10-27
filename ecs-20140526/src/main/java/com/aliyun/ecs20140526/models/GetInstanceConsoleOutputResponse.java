@@ -25,4 +25,36 @@ public class GetInstanceConsoleOutputResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetInstanceConsoleOutputResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetInstanceConsoleOutputResponse setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetInstanceConsoleOutputResponse setConsoleOutput(String consoleOutput) {
+        this.consoleOutput = consoleOutput;
+        return this;
+    }
+    public String getConsoleOutput() {
+        return this.consoleOutput;
+    }
+
+    public GetInstanceConsoleOutputResponse setLastUpdateTime(String lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+        return this;
+    }
+    public String getLastUpdateTime() {
+        return this.lastUpdateTime;
+    }
+
 }

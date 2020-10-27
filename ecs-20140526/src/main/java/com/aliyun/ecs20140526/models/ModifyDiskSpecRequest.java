@@ -22,4 +22,36 @@ public class ModifyDiskSpecRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyDiskSpecRequest setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    public ModifyDiskSpecRequest setPerformanceLevel(String performanceLevel) {
+        this.performanceLevel = performanceLevel;
+        return this;
+    }
+    public String getPerformanceLevel() {
+        return this.performanceLevel;
+    }
+
+    public ModifyDiskSpecRequest setDiskCategory(String diskCategory) {
+        this.diskCategory = diskCategory;
+        return this;
+    }
+    public String getDiskCategory() {
+        return this.diskCategory;
+    }
+
+    public ModifyDiskSpecRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
 }

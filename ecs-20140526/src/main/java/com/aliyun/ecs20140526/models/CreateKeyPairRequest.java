@@ -23,18 +23,64 @@ public class CreateKeyPairRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateKeyPairRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateKeyPairRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    public CreateKeyPairRequest setTag(java.util.List<CreateKeyPairRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateKeyPairRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateKeyPairRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static class CreateKeyPairRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static CreateKeyPairRequestTag build(java.util.Map<String, ?> map) throws Exception {
             CreateKeyPairRequestTag self = new CreateKeyPairRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public CreateKeyPairRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateKeyPairRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

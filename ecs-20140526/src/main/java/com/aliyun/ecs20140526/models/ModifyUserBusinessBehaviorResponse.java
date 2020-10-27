@@ -13,4 +13,12 @@ public class ModifyUserBusinessBehaviorResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyUserBusinessBehaviorResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

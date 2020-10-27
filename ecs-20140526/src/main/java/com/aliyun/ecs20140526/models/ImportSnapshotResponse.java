@@ -21,4 +21,28 @@ public class ImportSnapshotResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImportSnapshotResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ImportSnapshotResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public ImportSnapshotResponse setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
 }

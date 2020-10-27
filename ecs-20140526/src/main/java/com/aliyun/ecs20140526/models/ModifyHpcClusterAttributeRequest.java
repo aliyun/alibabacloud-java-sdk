@@ -26,4 +26,44 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyHpcClusterAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyHpcClusterAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyHpcClusterAttributeRequest setHpcClusterId(String hpcClusterId) {
+        this.hpcClusterId = hpcClusterId;
+        return this;
+    }
+    public String getHpcClusterId() {
+        return this.hpcClusterId;
+    }
+
+    public ModifyHpcClusterAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyHpcClusterAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
 }

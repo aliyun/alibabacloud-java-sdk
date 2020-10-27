@@ -29,6 +29,46 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeLaunchTemplateVersionsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLaunchTemplateVersionsResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeLaunchTemplateVersionsResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeLaunchTemplateVersionsResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeLaunchTemplateVersionsResponse setLaunchTemplateVersionSets(DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSets launchTemplateVersionSets) {
+        this.launchTemplateVersionSets = launchTemplateVersionSets;
+        return this;
+    }
+    public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSets getLaunchTemplateVersionSets() {
+        return this.launchTemplateVersionSets;
+    }
+
     public static class DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk extends TeaModel {
         @NameInMap("Size")
         @Validation(required = true)
@@ -53,6 +93,46 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
         public static DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk self = new DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setIops(Integer iops) {
+            this.iops = iops;
+            return this;
+        }
+        public Integer getIops() {
+            return this.iops;
         }
 
     }
@@ -95,6 +175,70 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
     }
 
     public static class DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks extends TeaModel {
@@ -105,6 +249,14 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
         public static DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks self = new DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks setDataDisk(java.util.List<DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk> dataDisk) {
+            this.dataDisk = dataDisk;
+            return this;
+        }
+        public java.util.List<DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk> getDataDisk() {
+            return this.dataDisk;
         }
 
     }
@@ -135,6 +287,46 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setPrimaryIpAddress(String primaryIpAddress) {
+            this.primaryIpAddress = primaryIpAddress;
+            return this;
+        }
+        public String getPrimaryIpAddress() {
+            return this.primaryIpAddress;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
     }
 
     public static class DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfaces extends TeaModel {
@@ -145,6 +337,14 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
         public static DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfaces self = new DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfaces();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfaces setNetworkInterface(java.util.List<DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface> networkInterface) {
+            this.networkInterface = networkInterface;
+            return this;
+        }
+        public java.util.List<DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterface> getNetworkInterface() {
+            return this.networkInterface;
         }
 
     }
@@ -163,6 +363,22 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags extends TeaModel {
@@ -173,6 +389,14 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
         public static DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags self = new DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags setInstanceTag(java.util.List<DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag> instanceTag) {
+            this.instanceTag = instanceTag;
+            return this;
+        }
+        public java.util.List<DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTagsInstanceTag> getInstanceTag() {
+            return this.instanceTag;
         }
 
     }
@@ -276,7 +500,7 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
 
         @NameInMap("SpotPriceLimit")
         @Validation(required = true)
-        public Double spotPriceLimit;
+        public Float spotPriceLimit;
 
         @NameInMap("SpotDuration")
         @Validation(required = true)
@@ -309,6 +533,262 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
         public static DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData self = new DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setImageOwnerAlias(String imageOwnerAlias) {
+            this.imageOwnerAlias = imageOwnerAlias;
+            return this;
+        }
+        public String getImageOwnerAlias() {
+            return this.imageOwnerAlias;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setPasswordInherit(Boolean passwordInherit) {
+            this.passwordInherit = passwordInherit;
+            return this;
+        }
+        public Boolean getPasswordInherit() {
+            return this.passwordInherit;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+            this.internetMaxBandwidthIn = internetMaxBandwidthIn;
+            return this;
+        }
+        public Integer getInternetMaxBandwidthIn() {
+            return this.internetMaxBandwidthIn;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+            return this;
+        }
+        public Integer getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setIoOptimized(String ioOptimized) {
+            this.ioOptimized = ioOptimized;
+            return this;
+        }
+        public String getIoOptimized() {
+            return this.ioOptimized;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setInstanceChargeType(String instanceChargeType) {
+            this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setPeriod(Integer period) {
+            this.period = period;
+            return this;
+        }
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setEnableVmOsConfig(Boolean enableVmOsConfig) {
+            this.enableVmOsConfig = enableVmOsConfig;
+            return this;
+        }
+        public Boolean getEnableVmOsConfig() {
+            return this.enableVmOsConfig;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setKeyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
+            return this;
+        }
+        public String getKeyPairName() {
+            return this.keyPairName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setAutoReleaseTime(String autoReleaseTime) {
+            this.autoReleaseTime = autoReleaseTime;
+            return this;
+        }
+        public String getAutoReleaseTime() {
+            return this.autoReleaseTime;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setSpotPriceLimit(Float spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public Float getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setSpotDuration(Integer spotDuration) {
+            this.spotDuration = spotDuration;
+            return this;
+        }
+        public Integer getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
+            this.securityEnhancementStrategy = securityEnhancementStrategy;
+            return this;
+        }
+        public String getSecurityEnhancementStrategy() {
+            return this.securityEnhancementStrategy;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setSystemDisk(DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk systemDisk) {
+            this.systemDisk = systemDisk;
+            return this;
+        }
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk getSystemDisk() {
+            return this.systemDisk;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setDataDisks(DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks dataDisks) {
+            this.dataDisks = dataDisks;
+            return this;
+        }
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisks getDataDisks() {
+            return this.dataDisks;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setNetworkInterfaces(DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfaces networkInterfaces) {
+            this.networkInterfaces = networkInterfaces;
+            return this;
+        }
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfaces getNetworkInterfaces() {
+            return this.networkInterfaces;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setTags(DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataTags getTags() {
+            return this.tags;
         }
 
     }
@@ -355,6 +835,78 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet setLaunchTemplateId(String launchTemplateId) {
+            this.launchTemplateId = launchTemplateId;
+            return this;
+        }
+        public String getLaunchTemplateId() {
+            return this.launchTemplateId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet setLaunchTemplateName(String launchTemplateName) {
+            this.launchTemplateName = launchTemplateName;
+            return this;
+        }
+        public String getLaunchTemplateName() {
+            return this.launchTemplateName;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet setDefaultVersion(Boolean defaultVersion) {
+            this.defaultVersion = defaultVersion;
+            return this;
+        }
+        public Boolean getDefaultVersion() {
+            return this.defaultVersion;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet setVersionNumber(Long versionNumber) {
+            this.versionNumber = versionNumber;
+            return this;
+        }
+        public Long getVersionNumber() {
+            return this.versionNumber;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet setVersionDescription(String versionDescription) {
+            this.versionDescription = versionDescription;
+            return this;
+        }
+        public String getVersionDescription() {
+            return this.versionDescription;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet setCreatedBy(String createdBy) {
+            this.createdBy = createdBy;
+            return this;
+        }
+        public String getCreatedBy() {
+            return this.createdBy;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet setLaunchTemplateData(DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData launchTemplateData) {
+            this.launchTemplateData = launchTemplateData;
+            return this;
+        }
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData getLaunchTemplateData() {
+            return this.launchTemplateData;
+        }
+
     }
 
     public static class DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSets extends TeaModel {
@@ -365,6 +917,14 @@ public class DescribeLaunchTemplateVersionsResponse extends TeaModel {
         public static DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSets build(java.util.Map<String, ?> map) throws Exception {
             DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSets self = new DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSets();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSets setLaunchTemplateVersionSet(java.util.List<DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet> launchTemplateVersionSet) {
+            this.launchTemplateVersionSet = launchTemplateVersionSet;
+            return this;
+        }
+        public java.util.List<DescribeLaunchTemplateVersionsResponseLaunchTemplateVersionSetsLaunchTemplateVersionSet> getLaunchTemplateVersionSet() {
+            return this.launchTemplateVersionSet;
         }
 
     }

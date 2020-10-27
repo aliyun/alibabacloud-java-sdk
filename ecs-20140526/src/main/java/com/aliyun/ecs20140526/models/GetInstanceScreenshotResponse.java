@@ -21,4 +21,28 @@ public class GetInstanceScreenshotResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetInstanceScreenshotResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetInstanceScreenshotResponse setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetInstanceScreenshotResponse setScreenshot(String screenshot) {
+        this.screenshot = screenshot;
+        return this;
+    }
+    public String getScreenshot() {
+        return this.screenshot;
+    }
+
 }

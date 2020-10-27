@@ -17,4 +17,20 @@ public class CancelTaskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelTaskRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CancelTaskRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
 }

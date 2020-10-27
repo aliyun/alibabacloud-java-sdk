@@ -29,6 +29,46 @@ public class DescribeCommandsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCommandsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeCommandsResponse setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeCommandsResponse setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeCommandsResponse setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeCommandsResponse setCommands(DescribeCommandsResponseCommands commands) {
+        this.commands = commands;
+        return this;
+    }
+    public DescribeCommandsResponseCommands getCommands() {
+        return this.commands;
+    }
+
     public static class DescribeCommandsResponseCommandsCommandParameterNames extends TeaModel {
         // ParameterName
         @NameInMap("ParameterName")
@@ -38,6 +78,14 @@ public class DescribeCommandsResponse extends TeaModel {
         public static DescribeCommandsResponseCommandsCommandParameterNames build(java.util.Map<String, ?> map) throws Exception {
             DescribeCommandsResponseCommandsCommandParameterNames self = new DescribeCommandsResponseCommandsCommandParameterNames();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsResponseCommandsCommandParameterNames setParameterName(java.util.List<String> parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public java.util.List<String> getParameterName() {
+            return this.parameterName;
         }
 
     }
@@ -92,6 +140,94 @@ public class DescribeCommandsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeCommandsResponseCommandsCommand setCommandId(String commandId) {
+            this.commandId = commandId;
+            return this;
+        }
+        public String getCommandId() {
+            return this.commandId;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setCommandContent(String commandContent) {
+            this.commandContent = commandContent;
+            return this;
+        }
+        public String getCommandContent() {
+            return this.commandContent;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setWorkingDir(String workingDir) {
+            this.workingDir = workingDir;
+            return this;
+        }
+        public String getWorkingDir() {
+            return this.workingDir;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setTimeout(Long timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public Long getTimeout() {
+            return this.timeout;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setInvokeTimes(Integer invokeTimes) {
+            this.invokeTimes = invokeTimes;
+            return this;
+        }
+        public Integer getInvokeTimes() {
+            return this.invokeTimes;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setEnableParameter(Boolean enableParameter) {
+            this.enableParameter = enableParameter;
+            return this;
+        }
+        public Boolean getEnableParameter() {
+            return this.enableParameter;
+        }
+
+        public DescribeCommandsResponseCommandsCommand setParameterNames(DescribeCommandsResponseCommandsCommandParameterNames parameterNames) {
+            this.parameterNames = parameterNames;
+            return this;
+        }
+        public DescribeCommandsResponseCommandsCommandParameterNames getParameterNames() {
+            return this.parameterNames;
+        }
+
     }
 
     public static class DescribeCommandsResponseCommands extends TeaModel {
@@ -102,6 +238,14 @@ public class DescribeCommandsResponse extends TeaModel {
         public static DescribeCommandsResponseCommands build(java.util.Map<String, ?> map) throws Exception {
             DescribeCommandsResponseCommands self = new DescribeCommandsResponseCommands();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsResponseCommands setCommand(java.util.List<DescribeCommandsResponseCommandsCommand> command) {
+            this.command = command;
+            return this;
+        }
+        public java.util.List<DescribeCommandsResponseCommandsCommand> getCommand() {
+            return this.command;
         }
 
     }

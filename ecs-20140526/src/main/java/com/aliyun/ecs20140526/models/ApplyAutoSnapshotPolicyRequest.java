@@ -21,4 +21,28 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ApplyAutoSnapshotPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ApplyAutoSnapshotPolicyRequest setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+        this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+        return this;
+    }
+    public String getAutoSnapshotPolicyId() {
+        return this.autoSnapshotPolicyId;
+    }
+
+    public ApplyAutoSnapshotPolicyRequest setDiskIds(String diskIds) {
+        this.diskIds = diskIds;
+        return this;
+    }
+    public String getDiskIds() {
+        return this.diskIds;
+    }
+
 }

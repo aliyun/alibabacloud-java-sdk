@@ -29,6 +29,46 @@ public class DescribeHpcClustersResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeHpcClustersResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeHpcClustersResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeHpcClustersResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeHpcClustersResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeHpcClustersResponse setHpcClusters(DescribeHpcClustersResponseHpcClusters hpcClusters) {
+        this.hpcClusters = hpcClusters;
+        return this;
+    }
+    public DescribeHpcClustersResponseHpcClusters getHpcClusters() {
+        return this.hpcClusters;
+    }
+
     public static class DescribeHpcClustersResponseHpcClustersHpcCluster extends TeaModel {
         @NameInMap("HpcClusterId")
         @Validation(required = true)
@@ -47,6 +87,30 @@ public class DescribeHpcClustersResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeHpcClustersResponseHpcClustersHpcCluster setHpcClusterId(String hpcClusterId) {
+            this.hpcClusterId = hpcClusterId;
+            return this;
+        }
+        public String getHpcClusterId() {
+            return this.hpcClusterId;
+        }
+
+        public DescribeHpcClustersResponseHpcClustersHpcCluster setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeHpcClustersResponseHpcClustersHpcCluster setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
     }
 
     public static class DescribeHpcClustersResponseHpcClusters extends TeaModel {
@@ -57,6 +121,14 @@ public class DescribeHpcClustersResponse extends TeaModel {
         public static DescribeHpcClustersResponseHpcClusters build(java.util.Map<String, ?> map) throws Exception {
             DescribeHpcClustersResponseHpcClusters self = new DescribeHpcClustersResponseHpcClusters();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHpcClustersResponseHpcClusters setHpcCluster(java.util.List<DescribeHpcClustersResponseHpcClustersHpcCluster> hpcCluster) {
+            this.hpcCluster = hpcCluster;
+            return this;
+        }
+        public java.util.List<DescribeHpcClustersResponseHpcClustersHpcCluster> getHpcCluster() {
+            return this.hpcCluster;
         }
 
     }

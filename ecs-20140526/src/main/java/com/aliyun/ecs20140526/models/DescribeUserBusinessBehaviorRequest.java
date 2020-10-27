@@ -16,4 +16,20 @@ public class DescribeUserBusinessBehaviorRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeUserBusinessBehaviorRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeUserBusinessBehaviorRequest setStatusKey(String statusKey) {
+        this.statusKey = statusKey;
+        return this;
+    }
+    public String getStatusKey() {
+        return this.statusKey;
+    }
+
 }

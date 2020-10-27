@@ -17,4 +17,20 @@ public class RedeployDedicatedHostRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RedeployDedicatedHostRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public RedeployDedicatedHostRequest setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+    public String getDedicatedHostId() {
+        return this.dedicatedHostId;
+    }
+
 }

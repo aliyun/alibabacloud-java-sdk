@@ -30,22 +30,91 @@ public class CreateNatGatewayRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateNatGatewayRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateNatGatewayRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateNatGatewayRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateNatGatewayRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateNatGatewayRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateNatGatewayRequest setBandwidthPackage(java.util.List<CreateNatGatewayRequestBandwidthPackage> bandwidthPackage) {
+        this.bandwidthPackage = bandwidthPackage;
+        return this;
+    }
+    public java.util.List<CreateNatGatewayRequestBandwidthPackage> getBandwidthPackage() {
+        return this.bandwidthPackage;
+    }
+
     public static class CreateNatGatewayRequestBandwidthPackage extends TeaModel {
         @NameInMap("IpCount")
-        @Validation(required = true)
         public Integer ipCount;
 
         @NameInMap("Bandwidth")
-        @Validation(required = true)
         public Integer bandwidth;
 
         @NameInMap("Zone")
-        @Validation(required = true)
         public String zone;
 
         public static CreateNatGatewayRequestBandwidthPackage build(java.util.Map<String, ?> map) throws Exception {
             CreateNatGatewayRequestBandwidthPackage self = new CreateNatGatewayRequestBandwidthPackage();
             return TeaModel.build(map, self);
+        }
+
+        public CreateNatGatewayRequestBandwidthPackage setIpCount(Integer ipCount) {
+            this.ipCount = ipCount;
+            return this;
+        }
+        public Integer getIpCount() {
+            return this.ipCount;
+        }
+
+        public CreateNatGatewayRequestBandwidthPackage setBandwidth(Integer bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Integer getBandwidth() {
+            return this.bandwidth;
+        }
+
+        public CreateNatGatewayRequestBandwidthPackage setZone(String zone) {
+            this.zone = zone;
+            return this;
+        }
+        public String getZone() {
+            return this.zone;
         }
 
     }

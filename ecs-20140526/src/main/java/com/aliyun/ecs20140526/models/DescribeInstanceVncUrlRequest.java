@@ -17,4 +17,20 @@ public class DescribeInstanceVncUrlRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceVncUrlRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstanceVncUrlRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
 }

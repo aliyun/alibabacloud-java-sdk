@@ -48,4 +48,100 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateVirtualBorderRouterRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateVirtualBorderRouterRequest setPhysicalConnectionId(String physicalConnectionId) {
+        this.physicalConnectionId = physicalConnectionId;
+        return this;
+    }
+    public String getPhysicalConnectionId() {
+        return this.physicalConnectionId;
+    }
+
+    public CreateVirtualBorderRouterRequest setVbrOwnerId(Long vbrOwnerId) {
+        this.vbrOwnerId = vbrOwnerId;
+        return this;
+    }
+    public Long getVbrOwnerId() {
+        return this.vbrOwnerId;
+    }
+
+    public CreateVirtualBorderRouterRequest setVlanId(Integer vlanId) {
+        this.vlanId = vlanId;
+        return this;
+    }
+    public Integer getVlanId() {
+        return this.vlanId;
+    }
+
+    public CreateVirtualBorderRouterRequest setCircuitCode(String circuitCode) {
+        this.circuitCode = circuitCode;
+        return this;
+    }
+    public String getCircuitCode() {
+        return this.circuitCode;
+    }
+
+    public CreateVirtualBorderRouterRequest setLocalGatewayIp(String localGatewayIp) {
+        this.localGatewayIp = localGatewayIp;
+        return this;
+    }
+    public String getLocalGatewayIp() {
+        return this.localGatewayIp;
+    }
+
+    public CreateVirtualBorderRouterRequest setPeerGatewayIp(String peerGatewayIp) {
+        this.peerGatewayIp = peerGatewayIp;
+        return this;
+    }
+    public String getPeerGatewayIp() {
+        return this.peerGatewayIp;
+    }
+
+    public CreateVirtualBorderRouterRequest setPeeringSubnetMask(String peeringSubnetMask) {
+        this.peeringSubnetMask = peeringSubnetMask;
+        return this;
+    }
+    public String getPeeringSubnetMask() {
+        return this.peeringSubnetMask;
+    }
+
+    public CreateVirtualBorderRouterRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateVirtualBorderRouterRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateVirtualBorderRouterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateVirtualBorderRouterRequest setUserCidr(String userCidr) {
+        this.userCidr = userCidr;
+        return this;
+    }
+    public String getUserCidr() {
+        return this.userCidr;
+    }
+
 }

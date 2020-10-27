@@ -41,4 +41,84 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyInstanceChargeTypeRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    public ModifyInstanceChargeTypeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyInstanceChargeTypeRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public ModifyInstanceChargeTypeRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    public ModifyInstanceChargeTypeRequest setIncludeDataDisks(Boolean includeDataDisks) {
+        this.includeDataDisks = includeDataDisks;
+        return this;
+    }
+    public Boolean getIncludeDataDisks() {
+        return this.includeDataDisks;
+    }
+
+    public ModifyInstanceChargeTypeRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public ModifyInstanceChargeTypeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public ModifyInstanceChargeTypeRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    public ModifyInstanceChargeTypeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyInstanceChargeTypeRequest setIsDetailFee(Boolean isDetailFee) {
+        this.isDetailFee = isDetailFee;
+        return this;
+    }
+    public Boolean getIsDetailFee() {
+        return this.isDetailFee;
+    }
+
 }

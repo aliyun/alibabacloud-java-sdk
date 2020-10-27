@@ -20,4 +20,28 @@ public class GetInstanceScreenshotRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetInstanceScreenshotRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetInstanceScreenshotRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetInstanceScreenshotRequest setWakeUp(Boolean wakeUp) {
+        this.wakeUp = wakeUp;
+        return this;
+    }
+    public Boolean getWakeUp() {
+        return this.wakeUp;
+    }
+
 }

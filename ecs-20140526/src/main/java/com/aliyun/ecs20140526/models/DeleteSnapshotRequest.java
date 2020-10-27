@@ -16,4 +16,20 @@ public class DeleteSnapshotRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteSnapshotRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
+    public DeleteSnapshotRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
+    }
+
 }

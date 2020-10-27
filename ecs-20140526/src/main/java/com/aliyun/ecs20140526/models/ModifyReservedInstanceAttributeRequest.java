@@ -23,4 +23,36 @@ public class ModifyReservedInstanceAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyReservedInstanceAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyReservedInstanceAttributeRequest setReservedInstanceId(String reservedInstanceId) {
+        this.reservedInstanceId = reservedInstanceId;
+        return this;
+    }
+    public String getReservedInstanceId() {
+        return this.reservedInstanceId;
+    }
+
+    public ModifyReservedInstanceAttributeRequest setReservedInstanceName(String reservedInstanceName) {
+        this.reservedInstanceName = reservedInstanceName;
+        return this;
+    }
+    public String getReservedInstanceName() {
+        return this.reservedInstanceName;
+    }
+
+    public ModifyReservedInstanceAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

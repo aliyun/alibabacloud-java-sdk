@@ -34,18 +34,96 @@ public class CreateSnapshotRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSnapshotRequest setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
+    public CreateSnapshotRequest setSnapshotName(String snapshotName) {
+        this.snapshotName = snapshotName;
+        return this;
+    }
+    public String getSnapshotName() {
+        return this.snapshotName;
+    }
+
+    public CreateSnapshotRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateSnapshotRequest setRetentionDays(Integer retentionDays) {
+        this.retentionDays = retentionDays;
+        return this;
+    }
+    public Integer getRetentionDays() {
+        return this.retentionDays;
+    }
+
+    public CreateSnapshotRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
+    }
+
+    public CreateSnapshotRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateSnapshotRequest setTag(java.util.List<CreateSnapshotRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateSnapshotRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public CreateSnapshotRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static class CreateSnapshotRequestTag extends TeaModel {
         @NameInMap("value")
-        @Validation(required = true)
         public String value;
 
         @NameInMap("key")
-        @Validation(required = true)
         public String key;
 
         public static CreateSnapshotRequestTag build(java.util.Map<String, ?> map) throws Exception {
             CreateSnapshotRequestTag self = new CreateSnapshotRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public CreateSnapshotRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public CreateSnapshotRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }

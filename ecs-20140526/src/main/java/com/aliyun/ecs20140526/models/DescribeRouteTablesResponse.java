@@ -29,6 +29,46 @@ public class DescribeRouteTablesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRouteTablesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeRouteTablesResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeRouteTablesResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeRouteTablesResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeRouteTablesResponse setRouteTables(DescribeRouteTablesResponseRouteTables routeTables) {
+        this.routeTables = routeTables;
+        return this;
+    }
+    public DescribeRouteTablesResponseRouteTables getRouteTables() {
+        return this.routeTables;
+    }
+
     public static class DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop extends TeaModel {
         @NameInMap("NextHopType")
         @Validation(required = true)
@@ -51,6 +91,38 @@ public class DescribeRouteTablesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setNextHopType(String nextHopType) {
+            this.nextHopType = nextHopType;
+            return this;
+        }
+        public String getNextHopType() {
+            return this.nextHopType;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setNextHopId(String nextHopId) {
+            this.nextHopId = nextHopId;
+            return this;
+        }
+        public String getNextHopId() {
+            return this.nextHopId;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setEnabled(Integer enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Integer getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
+        }
+
     }
 
     public static class DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHops extends TeaModel {
@@ -61,6 +133,14 @@ public class DescribeRouteTablesResponse extends TeaModel {
         public static DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHops build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHops self = new DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHops();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHops setNextHop(java.util.List<DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop> nextHop) {
+            this.nextHop = nextHop;
+            return this;
+        }
+        public java.util.List<DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHopsNextHop> getNextHop() {
+            return this.nextHop;
         }
 
     }
@@ -99,6 +179,62 @@ public class DescribeRouteTablesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntry setRouteTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntry setDestinationCidrBlock(String destinationCidrBlock) {
+            this.destinationCidrBlock = destinationCidrBlock;
+            return this;
+        }
+        public String getDestinationCidrBlock() {
+            return this.destinationCidrBlock;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntry setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntry setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntry setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntry setNextHopType(String nextHopType) {
+            this.nextHopType = nextHopType;
+            return this;
+        }
+        public String getNextHopType() {
+            return this.nextHopType;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntry setNextHops(DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHops nextHops) {
+            this.nextHops = nextHops;
+            return this;
+        }
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntryNextHops getNextHops() {
+            return this.nextHops;
+        }
+
     }
 
     public static class DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrys extends TeaModel {
@@ -109,6 +245,14 @@ public class DescribeRouteTablesResponse extends TeaModel {
         public static DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrys build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrys self = new DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrys();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrys setRouteEntry(java.util.List<DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntry> routeEntry) {
+            this.routeEntry = routeEntry;
+            return this;
+        }
+        public java.util.List<DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrysRouteEntry> getRouteEntry() {
+            return this.routeEntry;
         }
 
     }
@@ -143,6 +287,54 @@ public class DescribeRouteTablesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeRouteTablesResponseRouteTablesRouteTable setVRouterId(String VRouterId) {
+            this.VRouterId = VRouterId;
+            return this;
+        }
+        public String getVRouterId() {
+            return this.VRouterId;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTable setRouteTableId(String routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTable setRouteTableType(String routeTableType) {
+            this.routeTableType = routeTableType;
+            return this;
+        }
+        public String getRouteTableType() {
+            return this.routeTableType;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTable setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTable setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public DescribeRouteTablesResponseRouteTablesRouteTable setRouteEntrys(DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrys routeEntrys) {
+            this.routeEntrys = routeEntrys;
+            return this;
+        }
+        public DescribeRouteTablesResponseRouteTablesRouteTableRouteEntrys getRouteEntrys() {
+            return this.routeEntrys;
+        }
+
     }
 
     public static class DescribeRouteTablesResponseRouteTables extends TeaModel {
@@ -153,6 +345,14 @@ public class DescribeRouteTablesResponse extends TeaModel {
         public static DescribeRouteTablesResponseRouteTables build(java.util.Map<String, ?> map) throws Exception {
             DescribeRouteTablesResponseRouteTables self = new DescribeRouteTablesResponseRouteTables();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRouteTablesResponseRouteTables setRouteTable(java.util.List<DescribeRouteTablesResponseRouteTablesRouteTable> routeTable) {
+            this.routeTable = routeTable;
+            return this;
+        }
+        public java.util.List<DescribeRouteTablesResponseRouteTablesRouteTable> getRouteTable() {
+            return this.routeTable;
         }
 
     }

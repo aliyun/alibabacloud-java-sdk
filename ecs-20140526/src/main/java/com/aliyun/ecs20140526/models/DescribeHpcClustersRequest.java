@@ -25,4 +25,44 @@ public class DescribeHpcClustersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeHpcClustersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeHpcClustersRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DescribeHpcClustersRequest setHpcClusterIds(String hpcClusterIds) {
+        this.hpcClusterIds = hpcClusterIds;
+        return this;
+    }
+    public String getHpcClusterIds() {
+        return this.hpcClusterIds;
+    }
+
+    public DescribeHpcClustersRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeHpcClustersRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

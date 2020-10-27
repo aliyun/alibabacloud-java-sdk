@@ -19,4 +19,28 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyInstanceAutoReleaseTimeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyInstanceAutoReleaseTimeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceAutoReleaseTimeRequest setAutoReleaseTime(String autoReleaseTime) {
+        this.autoReleaseTime = autoReleaseTime;
+        return this;
+    }
+    public String getAutoReleaseTime() {
+        return this.autoReleaseTime;
+    }
+
 }

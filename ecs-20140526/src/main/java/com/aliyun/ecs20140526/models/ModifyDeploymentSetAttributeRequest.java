@@ -23,4 +23,36 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyDeploymentSetAttributeRequest setDeploymentSetId(String deploymentSetId) {
+        this.deploymentSetId = deploymentSetId;
+        return this;
+    }
+    public String getDeploymentSetId() {
+        return this.deploymentSetId;
+    }
+
+    public ModifyDeploymentSetAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ModifyDeploymentSetAttributeRequest setDeploymentSetName(String deploymentSetName) {
+        this.deploymentSetName = deploymentSetName;
+        return this;
+    }
+    public String getDeploymentSetName() {
+        return this.deploymentSetName;
+    }
+
+    public ModifyDeploymentSetAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

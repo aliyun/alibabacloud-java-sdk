@@ -17,4 +17,20 @@ public class InvokeCommandResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public InvokeCommandResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public InvokeCommandResponse setInvokeId(String invokeId) {
+        this.invokeId = invokeId;
+        return this;
+    }
+    public String getInvokeId() {
+        return this.invokeId;
+    }
+
 }

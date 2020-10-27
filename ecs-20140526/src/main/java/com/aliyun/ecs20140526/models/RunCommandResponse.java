@@ -21,4 +21,28 @@ public class RunCommandResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RunCommandResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RunCommandResponse setCommandId(String commandId) {
+        this.commandId = commandId;
+        return this;
+    }
+    public String getCommandId() {
+        return this.commandId;
+    }
+
+    public RunCommandResponse setInvokeId(String invokeId) {
+        this.invokeId = invokeId;
+        return this;
+    }
+    public String getInvokeId() {
+        return this.invokeId;
+    }
+
 }

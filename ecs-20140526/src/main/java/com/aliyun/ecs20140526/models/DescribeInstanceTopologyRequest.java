@@ -16,4 +16,20 @@ public class DescribeInstanceTopologyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceTopologyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstanceTopologyRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
+    }
+
 }

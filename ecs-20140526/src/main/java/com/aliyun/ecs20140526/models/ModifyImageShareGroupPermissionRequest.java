@@ -23,4 +23,36 @@ public class ModifyImageShareGroupPermissionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyImageShareGroupPermissionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyImageShareGroupPermissionRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public ModifyImageShareGroupPermissionRequest setAddGroup(java.util.List<String> addGroup) {
+        this.addGroup = addGroup;
+        return this;
+    }
+    public java.util.List<String> getAddGroup() {
+        return this.addGroup;
+    }
+
+    public ModifyImageShareGroupPermissionRequest setRemoveGroup(java.util.List<String> removeGroup) {
+        this.removeGroup = removeGroup;
+        return this;
+    }
+    public java.util.List<String> getRemoveGroup() {
+        return this.removeGroup;
+    }
+
 }

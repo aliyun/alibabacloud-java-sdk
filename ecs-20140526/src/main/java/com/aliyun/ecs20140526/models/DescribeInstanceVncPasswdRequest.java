@@ -17,4 +17,20 @@ public class DescribeInstanceVncPasswdRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceVncPasswdRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstanceVncPasswdRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
 }

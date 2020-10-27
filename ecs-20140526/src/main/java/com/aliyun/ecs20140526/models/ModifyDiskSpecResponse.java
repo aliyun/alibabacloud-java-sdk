@@ -17,4 +17,20 @@ public class ModifyDiskSpecResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyDiskSpecResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ModifyDiskSpecResponse setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
 }

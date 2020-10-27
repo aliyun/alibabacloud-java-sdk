@@ -23,4 +23,36 @@ public class AssociateEipAddressRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AssociateEipAddressRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AssociateEipAddressRequest setAllocationId(String allocationId) {
+        this.allocationId = allocationId;
+        return this;
+    }
+    public String getAllocationId() {
+        return this.allocationId;
+    }
+
+    public AssociateEipAddressRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public AssociateEipAddressRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
 }

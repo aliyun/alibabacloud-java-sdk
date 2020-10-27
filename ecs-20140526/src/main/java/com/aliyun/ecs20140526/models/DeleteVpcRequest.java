@@ -16,4 +16,20 @@ public class DeleteVpcRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteVpcRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public DeleteVpcRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

@@ -25,6 +25,38 @@ public class DescribeSpotPriceHistoryResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSpotPriceHistoryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSpotPriceHistoryResponse setNextOffset(Integer nextOffset) {
+        this.nextOffset = nextOffset;
+        return this;
+    }
+    public Integer getNextOffset() {
+        return this.nextOffset;
+    }
+
+    public DescribeSpotPriceHistoryResponse setCurrency(String currency) {
+        this.currency = currency;
+        return this;
+    }
+    public String getCurrency() {
+        return this.currency;
+    }
+
+    public DescribeSpotPriceHistoryResponse setSpotPrices(DescribeSpotPriceHistoryResponseSpotPrices spotPrices) {
+        this.spotPrices = spotPrices;
+        return this;
+    }
+    public DescribeSpotPriceHistoryResponseSpotPrices getSpotPrices() {
+        return this.spotPrices;
+    }
+
     public static class DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType extends TeaModel {
         @NameInMap("ZoneId")
         @Validation(required = true)
@@ -48,15 +80,71 @@ public class DescribeSpotPriceHistoryResponse extends TeaModel {
 
         @NameInMap("SpotPrice")
         @Validation(required = true)
-        public Double spotPrice;
+        public Float spotPrice;
 
         @NameInMap("OriginPrice")
         @Validation(required = true)
-        public Double originPrice;
+        public Float originPrice;
 
         public static DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType build(java.util.Map<String, ?> map) throws Exception {
             DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType self = new DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType setIoOptimized(String ioOptimized) {
+            this.ioOptimized = ioOptimized;
+            return this;
+        }
+        public String getIoOptimized() {
+            return this.ioOptimized;
+        }
+
+        public DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType setSpotPrice(Float spotPrice) {
+            this.spotPrice = spotPrice;
+            return this;
+        }
+        public Float getSpotPrice() {
+            return this.spotPrice;
+        }
+
+        public DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType setOriginPrice(Float originPrice) {
+            this.originPrice = originPrice;
+            return this;
+        }
+        public Float getOriginPrice() {
+            return this.originPrice;
         }
 
     }
@@ -69,6 +157,14 @@ public class DescribeSpotPriceHistoryResponse extends TeaModel {
         public static DescribeSpotPriceHistoryResponseSpotPrices build(java.util.Map<String, ?> map) throws Exception {
             DescribeSpotPriceHistoryResponseSpotPrices self = new DescribeSpotPriceHistoryResponseSpotPrices();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSpotPriceHistoryResponseSpotPrices setSpotPriceType(java.util.List<DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType> spotPriceType) {
+            this.spotPriceType = spotPriceType;
+            return this;
+        }
+        public java.util.List<DescribeSpotPriceHistoryResponseSpotPricesSpotPriceType> getSpotPriceType() {
+            return this.spotPriceType;
         }
 
     }

@@ -13,4 +13,12 @@ public class DeleteDiskResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteDiskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

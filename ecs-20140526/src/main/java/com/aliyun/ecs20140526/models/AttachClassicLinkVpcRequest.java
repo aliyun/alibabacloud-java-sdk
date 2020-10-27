@@ -21,4 +21,28 @@ public class AttachClassicLinkVpcRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AttachClassicLinkVpcRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AttachClassicLinkVpcRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public AttachClassicLinkVpcRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
 }

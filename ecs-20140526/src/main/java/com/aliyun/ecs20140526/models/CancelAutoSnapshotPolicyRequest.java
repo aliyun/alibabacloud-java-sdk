@@ -17,4 +17,20 @@ public class CancelAutoSnapshotPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelAutoSnapshotPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CancelAutoSnapshotPolicyRequest setDiskIds(String diskIds) {
+        this.diskIds = diskIds;
+        return this;
+    }
+    public String getDiskIds() {
+        return this.diskIds;
+    }
+
 }

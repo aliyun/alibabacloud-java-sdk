@@ -46,4 +46,100 @@ public class DescribeInvocationsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInvocationsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInvocationsRequest setInvokeId(String invokeId) {
+        this.invokeId = invokeId;
+        return this;
+    }
+    public String getInvokeId() {
+        return this.invokeId;
+    }
+
+    public DescribeInvocationsRequest setCommandId(String commandId) {
+        this.commandId = commandId;
+        return this;
+    }
+    public String getCommandId() {
+        return this.commandId;
+    }
+
+    public DescribeInvocationsRequest setCommandName(String commandName) {
+        this.commandName = commandName;
+        return this;
+    }
+    public String getCommandName() {
+        return this.commandName;
+    }
+
+    public DescribeInvocationsRequest setCommandType(String commandType) {
+        this.commandType = commandType;
+        return this;
+    }
+    public String getCommandType() {
+        return this.commandType;
+    }
+
+    public DescribeInvocationsRequest setTimed(Boolean timed) {
+        this.timed = timed;
+        return this;
+    }
+    public Boolean getTimed() {
+        return this.timed;
+    }
+
+    public DescribeInvocationsRequest setInvokeStatus(String invokeStatus) {
+        this.invokeStatus = invokeStatus;
+        return this;
+    }
+    public String getInvokeStatus() {
+        return this.invokeStatus;
+    }
+
+    public DescribeInvocationsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeInvocationsRequest setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
+        return this;
+    }
+    public String getContentEncoding() {
+        return this.contentEncoding;
+    }
+
+    public DescribeInvocationsRequest setIncludeOutput(Boolean includeOutput) {
+        this.includeOutput = includeOutput;
+        return this;
+    }
+    public Boolean getIncludeOutput() {
+        return this.includeOutput;
+    }
+
+    public DescribeInvocationsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeInvocationsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
 }

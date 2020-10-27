@@ -17,4 +17,20 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCloudAssistantStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeCloudAssistantStatusRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
 }

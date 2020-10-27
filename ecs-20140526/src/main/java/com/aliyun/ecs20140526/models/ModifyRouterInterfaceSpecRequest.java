@@ -27,4 +27,44 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyRouterInterfaceSpecRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyRouterInterfaceSpecRequest setRouterInterfaceId(String routerInterfaceId) {
+        this.routerInterfaceId = routerInterfaceId;
+        return this;
+    }
+    public String getRouterInterfaceId() {
+        return this.routerInterfaceId;
+    }
+
+    public ModifyRouterInterfaceSpecRequest setSpec(String spec) {
+        this.spec = spec;
+        return this;
+    }
+    public String getSpec() {
+        return this.spec;
+    }
+
+    public ModifyRouterInterfaceSpecRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyRouterInterfaceSpecRequest setUserCidr(String userCidr) {
+        this.userCidr = userCidr;
+        return this;
+    }
+    public String getUserCidr() {
+        return this.userCidr;
+    }
+
 }

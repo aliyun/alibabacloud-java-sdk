@@ -24,4 +24,36 @@ public class ExportSnapshotRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ExportSnapshotRequest setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+    public String getSnapshotId() {
+        return this.snapshotId;
+    }
+
+    public ExportSnapshotRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ExportSnapshotRequest setOssBucket(String ossBucket) {
+        this.ossBucket = ossBucket;
+        return this;
+    }
+    public String getOssBucket() {
+        return this.ossBucket;
+    }
+
+    public ExportSnapshotRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
+    }
+
 }

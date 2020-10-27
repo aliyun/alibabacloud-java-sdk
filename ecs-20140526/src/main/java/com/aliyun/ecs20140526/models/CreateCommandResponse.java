@@ -17,4 +17,20 @@ public class CreateCommandResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateCommandResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateCommandResponse setCommandId(String commandId) {
+        this.commandId = commandId;
+        return this;
+    }
+    public String getCommandId() {
+        return this.commandId;
+    }
+
 }

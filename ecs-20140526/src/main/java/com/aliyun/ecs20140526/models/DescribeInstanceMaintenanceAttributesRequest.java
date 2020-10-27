@@ -22,4 +22,36 @@ public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceMaintenanceAttributesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstanceMaintenanceAttributesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeInstanceMaintenanceAttributesRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeInstanceMaintenanceAttributesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
 }

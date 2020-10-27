@@ -23,4 +23,36 @@ public class DeleteLaunchTemplateVersionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteLaunchTemplateVersionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteLaunchTemplateVersionRequest setLaunchTemplateId(String launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
+        return this;
+    }
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
+    }
+
+    public DeleteLaunchTemplateVersionRequest setLaunchTemplateName(String launchTemplateName) {
+        this.launchTemplateName = launchTemplateName;
+        return this;
+    }
+    public String getLaunchTemplateName() {
+        return this.launchTemplateName;
+    }
+
+    public DeleteLaunchTemplateVersionRequest setDeleteVersion(java.util.List<Long> deleteVersion) {
+        this.deleteVersion = deleteVersion;
+        return this;
+    }
+    public java.util.List<Long> getDeleteVersion() {
+        return this.deleteVersion;
+    }
+
 }

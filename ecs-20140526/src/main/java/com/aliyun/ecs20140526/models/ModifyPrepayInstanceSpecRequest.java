@@ -29,7 +29,6 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public Boolean migrateAcrossZone;
 
     @NameInMap("SystemDisk")
-    @Validation(required = true)
     public ModifyPrepayInstanceSpecRequestSystemDisk systemDisk;
 
     @NameInMap("RebootTime")
@@ -46,6 +45,94 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyPrepayInstanceSpecRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setOperatorType(String operatorType) {
+        this.operatorType = operatorType;
+        return this;
+    }
+    public String getOperatorType() {
+        return this.operatorType;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setMigrateAcrossZone(Boolean migrateAcrossZone) {
+        this.migrateAcrossZone = migrateAcrossZone;
+        return this;
+    }
+    public Boolean getMigrateAcrossZone() {
+        return this.migrateAcrossZone;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setSystemDisk(ModifyPrepayInstanceSpecRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public ModifyPrepayInstanceSpecRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setRebootTime(String rebootTime) {
+        this.rebootTime = rebootTime;
+        return this;
+    }
+    public String getRebootTime() {
+        return this.rebootTime;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setRebootWhenFinished(Boolean rebootWhenFinished) {
+        this.rebootWhenFinished = rebootWhenFinished;
+        return this;
+    }
+    public Boolean getRebootWhenFinished() {
+        return this.rebootWhenFinished;
+    }
+
     public static class ModifyPrepayInstanceSpecRequestSystemDisk extends TeaModel {
         @NameInMap("Category")
         public String category;
@@ -53,6 +140,14 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
         public static ModifyPrepayInstanceSpecRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
             ModifyPrepayInstanceSpecRequestSystemDisk self = new ModifyPrepayInstanceSpecRequestSystemDisk();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyPrepayInstanceSpecRequestSystemDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
     }

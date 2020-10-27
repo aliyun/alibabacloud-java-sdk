@@ -21,4 +21,28 @@ public class DetachKeyPairRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetachKeyPairRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DetachKeyPairRequest setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    public DetachKeyPairRequest setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public String getInstanceIds() {
+        return this.instanceIds;
+    }
+
 }

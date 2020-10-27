@@ -17,4 +17,20 @@ public class CancelSimulatedSystemEventsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelSimulatedSystemEventsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CancelSimulatedSystemEventsRequest setEventId(java.util.List<String> eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public java.util.List<String> getEventId() {
+        return this.eventId;
+    }
+
 }

@@ -17,4 +17,20 @@ public class AcceptInquiredSystemEventRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AcceptInquiredSystemEventRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AcceptInquiredSystemEventRequest setEventId(String eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public String getEventId() {
+        return this.eventId;
+    }
+
 }

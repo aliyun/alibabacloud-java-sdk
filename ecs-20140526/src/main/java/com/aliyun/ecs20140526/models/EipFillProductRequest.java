@@ -19,4 +19,28 @@ public class EipFillProductRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public EipFillProductRequest setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
+    }
+
+    public EipFillProductRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public EipFillProductRequest setUserCidr(String userCidr) {
+        this.userCidr = userCidr;
+        return this;
+    }
+    public String getUserCidr() {
+        return this.userCidr;
+    }
+
 }

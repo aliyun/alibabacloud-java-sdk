@@ -26,4 +26,44 @@ public class ModifyStorageSetAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyStorageSetAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public ModifyStorageSetAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyStorageSetAttributeRequest setStorageSetId(String storageSetId) {
+        this.storageSetId = storageSetId;
+        return this;
+    }
+    public String getStorageSetId() {
+        return this.storageSetId;
+    }
+
+    public ModifyStorageSetAttributeRequest setStorageSetName(String storageSetName) {
+        this.storageSetName = storageSetName;
+        return this;
+    }
+    public String getStorageSetName() {
+        return this.storageSetName;
+    }
+
+    public ModifyStorageSetAttributeRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
 }

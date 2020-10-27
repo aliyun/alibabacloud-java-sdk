@@ -17,4 +17,20 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSecurityGroupReferencesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeSecurityGroupReferencesRequest setSecurityGroupId(java.util.List<String> securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
 }

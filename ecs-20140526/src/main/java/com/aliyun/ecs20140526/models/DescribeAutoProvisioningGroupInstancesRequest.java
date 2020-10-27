@@ -23,4 +23,36 @@ public class DescribeAutoProvisioningGroupInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAutoProvisioningGroupInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeAutoProvisioningGroupInstancesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeAutoProvisioningGroupInstancesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeAutoProvisioningGroupInstancesRequest setAutoProvisioningGroupId(String autoProvisioningGroupId) {
+        this.autoProvisioningGroupId = autoProvisioningGroupId;
+        return this;
+    }
+    public String getAutoProvisioningGroupId() {
+        return this.autoProvisioningGroupId;
+    }
+
 }

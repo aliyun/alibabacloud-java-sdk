@@ -10,7 +10,7 @@ public class RunInstancesResponse extends TeaModel {
 
     @NameInMap("TradePrice")
     @Validation(required = true)
-    public Double tradePrice;
+    public Float tradePrice;
 
     @NameInMap("InstanceIdSets")
     @Validation(required = true)
@@ -21,6 +21,30 @@ public class RunInstancesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RunInstancesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RunInstancesResponse setTradePrice(Float tradePrice) {
+        this.tradePrice = tradePrice;
+        return this;
+    }
+    public Float getTradePrice() {
+        return this.tradePrice;
+    }
+
+    public RunInstancesResponse setInstanceIdSets(RunInstancesResponseInstanceIdSets instanceIdSets) {
+        this.instanceIdSets = instanceIdSets;
+        return this;
+    }
+    public RunInstancesResponseInstanceIdSets getInstanceIdSets() {
+        return this.instanceIdSets;
+    }
+
     public static class RunInstancesResponseInstanceIdSets extends TeaModel {
         @NameInMap("InstanceIdSet")
         @Validation(required = true)
@@ -29,6 +53,14 @@ public class RunInstancesResponse extends TeaModel {
         public static RunInstancesResponseInstanceIdSets build(java.util.Map<String, ?> map) throws Exception {
             RunInstancesResponseInstanceIdSets self = new RunInstancesResponseInstanceIdSets();
             return TeaModel.build(map, self);
+        }
+
+        public RunInstancesResponseInstanceIdSets setInstanceIdSet(java.util.List<String> instanceIdSet) {
+            this.instanceIdSet = instanceIdSet;
+            return this;
+        }
+        public java.util.List<String> getInstanceIdSet() {
+            return this.instanceIdSet;
         }
 
     }

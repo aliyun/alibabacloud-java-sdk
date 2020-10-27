@@ -25,4 +25,44 @@ public class DescribeZonesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeZonesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeZonesRequest setVerbose(Boolean verbose) {
+        this.verbose = verbose;
+        return this;
+    }
+    public Boolean getVerbose() {
+        return this.verbose;
+    }
+
+    public DescribeZonesRequest setInstanceChargeType(String instanceChargeType) {
+        this.instanceChargeType = instanceChargeType;
+        return this;
+    }
+    public String getInstanceChargeType() {
+        return this.instanceChargeType;
+    }
+
+    public DescribeZonesRequest setSpotStrategy(String spotStrategy) {
+        this.spotStrategy = spotStrategy;
+        return this;
+    }
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    public DescribeZonesRequest setAcceptLanguage(String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+        return this;
+    }
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
 }

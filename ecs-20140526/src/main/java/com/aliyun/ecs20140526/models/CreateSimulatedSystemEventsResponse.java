@@ -17,6 +17,22 @@ public class CreateSimulatedSystemEventsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSimulatedSystemEventsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateSimulatedSystemEventsResponse setEventIdSet(CreateSimulatedSystemEventsResponseEventIdSet eventIdSet) {
+        this.eventIdSet = eventIdSet;
+        return this;
+    }
+    public CreateSimulatedSystemEventsResponseEventIdSet getEventIdSet() {
+        return this.eventIdSet;
+    }
+
     public static class CreateSimulatedSystemEventsResponseEventIdSet extends TeaModel {
         @NameInMap("EventId")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class CreateSimulatedSystemEventsResponse extends TeaModel {
         public static CreateSimulatedSystemEventsResponseEventIdSet build(java.util.Map<String, ?> map) throws Exception {
             CreateSimulatedSystemEventsResponseEventIdSet self = new CreateSimulatedSystemEventsResponseEventIdSet();
             return TeaModel.build(map, self);
+        }
+
+        public CreateSimulatedSystemEventsResponseEventIdSet setEventId(java.util.List<String> eventId) {
+            this.eventId = eventId;
+            return this;
+        }
+        public java.util.List<String> getEventId() {
+            return this.eventId;
         }
 
     }

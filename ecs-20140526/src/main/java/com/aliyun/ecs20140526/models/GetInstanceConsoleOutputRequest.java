@@ -20,4 +20,28 @@ public class GetInstanceConsoleOutputRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetInstanceConsoleOutputRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetInstanceConsoleOutputRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetInstanceConsoleOutputRequest setRemoveSymbols(Boolean removeSymbols) {
+        this.removeSymbols = removeSymbols;
+        return this;
+    }
+    public Boolean getRemoveSymbols() {
+        return this.removeSymbols;
+    }
+
 }

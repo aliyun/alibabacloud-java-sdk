@@ -20,30 +20,89 @@ public class ModifyReservedInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyReservedInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyReservedInstancesRequest setReservedInstanceId(java.util.List<String> reservedInstanceId) {
+        this.reservedInstanceId = reservedInstanceId;
+        return this;
+    }
+    public java.util.List<String> getReservedInstanceId() {
+        return this.reservedInstanceId;
+    }
+
+    public ModifyReservedInstancesRequest setConfiguration(java.util.List<ModifyReservedInstancesRequestConfiguration> configuration) {
+        this.configuration = configuration;
+        return this;
+    }
+    public java.util.List<ModifyReservedInstancesRequestConfiguration> getConfiguration() {
+        return this.configuration;
+    }
+
     public static class ModifyReservedInstancesRequestConfiguration extends TeaModel {
         @NameInMap("ZoneId")
-        @Validation(required = true)
         public String zoneId;
 
         @NameInMap("ReservedInstanceName")
-        @Validation(required = true)
         public String reservedInstanceName;
 
         @NameInMap("InstanceType")
-        @Validation(required = true)
         public String instanceType;
 
         @NameInMap("Scope")
-        @Validation(required = true)
         public String scope;
 
         @NameInMap("InstanceAmount")
-        @Validation(required = true)
         public Integer instanceAmount;
 
         public static ModifyReservedInstancesRequestConfiguration build(java.util.Map<String, ?> map) throws Exception {
             ModifyReservedInstancesRequestConfiguration self = new ModifyReservedInstancesRequestConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyReservedInstancesRequestConfiguration setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public ModifyReservedInstancesRequestConfiguration setReservedInstanceName(String reservedInstanceName) {
+            this.reservedInstanceName = reservedInstanceName;
+            return this;
+        }
+        public String getReservedInstanceName() {
+            return this.reservedInstanceName;
+        }
+
+        public ModifyReservedInstancesRequestConfiguration setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public ModifyReservedInstancesRequestConfiguration setScope(String scope) {
+            this.scope = scope;
+            return this;
+        }
+        public String getScope() {
+            return this.scope;
+        }
+
+        public ModifyReservedInstancesRequestConfiguration setInstanceAmount(Integer instanceAmount) {
+            this.instanceAmount = instanceAmount;
+            return this;
+        }
+        public Integer getInstanceAmount() {
+            return this.instanceAmount;
         }
 
     }

@@ -14,11 +14,35 @@ public class CreateInstanceResponse extends TeaModel {
 
     @NameInMap("TradePrice")
     @Validation(required = true)
-    public Double tradePrice;
+    public Float tradePrice;
 
     public static CreateInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceResponse self = new CreateInstanceResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateInstanceResponse setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateInstanceResponse setTradePrice(Float tradePrice) {
+        this.tradePrice = tradePrice;
+        return this;
+    }
+    public Float getTradePrice() {
+        return this.tradePrice;
     }
 
 }

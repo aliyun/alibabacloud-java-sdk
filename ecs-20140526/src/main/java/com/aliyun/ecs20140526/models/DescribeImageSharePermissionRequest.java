@@ -23,4 +23,36 @@ public class DescribeImageSharePermissionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeImageSharePermissionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeImageSharePermissionRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public DescribeImageSharePermissionRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeImageSharePermissionRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

@@ -29,6 +29,46 @@ public class DescribeTagsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeTagsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeTagsResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeTagsResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeTagsResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeTagsResponse setTags(DescribeTagsResponseTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public DescribeTagsResponseTags getTags() {
+        return this.tags;
+    }
+
     public static class DescribeTagsResponseTagsTagResourceTypeCount extends TeaModel {
         @NameInMap("Instance")
         @Validation(required = true)
@@ -74,9 +114,109 @@ public class DescribeTagsResponse extends TeaModel {
         @Validation(required = true)
         public Integer snapshotPolicy;
 
+        @NameInMap("ReservedInstance")
+        @Validation(required = true)
+        public Integer reservedInstance;
+
         public static DescribeTagsResponseTagsTagResourceTypeCount build(java.util.Map<String, ?> map) throws Exception {
             DescribeTagsResponseTagsTagResourceTypeCount self = new DescribeTagsResponseTagsTagResourceTypeCount();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setInstance(Integer instance) {
+            this.instance = instance;
+            return this;
+        }
+        public Integer getInstance() {
+            return this.instance;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setDisk(Integer disk) {
+            this.disk = disk;
+            return this;
+        }
+        public Integer getDisk() {
+            return this.disk;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setImage(Integer image) {
+            this.image = image;
+            return this;
+        }
+        public Integer getImage() {
+            return this.image;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setSnapshot(Integer snapshot) {
+            this.snapshot = snapshot;
+            return this;
+        }
+        public Integer getSnapshot() {
+            return this.snapshot;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setSecuritygroup(Integer securitygroup) {
+            this.securitygroup = securitygroup;
+            return this;
+        }
+        public Integer getSecuritygroup() {
+            return this.securitygroup;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setLaunchTemplate(Integer launchTemplate) {
+            this.launchTemplate = launchTemplate;
+            return this;
+        }
+        public Integer getLaunchTemplate() {
+            return this.launchTemplate;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setEni(Integer eni) {
+            this.eni = eni;
+            return this;
+        }
+        public Integer getEni() {
+            return this.eni;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setDdh(Integer ddh) {
+            this.ddh = ddh;
+            return this;
+        }
+        public Integer getDdh() {
+            return this.ddh;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setKeyPair(Integer keyPair) {
+            this.keyPair = keyPair;
+            return this;
+        }
+        public Integer getKeyPair() {
+            return this.keyPair;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setSnapshotPolicy(Integer snapshotPolicy) {
+            this.snapshotPolicy = snapshotPolicy;
+            return this;
+        }
+        public Integer getSnapshotPolicy() {
+            return this.snapshotPolicy;
+        }
+
+        public DescribeTagsResponseTagsTagResourceTypeCount setReservedInstance(Integer reservedInstance) {
+            this.reservedInstance = reservedInstance;
+            return this;
+        }
+        public Integer getReservedInstance() {
+            return this.reservedInstance;
         }
 
     }
@@ -99,6 +239,30 @@ public class DescribeTagsResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeTagsResponseTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeTagsResponseTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public DescribeTagsResponseTagsTag setResourceTypeCount(DescribeTagsResponseTagsTagResourceTypeCount resourceTypeCount) {
+            this.resourceTypeCount = resourceTypeCount;
+            return this;
+        }
+        public DescribeTagsResponseTagsTagResourceTypeCount getResourceTypeCount() {
+            return this.resourceTypeCount;
+        }
+
     }
 
     public static class DescribeTagsResponseTags extends TeaModel {
@@ -109,6 +273,14 @@ public class DescribeTagsResponse extends TeaModel {
         public static DescribeTagsResponseTags build(java.util.Map<String, ?> map) throws Exception {
             DescribeTagsResponseTags self = new DescribeTagsResponseTags();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTagsResponseTags setTag(java.util.List<DescribeTagsResponseTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeTagsResponseTagsTag> getTag() {
+            return this.tag;
         }
 
     }

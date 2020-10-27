@@ -21,4 +21,28 @@ public class ImportKeyPairResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImportKeyPairResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ImportKeyPairResponse setKeyPairName(String keyPairName) {
+        this.keyPairName = keyPairName;
+        return this;
+    }
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    public ImportKeyPairResponse setKeyPairFingerPrint(String keyPairFingerPrint) {
+        this.keyPairFingerPrint = keyPairFingerPrint;
+        return this;
+    }
+    public String getKeyPairFingerPrint() {
+        return this.keyPairFingerPrint;
+    }
+
 }

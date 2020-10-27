@@ -17,4 +17,20 @@ public class CreateDiskResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateDiskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateDiskResponse setDiskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public String getDiskId() {
+        return this.diskId;
+    }
+
 }

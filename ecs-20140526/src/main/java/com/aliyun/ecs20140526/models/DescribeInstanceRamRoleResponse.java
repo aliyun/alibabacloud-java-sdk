@@ -25,6 +25,38 @@ public class DescribeInstanceRamRoleResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeInstanceRamRoleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeInstanceRamRoleResponse setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstanceRamRoleResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeInstanceRamRoleResponse setInstanceRamRoleSets(DescribeInstanceRamRoleResponseInstanceRamRoleSets instanceRamRoleSets) {
+        this.instanceRamRoleSets = instanceRamRoleSets;
+        return this;
+    }
+    public DescribeInstanceRamRoleResponseInstanceRamRoleSets getInstanceRamRoleSets() {
+        return this.instanceRamRoleSets;
+    }
+
     public static class DescribeInstanceRamRoleResponseInstanceRamRoleSetsInstanceRamRoleSet extends TeaModel {
         @NameInMap("InstanceId")
         @Validation(required = true)
@@ -39,6 +71,22 @@ public class DescribeInstanceRamRoleResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeInstanceRamRoleResponseInstanceRamRoleSetsInstanceRamRoleSet setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeInstanceRamRoleResponseInstanceRamRoleSetsInstanceRamRoleSet setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
     }
 
     public static class DescribeInstanceRamRoleResponseInstanceRamRoleSets extends TeaModel {
@@ -49,6 +97,14 @@ public class DescribeInstanceRamRoleResponse extends TeaModel {
         public static DescribeInstanceRamRoleResponseInstanceRamRoleSets build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceRamRoleResponseInstanceRamRoleSets self = new DescribeInstanceRamRoleResponseInstanceRamRoleSets();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceRamRoleResponseInstanceRamRoleSets setInstanceRamRoleSet(java.util.List<DescribeInstanceRamRoleResponseInstanceRamRoleSetsInstanceRamRoleSet> instanceRamRoleSet) {
+            this.instanceRamRoleSet = instanceRamRoleSet;
+            return this;
+        }
+        public java.util.List<DescribeInstanceRamRoleResponseInstanceRamRoleSetsInstanceRamRoleSet> getInstanceRamRoleSet() {
+            return this.instanceRamRoleSet;
         }
 
     }

@@ -13,4 +13,12 @@ public class StartInstanceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public StartInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
 }

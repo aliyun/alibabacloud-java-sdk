@@ -34,4 +34,68 @@ public class DescribeCommandsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCommandsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeCommandsRequest setCommandId(String commandId) {
+        this.commandId = commandId;
+        return this;
+    }
+    public String getCommandId() {
+        return this.commandId;
+    }
+
+    public DescribeCommandsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeCommandsRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public DescribeCommandsRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public DescribeCommandsRequest setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
+        return this;
+    }
+    public String getContentEncoding() {
+        return this.contentEncoding;
+    }
+
+    public DescribeCommandsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeCommandsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
 }

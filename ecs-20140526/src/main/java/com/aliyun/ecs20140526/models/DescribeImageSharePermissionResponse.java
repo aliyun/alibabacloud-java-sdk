@@ -41,6 +41,70 @@ public class DescribeImageSharePermissionResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeImageSharePermissionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeImageSharePermissionResponse setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeImageSharePermissionResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeImageSharePermissionResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeImageSharePermissionResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeImageSharePermissionResponse setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public DescribeImageSharePermissionResponse setShareGroups(DescribeImageSharePermissionResponseShareGroups shareGroups) {
+        this.shareGroups = shareGroups;
+        return this;
+    }
+    public DescribeImageSharePermissionResponseShareGroups getShareGroups() {
+        return this.shareGroups;
+    }
+
+    public DescribeImageSharePermissionResponse setAccounts(DescribeImageSharePermissionResponseAccounts accounts) {
+        this.accounts = accounts;
+        return this;
+    }
+    public DescribeImageSharePermissionResponseAccounts getAccounts() {
+        return this.accounts;
+    }
+
     public static class DescribeImageSharePermissionResponseShareGroupsShareGroup extends TeaModel {
         @NameInMap("Group")
         @Validation(required = true)
@@ -49,6 +113,14 @@ public class DescribeImageSharePermissionResponse extends TeaModel {
         public static DescribeImageSharePermissionResponseShareGroupsShareGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageSharePermissionResponseShareGroupsShareGroup self = new DescribeImageSharePermissionResponseShareGroupsShareGroup();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImageSharePermissionResponseShareGroupsShareGroup setGroup(String group) {
+            this.group = group;
+            return this;
+        }
+        public String getGroup() {
+            return this.group;
         }
 
     }
@@ -63,6 +135,14 @@ public class DescribeImageSharePermissionResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeImageSharePermissionResponseShareGroups setShareGroup(java.util.List<DescribeImageSharePermissionResponseShareGroupsShareGroup> shareGroup) {
+            this.shareGroup = shareGroup;
+            return this;
+        }
+        public java.util.List<DescribeImageSharePermissionResponseShareGroupsShareGroup> getShareGroup() {
+            return this.shareGroup;
+        }
+
     }
 
     public static class DescribeImageSharePermissionResponseAccountsAccount extends TeaModel {
@@ -75,6 +155,14 @@ public class DescribeImageSharePermissionResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeImageSharePermissionResponseAccountsAccount setAliyunId(String aliyunId) {
+            this.aliyunId = aliyunId;
+            return this;
+        }
+        public String getAliyunId() {
+            return this.aliyunId;
+        }
+
     }
 
     public static class DescribeImageSharePermissionResponseAccounts extends TeaModel {
@@ -85,6 +173,14 @@ public class DescribeImageSharePermissionResponse extends TeaModel {
         public static DescribeImageSharePermissionResponseAccounts build(java.util.Map<String, ?> map) throws Exception {
             DescribeImageSharePermissionResponseAccounts self = new DescribeImageSharePermissionResponseAccounts();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeImageSharePermissionResponseAccounts setAccount(java.util.List<DescribeImageSharePermissionResponseAccountsAccount> account) {
+            this.account = account;
+            return this;
+        }
+        public java.util.List<DescribeImageSharePermissionResponseAccountsAccount> getAccount() {
+            return this.account;
         }
 
     }

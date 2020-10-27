@@ -17,6 +17,22 @@ public class DescribeSecurityGroupReferencesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSecurityGroupReferencesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSecurityGroupReferencesResponse setSecurityGroupReferences(DescribeSecurityGroupReferencesResponseSecurityGroupReferences securityGroupReferences) {
+        this.securityGroupReferences = securityGroupReferences;
+        return this;
+    }
+    public DescribeSecurityGroupReferencesResponseSecurityGroupReferences getSecurityGroupReferences() {
+        return this.securityGroupReferences;
+    }
+
     public static class DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup extends TeaModel {
         @NameInMap("AliUid")
         @Validation(required = true)
@@ -31,6 +47,22 @@ public class DescribeSecurityGroupReferencesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup setAliUid(String aliUid) {
+            this.aliUid = aliUid;
+            return this;
+        }
+        public String getAliUid() {
+            return this.aliUid;
+        }
+
+        public DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
     }
 
     public static class DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups extends TeaModel {
@@ -41,6 +73,14 @@ public class DescribeSecurityGroupReferencesResponse extends TeaModel {
         public static DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups self = new DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups setReferencingSecurityGroup(java.util.List<DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup> referencingSecurityGroup) {
+            this.referencingSecurityGroup = referencingSecurityGroup;
+            return this;
+        }
+        public java.util.List<DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroupsReferencingSecurityGroup> getReferencingSecurityGroup() {
+            return this.referencingSecurityGroup;
         }
 
     }
@@ -59,6 +99,22 @@ public class DescribeSecurityGroupReferencesResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReference setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReference setReferencingSecurityGroups(DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups referencingSecurityGroups) {
+            this.referencingSecurityGroups = referencingSecurityGroups;
+            return this;
+        }
+        public DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReferenceReferencingSecurityGroups getReferencingSecurityGroups() {
+            return this.referencingSecurityGroups;
+        }
+
     }
 
     public static class DescribeSecurityGroupReferencesResponseSecurityGroupReferences extends TeaModel {
@@ -69,6 +125,14 @@ public class DescribeSecurityGroupReferencesResponse extends TeaModel {
         public static DescribeSecurityGroupReferencesResponseSecurityGroupReferences build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupReferencesResponseSecurityGroupReferences self = new DescribeSecurityGroupReferencesResponseSecurityGroupReferences();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityGroupReferencesResponseSecurityGroupReferences setSecurityGroupReference(java.util.List<DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReference> securityGroupReference) {
+            this.securityGroupReference = securityGroupReference;
+            return this;
+        }
+        public java.util.List<DescribeSecurityGroupReferencesResponseSecurityGroupReferencesSecurityGroupReference> getSecurityGroupReference() {
+            return this.securityGroupReference;
         }
 
     }

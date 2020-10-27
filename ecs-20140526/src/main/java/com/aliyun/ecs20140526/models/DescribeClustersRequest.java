@@ -13,4 +13,12 @@ public class DescribeClustersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeClustersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

@@ -38,4 +38,76 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyAutoSnapshotPolicyExRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+        this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+        return this;
+    }
+    public String getAutoSnapshotPolicyId() {
+        return this.autoSnapshotPolicyId;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setAutoSnapshotPolicyName(String autoSnapshotPolicyName) {
+        this.autoSnapshotPolicyName = autoSnapshotPolicyName;
+        return this;
+    }
+    public String getAutoSnapshotPolicyName() {
+        return this.autoSnapshotPolicyName;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setTimePoints(String timePoints) {
+        this.timePoints = timePoints;
+        return this;
+    }
+    public String getTimePoints() {
+        return this.timePoints;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setRepeatWeekdays(String repeatWeekdays) {
+        this.repeatWeekdays = repeatWeekdays;
+        return this;
+    }
+    public String getRepeatWeekdays() {
+        return this.repeatWeekdays;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setRetentionDays(Integer retentionDays) {
+        this.retentionDays = retentionDays;
+        return this;
+    }
+    public Integer getRetentionDays() {
+        return this.retentionDays;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setEnableCrossRegionCopy(Boolean enableCrossRegionCopy) {
+        this.enableCrossRegionCopy = enableCrossRegionCopy;
+        return this;
+    }
+    public Boolean getEnableCrossRegionCopy() {
+        return this.enableCrossRegionCopy;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setTargetCopyRegions(String targetCopyRegions) {
+        this.targetCopyRegions = targetCopyRegions;
+        return this;
+    }
+    public String getTargetCopyRegions() {
+        return this.targetCopyRegions;
+    }
+
+    public ModifyAutoSnapshotPolicyExRequest setCopiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
+        this.copiedSnapshotsRetentionDays = copiedSnapshotsRetentionDays;
+        return this;
+    }
+    public Integer getCopiedSnapshotsRetentionDays() {
+        return this.copiedSnapshotsRetentionDays;
+    }
+
 }

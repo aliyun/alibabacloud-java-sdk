@@ -26,4 +26,44 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AssignPrivateIpAddressesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AssignPrivateIpAddressesRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public AssignPrivateIpAddressesRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public java.util.List<String> getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public AssignPrivateIpAddressesRequest setSecondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
+        this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
+        return this;
+    }
+    public Integer getSecondaryPrivateIpAddressCount() {
+        return this.secondaryPrivateIpAddressCount;
+    }
+
+    public AssignPrivateIpAddressesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
 }

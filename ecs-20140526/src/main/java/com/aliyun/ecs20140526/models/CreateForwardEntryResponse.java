@@ -17,4 +17,20 @@ public class CreateForwardEntryResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateForwardEntryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateForwardEntryResponse setForwardEntryId(String forwardEntryId) {
+        this.forwardEntryId = forwardEntryId;
+        return this;
+    }
+    public String getForwardEntryId() {
+        return this.forwardEntryId;
+    }
+
 }

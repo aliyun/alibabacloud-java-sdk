@@ -17,4 +17,20 @@ public class CreateLaunchTemplateResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateLaunchTemplateResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateLaunchTemplateResponse setLaunchTemplateId(String launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
+        return this;
+    }
+    public String getLaunchTemplateId() {
+        return this.launchTemplateId;
+    }
+
 }

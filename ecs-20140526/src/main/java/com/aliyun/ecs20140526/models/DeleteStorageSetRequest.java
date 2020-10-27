@@ -20,4 +20,28 @@ public class DeleteStorageSetRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteStorageSetRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DeleteStorageSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteStorageSetRequest setStorageSetId(String storageSetId) {
+        this.storageSetId = storageSetId;
+        return this;
+    }
+    public String getStorageSetId() {
+        return this.storageSetId;
+    }
+
 }

@@ -29,4 +29,52 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyInstanceAutoRenewAttributeRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceAutoRenewAttributeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyInstanceAutoRenewAttributeRequest setDuration(Integer duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Integer getDuration() {
+        return this.duration;
+    }
+
+    public ModifyInstanceAutoRenewAttributeRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public ModifyInstanceAutoRenewAttributeRequest setRenewalStatus(String renewalStatus) {
+        this.renewalStatus = renewalStatus;
+        return this;
+    }
+    public String getRenewalStatus() {
+        return this.renewalStatus;
+    }
+
+    public ModifyInstanceAutoRenewAttributeRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
 }

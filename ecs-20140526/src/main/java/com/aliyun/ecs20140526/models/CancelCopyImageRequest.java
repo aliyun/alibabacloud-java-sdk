@@ -17,4 +17,20 @@ public class CancelCopyImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelCopyImageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CancelCopyImageRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
 }

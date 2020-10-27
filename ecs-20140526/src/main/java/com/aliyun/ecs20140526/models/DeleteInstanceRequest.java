@@ -19,4 +19,28 @@ public class DeleteInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DeleteInstanceRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    public DeleteInstanceRequest setTerminateSubscription(Boolean terminateSubscription) {
+        this.terminateSubscription = terminateSubscription;
+        return this;
+    }
+    public Boolean getTerminateSubscription() {
+        return this.terminateSubscription;
+    }
+
 }

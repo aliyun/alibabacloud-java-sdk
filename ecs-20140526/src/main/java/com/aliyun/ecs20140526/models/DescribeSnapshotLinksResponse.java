@@ -29,6 +29,46 @@ public class DescribeSnapshotLinksResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSnapshotLinksResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeSnapshotLinksResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeSnapshotLinksResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSnapshotLinksResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeSnapshotLinksResponse setSnapshotLinks(DescribeSnapshotLinksResponseSnapshotLinks snapshotLinks) {
+        this.snapshotLinks = snapshotLinks;
+        return this;
+    }
+    public DescribeSnapshotLinksResponseSnapshotLinks getSnapshotLinks() {
+        return this.snapshotLinks;
+    }
+
     public static class DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink extends TeaModel {
         @NameInMap("SnapshotLinkId")
         @Validation(required = true)
@@ -79,6 +119,94 @@ public class DescribeSnapshotLinksResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setSnapshotLinkId(String snapshotLinkId) {
+            this.snapshotLinkId = snapshotLinkId;
+            return this;
+        }
+        public String getSnapshotLinkId() {
+            return this.snapshotLinkId;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setSourceDiskId(String sourceDiskId) {
+            this.sourceDiskId = sourceDiskId;
+            return this;
+        }
+        public String getSourceDiskId() {
+            return this.sourceDiskId;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setSourceDiskName(String sourceDiskName) {
+            this.sourceDiskName = sourceDiskName;
+            return this;
+        }
+        public String getSourceDiskName() {
+            return this.sourceDiskName;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setSourceDiskSize(Integer sourceDiskSize) {
+            this.sourceDiskSize = sourceDiskSize;
+            return this;
+        }
+        public Integer getSourceDiskSize() {
+            return this.sourceDiskSize;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setSourceDiskType(String sourceDiskType) {
+            this.sourceDiskType = sourceDiskType;
+            return this;
+        }
+        public String getSourceDiskType() {
+            return this.sourceDiskType;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setTotalSize(Long totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Long getTotalSize() {
+            return this.totalSize;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
     }
 
     public static class DescribeSnapshotLinksResponseSnapshotLinks extends TeaModel {
@@ -89,6 +217,14 @@ public class DescribeSnapshotLinksResponse extends TeaModel {
         public static DescribeSnapshotLinksResponseSnapshotLinks build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotLinksResponseSnapshotLinks self = new DescribeSnapshotLinksResponseSnapshotLinks();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinks setSnapshotLink(java.util.List<DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink> snapshotLink) {
+            this.snapshotLink = snapshotLink;
+            return this;
+        }
+        public java.util.List<DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink> getSnapshotLink() {
+            return this.snapshotLink;
         }
 
     }
