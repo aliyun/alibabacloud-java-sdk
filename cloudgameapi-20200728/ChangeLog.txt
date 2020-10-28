@@ -1,3 +1,7 @@
+2020-10-28 Version: 1.0.2
+- Add game start and bizdata parameters.
+- Support stoping game by server.
+
 2020-10-27 Version: 1.0.1
 - Add game start and bizdata parameters.
 - Support stoping game by server.
