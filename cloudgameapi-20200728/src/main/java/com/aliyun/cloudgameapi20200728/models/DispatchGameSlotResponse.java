@@ -28,6 +28,10 @@ public class DispatchGameSlotResponse extends TeaModel {
     @Validation(required = true)
     public String message;
 
+    @NameInMap("RegionName")
+    @Validation(required = true)
+    public String regionName;
+
     public static DispatchGameSlotResponse build(java.util.Map<String, ?> map) throws Exception {
         DispatchGameSlotResponse self = new DispatchGameSlotResponse();
         return TeaModel.build(map, self);
@@ -79,6 +83,14 @@ public class DispatchGameSlotResponse extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public DispatchGameSlotResponse setRegionName(String regionName) {
+        this.regionName = regionName;
+        return this;
+    }
+    public String getRegionName() {
+        return this.regionName;
     }
 
 }
