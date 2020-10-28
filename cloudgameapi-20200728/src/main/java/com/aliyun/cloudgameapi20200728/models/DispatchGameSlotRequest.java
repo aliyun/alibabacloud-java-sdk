@@ -19,8 +19,22 @@ public class DispatchGameSlotRequest extends TeaModel {
     @Validation(required = true)
     public String userId;
 
+    @NameInMap("BizParam")
+    public String bizParam;
+
+    @NameInMap("Cancel")
+    public Boolean cancel;
+
+    @NameInMap("GameSession")
+    public String gameSession;
+
+    @NameInMap("GameStartParam")
+    public String gameStartParam;
+
+    @NameInMap("GameCommand")
+    public String gameCommand;
+
     @NameInMap("SystemInfo")
-    @Validation(required = true)
     public String systemInfo;
 
     public static DispatchGameSlotRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -58,6 +72,46 @@ public class DispatchGameSlotRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public DispatchGameSlotRequest setBizParam(String bizParam) {
+        this.bizParam = bizParam;
+        return this;
+    }
+    public String getBizParam() {
+        return this.bizParam;
+    }
+
+    public DispatchGameSlotRequest setCancel(Boolean cancel) {
+        this.cancel = cancel;
+        return this;
+    }
+    public Boolean getCancel() {
+        return this.cancel;
+    }
+
+    public DispatchGameSlotRequest setGameSession(String gameSession) {
+        this.gameSession = gameSession;
+        return this;
+    }
+    public String getGameSession() {
+        return this.gameSession;
+    }
+
+    public DispatchGameSlotRequest setGameStartParam(String gameStartParam) {
+        this.gameStartParam = gameStartParam;
+        return this;
+    }
+    public String getGameStartParam() {
+        return this.gameStartParam;
+    }
+
+    public DispatchGameSlotRequest setGameCommand(String gameCommand) {
+        this.gameCommand = gameCommand;
+        return this;
+    }
+    public String getGameCommand() {
+        return this.gameCommand;
     }
 
     public DispatchGameSlotRequest setSystemInfo(String systemInfo) {
