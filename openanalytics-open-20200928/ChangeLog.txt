@@ -1,6 +1,9 @@
 2020-11-03 Version: 1.0.17
 - Add API for CloudAP.
 
+2020-11-03 Version: 1.0.17
+- Add API for CloudAP.
+
 2020-10-15 Version: 1.0.17
 - Modify serialization mode.
 
