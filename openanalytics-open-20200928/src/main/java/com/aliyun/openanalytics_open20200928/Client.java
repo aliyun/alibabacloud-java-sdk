@@ -82,44 +82,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AddPartitionsResponse addPartitionsWithOptions(AddPartitionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        AddPartitionsShrinkRequest request = new AddPartitionsShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.partition)) {
-            request.partitionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.partition, "Partition", "json");
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("AddPartitions", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new AddPartitionsResponse());
-    }
-
-    public AddPartitionsResponse addPartitions(AddPartitionsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.addPartitionsWithOptions(request, runtime);
-    }
-
-    public AlterDatabaseResponse alterDatabaseWithOptions(AlterDatabaseRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        AlterDatabaseShrinkRequest request = new AlterDatabaseShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parameters)) {
-            request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("AlterDatabase", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new AlterDatabaseResponse());
-    }
-
-    public AlterDatabaseResponse alterDatabase(AlterDatabaseRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.alterDatabaseWithOptions(request, runtime);
-    }
-
     public AlterTableResponse alterTableWithOptions(AlterTableRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AlterTableShrinkRequest request = new AlterTableShrinkRequest();
@@ -143,23 +105,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.alterTableWithOptions(request, runtime);
     }
 
-    public CreateDatabaseResponse createDatabaseWithOptions(CreateDatabaseRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DropPartitionResponse dropPartitionWithOptions(DropPartitionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
-        CreateDatabaseShrinkRequest request = new CreateDatabaseShrinkRequest();
+        DropPartitionShrinkRequest request = new DropPartitionShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parameters)) {
-            request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.partValues)) {
+            request.partValuesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.partValues, "PartValues", "json");
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateDatabase", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new CreateDatabaseResponse());
+        return TeaModel.toModel(this.doRPCRequest("DropPartition", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new DropPartitionResponse());
     }
 
-    public CreateDatabaseResponse createDatabase(CreateDatabaseRequest request) throws Exception {
+    public DropPartitionResponse dropPartition(DropPartitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDatabaseWithOptions(request, runtime);
+        return this.dropPartitionWithOptions(request, runtime);
+    }
+
+    public GetPartitionResponse getPartitionWithOptions(GetPartitionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetPartitionShrinkRequest request = new GetPartitionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.values)) {
+            request.valuesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.values, "Values", "json");
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetPartition", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetPartitionResponse());
+    }
+
+    public GetPartitionResponse getPartition(GetPartitionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPartitionWithOptions(request, runtime);
+    }
+
+    public GetDatabaseObjectByIdResponse getDatabaseObjectByIdWithOptions(GetDatabaseObjectByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDatabaseObjectById", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetDatabaseObjectByIdResponse());
+    }
+
+    public GetDatabaseObjectByIdResponse getDatabaseObjectById(GetDatabaseObjectByIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDatabaseObjectByIdWithOptions(request, runtime);
+    }
+
+    public GetDatabaseObjectsByFilterResponse getDatabaseObjectsByFilterWithOptions(GetDatabaseObjectsByFilterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetDatabaseObjectsByFilterShrinkRequest request = new GetDatabaseObjectsByFilterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.catalogTypes)) {
+            request.catalogTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.catalogTypes, "CatalogTypes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.likeLocations)) {
+            request.likeLocationsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.likeLocations, "LikeLocations", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.locations)) {
+            request.locationsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.locations, "Locations", "json");
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDatabaseObjectsByFilter", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetDatabaseObjectsByFilterResponse());
+    }
+
+    public GetDatabaseObjectsByFilterResponse getDatabaseObjectsByFilter(GetDatabaseObjectsByFilterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDatabaseObjectsByFilterWithOptions(request, runtime);
     }
 
     public CreateTableResponse createTableWithOptions(CreateTableRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -189,36 +210,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createTableWithOptions(request, runtime);
     }
 
-    public DropDatabaseResponse dropDatabaseWithOptions(DropDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetTableObjectsByDatabaseIdResponse getTableObjectsByDatabaseIdWithOptions(GetTableObjectsByDatabaseIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DropDatabase", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new DropDatabaseResponse());
+        return TeaModel.toModel(this.doRPCRequest("GetTableObjectsByDatabaseId", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetTableObjectsByDatabaseIdResponse());
     }
 
-    public DropDatabaseResponse dropDatabase(DropDatabaseRequest request) throws Exception {
+    public GetTableObjectsByDatabaseIdResponse getTableObjectsByDatabaseId(GetTableObjectsByDatabaseIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.dropDatabaseWithOptions(request, runtime);
-    }
-
-    public DropPartitionResponse dropPartitionWithOptions(DropPartitionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        DropPartitionShrinkRequest request = new DropPartitionShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.partValues)) {
-            request.partValuesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.partValues, "PartValues", "json");
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DropPartition", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new DropPartitionResponse());
-    }
-
-    public DropPartitionResponse dropPartition(DropPartitionRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.dropPartitionWithOptions(request, runtime);
+        return this.getTableObjectsByDatabaseIdWithOptions(request, runtime);
     }
 
     public DropTableResponse dropTableWithOptions(DropTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -234,72 +236,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.dropTableWithOptions(request, runtime);
     }
 
-    public GetAllDatabasesResponse getAllDatabasesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
-        return TeaModel.toModel(this.doRPCRequest("GetAllDatabases", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetAllDatabasesResponse());
-    }
-
-    public GetAllDatabasesResponse getAllDatabases() throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getAllDatabasesWithOptions(runtime);
-    }
-
-    public GetAllTablesResponse getAllTablesWithOptions(GetAllTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetAllTables", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetAllTablesResponse());
-    }
-
-    public GetAllTablesResponse getAllTables(GetAllTablesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getAllTablesWithOptions(request, runtime);
-    }
-
-    public GetDatabaseResponse getDatabaseWithOptions(GetDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetDatabase", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetDatabaseResponse());
-    }
-
-    public GetDatabaseResponse getDatabase(GetDatabaseRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDatabaseWithOptions(request, runtime);
-    }
-
-    public GetPartitionResponse getPartitionWithOptions(GetPartitionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public RevokePrivilegesResponse revokePrivilegesWithOptions(RevokePrivilegesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
-        GetPartitionShrinkRequest request = new GetPartitionShrinkRequest();
+        RevokePrivilegesShrinkRequest request = new RevokePrivilegesShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.values)) {
-            request.valuesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.values, "Values", "json");
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.privilegeBag))) {
+            request.privilegeBagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.privilegeBag), "PrivilegeBag", "json");
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetPartition", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetPartitionResponse());
+        return TeaModel.toModel(this.doRPCRequest("RevokePrivileges", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new RevokePrivilegesResponse());
     }
 
-    public GetPartitionResponse getPartition(GetPartitionRequest request) throws Exception {
+    public RevokePrivilegesResponse revokePrivileges(RevokePrivilegesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getPartitionWithOptions(request, runtime);
+        return this.revokePrivilegesWithOptions(request, runtime);
     }
 
-    public GetPartitionsResponse getPartitionsWithOptions(GetPartitionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetTableObjectsByNameResponse getTableObjectsByNameWithOptions(GetTableObjectsByNameRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetTableObjectsByNameShrinkRequest request = new GetTableObjectsByNameShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tableNames)) {
+            request.tableNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tableNames, "TableNames", "json");
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetPartitions", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetPartitionsResponse());
+        return TeaModel.toModel(this.doRPCRequest("GetTableObjectsByName", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetTableObjectsByNameResponse());
     }
 
-    public GetPartitionsResponse getPartitions(GetPartitionsRequest request) throws Exception {
+    public GetTableObjectsByNameResponse getTableObjectsByName(GetTableObjectsByNameRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getPartitionsWithOptions(request, runtime);
+        return this.getTableObjectsByNameWithOptions(request, runtime);
+    }
+
+    public AddPartitionsResponse addPartitionsWithOptions(AddPartitionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddPartitionsShrinkRequest request = new AddPartitionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.partition)) {
+            request.partitionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.partition, "Partition", "json");
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddPartitions", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new AddPartitionsResponse());
+    }
+
+    public AddPartitionsResponse addPartitions(AddPartitionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addPartitionsWithOptions(request, runtime);
     }
 
     public GetTableResponse getTableWithOptions(GetTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -334,22 +325,139 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.grantPrivilegesWithOptions(request, runtime);
     }
 
-    public RevokePrivilegesResponse revokePrivilegesWithOptions(RevokePrivilegesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetAllTablesResponse getAllTablesWithOptions(GetAllTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetAllTables", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetAllTablesResponse());
+    }
+
+    public GetAllTablesResponse getAllTables(GetAllTablesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAllTablesWithOptions(request, runtime);
+    }
+
+    public GetDatabaseObjectByNameResponse getDatabaseObjectByNameWithOptions(GetDatabaseObjectByNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDatabaseObjectByName", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetDatabaseObjectByNameResponse());
+    }
+
+    public GetDatabaseObjectByNameResponse getDatabaseObjectByName(GetDatabaseObjectByNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDatabaseObjectByNameWithOptions(request, runtime);
+    }
+
+    public GetPartitionsResponse getPartitionsWithOptions(GetPartitionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetPartitions", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetPartitionsResponse());
+    }
+
+    public GetPartitionsResponse getPartitions(GetPartitionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPartitionsWithOptions(request, runtime);
+    }
+
+    public GetDatabaseObjectsResponse getDatabaseObjectsWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("GetDatabaseObjects", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetDatabaseObjectsResponse());
+    }
+
+    public GetDatabaseObjectsResponse getDatabaseObjects() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDatabaseObjectsWithOptions(runtime);
+    }
+
+    public DropDatabaseResponse dropDatabaseWithOptions(DropDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DropDatabase", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new DropDatabaseResponse());
+    }
+
+    public DropDatabaseResponse dropDatabase(DropDatabaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.dropDatabaseWithOptions(request, runtime);
+    }
+
+    public GetAllDatabasesResponse getAllDatabasesWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("GetAllDatabases", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetAllDatabasesResponse());
+    }
+
+    public GetAllDatabasesResponse getAllDatabases() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAllDatabasesWithOptions(runtime);
+    }
+
+    public CreateDatabaseResponse createDatabaseWithOptions(CreateDatabaseRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
-        RevokePrivilegesShrinkRequest request = new RevokePrivilegesShrinkRequest();
+        CreateDatabaseShrinkRequest request = new CreateDatabaseShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.privilegeBag))) {
-            request.privilegeBagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.privilegeBag), "PrivilegeBag", "json");
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parameters)) {
+            request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("RevokePrivileges", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new RevokePrivilegesResponse());
+        return TeaModel.toModel(this.doRPCRequest("CreateDatabase", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new CreateDatabaseResponse());
     }
 
-    public RevokePrivilegesResponse revokePrivileges(RevokePrivilegesRequest request) throws Exception {
+    public CreateDatabaseResponse createDatabase(CreateDatabaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.revokePrivilegesWithOptions(request, runtime);
+        return this.createDatabaseWithOptions(request, runtime);
+    }
+
+    public GetColumnObjectsResponse getColumnObjectsWithOptions(GetColumnObjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetColumnObjects", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetColumnObjectsResponse());
+    }
+
+    public GetColumnObjectsResponse getColumnObjects(GetColumnObjectsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getColumnObjectsWithOptions(request, runtime);
+    }
+
+    public AlterDatabaseResponse alterDatabaseWithOptions(AlterDatabaseRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AlterDatabaseShrinkRequest request = new AlterDatabaseShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.parameters)) {
+            request.parametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.parameters, "Parameters", "json");
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AlterDatabase", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new AlterDatabaseResponse());
+    }
+
+    public AlterDatabaseResponse alterDatabase(AlterDatabaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.alterDatabaseWithOptions(request, runtime);
+    }
+
+    public GetDatabaseResponse getDatabaseWithOptions(GetDatabaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDatabase", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetDatabaseResponse());
+    }
+
+    public GetDatabaseResponse getDatabase(GetDatabaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDatabaseWithOptions(request, runtime);
     }
 }
