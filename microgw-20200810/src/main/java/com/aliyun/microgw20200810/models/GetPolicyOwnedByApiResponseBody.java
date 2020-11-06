@@ -10,7 +10,7 @@ public class GetPolicyOwnedByApiResponseBody extends TeaModel {
 
     // data
     @NameInMap("data")
-    public java.util.Map<String, java.util.Map<String, ?>> data;
+    public java.util.Map<String, DataValue> data;
 
     // message
     @NameInMap("message")
@@ -29,11 +29,11 @@ public class GetPolicyOwnedByApiResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetPolicyOwnedByApiResponseBody setData(java.util.Map<String, java.util.Map<String, ?>> data) {
+    public GetPolicyOwnedByApiResponseBody setData(java.util.Map<String, DataValue> data) {
         this.data = data;
         return this;
     }
-    public java.util.Map<String, java.util.Map<String, ?>> getData() {
+    public java.util.Map<String, DataValue> getData() {
         return this.data;
     }
 

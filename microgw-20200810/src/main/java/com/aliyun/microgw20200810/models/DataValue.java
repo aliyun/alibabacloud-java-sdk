@@ -3,7 +3,15 @@ package com.aliyun.microgw20200810.models;
 
 import com.aliyun.tea.*;
 
-public class CreatePolicyToApiRequest extends TeaModel {
+public class DataValue extends TeaModel {
+    // apiId
+    @NameInMap("apiId")
+    public Long apiId;
+
+    // apiName
+    @NameInMap("apiName")
+    public String apiName;
+
     // creationDateTime
     @NameInMap("creationDateTime")
     public String creationDateTime;
@@ -11,6 +19,10 @@ public class CreatePolicyToApiRequest extends TeaModel {
     // direction
     @NameInMap("direction")
     public String direction;
+
+    // id
+    @NameInMap("id")
+    public Long id;
 
     // policyAliasName
     @NameInMap("policyAliasName")
@@ -26,7 +38,7 @@ public class CreatePolicyToApiRequest extends TeaModel {
 
     // policyId
     @NameInMap("policyId")
-    public Long policyId;
+    public String policyId;
 
     // policyName
     @NameInMap("policyName")
@@ -48,12 +60,32 @@ public class CreatePolicyToApiRequest extends TeaModel {
     @NameInMap("type")
     public Long type;
 
-    public static CreatePolicyToApiRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreatePolicyToApiRequest self = new CreatePolicyToApiRequest();
+    // updateDateTime
+    @NameInMap("updateDateTime")
+    public String updateDateTime;
+
+    public static DataValue build(java.util.Map<String, ?> map) throws Exception {
+        DataValue self = new DataValue();
         return TeaModel.build(map, self);
     }
 
-    public CreatePolicyToApiRequest setCreationDateTime(String creationDateTime) {
+    public DataValue setApiId(Long apiId) {
+        this.apiId = apiId;
+        return this;
+    }
+    public Long getApiId() {
+        return this.apiId;
+    }
+
+    public DataValue setApiName(String apiName) {
+        this.apiName = apiName;
+        return this;
+    }
+    public String getApiName() {
+        return this.apiName;
+    }
+
+    public DataValue setCreationDateTime(String creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
     }
@@ -61,7 +93,7 @@ public class CreatePolicyToApiRequest extends TeaModel {
         return this.creationDateTime;
     }
 
-    public CreatePolicyToApiRequest setDirection(String direction) {
+    public DataValue setDirection(String direction) {
         this.direction = direction;
         return this;
     }
@@ -69,7 +101,15 @@ public class CreatePolicyToApiRequest extends TeaModel {
         return this.direction;
     }
 
-    public CreatePolicyToApiRequest setPolicyAliasName(String policyAliasName) {
+    public DataValue setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
+    }
+
+    public DataValue setPolicyAliasName(String policyAliasName) {
         this.policyAliasName = policyAliasName;
         return this;
     }
@@ -77,7 +117,7 @@ public class CreatePolicyToApiRequest extends TeaModel {
         return this.policyAliasName;
     }
 
-    public CreatePolicyToApiRequest setPolicyContent(String policyContent) {
+    public DataValue setPolicyContent(String policyContent) {
         this.policyContent = policyContent;
         return this;
     }
@@ -85,7 +125,7 @@ public class CreatePolicyToApiRequest extends TeaModel {
         return this.policyContent;
     }
 
-    public CreatePolicyToApiRequest setPolicyGroup(String policyGroup) {
+    public DataValue setPolicyGroup(String policyGroup) {
         this.policyGroup = policyGroup;
         return this;
     }
@@ -93,15 +133,15 @@ public class CreatePolicyToApiRequest extends TeaModel {
         return this.policyGroup;
     }
 
-    public CreatePolicyToApiRequest setPolicyId(Long policyId) {
+    public DataValue setPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
-    public Long getPolicyId() {
+    public String getPolicyId() {
         return this.policyId;
     }
 
-    public CreatePolicyToApiRequest setPolicyName(String policyName) {
+    public DataValue setPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
@@ -109,7 +149,7 @@ public class CreatePolicyToApiRequest extends TeaModel {
         return this.policyName;
     }
 
-    public CreatePolicyToApiRequest setPriority(Long priority) {
+    public DataValue setPriority(Long priority) {
         this.priority = priority;
         return this;
     }
@@ -117,7 +157,7 @@ public class CreatePolicyToApiRequest extends TeaModel {
         return this.priority;
     }
 
-    public CreatePolicyToApiRequest setScope(String scope) {
+    public DataValue setScope(String scope) {
         this.scope = scope;
         return this;
     }
@@ -125,7 +165,7 @@ public class CreatePolicyToApiRequest extends TeaModel {
         return this.scope;
     }
 
-    public CreatePolicyToApiRequest setStatus(Boolean status) {
+    public DataValue setStatus(Boolean status) {
         this.status = status;
         return this;
     }
@@ -133,12 +173,20 @@ public class CreatePolicyToApiRequest extends TeaModel {
         return this.status;
     }
 
-    public CreatePolicyToApiRequest setType(Long type) {
+    public DataValue setType(Long type) {
         this.type = type;
         return this;
     }
     public Long getType() {
         return this.type;
+    }
+
+    public DataValue setUpdateDateTime(String updateDateTime) {
+        this.updateDateTime = updateDateTime;
+        return this;
+    }
+    public String getUpdateDateTime() {
+        return this.updateDateTime;
     }
 
 }
