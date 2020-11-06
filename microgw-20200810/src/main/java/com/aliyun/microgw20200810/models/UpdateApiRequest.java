@@ -4,24 +4,144 @@ package com.aliyun.microgw20200810.models;
 import com.aliyun.tea.*;
 
 public class UpdateApiRequest extends TeaModel {
-    // ApiQueryDTO
-    @NameInMap("data")
-    public UpdateApiRequestData data;
+    // aliasName
+    @NameInMap("aliasName")
+    public String aliasName;
+
+    // attachedServices
+    @NameInMap("attachedServices")
+    public java.util.List<UpdateApiRequestAttachedServices> attachedServices;
+
+    // basePath
+    @NameInMap("basePath")
+    public String basePath;
+
+    // creationDateTime
+    @NameInMap("creationDateTime")
+    public String creationDateTime;
+
+    // description
+    @NameInMap("description")
+    public String description;
+
+    // id
+    @NameInMap("id")
+    public Long id;
+
+    // name
+    @NameInMap("name")
+    public String name;
+
+    // owneredPolicies
+    @NameInMap("owneredPolicies")
+    public java.util.List<UpdateApiRequestOwneredPolicies> owneredPolicies;
+
+    // A short description of struct
+    @NameInMap("publishedGateway")
+    public UpdateApiRequestPublishedGateway publishedGateway;
+
+    // status
+    @NameInMap("status")
+    public String status;
+
+    // updateDateTime
+    @NameInMap("updateDateTime")
+    public String updateDateTime;
 
     public static UpdateApiRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateApiRequest self = new UpdateApiRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateApiRequest setData(UpdateApiRequestData data) {
-        this.data = data;
+    public UpdateApiRequest setAliasName(String aliasName) {
+        this.aliasName = aliasName;
         return this;
     }
-    public UpdateApiRequestData getData() {
-        return this.data;
+    public String getAliasName() {
+        return this.aliasName;
     }
 
-    public static class UpdateApiRequestDataAttachedServicesServiceEnds extends TeaModel {
+    public UpdateApiRequest setAttachedServices(java.util.List<UpdateApiRequestAttachedServices> attachedServices) {
+        this.attachedServices = attachedServices;
+        return this;
+    }
+    public java.util.List<UpdateApiRequestAttachedServices> getAttachedServices() {
+        return this.attachedServices;
+    }
+
+    public UpdateApiRequest setBasePath(String basePath) {
+        this.basePath = basePath;
+        return this;
+    }
+    public String getBasePath() {
+        return this.basePath;
+    }
+
+    public UpdateApiRequest setCreationDateTime(String creationDateTime) {
+        this.creationDateTime = creationDateTime;
+        return this;
+    }
+    public String getCreationDateTime() {
+        return this.creationDateTime;
+    }
+
+    public UpdateApiRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public UpdateApiRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
+    }
+
+    public UpdateApiRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public UpdateApiRequest setOwneredPolicies(java.util.List<UpdateApiRequestOwneredPolicies> owneredPolicies) {
+        this.owneredPolicies = owneredPolicies;
+        return this;
+    }
+    public java.util.List<UpdateApiRequestOwneredPolicies> getOwneredPolicies() {
+        return this.owneredPolicies;
+    }
+
+    public UpdateApiRequest setPublishedGateway(UpdateApiRequestPublishedGateway publishedGateway) {
+        this.publishedGateway = publishedGateway;
+        return this;
+    }
+    public UpdateApiRequestPublishedGateway getPublishedGateway() {
+        return this.publishedGateway;
+    }
+
+    public UpdateApiRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public UpdateApiRequest setUpdateDateTime(String updateDateTime) {
+        this.updateDateTime = updateDateTime;
+        return this;
+    }
+    public String getUpdateDateTime() {
+        return this.updateDateTime;
+    }
+
+    public static class UpdateApiRequestAttachedServicesServiceEnds extends TeaModel {
         // creationDateTime
         @NameInMap("creationDateTime")
         public String creationDateTime;
@@ -50,12 +170,12 @@ public class UpdateApiRequest extends TeaModel {
         @NameInMap("updateDateTime")
         public String updateDateTime;
 
-        public static UpdateApiRequestDataAttachedServicesServiceEnds build(java.util.Map<String, ?> map) throws Exception {
-            UpdateApiRequestDataAttachedServicesServiceEnds self = new UpdateApiRequestDataAttachedServicesServiceEnds();
+        public static UpdateApiRequestAttachedServicesServiceEnds build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApiRequestAttachedServicesServiceEnds self = new UpdateApiRequestAttachedServicesServiceEnds();
             return TeaModel.build(map, self);
         }
 
-        public UpdateApiRequestDataAttachedServicesServiceEnds setCreationDateTime(String creationDateTime) {
+        public UpdateApiRequestAttachedServicesServiceEnds setCreationDateTime(String creationDateTime) {
             this.creationDateTime = creationDateTime;
             return this;
         }
@@ -63,7 +183,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.creationDateTime;
         }
 
-        public UpdateApiRequestDataAttachedServicesServiceEnds setId(Long id) {
+        public UpdateApiRequestAttachedServicesServiceEnds setId(Long id) {
             this.id = id;
             return this;
         }
@@ -71,7 +191,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.id;
         }
 
-        public UpdateApiRequestDataAttachedServicesServiceEnds setIpAddress(String ipAddress) {
+        public UpdateApiRequestAttachedServicesServiceEnds setIpAddress(String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
@@ -79,7 +199,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.ipAddress;
         }
 
-        public UpdateApiRequestDataAttachedServicesServiceEnds setPort(String port) {
+        public UpdateApiRequestAttachedServicesServiceEnds setPort(String port) {
             this.port = port;
             return this;
         }
@@ -87,7 +207,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.port;
         }
 
-        public UpdateApiRequestDataAttachedServicesServiceEnds setServiceId(Long serviceId) {
+        public UpdateApiRequestAttachedServicesServiceEnds setServiceId(Long serviceId) {
             this.serviceId = serviceId;
             return this;
         }
@@ -95,7 +215,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.serviceId;
         }
 
-        public UpdateApiRequestDataAttachedServicesServiceEnds setStatus(Long status) {
+        public UpdateApiRequestAttachedServicesServiceEnds setStatus(Long status) {
             this.status = status;
             return this;
         }
@@ -103,7 +223,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.status;
         }
 
-        public UpdateApiRequestDataAttachedServicesServiceEnds setUpdateDateTime(String updateDateTime) {
+        public UpdateApiRequestAttachedServicesServiceEnds setUpdateDateTime(String updateDateTime) {
             this.updateDateTime = updateDateTime;
             return this;
         }
@@ -113,7 +233,7 @@ public class UpdateApiRequest extends TeaModel {
 
     }
 
-    public static class UpdateApiRequestDataAttachedServices extends TeaModel {
+    public static class UpdateApiRequestAttachedServices extends TeaModel {
         // aliasName
         @NameInMap("aliasName")
         public String aliasName;
@@ -148,7 +268,7 @@ public class UpdateApiRequest extends TeaModel {
 
         // serviceEnds
         @NameInMap("serviceEnds")
-        public java.util.List<UpdateApiRequestDataAttachedServicesServiceEnds> serviceEnds;
+        public java.util.List<UpdateApiRequestAttachedServicesServiceEnds> serviceEnds;
 
         // serviceNameInRegistry
         @NameInMap("serviceNameInRegistry")
@@ -162,12 +282,12 @@ public class UpdateApiRequest extends TeaModel {
         @NameInMap("updateDateTime")
         public String updateDateTime;
 
-        public static UpdateApiRequestDataAttachedServices build(java.util.Map<String, ?> map) throws Exception {
-            UpdateApiRequestDataAttachedServices self = new UpdateApiRequestDataAttachedServices();
+        public static UpdateApiRequestAttachedServices build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApiRequestAttachedServices self = new UpdateApiRequestAttachedServices();
             return TeaModel.build(map, self);
         }
 
-        public UpdateApiRequestDataAttachedServices setAliasName(String aliasName) {
+        public UpdateApiRequestAttachedServices setAliasName(String aliasName) {
             this.aliasName = aliasName;
             return this;
         }
@@ -175,7 +295,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.aliasName;
         }
 
-        public UpdateApiRequestDataAttachedServices setCreationDateTime(String creationDateTime) {
+        public UpdateApiRequestAttachedServices setCreationDateTime(String creationDateTime) {
             this.creationDateTime = creationDateTime;
             return this;
         }
@@ -183,7 +303,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.creationDateTime;
         }
 
-        public UpdateApiRequestDataAttachedServices setDescription(String description) {
+        public UpdateApiRequestAttachedServices setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -191,7 +311,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.description;
         }
 
-        public UpdateApiRequestDataAttachedServices setId(Long id) {
+        public UpdateApiRequestAttachedServices setId(Long id) {
             this.id = id;
             return this;
         }
@@ -199,7 +319,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.id;
         }
 
-        public UpdateApiRequestDataAttachedServices setIsAutoRefresh(Boolean isAutoRefresh) {
+        public UpdateApiRequestAttachedServices setIsAutoRefresh(Boolean isAutoRefresh) {
             this.isAutoRefresh = isAutoRefresh;
             return this;
         }
@@ -207,7 +327,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.isAutoRefresh;
         }
 
-        public UpdateApiRequestDataAttachedServices setIsHealth(Boolean isHealth) {
+        public UpdateApiRequestAttachedServices setIsHealth(Boolean isHealth) {
             this.isHealth = isHealth;
             return this;
         }
@@ -215,7 +335,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.isHealth;
         }
 
-        public UpdateApiRequestDataAttachedServices setName(String name) {
+        public UpdateApiRequestAttachedServices setName(String name) {
             this.name = name;
             return this;
         }
@@ -223,7 +343,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.name;
         }
 
-        public UpdateApiRequestDataAttachedServices setRegistryId(String registryId) {
+        public UpdateApiRequestAttachedServices setRegistryId(String registryId) {
             this.registryId = registryId;
             return this;
         }
@@ -231,15 +351,15 @@ public class UpdateApiRequest extends TeaModel {
             return this.registryId;
         }
 
-        public UpdateApiRequestDataAttachedServices setServiceEnds(java.util.List<UpdateApiRequestDataAttachedServicesServiceEnds> serviceEnds) {
+        public UpdateApiRequestAttachedServices setServiceEnds(java.util.List<UpdateApiRequestAttachedServicesServiceEnds> serviceEnds) {
             this.serviceEnds = serviceEnds;
             return this;
         }
-        public java.util.List<UpdateApiRequestDataAttachedServicesServiceEnds> getServiceEnds() {
+        public java.util.List<UpdateApiRequestAttachedServicesServiceEnds> getServiceEnds() {
             return this.serviceEnds;
         }
 
-        public UpdateApiRequestDataAttachedServices setServiceNameInRegistry(String serviceNameInRegistry) {
+        public UpdateApiRequestAttachedServices setServiceNameInRegistry(String serviceNameInRegistry) {
             this.serviceNameInRegistry = serviceNameInRegistry;
             return this;
         }
@@ -247,7 +367,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.serviceNameInRegistry;
         }
 
-        public UpdateApiRequestDataAttachedServices setSourceType(Long sourceType) {
+        public UpdateApiRequestAttachedServices setSourceType(Long sourceType) {
             this.sourceType = sourceType;
             return this;
         }
@@ -255,7 +375,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.sourceType;
         }
 
-        public UpdateApiRequestDataAttachedServices setUpdateDateTime(String updateDateTime) {
+        public UpdateApiRequestAttachedServices setUpdateDateTime(String updateDateTime) {
             this.updateDateTime = updateDateTime;
             return this;
         }
@@ -265,7 +385,7 @@ public class UpdateApiRequest extends TeaModel {
 
     }
 
-    public static class UpdateApiRequestDataOwneredPolicies extends TeaModel {
+    public static class UpdateApiRequestOwneredPolicies extends TeaModel {
         // apiId
         @NameInMap("apiId")
         public Long apiId;
@@ -326,12 +446,12 @@ public class UpdateApiRequest extends TeaModel {
         @NameInMap("updateDateTime")
         public String updateDateTime;
 
-        public static UpdateApiRequestDataOwneredPolicies build(java.util.Map<String, ?> map) throws Exception {
-            UpdateApiRequestDataOwneredPolicies self = new UpdateApiRequestDataOwneredPolicies();
+        public static UpdateApiRequestOwneredPolicies build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApiRequestOwneredPolicies self = new UpdateApiRequestOwneredPolicies();
             return TeaModel.build(map, self);
         }
 
-        public UpdateApiRequestDataOwneredPolicies setApiId(Long apiId) {
+        public UpdateApiRequestOwneredPolicies setApiId(Long apiId) {
             this.apiId = apiId;
             return this;
         }
@@ -339,7 +459,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.apiId;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setApiName(String apiName) {
+        public UpdateApiRequestOwneredPolicies setApiName(String apiName) {
             this.apiName = apiName;
             return this;
         }
@@ -347,7 +467,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.apiName;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setCreationDateTime(String creationDateTime) {
+        public UpdateApiRequestOwneredPolicies setCreationDateTime(String creationDateTime) {
             this.creationDateTime = creationDateTime;
             return this;
         }
@@ -355,7 +475,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.creationDateTime;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setDirection(String direction) {
+        public UpdateApiRequestOwneredPolicies setDirection(String direction) {
             this.direction = direction;
             return this;
         }
@@ -363,7 +483,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.direction;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setId(Long id) {
+        public UpdateApiRequestOwneredPolicies setId(Long id) {
             this.id = id;
             return this;
         }
@@ -371,7 +491,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.id;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setPolicyAliasName(String policyAliasName) {
+        public UpdateApiRequestOwneredPolicies setPolicyAliasName(String policyAliasName) {
             this.policyAliasName = policyAliasName;
             return this;
         }
@@ -379,7 +499,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.policyAliasName;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setPolicyContent(String policyContent) {
+        public UpdateApiRequestOwneredPolicies setPolicyContent(String policyContent) {
             this.policyContent = policyContent;
             return this;
         }
@@ -387,7 +507,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.policyContent;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setPolicyGroup(String policyGroup) {
+        public UpdateApiRequestOwneredPolicies setPolicyGroup(String policyGroup) {
             this.policyGroup = policyGroup;
             return this;
         }
@@ -395,7 +515,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.policyGroup;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setPolicyId(String policyId) {
+        public UpdateApiRequestOwneredPolicies setPolicyId(String policyId) {
             this.policyId = policyId;
             return this;
         }
@@ -403,7 +523,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.policyId;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setPolicyName(String policyName) {
+        public UpdateApiRequestOwneredPolicies setPolicyName(String policyName) {
             this.policyName = policyName;
             return this;
         }
@@ -411,7 +531,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.policyName;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setPriority(Long priority) {
+        public UpdateApiRequestOwneredPolicies setPriority(Long priority) {
             this.priority = priority;
             return this;
         }
@@ -419,7 +539,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.priority;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setScope(String scope) {
+        public UpdateApiRequestOwneredPolicies setScope(String scope) {
             this.scope = scope;
             return this;
         }
@@ -427,7 +547,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.scope;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setStatus(Boolean status) {
+        public UpdateApiRequestOwneredPolicies setStatus(Boolean status) {
             this.status = status;
             return this;
         }
@@ -435,7 +555,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.status;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setType(Long type) {
+        public UpdateApiRequestOwneredPolicies setType(Long type) {
             this.type = type;
             return this;
         }
@@ -443,7 +563,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.type;
         }
 
-        public UpdateApiRequestDataOwneredPolicies setUpdateDateTime(String updateDateTime) {
+        public UpdateApiRequestOwneredPolicies setUpdateDateTime(String updateDateTime) {
             this.updateDateTime = updateDateTime;
             return this;
         }
@@ -453,7 +573,7 @@ public class UpdateApiRequest extends TeaModel {
 
     }
 
-    public static class UpdateApiRequestDataPublishedGateway extends TeaModel {
+    public static class UpdateApiRequestPublishedGateway extends TeaModel {
         // armsInfo
         @NameInMap("armsInfo")
         public String armsInfo;
@@ -530,12 +650,12 @@ public class UpdateApiRequest extends TeaModel {
         @NameInMap("vswitch")
         public String vswitch;
 
-        public static UpdateApiRequestDataPublishedGateway build(java.util.Map<String, ?> map) throws Exception {
-            UpdateApiRequestDataPublishedGateway self = new UpdateApiRequestDataPublishedGateway();
+        public static UpdateApiRequestPublishedGateway build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApiRequestPublishedGateway self = new UpdateApiRequestPublishedGateway();
             return TeaModel.build(map, self);
         }
 
-        public UpdateApiRequestDataPublishedGateway setArmsInfo(String armsInfo) {
+        public UpdateApiRequestPublishedGateway setArmsInfo(String armsInfo) {
             this.armsInfo = armsInfo;
             return this;
         }
@@ -543,7 +663,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.armsInfo;
         }
 
-        public UpdateApiRequestDataPublishedGateway setAutoCreateSlb(Boolean autoCreateSlb) {
+        public UpdateApiRequestPublishedGateway setAutoCreateSlb(Boolean autoCreateSlb) {
             this.autoCreateSlb = autoCreateSlb;
             return this;
         }
@@ -551,7 +671,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.autoCreateSlb;
         }
 
-        public UpdateApiRequestDataPublishedGateway setBasePath(String basePath) {
+        public UpdateApiRequestPublishedGateway setBasePath(String basePath) {
             this.basePath = basePath;
             return this;
         }
@@ -559,7 +679,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.basePath;
         }
 
-        public UpdateApiRequestDataPublishedGateway setCreationDateTime(String creationDateTime) {
+        public UpdateApiRequestPublishedGateway setCreationDateTime(String creationDateTime) {
             this.creationDateTime = creationDateTime;
             return this;
         }
@@ -567,7 +687,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.creationDateTime;
         }
 
-        public UpdateApiRequestDataPublishedGateway setEdasNamespaceId(String edasNamespaceId) {
+        public UpdateApiRequestPublishedGateway setEdasNamespaceId(String edasNamespaceId) {
             this.edasNamespaceId = edasNamespaceId;
             return this;
         }
@@ -575,7 +695,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.edasNamespaceId;
         }
 
-        public UpdateApiRequestDataPublishedGateway setGatewayType(String gatewayType) {
+        public UpdateApiRequestPublishedGateway setGatewayType(String gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
@@ -583,7 +703,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.gatewayType;
         }
 
-        public UpdateApiRequestDataPublishedGateway setId(Long id) {
+        public UpdateApiRequestPublishedGateway setId(Long id) {
             this.id = id;
             return this;
         }
@@ -591,7 +711,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.id;
         }
 
-        public UpdateApiRequestDataPublishedGateway setName(String name) {
+        public UpdateApiRequestPublishedGateway setName(String name) {
             this.name = name;
             return this;
         }
@@ -599,7 +719,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.name;
         }
 
-        public UpdateApiRequestDataPublishedGateway setPodCidr(String podCidr) {
+        public UpdateApiRequestPublishedGateway setPodCidr(String podCidr) {
             this.podCidr = podCidr;
             return this;
         }
@@ -607,7 +727,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.podCidr;
         }
 
-        public UpdateApiRequestDataPublishedGateway setRegion(String region) {
+        public UpdateApiRequestPublishedGateway setRegion(String region) {
             this.region = region;
             return this;
         }
@@ -615,7 +735,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.region;
         }
 
-        public UpdateApiRequestDataPublishedGateway setRegionName(String regionName) {
+        public UpdateApiRequestPublishedGateway setRegionName(String regionName) {
             this.regionName = regionName;
             return this;
         }
@@ -623,7 +743,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.regionName;
         }
 
-        public UpdateApiRequestDataPublishedGateway setReplica(Long replica) {
+        public UpdateApiRequestPublishedGateway setReplica(Long replica) {
             this.replica = replica;
             return this;
         }
@@ -631,7 +751,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.replica;
         }
 
-        public UpdateApiRequestDataPublishedGateway setRuntimeOn(String runtimeOn) {
+        public UpdateApiRequestPublishedGateway setRuntimeOn(String runtimeOn) {
             this.runtimeOn = runtimeOn;
             return this;
         }
@@ -639,7 +759,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.runtimeOn;
         }
 
-        public UpdateApiRequestDataPublishedGateway setSecurityGroup(String securityGroup) {
+        public UpdateApiRequestPublishedGateway setSecurityGroup(String securityGroup) {
             this.securityGroup = securityGroup;
             return this;
         }
@@ -647,7 +767,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.securityGroup;
         }
 
-        public UpdateApiRequestDataPublishedGateway setSlb(String slb) {
+        public UpdateApiRequestPublishedGateway setSlb(String slb) {
             this.slb = slb;
             return this;
         }
@@ -655,7 +775,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.slb;
         }
 
-        public UpdateApiRequestDataPublishedGateway setSlbAccessAddr(String slbAccessAddr) {
+        public UpdateApiRequestPublishedGateway setSlbAccessAddr(String slbAccessAddr) {
             this.slbAccessAddr = slbAccessAddr;
             return this;
         }
@@ -663,7 +783,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.slbAccessAddr;
         }
 
-        public UpdateApiRequestDataPublishedGateway setStatus(String status) {
+        public UpdateApiRequestPublishedGateway setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -671,7 +791,7 @@ public class UpdateApiRequest extends TeaModel {
             return this.status;
         }
 
-        public UpdateApiRequestDataPublishedGateway setVpc(String vpc) {
+        public UpdateApiRequestPublishedGateway setVpc(String vpc) {
             this.vpc = vpc;
             return this;
         }
@@ -679,152 +799,12 @@ public class UpdateApiRequest extends TeaModel {
             return this.vpc;
         }
 
-        public UpdateApiRequestDataPublishedGateway setVswitch(String vswitch) {
+        public UpdateApiRequestPublishedGateway setVswitch(String vswitch) {
             this.vswitch = vswitch;
             return this;
         }
         public String getVswitch() {
             return this.vswitch;
-        }
-
-    }
-
-    public static class UpdateApiRequestData extends TeaModel {
-        // aliasName
-        @NameInMap("aliasName")
-        public String aliasName;
-
-        // attachedServices
-        @NameInMap("attachedServices")
-        public java.util.List<UpdateApiRequestDataAttachedServices> attachedServices;
-
-        // basePath
-        @NameInMap("basePath")
-        public String basePath;
-
-        // creationDateTime
-        @NameInMap("creationDateTime")
-        public String creationDateTime;
-
-        // description
-        @NameInMap("description")
-        public String description;
-
-        // id
-        @NameInMap("id")
-        public Long id;
-
-        // name
-        @NameInMap("name")
-        public String name;
-
-        // owneredPolicies
-        @NameInMap("owneredPolicies")
-        public java.util.List<UpdateApiRequestDataOwneredPolicies> owneredPolicies;
-
-        // A short description of struct
-        @NameInMap("publishedGateway")
-        public UpdateApiRequestDataPublishedGateway publishedGateway;
-
-        // status
-        @NameInMap("status")
-        public String status;
-
-        // updateDateTime
-        @NameInMap("updateDateTime")
-        public String updateDateTime;
-
-        public static UpdateApiRequestData build(java.util.Map<String, ?> map) throws Exception {
-            UpdateApiRequestData self = new UpdateApiRequestData();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateApiRequestData setAliasName(String aliasName) {
-            this.aliasName = aliasName;
-            return this;
-        }
-        public String getAliasName() {
-            return this.aliasName;
-        }
-
-        public UpdateApiRequestData setAttachedServices(java.util.List<UpdateApiRequestDataAttachedServices> attachedServices) {
-            this.attachedServices = attachedServices;
-            return this;
-        }
-        public java.util.List<UpdateApiRequestDataAttachedServices> getAttachedServices() {
-            return this.attachedServices;
-        }
-
-        public UpdateApiRequestData setBasePath(String basePath) {
-            this.basePath = basePath;
-            return this;
-        }
-        public String getBasePath() {
-            return this.basePath;
-        }
-
-        public UpdateApiRequestData setCreationDateTime(String creationDateTime) {
-            this.creationDateTime = creationDateTime;
-            return this;
-        }
-        public String getCreationDateTime() {
-            return this.creationDateTime;
-        }
-
-        public UpdateApiRequestData setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public UpdateApiRequestData setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public UpdateApiRequestData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public UpdateApiRequestData setOwneredPolicies(java.util.List<UpdateApiRequestDataOwneredPolicies> owneredPolicies) {
-            this.owneredPolicies = owneredPolicies;
-            return this;
-        }
-        public java.util.List<UpdateApiRequestDataOwneredPolicies> getOwneredPolicies() {
-            return this.owneredPolicies;
-        }
-
-        public UpdateApiRequestData setPublishedGateway(UpdateApiRequestDataPublishedGateway publishedGateway) {
-            this.publishedGateway = publishedGateway;
-            return this;
-        }
-        public UpdateApiRequestDataPublishedGateway getPublishedGateway() {
-            return this.publishedGateway;
-        }
-
-        public UpdateApiRequestData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public UpdateApiRequestData setUpdateDateTime(String updateDateTime) {
-            this.updateDateTime = updateDateTime;
-            return this;
-        }
-        public String getUpdateDateTime() {
-            return this.updateDateTime;
         }
 
     }

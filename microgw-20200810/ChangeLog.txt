@@ -1,3 +1,6 @@
+2020-11-06 Version: 1.0.0
+- Java SDK.
+
 2020-09-24 Version: 1.0.0
 - Java SDK.
 
