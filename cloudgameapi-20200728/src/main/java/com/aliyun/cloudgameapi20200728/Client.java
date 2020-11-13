@@ -14,6 +14,16 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public StopGameSessionResponse stopGameSessionWithOptions(StopGameSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("StopGameSession", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new StopGameSessionResponse());
+    }
+
+    public StopGameSessionResponse stopGameSession(StopGameSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.stopGameSessionWithOptions(request, runtime);
+    }
+
     public DispatchGameSlotResponse dispatchGameSlotWithOptions(DispatchGameSlotRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DispatchGameSlot", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new DispatchGameSlotResponse());
