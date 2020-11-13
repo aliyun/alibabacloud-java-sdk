@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>imageseg20191230</artifactId>
-  <version>0.0.9</version>
+  <version>0.0.10</version>
   <packaging>jar</packaging>
   <name>imageseg20191230</name>
   <description>Aliyun IMAGESEG SDK for Java
@@ -75,7 +75,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>oss-client</artifactId>
-      <version>3.0.0</version>
+      <version>3.0.1</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>
@@ -107,7 +107,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.6</version>
+      <version>0.2.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
