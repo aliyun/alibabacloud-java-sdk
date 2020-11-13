@@ -8,8 +8,10 @@ public class ExtractPedestrianFeatureAttributeRequest extends TeaModel {
     public String mode;
 
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
+
+    @NameInMap("UrlList")
+    public java.util.List<ExtractPedestrianFeatureAttributeRequestUrlList> urlList;
 
     public static ExtractPedestrianFeatureAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ExtractPedestrianFeatureAttributeRequest self = new ExtractPedestrianFeatureAttributeRequest();
@@ -30,6 +32,33 @@ public class ExtractPedestrianFeatureAttributeRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
+    }
+
+    public ExtractPedestrianFeatureAttributeRequest setUrlList(java.util.List<ExtractPedestrianFeatureAttributeRequestUrlList> urlList) {
+        this.urlList = urlList;
+        return this;
+    }
+    public java.util.List<ExtractPedestrianFeatureAttributeRequestUrlList> getUrlList() {
+        return this.urlList;
+    }
+
+    public static class ExtractPedestrianFeatureAttributeRequestUrlList extends TeaModel {
+        @NameInMap("Url")
+        public String url;
+
+        public static ExtractPedestrianFeatureAttributeRequestUrlList build(java.util.Map<String, ?> map) throws Exception {
+            ExtractPedestrianFeatureAttributeRequestUrlList self = new ExtractPedestrianFeatureAttributeRequestUrlList();
+            return TeaModel.build(map, self);
+        }
+
+        public ExtractPedestrianFeatureAttributeRequestUrlList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
     }
 
 }
