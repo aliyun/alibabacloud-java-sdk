@@ -197,6 +197,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("PrivatePoolOptions")
     public RunInstancesRequestPrivatePoolOptions privatePoolOptions;
 
+    @NameInMap("Isp")
+    public String isp;
+
     public static RunInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         RunInstancesRequest self = new RunInstancesRequest();
         return TeaModel.build(map, self);
@@ -712,6 +715,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public RunInstancesRequestPrivatePoolOptions getPrivatePoolOptions() {
         return this.privatePoolOptions;
+    }
+
+    public RunInstancesRequest setIsp(String isp) {
+        this.isp = isp;
+        return this;
+    }
+    public String getIsp() {
+        return this.isp;
     }
 
     public static class RunInstancesRequestSystemDisk extends TeaModel {

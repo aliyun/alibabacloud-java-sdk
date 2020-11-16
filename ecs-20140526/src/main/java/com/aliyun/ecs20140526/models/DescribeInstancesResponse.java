@@ -847,6 +847,10 @@ public class DescribeInstancesResponse extends TeaModel {
         @Validation(required = true)
         public Boolean deletionProtection;
 
+        @NameInMap("ISP")
+        @Validation(required = true)
+        public String ISP;
+
         @NameInMap("NetworkInterfaces")
         @Validation(required = true)
         public DescribeInstancesResponseInstancesInstanceNetworkInterfaces networkInterfaces;
@@ -1274,6 +1278,14 @@ public class DescribeInstancesResponse extends TeaModel {
         }
         public Boolean getDeletionProtection() {
             return this.deletionProtection;
+        }
+
+        public DescribeInstancesResponseInstancesInstance setISP(String ISP) {
+            this.ISP = ISP;
+            return this;
+        }
+        public String getISP() {
+            return this.ISP;
         }
 
         public DescribeInstancesResponseInstancesInstance setNetworkInterfaces(DescribeInstancesResponseInstancesInstanceNetworkInterfaces networkInterfaces) {

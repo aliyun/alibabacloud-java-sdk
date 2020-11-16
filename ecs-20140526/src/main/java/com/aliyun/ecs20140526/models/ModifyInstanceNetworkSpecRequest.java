@@ -14,6 +14,9 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     @NameInMap("InternetMaxBandwidthIn")
     public Integer internetMaxBandwidthIn;
 
+    @NameInMap("ISP")
+    public String ISP;
+
     @NameInMap("NetworkChargeType")
     public String networkChargeType;
 
@@ -59,6 +62,14 @@ public class ModifyInstanceNetworkSpecRequest extends TeaModel {
     }
     public Integer getInternetMaxBandwidthIn() {
         return this.internetMaxBandwidthIn;
+    }
+
+    public ModifyInstanceNetworkSpecRequest setISP(String ISP) {
+        this.ISP = ISP;
+        return this;
+    }
+    public String getISP() {
+        return this.ISP;
     }
 
     public ModifyInstanceNetworkSpecRequest setNetworkChargeType(String networkChargeType) {
