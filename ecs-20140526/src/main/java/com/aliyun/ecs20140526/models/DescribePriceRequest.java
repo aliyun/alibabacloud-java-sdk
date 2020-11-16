@@ -68,6 +68,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("InstanceTypeList")
     public java.util.List<String> instanceTypeList;
 
+    @NameInMap("Isp")
+    public String isp;
+
     public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceRequest self = new DescribePriceRequest();
         return TeaModel.build(map, self);
@@ -239,6 +242,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceTypeList() {
         return this.instanceTypeList;
+    }
+
+    public DescribePriceRequest setIsp(String isp) {
+        this.isp = isp;
+        return this;
+    }
+    public String getIsp() {
+        return this.isp;
     }
 
     public static class DescribePriceRequestSystemDisk extends TeaModel {
