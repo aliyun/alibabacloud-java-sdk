@@ -32,6 +32,10 @@ public class FindGatewaysRequest extends TeaModel {
     @NameInMap("pageSize")
     public String pageSize;
 
+    // namespace
+    @NameInMap("namespace")
+    public String namespace;
+
     public static FindGatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
         FindGatewaysRequest self = new FindGatewaysRequest();
         return TeaModel.build(map, self);
@@ -91,6 +95,14 @@ public class FindGatewaysRequest extends TeaModel {
     }
     public String getPageSize() {
         return this.pageSize;
+    }
+
+    public FindGatewaysRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
 }

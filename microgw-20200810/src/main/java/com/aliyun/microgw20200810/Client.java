@@ -1268,9 +1268,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("FindApisByPaging", "2020-08-10", "HTTPS", "GET", "AK", "/v1/gateway/" + gatewayId + "/api", "json", req, runtime), new FindApisByPagingResponse());
     }
 
-    /**
-     * findGateways
-     */
     public FindGatewaysResponse findGateways(FindGatewaysRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1306,6 +1303,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("namespace", request.namespace);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
