@@ -33,6 +33,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("DagId")
+    public Long dagId;
+
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
@@ -108,6 +111,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstancesRequest setDagId(Long dagId) {
+        this.dagId = dagId;
+        return this;
+    }
+    public Long getDagId() {
+        return this.dagId;
     }
 
 }
