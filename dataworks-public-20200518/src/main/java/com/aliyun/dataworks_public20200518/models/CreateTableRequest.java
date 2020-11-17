@@ -54,6 +54,9 @@ public class CreateTableRequest extends TeaModel {
     @NameInMap("AppGuid")
     public String appGuid;
 
+    @NameInMap("Comment")
+    public String comment;
+
     public static CreateTableRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTableRequest self = new CreateTableRequest();
         return TeaModel.build(map, self);
@@ -185,6 +188,14 @@ public class CreateTableRequest extends TeaModel {
     }
     public String getAppGuid() {
         return this.appGuid;
+    }
+
+    public CreateTableRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
     }
 
     public static class CreateTableRequestColumns extends TeaModel {

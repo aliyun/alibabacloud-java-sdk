@@ -142,6 +142,42 @@ public class GetInstanceResponse extends TeaModel {
         @Validation(required = true)
         public String nodeName;
 
+        @NameInMap("Priority")
+        @Validation(required = true)
+        public Integer priority;
+
+        @NameInMap("BaselineId")
+        @Validation(required = true)
+        public Long baselineId;
+
+        @NameInMap("Repeatability")
+        @Validation(required = true)
+        public Boolean repeatability;
+
+        @NameInMap("RepeatInterval")
+        @Validation(required = true)
+        public Long repeatInterval;
+
+        @NameInMap("Connection")
+        @Validation(required = true)
+        public String connection;
+
+        @NameInMap("DqcType")
+        @Validation(required = true)
+        public Integer dqcType;
+
+        @NameInMap("DqcDescription")
+        @Validation(required = true)
+        public String dqcDescription;
+
+        @NameInMap("ErrorMessage")
+        @Validation(required = true)
+        public String errorMessage;
+
+        @NameInMap("RelatedFlowId")
+        @Validation(required = true)
+        public Long relatedFlowId;
+
         public static GetInstanceResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseData self = new GetInstanceResponseData();
             return TeaModel.build(map, self);
@@ -265,6 +301,78 @@ public class GetInstanceResponse extends TeaModel {
         }
         public String getNodeName() {
             return this.nodeName;
+        }
+
+        public GetInstanceResponseData setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public GetInstanceResponseData setBaselineId(Long baselineId) {
+            this.baselineId = baselineId;
+            return this;
+        }
+        public Long getBaselineId() {
+            return this.baselineId;
+        }
+
+        public GetInstanceResponseData setRepeatability(Boolean repeatability) {
+            this.repeatability = repeatability;
+            return this;
+        }
+        public Boolean getRepeatability() {
+            return this.repeatability;
+        }
+
+        public GetInstanceResponseData setRepeatInterval(Long repeatInterval) {
+            this.repeatInterval = repeatInterval;
+            return this;
+        }
+        public Long getRepeatInterval() {
+            return this.repeatInterval;
+        }
+
+        public GetInstanceResponseData setConnection(String connection) {
+            this.connection = connection;
+            return this;
+        }
+        public String getConnection() {
+            return this.connection;
+        }
+
+        public GetInstanceResponseData setDqcType(Integer dqcType) {
+            this.dqcType = dqcType;
+            return this;
+        }
+        public Integer getDqcType() {
+            return this.dqcType;
+        }
+
+        public GetInstanceResponseData setDqcDescription(String dqcDescription) {
+            this.dqcDescription = dqcDescription;
+            return this;
+        }
+        public String getDqcDescription() {
+            return this.dqcDescription;
+        }
+
+        public GetInstanceResponseData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public GetInstanceResponseData setRelatedFlowId(Long relatedFlowId) {
+            this.relatedFlowId = relatedFlowId;
+            return this;
+        }
+        public Long getRelatedFlowId() {
+            return this.relatedFlowId;
         }
 
     }

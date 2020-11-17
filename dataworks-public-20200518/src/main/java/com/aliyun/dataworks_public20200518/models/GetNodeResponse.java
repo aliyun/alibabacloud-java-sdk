@@ -126,6 +126,34 @@ public class GetNodeResponse extends TeaModel {
         @Validation(required = true)
         public String paramValues;
 
+        @NameInMap("Priority")
+        @Validation(required = true)
+        public Integer priority;
+
+        @NameInMap("BaselineId")
+        @Validation(required = true)
+        public Long baselineId;
+
+        @NameInMap("RepeatInterval")
+        @Validation(required = true)
+        public Long repeatInterval;
+
+        @NameInMap("Connection")
+        @Validation(required = true)
+        public String connection;
+
+        @NameInMap("DqcType")
+        @Validation(required = true)
+        public Integer dqcType;
+
+        @NameInMap("DqcDescription")
+        @Validation(required = true)
+        public String dqcDescription;
+
+        @NameInMap("RelatedFlowId")
+        @Validation(required = true)
+        public Long relatedFlowId;
+
         public static GetNodeResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetNodeResponseData self = new GetNodeResponseData();
             return TeaModel.build(map, self);
@@ -217,6 +245,62 @@ public class GetNodeResponse extends TeaModel {
         }
         public String getParamValues() {
             return this.paramValues;
+        }
+
+        public GetNodeResponseData setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public GetNodeResponseData setBaselineId(Long baselineId) {
+            this.baselineId = baselineId;
+            return this;
+        }
+        public Long getBaselineId() {
+            return this.baselineId;
+        }
+
+        public GetNodeResponseData setRepeatInterval(Long repeatInterval) {
+            this.repeatInterval = repeatInterval;
+            return this;
+        }
+        public Long getRepeatInterval() {
+            return this.repeatInterval;
+        }
+
+        public GetNodeResponseData setConnection(String connection) {
+            this.connection = connection;
+            return this;
+        }
+        public String getConnection() {
+            return this.connection;
+        }
+
+        public GetNodeResponseData setDqcType(Integer dqcType) {
+            this.dqcType = dqcType;
+            return this;
+        }
+        public Integer getDqcType() {
+            return this.dqcType;
+        }
+
+        public GetNodeResponseData setDqcDescription(String dqcDescription) {
+            this.dqcDescription = dqcDescription;
+            return this;
+        }
+        public String getDqcDescription() {
+            return this.dqcDescription;
+        }
+
+        public GetNodeResponseData setRelatedFlowId(Long relatedFlowId) {
+            this.relatedFlowId = relatedFlowId;
+            return this;
+        }
+        public Long getRelatedFlowId() {
+            return this.relatedFlowId;
         }
 
     }

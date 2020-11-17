@@ -90,6 +90,10 @@ public class ListNodeIOResponse extends TeaModel {
         @Validation(required = true)
         public String data;
 
+        @NameInMap("NodeId")
+        @Validation(required = true)
+        public Long nodeId;
+
         public static ListNodeIOResponseData build(java.util.Map<String, ?> map) throws Exception {
             ListNodeIOResponseData self = new ListNodeIOResponseData();
             return TeaModel.build(map, self);
@@ -109,6 +113,14 @@ public class ListNodeIOResponse extends TeaModel {
         }
         public String getData() {
             return this.data;
+        }
+
+        public ListNodeIOResponseData setNodeId(Long nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public Long getNodeId() {
+            return this.nodeId;
         }
 
     }
