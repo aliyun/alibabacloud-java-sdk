@@ -3,45 +3,21 @@ package com.aliyun.cloudgameapi20200728.models;
 
 import com.aliyun.tea.*;
 
-public class DispatchGameSlotResponse extends TeaModel {
+public class BatchDispatchGameSlotResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
 
-    @NameInMap("GameId")
+    @NameInMap("QueueResultList")
     @Validation(required = true)
-    public String gameId;
+    public java.util.List<BatchDispatchGameSlotResponseQueueResultList> queueResultList;
 
-    @NameInMap("GameSession")
-    @Validation(required = true)
-    public String gameSession;
-
-    @NameInMap("QueueState")
-    @Validation(required = true)
-    public Integer queueState;
-
-    @NameInMap("QueueCode")
-    @Validation(required = true)
-    public Integer queueCode;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RegionName")
-    @Validation(required = true)
-    public String regionName;
-
-    @NameInMap("UserId")
-    @Validation(required = true)
-    public String userId;
-
-    public static DispatchGameSlotResponse build(java.util.Map<String, ?> map) throws Exception {
-        DispatchGameSlotResponse self = new DispatchGameSlotResponse();
+    public static BatchDispatchGameSlotResponse build(java.util.Map<String, ?> map) throws Exception {
+        BatchDispatchGameSlotResponse self = new BatchDispatchGameSlotResponse();
         return TeaModel.build(map, self);
     }
 
-    public DispatchGameSlotResponse setRequestId(String requestId) {
+    public BatchDispatchGameSlotResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -49,60 +25,12 @@ public class DispatchGameSlotResponse extends TeaModel {
         return this.requestId;
     }
 
-    public DispatchGameSlotResponse setGameId(String gameId) {
-        this.gameId = gameId;
+    public BatchDispatchGameSlotResponse setQueueResultList(java.util.List<BatchDispatchGameSlotResponseQueueResultList> queueResultList) {
+        this.queueResultList = queueResultList;
         return this;
     }
-    public String getGameId() {
-        return this.gameId;
-    }
-
-    public DispatchGameSlotResponse setGameSession(String gameSession) {
-        this.gameSession = gameSession;
-        return this;
-    }
-    public String getGameSession() {
-        return this.gameSession;
-    }
-
-    public DispatchGameSlotResponse setQueueState(Integer queueState) {
-        this.queueState = queueState;
-        return this;
-    }
-    public Integer getQueueState() {
-        return this.queueState;
-    }
-
-    public DispatchGameSlotResponse setQueueCode(Integer queueCode) {
-        this.queueCode = queueCode;
-        return this;
-    }
-    public Integer getQueueCode() {
-        return this.queueCode;
-    }
-
-    public DispatchGameSlotResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DispatchGameSlotResponse setRegionName(String regionName) {
-        this.regionName = regionName;
-        return this;
-    }
-    public String getRegionName() {
-        return this.regionName;
-    }
-
-    public DispatchGameSlotResponse setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
+    public java.util.List<BatchDispatchGameSlotResponseQueueResultList> getQueueResultList() {
+        return this.queueResultList;
     }
 
     public static class BatchDispatchGameSlotResponseQueueResultList extends TeaModel {
