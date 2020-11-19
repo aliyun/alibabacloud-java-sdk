@@ -78,13 +78,13 @@ public class DetectPedestrianResponse extends TeaModel {
     }
 
     public static class DetectPedestrianResponseData extends TeaModel {
-        @NameInMap("Width")
-        @Validation(required = true)
-        public Integer width;
-
         @NameInMap("Height")
         @Validation(required = true)
         public Integer height;
+
+        @NameInMap("Width")
+        @Validation(required = true)
+        public Integer width;
 
         @NameInMap("Elements")
         @Validation(required = true)
@@ -95,20 +95,20 @@ public class DetectPedestrianResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DetectPedestrianResponseData setWidth(Integer width) {
-            this.width = width;
-            return this;
-        }
-        public Integer getWidth() {
-            return this.width;
-        }
-
         public DetectPedestrianResponseData setHeight(Integer height) {
             this.height = height;
             return this;
         }
         public Integer getHeight() {
             return this.height;
+        }
+
+        public DetectPedestrianResponseData setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
         }
 
         public DetectPedestrianResponseData setElements(java.util.List<DetectPedestrianResponseDataElements> elements) {
