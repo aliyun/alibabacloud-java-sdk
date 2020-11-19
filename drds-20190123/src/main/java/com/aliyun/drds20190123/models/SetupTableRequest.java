@@ -1,0 +1,71 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.drds20190123.models;
+
+import com.aliyun.tea.*;
+
+public class SetupTableRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
+    public String drdsInstanceId;
+
+    @NameInMap("DbName")
+    @Validation(required = true)
+    public String dbName;
+
+    @NameInMap("AllowFullTableScan")
+    @Validation(required = true)
+    public Boolean allowFullTableScan;
+
+    @NameInMap("TableName")
+    @Validation(required = true)
+    public java.util.List<String> tableName;
+
+    public static SetupTableRequest build(java.util.Map<String, ?> map) throws Exception {
+        SetupTableRequest self = new SetupTableRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public SetupTableRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public SetupTableRequest setDrdsInstanceId(String drdsInstanceId) {
+        this.drdsInstanceId = drdsInstanceId;
+        return this;
+    }
+    public String getDrdsInstanceId() {
+        return this.drdsInstanceId;
+    }
+
+    public SetupTableRequest setDbName(String dbName) {
+        this.dbName = dbName;
+        return this;
+    }
+    public String getDbName() {
+        return this.dbName;
+    }
+
+    public SetupTableRequest setAllowFullTableScan(Boolean allowFullTableScan) {
+        this.allowFullTableScan = allowFullTableScan;
+        return this;
+    }
+    public Boolean getAllowFullTableScan() {
+        return this.allowFullTableScan;
+    }
+
+    public SetupTableRequest setTableName(java.util.List<String> tableName) {
+        this.tableName = tableName;
+        return this;
+    }
+    public java.util.List<String> getTableName() {
+        return this.tableName;
+    }
+
+}
