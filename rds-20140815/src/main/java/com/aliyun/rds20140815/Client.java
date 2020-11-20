@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.rds20140815.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
+
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
@@ -57,6 +58,56 @@ public class Client extends com.aliyun.tearpc.Client {
         this._endpoint = this.getEndpoint("rds", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
+
+    public GetDbProxyInstanceSslResponse getDbProxyInstanceSslWithOptions(GetDbProxyInstanceSslRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetDbProxyInstanceSsl", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new GetDbProxyInstanceSslResponse());
+    }
+
+    public GetDbProxyInstanceSslResponse getDbProxyInstanceSsl(GetDbProxyInstanceSslRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDbProxyInstanceSslWithOptions(request, runtime);
+    }
+
+    public ModifyDbProxyInstanceSslResponse modifyDbProxyInstanceSslWithOptions(ModifyDbProxyInstanceSslRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyDbProxyInstanceSsl", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new ModifyDbProxyInstanceSslResponse());
+    }
+
+    public ModifyDbProxyInstanceSslResponse modifyDbProxyInstanceSsl(ModifyDbProxyInstanceSslRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDbProxyInstanceSslWithOptions(request, runtime);
+    }
+
+    public MigrateConnectionToOtherZoneResponse migrateConnectionToOtherZoneWithOptions(MigrateConnectionToOtherZoneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("MigrateConnectionToOtherZone", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new MigrateConnectionToOtherZoneResponse());
+    }
+
+    public MigrateConnectionToOtherZoneResponse migrateConnectionToOtherZone(MigrateConnectionToOtherZoneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.migrateConnectionToOtherZoneWithOptions(request, runtime);
+    }
+
+    public GetDBInstanceTopologyResponse getDBInstanceTopologyWithOptions(GetDBInstanceTopologyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetDBInstanceTopology", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new GetDBInstanceTopologyResponse());
+    }
+
+    public GetDBInstanceTopologyResponse getDBInstanceTopology(GetDBInstanceTopologyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDBInstanceTopologyWithOptions(request, runtime);
+    }
+
+    public CheckRegionSupportBackupEncryptionResponse checkRegionSupportBackupEncryptionWithOptions(CheckRegionSupportBackupEncryptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CheckRegionSupportBackupEncryption", "HTTPS", "POST", "2014-08-15", "AK", null, TeaModel.buildMap(request), runtime), new CheckRegionSupportBackupEncryptionResponse());
+    }
+
+    public CheckRegionSupportBackupEncryptionResponse checkRegionSupportBackupEncryption(CheckRegionSupportBackupEncryptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkRegionSupportBackupEncryptionWithOptions(request, runtime);
+    }
 
     public DescribeDBInstanceDetailResponse describeDBInstanceDetailWithOptions(DescribeDBInstanceDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);

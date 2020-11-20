@@ -106,10 +106,6 @@ public class DescribeCrossRegionBackupDBInstanceResponse extends TeaModel {
         @Validation(required = true)
         public String DBInstanceStatus;
 
-        @NameInMap("DBInstanceStatusDesc")
-        @Validation(required = true)
-        public String DBInstanceStatusDesc;
-
         @NameInMap("Engine")
         @Validation(required = true)
         public String engine;
@@ -154,14 +150,6 @@ public class DescribeCrossRegionBackupDBInstanceResponse extends TeaModel {
         @Validation(required = true)
         public String lockMode;
 
-        @NameInMap("RelService")
-        @Validation(required = true)
-        public String relService;
-
-        @NameInMap("RelServiceId")
-        @Validation(required = true)
-        public String relServiceId;
-
         public static DescribeCrossRegionBackupDBInstanceResponseItemsItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeCrossRegionBackupDBInstanceResponseItemsItem self = new DescribeCrossRegionBackupDBInstanceResponseItemsItem();
             return TeaModel.build(map, self);
@@ -189,14 +177,6 @@ public class DescribeCrossRegionBackupDBInstanceResponse extends TeaModel {
         }
         public String getDBInstanceStatus() {
             return this.DBInstanceStatus;
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseItemsItem setDBInstanceStatusDesc(String DBInstanceStatusDesc) {
-            this.DBInstanceStatusDesc = DBInstanceStatusDesc;
-            return this;
-        }
-        public String getDBInstanceStatusDesc() {
-            return this.DBInstanceStatusDesc;
         }
 
         public DescribeCrossRegionBackupDBInstanceResponseItemsItem setEngine(String engine) {
@@ -285,22 +265,6 @@ public class DescribeCrossRegionBackupDBInstanceResponse extends TeaModel {
         }
         public String getLockMode() {
             return this.lockMode;
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseItemsItem setRelService(String relService) {
-            this.relService = relService;
-            return this;
-        }
-        public String getRelService() {
-            return this.relService;
-        }
-
-        public DescribeCrossRegionBackupDBInstanceResponseItemsItem setRelServiceId(String relServiceId) {
-            this.relServiceId = relServiceId;
-            return this;
-        }
-        public String getRelServiceId() {
-            return this.relServiceId;
         }
 
     }

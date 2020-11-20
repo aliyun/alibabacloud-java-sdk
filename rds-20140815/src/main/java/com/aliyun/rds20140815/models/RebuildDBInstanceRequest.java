@@ -18,6 +18,9 @@ public class RebuildDBInstanceRequest extends TeaModel {
     @NameInMap("DedicatedHostId")
     public String dedicatedHostId;
 
+    @NameInMap("RebuildNodeType")
+    public String rebuildNodeType;
+
     public static RebuildDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RebuildDBInstanceRequest self = new RebuildDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -53,6 +56,14 @@ public class RebuildDBInstanceRequest extends TeaModel {
     }
     public String getDedicatedHostId() {
         return this.dedicatedHostId;
+    }
+
+    public RebuildDBInstanceRequest setRebuildNodeType(String rebuildNodeType) {
+        this.rebuildNodeType = rebuildNodeType;
+        return this;
+    }
+    public String getRebuildNodeType() {
+        return this.rebuildNodeType;
     }
 
 }

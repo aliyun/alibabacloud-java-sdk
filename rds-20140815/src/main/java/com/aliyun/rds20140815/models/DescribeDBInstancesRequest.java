@@ -77,6 +77,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("InstanceLevel")
     public Integer instanceLevel;
 
+    @NameInMap("NeedVpcName")
+    public Boolean needVpcName;
+
     public static DescribeDBInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBInstancesRequest self = new DescribeDBInstancesRequest();
         return TeaModel.build(map, self);
@@ -272,6 +275,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public Integer getInstanceLevel() {
         return this.instanceLevel;
+    }
+
+    public DescribeDBInstancesRequest setNeedVpcName(Boolean needVpcName) {
+        this.needVpcName = needVpcName;
+        return this;
+    }
+    public Boolean getNeedVpcName() {
+        return this.needVpcName;
     }
 
 }

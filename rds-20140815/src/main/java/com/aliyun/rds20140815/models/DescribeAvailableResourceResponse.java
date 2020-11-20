@@ -362,10 +362,6 @@ public class DescribeAvailableResourceResponse extends TeaModel {
         @Validation(required = true)
         public String status;
 
-        @NameInMap("NetworkTypes")
-        @Validation(required = true)
-        public String networkTypes;
-
         @NameInMap("SupportedEngines")
         @Validation(required = true)
         public DescribeAvailableResourceResponseAvailableZonesAvailableZoneSupportedEngines supportedEngines;
@@ -397,14 +393,6 @@ public class DescribeAvailableResourceResponse extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeAvailableResourceResponseAvailableZonesAvailableZone setNetworkTypes(String networkTypes) {
-            this.networkTypes = networkTypes;
-            return this;
-        }
-        public String getNetworkTypes() {
-            return this.networkTypes;
         }
 
         public DescribeAvailableResourceResponseAvailableZonesAvailableZone setSupportedEngines(DescribeAvailableResourceResponseAvailableZonesAvailableZoneSupportedEngines supportedEngines) {

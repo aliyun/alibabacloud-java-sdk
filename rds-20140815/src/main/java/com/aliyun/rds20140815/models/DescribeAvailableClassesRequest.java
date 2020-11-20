@@ -40,6 +40,9 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    @NameInMap("DispenseMode")
+    public String dispenseMode;
+
     public static DescribeAvailableClassesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableClassesRequest self = new DescribeAvailableClassesRequest();
         return TeaModel.build(map, self);
@@ -123,6 +126,14 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public DescribeAvailableClassesRequest setDispenseMode(String dispenseMode) {
+        this.dispenseMode = dispenseMode;
+        return this;
+    }
+    public String getDispenseMode() {
+        return this.dispenseMode;
     }
 
 }

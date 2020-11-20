@@ -50,10 +50,6 @@ public class DescribeDBInstanceIPArrayListResponse extends TeaModel {
         @Validation(required = true)
         public String securityIPList;
 
-        @NameInMap("WhitelistNetworkType")
-        @Validation(required = true)
-        public String whitelistNetworkType;
-
         public static DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray self = new DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray();
             return TeaModel.build(map, self);
@@ -89,14 +85,6 @@ public class DescribeDBInstanceIPArrayListResponse extends TeaModel {
         }
         public String getSecurityIPList() {
             return this.securityIPList;
-        }
-
-        public DescribeDBInstanceIPArrayListResponseItemsDBInstanceIPArray setWhitelistNetworkType(String whitelistNetworkType) {
-            this.whitelistNetworkType = whitelistNetworkType;
-            return this;
-        }
-        public String getWhitelistNetworkType() {
-            return this.whitelistNetworkType;
         }
 
     }

@@ -14,6 +14,9 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    @NameInMap("TargetMinorVersion")
+    public String targetMinorVersion;
+
     public static UpgradeDBInstanceKernelVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceKernelVersionRequest self = new UpgradeDBInstanceKernelVersionRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     }
     public String getSwitchTime() {
         return this.switchTime;
+    }
+
+    public UpgradeDBInstanceKernelVersionRequest setTargetMinorVersion(String targetMinorVersion) {
+        this.targetMinorVersion = targetMinorVersion;
+        return this;
+    }
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
     }
 
 }

@@ -16,14 +16,6 @@ public class CloneDBInstanceResponse extends TeaModel {
     @Validation(required = true)
     public String orderId;
 
-    @NameInMap("ConnectionString")
-    @Validation(required = true)
-    public String connectionString;
-
-    @NameInMap("Port")
-    @Validation(required = true)
-    public String port;
-
     public static CloneDBInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         CloneDBInstanceResponse self = new CloneDBInstanceResponse();
         return TeaModel.build(map, self);
@@ -51,22 +43,6 @@ public class CloneDBInstanceResponse extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
-    }
-
-    public CloneDBInstanceResponse setConnectionString(String connectionString) {
-        this.connectionString = connectionString;
-        return this;
-    }
-    public String getConnectionString() {
-        return this.connectionString;
-    }
-
-    public CloneDBInstanceResponse setPort(String port) {
-        this.port = port;
-        return this;
-    }
-    public String getPort() {
-        return this.port;
     }
 
 }

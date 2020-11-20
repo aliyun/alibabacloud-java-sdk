@@ -27,6 +27,12 @@ public class MigrateDBInstanceRequest extends TeaModel {
     @NameInMap("SpecifiedTime")
     public String specifiedTime;
 
+    @NameInMap("ZoneIdForLog")
+    public String zoneIdForLog;
+
+    @NameInMap("ZoneIdForFollower")
+    public String zoneIdForFollower;
+
     public static MigrateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         MigrateDBInstanceRequest self = new MigrateDBInstanceRequest();
         return TeaModel.build(map, self);
@@ -86,6 +92,22 @@ public class MigrateDBInstanceRequest extends TeaModel {
     }
     public String getSpecifiedTime() {
         return this.specifiedTime;
+    }
+
+    public MigrateDBInstanceRequest setZoneIdForLog(String zoneIdForLog) {
+        this.zoneIdForLog = zoneIdForLog;
+        return this;
+    }
+    public String getZoneIdForLog() {
+        return this.zoneIdForLog;
+    }
+
+    public MigrateDBInstanceRequest setZoneIdForFollower(String zoneIdForFollower) {
+        this.zoneIdForFollower = zoneIdForFollower;
+        return this;
+    }
+    public String getZoneIdForFollower() {
+        return this.zoneIdForFollower;
     }
 
 }

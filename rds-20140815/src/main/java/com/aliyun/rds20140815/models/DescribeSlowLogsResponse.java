@@ -202,6 +202,102 @@ public class DescribeSlowLogsResponse extends TeaModel {
         @Validation(required = true)
         public Long avgExecutionTime;
 
+        @NameInMap("AvgPhysicalReadCounts")
+        @Validation(required = true)
+        public Long avgPhysicalReadCounts;
+
+        @NameInMap("MaxPhysicalReadCounts")
+        @Validation(required = true)
+        public Long maxPhysicalReadCounts;
+
+        @NameInMap("MinPhysicalReadCounts")
+        @Validation(required = true)
+        public Long minPhysicalReadCounts;
+
+        @NameInMap("AvgLogicalReadCounts")
+        @Validation(required = true)
+        public Long avgLogicalReadCounts;
+
+        @NameInMap("MaxLogicalReadCounts")
+        @Validation(required = true)
+        public Long maxLogicalReadCounts;
+
+        @NameInMap("MinLogicalReadCounts")
+        @Validation(required = true)
+        public Long minLogicalReadCounts;
+
+        @NameInMap("TotalIOWriteCounts")
+        @Validation(required = true)
+        public Long totalIOWriteCounts;
+
+        @NameInMap("AvgIOWriteCounts")
+        @Validation(required = true)
+        public Long avgIOWriteCounts;
+
+        @NameInMap("MaxIOWriteCounts")
+        @Validation(required = true)
+        public Long maxIOWriteCounts;
+
+        @NameInMap("MinIOWriteCounts")
+        @Validation(required = true)
+        public Long minIOWriteCounts;
+
+        @NameInMap("TotalRowsAffectedCounts")
+        @Validation(required = true)
+        public Long totalRowsAffectedCounts;
+
+        @NameInMap("AvgRowsAffectedCounts")
+        @Validation(required = true)
+        public Long avgRowsAffectedCounts;
+
+        @NameInMap("MaxRowsAffectedCounts")
+        @Validation(required = true)
+        public Long maxRowsAffectedCounts;
+
+        @NameInMap("MinRowsAffectedCounts")
+        @Validation(required = true)
+        public Long minRowsAffectedCounts;
+
+        @NameInMap("TotalLastRowsAffectedCounts")
+        @Validation(required = true)
+        public Long totalLastRowsAffectedCounts;
+
+        @NameInMap("AvgLastRowsAffectedCounts")
+        @Validation(required = true)
+        public Long avgLastRowsAffectedCounts;
+
+        @NameInMap("MaxLastRowsAffectedCounts")
+        @Validation(required = true)
+        public Long maxLastRowsAffectedCounts;
+
+        @NameInMap("MinLastRowsAffectedCounts")
+        @Validation(required = true)
+        public Long minLastRowsAffectedCounts;
+
+        @NameInMap("SQLServerMinExecutionTime")
+        @Validation(required = true)
+        public Long SQLServerMinExecutionTime;
+
+        @NameInMap("SQLServerAvgExecutionTime")
+        @Validation(required = true)
+        public Long SQLServerAvgExecutionTime;
+
+        @NameInMap("SQLServerTotalCpuTime")
+        @Validation(required = true)
+        public Long SQLServerTotalCpuTime;
+
+        @NameInMap("SQLServerAvgCpuTime")
+        @Validation(required = true)
+        public Long SQLServerAvgCpuTime;
+
+        @NameInMap("SQLServerMaxCpuTime")
+        @Validation(required = true)
+        public Long SQLServerMaxCpuTime;
+
+        @NameInMap("SQLServerMinCpuTime")
+        @Validation(required = true)
+        public Long SQLServerMinCpuTime;
+
         public static DescribeSlowLogsResponseItemsSQLSlowLog build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogsResponseItemsSQLSlowLog self = new DescribeSlowLogsResponseItemsSQLSlowLog();
             return TeaModel.build(map, self);
@@ -373,6 +469,198 @@ public class DescribeSlowLogsResponse extends TeaModel {
         }
         public Long getAvgExecutionTime() {
             return this.avgExecutionTime;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setAvgPhysicalReadCounts(Long avgPhysicalReadCounts) {
+            this.avgPhysicalReadCounts = avgPhysicalReadCounts;
+            return this;
+        }
+        public Long getAvgPhysicalReadCounts() {
+            return this.avgPhysicalReadCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMaxPhysicalReadCounts(Long maxPhysicalReadCounts) {
+            this.maxPhysicalReadCounts = maxPhysicalReadCounts;
+            return this;
+        }
+        public Long getMaxPhysicalReadCounts() {
+            return this.maxPhysicalReadCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMinPhysicalReadCounts(Long minPhysicalReadCounts) {
+            this.minPhysicalReadCounts = minPhysicalReadCounts;
+            return this;
+        }
+        public Long getMinPhysicalReadCounts() {
+            return this.minPhysicalReadCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setAvgLogicalReadCounts(Long avgLogicalReadCounts) {
+            this.avgLogicalReadCounts = avgLogicalReadCounts;
+            return this;
+        }
+        public Long getAvgLogicalReadCounts() {
+            return this.avgLogicalReadCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMaxLogicalReadCounts(Long maxLogicalReadCounts) {
+            this.maxLogicalReadCounts = maxLogicalReadCounts;
+            return this;
+        }
+        public Long getMaxLogicalReadCounts() {
+            return this.maxLogicalReadCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMinLogicalReadCounts(Long minLogicalReadCounts) {
+            this.minLogicalReadCounts = minLogicalReadCounts;
+            return this;
+        }
+        public Long getMinLogicalReadCounts() {
+            return this.minLogicalReadCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setTotalIOWriteCounts(Long totalIOWriteCounts) {
+            this.totalIOWriteCounts = totalIOWriteCounts;
+            return this;
+        }
+        public Long getTotalIOWriteCounts() {
+            return this.totalIOWriteCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setAvgIOWriteCounts(Long avgIOWriteCounts) {
+            this.avgIOWriteCounts = avgIOWriteCounts;
+            return this;
+        }
+        public Long getAvgIOWriteCounts() {
+            return this.avgIOWriteCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMaxIOWriteCounts(Long maxIOWriteCounts) {
+            this.maxIOWriteCounts = maxIOWriteCounts;
+            return this;
+        }
+        public Long getMaxIOWriteCounts() {
+            return this.maxIOWriteCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMinIOWriteCounts(Long minIOWriteCounts) {
+            this.minIOWriteCounts = minIOWriteCounts;
+            return this;
+        }
+        public Long getMinIOWriteCounts() {
+            return this.minIOWriteCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setTotalRowsAffectedCounts(Long totalRowsAffectedCounts) {
+            this.totalRowsAffectedCounts = totalRowsAffectedCounts;
+            return this;
+        }
+        public Long getTotalRowsAffectedCounts() {
+            return this.totalRowsAffectedCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setAvgRowsAffectedCounts(Long avgRowsAffectedCounts) {
+            this.avgRowsAffectedCounts = avgRowsAffectedCounts;
+            return this;
+        }
+        public Long getAvgRowsAffectedCounts() {
+            return this.avgRowsAffectedCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMaxRowsAffectedCounts(Long maxRowsAffectedCounts) {
+            this.maxRowsAffectedCounts = maxRowsAffectedCounts;
+            return this;
+        }
+        public Long getMaxRowsAffectedCounts() {
+            return this.maxRowsAffectedCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMinRowsAffectedCounts(Long minRowsAffectedCounts) {
+            this.minRowsAffectedCounts = minRowsAffectedCounts;
+            return this;
+        }
+        public Long getMinRowsAffectedCounts() {
+            return this.minRowsAffectedCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setTotalLastRowsAffectedCounts(Long totalLastRowsAffectedCounts) {
+            this.totalLastRowsAffectedCounts = totalLastRowsAffectedCounts;
+            return this;
+        }
+        public Long getTotalLastRowsAffectedCounts() {
+            return this.totalLastRowsAffectedCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setAvgLastRowsAffectedCounts(Long avgLastRowsAffectedCounts) {
+            this.avgLastRowsAffectedCounts = avgLastRowsAffectedCounts;
+            return this;
+        }
+        public Long getAvgLastRowsAffectedCounts() {
+            return this.avgLastRowsAffectedCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMaxLastRowsAffectedCounts(Long maxLastRowsAffectedCounts) {
+            this.maxLastRowsAffectedCounts = maxLastRowsAffectedCounts;
+            return this;
+        }
+        public Long getMaxLastRowsAffectedCounts() {
+            return this.maxLastRowsAffectedCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setMinLastRowsAffectedCounts(Long minLastRowsAffectedCounts) {
+            this.minLastRowsAffectedCounts = minLastRowsAffectedCounts;
+            return this;
+        }
+        public Long getMinLastRowsAffectedCounts() {
+            return this.minLastRowsAffectedCounts;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setSQLServerMinExecutionTime(Long SQLServerMinExecutionTime) {
+            this.SQLServerMinExecutionTime = SQLServerMinExecutionTime;
+            return this;
+        }
+        public Long getSQLServerMinExecutionTime() {
+            return this.SQLServerMinExecutionTime;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setSQLServerAvgExecutionTime(Long SQLServerAvgExecutionTime) {
+            this.SQLServerAvgExecutionTime = SQLServerAvgExecutionTime;
+            return this;
+        }
+        public Long getSQLServerAvgExecutionTime() {
+            return this.SQLServerAvgExecutionTime;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setSQLServerTotalCpuTime(Long SQLServerTotalCpuTime) {
+            this.SQLServerTotalCpuTime = SQLServerTotalCpuTime;
+            return this;
+        }
+        public Long getSQLServerTotalCpuTime() {
+            return this.SQLServerTotalCpuTime;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setSQLServerAvgCpuTime(Long SQLServerAvgCpuTime) {
+            this.SQLServerAvgCpuTime = SQLServerAvgCpuTime;
+            return this;
+        }
+        public Long getSQLServerAvgCpuTime() {
+            return this.SQLServerAvgCpuTime;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setSQLServerMaxCpuTime(Long SQLServerMaxCpuTime) {
+            this.SQLServerMaxCpuTime = SQLServerMaxCpuTime;
+            return this;
+        }
+        public Long getSQLServerMaxCpuTime() {
+            return this.SQLServerMaxCpuTime;
+        }
+
+        public DescribeSlowLogsResponseItemsSQLSlowLog setSQLServerMinCpuTime(Long SQLServerMinCpuTime) {
+            this.SQLServerMinCpuTime = SQLServerMinCpuTime;
+            return this;
+        }
+        public Long getSQLServerMinCpuTime() {
+            return this.SQLServerMinCpuTime;
         }
 
     }

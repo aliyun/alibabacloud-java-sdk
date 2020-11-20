@@ -83,11 +83,9 @@ public class RemoveTagsFromResourceRequest extends TeaModel {
     }
 
     public static class RemoveTagsFromResourceRequestTag extends TeaModel {
-        // description: 要解绑的第一组标签的Tagkey。需要解绑的标签，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。; 
         @NameInMap("key")
         public String key;
 
-        // description: 要解绑的第一组标签的TagValue。需要解绑的标签，包括TagKey和TagValue，单次最多支持传入5组值。TagKey不能为空，TagValue可以为空。; 
         @NameInMap("value")
         public String value;
 

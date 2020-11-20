@@ -19,10 +19,6 @@ public class DescribeAvailableRecoveryTimeResponse extends TeaModel {
     @Validation(required = true)
     public String recoveryEndTime;
 
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
-    public String DBInstanceId;
-
     // description: 源实例所在地域ID。; 
     @NameInMap("RegionId")
     @Validation(required = true)
@@ -60,14 +56,6 @@ public class DescribeAvailableRecoveryTimeResponse extends TeaModel {
     }
     public String getRecoveryEndTime() {
         return this.recoveryEndTime;
-    }
-
-    public DescribeAvailableRecoveryTimeResponse setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
-        return this;
-    }
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
     }
 
     public DescribeAvailableRecoveryTimeResponse setRegionId(String regionId) {
