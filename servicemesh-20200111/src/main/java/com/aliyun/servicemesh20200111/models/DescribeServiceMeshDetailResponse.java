@@ -449,6 +449,98 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector extends TeaModel {
+        @NameInMap("EnableNamespacesByDefault")
+        @Validation(required = true)
+        public Boolean enableNamespacesByDefault;
+
+        @NameInMap("AutoInjectionPolicyEnabled")
+        @Validation(required = true)
+        public Boolean autoInjectionPolicyEnabled;
+
+        @NameInMap("RequestCPU")
+        @Validation(required = true)
+        public String requestCPU;
+
+        @NameInMap("RequestMemory")
+        @Validation(required = true)
+        public String requestMemory;
+
+        @NameInMap("LimitCPU")
+        @Validation(required = true)
+        public String limitCPU;
+
+        @NameInMap("LimitMemory")
+        @Validation(required = true)
+        public String limitMemory;
+
+        @NameInMap("SidecarInjectorWebhookAsYaml")
+        @Validation(required = true)
+        public String sidecarInjectorWebhookAsYaml;
+
+        public static DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector self = new DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector setEnableNamespacesByDefault(Boolean enableNamespacesByDefault) {
+            this.enableNamespacesByDefault = enableNamespacesByDefault;
+            return this;
+        }
+        public Boolean getEnableNamespacesByDefault() {
+            return this.enableNamespacesByDefault;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector setAutoInjectionPolicyEnabled(Boolean autoInjectionPolicyEnabled) {
+            this.autoInjectionPolicyEnabled = autoInjectionPolicyEnabled;
+            return this;
+        }
+        public Boolean getAutoInjectionPolicyEnabled() {
+            return this.autoInjectionPolicyEnabled;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector setRequestCPU(String requestCPU) {
+            this.requestCPU = requestCPU;
+            return this;
+        }
+        public String getRequestCPU() {
+            return this.requestCPU;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector setRequestMemory(String requestMemory) {
+            this.requestMemory = requestMemory;
+            return this;
+        }
+        public String getRequestMemory() {
+            return this.requestMemory;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector setLimitCPU(String limitCPU) {
+            this.limitCPU = limitCPU;
+            return this;
+        }
+        public String getLimitCPU() {
+            return this.limitCPU;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector setLimitMemory(String limitMemory) {
+            this.limitMemory = limitMemory;
+            return this;
+        }
+        public String getLimitMemory() {
+            return this.limitMemory;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector setSidecarInjectorWebhookAsYaml(String sidecarInjectorWebhookAsYaml) {
+            this.sidecarInjectorWebhookAsYaml = sidecarInjectorWebhookAsYaml;
+            return this;
+        }
+        public String getSidecarInjectorWebhookAsYaml() {
+            return this.sidecarInjectorWebhookAsYaml;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfig extends TeaModel {
         @NameInMap("EnableLocalityLB")
         @Validation(required = true)
@@ -489,6 +581,10 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
         @NameInMap("Proxy")
         @Validation(required = true)
         public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigProxy proxy;
+
+        @NameInMap("SidecarInjector")
+        @Validation(required = true)
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector sidecarInjector;
 
         public static DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfig self = new DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfig();
@@ -573,6 +669,14 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
         }
         public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigProxy getProxy() {
             return this.proxy;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfig setSidecarInjector(DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector sidecarInjector) {
+            this.sidecarInjector = sidecarInjector;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector getSidecarInjector() {
+            return this.sidecarInjector;
         }
 
     }

@@ -68,6 +68,27 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("IncludeIPRanges")
     public String includeIPRanges;
 
+    @NameInMap("EnableNamespacesByDefault")
+    public Boolean enableNamespacesByDefault;
+
+    @NameInMap("AutoInjectionPolicyEnabled")
+    public Boolean autoInjectionPolicyEnabled;
+
+    @NameInMap("SidecarInjectorRequestCPU")
+    public String sidecarInjectorRequestCPU;
+
+    @NameInMap("SidecarInjectorRequestMemory")
+    public String sidecarInjectorRequestMemory;
+
+    @NameInMap("SidecarInjectorLimitCPU")
+    public String sidecarInjectorLimitCPU;
+
+    @NameInMap("SidecarInjectorLimitMemory")
+    public String sidecarInjectorLimitMemory;
+
+    @NameInMap("SidecarInjectorWebhookAsYaml")
+    public String sidecarInjectorWebhookAsYaml;
+
     public static UpdateMeshFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMeshFeatureRequest self = new UpdateMeshFeatureRequest();
         return TeaModel.build(map, self);
@@ -239,6 +260,62 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public String getIncludeIPRanges() {
         return this.includeIPRanges;
+    }
+
+    public UpdateMeshFeatureRequest setEnableNamespacesByDefault(Boolean enableNamespacesByDefault) {
+        this.enableNamespacesByDefault = enableNamespacesByDefault;
+        return this;
+    }
+    public Boolean getEnableNamespacesByDefault() {
+        return this.enableNamespacesByDefault;
+    }
+
+    public UpdateMeshFeatureRequest setAutoInjectionPolicyEnabled(Boolean autoInjectionPolicyEnabled) {
+        this.autoInjectionPolicyEnabled = autoInjectionPolicyEnabled;
+        return this;
+    }
+    public Boolean getAutoInjectionPolicyEnabled() {
+        return this.autoInjectionPolicyEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setSidecarInjectorRequestCPU(String sidecarInjectorRequestCPU) {
+        this.sidecarInjectorRequestCPU = sidecarInjectorRequestCPU;
+        return this;
+    }
+    public String getSidecarInjectorRequestCPU() {
+        return this.sidecarInjectorRequestCPU;
+    }
+
+    public UpdateMeshFeatureRequest setSidecarInjectorRequestMemory(String sidecarInjectorRequestMemory) {
+        this.sidecarInjectorRequestMemory = sidecarInjectorRequestMemory;
+        return this;
+    }
+    public String getSidecarInjectorRequestMemory() {
+        return this.sidecarInjectorRequestMemory;
+    }
+
+    public UpdateMeshFeatureRequest setSidecarInjectorLimitCPU(String sidecarInjectorLimitCPU) {
+        this.sidecarInjectorLimitCPU = sidecarInjectorLimitCPU;
+        return this;
+    }
+    public String getSidecarInjectorLimitCPU() {
+        return this.sidecarInjectorLimitCPU;
+    }
+
+    public UpdateMeshFeatureRequest setSidecarInjectorLimitMemory(String sidecarInjectorLimitMemory) {
+        this.sidecarInjectorLimitMemory = sidecarInjectorLimitMemory;
+        return this;
+    }
+    public String getSidecarInjectorLimitMemory() {
+        return this.sidecarInjectorLimitMemory;
+    }
+
+    public UpdateMeshFeatureRequest setSidecarInjectorWebhookAsYaml(String sidecarInjectorWebhookAsYaml) {
+        this.sidecarInjectorWebhookAsYaml = sidecarInjectorWebhookAsYaml;
+        return this;
+    }
+    public String getSidecarInjectorWebhookAsYaml() {
+        return this.sidecarInjectorWebhookAsYaml;
     }
 
 }

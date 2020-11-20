@@ -12,6 +12,10 @@ public class GetDiagnosisResponse extends TeaModel {
     @Validation(required = true)
     public String result;
 
+    @NameInMap("RunAt")
+    @Validation(required = true)
+    public String runAt;
+
     public static GetDiagnosisResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDiagnosisResponse self = new GetDiagnosisResponse();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class GetDiagnosisResponse extends TeaModel {
     }
     public String getResult() {
         return this.result;
+    }
+
+    public GetDiagnosisResponse setRunAt(String runAt) {
+        this.runAt = runAt;
+        return this;
+    }
+    public String getRunAt() {
+        return this.runAt;
     }
 
 }
