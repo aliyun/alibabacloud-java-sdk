@@ -12,4 +12,12 @@ public class CheckPermissionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CheckPermissionRequest setAliyunId(String aliyunId) {
+        this.aliyunId = aliyunId;
+        return this;
+    }
+    public String getAliyunId() {
+        return this.aliyunId;
+    }
+
 }

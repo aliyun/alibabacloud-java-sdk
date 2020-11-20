@@ -12,4 +12,12 @@ public class ListMainScenesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListMainScenesRequest setQueryName(String queryName) {
+        this.queryName = queryName;
+        return this;
+    }
+    public String getQueryName() {
+        return this.queryName;
+    }
+
 }

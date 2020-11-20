@@ -15,4 +15,20 @@ public class ListScenesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListScenesRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public ListScenesRequest setIsPublishQuery(Boolean isPublishQuery) {
+        this.isPublishQuery = isPublishQuery;
+        return this;
+    }
+    public Boolean getIsPublishQuery() {
+        return this.isPublishQuery;
+    }
+
 }

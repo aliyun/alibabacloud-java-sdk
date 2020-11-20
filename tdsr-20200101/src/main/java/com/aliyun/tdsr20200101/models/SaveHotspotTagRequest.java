@@ -15,4 +15,20 @@ public class SaveHotspotTagRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SaveHotspotTagRequest setParamTag(String paramTag) {
+        this.paramTag = paramTag;
+        return this;
+    }
+    public String getParamTag() {
+        return this.paramTag;
+    }
+
+    public SaveHotspotTagRequest setSubSceneUuid(String subSceneUuid) {
+        this.subSceneUuid = subSceneUuid;
+        return this;
+    }
+    public String getSubSceneUuid() {
+        return this.subSceneUuid;
+    }
+
 }

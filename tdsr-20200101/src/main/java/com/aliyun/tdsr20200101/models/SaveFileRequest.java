@@ -15,4 +15,20 @@ public class SaveFileRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SaveFileRequest setParamFile(String paramFile) {
+        this.paramFile = paramFile;
+        return this;
+    }
+    public String getParamFile() {
+        return this.paramFile;
+    }
+
+    public SaveFileRequest setSubSceneUuid(String subSceneUuid) {
+        this.subSceneUuid = subSceneUuid;
+        return this;
+    }
+    public String getSubSceneUuid() {
+        return this.subSceneUuid;
+    }
+
 }

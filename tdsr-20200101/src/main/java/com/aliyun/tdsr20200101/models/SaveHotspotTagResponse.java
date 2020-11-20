@@ -21,4 +21,28 @@ public class SaveHotspotTagResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SaveHotspotTagResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SaveHotspotTagResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SaveHotspotTagResponse setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
 }

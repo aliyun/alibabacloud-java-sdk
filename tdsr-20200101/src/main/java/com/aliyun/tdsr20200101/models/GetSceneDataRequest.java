@@ -12,4 +12,12 @@ public class GetSceneDataRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetSceneDataRequest setToken(String token) {
+        this.token = token;
+        return this;
+    }
+    public String getToken() {
+        return this.token;
+    }
+
 }

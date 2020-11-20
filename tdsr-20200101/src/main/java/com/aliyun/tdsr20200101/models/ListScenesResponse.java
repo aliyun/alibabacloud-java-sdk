@@ -25,6 +25,38 @@ public class ListScenesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListScenesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListScenesResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListScenesResponse setErrMessage(String errMessage) {
+        this.errMessage = errMessage;
+        return this;
+    }
+    public String getErrMessage() {
+        return this.errMessage;
+    }
+
+    public ListScenesResponse setData(java.util.List<ListScenesResponseData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListScenesResponseData> getData() {
+        return this.data;
+    }
+
     public static class ListScenesResponseData extends TeaModel {
         @NameInMap("SceneId")
         @Validation(required = true)
@@ -33,6 +65,14 @@ public class ListScenesResponse extends TeaModel {
         public static ListScenesResponseData build(java.util.Map<String, ?> map) throws Exception {
             ListScenesResponseData self = new ListScenesResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ListScenesResponseData setSceneId(String sceneId) {
+            this.sceneId = sceneId;
+            return this;
+        }
+        public String getSceneId() {
+            return this.sceneId;
         }
 
     }

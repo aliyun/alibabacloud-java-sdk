@@ -12,4 +12,12 @@ public class DeleteProjectRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteProjectRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
 }

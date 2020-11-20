@@ -15,4 +15,20 @@ public class GetPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetPolicyRequest setSubSceneUuid(String subSceneUuid) {
+        this.subSceneUuid = subSceneUuid;
+        return this;
+    }
+    public String getSubSceneUuid() {
+        return this.subSceneUuid;
+    }
+
+    public GetPolicyRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
 }
