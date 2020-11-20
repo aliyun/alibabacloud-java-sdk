@@ -10,7 +10,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
 
     // 标准组件信息，包含各个组件的描述信息。
     @NameInMap("StandardComponents")
-    public java.util.Map<String, java.util.Map<String, ?>> standardComponents;
+    public java.util.Map<String, StandardComponentsValue> standardComponents;
 
     public static DescribeAddonsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAddonsResponseBody self = new DescribeAddonsResponseBody();
@@ -25,11 +25,11 @@ public class DescribeAddonsResponseBody extends TeaModel {
         return this.componentGroups;
     }
 
-    public DescribeAddonsResponseBody setStandardComponents(java.util.Map<String, java.util.Map<String, ?>> standardComponents) {
+    public DescribeAddonsResponseBody setStandardComponents(java.util.Map<String, StandardComponentsValue> standardComponents) {
         this.standardComponents = standardComponents;
         return this;
     }
-    public java.util.Map<String, java.util.Map<String, ?>> getStandardComponents() {
+    public java.util.Map<String, StandardComponentsValue> getStandardComponents() {
         return this.standardComponents;
     }
 

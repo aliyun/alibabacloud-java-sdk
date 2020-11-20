@@ -21,6 +21,26 @@ public class InstallClusterAddonsRequest extends TeaModel {
         return this.body;
     }
 
+    public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
+        // 组件名称。
+        @NameInMap("name")
+        public String name;
+
+        public static UnInstallClusterAddonsRequestAddons build(java.util.Map<String, ?> map) throws Exception {
+            UnInstallClusterAddonsRequestAddons self = new UnInstallClusterAddonsRequestAddons();
+            return TeaModel.build(map, self);
+        }
+
+        public UnInstallClusterAddonsRequestAddons setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class InstallClusterAddonsRequestBody extends TeaModel {
         // Addon配置信息。
         @NameInMap("config")
@@ -85,26 +105,6 @@ public class InstallClusterAddonsRequest extends TeaModel {
         }
         public String getVersion() {
             return this.version;
-        }
-
-    }
-
-    public static class UnInstallClusterAddonsRequestAddons extends TeaModel {
-        // 组件名称。
-        @NameInMap("name")
-        public String name;
-
-        public static UnInstallClusterAddonsRequestAddons build(java.util.Map<String, ?> map) throws Exception {
-            UnInstallClusterAddonsRequestAddons self = new UnInstallClusterAddonsRequestAddons();
-            return TeaModel.build(map, self);
-        }
-
-        public UnInstallClusterAddonsRequestAddons setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
     }

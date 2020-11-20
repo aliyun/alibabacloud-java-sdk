@@ -36,13 +36,25 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("endpoint_public_access")
     public Boolean endpointPublicAccess;
 
+    // 是否进行数据盘挂载
+    @NameInMap("format_disk")
+    public Boolean formatDisk;
+
     // 自定义镜像ID。
-    @NameInMap("images_id")
-    public String imagesId;
+    @NameInMap("image_id")
+    public String imageId;
+
+    // 已有实例列表。
+    @NameInMap("instances")
+    public java.util.List<String> instances;
 
     // 是否自动创建企业安全组，与security_group_id二选一。
     @NameInMap("is_enterprise_security_group")
     public Boolean isEnterpriseSecurityGroup;
+
+    // 是否保留实例名称。
+    @NameInMap("keep_instance_name")
+    public Boolean keepInstanceName;
 
     // key_pair名称，和login_password二选一。
     @NameInMap("key_pair")
@@ -301,12 +313,28 @@ public class CreateClusterRequest extends TeaModel {
         return this.endpointPublicAccess;
     }
 
-    public CreateClusterRequest setImagesId(String imagesId) {
-        this.imagesId = imagesId;
+    public CreateClusterRequest setFormatDisk(Boolean formatDisk) {
+        this.formatDisk = formatDisk;
         return this;
     }
-    public String getImagesId() {
-        return this.imagesId;
+    public Boolean getFormatDisk() {
+        return this.formatDisk;
+    }
+
+    public CreateClusterRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    public CreateClusterRequest setInstances(java.util.List<String> instances) {
+        this.instances = instances;
+        return this;
+    }
+    public java.util.List<String> getInstances() {
+        return this.instances;
     }
 
     public CreateClusterRequest setIsEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
@@ -315,6 +343,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public Boolean getIsEnterpriseSecurityGroup() {
         return this.isEnterpriseSecurityGroup;
+    }
+
+    public CreateClusterRequest setKeepInstanceName(Boolean keepInstanceName) {
+        this.keepInstanceName = keepInstanceName;
+        return this;
+    }
+    public Boolean getKeepInstanceName() {
+        return this.keepInstanceName;
     }
 
     public CreateClusterRequest setKeyPair(String keyPair) {
