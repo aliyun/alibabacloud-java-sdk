@@ -24,10 +24,6 @@ public class DescribeInstanceCrossBackupPolicyResponse extends TeaModel {
     @Validation(required = true)
     public String DBInstanceStatus;
 
-    @NameInMap("DBInstanceStatusDesc")
-    @Validation(required = true)
-    public String DBInstanceStatusDesc;
-
     // description: 数据库类型。; 
     @NameInMap("Engine")
     @Validation(required = true)
@@ -73,18 +69,6 @@ public class DescribeInstanceCrossBackupPolicyResponse extends TeaModel {
     @Validation(required = true)
     public String logBackupEnabledTime;
 
-    @NameInMap("StorageOwner")
-    @Validation(required = true)
-    public String storageOwner;
-
-    @NameInMap("StorageType")
-    @Validation(required = true)
-    public String storageType;
-
-    @NameInMap("Endpoint")
-    @Validation(required = true)
-    public String endpoint;
-
     // description: 跨地域备份保留方式。默认值：**1**，表示按时长保留。; 
     @NameInMap("RetentType")
     @Validation(required = true)
@@ -99,14 +83,6 @@ public class DescribeInstanceCrossBackupPolicyResponse extends TeaModel {
     @NameInMap("LockMode")
     @Validation(required = true)
     public String lockMode;
-
-    @NameInMap("RelService")
-    @Validation(required = true)
-    public String relService;
-
-    @NameInMap("RelServiceId")
-    @Validation(required = true)
-    public String relServiceId;
 
     public static DescribeInstanceCrossBackupPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceCrossBackupPolicyResponse self = new DescribeInstanceCrossBackupPolicyResponse();
@@ -143,14 +119,6 @@ public class DescribeInstanceCrossBackupPolicyResponse extends TeaModel {
     }
     public String getDBInstanceStatus() {
         return this.DBInstanceStatus;
-    }
-
-    public DescribeInstanceCrossBackupPolicyResponse setDBInstanceStatusDesc(String DBInstanceStatusDesc) {
-        this.DBInstanceStatusDesc = DBInstanceStatusDesc;
-        return this;
-    }
-    public String getDBInstanceStatusDesc() {
-        return this.DBInstanceStatusDesc;
     }
 
     public DescribeInstanceCrossBackupPolicyResponse setEngine(String engine) {
@@ -225,30 +193,6 @@ public class DescribeInstanceCrossBackupPolicyResponse extends TeaModel {
         return this.logBackupEnabledTime;
     }
 
-    public DescribeInstanceCrossBackupPolicyResponse setStorageOwner(String storageOwner) {
-        this.storageOwner = storageOwner;
-        return this;
-    }
-    public String getStorageOwner() {
-        return this.storageOwner;
-    }
-
-    public DescribeInstanceCrossBackupPolicyResponse setStorageType(String storageType) {
-        this.storageType = storageType;
-        return this;
-    }
-    public String getStorageType() {
-        return this.storageType;
-    }
-
-    public DescribeInstanceCrossBackupPolicyResponse setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-        return this;
-    }
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
     public DescribeInstanceCrossBackupPolicyResponse setRetentType(Integer retentType) {
         this.retentType = retentType;
         return this;
@@ -271,22 +215,6 @@ public class DescribeInstanceCrossBackupPolicyResponse extends TeaModel {
     }
     public String getLockMode() {
         return this.lockMode;
-    }
-
-    public DescribeInstanceCrossBackupPolicyResponse setRelService(String relService) {
-        this.relService = relService;
-        return this;
-    }
-    public String getRelService() {
-        return this.relService;
-    }
-
-    public DescribeInstanceCrossBackupPolicyResponse setRelServiceId(String relServiceId) {
-        this.relServiceId = relServiceId;
-        return this;
-    }
-    public String getRelServiceId() {
-        return this.relServiceId;
     }
 
 }

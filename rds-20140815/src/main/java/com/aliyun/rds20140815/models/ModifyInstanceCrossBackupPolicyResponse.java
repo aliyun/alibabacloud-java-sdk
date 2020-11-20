@@ -39,18 +39,6 @@ public class ModifyInstanceCrossBackupPolicyResponse extends TeaModel {
     @Validation(required = true)
     public String logBackupEnabled;
 
-    @NameInMap("StorageOwner")
-    @Validation(required = true)
-    public String storageOwner;
-
-    @NameInMap("StorageType")
-    @Validation(required = true)
-    public String storageType;
-
-    @NameInMap("Endpoint")
-    @Validation(required = true)
-    public String endpoint;
-
     // description: 跨地域备份保留方式。默认值：**1**，表示按时长保留。; 
     @NameInMap("RetentType")
     @Validation(required = true)
@@ -120,30 +108,6 @@ public class ModifyInstanceCrossBackupPolicyResponse extends TeaModel {
     }
     public String getLogBackupEnabled() {
         return this.logBackupEnabled;
-    }
-
-    public ModifyInstanceCrossBackupPolicyResponse setStorageOwner(String storageOwner) {
-        this.storageOwner = storageOwner;
-        return this;
-    }
-    public String getStorageOwner() {
-        return this.storageOwner;
-    }
-
-    public ModifyInstanceCrossBackupPolicyResponse setStorageType(String storageType) {
-        this.storageType = storageType;
-        return this;
-    }
-    public String getStorageType() {
-        return this.storageType;
-    }
-
-    public ModifyInstanceCrossBackupPolicyResponse setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-        return this;
-    }
-    public String getEndpoint() {
-        return this.endpoint;
     }
 
     public ModifyInstanceCrossBackupPolicyResponse setRetentType(Integer retentType) {

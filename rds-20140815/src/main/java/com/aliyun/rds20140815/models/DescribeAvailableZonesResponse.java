@@ -158,10 +158,6 @@ public class DescribeAvailableZonesResponse extends TeaModel {
         @Validation(required = true)
         public String zoneId;
 
-        @NameInMap("NetworkTypes")
-        @Validation(required = true)
-        public String networkTypes;
-
         @NameInMap("SupportedEngines")
         @Validation(required = true)
         public java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEngines> supportedEngines;
@@ -185,14 +181,6 @@ public class DescribeAvailableZonesResponse extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
-        }
-
-        public DescribeAvailableZonesResponseAvailableZones setNetworkTypes(String networkTypes) {
-            this.networkTypes = networkTypes;
-            return this;
-        }
-        public String getNetworkTypes() {
-            return this.networkTypes;
         }
 
         public DescribeAvailableZonesResponseAvailableZones setSupportedEngines(java.util.List<DescribeAvailableZonesResponseAvailableZonesSupportedEngines> supportedEngines) {

@@ -225,10 +225,6 @@ public class DescribeCrossRegionBackupsResponse extends TeaModel {
         @Validation(required = true)
         public String consistentTime;
 
-        @NameInMap("HasBackupTableMeta")
-        @Validation(required = true)
-        public String hasBackupTableMeta;
-
         @NameInMap("RestoreRegions")
         @Validation(required = true)
         public DescribeCrossRegionBackupsResponseItemsItemRestoreRegions restoreRegions;
@@ -380,14 +376,6 @@ public class DescribeCrossRegionBackupsResponse extends TeaModel {
         }
         public String getConsistentTime() {
             return this.consistentTime;
-        }
-
-        public DescribeCrossRegionBackupsResponseItemsItem setHasBackupTableMeta(String hasBackupTableMeta) {
-            this.hasBackupTableMeta = hasBackupTableMeta;
-            return this;
-        }
-        public String getHasBackupTableMeta() {
-            return this.hasBackupTableMeta;
         }
 
         public DescribeCrossRegionBackupsResponseItemsItem setRestoreRegions(DescribeCrossRegionBackupsResponseItemsItemRestoreRegions restoreRegions) {

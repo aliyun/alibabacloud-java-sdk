@@ -28,6 +28,38 @@ public class DescribeSlowLogRecordsResponse extends TeaModel {
     @Validation(required = true)
     public Integer pageRecordCount;
 
+    @NameInMap("SQLHash")
+    @Validation(required = true)
+    public String SQLHash;
+
+    @NameInMap("CPUTime")
+    @Validation(required = true)
+    public Long CPUTime;
+
+    @NameInMap("LogicalIORead")
+    @Validation(required = true)
+    public Long logicalIORead;
+
+    @NameInMap("PhysicalIORead")
+    @Validation(required = true)
+    public Long physicalIORead;
+
+    @NameInMap("WritesIOCount")
+    @Validation(required = true)
+    public Long writesIOCount;
+
+    @NameInMap("RowsAffectedCount")
+    @Validation(required = true)
+    public Long rowsAffectedCount;
+
+    @NameInMap("LastRowsAffectedCount")
+    @Validation(required = true)
+    public Long lastRowsAffectedCount;
+
+    @NameInMap("UserName")
+    @Validation(required = true)
+    public String userName;
+
     @NameInMap("Items")
     @Validation(required = true)
     public DescribeSlowLogRecordsResponseItems items;
@@ -85,6 +117,70 @@ public class DescribeSlowLogRecordsResponse extends TeaModel {
         return this.pageRecordCount;
     }
 
+    public DescribeSlowLogRecordsResponse setSQLHash(String SQLHash) {
+        this.SQLHash = SQLHash;
+        return this;
+    }
+    public String getSQLHash() {
+        return this.SQLHash;
+    }
+
+    public DescribeSlowLogRecordsResponse setCPUTime(Long CPUTime) {
+        this.CPUTime = CPUTime;
+        return this;
+    }
+    public Long getCPUTime() {
+        return this.CPUTime;
+    }
+
+    public DescribeSlowLogRecordsResponse setLogicalIORead(Long logicalIORead) {
+        this.logicalIORead = logicalIORead;
+        return this;
+    }
+    public Long getLogicalIORead() {
+        return this.logicalIORead;
+    }
+
+    public DescribeSlowLogRecordsResponse setPhysicalIORead(Long physicalIORead) {
+        this.physicalIORead = physicalIORead;
+        return this;
+    }
+    public Long getPhysicalIORead() {
+        return this.physicalIORead;
+    }
+
+    public DescribeSlowLogRecordsResponse setWritesIOCount(Long writesIOCount) {
+        this.writesIOCount = writesIOCount;
+        return this;
+    }
+    public Long getWritesIOCount() {
+        return this.writesIOCount;
+    }
+
+    public DescribeSlowLogRecordsResponse setRowsAffectedCount(Long rowsAffectedCount) {
+        this.rowsAffectedCount = rowsAffectedCount;
+        return this;
+    }
+    public Long getRowsAffectedCount() {
+        return this.rowsAffectedCount;
+    }
+
+    public DescribeSlowLogRecordsResponse setLastRowsAffectedCount(Long lastRowsAffectedCount) {
+        this.lastRowsAffectedCount = lastRowsAffectedCount;
+        return this;
+    }
+    public Long getLastRowsAffectedCount() {
+        return this.lastRowsAffectedCount;
+    }
+
+    public DescribeSlowLogRecordsResponse setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
     public DescribeSlowLogRecordsResponse setItems(DescribeSlowLogRecordsResponseItems items) {
         this.items = items;
         return this;
@@ -129,6 +225,42 @@ public class DescribeSlowLogRecordsResponse extends TeaModel {
         @NameInMap("QueryTimeMS")
         @Validation(required = true)
         public Long queryTimeMS;
+
+        @NameInMap("CpuTime")
+        @Validation(required = true)
+        public Long cpuTime;
+
+        @NameInMap("LogicalIORead")
+        @Validation(required = true)
+        public Long logicalIORead;
+
+        @NameInMap("PhysicalIORead")
+        @Validation(required = true)
+        public Long physicalIORead;
+
+        @NameInMap("WriteIOCount")
+        @Validation(required = true)
+        public Long writeIOCount;
+
+        @NameInMap("RowsAffectedCount")
+        @Validation(required = true)
+        public Long rowsAffectedCount;
+
+        @NameInMap("LastRowsAffectedCount")
+        @Validation(required = true)
+        public Long lastRowsAffectedCount;
+
+        @NameInMap("UserName")
+        @Validation(required = true)
+        public String userName;
+
+        @NameInMap("ApplicationName")
+        @Validation(required = true)
+        public String applicationName;
+
+        @NameInMap("ClientHostName")
+        @Validation(required = true)
+        public String clientHostName;
 
         public static DescribeSlowLogRecordsResponseItemsSQLSlowRecord build(java.util.Map<String, ?> map) throws Exception {
             DescribeSlowLogRecordsResponseItemsSQLSlowRecord self = new DescribeSlowLogRecordsResponseItemsSQLSlowRecord();
@@ -205,6 +337,78 @@ public class DescribeSlowLogRecordsResponse extends TeaModel {
         }
         public Long getQueryTimeMS() {
             return this.queryTimeMS;
+        }
+
+        public DescribeSlowLogRecordsResponseItemsSQLSlowRecord setCpuTime(Long cpuTime) {
+            this.cpuTime = cpuTime;
+            return this;
+        }
+        public Long getCpuTime() {
+            return this.cpuTime;
+        }
+
+        public DescribeSlowLogRecordsResponseItemsSQLSlowRecord setLogicalIORead(Long logicalIORead) {
+            this.logicalIORead = logicalIORead;
+            return this;
+        }
+        public Long getLogicalIORead() {
+            return this.logicalIORead;
+        }
+
+        public DescribeSlowLogRecordsResponseItemsSQLSlowRecord setPhysicalIORead(Long physicalIORead) {
+            this.physicalIORead = physicalIORead;
+            return this;
+        }
+        public Long getPhysicalIORead() {
+            return this.physicalIORead;
+        }
+
+        public DescribeSlowLogRecordsResponseItemsSQLSlowRecord setWriteIOCount(Long writeIOCount) {
+            this.writeIOCount = writeIOCount;
+            return this;
+        }
+        public Long getWriteIOCount() {
+            return this.writeIOCount;
+        }
+
+        public DescribeSlowLogRecordsResponseItemsSQLSlowRecord setRowsAffectedCount(Long rowsAffectedCount) {
+            this.rowsAffectedCount = rowsAffectedCount;
+            return this;
+        }
+        public Long getRowsAffectedCount() {
+            return this.rowsAffectedCount;
+        }
+
+        public DescribeSlowLogRecordsResponseItemsSQLSlowRecord setLastRowsAffectedCount(Long lastRowsAffectedCount) {
+            this.lastRowsAffectedCount = lastRowsAffectedCount;
+            return this;
+        }
+        public Long getLastRowsAffectedCount() {
+            return this.lastRowsAffectedCount;
+        }
+
+        public DescribeSlowLogRecordsResponseItemsSQLSlowRecord setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
+        }
+
+        public DescribeSlowLogRecordsResponseItemsSQLSlowRecord setApplicationName(String applicationName) {
+            this.applicationName = applicationName;
+            return this;
+        }
+        public String getApplicationName() {
+            return this.applicationName;
+        }
+
+        public DescribeSlowLogRecordsResponseItemsSQLSlowRecord setClientHostName(String clientHostName) {
+            this.clientHostName = clientHostName;
+            return this;
+        }
+        public String getClientHostName() {
+            return this.clientHostName;
         }
 
     }

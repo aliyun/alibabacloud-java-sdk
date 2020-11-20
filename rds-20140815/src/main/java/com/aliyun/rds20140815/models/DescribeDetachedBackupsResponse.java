@@ -20,10 +20,6 @@ public class DescribeDetachedBackupsResponse extends TeaModel {
     @Validation(required = true)
     public String pageRecordCount;
 
-    @NameInMap("TotalBackupSize")
-    @Validation(required = true)
-    public Long totalBackupSize;
-
     @NameInMap("Items")
     @Validation(required = true)
     public DescribeDetachedBackupsResponseItems items;
@@ -63,14 +59,6 @@ public class DescribeDetachedBackupsResponse extends TeaModel {
     }
     public String getPageRecordCount() {
         return this.pageRecordCount;
-    }
-
-    public DescribeDetachedBackupsResponse setTotalBackupSize(Long totalBackupSize) {
-        this.totalBackupSize = totalBackupSize;
-        return this;
-    }
-    public Long getTotalBackupSize() {
-        return this.totalBackupSize;
     }
 
     public DescribeDetachedBackupsResponse setItems(DescribeDetachedBackupsResponseItems items) {
@@ -122,26 +110,6 @@ public class DescribeDetachedBackupsResponse extends TeaModel {
         @Validation(required = true)
         public String backupIntranetDownloadURL;
 
-        @NameInMap("BackupLocation")
-        @Validation(required = true)
-        public String backupLocation;
-
-        @NameInMap("BackupExtractionStatus")
-        @Validation(required = true)
-        public String backupExtractionStatus;
-
-        @NameInMap("BackupScale")
-        @Validation(required = true)
-        public String backupScale;
-
-        @NameInMap("BackupDBNames")
-        @Validation(required = true)
-        public String backupDBNames;
-
-        @NameInMap("TotalBackupSize")
-        @Validation(required = true)
-        public Long totalBackupSize;
-
         @NameInMap("BackupSize")
         @Validation(required = true)
         public Long backupSize;
@@ -157,10 +125,6 @@ public class DescribeDetachedBackupsResponse extends TeaModel {
         @NameInMap("MetaStatus")
         @Validation(required = true)
         public String metaStatus;
-
-        @NameInMap("SlaveStatus")
-        @Validation(required = true)
-        public String slaveStatus;
 
         @NameInMap("ConsistentTime")
         @Validation(required = true)
@@ -255,46 +219,6 @@ public class DescribeDetachedBackupsResponse extends TeaModel {
             return this.backupIntranetDownloadURL;
         }
 
-        public DescribeDetachedBackupsResponseItemsBackup setBackupLocation(String backupLocation) {
-            this.backupLocation = backupLocation;
-            return this;
-        }
-        public String getBackupLocation() {
-            return this.backupLocation;
-        }
-
-        public DescribeDetachedBackupsResponseItemsBackup setBackupExtractionStatus(String backupExtractionStatus) {
-            this.backupExtractionStatus = backupExtractionStatus;
-            return this;
-        }
-        public String getBackupExtractionStatus() {
-            return this.backupExtractionStatus;
-        }
-
-        public DescribeDetachedBackupsResponseItemsBackup setBackupScale(String backupScale) {
-            this.backupScale = backupScale;
-            return this;
-        }
-        public String getBackupScale() {
-            return this.backupScale;
-        }
-
-        public DescribeDetachedBackupsResponseItemsBackup setBackupDBNames(String backupDBNames) {
-            this.backupDBNames = backupDBNames;
-            return this;
-        }
-        public String getBackupDBNames() {
-            return this.backupDBNames;
-        }
-
-        public DescribeDetachedBackupsResponseItemsBackup setTotalBackupSize(Long totalBackupSize) {
-            this.totalBackupSize = totalBackupSize;
-            return this;
-        }
-        public Long getTotalBackupSize() {
-            return this.totalBackupSize;
-        }
-
         public DescribeDetachedBackupsResponseItemsBackup setBackupSize(Long backupSize) {
             this.backupSize = backupSize;
             return this;
@@ -325,14 +249,6 @@ public class DescribeDetachedBackupsResponse extends TeaModel {
         }
         public String getMetaStatus() {
             return this.metaStatus;
-        }
-
-        public DescribeDetachedBackupsResponseItemsBackup setSlaveStatus(String slaveStatus) {
-            this.slaveStatus = slaveStatus;
-            return this;
-        }
-        public String getSlaveStatus() {
-            return this.slaveStatus;
         }
 
         public DescribeDetachedBackupsResponseItemsBackup setConsistentTime(Long consistentTime) {

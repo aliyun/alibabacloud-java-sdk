@@ -110,10 +110,6 @@ public class DescribeDBInstancesResponse extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseItemsDBInstance extends TeaModel {
-        @NameInMap("InsId")
-        @Validation(required = true)
-        public Integer insId;
-
         @NameInMap("DBInstanceId")
         @Validation(required = true)
         public String DBInstanceId;
@@ -222,10 +218,6 @@ public class DescribeDBInstancesResponse extends TeaModel {
         @Validation(required = true)
         public String vSwitchId;
 
-        @NameInMap("ReplicateId")
-        @Validation(required = true)
-        public String replicateId;
-
         @NameInMap("ResourceGroupId")
         @Validation(required = true)
         public String resourceGroupId;
@@ -289,14 +281,6 @@ public class DescribeDBInstancesResponse extends TeaModel {
         public static DescribeDBInstancesResponseItemsDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesResponseItemsDBInstance self = new DescribeDBInstancesResponseItemsDBInstance();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDBInstancesResponseItemsDBInstance setInsId(Integer insId) {
-            this.insId = insId;
-            return this;
-        }
-        public Integer getInsId() {
-            return this.insId;
         }
 
         public DescribeDBInstancesResponseItemsDBInstance setDBInstanceId(String DBInstanceId) {
@@ -513,14 +497,6 @@ public class DescribeDBInstancesResponse extends TeaModel {
         }
         public String getVSwitchId() {
             return this.vSwitchId;
-        }
-
-        public DescribeDBInstancesResponseItemsDBInstance setReplicateId(String replicateId) {
-            this.replicateId = replicateId;
-            return this;
-        }
-        public String getReplicateId() {
-            return this.replicateId;
         }
 
         public DescribeDBInstancesResponseItemsDBInstance setResourceGroupId(String resourceGroupId) {

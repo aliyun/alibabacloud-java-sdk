@@ -24,6 +24,9 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     @NameInMap("CommodityCode")
     public String commodityCode;
 
+    @NameInMap("DispenseMode")
+    public String dispenseMode;
+
     public static DescribeAvailableZonesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableZonesRequest self = new DescribeAvailableZonesRequest();
         return TeaModel.build(map, self);
@@ -75,6 +78,14 @@ public class DescribeAvailableZonesRequest extends TeaModel {
     }
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    public DescribeAvailableZonesRequest setDispenseMode(String dispenseMode) {
+        this.dispenseMode = dispenseMode;
+        return this;
+    }
+    public String getDispenseMode() {
+        return this.dispenseMode;
     }
 
 }

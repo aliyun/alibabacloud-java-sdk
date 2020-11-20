@@ -12,7 +12,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     public String DBInstanceId;
 
     @NameInMap("Flag")
-    public String flag;
+    public Integer flag;
 
     @NameInMap("DBInstanceNetRWSplitType")
     public String DBInstanceNetRWSplitType;
@@ -38,11 +38,11 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public DescribeDBInstanceNetInfoRequest setFlag(String flag) {
+    public DescribeDBInstanceNetInfoRequest setFlag(Integer flag) {
         this.flag = flag;
         return this;
     }
-    public String getFlag() {
+    public Integer getFlag() {
         return this.flag;
     }
 

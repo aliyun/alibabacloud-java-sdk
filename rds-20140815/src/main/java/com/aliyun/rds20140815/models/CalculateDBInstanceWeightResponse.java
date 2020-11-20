@@ -46,10 +46,6 @@ public class CalculateDBInstanceWeightResponse extends TeaModel {
         @Validation(required = true)
         public String readonlyInstanceSQLDelayedTime;
 
-        @NameInMap("Availability")
-        @Validation(required = true)
-        public String availability;
-
         @NameInMap("Weight")
         @Validation(required = true)
         public String weight;
@@ -81,14 +77,6 @@ public class CalculateDBInstanceWeightResponse extends TeaModel {
         }
         public String getReadonlyInstanceSQLDelayedTime() {
             return this.readonlyInstanceSQLDelayedTime;
-        }
-
-        public CalculateDBInstanceWeightResponseItemsDBInstanceWeight setAvailability(String availability) {
-            this.availability = availability;
-            return this;
-        }
-        public String getAvailability() {
-            return this.availability;
         }
 
         public CalculateDBInstanceWeightResponseItemsDBInstanceWeight setWeight(String weight) {
