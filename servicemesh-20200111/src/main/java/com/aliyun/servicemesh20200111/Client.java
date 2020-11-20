@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.servicemesh20200111.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
+
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";

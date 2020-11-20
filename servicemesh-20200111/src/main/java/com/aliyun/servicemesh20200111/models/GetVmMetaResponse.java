@@ -74,6 +74,14 @@ public class GetVmMetaResponse extends TeaModel {
         @Validation(required = true)
         public String hostsContent;
 
+        @NameInMap("TokenPath")
+        @Validation(required = true)
+        public String tokenPath;
+
+        @NameInMap("TokenContent")
+        @Validation(required = true)
+        public String tokenContent;
+
         public static GetVmMetaResponseVmMetaInfo build(java.util.Map<String, ?> map) throws Exception {
             GetVmMetaResponseVmMetaInfo self = new GetVmMetaResponseVmMetaInfo();
             return TeaModel.build(map, self);
@@ -157,6 +165,22 @@ public class GetVmMetaResponse extends TeaModel {
         }
         public String getHostsContent() {
             return this.hostsContent;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setTokenPath(String tokenPath) {
+            this.tokenPath = tokenPath;
+            return this;
+        }
+        public String getTokenPath() {
+            return this.tokenPath;
+        }
+
+        public GetVmMetaResponseVmMetaInfo setTokenContent(String tokenContent) {
+            this.tokenContent = tokenContent;
+            return this;
+        }
+        public String getTokenContent() {
+            return this.tokenContent;
         }
 
     }
