@@ -15,4 +15,20 @@ public class CreateSceneRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSceneRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateSceneRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
 }

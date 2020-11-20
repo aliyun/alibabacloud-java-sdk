@@ -24,4 +24,44 @@ public class CreateProjectRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateProjectRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public CreateProjectRequest setBusinessId(String businessId) {
+        this.businessId = businessId;
+        return this;
+    }
+    public String getBusinessId() {
+        return this.businessId;
+    }
+
+    public CreateProjectRequest setBusinessUserIdList(String businessUserIdList) {
+        this.businessUserIdList = businessUserIdList;
+        return this;
+    }
+    public String getBusinessUserIdList() {
+        return this.businessUserIdList;
+    }
+
+    public CreateProjectRequest setGatherUserIdList(String gatherUserIdList) {
+        this.gatherUserIdList = gatherUserIdList;
+        return this;
+    }
+    public String getGatherUserIdList() {
+        return this.gatherUserIdList;
+    }
+
+    public CreateProjectRequest setBuilderUserIdList(String builderUserIdList) {
+        this.builderUserIdList = builderUserIdList;
+        return this;
+    }
+    public String getBuilderUserIdList() {
+        return this.builderUserIdList;
+    }
+
 }

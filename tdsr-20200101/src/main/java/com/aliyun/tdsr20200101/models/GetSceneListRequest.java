@@ -12,4 +12,12 @@ public class GetSceneListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetSceneListRequest setAccountId(String accountId) {
+        this.accountId = accountId;
+        return this;
+    }
+    public String getAccountId() {
+        return this.accountId;
+    }
+
 }

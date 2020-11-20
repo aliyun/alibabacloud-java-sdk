@@ -3,7 +3,7 @@ package com.aliyun.tdsr20200101.models;
 
 import com.aliyun.tea.*;
 
-public class CheckPermissionResponse extends TeaModel {
+public class SaveHotspotConfigResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
@@ -16,12 +16,12 @@ public class CheckPermissionResponse extends TeaModel {
     @Validation(required = true)
     public String errMessage;
 
-    public static CheckPermissionResponse build(java.util.Map<String, ?> map) throws Exception {
-        CheckPermissionResponse self = new CheckPermissionResponse();
+    public static SaveHotspotConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        SaveHotspotConfigResponse self = new SaveHotspotConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckPermissionResponse setRequestId(String requestId) {
+    public SaveHotspotConfigResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -29,7 +29,7 @@ public class CheckPermissionResponse extends TeaModel {
         return this.requestId;
     }
 
-    public CheckPermissionResponse setSuccess(Boolean success) {
+    public SaveHotspotConfigResponse setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -37,7 +37,7 @@ public class CheckPermissionResponse extends TeaModel {
         return this.success;
     }
 
-    public CheckPermissionResponse setErrMessage(String errMessage) {
+    public SaveHotspotConfigResponse setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }

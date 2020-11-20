@@ -18,4 +18,28 @@ public class GetHotspotTagRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetHotspotTagRequest setPreviewToken(String previewToken) {
+        this.previewToken = previewToken;
+        return this;
+    }
+    public String getPreviewToken() {
+        return this.previewToken;
+    }
+
+    public GetHotspotTagRequest setSubSceneUuid(String subSceneUuid) {
+        this.subSceneUuid = subSceneUuid;
+        return this;
+    }
+    public String getSubSceneUuid() {
+        return this.subSceneUuid;
+    }
+
+    public GetHotspotTagRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
 }

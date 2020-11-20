@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.tdsr20200101.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
+
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
@@ -15,6 +16,26 @@ public class Client extends com.aliyun.tearpc.Client {
         this._endpoint = this.getEndpoint("tdsr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
+
+    public SaveHotspotConfigResponse saveHotspotConfigWithOptions(SaveHotspotConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SaveHotspotConfig", "HTTPS", "POST", "2020-01-01", "AK,APP,PrivateKey,BearerToken", null, TeaModel.buildMap(request), runtime), new SaveHotspotConfigResponse());
+    }
+
+    public SaveHotspotConfigResponse saveHotspotConfig(SaveHotspotConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.saveHotspotConfigWithOptions(request, runtime);
+    }
+
+    public GetHotspotConfigResponse getHotspotConfigWithOptions(GetHotspotConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetHotspotConfig", "HTTPS", "POST", "2020-01-01", "AK,APP,PrivateKey,BearerToken", null, TeaModel.buildMap(request), runtime), new GetHotspotConfigResponse());
+    }
+
+    public GetHotspotConfigResponse getHotspotConfig(GetHotspotConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getHotspotConfigWithOptions(request, runtime);
+    }
 
     public ListMainScenesResponse listMainScenesWithOptions(ListMainScenesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);

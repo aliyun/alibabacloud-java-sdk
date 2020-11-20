@@ -3,7 +3,7 @@ package com.aliyun.tdsr20200101.models;
 
 import com.aliyun.tea.*;
 
-public class SaveFileResponse extends TeaModel {
+public class GetHotspotConfigResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
@@ -24,12 +24,12 @@ public class SaveFileResponse extends TeaModel {
     @Validation(required = true)
     public String objectString;
 
-    public static SaveFileResponse build(java.util.Map<String, ?> map) throws Exception {
-        SaveFileResponse self = new SaveFileResponse();
+    public static GetHotspotConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetHotspotConfigResponse self = new GetHotspotConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public SaveFileResponse setRequestId(String requestId) {
+    public GetHotspotConfigResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -37,7 +37,7 @@ public class SaveFileResponse extends TeaModel {
         return this.requestId;
     }
 
-    public SaveFileResponse setSuccess(Boolean success) {
+    public GetHotspotConfigResponse setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -45,7 +45,7 @@ public class SaveFileResponse extends TeaModel {
         return this.success;
     }
 
-    public SaveFileResponse setErrMessage(String errMessage) {
+    public GetHotspotConfigResponse setErrMessage(String errMessage) {
         this.errMessage = errMessage;
         return this;
     }
@@ -53,7 +53,7 @@ public class SaveFileResponse extends TeaModel {
         return this.errMessage;
     }
 
-    public SaveFileResponse setData(String data) {
+    public GetHotspotConfigResponse setData(String data) {
         this.data = data;
         return this;
     }
@@ -61,7 +61,7 @@ public class SaveFileResponse extends TeaModel {
         return this.data;
     }
 
-    public SaveFileResponse setObjectString(String objectString) {
+    public GetHotspotConfigResponse setObjectString(String objectString) {
         this.objectString = objectString;
         return this;
     }

@@ -3,16 +3,16 @@ package com.aliyun.tdsr20200101.models;
 
 import com.aliyun.tea.*;
 
-public class GetWindowConfigRequest extends TeaModel {
+public class GetHotspotConfigRequest extends TeaModel {
     @NameInMap("PreviewToken")
     public String previewToken;
 
-    public static GetWindowConfigRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetWindowConfigRequest self = new GetWindowConfigRequest();
+    public static GetHotspotConfigRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetHotspotConfigRequest self = new GetHotspotConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetWindowConfigRequest setPreviewToken(String previewToken) {
+    public GetHotspotConfigRequest setPreviewToken(String previewToken) {
         this.previewToken = previewToken;
         return this;
     }
