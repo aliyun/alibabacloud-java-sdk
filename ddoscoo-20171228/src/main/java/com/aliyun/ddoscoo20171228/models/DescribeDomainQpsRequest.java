@@ -1,0 +1,70 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ddoscoo20171228.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeDomainQpsRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Domain")
+    @Validation(required = true)
+    public String domain;
+
+    @NameInMap("StartTime")
+    @Validation(required = true)
+    public Long startTime;
+
+    @NameInMap("EndTime")
+    @Validation(required = true)
+    public Long endTime;
+
+    public static DescribeDomainQpsRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDomainQpsRequest self = new DescribeDomainQpsRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainQpsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public DescribeDomainQpsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeDomainQpsRequest setDomain(String domain) {
+        this.domain = domain;
+        return this;
+    }
+    public String getDomain() {
+        return this.domain;
+    }
+
+    public DescribeDomainQpsRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeDomainQpsRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+}
