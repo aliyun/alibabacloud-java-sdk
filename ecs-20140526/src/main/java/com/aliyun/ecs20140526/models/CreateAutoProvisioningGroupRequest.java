@@ -61,7 +61,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String defaultTargetCapacityType;
 
     @NameInMap("LaunchTemplateId")
-    @Validation(required = true)
     public String launchTemplateId;
 
     @NameInMap("LaunchTemplateVersion")
@@ -72,6 +71,15 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("LaunchConfiguration")
+    public CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration;
+
+    @NameInMap("SystemDiskConfig")
+    public java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> systemDiskConfig;
+
+    @NameInMap("DataDiskConfig")
+    public java.util.List<CreateAutoProvisioningGroupRequestDataDiskConfig> dataDiskConfig;
 
     public static CreateAutoProvisioningGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoProvisioningGroupRequest self = new CreateAutoProvisioningGroupRequest();
@@ -254,6 +262,30 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateAutoProvisioningGroupRequest setLaunchConfiguration(CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration) {
+        this.launchConfiguration = launchConfiguration;
+        return this;
+    }
+    public CreateAutoProvisioningGroupRequestLaunchConfiguration getLaunchConfiguration() {
+        return this.launchConfiguration;
+    }
+
+    public CreateAutoProvisioningGroupRequest setSystemDiskConfig(java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> systemDiskConfig) {
+        this.systemDiskConfig = systemDiskConfig;
+        return this;
+    }
+    public java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> getSystemDiskConfig() {
+        return this.systemDiskConfig;
+    }
+
+    public CreateAutoProvisioningGroupRequest setDataDiskConfig(java.util.List<CreateAutoProvisioningGroupRequestDataDiskConfig> dataDiskConfig) {
+        this.dataDiskConfig = dataDiskConfig;
+        return this;
+    }
+    public java.util.List<CreateAutoProvisioningGroupRequestDataDiskConfig> getDataDiskConfig() {
+        return this.dataDiskConfig;
+    }
+
     public static class CreateAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
@@ -313,6 +345,305 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public Integer getPriority() {
             return this.priority;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupRequestLaunchConfiguration extends TeaModel {
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("IoOptimized")
+        public String ioOptimized;
+
+        @NameInMap("DataDisk")
+        public java.util.List<String> dataDisk;
+
+        @NameInMap("InternetChargeType")
+        public String internetChargeType;
+
+        @NameInMap("InternetMaxBandwidthIn")
+        public Integer internetMaxBandwidthIn;
+
+        @NameInMap("InternetMaxBandwidthOut")
+        public Integer internetMaxBandwidthOut;
+
+        @NameInMap("InstanceName")
+        public String instanceName;
+
+        @NameInMap("HostName")
+        public String hostName;
+
+        @NameInMap("InstanceDescription")
+        public String instanceDescription;
+
+        @NameInMap("KeyPairName")
+        public String keyPairName;
+
+        @NameInMap("RamRoleName")
+        public String ramRoleName;
+
+        @NameInMap("SecurityEnhancementStrategy")
+        public String securityEnhancementStrategy;
+
+        @NameInMap("Tag")
+        public java.util.List<String> tag;
+
+        @NameInMap("UserData")
+        public String userData;
+
+        @NameInMap("SystemDiskCategory")
+        public String systemDiskCategory;
+
+        @NameInMap("SystemDiskSize")
+        public Integer systemDiskSize;
+
+        @NameInMap("SystemDiskName")
+        public String systemDiskName;
+
+        @NameInMap("SystemDiskDescription")
+        public String systemDiskDescription;
+
+        @NameInMap("SystemDiskPerformanceLevel")
+        public String systemDiskPerformanceLevel;
+
+        @NameInMap("PasswordInherit")
+        public Boolean passwordInherit;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        @NameInMap("CreditSpecification")
+        public String creditSpecification;
+
+        public static CreateAutoProvisioningGroupRequestLaunchConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchConfiguration self = new CreateAutoProvisioningGroupRequestLaunchConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setIoOptimized(String ioOptimized) {
+            this.ioOptimized = ioOptimized;
+            return this;
+        }
+        public String getIoOptimized() {
+            return this.ioOptimized;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setDataDisk(java.util.List<String> dataDisk) {
+            this.dataDisk = dataDisk;
+            return this;
+        }
+        public java.util.List<String> getDataDisk() {
+            return this.dataDisk;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+            this.internetMaxBandwidthIn = internetMaxBandwidthIn;
+            return this;
+        }
+        public Integer getInternetMaxBandwidthIn() {
+            return this.internetMaxBandwidthIn;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+            this.internetMaxBandwidthOut = internetMaxBandwidthOut;
+            return this;
+        }
+        public Integer getInternetMaxBandwidthOut() {
+            return this.internetMaxBandwidthOut;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setHostName(String hostName) {
+            this.hostName = hostName;
+            return this;
+        }
+        public String getHostName() {
+            return this.hostName;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setInstanceDescription(String instanceDescription) {
+            this.instanceDescription = instanceDescription;
+            return this;
+        }
+        public String getInstanceDescription() {
+            return this.instanceDescription;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setKeyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
+            return this;
+        }
+        public String getKeyPairName() {
+            return this.keyPairName;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setRamRoleName(String ramRoleName) {
+            this.ramRoleName = ramRoleName;
+            return this;
+        }
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSecurityEnhancementStrategy(String securityEnhancementStrategy) {
+            this.securityEnhancementStrategy = securityEnhancementStrategy;
+            return this;
+        }
+        public String getSecurityEnhancementStrategy() {
+            return this.securityEnhancementStrategy;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setTag(java.util.List<String> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<String> getTag() {
+            return this.tag;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskCategory(String systemDiskCategory) {
+            this.systemDiskCategory = systemDiskCategory;
+            return this;
+        }
+        public String getSystemDiskCategory() {
+            return this.systemDiskCategory;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskSize(Integer systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Integer getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskName(String systemDiskName) {
+            this.systemDiskName = systemDiskName;
+            return this;
+        }
+        public String getSystemDiskName() {
+            return this.systemDiskName;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskDescription(String systemDiskDescription) {
+            this.systemDiskDescription = systemDiskDescription;
+            return this;
+        }
+        public String getSystemDiskDescription() {
+            return this.systemDiskDescription;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSystemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
+            this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+            return this;
+        }
+        public String getSystemDiskPerformanceLevel() {
+            return this.systemDiskPerformanceLevel;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setPasswordInherit(Boolean passwordInherit) {
+            this.passwordInherit = passwordInherit;
+            return this;
+        }
+        public Boolean getPasswordInherit() {
+            return this.passwordInherit;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setCreditSpecification(String creditSpecification) {
+            this.creditSpecification = creditSpecification;
+            return this;
+        }
+        public String getCreditSpecification() {
+            return this.creditSpecification;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupRequestSystemDiskConfig extends TeaModel {
+        @NameInMap("DiskCategory")
+        public String diskCategory;
+
+        public static CreateAutoProvisioningGroupRequestSystemDiskConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestSystemDiskConfig self = new CreateAutoProvisioningGroupRequestSystemDiskConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestSystemDiskConfig setDiskCategory(String diskCategory) {
+            this.diskCategory = diskCategory;
+            return this;
+        }
+        public String getDiskCategory() {
+            return this.diskCategory;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupRequestDataDiskConfig extends TeaModel {
+        @NameInMap("DiskCategory")
+        public String diskCategory;
+
+        public static CreateAutoProvisioningGroupRequestDataDiskConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestDataDiskConfig self = new CreateAutoProvisioningGroupRequestDataDiskConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestDataDiskConfig setDiskCategory(String diskCategory) {
+            this.diskCategory = diskCategory;
+            return this;
+        }
+        public String getDiskCategory() {
+            return this.diskCategory;
         }
 
     }

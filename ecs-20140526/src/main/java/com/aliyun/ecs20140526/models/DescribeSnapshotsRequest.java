@@ -26,6 +26,12 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
     @NameInMap("SnapshotName")
     public String snapshotName;
 
@@ -121,6 +127,22 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeSnapshotsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public DescribeSnapshotsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
     public DescribeSnapshotsRequest setSnapshotName(String snapshotName) {

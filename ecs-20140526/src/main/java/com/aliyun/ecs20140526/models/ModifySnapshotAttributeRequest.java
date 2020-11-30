@@ -14,6 +14,9 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DisableInstantAccess")
+    public Boolean disableInstantAccess;
+
     public static ModifySnapshotAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySnapshotAttributeRequest self = new ModifySnapshotAttributeRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifySnapshotAttributeRequest setDisableInstantAccess(Boolean disableInstantAccess) {
+        this.disableInstantAccess = disableInstantAccess;
+        return this;
+    }
+    public Boolean getDisableInstantAccess() {
+        return this.disableInstantAccess;
     }
 
 }

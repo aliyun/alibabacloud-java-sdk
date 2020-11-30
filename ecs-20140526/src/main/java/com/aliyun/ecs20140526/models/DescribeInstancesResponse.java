@@ -69,6 +69,98 @@ public class DescribeInstancesResponse extends TeaModel {
         return this.instances;
     }
 
+    public static class DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet extends TeaModel {
+        @NameInMap("PrivateIpAddress")
+        @Validation(required = true)
+        public String privateIpAddress;
+
+        @NameInMap("Primary")
+        @Validation(required = true)
+        public Boolean primary;
+
+        public static DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet self = new DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public String getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet setPrimary(Boolean primary) {
+            this.primary = primary;
+            return this;
+        }
+        public Boolean getPrimary() {
+            return this.primary;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets extends TeaModel {
+        @NameInMap("PrivateIpSet")
+        @Validation(required = true)
+        public java.util.List<DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet> privateIpSet;
+
+        public static DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets self = new DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets setPrivateIpSet(java.util.List<DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet> privateIpSet) {
+            this.privateIpSet = privateIpSet;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set extends TeaModel {
+        @NameInMap("Ipv6Address")
+        @Validation(required = true)
+        public String ipv6Address;
+
+        public static DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set self = new DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set setIpv6Address(String ipv6Address) {
+            this.ipv6Address = ipv6Address;
+            return this;
+        }
+        public String getIpv6Address() {
+            return this.ipv6Address;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets extends TeaModel {
+        @NameInMap("Ipv6Set")
+        @Validation(required = true)
+        public java.util.List<DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set> ipv6Set;
+
+        public static DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets self = new DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets setIpv6Set(java.util.List<DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set> ipv6Set) {
+            this.ipv6Set = ipv6Set;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set> getIpv6Set() {
+            return this.ipv6Set;
+        }
+
+    }
+
     public static class DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterface extends TeaModel {
         @NameInMap("NetworkInterfaceId")
         @Validation(required = true)
@@ -81,6 +173,18 @@ public class DescribeInstancesResponse extends TeaModel {
         @NameInMap("PrimaryIpAddress")
         @Validation(required = true)
         public String primaryIpAddress;
+
+        @NameInMap("Type")
+        @Validation(required = true)
+        public String type;
+
+        @NameInMap("PrivateIpSets")
+        @Validation(required = true)
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets privateIpSets;
+
+        @NameInMap("Ipv6Sets")
+        @Validation(required = true)
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets ipv6Sets;
 
         public static DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterface build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterface self = new DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterface();
@@ -109,6 +213,30 @@ public class DescribeInstancesResponse extends TeaModel {
         }
         public String getPrimaryIpAddress() {
             return this.primaryIpAddress;
+        }
+
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterface setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterface setPrivateIpSets(DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets privateIpSets) {
+            this.privateIpSets = privateIpSets;
+            return this;
+        }
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets getPrivateIpSets() {
+            return this.privateIpSets;
+        }
+
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterface setIpv6Sets(DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets ipv6Sets) {
+            this.ipv6Sets = ipv6Sets;
+            return this;
+        }
+        public DescribeInstancesResponseInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets getIpv6Sets() {
+            return this.ipv6Sets;
         }
 
     }

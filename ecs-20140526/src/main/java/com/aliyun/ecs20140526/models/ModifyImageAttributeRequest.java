@@ -24,6 +24,9 @@ public class ModifyImageAttributeRequest extends TeaModel {
     @NameInMap("BootMode")
     public String bootMode;
 
+    @NameInMap("LicenseType")
+    public String licenseType;
+
     @NameInMap("Description")
     public String description;
 
@@ -78,6 +81,14 @@ public class ModifyImageAttributeRequest extends TeaModel {
     }
     public String getBootMode() {
         return this.bootMode;
+    }
+
+    public ModifyImageAttributeRequest setLicenseType(String licenseType) {
+        this.licenseType = licenseType;
+        return this;
+    }
+    public String getLicenseType() {
+        return this.licenseType;
     }
 
     public ModifyImageAttributeRequest setDescription(String description) {

@@ -20,6 +20,10 @@ public class DescribeSnapshotsResponse extends TeaModel {
     @Validation(required = true)
     public Integer pageSize;
 
+    @NameInMap("NextToken")
+    @Validation(required = true)
+    public String nextToken;
+
     @NameInMap("Snapshots")
     @Validation(required = true)
     public DescribeSnapshotsResponseSnapshots snapshots;
@@ -59,6 +63,14 @@ public class DescribeSnapshotsResponse extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeSnapshotsResponse setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeSnapshotsResponse setSnapshots(DescribeSnapshotsResponseSnapshots snapshots) {
@@ -205,6 +217,14 @@ public class DescribeSnapshotsResponse extends TeaModel {
         @NameInMap("SnapshotType")
         @Validation(required = true)
         public String snapshotType;
+
+        @NameInMap("InstantAccess")
+        @Validation(required = true)
+        public Boolean instantAccess;
+
+        @NameInMap("InstantAccessRetentionDays")
+        @Validation(required = true)
+        public Integer instantAccessRetentionDays;
 
         @NameInMap("Tags")
         @Validation(required = true)
@@ -381,6 +401,22 @@ public class DescribeSnapshotsResponse extends TeaModel {
         }
         public String getSnapshotType() {
             return this.snapshotType;
+        }
+
+        public DescribeSnapshotsResponseSnapshotsSnapshot setInstantAccess(Boolean instantAccess) {
+            this.instantAccess = instantAccess;
+            return this;
+        }
+        public Boolean getInstantAccess() {
+            return this.instantAccess;
+        }
+
+        public DescribeSnapshotsResponseSnapshotsSnapshot setInstantAccessRetentionDays(Integer instantAccessRetentionDays) {
+            this.instantAccessRetentionDays = instantAccessRetentionDays;
+            return this;
+        }
+        public Integer getInstantAccessRetentionDays() {
+            return this.instantAccessRetentionDays;
         }
 
         public DescribeSnapshotsResponseSnapshotsSnapshot setTags(DescribeSnapshotsResponseSnapshotsSnapshotTags tags) {
