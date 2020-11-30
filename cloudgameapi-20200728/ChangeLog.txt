@@ -1,3 +1,6 @@
+2020-11-30 Version: 1.2.2
+- Add stop reason and trackinfo.
+
 2020-11-30 Version: 1.2.1
 - Add stop reason.
 - Add batch stop trackinfo.

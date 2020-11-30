@@ -28,6 +28,10 @@ public class BatchStopGameSessionsResponse extends TeaModel {
     @Validation(required = true)
     public String projectId;
 
+    @NameInMap("TrackInfo")
+    @Validation(required = true)
+    public String trackInfo;
+
     public static BatchStopGameSessionsResponse build(java.util.Map<String, ?> map) throws Exception {
         BatchStopGameSessionsResponse self = new BatchStopGameSessionsResponse();
         return TeaModel.build(map, self);
@@ -79,6 +83,14 @@ public class BatchStopGameSessionsResponse extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public BatchStopGameSessionsResponse setTrackInfo(String trackInfo) {
+        this.trackInfo = trackInfo;
+        return this;
+    }
+    public String getTrackInfo() {
+        return this.trackInfo;
     }
 
 }
