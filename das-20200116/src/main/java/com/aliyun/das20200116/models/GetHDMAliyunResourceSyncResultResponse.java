@@ -33,6 +33,54 @@ public class GetHDMAliyunResourceSyncResultResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetHDMAliyunResourceSyncResultResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetHDMAliyunResourceSyncResultResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetHDMAliyunResourceSyncResultResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetHDMAliyunResourceSyncResultResponse setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
+    public GetHDMAliyunResourceSyncResultResponse setSynchro(String synchro) {
+        this.synchro = synchro;
+        return this;
+    }
+    public String getSynchro() {
+        return this.synchro;
+    }
+
+    public GetHDMAliyunResourceSyncResultResponse setData(GetHDMAliyunResourceSyncResultResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public GetHDMAliyunResourceSyncResultResponseData getData() {
+        return this.data;
+    }
+
     public static class GetHDMAliyunResourceSyncResultResponseDataSubResultsResourceSyncSubResult extends TeaModel {
         @NameInMap("ResourceType")
         @Validation(required = true)
@@ -55,6 +103,38 @@ public class GetHDMAliyunResourceSyncResultResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetHDMAliyunResourceSyncResultResponseDataSubResultsResourceSyncSubResult setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public GetHDMAliyunResourceSyncResultResponseDataSubResultsResourceSyncSubResult setSyncCount(Integer syncCount) {
+            this.syncCount = syncCount;
+            return this;
+        }
+        public Integer getSyncCount() {
+            return this.syncCount;
+        }
+
+        public GetHDMAliyunResourceSyncResultResponseDataSubResultsResourceSyncSubResult setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public GetHDMAliyunResourceSyncResultResponseDataSubResultsResourceSyncSubResult setErrMsg(String errMsg) {
+            this.errMsg = errMsg;
+            return this;
+        }
+        public String getErrMsg() {
+            return this.errMsg;
+        }
+
     }
 
     public static class GetHDMAliyunResourceSyncResultResponseDataSubResults extends TeaModel {
@@ -65,6 +145,14 @@ public class GetHDMAliyunResourceSyncResultResponse extends TeaModel {
         public static GetHDMAliyunResourceSyncResultResponseDataSubResults build(java.util.Map<String, ?> map) throws Exception {
             GetHDMAliyunResourceSyncResultResponseDataSubResults self = new GetHDMAliyunResourceSyncResultResponseDataSubResults();
             return TeaModel.build(map, self);
+        }
+
+        public GetHDMAliyunResourceSyncResultResponseDataSubResults setResourceSyncSubResult(java.util.List<GetHDMAliyunResourceSyncResultResponseDataSubResultsResourceSyncSubResult> resourceSyncSubResult) {
+            this.resourceSyncSubResult = resourceSyncSubResult;
+            return this;
+        }
+        public java.util.List<GetHDMAliyunResourceSyncResultResponseDataSubResultsResourceSyncSubResult> getResourceSyncSubResult() {
+            return this.resourceSyncSubResult;
         }
 
     }
@@ -89,6 +177,38 @@ public class GetHDMAliyunResourceSyncResultResponse extends TeaModel {
         public static GetHDMAliyunResourceSyncResultResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetHDMAliyunResourceSyncResultResponseData self = new GetHDMAliyunResourceSyncResultResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GetHDMAliyunResourceSyncResultResponseData setSyncStatus(String syncStatus) {
+            this.syncStatus = syncStatus;
+            return this;
+        }
+        public String getSyncStatus() {
+            return this.syncStatus;
+        }
+
+        public GetHDMAliyunResourceSyncResultResponseData setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        public GetHDMAliyunResourceSyncResultResponseData setResults(String results) {
+            this.results = results;
+            return this;
+        }
+        public String getResults() {
+            return this.results;
+        }
+
+        public GetHDMAliyunResourceSyncResultResponseData setSubResults(GetHDMAliyunResourceSyncResultResponseDataSubResults subResults) {
+            this.subResults = subResults;
+            return this;
+        }
+        public GetHDMAliyunResourceSyncResultResponseDataSubResults getSubResults() {
+            return this.subResults;
         }
 
     }
