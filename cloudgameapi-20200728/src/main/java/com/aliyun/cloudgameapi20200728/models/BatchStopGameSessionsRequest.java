@@ -14,6 +14,12 @@ public class BatchStopGameSessionsRequest extends TeaModel {
     @NameInMap("Token")
     public String token;
 
+    @NameInMap("Reason")
+    public String reason;
+
+    @NameInMap("TrackInfo")
+    public String trackInfo;
+
     public static BatchStopGameSessionsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchStopGameSessionsRequest self = new BatchStopGameSessionsRequest();
         return TeaModel.build(map, self);
@@ -41,6 +47,22 @@ public class BatchStopGameSessionsRequest extends TeaModel {
     }
     public String getToken() {
         return this.token;
+    }
+
+    public BatchStopGameSessionsRequest setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
+    }
+
+    public BatchStopGameSessionsRequest setTrackInfo(String trackInfo) {
+        this.trackInfo = trackInfo;
+        return this;
+    }
+    public String getTrackInfo() {
+        return this.trackInfo;
     }
 
 }

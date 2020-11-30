@@ -23,6 +23,9 @@ public class StopGameSessionRequest extends TeaModel {
     @Validation(required = true)
     public String gameSession;
 
+    @NameInMap("Reason")
+    public String reason;
+
     public static StopGameSessionRequest build(java.util.Map<String, ?> map) throws Exception {
         StopGameSessionRequest self = new StopGameSessionRequest();
         return TeaModel.build(map, self);
@@ -66,6 +69,14 @@ public class StopGameSessionRequest extends TeaModel {
     }
     public String getGameSession() {
         return this.gameSession;
+    }
+
+    public StopGameSessionRequest setReason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+    public String getReason() {
+        return this.reason;
     }
 
 }
