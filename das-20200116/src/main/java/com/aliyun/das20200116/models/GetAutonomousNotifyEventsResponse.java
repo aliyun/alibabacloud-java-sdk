@@ -3,7 +3,7 @@ package com.aliyun.das20200116.models;
 
 import com.aliyun.tea.*;
 
-public class AccessHDMInstanceResponse extends TeaModel {
+public class GetAutonomousNotifyEventsResponse extends TeaModel {
     @NameInMap("Code")
     @Validation(required = true)
     public String code;
@@ -24,16 +24,12 @@ public class AccessHDMInstanceResponse extends TeaModel {
     @Validation(required = true)
     public String success;
 
-    @NameInMap("Synchro")
-    @Validation(required = true)
-    public String synchro;
-
-    public static AccessHDMInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
-        AccessHDMInstanceResponse self = new AccessHDMInstanceResponse();
+    public static GetAutonomousNotifyEventsResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetAutonomousNotifyEventsResponse self = new GetAutonomousNotifyEventsResponse();
         return TeaModel.build(map, self);
     }
 
-    public AccessHDMInstanceResponse setCode(String code) {
+    public GetAutonomousNotifyEventsResponse setCode(String code) {
         this.code = code;
         return this;
     }
@@ -41,7 +37,7 @@ public class AccessHDMInstanceResponse extends TeaModel {
         return this.code;
     }
 
-    public AccessHDMInstanceResponse setData(String data) {
+    public GetAutonomousNotifyEventsResponse setData(String data) {
         this.data = data;
         return this;
     }
@@ -49,7 +45,7 @@ public class AccessHDMInstanceResponse extends TeaModel {
         return this.data;
     }
 
-    public AccessHDMInstanceResponse setMessage(String message) {
+    public GetAutonomousNotifyEventsResponse setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -57,7 +53,7 @@ public class AccessHDMInstanceResponse extends TeaModel {
         return this.message;
     }
 
-    public AccessHDMInstanceResponse setRequestId(String requestId) {
+    public GetAutonomousNotifyEventsResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -65,20 +61,12 @@ public class AccessHDMInstanceResponse extends TeaModel {
         return this.requestId;
     }
 
-    public AccessHDMInstanceResponse setSuccess(String success) {
+    public GetAutonomousNotifyEventsResponse setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
-    }
-
-    public AccessHDMInstanceResponse setSynchro(String synchro) {
-        this.synchro = synchro;
-        return this;
-    }
-    public String getSynchro() {
-        return this.synchro;
     }
 
 }
