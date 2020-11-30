@@ -190,6 +190,10 @@ public class DescribeCapacityReservationsResponse extends TeaModel {
         @Validation(required = true)
         public String platform;
 
+        @NameInMap("TimeSlot")
+        @Validation(required = true)
+        public String timeSlot;
+
         @NameInMap("AllocatedResources")
         @Validation(required = true)
         public DescribeCapacityReservationsResponseCapacityReservationSetCapacityReservationItemAllocatedResources allocatedResources;
@@ -285,6 +289,14 @@ public class DescribeCapacityReservationsResponse extends TeaModel {
         }
         public String getPlatform() {
             return this.platform;
+        }
+
+        public DescribeCapacityReservationsResponseCapacityReservationSetCapacityReservationItem setTimeSlot(String timeSlot) {
+            this.timeSlot = timeSlot;
+            return this;
+        }
+        public String getTimeSlot() {
+            return this.timeSlot;
         }
 
         public DescribeCapacityReservationsResponseCapacityReservationSetCapacityReservationItem setAllocatedResources(DescribeCapacityReservationsResponseCapacityReservationSetCapacityReservationItemAllocatedResources allocatedResources) {

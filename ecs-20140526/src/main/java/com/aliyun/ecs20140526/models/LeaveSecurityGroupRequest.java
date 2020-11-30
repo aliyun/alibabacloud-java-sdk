@@ -9,8 +9,13 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public String securityGroupId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
+
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static LeaveSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         LeaveSecurityGroupRequest self = new LeaveSecurityGroupRequest();
@@ -31,6 +36,22 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public LeaveSecurityGroupRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public LeaveSecurityGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

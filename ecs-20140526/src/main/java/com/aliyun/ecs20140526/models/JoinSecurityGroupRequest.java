@@ -9,8 +9,13 @@ public class JoinSecurityGroupRequest extends TeaModel {
     public String securityGroupId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
+
+    @NameInMap("NetworkInterfaceId")
+    public String networkInterfaceId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static JoinSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         JoinSecurityGroupRequest self = new JoinSecurityGroupRequest();
@@ -31,6 +36,22 @@ public class JoinSecurityGroupRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public JoinSecurityGroupRequest setNetworkInterfaceId(String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    public JoinSecurityGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

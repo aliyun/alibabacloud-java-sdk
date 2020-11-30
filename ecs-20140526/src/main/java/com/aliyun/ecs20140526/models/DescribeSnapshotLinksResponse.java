@@ -106,6 +106,10 @@ public class DescribeSnapshotLinksResponse extends TeaModel {
         @Validation(required = true)
         public String category;
 
+        @NameInMap("InstantAccess")
+        @Validation(required = true)
+        public Boolean instantAccess;
+
         @NameInMap("TotalSize")
         @Validation(required = true)
         public Long totalSize;
@@ -189,6 +193,14 @@ public class DescribeSnapshotLinksResponse extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setInstantAccess(Boolean instantAccess) {
+            this.instantAccess = instantAccess;
+            return this;
+        }
+        public Boolean getInstantAccess() {
+            return this.instantAccess;
         }
 
         public DescribeSnapshotLinksResponseSnapshotLinksSnapshotLink setTotalSize(Long totalSize) {

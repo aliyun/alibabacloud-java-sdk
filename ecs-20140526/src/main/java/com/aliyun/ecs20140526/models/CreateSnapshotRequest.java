@@ -29,6 +29,12 @@ public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("InstantAccess")
+    public Boolean instantAccess;
+
+    @NameInMap("InstantAccessRetentionDays")
+    public Integer instantAccessRetentionDays;
+
     public static CreateSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnapshotRequest self = new CreateSnapshotRequest();
         return TeaModel.build(map, self);
@@ -96,6 +102,22 @@ public class CreateSnapshotRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateSnapshotRequest setInstantAccess(Boolean instantAccess) {
+        this.instantAccess = instantAccess;
+        return this;
+    }
+    public Boolean getInstantAccess() {
+        return this.instantAccess;
+    }
+
+    public CreateSnapshotRequest setInstantAccessRetentionDays(Integer instantAccessRetentionDays) {
+        this.instantAccessRetentionDays = instantAccessRetentionDays;
+        return this;
+    }
+    public Integer getInstantAccessRetentionDays() {
+        return this.instantAccessRetentionDays;
     }
 
     public static class CreateSnapshotRequestTag extends TeaModel {
