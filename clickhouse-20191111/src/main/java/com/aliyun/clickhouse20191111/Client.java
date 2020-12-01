@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.clickhouse20191111.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
+
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
@@ -58,6 +59,116 @@ public class Client extends com.aliyun.tearpc.Client {
         this._endpoint = this.getEndpoint("clickhouse", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
+
+    public DescribeLorneTasksMCountResponse describeLorneTasksMCountWithOptions(DescribeLorneTasksMCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeLorneTasksMCount", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new DescribeLorneTasksMCountResponse());
+    }
+
+    public DescribeLorneTasksMCountResponse describeLorneTasksMCount(DescribeLorneTasksMCountRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLorneTasksMCountWithOptions(request, runtime);
+    }
+
+    public DescribeLorneLogResponse describeLorneLogWithOptions(DescribeLorneLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeLorneLog", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new DescribeLorneLogResponse());
+    }
+
+    public DescribeLorneLogResponse describeLorneLog(DescribeLorneLogRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLorneLogWithOptions(request, runtime);
+    }
+
+    public DescribeLorneTasksMetricsResponse describeLorneTasksMetricsWithOptions(DescribeLorneTasksMetricsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeLorneTasksMetrics", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new DescribeLorneTasksMetricsResponse());
+    }
+
+    public DescribeLorneTasksMetricsResponse describeLorneTasksMetrics(DescribeLorneTasksMetricsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLorneTasksMetricsWithOptions(request, runtime);
+    }
+
+    public DescribeLorneTasksResponse describeLorneTasksWithOptions(DescribeLorneTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeLorneTasks", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new DescribeLorneTasksResponse());
+    }
+
+    public DescribeLorneTasksResponse describeLorneTasks(DescribeLorneTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLorneTasksWithOptions(request, runtime);
+    }
+
+    public OperateLorneTaskStatusResponse operateLorneTaskStatusWithOptions(OperateLorneTaskStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("OperateLorneTaskStatus", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new OperateLorneTaskStatusResponse());
+    }
+
+    public OperateLorneTaskStatusResponse operateLorneTaskStatus(OperateLorneTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.operateLorneTaskStatusWithOptions(request, runtime);
+    }
+
+    public DeleteLorneTaskResponse deleteLorneTaskWithOptions(DeleteLorneTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DeleteLorneTask", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new DeleteLorneTaskResponse());
+    }
+
+    public DeleteLorneTaskResponse deleteLorneTask(DeleteLorneTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteLorneTaskWithOptions(request, runtime);
+    }
+
+    public DescribeDBClusterConfigResponse describeDBClusterConfigWithOptions(DescribeDBClusterConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeDBClusterConfig", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new DescribeDBClusterConfigResponse());
+    }
+
+    public DescribeDBClusterConfigResponse describeDBClusterConfig(DescribeDBClusterConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDBClusterConfigWithOptions(request, runtime);
+    }
+
+    public ModifyAccountAuthorityResponse modifyAccountAuthorityWithOptions(ModifyAccountAuthorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyAccountAuthority", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new ModifyAccountAuthorityResponse());
+    }
+
+    public ModifyAccountAuthorityResponse modifyAccountAuthority(ModifyAccountAuthorityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyAccountAuthorityWithOptions(request, runtime);
+    }
+
+    public ModifyDBClusterConfigResponse modifyDBClusterConfigWithOptions(ModifyDBClusterConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyDBClusterConfig", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new ModifyDBClusterConfigResponse());
+    }
+
+    public ModifyDBClusterConfigResponse modifyDBClusterConfig(ModifyDBClusterConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDBClusterConfigWithOptions(request, runtime);
+    }
+
+    public CreateAccountAndAuthorityResponse createAccountAndAuthorityWithOptions(CreateAccountAndAuthorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateAccountAndAuthority", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new CreateAccountAndAuthorityResponse());
+    }
+
+    public CreateAccountAndAuthorityResponse createAccountAndAuthority(CreateAccountAndAuthorityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAccountAndAuthorityWithOptions(request, runtime);
+    }
+
+    public DescribeAccountAuthorityResponse describeAccountAuthorityWithOptions(DescribeAccountAuthorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeAccountAuthority", "HTTPS", "POST", "2019-11-11", "AK", null, TeaModel.buildMap(request), runtime), new DescribeAccountAuthorityResponse());
+    }
+
+    public DescribeAccountAuthorityResponse describeAccountAuthority(DescribeAccountAuthorityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAccountAuthorityWithOptions(request, runtime);
+    }
 
     public ModifyDBClusterResponse modifyDBClusterWithOptions(ModifyDBClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);

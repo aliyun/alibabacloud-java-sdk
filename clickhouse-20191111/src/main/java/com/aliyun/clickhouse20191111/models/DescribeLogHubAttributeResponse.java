@@ -8,9 +8,9 @@ public class DescribeLogHubAttributeResponse extends TeaModel {
     @Validation(required = true)
     public String requestId;
 
-    @NameInMap("TaskDetail")
+    @NameInMap("LoghubInfo")
     @Validation(required = true)
-    public DescribeLogHubAttributeResponseTaskDetail taskDetail;
+    public DescribeLogHubAttributeResponseLoghubInfo loghubInfo;
 
     public static DescribeLogHubAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogHubAttributeResponse self = new DescribeLogHubAttributeResponse();
@@ -25,97 +25,153 @@ public class DescribeLogHubAttributeResponse extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeLogHubAttributeResponse setTaskDetail(DescribeLogHubAttributeResponseTaskDetail taskDetail) {
-        this.taskDetail = taskDetail;
+    public DescribeLogHubAttributeResponse setLoghubInfo(DescribeLogHubAttributeResponseLoghubInfo loghubInfo) {
+        this.loghubInfo = loghubInfo;
         return this;
     }
-    public DescribeLogHubAttributeResponseTaskDetail getTaskDetail() {
-        return this.taskDetail;
+    public DescribeLogHubAttributeResponseLoghubInfo getLoghubInfo() {
+        return this.loghubInfo;
     }
 
-    public static class DescribeLogHubAttributeResponseTaskDetail extends TeaModel {
+    public static class DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore extends TeaModel {
+        @NameInMap("LogKey")
+        @Validation(required = true)
+        public String logKey;
+
+        @NameInMap("FieldKey")
+        @Validation(required = true)
+        public String fieldKey;
+
+        @NameInMap("Type")
+        @Validation(required = true)
+        public String type;
+
+        public static DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore self = new DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore setLogKey(String logKey) {
+            this.logKey = logKey;
+            return this;
+        }
+        public String getLogKey() {
+            return this.logKey;
+        }
+
+        public DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore setFieldKey(String fieldKey) {
+            this.fieldKey = fieldKey;
+            return this;
+        }
+        public String getFieldKey() {
+            return this.fieldKey;
+        }
+
+        public DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class DescribeLogHubAttributeResponseLoghubInfoLogHubStores extends TeaModel {
+        @NameInMap("LogHubStore")
+        @Validation(required = true)
+        public java.util.List<DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore> logHubStore;
+
+        public static DescribeLogHubAttributeResponseLoghubInfoLogHubStores build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLogHubAttributeResponseLoghubInfoLogHubStores self = new DescribeLogHubAttributeResponseLoghubInfoLogHubStores();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLogHubAttributeResponseLoghubInfoLogHubStores setLogHubStore(java.util.List<DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore> logHubStore) {
+            this.logHubStore = logHubStore;
+            return this;
+        }
+        public java.util.List<DescribeLogHubAttributeResponseLoghubInfoLogHubStoresLogHubStore> getLogHubStore() {
+            return this.logHubStore;
+        }
+
+    }
+
+    public static class DescribeLogHubAttributeResponseLoghubInfo extends TeaModel {
         @NameInMap("Id")
         @Validation(required = true)
         public String id;
 
-        @NameInMap("Name")
+        @NameInMap("DeliverName")
         @Validation(required = true)
-        public String name;
+        public String deliverName;
 
         @NameInMap("Description")
         @Validation(required = true)
         public String description;
 
-        @NameInMap("SourceType")
+        @NameInMap("ProjectName")
         @Validation(required = true)
-        public String sourceType;
+        public String projectName;
 
-        @NameInMap("SourceProject")
+        @NameInMap("LogStoreName")
         @Validation(required = true)
-        public String sourceProject;
+        public String logStoreName;
 
-        @NameInMap("SourceTopic")
+        @NameInMap("DBType")
         @Validation(required = true)
-        public String sourceTopic;
+        public String DBType;
 
-        @NameInMap("SourceRegion")
+        @NameInMap("DBClusterId")
         @Validation(required = true)
-        public String sourceRegion;
+        public String DBClusterId;
 
-        @NameInMap("SinkType")
+        @NameInMap("SchemaName")
         @Validation(required = true)
-        public String sinkType;
+        public String schemaName;
 
-        @NameInMap("SinkInstance")
+        @NameInMap("TableName")
         @Validation(required = true)
-        public String sinkInstance;
+        public String tableName;
 
-        @NameInMap("SinkSchema")
+        @NameInMap("UserName")
         @Validation(required = true)
-        public String sinkSchema;
+        public String userName;
 
-        @NameInMap("SinkTable")
+        @NameInMap("RegionId")
         @Validation(required = true)
-        public String sinkTable;
+        public String regionId;
 
-        @NameInMap("SinkUser")
+        @NameInMap("FilterDirtyData")
         @Validation(required = true)
-        public String sinkUser;
+        public String filterDirtyData;
 
-        @NameInMap("SinkRegion")
+        @NameInMap("DeliverTime")
         @Validation(required = true)
-        public String sinkRegion;
+        public String deliverTime;
 
-        @NameInMap("SinkVpcId")
+        @NameInMap("ZoneId")
         @Validation(required = true)
-        public String sinkVpcId;
+        public String zoneId;
 
-        @NameInMap("State")
+        @NameInMap("Password")
         @Validation(required = true)
-        public String state;
+        public String password;
 
-        @NameInMap("Strict")
+        @NameInMap("DomainUrl")
         @Validation(required = true)
-        public String strict;
+        public String domainUrl;
 
-        @NameInMap("ColumnMapper")
+        @NameInMap("LogHubStores")
         @Validation(required = true)
-        public String columnMapper;
+        public DescribeLogHubAttributeResponseLoghubInfoLogHubStores logHubStores;
 
-        @NameInMap("Checkpoint")
-        @Validation(required = true)
-        public String checkpoint;
-
-        @NameInMap("CreateTime")
-        @Validation(required = true)
-        public String createTime;
-
-        public static DescribeLogHubAttributeResponseTaskDetail build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLogHubAttributeResponseTaskDetail self = new DescribeLogHubAttributeResponseTaskDetail();
+        public static DescribeLogHubAttributeResponseLoghubInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLogHubAttributeResponseLoghubInfo self = new DescribeLogHubAttributeResponseLoghubInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setId(String id) {
+        public DescribeLogHubAttributeResponseLoghubInfo setId(String id) {
             this.id = id;
             return this;
         }
@@ -123,15 +179,15 @@ public class DescribeLogHubAttributeResponse extends TeaModel {
             return this.id;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setName(String name) {
-            this.name = name;
+        public DescribeLogHubAttributeResponseLoghubInfo setDeliverName(String deliverName) {
+            this.deliverName = deliverName;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getDeliverName() {
+            return this.deliverName;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setDescription(String description) {
+        public DescribeLogHubAttributeResponseLoghubInfo setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -139,132 +195,116 @@ public class DescribeLogHubAttributeResponse extends TeaModel {
             return this.description;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSourceType(String sourceType) {
-            this.sourceType = sourceType;
+        public DescribeLogHubAttributeResponseLoghubInfo setProjectName(String projectName) {
+            this.projectName = projectName;
             return this;
         }
-        public String getSourceType() {
-            return this.sourceType;
+        public String getProjectName() {
+            return this.projectName;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSourceProject(String sourceProject) {
-            this.sourceProject = sourceProject;
+        public DescribeLogHubAttributeResponseLoghubInfo setLogStoreName(String logStoreName) {
+            this.logStoreName = logStoreName;
             return this;
         }
-        public String getSourceProject() {
-            return this.sourceProject;
+        public String getLogStoreName() {
+            return this.logStoreName;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSourceTopic(String sourceTopic) {
-            this.sourceTopic = sourceTopic;
+        public DescribeLogHubAttributeResponseLoghubInfo setDBType(String DBType) {
+            this.DBType = DBType;
             return this;
         }
-        public String getSourceTopic() {
-            return this.sourceTopic;
+        public String getDBType() {
+            return this.DBType;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSourceRegion(String sourceRegion) {
-            this.sourceRegion = sourceRegion;
+        public DescribeLogHubAttributeResponseLoghubInfo setDBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
             return this;
         }
-        public String getSourceRegion() {
-            return this.sourceRegion;
+        public String getDBClusterId() {
+            return this.DBClusterId;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSinkType(String sinkType) {
-            this.sinkType = sinkType;
+        public DescribeLogHubAttributeResponseLoghubInfo setSchemaName(String schemaName) {
+            this.schemaName = schemaName;
             return this;
         }
-        public String getSinkType() {
-            return this.sinkType;
+        public String getSchemaName() {
+            return this.schemaName;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSinkInstance(String sinkInstance) {
-            this.sinkInstance = sinkInstance;
+        public DescribeLogHubAttributeResponseLoghubInfo setTableName(String tableName) {
+            this.tableName = tableName;
             return this;
         }
-        public String getSinkInstance() {
-            return this.sinkInstance;
+        public String getTableName() {
+            return this.tableName;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSinkSchema(String sinkSchema) {
-            this.sinkSchema = sinkSchema;
+        public DescribeLogHubAttributeResponseLoghubInfo setUserName(String userName) {
+            this.userName = userName;
             return this;
         }
-        public String getSinkSchema() {
-            return this.sinkSchema;
+        public String getUserName() {
+            return this.userName;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSinkTable(String sinkTable) {
-            this.sinkTable = sinkTable;
+        public DescribeLogHubAttributeResponseLoghubInfo setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public String getSinkTable() {
-            return this.sinkTable;
+        public String getRegionId() {
+            return this.regionId;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSinkUser(String sinkUser) {
-            this.sinkUser = sinkUser;
+        public DescribeLogHubAttributeResponseLoghubInfo setFilterDirtyData(String filterDirtyData) {
+            this.filterDirtyData = filterDirtyData;
             return this;
         }
-        public String getSinkUser() {
-            return this.sinkUser;
+        public String getFilterDirtyData() {
+            return this.filterDirtyData;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSinkRegion(String sinkRegion) {
-            this.sinkRegion = sinkRegion;
+        public DescribeLogHubAttributeResponseLoghubInfo setDeliverTime(String deliverTime) {
+            this.deliverTime = deliverTime;
             return this;
         }
-        public String getSinkRegion() {
-            return this.sinkRegion;
+        public String getDeliverTime() {
+            return this.deliverTime;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setSinkVpcId(String sinkVpcId) {
-            this.sinkVpcId = sinkVpcId;
+        public DescribeLogHubAttributeResponseLoghubInfo setZoneId(String zoneId) {
+            this.zoneId = zoneId;
             return this;
         }
-        public String getSinkVpcId() {
-            return this.sinkVpcId;
+        public String getZoneId() {
+            return this.zoneId;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setState(String state) {
-            this.state = state;
+        public DescribeLogHubAttributeResponseLoghubInfo setPassword(String password) {
+            this.password = password;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getPassword() {
+            return this.password;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setStrict(String strict) {
-            this.strict = strict;
+        public DescribeLogHubAttributeResponseLoghubInfo setDomainUrl(String domainUrl) {
+            this.domainUrl = domainUrl;
             return this;
         }
-        public String getStrict() {
-            return this.strict;
+        public String getDomainUrl() {
+            return this.domainUrl;
         }
 
-        public DescribeLogHubAttributeResponseTaskDetail setColumnMapper(String columnMapper) {
-            this.columnMapper = columnMapper;
+        public DescribeLogHubAttributeResponseLoghubInfo setLogHubStores(DescribeLogHubAttributeResponseLoghubInfoLogHubStores logHubStores) {
+            this.logHubStores = logHubStores;
             return this;
         }
-        public String getColumnMapper() {
-            return this.columnMapper;
-        }
-
-        public DescribeLogHubAttributeResponseTaskDetail setCheckpoint(String checkpoint) {
-            this.checkpoint = checkpoint;
-            return this;
-        }
-        public String getCheckpoint() {
-            return this.checkpoint;
-        }
-
-        public DescribeLogHubAttributeResponseTaskDetail setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
+        public DescribeLogHubAttributeResponseLoghubInfoLogHubStores getLogHubStores() {
+            return this.logHubStores;
         }
 
     }

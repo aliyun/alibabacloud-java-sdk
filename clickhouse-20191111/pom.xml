@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>clickhouse20191111</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>clickhouse20191111</name>
   <description>Alibaba Cloud ClickHouse (20191111) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.2</version>
+      <version>0.2.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-rpc</artifactId>
-      <version>0.0.14</version>
+      <version>0.1.2</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>
@@ -57,7 +57,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.4</version>
+      <version>0.0.6</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
