@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sae20190506.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateNamespaceVpcResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateNamespaceVpcResponseBody body;
+
+    public static UpdateNamespaceVpcResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateNamespaceVpcResponse self = new UpdateNamespaceVpcResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateNamespaceVpcResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateNamespaceVpcResponse setBody(UpdateNamespaceVpcResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateNamespaceVpcResponseBody getBody() {
+        return this.body;
+    }
+
+}

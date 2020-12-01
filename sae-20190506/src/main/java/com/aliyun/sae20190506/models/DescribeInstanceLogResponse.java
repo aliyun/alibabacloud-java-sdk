@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sae20190506.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeInstanceLogResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeInstanceLogResponseBody body;
+
+    public static DescribeInstanceLogResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInstanceLogResponse self = new DescribeInstanceLogResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceLogResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeInstanceLogResponse setBody(DescribeInstanceLogResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeInstanceLogResponseBody getBody() {
+        return this.body;
+    }
+
+}
