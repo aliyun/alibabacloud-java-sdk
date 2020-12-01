@@ -1,0 +1,3 @@
+2020-12-01 Version: 0.0.1
+- Fix nas parameters missing when deploy application.
+
