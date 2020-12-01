@@ -20,6 +20,10 @@ public class DescribeLogHubAttributeRequest extends TeaModel {
     @NameInMap("DeliverName")
     public String deliverName;
 
+    @NameInMap("TaskId")
+    @Validation(required = true)
+    public String taskId;
+
     public static DescribeLogHubAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogHubAttributeRequest self = new DescribeLogHubAttributeRequest();
         return TeaModel.build(map, self);
@@ -63,6 +67,14 @@ public class DescribeLogHubAttributeRequest extends TeaModel {
     }
     public String getDeliverName() {
         return this.deliverName;
+    }
+
+    public DescribeLogHubAttributeRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

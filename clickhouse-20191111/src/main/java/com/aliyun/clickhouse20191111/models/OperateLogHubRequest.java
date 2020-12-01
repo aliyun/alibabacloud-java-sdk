@@ -52,8 +52,8 @@ public class OperateLogHubRequest extends TeaModel {
     @Validation(required = true)
     public String password;
 
-    @NameInMap("FilterDirty")
-    public Boolean filterDirty;
+    @NameInMap("FilterDirtyData")
+    public Boolean filterDirtyData;
 
     @NameInMap("LogHubStores")
     @Validation(required = true)
@@ -64,6 +64,12 @@ public class OperateLogHubRequest extends TeaModel {
 
     @NameInMap("AccessSecret")
     public String accessSecret;
+
+    @NameInMap("UseLorne")
+    public Boolean useLorne;
+
+    @NameInMap("TaskId")
+    public String taskId;
 
     public static OperateLogHubRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateLogHubRequest self = new OperateLogHubRequest();
@@ -166,12 +172,12 @@ public class OperateLogHubRequest extends TeaModel {
         return this.password;
     }
 
-    public OperateLogHubRequest setFilterDirty(Boolean filterDirty) {
-        this.filterDirty = filterDirty;
+    public OperateLogHubRequest setFilterDirtyData(Boolean filterDirtyData) {
+        this.filterDirtyData = filterDirtyData;
         return this;
     }
-    public Boolean getFilterDirty() {
-        return this.filterDirty;
+    public Boolean getFilterDirtyData() {
+        return this.filterDirtyData;
     }
 
     public OperateLogHubRequest setLogHubStores(java.util.List<OperateLogHubRequestLogHubStores> logHubStores) {
@@ -196,6 +202,22 @@ public class OperateLogHubRequest extends TeaModel {
     }
     public String getAccessSecret() {
         return this.accessSecret;
+    }
+
+    public OperateLogHubRequest setUseLorne(Boolean useLorne) {
+        this.useLorne = useLorne;
+        return this;
+    }
+    public Boolean getUseLorne() {
+        return this.useLorne;
+    }
+
+    public OperateLogHubRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public static class OperateLogHubRequestLogHubStores extends TeaModel {
