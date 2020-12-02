@@ -19,6 +19,11 @@ public class Client extends com.aliyun.tearpc.Client {
         return TeaModel.toModel(this.doRequest("SegmentHDSky", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentHDSkyResponse());
     }
 
+    public SegmentHDSkyResponse segmentHDSkySimply(SegmentHDSkyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentHDSky(request, runtime);
+    }
+
     public SegmentHDSkyResponse segmentHDSkyAdvance(SegmentHDSkyAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
@@ -49,8 +54,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentHDSkyRequest segmentHDSkyreq = new SegmentHDSkyRequest();
-        com.aliyun.common.Common.convert(request, segmentHDSkyreq);
+        SegmentHDSkyRequest segmentHDSkyReq = new SegmentHDSkyRequest();
+        com.aliyun.common.Common.convert(request, segmentHDSkyReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -73,14 +78,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentHDSkyreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentHDSkyResponse segmentHDSkyResp = this.segmentHDSky(segmentHDSkyreq, runtime);
+        segmentHDSkyReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentHDSkyResponse segmentHDSkyResp = this.segmentHDSky(segmentHDSkyReq, runtime);
         return segmentHDSkyResp;
     }
 
     public SegmentHDCommonImageResponse segmentHDCommonImage(SegmentHDCommonImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentHDCommonImage", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentHDCommonImageResponse());
+    }
+
+    public SegmentHDCommonImageResponse segmentHDCommonImageSimply(SegmentHDCommonImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentHDCommonImage(request, runtime);
     }
 
     public SegmentHDCommonImageResponse segmentHDCommonImageAdvance(SegmentHDCommonImageAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -113,8 +123,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentHDCommonImageRequest segmentHDCommonImagereq = new SegmentHDCommonImageRequest();
-        com.aliyun.common.Common.convert(request, segmentHDCommonImagereq);
+        SegmentHDCommonImageRequest segmentHDCommonImageReq = new SegmentHDCommonImageRequest();
+        com.aliyun.common.Common.convert(request, segmentHDCommonImageReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -137,14 +147,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentHDCommonImagereq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentHDCommonImageResponse segmentHDCommonImageResp = this.segmentHDCommonImage(segmentHDCommonImagereq, runtime);
+        segmentHDCommonImageReq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentHDCommonImageResponse segmentHDCommonImageResp = this.segmentHDCommonImage(segmentHDCommonImageReq, runtime);
         return segmentHDCommonImageResp;
     }
 
     public SegmentSkinResponse segmentSkin(SegmentSkinRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentSkin", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentSkinResponse());
+    }
+
+    public SegmentSkinResponse segmentSkinSimply(SegmentSkinRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentSkin(request, runtime);
     }
 
     public SegmentSkinResponse segmentSkinAdvance(SegmentSkinAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -177,8 +192,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentSkinRequest segmentSkinreq = new SegmentSkinRequest();
-        com.aliyun.common.Common.convert(request, segmentSkinreq);
+        SegmentSkinRequest segmentSkinReq = new SegmentSkinRequest();
+        com.aliyun.common.Common.convert(request, segmentSkinReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -201,14 +216,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentSkinreq.URL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentSkinResponse segmentSkinResp = this.segmentSkin(segmentSkinreq, runtime);
+        segmentSkinReq.URL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentSkinResponse segmentSkinResp = this.segmentSkin(segmentSkinReq, runtime);
         return segmentSkinResp;
     }
 
     public ChangeSkyResponse changeSky(ChangeSkyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ChangeSky", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new ChangeSkyResponse());
+    }
+
+    public ChangeSkyResponse changeSkySimply(ChangeSkyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.changeSky(request, runtime);
     }
 
     public ChangeSkyResponse changeSkyAdvance(ChangeSkyAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -241,8 +261,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        ChangeSkyRequest changeSkyreq = new ChangeSkyRequest();
-        com.aliyun.common.Common.convert(request, changeSkyreq);
+        ChangeSkyRequest changeSkyReq = new ChangeSkyRequest();
+        com.aliyun.common.Common.convert(request, changeSkyReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -265,14 +285,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        changeSkyreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        ChangeSkyResponse changeSkyResp = this.changeSky(changeSkyreq, runtime);
+        changeSkyReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        ChangeSkyResponse changeSkyResp = this.changeSky(changeSkyReq, runtime);
         return changeSkyResp;
     }
 
     public SegmentLogoResponse segmentLogo(SegmentLogoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentLogo", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentLogoResponse());
+    }
+
+    public SegmentLogoResponse segmentLogoSimply(SegmentLogoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentLogo(request, runtime);
     }
 
     public SegmentLogoResponse segmentLogoAdvance(SegmentLogoAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -305,8 +330,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentLogoRequest segmentLogoreq = new SegmentLogoRequest();
-        com.aliyun.common.Common.convert(request, segmentLogoreq);
+        SegmentLogoRequest segmentLogoReq = new SegmentLogoRequest();
+        com.aliyun.common.Common.convert(request, segmentLogoReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -329,14 +354,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentLogoreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentLogoResponse segmentLogoResp = this.segmentLogo(segmentLogoreq, runtime);
+        segmentLogoReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentLogoResponse segmentLogoResp = this.segmentLogo(segmentLogoReq, runtime);
         return segmentLogoResp;
     }
 
     public SegmentSceneResponse segmentScene(SegmentSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentScene", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentSceneResponse());
+    }
+
+    public SegmentSceneResponse segmentSceneSimply(SegmentSceneRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentScene(request, runtime);
     }
 
     public SegmentSceneResponse segmentSceneAdvance(SegmentSceneAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -369,8 +399,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentSceneRequest segmentScenereq = new SegmentSceneRequest();
-        com.aliyun.common.Common.convert(request, segmentScenereq);
+        SegmentSceneRequest segmentSceneReq = new SegmentSceneRequest();
+        com.aliyun.common.Common.convert(request, segmentSceneReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -393,14 +423,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentScenereq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentSceneResponse segmentSceneResp = this.segmentScene(segmentScenereq, runtime);
+        segmentSceneReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentSceneResponse segmentSceneResp = this.segmentScene(segmentSceneReq, runtime);
         return segmentSceneResp;
     }
 
     public SegmentFoodResponse segmentFood(SegmentFoodRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentFood", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentFoodResponse());
+    }
+
+    public SegmentFoodResponse segmentFoodSimply(SegmentFoodRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentFood(request, runtime);
     }
 
     public SegmentFoodResponse segmentFoodAdvance(SegmentFoodAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -433,8 +468,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentFoodRequest segmentFoodreq = new SegmentFoodRequest();
-        com.aliyun.common.Common.convert(request, segmentFoodreq);
+        SegmentFoodRequest segmentFoodReq = new SegmentFoodRequest();
+        com.aliyun.common.Common.convert(request, segmentFoodReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -457,14 +492,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentFoodreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentFoodResponse segmentFoodResp = this.segmentFood(segmentFoodreq, runtime);
+        segmentFoodReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentFoodResponse segmentFoodResp = this.segmentFood(segmentFoodReq, runtime);
         return segmentFoodResp;
     }
 
     public SegmentClothResponse segmentCloth(SegmentClothRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentCloth", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentClothResponse());
+    }
+
+    public SegmentClothResponse segmentClothSimply(SegmentClothRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentCloth(request, runtime);
     }
 
     public SegmentClothResponse segmentClothAdvance(SegmentClothAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -497,8 +537,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentClothRequest segmentClothreq = new SegmentClothRequest();
-        com.aliyun.common.Common.convert(request, segmentClothreq);
+        SegmentClothRequest segmentClothReq = new SegmentClothRequest();
+        com.aliyun.common.Common.convert(request, segmentClothReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -521,14 +561,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentClothreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentClothResponse segmentClothResp = this.segmentCloth(segmentClothreq, runtime);
+        segmentClothReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentClothResponse segmentClothResp = this.segmentCloth(segmentClothReq, runtime);
         return segmentClothResp;
     }
 
     public SegmentAnimalResponse segmentAnimal(SegmentAnimalRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentAnimal", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentAnimalResponse());
+    }
+
+    public SegmentAnimalResponse segmentAnimalSimply(SegmentAnimalRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentAnimal(request, runtime);
     }
 
     public SegmentAnimalResponse segmentAnimalAdvance(SegmentAnimalAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -561,8 +606,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentAnimalRequest segmentAnimalreq = new SegmentAnimalRequest();
-        com.aliyun.common.Common.convert(request, segmentAnimalreq);
+        SegmentAnimalRequest segmentAnimalReq = new SegmentAnimalRequest();
+        com.aliyun.common.Common.convert(request, segmentAnimalReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -585,14 +630,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentAnimalreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentAnimalResponse segmentAnimalResp = this.segmentAnimal(segmentAnimalreq, runtime);
+        segmentAnimalReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentAnimalResponse segmentAnimalResp = this.segmentAnimal(segmentAnimalReq, runtime);
         return segmentAnimalResp;
     }
 
     public SegmentHDBodyResponse segmentHDBody(SegmentHDBodyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentHDBody", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentHDBodyResponse());
+    }
+
+    public SegmentHDBodyResponse segmentHDBodySimply(SegmentHDBodyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentHDBody(request, runtime);
     }
 
     public SegmentHDBodyResponse segmentHDBodyAdvance(SegmentHDBodyAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -625,8 +675,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentHDBodyRequest segmentHDBodyreq = new SegmentHDBodyRequest();
-        com.aliyun.common.Common.convert(request, segmentHDBodyreq);
+        SegmentHDBodyRequest segmentHDBodyReq = new SegmentHDBodyRequest();
+        com.aliyun.common.Common.convert(request, segmentHDBodyReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -649,14 +699,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentHDBodyreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentHDBodyResponse segmentHDBodyResp = this.segmentHDBody(segmentHDBodyreq, runtime);
+        segmentHDBodyReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentHDBodyResponse segmentHDBodyResp = this.segmentHDBody(segmentHDBodyReq, runtime);
         return segmentHDBodyResp;
     }
 
     public SegmentSkyResponse segmentSky(SegmentSkyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentSky", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentSkyResponse());
+    }
+
+    public SegmentSkyResponse segmentSkySimply(SegmentSkyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentSky(request, runtime);
     }
 
     public SegmentSkyResponse segmentSkyAdvance(SegmentSkyAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -689,8 +744,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentSkyRequest segmentSkyreq = new SegmentSkyRequest();
-        com.aliyun.common.Common.convert(request, segmentSkyreq);
+        SegmentSkyRequest segmentSkyReq = new SegmentSkyRequest();
+        com.aliyun.common.Common.convert(request, segmentSkyReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -713,8 +768,8 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentSkyreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentSkyResponse segmentSkyResp = this.segmentSky(segmentSkyreq, runtime);
+        segmentSkyReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentSkyResponse segmentSkyResp = this.segmentSky(segmentSkyReq, runtime);
         return segmentSkyResp;
     }
 
@@ -723,9 +778,19 @@ public class Client extends com.aliyun.tearpc.Client {
         return TeaModel.toModel(this.doRequest("GetAsyncJobResult", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new GetAsyncJobResultResponse());
     }
 
+    public GetAsyncJobResultResponse getAsyncJobResultSimply(GetAsyncJobResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAsyncJobResult(request, runtime);
+    }
+
     public SegmentFurnitureResponse segmentFurniture(SegmentFurnitureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentFurniture", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentFurnitureResponse());
+    }
+
+    public SegmentFurnitureResponse segmentFurnitureSimply(SegmentFurnitureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentFurniture(request, runtime);
     }
 
     public SegmentFurnitureResponse segmentFurnitureAdvance(SegmentFurnitureAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -758,8 +823,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentFurnitureRequest segmentFurniturereq = new SegmentFurnitureRequest();
-        com.aliyun.common.Common.convert(request, segmentFurniturereq);
+        SegmentFurnitureRequest segmentFurnitureReq = new SegmentFurnitureRequest();
+        com.aliyun.common.Common.convert(request, segmentFurnitureReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -782,14 +847,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentFurniturereq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentFurnitureResponse segmentFurnitureResp = this.segmentFurniture(segmentFurniturereq, runtime);
+        segmentFurnitureReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentFurnitureResponse segmentFurnitureResp = this.segmentFurniture(segmentFurnitureReq, runtime);
         return segmentFurnitureResp;
     }
 
     public RefineMaskResponse refineMask(RefineMaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("RefineMask", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new RefineMaskResponse());
+    }
+
+    public RefineMaskResponse refineMaskSimply(RefineMaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.refineMask(request, runtime);
     }
 
     public RefineMaskResponse refineMaskAdvance(RefineMaskAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -822,8 +892,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        RefineMaskRequest refineMaskreq = new RefineMaskRequest();
-        com.aliyun.common.Common.convert(request, refineMaskreq);
+        RefineMaskRequest refineMaskReq = new RefineMaskRequest();
+        com.aliyun.common.Common.convert(request, refineMaskReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -846,14 +916,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        refineMaskreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        RefineMaskResponse refineMaskResp = this.refineMask(refineMaskreq, runtime);
+        refineMaskReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        RefineMaskResponse refineMaskResp = this.refineMask(refineMaskReq, runtime);
         return refineMaskResp;
     }
 
     public ParseFaceResponse parseFace(ParseFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ParseFace", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new ParseFaceResponse());
+    }
+
+    public ParseFaceResponse parseFaceSimply(ParseFaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.parseFace(request, runtime);
     }
 
     public ParseFaceResponse parseFaceAdvance(ParseFaceAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -886,8 +961,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        ParseFaceRequest parseFacereq = new ParseFaceRequest();
-        com.aliyun.common.Common.convert(request, parseFacereq);
+        ParseFaceRequest parseFaceReq = new ParseFaceRequest();
+        com.aliyun.common.Common.convert(request, parseFaceReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -910,14 +985,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        parseFacereq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        ParseFaceResponse parseFaceResp = this.parseFace(parseFacereq, runtime);
+        parseFaceReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        ParseFaceResponse parseFaceResp = this.parseFace(parseFaceReq, runtime);
         return parseFaceResp;
     }
 
     public SegmentVehicleResponse segmentVehicle(SegmentVehicleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentVehicle", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentVehicleResponse());
+    }
+
+    public SegmentVehicleResponse segmentVehicleSimply(SegmentVehicleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentVehicle(request, runtime);
     }
 
     public SegmentVehicleResponse segmentVehicleAdvance(SegmentVehicleAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -950,8 +1030,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentVehicleRequest segmentVehiclereq = new SegmentVehicleRequest();
-        com.aliyun.common.Common.convert(request, segmentVehiclereq);
+        SegmentVehicleRequest segmentVehicleReq = new SegmentVehicleRequest();
+        com.aliyun.common.Common.convert(request, segmentVehicleReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -974,14 +1054,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentVehiclereq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentVehicleResponse segmentVehicleResp = this.segmentVehicle(segmentVehiclereq, runtime);
+        segmentVehicleReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentVehicleResponse segmentVehicleResp = this.segmentVehicle(segmentVehicleReq, runtime);
         return segmentVehicleResp;
     }
 
     public SegmentHairResponse segmentHair(SegmentHairRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentHair", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentHairResponse());
+    }
+
+    public SegmentHairResponse segmentHairSimply(SegmentHairRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentHair(request, runtime);
     }
 
     public SegmentHairResponse segmentHairAdvance(SegmentHairAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1014,8 +1099,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentHairRequest segmentHairreq = new SegmentHairRequest();
-        com.aliyun.common.Common.convert(request, segmentHairreq);
+        SegmentHairRequest segmentHairReq = new SegmentHairRequest();
+        com.aliyun.common.Common.convert(request, segmentHairReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -1038,14 +1123,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentHairreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentHairResponse segmentHairResp = this.segmentHair(segmentHairreq, runtime);
+        segmentHairReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentHairResponse segmentHairResp = this.segmentHair(segmentHairReq, runtime);
         return segmentHairResp;
     }
 
     public SegmentFaceResponse segmentFace(SegmentFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentFace", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentFaceResponse());
+    }
+
+    public SegmentFaceResponse segmentFaceSimply(SegmentFaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentFace(request, runtime);
     }
 
     public SegmentFaceResponse segmentFaceAdvance(SegmentFaceAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1078,8 +1168,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentFaceRequest segmentFacereq = new SegmentFaceRequest();
-        com.aliyun.common.Common.convert(request, segmentFacereq);
+        SegmentFaceRequest segmentFaceReq = new SegmentFaceRequest();
+        com.aliyun.common.Common.convert(request, segmentFaceReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -1102,14 +1192,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentFacereq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentFaceResponse segmentFaceResp = this.segmentFace(segmentFacereq, runtime);
+        segmentFaceReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentFaceResponse segmentFaceResp = this.segmentFace(segmentFaceReq, runtime);
         return segmentFaceResp;
     }
 
     public SegmentHeadResponse segmentHead(SegmentHeadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentHead", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentHeadResponse());
+    }
+
+    public SegmentHeadResponse segmentHeadSimply(SegmentHeadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentHead(request, runtime);
     }
 
     public SegmentHeadResponse segmentHeadAdvance(SegmentHeadAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1142,8 +1237,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentHeadRequest segmentHeadreq = new SegmentHeadRequest();
-        com.aliyun.common.Common.convert(request, segmentHeadreq);
+        SegmentHeadRequest segmentHeadReq = new SegmentHeadRequest();
+        com.aliyun.common.Common.convert(request, segmentHeadReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -1166,14 +1261,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentHeadreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentHeadResponse segmentHeadResp = this.segmentHead(segmentHeadreq, runtime);
+        segmentHeadReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentHeadResponse segmentHeadResp = this.segmentHead(segmentHeadReq, runtime);
         return segmentHeadResp;
     }
 
     public SegmentCommodityResponse segmentCommodity(SegmentCommodityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentCommodity", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentCommodityResponse());
+    }
+
+    public SegmentCommodityResponse segmentCommoditySimply(SegmentCommodityRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentCommodity(request, runtime);
     }
 
     public SegmentCommodityResponse segmentCommodityAdvance(SegmentCommodityAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1206,8 +1306,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentCommodityRequest segmentCommodityreq = new SegmentCommodityRequest();
-        com.aliyun.common.Common.convert(request, segmentCommodityreq);
+        SegmentCommodityRequest segmentCommodityReq = new SegmentCommodityRequest();
+        com.aliyun.common.Common.convert(request, segmentCommodityReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -1230,14 +1330,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentCommodityreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentCommodityResponse segmentCommodityResp = this.segmentCommodity(segmentCommodityreq, runtime);
+        segmentCommodityReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentCommodityResponse segmentCommodityResp = this.segmentCommodity(segmentCommodityReq, runtime);
         return segmentCommodityResp;
     }
 
     public SegmentBodyResponse segmentBody(SegmentBodyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentBody", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentBodyResponse());
+    }
+
+    public SegmentBodyResponse segmentBodySimply(SegmentBodyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentBody(request, runtime);
     }
 
     public SegmentBodyResponse segmentBodyAdvance(SegmentBodyAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1270,8 +1375,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentBodyRequest segmentBodyreq = new SegmentBodyRequest();
-        com.aliyun.common.Common.convert(request, segmentBodyreq);
+        SegmentBodyRequest segmentBodyReq = new SegmentBodyRequest();
+        com.aliyun.common.Common.convert(request, segmentBodyReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -1294,14 +1399,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentBodyreq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentBodyResponse segmentBodyResp = this.segmentBody(segmentBodyreq, runtime);
+        segmentBodyReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentBodyResponse segmentBodyResp = this.segmentBody(segmentBodyReq, runtime);
         return segmentBodyResp;
     }
 
     public SegmentCommonImageResponse segmentCommonImage(SegmentCommonImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SegmentCommonImage", "HTTPS", "POST", "2019-12-30", "AK", null, TeaModel.buildMap(request), runtime), new SegmentCommonImageResponse());
+    }
+
+    public SegmentCommonImageResponse segmentCommonImageSimply(SegmentCommonImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.segmentCommonImage(request, runtime);
     }
 
     public SegmentCommonImageResponse segmentCommonImageAdvance(SegmentCommonImageAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1334,8 +1444,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        SegmentCommonImageRequest segmentCommonImagereq = new SegmentCommonImageRequest();
-        com.aliyun.common.Common.convert(request, segmentCommonImagereq);
+        SegmentCommonImageRequest segmentCommonImageReq = new SegmentCommonImageRequest();
+        com.aliyun.common.Common.convert(request, segmentCommonImageReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -1358,8 +1468,8 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        segmentCommonImagereq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SegmentCommonImageResponse segmentCommonImageResp = this.segmentCommonImage(segmentCommonImagereq, runtime);
+        segmentCommonImageReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        SegmentCommonImageResponse segmentCommonImageResp = this.segmentCommonImage(segmentCommonImageReq, runtime);
         return segmentCommonImageResp;
     }
 

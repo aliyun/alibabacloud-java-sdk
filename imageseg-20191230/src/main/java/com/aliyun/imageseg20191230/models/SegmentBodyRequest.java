@@ -11,6 +11,9 @@ public class SegmentBodyRequest extends TeaModel {
     @NameInMap("Async")
     public Boolean async;
 
+    @NameInMap("ReturnForm")
+    public String returnForm;
+
     public static SegmentBodyRequest build(java.util.Map<String, ?> map) throws Exception {
         SegmentBodyRequest self = new SegmentBodyRequest();
         return TeaModel.build(map, self);
@@ -30,6 +33,14 @@ public class SegmentBodyRequest extends TeaModel {
     }
     public Boolean getAsync() {
         return this.async;
+    }
+
+    public SegmentBodyRequest setReturnForm(String returnForm) {
+        this.returnForm = returnForm;
+        return this;
+    }
+    public String getReturnForm() {
+        return this.returnForm;
     }
 
 }
