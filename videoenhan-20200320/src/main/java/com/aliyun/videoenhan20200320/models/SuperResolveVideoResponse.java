@@ -17,6 +17,22 @@ public class SuperResolveVideoResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SuperResolveVideoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SuperResolveVideoResponse setData(SuperResolveVideoResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public SuperResolveVideoResponseData getData() {
+        return this.data;
+    }
+
     public static class SuperResolveVideoResponseData extends TeaModel {
         @NameInMap("VideoUrl")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class SuperResolveVideoResponse extends TeaModel {
         public static SuperResolveVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
             SuperResolveVideoResponseData self = new SuperResolveVideoResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public SuperResolveVideoResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
         }
 
     }

@@ -16,22 +16,70 @@ public class EraseVideoLogoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public EraseVideoLogoRequest setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+        return this;
+    }
+    public String getVideoUrl() {
+        return this.videoUrl;
+    }
+
+    public EraseVideoLogoRequest setBoxes(java.util.List<EraseVideoLogoRequestBoxes> boxes) {
+        this.boxes = boxes;
+        return this;
+    }
+    public java.util.List<EraseVideoLogoRequestBoxes> getBoxes() {
+        return this.boxes;
+    }
+
     public static class EraseVideoLogoRequestBoxes extends TeaModel {
         @NameInMap("H")
-        public Double h;
+        public Float h;
 
         @NameInMap("W")
-        public Double w;
+        public Float w;
 
         @NameInMap("X")
-        public Double x;
+        public Float x;
 
         @NameInMap("Y")
-        public Double y;
+        public Float y;
 
         public static EraseVideoLogoRequestBoxes build(java.util.Map<String, ?> map) throws Exception {
             EraseVideoLogoRequestBoxes self = new EraseVideoLogoRequestBoxes();
             return TeaModel.build(map, self);
+        }
+
+        public EraseVideoLogoRequestBoxes setH(Float h) {
+            this.h = h;
+            return this;
+        }
+        public Float getH() {
+            return this.h;
+        }
+
+        public EraseVideoLogoRequestBoxes setW(Float w) {
+            this.w = w;
+            return this;
+        }
+        public Float getW() {
+            return this.w;
+        }
+
+        public EraseVideoLogoRequestBoxes setX(Float x) {
+            this.x = x;
+            return this;
+        }
+        public Float getX() {
+            return this.x;
+        }
+
+        public EraseVideoLogoRequestBoxes setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
         }
 
     }

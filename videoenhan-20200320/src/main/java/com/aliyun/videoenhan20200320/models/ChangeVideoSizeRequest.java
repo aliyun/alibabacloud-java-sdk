@@ -23,7 +23,7 @@ public class ChangeVideoSizeRequest extends TeaModel {
     public String fillType;
 
     @NameInMap("Tightness")
-    public Double tightness;
+    public Float tightness;
 
     @NameInMap("R")
     public Integer r;
@@ -37,6 +37,78 @@ public class ChangeVideoSizeRequest extends TeaModel {
     public static ChangeVideoSizeRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeVideoSizeRequest self = new ChangeVideoSizeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChangeVideoSizeRequest setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+        return this;
+    }
+    public String getVideoUrl() {
+        return this.videoUrl;
+    }
+
+    public ChangeVideoSizeRequest setWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    public Integer getWidth() {
+        return this.width;
+    }
+
+    public ChangeVideoSizeRequest setHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    public Integer getHeight() {
+        return this.height;
+    }
+
+    public ChangeVideoSizeRequest setCropType(String cropType) {
+        this.cropType = cropType;
+        return this;
+    }
+    public String getCropType() {
+        return this.cropType;
+    }
+
+    public ChangeVideoSizeRequest setFillType(String fillType) {
+        this.fillType = fillType;
+        return this;
+    }
+    public String getFillType() {
+        return this.fillType;
+    }
+
+    public ChangeVideoSizeRequest setTightness(Float tightness) {
+        this.tightness = tightness;
+        return this;
+    }
+    public Float getTightness() {
+        return this.tightness;
+    }
+
+    public ChangeVideoSizeRequest setR(Integer r) {
+        this.r = r;
+        return this;
+    }
+    public Integer getR() {
+        return this.r;
+    }
+
+    public ChangeVideoSizeRequest setG(Integer g) {
+        this.g = g;
+        return this;
+    }
+    public Integer getG() {
+        return this.g;
+    }
+
+    public ChangeVideoSizeRequest setB(Integer b) {
+        this.b = b;
+        return this;
+    }
+    public Integer getB() {
+        return this.b;
     }
 
 }

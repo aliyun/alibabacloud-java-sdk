@@ -26,4 +26,44 @@ public class AdjustVideoColorAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AdjustVideoColorAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+        this.videoUrlObject = videoUrlObject;
+        return this;
+    }
+    public java.io.InputStream getVideoUrlObject() {
+        return this.videoUrlObject;
+    }
+
+    public AdjustVideoColorAdvanceRequest setVideoBitrate(String videoBitrate) {
+        this.videoBitrate = videoBitrate;
+        return this;
+    }
+    public String getVideoBitrate() {
+        return this.videoBitrate;
+    }
+
+    public AdjustVideoColorAdvanceRequest setVideoCodec(String videoCodec) {
+        this.videoCodec = videoCodec;
+        return this;
+    }
+    public String getVideoCodec() {
+        return this.videoCodec;
+    }
+
+    public AdjustVideoColorAdvanceRequest setVideoFormat(String videoFormat) {
+        this.videoFormat = videoFormat;
+        return this;
+    }
+    public String getVideoFormat() {
+        return this.videoFormat;
+    }
+
+    public AdjustVideoColorAdvanceRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
 }
