@@ -34,10 +34,6 @@ public class SegmentHeadResponse extends TeaModel {
     }
 
     public static class SegmentHeadResponseDataElements extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
         @NameInMap("X")
         @Validation(required = true)
         public Integer x;
@@ -46,25 +42,21 @@ public class SegmentHeadResponse extends TeaModel {
         @Validation(required = true)
         public Integer y;
 
-        @NameInMap("Width")
+        @NameInMap("ImageURL")
         @Validation(required = true)
-        public Integer width;
+        public String imageURL;
 
         @NameInMap("Height")
         @Validation(required = true)
         public Integer height;
 
+        @NameInMap("Width")
+        @Validation(required = true)
+        public Integer width;
+
         public static SegmentHeadResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
             SegmentHeadResponseDataElements self = new SegmentHeadResponseDataElements();
             return TeaModel.build(map, self);
-        }
-
-        public SegmentHeadResponseDataElements setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
         }
 
         public SegmentHeadResponseDataElements setX(Integer x) {
@@ -83,12 +75,12 @@ public class SegmentHeadResponse extends TeaModel {
             return this.y;
         }
 
-        public SegmentHeadResponseDataElements setWidth(Integer width) {
-            this.width = width;
+        public SegmentHeadResponseDataElements setImageURL(String imageURL) {
+            this.imageURL = imageURL;
             return this;
         }
-        public Integer getWidth() {
-            return this.width;
+        public String getImageURL() {
+            return this.imageURL;
         }
 
         public SegmentHeadResponseDataElements setHeight(Integer height) {
@@ -97,6 +89,14 @@ public class SegmentHeadResponse extends TeaModel {
         }
         public Integer getHeight() {
             return this.height;
+        }
+
+        public SegmentHeadResponseDataElements setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
         }
 
     }
