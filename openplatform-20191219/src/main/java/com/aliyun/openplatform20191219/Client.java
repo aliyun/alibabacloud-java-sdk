@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.openplatform20191219.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
+
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "";
@@ -28,8 +29,8 @@ public class Client extends com.aliyun.tearpc.Client {
             return endpoint;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get("regionId"))) {
-            return endpointMap.get("regionId");
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);

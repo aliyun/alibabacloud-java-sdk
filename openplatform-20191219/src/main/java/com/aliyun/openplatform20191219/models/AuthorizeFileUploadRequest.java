@@ -16,4 +16,20 @@ public class AuthorizeFileUploadRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AuthorizeFileUploadRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
+    }
+
+    public AuthorizeFileUploadRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }
