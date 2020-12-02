@@ -17,6 +17,22 @@ public class AbstractEcommerceVideoResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AbstractEcommerceVideoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AbstractEcommerceVideoResponse setData(AbstractEcommerceVideoResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public AbstractEcommerceVideoResponseData getData() {
+        return this.data;
+    }
+
     public static class AbstractEcommerceVideoResponseData extends TeaModel {
         @NameInMap("VideoUrl")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class AbstractEcommerceVideoResponse extends TeaModel {
         public static AbstractEcommerceVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
             AbstractEcommerceVideoResponseData self = new AbstractEcommerceVideoResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public AbstractEcommerceVideoResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public AbstractEcommerceVideoResponseData setVideoCoverUrl(String videoCoverUrl) {
+            this.videoCoverUrl = videoCoverUrl;
+            return this;
+        }
+        public String getVideoCoverUrl() {
+            return this.videoCoverUrl;
         }
 
     }

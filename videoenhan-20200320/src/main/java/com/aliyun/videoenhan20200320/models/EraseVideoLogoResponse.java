@@ -17,6 +17,22 @@ public class EraseVideoLogoResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public EraseVideoLogoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public EraseVideoLogoResponse setData(EraseVideoLogoResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public EraseVideoLogoResponseData getData() {
+        return this.data;
+    }
+
     public static class EraseVideoLogoResponseData extends TeaModel {
         @NameInMap("VideoUrl")
         @Validation(required = true)
@@ -25,6 +41,14 @@ public class EraseVideoLogoResponse extends TeaModel {
         public static EraseVideoLogoResponseData build(java.util.Map<String, ?> map) throws Exception {
             EraseVideoLogoResponseData self = new EraseVideoLogoResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public EraseVideoLogoResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
         }
 
     }

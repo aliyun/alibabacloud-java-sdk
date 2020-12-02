@@ -17,4 +17,20 @@ public class AbstractFilmVideoAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AbstractFilmVideoAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+        this.videoUrlObject = videoUrlObject;
+        return this;
+    }
+    public java.io.InputStream getVideoUrlObject() {
+        return this.videoUrlObject;
+    }
+
+    public AbstractFilmVideoAdvanceRequest setLength(Integer length) {
+        this.length = length;
+        return this;
+    }
+    public Integer getLength() {
+        return this.length;
+    }
+
 }

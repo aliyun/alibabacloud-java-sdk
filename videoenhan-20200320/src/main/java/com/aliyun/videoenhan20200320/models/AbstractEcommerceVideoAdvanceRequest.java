@@ -10,7 +10,7 @@ public class AbstractEcommerceVideoAdvanceRequest extends TeaModel {
 
     @NameInMap("Duration")
     @Validation(required = true)
-    public Double duration;
+    public Float duration;
 
     @NameInMap("Width")
     public Integer width;
@@ -21,6 +21,38 @@ public class AbstractEcommerceVideoAdvanceRequest extends TeaModel {
     public static AbstractEcommerceVideoAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         AbstractEcommerceVideoAdvanceRequest self = new AbstractEcommerceVideoAdvanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AbstractEcommerceVideoAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+        this.videoUrlObject = videoUrlObject;
+        return this;
+    }
+    public java.io.InputStream getVideoUrlObject() {
+        return this.videoUrlObject;
+    }
+
+    public AbstractEcommerceVideoAdvanceRequest setDuration(Float duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Float getDuration() {
+        return this.duration;
+    }
+
+    public AbstractEcommerceVideoAdvanceRequest setWidth(Integer width) {
+        this.width = width;
+        return this;
+    }
+    public Integer getWidth() {
+        return this.width;
+    }
+
+    public AbstractEcommerceVideoAdvanceRequest setHeight(Integer height) {
+        this.height = height;
+        return this;
+    }
+    public Integer getHeight() {
+        return this.height;
     }
 
 }

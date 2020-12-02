@@ -17,6 +17,22 @@ public class ChangeVideoSizeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ChangeVideoSizeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ChangeVideoSizeResponse setData(ChangeVideoSizeResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ChangeVideoSizeResponseData getData() {
+        return this.data;
+    }
+
     public static class ChangeVideoSizeResponseData extends TeaModel {
         @NameInMap("VideoUrl")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class ChangeVideoSizeResponse extends TeaModel {
         public static ChangeVideoSizeResponseData build(java.util.Map<String, ?> map) throws Exception {
             ChangeVideoSizeResponseData self = new ChangeVideoSizeResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public ChangeVideoSizeResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public ChangeVideoSizeResponseData setVideoCoverUrl(String videoCoverUrl) {
+            this.videoCoverUrl = videoCoverUrl;
+            return this;
+        }
+        public String getVideoCoverUrl() {
+            return this.videoCoverUrl;
         }
 
     }

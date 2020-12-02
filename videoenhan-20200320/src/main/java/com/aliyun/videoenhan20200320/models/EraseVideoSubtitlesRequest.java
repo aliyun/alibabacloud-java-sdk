@@ -9,20 +9,60 @@ public class EraseVideoSubtitlesRequest extends TeaModel {
     public String videoUrl;
 
     @NameInMap("BX")
-    public Double BX;
+    public Float BX;
 
     @NameInMap("BY")
-    public Double BY;
+    public Float BY;
 
     @NameInMap("BW")
-    public Double BW;
+    public Float BW;
 
     @NameInMap("BH")
-    public Double BH;
+    public Float BH;
 
     public static EraseVideoSubtitlesRequest build(java.util.Map<String, ?> map) throws Exception {
         EraseVideoSubtitlesRequest self = new EraseVideoSubtitlesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EraseVideoSubtitlesRequest setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+        return this;
+    }
+    public String getVideoUrl() {
+        return this.videoUrl;
+    }
+
+    public EraseVideoSubtitlesRequest setBX(Float BX) {
+        this.BX = BX;
+        return this;
+    }
+    public Float getBX() {
+        return this.BX;
+    }
+
+    public EraseVideoSubtitlesRequest setBY(Float BY) {
+        this.BY = BY;
+        return this;
+    }
+    public Float getBY() {
+        return this.BY;
+    }
+
+    public EraseVideoSubtitlesRequest setBW(Float BW) {
+        this.BW = BW;
+        return this;
+    }
+    public Float getBW() {
+        return this.BW;
+    }
+
+    public EraseVideoSubtitlesRequest setBH(Float BH) {
+        this.BH = BH;
+        return this;
+    }
+    public Float getBH() {
+        return this.BH;
     }
 
 }

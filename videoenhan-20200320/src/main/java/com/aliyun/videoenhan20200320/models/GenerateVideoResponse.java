@@ -17,6 +17,22 @@ public class GenerateVideoResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GenerateVideoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GenerateVideoResponse setData(GenerateVideoResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public GenerateVideoResponseData getData() {
+        return this.data;
+    }
+
     public static class GenerateVideoResponseData extends TeaModel {
         @NameInMap("VideoUrl")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class GenerateVideoResponse extends TeaModel {
         public static GenerateVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
             GenerateVideoResponseData self = new GenerateVideoResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public GenerateVideoResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public GenerateVideoResponseData setVideoCoverUrl(String videoCoverUrl) {
+            this.videoCoverUrl = videoCoverUrl;
+            return this;
+        }
+        public String getVideoCoverUrl() {
+            return this.videoCoverUrl;
         }
 
     }

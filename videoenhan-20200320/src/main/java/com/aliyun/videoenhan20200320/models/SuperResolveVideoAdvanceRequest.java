@@ -16,4 +16,20 @@ public class SuperResolveVideoAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SuperResolveVideoAdvanceRequest setVideoUrlObject(java.io.InputStream videoUrlObject) {
+        this.videoUrlObject = videoUrlObject;
+        return this;
+    }
+    public java.io.InputStream getVideoUrlObject() {
+        return this.videoUrlObject;
+    }
+
+    public SuperResolveVideoAdvanceRequest setBitRate(Integer bitRate) {
+        this.bitRate = bitRate;
+        return this;
+    }
+    public Integer getBitRate() {
+        return this.bitRate;
+    }
+
 }
