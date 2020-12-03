@@ -82,6 +82,14 @@ public class DetectLungNoduleResponse extends TeaModel {
         @Validation(required = true)
         public String SOPInstanceUID;
 
+        @NameInMap("Volume")
+        @Validation(required = true)
+        public Float volume;
+
+        @NameInMap("MeanValue")
+        @Validation(required = true)
+        public Float meanValue;
+
         public static DetectLungNoduleResponseDataSeriesElements build(java.util.Map<String, ?> map) throws Exception {
             DetectLungNoduleResponseDataSeriesElements self = new DetectLungNoduleResponseDataSeriesElements();
             return TeaModel.build(map, self);
@@ -183,12 +191,32 @@ public class DetectLungNoduleResponse extends TeaModel {
             return this.SOPInstanceUID;
         }
 
+        public DetectLungNoduleResponseDataSeriesElements setVolume(Float volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Float getVolume() {
+            return this.volume;
+        }
+
+        public DetectLungNoduleResponseDataSeriesElements setMeanValue(Float meanValue) {
+            this.meanValue = meanValue;
+            return this;
+        }
+        public Float getMeanValue() {
+            return this.meanValue;
+        }
+
     }
 
     public static class DetectLungNoduleResponseDataSeries extends TeaModel {
         @NameInMap("SeriesInstanceUid")
         @Validation(required = true)
         public String seriesInstanceUid;
+
+        @NameInMap("Report")
+        @Validation(required = true)
+        public String report;
 
         @NameInMap("Elements")
         @Validation(required = true)
@@ -213,6 +241,14 @@ public class DetectLungNoduleResponse extends TeaModel {
         }
         public String getSeriesInstanceUid() {
             return this.seriesInstanceUid;
+        }
+
+        public DetectLungNoduleResponseDataSeries setReport(String report) {
+            this.report = report;
+            return this;
+        }
+        public String getReport() {
+            return this.report;
         }
 
         public DetectLungNoduleResponseDataSeries setElements(java.util.List<DetectLungNoduleResponseDataSeriesElements> elements) {
