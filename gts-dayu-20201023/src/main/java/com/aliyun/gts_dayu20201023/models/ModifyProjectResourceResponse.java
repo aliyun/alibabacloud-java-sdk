@@ -3,21 +3,21 @@ package com.aliyun.gts_dayu20201023.models;
 
 import com.aliyun.tea.*;
 
-public class ProjectQueryResponse extends TeaModel {
+public class ModifyProjectResourceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ProjectQueryResponseBody body;
+    public ModifyProjectResourceResponseBody body;
 
-    public static ProjectQueryResponse build(java.util.Map<String, ?> map) throws Exception {
-        ProjectQueryResponse self = new ProjectQueryResponse();
+    public static ModifyProjectResourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyProjectResourceResponse self = new ModifyProjectResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ProjectQueryResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyProjectResourceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ProjectQueryResponse extends TeaModel {
         return this.headers;
     }
 
-    public ProjectQueryResponse setBody(ProjectQueryResponseBody body) {
+    public ModifyProjectResourceResponse setBody(ModifyProjectResourceResponseBody body) {
         this.body = body;
         return this;
     }
-    public ProjectQueryResponseBody getBody() {
+    public ModifyProjectResourceResponseBody getBody() {
         return this.body;
     }
 

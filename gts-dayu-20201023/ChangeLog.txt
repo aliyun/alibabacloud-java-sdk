@@ -1,3 +1,6 @@
+2020-12-03 Version: 1.0.0
+- Add api.
+
 2020-10-26 Version: 1.0.0
 - Add api.
 
