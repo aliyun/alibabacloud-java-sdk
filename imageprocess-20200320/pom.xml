@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>imageprocess20200320</artifactId>
-  <version>1.0.8</version>
+  <version>1.0.9</version>
   <packaging>jar</packaging>
   <name>imageprocess20200320</name>
   <description>Alibaba Cloud imageprocess (20200320) SDK for Java
@@ -67,7 +67,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>oss-client</artifactId>
-      <version>3.0.1</version>
+      <version>3.0.2</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>
@@ -78,7 +78,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openplatform20191219</artifactId>
-      <version>4.0.0</version>
+      <version>3.0.1</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>

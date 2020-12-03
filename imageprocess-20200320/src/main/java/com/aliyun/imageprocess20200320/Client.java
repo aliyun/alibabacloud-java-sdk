@@ -19,6 +19,11 @@ public class Client extends com.aliyun.tearpc.Client {
         return TeaModel.toModel(this.doRequest("DetectSkinDisease", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new DetectSkinDiseaseResponse());
     }
 
+    public DetectSkinDiseaseResponse detectSkinDiseaseSimply(DetectSkinDiseaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectSkinDisease(request, runtime);
+    }
+
     public DetectSkinDiseaseResponse detectSkinDiseaseAdvance(DetectSkinDiseaseAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
@@ -49,8 +54,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        DetectSkinDiseaseRequest detectSkinDiseasereq = new DetectSkinDiseaseRequest();
-        com.aliyun.common.Common.convert(request, detectSkinDiseasereq);
+        DetectSkinDiseaseRequest detectSkinDiseaseReq = new DetectSkinDiseaseRequest();
+        com.aliyun.common.Common.convert(request, detectSkinDiseaseReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -73,8 +78,8 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        detectSkinDiseasereq.url = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        DetectSkinDiseaseResponse detectSkinDiseaseResp = this.detectSkinDisease(detectSkinDiseasereq, runtime);
+        detectSkinDiseaseReq.url = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        DetectSkinDiseaseResponse detectSkinDiseaseResp = this.detectSkinDisease(detectSkinDiseaseReq, runtime);
         return detectSkinDiseaseResp;
     }
 
@@ -83,9 +88,19 @@ public class Client extends com.aliyun.tearpc.Client {
         return TeaModel.toModel(this.doRequest("RunMedQA", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new RunMedQAResponse());
     }
 
+    public RunMedQAResponse runMedQASimply(RunMedQARequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runMedQA(request, runtime);
+    }
+
     public DetectKneeKeypointXRayResponse detectKneeKeypointXRay(DetectKneeKeypointXRayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DetectKneeKeypointXRay", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new DetectKneeKeypointXRayResponse());
+    }
+
+    public DetectKneeKeypointXRayResponse detectKneeKeypointXRaySimply(DetectKneeKeypointXRayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectKneeKeypointXRay(request, runtime);
     }
 
     public DetectKneeKeypointXRayResponse detectKneeKeypointXRayAdvance(DetectKneeKeypointXRayAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -118,8 +133,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        DetectKneeKeypointXRayRequest detectKneeKeypointXRayreq = new DetectKneeKeypointXRayRequest();
-        com.aliyun.common.Common.convert(request, detectKneeKeypointXRayreq);
+        DetectKneeKeypointXRayRequest detectKneeKeypointXRayReq = new DetectKneeKeypointXRayRequest();
+        com.aliyun.common.Common.convert(request, detectKneeKeypointXRayReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -142,14 +157,19 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        detectKneeKeypointXRayreq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        DetectKneeKeypointXRayResponse detectKneeKeypointXRayResp = this.detectKneeKeypointXRay(detectKneeKeypointXRayreq, runtime);
+        detectKneeKeypointXRayReq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        DetectKneeKeypointXRayResponse detectKneeKeypointXRayResp = this.detectKneeKeypointXRay(detectKneeKeypointXRayReq, runtime);
         return detectKneeKeypointXRayResp;
     }
 
     public ClassifyFNFResponse classifyFNF(ClassifyFNFRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ClassifyFNF", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new ClassifyFNFResponse());
+    }
+
+    public ClassifyFNFResponse classifyFNFSimply(ClassifyFNFRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.classifyFNF(request, runtime);
     }
 
     public ClassifyFNFResponse classifyFNFAdvance(ClassifyFNFAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -182,8 +202,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        ClassifyFNFRequest classifyFNFreq = new ClassifyFNFRequest();
-        com.aliyun.common.Common.convert(request, classifyFNFreq);
+        ClassifyFNFRequest classifyFNFReq = new ClassifyFNFRequest();
+        com.aliyun.common.Common.convert(request, classifyFNFReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -206,8 +226,8 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        classifyFNFreq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        ClassifyFNFResponse classifyFNFResp = this.classifyFNF(classifyFNFreq, runtime);
+        classifyFNFReq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        ClassifyFNFResponse classifyFNFResp = this.classifyFNF(classifyFNFReq, runtime);
         return classifyFNFResp;
     }
 
@@ -216,9 +236,19 @@ public class Client extends com.aliyun.tearpc.Client {
         return TeaModel.toModel(this.doRequest("RunCTRegistration", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new RunCTRegistrationResponse());
     }
 
+    public RunCTRegistrationResponse runCTRegistrationSimply(RunCTRegistrationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runCTRegistration(request, runtime);
+    }
+
     public DetectHipKeypointXRayResponse detectHipKeypointXRay(DetectHipKeypointXRayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DetectHipKeypointXRay", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new DetectHipKeypointXRayResponse());
+    }
+
+    public DetectHipKeypointXRayResponse detectHipKeypointXRaySimply(DetectHipKeypointXRayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectHipKeypointXRay(request, runtime);
     }
 
     public DetectHipKeypointXRayResponse detectHipKeypointXRayAdvance(DetectHipKeypointXRayAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -251,8 +281,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        DetectHipKeypointXRayRequest detectHipKeypointXRayreq = new DetectHipKeypointXRayRequest();
-        com.aliyun.common.Common.convert(request, detectHipKeypointXRayreq);
+        DetectHipKeypointXRayRequest detectHipKeypointXRayReq = new DetectHipKeypointXRayRequest();
+        com.aliyun.common.Common.convert(request, detectHipKeypointXRayReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -275,8 +305,8 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        detectHipKeypointXRayreq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        DetectHipKeypointXRayResponse detectHipKeypointXRayResp = this.detectHipKeypointXRay(detectHipKeypointXRayreq, runtime);
+        detectHipKeypointXRayReq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        DetectHipKeypointXRayResponse detectHipKeypointXRayResp = this.detectHipKeypointXRay(detectHipKeypointXRayReq, runtime);
         return detectHipKeypointXRayResp;
     }
 
@@ -285,9 +315,19 @@ public class Client extends com.aliyun.tearpc.Client {
         return TeaModel.toModel(this.doRequest("CalcCACS", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new CalcCACSResponse());
     }
 
+    public CalcCACSResponse calcCACSSimply(CalcCACSRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.calcCACS(request, runtime);
+    }
+
     public DetectKneeXRayResponse detectKneeXRay(DetectKneeXRayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DetectKneeXRay", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new DetectKneeXRayResponse());
+    }
+
+    public DetectKneeXRayResponse detectKneeXRaySimply(DetectKneeXRayRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectKneeXRay(request, runtime);
     }
 
     public DetectKneeXRayResponse detectKneeXRayAdvance(DetectKneeXRayAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -320,8 +360,8 @@ public class Client extends com.aliyun.tearpc.Client {
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.common.Common.convert(runtime, ossRuntime);
-        DetectKneeXRayRequest detectKneeXRayreq = new DetectKneeXRayRequest();
-        com.aliyun.common.Common.convert(request, detectKneeXRayreq);
+        DetectKneeXRayRequest detectKneeXRayReq = new DetectKneeXRayRequest();
+        com.aliyun.common.Common.convert(request, detectKneeXRayReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -344,8 +384,8 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        detectKneeXRayreq.url = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        DetectKneeXRayResponse detectKneeXRayResp = this.detectKneeXRay(detectKneeXRayreq, runtime);
+        detectKneeXRayReq.url = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        DetectKneeXRayResponse detectKneeXRayResp = this.detectKneeXRay(detectKneeXRayReq, runtime);
         return detectKneeXRayResp;
     }
 
@@ -354,9 +394,19 @@ public class Client extends com.aliyun.tearpc.Client {
         return TeaModel.toModel(this.doRequest("DetectSpineMRI", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new DetectSpineMRIResponse());
     }
 
+    public DetectSpineMRIResponse detectSpineMRISimply(DetectSpineMRIRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectSpineMRI(request, runtime);
+    }
+
     public TranslateMedResponse translateMed(TranslateMedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("TranslateMed", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new TranslateMedResponse());
+    }
+
+    public TranslateMedResponse translateMedSimply(TranslateMedRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.translateMed(request, runtime);
     }
 
     public DetectLungNoduleResponse detectLungNodule(DetectLungNoduleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -364,14 +414,29 @@ public class Client extends com.aliyun.tearpc.Client {
         return TeaModel.toModel(this.doRequest("DetectLungNodule", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new DetectLungNoduleResponse());
     }
 
+    public DetectLungNoduleResponse detectLungNoduleSimply(DetectLungNoduleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectLungNodule(request, runtime);
+    }
+
     public DetectCovid19CadResponse detectCovid19Cad(DetectCovid19CadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DetectCovid19Cad", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new DetectCovid19CadResponse());
     }
 
+    public DetectCovid19CadResponse detectCovid19CadSimply(DetectCovid19CadRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectCovid19Cad(request, runtime);
+    }
+
     public GetAsyncJobResultResponse getAsyncJobResult(GetAsyncJobResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetAsyncJobResult", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new GetAsyncJobResultResponse());
+    }
+
+    public GetAsyncJobResultResponse getAsyncJobResultSimply(GetAsyncJobResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAsyncJobResult(request, runtime);
     }
 
     public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
