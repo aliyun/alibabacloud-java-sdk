@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cloudgameapi20200728</artifactId>
-  <version>1.3.1</version>
+  <version>1.4.0</version>
   <packaging>jar</packaging>
   <name>cloudgameapi20200728</name>
   <description>Alibaba Cloud CloudGameAPI (20200728) SDK for Java
