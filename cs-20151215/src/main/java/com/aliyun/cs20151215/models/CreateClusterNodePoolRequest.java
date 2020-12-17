@@ -4,7 +4,7 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolRequest extends TeaModel {
-    // 自动伸缩配置。
+    // 自动伸缩节点池配置。
     @NameInMap("auto_scaling")
     public CreateClusterNodePoolRequestAutoScaling autoScaling;
 
@@ -16,13 +16,21 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     @NameInMap("nodepool_info")
     public CreateClusterNodePoolRequestNodepoolInfo nodepoolInfo;
 
-    // 节点池扩容配置
+    // 伸缩组配置
     @NameInMap("scaling_group")
     public CreateClusterNodePoolRequestScalingGroup scalingGroup;
 
-    // 加密计算配置。
+    // 加密计算节点池配置。
     @NameInMap("tee_config")
     public CreateClusterNodePoolRequestTeeConfig teeConfig;
+
+    // 托管节点池配置。
+    @NameInMap("management")
+    public CreateClusterNodePoolRequestManagement management;
+
+    // 节点数量。
+    @NameInMap("count")
+    public Long count;
 
     public static CreateClusterNodePoolRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateClusterNodePoolRequest self = new CreateClusterNodePoolRequest();
@@ -69,6 +77,22 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         return this.teeConfig;
     }
 
+    public CreateClusterNodePoolRequest setManagement(CreateClusterNodePoolRequestManagement management) {
+        this.management = management;
+        return this;
+    }
+    public CreateClusterNodePoolRequestManagement getManagement() {
+        return this.management;
+    }
+
+    public CreateClusterNodePoolRequest setCount(Long count) {
+        this.count = count;
+        return this;
+    }
+    public Long getCount() {
+        return this.count;
+    }
+
     public static class CreateClusterNodePoolRequestAutoScaling extends TeaModel {
         // 是否开启自动伸缩。
         @NameInMap("enable")
@@ -85,6 +109,18 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         // 扩容节点类型。
         @NameInMap("type")
         public String type;
+
+        // 是否绑定EIP。
+        @NameInMap("is_bond_eip")
+        public Boolean isBondEip;
+
+        // EIP实例规格。
+        @NameInMap("eip_internet_charge_type")
+        public String eipInternetChargeType;
+
+        // 带宽峰值。
+        @NameInMap("eip_bandwidth")
+        public Long eipBandwidth;
 
         public static CreateClusterNodePoolRequestAutoScaling build(java.util.Map<String, ?> map) throws Exception {
             CreateClusterNodePoolRequestAutoScaling self = new CreateClusterNodePoolRequestAutoScaling();
@@ -123,80 +159,28 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.type;
         }
 
-    }
-
-    public static class CreateClusterNodePoolRequestKubernetesConfigLabels extends TeaModel {
-        // key
-        @NameInMap("key")
-        public String key;
-
-        // value
-        @NameInMap("value")
-        public String value;
-
-        public static CreateClusterNodePoolRequestKubernetesConfigLabels build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterNodePoolRequestKubernetesConfigLabels self = new CreateClusterNodePoolRequestKubernetesConfigLabels();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateClusterNodePoolRequestKubernetesConfigLabels setKey(String key) {
-            this.key = key;
+        public CreateClusterNodePoolRequestAutoScaling setIsBondEip(Boolean isBondEip) {
+            this.isBondEip = isBondEip;
             return this;
         }
-        public String getKey() {
-            return this.key;
+        public Boolean getIsBondEip() {
+            return this.isBondEip;
         }
 
-        public CreateClusterNodePoolRequestKubernetesConfigLabels setValue(String value) {
-            this.value = value;
+        public CreateClusterNodePoolRequestAutoScaling setEipInternetChargeType(String eipInternetChargeType) {
+            this.eipInternetChargeType = eipInternetChargeType;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public String getEipInternetChargeType() {
+            return this.eipInternetChargeType;
         }
 
-    }
-
-    public static class CreateClusterNodePoolRequestKubernetesConfigTaints extends TeaModel {
-        // 污点策略。
-        @NameInMap("effect")
-        public String effect;
-
-        // key
-        @NameInMap("key")
-        public String key;
-
-        // value
-        @NameInMap("value")
-        public String value;
-
-        public static CreateClusterNodePoolRequestKubernetesConfigTaints build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterNodePoolRequestKubernetesConfigTaints self = new CreateClusterNodePoolRequestKubernetesConfigTaints();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateClusterNodePoolRequestKubernetesConfigTaints setEffect(String effect) {
-            this.effect = effect;
+        public CreateClusterNodePoolRequestAutoScaling setEipBandwidth(Long eipBandwidth) {
+            this.eipBandwidth = eipBandwidth;
             return this;
         }
-        public String getEffect() {
-            return this.effect;
-        }
-
-        public CreateClusterNodePoolRequestKubernetesConfigTaints setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateClusterNodePoolRequestKubernetesConfigTaints setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
+        public Long getEipBandwidth() {
+            return this.eipBandwidth;
         }
 
     }
@@ -212,7 +196,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
         // 节点标签。
         @NameInMap("labels")
-        public java.util.List<CreateClusterNodePoolRequestKubernetesConfigLabels> labels;
+        public java.util.List<Tags> labels;
 
         // 容器运行时。
         @NameInMap("runtime")
@@ -224,7 +208,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
         // 污点信息。
         @NameInMap("taints")
-        public java.util.List<CreateClusterNodePoolRequestKubernetesConfigTaints> taints;
+        public java.util.List<Taints> taints;
 
         // 节点自定义数据。
         @NameInMap("user_data")
@@ -251,11 +235,11 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.cpuPolicy;
         }
 
-        public CreateClusterNodePoolRequestKubernetesConfig setLabels(java.util.List<CreateClusterNodePoolRequestKubernetesConfigLabels> labels) {
+        public CreateClusterNodePoolRequestKubernetesConfig setLabels(java.util.List<Tags> labels) {
             this.labels = labels;
             return this;
         }
-        public java.util.List<CreateClusterNodePoolRequestKubernetesConfigLabels> getLabels() {
+        public java.util.List<Tags> getLabels() {
             return this.labels;
         }
 
@@ -275,11 +259,11 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.runtimeVersion;
         }
 
-        public CreateClusterNodePoolRequestKubernetesConfig setTaints(java.util.List<CreateClusterNodePoolRequestKubernetesConfigTaints> taints) {
+        public CreateClusterNodePoolRequestKubernetesConfig setTaints(java.util.List<Taints> taints) {
             this.taints = taints;
             return this;
         }
-        public java.util.List<CreateClusterNodePoolRequestKubernetesConfigTaints> getTaints() {
+        public java.util.List<Taints> getTaints() {
             return this.taints;
         }
 
@@ -325,46 +309,34 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
     }
 
-    public static class CreateClusterNodePoolRequestScalingGroupDataDisks extends TeaModel {
-        // 数据盘类型。
-        @NameInMap("category")
-        public String category;
+    public static class CreateClusterNodePoolRequestScalingGroupSpotPriceLimit extends TeaModel {
+        // 抢占实例规格。
+        @NameInMap("instance_type")
+        public String instanceType;
 
-        // 数据盘是否加密。
-        @NameInMap("encrypted")
-        public String encrypted;
+        // 抢占实例单价。
+        @NameInMap("price_limit")
+        public String priceLimit;
 
-        // 数据盘大小。
-        @NameInMap("size")
-        public Long size;
-
-        public static CreateClusterNodePoolRequestScalingGroupDataDisks build(java.util.Map<String, ?> map) throws Exception {
-            CreateClusterNodePoolRequestScalingGroupDataDisks self = new CreateClusterNodePoolRequestScalingGroupDataDisks();
+        public static CreateClusterNodePoolRequestScalingGroupSpotPriceLimit build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestScalingGroupSpotPriceLimit self = new CreateClusterNodePoolRequestScalingGroupSpotPriceLimit();
             return TeaModel.build(map, self);
         }
 
-        public CreateClusterNodePoolRequestScalingGroupDataDisks setCategory(String category) {
-            this.category = category;
+        public CreateClusterNodePoolRequestScalingGroupSpotPriceLimit setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
             return this;
         }
-        public String getCategory() {
-            return this.category;
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
-        public CreateClusterNodePoolRequestScalingGroupDataDisks setEncrypted(String encrypted) {
-            this.encrypted = encrypted;
+        public CreateClusterNodePoolRequestScalingGroupSpotPriceLimit setPriceLimit(String priceLimit) {
+            this.priceLimit = priceLimit;
             return this;
         }
-        public String getEncrypted() {
-            return this.encrypted;
-        }
-
-        public CreateClusterNodePoolRequestScalingGroupDataDisks setSize(Long size) {
-            this.size = size;
-            return this;
-        }
-        public Long getSize() {
-            return this.size;
+        public String getPriceLimit() {
+            return this.priceLimit;
         }
 
     }
@@ -412,7 +384,7 @@ public class CreateClusterNodePoolRequest extends TeaModel {
 
         // 数据盘配置。
         @NameInMap("data_disks")
-        public java.util.List<CreateClusterNodePoolRequestScalingGroupDataDisks> dataDisks;
+        public java.util.List<DataDisks> dataDisks;
 
         // 自定义镜像。
         @NameInMap("image_id")
@@ -450,6 +422,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("rds_instances")
         public java.util.List<String> rdsInstances;
 
+        // 抢占式实例类型
+        @NameInMap("spot_strategy")
+        public String spotStrategy;
+
+        // 抢占实例价格上限配置。
+        @NameInMap("spot_price_limit")
+        public java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> spotPriceLimit;
+
         // 自动伸缩。
         @NameInMap("scaling_policy")
         public String scalingPolicy;
@@ -469,10 +449,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         // ECS标签
         @NameInMap("tags")
         public java.util.List<CreateClusterNodePoolRequestScalingGroupTags> tags;
-
-        // VPC网络ID
-        @NameInMap("vpc_id")
-        public String vpcId;
 
         // 虚拟交换机ID。
         @NameInMap("vswitch_ids")
@@ -499,11 +475,11 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.autoRenewPeriod;
         }
 
-        public CreateClusterNodePoolRequestScalingGroup setDataDisks(java.util.List<CreateClusterNodePoolRequestScalingGroupDataDisks> dataDisks) {
+        public CreateClusterNodePoolRequestScalingGroup setDataDisks(java.util.List<DataDisks> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
-        public java.util.List<CreateClusterNodePoolRequestScalingGroupDataDisks> getDataDisks() {
+        public java.util.List<DataDisks> getDataDisks() {
             return this.dataDisks;
         }
 
@@ -579,6 +555,22 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.rdsInstances;
         }
 
+        public CreateClusterNodePoolRequestScalingGroup setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setSpotPriceLimit(java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public java.util.List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
         public CreateClusterNodePoolRequestScalingGroup setScalingPolicy(String scalingPolicy) {
             this.scalingPolicy = scalingPolicy;
             return this;
@@ -619,14 +611,6 @@ public class CreateClusterNodePoolRequest extends TeaModel {
             return this.tags;
         }
 
-        public CreateClusterNodePoolRequestScalingGroup setVpcId(String vpcId) {
-            this.vpcId = vpcId;
-            return this;
-        }
-        public String getVpcId() {
-            return this.vpcId;
-        }
-
         public CreateClusterNodePoolRequestScalingGroup setVswitchIds(java.util.List<String> vswitchIds) {
             this.vswitchIds = vswitchIds;
             return this;
@@ -653,6 +637,106 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public Boolean getTeeEnable() {
             return this.teeEnable;
+        }
+
+    }
+
+    public static class CreateClusterNodePoolRequestManagementUpgradeConfig extends TeaModel {
+        // 是否启用自动升级
+        @NameInMap("auto_upgrade")
+        public Boolean autoUpgrade;
+
+        // 额外节点数量。
+        @NameInMap("surge")
+        public Long surge;
+
+        // 额外节点比例。和surge二选一。
+        @NameInMap("surge_percentage")
+        public Long surgePercentage;
+
+        // 最大不可用节点数量。
+        @NameInMap("max_unavailable")
+        public Long maxUnavailable;
+
+        public static CreateClusterNodePoolRequestManagementUpgradeConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestManagementUpgradeConfig self = new CreateClusterNodePoolRequestManagementUpgradeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestManagementUpgradeConfig setAutoUpgrade(Boolean autoUpgrade) {
+            this.autoUpgrade = autoUpgrade;
+            return this;
+        }
+        public Boolean getAutoUpgrade() {
+            return this.autoUpgrade;
+        }
+
+        public CreateClusterNodePoolRequestManagementUpgradeConfig setSurge(Long surge) {
+            this.surge = surge;
+            return this;
+        }
+        public Long getSurge() {
+            return this.surge;
+        }
+
+        public CreateClusterNodePoolRequestManagementUpgradeConfig setSurgePercentage(Long surgePercentage) {
+            this.surgePercentage = surgePercentage;
+            return this;
+        }
+        public Long getSurgePercentage() {
+            return this.surgePercentage;
+        }
+
+        public CreateClusterNodePoolRequestManagementUpgradeConfig setMaxUnavailable(Long maxUnavailable) {
+            this.maxUnavailable = maxUnavailable;
+            return this;
+        }
+        public Long getMaxUnavailable() {
+            return this.maxUnavailable;
+        }
+
+    }
+
+    public static class CreateClusterNodePoolRequestManagement extends TeaModel {
+        // 是否启用托管节点池。
+        @NameInMap("enable")
+        public Boolean enable;
+
+        // 是否启用自动修复。
+        @NameInMap("auto_repair")
+        public Boolean autoRepair;
+
+        // 自动升级配置。
+        @NameInMap("upgrade_config")
+        public CreateClusterNodePoolRequestManagementUpgradeConfig upgradeConfig;
+
+        public static CreateClusterNodePoolRequestManagement build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestManagement self = new CreateClusterNodePoolRequestManagement();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestManagement setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public CreateClusterNodePoolRequestManagement setAutoRepair(Boolean autoRepair) {
+            this.autoRepair = autoRepair;
+            return this;
+        }
+        public Boolean getAutoRepair() {
+            return this.autoRepair;
+        }
+
+        public CreateClusterNodePoolRequestManagement setUpgradeConfig(CreateClusterNodePoolRequestManagementUpgradeConfig upgradeConfig) {
+            this.upgradeConfig = upgradeConfig;
+            return this;
+        }
+        public CreateClusterNodePoolRequestManagementUpgradeConfig getUpgradeConfig() {
+            return this.upgradeConfig;
         }
 
     }

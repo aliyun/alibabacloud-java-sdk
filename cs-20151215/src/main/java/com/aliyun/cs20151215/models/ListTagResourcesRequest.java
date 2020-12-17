@@ -4,25 +4,37 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    // 下一个版本。
-    @NameInMap("next_token")
-    public String nextToken;
-
-    // 资源ID。
+    // 集群ID列表。
     @NameInMap("resource_ids")
-    public String resourceIds;
+    public java.util.List<String> resourceIds;
 
     // 按标签查找。
     @NameInMap("tags")
-    public String tags;
+    public java.util.List<ListTagResourcesRequestTags> tags;
 
-    // 资源类型，例如：SLB。
-    @NameInMap("resource_type")
-    public String resourceType;
+    // 下一次查询Token。
+    @NameInMap("next_token")
+    public String nextToken;
 
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagResourcesRequest setResourceIds(java.util.List<String> resourceIds) {
+        this.resourceIds = resourceIds;
+        return this;
+    }
+    public java.util.List<String> getResourceIds() {
+        return this.resourceIds;
+    }
+
+    public ListTagResourcesRequest setTags(java.util.List<ListTagResourcesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<ListTagResourcesRequestTags> getTags() {
+        return this.tags;
     }
 
     public ListTagResourcesRequest setNextToken(String nextToken) {
@@ -33,28 +45,36 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListTagResourcesRequest setResourceIds(String resourceIds) {
-        this.resourceIds = resourceIds;
-        return this;
-    }
-    public String getResourceIds() {
-        return this.resourceIds;
-    }
+    public static class ListTagResourcesRequestTags extends TeaModel {
+        // 标签key。
+        @NameInMap("key")
+        public String key;
 
-    public ListTagResourcesRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
-    }
+        // 标签值。
+        @NameInMap("value")
+        public String value;
 
-    public ListTagResourcesRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
+        public static ListTagResourcesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTagResourcesRequestTags self = new ListTagResourcesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTagResourcesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTagResourcesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
