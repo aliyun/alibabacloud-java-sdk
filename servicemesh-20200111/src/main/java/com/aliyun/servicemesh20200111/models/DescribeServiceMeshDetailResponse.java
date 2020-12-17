@@ -254,6 +254,10 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
         @Validation(required = true)
         public Float traceSampling;
 
+        @NameInMap("Http10Enabled")
+        @Validation(required = true)
+        public Boolean http10Enabled;
+
         public static DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigPilot build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigPilot self = new DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigPilot();
             return TeaModel.build(map, self);
@@ -265,6 +269,14 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
         }
         public Float getTraceSampling() {
             return this.traceSampling;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigPilot setHttp10Enabled(Boolean http10Enabled) {
+            this.http10Enabled = http10Enabled;
+            return this;
+        }
+        public Boolean getHttp10Enabled() {
+            return this.http10Enabled;
         }
 
     }
@@ -449,6 +461,38 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration extends TeaModel {
+        @NameInMap("Enabled")
+        @Validation(required = true)
+        public Boolean enabled;
+
+        @NameInMap("ExcludeNamespaces")
+        @Validation(required = true)
+        public String excludeNamespaces;
+
+        public static DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration self = new DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration setExcludeNamespaces(String excludeNamespaces) {
+            this.excludeNamespaces = excludeNamespaces;
+            return this;
+        }
+        public String getExcludeNamespaces() {
+            return this.excludeNamespaces;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector extends TeaModel {
         @NameInMap("EnableNamespacesByDefault")
         @Validation(required = true)
@@ -477,6 +521,10 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
         @NameInMap("SidecarInjectorWebhookAsYaml")
         @Validation(required = true)
         public String sidecarInjectorWebhookAsYaml;
+
+        @NameInMap("InitCNIConfiguration")
+        @Validation(required = true)
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration initCNIConfiguration;
 
         public static DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector self = new DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector();
@@ -537,6 +585,14 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
         }
         public String getSidecarInjectorWebhookAsYaml() {
             return this.sidecarInjectorWebhookAsYaml;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjector setInitCNIConfiguration(DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration initCNIConfiguration) {
+            this.initCNIConfiguration = initCNIConfiguration;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigSidecarInjectorInitCNIConfiguration getInitCNIConfiguration() {
+            return this.initCNIConfiguration;
         }
 
     }

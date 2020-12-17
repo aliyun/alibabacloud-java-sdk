@@ -28,6 +28,7 @@ public class CreateServiceMeshRequest extends TeaModel {
     public String name;
 
     @NameInMap("VSwitches")
+    @Validation(required = true)
     public String vSwitches;
 
     @NameInMap("TraceSampling")
@@ -86,6 +87,9 @@ public class CreateServiceMeshRequest extends TeaModel {
 
     @NameInMap("ExcludeInboundPorts")
     public String excludeInboundPorts;
+
+    @NameInMap("OpaEnabled")
+    public Boolean opaEnabled;
 
     public static CreateServiceMeshRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceMeshRequest self = new CreateServiceMeshRequest();
@@ -306,6 +310,14 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public String getExcludeInboundPorts() {
         return this.excludeInboundPorts;
+    }
+
+    public CreateServiceMeshRequest setOpaEnabled(Boolean opaEnabled) {
+        this.opaEnabled = opaEnabled;
+        return this;
+    }
+    public Boolean getOpaEnabled() {
+        return this.opaEnabled;
     }
 
 }

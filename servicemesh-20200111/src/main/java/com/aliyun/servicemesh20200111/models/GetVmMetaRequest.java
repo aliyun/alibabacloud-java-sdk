@@ -12,11 +12,9 @@ public class GetVmMetaRequest extends TeaModel {
     public String trustDomain;
 
     @NameInMap("Namespace")
-    @Validation(required = true)
     public String namespace;
 
     @NameInMap("ServiceAccount")
-    @Validation(required = true)
     public String serviceAccount;
 
     public static GetVmMetaRequest build(java.util.Map<String, ?> map) throws Exception {
