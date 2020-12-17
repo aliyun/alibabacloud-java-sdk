@@ -20,4 +20,28 @@ public class GetChangeSetRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetChangeSetRequest setShowTemplate(Boolean showTemplate) {
+        this.showTemplate = showTemplate;
+        return this;
+    }
+    public Boolean getShowTemplate() {
+        return this.showTemplate;
+    }
+
+    public GetChangeSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetChangeSetRequest setChangeSetId(String changeSetId) {
+        this.changeSetId = changeSetId;
+        return this;
+    }
+    public String getChangeSetId() {
+        return this.changeSetId;
+    }
+
 }

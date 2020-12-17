@@ -25,4 +25,36 @@ public class GetStackInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetStackInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetStackInstanceRequest setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
+    public GetStackInstanceRequest setStackInstanceAccountId(String stackInstanceAccountId) {
+        this.stackInstanceAccountId = stackInstanceAccountId;
+        return this;
+    }
+    public String getStackInstanceAccountId() {
+        return this.stackInstanceAccountId;
+    }
+
+    public GetStackInstanceRequest setStackInstanceRegionId(String stackInstanceRegionId) {
+        this.stackInstanceRegionId = stackInstanceRegionId;
+        return this;
+    }
+    public String getStackInstanceRegionId() {
+        return this.stackInstanceRegionId;
+    }
+
 }

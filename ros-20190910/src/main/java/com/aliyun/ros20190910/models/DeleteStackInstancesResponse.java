@@ -17,4 +17,20 @@ public class DeleteStackInstancesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteStackInstancesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeleteStackInstancesResponse setOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    public String getOperationId() {
+        return this.operationId;
+    }
+
 }

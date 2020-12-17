@@ -21,4 +21,28 @@ public class ValidateTemplateResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ValidateTemplateResponse setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ValidateTemplateResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ValidateTemplateResponse setParameters(java.util.List<java.util.Map<String, ?>> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getParameters() {
+        return this.parameters;
+    }
+
 }

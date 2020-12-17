@@ -69,9 +69,199 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("ResourcesToImport")
     public java.util.List<CreateChangeSetRequestResourcesToImport> resourcesToImport;
 
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("TemplateVersion")
+    public String templateVersion;
+
     public static CreateChangeSetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateChangeSetRequest self = new CreateChangeSetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateChangeSetRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public CreateChangeSetRequest setParameters(java.util.List<CreateChangeSetRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<CreateChangeSetRequestParameters> getParameters() {
+        return this.parameters;
+    }
+
+    public CreateChangeSetRequest setStackPolicyURL(String stackPolicyURL) {
+        this.stackPolicyURL = stackPolicyURL;
+        return this;
+    }
+    public String getStackPolicyURL() {
+        return this.stackPolicyURL;
+    }
+
+    public CreateChangeSetRequest setStackPolicyBody(String stackPolicyBody) {
+        this.stackPolicyBody = stackPolicyBody;
+        return this;
+    }
+    public String getStackPolicyBody() {
+        return this.stackPolicyBody;
+    }
+
+    public CreateChangeSetRequest setStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    public String getStackName() {
+        return this.stackName;
+    }
+
+    public CreateChangeSetRequest setUsePreviousParameters(Boolean usePreviousParameters) {
+        this.usePreviousParameters = usePreviousParameters;
+        return this;
+    }
+    public Boolean getUsePreviousParameters() {
+        return this.usePreviousParameters;
+    }
+
+    public CreateChangeSetRequest setChangeSetType(String changeSetType) {
+        this.changeSetType = changeSetType;
+        return this;
+    }
+    public String getChangeSetType() {
+        return this.changeSetType;
+    }
+
+    public CreateChangeSetRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateChangeSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateChangeSetRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateChangeSetRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    public CreateChangeSetRequest setStackPolicyDuringUpdateURL(String stackPolicyDuringUpdateURL) {
+        this.stackPolicyDuringUpdateURL = stackPolicyDuringUpdateURL;
+        return this;
+    }
+    public String getStackPolicyDuringUpdateURL() {
+        return this.stackPolicyDuringUpdateURL;
+    }
+
+    public CreateChangeSetRequest setTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    public CreateChangeSetRequest setTimeoutInMinutes(Long timeoutInMinutes) {
+        this.timeoutInMinutes = timeoutInMinutes;
+        return this;
+    }
+    public Long getTimeoutInMinutes() {
+        return this.timeoutInMinutes;
+    }
+
+    public CreateChangeSetRequest setDisableRollback(Boolean disableRollback) {
+        this.disableRollback = disableRollback;
+        return this;
+    }
+    public Boolean getDisableRollback() {
+        return this.disableRollback;
+    }
+
+    public CreateChangeSetRequest setChangeSetName(String changeSetName) {
+        this.changeSetName = changeSetName;
+        return this;
+    }
+    public String getChangeSetName() {
+        return this.changeSetName;
+    }
+
+    public CreateChangeSetRequest setStackPolicyDuringUpdateBody(String stackPolicyDuringUpdateBody) {
+        this.stackPolicyDuringUpdateBody = stackPolicyDuringUpdateBody;
+        return this;
+    }
+    public String getStackPolicyDuringUpdateBody() {
+        return this.stackPolicyDuringUpdateBody;
+    }
+
+    public CreateChangeSetRequest setNotificationURLs(java.util.List<String> notificationURLs) {
+        this.notificationURLs = notificationURLs;
+        return this;
+    }
+    public java.util.List<String> getNotificationURLs() {
+        return this.notificationURLs;
+    }
+
+    public CreateChangeSetRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
+    public CreateChangeSetRequest setReplacementOption(String replacementOption) {
+        this.replacementOption = replacementOption;
+        return this;
+    }
+    public String getReplacementOption() {
+        return this.replacementOption;
+    }
+
+    public CreateChangeSetRequest setResourcesToImport(java.util.List<CreateChangeSetRequestResourcesToImport> resourcesToImport) {
+        this.resourcesToImport = resourcesToImport;
+        return this;
+    }
+    public java.util.List<CreateChangeSetRequestResourcesToImport> getResourcesToImport() {
+        return this.resourcesToImport;
+    }
+
+    public CreateChangeSetRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public CreateChangeSetRequest setTemplateVersion(String templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public String getTemplateVersion() {
+        return this.templateVersion;
     }
 
     public static class CreateChangeSetRequestParameters extends TeaModel {
@@ -86,6 +276,22 @@ public class CreateChangeSetRequest extends TeaModel {
         public static CreateChangeSetRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             CreateChangeSetRequestParameters self = new CreateChangeSetRequestParameters();
             return TeaModel.build(map, self);
+        }
+
+        public CreateChangeSetRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
+        public CreateChangeSetRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
         }
 
     }
@@ -106,6 +312,30 @@ public class CreateChangeSetRequest extends TeaModel {
         public static CreateChangeSetRequestResourcesToImport build(java.util.Map<String, ?> map) throws Exception {
             CreateChangeSetRequestResourcesToImport self = new CreateChangeSetRequestResourcesToImport();
             return TeaModel.build(map, self);
+        }
+
+        public CreateChangeSetRequestResourcesToImport setLogicalResourceId(String logicalResourceId) {
+            this.logicalResourceId = logicalResourceId;
+            return this;
+        }
+        public String getLogicalResourceId() {
+            return this.logicalResourceId;
+        }
+
+        public CreateChangeSetRequestResourcesToImport setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public CreateChangeSetRequestResourcesToImport setResourceIdentifier(String resourceIdentifier) {
+            this.resourceIdentifier = resourceIdentifier;
+            return this;
+        }
+        public String getResourceIdentifier() {
+            return this.resourceIdentifier;
         }
 
     }

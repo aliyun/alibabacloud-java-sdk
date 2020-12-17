@@ -29,4 +29,44 @@ public class GetResourceTypeResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetResourceTypeResponse setAttributes(java.util.Map<String, ?> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public java.util.Map<String, ?> getAttributes() {
+        return this.attributes;
+    }
+
+    public GetResourceTypeResponse setProperties(java.util.Map<String, ?> properties) {
+        this.properties = properties;
+        return this;
+    }
+    public java.util.Map<String, ?> getProperties() {
+        return this.properties;
+    }
+
+    public GetResourceTypeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetResourceTypeResponse setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public GetResourceTypeResponse setSupportDriftDetection(Boolean supportDriftDetection) {
+        this.supportDriftDetection = supportDriftDetection;
+        return this;
+    }
+    public Boolean getSupportDriftDetection() {
+        return this.supportDriftDetection;
+    }
+
 }

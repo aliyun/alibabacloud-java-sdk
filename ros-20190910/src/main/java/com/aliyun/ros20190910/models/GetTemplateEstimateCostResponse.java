@@ -17,4 +17,20 @@ public class GetTemplateEstimateCostResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetTemplateEstimateCostResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetTemplateEstimateCostResponse setResources(java.util.Map<String, ?> resources) {
+        this.resources = resources;
+        return this;
+    }
+    public java.util.Map<String, ?> getResources() {
+        return this.resources;
+    }
+
 }

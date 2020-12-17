@@ -17,4 +17,20 @@ public class DeleteStackGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteStackGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteStackGroupRequest setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
 }

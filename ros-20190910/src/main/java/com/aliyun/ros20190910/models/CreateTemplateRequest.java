@@ -22,4 +22,36 @@ public class CreateTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateTemplateRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    public CreateTemplateRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateTemplateRequest setTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    public CreateTemplateRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
 }

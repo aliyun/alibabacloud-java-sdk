@@ -20,4 +20,28 @@ public class CancelUpdateStackRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CancelUpdateStackRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public CancelUpdateStackRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CancelUpdateStackRequest setCancelType(String cancelType) {
+        this.cancelType = cancelType;
+        return this;
+    }
+    public String getCancelType() {
+        return this.cancelType;
+    }
+
 }

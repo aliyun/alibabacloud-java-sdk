@@ -17,4 +17,20 @@ public class ListResourceTypesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListResourceTypesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListResourceTypesResponse setResourceTypes(java.util.List<String> resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public java.util.List<String> getResourceTypes() {
+        return this.resourceTypes;
+    }
+
 }

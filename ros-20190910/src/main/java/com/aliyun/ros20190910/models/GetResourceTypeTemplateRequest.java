@@ -13,4 +13,12 @@ public class GetResourceTypeTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetResourceTypeTemplateRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
 }

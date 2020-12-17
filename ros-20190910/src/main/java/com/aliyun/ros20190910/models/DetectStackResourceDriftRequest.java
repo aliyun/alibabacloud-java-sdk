@@ -24,4 +24,36 @@ public class DetectStackResourceDriftRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetectStackResourceDriftRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public DetectStackResourceDriftRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DetectStackResourceDriftRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DetectStackResourceDriftRequest setLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    public String getLogicalResourceId() {
+        return this.logicalResourceId;
+    }
+
 }

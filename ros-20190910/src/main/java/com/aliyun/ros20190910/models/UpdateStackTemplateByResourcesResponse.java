@@ -21,4 +21,28 @@ public class UpdateStackTemplateByResourcesResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateStackTemplateByResourcesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpdateStackTemplateByResourcesResponse setOldTemplateBody(String oldTemplateBody) {
+        this.oldTemplateBody = oldTemplateBody;
+        return this;
+    }
+    public String getOldTemplateBody() {
+        return this.oldTemplateBody;
+    }
+
+    public UpdateStackTemplateByResourcesResponse setNewTemplateBody(String newTemplateBody) {
+        this.newTemplateBody = newTemplateBody;
+        return this;
+    }
+    public String getNewTemplateBody() {
+        return this.newTemplateBody;
+    }
+
 }

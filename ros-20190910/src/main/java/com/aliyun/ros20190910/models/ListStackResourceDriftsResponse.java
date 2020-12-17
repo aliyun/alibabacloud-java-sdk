@@ -21,6 +21,30 @@ public class ListStackResourceDriftsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListStackResourceDriftsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListStackResourceDriftsResponse setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListStackResourceDriftsResponse setResourceDrifts(java.util.List<ListStackResourceDriftsResponseResourceDrifts> resourceDrifts) {
+        this.resourceDrifts = resourceDrifts;
+        return this;
+    }
+    public java.util.List<ListStackResourceDriftsResponseResourceDrifts> getResourceDrifts() {
+        return this.resourceDrifts;
+    }
+
     public static class ListStackResourceDriftsResponseResourceDriftsPropertyDifferences extends TeaModel {
         @NameInMap("PropertyPath")
         @Validation(required = true)
@@ -41,6 +65,38 @@ public class ListStackResourceDriftsResponse extends TeaModel {
         public static ListStackResourceDriftsResponseResourceDriftsPropertyDifferences build(java.util.Map<String, ?> map) throws Exception {
             ListStackResourceDriftsResponseResourceDriftsPropertyDifferences self = new ListStackResourceDriftsResponseResourceDriftsPropertyDifferences();
             return TeaModel.build(map, self);
+        }
+
+        public ListStackResourceDriftsResponseResourceDriftsPropertyDifferences setPropertyPath(String propertyPath) {
+            this.propertyPath = propertyPath;
+            return this;
+        }
+        public String getPropertyPath() {
+            return this.propertyPath;
+        }
+
+        public ListStackResourceDriftsResponseResourceDriftsPropertyDifferences setActualValue(String actualValue) {
+            this.actualValue = actualValue;
+            return this;
+        }
+        public String getActualValue() {
+            return this.actualValue;
+        }
+
+        public ListStackResourceDriftsResponseResourceDriftsPropertyDifferences setExpectedValue(String expectedValue) {
+            this.expectedValue = expectedValue;
+            return this;
+        }
+        public String getExpectedValue() {
+            return this.expectedValue;
+        }
+
+        public ListStackResourceDriftsResponseResourceDriftsPropertyDifferences setDifferenceType(String differenceType) {
+            this.differenceType = differenceType;
+            return this;
+        }
+        public String getDifferenceType() {
+            return this.differenceType;
         }
 
     }
@@ -85,6 +141,78 @@ public class ListStackResourceDriftsResponse extends TeaModel {
         public static ListStackResourceDriftsResponseResourceDrifts build(java.util.Map<String, ?> map) throws Exception {
             ListStackResourceDriftsResponseResourceDrifts self = new ListStackResourceDriftsResponseResourceDrifts();
             return TeaModel.build(map, self);
+        }
+
+        public ListStackResourceDriftsResponseResourceDrifts setDriftDetectionTime(String driftDetectionTime) {
+            this.driftDetectionTime = driftDetectionTime;
+            return this;
+        }
+        public String getDriftDetectionTime() {
+            return this.driftDetectionTime;
+        }
+
+        public ListStackResourceDriftsResponseResourceDrifts setResourceDriftStatus(String resourceDriftStatus) {
+            this.resourceDriftStatus = resourceDriftStatus;
+            return this;
+        }
+        public String getResourceDriftStatus() {
+            return this.resourceDriftStatus;
+        }
+
+        public ListStackResourceDriftsResponseResourceDrifts setStackId(String stackId) {
+            this.stackId = stackId;
+            return this;
+        }
+        public String getStackId() {
+            return this.stackId;
+        }
+
+        public ListStackResourceDriftsResponseResourceDrifts setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public ListStackResourceDriftsResponseResourceDrifts setPhysicalResourceId(String physicalResourceId) {
+            this.physicalResourceId = physicalResourceId;
+            return this;
+        }
+        public String getPhysicalResourceId() {
+            return this.physicalResourceId;
+        }
+
+        public ListStackResourceDriftsResponseResourceDrifts setLogicalResourceId(String logicalResourceId) {
+            this.logicalResourceId = logicalResourceId;
+            return this;
+        }
+        public String getLogicalResourceId() {
+            return this.logicalResourceId;
+        }
+
+        public ListStackResourceDriftsResponseResourceDrifts setActualProperties(String actualProperties) {
+            this.actualProperties = actualProperties;
+            return this;
+        }
+        public String getActualProperties() {
+            return this.actualProperties;
+        }
+
+        public ListStackResourceDriftsResponseResourceDrifts setExpectedProperties(String expectedProperties) {
+            this.expectedProperties = expectedProperties;
+            return this;
+        }
+        public String getExpectedProperties() {
+            return this.expectedProperties;
+        }
+
+        public ListStackResourceDriftsResponseResourceDrifts setPropertyDifferences(java.util.List<ListStackResourceDriftsResponseResourceDriftsPropertyDifferences> propertyDifferences) {
+            this.propertyDifferences = propertyDifferences;
+            return this;
+        }
+        public java.util.List<ListStackResourceDriftsResponseResourceDriftsPropertyDifferences> getPropertyDifferences() {
+            return this.propertyDifferences;
         }
 
     }

@@ -17,4 +17,20 @@ public class UpdateTemplateResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateTemplateResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpdateTemplateResponse setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
 }

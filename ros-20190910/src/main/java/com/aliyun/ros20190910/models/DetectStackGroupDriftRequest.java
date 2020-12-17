@@ -23,4 +23,36 @@ public class DetectStackGroupDriftRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetectStackGroupDriftRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public DetectStackGroupDriftRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DetectStackGroupDriftRequest setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
+    public DetectStackGroupDriftRequest setOperationPreferences(java.util.Map<String, ?> operationPreferences) {
+        this.operationPreferences = operationPreferences;
+        return this;
+    }
+    public java.util.Map<String, ?> getOperationPreferences() {
+        return this.operationPreferences;
+    }
+
 }

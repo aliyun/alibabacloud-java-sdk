@@ -21,4 +21,28 @@ public class ListTagKeysResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListTagKeysResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListTagKeysResponse setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagKeysResponse setKeys(java.util.List<String> keys) {
+        this.keys = keys;
+        return this;
+    }
+    public java.util.List<String> getKeys() {
+        return this.keys;
+    }
+
 }

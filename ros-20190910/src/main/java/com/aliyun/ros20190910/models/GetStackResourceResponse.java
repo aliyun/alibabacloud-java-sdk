@@ -69,4 +69,124 @@ public class GetStackResourceResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetStackResourceResponse setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public GetStackResourceResponse setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public GetStackResourceResponse setLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    public String getLogicalResourceId() {
+        return this.logicalResourceId;
+    }
+
+    public GetStackResourceResponse setMetadata(java.util.Map<String, ?> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+    public java.util.Map<String, ?> getMetadata() {
+        return this.metadata;
+    }
+
+    public GetStackResourceResponse setPhysicalResourceId(String physicalResourceId) {
+        this.physicalResourceId = physicalResourceId;
+        return this;
+    }
+    public String getPhysicalResourceId() {
+        return this.physicalResourceId;
+    }
+
+    public GetStackResourceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetStackResourceResponse setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public GetStackResourceResponse setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public GetStackResourceResponse setStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    public String getStackName() {
+        return this.stackName;
+    }
+
+    public GetStackResourceResponse setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public GetStackResourceResponse setStatusReason(String statusReason) {
+        this.statusReason = statusReason;
+        return this;
+    }
+    public String getStatusReason() {
+        return this.statusReason;
+    }
+
+    public GetStackResourceResponse setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+    public String getUpdateTime() {
+        return this.updateTime;
+    }
+
+    public GetStackResourceResponse setResourceDriftStatus(String resourceDriftStatus) {
+        this.resourceDriftStatus = resourceDriftStatus;
+        return this;
+    }
+    public String getResourceDriftStatus() {
+        return this.resourceDriftStatus;
+    }
+
+    public GetStackResourceResponse setDriftDetectionTime(String driftDetectionTime) {
+        this.driftDetectionTime = driftDetectionTime;
+        return this;
+    }
+    public String getDriftDetectionTime() {
+        return this.driftDetectionTime;
+    }
+
+    public GetStackResourceResponse setResourceAttributes(java.util.List<java.util.Map<String, ?>> resourceAttributes) {
+        this.resourceAttributes = resourceAttributes;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getResourceAttributes() {
+        return this.resourceAttributes;
+    }
+
 }

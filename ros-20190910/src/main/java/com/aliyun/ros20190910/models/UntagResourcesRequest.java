@@ -27,4 +27,44 @@ public class UntagResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UntagResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UntagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
+    }
+
+    public UntagResourcesRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public UntagResourcesRequest setTagKey(java.util.List<String> tagKey) {
+        this.tagKey = tagKey;
+        return this;
+    }
+    public java.util.List<String> getTagKey() {
+        return this.tagKey;
+    }
+
+    public UntagResourcesRequest setAll(Boolean all) {
+        this.all = all;
+        return this;
+    }
+    public Boolean getAll() {
+        return this.all;
+    }
+
 }

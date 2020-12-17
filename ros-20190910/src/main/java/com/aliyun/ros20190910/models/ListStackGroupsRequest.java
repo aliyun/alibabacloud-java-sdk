@@ -22,4 +22,36 @@ public class ListStackGroupsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListStackGroupsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListStackGroupsRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public ListStackGroupsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListStackGroupsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
 }

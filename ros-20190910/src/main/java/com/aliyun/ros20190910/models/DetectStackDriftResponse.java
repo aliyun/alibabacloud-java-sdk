@@ -17,4 +17,20 @@ public class DetectStackDriftResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetectStackDriftResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DetectStackDriftResponse setDriftDetectionId(String driftDetectionId) {
+        this.driftDetectionId = driftDetectionId;
+        return this;
+    }
+    public String getDriftDetectionId() {
+        return this.driftDetectionId;
+    }
+
 }

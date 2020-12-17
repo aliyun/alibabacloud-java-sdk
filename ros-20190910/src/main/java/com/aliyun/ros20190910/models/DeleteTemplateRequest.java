@@ -13,4 +13,12 @@ public class DeleteTemplateRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteTemplateRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
 }

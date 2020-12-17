@@ -17,4 +17,20 @@ public class CreateStackResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateStackResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateStackResponse setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
 }

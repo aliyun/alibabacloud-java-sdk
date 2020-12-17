@@ -17,4 +17,20 @@ public class GetStackGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetStackGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetStackGroupRequest setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
 }

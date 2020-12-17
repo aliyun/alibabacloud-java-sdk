@@ -27,4 +27,44 @@ public class GetStackResourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetStackResourceRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public GetStackResourceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public GetStackResourceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetStackResourceRequest setShowResourceAttributes(Boolean showResourceAttributes) {
+        this.showResourceAttributes = showResourceAttributes;
+        return this;
+    }
+    public Boolean getShowResourceAttributes() {
+        return this.showResourceAttributes;
+    }
+
+    public GetStackResourceRequest setLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    public String getLogicalResourceId() {
+        return this.logicalResourceId;
+    }
+
 }

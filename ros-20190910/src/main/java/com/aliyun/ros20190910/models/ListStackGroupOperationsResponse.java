@@ -29,6 +29,46 @@ public class ListStackGroupOperationsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListStackGroupOperationsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListStackGroupOperationsResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListStackGroupOperationsResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListStackGroupOperationsResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListStackGroupOperationsResponse setStackGroupOperations(java.util.List<ListStackGroupOperationsResponseStackGroupOperations> stackGroupOperations) {
+        this.stackGroupOperations = stackGroupOperations;
+        return this;
+    }
+    public java.util.List<ListStackGroupOperationsResponseStackGroupOperations> getStackGroupOperations() {
+        return this.stackGroupOperations;
+    }
+
     public static class ListStackGroupOperationsResponseStackGroupOperations extends TeaModel {
         @NameInMap("StackGroupName")
         @Validation(required = true)
@@ -65,6 +105,70 @@ public class ListStackGroupOperationsResponse extends TeaModel {
         public static ListStackGroupOperationsResponseStackGroupOperations build(java.util.Map<String, ?> map) throws Exception {
             ListStackGroupOperationsResponseStackGroupOperations self = new ListStackGroupOperationsResponseStackGroupOperations();
             return TeaModel.build(map, self);
+        }
+
+        public ListStackGroupOperationsResponseStackGroupOperations setStackGroupName(String stackGroupName) {
+            this.stackGroupName = stackGroupName;
+            return this;
+        }
+        public String getStackGroupName() {
+            return this.stackGroupName;
+        }
+
+        public ListStackGroupOperationsResponseStackGroupOperations setStackGroupId(String stackGroupId) {
+            this.stackGroupId = stackGroupId;
+            return this;
+        }
+        public String getStackGroupId() {
+            return this.stackGroupId;
+        }
+
+        public ListStackGroupOperationsResponseStackGroupOperations setOperationId(String operationId) {
+            this.operationId = operationId;
+            return this;
+        }
+        public String getOperationId() {
+            return this.operationId;
+        }
+
+        public ListStackGroupOperationsResponseStackGroupOperations setOperationDescription(String operationDescription) {
+            this.operationDescription = operationDescription;
+            return this;
+        }
+        public String getOperationDescription() {
+            return this.operationDescription;
+        }
+
+        public ListStackGroupOperationsResponseStackGroupOperations setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListStackGroupOperationsResponseStackGroupOperations setEndTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        public ListStackGroupOperationsResponseStackGroupOperations setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public ListStackGroupOperationsResponseStackGroupOperations setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

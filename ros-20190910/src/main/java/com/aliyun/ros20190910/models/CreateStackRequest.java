@@ -45,9 +45,146 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("DeletionProtection")
     public String deletionProtection;
 
+    @NameInMap("CreateOption")
+    public String createOption;
+
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("TemplateVersion")
+    public String templateVersion;
+
     public static CreateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackRequest self = new CreateStackRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateStackRequest setDisableRollback(Boolean disableRollback) {
+        this.disableRollback = disableRollback;
+        return this;
+    }
+    public Boolean getDisableRollback() {
+        return this.disableRollback;
+    }
+
+    public CreateStackRequest setTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    public CreateStackRequest setParameters(java.util.List<CreateStackRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<CreateStackRequestParameters> getParameters() {
+        return this.parameters;
+    }
+
+    public CreateStackRequest setStackPolicyURL(String stackPolicyURL) {
+        this.stackPolicyURL = stackPolicyURL;
+        return this;
+    }
+    public String getStackPolicyURL() {
+        return this.stackPolicyURL;
+    }
+
+    public CreateStackRequest setTimeoutInMinutes(Long timeoutInMinutes) {
+        this.timeoutInMinutes = timeoutInMinutes;
+        return this;
+    }
+    public Long getTimeoutInMinutes() {
+        return this.timeoutInMinutes;
+    }
+
+    public CreateStackRequest setStackPolicyBody(String stackPolicyBody) {
+        this.stackPolicyBody = stackPolicyBody;
+        return this;
+    }
+    public String getStackPolicyBody() {
+        return this.stackPolicyBody;
+    }
+
+    public CreateStackRequest setStackName(String stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    public String getStackName() {
+        return this.stackName;
+    }
+
+    public CreateStackRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateStackRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateStackRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    public CreateStackRequest setNotificationURLs(java.util.List<String> notificationURLs) {
+        this.notificationURLs = notificationURLs;
+        return this;
+    }
+    public java.util.List<String> getNotificationURLs() {
+        return this.notificationURLs;
+    }
+
+    public CreateStackRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
+    }
+
+    public CreateStackRequest setDeletionProtection(String deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public String getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    public CreateStackRequest setCreateOption(String createOption) {
+        this.createOption = createOption;
+        return this;
+    }
+    public String getCreateOption() {
+        return this.createOption;
+    }
+
+    public CreateStackRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public CreateStackRequest setTemplateVersion(String templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public String getTemplateVersion() {
+        return this.templateVersion;
     }
 
     public static class CreateStackRequestParameters extends TeaModel {
@@ -64,6 +201,22 @@ public class CreateStackRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateStackRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
+        public CreateStackRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
     }
 
     public static class ContinueCreateStackRequestParameters extends TeaModel {
@@ -78,6 +231,22 @@ public class CreateStackRequest extends TeaModel {
         public static ContinueCreateStackRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             ContinueCreateStackRequestParameters self = new ContinueCreateStackRequestParameters();
             return TeaModel.build(map, self);
+        }
+
+        public ContinueCreateStackRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        public ContinueCreateStackRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
         }
 
     }

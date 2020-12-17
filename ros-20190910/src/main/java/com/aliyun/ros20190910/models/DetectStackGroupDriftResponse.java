@@ -17,4 +17,20 @@ public class DetectStackGroupDriftResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetectStackGroupDriftResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DetectStackGroupDriftResponse setOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    public String getOperationId() {
+        return this.operationId;
+    }
+
 }
