@@ -37,6 +37,78 @@ public class ListStacksRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListStacksRequest setStatus(java.util.List<String> status) {
+        this.status = status;
+        return this;
+    }
+    public java.util.List<String> getStatus() {
+        return this.status;
+    }
+
+    public ListStacksRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListStacksRequest setParentStackId(String parentStackId) {
+        this.parentStackId = parentStackId;
+        return this;
+    }
+    public String getParentStackId() {
+        return this.parentStackId;
+    }
+
+    public ListStacksRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListStacksRequest setStackName(java.util.List<String> stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    public java.util.List<String> getStackName() {
+        return this.stackName;
+    }
+
+    public ListStacksRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListStacksRequest setShowNestedStack(Boolean showNestedStack) {
+        this.showNestedStack = showNestedStack;
+        return this;
+    }
+    public Boolean getShowNestedStack() {
+        return this.showNestedStack;
+    }
+
+    public ListStacksRequest setTag(java.util.List<ListStacksRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListStacksRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public ListStacksRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
     public static class ListStacksRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -47,6 +119,22 @@ public class ListStacksRequest extends TeaModel {
         public static ListStacksRequestTag build(java.util.Map<String, ?> map) throws Exception {
             ListStacksRequestTag self = new ListStacksRequestTag();
             return TeaModel.build(map, self);
+        }
+
+        public ListStacksRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListStacksRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

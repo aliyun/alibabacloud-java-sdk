@@ -29,6 +29,46 @@ public class ListStacksResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListStacksResponse setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListStacksResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListStacksResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListStacksResponse setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListStacksResponse setStacks(java.util.List<ListStacksResponseStacks> stacks) {
+        this.stacks = stacks;
+        return this;
+    }
+    public java.util.List<ListStacksResponseStacks> getStacks() {
+        return this.stacks;
+    }
+
     public static class ListStacksResponseStacks extends TeaModel {
         @NameInMap("CreateTime")
         @Validation(required = true)
@@ -78,9 +118,117 @@ public class ListStacksResponse extends TeaModel {
         @Validation(required = true)
         public String driftDetectionTime;
 
+        @NameInMap("StackType")
+        @Validation(required = true)
+        public String stackType;
+
         public static ListStacksResponseStacks build(java.util.Map<String, ?> map) throws Exception {
             ListStacksResponseStacks self = new ListStacksResponseStacks();
             return TeaModel.build(map, self);
+        }
+
+        public ListStacksResponseStacks setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public ListStacksResponseStacks setDisableRollback(Boolean disableRollback) {
+            this.disableRollback = disableRollback;
+            return this;
+        }
+        public Boolean getDisableRollback() {
+            return this.disableRollback;
+        }
+
+        public ListStacksResponseStacks setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public ListStacksResponseStacks setStackId(String stackId) {
+            this.stackId = stackId;
+            return this;
+        }
+        public String getStackId() {
+            return this.stackId;
+        }
+
+        public ListStacksResponseStacks setStackName(String stackName) {
+            this.stackName = stackName;
+            return this;
+        }
+        public String getStackName() {
+            return this.stackName;
+        }
+
+        public ListStacksResponseStacks setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListStacksResponseStacks setStatusReason(String statusReason) {
+            this.statusReason = statusReason;
+            return this;
+        }
+        public String getStatusReason() {
+            return this.statusReason;
+        }
+
+        public ListStacksResponseStacks setTimeoutInMinutes(Integer timeoutInMinutes) {
+            this.timeoutInMinutes = timeoutInMinutes;
+            return this;
+        }
+        public Integer getTimeoutInMinutes() {
+            return this.timeoutInMinutes;
+        }
+
+        public ListStacksResponseStacks setParentStackId(String parentStackId) {
+            this.parentStackId = parentStackId;
+            return this;
+        }
+        public String getParentStackId() {
+            return this.parentStackId;
+        }
+
+        public ListStacksResponseStacks setUpdateTime(String updateTime) {
+            this.updateTime = updateTime;
+            return this;
+        }
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
+        public ListStacksResponseStacks setStackDriftStatus(String stackDriftStatus) {
+            this.stackDriftStatus = stackDriftStatus;
+            return this;
+        }
+        public String getStackDriftStatus() {
+            return this.stackDriftStatus;
+        }
+
+        public ListStacksResponseStacks setDriftDetectionTime(String driftDetectionTime) {
+            this.driftDetectionTime = driftDetectionTime;
+            return this;
+        }
+        public String getDriftDetectionTime() {
+            return this.driftDetectionTime;
+        }
+
+        public ListStacksResponseStacks setStackType(String stackType) {
+            this.stackType = stackType;
+            return this;
+        }
+        public String getStackType() {
+            return this.stackType;
         }
 
     }

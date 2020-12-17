@@ -17,4 +17,20 @@ public class StopStackGroupOperationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public StopStackGroupOperationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public StopStackGroupOperationRequest setOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    public String getOperationId() {
+        return this.operationId;
+    }
+
 }

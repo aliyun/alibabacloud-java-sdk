@@ -33,9 +33,103 @@ public class CreateStackGroupRequest extends TeaModel {
     @NameInMap("ExecutionRoleName")
     public String executionRoleName;
 
+    @NameInMap("TemplateId")
+    public String templateId;
+
+    @NameInMap("TemplateVersion")
+    public String templateVersion;
+
     public static CreateStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackGroupRequest self = new CreateStackGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateStackGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateStackGroupRequest setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
+    public CreateStackGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateStackGroupRequest setParameters(java.util.List<CreateStackGroupRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<CreateStackGroupRequestParameters> getParameters() {
+        return this.parameters;
+    }
+
+    public CreateStackGroupRequest setTemplateBody(String templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    public String getTemplateBody() {
+        return this.templateBody;
+    }
+
+    public CreateStackGroupRequest setTemplateURL(String templateURL) {
+        this.templateURL = templateURL;
+        return this;
+    }
+    public String getTemplateURL() {
+        return this.templateURL;
+    }
+
+    public CreateStackGroupRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateStackGroupRequest setAdministrationRoleName(String administrationRoleName) {
+        this.administrationRoleName = administrationRoleName;
+        return this;
+    }
+    public String getAdministrationRoleName() {
+        return this.administrationRoleName;
+    }
+
+    public CreateStackGroupRequest setExecutionRoleName(String executionRoleName) {
+        this.executionRoleName = executionRoleName;
+        return this;
+    }
+    public String getExecutionRoleName() {
+        return this.executionRoleName;
+    }
+
+    public CreateStackGroupRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    public CreateStackGroupRequest setTemplateVersion(String templateVersion) {
+        this.templateVersion = templateVersion;
+        return this;
+    }
+    public String getTemplateVersion() {
+        return this.templateVersion;
     }
 
     public static class CreateStackGroupRequestParameters extends TeaModel {
@@ -50,6 +144,22 @@ public class CreateStackGroupRequest extends TeaModel {
         public static CreateStackGroupRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             CreateStackGroupRequestParameters self = new CreateStackGroupRequestParameters();
             return TeaModel.build(map, self);
+        }
+
+        public CreateStackGroupRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
+        public CreateStackGroupRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
         }
 
     }

@@ -29,4 +29,52 @@ public class UpdateStackTemplateByResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateStackTemplateByResourcesRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public UpdateStackTemplateByResourcesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    public UpdateStackTemplateByResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UpdateStackTemplateByResourcesRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public UpdateStackTemplateByResourcesRequest setTemplateFormat(String templateFormat) {
+        this.templateFormat = templateFormat;
+        return this;
+    }
+    public String getTemplateFormat() {
+        return this.templateFormat;
+    }
+
+    public UpdateStackTemplateByResourcesRequest setLogicalResourceId(java.util.List<String> logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    public java.util.List<String> getLogicalResourceId() {
+        return this.logicalResourceId;
+    }
+
 }

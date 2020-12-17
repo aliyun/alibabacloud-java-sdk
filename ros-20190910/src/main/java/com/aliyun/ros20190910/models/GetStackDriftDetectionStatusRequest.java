@@ -17,4 +17,20 @@ public class GetStackDriftDetectionStatusRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetStackDriftDetectionStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public GetStackDriftDetectionStatusRequest setDriftDetectionId(String driftDetectionId) {
+        this.driftDetectionId = driftDetectionId;
+        return this;
+    }
+    public String getDriftDetectionId() {
+        return this.driftDetectionId;
+    }
+
 }

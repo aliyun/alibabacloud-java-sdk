@@ -32,4 +32,52 @@ public class SignalResourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SignalResourceRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public SignalResourceRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public SignalResourceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public SignalResourceRequest setUniqueId(String uniqueId) {
+        this.uniqueId = uniqueId;
+        return this;
+    }
+    public String getUniqueId() {
+        return this.uniqueId;
+    }
+
+    public SignalResourceRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public SignalResourceRequest setLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    public String getLogicalResourceId() {
+        return this.logicalResourceId;
+    }
+
 }

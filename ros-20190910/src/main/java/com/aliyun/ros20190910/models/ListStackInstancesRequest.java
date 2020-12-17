@@ -29,4 +29,52 @@ public class ListStackInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListStackInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListStackInstancesRequest setStackGroupName(String stackGroupName) {
+        this.stackGroupName = stackGroupName;
+        return this;
+    }
+    public String getStackGroupName() {
+        return this.stackGroupName;
+    }
+
+    public ListStackInstancesRequest setStackInstanceAccountId(String stackInstanceAccountId) {
+        this.stackInstanceAccountId = stackInstanceAccountId;
+        return this;
+    }
+    public String getStackInstanceAccountId() {
+        return this.stackInstanceAccountId;
+    }
+
+    public ListStackInstancesRequest setStackInstanceRegionId(String stackInstanceRegionId) {
+        this.stackInstanceRegionId = stackInstanceRegionId;
+        return this;
+    }
+    public String getStackInstanceRegionId() {
+        return this.stackInstanceRegionId;
+    }
+
+    public ListStackInstancesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListStackInstancesRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
 }

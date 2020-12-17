@@ -17,4 +17,20 @@ public class GetStackPolicyResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetStackPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetStackPolicyResponse setStackPolicyBody(java.util.Map<String, ?> stackPolicyBody) {
+        this.stackPolicyBody = stackPolicyBody;
+        return this;
+    }
+    public java.util.Map<String, ?> getStackPolicyBody() {
+        return this.stackPolicyBody;
+    }
+
 }

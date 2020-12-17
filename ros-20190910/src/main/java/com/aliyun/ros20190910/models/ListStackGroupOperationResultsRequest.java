@@ -23,4 +23,36 @@ public class ListStackGroupOperationResultsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListStackGroupOperationResultsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ListStackGroupOperationResultsRequest setOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    public String getOperationId() {
+        return this.operationId;
+    }
+
+    public ListStackGroupOperationResultsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListStackGroupOperationResultsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
 }

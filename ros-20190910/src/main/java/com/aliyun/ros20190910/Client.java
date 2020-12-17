@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.ros20190910.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
+
     public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
@@ -12,6 +13,36 @@ public class Client extends com.aliyun.tearpc.Client {
         this._endpoint = this.getEndpoint("ros", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
+
+    public GenerateTemplatePolicyResponse generateTemplatePolicyWithOptions(GenerateTemplatePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GenerateTemplatePolicy", "HTTPS", "POST", "2019-09-10", "AK", null, TeaModel.buildMap(request), runtime), new GenerateTemplatePolicyResponse());
+    }
+
+    public GenerateTemplatePolicyResponse generateTemplatePolicy(GenerateTemplatePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateTemplatePolicyWithOptions(request, runtime);
+    }
+
+    public ListTemplateVersionsResponse listTemplateVersionsWithOptions(ListTemplateVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListTemplateVersions", "HTTPS", "POST", "2019-09-10", "AK", null, TeaModel.buildMap(request), runtime), new ListTemplateVersionsResponse());
+    }
+
+    public ListTemplateVersionsResponse listTemplateVersions(ListTemplateVersionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTemplateVersionsWithOptions(request, runtime);
+    }
+
+    public SetTemplatePermissionResponse setTemplatePermissionWithOptions(SetTemplatePermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SetTemplatePermission", "HTTPS", "POST", "2019-09-10", "AK", null, TeaModel.buildMap(request), runtime), new SetTemplatePermissionResponse());
+    }
+
+    public SetTemplatePermissionResponse setTemplatePermission(SetTemplatePermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.setTemplatePermissionWithOptions(request, runtime);
+    }
 
     public ListStackOperationRisksResponse listStackOperationRisksWithOptions(ListStackOperationRisksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
@@ -83,8 +114,14 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.getStackDriftDetectionStatusWithOptions(request, runtime);
     }
 
-    public DetectStackGroupDriftResponse detectStackGroupDriftWithOptions(DetectStackGroupDriftRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DetectStackGroupDriftResponse detectStackGroupDriftWithOptions(DetectStackGroupDriftRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        DetectStackGroupDriftShrinkRequest request = new DetectStackGroupDriftShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.operationPreferences)) {
+            request.operationPreferencesShrink = com.aliyun.teautil.Common.toJSONString(tmp.operationPreferences);
+        }
+
         return TeaModel.toModel(this.doRequest("DetectStackGroupDrift", "HTTPS", "POST", "2019-09-10", "AK", null, TeaModel.buildMap(request), runtime), new DetectStackGroupDriftResponse());
     }
 
@@ -123,8 +160,22 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.detectStackDriftWithOptions(request, runtime);
     }
 
-    public UpdateStackInstancesResponse updateStackInstancesWithOptions(UpdateStackInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateStackInstancesResponse updateStackInstancesWithOptions(UpdateStackInstancesRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        UpdateStackInstancesShrinkRequest request = new UpdateStackInstancesShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.accountIds)) {
+            request.accountIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.accountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.regionIds)) {
+            request.regionIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.regionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.operationPreferences)) {
+            request.operationPreferencesShrink = com.aliyun.teautil.Common.toJSONString(tmp.operationPreferences);
+        }
+
         return TeaModel.toModel(this.doRequest("UpdateStackInstances", "HTTPS", "POST", "2019-09-10", "AK", null, TeaModel.buildMap(request), runtime), new UpdateStackInstancesResponse());
     }
 
@@ -173,8 +224,22 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.listStackGroupsWithOptions(request, runtime);
     }
 
-    public CreateStackInstancesResponse createStackInstancesWithOptions(CreateStackInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateStackInstancesResponse createStackInstancesWithOptions(CreateStackInstancesRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        CreateStackInstancesShrinkRequest request = new CreateStackInstancesShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.accountIds)) {
+            request.accountIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.accountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.regionIds)) {
+            request.regionIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.regionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.operationPreferences)) {
+            request.operationPreferencesShrink = com.aliyun.teautil.Common.toJSONString(tmp.operationPreferences);
+        }
+
         return TeaModel.toModel(this.doRequest("CreateStackInstances", "HTTPS", "POST", "2019-09-10", "AK", null, TeaModel.buildMap(request), runtime), new CreateStackInstancesResponse());
     }
 
@@ -203,8 +268,22 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.getStackInstanceWithOptions(request, runtime);
     }
 
-    public UpdateStackGroupResponse updateStackGroupWithOptions(UpdateStackGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateStackGroupResponse updateStackGroupWithOptions(UpdateStackGroupRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        UpdateStackGroupShrinkRequest request = new UpdateStackGroupShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.accountIds)) {
+            request.accountIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.accountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.regionIds)) {
+            request.regionIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.regionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.operationPreferences)) {
+            request.operationPreferencesShrink = com.aliyun.teautil.Common.toJSONString(tmp.operationPreferences);
+        }
+
         return TeaModel.toModel(this.doRequest("UpdateStackGroup", "HTTPS", "POST", "2019-09-10", "AK", null, TeaModel.buildMap(request), runtime), new UpdateStackGroupResponse());
     }
 
@@ -253,8 +332,22 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.deleteStackGroupWithOptions(request, runtime);
     }
 
-    public DeleteStackInstancesResponse deleteStackInstancesWithOptions(DeleteStackInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DeleteStackInstancesResponse deleteStackInstancesWithOptions(DeleteStackInstancesRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        DeleteStackInstancesShrinkRequest request = new DeleteStackInstancesShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.accountIds)) {
+            request.accountIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.accountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.regionIds)) {
+            request.regionIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.regionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.operationPreferences)) {
+            request.operationPreferencesShrink = com.aliyun.teautil.Common.toJSONString(tmp.operationPreferences);
+        }
+
         return TeaModel.toModel(this.doRequest("DeleteStackInstances", "HTTPS", "POST", "2019-09-10", "AK", null, TeaModel.buildMap(request), runtime), new DeleteStackInstancesResponse());
     }
 

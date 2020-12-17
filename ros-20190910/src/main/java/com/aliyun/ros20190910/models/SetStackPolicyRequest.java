@@ -23,4 +23,36 @@ public class SetStackPolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SetStackPolicyRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public SetStackPolicyRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public SetStackPolicyRequest setStackPolicyBody(String stackPolicyBody) {
+        this.stackPolicyBody = stackPolicyBody;
+        return this;
+    }
+    public String getStackPolicyBody() {
+        return this.stackPolicyBody;
+    }
+
+    public SetStackPolicyRequest setStackPolicyURL(String stackPolicyURL) {
+        this.stackPolicyURL = stackPolicyURL;
+        return this;
+    }
+    public String getStackPolicyURL() {
+        return this.stackPolicyURL;
+    }
+
 }

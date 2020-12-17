@@ -17,4 +17,20 @@ public class DeleteChangeSetRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteChangeSetRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DeleteChangeSetRequest setChangeSetId(String changeSetId) {
+        this.changeSetId = changeSetId;
+        return this;
+    }
+    public String getChangeSetId() {
+        return this.changeSetId;
+    }
+
 }

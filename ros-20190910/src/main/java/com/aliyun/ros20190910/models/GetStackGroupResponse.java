@@ -17,6 +17,22 @@ public class GetStackGroupResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetStackGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetStackGroupResponse setStackGroup(GetStackGroupResponseStackGroup stackGroup) {
+        this.stackGroup = stackGroup;
+        return this;
+    }
+    public GetStackGroupResponseStackGroup getStackGroup() {
+        return this.stackGroup;
+    }
+
     public static class GetStackGroupResponseStackGroupParameters extends TeaModel {
         @NameInMap("ParameterKey")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class GetStackGroupResponse extends TeaModel {
         public static GetStackGroupResponseStackGroupParameters build(java.util.Map<String, ?> map) throws Exception {
             GetStackGroupResponseStackGroupParameters self = new GetStackGroupResponseStackGroupParameters();
             return TeaModel.build(map, self);
+        }
+
+        public GetStackGroupResponseStackGroupParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        public GetStackGroupResponseStackGroupParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
         }
 
     }
@@ -75,6 +107,78 @@ public class GetStackGroupResponse extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail setDriftDetectionTime(String driftDetectionTime) {
+            this.driftDetectionTime = driftDetectionTime;
+            return this;
+        }
+        public String getDriftDetectionTime() {
+            return this.driftDetectionTime;
+        }
+
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail setStackGroupDriftStatus(String stackGroupDriftStatus) {
+            this.stackGroupDriftStatus = stackGroupDriftStatus;
+            return this;
+        }
+        public String getStackGroupDriftStatus() {
+            return this.stackGroupDriftStatus;
+        }
+
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail setDriftDetectionStatus(String driftDetectionStatus) {
+            this.driftDetectionStatus = driftDetectionStatus;
+            return this;
+        }
+        public String getDriftDetectionStatus() {
+            return this.driftDetectionStatus;
+        }
+
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail setDriftedStackInstancesCount(Integer driftedStackInstancesCount) {
+            this.driftedStackInstancesCount = driftedStackInstancesCount;
+            return this;
+        }
+        public Integer getDriftedStackInstancesCount() {
+            return this.driftedStackInstancesCount;
+        }
+
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail setFailedStackInstancesCount(Integer failedStackInstancesCount) {
+            this.failedStackInstancesCount = failedStackInstancesCount;
+            return this;
+        }
+        public Integer getFailedStackInstancesCount() {
+            return this.failedStackInstancesCount;
+        }
+
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail setCancelledStackInstancesCount(Integer cancelledStackInstancesCount) {
+            this.cancelledStackInstancesCount = cancelledStackInstancesCount;
+            return this;
+        }
+        public Integer getCancelledStackInstancesCount() {
+            return this.cancelledStackInstancesCount;
+        }
+
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail setInProgressStackInstancesCount(Integer inProgressStackInstancesCount) {
+            this.inProgressStackInstancesCount = inProgressStackInstancesCount;
+            return this;
+        }
+        public Integer getInProgressStackInstancesCount() {
+            return this.inProgressStackInstancesCount;
+        }
+
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail setInSyncStackInstancesCount(Integer inSyncStackInstancesCount) {
+            this.inSyncStackInstancesCount = inSyncStackInstancesCount;
+            return this;
+        }
+        public Integer getInSyncStackInstancesCount() {
+            return this.inSyncStackInstancesCount;
+        }
+
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail setTotalStackInstancesCount(Integer totalStackInstancesCount) {
+            this.totalStackInstancesCount = totalStackInstancesCount;
+            return this;
+        }
+        public Integer getTotalStackInstancesCount() {
+            return this.totalStackInstancesCount;
+        }
+
     }
 
     public static class GetStackGroupResponseStackGroup extends TeaModel {
@@ -117,6 +221,78 @@ public class GetStackGroupResponse extends TeaModel {
         public static GetStackGroupResponseStackGroup build(java.util.Map<String, ?> map) throws Exception {
             GetStackGroupResponseStackGroup self = new GetStackGroupResponseStackGroup();
             return TeaModel.build(map, self);
+        }
+
+        public GetStackGroupResponseStackGroup setStackGroupName(String stackGroupName) {
+            this.stackGroupName = stackGroupName;
+            return this;
+        }
+        public String getStackGroupName() {
+            return this.stackGroupName;
+        }
+
+        public GetStackGroupResponseStackGroup setStackGroupId(String stackGroupId) {
+            this.stackGroupId = stackGroupId;
+            return this;
+        }
+        public String getStackGroupId() {
+            return this.stackGroupId;
+        }
+
+        public GetStackGroupResponseStackGroup setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetStackGroupResponseStackGroup setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetStackGroupResponseStackGroup setTemplateBody(String templateBody) {
+            this.templateBody = templateBody;
+            return this;
+        }
+        public String getTemplateBody() {
+            return this.templateBody;
+        }
+
+        public GetStackGroupResponseStackGroup setExecutionRoleName(String executionRoleName) {
+            this.executionRoleName = executionRoleName;
+            return this;
+        }
+        public String getExecutionRoleName() {
+            return this.executionRoleName;
+        }
+
+        public GetStackGroupResponseStackGroup setAdministrationRoleName(String administrationRoleName) {
+            this.administrationRoleName = administrationRoleName;
+            return this;
+        }
+        public String getAdministrationRoleName() {
+            return this.administrationRoleName;
+        }
+
+        public GetStackGroupResponseStackGroup setParameters(java.util.List<GetStackGroupResponseStackGroupParameters> parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public java.util.List<GetStackGroupResponseStackGroupParameters> getParameters() {
+            return this.parameters;
+        }
+
+        public GetStackGroupResponseStackGroup setStackGroupDriftDetectionDetail(GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail stackGroupDriftDetectionDetail) {
+            this.stackGroupDriftDetectionDetail = stackGroupDriftDetectionDetail;
+            return this;
+        }
+        public GetStackGroupResponseStackGroupStackGroupDriftDetectionDetail getStackGroupDriftDetectionDetail() {
+            return this.stackGroupDriftDetectionDetail;
         }
 
     }

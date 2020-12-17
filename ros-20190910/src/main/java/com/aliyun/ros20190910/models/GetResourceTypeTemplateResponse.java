@@ -17,4 +17,20 @@ public class GetResourceTypeTemplateResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetResourceTypeTemplateResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetResourceTypeTemplateResponse setTemplateBody(java.util.Map<String, ?> templateBody) {
+        this.templateBody = templateBody;
+        return this;
+    }
+    public java.util.Map<String, ?> getTemplateBody() {
+        return this.templateBody;
+    }
+
 }

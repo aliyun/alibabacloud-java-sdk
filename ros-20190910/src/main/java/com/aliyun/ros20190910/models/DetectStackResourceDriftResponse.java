@@ -49,6 +49,86 @@ public class DetectStackResourceDriftResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetectStackResourceDriftResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DetectStackResourceDriftResponse setDriftDetectionTime(String driftDetectionTime) {
+        this.driftDetectionTime = driftDetectionTime;
+        return this;
+    }
+    public String getDriftDetectionTime() {
+        return this.driftDetectionTime;
+    }
+
+    public DetectStackResourceDriftResponse setResourceDriftStatus(String resourceDriftStatus) {
+        this.resourceDriftStatus = resourceDriftStatus;
+        return this;
+    }
+    public String getResourceDriftStatus() {
+        return this.resourceDriftStatus;
+    }
+
+    public DetectStackResourceDriftResponse setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public DetectStackResourceDriftResponse setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    public DetectStackResourceDriftResponse setPhysicalResourceId(String physicalResourceId) {
+        this.physicalResourceId = physicalResourceId;
+        return this;
+    }
+    public String getPhysicalResourceId() {
+        return this.physicalResourceId;
+    }
+
+    public DetectStackResourceDriftResponse setLogicalResourceId(String logicalResourceId) {
+        this.logicalResourceId = logicalResourceId;
+        return this;
+    }
+    public String getLogicalResourceId() {
+        return this.logicalResourceId;
+    }
+
+    public DetectStackResourceDriftResponse setActualProperties(String actualProperties) {
+        this.actualProperties = actualProperties;
+        return this;
+    }
+    public String getActualProperties() {
+        return this.actualProperties;
+    }
+
+    public DetectStackResourceDriftResponse setExpectedProperties(String expectedProperties) {
+        this.expectedProperties = expectedProperties;
+        return this;
+    }
+    public String getExpectedProperties() {
+        return this.expectedProperties;
+    }
+
+    public DetectStackResourceDriftResponse setPropertyDifferences(java.util.List<DetectStackResourceDriftResponsePropertyDifferences> propertyDifferences) {
+        this.propertyDifferences = propertyDifferences;
+        return this;
+    }
+    public java.util.List<DetectStackResourceDriftResponsePropertyDifferences> getPropertyDifferences() {
+        return this.propertyDifferences;
+    }
+
     public static class DetectStackResourceDriftResponsePropertyDifferences extends TeaModel {
         @NameInMap("PropertyPath")
         @Validation(required = true)
@@ -69,6 +149,38 @@ public class DetectStackResourceDriftResponse extends TeaModel {
         public static DetectStackResourceDriftResponsePropertyDifferences build(java.util.Map<String, ?> map) throws Exception {
             DetectStackResourceDriftResponsePropertyDifferences self = new DetectStackResourceDriftResponsePropertyDifferences();
             return TeaModel.build(map, self);
+        }
+
+        public DetectStackResourceDriftResponsePropertyDifferences setPropertyPath(String propertyPath) {
+            this.propertyPath = propertyPath;
+            return this;
+        }
+        public String getPropertyPath() {
+            return this.propertyPath;
+        }
+
+        public DetectStackResourceDriftResponsePropertyDifferences setActualValue(String actualValue) {
+            this.actualValue = actualValue;
+            return this;
+        }
+        public String getActualValue() {
+            return this.actualValue;
+        }
+
+        public DetectStackResourceDriftResponsePropertyDifferences setExpectedValue(String expectedValue) {
+            this.expectedValue = expectedValue;
+            return this;
+        }
+        public String getExpectedValue() {
+            return this.expectedValue;
+        }
+
+        public DetectStackResourceDriftResponsePropertyDifferences setDifferenceType(String differenceType) {
+            this.differenceType = differenceType;
+            return this;
+        }
+        public String getDifferenceType() {
+            return this.differenceType;
         }
 
     }

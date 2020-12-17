@@ -17,4 +17,20 @@ public class ListStackResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListStackResourcesRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
+    }
+
+    public ListStackResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
 }

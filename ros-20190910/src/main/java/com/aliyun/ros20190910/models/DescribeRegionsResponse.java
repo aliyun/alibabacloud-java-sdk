@@ -17,6 +17,22 @@ public class DescribeRegionsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRegionsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeRegionsResponse setRegions(java.util.List<DescribeRegionsResponseRegions> regions) {
+        this.regions = regions;
+        return this;
+    }
+    public java.util.List<DescribeRegionsResponseRegions> getRegions() {
+        return this.regions;
+    }
+
     public static class DescribeRegionsResponseRegions extends TeaModel {
         @NameInMap("RegionId")
         @Validation(required = true)
@@ -33,6 +49,30 @@ public class DescribeRegionsResponse extends TeaModel {
         public static DescribeRegionsResponseRegions build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseRegions self = new DescribeRegionsResponseRegions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseRegions setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeRegionsResponseRegions setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        public DescribeRegionsResponseRegions setRegionEndpoint(String regionEndpoint) {
+            this.regionEndpoint = regionEndpoint;
+            return this;
+        }
+        public String getRegionEndpoint() {
+            return this.regionEndpoint;
         }
 
     }
