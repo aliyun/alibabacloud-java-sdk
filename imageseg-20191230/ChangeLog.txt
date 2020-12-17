@@ -1,3 +1,6 @@
+2020-12-17 Version: 0.2.20
+- Update SegmentFood.
+
 2020-12-09 Version: 0.2.19
 - Update SegmentCommodity.
 
