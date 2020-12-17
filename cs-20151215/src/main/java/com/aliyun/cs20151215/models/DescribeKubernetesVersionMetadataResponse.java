@@ -42,21 +42,25 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         @NameInMap("image_name")
         public String imageName;
 
+        // 操作系统发行版。取值范围： CentOS,AliyunLinux,Windows,WindowsCore。
+        @NameInMap("platform")
+        public String platform;
+
+        // 镜像版本。
+        @NameInMap("os_version")
+        public String osVersion;
+
         // 镜像类型。	
         @NameInMap("image_type")
         public String imageType;
 
-        // 操作系统发行版本号。	
+        // 操作系统发行版本号。
         @NameInMap("os_type")
         public String osType;
 
-        // 操作系统平台类型。取值范围： Windows, Linux（默认）	
-        @NameInMap("os_version")
-        public String osVersion;
-
-        // 操作系统发行版。取值范围： CentOS,AliyunLinux,Windows,WindowsCore。	
-        @NameInMap("platform")
-        public String platform;
+        // 镜像分类
+        @NameInMap("image_category")
+        public String imageCategory;
 
         public static DescribeKubernetesVersionMetadataResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             DescribeKubernetesVersionMetadataResponseBodyImages self = new DescribeKubernetesVersionMetadataResponseBodyImages();
@@ -79,6 +83,22 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
             return this.imageName;
         }
 
+        public DescribeKubernetesVersionMetadataResponseBodyImages setPlatform(String platform) {
+            this.platform = platform;
+            return this;
+        }
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBodyImages setOsVersion(String osVersion) {
+            this.osVersion = osVersion;
+            return this;
+        }
+        public String getOsVersion() {
+            return this.osVersion;
+        }
+
         public DescribeKubernetesVersionMetadataResponseBodyImages setImageType(String imageType) {
             this.imageType = imageType;
             return this;
@@ -95,52 +115,12 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
             return this.osType;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBodyImages setOsVersion(String osVersion) {
-            this.osVersion = osVersion;
+        public DescribeKubernetesVersionMetadataResponseBodyImages setImageCategory(String imageCategory) {
+            this.imageCategory = imageCategory;
             return this;
         }
-        public String getOsVersion() {
-            return this.osVersion;
-        }
-
-        public DescribeKubernetesVersionMetadataResponseBodyImages setPlatform(String platform) {
-            this.platform = platform;
-            return this;
-        }
-        public String getPlatform() {
-            return this.platform;
-        }
-
-    }
-
-    public static class DescribeKubernetesVersionMetadataResponseBodyRuntimes extends TeaModel {
-        // 运行时名称。	
-        @NameInMap("name")
-        public String name;
-
-        // 运行时版本。	
-        @NameInMap("version")
-        public String version;
-
-        public static DescribeKubernetesVersionMetadataResponseBodyRuntimes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeKubernetesVersionMetadataResponseBodyRuntimes self = new DescribeKubernetesVersionMetadataResponseBodyRuntimes();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeKubernetesVersionMetadataResponseBodyRuntimes setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeKubernetesVersionMetadataResponseBodyRuntimes setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
+        public String getImageCategory() {
+            return this.imageCategory;
         }
 
     }
@@ -158,17 +138,17 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         @NameInMap("meta_data")
         public java.util.Map<String, ?> metaData;
 
-        // 是否为多可用区。	
-        @NameInMap("multi_az")
-        public String multiAz;
-
         // 容器运行时详情。	
         @NameInMap("runtimes")
-        public java.util.List<DescribeKubernetesVersionMetadataResponseBodyRuntimes> runtimes;
+        public java.util.List<Runtimes> runtimes;
 
         // Kubernetes版本。	
         @NameInMap("version")
         public String version;
+
+        // 是否为多可用区。
+        @NameInMap("multi_az")
+        public String multiAz;
 
         public static DescribeKubernetesVersionMetadataResponseBody build(java.util.Map<String, ?> map) throws Exception {
             DescribeKubernetesVersionMetadataResponseBody self = new DescribeKubernetesVersionMetadataResponseBody();
@@ -199,19 +179,11 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
             return this.metaData;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBody setMultiAz(String multiAz) {
-            this.multiAz = multiAz;
-            return this;
-        }
-        public String getMultiAz() {
-            return this.multiAz;
-        }
-
-        public DescribeKubernetesVersionMetadataResponseBody setRuntimes(java.util.List<DescribeKubernetesVersionMetadataResponseBodyRuntimes> runtimes) {
+        public DescribeKubernetesVersionMetadataResponseBody setRuntimes(java.util.List<Runtimes> runtimes) {
             this.runtimes = runtimes;
             return this;
         }
-        public java.util.List<DescribeKubernetesVersionMetadataResponseBodyRuntimes> getRuntimes() {
+        public java.util.List<Runtimes> getRuntimes() {
             return this.runtimes;
         }
 
@@ -221,6 +193,14 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public DescribeKubernetesVersionMetadataResponseBody setMultiAz(String multiAz) {
+            this.multiAz = multiAz;
+            return this;
+        }
+        public String getMultiAz() {
+            return this.multiAz;
         }
 
     }

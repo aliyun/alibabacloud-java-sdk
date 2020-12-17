@@ -20,6 +20,10 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     @NameInMap("upgrade_step")
     public String upgradeStep;
 
+    // 升级任务详情。
+    @NameInMap("upgrade_task")
+    public GetUpgradeStatusResponseBodyUpgradeTask upgradeTask;
+
     public static GetUpgradeStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUpgradeStatusResponseBody self = new GetUpgradeStatusResponseBody();
         return TeaModel.build(map, self);
@@ -55,6 +59,46 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
     }
     public String getUpgradeStep() {
         return this.upgradeStep;
+    }
+
+    public GetUpgradeStatusResponseBody setUpgradeTask(GetUpgradeStatusResponseBodyUpgradeTask upgradeTask) {
+        this.upgradeTask = upgradeTask;
+        return this;
+    }
+    public GetUpgradeStatusResponseBodyUpgradeTask getUpgradeTask() {
+        return this.upgradeTask;
+    }
+
+    public static class GetUpgradeStatusResponseBodyUpgradeTask extends TeaModel {
+        // 任务状态：  emptry、running、success、failed
+        @NameInMap("status")
+        public String status;
+
+        // 任务描述信息。
+        @NameInMap("message")
+        public String message;
+
+        public static GetUpgradeStatusResponseBodyUpgradeTask build(java.util.Map<String, ?> map) throws Exception {
+            GetUpgradeStatusResponseBodyUpgradeTask self = new GetUpgradeStatusResponseBodyUpgradeTask();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUpgradeStatusResponseBodyUpgradeTask setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetUpgradeStatusResponseBodyUpgradeTask setMessage(String message) {
+            this.message = message;
+            return this;
+        }
+        public String getMessage() {
+            return this.message;
+        }
+
     }
 
 }

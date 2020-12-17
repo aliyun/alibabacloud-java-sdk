@@ -4,12 +4,12 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersV1Request extends TeaModel {
-    // 集群名称。
-    @NameInMap("Name")
+    // 通过集群名称进行模糊查询。
+    @NameInMap("name")
     public String name;
 
-    // 集群类型。
-    @NameInMap("ClusterType")
+    // 集群类型。  Kubernetes: 专有版集群。 ManagedKubernetes：托管版集群。 Ask：Serverless集群。 ExternalKubernetes：注册集群。 ServiceMesh：ASM集群。
+    @NameInMap("cluster_type")
     public String clusterType;
 
     // 单页大小。

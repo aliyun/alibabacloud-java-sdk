@@ -4,17 +4,21 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyClusterRequest extends TeaModel {
-    // 集群是否开启EIP。
+    // 集群是否绑定EIP，用于公网访问API Server。 true | false
     @NameInMap("api_server_eip")
     public Boolean apiServerEip;
 
-    // 集群的API Server的EIP ID。
+    // 集群API Server 公网连接端点。
     @NameInMap("api_server_eip_id")
     public String apiServerEipId;
 
-    // 集群是否开启删除保护。
+    // 集群是否开启删除保护。默认值false。
     @NameInMap("deletion_protection")
     public Boolean deletionProtection;
+
+    // 实例删除保护，防止通过控制台或API误删除释放节点。
+    @NameInMap("instance_deletion_protection")
+    public Boolean instanceDeletionProtection;
 
     // 域名是否重新绑定到Ingress的SLB地址。
     @NameInMap("ingress_domain_rebinding")
@@ -27,6 +31,9 @@ public class ModifyClusterRequest extends TeaModel {
     // 集群资源组ID。
     @NameInMap("resource_group_id")
     public String resourceGroupId;
+
+    @NameInMap("maintenance_window")
+    public MaintenanceWindow maintenanceWindow;
 
     public static ModifyClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyClusterRequest self = new ModifyClusterRequest();
@@ -57,6 +64,14 @@ public class ModifyClusterRequest extends TeaModel {
         return this.deletionProtection;
     }
 
+    public ModifyClusterRequest setInstanceDeletionProtection(Boolean instanceDeletionProtection) {
+        this.instanceDeletionProtection = instanceDeletionProtection;
+        return this;
+    }
+    public Boolean getInstanceDeletionProtection() {
+        return this.instanceDeletionProtection;
+    }
+
     public ModifyClusterRequest setIngressDomainRebinding(String ingressDomainRebinding) {
         this.ingressDomainRebinding = ingressDomainRebinding;
         return this;
@@ -79,6 +94,14 @@ public class ModifyClusterRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public ModifyClusterRequest setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+        return this;
+    }
+    public MaintenanceWindow getMaintenanceWindow() {
+        return this.maintenanceWindow;
     }
 
 }

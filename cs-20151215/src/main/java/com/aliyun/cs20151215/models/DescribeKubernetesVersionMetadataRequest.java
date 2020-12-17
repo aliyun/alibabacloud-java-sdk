@@ -8,13 +8,13 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
-    // 是否多可用区。
-    @NameInMap("MultiAZ")
-    public Boolean multiAZ;
-
     // 集群类型。
     @NameInMap("ClusterType")
     public String clusterType;
+
+    // 是否查询多可用区。
+    @NameInMap("MultiAZ")
+    public Boolean multiAZ;
 
     // 要查询的版本，如果为空则查所有版本。
     @NameInMap("KubernetesVersion")
@@ -37,20 +37,20 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
         return this.region;
     }
 
-    public DescribeKubernetesVersionMetadataRequest setMultiAZ(Boolean multiAZ) {
-        this.multiAZ = multiAZ;
-        return this;
-    }
-    public Boolean getMultiAZ() {
-        return this.multiAZ;
-    }
-
     public DescribeKubernetesVersionMetadataRequest setClusterType(String clusterType) {
         this.clusterType = clusterType;
         return this;
     }
     public String getClusterType() {
         return this.clusterType;
+    }
+
+    public DescribeKubernetesVersionMetadataRequest setMultiAZ(Boolean multiAZ) {
+        this.multiAZ = multiAZ;
+        return this;
+    }
+    public Boolean getMultiAZ() {
+        return this.multiAZ;
     }
 
     public DescribeKubernetesVersionMetadataRequest setKubernetesVersion(String kubernetesVersion) {

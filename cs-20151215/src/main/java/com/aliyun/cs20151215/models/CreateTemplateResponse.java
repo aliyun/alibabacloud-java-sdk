@@ -3,21 +3,21 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyClusterNodePoolResponse extends TeaModel {
+public class CreateTemplateResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ModifyClusterNodePoolResponseBody body;
+    public CreateTemplateResponseBody body;
 
-    public static ModifyClusterNodePoolResponse build(java.util.Map<String, ?> map) throws Exception {
-        ModifyClusterNodePoolResponse self = new ModifyClusterNodePoolResponse();
+    public static CreateTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateTemplateResponse self = new CreateTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyClusterNodePoolResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateTemplateResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ModifyClusterNodePoolResponse extends TeaModel {
         return this.headers;
     }
 
-    public ModifyClusterNodePoolResponse setBody(ModifyClusterNodePoolResponseBody body) {
+    public CreateTemplateResponse setBody(CreateTemplateResponseBody body) {
         this.body = body;
         return this;
     }
-    public ModifyClusterNodePoolResponseBody getBody() {
+    public CreateTemplateResponseBody getBody() {
         return this.body;
     }
 
