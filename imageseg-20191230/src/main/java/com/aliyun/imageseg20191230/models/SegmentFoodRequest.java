@@ -8,6 +8,9 @@ public class SegmentFoodRequest extends TeaModel {
     @Validation(required = true)
     public String imageURL;
 
+    @NameInMap("ReturnForm")
+    public String returnForm;
+
     public static SegmentFoodRequest build(java.util.Map<String, ?> map) throws Exception {
         SegmentFoodRequest self = new SegmentFoodRequest();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class SegmentFoodRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
+    }
+
+    public SegmentFoodRequest setReturnForm(String returnForm) {
+        this.returnForm = returnForm;
+        return this;
+    }
+    public String getReturnForm() {
+        return this.returnForm;
     }
 
 }

@@ -8,6 +8,9 @@ public class SegmentFoodAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
+    @NameInMap("ReturnForm")
+    public String returnForm;
+
     public static SegmentFoodAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SegmentFoodAdvanceRequest self = new SegmentFoodAdvanceRequest();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class SegmentFoodAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
+    }
+
+    public SegmentFoodAdvanceRequest setReturnForm(String returnForm) {
+        this.returnForm = returnForm;
+        return this;
+    }
+    public String getReturnForm() {
+        return this.returnForm;
     }
 
 }
