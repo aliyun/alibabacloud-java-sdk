@@ -646,8 +646,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             headers.cookieShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.cookie, "cookie", "json");
         }
 
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.cookieShrink)) {
+            realHeaders.put("cookie", headers.cookieShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", com.aliyun.teautil.Common.stringifyMapValue(com.aliyun.teautil.Common.toMap(headers)))
+            new TeaPair("headers", realHeaders)
         ));
         return TeaModel.toModel(this.doROARequest("GetAuthTicketById", "2020-08-10", "HTTPS", "GET", "AK", "/v1/auth/" + ticketId + "", "json", req, runtime), new GetAuthTicketByIdResponse());
     }
@@ -1266,6 +1275,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         return TeaModel.toModel(this.doROARequest("FindApisByPaging", "2020-08-10", "HTTPS", "GET", "AK", "/v1/gateway/" + gatewayId + "/api", "json", req, runtime), new FindApisByPagingResponse());
+    }
+
+    public UpdateServiceEndsResponse updateServiceEnds(String serviceId, UpdateServiceEndsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateServiceEndsWithOptions(serviceId, request, headers, runtime);
+    }
+
+    public UpdateServiceEndsResponse updateServiceEndsWithOptions(String serviceId, UpdateServiceEndsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceNodes)) {
+            body.put("serviceNodes", request.serviceNodes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("UpdateServiceEnds", "2020-08-10", "HTTPS", "PUT", "AK", "/v1/service/" + serviceId + "/serviceends", "json", req, runtime), new UpdateServiceEndsResponse());
     }
 
     public FindGatewaysResponse findGateways(FindGatewaysRequest request) throws Exception {
