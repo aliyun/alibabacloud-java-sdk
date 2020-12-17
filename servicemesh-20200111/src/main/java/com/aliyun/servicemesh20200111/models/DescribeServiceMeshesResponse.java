@@ -261,6 +261,114 @@ public class DescribeServiceMeshesResponse extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot extends TeaModel {
+        @NameInMap("TraceSampling")
+        @Validation(required = true)
+        public Float traceSampling;
+
+        @NameInMap("Http10Enabled")
+        @Validation(required = true)
+        public Boolean http10Enabled;
+
+        public static DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot self = new DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot setTraceSampling(Float traceSampling) {
+            this.traceSampling = traceSampling;
+            return this;
+        }
+        public Float getTraceSampling() {
+            return this.traceSampling;
+        }
+
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot setHttp10Enabled(Boolean http10Enabled) {
+            this.http10Enabled = http10Enabled;
+            return this;
+        }
+        public Boolean getHttp10Enabled() {
+            return this.http10Enabled;
+        }
+
+    }
+
+    public static class DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration extends TeaModel {
+        @NameInMap("Enabled")
+        @Validation(required = true)
+        public Boolean enabled;
+
+        @NameInMap("ExcludeNamespaces")
+        @Validation(required = true)
+        public String excludeNamespaces;
+
+        public static DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration self = new DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration setExcludeNamespaces(String excludeNamespaces) {
+            this.excludeNamespaces = excludeNamespaces;
+            return this;
+        }
+        public String getExcludeNamespaces() {
+            return this.excludeNamespaces;
+        }
+
+    }
+
+    public static class DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector extends TeaModel {
+        @NameInMap("EnableNamespacesByDefault")
+        @Validation(required = true)
+        public Boolean enableNamespacesByDefault;
+
+        @NameInMap("AutoInjectionPolicyEnabled")
+        @Validation(required = true)
+        public Boolean autoInjectionPolicyEnabled;
+
+        @NameInMap("InitCNIConfiguration")
+        @Validation(required = true)
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration initCNIConfiguration;
+
+        public static DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector self = new DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector setEnableNamespacesByDefault(Boolean enableNamespacesByDefault) {
+            this.enableNamespacesByDefault = enableNamespacesByDefault;
+            return this;
+        }
+        public Boolean getEnableNamespacesByDefault() {
+            return this.enableNamespacesByDefault;
+        }
+
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector setAutoInjectionPolicyEnabled(Boolean autoInjectionPolicyEnabled) {
+            this.autoInjectionPolicyEnabled = autoInjectionPolicyEnabled;
+            return this;
+        }
+        public Boolean getAutoInjectionPolicyEnabled() {
+            return this.autoInjectionPolicyEnabled;
+        }
+
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector setInitCNIConfiguration(DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration initCNIConfiguration) {
+            this.initCNIConfiguration = initCNIConfiguration;
+            return this;
+        }
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjectorInitCNIConfiguration getInitCNIConfiguration() {
+            return this.initCNIConfiguration;
+        }
+
+    }
+
     public static class DescribeServiceMeshesResponseServiceMeshesSpecMeshConfig extends TeaModel {
         @NameInMap("Mtls")
         @Validation(required = true)
@@ -281,6 +389,14 @@ public class DescribeServiceMeshesResponse extends TeaModel {
         @NameInMap("Telemetry")
         @Validation(required = true)
         public Boolean telemetry;
+
+        @NameInMap("Pilot")
+        @Validation(required = true)
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot pilot;
+
+        @NameInMap("SidecarInjector")
+        @Validation(required = true)
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector sidecarInjector;
 
         public static DescribeServiceMeshesResponseServiceMeshesSpecMeshConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshesResponseServiceMeshesSpecMeshConfig self = new DescribeServiceMeshesResponseServiceMeshesSpecMeshConfig();
@@ -325,6 +441,22 @@ public class DescribeServiceMeshesResponse extends TeaModel {
         }
         public Boolean getTelemetry() {
             return this.telemetry;
+        }
+
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfig setPilot(DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot pilot) {
+            this.pilot = pilot;
+            return this;
+        }
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigPilot getPilot() {
+            return this.pilot;
+        }
+
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfig setSidecarInjector(DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector sidecarInjector) {
+            this.sidecarInjector = sidecarInjector;
+            return this;
+        }
+        public DescribeServiceMeshesResponseServiceMeshesSpecMeshConfigSidecarInjector getSidecarInjector() {
+            return this.sidecarInjector;
         }
 
     }

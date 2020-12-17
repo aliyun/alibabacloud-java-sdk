@@ -89,6 +89,18 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("SidecarInjectorWebhookAsYaml")
     public String sidecarInjectorWebhookAsYaml;
 
+    @NameInMap("CniEnabled")
+    public Boolean cniEnabled;
+
+    @NameInMap("CniExcludeNamespaces")
+    public String cniExcludeNamespaces;
+
+    @NameInMap("OpaEnabled")
+    public Boolean opaEnabled;
+
+    @NameInMap("Http10Enabled")
+    public Boolean http10Enabled;
+
     public static UpdateMeshFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMeshFeatureRequest self = new UpdateMeshFeatureRequest();
         return TeaModel.build(map, self);
@@ -316,6 +328,38 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public String getSidecarInjectorWebhookAsYaml() {
         return this.sidecarInjectorWebhookAsYaml;
+    }
+
+    public UpdateMeshFeatureRequest setCniEnabled(Boolean cniEnabled) {
+        this.cniEnabled = cniEnabled;
+        return this;
+    }
+    public Boolean getCniEnabled() {
+        return this.cniEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setCniExcludeNamespaces(String cniExcludeNamespaces) {
+        this.cniExcludeNamespaces = cniExcludeNamespaces;
+        return this;
+    }
+    public String getCniExcludeNamespaces() {
+        return this.cniExcludeNamespaces;
+    }
+
+    public UpdateMeshFeatureRequest setOpaEnabled(Boolean opaEnabled) {
+        this.opaEnabled = opaEnabled;
+        return this;
+    }
+    public Boolean getOpaEnabled() {
+        return this.opaEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setHttp10Enabled(Boolean http10Enabled) {
+        this.http10Enabled = http10Enabled;
+        return this;
+    }
+    public Boolean getHttp10Enabled() {
+        return this.http10Enabled;
     }
 
 }

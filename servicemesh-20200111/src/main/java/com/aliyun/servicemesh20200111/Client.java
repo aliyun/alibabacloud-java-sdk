@@ -174,16 +174,6 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.describeClusterGrafanaWithOptions(request, runtime);
     }
 
-    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("DescribeRegions", "HTTPS", "POST", "2020-01-11", "AK", null, TeaModel.buildMap(request), runtime), new DescribeRegionsResponse());
-    }
-
-    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeRegionsWithOptions(request, runtime);
-    }
-
     public DescribeCensResponse describeCensWithOptions(DescribeCensRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeCens", "HTTPS", "POST", "2020-01-11", "AK", null, TeaModel.buildMap(request), runtime), new DescribeCensResponse());
