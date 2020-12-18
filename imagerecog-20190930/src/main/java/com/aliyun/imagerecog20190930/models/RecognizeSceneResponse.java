@@ -17,10 +17,26 @@ public class RecognizeSceneResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeSceneResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RecognizeSceneResponse setData(RecognizeSceneResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public RecognizeSceneResponseData getData() {
+        return this.data;
+    }
+
     public static class RecognizeSceneResponseDataTags extends TeaModel {
         @NameInMap("Confidence")
         @Validation(required = true)
-        public Double confidence;
+        public Float confidence;
 
         @NameInMap("Value")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class RecognizeSceneResponse extends TeaModel {
         public static RecognizeSceneResponseDataTags build(java.util.Map<String, ?> map) throws Exception {
             RecognizeSceneResponseDataTags self = new RecognizeSceneResponseDataTags();
             return TeaModel.build(map, self);
+        }
+
+        public RecognizeSceneResponseDataTags setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public RecognizeSceneResponseDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -41,6 +73,14 @@ public class RecognizeSceneResponse extends TeaModel {
         public static RecognizeSceneResponseData build(java.util.Map<String, ?> map) throws Exception {
             RecognizeSceneResponseData self = new RecognizeSceneResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public RecognizeSceneResponseData setTags(java.util.List<RecognizeSceneResponseDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<RecognizeSceneResponseDataTags> getTags() {
+            return this.tags;
         }
 
     }

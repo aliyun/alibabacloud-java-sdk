@@ -16,4 +16,20 @@ public class RecognizeImageColorAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeImageColorAdvanceRequest setUrlObject(java.io.InputStream urlObject) {
+        this.urlObject = urlObject;
+        return this;
+    }
+    public java.io.InputStream getUrlObject() {
+        return this.urlObject;
+    }
+
+    public RecognizeImageColorAdvanceRequest setColorCount(Integer colorCount) {
+        this.colorCount = colorCount;
+        return this;
+    }
+    public Integer getColorCount() {
+        return this.colorCount;
+    }
+
 }

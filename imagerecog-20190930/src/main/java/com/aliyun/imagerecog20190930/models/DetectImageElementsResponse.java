@@ -17,6 +17,22 @@ public class DetectImageElementsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetectImageElementsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DetectImageElementsResponse setData(DetectImageElementsResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public DetectImageElementsResponseData getData() {
+        return this.data;
+    }
+
     public static class DetectImageElementsResponseDataElements extends TeaModel {
         @NameInMap("Type")
         @Validation(required = true)
@@ -40,11 +56,59 @@ public class DetectImageElementsResponse extends TeaModel {
 
         @NameInMap("Score")
         @Validation(required = true)
-        public Double score;
+        public Float score;
 
         public static DetectImageElementsResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
             DetectImageElementsResponseDataElements self = new DetectImageElementsResponseDataElements();
             return TeaModel.build(map, self);
+        }
+
+        public DetectImageElementsResponseDataElements setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DetectImageElementsResponseDataElements setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public DetectImageElementsResponseDataElements setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+        public DetectImageElementsResponseDataElements setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+        public DetectImageElementsResponseDataElements setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public DetectImageElementsResponseDataElements setScore(Float score) {
+            this.score = score;
+            return this;
+        }
+        public Float getScore() {
+            return this.score;
         }
 
     }
@@ -57,6 +121,14 @@ public class DetectImageElementsResponse extends TeaModel {
         public static DetectImageElementsResponseData build(java.util.Map<String, ?> map) throws Exception {
             DetectImageElementsResponseData self = new DetectImageElementsResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public DetectImageElementsResponseData setElements(java.util.List<DetectImageElementsResponseDataElements> elements) {
+            this.elements = elements;
+            return this;
+        }
+        public java.util.List<DetectImageElementsResponseDataElements> getElements() {
+            return this.elements;
         }
 
     }
