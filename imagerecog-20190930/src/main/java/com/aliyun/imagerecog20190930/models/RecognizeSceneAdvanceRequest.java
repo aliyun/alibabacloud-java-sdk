@@ -13,4 +13,12 @@ public class RecognizeSceneAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeSceneAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
 }

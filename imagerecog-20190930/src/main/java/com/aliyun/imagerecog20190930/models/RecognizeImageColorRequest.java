@@ -16,4 +16,20 @@ public class RecognizeImageColorRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeImageColorRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
+    }
+
+    public RecognizeImageColorRequest setColorCount(Integer colorCount) {
+        this.colorCount = colorCount;
+        return this;
+    }
+    public Integer getColorCount() {
+        return this.colorCount;
+    }
+
 }

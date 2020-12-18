@@ -13,6 +13,14 @@ public class RecognizeLogoRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeLogoRequest setTasks(java.util.List<RecognizeLogoRequestTasks> tasks) {
+        this.tasks = tasks;
+        return this;
+    }
+    public java.util.List<RecognizeLogoRequestTasks> getTasks() {
+        return this.tasks;
+    }
+
     public static class RecognizeLogoRequestTasks extends TeaModel {
         @NameInMap("ImageURL")
         @Validation(required = true)
@@ -21,6 +29,14 @@ public class RecognizeLogoRequest extends TeaModel {
         public static RecognizeLogoRequestTasks build(java.util.Map<String, ?> map) throws Exception {
             RecognizeLogoRequestTasks self = new RecognizeLogoRequestTasks();
             return TeaModel.build(map, self);
+        }
+
+        public RecognizeLogoRequestTasks setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
         }
 
     }

@@ -17,10 +17,26 @@ public class TaggingImageResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TaggingImageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public TaggingImageResponse setData(TaggingImageResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public TaggingImageResponseData getData() {
+        return this.data;
+    }
+
     public static class TaggingImageResponseDataTags extends TeaModel {
         @NameInMap("Confidence")
         @Validation(required = true)
-        public Double confidence;
+        public Float confidence;
 
         @NameInMap("Value")
         @Validation(required = true)
@@ -29,6 +45,22 @@ public class TaggingImageResponse extends TeaModel {
         public static TaggingImageResponseDataTags build(java.util.Map<String, ?> map) throws Exception {
             TaggingImageResponseDataTags self = new TaggingImageResponseDataTags();
             return TeaModel.build(map, self);
+        }
+
+        public TaggingImageResponseDataTags setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public TaggingImageResponseDataTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -41,6 +73,14 @@ public class TaggingImageResponse extends TeaModel {
         public static TaggingImageResponseData build(java.util.Map<String, ?> map) throws Exception {
             TaggingImageResponseData self = new TaggingImageResponseData();
             return TeaModel.build(map, self);
+        }
+
+        public TaggingImageResponseData setTags(java.util.List<TaggingImageResponseDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<TaggingImageResponseDataTags> getTags() {
+            return this.tags;
         }
 
     }

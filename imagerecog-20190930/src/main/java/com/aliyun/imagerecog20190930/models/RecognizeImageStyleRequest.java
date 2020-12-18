@@ -13,4 +13,12 @@ public class RecognizeImageStyleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeImageStyleRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
+    }
+
 }

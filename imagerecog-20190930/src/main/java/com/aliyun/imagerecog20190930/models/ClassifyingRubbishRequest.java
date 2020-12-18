@@ -13,4 +13,12 @@ public class ClassifyingRubbishRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ClassifyingRubbishRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }

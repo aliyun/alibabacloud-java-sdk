@@ -13,4 +13,12 @@ public class TaggingImageRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public TaggingImageRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
 }
