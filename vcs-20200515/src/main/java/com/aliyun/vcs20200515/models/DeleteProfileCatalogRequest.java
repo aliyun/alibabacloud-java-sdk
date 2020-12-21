@@ -8,11 +8,9 @@ public class DeleteProfileCatalogRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("CatalogId")
-    @Validation(required = true)
     public String catalogId;
 
     public static DeleteProfileCatalogRequest build(java.util.Map<String, ?> map) throws Exception {

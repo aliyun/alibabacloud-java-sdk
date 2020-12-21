@@ -5,30 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListBodyAlgorithmResultsRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("AlgorithmType")
-    @Validation(required = true)
     public String algorithmType;
 
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public String pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public String pageSize;
 
     @NameInMap("CapStyle")

@@ -8,7 +8,6 @@ public class ListUsersShrinkRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("UserName")
@@ -45,11 +44,9 @@ public class ListUsersShrinkRequest extends TeaModel {
     public String bizId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Long pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Long pageSize;
 
     @NameInMap("PersonList")

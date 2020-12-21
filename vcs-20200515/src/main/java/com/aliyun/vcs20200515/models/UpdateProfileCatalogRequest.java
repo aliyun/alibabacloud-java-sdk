@@ -8,15 +8,12 @@ public class UpdateProfileCatalogRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("CatalogId")
-    @Validation(required = true)
     public Long catalogId;
 
     @NameInMap("CatalogName")
-    @Validation(required = true)
     public String catalogName;
 
     public static UpdateProfileCatalogRequest build(java.util.Map<String, ?> map) throws Exception {

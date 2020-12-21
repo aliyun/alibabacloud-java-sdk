@@ -8,11 +8,9 @@ public class CreateUserGroupRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("UserGroupName")
-    @Validation(required = true)
     public String userGroupName;
 
     @NameInMap("ParentUserGroupId")

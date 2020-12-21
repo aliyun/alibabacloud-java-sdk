@@ -14,19 +14,19 @@ public class ListDeviceGroupsRequest extends TeaModel {
     public String name;
 
     @NameInMap("IsPage")
-    @Validation(required = true)
     public Integer isPage;
 
     @NameInMap("PageNum")
-    @Validation(required = true)
     public Integer pageNum;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Group")
     public String group;
+
+    @NameInMap("DataSourceType")
+    public String dataSourceType;
 
     public static ListDeviceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceGroupsRequest self = new ListDeviceGroupsRequest();
@@ -87,6 +87,14 @@ public class ListDeviceGroupsRequest extends TeaModel {
     }
     public String getGroup() {
         return this.group;
+    }
+
+    public ListDeviceGroupsRequest setDataSourceType(String dataSourceType) {
+        this.dataSourceType = dataSourceType;
+        return this;
+    }
+    public String getDataSourceType() {
+        return this.dataSourceType;
     }
 
 }

@@ -4,57 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeviceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public DeleteDeviceResponseBody body;
 
     public static DeleteDeviceResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDeviceResponse self = new DeleteDeviceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDeviceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteDeviceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteDeviceResponse setCode(String code) {
-        this.code = code;
+    public DeleteDeviceResponse setBody(DeleteDeviceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DeleteDeviceResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public DeleteDeviceResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public DeleteDeviceResponseBody getBody() {
+        return this.body;
     }
 
 }

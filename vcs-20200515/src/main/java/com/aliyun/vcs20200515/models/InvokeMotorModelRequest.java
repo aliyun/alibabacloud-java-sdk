@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class InvokeMotorModelRequest extends TeaModel {
     @NameInMap("PicId")
-    @Validation(required = true)
     public String picId;
 
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("PicPath")

@@ -8,7 +8,6 @@ public class GetProfileListShrinkRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("Name")
@@ -42,11 +41,9 @@ public class GetProfileListShrinkRequest extends TeaModel {
     public String bizId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Long pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Long pageSize;
 
     @NameInMap("PersonIdList")

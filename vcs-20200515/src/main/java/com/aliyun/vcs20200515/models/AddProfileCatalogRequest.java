@@ -8,11 +8,9 @@ public class AddProfileCatalogRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("CatalogName")
-    @Validation(required = true)
     public String catalogName;
 
     @NameInMap("ParentCatalogId")

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddMonitorRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("MonitorType")
-    @Validation(required = true)
     public String monitorType;
 
     @NameInMap("Description")
@@ -19,7 +17,6 @@ public class AddMonitorRequest extends TeaModel {
     public Integer batchIndicator;
 
     @NameInMap("AlgorithmVendor")
-    @Validation(required = true)
     public String algorithmVendor;
 
     @NameInMap("NotifierType")

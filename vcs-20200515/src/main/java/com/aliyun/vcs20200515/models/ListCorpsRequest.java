@@ -4,12 +4,12 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class ListCorpsRequest extends TeaModel {
+    // 页码
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
+    // 分页大小
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CorpName")

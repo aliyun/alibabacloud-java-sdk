@@ -4,57 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class RegisterDeviceResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("RetryInterval")
-    @Validation(required = true)
-    public String retryInterval;
+    public RegisterDeviceResponseBody body;
 
     public static RegisterDeviceResponse build(java.util.Map<String, ?> map) throws Exception {
         RegisterDeviceResponse self = new RegisterDeviceResponse();
         return TeaModel.build(map, self);
     }
 
-    public RegisterDeviceResponse setCode(String code) {
-        this.code = code;
+    public RegisterDeviceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RegisterDeviceResponse setMessage(String message) {
-        this.message = message;
+    public RegisterDeviceResponse setBody(RegisterDeviceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public RegisterDeviceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public RegisterDeviceResponse setRetryInterval(String retryInterval) {
-        this.retryInterval = retryInterval;
-        return this;
-    }
-    public String getRetryInterval() {
-        return this.retryInterval;
+    public RegisterDeviceResponseBody getBody() {
+        return this.body;
     }
 
 }

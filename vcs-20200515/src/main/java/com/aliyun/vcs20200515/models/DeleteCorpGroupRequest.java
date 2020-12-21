@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteCorpGroupRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     public static DeleteCorpGroupRequest build(java.util.Map<String, ?> map) throws Exception {

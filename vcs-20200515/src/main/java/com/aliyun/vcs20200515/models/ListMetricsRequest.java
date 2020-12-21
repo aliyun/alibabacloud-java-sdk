@@ -5,31 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListMetricsRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("TagCode")
-    @Validation(required = true)
     public String tagCode;
 
     @NameInMap("AggregateType")
-    @Validation(required = true)
     public String aggregateType;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public String pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public String pageSize;
 
     public static ListMetricsRequest build(java.util.Map<String, ?> map) throws Exception {

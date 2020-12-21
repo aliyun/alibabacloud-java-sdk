@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class BindCorpGroupRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("CorpGroupId")
-    @Validation(required = true)
     public String corpGroupId;
 
     public static BindCorpGroupRequest build(java.util.Map<String, ?> map) throws Exception {

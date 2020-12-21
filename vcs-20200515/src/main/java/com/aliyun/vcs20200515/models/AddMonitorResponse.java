@@ -4,77 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class AddMonitorResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public AddMonitorResponseData data;
+    public AddMonitorResponseBody body;
 
     public static AddMonitorResponse build(java.util.Map<String, ?> map) throws Exception {
         AddMonitorResponse self = new AddMonitorResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddMonitorResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddMonitorResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddMonitorResponse setCode(String code) {
-        this.code = code;
+    public AddMonitorResponse setBody(AddMonitorResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public AddMonitorResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public AddMonitorResponse setData(AddMonitorResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public AddMonitorResponseData getData() {
-        return this.data;
-    }
-
-    public static class AddMonitorResponseData extends TeaModel {
-        @NameInMap("TaskId")
-        @Validation(required = true)
-        public String taskId;
-
-        public static AddMonitorResponseData build(java.util.Map<String, ?> map) throws Exception {
-            AddMonitorResponseData self = new AddMonitorResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public AddMonitorResponseData setTaskId(String taskId) {
-            this.taskId = taskId;
-            return this;
-        }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
+    public AddMonitorResponseBody getBody() {
+        return this.body;
     }
 
 }

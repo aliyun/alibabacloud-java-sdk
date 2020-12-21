@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetMonitorResultRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("TaskId")
@@ -15,11 +14,9 @@ public class GetMonitorResultRequest extends TeaModel {
     public String minRecordId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("AlgorithmVendor")

@@ -5,35 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListPersonVisitCountRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("AggregateType")
-    @Validation(required = true)
     public String aggregateType;
 
     @NameInMap("TagCode")
-    @Validation(required = true)
     public String tagCode;
 
     @NameInMap("TimeAggregateType")
-    @Validation(required = true)
     public String timeAggregateType;
 
     @NameInMap("MinVal")

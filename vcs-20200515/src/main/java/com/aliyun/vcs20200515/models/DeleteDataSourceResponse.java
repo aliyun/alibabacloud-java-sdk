@@ -4,45 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteDataSourceResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public String data;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public DeleteDataSourceResponseBody body;
 
     public static DeleteDataSourceResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDataSourceResponse self = new DeleteDataSourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDataSourceResponse setCode(String code) {
-        this.code = code;
+    public DeleteDataSourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteDataSourceResponse setData(String data) {
-        this.data = data;
+    public DeleteDataSourceResponse setBody(DeleteDataSourceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getData() {
-        return this.data;
-    }
-
-    public DeleteDataSourceResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public DeleteDataSourceResponseBody getBody() {
+        return this.body;
     }
 
 }

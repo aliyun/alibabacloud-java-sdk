@@ -8,14 +8,12 @@ public class UpdateProfileRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("Name")
     public String name;
 
     @NameInMap("CatalogId")
-    @Validation(required = true)
     public Long catalogId;
 
     @NameInMap("IdNumber")
@@ -43,7 +41,6 @@ public class UpdateProfileRequest extends TeaModel {
     public String bizId;
 
     @NameInMap("ProfileId")
-    @Validation(required = true)
     public Long profileId;
 
     public static UpdateProfileRequest build(java.util.Map<String, ?> map) throws Exception {

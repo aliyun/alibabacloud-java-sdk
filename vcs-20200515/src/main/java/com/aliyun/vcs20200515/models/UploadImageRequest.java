@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class UploadImageRequest extends TeaModel {
     @NameInMap("ImageUrl")
-    @Validation(required = true)
     public String imageUrl;
 
     public static UploadImageRequest build(java.util.Map<String, ?> map) throws Exception {

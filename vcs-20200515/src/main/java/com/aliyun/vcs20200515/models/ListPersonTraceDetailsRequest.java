@@ -8,22 +8,18 @@ public class ListPersonTraceDetailsRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Long pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Long pageSize;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("PersonId")
     public String personId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("SubId")

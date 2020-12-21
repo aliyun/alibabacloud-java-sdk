@@ -4,57 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteVideoSummaryTaskResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public String data;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public DeleteVideoSummaryTaskResponseBody body;
 
     public static DeleteVideoSummaryTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteVideoSummaryTaskResponse self = new DeleteVideoSummaryTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteVideoSummaryTaskResponse setCode(String code) {
-        this.code = code;
+    public DeleteVideoSummaryTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteVideoSummaryTaskResponse setData(String data) {
-        this.data = data;
+    public DeleteVideoSummaryTaskResponse setBody(DeleteVideoSummaryTaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getData() {
-        return this.data;
-    }
-
-    public DeleteVideoSummaryTaskResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DeleteVideoSummaryTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public DeleteVideoSummaryTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -8,7 +8,6 @@ public class GetCatalogListRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     public static GetCatalogListRequest build(java.util.Map<String, ?> map) throws Exception {
