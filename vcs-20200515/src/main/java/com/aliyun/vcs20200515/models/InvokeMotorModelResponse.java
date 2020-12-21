@@ -4,77 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class InvokeMotorModelResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public InvokeMotorModelResponseData data;
+    public InvokeMotorModelResponseBody body;
 
     public static InvokeMotorModelResponse build(java.util.Map<String, ?> map) throws Exception {
         InvokeMotorModelResponse self = new InvokeMotorModelResponse();
         return TeaModel.build(map, self);
     }
 
-    public InvokeMotorModelResponse setCode(String code) {
-        this.code = code;
+    public InvokeMotorModelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public InvokeMotorModelResponse setMessage(String message) {
-        this.message = message;
+    public InvokeMotorModelResponse setBody(InvokeMotorModelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public InvokeMotorModelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public InvokeMotorModelResponse setData(InvokeMotorModelResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public InvokeMotorModelResponseData getData() {
-        return this.data;
-    }
-
-    public static class InvokeMotorModelResponseData extends TeaModel {
-        @NameInMap("StructList")
-        @Validation(required = true)
-        public String structList;
-
-        public static InvokeMotorModelResponseData build(java.util.Map<String, ?> map) throws Exception {
-            InvokeMotorModelResponseData self = new InvokeMotorModelResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public InvokeMotorModelResponseData setStructList(String structList) {
-            this.structList = structList;
-            return this;
-        }
-        public String getStructList() {
-            return this.structList;
-        }
-
+    public InvokeMotorModelResponseBody getBody() {
+        return this.body;
     }
 
 }

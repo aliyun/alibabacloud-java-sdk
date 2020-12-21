@@ -20,16 +20,13 @@ public class ReportDeviceCapacityRequest extends TeaModel {
     public String PTZCapacity;
 
     @NameInMap("DeviceSn")
-    @Validation(required = true)
     public String deviceSn;
 
-    @NameInMap("StreamCapacities")
-    @Validation(required = true)
-    public java.util.List<ReportDeviceCapacityRequestStreamCapacities> streamCapacities;
-
     @NameInMap("DeviceTimeStamp")
-    @Validation(required = true)
     public String deviceTimeStamp;
+
+    @NameInMap("StreamCapacities")
+    public java.util.List<ReportDeviceCapacityRequestStreamCapacities> streamCapacities;
 
     public static ReportDeviceCapacityRequest build(java.util.Map<String, ?> map) throws Exception {
         ReportDeviceCapacityRequest self = new ReportDeviceCapacityRequest();
@@ -84,14 +81,6 @@ public class ReportDeviceCapacityRequest extends TeaModel {
         return this.deviceSn;
     }
 
-    public ReportDeviceCapacityRequest setStreamCapacities(java.util.List<ReportDeviceCapacityRequestStreamCapacities> streamCapacities) {
-        this.streamCapacities = streamCapacities;
-        return this;
-    }
-    public java.util.List<ReportDeviceCapacityRequestStreamCapacities> getStreamCapacities() {
-        return this.streamCapacities;
-    }
-
     public ReportDeviceCapacityRequest setDeviceTimeStamp(String deviceTimeStamp) {
         this.deviceTimeStamp = deviceTimeStamp;
         return this;
@@ -100,30 +89,32 @@ public class ReportDeviceCapacityRequest extends TeaModel {
         return this.deviceTimeStamp;
     }
 
+    public ReportDeviceCapacityRequest setStreamCapacities(java.util.List<ReportDeviceCapacityRequestStreamCapacities> streamCapacities) {
+        this.streamCapacities = streamCapacities;
+        return this;
+    }
+    public java.util.List<ReportDeviceCapacityRequestStreamCapacities> getStreamCapacities() {
+        return this.streamCapacities;
+    }
+
     public static class ReportDeviceCapacityRequestStreamCapacities extends TeaModel {
         @NameInMap("EncodeFormat")
-        @Validation(required = true)
         public String encodeFormat;
 
-        @NameInMap("Resolution")
-        @Validation(required = true)
-        public String resolution;
+        @NameInMap("GovLengthRange")
+        public String govLengthRange;
 
         @NameInMap("MaxFrameRate")
-        @Validation(required = true)
         public String maxFrameRate;
 
-        @NameInMap("MaxStream")
-        @Validation(required = true)
-        public String maxStream;
-
         @NameInMap("BitrateRange")
-        @Validation(required = true)
         public String bitrateRange;
 
-        @NameInMap("GovLengthRange")
-        @Validation(required = true)
-        public String govLengthRange;
+        @NameInMap("MaxStream")
+        public String maxStream;
+
+        @NameInMap("Resolution")
+        public String resolution;
 
         public static ReportDeviceCapacityRequestStreamCapacities build(java.util.Map<String, ?> map) throws Exception {
             ReportDeviceCapacityRequestStreamCapacities self = new ReportDeviceCapacityRequestStreamCapacities();
@@ -138,12 +129,12 @@ public class ReportDeviceCapacityRequest extends TeaModel {
             return this.encodeFormat;
         }
 
-        public ReportDeviceCapacityRequestStreamCapacities setResolution(String resolution) {
-            this.resolution = resolution;
+        public ReportDeviceCapacityRequestStreamCapacities setGovLengthRange(String govLengthRange) {
+            this.govLengthRange = govLengthRange;
             return this;
         }
-        public String getResolution() {
-            return this.resolution;
+        public String getGovLengthRange() {
+            return this.govLengthRange;
         }
 
         public ReportDeviceCapacityRequestStreamCapacities setMaxFrameRate(String maxFrameRate) {
@@ -154,14 +145,6 @@ public class ReportDeviceCapacityRequest extends TeaModel {
             return this.maxFrameRate;
         }
 
-        public ReportDeviceCapacityRequestStreamCapacities setMaxStream(String maxStream) {
-            this.maxStream = maxStream;
-            return this;
-        }
-        public String getMaxStream() {
-            return this.maxStream;
-        }
-
         public ReportDeviceCapacityRequestStreamCapacities setBitrateRange(String bitrateRange) {
             this.bitrateRange = bitrateRange;
             return this;
@@ -170,12 +153,20 @@ public class ReportDeviceCapacityRequest extends TeaModel {
             return this.bitrateRange;
         }
 
-        public ReportDeviceCapacityRequestStreamCapacities setGovLengthRange(String govLengthRange) {
-            this.govLengthRange = govLengthRange;
+        public ReportDeviceCapacityRequestStreamCapacities setMaxStream(String maxStream) {
+            this.maxStream = maxStream;
             return this;
         }
-        public String getGovLengthRange() {
-            return this.govLengthRange;
+        public String getMaxStream() {
+            return this.maxStream;
+        }
+
+        public ReportDeviceCapacityRequestStreamCapacities setResolution(String resolution) {
+            this.resolution = resolution;
+            return this;
+        }
+        public String getResolution() {
+            return this.resolution;
         }
 
     }

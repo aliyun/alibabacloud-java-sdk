@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RegisterDeviceRequest extends TeaModel {
     @NameInMap("DeviceSn")
-    @Validation(required = true)
     public String deviceSn;
 
     @NameInMap("DeviceId")
@@ -15,7 +14,6 @@ public class RegisterDeviceRequest extends TeaModel {
     public String serverId;
 
     @NameInMap("DeviceTimeStamp")
-    @Validation(required = true)
     public String deviceTimeStamp;
 
     public static RegisterDeviceRequest build(java.util.Map<String, ?> map) throws Exception {

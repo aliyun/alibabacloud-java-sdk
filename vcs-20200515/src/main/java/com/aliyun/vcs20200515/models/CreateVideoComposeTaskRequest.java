@@ -5,26 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateVideoComposeTaskRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("BucketName")
-    @Validation(required = true)
     public String bucketName;
 
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("ImageFileNames")
-    @Validation(required = true)
     public String imageFileNames;
 
     @NameInMap("AudioFileName")
-    @Validation(required = true)
     public String audioFileName;
 
     @NameInMap("ImageParameters")
-    @Validation(required = true)
     public String imageParameters;
 
     @NameInMap("VideoFormat")

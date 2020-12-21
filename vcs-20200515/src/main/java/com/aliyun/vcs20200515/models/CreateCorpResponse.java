@@ -4,57 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateCorpResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("CorpId")
-    @Validation(required = true)
-    public String corpId;
+    public CreateCorpResponseBody body;
 
     public static CreateCorpResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateCorpResponse self = new CreateCorpResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateCorpResponse setCode(String code) {
-        this.code = code;
+    public CreateCorpResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateCorpResponse setMessage(String message) {
-        this.message = message;
+    public CreateCorpResponse setBody(CreateCorpResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public CreateCorpResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateCorpResponse setCorpId(String corpId) {
-        this.corpId = corpId;
-        return this;
-    }
-    public String getCorpId() {
-        return this.corpId;
+    public CreateCorpResponseBody getBody() {
+        return this.body;
     }
 
 }

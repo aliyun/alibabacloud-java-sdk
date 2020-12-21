@@ -8,7 +8,6 @@ public class ListUserGroupsRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     public static ListUserGroupsRequest build(java.util.Map<String, ?> map) throws Exception {

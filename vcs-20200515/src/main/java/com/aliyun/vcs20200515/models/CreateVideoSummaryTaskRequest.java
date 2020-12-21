@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateVideoSummaryTaskRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("DeviceId")
-    @Validation(required = true)
     public String deviceId;
 
     @NameInMap("StartTimeStamp")
-    @Validation(required = true)
     public Long startTimeStamp;
 
     @NameInMap("EndTimeStamp")
-    @Validation(required = true)
     public Long endTimeStamp;
 
     @NameInMap("OptionList")

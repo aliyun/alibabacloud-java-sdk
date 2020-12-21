@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetFaceModelResultRequest extends TeaModel {
     @NameInMap("PictureId")
-    @Validation(required = true)
     public String pictureId;
 
     @NameInMap("PictureContent")

@@ -5,28 +5,24 @@ import com.aliyun.tea.*;
 
 public class UploadFileRequest extends TeaModel {
     @NameInMap("FileType")
-    @Validation(required = true)
     public String fileType;
 
     @NameInMap("MD5")
     public String MD5;
 
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("FileContent")
     public String fileContent;
 
     @NameInMap("FileName")
-    @Validation(required = true)
     public String fileName;
 
     @NameInMap("FileAliasName")
     public String fileAliasName;
 
     @NameInMap("DataSourceId")
-    @Validation(required = true)
     public String dataSourceId;
 
     @NameInMap("FilePath")

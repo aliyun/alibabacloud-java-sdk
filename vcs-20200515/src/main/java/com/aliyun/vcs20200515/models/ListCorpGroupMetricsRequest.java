@@ -5,27 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListCorpGroupMetricsRequest extends TeaModel {
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("TagCode")
-    @Validation(required = true)
     public String tagCode;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public String pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public String pageSize;
 
     @NameInMap("DeviceId")

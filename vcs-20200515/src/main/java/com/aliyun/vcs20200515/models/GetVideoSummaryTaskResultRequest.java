@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetVideoSummaryTaskResultRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public String taskId;
 
     public static GetVideoSummaryTaskResultRequest build(java.util.Map<String, ?> map) throws Exception {

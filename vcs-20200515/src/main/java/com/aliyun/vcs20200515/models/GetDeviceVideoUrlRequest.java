@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetDeviceVideoUrlRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("GbId")

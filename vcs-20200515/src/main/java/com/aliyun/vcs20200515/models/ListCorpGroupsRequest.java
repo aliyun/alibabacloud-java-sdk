@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListCorpGroupsRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Long pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Long pageSize;
 
     public static ListCorpGroupsRequest build(java.util.Map<String, ?> map) throws Exception {

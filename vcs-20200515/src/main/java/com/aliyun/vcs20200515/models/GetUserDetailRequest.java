@@ -8,11 +8,9 @@ public class GetUserDetailRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("UserId")
-    @Validation(required = true)
     public Long userId;
 
     @NameInMap("NeedFaceDetail")

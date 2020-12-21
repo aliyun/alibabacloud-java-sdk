@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateCorpRequest extends TeaModel {
     @NameInMap("CorpName")
-    @Validation(required = true)
     public String corpName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("ParentCorpId")

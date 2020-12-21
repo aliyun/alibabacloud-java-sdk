@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class RecognizeImageRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("PicContent")
     public String picContent;
 
     @NameInMap("PicFormat")
-    @Validation(required = true)
     public String picFormat;
 
     @NameInMap("PicUrl")

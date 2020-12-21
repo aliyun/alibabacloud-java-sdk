@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDevicesRequest extends TeaModel {
     @NameInMap("PageNum")
-    @Validation(required = true)
     public Integer pageNum;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CorpIdList")
-    @Validation(required = true)
     public String corpIdList;
 
     public static DescribeDevicesRequest build(java.util.Map<String, ?> map) throws Exception {

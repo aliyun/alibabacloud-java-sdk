@@ -8,15 +8,12 @@ public class AddProfileRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("CatalogId")
-    @Validation(required = true)
     public Long catalogId;
 
     @NameInMap("IdNumber")

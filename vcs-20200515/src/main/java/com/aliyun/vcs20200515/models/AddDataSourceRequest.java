@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddDataSourceRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("DataSourceName")
-    @Validation(required = true)
     public String dataSourceName;
 
     @NameInMap("DataSourceType")
-    @Validation(required = true)
     public String dataSourceType;
 
     @NameInMap("Description")

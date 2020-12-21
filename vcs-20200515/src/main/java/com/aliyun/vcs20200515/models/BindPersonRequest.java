@@ -8,19 +8,15 @@ public class BindPersonRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("PersonMatchingRate")
-    @Validation(required = true)
     public String personMatchingRate;
 
     @NameInMap("PersonId")
-    @Validation(required = true)
     public String personId;
 
     @NameInMap("ProfileId")
-    @Validation(required = true)
     public Long profileId;
 
     public static BindPersonRequest build(java.util.Map<String, ?> map) throws Exception {

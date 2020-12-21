@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDeviceConfigRequest extends TeaModel {
     @NameInMap("DeviceSn")
-    @Validation(required = true)
     public String deviceSn;
 
     @NameInMap("DeviceTimeStamp")
-    @Validation(required = true)
     public String deviceTimeStamp;
 
     public static GetDeviceConfigRequest build(java.util.Map<String, ?> map) throws Exception {

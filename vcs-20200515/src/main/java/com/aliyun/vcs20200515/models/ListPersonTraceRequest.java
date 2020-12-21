@@ -5,22 +5,18 @@ import com.aliyun.tea.*;
 
 public class ListPersonTraceRequest extends TeaModel {
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("CorpId")
     public String corpId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public String pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public String pageSize;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("DataSourceId")
@@ -30,7 +26,6 @@ public class ListPersonTraceRequest extends TeaModel {
     public String personId;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     public static ListPersonTraceRequest build(java.util.Map<String, ?> map) throws Exception {

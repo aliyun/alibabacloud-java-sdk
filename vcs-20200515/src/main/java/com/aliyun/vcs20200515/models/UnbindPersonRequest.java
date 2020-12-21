@@ -8,11 +8,9 @@ public class UnbindPersonRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("ProfileId")
-    @Validation(required = true)
     public Long profileId;
 
     public static UnbindPersonRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,57 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class UpdateMonitorResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public String data;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public UpdateMonitorResponseBody body;
 
     public static UpdateMonitorResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateMonitorResponse self = new UpdateMonitorResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateMonitorResponse setCode(String code) {
-        this.code = code;
+    public UpdateMonitorResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateMonitorResponse setData(String data) {
-        this.data = data;
+    public UpdateMonitorResponse setBody(UpdateMonitorResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getData() {
-        return this.data;
-    }
-
-    public UpdateMonitorResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public UpdateMonitorResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public UpdateMonitorResponseBody getBody() {
+        return this.body;
     }
 
 }

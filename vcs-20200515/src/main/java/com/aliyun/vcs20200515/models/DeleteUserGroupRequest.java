@@ -8,11 +8,9 @@ public class DeleteUserGroupRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("UserGroupId")
-    @Validation(required = true)
     public String userGroupId;
 
     public static DeleteUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {

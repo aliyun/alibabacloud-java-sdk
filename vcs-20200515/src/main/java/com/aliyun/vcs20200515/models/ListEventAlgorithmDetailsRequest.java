@@ -5,30 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListEventAlgorithmDetailsRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("EventType")
-    @Validation(required = true)
     public String eventType;
 
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("SourceId")

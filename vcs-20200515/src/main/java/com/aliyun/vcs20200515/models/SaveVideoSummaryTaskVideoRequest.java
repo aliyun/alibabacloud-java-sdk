@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class SaveVideoSummaryTaskVideoRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public Long taskId;
 
     @NameInMap("SaveVideo")
-    @Validation(required = true)
     public Boolean saveVideo;
 
     public static SaveVideoSummaryTaskVideoRequest build(java.util.Map<String, ?> map) throws Exception {

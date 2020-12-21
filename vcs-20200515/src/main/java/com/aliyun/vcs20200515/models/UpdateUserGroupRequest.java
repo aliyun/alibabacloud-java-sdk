@@ -8,15 +8,12 @@ public class UpdateUserGroupRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("UserGroupId")
-    @Validation(required = true)
     public Long userGroupId;
 
     @NameInMap("UserGroupName")
-    @Validation(required = true)
     public String userGroupName;
 
     public static UpdateUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {

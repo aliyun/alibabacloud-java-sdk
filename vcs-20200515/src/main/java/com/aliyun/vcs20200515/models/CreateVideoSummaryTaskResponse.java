@@ -4,57 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class CreateVideoSummaryTaskResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
+    public CreateVideoSummaryTaskResponseBody body;
 
     public static CreateVideoSummaryTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateVideoSummaryTaskResponse self = new CreateVideoSummaryTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateVideoSummaryTaskResponse setCode(String code) {
-        this.code = code;
+    public CreateVideoSummaryTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateVideoSummaryTaskResponse setMessage(String message) {
-        this.message = message;
+    public CreateVideoSummaryTaskResponse setBody(CreateVideoSummaryTaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public CreateVideoSummaryTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateVideoSummaryTaskResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
+    public CreateVideoSummaryTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

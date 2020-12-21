@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteDataSourceRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("DataSourceId")
-    @Validation(required = true)
     public String dataSourceId;
 
     public static DeleteDataSourceRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetMonitorListRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static GetMonitorListRequest build(java.util.Map<String, ?> map) throws Exception {

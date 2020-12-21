@@ -8,15 +8,12 @@ public class CreateUserRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("IsvSubId")
-    @Validation(required = true)
     public String isvSubId;
 
     @NameInMap("UserName")
-    @Validation(required = true)
     public String userName;
 
     @NameInMap("UserGroupId")
-    @Validation(required = true)
     public Long userGroupId;
 
     @NameInMap("IdNumber")

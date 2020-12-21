@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetPersonListShrinkRequest extends TeaModel {
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Long pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Long pageSize;
 
     @NameInMap("FaceUrl")

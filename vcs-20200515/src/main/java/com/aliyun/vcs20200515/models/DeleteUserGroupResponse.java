@@ -4,57 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class DeleteUserGroupResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public Boolean data;
+    public DeleteUserGroupResponseBody body;
 
     public static DeleteUserGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteUserGroupResponse self = new DeleteUserGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteUserGroupResponse setCode(String code) {
-        this.code = code;
+    public DeleteUserGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteUserGroupResponse setMessage(String message) {
-        this.message = message;
+    public DeleteUserGroupResponse setBody(DeleteUserGroupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public DeleteUserGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DeleteUserGroupResponse setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
+    public DeleteUserGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

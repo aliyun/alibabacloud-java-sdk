@@ -8,7 +8,6 @@ public class UpdateMonitorRequest extends TeaModel {
     public String corpId;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public String taskId;
 
     @NameInMap("RuleName")
@@ -42,7 +41,6 @@ public class UpdateMonitorRequest extends TeaModel {
     public String ruleExpression;
 
     @NameInMap("AlgorithmVendor")
-    @Validation(required = true)
     public String algorithmVendor;
 
     @NameInMap("NotifierType")

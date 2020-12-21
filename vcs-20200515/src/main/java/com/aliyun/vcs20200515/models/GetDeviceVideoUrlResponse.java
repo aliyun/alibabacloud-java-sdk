@@ -4,69 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class GetDeviceVideoUrlResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Url")
-    @Validation(required = true)
-    public String url;
-
-    @NameInMap("OutProtocol")
-    @Validation(required = true)
-    public String outProtocol;
+    public GetDeviceVideoUrlResponseBody body;
 
     public static GetDeviceVideoUrlResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceVideoUrlResponse self = new GetDeviceVideoUrlResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDeviceVideoUrlResponse setCode(String code) {
-        this.code = code;
+    public GetDeviceVideoUrlResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetDeviceVideoUrlResponse setMessage(String message) {
-        this.message = message;
+    public GetDeviceVideoUrlResponse setBody(GetDeviceVideoUrlResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetDeviceVideoUrlResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetDeviceVideoUrlResponse setUrl(String url) {
-        this.url = url;
-        return this;
-    }
-    public String getUrl() {
-        return this.url;
-    }
-
-    public GetDeviceVideoUrlResponse setOutProtocol(String outProtocol) {
-        this.outProtocol = outProtocol;
-        return this;
-    }
-    public String getOutProtocol() {
-        return this.outProtocol;
+    public GetDeviceVideoUrlResponseBody getBody() {
+        return this.body;
     }
 
 }

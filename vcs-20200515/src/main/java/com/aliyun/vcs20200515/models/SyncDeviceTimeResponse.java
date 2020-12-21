@@ -4,93 +4,33 @@ package com.aliyun.vcs20200515.models;
 import com.aliyun.tea.*;
 
 public class SyncDeviceTimeResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("NTPServer")
-    @Validation(required = true)
-    public String NTPServer;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("RetryInterval")
-    @Validation(required = true)
-    public String retryInterval;
-
-    @NameInMap("SyncInterval")
-    @Validation(required = true)
-    public String syncInterval;
-
-    @NameInMap("TimeStamp")
-    @Validation(required = true)
-    public String timeStamp;
+    public SyncDeviceTimeResponseBody body;
 
     public static SyncDeviceTimeResponse build(java.util.Map<String, ?> map) throws Exception {
         SyncDeviceTimeResponse self = new SyncDeviceTimeResponse();
         return TeaModel.build(map, self);
     }
 
-    public SyncDeviceTimeResponse setCode(String code) {
-        this.code = code;
+    public SyncDeviceTimeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SyncDeviceTimeResponse setMessage(String message) {
-        this.message = message;
+    public SyncDeviceTimeResponse setBody(SyncDeviceTimeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public SyncDeviceTimeResponse setNTPServer(String NTPServer) {
-        this.NTPServer = NTPServer;
-        return this;
-    }
-    public String getNTPServer() {
-        return this.NTPServer;
-    }
-
-    public SyncDeviceTimeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public SyncDeviceTimeResponse setRetryInterval(String retryInterval) {
-        this.retryInterval = retryInterval;
-        return this;
-    }
-    public String getRetryInterval() {
-        return this.retryInterval;
-    }
-
-    public SyncDeviceTimeResponse setSyncInterval(String syncInterval) {
-        this.syncInterval = syncInterval;
-        return this;
-    }
-    public String getSyncInterval() {
-        return this.syncInterval;
-    }
-
-    public SyncDeviceTimeResponse setTimeStamp(String timeStamp) {
-        this.timeStamp = timeStamp;
-        return this;
-    }
-    public String getTimeStamp() {
-        return this.timeStamp;
+    public SyncDeviceTimeResponseBody getBody() {
+        return this.body;
     }
 
 }

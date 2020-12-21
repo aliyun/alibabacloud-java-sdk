@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateCorpGroupRequest extends TeaModel {
     @NameInMap("CorpId")
-    @Validation(required = true)
     public String corpId;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     @NameInMap("ClientToken")
-    @Validation(required = true)
     public String clientToken;
 
     public static CreateCorpGroupRequest build(java.util.Map<String, ?> map) throws Exception {
