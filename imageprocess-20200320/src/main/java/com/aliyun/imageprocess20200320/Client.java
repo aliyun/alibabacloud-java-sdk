@@ -14,6 +14,26 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public DetectRibFractureResponse detectRibFracture(DetectRibFractureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DetectRibFracture", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new DetectRibFractureResponse());
+    }
+
+    public DetectRibFractureResponse detectRibFractureSimply(DetectRibFractureRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectRibFracture(request, runtime);
+    }
+
+    public ScreenChestCTResponse screenChestCT(ScreenChestCTRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ScreenChestCT", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new ScreenChestCTResponse());
+    }
+
+    public ScreenChestCTResponse screenChestCTSimply(ScreenChestCTRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.screenChestCT(request, runtime);
+    }
+
     public DetectSkinDiseaseResponse detectSkinDisease(DetectSkinDiseaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DetectSkinDisease", "HTTPS", "POST", "2020-03-20", "AK", null, TeaModel.buildMap(request), runtime), new DetectSkinDiseaseResponse());

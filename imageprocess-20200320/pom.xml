@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>imageprocess20200320</artifactId>
-  <version>1.0.9</version>
+  <version>1.0.10</version>
   <packaging>jar</packaging>
   <name>imageprocess20200320</name>
   <description>Alibaba Cloud imageprocess (20200320) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.8</version>
+      <version>0.2.9</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -78,7 +78,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openplatform20191219</artifactId>
-      <version>3.0.1</version>
+      <version>3.0.2</version>
       <exclusions>
         <exclusion>
           <groupId>com.aliyun</groupId>
