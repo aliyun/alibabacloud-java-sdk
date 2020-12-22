@@ -74,7 +74,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     // 集群标签。
     @NameInMap("tags")
-    public java.util.List<Tags> tags;
+    public java.util.List<Tag> tags;
 
     // 集群更新时间。
     @NameInMap("updated")
@@ -268,11 +268,11 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.state;
     }
 
-    public DescribeClusterDetailResponseBody setTags(java.util.List<Tags> tags) {
+    public DescribeClusterDetailResponseBody setTags(java.util.List<Tag> tags) {
         this.tags = tags;
         return this;
     }
-    public java.util.List<Tags> getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 

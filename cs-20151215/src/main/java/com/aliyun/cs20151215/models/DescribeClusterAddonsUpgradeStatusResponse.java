@@ -8,6 +8,10 @@ public class DescribeClusterAddonsUpgradeStatusResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public java.util.Map<String, ?> body;
+
     public static DescribeClusterAddonsUpgradeStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterAddonsUpgradeStatusResponse self = new DescribeClusterAddonsUpgradeStatusResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class DescribeClusterAddonsUpgradeStatusResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeClusterAddonsUpgradeStatusResponse setBody(java.util.Map<String, ?> body) {
+        this.body = body;
+        return this;
+    }
+    public java.util.Map<String, ?> getBody() {
+        return this.body;
     }
 
 }

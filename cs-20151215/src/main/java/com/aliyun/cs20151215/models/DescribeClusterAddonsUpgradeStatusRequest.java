@@ -4,7 +4,7 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterAddonsUpgradeStatusRequest extends TeaModel {
-    // 组件列表。
+    // 组件名称列表。
     @NameInMap("componentIds")
     public java.util.List<String> componentIds;
 

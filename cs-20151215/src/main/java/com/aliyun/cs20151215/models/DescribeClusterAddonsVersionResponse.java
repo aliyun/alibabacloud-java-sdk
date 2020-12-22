@@ -10,7 +10,7 @@ public class DescribeClusterAddonsVersionResponse extends TeaModel {
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribeClusterAddonsVersionResponseBody body;
+    public java.util.Map<String, ?> body;
 
     public static DescribeClusterAddonsVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterAddonsVersionResponse self = new DescribeClusterAddonsVersionResponse();
@@ -25,11 +25,11 @@ public class DescribeClusterAddonsVersionResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeClusterAddonsVersionResponse setBody(DescribeClusterAddonsVersionResponseBody body) {
+    public DescribeClusterAddonsVersionResponse setBody(java.util.Map<String, ?> body) {
         this.body = body;
         return this;
     }
-    public DescribeClusterAddonsVersionResponseBody getBody() {
+    public java.util.Map<String, ?> getBody() {
         return this.body;
     }
 

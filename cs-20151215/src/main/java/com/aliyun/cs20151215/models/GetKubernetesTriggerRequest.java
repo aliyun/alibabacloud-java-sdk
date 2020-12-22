@@ -16,6 +16,10 @@ public class GetKubernetesTriggerRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    // 触发器行为。
+    @NameInMap("action")
+    public String action;
+
     public static GetKubernetesTriggerRequest build(java.util.Map<String, ?> map) throws Exception {
         GetKubernetesTriggerRequest self = new GetKubernetesTriggerRequest();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class GetKubernetesTriggerRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public GetKubernetesTriggerRequest setAction(String action) {
+        this.action = action;
+        return this;
+    }
+    public String getAction() {
+        return this.action;
     }
 
 }

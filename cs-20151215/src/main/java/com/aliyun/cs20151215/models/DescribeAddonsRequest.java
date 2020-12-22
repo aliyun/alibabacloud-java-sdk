@@ -4,11 +4,11 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeAddonsRequest extends TeaModel {
-    // Region ID。
+    // 地域ID。
     @NameInMap("region")
     public String region;
 
-    // 集群类型，默认为kubernetes。
+    // 集群类型。  - Kubernetes: 专有版集群。 - ManagedKubernetes：托管版集群。 - Ask：Serverless 集群。 - ExternalKubernetes：注册到ACK的外部集群。
     @NameInMap("cluster_type")
     public String clusterType;
 

@@ -8,6 +8,14 @@ public class DescribeTemplatesRequest extends TeaModel {
     @NameInMap("template_type")
     public String templateType;
 
+    // 对查询结果进行分页处理，指定返回第几页的数据。  默认值为 1
+    @NameInMap("page_num")
+    public Long pageNum;
+
+    // 对查询结果进行分页处理，指定每页包含的数据条数。  默认值为 10
+    @NameInMap("page_size")
+    public Long pageSize;
+
     public static DescribeTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTemplatesRequest self = new DescribeTemplatesRequest();
         return TeaModel.build(map, self);
@@ -19,6 +27,22 @@ public class DescribeTemplatesRequest extends TeaModel {
     }
     public String getTemplateType() {
         return this.templateType;
+    }
+
+    public DescribeTemplatesRequest setPageNum(Long pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Long getPageNum() {
+        return this.pageNum;
+    }
+
+    public DescribeTemplatesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
 }

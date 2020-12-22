@@ -10,7 +10,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     // 按标签查找。
     @NameInMap("tags")
-    public java.util.List<ListTagResourcesRequestTags> tags;
+    public java.util.List<Tag> tags;
 
     // 下一次查询Token。
     @NameInMap("next_token")
@@ -29,11 +29,11 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceIds;
     }
 
-    public ListTagResourcesRequest setTags(java.util.List<ListTagResourcesRequestTags> tags) {
+    public ListTagResourcesRequest setTags(java.util.List<Tag> tags) {
         this.tags = tags;
         return this;
     }
-    public java.util.List<ListTagResourcesRequestTags> getTags() {
+    public java.util.List<Tag> getTags() {
         return this.tags;
     }
 
@@ -43,38 +43,6 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public static class ListTagResourcesRequestTags extends TeaModel {
-        // 标签key。
-        @NameInMap("key")
-        public String key;
-
-        // 标签值。
-        @NameInMap("value")
-        public String value;
-
-        public static ListTagResourcesRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesRequestTags self = new ListTagResourcesRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTagResourcesRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTagResourcesRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
 }

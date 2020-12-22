@@ -4,15 +4,23 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
+    // 模板名称。
     @NameInMap("name")
     public String name;
 
+    // YAML格式的模板内容。
     @NameInMap("template")
     public String template;
 
+    // 模板标签。
     @NameInMap("tags")
     public String tags;
 
+    // 模板描述。
+    @NameInMap("description")
+    public String description;
+
+    // 模板类型。默认值：kubernetes
     @NameInMap("template_type")
     public String templateType;
 
@@ -43,6 +51,14 @@ public class CreateTemplateRequest extends TeaModel {
     }
     public String getTags() {
         return this.tags;
+    }
+
+    public CreateTemplateRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateTemplateRequest setTemplateType(String templateType) {

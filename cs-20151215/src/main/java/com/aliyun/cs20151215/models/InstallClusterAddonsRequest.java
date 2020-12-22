@@ -42,45 +42,21 @@ public class InstallClusterAddonsRequest extends TeaModel {
     }
 
     public static class InstallClusterAddonsRequestBody extends TeaModel {
-        // Addon配置信息。
-        @NameInMap("config")
-        public String config;
-
-        // 是否禁止默认安装。
-        @NameInMap("disabled")
-        public Boolean disabled;
-
-        // Addon名称。
+        // 组件名称。
         @NameInMap("name")
         public String name;
 
-        // 是否默认安装。
-        @NameInMap("required")
-        public String required;
-
-        // Addon版本号。
+        // 组件版本号。
         @NameInMap("version")
         public String version;
+
+        // 组件配置信息。
+        @NameInMap("config")
+        public String config;
 
         public static InstallClusterAddonsRequestBody build(java.util.Map<String, ?> map) throws Exception {
             InstallClusterAddonsRequestBody self = new InstallClusterAddonsRequestBody();
             return TeaModel.build(map, self);
-        }
-
-        public InstallClusterAddonsRequestBody setConfig(String config) {
-            this.config = config;
-            return this;
-        }
-        public String getConfig() {
-            return this.config;
-        }
-
-        public InstallClusterAddonsRequestBody setDisabled(Boolean disabled) {
-            this.disabled = disabled;
-            return this;
-        }
-        public Boolean getDisabled() {
-            return this.disabled;
         }
 
         public InstallClusterAddonsRequestBody setName(String name) {
@@ -91,20 +67,20 @@ public class InstallClusterAddonsRequest extends TeaModel {
             return this.name;
         }
 
-        public InstallClusterAddonsRequestBody setRequired(String required) {
-            this.required = required;
-            return this;
-        }
-        public String getRequired() {
-            return this.required;
-        }
-
         public InstallClusterAddonsRequestBody setVersion(String version) {
             this.version = version;
             return this;
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public InstallClusterAddonsRequestBody setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
     }

@@ -4,7 +4,7 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
-    // 下一个查询token。
+    // 下一个查询开始Token，为空说明没有下一个
     @NameInMap("next_token")
     public String nextToken;
 

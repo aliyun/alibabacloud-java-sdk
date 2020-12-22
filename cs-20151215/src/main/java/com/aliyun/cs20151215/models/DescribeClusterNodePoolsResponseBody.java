@@ -124,7 +124,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         // ECS标签。	
         @NameInMap("labels")
-        public java.util.List<Tags> labels;
+        public java.util.List<Tag> labels;
 
         // 容器运行时	
         @NameInMap("runtime")
@@ -136,7 +136,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         // 污点配置
         @NameInMap("taints")
-        public java.util.List<Taints> taints;
+        public java.util.List<Taint> taints;
 
         // 节点自定义数据
         @NameInMap("user_data")
@@ -163,11 +163,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.cpuPolicy;
         }
 
-        public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig setLabels(java.util.List<Tags> labels) {
+        public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig setLabels(java.util.List<Tag> labels) {
             this.labels = labels;
             return this;
         }
-        public java.util.List<Tags> getLabels() {
+        public java.util.List<Tag> getLabels() {
             return this.labels;
         }
 
@@ -187,11 +187,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.runtimeVersion;
         }
 
-        public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig setTaints(java.util.List<Taints> taints) {
+        public DescribeClusterNodePoolsResponseBodyNodepoolsKubernetesConfig setTaints(java.util.List<Taint> taints) {
             this.taints = taints;
             return this;
         }
-        public java.util.List<Taints> getTaints() {
+        public java.util.List<Taint> getTaints() {
             return this.taints;
         }
 
@@ -352,7 +352,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         // 数据盘配置	
         @NameInMap("data_disks")
-        public java.util.List<DataDisks> dataDisks;
+        public java.util.List<DataDisk> dataDisks;
 
         // 镜像ID	
         @NameInMap("image_id")
@@ -366,9 +366,29 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("instance_types")
         public java.util.List<String> instanceTypes;
 
-        // 多可用去策略	
+        // 多可用区伸缩组ECS实例扩缩容策略
         @NameInMap("multi_az_policy")
         public String multiAzPolicy;
+
+        // 伸缩组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。
+        @NameInMap("on_demand_base_capacity")
+        public Long onDemandBaseCapacity;
+
+        // 伸缩组满足最小按量实例数（OnDemandBaseCapacity）要求后，超出的实例中按量实例应占的比例，取值范围：0～100。
+        @NameInMap("on_demand_percentage_above_base_capacity")
+        public Long onDemandPercentageAboveBaseCapacity;
+
+        // 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：1~10。
+        @NameInMap("spot_instance_pools")
+        public Long spotInstancePools;
+
+        // 是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。
+        @NameInMap("spot_instance_remedy")
+        public Boolean spotInstanceRemedy;
+
+        // 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
+        @NameInMap("compensate_with_on_demand")
+        public Boolean compensateWithOnDemand;
 
         // 包年包月时长	
         @NameInMap("period")
@@ -420,7 +440,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
         // 节点标签	
         @NameInMap("tags")
-        public java.util.List<Tags> tags;
+        public java.util.List<Tag> tags;
 
         // 虚拟交换机ID。	
         @NameInMap("vswitch_ids")
@@ -455,11 +475,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.autoRenewPeriod;
         }
 
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setDataDisks(java.util.List<DataDisks> dataDisks) {
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setDataDisks(java.util.List<DataDisk> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
-        public java.util.List<DataDisks> getDataDisks() {
+        public java.util.List<DataDisk> getDataDisks() {
             return this.dataDisks;
         }
 
@@ -493,6 +513,46 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
         public String getMultiAzPolicy() {
             return this.multiAzPolicy;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setOnDemandBaseCapacity(Long onDemandBaseCapacity) {
+            this.onDemandBaseCapacity = onDemandBaseCapacity;
+            return this;
+        }
+        public Long getOnDemandBaseCapacity() {
+            return this.onDemandBaseCapacity;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setOnDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
+            this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
+            return this;
+        }
+        public Long getOnDemandPercentageAboveBaseCapacity() {
+            return this.onDemandPercentageAboveBaseCapacity;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotInstancePools(Long spotInstancePools) {
+            this.spotInstancePools = spotInstancePools;
+            return this;
+        }
+        public Long getSpotInstancePools() {
+            return this.spotInstancePools;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setSpotInstanceRemedy(Boolean spotInstanceRemedy) {
+            this.spotInstanceRemedy = spotInstanceRemedy;
+            return this;
+        }
+        public Boolean getSpotInstanceRemedy() {
+            return this.spotInstanceRemedy;
+        }
+
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
+            this.compensateWithOnDemand = compensateWithOnDemand;
+            return this;
+        }
+        public Boolean getCompensateWithOnDemand() {
+            return this.compensateWithOnDemand;
         }
 
         public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setPeriod(Long period) {
@@ -591,11 +651,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             return this.systemDiskSize;
         }
 
-        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setTags(java.util.List<Tags> tags) {
+        public DescribeClusterNodePoolsResponseBodyNodepoolsScalingGroup setTags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<Tags> getTags() {
+        public java.util.List<Tag> getTags() {
             return this.tags;
         }
 
