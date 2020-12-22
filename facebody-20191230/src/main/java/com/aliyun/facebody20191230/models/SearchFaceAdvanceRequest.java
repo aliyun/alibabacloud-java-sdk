@@ -9,12 +9,13 @@ public class SearchFaceAdvanceRequest extends TeaModel {
     public java.io.InputStream imageUrlObject;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("Limit")
-    @Validation(required = true)
     public Integer limit;
+
+    @NameInMap("DbNames")
+    public String dbNames;
 
     public static SearchFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchFaceAdvanceRequest self = new SearchFaceAdvanceRequest();
@@ -43,6 +44,14 @@ public class SearchFaceAdvanceRequest extends TeaModel {
     }
     public Integer getLimit() {
         return this.limit;
+    }
+
+    public SearchFaceAdvanceRequest setDbNames(String dbNames) {
+        this.dbNames = dbNames;
+        return this;
+    }
+    public String getDbNames() {
+        return this.dbNames;
     }
 
 }

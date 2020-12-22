@@ -9,7 +9,6 @@ public class VerifyFaceMaskAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("RefUrl")
-    @Validation(required = true)
     public String refUrl;
 
     public static VerifyFaceMaskAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ExtractPedestrianFeatureAttrRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     @NameInMap("Mode")

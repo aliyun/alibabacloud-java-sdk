@@ -1,0 +1,105 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.facebody20191230.models;
+
+import com.aliyun.tea.*;
+
+public class GetFaceEntityResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Data")
+    public GetFaceEntityResponseBodyData data;
+
+    public static GetFaceEntityResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetFaceEntityResponseBody self = new GetFaceEntityResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public GetFaceEntityResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetFaceEntityResponseBody setData(GetFaceEntityResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetFaceEntityResponseBodyData getData() {
+        return this.data;
+    }
+
+    public static class GetFaceEntityResponseBodyDataFaces extends TeaModel {
+        @NameInMap("FaceId")
+        public String faceId;
+
+        public static GetFaceEntityResponseBodyDataFaces build(java.util.Map<String, ?> map) throws Exception {
+            GetFaceEntityResponseBodyDataFaces self = new GetFaceEntityResponseBodyDataFaces();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFaceEntityResponseBodyDataFaces setFaceId(String faceId) {
+            this.faceId = faceId;
+            return this;
+        }
+        public String getFaceId() {
+            return this.faceId;
+        }
+
+    }
+
+    public static class GetFaceEntityResponseBodyData extends TeaModel {
+        @NameInMap("DbName")
+        public String dbName;
+
+        @NameInMap("EntityId")
+        public String entityId;
+
+        @NameInMap("Labels")
+        public String labels;
+
+        @NameInMap("Faces")
+        public java.util.List<GetFaceEntityResponseBodyDataFaces> faces;
+
+        public static GetFaceEntityResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetFaceEntityResponseBodyData self = new GetFaceEntityResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFaceEntityResponseBodyData setDbName(String dbName) {
+            this.dbName = dbName;
+            return this;
+        }
+        public String getDbName() {
+            return this.dbName;
+        }
+
+        public GetFaceEntityResponseBodyData setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public GetFaceEntityResponseBodyData setLabels(String labels) {
+            this.labels = labels;
+            return this;
+        }
+        public String getLabels() {
+            return this.labels;
+        }
+
+        public GetFaceEntityResponseBodyData setFaces(java.util.List<GetFaceEntityResponseBodyDataFaces> faces) {
+            this.faces = faces;
+            return this;
+        }
+        public java.util.List<GetFaceEntityResponseBodyDataFaces> getFaces() {
+            return this.faces;
+        }
+
+    }
+
+}

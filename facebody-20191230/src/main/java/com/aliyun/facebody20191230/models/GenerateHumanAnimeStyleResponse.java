@@ -4,53 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class GenerateHumanAnimeStyleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public GenerateHumanAnimeStyleResponseData data;
+    public GenerateHumanAnimeStyleResponseBody body;
 
     public static GenerateHumanAnimeStyleResponse build(java.util.Map<String, ?> map) throws Exception {
         GenerateHumanAnimeStyleResponse self = new GenerateHumanAnimeStyleResponse();
         return TeaModel.build(map, self);
     }
 
-    public GenerateHumanAnimeStyleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GenerateHumanAnimeStyleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GenerateHumanAnimeStyleResponse setData(GenerateHumanAnimeStyleResponseData data) {
-        this.data = data;
+    public GenerateHumanAnimeStyleResponse setBody(GenerateHumanAnimeStyleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public GenerateHumanAnimeStyleResponseData getData() {
-        return this.data;
-    }
-
-    public static class GenerateHumanAnimeStyleResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static GenerateHumanAnimeStyleResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GenerateHumanAnimeStyleResponseData self = new GenerateHumanAnimeStyleResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GenerateHumanAnimeStyleResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public GenerateHumanAnimeStyleResponseBody getBody() {
+        return this.body;
     }
 
 }

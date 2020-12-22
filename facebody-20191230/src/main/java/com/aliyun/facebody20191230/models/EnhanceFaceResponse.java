@@ -4,53 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class EnhanceFaceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public EnhanceFaceResponseData data;
+    public EnhanceFaceResponseBody body;
 
     public static EnhanceFaceResponse build(java.util.Map<String, ?> map) throws Exception {
         EnhanceFaceResponse self = new EnhanceFaceResponse();
         return TeaModel.build(map, self);
     }
 
-    public EnhanceFaceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public EnhanceFaceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public EnhanceFaceResponse setData(EnhanceFaceResponseData data) {
-        this.data = data;
+    public EnhanceFaceResponse setBody(EnhanceFaceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public EnhanceFaceResponseData getData() {
-        return this.data;
-    }
-
-    public static class EnhanceFaceResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static EnhanceFaceResponseData build(java.util.Map<String, ?> map) throws Exception {
-            EnhanceFaceResponseData self = new EnhanceFaceResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public EnhanceFaceResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public EnhanceFaceResponseBody getBody() {
+        return this.body;
     }
 
 }

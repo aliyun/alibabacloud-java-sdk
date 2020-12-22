@@ -9,11 +9,9 @@ public class FaceTidyupAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("ShapeType")
-    @Validation(required = true)
     public Integer shapeType;
 
     @NameInMap("Strength")
-    @Validation(required = true)
     public Float strength;
 
     public static FaceTidyupAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

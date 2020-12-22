@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RecognizePublicFaceRequest extends TeaModel {
     @NameInMap("Task")
-    @Validation(required = true)
     public java.util.List<RecognizePublicFaceRequestTask> task;
 
     public static RecognizePublicFaceRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -23,7 +22,6 @@ public class RecognizePublicFaceRequest extends TeaModel {
 
     public static class RecognizePublicFaceRequestTask extends TeaModel {
         @NameInMap("ImageURL")
-        @Validation(required = true)
         public String imageURL;
 
         public static RecognizePublicFaceRequestTask build(java.util.Map<String, ?> map) throws Exception {

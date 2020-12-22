@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateFaceEntityRequest extends TeaModel {
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("EntityId")
-    @Validation(required = true)
     public String entityId;
 
     @NameInMap("Labels")

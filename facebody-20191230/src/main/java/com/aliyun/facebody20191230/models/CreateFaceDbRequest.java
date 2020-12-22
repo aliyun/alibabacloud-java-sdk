@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateFaceDbRequest extends TeaModel {
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     public static CreateFaceDbRequest build(java.util.Map<String, ?> map) throws Exception {

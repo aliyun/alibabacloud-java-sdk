@@ -8,6 +8,9 @@ public class DetectFaceAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
+    @NameInMap("ImageType")
+    public Integer imageType;
+
     public static DetectFaceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectFaceAdvanceRequest self = new DetectFaceAdvanceRequest();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class DetectFaceAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
+    }
+
+    public DetectFaceAdvanceRequest setImageType(Integer imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public Integer getImageType() {
+        return this.imageType;
     }
 
 }

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddFaceRequest extends TeaModel {
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("ImageUrl")
-    @Validation(required = true)
     public String imageUrl;
 
     @NameInMap("EntityId")
-    @Validation(required = true)
     public String entityId;
 
     @NameInMap("ExtraData")

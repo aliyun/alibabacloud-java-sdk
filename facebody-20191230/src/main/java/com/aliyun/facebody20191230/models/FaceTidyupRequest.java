@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class FaceTidyupRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     @NameInMap("ShapeType")
-    @Validation(required = true)
     public Integer shapeType;
 
     @NameInMap("Strength")
-    @Validation(required = true)
     public Float strength;
 
     public static FaceTidyupRequest build(java.util.Map<String, ?> map) throws Exception {

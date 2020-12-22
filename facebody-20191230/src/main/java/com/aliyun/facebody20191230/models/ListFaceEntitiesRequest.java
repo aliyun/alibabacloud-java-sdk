@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListFaceEntitiesRequest extends TeaModel {
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("Offset")

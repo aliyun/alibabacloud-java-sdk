@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class FaceBeautyRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     @NameInMap("Sharp")
-    @Validation(required = true)
     public Float sharp;
 
     @NameInMap("Smooth")
-    @Validation(required = true)
     public Float smooth;
 
     @NameInMap("White")
-    @Validation(required = true)
     public Float white;
 
     public static FaceBeautyRequest build(java.util.Map<String, ?> map) throws Exception {
