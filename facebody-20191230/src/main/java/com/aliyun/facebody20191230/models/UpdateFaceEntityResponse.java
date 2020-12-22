@@ -4,21 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaceEntityResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateFaceEntityResponseBody body;
 
     public static UpdateFaceEntityResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateFaceEntityResponse self = new UpdateFaceEntityResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateFaceEntityResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateFaceEntityResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateFaceEntityResponse setBody(UpdateFaceEntityResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateFaceEntityResponseBody getBody() {
+        return this.body;
     }
 
 }

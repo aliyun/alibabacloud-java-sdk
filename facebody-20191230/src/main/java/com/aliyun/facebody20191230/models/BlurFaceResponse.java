@@ -4,53 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class BlurFaceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public BlurFaceResponseData data;
+    public BlurFaceResponseBody body;
 
     public static BlurFaceResponse build(java.util.Map<String, ?> map) throws Exception {
         BlurFaceResponse self = new BlurFaceResponse();
         return TeaModel.build(map, self);
     }
 
-    public BlurFaceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public BlurFaceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public BlurFaceResponse setData(BlurFaceResponseData data) {
-        this.data = data;
+    public BlurFaceResponse setBody(BlurFaceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public BlurFaceResponseData getData() {
-        return this.data;
-    }
-
-    public static class BlurFaceResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static BlurFaceResponseData build(java.util.Map<String, ?> map) throws Exception {
-            BlurFaceResponseData self = new BlurFaceResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public BlurFaceResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public BlurFaceResponseBody getBody() {
+        return this.body;
     }
 
 }

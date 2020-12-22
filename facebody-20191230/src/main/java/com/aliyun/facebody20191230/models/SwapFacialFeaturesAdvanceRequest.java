@@ -9,11 +9,9 @@ public class SwapFacialFeaturesAdvanceRequest extends TeaModel {
     public java.io.InputStream sourceImageURLObject;
 
     @NameInMap("EditPart")
-    @Validation(required = true)
     public String editPart;
 
     @NameInMap("TargetImageURL")
-    @Validation(required = true)
     public String targetImageURL;
 
     public static SwapFacialFeaturesAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

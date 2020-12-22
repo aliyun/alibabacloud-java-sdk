@@ -9,11 +9,9 @@ public class AddFaceAdvanceRequest extends TeaModel {
     public java.io.InputStream imageUrlObject;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("EntityId")
-    @Validation(required = true)
     public String entityId;
 
     @NameInMap("ExtraData")

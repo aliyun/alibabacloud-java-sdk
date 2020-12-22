@@ -4,89 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class CompareFaceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public CompareFaceResponseData data;
+    public CompareFaceResponseBody body;
 
     public static CompareFaceResponse build(java.util.Map<String, ?> map) throws Exception {
         CompareFaceResponse self = new CompareFaceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CompareFaceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CompareFaceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CompareFaceResponse setData(CompareFaceResponseData data) {
-        this.data = data;
+    public CompareFaceResponse setBody(CompareFaceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public CompareFaceResponseData getData() {
-        return this.data;
-    }
-
-    public static class CompareFaceResponseData extends TeaModel {
-        @NameInMap("Confidence")
-        @Validation(required = true)
-        public Float confidence;
-
-        @NameInMap("Thresholds")
-        @Validation(required = true)
-        public java.util.List<Float> thresholds;
-
-        @NameInMap("RectAList")
-        @Validation(required = true)
-        public java.util.List<Integer> rectAList;
-
-        @NameInMap("RectBList")
-        @Validation(required = true)
-        public java.util.List<Integer> rectBList;
-
-        public static CompareFaceResponseData build(java.util.Map<String, ?> map) throws Exception {
-            CompareFaceResponseData self = new CompareFaceResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public CompareFaceResponseData setConfidence(Float confidence) {
-            this.confidence = confidence;
-            return this;
-        }
-        public Float getConfidence() {
-            return this.confidence;
-        }
-
-        public CompareFaceResponseData setThresholds(java.util.List<Float> thresholds) {
-            this.thresholds = thresholds;
-            return this;
-        }
-        public java.util.List<Float> getThresholds() {
-            return this.thresholds;
-        }
-
-        public CompareFaceResponseData setRectAList(java.util.List<Integer> rectAList) {
-            this.rectAList = rectAList;
-            return this;
-        }
-        public java.util.List<Integer> getRectAList() {
-            return this.rectAList;
-        }
-
-        public CompareFaceResponseData setRectBList(java.util.List<Integer> rectBList) {
-            this.rectBList = rectBList;
-            return this;
-        }
-        public java.util.List<Integer> getRectBList() {
-            return this.rectBList;
-        }
-
+    public CompareFaceResponseBody getBody() {
+        return this.body;
     }
 
 }

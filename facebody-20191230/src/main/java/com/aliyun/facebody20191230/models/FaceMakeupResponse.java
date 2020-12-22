@@ -4,53 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class FaceMakeupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public FaceMakeupResponseData data;
+    public FaceMakeupResponseBody body;
 
     public static FaceMakeupResponse build(java.util.Map<String, ?> map) throws Exception {
         FaceMakeupResponse self = new FaceMakeupResponse();
         return TeaModel.build(map, self);
     }
 
-    public FaceMakeupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public FaceMakeupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public FaceMakeupResponse setData(FaceMakeupResponseData data) {
-        this.data = data;
+    public FaceMakeupResponse setBody(FaceMakeupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public FaceMakeupResponseData getData() {
-        return this.data;
-    }
-
-    public static class FaceMakeupResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static FaceMakeupResponseData build(java.util.Map<String, ?> map) throws Exception {
-            FaceMakeupResponseData self = new FaceMakeupResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public FaceMakeupResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public FaceMakeupResponseBody getBody() {
+        return this.body;
     }
 
 }

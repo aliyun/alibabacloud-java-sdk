@@ -4,65 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectMaskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public DetectMaskResponseData data;
+    public DetectMaskResponseBody body;
 
     public static DetectMaskResponse build(java.util.Map<String, ?> map) throws Exception {
         DetectMaskResponse self = new DetectMaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public DetectMaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DetectMaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DetectMaskResponse setData(DetectMaskResponseData data) {
-        this.data = data;
+    public DetectMaskResponse setBody(DetectMaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DetectMaskResponseData getData() {
-        return this.data;
-    }
-
-    public static class DetectMaskResponseData extends TeaModel {
-        @NameInMap("Mask")
-        @Validation(required = true)
-        public Integer mask;
-
-        @NameInMap("FaceProbability")
-        @Validation(required = true)
-        public Float faceProbability;
-
-        public static DetectMaskResponseData build(java.util.Map<String, ?> map) throws Exception {
-            DetectMaskResponseData self = new DetectMaskResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectMaskResponseData setMask(Integer mask) {
-            this.mask = mask;
-            return this;
-        }
-        public Integer getMask() {
-            return this.mask;
-        }
-
-        public DetectMaskResponseData setFaceProbability(Float faceProbability) {
-            this.faceProbability = faceProbability;
-            return this;
-        }
-        public Float getFaceProbability() {
-            return this.faceProbability;
-        }
-
+    public DetectMaskResponseBody getBody() {
+        return this.body;
     }
 
 }

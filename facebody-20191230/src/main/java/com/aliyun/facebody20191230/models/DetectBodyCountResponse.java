@@ -4,53 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectBodyCountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public DetectBodyCountResponseData data;
+    public DetectBodyCountResponseBody body;
 
     public static DetectBodyCountResponse build(java.util.Map<String, ?> map) throws Exception {
         DetectBodyCountResponse self = new DetectBodyCountResponse();
         return TeaModel.build(map, self);
     }
 
-    public DetectBodyCountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DetectBodyCountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DetectBodyCountResponse setData(DetectBodyCountResponseData data) {
-        this.data = data;
+    public DetectBodyCountResponse setBody(DetectBodyCountResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DetectBodyCountResponseData getData() {
-        return this.data;
-    }
-
-    public static class DetectBodyCountResponseData extends TeaModel {
-        @NameInMap("PersonNumber")
-        @Validation(required = true)
-        public Integer personNumber;
-
-        public static DetectBodyCountResponseData build(java.util.Map<String, ?> map) throws Exception {
-            DetectBodyCountResponseData self = new DetectBodyCountResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectBodyCountResponseData setPersonNumber(Integer personNumber) {
-            this.personNumber = personNumber;
-            return this;
-        }
-        public Integer getPersonNumber() {
-            return this.personNumber;
-        }
-
+    public DetectBodyCountResponseBody getBody() {
+        return this.body;
     }
 
 }

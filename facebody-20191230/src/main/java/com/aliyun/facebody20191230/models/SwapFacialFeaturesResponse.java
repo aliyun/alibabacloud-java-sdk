@@ -4,53 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class SwapFacialFeaturesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public SwapFacialFeaturesResponseData data;
+    public SwapFacialFeaturesResponseBody body;
 
     public static SwapFacialFeaturesResponse build(java.util.Map<String, ?> map) throws Exception {
         SwapFacialFeaturesResponse self = new SwapFacialFeaturesResponse();
         return TeaModel.build(map, self);
     }
 
-    public SwapFacialFeaturesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SwapFacialFeaturesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SwapFacialFeaturesResponse setData(SwapFacialFeaturesResponseData data) {
-        this.data = data;
+    public SwapFacialFeaturesResponse setBody(SwapFacialFeaturesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public SwapFacialFeaturesResponseData getData() {
-        return this.data;
-    }
-
-    public static class SwapFacialFeaturesResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static SwapFacialFeaturesResponseData build(java.util.Map<String, ?> map) throws Exception {
-            SwapFacialFeaturesResponseData self = new SwapFacialFeaturesResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public SwapFacialFeaturesResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public SwapFacialFeaturesResponseBody getBody() {
+        return this.body;
     }
 
 }

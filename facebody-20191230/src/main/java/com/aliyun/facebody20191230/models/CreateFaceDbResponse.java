@@ -4,21 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class CreateFaceDbResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CreateFaceDbResponseBody body;
 
     public static CreateFaceDbResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateFaceDbResponse self = new CreateFaceDbResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateFaceDbResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateFaceDbResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateFaceDbResponse setBody(CreateFaceDbResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateFaceDbResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class SearchFaceRequest extends TeaModel {
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("ImageUrl")
-    @Validation(required = true)
     public String imageUrl;
 
     @NameInMap("Limit")
-    @Validation(required = true)
     public Integer limit;
+
+    @NameInMap("DbNames")
+    public String dbNames;
 
     public static SearchFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchFaceRequest self = new SearchFaceRequest();
@@ -43,6 +43,14 @@ public class SearchFaceRequest extends TeaModel {
     }
     public Integer getLimit() {
         return this.limit;
+    }
+
+    public SearchFaceRequest setDbNames(String dbNames) {
+        this.dbNames = dbNames;
+        return this;
+    }
+    public String getDbNames() {
+        return this.dbNames;
     }
 
 }

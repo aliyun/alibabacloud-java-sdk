@@ -9,15 +9,12 @@ public class FaceBeautyAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("Sharp")
-    @Validation(required = true)
     public Float sharp;
 
     @NameInMap("Smooth")
-    @Validation(required = true)
     public Float smooth;
 
     @NameInMap("White")
-    @Validation(required = true)
     public Float white;
 
     public static FaceBeautyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

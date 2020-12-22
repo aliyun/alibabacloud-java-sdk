@@ -4,53 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class FaceTidyupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public FaceTidyupResponseData data;
+    public FaceTidyupResponseBody body;
 
     public static FaceTidyupResponse build(java.util.Map<String, ?> map) throws Exception {
         FaceTidyupResponse self = new FaceTidyupResponse();
         return TeaModel.build(map, self);
     }
 
-    public FaceTidyupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public FaceTidyupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public FaceTidyupResponse setData(FaceTidyupResponseData data) {
-        this.data = data;
+    public FaceTidyupResponse setBody(FaceTidyupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public FaceTidyupResponseData getData() {
-        return this.data;
-    }
-
-    public static class FaceTidyupResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static FaceTidyupResponseData build(java.util.Map<String, ?> map) throws Exception {
-            FaceTidyupResponseData self = new FaceTidyupResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public FaceTidyupResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public FaceTidyupResponseBody getBody() {
+        return this.body;
     }
 
 }

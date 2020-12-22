@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetFaceEntityRequest extends TeaModel {
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("EntityId")
-    @Validation(required = true)
     public String entityId;
 
     public static GetFaceEntityRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,73 +4,33 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class ListFaceDbsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ListFaceDbsResponseData data;
+    public ListFaceDbsResponseBody body;
 
     public static ListFaceDbsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListFaceDbsResponse self = new ListFaceDbsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListFaceDbsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListFaceDbsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ListFaceDbsResponse setData(ListFaceDbsResponseData data) {
-        this.data = data;
+    public ListFaceDbsResponse setBody(ListFaceDbsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ListFaceDbsResponseData getData() {
-        return this.data;
-    }
-
-    public static class ListFaceDbsResponseDataDbList extends TeaModel {
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        public static ListFaceDbsResponseDataDbList build(java.util.Map<String, ?> map) throws Exception {
-            ListFaceDbsResponseDataDbList self = new ListFaceDbsResponseDataDbList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListFaceDbsResponseDataDbList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
-    public static class ListFaceDbsResponseData extends TeaModel {
-        @NameInMap("DbList")
-        @Validation(required = true)
-        public java.util.List<ListFaceDbsResponseDataDbList> dbList;
-
-        public static ListFaceDbsResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ListFaceDbsResponseData self = new ListFaceDbsResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ListFaceDbsResponseData setDbList(java.util.List<ListFaceDbsResponseDataDbList> dbList) {
-            this.dbList = dbList;
-            return this;
-        }
-        public java.util.List<ListFaceDbsResponseDataDbList> getDbList() {
-            return this.dbList;
-        }
-
+    public ListFaceDbsResponseBody getBody() {
+        return this.body;
     }
 
 }

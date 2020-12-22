@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class BlurFaceRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static BlurFaceRequest build(java.util.Map<String, ?> map) throws Exception {

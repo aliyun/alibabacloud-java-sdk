@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DetectCelebrityRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static DetectCelebrityRequest build(java.util.Map<String, ?> map) throws Exception {
