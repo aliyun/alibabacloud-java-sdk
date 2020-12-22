@@ -34,45 +34,13 @@ public class DescribeAddonsResponseBody extends TeaModel {
     }
 
     public static class DescribeAddonsResponseBodyComponentGroupsItems extends TeaModel {
-        // 组件描述信息。
-        @NameInMap("description")
-        public String description;
-
-        // 是否禁止默认安装。
-        @NameInMap("disabled")
-        public Boolean disabled;
-
         // 组件名称。
         @NameInMap("name")
         public String name;
 
-        // 是否为必需组件。
-        @NameInMap("required")
-        public String required;
-
-        // 组件版本。
-        @NameInMap("version")
-        public String version;
-
         public static DescribeAddonsResponseBodyComponentGroupsItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeAddonsResponseBodyComponentGroupsItems self = new DescribeAddonsResponseBodyComponentGroupsItems();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAddonsResponseBodyComponentGroupsItems setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeAddonsResponseBodyComponentGroupsItems setDisabled(Boolean disabled) {
-            this.disabled = disabled;
-            return this;
-        }
-        public Boolean getDisabled() {
-            return this.disabled;
         }
 
         public DescribeAddonsResponseBodyComponentGroupsItems setName(String name) {
@@ -83,48 +51,20 @@ public class DescribeAddonsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeAddonsResponseBodyComponentGroupsItems setRequired(String required) {
-            this.required = required;
-            return this;
-        }
-        public String getRequired() {
-            return this.required;
-        }
-
-        public DescribeAddonsResponseBodyComponentGroupsItems setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
     }
 
     public static class DescribeAddonsResponseBodyComponentGroups extends TeaModel {
-        // 默认组件组。
-        @NameInMap("default")
-        public java.util.List<String> _default;
-
         // 组件组名称。
         @NameInMap("group_name")
         public String groupName;
 
-        // 组件清单。
+        // 组件列表
         @NameInMap("items")
         public java.util.List<DescribeAddonsResponseBodyComponentGroupsItems> items;
 
         public static DescribeAddonsResponseBodyComponentGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeAddonsResponseBodyComponentGroups self = new DescribeAddonsResponseBodyComponentGroups();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAddonsResponseBodyComponentGroups set_default(java.util.List<String> _default) {
-            this._default = _default;
-            return this;
-        }
-        public java.util.List<String> get_default() {
-            return this._default;
         }
 
         public DescribeAddonsResponseBodyComponentGroups setGroupName(String groupName) {

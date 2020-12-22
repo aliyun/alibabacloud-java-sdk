@@ -120,7 +120,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
         // 集群标签。
         @NameInMap("tags")
-        public java.util.List<Tags> tags;
+        public java.util.List<Tag> tags;
 
         // 集群更新时间。
         @NameInMap("updated")
@@ -322,11 +322,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.subnetCidr;
         }
 
-        public DescribeClustersV1ResponseBodyClusters setTags(java.util.List<Tags> tags) {
+        public DescribeClustersV1ResponseBodyClusters setTags(java.util.List<Tag> tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<Tags> getTags() {
+        public java.util.List<Tag> getTags() {
             return this.tags;
         }
 

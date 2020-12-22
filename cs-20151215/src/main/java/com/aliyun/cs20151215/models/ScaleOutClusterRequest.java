@@ -4,25 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ScaleOutClusterRequest extends TeaModel {
-    // 是否安装云监控插件。
-    @NameInMap("cloud_monitor_flags")
-    public Boolean cloudMonitorFlags;
-
-    // 扩容实例数量。
+    // 扩容节点数
     @NameInMap("count")
-    public Integer count;
-
-    // CPU策略，取值static或者none。
-    @NameInMap("cpu_policy")
-    public String cpuPolicy;
-
-    // 失败是否回滚。
-    @NameInMap("disable_rollback")
-    public Boolean disableRollback;
-
-    // 自定义镜像ID。
-    @NameInMap("image_id")
-    public String imageId;
+    public Long count;
 
     // keypair名称，和login_password二选一。
     @NameInMap("key_pair")
@@ -32,113 +16,88 @@ public class ScaleOutClusterRequest extends TeaModel {
     @NameInMap("login_password")
     public String loginPassword;
 
-    // RDS白名单实例列表。
-    @NameInMap("rds_instances")
-    public java.util.List<String> rdsInstances;
-
-    // 容器引擎。
-    @NameInMap("runtime")
-    public ScaleOutClusterRequestRuntime runtime;
-
-    // 节点标签。
-    @NameInMap("tags")
-    public java.util.List<ScaleOutClusterRequestTags> tags;
-
-    // 节点污点信息。
-    @NameInMap("taints")
-    public java.util.List<ScaleOutClusterRequestTaints> taints;
-
-    // 用户自定义数据。
-    @NameInMap("user_data")
-    public String userData;
-
-    // 节点交换机ID列表，交换机个数取值范围为1~3。
+    // 虚拟交换机
     @NameInMap("vswitch_ids")
     public java.util.List<String> vswitchIds;
 
-    // Worker节点是否开启自动续费。
-    @NameInMap("worker_auto_renew")
-    public Boolean workerAutoRenew;
-
-    // Worker节点自动续费周期。
-    @NameInMap("worker_auto_renew_period")
-    public Integer workerAutoRenewPeriod;
-
-    // Worker节点是否挂载数据盘。
-    @NameInMap("worker_data_disk")
-    public Boolean workerDataDisk;
-
-    // Worker数据盘类型、大小等配置的组合。
-    @NameInMap("worker_data_disks")
-    public java.util.List<ScaleOutClusterRequestWorkerDataDisks> workerDataDisks;
-
-    // Worker节点付费类型。
+    // Worker节点付费类型
     @NameInMap("worker_instance_charge_type")
     public String workerInstanceChargeType;
 
-    // Worker节点ECS规格类型代码。
-    @NameInMap("worker_instance_types")
-    public java.util.List<String> workerInstanceTypes;
-
-    // Worker节点包年包月时长。
+    // Worker节点包年包月时长
     @NameInMap("worker_period")
-    public Integer workerPeriod;
+    public Long workerPeriod;
 
-    // Worker节点预付费周期。
+    // Worker节点包年包月周期
     @NameInMap("worker_period_unit")
     public String workerPeriodUnit;
 
-    // Worker节点系统盘类型。
+    // Worker节点到期是否自动续费
+    @NameInMap("worker_auto_renew")
+    public Boolean workerAutoRenew;
+
+    // Worker节点自动续费时长
+    @NameInMap("worker_auto_renew_period")
+    public Long workerAutoRenewPeriod;
+
+    // Worker节点实例规格
+    @NameInMap("worker_instance_types")
+    public java.util.List<String> workerInstanceTypes;
+
+    // Worker节点系统盘类型
     @NameInMap("worker_system_disk_category")
     public String workerSystemDiskCategory;
 
-    // Worker节点系统盘大小。
+    // Worker节点系统盘大小
     @NameInMap("worker_system_disk_size")
-    public Integer workerSystemDiskSize;
+    public Long workerSystemDiskSize;
+
+    // Worker节点数据盘配置
+    @NameInMap("worker_data_disks")
+    public java.util.List<DataDisk> workerDataDisks;
+
+    // 在节点上安装云监控
+    @NameInMap("cloud_monitor_flags")
+    public Boolean cloudMonitorFlags;
+
+    // CPU亲和性策略
+    @NameInMap("cpu_policy")
+    public String cpuPolicy;
+
+    // 自定义镜像
+    @NameInMap("image_id")
+    public String imageId;
+
+    // 节点自定义数据
+    @NameInMap("user_data")
+    public String userData;
+
+    // RDS白名单
+    @NameInMap("rds_instances")
+    public java.util.List<String> rdsInstances;
+
+    // 节点标签
+    @NameInMap("tags")
+    public java.util.List<Tag> tags;
+
+    // 节点污点信息
+    @NameInMap("taints")
+    public java.util.List<Taint> taints;
+
+    @NameInMap("runtime")
+    public Runtime runtime;
 
     public static ScaleOutClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ScaleOutClusterRequest self = new ScaleOutClusterRequest();
         return TeaModel.build(map, self);
     }
 
-    public ScaleOutClusterRequest setCloudMonitorFlags(Boolean cloudMonitorFlags) {
-        this.cloudMonitorFlags = cloudMonitorFlags;
-        return this;
-    }
-    public Boolean getCloudMonitorFlags() {
-        return this.cloudMonitorFlags;
-    }
-
-    public ScaleOutClusterRequest setCount(Integer count) {
+    public ScaleOutClusterRequest setCount(Long count) {
         this.count = count;
         return this;
     }
-    public Integer getCount() {
+    public Long getCount() {
         return this.count;
-    }
-
-    public ScaleOutClusterRequest setCpuPolicy(String cpuPolicy) {
-        this.cpuPolicy = cpuPolicy;
-        return this;
-    }
-    public String getCpuPolicy() {
-        return this.cpuPolicy;
-    }
-
-    public ScaleOutClusterRequest setDisableRollback(Boolean disableRollback) {
-        this.disableRollback = disableRollback;
-        return this;
-    }
-    public Boolean getDisableRollback() {
-        return this.disableRollback;
-    }
-
-    public ScaleOutClusterRequest setImageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-    public String getImageId() {
-        return this.imageId;
     }
 
     public ScaleOutClusterRequest setKeyPair(String keyPair) {
@@ -157,84 +116,12 @@ public class ScaleOutClusterRequest extends TeaModel {
         return this.loginPassword;
     }
 
-    public ScaleOutClusterRequest setRdsInstances(java.util.List<String> rdsInstances) {
-        this.rdsInstances = rdsInstances;
-        return this;
-    }
-    public java.util.List<String> getRdsInstances() {
-        return this.rdsInstances;
-    }
-
-    public ScaleOutClusterRequest setRuntime(ScaleOutClusterRequestRuntime runtime) {
-        this.runtime = runtime;
-        return this;
-    }
-    public ScaleOutClusterRequestRuntime getRuntime() {
-        return this.runtime;
-    }
-
-    public ScaleOutClusterRequest setTags(java.util.List<ScaleOutClusterRequestTags> tags) {
-        this.tags = tags;
-        return this;
-    }
-    public java.util.List<ScaleOutClusterRequestTags> getTags() {
-        return this.tags;
-    }
-
-    public ScaleOutClusterRequest setTaints(java.util.List<ScaleOutClusterRequestTaints> taints) {
-        this.taints = taints;
-        return this;
-    }
-    public java.util.List<ScaleOutClusterRequestTaints> getTaints() {
-        return this.taints;
-    }
-
-    public ScaleOutClusterRequest setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
-    }
-
     public ScaleOutClusterRequest setVswitchIds(java.util.List<String> vswitchIds) {
         this.vswitchIds = vswitchIds;
         return this;
     }
     public java.util.List<String> getVswitchIds() {
         return this.vswitchIds;
-    }
-
-    public ScaleOutClusterRequest setWorkerAutoRenew(Boolean workerAutoRenew) {
-        this.workerAutoRenew = workerAutoRenew;
-        return this;
-    }
-    public Boolean getWorkerAutoRenew() {
-        return this.workerAutoRenew;
-    }
-
-    public ScaleOutClusterRequest setWorkerAutoRenewPeriod(Integer workerAutoRenewPeriod) {
-        this.workerAutoRenewPeriod = workerAutoRenewPeriod;
-        return this;
-    }
-    public Integer getWorkerAutoRenewPeriod() {
-        return this.workerAutoRenewPeriod;
-    }
-
-    public ScaleOutClusterRequest setWorkerDataDisk(Boolean workerDataDisk) {
-        this.workerDataDisk = workerDataDisk;
-        return this;
-    }
-    public Boolean getWorkerDataDisk() {
-        return this.workerDataDisk;
-    }
-
-    public ScaleOutClusterRequest setWorkerDataDisks(java.util.List<ScaleOutClusterRequestWorkerDataDisks> workerDataDisks) {
-        this.workerDataDisks = workerDataDisks;
-        return this;
-    }
-    public java.util.List<ScaleOutClusterRequestWorkerDataDisks> getWorkerDataDisks() {
-        return this.workerDataDisks;
     }
 
     public ScaleOutClusterRequest setWorkerInstanceChargeType(String workerInstanceChargeType) {
@@ -245,19 +132,11 @@ public class ScaleOutClusterRequest extends TeaModel {
         return this.workerInstanceChargeType;
     }
 
-    public ScaleOutClusterRequest setWorkerInstanceTypes(java.util.List<String> workerInstanceTypes) {
-        this.workerInstanceTypes = workerInstanceTypes;
-        return this;
-    }
-    public java.util.List<String> getWorkerInstanceTypes() {
-        return this.workerInstanceTypes;
-    }
-
-    public ScaleOutClusterRequest setWorkerPeriod(Integer workerPeriod) {
+    public ScaleOutClusterRequest setWorkerPeriod(Long workerPeriod) {
         this.workerPeriod = workerPeriod;
         return this;
     }
-    public Integer getWorkerPeriod() {
+    public Long getWorkerPeriod() {
         return this.workerPeriod;
     }
 
@@ -269,6 +148,30 @@ public class ScaleOutClusterRequest extends TeaModel {
         return this.workerPeriodUnit;
     }
 
+    public ScaleOutClusterRequest setWorkerAutoRenew(Boolean workerAutoRenew) {
+        this.workerAutoRenew = workerAutoRenew;
+        return this;
+    }
+    public Boolean getWorkerAutoRenew() {
+        return this.workerAutoRenew;
+    }
+
+    public ScaleOutClusterRequest setWorkerAutoRenewPeriod(Long workerAutoRenewPeriod) {
+        this.workerAutoRenewPeriod = workerAutoRenewPeriod;
+        return this;
+    }
+    public Long getWorkerAutoRenewPeriod() {
+        return this.workerAutoRenewPeriod;
+    }
+
+    public ScaleOutClusterRequest setWorkerInstanceTypes(java.util.List<String> workerInstanceTypes) {
+        this.workerInstanceTypes = workerInstanceTypes;
+        return this;
+    }
+    public java.util.List<String> getWorkerInstanceTypes() {
+        return this.workerInstanceTypes;
+    }
+
     public ScaleOutClusterRequest setWorkerSystemDiskCategory(String workerSystemDiskCategory) {
         this.workerSystemDiskCategory = workerSystemDiskCategory;
         return this;
@@ -277,164 +180,84 @@ public class ScaleOutClusterRequest extends TeaModel {
         return this.workerSystemDiskCategory;
     }
 
-    public ScaleOutClusterRequest setWorkerSystemDiskSize(Integer workerSystemDiskSize) {
+    public ScaleOutClusterRequest setWorkerSystemDiskSize(Long workerSystemDiskSize) {
         this.workerSystemDiskSize = workerSystemDiskSize;
         return this;
     }
-    public Integer getWorkerSystemDiskSize() {
+    public Long getWorkerSystemDiskSize() {
         return this.workerSystemDiskSize;
     }
 
-    public static class ScaleOutClusterRequestRuntime extends TeaModel {
-        // 容器引擎名称。
-        @NameInMap("name")
-        public String name;
-
-        // 容器引擎版本。
-        @NameInMap("version")
-        public String version;
-
-        public static ScaleOutClusterRequestRuntime build(java.util.Map<String, ?> map) throws Exception {
-            ScaleOutClusterRequestRuntime self = new ScaleOutClusterRequestRuntime();
-            return TeaModel.build(map, self);
-        }
-
-        public ScaleOutClusterRequestRuntime setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ScaleOutClusterRequestRuntime setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
+    public ScaleOutClusterRequest setWorkerDataDisks(java.util.List<DataDisk> workerDataDisks) {
+        this.workerDataDisks = workerDataDisks;
+        return this;
+    }
+    public java.util.List<DataDisk> getWorkerDataDisks() {
+        return this.workerDataDisks;
     }
 
-    public static class ScaleOutClusterRequestTags extends TeaModel {
-        // 标签名。
-        @NameInMap("key")
-        public String key;
-
-        // 标签值。
-        @NameInMap("value")
-        public String value;
-
-        public static ScaleOutClusterRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            ScaleOutClusterRequestTags self = new ScaleOutClusterRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public ScaleOutClusterRequestTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ScaleOutClusterRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public ScaleOutClusterRequest setCloudMonitorFlags(Boolean cloudMonitorFlags) {
+        this.cloudMonitorFlags = cloudMonitorFlags;
+        return this;
+    }
+    public Boolean getCloudMonitorFlags() {
+        return this.cloudMonitorFlags;
     }
 
-    public static class ScaleOutClusterRequestTaints extends TeaModel {
-        // 污点生效策略。
-        @NameInMap("effect")
-        public String effect;
-
-        // 污点名。
-        @NameInMap("key")
-        public String key;
-
-        // 污点值。
-        @NameInMap("value")
-        public String value;
-
-        public static ScaleOutClusterRequestTaints build(java.util.Map<String, ?> map) throws Exception {
-            ScaleOutClusterRequestTaints self = new ScaleOutClusterRequestTaints();
-            return TeaModel.build(map, self);
-        }
-
-        public ScaleOutClusterRequestTaints setEffect(String effect) {
-            this.effect = effect;
-            return this;
-        }
-        public String getEffect() {
-            return this.effect;
-        }
-
-        public ScaleOutClusterRequestTaints setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ScaleOutClusterRequestTaints setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public ScaleOutClusterRequest setCpuPolicy(String cpuPolicy) {
+        this.cpuPolicy = cpuPolicy;
+        return this;
+    }
+    public String getCpuPolicy() {
+        return this.cpuPolicy;
     }
 
-    public static class ScaleOutClusterRequestWorkerDataDisks extends TeaModel {
-        // 数据盘类型。
-        @NameInMap("category")
-        public String category;
+    public ScaleOutClusterRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
+    }
 
-        // 是否对数据盘加密。
-        @NameInMap("encrypted")
-        public String encrypted;
+    public ScaleOutClusterRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
+    }
 
-        // 数据盘大小。
-        @NameInMap("size")
-        public Long size;
+    public ScaleOutClusterRequest setRdsInstances(java.util.List<String> rdsInstances) {
+        this.rdsInstances = rdsInstances;
+        return this;
+    }
+    public java.util.List<String> getRdsInstances() {
+        return this.rdsInstances;
+    }
 
-        public static ScaleOutClusterRequestWorkerDataDisks build(java.util.Map<String, ?> map) throws Exception {
-            ScaleOutClusterRequestWorkerDataDisks self = new ScaleOutClusterRequestWorkerDataDisks();
-            return TeaModel.build(map, self);
-        }
+    public ScaleOutClusterRequest setTags(java.util.List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<Tag> getTags() {
+        return this.tags;
+    }
 
-        public ScaleOutClusterRequestWorkerDataDisks setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
+    public ScaleOutClusterRequest setTaints(java.util.List<Taint> taints) {
+        this.taints = taints;
+        return this;
+    }
+    public java.util.List<Taint> getTaints() {
+        return this.taints;
+    }
 
-        public ScaleOutClusterRequestWorkerDataDisks setEncrypted(String encrypted) {
-            this.encrypted = encrypted;
-            return this;
-        }
-        public String getEncrypted() {
-            return this.encrypted;
-        }
-
-        public ScaleOutClusterRequestWorkerDataDisks setSize(Long size) {
-            this.size = size;
-            return this;
-        }
-        public Long getSize() {
-            return this.size;
-        }
-
+    public ScaleOutClusterRequest setRuntime(Runtime runtime) {
+        this.runtime = runtime;
+        return this;
+    }
+    public Runtime getRuntime() {
+        return this.runtime;
     }
 
 }

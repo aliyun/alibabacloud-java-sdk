@@ -140,7 +140,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
 
         // 容器运行时详情。	
         @NameInMap("runtimes")
-        public java.util.List<Runtimes> runtimes;
+        public java.util.List<Runtime> runtimes;
 
         // Kubernetes版本。	
         @NameInMap("version")
@@ -179,11 +179,11 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
             return this.metaData;
         }
 
-        public DescribeKubernetesVersionMetadataResponseBody setRuntimes(java.util.List<Runtimes> runtimes) {
+        public DescribeKubernetesVersionMetadataResponseBody setRuntimes(java.util.List<Runtime> runtimes) {
             this.runtimes = runtimes;
             return this;
         }
-        public java.util.List<Runtimes> getRuntimes() {
+        public java.util.List<Runtime> getRuntimes() {
             return this.runtimes;
         }
 

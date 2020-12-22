@@ -62,7 +62,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         @NameInMap("instance_id")
         public String instanceId;
 
-        // 节点实例名称。
+        // 节点名称。
         @NameInMap("instance_name")
         public String instanceName;
 
@@ -98,7 +98,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         @NameInMap("node_status")
         public String nodeStatus;
 
-        // 节点所属的节点池ID。
+        // 节点池ID。
         @NameInMap("nodepool_id")
         public String nodepoolId;
 
@@ -106,9 +106,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         @NameInMap("source")
         public String source;
 
-        // ECS运行状态，例如：running。
+        // ECS运行状态，例如：Running。
         @NameInMap("state")
         public String state;
+
+        // 抢占时实例类型
+        @NameInMap("spot_strategy")
+        public String spotStrategy;
 
         public static DescribeClusterNodesResponseBodyNodes build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodesResponseBodyNodes self = new DescribeClusterNodesResponseBodyNodes();
@@ -265,6 +269,14 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public DescribeClusterNodesResponseBodyNodes setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
         }
 
     }
