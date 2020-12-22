@@ -37,6 +37,9 @@ public class DispatchGameSlotRequest extends TeaModel {
     @NameInMap("SystemInfo")
     public String systemInfo;
 
+    @NameInMap("ClientIp")
+    public String clientIp;
+
     public static DispatchGameSlotRequest build(java.util.Map<String, ?> map) throws Exception {
         DispatchGameSlotRequest self = new DispatchGameSlotRequest();
         return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class DispatchGameSlotRequest extends TeaModel {
     }
     public String getSystemInfo() {
         return this.systemInfo;
+    }
+
+    public DispatchGameSlotRequest setClientIp(String clientIp) {
+        this.clientIp = clientIp;
+        return this;
+    }
+    public String getClientIp() {
+        return this.clientIp;
     }
 
 }
