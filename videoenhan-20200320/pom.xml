@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>videoenhan20200320</artifactId>
-  <version>0.0.7</version>
+  <version>0.0.8</version>
   <packaging>jar</packaging>
   <name>videoenhan20200320</name>
   <description>Aliyun VIDEOENHAN for Java
