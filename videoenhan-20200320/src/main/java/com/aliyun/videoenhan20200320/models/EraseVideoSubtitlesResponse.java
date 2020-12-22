@@ -4,53 +4,33 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EraseVideoSubtitlesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public EraseVideoSubtitlesResponseData data;
+    public EraseVideoSubtitlesResponseBody body;
 
     public static EraseVideoSubtitlesResponse build(java.util.Map<String, ?> map) throws Exception {
         EraseVideoSubtitlesResponse self = new EraseVideoSubtitlesResponse();
         return TeaModel.build(map, self);
     }
 
-    public EraseVideoSubtitlesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public EraseVideoSubtitlesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public EraseVideoSubtitlesResponse setData(EraseVideoSubtitlesResponseData data) {
-        this.data = data;
+    public EraseVideoSubtitlesResponse setBody(EraseVideoSubtitlesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public EraseVideoSubtitlesResponseData getData() {
-        return this.data;
-    }
-
-    public static class EraseVideoSubtitlesResponseData extends TeaModel {
-        @NameInMap("VideoUrl")
-        @Validation(required = true)
-        public String videoUrl;
-
-        public static EraseVideoSubtitlesResponseData build(java.util.Map<String, ?> map) throws Exception {
-            EraseVideoSubtitlesResponseData self = new EraseVideoSubtitlesResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public EraseVideoSubtitlesResponseData setVideoUrl(String videoUrl) {
-            this.videoUrl = videoUrl;
-            return this;
-        }
-        public String getVideoUrl() {
-            return this.videoUrl;
-        }
-
+    public EraseVideoSubtitlesResponseBody getBody() {
+        return this.body;
     }
 
 }

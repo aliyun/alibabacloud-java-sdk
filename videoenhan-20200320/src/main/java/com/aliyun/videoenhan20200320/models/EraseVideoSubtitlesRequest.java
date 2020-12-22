@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class EraseVideoSubtitlesRequest extends TeaModel {
     @NameInMap("VideoUrl")
-    @Validation(required = true)
     public String videoUrl;
+
+    @NameInMap("Async")
+    public Boolean async;
 
     @NameInMap("BX")
     public Float BX;
@@ -31,6 +33,14 @@ public class EraseVideoSubtitlesRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
+    }
+
+    public EraseVideoSubtitlesRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public EraseVideoSubtitlesRequest setBX(Float BX) {

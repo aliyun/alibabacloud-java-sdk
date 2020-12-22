@@ -131,6 +131,16 @@
       <artifactId>endpoint-util</artifactId>
       <version>0.0.6</version>
     </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-openapi</artifactId>
+      <version>0.0.7</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.0.8</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>

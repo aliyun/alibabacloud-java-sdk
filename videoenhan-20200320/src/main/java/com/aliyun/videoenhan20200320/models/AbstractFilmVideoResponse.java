@@ -4,53 +4,33 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AbstractFilmVideoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public AbstractFilmVideoResponseData data;
+    public AbstractFilmVideoResponseBody body;
 
     public static AbstractFilmVideoResponse build(java.util.Map<String, ?> map) throws Exception {
         AbstractFilmVideoResponse self = new AbstractFilmVideoResponse();
         return TeaModel.build(map, self);
     }
 
-    public AbstractFilmVideoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AbstractFilmVideoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AbstractFilmVideoResponse setData(AbstractFilmVideoResponseData data) {
-        this.data = data;
+    public AbstractFilmVideoResponse setBody(AbstractFilmVideoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public AbstractFilmVideoResponseData getData() {
-        return this.data;
-    }
-
-    public static class AbstractFilmVideoResponseData extends TeaModel {
-        @NameInMap("VideoUrl")
-        @Validation(required = true)
-        public String videoUrl;
-
-        public static AbstractFilmVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
-            AbstractFilmVideoResponseData self = new AbstractFilmVideoResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public AbstractFilmVideoResponseData setVideoUrl(String videoUrl) {
-            this.videoUrl = videoUrl;
-            return this;
-        }
-        public String getVideoUrl() {
-            return this.videoUrl;
-        }
-
+    public AbstractFilmVideoResponseBody getBody() {
+        return this.body;
     }
 
 }
