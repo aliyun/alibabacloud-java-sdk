@@ -8,6 +8,9 @@ public class SegmentCommonImageAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
+    @NameInMap("ReturnForm")
+    public String returnForm;
+
     public static SegmentCommonImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SegmentCommonImageAdvanceRequest self = new SegmentCommonImageAdvanceRequest();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class SegmentCommonImageAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
+    }
+
+    public SegmentCommonImageAdvanceRequest setReturnForm(String returnForm) {
+        this.returnForm = returnForm;
+        return this;
+    }
+    public String getReturnForm() {
+        return this.returnForm;
     }
 
 }
