@@ -7,8 +7,8 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("Region")
-    public java.util.List<DetectPedestrianIntrusionRequestRegion> region;
+    @NameInMap("DetectRegion")
+    public java.util.List<DetectPedestrianIntrusionRequestDetectRegion> detectRegion;
 
     @NameInMap("RegionType")
     public String regionType;
@@ -26,12 +26,12 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
         return this.imageURL;
     }
 
-    public DetectPedestrianIntrusionRequest setRegion(java.util.List<DetectPedestrianIntrusionRequestRegion> region) {
-        this.region = region;
+    public DetectPedestrianIntrusionRequest setDetectRegion(java.util.List<DetectPedestrianIntrusionRequestDetectRegion> detectRegion) {
+        this.detectRegion = detectRegion;
         return this;
     }
-    public java.util.List<DetectPedestrianIntrusionRequestRegion> getRegion() {
-        return this.region;
+    public java.util.List<DetectPedestrianIntrusionRequestDetectRegion> getDetectRegion() {
+        return this.detectRegion;
     }
 
     public DetectPedestrianIntrusionRequest setRegionType(String regionType) {
@@ -42,7 +42,7 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
         return this.regionType;
     }
 
-    public static class DetectPedestrianIntrusionRequestRegionRect extends TeaModel {
+    public static class DetectPedestrianIntrusionRequestDetectRegionRect extends TeaModel {
         @NameInMap("Left")
         public Long left;
 
@@ -55,12 +55,12 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
         @NameInMap("Bottom")
         public Long bottom;
 
-        public static DetectPedestrianIntrusionRequestRegionRect build(java.util.Map<String, ?> map) throws Exception {
-            DetectPedestrianIntrusionRequestRegionRect self = new DetectPedestrianIntrusionRequestRegionRect();
+        public static DetectPedestrianIntrusionRequestDetectRegionRect build(java.util.Map<String, ?> map) throws Exception {
+            DetectPedestrianIntrusionRequestDetectRegionRect self = new DetectPedestrianIntrusionRequestDetectRegionRect();
             return TeaModel.build(map, self);
         }
 
-        public DetectPedestrianIntrusionRequestRegionRect setLeft(Long left) {
+        public DetectPedestrianIntrusionRequestDetectRegionRect setLeft(Long left) {
             this.left = left;
             return this;
         }
@@ -68,7 +68,7 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
             return this.left;
         }
 
-        public DetectPedestrianIntrusionRequestRegionRect setTop(Long top) {
+        public DetectPedestrianIntrusionRequestDetectRegionRect setTop(Long top) {
             this.top = top;
             return this;
         }
@@ -76,7 +76,7 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
             return this.top;
         }
 
-        public DetectPedestrianIntrusionRequestRegionRect setRight(Long right) {
+        public DetectPedestrianIntrusionRequestDetectRegionRect setRight(Long right) {
             this.right = right;
             return this;
         }
@@ -84,7 +84,7 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
             return this.right;
         }
 
-        public DetectPedestrianIntrusionRequestRegionRect setBottom(Long bottom) {
+        public DetectPedestrianIntrusionRequestDetectRegionRect setBottom(Long bottom) {
             this.bottom = bottom;
             return this;
         }
@@ -94,7 +94,7 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
 
     }
 
-    public static class DetectPedestrianIntrusionRequestRegionLine extends TeaModel {
+    public static class DetectPedestrianIntrusionRequestDetectRegionLine extends TeaModel {
         @NameInMap("X1")
         public Long x1;
 
@@ -107,12 +107,12 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
         @NameInMap("Y2")
         public Long y2;
 
-        public static DetectPedestrianIntrusionRequestRegionLine build(java.util.Map<String, ?> map) throws Exception {
-            DetectPedestrianIntrusionRequestRegionLine self = new DetectPedestrianIntrusionRequestRegionLine();
+        public static DetectPedestrianIntrusionRequestDetectRegionLine build(java.util.Map<String, ?> map) throws Exception {
+            DetectPedestrianIntrusionRequestDetectRegionLine self = new DetectPedestrianIntrusionRequestDetectRegionLine();
             return TeaModel.build(map, self);
         }
 
-        public DetectPedestrianIntrusionRequestRegionLine setX1(Long x1) {
+        public DetectPedestrianIntrusionRequestDetectRegionLine setX1(Long x1) {
             this.x1 = x1;
             return this;
         }
@@ -120,7 +120,7 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
             return this.x1;
         }
 
-        public DetectPedestrianIntrusionRequestRegionLine setY1(Long y1) {
+        public DetectPedestrianIntrusionRequestDetectRegionLine setY1(Long y1) {
             this.y1 = y1;
             return this;
         }
@@ -128,7 +128,7 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
             return this.y1;
         }
 
-        public DetectPedestrianIntrusionRequestRegionLine setX2(Long x2) {
+        public DetectPedestrianIntrusionRequestDetectRegionLine setX2(Long x2) {
             this.x2 = x2;
             return this;
         }
@@ -136,7 +136,7 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
             return this.x2;
         }
 
-        public DetectPedestrianIntrusionRequestRegionLine setY2(Long y2) {
+        public DetectPedestrianIntrusionRequestDetectRegionLine setY2(Long y2) {
             this.y2 = y2;
             return this;
         }
@@ -146,31 +146,31 @@ public class DetectPedestrianIntrusionRequest extends TeaModel {
 
     }
 
-    public static class DetectPedestrianIntrusionRequestRegion extends TeaModel {
+    public static class DetectPedestrianIntrusionRequestDetectRegion extends TeaModel {
         @NameInMap("Rect")
-        public DetectPedestrianIntrusionRequestRegionRect rect;
+        public DetectPedestrianIntrusionRequestDetectRegionRect rect;
 
         @NameInMap("Line")
-        public DetectPedestrianIntrusionRequestRegionLine line;
+        public DetectPedestrianIntrusionRequestDetectRegionLine line;
 
-        public static DetectPedestrianIntrusionRequestRegion build(java.util.Map<String, ?> map) throws Exception {
-            DetectPedestrianIntrusionRequestRegion self = new DetectPedestrianIntrusionRequestRegion();
+        public static DetectPedestrianIntrusionRequestDetectRegion build(java.util.Map<String, ?> map) throws Exception {
+            DetectPedestrianIntrusionRequestDetectRegion self = new DetectPedestrianIntrusionRequestDetectRegion();
             return TeaModel.build(map, self);
         }
 
-        public DetectPedestrianIntrusionRequestRegion setRect(DetectPedestrianIntrusionRequestRegionRect rect) {
+        public DetectPedestrianIntrusionRequestDetectRegion setRect(DetectPedestrianIntrusionRequestDetectRegionRect rect) {
             this.rect = rect;
             return this;
         }
-        public DetectPedestrianIntrusionRequestRegionRect getRect() {
+        public DetectPedestrianIntrusionRequestDetectRegionRect getRect() {
             return this.rect;
         }
 
-        public DetectPedestrianIntrusionRequestRegion setLine(DetectPedestrianIntrusionRequestRegionLine line) {
+        public DetectPedestrianIntrusionRequestDetectRegion setLine(DetectPedestrianIntrusionRequestDetectRegionLine line) {
             this.line = line;
             return this;
         }
-        public DetectPedestrianIntrusionRequestRegionLine getLine() {
+        public DetectPedestrianIntrusionRequestDetectRegionLine getLine() {
             return this.line;
         }
 

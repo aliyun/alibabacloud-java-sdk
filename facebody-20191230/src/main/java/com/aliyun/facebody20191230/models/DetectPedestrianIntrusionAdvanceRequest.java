@@ -8,8 +8,8 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("Region")
-    public java.util.List<DetectPedestrianIntrusionAdvanceRequestRegion> region;
+    @NameInMap("DetectRegion")
+    public java.util.List<DetectPedestrianIntrusionAdvanceRequestDetectRegion> detectRegion;
 
     @NameInMap("RegionType")
     public String regionType;
@@ -27,12 +27,12 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
         return this.imageURLObject;
     }
 
-    public DetectPedestrianIntrusionAdvanceRequest setRegion(java.util.List<DetectPedestrianIntrusionAdvanceRequestRegion> region) {
-        this.region = region;
+    public DetectPedestrianIntrusionAdvanceRequest setDetectRegion(java.util.List<DetectPedestrianIntrusionAdvanceRequestDetectRegion> detectRegion) {
+        this.detectRegion = detectRegion;
         return this;
     }
-    public java.util.List<DetectPedestrianIntrusionAdvanceRequestRegion> getRegion() {
-        return this.region;
+    public java.util.List<DetectPedestrianIntrusionAdvanceRequestDetectRegion> getDetectRegion() {
+        return this.detectRegion;
     }
 
     public DetectPedestrianIntrusionAdvanceRequest setRegionType(String regionType) {
@@ -43,7 +43,7 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
         return this.regionType;
     }
 
-    public static class DetectPedestrianIntrusionAdvanceRequestRegionRect extends TeaModel {
+    public static class DetectPedestrianIntrusionAdvanceRequestDetectRegionRect extends TeaModel {
         @NameInMap("Left")
         public Long left;
 
@@ -56,12 +56,12 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
         @NameInMap("Bottom")
         public Long bottom;
 
-        public static DetectPedestrianIntrusionAdvanceRequestRegionRect build(java.util.Map<String, ?> map) throws Exception {
-            DetectPedestrianIntrusionAdvanceRequestRegionRect self = new DetectPedestrianIntrusionAdvanceRequestRegionRect();
+        public static DetectPedestrianIntrusionAdvanceRequestDetectRegionRect build(java.util.Map<String, ?> map) throws Exception {
+            DetectPedestrianIntrusionAdvanceRequestDetectRegionRect self = new DetectPedestrianIntrusionAdvanceRequestDetectRegionRect();
             return TeaModel.build(map, self);
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegionRect setLeft(Long left) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionRect setLeft(Long left) {
             this.left = left;
             return this;
         }
@@ -69,7 +69,7 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
             return this.left;
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegionRect setTop(Long top) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionRect setTop(Long top) {
             this.top = top;
             return this;
         }
@@ -77,7 +77,7 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
             return this.top;
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegionRect setRight(Long right) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionRect setRight(Long right) {
             this.right = right;
             return this;
         }
@@ -85,7 +85,7 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
             return this.right;
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegionRect setBottom(Long bottom) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionRect setBottom(Long bottom) {
             this.bottom = bottom;
             return this;
         }
@@ -95,7 +95,7 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
 
     }
 
-    public static class DetectPedestrianIntrusionAdvanceRequestRegionLine extends TeaModel {
+    public static class DetectPedestrianIntrusionAdvanceRequestDetectRegionLine extends TeaModel {
         @NameInMap("X1")
         public Long x1;
 
@@ -108,12 +108,12 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
         @NameInMap("Y2")
         public Long y2;
 
-        public static DetectPedestrianIntrusionAdvanceRequestRegionLine build(java.util.Map<String, ?> map) throws Exception {
-            DetectPedestrianIntrusionAdvanceRequestRegionLine self = new DetectPedestrianIntrusionAdvanceRequestRegionLine();
+        public static DetectPedestrianIntrusionAdvanceRequestDetectRegionLine build(java.util.Map<String, ?> map) throws Exception {
+            DetectPedestrianIntrusionAdvanceRequestDetectRegionLine self = new DetectPedestrianIntrusionAdvanceRequestDetectRegionLine();
             return TeaModel.build(map, self);
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegionLine setX1(Long x1) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionLine setX1(Long x1) {
             this.x1 = x1;
             return this;
         }
@@ -121,7 +121,7 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
             return this.x1;
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegionLine setY1(Long y1) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionLine setY1(Long y1) {
             this.y1 = y1;
             return this;
         }
@@ -129,7 +129,7 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
             return this.y1;
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegionLine setX2(Long x2) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionLine setX2(Long x2) {
             this.x2 = x2;
             return this;
         }
@@ -137,7 +137,7 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
             return this.x2;
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegionLine setY2(Long y2) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionLine setY2(Long y2) {
             this.y2 = y2;
             return this;
         }
@@ -147,31 +147,31 @@ public class DetectPedestrianIntrusionAdvanceRequest extends TeaModel {
 
     }
 
-    public static class DetectPedestrianIntrusionAdvanceRequestRegion extends TeaModel {
+    public static class DetectPedestrianIntrusionAdvanceRequestDetectRegion extends TeaModel {
         @NameInMap("Rect")
-        public DetectPedestrianIntrusionAdvanceRequestRegionRect rect;
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionRect rect;
 
         @NameInMap("Line")
-        public DetectPedestrianIntrusionAdvanceRequestRegionLine line;
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionLine line;
 
-        public static DetectPedestrianIntrusionAdvanceRequestRegion build(java.util.Map<String, ?> map) throws Exception {
-            DetectPedestrianIntrusionAdvanceRequestRegion self = new DetectPedestrianIntrusionAdvanceRequestRegion();
+        public static DetectPedestrianIntrusionAdvanceRequestDetectRegion build(java.util.Map<String, ?> map) throws Exception {
+            DetectPedestrianIntrusionAdvanceRequestDetectRegion self = new DetectPedestrianIntrusionAdvanceRequestDetectRegion();
             return TeaModel.build(map, self);
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegion setRect(DetectPedestrianIntrusionAdvanceRequestRegionRect rect) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegion setRect(DetectPedestrianIntrusionAdvanceRequestDetectRegionRect rect) {
             this.rect = rect;
             return this;
         }
-        public DetectPedestrianIntrusionAdvanceRequestRegionRect getRect() {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionRect getRect() {
             return this.rect;
         }
 
-        public DetectPedestrianIntrusionAdvanceRequestRegion setLine(DetectPedestrianIntrusionAdvanceRequestRegionLine line) {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegion setLine(DetectPedestrianIntrusionAdvanceRequestDetectRegionLine line) {
             this.line = line;
             return this;
         }
-        public DetectPedestrianIntrusionAdvanceRequestRegionLine getLine() {
+        public DetectPedestrianIntrusionAdvanceRequestDetectRegionLine getLine() {
             return this.line;
         }
 

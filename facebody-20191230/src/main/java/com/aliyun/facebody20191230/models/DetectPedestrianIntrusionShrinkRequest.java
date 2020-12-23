@@ -7,8 +7,8 @@ public class DetectPedestrianIntrusionShrinkRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("Region")
-    public String regionShrink;
+    @NameInMap("DetectRegion")
+    public String detectRegionShrink;
 
     @NameInMap("RegionType")
     public String regionType;
@@ -26,12 +26,12 @@ public class DetectPedestrianIntrusionShrinkRequest extends TeaModel {
         return this.imageURL;
     }
 
-    public DetectPedestrianIntrusionShrinkRequest setRegionShrink(String regionShrink) {
-        this.regionShrink = regionShrink;
+    public DetectPedestrianIntrusionShrinkRequest setDetectRegionShrink(String detectRegionShrink) {
+        this.detectRegionShrink = detectRegionShrink;
         return this;
     }
-    public String getRegionShrink() {
-        return this.regionShrink;
+    public String getDetectRegionShrink() {
+        return this.detectRegionShrink;
     }
 
     public DetectPedestrianIntrusionShrinkRequest setRegionType(String regionType) {

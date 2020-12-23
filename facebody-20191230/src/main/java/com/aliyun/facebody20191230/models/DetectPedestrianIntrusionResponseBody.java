@@ -4,12 +4,6 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectPedestrianIntrusionResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -19,22 +13,6 @@ public class DetectPedestrianIntrusionResponseBody extends TeaModel {
     public static DetectPedestrianIntrusionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DetectPedestrianIntrusionResponseBody self = new DetectPedestrianIntrusionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DetectPedestrianIntrusionResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DetectPedestrianIntrusionResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public DetectPedestrianIntrusionResponseBody setRequestId(String requestId) {
