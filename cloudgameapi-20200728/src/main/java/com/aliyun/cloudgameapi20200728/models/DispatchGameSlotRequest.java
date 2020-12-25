@@ -40,6 +40,9 @@ public class DispatchGameSlotRequest extends TeaModel {
     @NameInMap("ClientIp")
     public String clientIp;
 
+    @NameInMap("Reconnect")
+    public Boolean reconnect;
+
     public static DispatchGameSlotRequest build(java.util.Map<String, ?> map) throws Exception {
         DispatchGameSlotRequest self = new DispatchGameSlotRequest();
         return TeaModel.build(map, self);
@@ -131,6 +134,14 @@ public class DispatchGameSlotRequest extends TeaModel {
     }
     public String getClientIp() {
         return this.clientIp;
+    }
+
+    public DispatchGameSlotRequest setReconnect(Boolean reconnect) {
+        this.reconnect = reconnect;
+        return this;
+    }
+    public Boolean getReconnect() {
+        return this.reconnect;
     }
 
 }
