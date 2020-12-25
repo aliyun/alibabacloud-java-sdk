@@ -10,6 +10,9 @@
 2020-12-25 Version: 1.4.1
 - Support reconnet param .
 
+2020-12-25 Version: 1.4.1
+- Support reconnet param .
+
 2020-12-22 Version: 1.4.0
 - Add client ip as input param.
 
