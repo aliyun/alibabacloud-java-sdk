@@ -8,13 +8,12 @@ public class ChangeVideoSizeAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoUrlObject;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Width")
+    @Validation(required = true)
     public Integer width;
 
     @NameInMap("Height")
+    @Validation(required = true)
     public Integer height;
 
     @NameInMap("CropType")
@@ -46,14 +45,6 @@ public class ChangeVideoSizeAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoUrlObject() {
         return this.videoUrlObject;
-    }
-
-    public ChangeVideoSizeAdvanceRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public ChangeVideoSizeAdvanceRequest setWidth(Integer width) {

@@ -4,33 +4,53 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EraseVideoLogoResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public EraseVideoLogoResponseBody body;
+    public EraseVideoLogoResponseData data;
 
     public static EraseVideoLogoResponse build(java.util.Map<String, ?> map) throws Exception {
         EraseVideoLogoResponse self = new EraseVideoLogoResponse();
         return TeaModel.build(map, self);
     }
 
-    public EraseVideoLogoResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public EraseVideoLogoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public EraseVideoLogoResponse setBody(EraseVideoLogoResponseBody body) {
-        this.body = body;
+    public EraseVideoLogoResponse setData(EraseVideoLogoResponseData data) {
+        this.data = data;
         return this;
     }
-    public EraseVideoLogoResponseBody getBody() {
-        return this.body;
+    public EraseVideoLogoResponseData getData() {
+        return this.data;
+    }
+
+    public static class EraseVideoLogoResponseData extends TeaModel {
+        @NameInMap("VideoUrl")
+        @Validation(required = true)
+        public String videoUrl;
+
+        public static EraseVideoLogoResponseData build(java.util.Map<String, ?> map) throws Exception {
+            EraseVideoLogoResponseData self = new EraseVideoLogoResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public EraseVideoLogoResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
     }
 
 }

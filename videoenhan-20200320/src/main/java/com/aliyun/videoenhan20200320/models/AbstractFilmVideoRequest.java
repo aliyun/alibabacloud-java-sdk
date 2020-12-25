@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class AbstractFilmVideoRequest extends TeaModel {
     @NameInMap("VideoUrl")
+    @Validation(required = true)
     public String videoUrl;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Length")
+    @Validation(required = true)
     public Integer length;
 
     public static AbstractFilmVideoRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -24,14 +23,6 @@ public class AbstractFilmVideoRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
-    }
-
-    public AbstractFilmVideoRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public AbstractFilmVideoRequest setLength(Integer length) {

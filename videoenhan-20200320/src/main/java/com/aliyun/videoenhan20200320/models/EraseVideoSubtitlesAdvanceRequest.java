@@ -8,9 +8,6 @@ public class EraseVideoSubtitlesAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoUrlObject;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("BX")
     public Float BX;
 
@@ -34,14 +31,6 @@ public class EraseVideoSubtitlesAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoUrlObject() {
         return this.videoUrlObject;
-    }
-
-    public EraseVideoSubtitlesAdvanceRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public EraseVideoSubtitlesAdvanceRequest setBX(Float BX) {

@@ -4,33 +4,65 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class GenerateVideoResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public GenerateVideoResponseBody body;
+    public GenerateVideoResponseData data;
 
     public static GenerateVideoResponse build(java.util.Map<String, ?> map) throws Exception {
         GenerateVideoResponse self = new GenerateVideoResponse();
         return TeaModel.build(map, self);
     }
 
-    public GenerateVideoResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GenerateVideoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GenerateVideoResponse setBody(GenerateVideoResponseBody body) {
-        this.body = body;
+    public GenerateVideoResponse setData(GenerateVideoResponseData data) {
+        this.data = data;
         return this;
     }
-    public GenerateVideoResponseBody getBody() {
-        return this.body;
+    public GenerateVideoResponseData getData() {
+        return this.data;
+    }
+
+    public static class GenerateVideoResponseData extends TeaModel {
+        @NameInMap("VideoUrl")
+        @Validation(required = true)
+        public String videoUrl;
+
+        @NameInMap("VideoCoverUrl")
+        @Validation(required = true)
+        public String videoCoverUrl;
+
+        public static GenerateVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
+            GenerateVideoResponseData self = new GenerateVideoResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public GenerateVideoResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public GenerateVideoResponseData setVideoCoverUrl(String videoCoverUrl) {
+            this.videoCoverUrl = videoCoverUrl;
+            return this;
+        }
+        public String getVideoCoverUrl() {
+            return this.videoCoverUrl;
+        }
+
     }
 
 }
