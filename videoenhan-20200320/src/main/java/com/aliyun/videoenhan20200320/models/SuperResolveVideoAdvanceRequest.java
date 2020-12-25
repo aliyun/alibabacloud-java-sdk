@@ -8,6 +8,9 @@ public class SuperResolveVideoAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoUrlObject;
 
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("BitRate")
     public Integer bitRate;
 
@@ -22,6 +25,14 @@ public class SuperResolveVideoAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoUrlObject() {
         return this.videoUrlObject;
+    }
+
+    public SuperResolveVideoAdvanceRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public SuperResolveVideoAdvanceRequest setBitRate(Integer bitRate) {

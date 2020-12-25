@@ -4,9 +4,8 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class GenerateVideoRequest extends TeaModel {
-    @NameInMap("FileList")
-    @Validation(required = true)
-    public java.util.List<GenerateVideoRequestFileList> fileList;
+    @NameInMap("Async")
+    public Boolean async;
 
     @NameInMap("Scene")
     public String scene;
@@ -38,17 +37,20 @@ public class GenerateVideoRequest extends TeaModel {
     @NameInMap("Mute")
     public Boolean mute;
 
+    @NameInMap("FileList")
+    public java.util.List<GenerateVideoRequestFileList> fileList;
+
     public static GenerateVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateVideoRequest self = new GenerateVideoRequest();
         return TeaModel.build(map, self);
     }
 
-    public GenerateVideoRequest setFileList(java.util.List<GenerateVideoRequestFileList> fileList) {
-        this.fileList = fileList;
+    public GenerateVideoRequest setAsync(Boolean async) {
+        this.async = async;
         return this;
     }
-    public java.util.List<GenerateVideoRequestFileList> getFileList() {
-        return this.fileList;
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public GenerateVideoRequest setScene(String scene) {
@@ -131,22 +133,35 @@ public class GenerateVideoRequest extends TeaModel {
         return this.mute;
     }
 
+    public GenerateVideoRequest setFileList(java.util.List<GenerateVideoRequestFileList> fileList) {
+        this.fileList = fileList;
+        return this;
+    }
+    public java.util.List<GenerateVideoRequestFileList> getFileList() {
+        return this.fileList;
+    }
+
     public static class GenerateVideoRequestFileList extends TeaModel {
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("FileUrl")
-        @Validation(required = true)
         public String fileUrl;
 
         @NameInMap("FileName")
-        @Validation(required = true)
         public String fileName;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
 
         public static GenerateVideoRequestFileList build(java.util.Map<String, ?> map) throws Exception {
             GenerateVideoRequestFileList self = new GenerateVideoRequestFileList();
             return TeaModel.build(map, self);
+        }
+
+        public GenerateVideoRequestFileList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public GenerateVideoRequestFileList setFileUrl(String fileUrl) {
@@ -163,14 +178,6 @@ public class GenerateVideoRequest extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
-        }
-
-        public GenerateVideoRequestFileList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
     }
