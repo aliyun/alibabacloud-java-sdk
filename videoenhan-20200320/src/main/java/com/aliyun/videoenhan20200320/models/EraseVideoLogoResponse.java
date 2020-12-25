@@ -4,53 +4,33 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EraseVideoLogoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public EraseVideoLogoResponseData data;
+    public EraseVideoLogoResponseBody body;
 
     public static EraseVideoLogoResponse build(java.util.Map<String, ?> map) throws Exception {
         EraseVideoLogoResponse self = new EraseVideoLogoResponse();
         return TeaModel.build(map, self);
     }
 
-    public EraseVideoLogoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public EraseVideoLogoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public EraseVideoLogoResponse setData(EraseVideoLogoResponseData data) {
-        this.data = data;
+    public EraseVideoLogoResponse setBody(EraseVideoLogoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public EraseVideoLogoResponseData getData() {
-        return this.data;
-    }
-
-    public static class EraseVideoLogoResponseData extends TeaModel {
-        @NameInMap("VideoUrl")
-        @Validation(required = true)
-        public String videoUrl;
-
-        public static EraseVideoLogoResponseData build(java.util.Map<String, ?> map) throws Exception {
-            EraseVideoLogoResponseData self = new EraseVideoLogoResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public EraseVideoLogoResponseData setVideoUrl(String videoUrl) {
-            this.videoUrl = videoUrl;
-            return this;
-        }
-        public String getVideoUrl() {
-            return this.videoUrl;
-        }
-
+    public EraseVideoLogoResponseBody getBody() {
+        return this.body;
     }
 
 }
