@@ -3,11 +3,11 @@ package com.aliyun.cloudgameapi20200728;
 
 import com.aliyun.tea.*;
 import com.aliyun.cloudgameapi20200728.models.*;
-import com.aliyun.teautil;
+import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
-import com.aliyun.tearpc;
+import com.aliyun.tearpc.*;
 import com.aliyun.tearpc.models.*;
-import com.aliyun.endpointutil;
+import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.tearpc.Client {
 
