@@ -4,33 +4,53 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class SuperResolveVideoResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public SuperResolveVideoResponseBody body;
+    public SuperResolveVideoResponseData data;
 
     public static SuperResolveVideoResponse build(java.util.Map<String, ?> map) throws Exception {
         SuperResolveVideoResponse self = new SuperResolveVideoResponse();
         return TeaModel.build(map, self);
     }
 
-    public SuperResolveVideoResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SuperResolveVideoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SuperResolveVideoResponse setBody(SuperResolveVideoResponseBody body) {
-        this.body = body;
+    public SuperResolveVideoResponse setData(SuperResolveVideoResponseData data) {
+        this.data = data;
         return this;
     }
-    public SuperResolveVideoResponseBody getBody() {
-        return this.body;
+    public SuperResolveVideoResponseData getData() {
+        return this.data;
+    }
+
+    public static class SuperResolveVideoResponseData extends TeaModel {
+        @NameInMap("VideoUrl")
+        @Validation(required = true)
+        public String videoUrl;
+
+        public static SuperResolveVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
+            SuperResolveVideoResponseData self = new SuperResolveVideoResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public SuperResolveVideoResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
     }
 
 }

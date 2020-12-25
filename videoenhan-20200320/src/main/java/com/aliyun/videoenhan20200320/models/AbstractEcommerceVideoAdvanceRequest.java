@@ -8,10 +8,8 @@ public class AbstractEcommerceVideoAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoUrlObject;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Duration")
+    @Validation(required = true)
     public Float duration;
 
     @NameInMap("Width")
@@ -31,14 +29,6 @@ public class AbstractEcommerceVideoAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoUrlObject() {
         return this.videoUrlObject;
-    }
-
-    public AbstractEcommerceVideoAdvanceRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public AbstractEcommerceVideoAdvanceRequest setDuration(Float duration) {

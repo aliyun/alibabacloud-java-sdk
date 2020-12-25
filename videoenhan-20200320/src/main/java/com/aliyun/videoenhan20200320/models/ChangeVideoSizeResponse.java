@@ -4,33 +4,65 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ChangeVideoSizeResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public ChangeVideoSizeResponseBody body;
+    public ChangeVideoSizeResponseData data;
 
     public static ChangeVideoSizeResponse build(java.util.Map<String, ?> map) throws Exception {
         ChangeVideoSizeResponse self = new ChangeVideoSizeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ChangeVideoSizeResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ChangeVideoSizeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ChangeVideoSizeResponse setBody(ChangeVideoSizeResponseBody body) {
-        this.body = body;
+    public ChangeVideoSizeResponse setData(ChangeVideoSizeResponseData data) {
+        this.data = data;
         return this;
     }
-    public ChangeVideoSizeResponseBody getBody() {
-        return this.body;
+    public ChangeVideoSizeResponseData getData() {
+        return this.data;
+    }
+
+    public static class ChangeVideoSizeResponseData extends TeaModel {
+        @NameInMap("VideoUrl")
+        @Validation(required = true)
+        public String videoUrl;
+
+        @NameInMap("VideoCoverUrl")
+        @Validation(required = true)
+        public String videoCoverUrl;
+
+        public static ChangeVideoSizeResponseData build(java.util.Map<String, ?> map) throws Exception {
+            ChangeVideoSizeResponseData self = new ChangeVideoSizeResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public ChangeVideoSizeResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public ChangeVideoSizeResponseData setVideoCoverUrl(String videoCoverUrl) {
+            this.videoCoverUrl = videoCoverUrl;
+            return this;
+        }
+        public String getVideoCoverUrl() {
+            return this.videoCoverUrl;
+        }
+
     }
 
 }

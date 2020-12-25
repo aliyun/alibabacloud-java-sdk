@@ -3,21 +3,21 @@ package com.aliyun.videoenhan20200320.models;
 
 import com.aliyun.tea.*;
 
-public class MergeVideoFaceResponse extends TeaModel {
+public class ToneSdrVideoResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
 
     @NameInMap("Data")
     @Validation(required = true)
-    public MergeVideoFaceResponseData data;
+    public ToneSdrVideoResponseData data;
 
-    public static MergeVideoFaceResponse build(java.util.Map<String, ?> map) throws Exception {
-        MergeVideoFaceResponse self = new MergeVideoFaceResponse();
+    public static ToneSdrVideoResponse build(java.util.Map<String, ?> map) throws Exception {
+        ToneSdrVideoResponse self = new ToneSdrVideoResponse();
         return TeaModel.build(map, self);
     }
 
-    public MergeVideoFaceResponse setRequestId(String requestId) {
+    public ToneSdrVideoResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -25,25 +25,25 @@ public class MergeVideoFaceResponse extends TeaModel {
         return this.requestId;
     }
 
-    public MergeVideoFaceResponse setData(MergeVideoFaceResponseData data) {
+    public ToneSdrVideoResponse setData(ToneSdrVideoResponseData data) {
         this.data = data;
         return this;
     }
-    public MergeVideoFaceResponseData getData() {
+    public ToneSdrVideoResponseData getData() {
         return this.data;
     }
 
-    public static class MergeVideoFaceResponseData extends TeaModel {
+    public static class ToneSdrVideoResponseData extends TeaModel {
         @NameInMap("VideoURL")
         @Validation(required = true)
         public String videoURL;
 
-        public static MergeVideoFaceResponseData build(java.util.Map<String, ?> map) throws Exception {
-            MergeVideoFaceResponseData self = new MergeVideoFaceResponseData();
+        public static ToneSdrVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
+            ToneSdrVideoResponseData self = new ToneSdrVideoResponseData();
             return TeaModel.build(map, self);
         }
 
-        public MergeVideoFaceResponseData setVideoURL(String videoURL) {
+        public ToneSdrVideoResponseData setVideoURL(String videoURL) {
             this.videoURL = videoURL;
             return this;
         }

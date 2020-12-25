@@ -4,33 +4,53 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EraseVideoSubtitlesResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public EraseVideoSubtitlesResponseBody body;
+    public EraseVideoSubtitlesResponseData data;
 
     public static EraseVideoSubtitlesResponse build(java.util.Map<String, ?> map) throws Exception {
         EraseVideoSubtitlesResponse self = new EraseVideoSubtitlesResponse();
         return TeaModel.build(map, self);
     }
 
-    public EraseVideoSubtitlesResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public EraseVideoSubtitlesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public EraseVideoSubtitlesResponse setBody(EraseVideoSubtitlesResponseBody body) {
-        this.body = body;
+    public EraseVideoSubtitlesResponse setData(EraseVideoSubtitlesResponseData data) {
+        this.data = data;
         return this;
     }
-    public EraseVideoSubtitlesResponseBody getBody() {
-        return this.body;
+    public EraseVideoSubtitlesResponseData getData() {
+        return this.data;
+    }
+
+    public static class EraseVideoSubtitlesResponseData extends TeaModel {
+        @NameInMap("VideoUrl")
+        @Validation(required = true)
+        public String videoUrl;
+
+        public static EraseVideoSubtitlesResponseData build(java.util.Map<String, ?> map) throws Exception {
+            EraseVideoSubtitlesResponseData self = new EraseVideoSubtitlesResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public EraseVideoSubtitlesResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
     }
 
 }

@@ -3,21 +3,21 @@ package com.aliyun.videoenhan20200320.models;
 
 import com.aliyun.tea.*;
 
-public class MergeVideoFaceResponse extends TeaModel {
+public class ConvertHdrVideoResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
 
     @NameInMap("Data")
     @Validation(required = true)
-    public MergeVideoFaceResponseData data;
+    public ConvertHdrVideoResponseData data;
 
-    public static MergeVideoFaceResponse build(java.util.Map<String, ?> map) throws Exception {
-        MergeVideoFaceResponse self = new MergeVideoFaceResponse();
+    public static ConvertHdrVideoResponse build(java.util.Map<String, ?> map) throws Exception {
+        ConvertHdrVideoResponse self = new ConvertHdrVideoResponse();
         return TeaModel.build(map, self);
     }
 
-    public MergeVideoFaceResponse setRequestId(String requestId) {
+    public ConvertHdrVideoResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -25,25 +25,25 @@ public class MergeVideoFaceResponse extends TeaModel {
         return this.requestId;
     }
 
-    public MergeVideoFaceResponse setData(MergeVideoFaceResponseData data) {
+    public ConvertHdrVideoResponse setData(ConvertHdrVideoResponseData data) {
         this.data = data;
         return this;
     }
-    public MergeVideoFaceResponseData getData() {
+    public ConvertHdrVideoResponseData getData() {
         return this.data;
     }
 
-    public static class MergeVideoFaceResponseData extends TeaModel {
+    public static class ConvertHdrVideoResponseData extends TeaModel {
         @NameInMap("VideoURL")
         @Validation(required = true)
         public String videoURL;
 
-        public static MergeVideoFaceResponseData build(java.util.Map<String, ?> map) throws Exception {
-            MergeVideoFaceResponseData self = new MergeVideoFaceResponseData();
+        public static ConvertHdrVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
+            ConvertHdrVideoResponseData self = new ConvertHdrVideoResponseData();
             return TeaModel.build(map, self);
         }
 
-        public MergeVideoFaceResponseData setVideoURL(String videoURL) {
+        public ConvertHdrVideoResponseData setVideoURL(String videoURL) {
             this.videoURL = videoURL;
             return this;
         }
