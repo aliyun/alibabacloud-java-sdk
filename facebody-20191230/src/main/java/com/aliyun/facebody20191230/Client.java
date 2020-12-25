@@ -1878,6 +1878,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteFaceDbWithOptions(request, runtime);
     }
 
+    public ListBodyPersonResponse listBodyPersonWithOptions(ListBodyPersonRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListBodyPerson", "2019-12-30", "HTTPS", "GET", "AK", "json", req, runtime), new ListBodyPersonResponse());
+    }
+
+    public ListBodyPersonResponse listBodyPerson(ListBodyPersonRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBodyPersonWithOptions(request, runtime);
+    }
+
     public ListBodyDbsResponse listBodyDbsWithOptions(ListBodyDbsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
