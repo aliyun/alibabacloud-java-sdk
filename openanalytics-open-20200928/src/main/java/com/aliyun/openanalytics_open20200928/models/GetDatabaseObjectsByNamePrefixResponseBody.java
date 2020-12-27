@@ -3,57 +3,33 @@ package com.aliyun.openanalytics_open20200928.models;
 
 import com.aliyun.tea.*;
 
-public class GetDatabaseObjectByIdResponseBody extends TeaModel {
-    // 如果后端处理出现错误，则表示错误的类型	
+public class GetDatabaseObjectsByNamePrefixResponseBody extends TeaModel {
+    // 请求的 ID	
+    @NameInMap("RequestId")
+    public String requestId;
+
+    // 如果后端处理出现错误，则表示错误的类型
     @NameInMap("Code")
     public String code;
 
-    //  返回的数据结构
-    @NameInMap("DatabaseModel")
-    public GetDatabaseObjectByIdResponseBodyDatabaseModel databaseModel;
-
-    // 如果后端处理出现错误，则表示错误的信息	
+    // 如果后端处理出现错误，则表示错误的信息
     @NameInMap("Message")
     public String message;
 
-    // 请求的 ID
-    @NameInMap("RequestId	")
-    public String requestId;
-
-    // 标识本次请求是否成功	
-    @NameInMap("Success	")
+    // 标识本次请求是否成功
+    @NameInMap("Success")
     public Boolean success;
 
-    public static GetDatabaseObjectByIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetDatabaseObjectByIdResponseBody self = new GetDatabaseObjectByIdResponseBody();
+    // 返回的数据库列表
+    @NameInMap("Data")
+    public java.util.List<GetDatabaseObjectsByNamePrefixResponseBodyData> data;
+
+    public static GetDatabaseObjectsByNamePrefixResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetDatabaseObjectsByNamePrefixResponseBody self = new GetDatabaseObjectsByNamePrefixResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetDatabaseObjectByIdResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetDatabaseObjectByIdResponseBody setDatabaseModel(GetDatabaseObjectByIdResponseBodyDatabaseModel databaseModel) {
-        this.databaseModel = databaseModel;
-        return this;
-    }
-    public GetDatabaseObjectByIdResponseBodyDatabaseModel getDatabaseModel() {
-        return this.databaseModel;
-    }
-
-    public GetDatabaseObjectByIdResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetDatabaseObjectByIdResponseBody setRequestId(String requestId) {
+    public GetDatabaseObjectsByNamePrefixResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -61,7 +37,23 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetDatabaseObjectByIdResponseBody setSuccess(Boolean success) {
+    public GetDatabaseObjectsByNamePrefixResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetDatabaseObjectsByNamePrefixResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetDatabaseObjectsByNamePrefixResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -69,12 +61,20 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetDatabaseObjectByIdResponseBodyDatabaseModel extends TeaModel {
+    public GetDatabaseObjectsByNamePrefixResponseBody setData(java.util.List<GetDatabaseObjectsByNamePrefixResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<GetDatabaseObjectsByNamePrefixResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public static class GetDatabaseObjectsByNamePrefixResponseBodyData extends TeaModel {
         // 数据库描述	
         @NameInMap("Description")
         public String description;
 
-        // 数据库地址
+        // 数据库位置
         @NameInMap("LocationUri")
         public String locationUri;
 
@@ -82,11 +82,11 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        // 数据库所属 DLA userName	
+        // 数据库所属 DLA userName
         @NameInMap("OwnerName")
         public String ownerName;
 
-        // 数据库参数	
+        // 数据库参数
         @NameInMap("Parameters")
         public java.util.Map<String, String> parameters;
 
@@ -98,7 +98,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
         @NameInMap("DBId")
         public Long DBId;
 
-        //  数据库的类型
+        // 数据库的类型	
         @NameInMap("CatalogType")
         public String catalogType;
 
@@ -106,16 +106,16 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public Long createTime;
 
-        // 修改时间
+        // 更新时间
         @NameInMap("UpdateTime")
         public Long updateTime;
 
-        public static GetDatabaseObjectByIdResponseBodyDatabaseModel build(java.util.Map<String, ?> map) throws Exception {
-            GetDatabaseObjectByIdResponseBodyDatabaseModel self = new GetDatabaseObjectByIdResponseBodyDatabaseModel();
+        public static GetDatabaseObjectsByNamePrefixResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetDatabaseObjectsByNamePrefixResponseBodyData self = new GetDatabaseObjectsByNamePrefixResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setDescription(String description) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -123,7 +123,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
             return this.description;
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setLocationUri(String locationUri) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setLocationUri(String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
@@ -131,7 +131,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
             return this.locationUri;
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setName(String name) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setName(String name) {
             this.name = name;
             return this;
         }
@@ -139,7 +139,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setOwnerName(String ownerName) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setOwnerName(String ownerName) {
             this.ownerName = ownerName;
             return this;
         }
@@ -147,7 +147,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
             return this.ownerName;
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setParameters(java.util.Map<String, String> parameters) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setParameters(java.util.Map<String, String> parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -155,7 +155,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
             return this.parameters;
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setTenantId(String tenantId) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setTenantId(String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
@@ -163,7 +163,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
             return this.tenantId;
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setDBId(Long DBId) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setDBId(Long DBId) {
             this.DBId = DBId;
             return this;
         }
@@ -171,7 +171,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
             return this.DBId;
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setCatalogType(String catalogType) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setCatalogType(String catalogType) {
             this.catalogType = catalogType;
             return this;
         }
@@ -179,7 +179,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
             return this.catalogType;
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setCreateTime(Long createTime) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -187,7 +187,7 @@ public class GetDatabaseObjectByIdResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetDatabaseObjectByIdResponseBodyDatabaseModel setUpdateTime(Long updateTime) {
+        public GetDatabaseObjectsByNamePrefixResponseBodyData setUpdateTime(Long updateTime) {
             this.updateTime = updateTime;
             return this;
         }
