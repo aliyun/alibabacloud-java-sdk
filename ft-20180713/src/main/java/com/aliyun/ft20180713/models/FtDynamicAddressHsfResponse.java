@@ -4,21 +4,33 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtDynamicAddressHsfResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public FtDynamicAddressHsfResponseBody body;
 
     public static FtDynamicAddressHsfResponse build(java.util.Map<String, ?> map) throws Exception {
         FtDynamicAddressHsfResponse self = new FtDynamicAddressHsfResponse();
         return TeaModel.build(map, self);
     }
 
-    public FtDynamicAddressHsfResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public FtDynamicAddressHsfResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public FtDynamicAddressHsfResponse setBody(FtDynamicAddressHsfResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public FtDynamicAddressHsfResponseBody getBody() {
+        return this.body;
     }
 
 }
