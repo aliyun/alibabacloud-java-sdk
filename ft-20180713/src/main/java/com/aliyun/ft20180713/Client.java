@@ -3,10 +3,16 @@ package com.aliyun.ft20180713;
 
 import com.aliyun.tea.*;
 import com.aliyun.ft20180713.models.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.teaopenapi.*;
+import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
+import com.aliyun.endpointutil.*;
 
-public class Client extends com.aliyun.tearpc.Client {
+public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(com.aliyun.tearpc.models.Config config) throws Exception {
+    public Client(Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
@@ -34,6 +40,7 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("cn-hangzhou-test-306", "ft.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "ft.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "ft.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "ft.aliyuncs.com"),
             new TeaPair("cn-qingdao", "ft.aliyuncs.com"),
             new TeaPair("cn-qingdao-nebula", "ft.aliyuncs.com"),
             new TeaPair("cn-shanghai-et15-b01", "ft.aliyuncs.com"),
@@ -46,7 +53,9 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("cn-shenzhen-st4-d01", "ft.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "ft.aliyuncs.com"),
             new TeaPair("cn-wuhan", "ft.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "ft.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "ft.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "ft.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "ft.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou-na62-a01", "ft.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "ft.aliyuncs.com"),
@@ -62,136 +71,6 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
-    public TestFlowStrategy01Response testFlowStrategy01WithOptions(TestFlowStrategy01Request tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmp);
-        TestFlowStrategy01ShrinkRequest request = new TestFlowStrategy01ShrinkRequest();
-        com.aliyun.common.Common.convert(tmp, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmp.names)) {
-            request.namesShrink = com.aliyun.teautil.Common.toJSONString(tmp.names);
-        }
-
-        return TeaModel.toModel(this.doRequest("TestFlowStrategy01", "HTTPS", "PUT", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new TestFlowStrategy01Response());
-    }
-
-    public TestFlowStrategy01Response testFlowStrategy01(TestFlowStrategy01Request request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.testFlowStrategy01WithOptions(request, runtime);
-    }
-
-    public TestHttpApiResponse testHttpApiWithOptions(TestHttpApiRequest tmp, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmp);
-        TestHttpApiShrinkRequest request = new TestHttpApiShrinkRequest();
-        com.aliyun.common.Common.convert(tmp, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmp.stringValue)) {
-            request.stringValueShrink = com.aliyun.teautil.Common.toJSONString(tmp.stringValue);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmp.defaultValue)) {
-            request.defaultValueShrink = com.aliyun.teautil.Common.toJSONString(tmp.defaultValue);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(tmp.otherParam)) {
-            request.otherParamShrink = com.aliyun.teautil.Common.toJSONString(tmp.otherParam);
-        }
-
-        return TeaModel.toModel(this.doRequest("TestHttpApi", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new TestHttpApiResponse());
-    }
-
-    public TestHttpApiResponse testHttpApi(TestHttpApiRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.testHttpApiWithOptions(request, runtime);
-    }
-
-    public BatchAuditTest01Response batchAuditTest01WithOptions(BatchAuditTest01Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("BatchAuditTest01", "HTTPS", "POST", "2018-07-13", "Anonymous", null, TeaModel.buildMap(request), runtime), new BatchAuditTest01Response());
-    }
-
-    public BatchAuditTest01Response batchAuditTest01(BatchAuditTest01Request request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.batchAuditTest01WithOptions(request, runtime);
-    }
-
-    public FtIpFlowControlResponse ftIpFlowControlWithOptions(FtIpFlowControlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("FtIpFlowControl", "HTTPS", "POST", "2018-07-13", "Anonymous", null, TeaModel.buildMap(request), runtime), new FtIpFlowControlResponse());
-    }
-
-    public FtIpFlowControlResponse ftIpFlowControl(FtIpFlowControlRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.ftIpFlowControlWithOptions(request, runtime);
-    }
-
-    public FtDynamicAddressDubboResponse ftDynamicAddressDubboWithOptions(FtDynamicAddressDubboRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("FtDynamicAddressDubbo", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new FtDynamicAddressDubboResponse());
-    }
-
-    public FtDynamicAddressDubboResponse ftDynamicAddressDubbo(FtDynamicAddressDubboRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.ftDynamicAddressDubboWithOptions(request, runtime);
-    }
-
-    public FtDynamicAddressHsfResponse ftDynamicAddressHsfWithOptions(FtDynamicAddressHsfRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("FtDynamicAddressHsf", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new FtDynamicAddressHsfResponse());
-    }
-
-    public FtDynamicAddressHsfResponse ftDynamicAddressHsf(FtDynamicAddressHsfRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.ftDynamicAddressHsfWithOptions(request, runtime);
-    }
-
-    public FtFlowSpecialResponse ftFlowSpecialWithOptions(FtFlowSpecialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("FtFlowSpecial", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new FtFlowSpecialResponse());
-    }
-
-    public FtFlowSpecialResponse ftFlowSpecial(FtFlowSpecialRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.ftFlowSpecialWithOptions(request, runtime);
-    }
-
-    public FTApiAliasApiResponse FTApiAliasApiWithOptions(FTApiAliasApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("FTApiAliasApi", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new FTApiAliasApiResponse());
-    }
-
-    public FTApiAliasApiResponse FTApiAliasApi(FTApiAliasApiRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.FTApiAliasApiWithOptions(request, runtime);
-    }
-
-    public FtEagleEyeResponse ftEagleEyeWithOptions(FtEagleEyeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("FtEagleEye", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new FtEagleEyeResponse());
-    }
-
-    public FtEagleEyeResponse ftEagleEye(FtEagleEyeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.ftEagleEyeWithOptions(request, runtime);
-    }
-
-    public FtParamListResponse ftParamListWithOptions(FtParamListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("FtParamList", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new FtParamListResponse());
-    }
-
-    public FtParamListResponse ftParamList(FtParamListRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.ftParamListWithOptions(request, runtime);
-    }
-
-    public FtGatedLaunchPolicy4Response ftGatedLaunchPolicy4WithOptions(FtGatedLaunchPolicy4Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("FtGatedLaunchPolicy4", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new FtGatedLaunchPolicy4Response());
-    }
-
-    public FtGatedLaunchPolicy4Response ftGatedLaunchPolicy4(FtGatedLaunchPolicy4Request request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.ftGatedLaunchPolicy4WithOptions(request, runtime);
-    }
-
     public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
         if (!com.aliyun.teautil.Common.empty(endpoint)) {
             return endpoint;
@@ -202,5 +81,165 @@ public class Client extends com.aliyun.tearpc.Client {
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
+    }
+
+    public BatchAuditTest01Response batchAuditTest01WithOptions(BatchAuditTest01Request request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BatchAuditTest01", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new BatchAuditTest01Response());
+    }
+
+    public BatchAuditTest01Response batchAuditTest01(BatchAuditTest01Request request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchAuditTest01WithOptions(request, runtime);
+    }
+
+    public FTApiAliasApiResponse fTApiAliasApiWithOptions(FTApiAliasApiRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("FTApiAliasApi", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new FTApiAliasApiResponse());
+    }
+
+    public FTApiAliasApiResponse fTApiAliasApi(FTApiAliasApiRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.fTApiAliasApiWithOptions(request, runtime);
+    }
+
+    public FtDynamicAddressDubboResponse ftDynamicAddressDubboWithOptions(FtDynamicAddressDubboRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("FtDynamicAddressDubbo", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new FtDynamicAddressDubboResponse());
+    }
+
+    public FtDynamicAddressDubboResponse ftDynamicAddressDubbo(FtDynamicAddressDubboRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.ftDynamicAddressDubboWithOptions(request, runtime);
+    }
+
+    public FtDynamicAddressHsfResponse ftDynamicAddressHsfWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("FtDynamicAddressHsf", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new FtDynamicAddressHsfResponse());
+    }
+
+    public FtDynamicAddressHsfResponse ftDynamicAddressHsf() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.ftDynamicAddressHsfWithOptions(runtime);
+    }
+
+    public FtEagleEyeResponse ftEagleEyeWithOptions(FtEagleEyeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("FtEagleEye", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new FtEagleEyeResponse());
+    }
+
+    public FtEagleEyeResponse ftEagleEye(FtEagleEyeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.ftEagleEyeWithOptions(request, runtime);
+    }
+
+    public FtFlowSpecialResponse ftFlowSpecialWithOptions(FtFlowSpecialRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("FtFlowSpecial", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new FtFlowSpecialResponse());
+    }
+
+    public FtFlowSpecialResponse ftFlowSpecial(FtFlowSpecialRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.ftFlowSpecialWithOptions(request, runtime);
+    }
+
+    public FtGatedLaunchPolicy4Response ftGatedLaunchPolicy4WithOptions(FtGatedLaunchPolicy4Request request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("FtGatedLaunchPolicy4", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new FtGatedLaunchPolicy4Response());
+    }
+
+    public FtGatedLaunchPolicy4Response ftGatedLaunchPolicy4(FtGatedLaunchPolicy4Request request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.ftGatedLaunchPolicy4WithOptions(request, runtime);
+    }
+
+    public FtIpFlowControlResponse ftIpFlowControlWithOptions(FtIpFlowControlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("FtIpFlowControl", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new FtIpFlowControlResponse());
+    }
+
+    public FtIpFlowControlResponse ftIpFlowControl(FtIpFlowControlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.ftIpFlowControlWithOptions(request, runtime);
+    }
+
+    public FtParamListResponse ftParamListWithOptions(FtParamListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("FtParamList", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new FtParamListResponse());
+    }
+
+    public FtParamListResponse ftParamList(FtParamListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.ftParamListWithOptions(request, runtime);
+    }
+
+    public TestFlowStrategy01Response testFlowStrategy01WithOptions(TestFlowStrategy01Request tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TestFlowStrategy01ShrinkRequest request = new TestFlowStrategy01ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.names)) {
+            request.namesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.names, "Names", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("TestFlowStrategy01", "2018-07-13", "HTTPS", "PUT", "AK", "json", req, runtime), new TestFlowStrategy01Response());
+    }
+
+    public TestFlowStrategy01Response testFlowStrategy01(TestFlowStrategy01Request request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.testFlowStrategy01WithOptions(request, runtime);
+    }
+
+    public TestHttpApiResponse testHttpApiWithOptions(TestHttpApiRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TestHttpApiShrinkRequest request = new TestHttpApiShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.stringValue)) {
+            request.stringValueShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.stringValue, "StringValue", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.defaultValue)) {
+            request.defaultValueShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.defaultValue, "DefaultValue", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.otherParam)) {
+            request.otherParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.otherParam, "OtherParam", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("TestHttpApi", "2018-07-13", "HTTPS", "POST", "AK", "json", req, runtime), new TestHttpApiResponse());
+    }
+
+    public TestHttpApiResponse testHttpApi(TestHttpApiRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.testHttpApiWithOptions(request, runtime);
     }
 }
