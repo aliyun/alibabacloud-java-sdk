@@ -4,15 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class PurchaseStorageCapacityUnitRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Capacity")
-    @Validation(required = true)
     public Integer capacity;
 
     @NameInMap("Description")
@@ -39,6 +49,38 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public static PurchaseStorageCapacityUnitRequest build(java.util.Map<String, ?> map) throws Exception {
         PurchaseStorageCapacityUnitRequest self = new PurchaseStorageCapacityUnitRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PurchaseStorageCapacityUnitRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public PurchaseStorageCapacityUnitRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public PurchaseStorageCapacityUnitRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public PurchaseStorageCapacityUnitRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public PurchaseStorageCapacityUnitRequest setRegionId(String regionId) {

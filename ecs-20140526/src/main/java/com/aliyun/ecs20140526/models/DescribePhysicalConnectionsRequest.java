@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribePhysicalConnectionsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
@@ -14,14 +13,26 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribePhysicalConnectionsRequestFilter> filter;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("UserCidr")
     public String userCidr;
+
+    @NameInMap("Filter")
+    public java.util.List<DescribePhysicalConnectionsRequestFilter> filter;
 
     public static DescribePhysicalConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePhysicalConnectionsRequest self = new DescribePhysicalConnectionsRequest();
@@ -52,12 +63,28 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribePhysicalConnectionsRequest setFilter(java.util.List<DescribePhysicalConnectionsRequestFilter> filter) {
-        this.filter = filter;
+    public DescribePhysicalConnectionsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public java.util.List<DescribePhysicalConnectionsRequestFilter> getFilter() {
-        return this.filter;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribePhysicalConnectionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribePhysicalConnectionsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribePhysicalConnectionsRequest setClientToken(String clientToken) {
@@ -68,12 +95,28 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public DescribePhysicalConnectionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DescribePhysicalConnectionsRequest setUserCidr(String userCidr) {
         this.userCidr = userCidr;
         return this;
     }
     public String getUserCidr() {
         return this.userCidr;
+    }
+
+    public DescribePhysicalConnectionsRequest setFilter(java.util.List<DescribePhysicalConnectionsRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribePhysicalConnectionsRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public static class DescribePhysicalConnectionsRequestFilter extends TeaModel {

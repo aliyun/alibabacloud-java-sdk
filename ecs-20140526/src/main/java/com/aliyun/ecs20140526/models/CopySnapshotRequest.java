@@ -4,30 +4,34 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopySnapshotRequest extends TeaModel {
-    @NameInMap("Tag")
-    public java.util.List<CopySnapshotRequestTag> tag;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CopySnapshotRequestTag> tag;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DestinationRegionId")
-    @Validation(required = true)
     public String destinationRegionId;
 
     @NameInMap("SnapshotId")
-    @Validation(required = true)
     public String snapshotId;
 
     @NameInMap("DestinationSnapshotName")
-    @Validation(required = true)
     public String destinationSnapshotName;
 
     @NameInMap("DestinationSnapshotDescription")
-    @Validation(required = true)
     public String destinationSnapshotDescription;
 
     @NameInMap("RetentionDays")
@@ -38,12 +42,28 @@ public class CopySnapshotRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CopySnapshotRequest setTag(java.util.List<CopySnapshotRequestTag> tag) {
-        this.tag = tag;
+    public CopySnapshotRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public java.util.List<CopySnapshotRequestTag> getTag() {
-        return this.tag;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CopySnapshotRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CopySnapshotRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CopySnapshotRequest setResourceGroupId(String resourceGroupId) {
@@ -52,6 +72,14 @@ public class CopySnapshotRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CopySnapshotRequest setTag(java.util.List<CopySnapshotRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CopySnapshotRequestTag> getTag() {
+        return this.tag;
     }
 
     public CopySnapshotRequest setRegionId(String regionId) {

@@ -4,8 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ConfirmStop")
@@ -14,15 +22,45 @@ public class StopInstanceRequest extends TeaModel {
     @NameInMap("ForceStop")
     public Boolean forceStop;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("StoppedMode")
     public String stoppedMode;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Hibernate")
+    public Boolean hibernate;
+
     public static StopInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopInstanceRequest self = new StopInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StopInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public StopInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public StopInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public StopInstanceRequest setInstanceId(String instanceId) {
@@ -49,6 +87,14 @@ public class StopInstanceRequest extends TeaModel {
         return this.forceStop;
     }
 
+    public StopInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public StopInstanceRequest setStoppedMode(String stoppedMode) {
         this.stoppedMode = stoppedMode;
         return this;
@@ -63,6 +109,14 @@ public class StopInstanceRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public StopInstanceRequest setHibernate(Boolean hibernate) {
+        this.hibernate = hibernate;
+        return this;
+    }
+    public Boolean getHibernate() {
+        return this.hibernate;
     }
 
 }

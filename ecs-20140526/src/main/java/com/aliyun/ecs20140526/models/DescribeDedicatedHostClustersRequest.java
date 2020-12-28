@@ -4,20 +4,31 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostClustersRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("Status")
     public String status;
 
     @NameInMap("LockReason")
     public String lockReason;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeDedicatedHostClustersRequestTag> tag;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeDedicatedHostClustersRequestTag> tag;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
@@ -40,6 +51,30 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDedicatedHostClustersRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeDedicatedHostClustersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeDedicatedHostClustersRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public DescribeDedicatedHostClustersRequest setStatus(String status) {
         this.status = status;
         return this;
@@ -56,12 +91,12 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
         return this.lockReason;
     }
 
-    public DescribeDedicatedHostClustersRequest setTag(java.util.List<DescribeDedicatedHostClustersRequestTag> tag) {
-        this.tag = tag;
+    public DescribeDedicatedHostClustersRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public java.util.List<DescribeDedicatedHostClustersRequestTag> getTag() {
-        return this.tag;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeDedicatedHostClustersRequest setResourceGroupId(String resourceGroupId) {
@@ -70,6 +105,14 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeDedicatedHostClustersRequest setTag(java.util.List<DescribeDedicatedHostClustersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDedicatedHostClustersRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeDedicatedHostClustersRequest setRegionId(String regionId) {

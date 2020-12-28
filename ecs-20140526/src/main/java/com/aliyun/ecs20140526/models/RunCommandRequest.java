@@ -4,8 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Name")
@@ -15,11 +26,9 @@ public class RunCommandRequest extends TeaModel {
     public String description;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("CommandContent")
-    @Validation(required = true)
     public String commandContent;
 
     @NameInMap("WorkingDir")
@@ -37,10 +46,6 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("Frequency")
     public String frequency;
 
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public java.util.List<String> instanceId;
-
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
@@ -50,9 +55,47 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
+    @NameInMap("Username")
+    public String username;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     public static RunCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCommandRequest self = new RunCommandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunCommandRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public RunCommandRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public RunCommandRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public RunCommandRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RunCommandRequest setRegionId(String regionId) {
@@ -135,14 +178,6 @@ public class RunCommandRequest extends TeaModel {
         return this.frequency;
     }
 
-    public RunCommandRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
     public RunCommandRequest setParameters(java.util.Map<String, ?> parameters) {
         this.parameters = parameters;
         return this;
@@ -165,6 +200,22 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getContentEncoding() {
         return this.contentEncoding;
+    }
+
+    public RunCommandRequest setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
+    }
+
+    public RunCommandRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
 }

@@ -4,45 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("InstanceId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String instanceId;
-
-    @NameInMap("TradePrice")
-    @Validation(required = true)
-    public Float tradePrice;
+    public CreateInstanceResponseBody body;
 
     public static CreateInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceResponse self = new CreateInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateInstanceResponse setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateInstanceResponse setBody(CreateInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public CreateInstanceResponse setTradePrice(Float tradePrice) {
-        this.tradePrice = tradePrice;
-        return this;
-    }
-    public Float getTradePrice() {
-        return this.tradePrice;
+    public CreateInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,12 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteInstancesRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public java.util.List<String> instanceId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("Force")
     public Boolean force;
@@ -21,20 +29,38 @@ public class DeleteInstancesRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
 
     public static DeleteInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstancesRequest self = new DeleteInstancesRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteInstancesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
+    public DeleteInstancesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DeleteInstancesRequest setDryRun(Boolean dryRun) {
@@ -43,6 +69,14 @@ public class DeleteInstancesRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DeleteInstancesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteInstancesRequest setForce(Boolean force) {
@@ -75,6 +109,14 @@ public class DeleteInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DeleteInstancesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
 }

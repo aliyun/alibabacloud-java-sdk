@@ -4,53 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class PurchaseReservedInstancesOfferingResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ReservedInstanceIdSets")
+    @NameInMap("body")
     @Validation(required = true)
-    public PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets reservedInstanceIdSets;
+    public PurchaseReservedInstancesOfferingResponseBody body;
 
     public static PurchaseReservedInstancesOfferingResponse build(java.util.Map<String, ?> map) throws Exception {
         PurchaseReservedInstancesOfferingResponse self = new PurchaseReservedInstancesOfferingResponse();
         return TeaModel.build(map, self);
     }
 
-    public PurchaseReservedInstancesOfferingResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PurchaseReservedInstancesOfferingResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PurchaseReservedInstancesOfferingResponse setReservedInstanceIdSets(PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets reservedInstanceIdSets) {
-        this.reservedInstanceIdSets = reservedInstanceIdSets;
+    public PurchaseReservedInstancesOfferingResponse setBody(PurchaseReservedInstancesOfferingResponseBody body) {
+        this.body = body;
         return this;
     }
-    public PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets getReservedInstanceIdSets() {
-        return this.reservedInstanceIdSets;
-    }
-
-    public static class PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets extends TeaModel {
-        @NameInMap("ReservedInstanceId")
-        @Validation(required = true)
-        public java.util.List<String> reservedInstanceId;
-
-        public static PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets build(java.util.Map<String, ?> map) throws Exception {
-            PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets self = new PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets();
-            return TeaModel.build(map, self);
-        }
-
-        public PurchaseReservedInstancesOfferingResponseReservedInstanceIdSets setReservedInstanceId(java.util.List<String> reservedInstanceId) {
-            this.reservedInstanceId = reservedInstanceId;
-            return this;
-        }
-        public java.util.List<String> getReservedInstanceId() {
-            return this.reservedInstanceId;
-        }
-
+    public PurchaseReservedInstancesOfferingResponseBody getBody() {
+        return this.body;
     }
 
 }

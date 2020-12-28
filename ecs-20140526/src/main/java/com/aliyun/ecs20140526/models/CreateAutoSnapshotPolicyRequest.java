@@ -4,23 +4,28 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("regionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("autoSnapshotPolicyName")
     public String autoSnapshotPolicyName;
 
     @NameInMap("timePoints")
-    @Validation(required = true)
     public String timePoints;
 
     @NameInMap("repeatWeekdays")
-    @Validation(required = true)
     public String repeatWeekdays;
 
     @NameInMap("retentionDays")
-    @Validation(required = true)
     public Integer retentionDays;
 
     @NameInMap("EnableCrossRegionCopy")
@@ -38,6 +43,30 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public static CreateAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoSnapshotPolicyRequest self = new CreateAutoSnapshotPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAutoSnapshotPolicyRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateAutoSnapshotPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateAutoSnapshotPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateAutoSnapshotPolicyRequest setRegionId(String regionId) {

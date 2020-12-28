@@ -4,6 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("SystemDiskPolicyEnabled")
     public Boolean systemDiskPolicyEnabled;
 
@@ -28,9 +37,36 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("DataDiskPolicyRetentionLastWeek")
     public Boolean dataDiskPolicyRetentionLastWeek;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     public static ModifyAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAutoSnapshotPolicyRequest self = new ModifyAutoSnapshotPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ModifyAutoSnapshotPolicyRequest setSystemDiskPolicyEnabled(Boolean systemDiskPolicyEnabled) {
@@ -95,6 +131,14 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     }
     public Boolean getDataDiskPolicyRetentionLastWeek() {
         return this.dataDiskPolicyRetentionLastWeek;
+    }
+
+    public ModifyAutoSnapshotPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

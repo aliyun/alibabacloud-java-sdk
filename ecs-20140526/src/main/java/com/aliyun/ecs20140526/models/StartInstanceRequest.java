@@ -7,12 +7,23 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("SourceRegionId")
     public String sourceRegionId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("InitLocalDisk")
     public Boolean initLocalDisk;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -30,6 +41,30 @@ public class StartInstanceRequest extends TeaModel {
         return this.sourceRegionId;
     }
 
+    public StartInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public StartInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public StartInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public StartInstanceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -44,6 +79,14 @@ public class StartInstanceRequest extends TeaModel {
     }
     public Boolean getInitLocalDisk() {
         return this.initLocalDisk;
+    }
+
+    public StartInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public StartInstanceRequest setDryRun(Boolean dryRun) {

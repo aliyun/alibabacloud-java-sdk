@@ -4,8 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("MaxResults")
@@ -14,12 +28,52 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("PrivatePoolOptions")
-    public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions;
+    @NameInMap("PackageType")
+    public String packageType;
 
     public static DescribeElasticityAssuranceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticityAssuranceInstancesRequest self = new DescribeElasticityAssuranceInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeElasticityAssuranceInstancesRequest setPrivatePoolOptions(DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
+    }
+
+    public DescribeElasticityAssuranceInstancesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeElasticityAssuranceInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeElasticityAssuranceInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeElasticityAssuranceInstancesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeElasticityAssuranceInstancesRequest setRegionId(String regionId) {
@@ -46,17 +100,16 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeElasticityAssuranceInstancesRequest setPrivatePoolOptions(DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
+    public DescribeElasticityAssuranceInstancesRequest setPackageType(String packageType) {
+        this.packageType = packageType;
         return this;
     }
-    public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
+    public String getPackageType() {
+        return this.packageType;
     }
 
     public static class DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("Id")
-        @Validation(required = true)
         public String id;
 
         public static DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {

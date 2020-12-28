@@ -4,8 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageCapacityUnitsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
@@ -20,18 +31,50 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     @NameInMap("Capacity")
     public Integer capacity;
 
+    @NameInMap("AllocationType")
+    public String allocationType;
+
     @NameInMap("StorageCapacityUnitId")
     public java.util.List<String> storageCapacityUnitId;
 
     @NameInMap("Status")
     public java.util.List<String> status;
 
-    @NameInMap("AllocationType")
-    public String allocationType;
-
     public static DescribeStorageCapacityUnitsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageCapacityUnitsRequest self = new DescribeStorageCapacityUnitsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeStorageCapacityUnitsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeStorageCapacityUnitsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeStorageCapacityUnitsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeStorageCapacityUnitsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeStorageCapacityUnitsRequest setRegionId(String regionId) {
@@ -74,6 +117,14 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
         return this.capacity;
     }
 
+    public DescribeStorageCapacityUnitsRequest setAllocationType(String allocationType) {
+        this.allocationType = allocationType;
+        return this;
+    }
+    public String getAllocationType() {
+        return this.allocationType;
+    }
+
     public DescribeStorageCapacityUnitsRequest setStorageCapacityUnitId(java.util.List<String> storageCapacityUnitId) {
         this.storageCapacityUnitId = storageCapacityUnitId;
         return this;
@@ -88,14 +139,6 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     }
     public java.util.List<String> getStatus() {
         return this.status;
-    }
-
-    public DescribeStorageCapacityUnitsRequest setAllocationType(String allocationType) {
-        this.allocationType = allocationType;
-        return this;
-    }
-    public String getAllocationType() {
-        return this.allocationType;
     }
 
 }

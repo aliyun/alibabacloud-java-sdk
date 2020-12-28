@@ -4,18 +4,29 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReplaceSystemDiskRequest extends TeaModel {
+    @NameInMap("SystemDisk")
+    public ReplaceSystemDiskRequestSystemDisk systemDisk;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ImageId")
     public String imageId;
 
-    @NameInMap("SystemDisk")
-    public ReplaceSystemDiskRequestSystemDisk systemDisk;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("UseAdditionalService")
     public Boolean useAdditionalService;
@@ -46,6 +57,38 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ReplaceSystemDiskRequest setSystemDisk(ReplaceSystemDiskRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public ReplaceSystemDiskRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    public ReplaceSystemDiskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ReplaceSystemDiskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ReplaceSystemDiskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public ReplaceSystemDiskRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -62,20 +105,20 @@ public class ReplaceSystemDiskRequest extends TeaModel {
         return this.imageId;
     }
 
-    public ReplaceSystemDiskRequest setSystemDisk(ReplaceSystemDiskRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public ReplaceSystemDiskRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
-    }
-
     public ReplaceSystemDiskRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ReplaceSystemDiskRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ReplaceSystemDiskRequest setUseAdditionalService(Boolean useAdditionalService) {

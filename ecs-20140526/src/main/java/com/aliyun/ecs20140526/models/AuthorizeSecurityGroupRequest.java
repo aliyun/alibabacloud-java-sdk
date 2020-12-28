@@ -4,20 +4,28 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AuthorizeSecurityGroupRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SecurityGroupId")
-    @Validation(required = true)
     public String securityGroupId;
 
     @NameInMap("IpProtocol")
-    @Validation(required = true)
     public String ipProtocol;
 
     @NameInMap("PortRange")
-    @Validation(required = true)
     public String portRange;
 
     @NameInMap("SourceGroupId")
@@ -62,6 +70,38 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public static AuthorizeSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AuthorizeSecurityGroupRequest self = new AuthorizeSecurityGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AuthorizeSecurityGroupRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AuthorizeSecurityGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AuthorizeSecurityGroupRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public AuthorizeSecurityGroupRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AuthorizeSecurityGroupRequest setRegionId(String regionId) {

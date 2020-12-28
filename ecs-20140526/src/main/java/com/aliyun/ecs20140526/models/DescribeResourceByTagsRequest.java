@@ -4,6 +4,15 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceByTagsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -14,7 +23,6 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     public String resourceType;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Tag")
@@ -23,6 +31,30 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     public static DescribeResourceByTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceByTagsRequest self = new DescribeResourceByTagsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeResourceByTagsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeResourceByTagsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeResourceByTagsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeResourceByTagsRequest setPageSize(Integer pageSize) {
@@ -66,23 +98,15 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     }
 
     public static class DescribeResourceByTagsRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
-
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeResourceByTagsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceByTagsRequestTag self = new DescribeResourceByTagsRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeResourceByTagsRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeResourceByTagsRequestTag setKey(String key) {
@@ -91,6 +115,14 @@ public class DescribeResourceByTagsRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public DescribeResourceByTagsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

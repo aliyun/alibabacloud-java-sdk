@@ -4,8 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDeploymentSetRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OnUnableToRedeployFailedInstance")
@@ -32,9 +40,36 @@ public class CreateDeploymentSetRequest extends TeaModel {
     @NameInMap("GroupCount")
     public Long groupCount;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     public static CreateDeploymentSetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDeploymentSetRequest self = new CreateDeploymentSetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDeploymentSetRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateDeploymentSetRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDeploymentSetRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateDeploymentSetRequest setRegionId(String regionId) {
@@ -107,6 +142,14 @@ public class CreateDeploymentSetRequest extends TeaModel {
     }
     public Long getGroupCount() {
         return this.groupCount;
+    }
+
+    public CreateDeploymentSetRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

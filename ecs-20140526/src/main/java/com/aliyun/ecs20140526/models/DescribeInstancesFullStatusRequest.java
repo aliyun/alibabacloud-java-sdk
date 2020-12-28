@@ -4,15 +4,26 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesFullStatusRequest extends TeaModel {
+    @NameInMap("NotBefore")
+    public DescribeInstancesFullStatusRequestNotBefore notBefore;
+
+    @NameInMap("EventPublishTime")
+    public DescribeInstancesFullStatusRequestEventPublishTime eventPublishTime;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
-
-    @NameInMap("EventId")
-    public java.util.List<String> eventId;
 
     @NameInMap("Status")
     public String status;
@@ -20,17 +31,8 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("HealthStatus")
     public String healthStatus;
 
-    @NameInMap("InstanceEventType")
-    public java.util.List<String> instanceEventType;
-
     @NameInMap("EventType")
     public String eventType;
-
-    @NameInMap("NotBefore")
-    public DescribeInstancesFullStatusRequestNotBefore notBefore;
-
-    @NameInMap("EventPublishTime")
-    public DescribeInstancesFullStatusRequestEventPublishTime eventPublishTime;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -38,65 +40,18 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
+    @NameInMap("EventId")
+    public java.util.List<String> eventId;
+
+    @NameInMap("InstanceEventType")
+    public java.util.List<String> instanceEventType;
+
     public static DescribeInstancesFullStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesFullStatusRequest self = new DescribeInstancesFullStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstancesFullStatusRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeInstancesFullStatusRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeInstancesFullStatusRequest setEventId(java.util.List<String> eventId) {
-        this.eventId = eventId;
-        return this;
-    }
-    public java.util.List<String> getEventId() {
-        return this.eventId;
-    }
-
-    public DescribeInstancesFullStatusRequest setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public DescribeInstancesFullStatusRequest setHealthStatus(String healthStatus) {
-        this.healthStatus = healthStatus;
-        return this;
-    }
-    public String getHealthStatus() {
-        return this.healthStatus;
-    }
-
-    public DescribeInstancesFullStatusRequest setInstanceEventType(java.util.List<String> instanceEventType) {
-        this.instanceEventType = instanceEventType;
-        return this;
-    }
-    public java.util.List<String> getInstanceEventType() {
-        return this.instanceEventType;
-    }
-
-    public DescribeInstancesFullStatusRequest setEventType(String eventType) {
-        this.eventType = eventType;
-        return this;
-    }
-    public String getEventType() {
-        return this.eventType;
     }
 
     public DescribeInstancesFullStatusRequest setNotBefore(DescribeInstancesFullStatusRequestNotBefore notBefore) {
@@ -115,6 +70,70 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
         return this.eventPublishTime;
     }
 
+    public DescribeInstancesFullStatusRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeInstancesFullStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeInstancesFullStatusRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeInstancesFullStatusRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeInstancesFullStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public DescribeInstancesFullStatusRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeInstancesFullStatusRequest setHealthStatus(String healthStatus) {
+        this.healthStatus = healthStatus;
+        return this;
+    }
+    public String getHealthStatus() {
+        return this.healthStatus;
+    }
+
+    public DescribeInstancesFullStatusRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
+    }
+
     public DescribeInstancesFullStatusRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -129,6 +148,30 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeInstancesFullStatusRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeInstancesFullStatusRequest setEventId(java.util.List<String> eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public java.util.List<String> getEventId() {
+        return this.eventId;
+    }
+
+    public DescribeInstancesFullStatusRequest setInstanceEventType(java.util.List<String> instanceEventType) {
+        this.instanceEventType = instanceEventType;
+        return this;
+    }
+    public java.util.List<String> getInstanceEventType() {
+        return this.instanceEventType;
     }
 
     public static class DescribeInstancesFullStatusRequestNotBefore extends TeaModel {
