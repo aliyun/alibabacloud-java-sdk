@@ -4,33 +4,65 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AbstractEcommerceVideoResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public AbstractEcommerceVideoResponseBody body;
+    public AbstractEcommerceVideoResponseData data;
 
     public static AbstractEcommerceVideoResponse build(java.util.Map<String, ?> map) throws Exception {
         AbstractEcommerceVideoResponse self = new AbstractEcommerceVideoResponse();
         return TeaModel.build(map, self);
     }
 
-    public AbstractEcommerceVideoResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AbstractEcommerceVideoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AbstractEcommerceVideoResponse setBody(AbstractEcommerceVideoResponseBody body) {
-        this.body = body;
+    public AbstractEcommerceVideoResponse setData(AbstractEcommerceVideoResponseData data) {
+        this.data = data;
         return this;
     }
-    public AbstractEcommerceVideoResponseBody getBody() {
-        return this.body;
+    public AbstractEcommerceVideoResponseData getData() {
+        return this.data;
+    }
+
+    public static class AbstractEcommerceVideoResponseData extends TeaModel {
+        @NameInMap("VideoUrl")
+        @Validation(required = true)
+        public String videoUrl;
+
+        @NameInMap("VideoCoverUrl")
+        @Validation(required = true)
+        public String videoCoverUrl;
+
+        public static AbstractEcommerceVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
+            AbstractEcommerceVideoResponseData self = new AbstractEcommerceVideoResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public AbstractEcommerceVideoResponseData setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public AbstractEcommerceVideoResponseData setVideoCoverUrl(String videoCoverUrl) {
+            this.videoCoverUrl = videoCoverUrl;
+            return this;
+        }
+        public String getVideoCoverUrl() {
+            return this.videoCoverUrl;
+        }
+
     }
 
 }

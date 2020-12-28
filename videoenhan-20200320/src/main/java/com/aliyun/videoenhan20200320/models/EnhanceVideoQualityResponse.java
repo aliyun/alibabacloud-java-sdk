@@ -4,33 +4,53 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EnhanceVideoQualityResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public EnhanceVideoQualityResponseBody body;
+    public EnhanceVideoQualityResponseData data;
 
     public static EnhanceVideoQualityResponse build(java.util.Map<String, ?> map) throws Exception {
         EnhanceVideoQualityResponse self = new EnhanceVideoQualityResponse();
         return TeaModel.build(map, self);
     }
 
-    public EnhanceVideoQualityResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public EnhanceVideoQualityResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public EnhanceVideoQualityResponse setBody(EnhanceVideoQualityResponseBody body) {
-        this.body = body;
+    public EnhanceVideoQualityResponse setData(EnhanceVideoQualityResponseData data) {
+        this.data = data;
         return this;
     }
-    public EnhanceVideoQualityResponseBody getBody() {
-        return this.body;
+    public EnhanceVideoQualityResponseData getData() {
+        return this.data;
+    }
+
+    public static class EnhanceVideoQualityResponseData extends TeaModel {
+        @NameInMap("VideoURL")
+        @Validation(required = true)
+        public String videoURL;
+
+        public static EnhanceVideoQualityResponseData build(java.util.Map<String, ?> map) throws Exception {
+            EnhanceVideoQualityResponseData self = new EnhanceVideoQualityResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public EnhanceVideoQualityResponseData setVideoURL(String videoURL) {
+            this.videoURL = videoURL;
+            return this;
+        }
+        public String getVideoURL() {
+            return this.videoURL;
+        }
+
     }
 
 }
