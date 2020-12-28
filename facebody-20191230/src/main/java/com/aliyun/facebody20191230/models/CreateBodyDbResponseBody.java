@@ -11,12 +11,6 @@ public class CreateBodyDbResponseBody extends TeaModel {
     @NameInMap("Data")
     public CreateBodyDbResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
     public static CreateBodyDbResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateBodyDbResponseBody self = new CreateBodyDbResponseBody();
         return TeaModel.build(map, self);
@@ -36,22 +30,6 @@ public class CreateBodyDbResponseBody extends TeaModel {
     }
     public CreateBodyDbResponseBodyData getData() {
         return this.data;
-    }
-
-    public CreateBodyDbResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateBodyDbResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public static class CreateBodyDbResponseBodyData extends TeaModel {

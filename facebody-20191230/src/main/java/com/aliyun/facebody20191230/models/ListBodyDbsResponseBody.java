@@ -11,12 +11,6 @@ public class ListBodyDbsResponseBody extends TeaModel {
     @NameInMap("Data")
     public ListBodyDbsResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
     public static ListBodyDbsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListBodyDbsResponseBody self = new ListBodyDbsResponseBody();
         return TeaModel.build(map, self);
@@ -36,22 +30,6 @@ public class ListBodyDbsResponseBody extends TeaModel {
     }
     public ListBodyDbsResponseBodyData getData() {
         return this.data;
-    }
-
-    public ListBodyDbsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ListBodyDbsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public static class ListBodyDbsResponseBodyDataDbList extends TeaModel {
