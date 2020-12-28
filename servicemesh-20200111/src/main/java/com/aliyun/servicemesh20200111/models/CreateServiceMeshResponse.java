@@ -4,33 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceMeshResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ServiceMeshId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String serviceMeshId;
+    public CreateServiceMeshResponseBody body;
 
     public static CreateServiceMeshResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceMeshResponse self = new CreateServiceMeshResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateServiceMeshResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateServiceMeshResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateServiceMeshResponse setServiceMeshId(String serviceMeshId) {
-        this.serviceMeshId = serviceMeshId;
+    public CreateServiceMeshResponse setBody(CreateServiceMeshResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getServiceMeshId() {
-        return this.serviceMeshId;
+    public CreateServiceMeshResponseBody getBody() {
+        return this.body;
     }
 
 }

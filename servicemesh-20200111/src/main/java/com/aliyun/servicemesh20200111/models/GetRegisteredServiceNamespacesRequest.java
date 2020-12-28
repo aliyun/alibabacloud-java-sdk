@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetRegisteredServiceNamespacesRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
-    @Validation(required = true)
     public String serviceMeshId;
 
     public static GetRegisteredServiceNamespacesRequest build(java.util.Map<String, ?> map) throws Exception {

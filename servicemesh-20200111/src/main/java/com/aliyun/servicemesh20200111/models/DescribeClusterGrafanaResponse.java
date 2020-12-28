@@ -4,65 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterGrafanaResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Dashboards")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeClusterGrafanaResponseDashboards> dashboards;
+    public DescribeClusterGrafanaResponseBody body;
 
     public static DescribeClusterGrafanaResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterGrafanaResponse self = new DescribeClusterGrafanaResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClusterGrafanaResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeClusterGrafanaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeClusterGrafanaResponse setDashboards(java.util.List<DescribeClusterGrafanaResponseDashboards> dashboards) {
-        this.dashboards = dashboards;
+    public DescribeClusterGrafanaResponse setBody(DescribeClusterGrafanaResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeClusterGrafanaResponseDashboards> getDashboards() {
-        return this.dashboards;
-    }
-
-    public static class DescribeClusterGrafanaResponseDashboards extends TeaModel {
-        @NameInMap("Url")
-        @Validation(required = true)
-        public String url;
-
-        @NameInMap("Title")
-        @Validation(required = true)
-        public String title;
-
-        public static DescribeClusterGrafanaResponseDashboards build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterGrafanaResponseDashboards self = new DescribeClusterGrafanaResponseDashboards();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeClusterGrafanaResponseDashboards setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-        public DescribeClusterGrafanaResponseDashboards setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
+    public DescribeClusterGrafanaResponseBody getBody() {
+        return this.body;
     }
 
 }

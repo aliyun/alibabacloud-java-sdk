@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetRegisteredServiceEndpointsRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
-    @Validation(required = true)
     public String serviceMeshId;
 
     @NameInMap("Namespace")
-    @Validation(required = true)
     public String namespace;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     public static GetRegisteredServiceEndpointsRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeServiceMeshDetailRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
-    @Validation(required = true)
     public String serviceMeshId;
 
     public static DescribeServiceMeshDetailRequest build(java.util.Map<String, ?> map) throws Exception {
