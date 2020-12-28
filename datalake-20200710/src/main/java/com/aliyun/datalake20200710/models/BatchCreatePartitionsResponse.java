@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.datalake20200710.models;
+
+import com.aliyun.tea.*;
+
+public class BatchCreatePartitionsResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public BatchCreatePartitionsResponseBody body;
+
+    public static BatchCreatePartitionsResponse build(java.util.Map<String, ?> map) throws Exception {
+        BatchCreatePartitionsResponse self = new BatchCreatePartitionsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public BatchCreatePartitionsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public BatchCreatePartitionsResponse setBody(BatchCreatePartitionsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public BatchCreatePartitionsResponseBody getBody() {
+        return this.body;
+    }
+
+}
