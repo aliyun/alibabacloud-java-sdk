@@ -4,13 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class AttachPolicyToRoleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AttachPolicyToRoleResponseBody body;
 
     public static AttachPolicyToRoleResponse build(java.util.Map<String, ?> map) throws Exception {
         AttachPolicyToRoleResponse self = new AttachPolicyToRoleResponse();
         return TeaModel.build(map, self);
+    }
+
+    public AttachPolicyToRoleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AttachPolicyToRoleResponse setBody(AttachPolicyToRoleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AttachPolicyToRoleResponseBody getBody() {
+        return this.body;
     }
 
 }

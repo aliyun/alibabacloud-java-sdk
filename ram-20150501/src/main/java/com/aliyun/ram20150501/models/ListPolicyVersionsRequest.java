@@ -15,4 +15,20 @@ public class ListPolicyVersionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListPolicyVersionsRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
+    }
+
+    public ListPolicyVersionsRequest setPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    public String getPolicyName() {
+        return this.policyName;
+    }
+
 }

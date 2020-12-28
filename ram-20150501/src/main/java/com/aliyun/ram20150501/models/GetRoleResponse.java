@@ -4,57 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetRoleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Role")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetRoleResponseRole role;
+    public GetRoleResponseBody body;
 
     public static GetRoleResponse build(java.util.Map<String, ?> map) throws Exception {
         GetRoleResponse self = new GetRoleResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GetRoleResponseRole extends TeaModel {
-        @NameInMap("RoleId")
-        @Validation(required = true)
-        public String roleId;
+    public GetRoleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("RoleName")
-        @Validation(required = true)
-        public String roleName;
-
-        @NameInMap("Arn")
-        @Validation(required = true)
-        public String arn;
-
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("AssumeRolePolicyDocument")
-        @Validation(required = true)
-        public String assumeRolePolicyDocument;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        @NameInMap("UpdateDate")
-        @Validation(required = true)
-        public String updateDate;
-
-        @NameInMap("MaxSessionDuration")
-        @Validation(required = true)
-        public Long maxSessionDuration;
-
-        public static GetRoleResponseRole build(java.util.Map<String, ?> map) throws Exception {
-            GetRoleResponseRole self = new GetRoleResponseRole();
-            return TeaModel.build(map, self);
-        }
-
+    public GetRoleResponse setBody(GetRoleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetRoleResponseBody getBody() {
+        return this.body;
     }
 
 }

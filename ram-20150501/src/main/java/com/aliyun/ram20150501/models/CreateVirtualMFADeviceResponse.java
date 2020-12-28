@@ -4,37 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateVirtualMFADeviceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("VirtualMFADevice")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreateVirtualMFADeviceResponseVirtualMFADevice virtualMFADevice;
+    public CreateVirtualMFADeviceResponseBody body;
 
     public static CreateVirtualMFADeviceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateVirtualMFADeviceResponse self = new CreateVirtualMFADeviceResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class CreateVirtualMFADeviceResponseVirtualMFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
-        @Validation(required = true)
-        public String serialNumber;
+    public CreateVirtualMFADeviceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Base32StringSeed")
-        @Validation(required = true)
-        public String base32StringSeed;
-
-        @NameInMap("QRCodePNG")
-        @Validation(required = true)
-        public String QRCodePNG;
-
-        public static CreateVirtualMFADeviceResponseVirtualMFADevice build(java.util.Map<String, ?> map) throws Exception {
-            CreateVirtualMFADeviceResponseVirtualMFADevice self = new CreateVirtualMFADeviceResponseVirtualMFADevice();
-            return TeaModel.build(map, self);
-        }
-
+    public CreateVirtualMFADeviceResponse setBody(CreateVirtualMFADeviceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateVirtualMFADeviceResponseBody getBody() {
+        return this.body;
     }
 
 }

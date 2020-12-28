@@ -12,4 +12,12 @@ public class CreateVirtualMFADeviceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateVirtualMFADeviceRequest setVirtualMFADeviceName(String virtualMFADeviceName) {
+        this.virtualMFADeviceName = virtualMFADeviceName;
+        return this;
+    }
+    public String getVirtualMFADeviceName() {
+        return this.virtualMFADeviceName;
+    }
+
 }

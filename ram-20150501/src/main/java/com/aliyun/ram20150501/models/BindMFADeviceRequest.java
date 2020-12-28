@@ -21,4 +21,36 @@ public class BindMFADeviceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public BindMFADeviceRequest setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    public String getSerialNumber() {
+        return this.serialNumber;
+    }
+
+    public BindMFADeviceRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public BindMFADeviceRequest setAuthenticationCode1(String authenticationCode1) {
+        this.authenticationCode1 = authenticationCode1;
+        return this;
+    }
+    public String getAuthenticationCode1() {
+        return this.authenticationCode1;
+    }
+
+    public BindMFADeviceRequest setAuthenticationCode2(String authenticationCode2) {
+        this.authenticationCode2 = authenticationCode2;
+        return this;
+    }
+    public String getAuthenticationCode2() {
+        return this.authenticationCode2;
+    }
+
 }

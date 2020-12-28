@@ -12,4 +12,12 @@ public class GetGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetGroupRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
 }

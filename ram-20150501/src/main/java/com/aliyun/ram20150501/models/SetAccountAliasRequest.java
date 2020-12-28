@@ -12,4 +12,12 @@ public class SetAccountAliasRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SetAccountAliasRequest setAccountAlias(String accountAlias) {
+        this.accountAlias = accountAlias;
+        return this;
+    }
+    public String getAccountAlias() {
+        return this.accountAlias;
+    }
+
 }

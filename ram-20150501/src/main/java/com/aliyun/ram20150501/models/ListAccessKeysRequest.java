@@ -12,4 +12,12 @@ public class ListAccessKeysRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListAccessKeysRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
 }

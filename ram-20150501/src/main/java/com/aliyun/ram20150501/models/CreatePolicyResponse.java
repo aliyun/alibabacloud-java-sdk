@@ -4,45 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Policy")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreatePolicyResponsePolicy policy;
+    public CreatePolicyResponseBody body;
 
     public static CreatePolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         CreatePolicyResponse self = new CreatePolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class CreatePolicyResponsePolicy extends TeaModel {
-        @NameInMap("PolicyName")
-        @Validation(required = true)
-        public String policyName;
+    public CreatePolicyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("PolicyType")
-        @Validation(required = true)
-        public String policyType;
-
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("DefaultVersion")
-        @Validation(required = true)
-        public String defaultVersion;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        public static CreatePolicyResponsePolicy build(java.util.Map<String, ?> map) throws Exception {
-            CreatePolicyResponsePolicy self = new CreatePolicyResponsePolicy();
-            return TeaModel.build(map, self);
-        }
-
+    public CreatePolicyResponse setBody(CreatePolicyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreatePolicyResponseBody getBody() {
+        return this.body;
     }
 
 }

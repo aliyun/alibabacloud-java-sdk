@@ -15,4 +15,20 @@ public class CreateGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateGroupRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    public CreateGroupRequest setComments(String comments) {
+        this.comments = comments;
+        return this;
+    }
+    public String getComments() {
+        return this.comments;
+    }
+
 }

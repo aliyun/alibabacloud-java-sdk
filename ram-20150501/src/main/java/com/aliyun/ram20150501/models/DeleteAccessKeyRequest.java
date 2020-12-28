@@ -15,4 +15,20 @@ public class DeleteAccessKeyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteAccessKeyRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public DeleteAccessKeyRequest setUserAccessKeyId(String userAccessKeyId) {
+        this.userAccessKeyId = userAccessKeyId;
+        return this;
+    }
+    public String getUserAccessKeyId() {
+        return this.userAccessKeyId;
+    }
+
 }

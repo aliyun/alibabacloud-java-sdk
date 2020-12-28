@@ -4,41 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateLoginProfileResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("LoginProfile")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreateLoginProfileResponseLoginProfile loginProfile;
+    public CreateLoginProfileResponseBody body;
 
     public static CreateLoginProfileResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateLoginProfileResponse self = new CreateLoginProfileResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class CreateLoginProfileResponseLoginProfile extends TeaModel {
-        @NameInMap("UserName")
-        @Validation(required = true)
-        public String userName;
+    public CreateLoginProfileResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("PasswordResetRequired")
-        @Validation(required = true)
-        public Boolean passwordResetRequired;
-
-        @NameInMap("MFABindRequired")
-        @Validation(required = true)
-        public Boolean MFABindRequired;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        public static CreateLoginProfileResponseLoginProfile build(java.util.Map<String, ?> map) throws Exception {
-            CreateLoginProfileResponseLoginProfile self = new CreateLoginProfileResponseLoginProfile();
-            return TeaModel.build(map, self);
-        }
-
+    public CreateLoginProfileResponse setBody(CreateLoginProfileResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateLoginProfileResponseBody getBody() {
+        return this.body;
     }
 
 }

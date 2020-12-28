@@ -12,4 +12,12 @@ public class DeleteGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteGroupRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
 }

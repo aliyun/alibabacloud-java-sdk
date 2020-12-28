@@ -15,4 +15,20 @@ public class AddUserToGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AddUserToGroupRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public AddUserToGroupRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
 }

@@ -12,4 +12,12 @@ public class DeleteLoginProfileRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteLoginProfileRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
 }

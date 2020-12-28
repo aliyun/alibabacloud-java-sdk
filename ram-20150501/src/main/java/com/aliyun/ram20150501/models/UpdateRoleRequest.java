@@ -18,4 +18,28 @@ public class UpdateRoleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateRoleRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
+    }
+
+    public UpdateRoleRequest setNewAssumeRolePolicyDocument(String newAssumeRolePolicyDocument) {
+        this.newAssumeRolePolicyDocument = newAssumeRolePolicyDocument;
+        return this;
+    }
+    public String getNewAssumeRolePolicyDocument() {
+        return this.newAssumeRolePolicyDocument;
+    }
+
+    public UpdateRoleRequest setNewMaxSessionDuration(Long newMaxSessionDuration) {
+        this.newMaxSessionDuration = newMaxSessionDuration;
+        return this;
+    }
+    public Long getNewMaxSessionDuration() {
+        return this.newMaxSessionDuration;
+    }
+
 }

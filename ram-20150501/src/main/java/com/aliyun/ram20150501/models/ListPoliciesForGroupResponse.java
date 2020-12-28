@@ -4,57 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListPoliciesForGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Policies")
+    @NameInMap("body")
     @Validation(required = true)
-    public ListPoliciesForGroupResponsePolicies policies;
+    public ListPoliciesForGroupResponseBody body;
 
     public static ListPoliciesForGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         ListPoliciesForGroupResponse self = new ListPoliciesForGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListPoliciesForGroupResponsePoliciesPolicy extends TeaModel {
-        @NameInMap("PolicyName")
-        @Validation(required = true)
-        public String policyName;
-
-        @NameInMap("PolicyType")
-        @Validation(required = true)
-        public String policyType;
-
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("DefaultVersion")
-        @Validation(required = true)
-        public String defaultVersion;
-
-        @NameInMap("AttachDate")
-        @Validation(required = true)
-        public String attachDate;
-
-        public static ListPoliciesForGroupResponsePoliciesPolicy build(java.util.Map<String, ?> map) throws Exception {
-            ListPoliciesForGroupResponsePoliciesPolicy self = new ListPoliciesForGroupResponsePoliciesPolicy();
-            return TeaModel.build(map, self);
-        }
-
+    public ListPoliciesForGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class ListPoliciesForGroupResponsePolicies extends TeaModel {
-        @NameInMap("Policy")
-        @Validation(required = true)
-        public java.util.List<ListPoliciesForGroupResponsePoliciesPolicy> policy;
-
-        public static ListPoliciesForGroupResponsePolicies build(java.util.Map<String, ?> map) throws Exception {
-            ListPoliciesForGroupResponsePolicies self = new ListPoliciesForGroupResponsePolicies();
-            return TeaModel.build(map, self);
-        }
-
+    public ListPoliciesForGroupResponse setBody(ListPoliciesForGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListPoliciesForGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

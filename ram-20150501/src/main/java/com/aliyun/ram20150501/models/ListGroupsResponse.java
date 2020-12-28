@@ -4,61 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsTruncated")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isTruncated;
-
-    @NameInMap("Marker")
-    @Validation(required = true)
-    public String marker;
-
-    @NameInMap("Groups")
-    @Validation(required = true)
-    public ListGroupsResponseGroups groups;
+    public ListGroupsResponseBody body;
 
     public static ListGroupsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsResponse self = new ListGroupsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListGroupsResponseGroupsGroup extends TeaModel {
-        @NameInMap("GroupName")
-        @Validation(required = true)
-        public String groupName;
-
-        @NameInMap("Comments")
-        @Validation(required = true)
-        public String comments;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        @NameInMap("UpdateDate")
-        @Validation(required = true)
-        public String updateDate;
-
-        public static ListGroupsResponseGroupsGroup build(java.util.Map<String, ?> map) throws Exception {
-            ListGroupsResponseGroupsGroup self = new ListGroupsResponseGroupsGroup();
-            return TeaModel.build(map, self);
-        }
-
+    public ListGroupsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class ListGroupsResponseGroups extends TeaModel {
-        @NameInMap("Group")
-        @Validation(required = true)
-        public java.util.List<ListGroupsResponseGroupsGroup> group;
-
-        public static ListGroupsResponseGroups build(java.util.Map<String, ?> map) throws Exception {
-            ListGroupsResponseGroups self = new ListGroupsResponseGroups();
-            return TeaModel.build(map, self);
-        }
-
+    public ListGroupsResponse setBody(ListGroupsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListGroupsResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -12,4 +12,12 @@ public class DeletePolicyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeletePolicyRequest setPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    public String getPolicyName() {
+        return this.policyName;
+    }
+
 }

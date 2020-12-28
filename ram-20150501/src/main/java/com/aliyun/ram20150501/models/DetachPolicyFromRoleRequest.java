@@ -18,4 +18,28 @@ public class DetachPolicyFromRoleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DetachPolicyFromRoleRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
+    }
+
+    public DetachPolicyFromRoleRequest setPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    public String getPolicyName() {
+        return this.policyName;
+    }
+
+    public DetachPolicyFromRoleRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
+    }
+
 }

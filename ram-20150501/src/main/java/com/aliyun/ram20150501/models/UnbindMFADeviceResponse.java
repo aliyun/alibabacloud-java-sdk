@@ -4,29 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class UnbindMFADeviceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("MFADevice")
+    @NameInMap("body")
     @Validation(required = true)
-    public UnbindMFADeviceResponseMFADevice MFADevice;
+    public UnbindMFADeviceResponseBody body;
 
     public static UnbindMFADeviceResponse build(java.util.Map<String, ?> map) throws Exception {
         UnbindMFADeviceResponse self = new UnbindMFADeviceResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class UnbindMFADeviceResponseMFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
-        @Validation(required = true)
-        public String serialNumber;
+    public UnbindMFADeviceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static UnbindMFADeviceResponseMFADevice build(java.util.Map<String, ?> map) throws Exception {
-            UnbindMFADeviceResponseMFADevice self = new UnbindMFADeviceResponseMFADevice();
-            return TeaModel.build(map, self);
-        }
-
+    public UnbindMFADeviceResponse setBody(UnbindMFADeviceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UnbindMFADeviceResponseBody getBody() {
+        return this.body;
     }
 
 }
