@@ -1,3 +1,7 @@
+2020-12-28 Version: 1.0.19-SNAPSHOT
+- Add API for CloudAP.
+- TEST version.
+
 2020-12-27 Version: 20201227.0.0
 - Add API for CloudAP.
 - TEST version.

@@ -396,6 +396,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getPartitionWithOptions(request, runtime);
     }
 
+    public GetDatabaseObjectByIdResponse getDatabaseObjectByIdWithOptions(GetDatabaseObjectByIdRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDatabaseObjectById", "2020-09-28", "HTTPS", "POST", "AK", "json", req, runtime), new GetDatabaseObjectByIdResponse());
+    }
+
+    public GetDatabaseObjectByIdResponse getDatabaseObjectById(GetDatabaseObjectByIdRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDatabaseObjectByIdWithOptions(request, runtime);
+    }
+
     public GetTableObjectsByDatabaseIdResponse getTableObjectsByDatabaseIdWithOptions(GetTableObjectsByDatabaseIdRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
