@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class AdjustVideoColorRequest extends TeaModel {
     @NameInMap("VideoUrl")
+    @Validation(required = true)
     public String videoUrl;
-
-    @NameInMap("Async")
-    public Boolean async;
 
     @NameInMap("VideoBitrate")
     public String videoBitrate;
@@ -20,6 +18,7 @@ public class AdjustVideoColorRequest extends TeaModel {
     public String videoFormat;
 
     @NameInMap("Mode")
+    @Validation(required = true)
     public String mode;
 
     public static AdjustVideoColorRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -33,14 +32,6 @@ public class AdjustVideoColorRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
-    }
-
-    public AdjustVideoColorRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public AdjustVideoColorRequest setVideoBitrate(String videoBitrate) {

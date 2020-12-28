@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class SuperResolveVideoRequest extends TeaModel {
     @NameInMap("VideoUrl")
+    @Validation(required = true)
     public String videoUrl;
-
-    @NameInMap("Async")
-    public Boolean async;
 
     @NameInMap("BitRate")
     public Integer bitRate;
@@ -24,14 +22,6 @@ public class SuperResolveVideoRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
-    }
-
-    public SuperResolveVideoRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public SuperResolveVideoRequest setBitRate(Integer bitRate) {

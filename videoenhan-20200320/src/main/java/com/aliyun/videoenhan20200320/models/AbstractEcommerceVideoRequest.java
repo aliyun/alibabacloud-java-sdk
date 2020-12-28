@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class AbstractEcommerceVideoRequest extends TeaModel {
     @NameInMap("VideoUrl")
+    @Validation(required = true)
     public String videoUrl;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Duration")
+    @Validation(required = true)
     public Float duration;
 
     @NameInMap("Width")
@@ -30,14 +29,6 @@ public class AbstractEcommerceVideoRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
-    }
-
-    public AbstractEcommerceVideoRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public AbstractEcommerceVideoRequest setDuration(Float duration) {

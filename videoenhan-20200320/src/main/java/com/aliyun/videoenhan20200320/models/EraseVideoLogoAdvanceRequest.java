@@ -8,9 +8,6 @@ public class EraseVideoLogoAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoUrlObject;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Boxes")
     public java.util.List<EraseVideoLogoAdvanceRequestBoxes> boxes;
 
@@ -27,14 +24,6 @@ public class EraseVideoLogoAdvanceRequest extends TeaModel {
         return this.videoUrlObject;
     }
 
-    public EraseVideoLogoAdvanceRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
-    }
-
     public EraseVideoLogoAdvanceRequest setBoxes(java.util.List<EraseVideoLogoAdvanceRequestBoxes> boxes) {
         this.boxes = boxes;
         return this;
@@ -44,29 +33,21 @@ public class EraseVideoLogoAdvanceRequest extends TeaModel {
     }
 
     public static class EraseVideoLogoAdvanceRequestBoxes extends TeaModel {
-        @NameInMap("W")
-        public Float w;
-
         @NameInMap("H")
         public Float h;
 
-        @NameInMap("Y")
-        public Float y;
+        @NameInMap("W")
+        public Float w;
 
         @NameInMap("X")
         public Float x;
 
+        @NameInMap("Y")
+        public Float y;
+
         public static EraseVideoLogoAdvanceRequestBoxes build(java.util.Map<String, ?> map) throws Exception {
             EraseVideoLogoAdvanceRequestBoxes self = new EraseVideoLogoAdvanceRequestBoxes();
             return TeaModel.build(map, self);
-        }
-
-        public EraseVideoLogoAdvanceRequestBoxes setW(Float w) {
-            this.w = w;
-            return this;
-        }
-        public Float getW() {
-            return this.w;
         }
 
         public EraseVideoLogoAdvanceRequestBoxes setH(Float h) {
@@ -77,12 +58,12 @@ public class EraseVideoLogoAdvanceRequest extends TeaModel {
             return this.h;
         }
 
-        public EraseVideoLogoAdvanceRequestBoxes setY(Float y) {
-            this.y = y;
+        public EraseVideoLogoAdvanceRequestBoxes setW(Float w) {
+            this.w = w;
             return this;
         }
-        public Float getY() {
-            return this.y;
+        public Float getW() {
+            return this.w;
         }
 
         public EraseVideoLogoAdvanceRequestBoxes setX(Float x) {
@@ -91,6 +72,14 @@ public class EraseVideoLogoAdvanceRequest extends TeaModel {
         }
         public Float getX() {
             return this.x;
+        }
+
+        public EraseVideoLogoAdvanceRequestBoxes setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
         }
 
     }

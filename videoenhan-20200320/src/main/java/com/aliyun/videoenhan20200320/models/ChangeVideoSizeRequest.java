@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ChangeVideoSizeRequest extends TeaModel {
     @NameInMap("VideoUrl")
+    @Validation(required = true)
     public String videoUrl;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Width")
+    @Validation(required = true)
     public Integer width;
 
     @NameInMap("Height")
+    @Validation(required = true)
     public Integer height;
 
     @NameInMap("CropType")
@@ -45,14 +45,6 @@ public class ChangeVideoSizeRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
-    }
-
-    public ChangeVideoSizeRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public ChangeVideoSizeRequest setWidth(Integer width) {
