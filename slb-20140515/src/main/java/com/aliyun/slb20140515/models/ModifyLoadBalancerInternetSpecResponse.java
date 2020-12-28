@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.slb20140515.models;
+
+import com.aliyun.tea.*;
+
+public class ModifyLoadBalancerInternetSpecResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifyLoadBalancerInternetSpecResponseBody body;
+
+    public static ModifyLoadBalancerInternetSpecResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyLoadBalancerInternetSpecResponse self = new ModifyLoadBalancerInternetSpecResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ModifyLoadBalancerInternetSpecResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyLoadBalancerInternetSpecResponse setBody(ModifyLoadBalancerInternetSpecResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyLoadBalancerInternetSpecResponseBody getBody() {
+        return this.body;
+    }
+
+}

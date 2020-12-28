@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.slb20140515.models;
+
+import com.aliyun.tea.*;
+
+public class SetRuleResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SetRuleResponseBody body;
+
+    public static SetRuleResponse build(java.util.Map<String, ?> map) throws Exception {
+        SetRuleResponse self = new SetRuleResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public SetRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SetRuleResponse setBody(SetRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SetRuleResponseBody getBody() {
+        return this.body;
+    }
+
+}

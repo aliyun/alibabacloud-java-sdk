@@ -1,0 +1,177 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.slb20140515.models;
+
+import com.aliyun.tea.*;
+
+public class UploadServerCertificateResponseBody extends TeaModel {
+    @NameInMap("Fingerprint")
+    public String fingerprint;
+
+    @NameInMap("ExpireTimeStamp")
+    public Long expireTimeStamp;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    @NameInMap("SubjectAlternativeNames")
+    public java.util.List<String> subjectAlternativeNames;
+
+    @NameInMap("AliCloudCertificateId")
+    public String aliCloudCertificateId;
+
+    @NameInMap("AliCloudCertificateName")
+    public String aliCloudCertificateName;
+
+    @NameInMap("IsAliCloudCertificate")
+    public Integer isAliCloudCertificate;
+
+    @NameInMap("ServerCertificateId")
+    public String serverCertificateId;
+
+    @NameInMap("ServerCertificateName")
+    public String serverCertificateName;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("ExpireTime")
+    public String expireTime;
+
+    @NameInMap("CreateTimeStamp")
+    public Long createTimeStamp;
+
+    @NameInMap("CommonName")
+    public String commonName;
+
+    public static UploadServerCertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UploadServerCertificateResponseBody self = new UploadServerCertificateResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public UploadServerCertificateResponseBody setFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+        return this;
+    }
+    public String getFingerprint() {
+        return this.fingerprint;
+    }
+
+    public UploadServerCertificateResponseBody setExpireTimeStamp(Long expireTimeStamp) {
+        this.expireTimeStamp = expireTimeStamp;
+        return this;
+    }
+    public Long getExpireTimeStamp() {
+        return this.expireTimeStamp;
+    }
+
+    public UploadServerCertificateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UploadServerCertificateResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public UploadServerCertificateResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public UploadServerCertificateResponseBody setSubjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
+        this.subjectAlternativeNames = subjectAlternativeNames;
+        return this;
+    }
+    public java.util.List<String> getSubjectAlternativeNames() {
+        return this.subjectAlternativeNames;
+    }
+
+    public UploadServerCertificateResponseBody setAliCloudCertificateId(String aliCloudCertificateId) {
+        this.aliCloudCertificateId = aliCloudCertificateId;
+        return this;
+    }
+    public String getAliCloudCertificateId() {
+        return this.aliCloudCertificateId;
+    }
+
+    public UploadServerCertificateResponseBody setAliCloudCertificateName(String aliCloudCertificateName) {
+        this.aliCloudCertificateName = aliCloudCertificateName;
+        return this;
+    }
+    public String getAliCloudCertificateName() {
+        return this.aliCloudCertificateName;
+    }
+
+    public UploadServerCertificateResponseBody setIsAliCloudCertificate(Integer isAliCloudCertificate) {
+        this.isAliCloudCertificate = isAliCloudCertificate;
+        return this;
+    }
+    public Integer getIsAliCloudCertificate() {
+        return this.isAliCloudCertificate;
+    }
+
+    public UploadServerCertificateResponseBody setServerCertificateId(String serverCertificateId) {
+        this.serverCertificateId = serverCertificateId;
+        return this;
+    }
+    public String getServerCertificateId() {
+        return this.serverCertificateId;
+    }
+
+    public UploadServerCertificateResponseBody setServerCertificateName(String serverCertificateName) {
+        this.serverCertificateName = serverCertificateName;
+        return this;
+    }
+    public String getServerCertificateName() {
+        return this.serverCertificateName;
+    }
+
+    public UploadServerCertificateResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public UploadServerCertificateResponseBody setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public String getExpireTime() {
+        return this.expireTime;
+    }
+
+    public UploadServerCertificateResponseBody setCreateTimeStamp(Long createTimeStamp) {
+        this.createTimeStamp = createTimeStamp;
+        return this;
+    }
+    public Long getCreateTimeStamp() {
+        return this.createTimeStamp;
+    }
+
+    public UploadServerCertificateResponseBody setCommonName(String commonName) {
+        this.commonName = commonName;
+        return this;
+    }
+    public String getCommonName() {
+        return this.commonName;
+    }
+
+}

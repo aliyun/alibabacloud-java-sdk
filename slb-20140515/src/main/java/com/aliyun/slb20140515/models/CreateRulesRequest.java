@@ -1,0 +1,133 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.slb20140515.models;
+
+import com.aliyun.tea.*;
+
+public class CreateRulesRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("access_key_id")
+    public String accessKeyId;
+
+    @NameInMap("Tags")
+    public String tags;
+
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
+
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    @NameInMap("ListenerProtocol")
+    public String listenerProtocol;
+
+    @NameInMap("RuleList")
+    public String ruleList;
+
+    public static CreateRulesRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateRulesRequest self = new CreateRulesRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateRulesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateRulesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateRulesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public CreateRulesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateRulesRequest setAccessKeyId(String accessKeyId) {
+        this.accessKeyId = accessKeyId;
+        return this;
+    }
+    public String getAccessKeyId() {
+        return this.accessKeyId;
+    }
+
+    public CreateRulesRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
+    }
+
+    public CreateRulesRequest setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
+    }
+
+    public CreateRulesRequest setListenerPort(Integer listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public Integer getListenerPort() {
+        return this.listenerPort;
+    }
+
+    public CreateRulesRequest setListenerProtocol(String listenerProtocol) {
+        this.listenerProtocol = listenerProtocol;
+        return this;
+    }
+    public String getListenerProtocol() {
+        return this.listenerProtocol;
+    }
+
+    public CreateRulesRequest setRuleList(String ruleList) {
+        this.ruleList = ruleList;
+        return this;
+    }
+    public String getRuleList() {
+        return this.ruleList;
+    }
+
+}
