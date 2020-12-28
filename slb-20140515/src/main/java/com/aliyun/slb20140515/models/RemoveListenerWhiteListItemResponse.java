@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.slb20140515.models;
+
+import com.aliyun.tea.*;
+
+public class RemoveListenerWhiteListItemResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RemoveListenerWhiteListItemResponseBody body;
+
+    public static RemoveListenerWhiteListItemResponse build(java.util.Map<String, ?> map) throws Exception {
+        RemoveListenerWhiteListItemResponse self = new RemoveListenerWhiteListItemResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public RemoveListenerWhiteListItemResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RemoveListenerWhiteListItemResponse setBody(RemoveListenerWhiteListItemResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RemoveListenerWhiteListItemResponseBody getBody() {
+        return this.body;
+    }
+
+}
