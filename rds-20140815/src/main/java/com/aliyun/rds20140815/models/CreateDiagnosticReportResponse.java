@@ -4,33 +4,33 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class CreateDiagnosticReportResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ReportId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String reportId;
+    public CreateDiagnosticReportResponseBody body;
 
     public static CreateDiagnosticReportResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDiagnosticReportResponse self = new CreateDiagnosticReportResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDiagnosticReportResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateDiagnosticReportResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateDiagnosticReportResponse setReportId(String reportId) {
-        this.reportId = reportId;
+    public CreateDiagnosticReportResponse setBody(CreateDiagnosticReportResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getReportId() {
-        return this.reportId;
+    public CreateDiagnosticReportResponseBody getBody() {
+        return this.body;
     }
 
 }

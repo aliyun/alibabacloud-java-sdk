@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeDiagnosticReportListRequest extends TeaModel {
     @NameInMap("DBInstanceId")
-    @Validation(required = true)
     public String DBInstanceId;
 
     public static DescribeDiagnosticReportListRequest build(java.util.Map<String, ?> map) throws Exception {
