@@ -11,12 +11,6 @@ public class SearchBodyTraceResponseBody extends TeaModel {
     @NameInMap("Data")
     public SearchBodyTraceResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
     public static SearchBodyTraceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SearchBodyTraceResponseBody self = new SearchBodyTraceResponseBody();
         return TeaModel.build(map, self);
@@ -36,22 +30,6 @@ public class SearchBodyTraceResponseBody extends TeaModel {
     }
     public SearchBodyTraceResponseBodyData getData() {
         return this.data;
-    }
-
-    public SearchBodyTraceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public SearchBodyTraceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public static class SearchBodyTraceResponseBodyDataMatchList extends TeaModel {

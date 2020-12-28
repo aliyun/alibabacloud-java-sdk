@@ -8,12 +8,6 @@ public class DeleteBodyPersonResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
     public static DeleteBodyPersonResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteBodyPersonResponseBody self = new DeleteBodyPersonResponseBody();
         return TeaModel.build(map, self);
@@ -25,22 +19,6 @@ public class DeleteBodyPersonResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DeleteBodyPersonResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DeleteBodyPersonResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
 }

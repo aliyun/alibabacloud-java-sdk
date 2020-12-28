@@ -11,12 +11,6 @@ public class GetBodyPersonResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetBodyPersonResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
     public static GetBodyPersonResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetBodyPersonResponseBody self = new GetBodyPersonResponseBody();
         return TeaModel.build(map, self);
@@ -36,22 +30,6 @@ public class GetBodyPersonResponseBody extends TeaModel {
     }
     public GetBodyPersonResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetBodyPersonResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetBodyPersonResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public static class GetBodyPersonResponseBodyDataTraceList extends TeaModel {
