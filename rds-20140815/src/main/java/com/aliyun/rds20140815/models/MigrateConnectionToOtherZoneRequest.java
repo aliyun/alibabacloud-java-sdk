@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class MigrateConnectionToOtherZoneRequest extends TeaModel {
     @NameInMap("DBInstanceId")
-    @Validation(required = true)
     public String DBInstanceId;
 
     @NameInMap("ConnectionString")
-    @Validation(required = true)
     public String connectionString;
 
     @NameInMap("ZoneId")
-    @Validation(required = true)
     public String zoneId;
 
     public static MigrateConnectionToOtherZoneRequest build(java.util.Map<String, ?> map) throws Exception {

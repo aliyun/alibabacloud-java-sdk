@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnosticReportRequest extends TeaModel {
     @NameInMap("DBInstanceId")
-    @Validation(required = true)
     public String DBInstanceId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
+
+    @NameInMap("Category")
+    public String category;
 
     public static CreateDiagnosticReportRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDiagnosticReportRequest self = new CreateDiagnosticReportRequest();
@@ -43,6 +43,14 @@ public class CreateDiagnosticReportRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public CreateDiagnosticReportRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
 }
