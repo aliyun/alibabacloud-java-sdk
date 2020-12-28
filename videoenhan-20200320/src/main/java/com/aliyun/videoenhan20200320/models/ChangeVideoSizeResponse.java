@@ -4,65 +4,33 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ChangeVideoSizeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ChangeVideoSizeResponseData data;
+    public ChangeVideoSizeResponseBody body;
 
     public static ChangeVideoSizeResponse build(java.util.Map<String, ?> map) throws Exception {
         ChangeVideoSizeResponse self = new ChangeVideoSizeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ChangeVideoSizeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ChangeVideoSizeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ChangeVideoSizeResponse setData(ChangeVideoSizeResponseData data) {
-        this.data = data;
+    public ChangeVideoSizeResponse setBody(ChangeVideoSizeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ChangeVideoSizeResponseData getData() {
-        return this.data;
-    }
-
-    public static class ChangeVideoSizeResponseData extends TeaModel {
-        @NameInMap("VideoUrl")
-        @Validation(required = true)
-        public String videoUrl;
-
-        @NameInMap("VideoCoverUrl")
-        @Validation(required = true)
-        public String videoCoverUrl;
-
-        public static ChangeVideoSizeResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ChangeVideoSizeResponseData self = new ChangeVideoSizeResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ChangeVideoSizeResponseData setVideoUrl(String videoUrl) {
-            this.videoUrl = videoUrl;
-            return this;
-        }
-        public String getVideoUrl() {
-            return this.videoUrl;
-        }
-
-        public ChangeVideoSizeResponseData setVideoCoverUrl(String videoCoverUrl) {
-            this.videoCoverUrl = videoCoverUrl;
-            return this;
-        }
-        public String getVideoCoverUrl() {
-            return this.videoCoverUrl;
-        }
-
+    public ChangeVideoSizeResponseBody getBody() {
+        return this.body;
     }
 
 }

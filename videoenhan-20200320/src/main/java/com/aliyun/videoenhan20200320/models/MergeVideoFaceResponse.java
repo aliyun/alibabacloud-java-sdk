@@ -4,53 +4,33 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class MergeVideoFaceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public MergeVideoFaceResponseData data;
+    public MergeVideoFaceResponseBody body;
 
     public static MergeVideoFaceResponse build(java.util.Map<String, ?> map) throws Exception {
         MergeVideoFaceResponse self = new MergeVideoFaceResponse();
         return TeaModel.build(map, self);
     }
 
-    public MergeVideoFaceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public MergeVideoFaceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public MergeVideoFaceResponse setData(MergeVideoFaceResponseData data) {
-        this.data = data;
+    public MergeVideoFaceResponse setBody(MergeVideoFaceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public MergeVideoFaceResponseData getData() {
-        return this.data;
-    }
-
-    public static class MergeVideoFaceResponseData extends TeaModel {
-        @NameInMap("VideoURL")
-        @Validation(required = true)
-        public String videoURL;
-
-        public static MergeVideoFaceResponseData build(java.util.Map<String, ?> map) throws Exception {
-            MergeVideoFaceResponseData self = new MergeVideoFaceResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public MergeVideoFaceResponseData setVideoURL(String videoURL) {
-            this.videoURL = videoURL;
-            return this;
-        }
-        public String getVideoURL() {
-            return this.videoURL;
-        }
-
+    public MergeVideoFaceResponseBody getBody() {
+        return this.body;
     }
 
 }

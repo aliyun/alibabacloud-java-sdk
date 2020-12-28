@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class InterpolateVideoFrameRequest extends TeaModel {
     @NameInMap("VideoURL")
-    @Validation(required = true)
     public String videoURL;
+
+    @NameInMap("Async")
+    public Boolean async;
 
     @NameInMap("FrameRate")
     public Integer frameRate;
@@ -25,6 +27,14 @@ public class InterpolateVideoFrameRequest extends TeaModel {
     }
     public String getVideoURL() {
         return this.videoURL;
+    }
+
+    public InterpolateVideoFrameRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public InterpolateVideoFrameRequest setFrameRate(Integer frameRate) {

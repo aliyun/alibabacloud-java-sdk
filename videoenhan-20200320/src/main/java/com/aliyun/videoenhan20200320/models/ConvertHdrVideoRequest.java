@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class ConvertHdrVideoRequest extends TeaModel {
     @NameInMap("VideoURL")
-    @Validation(required = true)
     public String videoURL;
+
+    @NameInMap("Async")
+    public Boolean async;
 
     @NameInMap("HDRFormat")
     public String HDRFormat;
@@ -28,6 +30,14 @@ public class ConvertHdrVideoRequest extends TeaModel {
     }
     public String getVideoURL() {
         return this.videoURL;
+    }
+
+    public ConvertHdrVideoRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public ConvertHdrVideoRequest setHDRFormat(String HDRFormat) {

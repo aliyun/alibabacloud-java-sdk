@@ -8,6 +8,9 @@ public class ConvertHdrVideoAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoURLObject;
 
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("HDRFormat")
     public String HDRFormat;
 
@@ -28,6 +31,14 @@ public class ConvertHdrVideoAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoURLObject() {
         return this.videoURLObject;
+    }
+
+    public ConvertHdrVideoAdvanceRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public ConvertHdrVideoAdvanceRequest setHDRFormat(String HDRFormat) {
