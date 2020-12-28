@@ -4,11 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVRoutersRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("VRouterId")
     public String VRouterId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
@@ -17,9 +25,36 @@ public class DescribeVRoutersRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     public static DescribeVRoutersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVRoutersRequest self = new DescribeVRoutersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVRoutersRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVRoutersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeVRoutersRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeVRoutersRequest setVRouterId(String VRouterId) {
@@ -52,6 +87,14 @@ public class DescribeVRoutersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeVRoutersRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

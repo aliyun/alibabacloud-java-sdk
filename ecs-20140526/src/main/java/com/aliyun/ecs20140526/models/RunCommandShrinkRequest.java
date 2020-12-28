@@ -4,8 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RunCommandShrinkRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Name")
@@ -15,11 +26,9 @@ public class RunCommandShrinkRequest extends TeaModel {
     public String description;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("CommandContent")
-    @Validation(required = true)
     public String commandContent;
 
     @NameInMap("WorkingDir")
@@ -37,10 +46,6 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("Frequency")
     public String frequency;
 
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public java.util.List<String> instanceId;
-
     @NameInMap("Parameters")
     public String parametersShrink;
 
@@ -50,9 +55,47 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("ContentEncoding")
     public String contentEncoding;
 
+    @NameInMap("Username")
+    public String username;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     public static RunCommandShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCommandShrinkRequest self = new RunCommandShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunCommandShrinkRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public RunCommandShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public RunCommandShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public RunCommandShrinkRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public RunCommandShrinkRequest setRegionId(String regionId) {
@@ -135,14 +178,6 @@ public class RunCommandShrinkRequest extends TeaModel {
         return this.frequency;
     }
 
-    public RunCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
     public RunCommandShrinkRequest setParametersShrink(String parametersShrink) {
         this.parametersShrink = parametersShrink;
         return this;
@@ -165,6 +200,22 @@ public class RunCommandShrinkRequest extends TeaModel {
     }
     public String getContentEncoding() {
         return this.contentEncoding;
+    }
+
+    public RunCommandShrinkRequest setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
+    }
+
+    public RunCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
 }

@@ -5,11 +5,21 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("SecurityGroupId")
-    @Validation(required = true)
     public java.util.List<String> securityGroupId;
 
     public static DescribeSecurityGroupReferencesRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +33,38 @@ public class DescribeSecurityGroupReferencesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeSecurityGroupReferencesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeSecurityGroupReferencesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeSecurityGroupReferencesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeSecurityGroupReferencesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeSecurityGroupReferencesRequest setSecurityGroupId(java.util.List<String> securityGroupId) {

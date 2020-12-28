@@ -4,16 +4,51 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReActivateInstancesRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static ReActivateInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ReActivateInstancesRequest self = new ReActivateInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReActivateInstancesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ReActivateInstancesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ReActivateInstancesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ReActivateInstancesRequest setRegionId(String regionId) {
@@ -30,6 +65,14 @@ public class ReActivateInstancesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ReActivateInstancesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

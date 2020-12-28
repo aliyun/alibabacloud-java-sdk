@@ -5,27 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Role")
-    @Validation(required = true)
     public String role;
 
     @NameInMap("OppositeRegionId")
-    @Validation(required = true)
     public String oppositeRegionId;
 
     @NameInMap("Spec")
-    @Validation(required = true)
     public String spec;
 
     @NameInMap("RouterType")
-    @Validation(required = true)
     public String routerType;
 
     @NameInMap("RouterId")
-    @Validation(required = true)
     public String routerId;
 
     @NameInMap("OppositeInterfaceId")
@@ -72,6 +66,18 @@ public class CreateRouterInterfaceRequest extends TeaModel {
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("UserCidr")
     public String userCidr;
@@ -247,6 +253,38 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateRouterInterfaceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateRouterInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateRouterInterfaceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateRouterInterfaceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateRouterInterfaceRequest setUserCidr(String userCidr) {

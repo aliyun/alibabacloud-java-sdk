@@ -4,8 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("AutoSnapshotPolicyId")
@@ -23,6 +34,38 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public static DescribeAutoSnapshotPolicyExRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoSnapshotPolicyExRequest self = new DescribeAutoSnapshotPolicyExRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeAutoSnapshotPolicyExRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeAutoSnapshotPolicyExRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeAutoSnapshotPolicyExRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeAutoSnapshotPolicyExRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeAutoSnapshotPolicyExRequest setRegionId(String regionId) {

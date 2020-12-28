@@ -4,11 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
-    @NameInMap("DiskDeviceMapping")
-    public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SnapshotId")
@@ -38,23 +43,45 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("Tag")
-    public java.util.List<CreateImageRequestTag> tag;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("DiskDeviceMapping")
+    public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateImageRequestTag> tag;
 
     public static CreateImageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageRequest self = new CreateImageRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateImageRequest setDiskDeviceMapping(java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping) {
-        this.diskDeviceMapping = diskDeviceMapping;
+    public CreateImageRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public java.util.List<CreateImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
-        return this.diskDeviceMapping;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateImageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateImageRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateImageRequest setRegionId(String regionId) {
@@ -137,12 +164,12 @@ public class CreateImageRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateImageRequest setTag(java.util.List<CreateImageRequestTag> tag) {
-        this.tag = tag;
+    public CreateImageRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public java.util.List<CreateImageRequestTag> getTag() {
-        return this.tag;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateImageRequest setResourceGroupId(String resourceGroupId) {
@@ -153,12 +180,28 @@ public class CreateImageRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public static class CreateImageRequestDiskDeviceMapping extends TeaModel {
-        @NameInMap("Size")
-        public Integer size;
+    public CreateImageRequest setDiskDeviceMapping(java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping) {
+        this.diskDeviceMapping = diskDeviceMapping;
+        return this;
+    }
+    public java.util.List<CreateImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
+        return this.diskDeviceMapping;
+    }
 
+    public CreateImageRequest setTag(java.util.List<CreateImageRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateImageRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateImageRequestDiskDeviceMapping extends TeaModel {
         @NameInMap("SnapshotId")
         public String snapshotId;
+
+        @NameInMap("Size")
+        public Integer size;
 
         @NameInMap("Device")
         public String device;
@@ -171,20 +214,20 @@ public class CreateImageRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateImageRequestDiskDeviceMapping setSize(Integer size) {
-            this.size = size;
-            return this;
-        }
-        public Integer getSize() {
-            return this.size;
-        }
-
         public CreateImageRequestDiskDeviceMapping setSnapshotId(String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
         public String getSnapshotId() {
             return this.snapshotId;
+        }
+
+        public CreateImageRequestDiskDeviceMapping setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
         }
 
         public CreateImageRequestDiskDeviceMapping setDevice(String device) {
@@ -206,23 +249,15 @@ public class CreateImageRequest extends TeaModel {
     }
 
     public static class CreateImageRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
-
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static CreateImageRequestTag build(java.util.Map<String, ?> map) throws Exception {
             CreateImageRequestTag self = new CreateImageRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public CreateImageRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public CreateImageRequestTag setKey(String key) {
@@ -231,6 +266,14 @@ public class CreateImageRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public CreateImageRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

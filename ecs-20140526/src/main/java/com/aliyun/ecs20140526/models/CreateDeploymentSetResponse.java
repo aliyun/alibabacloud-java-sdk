@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDeploymentSetResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DeploymentSetId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String deploymentSetId;
+    public CreateDeploymentSetResponseBody body;
 
     public static CreateDeploymentSetResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDeploymentSetResponse self = new CreateDeploymentSetResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDeploymentSetResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateDeploymentSetResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateDeploymentSetResponse setDeploymentSetId(String deploymentSetId) {
-        this.deploymentSetId = deploymentSetId;
+    public CreateDeploymentSetResponse setBody(CreateDeploymentSetResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getDeploymentSetId() {
-        return this.deploymentSetId;
+    public CreateDeploymentSetResponseBody getBody() {
+        return this.body;
     }
 
 }

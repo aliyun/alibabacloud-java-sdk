@@ -4,11 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeStorageSetsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StorageSetIds")
@@ -29,6 +40,38 @@ public class DescribeStorageSetsRequest extends TeaModel {
     public static DescribeStorageSetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageSetsRequest self = new DescribeStorageSetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeStorageSetsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeStorageSetsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeStorageSetsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeStorageSetsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeStorageSetsRequest setClientToken(String clientToken) {

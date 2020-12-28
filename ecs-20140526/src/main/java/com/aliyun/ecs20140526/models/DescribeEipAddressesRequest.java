@@ -4,8 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipAddressesRequest extends TeaModel {
+    @NameInMap("Filter")
+    public java.util.List<DescribeEipAddressesRequestFilter> filter;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Status")
@@ -26,8 +37,8 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeEipAddressesRequestFilter> filter;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("LockReason")
     public String lockReason;
@@ -44,6 +55,38 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public static DescribeEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipAddressesRequest self = new DescribeEipAddressesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEipAddressesRequest setFilter(java.util.List<DescribeEipAddressesRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeEipAddressesRequestFilter> getFilter() {
+        return this.filter;
+    }
+
+    public DescribeEipAddressesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeEipAddressesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeEipAddressesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeEipAddressesRequest setRegionId(String regionId) {
@@ -102,12 +145,12 @@ public class DescribeEipAddressesRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeEipAddressesRequest setFilter(java.util.List<DescribeEipAddressesRequestFilter> filter) {
-        this.filter = filter;
+    public DescribeEipAddressesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public java.util.List<DescribeEipAddressesRequestFilter> getFilter() {
-        return this.filter;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeEipAddressesRequest setLockReason(String lockReason) {

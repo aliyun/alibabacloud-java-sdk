@@ -4,8 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VpcId")
@@ -17,11 +25,11 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("SecurityGroupIds")
     public String securityGroupIds;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeSecurityGroupsRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -47,9 +55,36 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeSecurityGroupsRequestTag> tag;
+
     public static DescribeSecurityGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupsRequest self = new DescribeSecurityGroupsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSecurityGroupsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeSecurityGroupsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeSecurityGroupsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeSecurityGroupsRequest setRegionId(String regionId) {
@@ -84,20 +119,20 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeSecurityGroupsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DescribeSecurityGroupsRequest setSecurityGroupIds(String securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
     public String getSecurityGroupIds() {
         return this.securityGroupIds;
-    }
-
-    public DescribeSecurityGroupsRequest setTag(java.util.List<DescribeSecurityGroupsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeSecurityGroupsRequestTag> getTag() {
-        return this.tag;
     }
 
     public DescribeSecurityGroupsRequest setResourceGroupId(String resourceGroupId) {
@@ -164,24 +199,24 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public static class DescribeSecurityGroupsRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
+    public DescribeSecurityGroupsRequest setTag(java.util.List<DescribeSecurityGroupsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeSecurityGroupsRequestTag> getTag() {
+        return this.tag;
+    }
 
+    public static class DescribeSecurityGroupsRequestTag extends TeaModel {
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeSecurityGroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupsRequestTag self = new DescribeSecurityGroupsRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSecurityGroupsRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeSecurityGroupsRequestTag setKey(String key) {
@@ -190,6 +225,14 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public DescribeSecurityGroupsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

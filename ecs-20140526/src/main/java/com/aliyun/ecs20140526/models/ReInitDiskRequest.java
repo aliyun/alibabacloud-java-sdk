@@ -4,9 +4,20 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReInitDiskRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("DiskId")
-    @Validation(required = true)
     public String diskId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("Password")
     public String password;
@@ -25,12 +36,44 @@ public class ReInitDiskRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ReInitDiskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ReInitDiskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ReInitDiskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public ReInitDiskRequest setDiskId(String diskId) {
         this.diskId = diskId;
         return this;
     }
     public String getDiskId() {
         return this.diskId;
+    }
+
+    public ReInitDiskRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ReInitDiskRequest setPassword(String password) {

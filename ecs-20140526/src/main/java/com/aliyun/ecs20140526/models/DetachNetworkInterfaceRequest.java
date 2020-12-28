@@ -4,16 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DetachNetworkInterfaceRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
     public String networkInterfaceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("TrunkNetworkInstanceId")
@@ -22,6 +31,38 @@ public class DetachNetworkInterfaceRequest extends TeaModel {
     public static DetachNetworkInterfaceRequest build(java.util.Map<String, ?> map) throws Exception {
         DetachNetworkInterfaceRequest self = new DetachNetworkInterfaceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DetachNetworkInterfaceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DetachNetworkInterfaceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DetachNetworkInterfaceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DetachNetworkInterfaceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DetachNetworkInterfaceRequest setRegionId(String regionId) {

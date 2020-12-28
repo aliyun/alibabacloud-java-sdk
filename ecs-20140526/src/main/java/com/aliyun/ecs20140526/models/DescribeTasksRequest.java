@@ -4,14 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("TaskIds")
@@ -34,6 +45,30 @@ public class DescribeTasksRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeTasksRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeTasksRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeTasksRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public DescribeTasksRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -48,6 +83,14 @@ public class DescribeTasksRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeTasksRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeTasksRequest setRegionId(String regionId) {

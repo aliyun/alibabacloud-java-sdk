@@ -4,8 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("DiskId")
-    @Validation(required = true)
     public String diskId;
 
     @NameInMap("SnapshotName")
@@ -23,8 +31,8 @@ public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("Tag")
-    public java.util.List<CreateSnapshotRequestTag> tag;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -35,9 +43,36 @@ public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateSnapshotRequestTag> tag;
+
     public static CreateSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnapshotRequest self = new CreateSnapshotRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSnapshotRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateSnapshotRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateSnapshotRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateSnapshotRequest setDiskId(String diskId) {
@@ -88,12 +123,12 @@ public class CreateSnapshotRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateSnapshotRequest setTag(java.util.List<CreateSnapshotRequestTag> tag) {
-        this.tag = tag;
+    public CreateSnapshotRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public java.util.List<CreateSnapshotRequestTag> getTag() {
-        return this.tag;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateSnapshotRequest setResourceGroupId(String resourceGroupId) {
@@ -120,24 +155,24 @@ public class CreateSnapshotRequest extends TeaModel {
         return this.instantAccessRetentionDays;
     }
 
-    public static class CreateSnapshotRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
+    public CreateSnapshotRequest setTag(java.util.List<CreateSnapshotRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateSnapshotRequestTag> getTag() {
+        return this.tag;
+    }
 
+    public static class CreateSnapshotRequestTag extends TeaModel {
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static CreateSnapshotRequestTag build(java.util.Map<String, ?> map) throws Exception {
             CreateSnapshotRequestTag self = new CreateSnapshotRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public CreateSnapshotRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public CreateSnapshotRequestTag setKey(String key) {
@@ -146,6 +181,14 @@ public class CreateSnapshotRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public CreateSnapshotRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

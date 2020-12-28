@@ -4,8 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocateDedicatedHostsRequest extends TeaModel {
+    @NameInMap("NetworkAttributes")
+    public AllocateDedicatedHostsRequestNetworkAttributes networkAttributes;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Tag")
@@ -24,14 +38,10 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostClusterId;
 
     @NameInMap("DedicatedHostType")
-    @Validation(required = true)
     public String dedicatedHostType;
 
     @NameInMap("ActionOnMaintenance")
     public String actionOnMaintenance;
-
-    @NameInMap("NetworkAttributes")
-    public AllocateDedicatedHostsRequestNetworkAttributes networkAttributes;
 
     @NameInMap("Description")
     public String description;
@@ -69,6 +79,46 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public static AllocateDedicatedHostsRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateDedicatedHostsRequest self = new AllocateDedicatedHostsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AllocateDedicatedHostsRequest setNetworkAttributes(AllocateDedicatedHostsRequestNetworkAttributes networkAttributes) {
+        this.networkAttributes = networkAttributes;
+        return this;
+    }
+    public AllocateDedicatedHostsRequestNetworkAttributes getNetworkAttributes() {
+        return this.networkAttributes;
+    }
+
+    public AllocateDedicatedHostsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AllocateDedicatedHostsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AllocateDedicatedHostsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public AllocateDedicatedHostsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AllocateDedicatedHostsRequest setRegionId(String regionId) {
@@ -133,14 +183,6 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     }
     public String getActionOnMaintenance() {
         return this.actionOnMaintenance;
-    }
-
-    public AllocateDedicatedHostsRequest setNetworkAttributes(AllocateDedicatedHostsRequestNetworkAttributes networkAttributes) {
-        this.networkAttributes = networkAttributes;
-        return this;
-    }
-    public AllocateDedicatedHostsRequestNetworkAttributes getNetworkAttributes() {
-        return this.networkAttributes;
     }
 
     public AllocateDedicatedHostsRequest setDescription(String description) {
@@ -231,36 +273,6 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public static class AllocateDedicatedHostsRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static AllocateDedicatedHostsRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            AllocateDedicatedHostsRequestTag self = new AllocateDedicatedHostsRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public AllocateDedicatedHostsRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public AllocateDedicatedHostsRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class AllocateDedicatedHostsRequestNetworkAttributes extends TeaModel {
         @NameInMap("SlbUdpTimeout")
         public Integer slbUdpTimeout;
@@ -287,6 +299,36 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
         }
         public Integer getUdpTimeout() {
             return this.udpTimeout;
+        }
+
+    }
+
+    public static class AllocateDedicatedHostsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static AllocateDedicatedHostsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            AllocateDedicatedHostsRequestTag self = new AllocateDedicatedHostsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public AllocateDedicatedHostsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public AllocateDedicatedHostsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

@@ -4,12 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DedicatedHostClusterId")
-    @Validation(required = true)
     public String dedicatedHostClusterId;
 
     @NameInMap("DedicatedHostClusterName")
@@ -21,6 +31,38 @@ public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
     public static ModifyDedicatedHostClusterAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDedicatedHostClusterAttributeRequest self = new ModifyDedicatedHostClusterAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDedicatedHostClusterAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyDedicatedHostClusterAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyDedicatedHostClusterAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyDedicatedHostClusterAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDedicatedHostClusterAttributeRequest setRegionId(String regionId) {

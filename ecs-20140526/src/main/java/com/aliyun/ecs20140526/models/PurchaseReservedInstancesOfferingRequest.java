@@ -4,8 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Tag")
@@ -21,7 +32,6 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String reservedInstanceName;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("Scope")
@@ -51,6 +61,38 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public static PurchaseReservedInstancesOfferingRequest build(java.util.Map<String, ?> map) throws Exception {
         PurchaseReservedInstancesOfferingRequest self = new PurchaseReservedInstancesOfferingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public PurchaseReservedInstancesOfferingRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public PurchaseReservedInstancesOfferingRequest setRegionId(String regionId) {

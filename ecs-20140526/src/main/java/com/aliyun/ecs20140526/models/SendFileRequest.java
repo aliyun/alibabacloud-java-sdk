@@ -4,12 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class SendFileRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Description")
@@ -19,18 +29,12 @@ public class SendFileRequest extends TeaModel {
     public Long timeout;
 
     @NameInMap("TargetDir")
-    @Validation(required = true)
     public String targetDir;
-
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public java.util.List<String> instanceId;
 
     @NameInMap("ContentType")
     public String contentType;
 
     @NameInMap("Content")
-    @Validation(required = true)
     public String content;
 
     @NameInMap("FileOwner")
@@ -45,9 +49,44 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("Overwrite")
     public Boolean overwrite;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     public static SendFileRequest build(java.util.Map<String, ?> map) throws Exception {
         SendFileRequest self = new SendFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendFileRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SendFileRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SendFileRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public SendFileRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public SendFileRequest setRegionId(String regionId) {
@@ -88,14 +127,6 @@ public class SendFileRequest extends TeaModel {
     }
     public String getTargetDir() {
         return this.targetDir;
-    }
-
-    public SendFileRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
     public SendFileRequest setContentType(String contentType) {
@@ -144,6 +175,14 @@ public class SendFileRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
+    }
+
+    public SendFileRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
 }

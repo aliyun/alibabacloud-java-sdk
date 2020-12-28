@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupPolicyRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
-    @Validation(required = true)
     public String securityGroupId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InnerAccessPolicy")
-    @Validation(required = true)
     public String innerAccessPolicy;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static ModifySecurityGroupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySecurityGroupPolicyRequest self = new ModifySecurityGroupPolicyRequest();
@@ -54,6 +63,38 @@ public class ModifySecurityGroupPolicyRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifySecurityGroupPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifySecurityGroupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifySecurityGroupPolicyRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifySecurityGroupPolicyRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

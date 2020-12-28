@@ -4,18 +4,23 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLaunchTemplatesRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("TemplateTag")
     public java.util.List<DescribeLaunchTemplatesRequestTemplateTag> templateTag;
-
-    @NameInMap("LaunchTemplateId")
-    public java.util.List<String> launchTemplateId;
-
-    @NameInMap("LaunchTemplateName")
-    public java.util.List<String> launchTemplateName;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -26,9 +31,47 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     @NameInMap("TemplateResourceGroupId")
     public String templateResourceGroupId;
 
+    @NameInMap("LaunchTemplateId")
+    public java.util.List<String> launchTemplateId;
+
+    @NameInMap("LaunchTemplateName")
+    public java.util.List<String> launchTemplateName;
+
     public static DescribeLaunchTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLaunchTemplatesRequest self = new DescribeLaunchTemplatesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLaunchTemplatesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeLaunchTemplatesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeLaunchTemplatesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeLaunchTemplatesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeLaunchTemplatesRequest setRegionId(String regionId) {
@@ -45,22 +88,6 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     }
     public java.util.List<DescribeLaunchTemplatesRequestTemplateTag> getTemplateTag() {
         return this.templateTag;
-    }
-
-    public DescribeLaunchTemplatesRequest setLaunchTemplateId(java.util.List<String> launchTemplateId) {
-        this.launchTemplateId = launchTemplateId;
-        return this;
-    }
-    public java.util.List<String> getLaunchTemplateId() {
-        return this.launchTemplateId;
-    }
-
-    public DescribeLaunchTemplatesRequest setLaunchTemplateName(java.util.List<String> launchTemplateName) {
-        this.launchTemplateName = launchTemplateName;
-        return this;
-    }
-    public java.util.List<String> getLaunchTemplateName() {
-        return this.launchTemplateName;
     }
 
     public DescribeLaunchTemplatesRequest setPageNumber(Integer pageNumber) {
@@ -85,6 +112,22 @@ public class DescribeLaunchTemplatesRequest extends TeaModel {
     }
     public String getTemplateResourceGroupId() {
         return this.templateResourceGroupId;
+    }
+
+    public DescribeLaunchTemplatesRequest setLaunchTemplateId(java.util.List<String> launchTemplateId) {
+        this.launchTemplateId = launchTemplateId;
+        return this;
+    }
+    public java.util.List<String> getLaunchTemplateId() {
+        return this.launchTemplateId;
+    }
+
+    public DescribeLaunchTemplatesRequest setLaunchTemplateName(java.util.List<String> launchTemplateName) {
+        this.launchTemplateName = launchTemplateName;
+        return this;
+    }
+    public java.util.List<String> getLaunchTemplateName() {
+        return this.launchTemplateName;
     }
 
     public static class DescribeLaunchTemplatesRequestTemplateTag extends TeaModel {

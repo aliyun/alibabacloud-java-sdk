@@ -4,11 +4,16 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStatusRequest extends TeaModel {
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
@@ -23,17 +28,39 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     public static DescribeInstanceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStatusRequest self = new DescribeInstanceStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceStatusRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
+    public DescribeInstanceStatusRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeInstanceStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeInstanceStatusRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeInstanceStatusRequest setRegionId(String regionId) {
@@ -74,6 +101,22 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeInstanceStatusRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeInstanceStatusRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
 }

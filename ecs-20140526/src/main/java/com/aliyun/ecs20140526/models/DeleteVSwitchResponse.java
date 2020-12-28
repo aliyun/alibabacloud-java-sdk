@@ -4,21 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteVSwitchResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteVSwitchResponseBody body;
 
     public static DeleteVSwitchResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteVSwitchResponse self = new DeleteVSwitchResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteVSwitchResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteVSwitchResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteVSwitchResponse setBody(DeleteVSwitchResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteVSwitchResponseBody getBody() {
+        return this.body;
     }
 
 }

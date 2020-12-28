@@ -4,18 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    public String regionId;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
-    @NameInMap("SecurityGroupId")
-    public java.util.List<String> securityGroupId;
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
     @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
     public String networkInterfaceId;
 
     @NameInMap("QueueNumber")
@@ -24,9 +31,44 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("SecurityGroupId")
+    public java.util.List<String> securityGroupId;
+
     public static ModifyNetworkInterfaceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkInterfaceAttributeRequest self = new ModifyNetworkInterfaceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyNetworkInterfaceAttributeRequest setRegionId(String regionId) {
@@ -35,14 +77,6 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ModifyNetworkInterfaceAttributeRequest setSecurityGroupId(java.util.List<String> securityGroupId) {
-        this.securityGroupId = securityGroupId;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupId() {
-        return this.securityGroupId;
     }
 
     public ModifyNetworkInterfaceAttributeRequest setNetworkInterfaceName(String networkInterfaceName) {
@@ -75,6 +109,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setSecurityGroupId(java.util.List<String> securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
 }

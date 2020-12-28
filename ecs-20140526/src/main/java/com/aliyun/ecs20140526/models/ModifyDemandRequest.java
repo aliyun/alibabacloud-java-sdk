@@ -4,18 +4,28 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDemandRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
     public String zoneId;
 
     @NameInMap("DemandId")
-    @Validation(required = true)
     public String demandId;
 
     @NameInMap("DemandName")
@@ -48,6 +58,38 @@ public class ModifyDemandRequest extends TeaModel {
     public static ModifyDemandRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDemandRequest self = new ModifyDemandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDemandRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyDemandRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyDemandRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyDemandRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDemandRequest setClientToken(String clientToken) {

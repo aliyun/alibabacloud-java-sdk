@@ -4,8 +4,19 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteLaunchTemplateVersionRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("LaunchTemplateId")
@@ -15,12 +26,43 @@ public class DeleteLaunchTemplateVersionRequest extends TeaModel {
     public String launchTemplateName;
 
     @NameInMap("DeleteVersion")
-    @Validation(required = true)
-    public java.util.List<Long> deleteVersion;
+    public java.util.List<Integer> deleteVersion;
 
     public static DeleteLaunchTemplateVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLaunchTemplateVersionRequest self = new DeleteLaunchTemplateVersionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteLaunchTemplateVersionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteLaunchTemplateVersionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteLaunchTemplateVersionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DeleteLaunchTemplateVersionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteLaunchTemplateVersionRequest setRegionId(String regionId) {
@@ -47,11 +89,11 @@ public class DeleteLaunchTemplateVersionRequest extends TeaModel {
         return this.launchTemplateName;
     }
 
-    public DeleteLaunchTemplateVersionRequest setDeleteVersion(java.util.List<Long> deleteVersion) {
+    public DeleteLaunchTemplateVersionRequest setDeleteVersion(java.util.List<Integer> deleteVersion) {
         this.deleteVersion = deleteVersion;
         return this;
     }
-    public java.util.List<Long> getDeleteVersion() {
+    public java.util.List<Integer> getDeleteVersion() {
         return this.deleteVersion;
     }
 

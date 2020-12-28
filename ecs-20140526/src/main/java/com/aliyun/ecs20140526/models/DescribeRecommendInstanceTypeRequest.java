@@ -4,6 +4,18 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecommendInstanceTypeRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("Cores")
     public Integer cores;
 
@@ -17,7 +29,6 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String instanceType;
 
     @NameInMap("NetworkType")
-    @Validation(required = true)
     public String networkType;
 
     @NameInMap("InstanceChargeType")
@@ -29,17 +40,25 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
-    @NameInMap("InstanceTypeFamily")
-    public java.util.List<String> instanceTypeFamily;
-
     @NameInMap("PriorityStrategy")
     public String priorityStrategy;
 
     @NameInMap("MaxPrice")
     public Float maxPrice;
 
+    @NameInMap("InstanceBandwidthRx")
+    public Integer instanceBandwidthRx;
+
+    @NameInMap("InstanceBandwidthTx")
+    public Integer instanceBandwidthTx;
+
+    @NameInMap("InstancePpsRx")
+    public Integer instancePpsRx;
+
+    @NameInMap("InstancePpsTx")
+    public Integer instancePpsTx;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
@@ -51,9 +70,44 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     @NameInMap("Scene")
     public String scene;
 
+    @NameInMap("InstanceTypeFamily")
+    public java.util.List<String> instanceTypeFamily;
+
     public static DescribeRecommendInstanceTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecommendInstanceTypeRequest self = new DescribeRecommendInstanceTypeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRecommendInstanceTypeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeRecommendInstanceTypeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeRecommendInstanceTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeRecommendInstanceTypeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeRecommendInstanceTypeRequest setCores(Integer cores) {
@@ -120,14 +174,6 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
         return this.ioOptimized;
     }
 
-    public DescribeRecommendInstanceTypeRequest setInstanceTypeFamily(java.util.List<String> instanceTypeFamily) {
-        this.instanceTypeFamily = instanceTypeFamily;
-        return this;
-    }
-    public java.util.List<String> getInstanceTypeFamily() {
-        return this.instanceTypeFamily;
-    }
-
     public DescribeRecommendInstanceTypeRequest setPriorityStrategy(String priorityStrategy) {
         this.priorityStrategy = priorityStrategy;
         return this;
@@ -142,6 +188,38 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     }
     public Float getMaxPrice() {
         return this.maxPrice;
+    }
+
+    public DescribeRecommendInstanceTypeRequest setInstanceBandwidthRx(Integer instanceBandwidthRx) {
+        this.instanceBandwidthRx = instanceBandwidthRx;
+        return this;
+    }
+    public Integer getInstanceBandwidthRx() {
+        return this.instanceBandwidthRx;
+    }
+
+    public DescribeRecommendInstanceTypeRequest setInstanceBandwidthTx(Integer instanceBandwidthTx) {
+        this.instanceBandwidthTx = instanceBandwidthTx;
+        return this;
+    }
+    public Integer getInstanceBandwidthTx() {
+        return this.instanceBandwidthTx;
+    }
+
+    public DescribeRecommendInstanceTypeRequest setInstancePpsRx(Integer instancePpsRx) {
+        this.instancePpsRx = instancePpsRx;
+        return this;
+    }
+    public Integer getInstancePpsRx() {
+        return this.instancePpsRx;
+    }
+
+    public DescribeRecommendInstanceTypeRequest setInstancePpsTx(Integer instancePpsTx) {
+        this.instancePpsTx = instancePpsTx;
+        return this;
+    }
+    public Integer getInstancePpsTx() {
+        return this.instancePpsTx;
     }
 
     public DescribeRecommendInstanceTypeRequest setRegionId(String regionId) {
@@ -174,6 +252,14 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     }
     public String getScene() {
         return this.scene;
+    }
+
+    public DescribeRecommendInstanceTypeRequest setInstanceTypeFamily(java.util.List<String> instanceTypeFamily) {
+        this.instanceTypeFamily = instanceTypeFamily;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypeFamily() {
+        return this.instanceTypeFamily;
     }
 
 }

@@ -4,45 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeLimitationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Limitation")
+    @NameInMap("body")
     @Validation(required = true)
-    public String limitation;
-
-    @NameInMap("Value")
-    @Validation(required = true)
-    public String value;
+    public DescribeLimitationResponseBody body;
 
     public static DescribeLimitationResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLimitationResponse self = new DescribeLimitationResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLimitationResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLimitationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLimitationResponse setLimitation(String limitation) {
-        this.limitation = limitation;
+    public DescribeLimitationResponse setBody(DescribeLimitationResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getLimitation() {
-        return this.limitation;
-    }
-
-    public DescribeLimitationResponse setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
+    public DescribeLimitationResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,24 +4,27 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartElasticityAssuranceRequest extends TeaModel {
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    public String regionId;
-
     @NameInMap("PrivatePoolOptions")
     public StartElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static StartElasticityAssuranceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartElasticityAssuranceRequest self = new StartElasticityAssuranceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public StartElasticityAssuranceRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public StartElasticityAssuranceRequest setPrivatePoolOptions(StartElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions) {
@@ -32,9 +35,48 @@ public class StartElasticityAssuranceRequest extends TeaModel {
         return this.privatePoolOptions;
     }
 
+    public StartElasticityAssuranceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public StartElasticityAssuranceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public StartElasticityAssuranceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public StartElasticityAssuranceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public StartElasticityAssuranceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static class StartElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("Id")
-        @Validation(required = true)
         public String id;
 
         public static StartElasticityAssuranceRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {

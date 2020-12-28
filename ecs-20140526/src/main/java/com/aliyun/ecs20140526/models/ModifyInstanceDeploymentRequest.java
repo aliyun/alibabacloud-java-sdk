@@ -4,12 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceDeploymentRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DedicatedHostId")
@@ -42,6 +52,38 @@ public class ModifyInstanceDeploymentRequest extends TeaModel {
     public static ModifyInstanceDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceDeploymentRequest self = new ModifyInstanceDeploymentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceDeploymentRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyInstanceDeploymentRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyInstanceDeploymentRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyInstanceDeploymentRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceDeploymentRequest setRegionId(String regionId) {

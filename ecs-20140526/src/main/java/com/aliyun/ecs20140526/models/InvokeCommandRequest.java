@@ -4,12 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class InvokeCommandRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("CommandId")
-    @Validation(required = true)
     public String commandId;
 
     @NameInMap("Timed")
@@ -18,16 +28,50 @@ public class InvokeCommandRequest extends TeaModel {
     @NameInMap("Frequency")
     public String frequency;
 
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public java.util.List<String> instanceId;
-
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
+
+    @NameInMap("Username")
+    public String username;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
 
     public static InvokeCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeCommandRequest self = new InvokeCommandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InvokeCommandRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public InvokeCommandRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public InvokeCommandRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public InvokeCommandRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public InvokeCommandRequest setRegionId(String regionId) {
@@ -62,20 +106,28 @@ public class InvokeCommandRequest extends TeaModel {
         return this.frequency;
     }
 
-    public InvokeCommandRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
     public InvokeCommandRequest setParameters(java.util.Map<String, ?> parameters) {
         this.parameters = parameters;
         return this;
     }
     public java.util.Map<String, ?> getParameters() {
         return this.parameters;
+    }
+
+    public InvokeCommandRequest setUsername(String username) {
+        this.username = username;
+        return this;
+    }
+    public String getUsername() {
+        return this.username;
+    }
+
+    public InvokeCommandRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
 }

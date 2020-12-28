@@ -4,8 +4,22 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceSpecRequest extends TeaModel {
+    @NameInMap("Temporary")
+    public ModifyInstanceSpecRequestTemporary temporary;
+
+    @NameInMap("SystemDisk")
+    public ModifyInstanceSpecRequestSystemDisk systemDisk;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("InstanceType")
@@ -17,8 +31,8 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("InternetMaxBandwidthIn")
     public Integer internetMaxBandwidthIn;
 
-    @NameInMap("Temporary")
-    public ModifyInstanceSpecRequestTemporary temporary;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("Async")
     public Boolean async;
@@ -26,15 +40,52 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("AllowMigrateAcrossZone")
     public Boolean allowMigrateAcrossZone;
 
-    @NameInMap("SystemDisk")
-    public ModifyInstanceSpecRequestSystemDisk systemDisk;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
     public static ModifyInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceSpecRequest self = new ModifyInstanceSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceSpecRequest setTemporary(ModifyInstanceSpecRequestTemporary temporary) {
+        this.temporary = temporary;
+        return this;
+    }
+    public ModifyInstanceSpecRequestTemporary getTemporary() {
+        return this.temporary;
+    }
+
+    public ModifyInstanceSpecRequest setSystemDisk(ModifyInstanceSpecRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public ModifyInstanceSpecRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    public ModifyInstanceSpecRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyInstanceSpecRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyInstanceSpecRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ModifyInstanceSpecRequest setInstanceId(String instanceId) {
@@ -69,12 +120,12 @@ public class ModifyInstanceSpecRequest extends TeaModel {
         return this.internetMaxBandwidthIn;
     }
 
-    public ModifyInstanceSpecRequest setTemporary(ModifyInstanceSpecRequestTemporary temporary) {
-        this.temporary = temporary;
+    public ModifyInstanceSpecRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public ModifyInstanceSpecRequestTemporary getTemporary() {
-        return this.temporary;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyInstanceSpecRequest setAsync(Boolean async) {
@@ -91,14 +142,6 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public Boolean getAllowMigrateAcrossZone() {
         return this.allowMigrateAcrossZone;
-    }
-
-    public ModifyInstanceSpecRequest setSystemDisk(ModifyInstanceSpecRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public ModifyInstanceSpecRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
     }
 
     public ModifyInstanceSpecRequest setClientToken(String clientToken) {

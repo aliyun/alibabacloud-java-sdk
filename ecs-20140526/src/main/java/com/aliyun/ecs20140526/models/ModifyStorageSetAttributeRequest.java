@@ -4,15 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyStorageSetAttributeRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StorageSetId")
-    @Validation(required = true)
     public String storageSetId;
 
     @NameInMap("StorageSetName")
@@ -24,6 +34,38 @@ public class ModifyStorageSetAttributeRequest extends TeaModel {
     public static ModifyStorageSetAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyStorageSetAttributeRequest self = new ModifyStorageSetAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyStorageSetAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyStorageSetAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyStorageSetAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyStorageSetAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyStorageSetAttributeRequest setClientToken(String clientToken) {

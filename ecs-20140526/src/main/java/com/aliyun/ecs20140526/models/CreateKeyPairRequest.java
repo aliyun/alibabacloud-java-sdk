@@ -4,23 +4,54 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateKeyPairRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("KeyPairName")
-    @Validation(required = true)
     public String keyPairName;
-
-    @NameInMap("Tag")
-    public java.util.List<CreateKeyPairRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateKeyPairRequestTag> tag;
+
     public static CreateKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKeyPairRequest self = new CreateKeyPairRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateKeyPairRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateKeyPairRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateKeyPairRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateKeyPairRequest setRegionId(String regionId) {
@@ -39,20 +70,20 @@ public class CreateKeyPairRequest extends TeaModel {
         return this.keyPairName;
     }
 
-    public CreateKeyPairRequest setTag(java.util.List<CreateKeyPairRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateKeyPairRequestTag> getTag() {
-        return this.tag;
-    }
-
     public CreateKeyPairRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateKeyPairRequest setTag(java.util.List<CreateKeyPairRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateKeyPairRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class CreateKeyPairRequestTag extends TeaModel {

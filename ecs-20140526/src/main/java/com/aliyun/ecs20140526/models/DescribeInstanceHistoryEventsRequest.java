@@ -4,33 +4,35 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceHistoryEventsRequest extends TeaModel {
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    public String instanceId;
-
-    @NameInMap("EventId")
-    public java.util.List<String> eventId;
-
-    @NameInMap("InstanceEventCycleStatus")
-    public java.util.List<String> instanceEventCycleStatus;
-
-    @NameInMap("EventCycleStatus")
-    public String eventCycleStatus;
-
-    @NameInMap("InstanceEventType")
-    public java.util.List<String> instanceEventType;
-
-    @NameInMap("EventType")
-    public String eventType;
-
     @NameInMap("NotBefore")
     public DescribeInstanceHistoryEventsRequestNotBefore notBefore;
 
     @NameInMap("EventPublishTime")
     public DescribeInstanceHistoryEventsRequestEventPublishTime eventPublishTime;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("EventCycleStatus")
+    public String eventCycleStatus;
+
+    @NameInMap("EventType")
+    public String eventType;
 
     @NameInMap("ImpactLevel")
     public String impactLevel;
@@ -41,9 +43,66 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("EventId")
+    public java.util.List<String> eventId;
+
+    @NameInMap("InstanceEventCycleStatus")
+    public java.util.List<String> instanceEventCycleStatus;
+
+    @NameInMap("InstanceEventType")
+    public java.util.List<String> instanceEventType;
+
     public static DescribeInstanceHistoryEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceHistoryEventsRequest self = new DescribeInstanceHistoryEventsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceHistoryEventsRequest setNotBefore(DescribeInstanceHistoryEventsRequestNotBefore notBefore) {
+        this.notBefore = notBefore;
+        return this;
+    }
+    public DescribeInstanceHistoryEventsRequestNotBefore getNotBefore() {
+        return this.notBefore;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setEventPublishTime(DescribeInstanceHistoryEventsRequestEventPublishTime eventPublishTime) {
+        this.eventPublishTime = eventPublishTime;
+        return this;
+    }
+    public DescribeInstanceHistoryEventsRequestEventPublishTime getEventPublishTime() {
+        return this.eventPublishTime;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeInstanceHistoryEventsRequest setRegionId(String regionId) {
@@ -62,22 +121,6 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeInstanceHistoryEventsRequest setEventId(java.util.List<String> eventId) {
-        this.eventId = eventId;
-        return this;
-    }
-    public java.util.List<String> getEventId() {
-        return this.eventId;
-    }
-
-    public DescribeInstanceHistoryEventsRequest setInstanceEventCycleStatus(java.util.List<String> instanceEventCycleStatus) {
-        this.instanceEventCycleStatus = instanceEventCycleStatus;
-        return this;
-    }
-    public java.util.List<String> getInstanceEventCycleStatus() {
-        return this.instanceEventCycleStatus;
-    }
-
     public DescribeInstanceHistoryEventsRequest setEventCycleStatus(String eventCycleStatus) {
         this.eventCycleStatus = eventCycleStatus;
         return this;
@@ -86,36 +129,12 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
         return this.eventCycleStatus;
     }
 
-    public DescribeInstanceHistoryEventsRequest setInstanceEventType(java.util.List<String> instanceEventType) {
-        this.instanceEventType = instanceEventType;
-        return this;
-    }
-    public java.util.List<String> getInstanceEventType() {
-        return this.instanceEventType;
-    }
-
     public DescribeInstanceHistoryEventsRequest setEventType(String eventType) {
         this.eventType = eventType;
         return this;
     }
     public String getEventType() {
         return this.eventType;
-    }
-
-    public DescribeInstanceHistoryEventsRequest setNotBefore(DescribeInstanceHistoryEventsRequestNotBefore notBefore) {
-        this.notBefore = notBefore;
-        return this;
-    }
-    public DescribeInstanceHistoryEventsRequestNotBefore getNotBefore() {
-        return this.notBefore;
-    }
-
-    public DescribeInstanceHistoryEventsRequest setEventPublishTime(DescribeInstanceHistoryEventsRequestEventPublishTime eventPublishTime) {
-        this.eventPublishTime = eventPublishTime;
-        return this;
-    }
-    public DescribeInstanceHistoryEventsRequestEventPublishTime getEventPublishTime() {
-        return this.eventPublishTime;
     }
 
     public DescribeInstanceHistoryEventsRequest setImpactLevel(String impactLevel) {
@@ -140,6 +159,30 @@ public class DescribeInstanceHistoryEventsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setEventId(java.util.List<String> eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public java.util.List<String> getEventId() {
+        return this.eventId;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setInstanceEventCycleStatus(java.util.List<String> instanceEventCycleStatus) {
+        this.instanceEventCycleStatus = instanceEventCycleStatus;
+        return this;
+    }
+    public java.util.List<String> getInstanceEventCycleStatus() {
+        return this.instanceEventCycleStatus;
+    }
+
+    public DescribeInstanceHistoryEventsRequest setInstanceEventType(java.util.List<String> instanceEventType) {
+        this.instanceEventType = instanceEventType;
+        return this;
+    }
+    public java.util.List<String> getInstanceEventType() {
+        return this.instanceEventType;
     }
 
     public static class DescribeInstanceHistoryEventsRequestNotBefore extends TeaModel {

@@ -5,25 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("AccessPointId")
-    @Validation(required = true)
     public String accessPointId;
 
     @NameInMap("Type")
     public String type;
 
     @NameInMap("LineOperator")
-    @Validation(required = true)
     public String lineOperator;
 
     @NameInMap("bandwidth")
     public Integer bandwidth;
 
     @NameInMap("PeerLocation")
-    @Validation(required = true)
     public String peerLocation;
 
     @NameInMap("PortType")
@@ -43,6 +39,18 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("UserCidr")
     public String userCidr;
@@ -146,6 +154,38 @@ public class CreatePhysicalConnectionRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreatePhysicalConnectionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreatePhysicalConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreatePhysicalConnectionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreatePhysicalConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreatePhysicalConnectionRequest setUserCidr(String userCidr) {

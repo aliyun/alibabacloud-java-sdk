@@ -4,16 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecRequest extends TeaModel {
+    @NameInMap("SystemDisk")
+    public ModifyPrepayInstanceSpecRequestSystemDisk systemDisk;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("OperatorType")
@@ -28,8 +37,8 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     @NameInMap("MigrateAcrossZone")
     public Boolean migrateAcrossZone;
 
-    @NameInMap("SystemDisk")
-    public ModifyPrepayInstanceSpecRequestSystemDisk systemDisk;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("RebootTime")
     public String rebootTime;
@@ -43,6 +52,38 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public static ModifyPrepayInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPrepayInstanceSpecRequest self = new ModifyPrepayInstanceSpecRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyPrepayInstanceSpecRequest setSystemDisk(ModifyPrepayInstanceSpecRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public ModifyPrepayInstanceSpecRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ModifyPrepayInstanceSpecRequest setInstanceId(String instanceId) {
@@ -101,12 +142,12 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
         return this.migrateAcrossZone;
     }
 
-    public ModifyPrepayInstanceSpecRequest setSystemDisk(ModifyPrepayInstanceSpecRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
+    public ModifyPrepayInstanceSpecRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public ModifyPrepayInstanceSpecRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyPrepayInstanceSpecRequest setRebootTime(String rebootTime) {

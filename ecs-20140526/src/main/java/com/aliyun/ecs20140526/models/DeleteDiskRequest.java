@@ -4,13 +4,48 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteDiskRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("DiskId")
-    @Validation(required = true)
     public String diskId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static DeleteDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDiskRequest self = new DeleteDiskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDiskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteDiskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteDiskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DeleteDiskRequest setDiskId(String diskId) {
@@ -19,6 +54,14 @@ public class DeleteDiskRequest extends TeaModel {
     }
     public String getDiskId() {
         return this.diskId;
+    }
+
+    public DeleteDiskRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

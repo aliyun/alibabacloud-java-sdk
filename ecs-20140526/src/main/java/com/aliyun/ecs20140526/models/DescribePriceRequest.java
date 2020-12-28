@@ -4,8 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
+    @NameInMap("SystemDisk")
+    public DescribePriceRequestSystemDisk systemDisk;
+
+    @NameInMap("DataDisk")
+    public java.util.List<DescribePriceRequestDataDisk> dataDisk;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
@@ -28,12 +45,6 @@ public class DescribePriceRequest extends TeaModel {
 
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
-
-    @NameInMap("SystemDisk")
-    public DescribePriceRequestSystemDisk systemDisk;
-
-    @NameInMap("DataDisk")
-    public java.util.List<DescribePriceRequestDataDisk> dataDisk;
 
     @NameInMap("Period")
     public Integer period;
@@ -65,15 +76,63 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("InstanceCpuCoreCount")
     public Integer instanceCpuCoreCount;
 
-    @NameInMap("InstanceTypeList")
-    public java.util.List<String> instanceTypeList;
-
     @NameInMap("Isp")
     public String isp;
+
+    @NameInMap("InstanceTypeList")
+    public java.util.List<String> instanceTypeList;
 
     public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceRequest self = new DescribePriceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public DescribePriceRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    public DescribePriceRequest setDataDisk(java.util.List<DescribePriceRequestDataDisk> dataDisk) {
+        this.dataDisk = dataDisk;
+        return this;
+    }
+    public java.util.List<DescribePriceRequestDataDisk> getDataDisk() {
+        return this.dataDisk;
+    }
+
+    public DescribePriceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribePriceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribePriceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribePriceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribePriceRequest setRegionId(String regionId) {
@@ -138,22 +197,6 @@ public class DescribePriceRequest extends TeaModel {
     }
     public Integer getInternetMaxBandwidthOut() {
         return this.internetMaxBandwidthOut;
-    }
-
-    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public DescribePriceRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
-    }
-
-    public DescribePriceRequest setDataDisk(java.util.List<DescribePriceRequestDataDisk> dataDisk) {
-        this.dataDisk = dataDisk;
-        return this;
-    }
-    public java.util.List<DescribePriceRequestDataDisk> getDataDisk() {
-        return this.dataDisk;
     }
 
     public DescribePriceRequest setPeriod(Integer period) {
@@ -236,20 +279,20 @@ public class DescribePriceRequest extends TeaModel {
         return this.instanceCpuCoreCount;
     }
 
-    public DescribePriceRequest setInstanceTypeList(java.util.List<String> instanceTypeList) {
-        this.instanceTypeList = instanceTypeList;
-        return this;
-    }
-    public java.util.List<String> getInstanceTypeList() {
-        return this.instanceTypeList;
-    }
-
     public DescribePriceRequest setIsp(String isp) {
         this.isp = isp;
         return this;
     }
     public String getIsp() {
         return this.isp;
+    }
+
+    public DescribePriceRequest setInstanceTypeList(java.util.List<String> instanceTypeList) {
+        this.instanceTypeList = instanceTypeList;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypeList() {
+        return this.instanceTypeList;
     }
 
     public static class DescribePriceRequestSystemDisk extends TeaModel {

@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
     public String physicalConnectionId;
 
     @NameInMap("VbrOwnerId")
     public Long vbrOwnerId;
 
     @NameInMap("VlanId")
-    @Validation(required = true)
     public Integer vlanId;
 
     @NameInMap("CircuitCode")
@@ -39,6 +36,18 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("UserCidr")
     public String userCidr;
@@ -134,6 +143,38 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateVirtualBorderRouterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateVirtualBorderRouterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateVirtualBorderRouterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateVirtualBorderRouterRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateVirtualBorderRouterRequest setUserCidr(String userCidr) {

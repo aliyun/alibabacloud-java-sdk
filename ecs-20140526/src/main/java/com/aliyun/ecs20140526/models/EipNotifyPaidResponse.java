@@ -4,69 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class EipNotifyPaidResponse extends TeaModel {
-    @NameInMap("requestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("data")
+    @NameInMap("body")
     @Validation(required = true)
-    public String data;
-
-    @NameInMap("code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("success")
-    @Validation(required = true)
-    public Boolean success;
+    public EipNotifyPaidResponseBody body;
 
     public static EipNotifyPaidResponse build(java.util.Map<String, ?> map) throws Exception {
         EipNotifyPaidResponse self = new EipNotifyPaidResponse();
         return TeaModel.build(map, self);
     }
 
-    public EipNotifyPaidResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public EipNotifyPaidResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public EipNotifyPaidResponse setData(String data) {
-        this.data = data;
+    public EipNotifyPaidResponse setBody(EipNotifyPaidResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getData() {
-        return this.data;
-    }
-
-    public EipNotifyPaidResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public EipNotifyPaidResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public EipNotifyPaidResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public EipNotifyPaidResponseBody getBody() {
+        return this.body;
     }
 
 }

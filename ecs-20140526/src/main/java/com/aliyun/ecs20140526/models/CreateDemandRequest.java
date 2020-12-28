@@ -4,15 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDemandRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
-    @Validation(required = true)
     public String zoneId;
 
     @NameInMap("DemandName")
@@ -22,35 +32,61 @@ public class CreateDemandRequest extends TeaModel {
     public String demandDescription;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("Amount")
-    @Validation(required = true)
     public Integer amount;
 
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     @NameInMap("Period")
-    @Validation(required = true)
     public Integer period;
 
     @NameInMap("PeriodUnit")
-    @Validation(required = true)
     public String periodUnit;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     public static CreateDemandRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDemandRequest self = new CreateDemandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDemandRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateDemandRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDemandRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateDemandRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateDemandRequest setClientToken(String clientToken) {

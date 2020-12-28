@@ -4,12 +4,25 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostAttributeRequest extends TeaModel {
+    @NameInMap("NetworkAttributes")
+    public ModifyDedicatedHostAttributeRequestNetworkAttributes networkAttributes;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DedicatedHostId")
-    @Validation(required = true)
     public String dedicatedHostId;
 
     @NameInMap("DedicatedHostName")
@@ -20,9 +33,6 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
 
     @NameInMap("ActionOnMaintenance")
     public String actionOnMaintenance;
-
-    @NameInMap("NetworkAttributes")
-    public ModifyDedicatedHostAttributeRequestNetworkAttributes networkAttributes;
 
     @NameInMap("AutoPlacement")
     public String autoPlacement;
@@ -36,6 +46,46 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     public static ModifyDedicatedHostAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDedicatedHostAttributeRequest self = new ModifyDedicatedHostAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDedicatedHostAttributeRequest setNetworkAttributes(ModifyDedicatedHostAttributeRequestNetworkAttributes networkAttributes) {
+        this.networkAttributes = networkAttributes;
+        return this;
+    }
+    public ModifyDedicatedHostAttributeRequestNetworkAttributes getNetworkAttributes() {
+        return this.networkAttributes;
+    }
+
+    public ModifyDedicatedHostAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyDedicatedHostAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyDedicatedHostAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyDedicatedHostAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDedicatedHostAttributeRequest setRegionId(String regionId) {
@@ -76,14 +126,6 @@ public class ModifyDedicatedHostAttributeRequest extends TeaModel {
     }
     public String getActionOnMaintenance() {
         return this.actionOnMaintenance;
-    }
-
-    public ModifyDedicatedHostAttributeRequest setNetworkAttributes(ModifyDedicatedHostAttributeRequestNetworkAttributes networkAttributes) {
-        this.networkAttributes = networkAttributes;
-        return this;
-    }
-    public ModifyDedicatedHostAttributeRequestNetworkAttributes getNetworkAttributes() {
-        return this.networkAttributes;
     }
 
     public ModifyDedicatedHostAttributeRequest setAutoPlacement(String autoPlacement) {
