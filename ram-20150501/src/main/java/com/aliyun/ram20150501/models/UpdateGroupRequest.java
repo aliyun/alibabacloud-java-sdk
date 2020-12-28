@@ -18,4 +18,28 @@ public class UpdateGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateGroupRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    public UpdateGroupRequest setNewGroupName(String newGroupName) {
+        this.newGroupName = newGroupName;
+        return this;
+    }
+    public String getNewGroupName() {
+        return this.newGroupName;
+    }
+
+    public UpdateGroupRequest setNewComments(String newComments) {
+        this.newComments = newComments;
+        return this;
+    }
+    public String getNewComments() {
+        return this.newComments;
+    }
+
 }

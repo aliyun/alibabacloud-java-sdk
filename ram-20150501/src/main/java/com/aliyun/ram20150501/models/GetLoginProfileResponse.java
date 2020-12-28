@@ -4,41 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetLoginProfileResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("LoginProfile")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetLoginProfileResponseLoginProfile loginProfile;
+    public GetLoginProfileResponseBody body;
 
     public static GetLoginProfileResponse build(java.util.Map<String, ?> map) throws Exception {
         GetLoginProfileResponse self = new GetLoginProfileResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GetLoginProfileResponseLoginProfile extends TeaModel {
-        @NameInMap("UserName")
-        @Validation(required = true)
-        public String userName;
+    public GetLoginProfileResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("PasswordResetRequired")
-        @Validation(required = true)
-        public Boolean passwordResetRequired;
-
-        @NameInMap("MFABindRequired")
-        @Validation(required = true)
-        public Boolean MFABindRequired;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        public static GetLoginProfileResponseLoginProfile build(java.util.Map<String, ?> map) throws Exception {
-            GetLoginProfileResponseLoginProfile self = new GetLoginProfileResponseLoginProfile();
-            return TeaModel.build(map, self);
-        }
-
+    public GetLoginProfileResponse setBody(GetLoginProfileResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetLoginProfileResponseBody getBody() {
+        return this.body;
     }
 
 }

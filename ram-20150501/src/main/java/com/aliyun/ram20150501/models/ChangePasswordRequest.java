@@ -15,4 +15,20 @@ public class ChangePasswordRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ChangePasswordRequest setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
+        return this;
+    }
+    public String getOldPassword() {
+        return this.oldPassword;
+    }
+
+    public ChangePasswordRequest setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
+        return this;
+    }
+    public String getNewPassword() {
+        return this.newPassword;
+    }
+
 }

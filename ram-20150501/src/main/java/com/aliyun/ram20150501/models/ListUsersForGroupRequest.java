@@ -18,4 +18,28 @@ public class ListUsersForGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListUsersForGroupRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    public ListUsersForGroupRequest setMarker(String marker) {
+        this.marker = marker;
+        return this;
+    }
+    public String getMarker() {
+        return this.marker;
+    }
+
+    public ListUsersForGroupRequest setMaxItems(Integer maxItems) {
+        this.maxItems = maxItems;
+        return this;
+    }
+    public Integer getMaxItems() {
+        return this.maxItems;
+    }
+
 }

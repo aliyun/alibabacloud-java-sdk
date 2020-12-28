@@ -18,4 +18,28 @@ public class AttachPolicyToUserRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AttachPolicyToUserRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
+    }
+
+    public AttachPolicyToUserRequest setPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    public String getPolicyName() {
+        return this.policyName;
+    }
+
+    public AttachPolicyToUserRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
 }

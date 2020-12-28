@@ -12,4 +12,12 @@ public class ListPoliciesForRoleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListPoliciesForRoleRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
+    }
+
 }

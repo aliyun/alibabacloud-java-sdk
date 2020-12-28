@@ -15,4 +15,20 @@ public class DeletePolicyVersionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeletePolicyVersionRequest setPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    public String getPolicyName() {
+        return this.policyName;
+    }
+
+    public DeletePolicyVersionRequest setVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public String getVersionId() {
+        return this.versionId;
+    }
+
 }

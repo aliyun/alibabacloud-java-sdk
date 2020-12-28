@@ -4,41 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessKeyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AccessKey")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreateAccessKeyResponseAccessKey accessKey;
+    public CreateAccessKeyResponseBody body;
 
     public static CreateAccessKeyResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAccessKeyResponse self = new CreateAccessKeyResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class CreateAccessKeyResponseAccessKey extends TeaModel {
-        @NameInMap("AccessKeyId")
-        @Validation(required = true)
-        public String accessKeyId;
+    public CreateAccessKeyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("AccessKeySecret")
-        @Validation(required = true)
-        public String accessKeySecret;
-
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        public static CreateAccessKeyResponseAccessKey build(java.util.Map<String, ?> map) throws Exception {
-            CreateAccessKeyResponseAccessKey self = new CreateAccessKeyResponseAccessKey();
-            return TeaModel.build(map, self);
-        }
-
+    public CreateAccessKeyResponse setBody(CreateAccessKeyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateAccessKeyResponseBody getBody() {
+        return this.body;
     }
 
 }

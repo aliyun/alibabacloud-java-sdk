@@ -12,4 +12,12 @@ public class DeleteVirtualMFADeviceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteVirtualMFADeviceRequest setSerialNumber(String serialNumber) {
+        this.serialNumber = serialNumber;
+        return this;
+    }
+    public String getSerialNumber() {
+        return this.serialNumber;
+    }
+
 }

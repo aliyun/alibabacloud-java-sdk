@@ -4,53 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateRoleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Role")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreateRoleResponseRole role;
+    public CreateRoleResponseBody body;
 
     public static CreateRoleResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateRoleResponse self = new CreateRoleResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class CreateRoleResponseRole extends TeaModel {
-        @NameInMap("RoleId")
-        @Validation(required = true)
-        public String roleId;
+    public CreateRoleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("RoleName")
-        @Validation(required = true)
-        public String roleName;
-
-        @NameInMap("Arn")
-        @Validation(required = true)
-        public String arn;
-
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("AssumeRolePolicyDocument")
-        @Validation(required = true)
-        public String assumeRolePolicyDocument;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        @NameInMap("MaxSessionDuration")
-        @Validation(required = true)
-        public Long maxSessionDuration;
-
-        public static CreateRoleResponseRole build(java.util.Map<String, ?> map) throws Exception {
-            CreateRoleResponseRole self = new CreateRoleResponseRole();
-            return TeaModel.build(map, self);
-        }
-
+    public CreateRoleResponse setBody(CreateRoleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateRoleResponseBody getBody() {
+        return this.body;
     }
 
 }

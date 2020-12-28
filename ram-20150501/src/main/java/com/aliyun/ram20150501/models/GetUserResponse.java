@@ -4,61 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetUserResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("User")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetUserResponseUser user;
+    public GetUserResponseBody body;
 
     public static GetUserResponse build(java.util.Map<String, ?> map) throws Exception {
         GetUserResponse self = new GetUserResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GetUserResponseUser extends TeaModel {
-        @NameInMap("UserId")
-        @Validation(required = true)
-        public String userId;
+    public GetUserResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("UserName")
-        @Validation(required = true)
-        public String userName;
-
-        @NameInMap("DisplayName")
-        @Validation(required = true)
-        public String displayName;
-
-        @NameInMap("MobilePhone")
-        @Validation(required = true)
-        public String mobilePhone;
-
-        @NameInMap("Email")
-        @Validation(required = true)
-        public String email;
-
-        @NameInMap("Comments")
-        @Validation(required = true)
-        public String comments;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        @NameInMap("UpdateDate")
-        @Validation(required = true)
-        public String updateDate;
-
-        @NameInMap("LastLoginDate")
-        @Validation(required = true)
-        public String lastLoginDate;
-
-        public static GetUserResponseUser build(java.util.Map<String, ?> map) throws Exception {
-            GetUserResponseUser self = new GetUserResponseUser();
-            return TeaModel.build(map, self);
-        }
-
+    public GetUserResponse setBody(GetUserResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetUserResponseBody getBody() {
+        return this.body;
     }
 
 }

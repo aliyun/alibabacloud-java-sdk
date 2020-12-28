@@ -12,4 +12,12 @@ public class DeleteRoleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteRoleRequest setRoleName(String roleName) {
+        this.roleName = roleName;
+        return this;
+    }
+    public String getRoleName() {
+        return this.roleName;
+    }
+
 }

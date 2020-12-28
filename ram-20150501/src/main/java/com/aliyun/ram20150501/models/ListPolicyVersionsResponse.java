@@ -4,53 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class ListPolicyVersionsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PolicyVersions")
+    @NameInMap("body")
     @Validation(required = true)
-    public ListPolicyVersionsResponsePolicyVersions policyVersions;
+    public ListPolicyVersionsResponseBody body;
 
     public static ListPolicyVersionsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListPolicyVersionsResponse self = new ListPolicyVersionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListPolicyVersionsResponsePolicyVersionsPolicyVersion extends TeaModel {
-        @NameInMap("VersionId")
-        @Validation(required = true)
-        public String versionId;
-
-        @NameInMap("IsDefaultVersion")
-        @Validation(required = true)
-        public Boolean isDefaultVersion;
-
-        @NameInMap("PolicyDocument")
-        @Validation(required = true)
-        public String policyDocument;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        public static ListPolicyVersionsResponsePolicyVersionsPolicyVersion build(java.util.Map<String, ?> map) throws Exception {
-            ListPolicyVersionsResponsePolicyVersionsPolicyVersion self = new ListPolicyVersionsResponsePolicyVersionsPolicyVersion();
-            return TeaModel.build(map, self);
-        }
-
+    public ListPolicyVersionsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class ListPolicyVersionsResponsePolicyVersions extends TeaModel {
-        @NameInMap("PolicyVersion")
-        @Validation(required = true)
-        public java.util.List<ListPolicyVersionsResponsePolicyVersionsPolicyVersion> policyVersion;
-
-        public static ListPolicyVersionsResponsePolicyVersions build(java.util.Map<String, ?> map) throws Exception {
-            ListPolicyVersionsResponsePolicyVersions self = new ListPolicyVersionsResponsePolicyVersions();
-            return TeaModel.build(map, self);
-        }
-
+    public ListPolicyVersionsResponse setBody(ListPolicyVersionsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListPolicyVersionsResponseBody getBody() {
+        return this.body;
     }
 
 }

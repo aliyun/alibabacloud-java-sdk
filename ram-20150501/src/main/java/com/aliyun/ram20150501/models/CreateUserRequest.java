@@ -24,4 +24,44 @@ public class CreateUserRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateUserRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public CreateUserRequest setDisplayName(String displayName) {
+        this.displayName = displayName;
+        return this;
+    }
+    public String getDisplayName() {
+        return this.displayName;
+    }
+
+    public CreateUserRequest setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+        return this;
+    }
+    public String getMobilePhone() {
+        return this.mobilePhone;
+    }
+
+    public CreateUserRequest setEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    public String getEmail() {
+        return this.email;
+    }
+
+    public CreateUserRequest setComments(String comments) {
+        this.comments = comments;
+        return this;
+    }
+    public String getComments() {
+        return this.comments;
+    }
+
 }

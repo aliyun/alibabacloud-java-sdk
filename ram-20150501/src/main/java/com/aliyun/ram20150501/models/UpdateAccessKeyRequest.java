@@ -18,4 +18,28 @@ public class UpdateAccessKeyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateAccessKeyRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public UpdateAccessKeyRequest setUserAccessKeyId(String userAccessKeyId) {
+        this.userAccessKeyId = userAccessKeyId;
+        return this;
+    }
+    public String getUserAccessKeyId() {
+        return this.userAccessKeyId;
+    }
+
+    public UpdateAccessKeyRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
 }

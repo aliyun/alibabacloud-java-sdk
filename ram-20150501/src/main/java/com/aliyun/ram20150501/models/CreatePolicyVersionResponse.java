@@ -4,41 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreatePolicyVersionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PolicyVersion")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreatePolicyVersionResponsePolicyVersion policyVersion;
+    public CreatePolicyVersionResponseBody body;
 
     public static CreatePolicyVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         CreatePolicyVersionResponse self = new CreatePolicyVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class CreatePolicyVersionResponsePolicyVersion extends TeaModel {
-        @NameInMap("VersionId")
-        @Validation(required = true)
-        public String versionId;
+    public CreatePolicyVersionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("IsDefaultVersion")
-        @Validation(required = true)
-        public Boolean isDefaultVersion;
-
-        @NameInMap("PolicyDocument")
-        @Validation(required = true)
-        public String policyDocument;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        public static CreatePolicyVersionResponsePolicyVersion build(java.util.Map<String, ?> map) throws Exception {
-            CreatePolicyVersionResponsePolicyVersion self = new CreatePolicyVersionResponsePolicyVersion();
-            return TeaModel.build(map, self);
-        }
-
+    public CreatePolicyVersionResponse setBody(CreatePolicyVersionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreatePolicyVersionResponseBody getBody() {
+        return this.body;
     }
 
 }

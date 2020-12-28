@@ -12,4 +12,12 @@ public class ListPoliciesForGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListPoliciesForGroupRequest setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
+    }
+
 }

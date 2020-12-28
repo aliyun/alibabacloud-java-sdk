@@ -4,37 +4,33 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Group")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreateGroupResponseGroup group;
+    public CreateGroupResponseBody body;
 
     public static CreateGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupResponse self = new CreateGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class CreateGroupResponseGroup extends TeaModel {
-        @NameInMap("GroupName")
-        @Validation(required = true)
-        public String groupName;
+    public CreateGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Comments")
-        @Validation(required = true)
-        public String comments;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        public static CreateGroupResponseGroup build(java.util.Map<String, ?> map) throws Exception {
-            CreateGroupResponseGroup self = new CreateGroupResponseGroup();
-            return TeaModel.build(map, self);
-        }
-
+    public CreateGroupResponse setBody(CreateGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

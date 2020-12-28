@@ -15,4 +15,20 @@ public class GetAccessKeyLastUsedRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetAccessKeyLastUsedRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public GetAccessKeyLastUsedRequest setUserAccessKeyId(String userAccessKeyId) {
+        this.userAccessKeyId = userAccessKeyId;
+        return this;
+    }
+    public String getUserAccessKeyId() {
+        return this.userAccessKeyId;
+    }
+
 }

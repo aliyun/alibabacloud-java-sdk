@@ -18,4 +18,28 @@ public class GetPolicyVersionRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetPolicyVersionRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
+    }
+
+    public GetPolicyVersionRequest setPolicyName(String policyName) {
+        this.policyName = policyName;
+        return this;
+    }
+    public String getPolicyName() {
+        return this.policyName;
+    }
+
+    public GetPolicyVersionRequest setVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public String getVersionId() {
+        return this.versionId;
+    }
+
 }
