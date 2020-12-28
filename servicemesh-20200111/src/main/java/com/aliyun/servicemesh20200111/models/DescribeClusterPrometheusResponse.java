@@ -4,33 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterPrometheusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Prometheus")
+    @NameInMap("body")
     @Validation(required = true)
-    public String prometheus;
+    public DescribeClusterPrometheusResponseBody body;
 
     public static DescribeClusterPrometheusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterPrometheusResponse self = new DescribeClusterPrometheusResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClusterPrometheusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeClusterPrometheusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeClusterPrometheusResponse setPrometheus(String prometheus) {
-        this.prometheus = prometheus;
+    public DescribeClusterPrometheusResponse setBody(DescribeClusterPrometheusResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getPrometheus() {
-        return this.prometheus;
+    public DescribeClusterPrometheusResponseBody getBody() {
+        return this.body;
     }
 
 }

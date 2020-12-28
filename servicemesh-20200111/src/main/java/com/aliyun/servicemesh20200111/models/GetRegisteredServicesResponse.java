@@ -4,33 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetRegisteredServicesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Services")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<String> services;
+    public GetRegisteredServicesResponseBody body;
 
     public static GetRegisteredServicesResponse build(java.util.Map<String, ?> map) throws Exception {
         GetRegisteredServicesResponse self = new GetRegisteredServicesResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetRegisteredServicesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetRegisteredServicesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetRegisteredServicesResponse setServices(java.util.List<String> services) {
-        this.services = services;
+    public GetRegisteredServicesResponse setBody(GetRegisteredServicesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<String> getServices() {
-        return this.services;
+    public GetRegisteredServicesResponseBody getBody() {
+        return this.body;
     }
 
 }

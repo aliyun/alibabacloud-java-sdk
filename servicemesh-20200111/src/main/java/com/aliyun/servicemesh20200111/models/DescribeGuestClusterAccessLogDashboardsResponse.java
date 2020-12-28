@@ -4,77 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeGuestClusterAccessLogDashboardsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("K8sClusterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String k8sClusterId;
-
-    @NameInMap("Dashboards")
-    @Validation(required = true)
-    public java.util.List<DescribeGuestClusterAccessLogDashboardsResponseDashboards> dashboards;
+    public DescribeGuestClusterAccessLogDashboardsResponseBody body;
 
     public static DescribeGuestClusterAccessLogDashboardsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeGuestClusterAccessLogDashboardsResponse self = new DescribeGuestClusterAccessLogDashboardsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGuestClusterAccessLogDashboardsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeGuestClusterAccessLogDashboardsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeGuestClusterAccessLogDashboardsResponse setK8sClusterId(String k8sClusterId) {
-        this.k8sClusterId = k8sClusterId;
+    public DescribeGuestClusterAccessLogDashboardsResponse setBody(DescribeGuestClusterAccessLogDashboardsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getK8sClusterId() {
-        return this.k8sClusterId;
-    }
-
-    public DescribeGuestClusterAccessLogDashboardsResponse setDashboards(java.util.List<DescribeGuestClusterAccessLogDashboardsResponseDashboards> dashboards) {
-        this.dashboards = dashboards;
-        return this;
-    }
-    public java.util.List<DescribeGuestClusterAccessLogDashboardsResponseDashboards> getDashboards() {
-        return this.dashboards;
-    }
-
-    public static class DescribeGuestClusterAccessLogDashboardsResponseDashboards extends TeaModel {
-        @NameInMap("Title")
-        @Validation(required = true)
-        public String title;
-
-        @NameInMap("Url")
-        @Validation(required = true)
-        public String url;
-
-        public static DescribeGuestClusterAccessLogDashboardsResponseDashboards build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGuestClusterAccessLogDashboardsResponseDashboards self = new DescribeGuestClusterAccessLogDashboardsResponseDashboards();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeGuestClusterAccessLogDashboardsResponseDashboards setTitle(String title) {
-            this.title = title;
-            return this;
-        }
-        public String getTitle() {
-            return this.title;
-        }
-
-        public DescribeGuestClusterAccessLogDashboardsResponseDashboards setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
+    public DescribeGuestClusterAccessLogDashboardsResponseBody getBody() {
+        return this.body;
     }
 
 }
