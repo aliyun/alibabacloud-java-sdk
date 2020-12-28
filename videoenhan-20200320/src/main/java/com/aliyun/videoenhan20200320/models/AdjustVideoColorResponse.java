@@ -4,53 +4,33 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AdjustVideoColorResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public AdjustVideoColorResponseData data;
+    public AdjustVideoColorResponseBody body;
 
     public static AdjustVideoColorResponse build(java.util.Map<String, ?> map) throws Exception {
         AdjustVideoColorResponse self = new AdjustVideoColorResponse();
         return TeaModel.build(map, self);
     }
 
-    public AdjustVideoColorResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AdjustVideoColorResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AdjustVideoColorResponse setData(AdjustVideoColorResponseData data) {
-        this.data = data;
+    public AdjustVideoColorResponse setBody(AdjustVideoColorResponseBody body) {
+        this.body = body;
         return this;
     }
-    public AdjustVideoColorResponseData getData() {
-        return this.data;
-    }
-
-    public static class AdjustVideoColorResponseData extends TeaModel {
-        @NameInMap("VideoUrl")
-        @Validation(required = true)
-        public String videoUrl;
-
-        public static AdjustVideoColorResponseData build(java.util.Map<String, ?> map) throws Exception {
-            AdjustVideoColorResponseData self = new AdjustVideoColorResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public AdjustVideoColorResponseData setVideoUrl(String videoUrl) {
-            this.videoUrl = videoUrl;
-            return this;
-        }
-        public String getVideoUrl() {
-            return this.videoUrl;
-        }
-
+    public AdjustVideoColorResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,53 +4,33 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ConvertHdrVideoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ConvertHdrVideoResponseData data;
+    public ConvertHdrVideoResponseBody body;
 
     public static ConvertHdrVideoResponse build(java.util.Map<String, ?> map) throws Exception {
         ConvertHdrVideoResponse self = new ConvertHdrVideoResponse();
         return TeaModel.build(map, self);
     }
 
-    public ConvertHdrVideoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ConvertHdrVideoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ConvertHdrVideoResponse setData(ConvertHdrVideoResponseData data) {
-        this.data = data;
+    public ConvertHdrVideoResponse setBody(ConvertHdrVideoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ConvertHdrVideoResponseData getData() {
-        return this.data;
-    }
-
-    public static class ConvertHdrVideoResponseData extends TeaModel {
-        @NameInMap("VideoURL")
-        @Validation(required = true)
-        public String videoURL;
-
-        public static ConvertHdrVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ConvertHdrVideoResponseData self = new ConvertHdrVideoResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ConvertHdrVideoResponseData setVideoURL(String videoURL) {
-            this.videoURL = videoURL;
-            return this;
-        }
-        public String getVideoURL() {
-            return this.videoURL;
-        }
-
+    public ConvertHdrVideoResponseBody getBody() {
+        return this.body;
     }
 
 }

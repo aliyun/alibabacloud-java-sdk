@@ -4,53 +4,33 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ToneSdrVideoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ToneSdrVideoResponseData data;
+    public ToneSdrVideoResponseBody body;
 
     public static ToneSdrVideoResponse build(java.util.Map<String, ?> map) throws Exception {
         ToneSdrVideoResponse self = new ToneSdrVideoResponse();
         return TeaModel.build(map, self);
     }
 
-    public ToneSdrVideoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ToneSdrVideoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ToneSdrVideoResponse setData(ToneSdrVideoResponseData data) {
-        this.data = data;
+    public ToneSdrVideoResponse setBody(ToneSdrVideoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ToneSdrVideoResponseData getData() {
-        return this.data;
-    }
-
-    public static class ToneSdrVideoResponseData extends TeaModel {
-        @NameInMap("VideoURL")
-        @Validation(required = true)
-        public String videoURL;
-
-        public static ToneSdrVideoResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ToneSdrVideoResponseData self = new ToneSdrVideoResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ToneSdrVideoResponseData setVideoURL(String videoURL) {
-            this.videoURL = videoURL;
-            return this;
-        }
-        public String getVideoURL() {
-            return this.videoURL;
-        }
-
+    public ToneSdrVideoResponseBody getBody() {
+        return this.body;
     }
 
 }

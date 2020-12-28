@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class ToneSdrVideoRequest extends TeaModel {
     @NameInMap("VideoURL")
-    @Validation(required = true)
     public String videoURL;
+
+    @NameInMap("Async")
+    public Boolean async;
 
     @NameInMap("Bitrate")
     public Integer bitrate;
@@ -25,6 +27,14 @@ public class ToneSdrVideoRequest extends TeaModel {
     }
     public String getVideoURL() {
         return this.videoURL;
+    }
+
+    public ToneSdrVideoRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public ToneSdrVideoRequest setBitrate(Integer bitrate) {

@@ -8,8 +8,10 @@ public class AbstractFilmVideoAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoUrlObject;
 
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("Length")
-    @Validation(required = true)
     public Integer length;
 
     public static AbstractFilmVideoAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -23,6 +25,14 @@ public class AbstractFilmVideoAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoUrlObject() {
         return this.videoUrlObject;
+    }
+
+    public AbstractFilmVideoAdvanceRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public AbstractFilmVideoAdvanceRequest setLength(Integer length) {

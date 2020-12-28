@@ -8,6 +8,9 @@ public class InterpolateVideoFrameAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoURLObject;
 
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("FrameRate")
     public Integer frameRate;
 
@@ -25,6 +28,14 @@ public class InterpolateVideoFrameAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoURLObject() {
         return this.videoURLObject;
+    }
+
+    public InterpolateVideoFrameAdvanceRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public InterpolateVideoFrameAdvanceRequest setFrameRate(Integer frameRate) {
