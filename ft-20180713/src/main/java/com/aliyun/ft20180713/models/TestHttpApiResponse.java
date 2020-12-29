@@ -4,33 +4,33 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class TestHttpApiResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Params")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String params;
 
-    @NameInMap("body")
+    @NameInMap("ServiceRpcSign")
     @Validation(required = true)
-    public TestHttpApiResponseBody body;
+    public String serviceRpcSign;
 
     public static TestHttpApiResponse build(java.util.Map<String, ?> map) throws Exception {
         TestHttpApiResponse self = new TestHttpApiResponse();
         return TeaModel.build(map, self);
     }
 
-    public TestHttpApiResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public TestHttpApiResponse setParams(String params) {
+        this.params = params;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getParams() {
+        return this.params;
     }
 
-    public TestHttpApiResponse setBody(TestHttpApiResponseBody body) {
-        this.body = body;
+    public TestHttpApiResponse setServiceRpcSign(String serviceRpcSign) {
+        this.serviceRpcSign = serviceRpcSign;
         return this;
     }
-    public TestHttpApiResponseBody getBody() {
-        return this.body;
+    public String getServiceRpcSign() {
+        return this.serviceRpcSign;
     }
 
 }
