@@ -4,25 +4,33 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DeleteSmsSignResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SignName")
+    @NameInMap("body")
     @Validation(required = true)
-    public String signName;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public DeleteSmsSignResponseBody body;
 
     public static DeleteSmsSignResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteSmsSignResponse self = new DeleteSmsSignResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSmsSignResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteSmsSignResponse setBody(DeleteSmsSignResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteSmsSignResponseBody getBody() {
+        return this.body;
     }
 
 }

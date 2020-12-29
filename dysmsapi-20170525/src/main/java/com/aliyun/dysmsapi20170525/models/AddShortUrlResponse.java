@@ -3,21 +3,21 @@ package com.aliyun.dysmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteSmsTemplateResponse extends TeaModel {
+public class AddShortUrlResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DeleteSmsTemplateResponseBody body;
+    public AddShortUrlResponseBody body;
 
-    public static DeleteSmsTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
-        DeleteSmsTemplateResponse self = new DeleteSmsTemplateResponse();
+    public static AddShortUrlResponse build(java.util.Map<String, ?> map) throws Exception {
+        AddShortUrlResponse self = new AddShortUrlResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSmsTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+    public AddShortUrlResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DeleteSmsTemplateResponse extends TeaModel {
         return this.headers;
     }
 
-    public DeleteSmsTemplateResponse setBody(DeleteSmsTemplateResponseBody body) {
+    public AddShortUrlResponse setBody(AddShortUrlResponseBody body) {
         this.body = body;
         return this;
     }
-    public DeleteSmsTemplateResponseBody getBody() {
+    public AddShortUrlResponseBody getBody() {
         return this.body;
     }
 
