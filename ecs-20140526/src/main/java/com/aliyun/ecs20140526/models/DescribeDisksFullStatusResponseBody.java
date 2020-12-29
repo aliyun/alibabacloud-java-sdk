@@ -17,7 +17,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("DiskFullStatusSet")
-    public java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSet> diskFullStatusSet;
+    public DescribeDisksFullStatusResponseBodyDiskFullStatusSet diskFullStatusSet;
 
     public static DescribeDisksFullStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDisksFullStatusResponseBody self = new DescribeDisksFullStatusResponseBody();
@@ -56,27 +56,27 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDisksFullStatusResponseBody setDiskFullStatusSet(java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSet> diskFullStatusSet) {
+    public DescribeDisksFullStatusResponseBody setDiskFullStatusSet(DescribeDisksFullStatusResponseBodyDiskFullStatusSet diskFullStatusSet) {
         this.diskFullStatusSet = diskFullStatusSet;
         return this;
     }
-    public java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSet> getDiskFullStatusSet() {
+    public DescribeDisksFullStatusResponseBodyDiskFullStatusSet getDiskFullStatusSet() {
         return this.diskFullStatusSet;
     }
 
-    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetStatus extends TeaModel {
+    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
         @NameInMap("Name")
         public String name;
 
-        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDisksFullStatusResponseBodyDiskFullStatusSetStatus self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetStatus();
+        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetStatus setCode(Integer code) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus setCode(Integer code) {
             this.code = code;
             return this;
         }
@@ -84,7 +84,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetStatus setName(String name) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus setName(String name) {
             this.name = name;
             return this;
         }
@@ -94,19 +94,19 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSetEventType extends TeaModel {
+    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
         @NameInMap("Name")
         public String name;
 
-        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSetEventType build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSetEventType self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSetEventType();
+        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSetEventType setCode(Integer code) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType setCode(Integer code) {
             this.code = code;
             return this;
         }
@@ -114,7 +114,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSetEventType setName(String name) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType setName(String name) {
             this.name = name;
             return this;
         }
@@ -124,7 +124,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet extends TeaModel {
+    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType extends TeaModel {
         @NameInMap("EventId")
         public String eventId;
 
@@ -138,14 +138,14 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public String impactLevel;
 
         @NameInMap("EventType")
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSetEventType eventType;
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType eventType;
 
-        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet();
+        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet setEventId(String eventId) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType setEventId(String eventId) {
             this.eventId = eventId;
             return this;
         }
@@ -153,7 +153,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.eventId;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet setEventEndTime(String eventEndTime) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType setEventEndTime(String eventEndTime) {
             this.eventEndTime = eventEndTime;
             return this;
         }
@@ -161,7 +161,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.eventEndTime;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet setEventTime(String eventTime) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType setEventTime(String eventTime) {
             this.eventTime = eventTime;
             return this;
         }
@@ -169,7 +169,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.eventTime;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet setImpactLevel(String impactLevel) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType setImpactLevel(String impactLevel) {
             this.impactLevel = impactLevel;
             return this;
         }
@@ -177,29 +177,48 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.impactLevel;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet setEventType(DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSetEventType eventType) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType setEventType(DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType eventType) {
             this.eventType = eventType;
             return this;
         }
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSetEventType getEventType() {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventTypeEventType getEventType() {
             return this.eventType;
         }
 
     }
 
-    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetHealthStatus extends TeaModel {
+    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet extends TeaModel {
+        @NameInMap("DiskEventType")
+        public java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType> diskEventType;
+
+        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet setDiskEventType(java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType> diskEventType) {
+            this.diskEventType = diskEventType;
+            return this;
+        }
+        public java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSetDiskEventType> getDiskEventType() {
+            return this.diskEventType;
+        }
+
+    }
+
+    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
         @NameInMap("Name")
         public String name;
 
-        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetHealthStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDisksFullStatusResponseBodyDiskFullStatusSetHealthStatus self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetHealthStatus();
+        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetHealthStatus setCode(Integer code) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus setCode(Integer code) {
             this.code = code;
             return this;
         }
@@ -207,7 +226,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetHealthStatus setName(String name) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus setName(String name) {
             this.name = name;
             return this;
         }
@@ -217,12 +236,12 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSet extends TeaModel {
+    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType extends TeaModel {
         @NameInMap("Status")
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetStatus status;
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus status;
 
         @NameInMap("DiskEventSet")
-        public java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet> diskEventSet;
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet diskEventSet;
 
         @NameInMap("Device")
         public String device;
@@ -234,30 +253,30 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         public String instanceId;
 
         @NameInMap("HealthStatus")
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetHealthStatus healthStatus;
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus healthStatus;
 
-        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDisksFullStatusResponseBodyDiskFullStatusSet self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSet();
+        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSet setStatus(DescribeDisksFullStatusResponseBodyDiskFullStatusSetStatus status) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType setStatus(DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus status) {
             this.status = status;
             return this;
         }
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetStatus getStatus() {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeStatus getStatus() {
             return this.status;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSet setDiskEventSet(java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet> diskEventSet) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType setDiskEventSet(DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet diskEventSet) {
             this.diskEventSet = diskEventSet;
             return this;
         }
-        public java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskEventSet> getDiskEventSet() {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeDiskEventSet getDiskEventSet() {
             return this.diskEventSet;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSet setDevice(String device) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType setDevice(String device) {
             this.device = device;
             return this;
         }
@@ -265,7 +284,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.device;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSet setDiskId(String diskId) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType setDiskId(String diskId) {
             this.diskId = diskId;
             return this;
         }
@@ -273,7 +292,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.diskId;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSet setInstanceId(String instanceId) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -281,12 +300,31 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSet setHealthStatus(DescribeDisksFullStatusResponseBodyDiskFullStatusSetHealthStatus healthStatus) {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType setHealthStatus(DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetHealthStatus getHealthStatus() {
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusTypeHealthStatus getHealthStatus() {
             return this.healthStatus;
+        }
+
+    }
+
+    public static class DescribeDisksFullStatusResponseBodyDiskFullStatusSet extends TeaModel {
+        @NameInMap("DiskFullStatusType")
+        public java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType> diskFullStatusType;
+
+        public static DescribeDisksFullStatusResponseBodyDiskFullStatusSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksFullStatusResponseBodyDiskFullStatusSet self = new DescribeDisksFullStatusResponseBodyDiskFullStatusSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksFullStatusResponseBodyDiskFullStatusSet setDiskFullStatusType(java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType> diskFullStatusType) {
+            this.diskFullStatusType = diskFullStatusType;
+            return this;
+        }
+        public java.util.List<DescribeDisksFullStatusResponseBodyDiskFullStatusSetDiskFullStatusType> getDiskFullStatusType() {
+            return this.diskFullStatusType;
         }
 
     }

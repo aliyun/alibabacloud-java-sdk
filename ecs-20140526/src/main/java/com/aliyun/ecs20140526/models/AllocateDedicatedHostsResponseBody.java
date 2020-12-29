@@ -8,7 +8,7 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("DedicatedHostIdSets")
-    public java.util.List<String> dedicatedHostIdSets;
+    public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets dedicatedHostIdSets;
 
     public static AllocateDedicatedHostsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AllocateDedicatedHostsResponseBody self = new AllocateDedicatedHostsResponseBody();
@@ -23,12 +23,31 @@ public class AllocateDedicatedHostsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AllocateDedicatedHostsResponseBody setDedicatedHostIdSets(java.util.List<String> dedicatedHostIdSets) {
+    public AllocateDedicatedHostsResponseBody setDedicatedHostIdSets(AllocateDedicatedHostsResponseBodyDedicatedHostIdSets dedicatedHostIdSets) {
         this.dedicatedHostIdSets = dedicatedHostIdSets;
         return this;
     }
-    public java.util.List<String> getDedicatedHostIdSets() {
+    public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets getDedicatedHostIdSets() {
         return this.dedicatedHostIdSets;
+    }
+
+    public static class AllocateDedicatedHostsResponseBodyDedicatedHostIdSets extends TeaModel {
+        @NameInMap("DedicatedHostId")
+        public java.util.List<String> dedicatedHostId;
+
+        public static AllocateDedicatedHostsResponseBodyDedicatedHostIdSets build(java.util.Map<String, ?> map) throws Exception {
+            AllocateDedicatedHostsResponseBodyDedicatedHostIdSets self = new AllocateDedicatedHostsResponseBodyDedicatedHostIdSets();
+            return TeaModel.build(map, self);
+        }
+
+        public AllocateDedicatedHostsResponseBodyDedicatedHostIdSets setDedicatedHostId(java.util.List<String> dedicatedHostId) {
+            this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+        public java.util.List<String> getDedicatedHostId() {
+            return this.dedicatedHostId;
+        }
+
     }
 
 }

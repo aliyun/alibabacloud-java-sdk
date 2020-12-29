@@ -8,7 +8,7 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("EventIdSet")
-    public java.util.List<String> eventIdSet;
+    public CreateSimulatedSystemEventsResponseBodyEventIdSet eventIdSet;
 
     public static CreateSimulatedSystemEventsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSimulatedSystemEventsResponseBody self = new CreateSimulatedSystemEventsResponseBody();
@@ -23,12 +23,31 @@ public class CreateSimulatedSystemEventsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateSimulatedSystemEventsResponseBody setEventIdSet(java.util.List<String> eventIdSet) {
+    public CreateSimulatedSystemEventsResponseBody setEventIdSet(CreateSimulatedSystemEventsResponseBodyEventIdSet eventIdSet) {
         this.eventIdSet = eventIdSet;
         return this;
     }
-    public java.util.List<String> getEventIdSet() {
+    public CreateSimulatedSystemEventsResponseBodyEventIdSet getEventIdSet() {
         return this.eventIdSet;
+    }
+
+    public static class CreateSimulatedSystemEventsResponseBodyEventIdSet extends TeaModel {
+        @NameInMap("EventId")
+        public java.util.List<String> eventId;
+
+        public static CreateSimulatedSystemEventsResponseBodyEventIdSet build(java.util.Map<String, ?> map) throws Exception {
+            CreateSimulatedSystemEventsResponseBodyEventIdSet self = new CreateSimulatedSystemEventsResponseBodyEventIdSet();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateSimulatedSystemEventsResponseBodyEventIdSet setEventId(java.util.List<String> eventId) {
+            this.eventId = eventId;
+            return this;
+        }
+        public java.util.List<String> getEventId() {
+            return this.eventId;
+        }
+
     }
 
 }

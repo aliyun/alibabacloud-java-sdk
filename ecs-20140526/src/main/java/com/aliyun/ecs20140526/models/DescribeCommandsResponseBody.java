@@ -17,7 +17,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
     public Long pageNumber;
 
     @NameInMap("Commands")
-    public java.util.List<DescribeCommandsResponseBodyCommands> commands;
+    public DescribeCommandsResponseBodyCommands commands;
 
     public static DescribeCommandsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCommandsResponseBody self = new DescribeCommandsResponseBody();
@@ -56,15 +56,34 @@ public class DescribeCommandsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeCommandsResponseBody setCommands(java.util.List<DescribeCommandsResponseBodyCommands> commands) {
+    public DescribeCommandsResponseBody setCommands(DescribeCommandsResponseBodyCommands commands) {
         this.commands = commands;
         return this;
     }
-    public java.util.List<DescribeCommandsResponseBodyCommands> getCommands() {
+    public DescribeCommandsResponseBodyCommands getCommands() {
         return this.commands;
     }
 
-    public static class DescribeCommandsResponseBodyCommands extends TeaModel {
+    public static class DescribeCommandsResponseBodyCommandsCommandParameterNames extends TeaModel {
+        @NameInMap("ParameterName")
+        public java.util.List<String> parameterName;
+
+        public static DescribeCommandsResponseBodyCommandsCommandParameterNames build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommandsResponseBodyCommandsCommandParameterNames self = new DescribeCommandsResponseBodyCommandsCommandParameterNames();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsResponseBodyCommandsCommandParameterNames setParameterName(java.util.List<String> parameterName) {
+            this.parameterName = parameterName;
+            return this;
+        }
+        public java.util.List<String> getParameterName() {
+            return this.parameterName;
+        }
+
+    }
+
+    public static class DescribeCommandsResponseBodyCommandsCommand extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -75,7 +94,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
         public String type;
 
         @NameInMap("ParameterNames")
-        public java.util.List<String> parameterNames;
+        public DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames;
 
         @NameInMap("InvokeTimes")
         public Integer invokeTimes;
@@ -98,12 +117,12 @@ public class DescribeCommandsResponseBody extends TeaModel {
         @NameInMap("EnableParameter")
         public Boolean enableParameter;
 
-        public static DescribeCommandsResponseBodyCommands build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCommandsResponseBodyCommands self = new DescribeCommandsResponseBodyCommands();
+        public static DescribeCommandsResponseBodyCommandsCommand build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommandsResponseBodyCommandsCommand self = new DescribeCommandsResponseBodyCommandsCommand();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCommandsResponseBodyCommands setCreationTime(String creationTime) {
+        public DescribeCommandsResponseBodyCommandsCommand setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -111,7 +130,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeCommandsResponseBodyCommands setTimeout(Long timeout) {
+        public DescribeCommandsResponseBodyCommandsCommand setTimeout(Long timeout) {
             this.timeout = timeout;
             return this;
         }
@@ -119,7 +138,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.timeout;
         }
 
-        public DescribeCommandsResponseBodyCommands setType(String type) {
+        public DescribeCommandsResponseBodyCommandsCommand setType(String type) {
             this.type = type;
             return this;
         }
@@ -127,15 +146,15 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeCommandsResponseBodyCommands setParameterNames(java.util.List<String> parameterNames) {
+        public DescribeCommandsResponseBodyCommandsCommand setParameterNames(DescribeCommandsResponseBodyCommandsCommandParameterNames parameterNames) {
             this.parameterNames = parameterNames;
             return this;
         }
-        public java.util.List<String> getParameterNames() {
+        public DescribeCommandsResponseBodyCommandsCommandParameterNames getParameterNames() {
             return this.parameterNames;
         }
 
-        public DescribeCommandsResponseBodyCommands setInvokeTimes(Integer invokeTimes) {
+        public DescribeCommandsResponseBodyCommandsCommand setInvokeTimes(Integer invokeTimes) {
             this.invokeTimes = invokeTimes;
             return this;
         }
@@ -143,7 +162,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.invokeTimes;
         }
 
-        public DescribeCommandsResponseBodyCommands setWorkingDir(String workingDir) {
+        public DescribeCommandsResponseBodyCommandsCommand setWorkingDir(String workingDir) {
             this.workingDir = workingDir;
             return this;
         }
@@ -151,7 +170,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.workingDir;
         }
 
-        public DescribeCommandsResponseBodyCommands setDescription(String description) {
+        public DescribeCommandsResponseBodyCommandsCommand setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -159,7 +178,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeCommandsResponseBodyCommands setCommandContent(String commandContent) {
+        public DescribeCommandsResponseBodyCommandsCommand setCommandContent(String commandContent) {
             this.commandContent = commandContent;
             return this;
         }
@@ -167,7 +186,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.commandContent;
         }
 
-        public DescribeCommandsResponseBodyCommands setCommandId(String commandId) {
+        public DescribeCommandsResponseBodyCommandsCommand setCommandId(String commandId) {
             this.commandId = commandId;
             return this;
         }
@@ -175,7 +194,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.commandId;
         }
 
-        public DescribeCommandsResponseBodyCommands setName(String name) {
+        public DescribeCommandsResponseBodyCommandsCommand setName(String name) {
             this.name = name;
             return this;
         }
@@ -183,12 +202,31 @@ public class DescribeCommandsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeCommandsResponseBodyCommands setEnableParameter(Boolean enableParameter) {
+        public DescribeCommandsResponseBodyCommandsCommand setEnableParameter(Boolean enableParameter) {
             this.enableParameter = enableParameter;
             return this;
         }
         public Boolean getEnableParameter() {
             return this.enableParameter;
+        }
+
+    }
+
+    public static class DescribeCommandsResponseBodyCommands extends TeaModel {
+        @NameInMap("Command")
+        public java.util.List<DescribeCommandsResponseBodyCommandsCommand> command;
+
+        public static DescribeCommandsResponseBodyCommands build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCommandsResponseBodyCommands self = new DescribeCommandsResponseBodyCommands();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCommandsResponseBodyCommands setCommand(java.util.List<DescribeCommandsResponseBodyCommandsCommand> command) {
+            this.command = command;
+            return this;
+        }
+        public java.util.List<DescribeCommandsResponseBodyCommandsCommand> getCommand() {
+            return this.command;
         }
 
     }

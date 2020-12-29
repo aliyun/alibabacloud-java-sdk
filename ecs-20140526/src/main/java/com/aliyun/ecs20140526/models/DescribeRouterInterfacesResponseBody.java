@@ -17,7 +17,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("RouterInterfaceSet")
-    public java.util.List<DescribeRouterInterfacesResponseBodyRouterInterfaceSet> routerInterfaceSet;
+    public DescribeRouterInterfacesResponseBodyRouterInterfaceSet routerInterfaceSet;
 
     public static DescribeRouterInterfacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouterInterfacesResponseBody self = new DescribeRouterInterfacesResponseBody();
@@ -56,15 +56,15 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeRouterInterfacesResponseBody setRouterInterfaceSet(java.util.List<DescribeRouterInterfacesResponseBodyRouterInterfaceSet> routerInterfaceSet) {
+    public DescribeRouterInterfacesResponseBody setRouterInterfaceSet(DescribeRouterInterfacesResponseBodyRouterInterfaceSet routerInterfaceSet) {
         this.routerInterfaceSet = routerInterfaceSet;
         return this;
     }
-    public java.util.List<DescribeRouterInterfacesResponseBodyRouterInterfaceSet> getRouterInterfaceSet() {
+    public DescribeRouterInterfacesResponseBodyRouterInterfaceSet getRouterInterfaceSet() {
         return this.routerInterfaceSet;
     }
 
-    public static class DescribeRouterInterfacesResponseBodyRouterInterfaceSet extends TeaModel {
+    public static class DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType extends TeaModel {
         @NameInMap("HealthCheckTargetIp")
         public String healthCheckTargetIp;
 
@@ -140,12 +140,12 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         @NameInMap("AccessPointId")
         public String accessPointId;
 
-        public static DescribeRouterInterfacesResponseBodyRouterInterfaceSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRouterInterfacesResponseBodyRouterInterfaceSet self = new DescribeRouterInterfacesResponseBodyRouterInterfaceSet();
+        public static DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType self = new DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setHealthCheckTargetIp(String healthCheckTargetIp) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setHealthCheckTargetIp(String healthCheckTargetIp) {
             this.healthCheckTargetIp = healthCheckTargetIp;
             return this;
         }
@@ -153,7 +153,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.healthCheckTargetIp;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setCreationTime(String creationTime) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -161,7 +161,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setStatus(String status) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -169,7 +169,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setSpec(String spec) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setSpec(String spec) {
             this.spec = spec;
             return this;
         }
@@ -177,7 +177,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.spec;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setOppositeInterfaceId(String oppositeInterfaceId) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeInterfaceId(String oppositeInterfaceId) {
             this.oppositeInterfaceId = oppositeInterfaceId;
             return this;
         }
@@ -185,7 +185,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.oppositeInterfaceId;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setRouterInterfaceId(String routerInterfaceId) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setRouterInterfaceId(String routerInterfaceId) {
             this.routerInterfaceId = routerInterfaceId;
             return this;
         }
@@ -193,7 +193,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.routerInterfaceId;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setChargeType(String chargeType) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setChargeType(String chargeType) {
             this.chargeType = chargeType;
             return this;
         }
@@ -201,7 +201,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.chargeType;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setOppositeRouterType(String oppositeRouterType) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeRouterType(String oppositeRouterType) {
             this.oppositeRouterType = oppositeRouterType;
             return this;
         }
@@ -209,7 +209,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.oppositeRouterType;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setOppositeInterfaceOwnerId(String oppositeInterfaceOwnerId) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeInterfaceOwnerId(String oppositeInterfaceOwnerId) {
             this.oppositeInterfaceOwnerId = oppositeInterfaceOwnerId;
             return this;
         }
@@ -217,7 +217,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.oppositeInterfaceOwnerId;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setDescription(String description) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -225,7 +225,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setName(String name) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setName(String name) {
             this.name = name;
             return this;
         }
@@ -233,7 +233,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setOppositeRouterId(String oppositeRouterId) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeRouterId(String oppositeRouterId) {
             this.oppositeRouterId = oppositeRouterId;
             return this;
         }
@@ -241,7 +241,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.oppositeRouterId;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setOppositeInterfaceSpec(String oppositeInterfaceSpec) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeInterfaceSpec(String oppositeInterfaceSpec) {
             this.oppositeInterfaceSpec = oppositeInterfaceSpec;
             return this;
         }
@@ -249,7 +249,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.oppositeInterfaceSpec;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setRouterId(String routerId) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setRouterId(String routerId) {
             this.routerId = routerId;
             return this;
         }
@@ -257,7 +257,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.routerId;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setOppositeInterfaceBusinessStatus(String oppositeInterfaceBusinessStatus) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeInterfaceBusinessStatus(String oppositeInterfaceBusinessStatus) {
             this.oppositeInterfaceBusinessStatus = oppositeInterfaceBusinessStatus;
             return this;
         }
@@ -265,7 +265,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.oppositeInterfaceBusinessStatus;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setConnectedTime(String connectedTime) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setConnectedTime(String connectedTime) {
             this.connectedTime = connectedTime;
             return this;
         }
@@ -273,7 +273,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.connectedTime;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setHealthCheckSourceIp(String healthCheckSourceIp) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setHealthCheckSourceIp(String healthCheckSourceIp) {
             this.healthCheckSourceIp = healthCheckSourceIp;
             return this;
         }
@@ -281,7 +281,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.healthCheckSourceIp;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setOppositeInterfaceStatus(String oppositeInterfaceStatus) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeInterfaceStatus(String oppositeInterfaceStatus) {
             this.oppositeInterfaceStatus = oppositeInterfaceStatus;
             return this;
         }
@@ -289,7 +289,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.oppositeInterfaceStatus;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setEndTime(String endTime) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -297,7 +297,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setOppositeRegionId(String oppositeRegionId) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeRegionId(String oppositeRegionId) {
             this.oppositeRegionId = oppositeRegionId;
             return this;
         }
@@ -305,7 +305,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.oppositeRegionId;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setOppositeAccessPointId(String oppositeAccessPointId) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setOppositeAccessPointId(String oppositeAccessPointId) {
             this.oppositeAccessPointId = oppositeAccessPointId;
             return this;
         }
@@ -313,7 +313,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.oppositeAccessPointId;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setBusinessStatus(String businessStatus) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setBusinessStatus(String businessStatus) {
             this.businessStatus = businessStatus;
             return this;
         }
@@ -321,7 +321,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.businessStatus;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setRouterType(String routerType) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setRouterType(String routerType) {
             this.routerType = routerType;
             return this;
         }
@@ -329,7 +329,7 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.routerType;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setRole(String role) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setRole(String role) {
             this.role = role;
             return this;
         }
@@ -337,12 +337,31 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             return this.role;
         }
 
-        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setAccessPointId(String accessPointId) {
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType setAccessPointId(String accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
         public String getAccessPointId() {
             return this.accessPointId;
+        }
+
+    }
+
+    public static class DescribeRouterInterfacesResponseBodyRouterInterfaceSet extends TeaModel {
+        @NameInMap("RouterInterfaceType")
+        public java.util.List<DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType> routerInterfaceType;
+
+        public static DescribeRouterInterfacesResponseBodyRouterInterfaceSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouterInterfacesResponseBodyRouterInterfaceSet self = new DescribeRouterInterfacesResponseBodyRouterInterfaceSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRouterInterfacesResponseBodyRouterInterfaceSet setRouterInterfaceType(java.util.List<DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType> routerInterfaceType) {
+            this.routerInterfaceType = routerInterfaceType;
+            return this;
+        }
+        public java.util.List<DescribeRouterInterfacesResponseBodyRouterInterfaceSetRouterInterfaceType> getRouterInterfaceType() {
+            return this.routerInterfaceType;
         }
 
     }

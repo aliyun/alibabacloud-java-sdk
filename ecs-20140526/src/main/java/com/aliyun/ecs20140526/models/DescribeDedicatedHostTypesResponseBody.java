@@ -8,7 +8,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("DedicatedHostTypes")
-    public java.util.List<DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes> dedicatedHostTypes;
+    public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes dedicatedHostTypes;
 
     public static DescribeDedicatedHostTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostTypesResponseBody self = new DescribeDedicatedHostTypesResponseBody();
@@ -23,15 +23,53 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDedicatedHostTypesResponseBody setDedicatedHostTypes(java.util.List<DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes> dedicatedHostTypes) {
+    public DescribeDedicatedHostTypesResponseBody setDedicatedHostTypes(DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes dedicatedHostTypes) {
         this.dedicatedHostTypes = dedicatedHostTypes;
         return this;
     }
-    public java.util.List<DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes> getDedicatedHostTypes() {
+    public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes getDedicatedHostTypes() {
         return this.dedicatedHostTypes;
     }
 
-    public static class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes extends TeaModel {
+    public static class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList extends TeaModel {
+        @NameInMap("SupportedInstanceTypesList")
+        public java.util.List<String> supportedInstanceTypesList;
+
+        public static DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList self = new DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList setSupportedInstanceTypesList(java.util.List<String> supportedInstanceTypesList) {
+            this.supportedInstanceTypesList = supportedInstanceTypesList;
+            return this;
+        }
+        public java.util.List<String> getSupportedInstanceTypesList() {
+            return this.supportedInstanceTypesList;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies extends TeaModel {
+        @NameInMap("SupportedInstanceTypeFamily")
+        public java.util.List<String> supportedInstanceTypeFamily;
+
+        public static DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies self = new DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies setSupportedInstanceTypeFamily(java.util.List<String> supportedInstanceTypeFamily) {
+            this.supportedInstanceTypeFamily = supportedInstanceTypeFamily;
+            return this;
+        }
+        public java.util.List<String> getSupportedInstanceTypeFamily() {
+            return this.supportedInstanceTypeFamily;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType extends TeaModel {
         @NameInMap("Cores")
         public Integer cores;
 
@@ -48,7 +86,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         public String cpuOverCommitRatioRange;
 
         @NameInMap("SupportedInstanceTypesList")
-        public java.util.List<String> supportedInstanceTypesList;
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList supportedInstanceTypesList;
 
         @NameInMap("PhysicalGpus")
         public Integer physicalGpus;
@@ -75,14 +113,14 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
         public Integer sockets;
 
         @NameInMap("SupportedInstanceTypeFamilies")
-        public java.util.List<String> supportedInstanceTypeFamilies;
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
-        public static DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes self = new DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes();
+        public static DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType self = new DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setCores(Integer cores) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setCores(Integer cores) {
             this.cores = cores;
             return this;
         }
@@ -90,7 +128,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.cores;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setGPUSpec(String GPUSpec) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setGPUSpec(String GPUSpec) {
             this.GPUSpec = GPUSpec;
             return this;
         }
@@ -98,7 +136,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.GPUSpec;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setLocalStorageCategory(String localStorageCategory) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setLocalStorageCategory(String localStorageCategory) {
             this.localStorageCategory = localStorageCategory;
             return this;
         }
@@ -106,7 +144,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.localStorageCategory;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setTotalVcpus(Integer totalVcpus) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setTotalVcpus(Integer totalVcpus) {
             this.totalVcpus = totalVcpus;
             return this;
         }
@@ -114,7 +152,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.totalVcpus;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setCpuOverCommitRatioRange(String cpuOverCommitRatioRange) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setCpuOverCommitRatioRange(String cpuOverCommitRatioRange) {
             this.cpuOverCommitRatioRange = cpuOverCommitRatioRange;
             return this;
         }
@@ -122,15 +160,15 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.cpuOverCommitRatioRange;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setSupportedInstanceTypesList(java.util.List<String> supportedInstanceTypesList) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setSupportedInstanceTypesList(DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList supportedInstanceTypesList) {
             this.supportedInstanceTypesList = supportedInstanceTypesList;
             return this;
         }
-        public java.util.List<String> getSupportedInstanceTypesList() {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypesList getSupportedInstanceTypesList() {
             return this.supportedInstanceTypesList;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setPhysicalGpus(Integer physicalGpus) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setPhysicalGpus(Integer physicalGpus) {
             this.physicalGpus = physicalGpus;
             return this;
         }
@@ -138,7 +176,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.physicalGpus;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setMemorySize(Float memorySize) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setMemorySize(Float memorySize) {
             this.memorySize = memorySize;
             return this;
         }
@@ -146,7 +184,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.memorySize;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setSupportCpuOverCommitRatio(Boolean supportCpuOverCommitRatio) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setSupportCpuOverCommitRatio(Boolean supportCpuOverCommitRatio) {
             this.supportCpuOverCommitRatio = supportCpuOverCommitRatio;
             return this;
         }
@@ -154,7 +192,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.supportCpuOverCommitRatio;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setLocalStorageCapacity(Long localStorageCapacity) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setLocalStorageCapacity(Long localStorageCapacity) {
             this.localStorageCapacity = localStorageCapacity;
             return this;
         }
@@ -162,7 +200,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.localStorageCapacity;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setLocalStorageAmount(Integer localStorageAmount) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setLocalStorageAmount(Integer localStorageAmount) {
             this.localStorageAmount = localStorageAmount;
             return this;
         }
@@ -170,7 +208,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.localStorageAmount;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setDedicatedHostType(String dedicatedHostType) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setDedicatedHostType(String dedicatedHostType) {
             this.dedicatedHostType = dedicatedHostType;
             return this;
         }
@@ -178,7 +216,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.dedicatedHostType;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setTotalVgpus(Integer totalVgpus) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setTotalVgpus(Integer totalVgpus) {
             this.totalVgpus = totalVgpus;
             return this;
         }
@@ -186,7 +224,7 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.totalVgpus;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setSockets(Integer sockets) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setSockets(Integer sockets) {
             this.sockets = sockets;
             return this;
         }
@@ -194,12 +232,31 @@ public class DescribeDedicatedHostTypesResponseBody extends TeaModel {
             return this.sockets;
         }
 
-        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setSupportedInstanceTypeFamilies(java.util.List<String> supportedInstanceTypeFamilies) {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType setSupportedInstanceTypeFamilies(DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies supportedInstanceTypeFamilies) {
             this.supportedInstanceTypeFamilies = supportedInstanceTypeFamilies;
             return this;
         }
-        public java.util.List<String> getSupportedInstanceTypeFamilies() {
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostTypeSupportedInstanceTypeFamilies getSupportedInstanceTypeFamilies() {
             return this.supportedInstanceTypeFamilies;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes extends TeaModel {
+        @NameInMap("DedicatedHostType")
+        public java.util.List<DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType> dedicatedHostType;
+
+        public static DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes self = new DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostTypesResponseBodyDedicatedHostTypes setDedicatedHostType(java.util.List<DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType> dedicatedHostType) {
+            this.dedicatedHostType = dedicatedHostType;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedHostTypesResponseBodyDedicatedHostTypesDedicatedHostType> getDedicatedHostType() {
+            return this.dedicatedHostType;
         }
 
     }

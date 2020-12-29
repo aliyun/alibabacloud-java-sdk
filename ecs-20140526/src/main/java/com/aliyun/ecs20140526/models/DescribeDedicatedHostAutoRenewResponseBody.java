@@ -8,7 +8,7 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("DedicatedHostRenewAttributes")
-    public java.util.List<DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes> dedicatedHostRenewAttributes;
+    public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes dedicatedHostRenewAttributes;
 
     public static DescribeDedicatedHostAutoRenewResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostAutoRenewResponseBody self = new DescribeDedicatedHostAutoRenewResponseBody();
@@ -23,15 +23,15 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDedicatedHostAutoRenewResponseBody setDedicatedHostRenewAttributes(java.util.List<DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes> dedicatedHostRenewAttributes) {
+    public DescribeDedicatedHostAutoRenewResponseBody setDedicatedHostRenewAttributes(DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes dedicatedHostRenewAttributes) {
         this.dedicatedHostRenewAttributes = dedicatedHostRenewAttributes;
         return this;
     }
-    public java.util.List<DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes> getDedicatedHostRenewAttributes() {
+    public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes getDedicatedHostRenewAttributes() {
         return this.dedicatedHostRenewAttributes;
     }
 
-    public static class DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes extends TeaModel {
+    public static class DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute extends TeaModel {
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
@@ -47,12 +47,12 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         @NameInMap("AutoRenewEnabled")
         public Boolean autoRenewEnabled;
 
-        public static DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes self = new DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes();
+        public static DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute self = new DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes setPeriodUnit(String periodUnit) {
+        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute setPeriodUnit(String periodUnit) {
             this.periodUnit = periodUnit;
             return this;
         }
@@ -60,7 +60,7 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             return this.periodUnit;
         }
 
-        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes setDuration(Integer duration) {
+        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute setDuration(Integer duration) {
             this.duration = duration;
             return this;
         }
@@ -68,7 +68,7 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes setDedicatedHostId(String dedicatedHostId) {
+        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute setDedicatedHostId(String dedicatedHostId) {
             this.dedicatedHostId = dedicatedHostId;
             return this;
         }
@@ -76,7 +76,7 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             return this.dedicatedHostId;
         }
 
-        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes setRenewalStatus(String renewalStatus) {
+        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute setRenewalStatus(String renewalStatus) {
             this.renewalStatus = renewalStatus;
             return this;
         }
@@ -84,12 +84,31 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             return this.renewalStatus;
         }
 
-        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes setAutoRenewEnabled(Boolean autoRenewEnabled) {
+        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute setAutoRenewEnabled(Boolean autoRenewEnabled) {
             this.autoRenewEnabled = autoRenewEnabled;
             return this;
         }
         public Boolean getAutoRenewEnabled() {
             return this.autoRenewEnabled;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes extends TeaModel {
+        @NameInMap("DedicatedHostRenewAttribute")
+        public java.util.List<DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute> dedicatedHostRenewAttribute;
+
+        public static DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes self = new DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributes setDedicatedHostRenewAttribute(java.util.List<DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute> dedicatedHostRenewAttribute) {
+            this.dedicatedHostRenewAttribute = dedicatedHostRenewAttribute;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedHostAutoRenewResponseBodyDedicatedHostRenewAttributesDedicatedHostRenewAttribute> getDedicatedHostRenewAttribute() {
+            return this.dedicatedHostRenewAttribute;
         }
 
     }

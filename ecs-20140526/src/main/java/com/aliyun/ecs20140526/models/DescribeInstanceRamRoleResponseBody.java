@@ -14,7 +14,7 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
     public String regionId;
 
     @NameInMap("InstanceRamRoleSets")
-    public java.util.List<DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets> instanceRamRoleSets;
+    public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets instanceRamRoleSets;
 
     public static DescribeInstanceRamRoleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceRamRoleResponseBody self = new DescribeInstanceRamRoleResponseBody();
@@ -45,27 +45,27 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeInstanceRamRoleResponseBody setInstanceRamRoleSets(java.util.List<DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets> instanceRamRoleSets) {
+    public DescribeInstanceRamRoleResponseBody setInstanceRamRoleSets(DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets instanceRamRoleSets) {
         this.instanceRamRoleSets = instanceRamRoleSets;
         return this;
     }
-    public java.util.List<DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets> getInstanceRamRoleSets() {
+    public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets getInstanceRamRoleSets() {
         return this.instanceRamRoleSets;
     }
 
-    public static class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets extends TeaModel {
+    public static class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet extends TeaModel {
         @NameInMap("RamRoleName")
         public String ramRoleName;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets self = new DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets();
+        public static DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet self = new DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets setRamRoleName(String ramRoleName) {
+        public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet setRamRoleName(String ramRoleName) {
             this.ramRoleName = ramRoleName;
             return this;
         }
@@ -73,12 +73,31 @@ public class DescribeInstanceRamRoleResponseBody extends TeaModel {
             return this.ramRoleName;
         }
 
-        public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets setInstanceId(String instanceId) {
+        public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets extends TeaModel {
+        @NameInMap("InstanceRamRoleSet")
+        public java.util.List<DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet> instanceRamRoleSet;
+
+        public static DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets self = new DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceRamRoleResponseBodyInstanceRamRoleSets setInstanceRamRoleSet(java.util.List<DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet> instanceRamRoleSet) {
+            this.instanceRamRoleSet = instanceRamRoleSet;
+            return this;
+        }
+        public java.util.List<DescribeInstanceRamRoleResponseBodyInstanceRamRoleSetsInstanceRamRoleSet> getInstanceRamRoleSet() {
+            return this.instanceRamRoleSet;
         }
 
     }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
     @NameInMap("StorageCapacityUnitIds")
-    public java.util.List<String> storageCapacityUnitIds;
+    public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds storageCapacityUnitIds;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -18,11 +18,11 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public PurchaseStorageCapacityUnitResponseBody setStorageCapacityUnitIds(java.util.List<String> storageCapacityUnitIds) {
+    public PurchaseStorageCapacityUnitResponseBody setStorageCapacityUnitIds(PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds storageCapacityUnitIds) {
         this.storageCapacityUnitIds = storageCapacityUnitIds;
         return this;
     }
-    public java.util.List<String> getStorageCapacityUnitIds() {
+    public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds getStorageCapacityUnitIds() {
         return this.storageCapacityUnitIds;
     }
 
@@ -40,6 +40,25 @@ public class PurchaseStorageCapacityUnitResponseBody extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public static class PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds extends TeaModel {
+        @NameInMap("StorageCapacityUnitId")
+        public java.util.List<String> storageCapacityUnitId;
+
+        public static PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds build(java.util.Map<String, ?> map) throws Exception {
+            PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds self = new PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds();
+            return TeaModel.build(map, self);
+        }
+
+        public PurchaseStorageCapacityUnitResponseBodyStorageCapacityUnitIds setStorageCapacityUnitId(java.util.List<String> storageCapacityUnitId) {
+            this.storageCapacityUnitId = storageCapacityUnitId;
+            return this;
+        }
+        public java.util.List<String> getStorageCapacityUnitId() {
+            return this.storageCapacityUnitId;
+        }
+
     }
 
 }

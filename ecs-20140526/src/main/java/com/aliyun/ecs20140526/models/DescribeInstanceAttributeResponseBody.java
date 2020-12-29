@@ -20,10 +20,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public String instanceNetworkType;
 
     @NameInMap("PublicIpAddress")
-    public java.util.List<String> publicIpAddress;
+    public DescribeInstanceAttributeResponseBodyPublicIpAddress publicIpAddress;
 
     @NameInMap("InnerIpAddress")
-    public java.util.List<String> innerIpAddress;
+    public DescribeInstanceAttributeResponseBodyInnerIpAddress innerIpAddress;
 
     @NameInMap("ExpiredTime")
     public String expiredTime;
@@ -68,13 +68,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     public DescribeInstanceAttributeResponseBodyDedicatedHostAttribute dedicatedHostAttribute;
 
     @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
+    public DescribeInstanceAttributeResponseBodySecurityGroupIds securityGroupIds;
 
     @NameInMap("VpcAttributes")
     public DescribeInstanceAttributeResponseBodyVpcAttributes vpcAttributes;
 
     @NameInMap("OperationLocks")
-    public java.util.List<DescribeInstanceAttributeResponseBodyOperationLocks> operationLocks;
+    public DescribeInstanceAttributeResponseBodyOperationLocks operationLocks;
 
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -145,19 +145,19 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         return this.instanceNetworkType;
     }
 
-    public DescribeInstanceAttributeResponseBody setPublicIpAddress(java.util.List<String> publicIpAddress) {
+    public DescribeInstanceAttributeResponseBody setPublicIpAddress(DescribeInstanceAttributeResponseBodyPublicIpAddress publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
         return this;
     }
-    public java.util.List<String> getPublicIpAddress() {
+    public DescribeInstanceAttributeResponseBodyPublicIpAddress getPublicIpAddress() {
         return this.publicIpAddress;
     }
 
-    public DescribeInstanceAttributeResponseBody setInnerIpAddress(java.util.List<String> innerIpAddress) {
+    public DescribeInstanceAttributeResponseBody setInnerIpAddress(DescribeInstanceAttributeResponseBodyInnerIpAddress innerIpAddress) {
         this.innerIpAddress = innerIpAddress;
         return this;
     }
-    public java.util.List<String> getInnerIpAddress() {
+    public DescribeInstanceAttributeResponseBodyInnerIpAddress getInnerIpAddress() {
         return this.innerIpAddress;
     }
 
@@ -273,11 +273,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         return this.dedicatedHostAttribute;
     }
 
-    public DescribeInstanceAttributeResponseBody setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+    public DescribeInstanceAttributeResponseBody setSecurityGroupIds(DescribeInstanceAttributeResponseBodySecurityGroupIds securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
-    public java.util.List<String> getSecurityGroupIds() {
+    public DescribeInstanceAttributeResponseBodySecurityGroupIds getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -289,11 +289,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         return this.vpcAttributes;
     }
 
-    public DescribeInstanceAttributeResponseBody setOperationLocks(java.util.List<DescribeInstanceAttributeResponseBodyOperationLocks> operationLocks) {
+    public DescribeInstanceAttributeResponseBody setOperationLocks(DescribeInstanceAttributeResponseBodyOperationLocks operationLocks) {
         this.operationLocks = operationLocks;
         return this;
     }
-    public java.util.List<DescribeInstanceAttributeResponseBodyOperationLocks> getOperationLocks() {
+    public DescribeInstanceAttributeResponseBodyOperationLocks getOperationLocks() {
         return this.operationLocks;
     }
 
@@ -359,6 +359,44 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
     public String getCreditSpecification() {
         return this.creditSpecification;
+    }
+
+    public static class DescribeInstanceAttributeResponseBodyPublicIpAddress extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
+
+        public static DescribeInstanceAttributeResponseBodyPublicIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttributeResponseBodyPublicIpAddress self = new DescribeInstanceAttributeResponseBodyPublicIpAddress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodyPublicIpAddress setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
+    }
+
+    public static class DescribeInstanceAttributeResponseBodyInnerIpAddress extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
+
+        public static DescribeInstanceAttributeResponseBodyInnerIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttributeResponseBodyInnerIpAddress self = new DescribeInstanceAttributeResponseBodyInnerIpAddress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodyInnerIpAddress setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
     }
 
     public static class DescribeInstanceAttributeResponseBodyEipAddress extends TeaModel {
@@ -443,6 +481,44 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceAttributeResponseBodySecurityGroupIds extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        public java.util.List<String> securityGroupId;
+
+        public static DescribeInstanceAttributeResponseBodySecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttributeResponseBodySecurityGroupIds self = new DescribeInstanceAttributeResponseBodySecurityGroupIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodySecurityGroupIds setSecurityGroupId(java.util.List<String> securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+    }
+
+    public static class DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
+
+        public static DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress self = new DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
+    }
+
     public static class DescribeInstanceAttributeResponseBodyVpcAttributes extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
@@ -454,7 +530,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public String vSwitchId;
 
         @NameInMap("PrivateIpAddress")
-        public java.util.List<String> privateIpAddress;
+        public DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress privateIpAddress;
 
         public static DescribeInstanceAttributeResponseBodyVpcAttributes build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAttributeResponseBodyVpcAttributes self = new DescribeInstanceAttributeResponseBodyVpcAttributes();
@@ -485,30 +561,49 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeInstanceAttributeResponseBodyVpcAttributes setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+        public DescribeInstanceAttributeResponseBodyVpcAttributes setPrivateIpAddress(DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-        public java.util.List<String> getPrivateIpAddress() {
+        public DescribeInstanceAttributeResponseBodyVpcAttributesPrivateIpAddress getPrivateIpAddress() {
             return this.privateIpAddress;
+        }
+
+    }
+
+    public static class DescribeInstanceAttributeResponseBodyOperationLocksLockReason extends TeaModel {
+        @NameInMap("LockReason")
+        public String lockReason;
+
+        public static DescribeInstanceAttributeResponseBodyOperationLocksLockReason build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttributeResponseBodyOperationLocksLockReason self = new DescribeInstanceAttributeResponseBodyOperationLocksLockReason();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodyOperationLocksLockReason setLockReason(String lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public String getLockReason() {
+            return this.lockReason;
         }
 
     }
 
     public static class DescribeInstanceAttributeResponseBodyOperationLocks extends TeaModel {
         @NameInMap("LockReason")
-        public String lockReason;
+        public java.util.List<DescribeInstanceAttributeResponseBodyOperationLocksLockReason> lockReason;
 
         public static DescribeInstanceAttributeResponseBodyOperationLocks build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAttributeResponseBodyOperationLocks self = new DescribeInstanceAttributeResponseBodyOperationLocks();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceAttributeResponseBodyOperationLocks setLockReason(String lockReason) {
+        public DescribeInstanceAttributeResponseBodyOperationLocks setLockReason(java.util.List<DescribeInstanceAttributeResponseBodyOperationLocksLockReason> lockReason) {
             this.lockReason = lockReason;
             return this;
         }
-        public String getLockReason() {
+        public java.util.List<DescribeInstanceAttributeResponseBodyOperationLocksLockReason> getLockReason() {
             return this.lockReason;
         }
 

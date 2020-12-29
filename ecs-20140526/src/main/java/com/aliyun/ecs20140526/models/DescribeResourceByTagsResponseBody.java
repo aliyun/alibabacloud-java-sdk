@@ -17,7 +17,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("Resources")
-    public java.util.List<DescribeResourceByTagsResponseBodyResources> resources;
+    public DescribeResourceByTagsResponseBodyResources resources;
 
     public static DescribeResourceByTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceByTagsResponseBody self = new DescribeResourceByTagsResponseBody();
@@ -56,15 +56,15 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeResourceByTagsResponseBody setResources(java.util.List<DescribeResourceByTagsResponseBodyResources> resources) {
+    public DescribeResourceByTagsResponseBody setResources(DescribeResourceByTagsResponseBodyResources resources) {
         this.resources = resources;
         return this;
     }
-    public java.util.List<DescribeResourceByTagsResponseBodyResources> getResources() {
+    public DescribeResourceByTagsResponseBodyResources getResources() {
         return this.resources;
     }
 
-    public static class DescribeResourceByTagsResponseBodyResources extends TeaModel {
+    public static class DescribeResourceByTagsResponseBodyResourcesResource extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -74,12 +74,12 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeResourceByTagsResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeResourceByTagsResponseBodyResources self = new DescribeResourceByTagsResponseBodyResources();
+        public static DescribeResourceByTagsResponseBodyResourcesResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeResourceByTagsResponseBodyResourcesResource self = new DescribeResourceByTagsResponseBodyResourcesResource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeResourceByTagsResponseBodyResources setResourceType(String resourceType) {
+        public DescribeResourceByTagsResponseBodyResourcesResource setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
@@ -87,7 +87,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             return this.resourceType;
         }
 
-        public DescribeResourceByTagsResponseBodyResources setResourceId(String resourceId) {
+        public DescribeResourceByTagsResponseBodyResourcesResource setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
@@ -95,12 +95,31 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             return this.resourceId;
         }
 
-        public DescribeResourceByTagsResponseBodyResources setRegionId(String regionId) {
+        public DescribeResourceByTagsResponseBodyResourcesResource setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeResourceByTagsResponseBodyResources extends TeaModel {
+        @NameInMap("Resource")
+        public java.util.List<DescribeResourceByTagsResponseBodyResourcesResource> resource;
+
+        public static DescribeResourceByTagsResponseBodyResources build(java.util.Map<String, ?> map) throws Exception {
+            DescribeResourceByTagsResponseBodyResources self = new DescribeResourceByTagsResponseBodyResources();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeResourceByTagsResponseBodyResources setResource(java.util.List<DescribeResourceByTagsResponseBodyResourcesResource> resource) {
+            this.resource = resource;
+            return this;
+        }
+        public java.util.List<DescribeResourceByTagsResponseBodyResourcesResource> getResource() {
+            return this.resource;
         }
 
     }

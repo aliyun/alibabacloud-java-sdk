@@ -17,7 +17,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("SnapshotPackages")
-    public java.util.List<DescribeSnapshotPackageResponseBodySnapshotPackages> snapshotPackages;
+    public DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages;
 
     public static DescribeSnapshotPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotPackageResponseBody self = new DescribeSnapshotPackageResponseBody();
@@ -56,15 +56,15 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeSnapshotPackageResponseBody setSnapshotPackages(java.util.List<DescribeSnapshotPackageResponseBodySnapshotPackages> snapshotPackages) {
+    public DescribeSnapshotPackageResponseBody setSnapshotPackages(DescribeSnapshotPackageResponseBodySnapshotPackages snapshotPackages) {
         this.snapshotPackages = snapshotPackages;
         return this;
     }
-    public java.util.List<DescribeSnapshotPackageResponseBodySnapshotPackages> getSnapshotPackages() {
+    public DescribeSnapshotPackageResponseBodySnapshotPackages getSnapshotPackages() {
         return this.snapshotPackages;
     }
 
-    public static class DescribeSnapshotPackageResponseBodySnapshotPackages extends TeaModel {
+    public static class DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -77,12 +77,12 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
         @NameInMap("InitCapacity")
         public Long initCapacity;
 
-        public static DescribeSnapshotPackageResponseBodySnapshotPackages build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSnapshotPackageResponseBodySnapshotPackages self = new DescribeSnapshotPackageResponseBodySnapshotPackages();
+        public static DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage self = new DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSnapshotPackageResponseBodySnapshotPackages setDisplayName(String displayName) {
+        public DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage setDisplayName(String displayName) {
             this.displayName = displayName;
             return this;
         }
@@ -90,7 +90,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public DescribeSnapshotPackageResponseBodySnapshotPackages setEndTime(String endTime) {
+        public DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -98,7 +98,7 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeSnapshotPackageResponseBodySnapshotPackages setStartTime(String startTime) {
+        public DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -106,12 +106,31 @@ public class DescribeSnapshotPackageResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeSnapshotPackageResponseBodySnapshotPackages setInitCapacity(Long initCapacity) {
+        public DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage setInitCapacity(Long initCapacity) {
             this.initCapacity = initCapacity;
             return this;
         }
         public Long getInitCapacity() {
             return this.initCapacity;
+        }
+
+    }
+
+    public static class DescribeSnapshotPackageResponseBodySnapshotPackages extends TeaModel {
+        @NameInMap("SnapshotPackage")
+        public java.util.List<DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage> snapshotPackage;
+
+        public static DescribeSnapshotPackageResponseBodySnapshotPackages build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotPackageResponseBodySnapshotPackages self = new DescribeSnapshotPackageResponseBodySnapshotPackages();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotPackageResponseBodySnapshotPackages setSnapshotPackage(java.util.List<DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage> snapshotPackage) {
+            this.snapshotPackage = snapshotPackage;
+            return this;
+        }
+        public java.util.List<DescribeSnapshotPackageResponseBodySnapshotPackagesSnapshotPackage> getSnapshotPackage() {
+            return this.snapshotPackage;
         }
 
     }

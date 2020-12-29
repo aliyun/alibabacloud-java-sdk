@@ -17,7 +17,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("Links")
-    public java.util.List<DescribeClassicLinkInstancesResponseBodyLinks> links;
+    public DescribeClassicLinkInstancesResponseBodyLinks links;
 
     public static DescribeClassicLinkInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClassicLinkInstancesResponseBody self = new DescribeClassicLinkInstancesResponseBody();
@@ -56,27 +56,27 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeClassicLinkInstancesResponseBody setLinks(java.util.List<DescribeClassicLinkInstancesResponseBodyLinks> links) {
+    public DescribeClassicLinkInstancesResponseBody setLinks(DescribeClassicLinkInstancesResponseBodyLinks links) {
         this.links = links;
         return this;
     }
-    public java.util.List<DescribeClassicLinkInstancesResponseBodyLinks> getLinks() {
+    public DescribeClassicLinkInstancesResponseBodyLinks getLinks() {
         return this.links;
     }
 
-    public static class DescribeClassicLinkInstancesResponseBodyLinks extends TeaModel {
+    public static class DescribeClassicLinkInstancesResponseBodyLinksLink extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static DescribeClassicLinkInstancesResponseBodyLinks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClassicLinkInstancesResponseBodyLinks self = new DescribeClassicLinkInstancesResponseBodyLinks();
+        public static DescribeClassicLinkInstancesResponseBodyLinksLink build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClassicLinkInstancesResponseBodyLinksLink self = new DescribeClassicLinkInstancesResponseBodyLinksLink();
             return TeaModel.build(map, self);
         }
 
-        public DescribeClassicLinkInstancesResponseBodyLinks setVpcId(String vpcId) {
+        public DescribeClassicLinkInstancesResponseBodyLinksLink setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -84,12 +84,31 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeClassicLinkInstancesResponseBodyLinks setInstanceId(String instanceId) {
+        public DescribeClassicLinkInstancesResponseBodyLinksLink setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeClassicLinkInstancesResponseBodyLinks extends TeaModel {
+        @NameInMap("Link")
+        public java.util.List<DescribeClassicLinkInstancesResponseBodyLinksLink> link;
+
+        public static DescribeClassicLinkInstancesResponseBodyLinks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClassicLinkInstancesResponseBodyLinks self = new DescribeClassicLinkInstancesResponseBodyLinks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClassicLinkInstancesResponseBodyLinks setLink(java.util.List<DescribeClassicLinkInstancesResponseBodyLinksLink> link) {
+            this.link = link;
+            return this;
+        }
+        public java.util.List<DescribeClassicLinkInstancesResponseBodyLinksLink> getLink() {
+            return this.link;
         }
 
     }

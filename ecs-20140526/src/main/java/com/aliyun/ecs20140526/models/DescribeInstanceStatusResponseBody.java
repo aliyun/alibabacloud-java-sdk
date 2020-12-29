@@ -17,7 +17,7 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("InstanceStatuses")
-    public java.util.List<DescribeInstanceStatusResponseBodyInstanceStatuses> instanceStatuses;
+    public DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses;
 
     public static DescribeInstanceStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStatusResponseBody self = new DescribeInstanceStatusResponseBody();
@@ -56,27 +56,27 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeInstanceStatusResponseBody setInstanceStatuses(java.util.List<DescribeInstanceStatusResponseBodyInstanceStatuses> instanceStatuses) {
+    public DescribeInstanceStatusResponseBody setInstanceStatuses(DescribeInstanceStatusResponseBodyInstanceStatuses instanceStatuses) {
         this.instanceStatuses = instanceStatuses;
         return this;
     }
-    public java.util.List<DescribeInstanceStatusResponseBodyInstanceStatuses> getInstanceStatuses() {
+    public DescribeInstanceStatusResponseBodyInstanceStatuses getInstanceStatuses() {
         return this.instanceStatuses;
     }
 
-    public static class DescribeInstanceStatusResponseBodyInstanceStatuses extends TeaModel {
+    public static class DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus extends TeaModel {
         @NameInMap("Status")
         public String status;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static DescribeInstanceStatusResponseBodyInstanceStatuses build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceStatusResponseBodyInstanceStatuses self = new DescribeInstanceStatusResponseBodyInstanceStatuses();
+        public static DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus self = new DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceStatusResponseBodyInstanceStatuses setStatus(String status) {
+        public DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -84,12 +84,31 @@ public class DescribeInstanceStatusResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeInstanceStatusResponseBodyInstanceStatuses setInstanceId(String instanceId) {
+        public DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeInstanceStatusResponseBodyInstanceStatuses extends TeaModel {
+        @NameInMap("InstanceStatus")
+        public java.util.List<DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus> instanceStatus;
+
+        public static DescribeInstanceStatusResponseBodyInstanceStatuses build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceStatusResponseBodyInstanceStatuses self = new DescribeInstanceStatusResponseBodyInstanceStatuses();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceStatusResponseBodyInstanceStatuses setInstanceStatus(java.util.List<DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus> instanceStatus) {
+            this.instanceStatus = instanceStatus;
+            return this;
+        }
+        public java.util.List<DescribeInstanceStatusResponseBodyInstanceStatusesInstanceStatus> getInstanceStatus() {
+            return this.instanceStatus;
         }
 
     }

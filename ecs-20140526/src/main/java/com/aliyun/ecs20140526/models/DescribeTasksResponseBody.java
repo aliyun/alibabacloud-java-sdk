@@ -17,7 +17,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("TaskSet")
-    public java.util.List<DescribeTasksResponseBodyTaskSet> taskSet;
+    public DescribeTasksResponseBodyTaskSet taskSet;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -59,11 +59,11 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeTasksResponseBody setTaskSet(java.util.List<DescribeTasksResponseBodyTaskSet> taskSet) {
+    public DescribeTasksResponseBody setTaskSet(DescribeTasksResponseBodyTaskSet taskSet) {
         this.taskSet = taskSet;
         return this;
     }
-    public java.util.List<DescribeTasksResponseBodyTaskSet> getTaskSet() {
+    public DescribeTasksResponseBodyTaskSet getTaskSet() {
         return this.taskSet;
     }
 
@@ -75,7 +75,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public static class DescribeTasksResponseBodyTaskSet extends TeaModel {
+    public static class DescribeTasksResponseBodyTaskSetTask extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -94,12 +94,12 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("TaskAction")
         public String taskAction;
 
-        public static DescribeTasksResponseBodyTaskSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTasksResponseBodyTaskSet self = new DescribeTasksResponseBodyTaskSet();
+        public static DescribeTasksResponseBodyTaskSetTask build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTasksResponseBodyTaskSetTask self = new DescribeTasksResponseBodyTaskSetTask();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTasksResponseBodyTaskSet setCreationTime(String creationTime) {
+        public DescribeTasksResponseBodyTaskSetTask setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -107,7 +107,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeTasksResponseBodyTaskSet setTaskStatus(String taskStatus) {
+        public DescribeTasksResponseBodyTaskSetTask setTaskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
             return this;
         }
@@ -115,7 +115,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.taskStatus;
         }
 
-        public DescribeTasksResponseBodyTaskSet setFinishedTime(String finishedTime) {
+        public DescribeTasksResponseBodyTaskSetTask setFinishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
             return this;
         }
@@ -123,7 +123,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.finishedTime;
         }
 
-        public DescribeTasksResponseBodyTaskSet setSupportCancel(String supportCancel) {
+        public DescribeTasksResponseBodyTaskSetTask setSupportCancel(String supportCancel) {
             this.supportCancel = supportCancel;
             return this;
         }
@@ -131,7 +131,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.supportCancel;
         }
 
-        public DescribeTasksResponseBodyTaskSet setTaskId(String taskId) {
+        public DescribeTasksResponseBodyTaskSetTask setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
@@ -139,12 +139,31 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public DescribeTasksResponseBodyTaskSet setTaskAction(String taskAction) {
+        public DescribeTasksResponseBodyTaskSetTask setTaskAction(String taskAction) {
             this.taskAction = taskAction;
             return this;
         }
         public String getTaskAction() {
             return this.taskAction;
+        }
+
+    }
+
+    public static class DescribeTasksResponseBodyTaskSet extends TeaModel {
+        @NameInMap("Task")
+        public java.util.List<DescribeTasksResponseBodyTaskSetTask> task;
+
+        public static DescribeTasksResponseBodyTaskSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTasksResponseBodyTaskSet self = new DescribeTasksResponseBodyTaskSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTasksResponseBodyTaskSet setTask(java.util.List<DescribeTasksResponseBodyTaskSetTask> task) {
+            this.task = task;
+            return this;
+        }
+        public java.util.List<DescribeTasksResponseBodyTaskSetTask> getTask() {
+            return this.task;
         }
 
     }

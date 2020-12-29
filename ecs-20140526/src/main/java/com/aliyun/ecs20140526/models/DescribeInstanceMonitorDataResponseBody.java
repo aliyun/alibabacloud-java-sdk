@@ -8,7 +8,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("MonitorData")
-    public java.util.List<DescribeInstanceMonitorDataResponseBodyMonitorData> monitorData;
+    public DescribeInstanceMonitorDataResponseBodyMonitorData monitorData;
 
     public static DescribeInstanceMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMonitorDataResponseBody self = new DescribeInstanceMonitorDataResponseBody();
@@ -23,15 +23,15 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstanceMonitorDataResponseBody setMonitorData(java.util.List<DescribeInstanceMonitorDataResponseBodyMonitorData> monitorData) {
+    public DescribeInstanceMonitorDataResponseBody setMonitorData(DescribeInstanceMonitorDataResponseBodyMonitorData monitorData) {
         this.monitorData = monitorData;
         return this;
     }
-    public java.util.List<DescribeInstanceMonitorDataResponseBodyMonitorData> getMonitorData() {
+    public DescribeInstanceMonitorDataResponseBodyMonitorData getMonitorData() {
         return this.monitorData;
     }
 
-    public static class DescribeInstanceMonitorDataResponseBodyMonitorData extends TeaModel {
+    public static class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData extends TeaModel {
         @NameInMap("CPUCreditBalance")
         public Float CPUCreditBalance;
 
@@ -83,12 +83,12 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
         @NameInMap("IntranetBandwidth")
         public Integer intranetBandwidth;
 
-        public static DescribeInstanceMonitorDataResponseBodyMonitorData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceMonitorDataResponseBodyMonitorData self = new DescribeInstanceMonitorDataResponseBodyMonitorData();
+        public static DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData self = new DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setCPUCreditBalance(Float CPUCreditBalance) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUCreditBalance(Float CPUCreditBalance) {
             this.CPUCreditBalance = CPUCreditBalance;
             return this;
         }
@@ -96,7 +96,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.CPUCreditBalance;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setBPSRead(Integer BPSRead) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setBPSRead(Integer BPSRead) {
             this.BPSRead = BPSRead;
             return this;
         }
@@ -104,7 +104,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.BPSRead;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setInternetTX(Integer internetTX) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInternetTX(Integer internetTX) {
             this.internetTX = internetTX;
             return this;
         }
@@ -112,7 +112,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.internetTX;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setCPU(Integer CPU) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPU(Integer CPU) {
             this.CPU = CPU;
             return this;
         }
@@ -120,7 +120,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.CPU;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setCPUCreditUsage(Float CPUCreditUsage) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUCreditUsage(Float CPUCreditUsage) {
             this.CPUCreditUsage = CPUCreditUsage;
             return this;
         }
@@ -128,7 +128,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.CPUCreditUsage;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setIOPSWrite(Integer IOPSWrite) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIOPSWrite(Integer IOPSWrite) {
             this.IOPSWrite = IOPSWrite;
             return this;
         }
@@ -136,7 +136,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.IOPSWrite;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setInstanceId(String instanceId) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -144,7 +144,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setIntranetTX(Integer intranetTX) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIntranetTX(Integer intranetTX) {
             this.intranetTX = intranetTX;
             return this;
         }
@@ -152,7 +152,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.intranetTX;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setBPSWrite(Integer BPSWrite) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setBPSWrite(Integer BPSWrite) {
             this.BPSWrite = BPSWrite;
             return this;
         }
@@ -160,7 +160,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.BPSWrite;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setCPUNotpaidSurplusCreditUsage(Float CPUNotpaidSurplusCreditUsage) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUNotpaidSurplusCreditUsage(Float CPUNotpaidSurplusCreditUsage) {
             this.CPUNotpaidSurplusCreditUsage = CPUNotpaidSurplusCreditUsage;
             return this;
         }
@@ -168,7 +168,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.CPUNotpaidSurplusCreditUsage;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setIOPSRead(Integer IOPSRead) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIOPSRead(Integer IOPSRead) {
             this.IOPSRead = IOPSRead;
             return this;
         }
@@ -176,7 +176,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.IOPSRead;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setCPUAdvanceCreditBalance(Float CPUAdvanceCreditBalance) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setCPUAdvanceCreditBalance(Float CPUAdvanceCreditBalance) {
             this.CPUAdvanceCreditBalance = CPUAdvanceCreditBalance;
             return this;
         }
@@ -184,7 +184,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.CPUAdvanceCreditBalance;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setInternetBandwidth(Integer internetBandwidth) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInternetBandwidth(Integer internetBandwidth) {
             this.internetBandwidth = internetBandwidth;
             return this;
         }
@@ -192,7 +192,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.internetBandwidth;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setInternetRX(Integer internetRX) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setInternetRX(Integer internetRX) {
             this.internetRX = internetRX;
             return this;
         }
@@ -200,7 +200,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.internetRX;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setTimeStamp(String timeStamp) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
@@ -208,7 +208,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setIntranetRX(Integer intranetRX) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIntranetRX(Integer intranetRX) {
             this.intranetRX = intranetRX;
             return this;
         }
@@ -216,12 +216,31 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             return this.intranetRX;
         }
 
-        public DescribeInstanceMonitorDataResponseBodyMonitorData setIntranetBandwidth(Integer intranetBandwidth) {
+        public DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData setIntranetBandwidth(Integer intranetBandwidth) {
             this.intranetBandwidth = intranetBandwidth;
             return this;
         }
         public Integer getIntranetBandwidth() {
             return this.intranetBandwidth;
+        }
+
+    }
+
+    public static class DescribeInstanceMonitorDataResponseBodyMonitorData extends TeaModel {
+        @NameInMap("InstanceMonitorData")
+        public java.util.List<DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData> instanceMonitorData;
+
+        public static DescribeInstanceMonitorDataResponseBodyMonitorData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceMonitorDataResponseBodyMonitorData self = new DescribeInstanceMonitorDataResponseBodyMonitorData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMonitorDataResponseBodyMonitorData setInstanceMonitorData(java.util.List<DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData> instanceMonitorData) {
+            this.instanceMonitorData = instanceMonitorData;
+            return this;
+        }
+        public java.util.List<DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData> getInstanceMonitorData() {
+            return this.instanceMonitorData;
         }
 
     }

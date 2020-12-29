@@ -8,7 +8,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("InstanceCloudAssistantStatusSet")
-    public java.util.List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet> instanceCloudAssistantStatusSet;
+    public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet;
 
     public static DescribeCloudAssistantStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudAssistantStatusResponseBody self = new DescribeCloudAssistantStatusResponseBody();
@@ -23,15 +23,15 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCloudAssistantStatusResponseBody setInstanceCloudAssistantStatusSet(java.util.List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet> instanceCloudAssistantStatusSet) {
+    public DescribeCloudAssistantStatusResponseBody setInstanceCloudAssistantStatusSet(DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet instanceCloudAssistantStatusSet) {
         this.instanceCloudAssistantStatusSet = instanceCloudAssistantStatusSet;
         return this;
     }
-    public java.util.List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet> getInstanceCloudAssistantStatusSet() {
+    public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet getInstanceCloudAssistantStatusSet() {
         return this.instanceCloudAssistantStatusSet;
     }
 
-    public static class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet extends TeaModel {
+    public static class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus extends TeaModel {
         @NameInMap("CloudAssistantStatus")
         public String cloudAssistantStatus;
 
@@ -41,12 +41,12 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet self = new DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet();
+        public static DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus self = new DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet setCloudAssistantStatus(String cloudAssistantStatus) {
+        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus setCloudAssistantStatus(String cloudAssistantStatus) {
             this.cloudAssistantStatus = cloudAssistantStatus;
             return this;
         }
@@ -54,7 +54,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             return this.cloudAssistantStatus;
         }
 
-        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet setCloudAssistantVersion(String cloudAssistantVersion) {
+        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus setCloudAssistantVersion(String cloudAssistantVersion) {
             this.cloudAssistantVersion = cloudAssistantVersion;
             return this;
         }
@@ -62,12 +62,31 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
             return this.cloudAssistantVersion;
         }
 
-        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet setInstanceId(String instanceId) {
+        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet extends TeaModel {
+        @NameInMap("InstanceCloudAssistantStatus")
+        public java.util.List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus> instanceCloudAssistantStatus;
+
+        public static DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet self = new DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSet setInstanceCloudAssistantStatus(java.util.List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus> instanceCloudAssistantStatus) {
+            this.instanceCloudAssistantStatus = instanceCloudAssistantStatus;
+            return this;
+        }
+        public java.util.List<DescribeCloudAssistantStatusResponseBodyInstanceCloudAssistantStatusSetInstanceCloudAssistantStatus> getInstanceCloudAssistantStatus() {
+            return this.instanceCloudAssistantStatus;
         }
 
     }

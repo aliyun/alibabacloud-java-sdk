@@ -17,7 +17,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("VSwitches")
-    public java.util.List<DescribeVSwitchesResponseBodyVSwitches> vSwitches;
+    public DescribeVSwitchesResponseBodyVSwitches vSwitches;
 
     public static DescribeVSwitchesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVSwitchesResponseBody self = new DescribeVSwitchesResponseBody();
@@ -56,15 +56,15 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeVSwitchesResponseBody setVSwitches(java.util.List<DescribeVSwitchesResponseBodyVSwitches> vSwitches) {
+    public DescribeVSwitchesResponseBody setVSwitches(DescribeVSwitchesResponseBodyVSwitches vSwitches) {
         this.vSwitches = vSwitches;
         return this;
     }
-    public java.util.List<DescribeVSwitchesResponseBodyVSwitches> getVSwitches() {
+    public DescribeVSwitchesResponseBodyVSwitches getVSwitches() {
         return this.vSwitches;
     }
 
-    public static class DescribeVSwitchesResponseBodyVSwitches extends TeaModel {
+    public static class DescribeVSwitchesResponseBodyVSwitchesVSwitch extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -98,12 +98,12 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @NameInMap("VSwitchName")
         public String vSwitchName;
 
-        public static DescribeVSwitchesResponseBodyVSwitches build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVSwitchesResponseBodyVSwitches self = new DescribeVSwitchesResponseBodyVSwitches();
+        public static DescribeVSwitchesResponseBodyVSwitchesVSwitch build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVSwitchesResponseBodyVSwitchesVSwitch self = new DescribeVSwitchesResponseBodyVSwitchesVSwitch();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setCreationTime(String creationTime) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -111,7 +111,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setStatus(String status) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -119,7 +119,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setVpcId(String vpcId) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -127,7 +127,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setIsDefault(Boolean isDefault) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setIsDefault(Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
@@ -135,7 +135,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.isDefault;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setVSwitchId(String vSwitchId) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -143,7 +143,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setCidrBlock(String cidrBlock) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setCidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
@@ -151,7 +151,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.cidrBlock;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setDescription(String description) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -159,7 +159,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setAvailableIpAddressCount(Long availableIpAddressCount) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setAvailableIpAddressCount(Long availableIpAddressCount) {
             this.availableIpAddressCount = availableIpAddressCount;
             return this;
         }
@@ -167,7 +167,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.availableIpAddressCount;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setResourceGroupId(String resourceGroupId) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -175,7 +175,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setZoneId(String zoneId) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -183,12 +183,31 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeVSwitchesResponseBodyVSwitches setVSwitchName(String vSwitchName) {
+        public DescribeVSwitchesResponseBodyVSwitchesVSwitch setVSwitchName(String vSwitchName) {
             this.vSwitchName = vSwitchName;
             return this;
         }
         public String getVSwitchName() {
             return this.vSwitchName;
+        }
+
+    }
+
+    public static class DescribeVSwitchesResponseBodyVSwitches extends TeaModel {
+        @NameInMap("VSwitch")
+        public java.util.List<DescribeVSwitchesResponseBodyVSwitchesVSwitch> vSwitch;
+
+        public static DescribeVSwitchesResponseBodyVSwitches build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVSwitchesResponseBodyVSwitches self = new DescribeVSwitchesResponseBodyVSwitches();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVSwitchesResponseBodyVSwitches setVSwitch(java.util.List<DescribeVSwitchesResponseBodyVSwitchesVSwitch> vSwitch) {
+            this.vSwitch = vSwitch;
+            return this;
+        }
+        public java.util.List<DescribeVSwitchesResponseBodyVSwitchesVSwitch> getVSwitch() {
+            return this.vSwitch;
         }
 
     }

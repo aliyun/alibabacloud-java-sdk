@@ -17,7 +17,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("ReservedInstances")
-    public java.util.List<DescribeReservedInstancesResponseBodyReservedInstances> reservedInstances;
+    public DescribeReservedInstancesResponseBodyReservedInstances reservedInstances;
 
     public static DescribeReservedInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeReservedInstancesResponseBody self = new DescribeReservedInstancesResponseBody();
@@ -56,24 +56,24 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeReservedInstancesResponseBody setReservedInstances(java.util.List<DescribeReservedInstancesResponseBodyReservedInstances> reservedInstances) {
+    public DescribeReservedInstancesResponseBody setReservedInstances(DescribeReservedInstancesResponseBodyReservedInstances reservedInstances) {
         this.reservedInstances = reservedInstances;
         return this;
     }
-    public java.util.List<DescribeReservedInstancesResponseBodyReservedInstances> getReservedInstances() {
+    public DescribeReservedInstancesResponseBodyReservedInstances getReservedInstances() {
         return this.reservedInstances;
     }
 
-    public static class DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks extends TeaModel {
+    public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock extends TeaModel {
         @NameInMap("LockReason")
         public String lockReason;
 
-        public static DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks self = new DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks();
+        public static DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock build(java.util.Map<String, ?> map) throws Exception {
+            DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock self = new DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock();
             return TeaModel.build(map, self);
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks setLockReason(String lockReason) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock setLockReason(String lockReason) {
             this.lockReason = lockReason;
             return this;
         }
@@ -83,19 +83,38 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeReservedInstancesResponseBodyReservedInstancesTags extends TeaModel {
+    public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks extends TeaModel {
+        @NameInMap("OperationLock")
+        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock> operationLock;
+
+        public static DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks self = new DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks setOperationLock(java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock> operationLock) {
+            this.operationLock = operationLock;
+            return this;
+        }
+        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocksOperationLock> getOperationLock() {
+            return this.operationLock;
+        }
+
+    }
+
+    public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static DescribeReservedInstancesResponseBodyReservedInstancesTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeReservedInstancesResponseBodyReservedInstancesTags self = new DescribeReservedInstancesResponseBodyReservedInstancesTags();
+        public static DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag self = new DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstancesTags setTagValue(String tagValue) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -103,7 +122,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstancesTags setTagKey(String tagKey) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
@@ -113,7 +132,26 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeReservedInstancesResponseBodyReservedInstances extends TeaModel {
+    public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag> tag;
+
+        public static DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags self = new DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags setTag(java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -124,13 +162,13 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         public String reservedInstanceName;
 
         @NameInMap("OperationLocks")
-        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks> operationLocks;
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks operationLocks;
 
         @NameInMap("ReservedInstanceId")
         public String reservedInstanceId;
 
         @NameInMap("Tags")
-        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesTags> tags;
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags;
 
         @NameInMap("InstanceType")
         public String instanceType;
@@ -168,12 +206,12 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         @NameInMap("Scope")
         public String scope;
 
-        public static DescribeReservedInstancesResponseBodyReservedInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeReservedInstancesResponseBodyReservedInstances self = new DescribeReservedInstancesResponseBodyReservedInstances();
+        public static DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance self = new DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setCreationTime(String creationTime) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -181,7 +219,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setStatus(String status) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -189,7 +227,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setReservedInstanceName(String reservedInstanceName) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setReservedInstanceName(String reservedInstanceName) {
             this.reservedInstanceName = reservedInstanceName;
             return this;
         }
@@ -197,15 +235,15 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.reservedInstanceName;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setOperationLocks(java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks> operationLocks) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setOperationLocks(DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks operationLocks) {
             this.operationLocks = operationLocks;
             return this;
         }
-        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesOperationLocks> getOperationLocks() {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceOperationLocks getOperationLocks() {
             return this.operationLocks;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setReservedInstanceId(String reservedInstanceId) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setReservedInstanceId(String reservedInstanceId) {
             this.reservedInstanceId = reservedInstanceId;
             return this;
         }
@@ -213,15 +251,15 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.reservedInstanceId;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setTags(java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesTags> tags) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setTags(DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesTags> getTags() {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstanceTags getTags() {
             return this.tags;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setInstanceType(String instanceType) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -229,7 +267,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setInstanceAmount(Integer instanceAmount) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setInstanceAmount(Integer instanceAmount) {
             this.instanceAmount = instanceAmount;
             return this;
         }
@@ -237,7 +275,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.instanceAmount;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setOfferingType(String offeringType) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setOfferingType(String offeringType) {
             this.offeringType = offeringType;
             return this;
         }
@@ -245,7 +283,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.offeringType;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setRegionId(String regionId) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -253,7 +291,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setStartTime(String startTime) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -261,7 +299,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setDescription(String description) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -269,7 +307,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setAllocationStatus(String allocationStatus) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setAllocationStatus(String allocationStatus) {
             this.allocationStatus = allocationStatus;
             return this;
         }
@@ -277,7 +315,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.allocationStatus;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setExpiredTime(String expiredTime) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
@@ -285,7 +323,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setResourceGroupId(String resourceGroupId) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -293,7 +331,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setZoneId(String zoneId) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -301,7 +339,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setPlatform(String platform) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setPlatform(String platform) {
             this.platform = platform;
             return this;
         }
@@ -309,12 +347,31 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             return this.platform;
         }
 
-        public DescribeReservedInstancesResponseBodyReservedInstances setScope(String scope) {
+        public DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance setScope(String scope) {
             this.scope = scope;
             return this;
         }
         public String getScope() {
             return this.scope;
+        }
+
+    }
+
+    public static class DescribeReservedInstancesResponseBodyReservedInstances extends TeaModel {
+        @NameInMap("ReservedInstance")
+        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance> reservedInstance;
+
+        public static DescribeReservedInstancesResponseBodyReservedInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeReservedInstancesResponseBodyReservedInstances self = new DescribeReservedInstancesResponseBodyReservedInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeReservedInstancesResponseBodyReservedInstances setReservedInstance(java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance> reservedInstance) {
+            this.reservedInstance = reservedInstance;
+            return this;
+        }
+        public java.util.List<DescribeReservedInstancesResponseBodyReservedInstancesReservedInstance> getReservedInstance() {
+            return this.reservedInstance;
         }
 
     }

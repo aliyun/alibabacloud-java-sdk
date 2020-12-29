@@ -17,7 +17,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("HpcClusters")
-    public java.util.List<DescribeHpcClustersResponseBodyHpcClusters> hpcClusters;
+    public DescribeHpcClustersResponseBodyHpcClusters hpcClusters;
 
     public static DescribeHpcClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHpcClustersResponseBody self = new DescribeHpcClustersResponseBody();
@@ -56,15 +56,15 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeHpcClustersResponseBody setHpcClusters(java.util.List<DescribeHpcClustersResponseBodyHpcClusters> hpcClusters) {
+    public DescribeHpcClustersResponseBody setHpcClusters(DescribeHpcClustersResponseBodyHpcClusters hpcClusters) {
         this.hpcClusters = hpcClusters;
         return this;
     }
-    public java.util.List<DescribeHpcClustersResponseBodyHpcClusters> getHpcClusters() {
+    public DescribeHpcClustersResponseBodyHpcClusters getHpcClusters() {
         return this.hpcClusters;
     }
 
-    public static class DescribeHpcClustersResponseBodyHpcClusters extends TeaModel {
+    public static class DescribeHpcClustersResponseBodyHpcClustersHpcCluster extends TeaModel {
         @NameInMap("Description")
         public String description;
 
@@ -74,12 +74,12 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        public static DescribeHpcClustersResponseBodyHpcClusters build(java.util.Map<String, ?> map) throws Exception {
-            DescribeHpcClustersResponseBodyHpcClusters self = new DescribeHpcClustersResponseBodyHpcClusters();
+        public static DescribeHpcClustersResponseBodyHpcClustersHpcCluster build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHpcClustersResponseBodyHpcClustersHpcCluster self = new DescribeHpcClustersResponseBodyHpcClustersHpcCluster();
             return TeaModel.build(map, self);
         }
 
-        public DescribeHpcClustersResponseBodyHpcClusters setDescription(String description) {
+        public DescribeHpcClustersResponseBodyHpcClustersHpcCluster setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -87,7 +87,7 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeHpcClustersResponseBodyHpcClusters setHpcClusterId(String hpcClusterId) {
+        public DescribeHpcClustersResponseBodyHpcClustersHpcCluster setHpcClusterId(String hpcClusterId) {
             this.hpcClusterId = hpcClusterId;
             return this;
         }
@@ -95,12 +95,31 @@ public class DescribeHpcClustersResponseBody extends TeaModel {
             return this.hpcClusterId;
         }
 
-        public DescribeHpcClustersResponseBodyHpcClusters setName(String name) {
+        public DescribeHpcClustersResponseBodyHpcClustersHpcCluster setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class DescribeHpcClustersResponseBodyHpcClusters extends TeaModel {
+        @NameInMap("HpcCluster")
+        public java.util.List<DescribeHpcClustersResponseBodyHpcClustersHpcCluster> hpcCluster;
+
+        public static DescribeHpcClustersResponseBodyHpcClusters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHpcClustersResponseBodyHpcClusters self = new DescribeHpcClustersResponseBodyHpcClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHpcClustersResponseBodyHpcClusters setHpcCluster(java.util.List<DescribeHpcClustersResponseBodyHpcClustersHpcCluster> hpcCluster) {
+            this.hpcCluster = hpcCluster;
+            return this;
+        }
+        public java.util.List<DescribeHpcClustersResponseBodyHpcClustersHpcCluster> getHpcCluster() {
+            return this.hpcCluster;
         }
 
     }

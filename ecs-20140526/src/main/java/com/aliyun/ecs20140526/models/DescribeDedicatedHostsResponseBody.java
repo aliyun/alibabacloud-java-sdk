@@ -8,7 +8,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     public Integer totalCount;
 
     @NameInMap("DedicatedHosts")
-    public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHosts> dedicatedHosts;
+    public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -32,11 +32,11 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeDedicatedHostsResponseBody setDedicatedHosts(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHosts> dedicatedHosts) {
+    public DescribeDedicatedHostsResponseBody setDedicatedHosts(DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts) {
         this.dedicatedHosts = dedicatedHosts;
         return this;
     }
-    public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHosts> getDedicatedHosts() {
+    public DescribeDedicatedHostsResponseBodyDedicatedHosts getDedicatedHosts() {
         return this.dedicatedHosts;
     }
 
@@ -64,7 +64,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity extends TeaModel {
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity extends TeaModel {
         @NameInMap("AvailableMemory")
         public Float availableMemory;
 
@@ -92,12 +92,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         @NameInMap("AvailableVgpus")
         public Integer availableVgpus;
 
-        public static DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity self = new DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity();
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity setAvailableMemory(Float availableMemory) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setAvailableMemory(Float availableMemory) {
             this.availableMemory = availableMemory;
             return this;
         }
@@ -105,7 +105,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.availableMemory;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity setLocalStorageCategory(String localStorageCategory) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setLocalStorageCategory(String localStorageCategory) {
             this.localStorageCategory = localStorageCategory;
             return this;
         }
@@ -113,7 +113,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.localStorageCategory;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity setTotalMemory(Float totalMemory) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setTotalMemory(Float totalMemory) {
             this.totalMemory = totalMemory;
             return this;
         }
@@ -121,7 +121,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.totalMemory;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity setTotalLocalStorage(Integer totalLocalStorage) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setTotalLocalStorage(Integer totalLocalStorage) {
             this.totalLocalStorage = totalLocalStorage;
             return this;
         }
@@ -129,7 +129,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.totalLocalStorage;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity setTotalVcpus(Integer totalVcpus) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setTotalVcpus(Integer totalVcpus) {
             this.totalVcpus = totalVcpus;
             return this;
         }
@@ -137,7 +137,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.totalVcpus;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity setTotalVgpus(Integer totalVgpus) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setTotalVgpus(Integer totalVgpus) {
             this.totalVgpus = totalVgpus;
             return this;
         }
@@ -145,7 +145,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.totalVgpus;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity setAvailableLocalStorage(Integer availableLocalStorage) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setAvailableLocalStorage(Integer availableLocalStorage) {
             this.availableLocalStorage = availableLocalStorage;
             return this;
         }
@@ -153,7 +153,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.availableLocalStorage;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity setAvailableVcpus(Integer availableVcpus) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setAvailableVcpus(Integer availableVcpus) {
             this.availableVcpus = availableVcpus;
             return this;
         }
@@ -161,7 +161,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.availableVcpus;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity setAvailableVgpus(Integer availableVgpus) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setAvailableVgpus(Integer availableVgpus) {
             this.availableVgpus = availableVgpus;
             return this;
         }
@@ -171,16 +171,16 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsOperationLocks extends TeaModel {
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock extends TeaModel {
         @NameInMap("LockReason")
         public String lockReason;
 
-        public static DescribeDedicatedHostsResponseBodyDedicatedHostsOperationLocks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDedicatedHostsResponseBodyDedicatedHostsOperationLocks self = new DescribeDedicatedHostsResponseBodyDedicatedHostsOperationLocks();
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsOperationLocks setLockReason(String lockReason) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock setLockReason(String lockReason) {
             this.lockReason = lockReason;
             return this;
         }
@@ -190,19 +190,38 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsTags extends TeaModel {
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks extends TeaModel {
+        @NameInMap("OperationLock")
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock> operationLock;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks setOperationLock(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock> operationLock) {
+            this.operationLock = operationLock;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocksOperationLock> getOperationLock() {
+            return this.operationLock;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static DescribeDedicatedHostsResponseBodyDedicatedHostsTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDedicatedHostsResponseBodyDedicatedHostsTags self = new DescribeDedicatedHostsResponseBodyDedicatedHostsTags();
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsTags setTagValue(String tagValue) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -210,7 +229,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsTags setTagKey(String tagKey) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
@@ -220,19 +239,76 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsInstances extends TeaModel {
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag> tag;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags setTag(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList extends TeaModel {
+        @NameInMap("SupportedInstanceTypesList")
+        public java.util.List<String> supportedInstanceTypesList;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList setSupportedInstanceTypesList(java.util.List<String> supportedInstanceTypesList) {
+            this.supportedInstanceTypesList = supportedInstanceTypesList;
+            return this;
+        }
+        public java.util.List<String> getSupportedInstanceTypesList() {
+            return this.supportedInstanceTypesList;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies extends TeaModel {
+        @NameInMap("SupportedCustomInstanceTypeFamily")
+        public java.util.List<String> supportedCustomInstanceTypeFamily;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies setSupportedCustomInstanceTypeFamily(java.util.List<String> supportedCustomInstanceTypeFamily) {
+            this.supportedCustomInstanceTypeFamily = supportedCustomInstanceTypeFamily;
+            return this;
+        }
+        public java.util.List<String> getSupportedCustomInstanceTypeFamily() {
+            return this.supportedCustomInstanceTypeFamily;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("InstanceType")
         public String instanceType;
 
-        public static DescribeDedicatedHostsResponseBodyDedicatedHostsInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDedicatedHostsResponseBodyDedicatedHostsInstances self = new DescribeDedicatedHostsResponseBodyDedicatedHostsInstances();
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsInstances setInstanceId(String instanceId) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -240,7 +316,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsInstances setInstanceType(String instanceType) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -250,19 +326,38 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsNetworkAttributes extends TeaModel {
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances extends TeaModel {
+        @NameInMap("Instance")
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance> instance;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances setInstance(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance> instance) {
+            this.instance = instance;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstancesInstance> getInstance() {
+            return this.instance;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes extends TeaModel {
         @NameInMap("UdpTimeout")
         public Integer udpTimeout;
 
         @NameInMap("SlbUdpTimeout")
         public Integer slbUdpTimeout;
 
-        public static DescribeDedicatedHostsResponseBodyDedicatedHostsNetworkAttributes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDedicatedHostsResponseBodyDedicatedHostsNetworkAttributes self = new DescribeDedicatedHostsResponseBodyDedicatedHostsNetworkAttributes();
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsNetworkAttributes setUdpTimeout(Integer udpTimeout) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes setUdpTimeout(Integer udpTimeout) {
             this.udpTimeout = udpTimeout;
             return this;
         }
@@ -270,7 +365,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.udpTimeout;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsNetworkAttributes setSlbUdpTimeout(Integer slbUdpTimeout) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes setSlbUdpTimeout(Integer slbUdpTimeout) {
             this.slbUdpTimeout = slbUdpTimeout;
             return this;
         }
@@ -280,7 +375,26 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDedicatedHostsResponseBodyDedicatedHosts extends TeaModel {
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies extends TeaModel {
+        @NameInMap("SupportedInstanceTypeFamily")
+        public java.util.List<String> supportedInstanceTypeFamily;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies setSupportedInstanceTypeFamily(java.util.List<String> supportedInstanceTypeFamily) {
+            this.supportedInstanceTypeFamily = supportedInstanceTypeFamily;
+            return this;
+        }
+        public java.util.List<String> getSupportedInstanceTypeFamily() {
+            return this.supportedInstanceTypeFamily;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -288,19 +402,19 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String creationTime;
 
         @NameInMap("Capacity")
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity capacity;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity capacity;
 
         @NameInMap("AutoPlacement")
         public String autoPlacement;
 
         @NameInMap("OperationLocks")
-        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsOperationLocks> operationLocks;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks operationLocks;
 
         @NameInMap("ChargeType")
         public String chargeType;
 
         @NameInMap("Tags")
-        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsTags> tags;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags tags;
 
         @NameInMap("ActionOnMaintenance")
         public String actionOnMaintenance;
@@ -336,19 +450,19 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Float cpuOverCommitRatio;
 
         @NameInMap("SupportedInstanceTypesList")
-        public java.util.List<String> supportedInstanceTypesList;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList supportedInstanceTypesList;
 
         @NameInMap("SupportedCustomInstanceTypeFamilies")
-        public java.util.List<String> supportedCustomInstanceTypeFamilies;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies;
 
         @NameInMap("Instances")
-        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsInstances> instances;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances instances;
 
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("NetworkAttributes")
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsNetworkAttributes networkAttributes;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes networkAttributes;
 
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
@@ -366,17 +480,17 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public String zoneId;
 
         @NameInMap("SupportedInstanceTypeFamilies")
-        public java.util.List<String> supportedInstanceTypeFamilies;
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies supportedInstanceTypeFamilies;
 
         @NameInMap("MachineId")
         public String machineId;
 
-        public static DescribeDedicatedHostsResponseBodyDedicatedHosts build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDedicatedHostsResponseBodyDedicatedHosts self = new DescribeDedicatedHostsResponseBodyDedicatedHosts();
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setStatus(String status) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -384,7 +498,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setCreationTime(String creationTime) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -392,15 +506,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setCapacity(DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity capacity) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setCapacity(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity capacity) {
             this.capacity = capacity;
             return this;
         }
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsCapacity getCapacity() {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity getCapacity() {
             return this.capacity;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setAutoPlacement(String autoPlacement) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setAutoPlacement(String autoPlacement) {
             this.autoPlacement = autoPlacement;
             return this;
         }
@@ -408,15 +522,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.autoPlacement;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setOperationLocks(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsOperationLocks> operationLocks) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setOperationLocks(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks operationLocks) {
             this.operationLocks = operationLocks;
             return this;
         }
-        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsOperationLocks> getOperationLocks() {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostOperationLocks getOperationLocks() {
             return this.operationLocks;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setChargeType(String chargeType) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setChargeType(String chargeType) {
             this.chargeType = chargeType;
             return this;
         }
@@ -424,15 +538,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.chargeType;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setTags(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsTags> tags) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setTags(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsTags> getTags() {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostTags getTags() {
             return this.tags;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setActionOnMaintenance(String actionOnMaintenance) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setActionOnMaintenance(String actionOnMaintenance) {
             this.actionOnMaintenance = actionOnMaintenance;
             return this;
         }
@@ -440,7 +554,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.actionOnMaintenance;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setPhysicalGpus(Integer physicalGpus) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setPhysicalGpus(Integer physicalGpus) {
             this.physicalGpus = physicalGpus;
             return this;
         }
@@ -448,7 +562,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.physicalGpus;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setSaleCycle(String saleCycle) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setSaleCycle(String saleCycle) {
             this.saleCycle = saleCycle;
             return this;
         }
@@ -456,7 +570,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.saleCycle;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setDescription(String description) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -464,7 +578,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setDedicatedHostType(String dedicatedHostType) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setDedicatedHostType(String dedicatedHostType) {
             this.dedicatedHostType = dedicatedHostType;
             return this;
         }
@@ -472,7 +586,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.dedicatedHostType;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setDedicatedHostId(String dedicatedHostId) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setDedicatedHostId(String dedicatedHostId) {
             this.dedicatedHostId = dedicatedHostId;
             return this;
         }
@@ -480,7 +594,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.dedicatedHostId;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setSockets(Integer sockets) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setSockets(Integer sockets) {
             this.sockets = sockets;
             return this;
         }
@@ -488,7 +602,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.sockets;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setCores(Integer cores) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setCores(Integer cores) {
             this.cores = cores;
             return this;
         }
@@ -496,7 +610,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.cores;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setGPUSpec(String GPUSpec) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setGPUSpec(String GPUSpec) {
             this.GPUSpec = GPUSpec;
             return this;
         }
@@ -504,7 +618,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.GPUSpec;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setAutoReleaseTime(String autoReleaseTime) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setAutoReleaseTime(String autoReleaseTime) {
             this.autoReleaseTime = autoReleaseTime;
             return this;
         }
@@ -512,7 +626,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.autoReleaseTime;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setCpuOverCommitRatio(Float cpuOverCommitRatio) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setCpuOverCommitRatio(Float cpuOverCommitRatio) {
             this.cpuOverCommitRatio = cpuOverCommitRatio;
             return this;
         }
@@ -520,31 +634,31 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.cpuOverCommitRatio;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setSupportedInstanceTypesList(java.util.List<String> supportedInstanceTypesList) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setSupportedInstanceTypesList(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList supportedInstanceTypesList) {
             this.supportedInstanceTypesList = supportedInstanceTypesList;
             return this;
         }
-        public java.util.List<String> getSupportedInstanceTypesList() {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypesList getSupportedInstanceTypesList() {
             return this.supportedInstanceTypesList;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setSupportedCustomInstanceTypeFamilies(java.util.List<String> supportedCustomInstanceTypeFamilies) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setSupportedCustomInstanceTypeFamilies(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies supportedCustomInstanceTypeFamilies) {
             this.supportedCustomInstanceTypeFamilies = supportedCustomInstanceTypeFamilies;
             return this;
         }
-        public java.util.List<String> getSupportedCustomInstanceTypeFamilies() {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedCustomInstanceTypeFamilies getSupportedCustomInstanceTypeFamilies() {
             return this.supportedCustomInstanceTypeFamilies;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setInstances(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsInstances> instances) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setInstances(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances instances) {
             this.instances = instances;
             return this;
         }
-        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsInstances> getInstances() {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostInstances getInstances() {
             return this.instances;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setRegionId(String regionId) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -552,15 +666,15 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setNetworkAttributes(DescribeDedicatedHostsResponseBodyDedicatedHostsNetworkAttributes networkAttributes) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setNetworkAttributes(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes networkAttributes) {
             this.networkAttributes = networkAttributes;
             return this;
         }
-        public DescribeDedicatedHostsResponseBodyDedicatedHostsNetworkAttributes getNetworkAttributes() {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostNetworkAttributes getNetworkAttributes() {
             return this.networkAttributes;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setDedicatedHostName(String dedicatedHostName) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setDedicatedHostName(String dedicatedHostName) {
             this.dedicatedHostName = dedicatedHostName;
             return this;
         }
@@ -568,7 +682,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.dedicatedHostName;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setExpiredTime(String expiredTime) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
@@ -576,7 +690,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setDedicatedHostClusterId(String dedicatedHostClusterId) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setDedicatedHostClusterId(String dedicatedHostClusterId) {
             this.dedicatedHostClusterId = dedicatedHostClusterId;
             return this;
         }
@@ -584,7 +698,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.dedicatedHostClusterId;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setResourceGroupId(String resourceGroupId) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -592,7 +706,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setZoneId(String zoneId) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -600,20 +714,39 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setSupportedInstanceTypeFamilies(java.util.List<String> supportedInstanceTypeFamilies) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setSupportedInstanceTypeFamilies(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies supportedInstanceTypeFamilies) {
             this.supportedInstanceTypeFamilies = supportedInstanceTypeFamilies;
             return this;
         }
-        public java.util.List<String> getSupportedInstanceTypeFamilies() {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostSupportedInstanceTypeFamilies getSupportedInstanceTypeFamilies() {
             return this.supportedInstanceTypeFamilies;
         }
 
-        public DescribeDedicatedHostsResponseBodyDedicatedHosts setMachineId(String machineId) {
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost setMachineId(String machineId) {
             this.machineId = machineId;
             return this;
         }
         public String getMachineId() {
             return this.machineId;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHosts extends TeaModel {
+        @NameInMap("DedicatedHost")
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost> dedicatedHost;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHosts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHosts self = new DescribeDedicatedHostsResponseBodyDedicatedHosts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHosts setDedicatedHost(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost> dedicatedHost) {
+            this.dedicatedHost = dedicatedHost;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHost> getDedicatedHost() {
+            return this.dedicatedHost;
         }
 
     }

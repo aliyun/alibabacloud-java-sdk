@@ -8,7 +8,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("AccountAttributeItems")
-    public java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItems> accountAttributeItems;
+    public DescribeAccountAttributesResponseBodyAccountAttributeItems accountAttributeItems;
 
     public static DescribeAccountAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccountAttributesResponseBody self = new DescribeAccountAttributesResponseBody();
@@ -23,15 +23,15 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAccountAttributesResponseBody setAccountAttributeItems(java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItems> accountAttributeItems) {
+    public DescribeAccountAttributesResponseBody setAccountAttributeItems(DescribeAccountAttributesResponseBodyAccountAttributeItems accountAttributeItems) {
         this.accountAttributeItems = accountAttributeItems;
         return this;
     }
-    public java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItems> getAccountAttributeItems() {
+    public DescribeAccountAttributesResponseBodyAccountAttributeItems getAccountAttributeItems() {
         return this.accountAttributeItems;
     }
 
-    public static class DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues extends TeaModel {
+    public static class DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem extends TeaModel {
         @NameInMap("DiskCategory")
         public String diskCategory;
 
@@ -53,12 +53,12 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
-        public static DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues self = new DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues();
+        public static DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem self = new DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues setDiskCategory(String diskCategory) {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setDiskCategory(String diskCategory) {
             this.diskCategory = diskCategory;
             return this;
         }
@@ -66,7 +66,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             return this.diskCategory;
         }
 
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues setValue(String value) {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setValue(String value) {
             this.value = value;
             return this;
         }
@@ -74,7 +74,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             return this.value;
         }
 
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues setExpiredTime(String expiredTime) {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
@@ -82,7 +82,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues setZoneId(String zoneId) {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -90,7 +90,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues setInstanceType(String instanceType) {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -98,7 +98,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues setCount(Integer count) {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setCount(Integer count) {
             this.count = count;
             return this;
         }
@@ -106,7 +106,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             return this.count;
         }
 
-        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues setInstanceChargeType(String instanceChargeType) {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem setInstanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
             return this;
         }
@@ -116,19 +116,38 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeAccountAttributesResponseBodyAccountAttributeItems extends TeaModel {
+    public static class DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues extends TeaModel {
+        @NameInMap("ValueItem")
+        public java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem> valueItem;
+
+        public static DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues self = new DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues setValueItem(java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem> valueItem) {
+            this.valueItem = valueItem;
+            return this;
+        }
+        public java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValuesValueItem> getValueItem() {
+            return this.valueItem;
+        }
+
+    }
+
+    public static class DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem extends TeaModel {
         @NameInMap("AttributeName")
         public String attributeName;
 
         @NameInMap("AttributeValues")
-        public java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues> attributeValues;
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues attributeValues;
 
-        public static DescribeAccountAttributesResponseBodyAccountAttributeItems build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAccountAttributesResponseBodyAccountAttributeItems self = new DescribeAccountAttributesResponseBodyAccountAttributeItems();
+        public static DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem self = new DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAccountAttributesResponseBodyAccountAttributeItems setAttributeName(String attributeName) {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem setAttributeName(String attributeName) {
             this.attributeName = attributeName;
             return this;
         }
@@ -136,12 +155,31 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             return this.attributeName;
         }
 
-        public DescribeAccountAttributesResponseBodyAccountAttributeItems setAttributeValues(java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues> attributeValues) {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem setAttributeValues(DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues attributeValues) {
             this.attributeValues = attributeValues;
             return this;
         }
-        public java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAttributeValues> getAttributeValues() {
+        public DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItemAttributeValues getAttributeValues() {
             return this.attributeValues;
+        }
+
+    }
+
+    public static class DescribeAccountAttributesResponseBodyAccountAttributeItems extends TeaModel {
+        @NameInMap("AccountAttributeItem")
+        public java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem> accountAttributeItem;
+
+        public static DescribeAccountAttributesResponseBodyAccountAttributeItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccountAttributesResponseBodyAccountAttributeItems self = new DescribeAccountAttributesResponseBodyAccountAttributeItems();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccountAttributesResponseBodyAccountAttributeItems setAccountAttributeItem(java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem> accountAttributeItem) {
+            this.accountAttributeItem = accountAttributeItem;
+            return this;
+        }
+        public java.util.List<DescribeAccountAttributesResponseBodyAccountAttributeItemsAccountAttributeItem> getAccountAttributeItem() {
+            return this.accountAttributeItem;
         }
 
     }

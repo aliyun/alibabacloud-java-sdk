@@ -38,7 +38,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String networkInterfaceId;
 
     @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
+    public CreateNetworkInterfaceResponseBodySecurityGroupIds securityGroupIds;
 
     @NameInMap("ServiceID")
     public Long serviceID;
@@ -53,10 +53,10 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
     public String ownerId;
 
     @NameInMap("Tags")
-    public java.util.List<CreateNetworkInterfaceResponseBodyTags> tags;
+    public CreateNetworkInterfaceResponseBodyTags tags;
 
     @NameInMap("PrivateIpSets")
-    public java.util.List<CreateNetworkInterfaceResponseBodyPrivateIpSets> privateIpSets;
+    public CreateNetworkInterfaceResponseBodyPrivateIpSets privateIpSets;
 
     public static CreateNetworkInterfaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkInterfaceResponseBody self = new CreateNetworkInterfaceResponseBody();
@@ -151,11 +151,11 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         return this.networkInterfaceId;
     }
 
-    public CreateNetworkInterfaceResponseBody setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+    public CreateNetworkInterfaceResponseBody setSecurityGroupIds(CreateNetworkInterfaceResponseBodySecurityGroupIds securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
     }
-    public java.util.List<String> getSecurityGroupIds() {
+    public CreateNetworkInterfaceResponseBodySecurityGroupIds getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
@@ -191,35 +191,54 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateNetworkInterfaceResponseBody setTags(java.util.List<CreateNetworkInterfaceResponseBodyTags> tags) {
+    public CreateNetworkInterfaceResponseBody setTags(CreateNetworkInterfaceResponseBodyTags tags) {
         this.tags = tags;
         return this;
     }
-    public java.util.List<CreateNetworkInterfaceResponseBodyTags> getTags() {
+    public CreateNetworkInterfaceResponseBodyTags getTags() {
         return this.tags;
     }
 
-    public CreateNetworkInterfaceResponseBody setPrivateIpSets(java.util.List<CreateNetworkInterfaceResponseBodyPrivateIpSets> privateIpSets) {
+    public CreateNetworkInterfaceResponseBody setPrivateIpSets(CreateNetworkInterfaceResponseBodyPrivateIpSets privateIpSets) {
         this.privateIpSets = privateIpSets;
         return this;
     }
-    public java.util.List<CreateNetworkInterfaceResponseBodyPrivateIpSets> getPrivateIpSets() {
+    public CreateNetworkInterfaceResponseBodyPrivateIpSets getPrivateIpSets() {
         return this.privateIpSets;
     }
 
-    public static class CreateNetworkInterfaceResponseBodyTags extends TeaModel {
+    public static class CreateNetworkInterfaceResponseBodySecurityGroupIds extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        public java.util.List<String> securityGroupId;
+
+        public static CreateNetworkInterfaceResponseBodySecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceResponseBodySecurityGroupIds self = new CreateNetworkInterfaceResponseBodySecurityGroupIds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceResponseBodySecurityGroupIds setSecurityGroupId(java.util.List<String> securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+    }
+
+    public static class CreateNetworkInterfaceResponseBodyTagsTag extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static CreateNetworkInterfaceResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
-            CreateNetworkInterfaceResponseBodyTags self = new CreateNetworkInterfaceResponseBodyTags();
+        public static CreateNetworkInterfaceResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceResponseBodyTagsTag self = new CreateNetworkInterfaceResponseBodyTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateNetworkInterfaceResponseBodyTags setTagValue(String tagValue) {
+        public CreateNetworkInterfaceResponseBodyTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -227,7 +246,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public CreateNetworkInterfaceResponseBodyTags setTagKey(String tagKey) {
+        public CreateNetworkInterfaceResponseBodyTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
@@ -237,19 +256,38 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
 
     }
 
-    public static class CreateNetworkInterfaceResponseBodyPrivateIpSets extends TeaModel {
+    public static class CreateNetworkInterfaceResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<CreateNetworkInterfaceResponseBodyTagsTag> tag;
+
+        public static CreateNetworkInterfaceResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceResponseBodyTags self = new CreateNetworkInterfaceResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceResponseBodyTags setTag(java.util.List<CreateNetworkInterfaceResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<CreateNetworkInterfaceResponseBodyTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet extends TeaModel {
         @NameInMap("Primary")
         public Boolean primary;
 
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
-        public static CreateNetworkInterfaceResponseBodyPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
-            CreateNetworkInterfaceResponseBodyPrivateIpSets self = new CreateNetworkInterfaceResponseBodyPrivateIpSets();
+        public static CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet self = new CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet();
             return TeaModel.build(map, self);
         }
 
-        public CreateNetworkInterfaceResponseBodyPrivateIpSets setPrimary(Boolean primary) {
+        public CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet setPrimary(Boolean primary) {
             this.primary = primary;
             return this;
         }
@@ -257,12 +295,31 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             return this.primary;
         }
 
-        public CreateNetworkInterfaceResponseBodyPrivateIpSets setPrivateIpAddress(String privateIpAddress) {
+        public CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
         public String getPrivateIpAddress() {
             return this.privateIpAddress;
+        }
+
+    }
+
+    public static class CreateNetworkInterfaceResponseBodyPrivateIpSets extends TeaModel {
+        @NameInMap("PrivateIpSet")
+        public java.util.List<CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet> privateIpSet;
+
+        public static CreateNetworkInterfaceResponseBodyPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
+            CreateNetworkInterfaceResponseBodyPrivateIpSets self = new CreateNetworkInterfaceResponseBodyPrivateIpSets();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNetworkInterfaceResponseBodyPrivateIpSets setPrivateIpSet(java.util.List<CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet> privateIpSet) {
+            this.privateIpSet = privateIpSet;
+            return this;
+        }
+        public java.util.List<CreateNetworkInterfaceResponseBodyPrivateIpSetsPrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
         }
 
     }

@@ -14,7 +14,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
     public String regionId;
 
     @NameInMap("InstanceTypes")
-    public java.util.List<DescribeImageSupportInstanceTypesResponseBodyInstanceTypes> instanceTypes;
+    public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
     public static DescribeImageSupportInstanceTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageSupportInstanceTypesResponseBody self = new DescribeImageSupportInstanceTypesResponseBody();
@@ -45,15 +45,15 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeImageSupportInstanceTypesResponseBody setInstanceTypes(java.util.List<DescribeImageSupportInstanceTypesResponseBodyInstanceTypes> instanceTypes) {
+    public DescribeImageSupportInstanceTypesResponseBody setInstanceTypes(DescribeImageSupportInstanceTypesResponseBodyInstanceTypes instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
     }
-    public java.util.List<DescribeImageSupportInstanceTypesResponseBodyInstanceTypes> getInstanceTypes() {
+    public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes getInstanceTypes() {
         return this.instanceTypes;
     }
 
-    public static class DescribeImageSupportInstanceTypesResponseBodyInstanceTypes extends TeaModel {
+    public static class DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
         @NameInMap("InstanceTypeId")
         public String instanceTypeId;
 
@@ -66,12 +66,12 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         @NameInMap("MemorySize")
         public Float memorySize;
 
-        public static DescribeImageSupportInstanceTypesResponseBodyInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageSupportInstanceTypesResponseBodyInstanceTypes self = new DescribeImageSupportInstanceTypesResponseBodyInstanceTypes();
+        public static DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType self = new DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes setInstanceTypeId(String instanceTypeId) {
+        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeId(String instanceTypeId) {
             this.instanceTypeId = instanceTypeId;
             return this;
         }
@@ -79,7 +79,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             return this.instanceTypeId;
         }
 
-        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes setInstanceTypeFamily(String instanceTypeFamily) {
+        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeFamily(String instanceTypeFamily) {
             this.instanceTypeFamily = instanceTypeFamily;
             return this;
         }
@@ -87,7 +87,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             return this.instanceTypeFamily;
         }
 
-        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes setCpuCoreCount(Integer cpuCoreCount) {
+        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setCpuCoreCount(Integer cpuCoreCount) {
             this.cpuCoreCount = cpuCoreCount;
             return this;
         }
@@ -95,12 +95,31 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             return this.cpuCoreCount;
         }
 
-        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes setMemorySize(Float memorySize) {
+        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType setMemorySize(Float memorySize) {
             this.memorySize = memorySize;
             return this;
         }
         public Float getMemorySize() {
             return this.memorySize;
+        }
+
+    }
+
+    public static class DescribeImageSupportInstanceTypesResponseBodyInstanceTypes extends TeaModel {
+        @NameInMap("InstanceType")
+        public java.util.List<DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType> instanceType;
+
+        public static DescribeImageSupportInstanceTypesResponseBodyInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageSupportInstanceTypesResponseBodyInstanceTypes self = new DescribeImageSupportInstanceTypesResponseBodyInstanceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageSupportInstanceTypesResponseBodyInstanceTypes setInstanceType(java.util.List<DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType> instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public java.util.List<DescribeImageSupportInstanceTypesResponseBodyInstanceTypesInstanceType> getInstanceType() {
+            return this.instanceType;
         }
 
     }

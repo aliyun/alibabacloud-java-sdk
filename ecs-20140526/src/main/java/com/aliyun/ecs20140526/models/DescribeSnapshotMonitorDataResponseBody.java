@@ -8,7 +8,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("MonitorData")
-    public java.util.List<DescribeSnapshotMonitorDataResponseBodyMonitorData> monitorData;
+    public DescribeSnapshotMonitorDataResponseBodyMonitorData monitorData;
 
     public static DescribeSnapshotMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotMonitorDataResponseBody self = new DescribeSnapshotMonitorDataResponseBody();
@@ -23,27 +23,27 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSnapshotMonitorDataResponseBody setMonitorData(java.util.List<DescribeSnapshotMonitorDataResponseBodyMonitorData> monitorData) {
+    public DescribeSnapshotMonitorDataResponseBody setMonitorData(DescribeSnapshotMonitorDataResponseBodyMonitorData monitorData) {
         this.monitorData = monitorData;
         return this;
     }
-    public java.util.List<DescribeSnapshotMonitorDataResponseBodyMonitorData> getMonitorData() {
+    public DescribeSnapshotMonitorDataResponseBodyMonitorData getMonitorData() {
         return this.monitorData;
     }
 
-    public static class DescribeSnapshotMonitorDataResponseBodyMonitorData extends TeaModel {
+    public static class DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint extends TeaModel {
         @NameInMap("Size")
         public Long size;
 
         @NameInMap("TimeStamp")
         public String timeStamp;
 
-        public static DescribeSnapshotMonitorDataResponseBodyMonitorData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSnapshotMonitorDataResponseBodyMonitorData self = new DescribeSnapshotMonitorDataResponseBodyMonitorData();
+        public static DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint self = new DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSnapshotMonitorDataResponseBodyMonitorData setSize(Long size) {
+        public DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint setSize(Long size) {
             this.size = size;
             return this;
         }
@@ -51,12 +51,31 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             return this.size;
         }
 
-        public DescribeSnapshotMonitorDataResponseBodyMonitorData setTimeStamp(String timeStamp) {
+        public DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+    }
+
+    public static class DescribeSnapshotMonitorDataResponseBodyMonitorData extends TeaModel {
+        @NameInMap("DataPoint")
+        public java.util.List<DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint> dataPoint;
+
+        public static DescribeSnapshotMonitorDataResponseBodyMonitorData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotMonitorDataResponseBodyMonitorData self = new DescribeSnapshotMonitorDataResponseBodyMonitorData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotMonitorDataResponseBodyMonitorData setDataPoint(java.util.List<DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint> dataPoint) {
+            this.dataPoint = dataPoint;
+            return this;
+        }
+        public java.util.List<DescribeSnapshotMonitorDataResponseBodyMonitorDataDataPoint> getDataPoint() {
+            return this.dataPoint;
         }
 
     }

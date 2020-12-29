@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccessPointsResponseBody extends TeaModel {
     @NameInMap("AccessPointSet")
-    public java.util.List<DescribeAccessPointsResponseBodyAccessPointSet> accessPointSet;
+    public DescribeAccessPointsResponseBodyAccessPointSet accessPointSet;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -24,11 +24,11 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAccessPointsResponseBody setAccessPointSet(java.util.List<DescribeAccessPointsResponseBodyAccessPointSet> accessPointSet) {
+    public DescribeAccessPointsResponseBody setAccessPointSet(DescribeAccessPointsResponseBodyAccessPointSet accessPointSet) {
         this.accessPointSet = accessPointSet;
         return this;
     }
-    public java.util.List<DescribeAccessPointsResponseBodyAccessPointSet> getAccessPointSet() {
+    public DescribeAccessPointsResponseBodyAccessPointSet getAccessPointSet() {
         return this.accessPointSet;
     }
 
@@ -64,7 +64,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeAccessPointsResponseBodyAccessPointSet extends TeaModel {
+    public static class DescribeAccessPointsResponseBodyAccessPointSetAccessPointType extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -89,12 +89,12 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         @NameInMap("Location")
         public String location;
 
-        public static DescribeAccessPointsResponseBodyAccessPointSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAccessPointsResponseBodyAccessPointSet self = new DescribeAccessPointsResponseBodyAccessPointSet();
+        public static DescribeAccessPointsResponseBodyAccessPointSetAccessPointType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessPointsResponseBodyAccessPointSetAccessPointType self = new DescribeAccessPointsResponseBodyAccessPointSetAccessPointType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAccessPointsResponseBodyAccessPointSet setStatus(String status) {
+        public DescribeAccessPointsResponseBodyAccessPointSetAccessPointType setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -102,7 +102,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeAccessPointsResponseBodyAccessPointSet setType(String type) {
+        public DescribeAccessPointsResponseBodyAccessPointSetAccessPointType setType(String type) {
             this.type = type;
             return this;
         }
@@ -110,7 +110,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeAccessPointsResponseBodyAccessPointSet setHostOperator(String hostOperator) {
+        public DescribeAccessPointsResponseBodyAccessPointSetAccessPointType setHostOperator(String hostOperator) {
             this.hostOperator = hostOperator;
             return this;
         }
@@ -118,7 +118,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             return this.hostOperator;
         }
 
-        public DescribeAccessPointsResponseBodyAccessPointSet setDescription(String description) {
+        public DescribeAccessPointsResponseBodyAccessPointSetAccessPointType setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -126,7 +126,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeAccessPointsResponseBodyAccessPointSet setAttachedRegionNo(String attachedRegionNo) {
+        public DescribeAccessPointsResponseBodyAccessPointSetAccessPointType setAttachedRegionNo(String attachedRegionNo) {
             this.attachedRegionNo = attachedRegionNo;
             return this;
         }
@@ -134,7 +134,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             return this.attachedRegionNo;
         }
 
-        public DescribeAccessPointsResponseBodyAccessPointSet setName(String name) {
+        public DescribeAccessPointsResponseBodyAccessPointSetAccessPointType setName(String name) {
             this.name = name;
             return this;
         }
@@ -142,7 +142,7 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeAccessPointsResponseBodyAccessPointSet setAccessPointId(String accessPointId) {
+        public DescribeAccessPointsResponseBodyAccessPointSetAccessPointType setAccessPointId(String accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
@@ -150,12 +150,31 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             return this.accessPointId;
         }
 
-        public DescribeAccessPointsResponseBodyAccessPointSet setLocation(String location) {
+        public DescribeAccessPointsResponseBodyAccessPointSetAccessPointType setLocation(String location) {
             this.location = location;
             return this;
         }
         public String getLocation() {
             return this.location;
+        }
+
+    }
+
+    public static class DescribeAccessPointsResponseBodyAccessPointSet extends TeaModel {
+        @NameInMap("AccessPointType")
+        public java.util.List<DescribeAccessPointsResponseBodyAccessPointSetAccessPointType> accessPointType;
+
+        public static DescribeAccessPointsResponseBodyAccessPointSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessPointsResponseBodyAccessPointSet self = new DescribeAccessPointsResponseBodyAccessPointSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccessPointsResponseBodyAccessPointSet setAccessPointType(java.util.List<DescribeAccessPointsResponseBodyAccessPointSetAccessPointType> accessPointType) {
+            this.accessPointType = accessPointType;
+            return this;
+        }
+        public java.util.List<DescribeAccessPointsResponseBodyAccessPointSetAccessPointType> getAccessPointType() {
+            return this.accessPointType;
         }
 
     }

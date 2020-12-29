@@ -8,7 +8,7 @@ public class StopInstancesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("InstanceResponses")
-    public java.util.List<StopInstancesResponseBodyInstanceResponses> instanceResponses;
+    public StopInstancesResponseBodyInstanceResponses instanceResponses;
 
     public static StopInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StopInstancesResponseBody self = new StopInstancesResponseBody();
@@ -23,15 +23,15 @@ public class StopInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public StopInstancesResponseBody setInstanceResponses(java.util.List<StopInstancesResponseBodyInstanceResponses> instanceResponses) {
+    public StopInstancesResponseBody setInstanceResponses(StopInstancesResponseBodyInstanceResponses instanceResponses) {
         this.instanceResponses = instanceResponses;
         return this;
     }
-    public java.util.List<StopInstancesResponseBodyInstanceResponses> getInstanceResponses() {
+    public StopInstancesResponseBodyInstanceResponses getInstanceResponses() {
         return this.instanceResponses;
     }
 
-    public static class StopInstancesResponseBodyInstanceResponses extends TeaModel {
+    public static class StopInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
@@ -47,12 +47,12 @@ public class StopInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static StopInstancesResponseBodyInstanceResponses build(java.util.Map<String, ?> map) throws Exception {
-            StopInstancesResponseBodyInstanceResponses self = new StopInstancesResponseBodyInstanceResponses();
+        public static StopInstancesResponseBodyInstanceResponsesInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+            StopInstancesResponseBodyInstanceResponsesInstanceResponse self = new StopInstancesResponseBodyInstanceResponsesInstanceResponse();
             return TeaModel.build(map, self);
         }
 
-        public StopInstancesResponseBodyInstanceResponses setCurrentStatus(String currentStatus) {
+        public StopInstancesResponseBodyInstanceResponsesInstanceResponse setCurrentStatus(String currentStatus) {
             this.currentStatus = currentStatus;
             return this;
         }
@@ -60,7 +60,7 @@ public class StopInstancesResponseBody extends TeaModel {
             return this.currentStatus;
         }
 
-        public StopInstancesResponseBodyInstanceResponses setPreviousStatus(String previousStatus) {
+        public StopInstancesResponseBodyInstanceResponsesInstanceResponse setPreviousStatus(String previousStatus) {
             this.previousStatus = previousStatus;
             return this;
         }
@@ -68,7 +68,7 @@ public class StopInstancesResponseBody extends TeaModel {
             return this.previousStatus;
         }
 
-        public StopInstancesResponseBodyInstanceResponses setCode(String code) {
+        public StopInstancesResponseBodyInstanceResponsesInstanceResponse setCode(String code) {
             this.code = code;
             return this;
         }
@@ -76,7 +76,7 @@ public class StopInstancesResponseBody extends TeaModel {
             return this.code;
         }
 
-        public StopInstancesResponseBodyInstanceResponses setMessage(String message) {
+        public StopInstancesResponseBodyInstanceResponsesInstanceResponse setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -84,12 +84,31 @@ public class StopInstancesResponseBody extends TeaModel {
             return this.message;
         }
 
-        public StopInstancesResponseBodyInstanceResponses setInstanceId(String instanceId) {
+        public StopInstancesResponseBodyInstanceResponsesInstanceResponse setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class StopInstancesResponseBodyInstanceResponses extends TeaModel {
+        @NameInMap("InstanceResponse")
+        public java.util.List<StopInstancesResponseBodyInstanceResponsesInstanceResponse> instanceResponse;
+
+        public static StopInstancesResponseBodyInstanceResponses build(java.util.Map<String, ?> map) throws Exception {
+            StopInstancesResponseBodyInstanceResponses self = new StopInstancesResponseBodyInstanceResponses();
+            return TeaModel.build(map, self);
+        }
+
+        public StopInstancesResponseBodyInstanceResponses setInstanceResponse(java.util.List<StopInstancesResponseBodyInstanceResponsesInstanceResponse> instanceResponse) {
+            this.instanceResponse = instanceResponse;
+            return this;
+        }
+        public java.util.List<StopInstancesResponseBodyInstanceResponsesInstanceResponse> getInstanceResponse() {
+            return this.instanceResponse;
         }
 
     }

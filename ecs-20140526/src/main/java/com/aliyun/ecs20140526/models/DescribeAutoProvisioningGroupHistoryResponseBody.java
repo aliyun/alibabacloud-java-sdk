@@ -17,7 +17,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("AutoProvisioningGroupHistories")
-    public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories> autoProvisioningGroupHistories;
+    public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories autoProvisioningGroupHistories;
 
     public static DescribeAutoProvisioningGroupHistoryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAutoProvisioningGroupHistoryResponseBody self = new DescribeAutoProvisioningGroupHistoryResponseBody();
@@ -56,27 +56,27 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeAutoProvisioningGroupHistoryResponseBody setAutoProvisioningGroupHistories(java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories> autoProvisioningGroupHistories) {
+    public DescribeAutoProvisioningGroupHistoryResponseBody setAutoProvisioningGroupHistories(DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories autoProvisioningGroupHistories) {
         this.autoProvisioningGroupHistories = autoProvisioningGroupHistories;
         return this;
     }
-    public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories> getAutoProvisioningGroupHistories() {
+    public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories getAutoProvisioningGroupHistories() {
         return this.autoProvisioningGroupHistories;
     }
 
-    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails extends TeaModel {
+    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail extends TeaModel {
         @NameInMap("Status")
         public String status;
 
         @NameInMap("Detail")
         public String detail;
 
-        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails();
+        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails setStatus(String status) {
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -84,7 +84,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails setDetail(String detail) {
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail setDetail(String detail) {
             this.detail = detail;
             return this;
         }
@@ -94,7 +94,26 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories extends TeaModel {
+    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails extends TeaModel {
+        @NameInMap("ActivityDetail")
+        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail> activityDetail;
+
+        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails setActivityDetail(java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail> activityDetail) {
+            this.activityDetail = activityDetail;
+            return this;
+        }
+        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail> getActivityDetail() {
+            return this.activityDetail;
+        }
+
+    }
+
+    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -102,7 +121,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         public String startTime;
 
         @NameInMap("ActivityDetails")
-        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails> activityDetails;
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails activityDetails;
 
         @NameInMap("TaskId")
         public String taskId;
@@ -110,12 +129,12 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
         @NameInMap("LastEventTime")
         public String lastEventTime;
 
-        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories();
+        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories setStatus(String status) {
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -123,7 +142,7 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories setStartTime(String startTime) {
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -131,15 +150,15 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories setActivityDetails(java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails> activityDetails) {
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setActivityDetails(DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails activityDetails) {
             this.activityDetails = activityDetails;
             return this;
         }
-        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesActivityDetails> getActivityDetails() {
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetails getActivityDetails() {
             return this.activityDetails;
         }
 
-        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories setTaskId(String taskId) {
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
@@ -147,12 +166,31 @@ public class DescribeAutoProvisioningGroupHistoryResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories setLastEventTime(String lastEventTime) {
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory setLastEventTime(String lastEventTime) {
             this.lastEventTime = lastEventTime;
             return this;
         }
         public String getLastEventTime() {
             return this.lastEventTime;
+        }
+
+    }
+
+    public static class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories extends TeaModel {
+        @NameInMap("AutoProvisioningGroupHistory")
+        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory> autoProvisioningGroupHistory;
+
+        public static DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories self = new DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistories setAutoProvisioningGroupHistory(java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory> autoProvisioningGroupHistory) {
+            this.autoProvisioningGroupHistory = autoProvisioningGroupHistory;
+            return this;
+        }
+        public java.util.List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistory> getAutoProvisioningGroupHistory() {
+            return this.autoProvisioningGroupHistory;
         }
 
     }

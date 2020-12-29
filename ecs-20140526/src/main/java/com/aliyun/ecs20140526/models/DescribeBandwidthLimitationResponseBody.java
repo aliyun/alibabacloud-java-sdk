@@ -8,7 +8,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Bandwidths")
-    public java.util.List<DescribeBandwidthLimitationResponseBodyBandwidths> bandwidths;
+    public DescribeBandwidthLimitationResponseBodyBandwidths bandwidths;
 
     public static DescribeBandwidthLimitationResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBandwidthLimitationResponseBody self = new DescribeBandwidthLimitationResponseBody();
@@ -23,15 +23,15 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeBandwidthLimitationResponseBody setBandwidths(java.util.List<DescribeBandwidthLimitationResponseBodyBandwidths> bandwidths) {
+    public DescribeBandwidthLimitationResponseBody setBandwidths(DescribeBandwidthLimitationResponseBodyBandwidths bandwidths) {
         this.bandwidths = bandwidths;
         return this;
     }
-    public java.util.List<DescribeBandwidthLimitationResponseBodyBandwidths> getBandwidths() {
+    public DescribeBandwidthLimitationResponseBodyBandwidths getBandwidths() {
         return this.bandwidths;
     }
 
-    public static class DescribeBandwidthLimitationResponseBodyBandwidths extends TeaModel {
+    public static class DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth extends TeaModel {
         @NameInMap("Max")
         public Integer max;
 
@@ -44,12 +44,12 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
         @NameInMap("Min")
         public Integer min;
 
-        public static DescribeBandwidthLimitationResponseBodyBandwidths build(java.util.Map<String, ?> map) throws Exception {
-            DescribeBandwidthLimitationResponseBodyBandwidths self = new DescribeBandwidthLimitationResponseBodyBandwidths();
+        public static DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth self = new DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth();
             return TeaModel.build(map, self);
         }
 
-        public DescribeBandwidthLimitationResponseBodyBandwidths setMax(Integer max) {
+        public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setMax(Integer max) {
             this.max = max;
             return this;
         }
@@ -57,7 +57,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             return this.max;
         }
 
-        public DescribeBandwidthLimitationResponseBodyBandwidths setUnit(String unit) {
+        public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setUnit(String unit) {
             this.unit = unit;
             return this;
         }
@@ -65,7 +65,7 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             return this.unit;
         }
 
-        public DescribeBandwidthLimitationResponseBodyBandwidths setInternetChargeType(String internetChargeType) {
+        public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setInternetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
             return this;
         }
@@ -73,12 +73,31 @@ public class DescribeBandwidthLimitationResponseBody extends TeaModel {
             return this.internetChargeType;
         }
 
-        public DescribeBandwidthLimitationResponseBodyBandwidths setMin(Integer min) {
+        public DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth setMin(Integer min) {
             this.min = min;
             return this;
         }
         public Integer getMin() {
             return this.min;
+        }
+
+    }
+
+    public static class DescribeBandwidthLimitationResponseBodyBandwidths extends TeaModel {
+        @NameInMap("Bandwidth")
+        public java.util.List<DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth> bandwidth;
+
+        public static DescribeBandwidthLimitationResponseBodyBandwidths build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBandwidthLimitationResponseBodyBandwidths self = new DescribeBandwidthLimitationResponseBodyBandwidths();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBandwidthLimitationResponseBodyBandwidths setBandwidth(java.util.List<DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth> bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public java.util.List<DescribeBandwidthLimitationResponseBodyBandwidthsBandwidth> getBandwidth() {
+            return this.bandwidth;
         }
 
     }

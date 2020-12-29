@@ -8,7 +8,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     public Integer totalCount;
 
     @NameInMap("SnapshotLinks")
-    public java.util.List<DescribeSnapshotLinksResponseBodySnapshotLinks> snapshotLinks;
+    public DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -32,11 +32,11 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeSnapshotLinksResponseBody setSnapshotLinks(java.util.List<DescribeSnapshotLinksResponseBodySnapshotLinks> snapshotLinks) {
+    public DescribeSnapshotLinksResponseBody setSnapshotLinks(DescribeSnapshotLinksResponseBodySnapshotLinks snapshotLinks) {
         this.snapshotLinks = snapshotLinks;
         return this;
     }
-    public java.util.List<DescribeSnapshotLinksResponseBodySnapshotLinks> getSnapshotLinks() {
+    public DescribeSnapshotLinksResponseBodySnapshotLinks getSnapshotLinks() {
         return this.snapshotLinks;
     }
 
@@ -64,7 +64,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeSnapshotLinksResponseBodySnapshotLinks extends TeaModel {
+    public static class DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink extends TeaModel {
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
@@ -101,12 +101,12 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
-        public static DescribeSnapshotLinksResponseBodySnapshotLinks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSnapshotLinksResponseBodySnapshotLinks self = new DescribeSnapshotLinksResponseBodySnapshotLinks();
+        public static DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink self = new DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setInstantAccess(Boolean instantAccess) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setInstantAccess(Boolean instantAccess) {
             this.instantAccess = instantAccess;
             return this;
         }
@@ -114,7 +114,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.instantAccess;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setTotalSize(Long totalSize) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setTotalSize(Long totalSize) {
             this.totalSize = totalSize;
             return this;
         }
@@ -122,7 +122,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.totalSize;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setSourceDiskName(String sourceDiskName) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSourceDiskName(String sourceDiskName) {
             this.sourceDiskName = sourceDiskName;
             return this;
         }
@@ -130,7 +130,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.sourceDiskName;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setSourceDiskSize(Integer sourceDiskSize) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSourceDiskSize(Integer sourceDiskSize) {
             this.sourceDiskSize = sourceDiskSize;
             return this;
         }
@@ -138,7 +138,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.sourceDiskSize;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setSourceDiskType(String sourceDiskType) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSourceDiskType(String sourceDiskType) {
             this.sourceDiskType = sourceDiskType;
             return this;
         }
@@ -146,7 +146,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.sourceDiskType;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setInstanceId(String instanceId) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -154,7 +154,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setTotalCount(Integer totalCount) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
@@ -162,7 +162,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setSnapshotLinkId(String snapshotLinkId) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSnapshotLinkId(String snapshotLinkId) {
             this.snapshotLinkId = snapshotLinkId;
             return this;
         }
@@ -170,7 +170,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.snapshotLinkId;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setRegionId(String regionId) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -178,7 +178,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setSourceDiskId(String sourceDiskId) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setSourceDiskId(String sourceDiskId) {
             this.sourceDiskId = sourceDiskId;
             return this;
         }
@@ -186,7 +186,7 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.sourceDiskId;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setInstanceName(String instanceName) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
@@ -194,12 +194,31 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public DescribeSnapshotLinksResponseBodySnapshotLinks setCategory(String category) {
+        public DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink setCategory(String category) {
             this.category = category;
             return this;
         }
         public String getCategory() {
             return this.category;
+        }
+
+    }
+
+    public static class DescribeSnapshotLinksResponseBodySnapshotLinks extends TeaModel {
+        @NameInMap("SnapshotLink")
+        public java.util.List<DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink> snapshotLink;
+
+        public static DescribeSnapshotLinksResponseBodySnapshotLinks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotLinksResponseBodySnapshotLinks self = new DescribeSnapshotLinksResponseBodySnapshotLinks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotLinksResponseBodySnapshotLinks setSnapshotLink(java.util.List<DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink> snapshotLink) {
+            this.snapshotLink = snapshotLink;
+            return this;
+        }
+        public java.util.List<DescribeSnapshotLinksResponseBodySnapshotLinksSnapshotLink> getSnapshotLink() {
+            return this.snapshotLink;
         }
 
     }

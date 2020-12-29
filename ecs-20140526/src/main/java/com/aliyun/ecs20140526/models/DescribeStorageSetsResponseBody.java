@@ -17,7 +17,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("StorageSets")
-    public java.util.List<DescribeStorageSetsResponseBodyStorageSets> storageSets;
+    public DescribeStorageSetsResponseBodyStorageSets storageSets;
 
     public static DescribeStorageSetsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageSetsResponseBody self = new DescribeStorageSetsResponseBody();
@@ -56,15 +56,15 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeStorageSetsResponseBody setStorageSets(java.util.List<DescribeStorageSetsResponseBodyStorageSets> storageSets) {
+    public DescribeStorageSetsResponseBody setStorageSets(DescribeStorageSetsResponseBodyStorageSets storageSets) {
         this.storageSets = storageSets;
         return this;
     }
-    public java.util.List<DescribeStorageSetsResponseBodyStorageSets> getStorageSets() {
+    public DescribeStorageSetsResponseBodyStorageSets getStorageSets() {
         return this.storageSets;
     }
 
-    public static class DescribeStorageSetsResponseBodyStorageSets extends TeaModel {
+    public static class DescribeStorageSetsResponseBodyStorageSetsStorageSet extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -86,12 +86,12 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeStorageSetsResponseBodyStorageSets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeStorageSetsResponseBodyStorageSets self = new DescribeStorageSetsResponseBodyStorageSets();
+        public static DescribeStorageSetsResponseBodyStorageSetsStorageSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageSetsResponseBodyStorageSetsStorageSet self = new DescribeStorageSetsResponseBodyStorageSetsStorageSet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeStorageSetsResponseBodyStorageSets setCreationTime(String creationTime) {
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSet setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -99,7 +99,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeStorageSetsResponseBodyStorageSets setDescription(String description) {
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSet setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -107,7 +107,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeStorageSetsResponseBodyStorageSets setZoneId(String zoneId) {
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSet setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -115,7 +115,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeStorageSetsResponseBodyStorageSets setStorageSetId(String storageSetId) {
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSet setStorageSetId(String storageSetId) {
             this.storageSetId = storageSetId;
             return this;
         }
@@ -123,7 +123,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             return this.storageSetId;
         }
 
-        public DescribeStorageSetsResponseBodyStorageSets setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSet setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
             this.storageSetPartitionNumber = storageSetPartitionNumber;
             return this;
         }
@@ -131,7 +131,7 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             return this.storageSetPartitionNumber;
         }
 
-        public DescribeStorageSetsResponseBodyStorageSets setStorageSetName(String storageSetName) {
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSet setStorageSetName(String storageSetName) {
             this.storageSetName = storageSetName;
             return this;
         }
@@ -139,12 +139,31 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             return this.storageSetName;
         }
 
-        public DescribeStorageSetsResponseBodyStorageSets setRegionId(String regionId) {
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSet setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeStorageSetsResponseBodyStorageSets extends TeaModel {
+        @NameInMap("StorageSet")
+        public java.util.List<DescribeStorageSetsResponseBodyStorageSetsStorageSet> storageSet;
+
+        public static DescribeStorageSetsResponseBodyStorageSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageSetsResponseBodyStorageSets self = new DescribeStorageSetsResponseBodyStorageSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeStorageSetsResponseBodyStorageSets setStorageSet(java.util.List<DescribeStorageSetsResponseBodyStorageSetsStorageSet> storageSet) {
+            this.storageSet = storageSet;
+            return this;
+        }
+        public java.util.List<DescribeStorageSetsResponseBodyStorageSetsStorageSet> getStorageSet() {
+            return this.storageSet;
         }
 
     }

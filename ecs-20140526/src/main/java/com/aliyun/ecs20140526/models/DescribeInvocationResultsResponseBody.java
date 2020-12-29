@@ -31,7 +31,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         return this.invocation;
     }
 
-    public static class DescribeInvocationResultsResponseBodyInvocationInvocationResults extends TeaModel {
+    public static class DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult extends TeaModel {
         @NameInMap("InvocationStatus")
         public String invocationStatus;
 
@@ -77,12 +77,12 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("Username")
         public String username;
 
-        public static DescribeInvocationResultsResponseBodyInvocationInvocationResults build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInvocationResultsResponseBodyInvocationInvocationResults self = new DescribeInvocationResultsResponseBodyInvocationInvocationResults();
+        public static DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult self = new DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setInvocationStatus(String invocationStatus) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setInvocationStatus(String invocationStatus) {
             this.invocationStatus = invocationStatus;
             return this;
         }
@@ -90,7 +90,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.invocationStatus;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setRepeats(Integer repeats) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setRepeats(Integer repeats) {
             this.repeats = repeats;
             return this;
         }
@@ -98,7 +98,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.repeats;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setOutput(String output) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOutput(String output) {
             this.output = output;
             return this;
         }
@@ -106,7 +106,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.output;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setInstanceId(String instanceId) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -114,7 +114,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setCommandId(String commandId) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setCommandId(String commandId) {
             this.commandId = commandId;
             return this;
         }
@@ -122,7 +122,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.commandId;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setDropped(Integer dropped) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setDropped(Integer dropped) {
             this.dropped = dropped;
             return this;
         }
@@ -130,7 +130,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.dropped;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setStopTime(String stopTime) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setStopTime(String stopTime) {
             this.stopTime = stopTime;
             return this;
         }
@@ -138,7 +138,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.stopTime;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setExitCode(Long exitCode) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setExitCode(Long exitCode) {
             this.exitCode = exitCode;
             return this;
         }
@@ -146,7 +146,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.exitCode;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setStartTime(String startTime) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -154,7 +154,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setErrorInfo(String errorInfo) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setErrorInfo(String errorInfo) {
             this.errorInfo = errorInfo;
             return this;
         }
@@ -162,7 +162,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.errorInfo;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setErrorCode(String errorCode) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
@@ -170,7 +170,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.errorCode;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setFinishedTime(String finishedTime) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setFinishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
             return this;
         }
@@ -178,7 +178,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.finishedTime;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setInvokeId(String invokeId) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setInvokeId(String invokeId) {
             this.invokeId = invokeId;
             return this;
         }
@@ -186,7 +186,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.invokeId;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setInvokeRecordStatus(String invokeRecordStatus) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setInvokeRecordStatus(String invokeRecordStatus) {
             this.invokeRecordStatus = invokeRecordStatus;
             return this;
         }
@@ -194,12 +194,31 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.invokeRecordStatus;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setUsername(String username) {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setUsername(String username) {
             this.username = username;
             return this;
         }
         public String getUsername() {
             return this.username;
+        }
+
+    }
+
+    public static class DescribeInvocationResultsResponseBodyInvocationInvocationResults extends TeaModel {
+        @NameInMap("InvocationResult")
+        public java.util.List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult> invocationResult;
+
+        public static DescribeInvocationResultsResponseBodyInvocationInvocationResults build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationResultsResponseBodyInvocationInvocationResults self = new DescribeInvocationResultsResponseBodyInvocationInvocationResults();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResults setInvocationResult(java.util.List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult> invocationResult) {
+            this.invocationResult = invocationResult;
+            return this;
+        }
+        public java.util.List<DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult> getInvocationResult() {
+            return this.invocationResult;
         }
 
     }
@@ -212,7 +231,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         public Long pageNumber;
 
         @NameInMap("InvocationResults")
-        public java.util.List<DescribeInvocationResultsResponseBodyInvocationInvocationResults> invocationResults;
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResults invocationResults;
 
         @NameInMap("TotalCount")
         public Long totalCount;
@@ -238,11 +257,11 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             return this.pageNumber;
         }
 
-        public DescribeInvocationResultsResponseBodyInvocation setInvocationResults(java.util.List<DescribeInvocationResultsResponseBodyInvocationInvocationResults> invocationResults) {
+        public DescribeInvocationResultsResponseBodyInvocation setInvocationResults(DescribeInvocationResultsResponseBodyInvocationInvocationResults invocationResults) {
             this.invocationResults = invocationResults;
             return this;
         }
-        public java.util.List<DescribeInvocationResultsResponseBodyInvocationInvocationResults> getInvocationResults() {
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResults getInvocationResults() {
             return this.invocationResults;
         }
 

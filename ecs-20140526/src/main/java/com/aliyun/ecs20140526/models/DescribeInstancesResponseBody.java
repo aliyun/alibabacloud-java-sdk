@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
-    public java.util.List<DescribeInstancesResponseBodyInstances> instances;
+    public DescribeInstancesResponseBodyInstances instances;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -24,11 +24,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstancesResponseBody setInstances(java.util.List<DescribeInstancesResponseBodyInstances> instances) {
+    public DescribeInstancesResponseBody setInstances(DescribeInstancesResponseBodyInstances instances) {
         this.instances = instances;
         return this;
     }
-    public java.util.List<DescribeInstancesResponseBodyInstances> getInstances() {
+    public DescribeInstancesResponseBodyInstances getInstances() {
         return this.instances;
     }
 
@@ -64,7 +64,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeInstancesResponseBodyInstancesDedicatedHostAttribute extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute extends TeaModel {
         @NameInMap("DedicatedHostName")
         public String dedicatedHostName;
 
@@ -74,12 +74,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
-        public static DescribeInstancesResponseBodyInstancesDedicatedHostAttribute build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesDedicatedHostAttribute self = new DescribeInstancesResponseBodyInstancesDedicatedHostAttribute();
+        public static DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute self = new DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesDedicatedHostAttribute setDedicatedHostName(String dedicatedHostName) {
+        public DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute setDedicatedHostName(String dedicatedHostName) {
             this.dedicatedHostName = dedicatedHostName;
             return this;
         }
@@ -87,7 +87,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.dedicatedHostName;
         }
 
-        public DescribeInstancesResponseBodyInstancesDedicatedHostAttribute setDedicatedHostClusterId(String dedicatedHostClusterId) {
+        public DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute setDedicatedHostClusterId(String dedicatedHostClusterId) {
             this.dedicatedHostClusterId = dedicatedHostClusterId;
             return this;
         }
@@ -95,7 +95,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.dedicatedHostClusterId;
         }
 
-        public DescribeInstancesResponseBodyInstancesDedicatedHostAttribute setDedicatedHostId(String dedicatedHostId) {
+        public DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute setDedicatedHostId(String dedicatedHostId) {
             this.dedicatedHostId = dedicatedHostId;
             return this;
         }
@@ -105,19 +105,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesOperationLocks extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason extends TeaModel {
         @NameInMap("LockReason")
         public String lockReason;
 
         @NameInMap("LockMsg")
         public String lockMsg;
 
-        public static DescribeInstancesResponseBodyInstancesOperationLocks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesOperationLocks self = new DescribeInstancesResponseBodyInstancesOperationLocks();
+        public static DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason self = new DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesOperationLocks setLockReason(String lockReason) {
+        public DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason setLockReason(String lockReason) {
             this.lockReason = lockReason;
             return this;
         }
@@ -125,7 +125,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.lockReason;
         }
 
-        public DescribeInstancesResponseBodyInstancesOperationLocks setLockMsg(String lockMsg) {
+        public DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason setLockMsg(String lockMsg) {
             this.lockMsg = lockMsg;
             return this;
         }
@@ -135,19 +135,38 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesTags extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceOperationLocks extends TeaModel {
+        @NameInMap("LockReason")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason> lockReason;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceOperationLocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceOperationLocks self = new DescribeInstancesResponseBodyInstancesInstanceOperationLocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceOperationLocks setLockReason(java.util.List<DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason> lockReason) {
+            this.lockReason = lockReason;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceOperationLocksLockReason> getLockReason() {
+            return this.lockReason;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceTagsTag extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static DescribeInstancesResponseBodyInstancesTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesTags self = new DescribeInstancesResponseBodyInstancesTags();
+        public static DescribeInstancesResponseBodyInstancesInstanceTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceTagsTag self = new DescribeInstancesResponseBodyInstancesInstanceTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesTags setTagValue(String tagValue) {
+        public DescribeInstancesResponseBodyInstancesInstanceTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -155,7 +174,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public DescribeInstancesResponseBodyInstancesTags setTagKey(String tagKey) {
+        public DescribeInstancesResponseBodyInstancesInstanceTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
@@ -165,7 +184,26 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesMetadataOptions extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceTagsTag> tag;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceTags self = new DescribeInstancesResponseBodyInstancesInstanceTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceTags setTag(java.util.List<DescribeInstancesResponseBodyInstancesInstanceTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceMetadataOptions extends TeaModel {
         @NameInMap("HttpPutResponseHopLimit")
         public Integer httpPutResponseHopLimit;
 
@@ -175,12 +213,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("HttpTokens")
         public String httpTokens;
 
-        public static DescribeInstancesResponseBodyInstancesMetadataOptions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesMetadataOptions self = new DescribeInstancesResponseBodyInstancesMetadataOptions();
+        public static DescribeInstancesResponseBodyInstancesInstanceMetadataOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceMetadataOptions self = new DescribeInstancesResponseBodyInstancesInstanceMetadataOptions();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesMetadataOptions setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+        public DescribeInstancesResponseBodyInstancesInstanceMetadataOptions setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
@@ -188,7 +226,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.httpPutResponseHopLimit;
         }
 
-        public DescribeInstancesResponseBodyInstancesMetadataOptions setHttpEndpoint(String httpEndpoint) {
+        public DescribeInstancesResponseBodyInstancesInstanceMetadataOptions setHttpEndpoint(String httpEndpoint) {
             this.httpEndpoint = httpEndpoint;
             return this;
         }
@@ -196,7 +234,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.httpEndpoint;
         }
 
-        public DescribeInstancesResponseBodyInstancesMetadataOptions setHttpTokens(String httpTokens) {
+        public DescribeInstancesResponseBodyInstancesInstanceMetadataOptions setHttpTokens(String httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
@@ -206,7 +244,26 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesEipAddress extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstancePublicIpAddress extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
+
+        public static DescribeInstancesResponseBodyInstancesInstancePublicIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstancePublicIpAddress self = new DescribeInstancesResponseBodyInstancesInstancePublicIpAddress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceEipAddress extends TeaModel {
         @NameInMap("IpAddress")
         public String ipAddress;
 
@@ -222,12 +279,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
-        public static DescribeInstancesResponseBodyInstancesEipAddress build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesEipAddress self = new DescribeInstancesResponseBodyInstancesEipAddress();
+        public static DescribeInstancesResponseBodyInstancesInstanceEipAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceEipAddress self = new DescribeInstancesResponseBodyInstancesInstanceEipAddress();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesEipAddress setIpAddress(String ipAddress) {
+        public DescribeInstancesResponseBodyInstancesInstanceEipAddress setIpAddress(String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
@@ -235,7 +292,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.ipAddress;
         }
 
-        public DescribeInstancesResponseBodyInstancesEipAddress setBandwidth(Integer bandwidth) {
+        public DescribeInstancesResponseBodyInstancesInstanceEipAddress setBandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
@@ -243,7 +300,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.bandwidth;
         }
 
-        public DescribeInstancesResponseBodyInstancesEipAddress setAllocationId(String allocationId) {
+        public DescribeInstancesResponseBodyInstancesInstanceEipAddress setAllocationId(String allocationId) {
             this.allocationId = allocationId;
             return this;
         }
@@ -251,7 +308,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.allocationId;
         }
 
-        public DescribeInstancesResponseBodyInstancesEipAddress setIsSupportUnassociate(Boolean isSupportUnassociate) {
+        public DescribeInstancesResponseBodyInstancesInstanceEipAddress setIsSupportUnassociate(Boolean isSupportUnassociate) {
             this.isSupportUnassociate = isSupportUnassociate;
             return this;
         }
@@ -259,7 +316,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.isSupportUnassociate;
         }
 
-        public DescribeInstancesResponseBodyInstancesEipAddress setInternetChargeType(String internetChargeType) {
+        public DescribeInstancesResponseBodyInstancesInstanceEipAddress setInternetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
             return this;
         }
@@ -269,19 +326,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesDedicatedInstanceAttribute extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute extends TeaModel {
         @NameInMap("Affinity")
         public String affinity;
 
         @NameInMap("Tenancy")
         public String tenancy;
 
-        public static DescribeInstancesResponseBodyInstancesDedicatedInstanceAttribute build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesDedicatedInstanceAttribute self = new DescribeInstancesResponseBodyInstancesDedicatedInstanceAttribute();
+        public static DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute self = new DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesDedicatedInstanceAttribute setAffinity(String affinity) {
+        public DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute setAffinity(String affinity) {
             this.affinity = affinity;
             return this;
         }
@@ -289,7 +346,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.affinity;
         }
 
-        public DescribeInstancesResponseBodyInstancesDedicatedInstanceAttribute setTenancy(String tenancy) {
+        public DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute setTenancy(String tenancy) {
             this.tenancy = tenancy;
             return this;
         }
@@ -299,7 +356,26 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesCpuOptions extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress self = new DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceCpuOptions extends TeaModel {
         @NameInMap("Numa")
         public String numa;
 
@@ -309,12 +385,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ThreadsPerCore")
         public Integer threadsPerCore;
 
-        public static DescribeInstancesResponseBodyInstancesCpuOptions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesCpuOptions self = new DescribeInstancesResponseBodyInstancesCpuOptions();
+        public static DescribeInstancesResponseBodyInstancesInstanceCpuOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceCpuOptions self = new DescribeInstancesResponseBodyInstancesInstanceCpuOptions();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesCpuOptions setNuma(String numa) {
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setNuma(String numa) {
             this.numa = numa;
             return this;
         }
@@ -322,7 +398,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.numa;
         }
 
-        public DescribeInstancesResponseBodyInstancesCpuOptions setCoreCount(Integer coreCount) {
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setCoreCount(Integer coreCount) {
             this.coreCount = coreCount;
             return this;
         }
@@ -330,7 +406,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.coreCount;
         }
 
-        public DescribeInstancesResponseBodyInstancesCpuOptions setThreadsPerCore(Integer threadsPerCore) {
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions setThreadsPerCore(Integer threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
@@ -340,7 +416,26 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesVpcAttributes extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress self = new DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceVpcAttributes extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -351,14 +446,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String vSwitchId;
 
         @NameInMap("PrivateIpAddress")
-        public java.util.List<String> privateIpAddress;
+        public DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress privateIpAddress;
 
-        public static DescribeInstancesResponseBodyInstancesVpcAttributes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesVpcAttributes self = new DescribeInstancesResponseBodyInstancesVpcAttributes();
+        public static DescribeInstancesResponseBodyInstancesInstanceVpcAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceVpcAttributes self = new DescribeInstancesResponseBodyInstancesInstanceVpcAttributes();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesVpcAttributes setVpcId(String vpcId) {
+        public DescribeInstancesResponseBodyInstancesInstanceVpcAttributes setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -366,7 +461,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeInstancesResponseBodyInstancesVpcAttributes setNatIpAddress(String natIpAddress) {
+        public DescribeInstancesResponseBodyInstancesInstanceVpcAttributes setNatIpAddress(String natIpAddress) {
             this.natIpAddress = natIpAddress;
             return this;
         }
@@ -374,7 +469,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.natIpAddress;
         }
 
-        public DescribeInstancesResponseBodyInstancesVpcAttributes setVSwitchId(String vSwitchId) {
+        public DescribeInstancesResponseBodyInstancesInstanceVpcAttributes setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -382,29 +477,29 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeInstancesResponseBodyInstancesVpcAttributes setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+        public DescribeInstancesResponseBodyInstancesInstanceVpcAttributes setPrivateIpAddress(DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
-        public java.util.List<String> getPrivateIpAddress() {
+        public DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress getPrivateIpAddress() {
             return this.privateIpAddress;
         }
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesEcsCapacityReservationAttr extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr extends TeaModel {
         @NameInMap("CapacityReservationPreference")
         public String capacityReservationPreference;
 
         @NameInMap("CapacityReservationId")
         public String capacityReservationId;
 
-        public static DescribeInstancesResponseBodyInstancesEcsCapacityReservationAttr build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesEcsCapacityReservationAttr self = new DescribeInstancesResponseBodyInstancesEcsCapacityReservationAttr();
+        public static DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr self = new DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesEcsCapacityReservationAttr setCapacityReservationPreference(String capacityReservationPreference) {
+        public DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr setCapacityReservationPreference(String capacityReservationPreference) {
             this.capacityReservationPreference = capacityReservationPreference;
             return this;
         }
@@ -412,7 +507,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.capacityReservationPreference;
         }
 
-        public DescribeInstancesResponseBodyInstancesEcsCapacityReservationAttr setCapacityReservationId(String capacityReservationId) {
+        public DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr setCapacityReservationId(String capacityReservationId) {
             this.capacityReservationId = capacityReservationId;
             return this;
         }
@@ -422,16 +517,54 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesNetworkInterfacesIpv6Sets extends TeaModel {
-        @NameInMap("Ipv6Address")
-        public String ipv6Address;
+    public static class DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        public java.util.List<String> securityGroupId;
 
-        public static DescribeInstancesResponseBodyInstancesNetworkInterfacesIpv6Sets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesNetworkInterfacesIpv6Sets self = new DescribeInstancesResponseBodyInstancesNetworkInterfacesIpv6Sets();
+        public static DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds self = new DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesNetworkInterfacesIpv6Sets setIpv6Address(String ipv6Address) {
+        public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds setSecurityGroupId(java.util.List<String> securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress extends TeaModel {
+        @NameInMap("IpAddress")
+        public java.util.List<String> ipAddress;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress self = new DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress setIpAddress(java.util.List<String> ipAddress) {
+            this.ipAddress = ipAddress;
+            return this;
+        }
+        public java.util.List<String> getIpAddress() {
+            return this.ipAddress;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set extends TeaModel {
+        @NameInMap("Ipv6Address")
+        public String ipv6Address;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set setIpv6Address(String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
@@ -441,19 +574,38 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesNetworkInterfacesPrivateIpSets extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets extends TeaModel {
+        @NameInMap("Ipv6Set")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set> ipv6Set;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets setIpv6Set(java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set> ipv6Set) {
+            this.ipv6Set = ipv6Set;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6SetsIpv6Set> getIpv6Set() {
+            return this.ipv6Set;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet extends TeaModel {
         @NameInMap("Primary")
         public Boolean primary;
 
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
-        public static DescribeInstancesResponseBodyInstancesNetworkInterfacesPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesNetworkInterfacesPrivateIpSets self = new DescribeInstancesResponseBodyInstancesNetworkInterfacesPrivateIpSets();
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesNetworkInterfacesPrivateIpSets setPrimary(Boolean primary) {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet setPrimary(Boolean primary) {
             this.primary = primary;
             return this;
         }
@@ -461,7 +613,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.primary;
         }
 
-        public DescribeInstancesResponseBodyInstancesNetworkInterfacesPrivateIpSets setPrivateIpAddress(String privateIpAddress) {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
@@ -471,7 +623,26 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesResponseBodyInstancesNetworkInterfaces extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets extends TeaModel {
+        @NameInMap("PrivateIpSet")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet> privateIpSet;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets setPrivateIpSet(java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet> privateIpSet) {
+            this.privateIpSet = privateIpSet;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSetsPrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -482,20 +653,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         @NameInMap("Ipv6Sets")
-        public java.util.List<DescribeInstancesResponseBodyInstancesNetworkInterfacesIpv6Sets> ipv6Sets;
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets ipv6Sets;
 
         @NameInMap("PrimaryIpAddress")
         public String primaryIpAddress;
 
         @NameInMap("PrivateIpSets")
-        public java.util.List<DescribeInstancesResponseBodyInstancesNetworkInterfacesPrivateIpSets> privateIpSets;
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets privateIpSets;
 
-        public static DescribeInstancesResponseBodyInstancesNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstancesNetworkInterfaces self = new DescribeInstancesResponseBodyInstancesNetworkInterfaces();
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstancesNetworkInterfaces setType(String type) {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface setType(String type) {
             this.type = type;
             return this;
         }
@@ -503,7 +674,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeInstancesResponseBodyInstancesNetworkInterfaces setMacAddress(String macAddress) {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface setMacAddress(String macAddress) {
             this.macAddress = macAddress;
             return this;
         }
@@ -511,7 +682,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.macAddress;
         }
 
-        public DescribeInstancesResponseBodyInstancesNetworkInterfaces setNetworkInterfaceId(String networkInterfaceId) {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface setNetworkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
@@ -519,15 +690,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.networkInterfaceId;
         }
 
-        public DescribeInstancesResponseBodyInstancesNetworkInterfaces setIpv6Sets(java.util.List<DescribeInstancesResponseBodyInstancesNetworkInterfacesIpv6Sets> ipv6Sets) {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface setIpv6Sets(DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets ipv6Sets) {
             this.ipv6Sets = ipv6Sets;
             return this;
         }
-        public java.util.List<DescribeInstancesResponseBodyInstancesNetworkInterfacesIpv6Sets> getIpv6Sets() {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfaceIpv6Sets getIpv6Sets() {
             return this.ipv6Sets;
         }
 
-        public DescribeInstancesResponseBodyInstancesNetworkInterfaces setPrimaryIpAddress(String primaryIpAddress) {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface setPrimaryIpAddress(String primaryIpAddress) {
             this.primaryIpAddress = primaryIpAddress;
             return this;
         }
@@ -535,17 +706,36 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.primaryIpAddress;
         }
 
-        public DescribeInstancesResponseBodyInstancesNetworkInterfaces setPrivateIpSets(java.util.List<DescribeInstancesResponseBodyInstancesNetworkInterfacesPrivateIpSets> privateIpSets) {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface setPrivateIpSets(DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets privateIpSets) {
             this.privateIpSets = privateIpSets;
             return this;
         }
-        public java.util.List<DescribeInstancesResponseBodyInstancesNetworkInterfacesPrivateIpSets> getPrivateIpSets() {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterfacePrivateIpSets getPrivateIpSets() {
             return this.privateIpSets;
         }
 
     }
 
-    public static class DescribeInstancesResponseBodyInstances extends TeaModel {
+    public static class DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces extends TeaModel {
+        @NameInMap("NetworkInterface")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface> networkInterface;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces self = new DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces setNetworkInterface(java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface> networkInterface) {
+            this.networkInterface = networkInterface;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstanceNetworkInterfacesNetworkInterface> getNetworkInterface() {
+            return this.networkInterface;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesInstance extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -553,22 +743,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String serialNumber;
 
         @NameInMap("DedicatedHostAttribute")
-        public DescribeInstancesResponseBodyInstancesDedicatedHostAttribute dedicatedHostAttribute;
+        public DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute dedicatedHostAttribute;
 
         @NameInMap("OperationLocks")
-        public java.util.List<DescribeInstancesResponseBodyInstancesOperationLocks> operationLocks;
+        public DescribeInstancesResponseBodyInstancesInstanceOperationLocks operationLocks;
 
         @NameInMap("Tags")
-        public java.util.List<DescribeInstancesResponseBodyInstancesTags> tags;
+        public DescribeInstancesResponseBodyInstancesInstanceTags tags;
 
         @NameInMap("MetadataOptions")
-        public DescribeInstancesResponseBodyInstancesMetadataOptions metadataOptions;
+        public DescribeInstancesResponseBodyInstancesInstanceMetadataOptions metadataOptions;
 
         @NameInMap("SaleCycle")
         public String saleCycle;
 
         @NameInMap("PublicIpAddress")
-        public java.util.List<String> publicIpAddress;
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress;
 
         @NameInMap("SpotStrategy")
         public String spotStrategy;
@@ -577,7 +767,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean deviceAvailable;
 
         @NameInMap("EipAddress")
-        public DescribeInstancesResponseBodyInstancesEipAddress eipAddress;
+        public DescribeInstancesResponseBodyInstancesInstanceEipAddress eipAddress;
 
         @NameInMap("InstanceName")
         public String instanceName;
@@ -607,7 +797,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String clusterId;
 
         @NameInMap("DedicatedInstanceAttribute")
-        public DescribeInstancesResponseBodyInstancesDedicatedInstanceAttribute dedicatedInstanceAttribute;
+        public DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute dedicatedInstanceAttribute;
 
         @NameInMap("GPUSpec")
         public String GPUSpec;
@@ -616,7 +806,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String autoReleaseTime;
 
         @NameInMap("InnerIpAddress")
-        public java.util.List<String> innerIpAddress;
+        public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress;
 
         @NameInMap("StoppedMode")
         public String stoppedMode;
@@ -664,7 +854,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String keyPairName;
 
         @NameInMap("CpuOptions")
-        public DescribeInstancesResponseBodyInstancesCpuOptions cpuOptions;
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions cpuOptions;
 
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
@@ -682,13 +872,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String vlanId;
 
         @NameInMap("VpcAttributes")
-        public DescribeInstancesResponseBodyInstancesVpcAttributes vpcAttributes;
+        public DescribeInstancesResponseBodyInstancesInstanceVpcAttributes vpcAttributes;
 
         @NameInMap("DeletionProtection")
         public Boolean deletionProtection;
 
         @NameInMap("EcsCapacityReservationAttr")
-        public DescribeInstancesResponseBodyInstancesEcsCapacityReservationAttr ecsCapacityReservationAttr;
+        public DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr ecsCapacityReservationAttr;
 
         @NameInMap("InternetMaxBandwidthIn")
         public Integer internetMaxBandwidthIn;
@@ -697,7 +887,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer internetMaxBandwidthOut;
 
         @NameInMap("SecurityGroupIds")
-        public java.util.List<String> securityGroupIds;
+        public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds;
 
         @NameInMap("RegionId")
         public String regionId;
@@ -709,7 +899,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer cpu;
 
         @NameInMap("RdmaIpAddress")
-        public java.util.List<String> rdmaIpAddress;
+        public DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress rdmaIpAddress;
 
         @NameInMap("ExpiredTime")
         public String expiredTime;
@@ -727,14 +917,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String ISP;
 
         @NameInMap("NetworkInterfaces")
-        public java.util.List<DescribeInstancesResponseBodyInstancesNetworkInterfaces> networkInterfaces;
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces networkInterfaces;
 
-        public static DescribeInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesResponseBodyInstances self = new DescribeInstancesResponseBodyInstances();
+        public static DescribeInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstance self = new DescribeInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesResponseBodyInstances setCreationTime(String creationTime) {
+        public DescribeInstancesResponseBodyInstancesInstance setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -742,7 +932,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeInstancesResponseBodyInstances setSerialNumber(String serialNumber) {
+        public DescribeInstancesResponseBodyInstancesInstance setSerialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
@@ -750,39 +940,39 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.serialNumber;
         }
 
-        public DescribeInstancesResponseBodyInstances setDedicatedHostAttribute(DescribeInstancesResponseBodyInstancesDedicatedHostAttribute dedicatedHostAttribute) {
+        public DescribeInstancesResponseBodyInstancesInstance setDedicatedHostAttribute(DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute dedicatedHostAttribute) {
             this.dedicatedHostAttribute = dedicatedHostAttribute;
             return this;
         }
-        public DescribeInstancesResponseBodyInstancesDedicatedHostAttribute getDedicatedHostAttribute() {
+        public DescribeInstancesResponseBodyInstancesInstanceDedicatedHostAttribute getDedicatedHostAttribute() {
             return this.dedicatedHostAttribute;
         }
 
-        public DescribeInstancesResponseBodyInstances setOperationLocks(java.util.List<DescribeInstancesResponseBodyInstancesOperationLocks> operationLocks) {
+        public DescribeInstancesResponseBodyInstancesInstance setOperationLocks(DescribeInstancesResponseBodyInstancesInstanceOperationLocks operationLocks) {
             this.operationLocks = operationLocks;
             return this;
         }
-        public java.util.List<DescribeInstancesResponseBodyInstancesOperationLocks> getOperationLocks() {
+        public DescribeInstancesResponseBodyInstancesInstanceOperationLocks getOperationLocks() {
             return this.operationLocks;
         }
 
-        public DescribeInstancesResponseBodyInstances setTags(java.util.List<DescribeInstancesResponseBodyInstancesTags> tags) {
+        public DescribeInstancesResponseBodyInstancesInstance setTags(DescribeInstancesResponseBodyInstancesInstanceTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeInstancesResponseBodyInstancesTags> getTags() {
+        public DescribeInstancesResponseBodyInstancesInstanceTags getTags() {
             return this.tags;
         }
 
-        public DescribeInstancesResponseBodyInstances setMetadataOptions(DescribeInstancesResponseBodyInstancesMetadataOptions metadataOptions) {
+        public DescribeInstancesResponseBodyInstancesInstance setMetadataOptions(DescribeInstancesResponseBodyInstancesInstanceMetadataOptions metadataOptions) {
             this.metadataOptions = metadataOptions;
             return this;
         }
-        public DescribeInstancesResponseBodyInstancesMetadataOptions getMetadataOptions() {
+        public DescribeInstancesResponseBodyInstancesInstanceMetadataOptions getMetadataOptions() {
             return this.metadataOptions;
         }
 
-        public DescribeInstancesResponseBodyInstances setSaleCycle(String saleCycle) {
+        public DescribeInstancesResponseBodyInstancesInstance setSaleCycle(String saleCycle) {
             this.saleCycle = saleCycle;
             return this;
         }
@@ -790,15 +980,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.saleCycle;
         }
 
-        public DescribeInstancesResponseBodyInstances setPublicIpAddress(java.util.List<String> publicIpAddress) {
+        public DescribeInstancesResponseBodyInstancesInstance setPublicIpAddress(DescribeInstancesResponseBodyInstancesInstancePublicIpAddress publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-        public java.util.List<String> getPublicIpAddress() {
+        public DescribeInstancesResponseBodyInstancesInstancePublicIpAddress getPublicIpAddress() {
             return this.publicIpAddress;
         }
 
-        public DescribeInstancesResponseBodyInstances setSpotStrategy(String spotStrategy) {
+        public DescribeInstancesResponseBodyInstancesInstance setSpotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
             return this;
         }
@@ -806,7 +996,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.spotStrategy;
         }
 
-        public DescribeInstancesResponseBodyInstances setDeviceAvailable(Boolean deviceAvailable) {
+        public DescribeInstancesResponseBodyInstancesInstance setDeviceAvailable(Boolean deviceAvailable) {
             this.deviceAvailable = deviceAvailable;
             return this;
         }
@@ -814,15 +1004,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.deviceAvailable;
         }
 
-        public DescribeInstancesResponseBodyInstances setEipAddress(DescribeInstancesResponseBodyInstancesEipAddress eipAddress) {
+        public DescribeInstancesResponseBodyInstancesInstance setEipAddress(DescribeInstancesResponseBodyInstancesInstanceEipAddress eipAddress) {
             this.eipAddress = eipAddress;
             return this;
         }
-        public DescribeInstancesResponseBodyInstancesEipAddress getEipAddress() {
+        public DescribeInstancesResponseBodyInstancesInstanceEipAddress getEipAddress() {
             return this.eipAddress;
         }
 
-        public DescribeInstancesResponseBodyInstances setInstanceName(String instanceName) {
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
@@ -830,7 +1020,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public DescribeInstancesResponseBodyInstances setInstanceNetworkType(String instanceNetworkType) {
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
             return this;
         }
@@ -838,7 +1028,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.instanceNetworkType;
         }
 
-        public DescribeInstancesResponseBodyInstances setSpotDuration(Integer spotDuration) {
+        public DescribeInstancesResponseBodyInstancesInstance setSpotDuration(Integer spotDuration) {
             this.spotDuration = spotDuration;
             return this;
         }
@@ -846,7 +1036,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.spotDuration;
         }
 
-        public DescribeInstancesResponseBodyInstances setOSNameEn(String OSNameEn) {
+        public DescribeInstancesResponseBodyInstancesInstance setOSNameEn(String OSNameEn) {
             this.OSNameEn = OSNameEn;
             return this;
         }
@@ -854,7 +1044,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.OSNameEn;
         }
 
-        public DescribeInstancesResponseBodyInstances setSpotPriceLimit(Float spotPriceLimit) {
+        public DescribeInstancesResponseBodyInstancesInstance setSpotPriceLimit(Float spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
             return this;
         }
@@ -862,7 +1052,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.spotPriceLimit;
         }
 
-        public DescribeInstancesResponseBodyInstances setOSName(String OSName) {
+        public DescribeInstancesResponseBodyInstancesInstance setOSName(String OSName) {
             this.OSName = OSName;
             return this;
         }
@@ -870,7 +1060,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.OSName;
         }
 
-        public DescribeInstancesResponseBodyInstances setImageId(String imageId) {
+        public DescribeInstancesResponseBodyInstancesInstance setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
@@ -878,7 +1068,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public DescribeInstancesResponseBodyInstances setDeploymentSetGroupNo(Integer deploymentSetGroupNo) {
+        public DescribeInstancesResponseBodyInstancesInstance setDeploymentSetGroupNo(Integer deploymentSetGroupNo) {
             this.deploymentSetGroupNo = deploymentSetGroupNo;
             return this;
         }
@@ -886,7 +1076,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.deploymentSetGroupNo;
         }
 
-        public DescribeInstancesResponseBodyInstances setClusterId(String clusterId) {
+        public DescribeInstancesResponseBodyInstancesInstance setClusterId(String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
@@ -894,15 +1084,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.clusterId;
         }
 
-        public DescribeInstancesResponseBodyInstances setDedicatedInstanceAttribute(DescribeInstancesResponseBodyInstancesDedicatedInstanceAttribute dedicatedInstanceAttribute) {
+        public DescribeInstancesResponseBodyInstancesInstance setDedicatedInstanceAttribute(DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute dedicatedInstanceAttribute) {
             this.dedicatedInstanceAttribute = dedicatedInstanceAttribute;
             return this;
         }
-        public DescribeInstancesResponseBodyInstancesDedicatedInstanceAttribute getDedicatedInstanceAttribute() {
+        public DescribeInstancesResponseBodyInstancesInstanceDedicatedInstanceAttribute getDedicatedInstanceAttribute() {
             return this.dedicatedInstanceAttribute;
         }
 
-        public DescribeInstancesResponseBodyInstances setGPUSpec(String GPUSpec) {
+        public DescribeInstancesResponseBodyInstancesInstance setGPUSpec(String GPUSpec) {
             this.GPUSpec = GPUSpec;
             return this;
         }
@@ -910,7 +1100,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.GPUSpec;
         }
 
-        public DescribeInstancesResponseBodyInstances setAutoReleaseTime(String autoReleaseTime) {
+        public DescribeInstancesResponseBodyInstancesInstance setAutoReleaseTime(String autoReleaseTime) {
             this.autoReleaseTime = autoReleaseTime;
             return this;
         }
@@ -918,15 +1108,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.autoReleaseTime;
         }
 
-        public DescribeInstancesResponseBodyInstances setInnerIpAddress(java.util.List<String> innerIpAddress) {
+        public DescribeInstancesResponseBodyInstancesInstance setInnerIpAddress(DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress innerIpAddress) {
             this.innerIpAddress = innerIpAddress;
             return this;
         }
-        public java.util.List<String> getInnerIpAddress() {
+        public DescribeInstancesResponseBodyInstancesInstanceInnerIpAddress getInnerIpAddress() {
             return this.innerIpAddress;
         }
 
-        public DescribeInstancesResponseBodyInstances setStoppedMode(String stoppedMode) {
+        public DescribeInstancesResponseBodyInstancesInstance setStoppedMode(String stoppedMode) {
             this.stoppedMode = stoppedMode;
             return this;
         }
@@ -934,7 +1124,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.stoppedMode;
         }
 
-        public DescribeInstancesResponseBodyInstances setGPUAmount(Integer GPUAmount) {
+        public DescribeInstancesResponseBodyInstancesInstance setGPUAmount(Integer GPUAmount) {
             this.GPUAmount = GPUAmount;
             return this;
         }
@@ -942,7 +1132,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.GPUAmount;
         }
 
-        public DescribeInstancesResponseBodyInstances setHostName(String hostName) {
+        public DescribeInstancesResponseBodyInstancesInstance setHostName(String hostName) {
             this.hostName = hostName;
             return this;
         }
@@ -950,7 +1140,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.hostName;
         }
 
-        public DescribeInstancesResponseBodyInstances setInstanceId(String instanceId) {
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -958,7 +1148,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstancesResponseBodyInstances setInstanceType(String instanceType) {
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -966,7 +1156,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeInstancesResponseBodyInstances setInstanceChargeType(String instanceChargeType) {
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
             return this;
         }
@@ -974,7 +1164,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.instanceChargeType;
         }
 
-        public DescribeInstancesResponseBodyInstances setStartTime(String startTime) {
+        public DescribeInstancesResponseBodyInstancesInstance setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -982,7 +1172,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeInstancesResponseBodyInstances setInternetChargeType(String internetChargeType) {
+        public DescribeInstancesResponseBodyInstancesInstance setInternetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
             return this;
         }
@@ -990,7 +1180,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.internetChargeType;
         }
 
-        public DescribeInstancesResponseBodyInstances setZoneId(String zoneId) {
+        public DescribeInstancesResponseBodyInstancesInstance setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -998,7 +1188,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeInstancesResponseBodyInstances setRecyclable(Boolean recyclable) {
+        public DescribeInstancesResponseBodyInstancesInstance setRecyclable(Boolean recyclable) {
             this.recyclable = recyclable;
             return this;
         }
@@ -1006,7 +1196,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.recyclable;
         }
 
-        public DescribeInstancesResponseBodyInstances setCreditSpecification(String creditSpecification) {
+        public DescribeInstancesResponseBodyInstancesInstance setCreditSpecification(String creditSpecification) {
             this.creditSpecification = creditSpecification;
             return this;
         }
@@ -1014,7 +1204,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.creditSpecification;
         }
 
-        public DescribeInstancesResponseBodyInstances setOSType(String OSType) {
+        public DescribeInstancesResponseBodyInstancesInstance setOSType(String OSType) {
             this.OSType = OSType;
             return this;
         }
@@ -1022,7 +1212,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.OSType;
         }
 
-        public DescribeInstancesResponseBodyInstances setStatus(String status) {
+        public DescribeInstancesResponseBodyInstancesInstance setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -1030,7 +1220,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeInstancesResponseBodyInstances setDeploymentSetId(String deploymentSetId) {
+        public DescribeInstancesResponseBodyInstancesInstance setDeploymentSetId(String deploymentSetId) {
             this.deploymentSetId = deploymentSetId;
             return this;
         }
@@ -1038,7 +1228,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.deploymentSetId;
         }
 
-        public DescribeInstancesResponseBodyInstances setKeyPairName(String keyPairName) {
+        public DescribeInstancesResponseBodyInstancesInstance setKeyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
             return this;
         }
@@ -1046,15 +1236,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.keyPairName;
         }
 
-        public DescribeInstancesResponseBodyInstances setCpuOptions(DescribeInstancesResponseBodyInstancesCpuOptions cpuOptions) {
+        public DescribeInstancesResponseBodyInstancesInstance setCpuOptions(DescribeInstancesResponseBodyInstancesInstanceCpuOptions cpuOptions) {
             this.cpuOptions = cpuOptions;
             return this;
         }
-        public DescribeInstancesResponseBodyInstancesCpuOptions getCpuOptions() {
+        public DescribeInstancesResponseBodyInstancesInstanceCpuOptions getCpuOptions() {
             return this.cpuOptions;
         }
 
-        public DescribeInstancesResponseBodyInstances setLocalStorageCapacity(Long localStorageCapacity) {
+        public DescribeInstancesResponseBodyInstancesInstance setLocalStorageCapacity(Long localStorageCapacity) {
             this.localStorageCapacity = localStorageCapacity;
             return this;
         }
@@ -1062,7 +1252,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.localStorageCapacity;
         }
 
-        public DescribeInstancesResponseBodyInstances setDescription(String description) {
+        public DescribeInstancesResponseBodyInstancesInstance setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -1070,7 +1260,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeInstancesResponseBodyInstances setHpcClusterId(String hpcClusterId) {
+        public DescribeInstancesResponseBodyInstancesInstance setHpcClusterId(String hpcClusterId) {
             this.hpcClusterId = hpcClusterId;
             return this;
         }
@@ -1078,7 +1268,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.hpcClusterId;
         }
 
-        public DescribeInstancesResponseBodyInstances setMemory(Integer memory) {
+        public DescribeInstancesResponseBodyInstancesInstance setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
@@ -1086,7 +1276,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.memory;
         }
 
-        public DescribeInstancesResponseBodyInstances setVlanId(String vlanId) {
+        public DescribeInstancesResponseBodyInstancesInstance setVlanId(String vlanId) {
             this.vlanId = vlanId;
             return this;
         }
@@ -1094,15 +1284,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.vlanId;
         }
 
-        public DescribeInstancesResponseBodyInstances setVpcAttributes(DescribeInstancesResponseBodyInstancesVpcAttributes vpcAttributes) {
+        public DescribeInstancesResponseBodyInstancesInstance setVpcAttributes(DescribeInstancesResponseBodyInstancesInstanceVpcAttributes vpcAttributes) {
             this.vpcAttributes = vpcAttributes;
             return this;
         }
-        public DescribeInstancesResponseBodyInstancesVpcAttributes getVpcAttributes() {
+        public DescribeInstancesResponseBodyInstancesInstanceVpcAttributes getVpcAttributes() {
             return this.vpcAttributes;
         }
 
-        public DescribeInstancesResponseBodyInstances setDeletionProtection(Boolean deletionProtection) {
+        public DescribeInstancesResponseBodyInstancesInstance setDeletionProtection(Boolean deletionProtection) {
             this.deletionProtection = deletionProtection;
             return this;
         }
@@ -1110,15 +1300,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.deletionProtection;
         }
 
-        public DescribeInstancesResponseBodyInstances setEcsCapacityReservationAttr(DescribeInstancesResponseBodyInstancesEcsCapacityReservationAttr ecsCapacityReservationAttr) {
+        public DescribeInstancesResponseBodyInstancesInstance setEcsCapacityReservationAttr(DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr ecsCapacityReservationAttr) {
             this.ecsCapacityReservationAttr = ecsCapacityReservationAttr;
             return this;
         }
-        public DescribeInstancesResponseBodyInstancesEcsCapacityReservationAttr getEcsCapacityReservationAttr() {
+        public DescribeInstancesResponseBodyInstancesInstanceEcsCapacityReservationAttr getEcsCapacityReservationAttr() {
             return this.ecsCapacityReservationAttr;
         }
 
-        public DescribeInstancesResponseBodyInstances setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
+        public DescribeInstancesResponseBodyInstancesInstance setInternetMaxBandwidthIn(Integer internetMaxBandwidthIn) {
             this.internetMaxBandwidthIn = internetMaxBandwidthIn;
             return this;
         }
@@ -1126,7 +1316,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.internetMaxBandwidthIn;
         }
 
-        public DescribeInstancesResponseBodyInstances setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
+        public DescribeInstancesResponseBodyInstancesInstance setInternetMaxBandwidthOut(Integer internetMaxBandwidthOut) {
             this.internetMaxBandwidthOut = internetMaxBandwidthOut;
             return this;
         }
@@ -1134,15 +1324,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.internetMaxBandwidthOut;
         }
 
-        public DescribeInstancesResponseBodyInstances setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        public DescribeInstancesResponseBodyInstancesInstance setSecurityGroupIds(DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-        public java.util.List<String> getSecurityGroupIds() {
+        public DescribeInstancesResponseBodyInstancesInstanceSecurityGroupIds getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
-        public DescribeInstancesResponseBodyInstances setRegionId(String regionId) {
+        public DescribeInstancesResponseBodyInstancesInstance setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -1150,7 +1340,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeInstancesResponseBodyInstances setIoOptimized(Boolean ioOptimized) {
+        public DescribeInstancesResponseBodyInstancesInstance setIoOptimized(Boolean ioOptimized) {
             this.ioOptimized = ioOptimized;
             return this;
         }
@@ -1158,7 +1348,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.ioOptimized;
         }
 
-        public DescribeInstancesResponseBodyInstances setCpu(Integer cpu) {
+        public DescribeInstancesResponseBodyInstancesInstance setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
         }
@@ -1166,15 +1356,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.cpu;
         }
 
-        public DescribeInstancesResponseBodyInstances setRdmaIpAddress(java.util.List<String> rdmaIpAddress) {
+        public DescribeInstancesResponseBodyInstancesInstance setRdmaIpAddress(DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress rdmaIpAddress) {
             this.rdmaIpAddress = rdmaIpAddress;
             return this;
         }
-        public java.util.List<String> getRdmaIpAddress() {
+        public DescribeInstancesResponseBodyInstancesInstanceRdmaIpAddress getRdmaIpAddress() {
             return this.rdmaIpAddress;
         }
 
-        public DescribeInstancesResponseBodyInstances setExpiredTime(String expiredTime) {
+        public DescribeInstancesResponseBodyInstancesInstance setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
@@ -1182,7 +1372,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeInstancesResponseBodyInstances setLocalStorageAmount(Integer localStorageAmount) {
+        public DescribeInstancesResponseBodyInstancesInstance setLocalStorageAmount(Integer localStorageAmount) {
             this.localStorageAmount = localStorageAmount;
             return this;
         }
@@ -1190,7 +1380,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.localStorageAmount;
         }
 
-        public DescribeInstancesResponseBodyInstances setResourceGroupId(String resourceGroupId) {
+        public DescribeInstancesResponseBodyInstancesInstance setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -1198,7 +1388,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeInstancesResponseBodyInstances setInstanceTypeFamily(String instanceTypeFamily) {
+        public DescribeInstancesResponseBodyInstancesInstance setInstanceTypeFamily(String instanceTypeFamily) {
             this.instanceTypeFamily = instanceTypeFamily;
             return this;
         }
@@ -1206,7 +1396,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.instanceTypeFamily;
         }
 
-        public DescribeInstancesResponseBodyInstances setISP(String ISP) {
+        public DescribeInstancesResponseBodyInstancesInstance setISP(String ISP) {
             this.ISP = ISP;
             return this;
         }
@@ -1214,12 +1404,31 @@ public class DescribeInstancesResponseBody extends TeaModel {
             return this.ISP;
         }
 
-        public DescribeInstancesResponseBodyInstances setNetworkInterfaces(java.util.List<DescribeInstancesResponseBodyInstancesNetworkInterfaces> networkInterfaces) {
+        public DescribeInstancesResponseBodyInstancesInstance setNetworkInterfaces(DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-        public java.util.List<DescribeInstancesResponseBodyInstancesNetworkInterfaces> getNetworkInterfaces() {
+        public DescribeInstancesResponseBodyInstancesInstanceNetworkInterfaces getNetworkInterfaces() {
             return this.networkInterfaces;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstances extends TeaModel {
+        @NameInMap("Instance")
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstance> instance;
+
+        public static DescribeInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstances self = new DescribeInstancesResponseBodyInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstances setInstance(java.util.List<DescribeInstancesResponseBodyInstancesInstance> instance) {
+            this.instance = instance;
+            return this;
+        }
+        public java.util.List<DescribeInstancesResponseBodyInstancesInstance> getInstance() {
+            return this.instance;
         }
 
     }

@@ -11,7 +11,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("MonitorData")
-    public java.util.List<DescribeDiskMonitorDataResponseBodyMonitorData> monitorData;
+    public DescribeDiskMonitorDataResponseBodyMonitorData monitorData;
 
     public static DescribeDiskMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiskMonitorDataResponseBody self = new DescribeDiskMonitorDataResponseBody();
@@ -34,15 +34,15 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDiskMonitorDataResponseBody setMonitorData(java.util.List<DescribeDiskMonitorDataResponseBodyMonitorData> monitorData) {
+    public DescribeDiskMonitorDataResponseBody setMonitorData(DescribeDiskMonitorDataResponseBodyMonitorData monitorData) {
         this.monitorData = monitorData;
         return this;
     }
-    public java.util.List<DescribeDiskMonitorDataResponseBodyMonitorData> getMonitorData() {
+    public DescribeDiskMonitorDataResponseBodyMonitorData getMonitorData() {
         return this.monitorData;
     }
 
-    public static class DescribeDiskMonitorDataResponseBodyMonitorData extends TeaModel {
+    public static class DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData extends TeaModel {
         @NameInMap("BPSRead")
         public Integer BPSRead;
 
@@ -73,12 +73,12 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
         @NameInMap("BPSWrite")
         public Integer BPSWrite;
 
-        public static DescribeDiskMonitorDataResponseBodyMonitorData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDiskMonitorDataResponseBodyMonitorData self = new DescribeDiskMonitorDataResponseBodyMonitorData();
+        public static DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData self = new DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setBPSRead(Integer BPSRead) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setBPSRead(Integer BPSRead) {
             this.BPSRead = BPSRead;
             return this;
         }
@@ -86,7 +86,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.BPSRead;
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setIOPSRead(Integer IOPSRead) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setIOPSRead(Integer IOPSRead) {
             this.IOPSRead = IOPSRead;
             return this;
         }
@@ -94,7 +94,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.IOPSRead;
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setLatencyRead(Integer latencyRead) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setLatencyRead(Integer latencyRead) {
             this.latencyRead = latencyRead;
             return this;
         }
@@ -102,7 +102,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.latencyRead;
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setBPSTotal(Integer BPSTotal) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setBPSTotal(Integer BPSTotal) {
             this.BPSTotal = BPSTotal;
             return this;
         }
@@ -110,7 +110,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.BPSTotal;
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setIOPSTotal(Integer IOPSTotal) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setIOPSTotal(Integer IOPSTotal) {
             this.IOPSTotal = IOPSTotal;
             return this;
         }
@@ -118,7 +118,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.IOPSTotal;
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setTimeStamp(String timeStamp) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
@@ -126,7 +126,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setLatencyWrite(Integer latencyWrite) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setLatencyWrite(Integer latencyWrite) {
             this.latencyWrite = latencyWrite;
             return this;
         }
@@ -134,7 +134,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.latencyWrite;
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setIOPSWrite(Integer IOPSWrite) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setIOPSWrite(Integer IOPSWrite) {
             this.IOPSWrite = IOPSWrite;
             return this;
         }
@@ -142,7 +142,7 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.IOPSWrite;
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setDiskId(String diskId) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setDiskId(String diskId) {
             this.diskId = diskId;
             return this;
         }
@@ -150,12 +150,31 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
             return this.diskId;
         }
 
-        public DescribeDiskMonitorDataResponseBodyMonitorData setBPSWrite(Integer BPSWrite) {
+        public DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData setBPSWrite(Integer BPSWrite) {
             this.BPSWrite = BPSWrite;
             return this;
         }
         public Integer getBPSWrite() {
             return this.BPSWrite;
+        }
+
+    }
+
+    public static class DescribeDiskMonitorDataResponseBodyMonitorData extends TeaModel {
+        @NameInMap("DiskMonitorData")
+        public java.util.List<DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData> diskMonitorData;
+
+        public static DescribeDiskMonitorDataResponseBodyMonitorData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDiskMonitorDataResponseBodyMonitorData self = new DescribeDiskMonitorDataResponseBodyMonitorData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDiskMonitorDataResponseBodyMonitorData setDiskMonitorData(java.util.List<DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData> diskMonitorData) {
+            this.diskMonitorData = diskMonitorData;
+            return this;
+        }
+        public java.util.List<DescribeDiskMonitorDataResponseBodyMonitorDataDiskMonitorData> getDiskMonitorData() {
+            return this.diskMonitorData;
         }
 
     }

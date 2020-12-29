@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
     @NameInMap("CapacityReservationItem")
-    public java.util.List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem> capacityReservationItem;
+    public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem capacityReservationItem;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -24,11 +24,11 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeCapacityReservationInstancesResponseBody setCapacityReservationItem(java.util.List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem> capacityReservationItem) {
+    public DescribeCapacityReservationInstancesResponseBody setCapacityReservationItem(DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem capacityReservationItem) {
         this.capacityReservationItem = capacityReservationItem;
         return this;
     }
-    public java.util.List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem> getCapacityReservationItem() {
+    public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem getCapacityReservationItem() {
         return this.capacityReservationItem;
     }
 
@@ -64,21 +64,40 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         return this.maxResults;
     }
 
-    public static class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem extends TeaModel {
+    public static class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
+
+        public static DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet self = new DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem extends TeaModel {
+        @NameInMap("InstanceIdSet")
+        public java.util.List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet> instanceIdSet;
 
         public static DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem self = new DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public DescribeCapacityReservationInstancesResponseBodyCapacityReservationItem setInstanceIdSet(java.util.List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet> instanceIdSet) {
+            this.instanceIdSet = instanceIdSet;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public java.util.List<DescribeCapacityReservationInstancesResponseBodyCapacityReservationItemInstanceIdSet> getInstanceIdSet() {
+            return this.instanceIdSet;
         }
 
     }

@@ -17,7 +17,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("VirtualBorderRouterSet")
-    public java.util.List<DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet> virtualBorderRouterSet;
+    public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet virtualBorderRouterSet;
 
     public static DescribeVirtualBorderRoutersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualBorderRoutersResponseBody self = new DescribeVirtualBorderRoutersResponseBody();
@@ -56,15 +56,15 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeVirtualBorderRoutersResponseBody setVirtualBorderRouterSet(java.util.List<DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet> virtualBorderRouterSet) {
+    public DescribeVirtualBorderRoutersResponseBody setVirtualBorderRouterSet(DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet virtualBorderRouterSet) {
         this.virtualBorderRouterSet = virtualBorderRouterSet;
         return this;
     }
-    public java.util.List<DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet> getVirtualBorderRouterSet() {
+    public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet getVirtualBorderRouterSet() {
         return this.virtualBorderRouterSet;
     }
 
-    public static class DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet extends TeaModel {
+    public static class DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -125,12 +125,12 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("VlanId")
         public Integer vlanId;
 
-        public static DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet self = new DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet();
+        public static DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType self = new DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setCreationTime(String creationTime) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -138,7 +138,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setStatus(String status) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -146,7 +146,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setVlanInterfaceId(String vlanInterfaceId) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setVlanInterfaceId(String vlanInterfaceId) {
             this.vlanInterfaceId = vlanInterfaceId;
             return this;
         }
@@ -154,7 +154,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.vlanInterfaceId;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setCircuitCode(String circuitCode) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setCircuitCode(String circuitCode) {
             this.circuitCode = circuitCode;
             return this;
         }
@@ -162,7 +162,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.circuitCode;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setPhysicalConnectionOwnerUid(String physicalConnectionOwnerUid) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setPhysicalConnectionOwnerUid(String physicalConnectionOwnerUid) {
             this.physicalConnectionOwnerUid = physicalConnectionOwnerUid;
             return this;
         }
@@ -170,7 +170,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.physicalConnectionOwnerUid;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setLocalGatewayIp(String localGatewayIp) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setLocalGatewayIp(String localGatewayIp) {
             this.localGatewayIp = localGatewayIp;
             return this;
         }
@@ -178,7 +178,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.localGatewayIp;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setActivationTime(String activationTime) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setActivationTime(String activationTime) {
             this.activationTime = activationTime;
             return this;
         }
@@ -186,7 +186,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.activationTime;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setPhysicalConnectionBusinessStatus(String physicalConnectionBusinessStatus) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setPhysicalConnectionBusinessStatus(String physicalConnectionBusinessStatus) {
             this.physicalConnectionBusinessStatus = physicalConnectionBusinessStatus;
             return this;
         }
@@ -194,7 +194,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.physicalConnectionBusinessStatus;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setPeeringSubnetMask(String peeringSubnetMask) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setPeeringSubnetMask(String peeringSubnetMask) {
             this.peeringSubnetMask = peeringSubnetMask;
             return this;
         }
@@ -202,7 +202,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.peeringSubnetMask;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setRouteTableId(String routeTableId) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setRouteTableId(String routeTableId) {
             this.routeTableId = routeTableId;
             return this;
         }
@@ -210,7 +210,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.routeTableId;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setDescription(String description) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -218,7 +218,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setPhysicalConnectionStatus(String physicalConnectionStatus) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setPhysicalConnectionStatus(String physicalConnectionStatus) {
             this.physicalConnectionStatus = physicalConnectionStatus;
             return this;
         }
@@ -226,7 +226,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.physicalConnectionStatus;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setRecoveryTime(String recoveryTime) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setRecoveryTime(String recoveryTime) {
             this.recoveryTime = recoveryTime;
             return this;
         }
@@ -234,7 +234,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.recoveryTime;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setTerminationTime(String terminationTime) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setTerminationTime(String terminationTime) {
             this.terminationTime = terminationTime;
             return this;
         }
@@ -242,7 +242,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.terminationTime;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setPeerGatewayIp(String peerGatewayIp) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setPeerGatewayIp(String peerGatewayIp) {
             this.peerGatewayIp = peerGatewayIp;
             return this;
         }
@@ -250,7 +250,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.peerGatewayIp;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setName(String name) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setName(String name) {
             this.name = name;
             return this;
         }
@@ -258,7 +258,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setAccessPointId(String accessPointId) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setAccessPointId(String accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
@@ -266,7 +266,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.accessPointId;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setVbrId(String vbrId) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setVbrId(String vbrId) {
             this.vbrId = vbrId;
             return this;
         }
@@ -274,7 +274,7 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.vbrId;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setPhysicalConnectionId(String physicalConnectionId) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setPhysicalConnectionId(String physicalConnectionId) {
             this.physicalConnectionId = physicalConnectionId;
             return this;
         }
@@ -282,12 +282,31 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             return this.physicalConnectionId;
         }
 
-        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setVlanId(Integer vlanId) {
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setVlanId(Integer vlanId) {
             this.vlanId = vlanId;
             return this;
         }
         public Integer getVlanId() {
             return this.vlanId;
+        }
+
+    }
+
+    public static class DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet extends TeaModel {
+        @NameInMap("VirtualBorderRouterType")
+        public java.util.List<DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType> virtualBorderRouterType;
+
+        public static DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet self = new DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSet setVirtualBorderRouterType(java.util.List<DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType> virtualBorderRouterType) {
+            this.virtualBorderRouterType = virtualBorderRouterType;
+            return this;
+        }
+        public java.util.List<DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType> getVirtualBorderRouterType() {
+            return this.virtualBorderRouterType;
         }
 
     }

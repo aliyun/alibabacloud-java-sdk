@@ -20,7 +20,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("NetworkInterfaceSets")
-    public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets> networkInterfaceSets;
+    public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets networkInterfaceSets;
 
     public static DescribeNetworkInterfacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfacesResponseBody self = new DescribeNetworkInterfacesResponseBody();
@@ -67,27 +67,27 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeNetworkInterfacesResponseBody setNetworkInterfaceSets(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets> networkInterfaceSets) {
+    public DescribeNetworkInterfacesResponseBody setNetworkInterfaceSets(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets networkInterfaceSets) {
         this.networkInterfaceSets = networkInterfaceSets;
         return this;
     }
-    public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets> getNetworkInterfaceSets() {
+    public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets getNetworkInterfaceSets() {
         return this.networkInterfaceSets;
     }
 
-    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsTags extends TeaModel {
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsTags self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsTags();
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsTags setTagValue(String tagValue) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -95,7 +95,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsTags setTagKey(String tagKey) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
@@ -105,7 +105,26 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment extends TeaModel {
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag> tag;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags setTag(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment extends TeaModel {
         @NameInMap("DeviceIndex")
         public Integer deviceIndex;
 
@@ -115,12 +134,12 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("TrunkNetworkInterfaceId")
         public String trunkNetworkInterfaceId;
 
-        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment();
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment setDeviceIndex(Integer deviceIndex) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment setDeviceIndex(Integer deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
@@ -128,7 +147,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.deviceIndex;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment setInstanceId(String instanceId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -136,7 +155,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment setTrunkNetworkInterfaceId(String trunkNetworkInterfaceId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment setTrunkNetworkInterfaceId(String trunkNetworkInterfaceId) {
             this.trunkNetworkInterfaceId = trunkNetworkInterfaceId;
             return this;
         }
@@ -146,16 +165,16 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsIpv6Sets extends TeaModel {
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set extends TeaModel {
         @NameInMap("Ipv6Address")
         public String ipv6Address;
 
-        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsIpv6Sets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsIpv6Sets self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsIpv6Sets();
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsIpv6Sets setIpv6Address(String ipv6Address) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set setIpv6Address(String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
@@ -165,19 +184,57 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAssociatedPublicIp extends TeaModel {
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets extends TeaModel {
+        @NameInMap("Ipv6Set")
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set> ipv6Set;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets setIpv6Set(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set> ipv6Set) {
+            this.ipv6Set = ipv6Set;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6SetsIpv6Set> getIpv6Set() {
+            return this.ipv6Set;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds extends TeaModel {
+        @NameInMap("SecurityGroupId")
+        public java.util.List<String> securityGroupId;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds setSecurityGroupId(java.util.List<String> securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp extends TeaModel {
         @NameInMap("AllocationId")
         public String allocationId;
 
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
-        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAssociatedPublicIp build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAssociatedPublicIp self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAssociatedPublicIp();
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAssociatedPublicIp setAllocationId(String allocationId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp setAllocationId(String allocationId) {
             this.allocationId = allocationId;
             return this;
         }
@@ -185,7 +242,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.allocationId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAssociatedPublicIp setPublicIpAddress(String publicIpAddress) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp setPublicIpAddress(String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
@@ -195,19 +252,19 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSetsAssociatedPublicIp extends TeaModel {
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp extends TeaModel {
         @NameInMap("AllocationId")
         public String allocationId;
 
         @NameInMap("PublicIpAddress")
         public String publicIpAddress;
 
-        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSetsAssociatedPublicIp build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSetsAssociatedPublicIp self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSetsAssociatedPublicIp();
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSetsAssociatedPublicIp setAllocationId(String allocationId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp setAllocationId(String allocationId) {
             this.allocationId = allocationId;
             return this;
         }
@@ -215,7 +272,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.allocationId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSetsAssociatedPublicIp setPublicIpAddress(String publicIpAddress) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp setPublicIpAddress(String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
@@ -225,9 +282,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets extends TeaModel {
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet extends TeaModel {
         @NameInMap("AssociatedPublicIp")
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSetsAssociatedPublicIp associatedPublicIp;
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp;
 
         @NameInMap("Primary")
         public Boolean primary;
@@ -235,20 +292,20 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("PrivateIpAddress")
         public String privateIpAddress;
 
-        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets();
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets setAssociatedPublicIp(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSetsAssociatedPublicIp associatedPublicIp) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet setAssociatedPublicIp(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp associatedPublicIp) {
             this.associatedPublicIp = associatedPublicIp;
             return this;
         }
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSetsAssociatedPublicIp getAssociatedPublicIp() {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSetAssociatedPublicIp getAssociatedPublicIp() {
             return this.associatedPublicIp;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets setPrimary(Boolean primary) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet setPrimary(Boolean primary) {
             this.primary = primary;
             return this;
         }
@@ -256,7 +313,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.primary;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets setPrivateIpAddress(String privateIpAddress) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet setPrivateIpAddress(String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
@@ -266,7 +323,26 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets extends TeaModel {
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets extends TeaModel {
+        @NameInMap("PrivateIpSet")
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> privateIpSet;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets setPrivateIpSet(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> privateIpSet) {
+            this.privateIpSet = privateIpSet;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSetsPrivateIpSet> getPrivateIpSet() {
+            return this.privateIpSet;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -289,16 +365,16 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         @NameInMap("Tags")
-        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsTags> tags;
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags tags;
 
         @NameInMap("Attachment")
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment attachment;
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment attachment;
 
         @NameInMap("ServiceID")
         public Long serviceID;
 
         @NameInMap("Ipv6Sets")
-        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsIpv6Sets> ipv6Sets;
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets ipv6Sets;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -307,7 +383,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public String ownerId;
 
         @NameInMap("SecurityGroupIds")
-        public java.util.List<String> securityGroupIds;
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds securityGroupIds;
 
         @NameInMap("ServiceManaged")
         public Boolean serviceManaged;
@@ -322,7 +398,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         @NameInMap("AssociatedPublicIp")
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAssociatedPublicIp associatedPublicIp;
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp associatedPublicIp;
 
         @NameInMap("ZoneId")
         public String zoneId;
@@ -334,14 +410,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public Integer queueNumber;
 
         @NameInMap("PrivateIpSets")
-        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets> privateIpSets;
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets privateIpSets;
 
-        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets();
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setStatus(String status) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -349,7 +425,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setType(String type) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setType(String type) {
             this.type = type;
             return this;
         }
@@ -357,7 +433,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setVpcId(String vpcId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -365,7 +441,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setCreationTime(String creationTime) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -373,7 +449,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setNetworkInterfaceName(String networkInterfaceName) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setNetworkInterfaceName(String networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
@@ -381,7 +457,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.networkInterfaceName;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setMacAddress(String macAddress) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setMacAddress(String macAddress) {
             this.macAddress = macAddress;
             return this;
         }
@@ -389,7 +465,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.macAddress;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setNetworkInterfaceId(String networkInterfaceId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setNetworkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
@@ -397,23 +473,23 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.networkInterfaceId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setTags(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsTags> tags) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setTags(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsTags> getTags() {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetTags getTags() {
             return this.tags;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setAttachment(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment attachment) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setAttachment(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment attachment) {
             this.attachment = attachment;
             return this;
         }
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAttachment getAttachment() {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAttachment getAttachment() {
             return this.attachment;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setServiceID(Long serviceID) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setServiceID(Long serviceID) {
             this.serviceID = serviceID;
             return this;
         }
@@ -421,15 +497,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.serviceID;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setIpv6Sets(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsIpv6Sets> ipv6Sets) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setIpv6Sets(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets ipv6Sets) {
             this.ipv6Sets = ipv6Sets;
             return this;
         }
-        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsIpv6Sets> getIpv6Sets() {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetIpv6Sets getIpv6Sets() {
             return this.ipv6Sets;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setInstanceId(String instanceId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -437,7 +513,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setOwnerId(String ownerId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setOwnerId(String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
@@ -445,15 +521,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.ownerId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setSecurityGroupIds(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
-        public java.util.List<String> getSecurityGroupIds() {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetSecurityGroupIds getSecurityGroupIds() {
             return this.securityGroupIds;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setServiceManaged(Boolean serviceManaged) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setServiceManaged(Boolean serviceManaged) {
             this.serviceManaged = serviceManaged;
             return this;
         }
@@ -461,7 +537,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.serviceManaged;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setVSwitchId(String vSwitchId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -469,7 +545,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setDescription(String description) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -477,7 +553,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setResourceGroupId(String resourceGroupId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -485,15 +561,15 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setAssociatedPublicIp(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAssociatedPublicIp associatedPublicIp) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setAssociatedPublicIp(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp associatedPublicIp) {
             this.associatedPublicIp = associatedPublicIp;
             return this;
         }
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsAssociatedPublicIp getAssociatedPublicIp() {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetAssociatedPublicIp getAssociatedPublicIp() {
             return this.associatedPublicIp;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setZoneId(String zoneId) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -501,7 +577,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setPrivateIpAddress(String privateIpAddress) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setPrivateIpAddress(String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
@@ -509,7 +585,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.privateIpAddress;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setQueueNumber(Integer queueNumber) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setQueueNumber(Integer queueNumber) {
             this.queueNumber = queueNumber;
             return this;
         }
@@ -517,12 +593,31 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             return this.queueNumber;
         }
 
-        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setPrivateIpSets(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets> privateIpSets) {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet setPrivateIpSets(DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets privateIpSets) {
             this.privateIpSets = privateIpSets;
             return this;
         }
-        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsPrivateIpSets> getPrivateIpSets() {
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSetPrivateIpSets getPrivateIpSets() {
             return this.privateIpSets;
+        }
+
+    }
+
+    public static class DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets extends TeaModel {
+        @NameInMap("NetworkInterfaceSet")
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet> networkInterfaceSet;
+
+        public static DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets self = new DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkInterfacesResponseBodyNetworkInterfaceSets setNetworkInterfaceSet(java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet> networkInterfaceSet) {
+            this.networkInterfaceSet = networkInterfaceSet;
+            return this;
+        }
+        public java.util.List<DescribeNetworkInterfacesResponseBodyNetworkInterfaceSetsNetworkInterfaceSet> getNetworkInterfaceSet() {
+            return this.networkInterfaceSet;
         }
 
     }

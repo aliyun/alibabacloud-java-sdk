@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyReservedInstancesResponseBody extends TeaModel {
     @NameInMap("ReservedInstanceIdSets")
-    public java.util.List<String> reservedInstanceIdSets;
+    public ModifyReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyReservedInstancesResponseBody setReservedInstanceIdSets(java.util.List<String> reservedInstanceIdSets) {
+    public ModifyReservedInstancesResponseBody setReservedInstanceIdSets(ModifyReservedInstancesResponseBodyReservedInstanceIdSets reservedInstanceIdSets) {
         this.reservedInstanceIdSets = reservedInstanceIdSets;
         return this;
     }
-    public java.util.List<String> getReservedInstanceIdSets() {
+    public ModifyReservedInstancesResponseBodyReservedInstanceIdSets getReservedInstanceIdSets() {
         return this.reservedInstanceIdSets;
     }
 
@@ -29,6 +29,25 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class ModifyReservedInstancesResponseBodyReservedInstanceIdSets extends TeaModel {
+        @NameInMap("ReservedInstanceId")
+        public java.util.List<String> reservedInstanceId;
+
+        public static ModifyReservedInstancesResponseBodyReservedInstanceIdSets build(java.util.Map<String, ?> map) throws Exception {
+            ModifyReservedInstancesResponseBodyReservedInstanceIdSets self = new ModifyReservedInstancesResponseBodyReservedInstanceIdSets();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyReservedInstancesResponseBodyReservedInstanceIdSets setReservedInstanceId(java.util.List<String> reservedInstanceId) {
+            this.reservedInstanceId = reservedInstanceId;
+            return this;
+        }
+        public java.util.List<String> getReservedInstanceId() {
+            return this.reservedInstanceId;
+        }
+
     }
 
 }
