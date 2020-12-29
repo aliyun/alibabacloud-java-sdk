@@ -4,25 +4,33 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddSmsTemplateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TemplateCode")
+    @NameInMap("body")
     @Validation(required = true)
-    public String templateCode;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public AddSmsTemplateResponseBody body;
 
     public static AddSmsTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         AddSmsTemplateResponse self = new AddSmsTemplateResponse();
         return TeaModel.build(map, self);
+    }
+
+    public AddSmsTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddSmsTemplateResponse setBody(AddSmsTemplateResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddSmsTemplateResponseBody getBody() {
+        return this.body;
     }
 
 }

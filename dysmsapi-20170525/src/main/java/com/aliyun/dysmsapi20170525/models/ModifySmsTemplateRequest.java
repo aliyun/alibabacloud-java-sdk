@@ -4,9 +4,6 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ModifySmsTemplateRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,28 +14,87 @@ public class ModifySmsTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("TemplateType")
-    @Validation(required = true)
     public Integer templateType;
 
     @NameInMap("TemplateName")
-    @Validation(required = true)
     public String templateName;
 
     @NameInMap("TemplateCode")
-    @Validation(required = true)
     public String templateCode;
 
     @NameInMap("TemplateContent")
-    @Validation(required = true)
     public String templateContent;
 
     @NameInMap("Remark")
-    @Validation(required = true)
     public String remark;
 
     public static ModifySmsTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySmsTemplateRequest self = new ModifySmsTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySmsTemplateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifySmsTemplateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifySmsTemplateRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifySmsTemplateRequest setTemplateType(Integer templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+    public Integer getTemplateType() {
+        return this.templateType;
+    }
+
+    public ModifySmsTemplateRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public ModifySmsTemplateRequest setTemplateCode(String templateCode) {
+        this.templateCode = templateCode;
+        return this;
+    }
+    public String getTemplateCode() {
+        return this.templateCode;
+    }
+
+    public ModifySmsTemplateRequest setTemplateContent(String templateContent) {
+        this.templateContent = templateContent;
+        return this;
+    }
+    public String getTemplateContent() {
+        return this.templateContent;
+    }
+
+    public ModifySmsTemplateRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
 }

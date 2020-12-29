@@ -4,37 +4,33 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySmsSignResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("SignStatus")
-    @Validation(required = true)
-    public Integer signStatus;
-
-    @NameInMap("Reason")
-    @Validation(required = true)
-    public String reason;
-
-    @NameInMap("SignName")
-    @Validation(required = true)
-    public String signName;
-
-    @NameInMap("CreateDate")
-    @Validation(required = true)
-    public String createDate;
+    public QuerySmsSignResponseBody body;
 
     public static QuerySmsSignResponse build(java.util.Map<String, ?> map) throws Exception {
         QuerySmsSignResponse self = new QuerySmsSignResponse();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySmsSignResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public QuerySmsSignResponse setBody(QuerySmsSignResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public QuerySmsSignResponseBody getBody() {
+        return this.body;
     }
 
 }

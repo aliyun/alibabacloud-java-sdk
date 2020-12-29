@@ -4,9 +4,6 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ModifySmsSignRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,38 +14,104 @@ public class ModifySmsSignRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("SignName")
-    @Validation(required = true)
     public String signName;
 
     @NameInMap("SignSource")
-    @Validation(required = true)
     public Integer signSource;
 
-    @NameInMap("SignFileList")
-    @Validation(required = true)
-    public java.util.List<ModifySmsSignRequestSignFileList> signFileList;
-
     @NameInMap("Remark")
-    @Validation(required = true)
     public String remark;
+
+    @NameInMap("SignFileList")
+    public java.util.List<ModifySmsSignRequestSignFileList> signFileList;
 
     public static ModifySmsSignRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySmsSignRequest self = new ModifySmsSignRequest();
         return TeaModel.build(map, self);
     }
 
-    public static class ModifySmsSignRequestSignFileList extends TeaModel {
-        @NameInMap("FileSuffix")
-        @Validation(required = true)
-        public String fileSuffix;
+    public ModifySmsSignRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
 
+    public ModifySmsSignRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifySmsSignRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifySmsSignRequest setSignName(String signName) {
+        this.signName = signName;
+        return this;
+    }
+    public String getSignName() {
+        return this.signName;
+    }
+
+    public ModifySmsSignRequest setSignSource(Integer signSource) {
+        this.signSource = signSource;
+        return this;
+    }
+    public Integer getSignSource() {
+        return this.signSource;
+    }
+
+    public ModifySmsSignRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
+    }
+
+    public ModifySmsSignRequest setSignFileList(java.util.List<ModifySmsSignRequestSignFileList> signFileList) {
+        this.signFileList = signFileList;
+        return this;
+    }
+    public java.util.List<ModifySmsSignRequestSignFileList> getSignFileList() {
+        return this.signFileList;
+    }
+
+    public static class ModifySmsSignRequestSignFileList extends TeaModel {
         @NameInMap("FileContents")
-        @Validation(required = true)
         public String fileContents;
+
+        @NameInMap("FileSuffix")
+        public String fileSuffix;
 
         public static ModifySmsSignRequestSignFileList build(java.util.Map<String, ?> map) throws Exception {
             ModifySmsSignRequestSignFileList self = new ModifySmsSignRequestSignFileList();
             return TeaModel.build(map, self);
+        }
+
+        public ModifySmsSignRequestSignFileList setFileContents(String fileContents) {
+            this.fileContents = fileContents;
+            return this;
+        }
+        public String getFileContents() {
+            return this.fileContents;
+        }
+
+        public ModifySmsSignRequestSignFileList setFileSuffix(String fileSuffix) {
+            this.fileSuffix = fileSuffix;
+            return this;
+        }
+        public String getFileSuffix() {
+            return this.fileSuffix;
         }
 
     }

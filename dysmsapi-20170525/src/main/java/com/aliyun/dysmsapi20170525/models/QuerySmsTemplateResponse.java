@@ -4,49 +4,33 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySmsTemplateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("TemplateStatus")
-    @Validation(required = true)
-    public Integer templateStatus;
-
-    @NameInMap("Reason")
-    @Validation(required = true)
-    public String reason;
-
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
-    public String templateCode;
-
-    @NameInMap("TemplateType")
-    @Validation(required = true)
-    public Integer templateType;
-
-    @NameInMap("TemplateName")
-    @Validation(required = true)
-    public String templateName;
-
-    @NameInMap("TemplateContent")
-    @Validation(required = true)
-    public String templateContent;
-
-    @NameInMap("CreateDate")
-    @Validation(required = true)
-    public String createDate;
+    public QuerySmsTemplateResponseBody body;
 
     public static QuerySmsTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         QuerySmsTemplateResponse self = new QuerySmsTemplateResponse();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySmsTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public QuerySmsTemplateResponse setBody(QuerySmsTemplateResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public QuerySmsTemplateResponseBody getBody() {
+        return this.body;
     }
 
 }
