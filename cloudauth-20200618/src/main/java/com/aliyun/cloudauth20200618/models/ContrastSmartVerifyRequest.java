@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class ContrastSmartVerifyRequest extends TeaModel {
     @NameInMap("SceneId")
-    @Validation(required = true)
     public Long sceneId;
 
     @NameInMap("OuterOrderNo")
-    @Validation(required = true)
     public String outerOrderNo;
 
     @NameInMap("Mode")
-    @Validation(required = true)
     public String mode;
 
     @NameInMap("CertType")
-    @Validation(required = true)
     public String certType;
 
     @NameInMap("Mobile")
@@ -30,11 +26,9 @@ public class ContrastSmartVerifyRequest extends TeaModel {
     public String userId;
 
     @NameInMap("CertName")
-    @Validation(required = true)
     public String certName;
 
     @NameInMap("CertNo")
-    @Validation(required = true)
     public String certNo;
 
     @NameInMap("FacePicFile")
