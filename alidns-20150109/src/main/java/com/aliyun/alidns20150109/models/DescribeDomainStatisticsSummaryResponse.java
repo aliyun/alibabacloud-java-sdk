@@ -4,61 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainStatisticsSummaryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TotalItems")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer totalItems;
-
-    @NameInMap("TotalPages")
-    @Validation(required = true)
-    public Integer totalPages;
-
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
-
-    @NameInMap("PageNumber")
-    @Validation(required = true)
-    public Integer pageNumber;
-
-    @NameInMap("Statistics")
-    @Validation(required = true)
-    public DescribeDomainStatisticsSummaryResponseStatistics statistics;
+    public DescribeDomainStatisticsSummaryResponseBody body;
 
     public static DescribeDomainStatisticsSummaryResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainStatisticsSummaryResponse self = new DescribeDomainStatisticsSummaryResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeDomainStatisticsSummaryResponseStatisticsStatistic extends TeaModel {
-        @NameInMap("DomainName")
-        @Validation(required = true)
-        public String domainName;
-
-        @NameInMap("Count")
-        @Validation(required = true)
-        public Long count;
-
-        public static DescribeDomainStatisticsSummaryResponseStatisticsStatistic build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainStatisticsSummaryResponseStatisticsStatistic self = new DescribeDomainStatisticsSummaryResponseStatisticsStatistic();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeDomainStatisticsSummaryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeDomainStatisticsSummaryResponseStatistics extends TeaModel {
-        @NameInMap("Statistic")
-        @Validation(required = true)
-        public java.util.List<DescribeDomainStatisticsSummaryResponseStatisticsStatistic> statistic;
-
-        public static DescribeDomainStatisticsSummaryResponseStatistics build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainStatisticsSummaryResponseStatistics self = new DescribeDomainStatisticsSummaryResponseStatistics();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeDomainStatisticsSummaryResponse setBody(DescribeDomainStatisticsSummaryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeDomainStatisticsSummaryResponseBody getBody() {
+        return this.body;
     }
 
 }

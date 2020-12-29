@@ -4,21 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class BindInstanceDomainsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SuccessCount")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer successCount;
-
-    @NameInMap("FailedCount")
-    @Validation(required = true)
-    public Integer failedCount;
+    public BindInstanceDomainsResponseBody body;
 
     public static BindInstanceDomainsResponse build(java.util.Map<String, ?> map) throws Exception {
         BindInstanceDomainsResponse self = new BindInstanceDomainsResponse();
         return TeaModel.build(map, self);
+    }
+
+    public BindInstanceDomainsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public BindInstanceDomainsResponse setBody(BindInstanceDomainsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public BindInstanceDomainsResponseBody getBody() {
+        return this.body;
     }
 
 }

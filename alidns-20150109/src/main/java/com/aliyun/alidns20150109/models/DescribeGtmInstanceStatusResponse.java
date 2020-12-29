@@ -4,37 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmInstanceStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AddrNotAvailableNum")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer addrNotAvailableNum;
-
-    @NameInMap("AddrPoolNotAvailableNum")
-    @Validation(required = true)
-    public Integer addrPoolNotAvailableNum;
-
-    @NameInMap("SwitchToFailoverStrategyNum")
-    @Validation(required = true)
-    public Integer switchToFailoverStrategyNum;
-
-    @NameInMap("StrategyNotAvailableNum")
-    @Validation(required = true)
-    public Integer strategyNotAvailableNum;
-
-    @NameInMap("Status")
-    @Validation(required = true)
-    public String status;
-
-    @NameInMap("StatusReason")
-    @Validation(required = true)
-    public String statusReason;
+    public DescribeGtmInstanceStatusResponseBody body;
 
     public static DescribeGtmInstanceStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmInstanceStatusResponse self = new DescribeGtmInstanceStatusResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGtmInstanceStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeGtmInstanceStatusResponse setBody(DescribeGtmInstanceStatusResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeGtmInstanceStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

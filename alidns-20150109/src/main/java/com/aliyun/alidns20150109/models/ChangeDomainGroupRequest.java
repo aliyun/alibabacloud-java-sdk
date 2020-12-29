@@ -7,8 +7,10 @@ public class ChangeDomainGroupRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("GroupId")
@@ -17,6 +19,38 @@ public class ChangeDomainGroupRequest extends TeaModel {
     public static ChangeDomainGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeDomainGroupRequest self = new ChangeDomainGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChangeDomainGroupRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public ChangeDomainGroupRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
+    public ChangeDomainGroupRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public ChangeDomainGroupRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
 }

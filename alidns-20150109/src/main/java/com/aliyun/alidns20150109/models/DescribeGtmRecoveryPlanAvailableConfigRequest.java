@@ -7,9 +7,28 @@ public class DescribeGtmRecoveryPlanAvailableConfigRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static DescribeGtmRecoveryPlanAvailableConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmRecoveryPlanAvailableConfigRequest self = new DescribeGtmRecoveryPlanAvailableConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGtmRecoveryPlanAvailableConfigRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeGtmRecoveryPlanAvailableConfigRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

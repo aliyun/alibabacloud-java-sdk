@@ -7,12 +7,39 @@ public class DeleteGtmAccessStrategyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("StrategyId")
     public String strategyId;
 
     public static DeleteGtmAccessStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteGtmAccessStrategyRequest self = new DeleteGtmAccessStrategyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteGtmAccessStrategyRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DeleteGtmAccessStrategyRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
+    public DeleteGtmAccessStrategyRequest setStrategyId(String strategyId) {
+        this.strategyId = strategyId;
+        return this;
+    }
+    public String getStrategyId() {
+        return this.strategyId;
     }
 
 }

@@ -4,17 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteDomainGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("GroupName")
+    @NameInMap("body")
     @Validation(required = true)
-    public String groupName;
+    public DeleteDomainGroupResponseBody body;
 
     public static DeleteDomainGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDomainGroupResponse self = new DeleteDomainGroupResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDomainGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteDomainGroupResponse setBody(DeleteDomainGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteDomainGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

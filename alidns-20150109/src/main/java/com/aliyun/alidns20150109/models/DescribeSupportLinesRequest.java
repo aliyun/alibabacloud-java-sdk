@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeSupportLinesRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("Lang")
     public String lang;
 
@@ -19,6 +16,30 @@ public class DescribeSupportLinesRequest extends TeaModel {
     public static DescribeSupportLinesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSupportLinesRequest self = new DescribeSupportLinesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSupportLinesRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeSupportLinesRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
+    public DescribeSupportLinesRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
 }

@@ -4,45 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordStatisticsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Statistics")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeRecordStatisticsResponseStatistics statistics;
+    public DescribeRecordStatisticsResponseBody body;
 
     public static DescribeRecordStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordStatisticsResponse self = new DescribeRecordStatisticsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeRecordStatisticsResponseStatisticsStatistic extends TeaModel {
-        @NameInMap("Timestamp")
-        @Validation(required = true)
-        public Long timestamp;
-
-        @NameInMap("Count")
-        @Validation(required = true)
-        public Long count;
-
-        public static DescribeRecordStatisticsResponseStatisticsStatistic build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRecordStatisticsResponseStatisticsStatistic self = new DescribeRecordStatisticsResponseStatisticsStatistic();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeRecordStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeRecordStatisticsResponseStatistics extends TeaModel {
-        @NameInMap("Statistic")
-        @Validation(required = true)
-        public java.util.List<DescribeRecordStatisticsResponseStatisticsStatistic> statistic;
-
-        public static DescribeRecordStatisticsResponseStatistics build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRecordStatisticsResponseStatistics self = new DescribeRecordStatisticsResponseStatistics();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeRecordStatisticsResponse setBody(DescribeRecordStatisticsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeRecordStatisticsResponseBody getBody() {
+        return this.body;
     }
 
 }

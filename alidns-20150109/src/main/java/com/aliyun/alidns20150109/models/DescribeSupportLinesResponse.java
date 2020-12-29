@@ -4,53 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeSupportLinesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RecordLines")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeSupportLinesResponseRecordLines recordLines;
+    public DescribeSupportLinesResponseBody body;
 
     public static DescribeSupportLinesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeSupportLinesResponse self = new DescribeSupportLinesResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeSupportLinesResponseRecordLinesRecordLine extends TeaModel {
-        @NameInMap("LineCode")
-        @Validation(required = true)
-        public String lineCode;
-
-        @NameInMap("FatherCode")
-        @Validation(required = true)
-        public String fatherCode;
-
-        @NameInMap("LineName")
-        @Validation(required = true)
-        public String lineName;
-
-        @NameInMap("LineDisplayName")
-        @Validation(required = true)
-        public String lineDisplayName;
-
-        public static DescribeSupportLinesResponseRecordLinesRecordLine build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSupportLinesResponseRecordLinesRecordLine self = new DescribeSupportLinesResponseRecordLinesRecordLine();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeSupportLinesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeSupportLinesResponseRecordLines extends TeaModel {
-        @NameInMap("RecordLine")
-        @Validation(required = true)
-        public java.util.List<DescribeSupportLinesResponseRecordLinesRecordLine> recordLine;
-
-        public static DescribeSupportLinesResponseRecordLines build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSupportLinesResponseRecordLines self = new DescribeSupportLinesResponseRecordLines();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeSupportLinesResponse setBody(DescribeSupportLinesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeSupportLinesResponseBody getBody() {
+        return this.body;
     }
 
 }

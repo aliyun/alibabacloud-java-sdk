@@ -4,45 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainStatisticsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Statistics")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeDomainStatisticsResponseStatistics statistics;
+    public DescribeDomainStatisticsResponseBody body;
 
     public static DescribeDomainStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainStatisticsResponse self = new DescribeDomainStatisticsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeDomainStatisticsResponseStatisticsStatistic extends TeaModel {
-        @NameInMap("Timestamp")
-        @Validation(required = true)
-        public Long timestamp;
-
-        @NameInMap("Count")
-        @Validation(required = true)
-        public Long count;
-
-        public static DescribeDomainStatisticsResponseStatisticsStatistic build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainStatisticsResponseStatisticsStatistic self = new DescribeDomainStatisticsResponseStatisticsStatistic();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeDomainStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeDomainStatisticsResponseStatistics extends TeaModel {
-        @NameInMap("Statistic")
-        @Validation(required = true)
-        public java.util.List<DescribeDomainStatisticsResponseStatisticsStatistic> statistic;
-
-        public static DescribeDomainStatisticsResponseStatistics build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainStatisticsResponseStatistics self = new DescribeDomainStatisticsResponseStatistics();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeDomainStatisticsResponse setBody(DescribeDomainStatisticsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeDomainStatisticsResponseBody getBody() {
+        return this.body;
     }
 
 }

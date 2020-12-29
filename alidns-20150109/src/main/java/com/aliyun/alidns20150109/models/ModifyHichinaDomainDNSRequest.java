@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class ModifyHichinaDomainDNSRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("Lang")
     public String lang;
 
@@ -14,12 +11,35 @@ public class ModifyHichinaDomainDNSRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     public static ModifyHichinaDomainDNSRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHichinaDomainDNSRequest self = new ModifyHichinaDomainDNSRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyHichinaDomainDNSRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public ModifyHichinaDomainDNSRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
+    public ModifyHichinaDomainDNSRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
 }

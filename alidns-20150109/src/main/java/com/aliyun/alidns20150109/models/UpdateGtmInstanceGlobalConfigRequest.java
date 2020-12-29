@@ -7,8 +7,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("InstanceName")
@@ -35,6 +37,86 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     public static UpdateGtmInstanceGlobalConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGtmInstanceGlobalConfigRequest self = new UpdateGtmInstanceGlobalConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setTtl(Integer ttl) {
+        this.ttl = ttl;
+        return this;
+    }
+    public Integer getTtl() {
+        return this.ttl;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setUserDomainName(String userDomainName) {
+        this.userDomainName = userDomainName;
+        return this;
+    }
+    public String getUserDomainName() {
+        return this.userDomainName;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setLbaStrategy(String lbaStrategy) {
+        this.lbaStrategy = lbaStrategy;
+        return this;
+    }
+    public String getLbaStrategy() {
+        return this.lbaStrategy;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setAlertGroup(String alertGroup) {
+        this.alertGroup = alertGroup;
+        return this;
+    }
+    public String getAlertGroup() {
+        return this.alertGroup;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setCnameMode(String cnameMode) {
+        this.cnameMode = cnameMode;
+        return this;
+    }
+    public String getCnameMode() {
+        return this.cnameMode;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setCnameCustomDomainName(String cnameCustomDomainName) {
+        this.cnameCustomDomainName = cnameCustomDomainName;
+        return this;
+    }
+    public String getCnameCustomDomainName() {
+        return this.cnameCustomDomainName;
     }
 
 }
