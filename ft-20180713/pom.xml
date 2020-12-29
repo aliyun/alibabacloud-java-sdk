@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ft20180713</artifactId>
-  <version>3.0.0</version>
+  <version>3.0.1</version>
   <packaging>jar</packaging>
   <name>ft20180713</name>
   <description>Alibaba Cloud Ft (20180713) SDK for Java

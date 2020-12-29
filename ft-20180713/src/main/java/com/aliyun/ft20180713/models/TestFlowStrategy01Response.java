@@ -4,33 +4,45 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class TestFlowStrategy01Response extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("List")
     @Validation(required = true)
-    public TestFlowStrategy01ResponseBody body;
+    public java.util.List<String> list;
+
+    @NameInMap("Names")
+    @Validation(required = true)
+    public java.util.List<String> names;
 
     public static TestFlowStrategy01Response build(java.util.Map<String, ?> map) throws Exception {
         TestFlowStrategy01Response self = new TestFlowStrategy01Response();
         return TeaModel.build(map, self);
     }
 
-    public TestFlowStrategy01Response setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public TestFlowStrategy01Response setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public TestFlowStrategy01Response setBody(TestFlowStrategy01ResponseBody body) {
-        this.body = body;
+    public TestFlowStrategy01Response setList(java.util.List<String> list) {
+        this.list = list;
         return this;
     }
-    public TestFlowStrategy01ResponseBody getBody() {
-        return this.body;
+    public java.util.List<String> getList() {
+        return this.list;
+    }
+
+    public TestFlowStrategy01Response setNames(java.util.List<String> names) {
+        this.names = names;
+        return this;
+    }
+    public java.util.List<String> getNames() {
+        return this.names;
     }
 
 }

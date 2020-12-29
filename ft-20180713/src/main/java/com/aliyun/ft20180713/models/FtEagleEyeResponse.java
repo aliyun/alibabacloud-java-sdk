@@ -4,33 +4,45 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtEagleEyeResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Name")
     @Validation(required = true)
-    public FtEagleEyeResponseBody body;
+    public String name;
+
+    @NameInMap("eagleEyeTraceId")
+    @Validation(required = true)
+    public String eagleEyeTraceId;
 
     public static FtEagleEyeResponse build(java.util.Map<String, ?> map) throws Exception {
         FtEagleEyeResponse self = new FtEagleEyeResponse();
         return TeaModel.build(map, self);
     }
 
-    public FtEagleEyeResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public FtEagleEyeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public FtEagleEyeResponse setBody(FtEagleEyeResponseBody body) {
-        this.body = body;
+    public FtEagleEyeResponse setName(String name) {
+        this.name = name;
         return this;
     }
-    public FtEagleEyeResponseBody getBody() {
-        return this.body;
+    public String getName() {
+        return this.name;
+    }
+
+    public FtEagleEyeResponse setEagleEyeTraceId(String eagleEyeTraceId) {
+        this.eagleEyeTraceId = eagleEyeTraceId;
+        return this;
+    }
+    public String getEagleEyeTraceId() {
+        return this.eagleEyeTraceId;
     }
 
 }

@@ -4,33 +4,33 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtGatedLaunchPolicy4Response extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("IsGatedLaunch")
     @Validation(required = true)
-    public FtGatedLaunchPolicy4ResponseBody body;
+    public String isGatedLaunch;
 
     public static FtGatedLaunchPolicy4Response build(java.util.Map<String, ?> map) throws Exception {
         FtGatedLaunchPolicy4Response self = new FtGatedLaunchPolicy4Response();
         return TeaModel.build(map, self);
     }
 
-    public FtGatedLaunchPolicy4Response setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public FtGatedLaunchPolicy4Response setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public FtGatedLaunchPolicy4Response setBody(FtGatedLaunchPolicy4ResponseBody body) {
-        this.body = body;
+    public FtGatedLaunchPolicy4Response setIsGatedLaunch(String isGatedLaunch) {
+        this.isGatedLaunch = isGatedLaunch;
         return this;
     }
-    public FtGatedLaunchPolicy4ResponseBody getBody() {
-        return this.body;
+    public String getIsGatedLaunch() {
+        return this.isGatedLaunch;
     }
 
 }
