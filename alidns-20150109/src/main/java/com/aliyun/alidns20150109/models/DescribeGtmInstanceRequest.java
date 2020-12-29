@@ -7,8 +7,10 @@ public class DescribeGtmInstanceRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("NeedDetailAttributes")
@@ -17,6 +19,38 @@ public class DescribeGtmInstanceRequest extends TeaModel {
     public static DescribeGtmInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmInstanceRequest self = new DescribeGtmInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGtmInstanceRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeGtmInstanceRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
+    public DescribeGtmInstanceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeGtmInstanceRequest setNeedDetailAttributes(Boolean needDetailAttributes) {
+        this.needDetailAttributes = needDetailAttributes;
+        return this;
+    }
+    public Boolean getNeedDetailAttributes() {
+        return this.needDetailAttributes;
     }
 
 }

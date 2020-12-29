@@ -4,49 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DomainId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String domainId;
-
-    @NameInMap("DomainName")
-    @Validation(required = true)
-    public String domainName;
-
-    @NameInMap("PunyCode")
-    @Validation(required = true)
-    public String punyCode;
-
-    @NameInMap("GroupId")
-    @Validation(required = true)
-    public String groupId;
-
-    @NameInMap("GroupName")
-    @Validation(required = true)
-    public String groupName;
-
-    @NameInMap("DnsServers")
-    @Validation(required = true)
-    public AddDomainResponseDnsServers dnsServers;
+    public AddDomainResponseBody body;
 
     public static AddDomainResponse build(java.util.Map<String, ?> map) throws Exception {
         AddDomainResponse self = new AddDomainResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class AddDomainResponseDnsServers extends TeaModel {
-        @NameInMap("DnsServer")
-        @Validation(required = true)
-        public java.util.List<String> dnsServer;
+    public AddDomainResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static AddDomainResponseDnsServers build(java.util.Map<String, ?> map) throws Exception {
-            AddDomainResponseDnsServers self = new AddDomainResponseDnsServers();
-            return TeaModel.build(map, self);
-        }
-
+    public AddDomainResponse setBody(AddDomainResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddDomainResponseBody getBody() {
+        return this.body;
     }
 
 }

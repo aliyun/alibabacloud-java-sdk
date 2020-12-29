@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainRecordInfoRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("Lang")
     public String lang;
 
@@ -14,12 +11,35 @@ public class DescribeDomainRecordInfoRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("RecordId")
-    @Validation(required = true)
     public String recordId;
 
     public static DescribeDomainRecordInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainRecordInfoRequest self = new DescribeDomainRecordInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDomainRecordInfoRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeDomainRecordInfoRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
+    public DescribeDomainRecordInfoRequest setRecordId(String recordId) {
+        this.recordId = recordId;
+        return this;
+    }
+    public String getRecordId() {
+        return this.recordId;
     }
 
 }

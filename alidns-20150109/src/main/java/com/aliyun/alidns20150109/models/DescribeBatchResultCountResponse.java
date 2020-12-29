@@ -4,41 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeBatchResultCountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Status")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer status;
-
-    @NameInMap("TotalCount")
-    @Validation(required = true)
-    public Integer totalCount;
-
-    @NameInMap("SuccessCount")
-    @Validation(required = true)
-    public Integer successCount;
-
-    @NameInMap("FailedCount")
-    @Validation(required = true)
-    public Integer failedCount;
-
-    @NameInMap("Reason")
-    @Validation(required = true)
-    public String reason;
-
-    @NameInMap("BatchType")
-    @Validation(required = true)
-    public String batchType;
-
-    @NameInMap("TaskId")
-    @Validation(required = true)
-    public Long taskId;
+    public DescribeBatchResultCountResponseBody body;
 
     public static DescribeBatchResultCountResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeBatchResultCountResponse self = new DescribeBatchResultCountResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBatchResultCountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeBatchResultCountResponse setBody(DescribeBatchResultCountResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeBatchResultCountResponseBody getBody() {
+        return this.body;
     }
 
 }

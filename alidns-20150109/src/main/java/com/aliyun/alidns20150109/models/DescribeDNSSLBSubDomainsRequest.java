@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("Lang")
     public String lang;
 
@@ -14,7 +11,6 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("PageNumber")
@@ -26,6 +22,46 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     public static DescribeDNSSLBSubDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDNSSLBSubDomainsRequest self = new DescribeDNSSLBSubDomainsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDNSSLBSubDomainsRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
+    }
+
+    public DescribeDNSSLBSubDomainsRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
+    public DescribeDNSSLBSubDomainsRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeDNSSLBSubDomainsRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDNSSLBSubDomainsRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
 }

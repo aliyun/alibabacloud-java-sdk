@@ -4,65 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomLinesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TotalItems")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer totalItems;
-
-    @NameInMap("PageNumber")
-    @Validation(required = true)
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
-
-    @NameInMap("TotalPages")
-    @Validation(required = true)
-    public Integer totalPages;
-
-    @NameInMap("CustomLines")
-    @Validation(required = true)
-    public java.util.List<DescribeCustomLinesResponseCustomLines> customLines;
+    public DescribeCustomLinesResponseBody body;
 
     public static DescribeCustomLinesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomLinesResponse self = new DescribeCustomLinesResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeCustomLinesResponseCustomLines extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
-        public Long id;
+    public DescribeCustomLinesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("CreateTime")
-        @Validation(required = true)
-        public String createTime;
-
-        @NameInMap("CreateTimestamp")
-        @Validation(required = true)
-        public Long createTimestamp;
-
-        @NameInMap("IpSegments")
-        @Validation(required = true)
-        public String ipSegments;
-
-        @NameInMap("Code")
-        @Validation(required = true)
-        public String code;
-
-        public static DescribeCustomLinesResponseCustomLines build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCustomLinesResponseCustomLines self = new DescribeCustomLinesResponseCustomLines();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeCustomLinesResponse setBody(DescribeCustomLinesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeCustomLinesResponseBody getBody() {
+        return this.body;
     }
 
 }
