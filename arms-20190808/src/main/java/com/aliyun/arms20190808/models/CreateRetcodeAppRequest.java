@@ -5,20 +5,41 @@ import com.aliyun.tea.*;
 
 public class CreateRetcodeAppRequest extends TeaModel {
     @NameInMap("RetcodeAppName")
-    @Validation(required = true)
     public String retcodeAppName;
 
     @NameInMap("RetcodeAppType")
-    @Validation(required = true)
     public String retcodeAppType;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static CreateRetcodeAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRetcodeAppRequest self = new CreateRetcodeAppRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRetcodeAppRequest setRetcodeAppName(String retcodeAppName) {
+        this.retcodeAppName = retcodeAppName;
+        return this;
+    }
+    public String getRetcodeAppName() {
+        return this.retcodeAppName;
+    }
+
+    public CreateRetcodeAppRequest setRetcodeAppType(String retcodeAppType) {
+        this.retcodeAppType = retcodeAppType;
+        return this;
+    }
+    public String getRetcodeAppType() {
+        return this.retcodeAppType;
+    }
+
+    public CreateRetcodeAppRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

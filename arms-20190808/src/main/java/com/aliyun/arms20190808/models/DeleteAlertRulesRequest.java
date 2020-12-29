@@ -5,19 +5,41 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertRulesRequest extends TeaModel {
     @NameInMap("AlertIds")
-    @Validation(required = true)
     public String alertIds;
 
     @NameInMap("ProxyUserId")
     public String proxyUserId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static DeleteAlertRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAlertRulesRequest self = new DeleteAlertRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteAlertRulesRequest setAlertIds(String alertIds) {
+        this.alertIds = alertIds;
+        return this;
+    }
+    public String getAlertIds() {
+        return this.alertIds;
+    }
+
+    public DeleteAlertRulesRequest setProxyUserId(String proxyUserId) {
+        this.proxyUserId = proxyUserId;
+        return this;
+    }
+    public String getProxyUserId() {
+        return this.proxyUserId;
+    }
+
+    public DeleteAlertRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -4,37 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListRetcodeAppsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RetcodeApps")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<ListRetcodeAppsResponseRetcodeApps> retcodeApps;
+    public ListRetcodeAppsResponseBody body;
 
     public static ListRetcodeAppsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListRetcodeAppsResponse self = new ListRetcodeAppsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListRetcodeAppsResponseRetcodeApps extends TeaModel {
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public Long appId;
+    public ListRetcodeAppsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Pid")
-        @Validation(required = true)
-        public String pid;
-
-        @NameInMap("AppName")
-        @Validation(required = true)
-        public String appName;
-
-        public static ListRetcodeAppsResponseRetcodeApps build(java.util.Map<String, ?> map) throws Exception {
-            ListRetcodeAppsResponseRetcodeApps self = new ListRetcodeAppsResponseRetcodeApps();
-            return TeaModel.build(map, self);
-        }
-
+    public ListRetcodeAppsResponse setBody(ListRetcodeAppsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListRetcodeAppsResponseBody getBody() {
+        return this.body;
     }
 
 }

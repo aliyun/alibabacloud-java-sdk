@@ -8,11 +8,9 @@ public class ImportAppAlertRulesRequest extends TeaModel {
     public String templateAlertId;
 
     @NameInMap("Pids")
-    @Validation(required = true)
     public String pids;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ContactGroupIds")
@@ -30,6 +28,62 @@ public class ImportAppAlertRulesRequest extends TeaModel {
     public static ImportAppAlertRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportAppAlertRulesRequest self = new ImportAppAlertRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ImportAppAlertRulesRequest setTemplateAlertId(String templateAlertId) {
+        this.templateAlertId = templateAlertId;
+        return this;
+    }
+    public String getTemplateAlertId() {
+        return this.templateAlertId;
+    }
+
+    public ImportAppAlertRulesRequest setPids(String pids) {
+        this.pids = pids;
+        return this;
+    }
+    public String getPids() {
+        return this.pids;
+    }
+
+    public ImportAppAlertRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ImportAppAlertRulesRequest setContactGroupIds(String contactGroupIds) {
+        this.contactGroupIds = contactGroupIds;
+        return this;
+    }
+    public String getContactGroupIds() {
+        return this.contactGroupIds;
+    }
+
+    public ImportAppAlertRulesRequest setIsAutoStart(Boolean isAutoStart) {
+        this.isAutoStart = isAutoStart;
+        return this;
+    }
+    public Boolean getIsAutoStart() {
+        return this.isAutoStart;
+    }
+
+    public ImportAppAlertRulesRequest setTemplageAlertConfig(String templageAlertConfig) {
+        this.templageAlertConfig = templageAlertConfig;
+        return this;
+    }
+    public String getTemplageAlertConfig() {
+        return this.templageAlertConfig;
+    }
+
+    public ImportAppAlertRulesRequest setProxyUserId(String proxyUserId) {
+        this.proxyUserId = proxyUserId;
+        return this;
+    }
+    public String getProxyUserId() {
+        return this.proxyUserId;
     }
 
 }

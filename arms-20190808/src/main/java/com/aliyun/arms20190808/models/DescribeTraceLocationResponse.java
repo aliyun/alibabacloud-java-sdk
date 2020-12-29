@@ -4,33 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class DescribeTraceLocationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RegionConfigs")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeTraceLocationResponseRegionConfigs> regionConfigs;
+    public DescribeTraceLocationResponseBody body;
 
     public static DescribeTraceLocationResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeTraceLocationResponse self = new DescribeTraceLocationResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeTraceLocationResponseRegionConfigs extends TeaModel {
-        @NameInMap("RegionNo")
-        @Validation(required = true)
-        public String regionNo;
+    public DescribeTraceLocationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Url")
-        @Validation(required = true)
-        public String url;
-
-        public static DescribeTraceLocationResponseRegionConfigs build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTraceLocationResponseRegionConfigs self = new DescribeTraceLocationResponseRegionConfigs();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeTraceLocationResponse setBody(DescribeTraceLocationResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeTraceLocationResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListClusterFromGrafanaRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static ListClusterFromGrafanaRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterFromGrafanaRequest self = new ListClusterFromGrafanaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListClusterFromGrafanaRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

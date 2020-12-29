@@ -4,17 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertContactGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isSuccess;
+    public UpdateAlertContactGroupResponseBody body;
 
     public static UpdateAlertContactGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlertContactGroupResponse self = new UpdateAlertContactGroupResponse();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAlertContactGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateAlertContactGroupResponse setBody(UpdateAlertContactGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateAlertContactGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

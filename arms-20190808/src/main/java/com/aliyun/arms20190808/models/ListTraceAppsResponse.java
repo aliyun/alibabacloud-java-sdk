@@ -4,69 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListTraceAppsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("TraceApps")
-    @Validation(required = true)
-    public java.util.List<ListTraceAppsResponseTraceApps> traceApps;
+    public ListTraceAppsResponseBody body;
 
     public static ListTraceAppsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListTraceAppsResponse self = new ListTraceAppsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListTraceAppsResponseTraceApps extends TeaModel {
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public Long appId;
+    public ListTraceAppsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Pid")
-        @Validation(required = true)
-        public String pid;
-
-        @NameInMap("AppName")
-        @Validation(required = true)
-        public String appName;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        @NameInMap("UserId")
-        @Validation(required = true)
-        public String userId;
-
-        @NameInMap("CreateTime")
-        @Validation(required = true)
-        public Long createTime;
-
-        @NameInMap("UpdateTime")
-        @Validation(required = true)
-        public Long updateTime;
-
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
-        public static ListTraceAppsResponseTraceApps build(java.util.Map<String, ?> map) throws Exception {
-            ListTraceAppsResponseTraceApps self = new ListTraceAppsResponseTraceApps();
-            return TeaModel.build(map, self);
-        }
-
+    public ListTraceAppsResponse setBody(ListTraceAppsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListTraceAppsResponseBody getBody() {
+        return this.body;
     }
 
 }
