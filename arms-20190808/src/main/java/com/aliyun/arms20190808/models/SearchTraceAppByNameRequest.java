@@ -8,12 +8,27 @@ public class SearchTraceAppByNameRequest extends TeaModel {
     public String traceAppName;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static SearchTraceAppByNameRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTraceAppByNameRequest self = new SearchTraceAppByNameRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchTraceAppByNameRequest setTraceAppName(String traceAppName) {
+        this.traceAppName = traceAppName;
+        return this;
+    }
+    public String getTraceAppName() {
+        return this.traceAppName;
+    }
+
+    public SearchTraceAppByNameRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

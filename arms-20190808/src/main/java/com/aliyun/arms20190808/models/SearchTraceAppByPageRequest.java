@@ -14,12 +14,43 @@ public class SearchTraceAppByPageRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static SearchTraceAppByPageRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchTraceAppByPageRequest self = new SearchTraceAppByPageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchTraceAppByPageRequest setTraceAppName(String traceAppName) {
+        this.traceAppName = traceAppName;
+        return this;
+    }
+    public String getTraceAppName() {
+        return this.traceAppName;
+    }
+
+    public SearchTraceAppByPageRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public SearchTraceAppByPageRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public SearchTraceAppByPageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

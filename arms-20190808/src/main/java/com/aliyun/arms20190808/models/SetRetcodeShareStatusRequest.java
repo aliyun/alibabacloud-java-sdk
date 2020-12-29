@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class SetRetcodeShareStatusRequest extends TeaModel {
     @NameInMap("Pid")
-    @Validation(required = true)
     public String pid;
 
     @NameInMap("Status")
-    @Validation(required = true)
     public Boolean status;
 
     public static SetRetcodeShareStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetRetcodeShareStatusRequest self = new SetRetcodeShareStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetRetcodeShareStatusRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
+    }
+
+    public SetRetcodeShareStatusRequest setStatus(Boolean status) {
+        this.status = status;
+        return this;
+    }
+    public Boolean getStatus() {
+        return this.status;
     }
 
 }

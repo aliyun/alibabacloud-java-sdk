@@ -4,73 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesByPageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PageBean")
+    @NameInMap("body")
     @Validation(required = true)
-    public SearchTracesByPageResponsePageBean pageBean;
+    public SearchTracesByPageResponseBody body;
 
     public static SearchTracesByPageResponse build(java.util.Map<String, ?> map) throws Exception {
         SearchTracesByPageResponse self = new SearchTracesByPageResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class SearchTracesByPageResponsePageBeanTraceInfos extends TeaModel {
-        @NameInMap("TraceID")
-        @Validation(required = true)
-        public String traceID;
-
-        @NameInMap("OperationName")
-        @Validation(required = true)
-        public String operationName;
-
-        @NameInMap("ServiceName")
-        @Validation(required = true)
-        public String serviceName;
-
-        @NameInMap("ServiceIp")
-        @Validation(required = true)
-        public String serviceIp;
-
-        @NameInMap("Duration")
-        @Validation(required = true)
-        public Long duration;
-
-        @NameInMap("Timestamp")
-        @Validation(required = true)
-        public Long timestamp;
-
-        public static SearchTracesByPageResponsePageBeanTraceInfos build(java.util.Map<String, ?> map) throws Exception {
-            SearchTracesByPageResponsePageBeanTraceInfos self = new SearchTracesByPageResponsePageBeanTraceInfos();
-            return TeaModel.build(map, self);
-        }
-
+    public SearchTracesByPageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class SearchTracesByPageResponsePageBean extends TeaModel {
-        @NameInMap("Total")
-        @Validation(required = true)
-        public Integer total;
-
-        @NameInMap("PageNumber")
-        @Validation(required = true)
-        public Integer pageNumber;
-
-        @NameInMap("PageSize")
-        @Validation(required = true)
-        public Integer pageSize;
-
-        @NameInMap("TraceInfos")
-        @Validation(required = true)
-        public java.util.List<SearchTracesByPageResponsePageBeanTraceInfos> traceInfos;
-
-        public static SearchTracesByPageResponsePageBean build(java.util.Map<String, ?> map) throws Exception {
-            SearchTracesByPageResponsePageBean self = new SearchTracesByPageResponsePageBean();
-            return TeaModel.build(map, self);
-        }
-
+    public SearchTracesByPageResponse setBody(SearchTracesByPageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SearchTracesByPageResponseBody getBody() {
+        return this.body;
     }
 
 }

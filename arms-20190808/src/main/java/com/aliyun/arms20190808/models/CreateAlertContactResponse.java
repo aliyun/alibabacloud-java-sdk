@@ -4,17 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class CreateAlertContactResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ContactId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String contactId;
+    public CreateAlertContactResponseBody body;
 
     public static CreateAlertContactResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAlertContactResponse self = new CreateAlertContactResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAlertContactResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateAlertContactResponse setBody(CreateAlertContactResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateAlertContactResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -20,7 +20,6 @@ public class SearchAlertHistoriesRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StartTime")
@@ -32,6 +31,70 @@ public class SearchAlertHistoriesRequest extends TeaModel {
     public static SearchAlertHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchAlertHistoriesRequest self = new SearchAlertHistoriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchAlertHistoriesRequest setProxyUserId(String proxyUserId) {
+        this.proxyUserId = proxyUserId;
+        return this;
+    }
+    public String getProxyUserId() {
+        return this.proxyUserId;
+    }
+
+    public SearchAlertHistoriesRequest setAlertId(Long alertId) {
+        this.alertId = alertId;
+        return this;
+    }
+    public Long getAlertId() {
+        return this.alertId;
+    }
+
+    public SearchAlertHistoriesRequest setAlertType(Integer alertType) {
+        this.alertType = alertType;
+        return this;
+    }
+    public Integer getAlertType() {
+        return this.alertType;
+    }
+
+    public SearchAlertHistoriesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public SearchAlertHistoriesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public SearchAlertHistoriesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public SearchAlertHistoriesRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public SearchAlertHistoriesRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
 }

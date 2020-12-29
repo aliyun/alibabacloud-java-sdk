@@ -4,81 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchRetcodeAppByPageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PageBean")
+    @NameInMap("body")
     @Validation(required = true)
-    public SearchRetcodeAppByPageResponsePageBean pageBean;
+    public SearchRetcodeAppByPageResponseBody body;
 
     public static SearchRetcodeAppByPageResponse build(java.util.Map<String, ?> map) throws Exception {
         SearchRetcodeAppByPageResponse self = new SearchRetcodeAppByPageResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class SearchRetcodeAppByPageResponsePageBeanRetcodeApps extends TeaModel {
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public Long appId;
-
-        @NameInMap("Pid")
-        @Validation(required = true)
-        public String pid;
-
-        @NameInMap("AppName")
-        @Validation(required = true)
-        public String appName;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        @NameInMap("UserId")
-        @Validation(required = true)
-        public String userId;
-
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
-        @NameInMap("CreateTime")
-        @Validation(required = true)
-        public Long createTime;
-
-        @NameInMap("UpdateTime")
-        @Validation(required = true)
-        public Long updateTime;
-
-        public static SearchRetcodeAppByPageResponsePageBeanRetcodeApps build(java.util.Map<String, ?> map) throws Exception {
-            SearchRetcodeAppByPageResponsePageBeanRetcodeApps self = new SearchRetcodeAppByPageResponsePageBeanRetcodeApps();
-            return TeaModel.build(map, self);
-        }
-
+    public SearchRetcodeAppByPageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class SearchRetcodeAppByPageResponsePageBean extends TeaModel {
-        @NameInMap("TotalCount")
-        @Validation(required = true)
-        public Integer totalCount;
-
-        @NameInMap("PageNumber")
-        @Validation(required = true)
-        public Integer pageNumber;
-
-        @NameInMap("PageSize")
-        @Validation(required = true)
-        public Integer pageSize;
-
-        @NameInMap("RetcodeApps")
-        @Validation(required = true)
-        public java.util.List<SearchRetcodeAppByPageResponsePageBeanRetcodeApps> retcodeApps;
-
-        public static SearchRetcodeAppByPageResponsePageBean build(java.util.Map<String, ?> map) throws Exception {
-            SearchRetcodeAppByPageResponsePageBean self = new SearchRetcodeAppByPageResponsePageBean();
-            return TeaModel.build(map, self);
-        }
-
+    public SearchRetcodeAppByPageResponse setBody(SearchRetcodeAppByPageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SearchRetcodeAppByPageResponseBody getBody() {
+        return this.body;
     }
 
 }

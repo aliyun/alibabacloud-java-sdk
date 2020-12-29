@@ -8,12 +8,27 @@ public class ListRetcodeAppsRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static ListRetcodeAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRetcodeAppsRequest self = new ListRetcodeAppsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRetcodeAppsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public ListRetcodeAppsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

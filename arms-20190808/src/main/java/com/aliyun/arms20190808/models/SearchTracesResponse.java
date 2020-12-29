@@ -4,49 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTracesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TraceInfos")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<SearchTracesResponseTraceInfos> traceInfos;
+    public SearchTracesResponseBody body;
 
     public static SearchTracesResponse build(java.util.Map<String, ?> map) throws Exception {
         SearchTracesResponse self = new SearchTracesResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class SearchTracesResponseTraceInfos extends TeaModel {
-        @NameInMap("TraceID")
-        @Validation(required = true)
-        public String traceID;
+    public SearchTracesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("OperationName")
-        @Validation(required = true)
-        public String operationName;
-
-        @NameInMap("ServiceName")
-        @Validation(required = true)
-        public String serviceName;
-
-        @NameInMap("ServiceIp")
-        @Validation(required = true)
-        public String serviceIp;
-
-        @NameInMap("Duration")
-        @Validation(required = true)
-        public Long duration;
-
-        @NameInMap("Timestamp")
-        @Validation(required = true)
-        public Long timestamp;
-
-        public static SearchTracesResponseTraceInfos build(java.util.Map<String, ?> map) throws Exception {
-            SearchTracesResponseTraceInfos self = new SearchTracesResponseTraceInfos();
-            return TeaModel.build(map, self);
-        }
-
+    public SearchTracesResponse setBody(SearchTracesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SearchTracesResponseBody getBody() {
+        return this.body;
     }
 
 }

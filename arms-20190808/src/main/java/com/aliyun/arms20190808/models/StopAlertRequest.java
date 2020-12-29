@@ -5,19 +5,41 @@ import com.aliyun.tea.*;
 
 public class StopAlertRequest extends TeaModel {
     @NameInMap("AlertId")
-    @Validation(required = true)
     public String alertId;
 
     @NameInMap("ProxyUserId")
     public String proxyUserId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static StopAlertRequest build(java.util.Map<String, ?> map) throws Exception {
         StopAlertRequest self = new StopAlertRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StopAlertRequest setAlertId(String alertId) {
+        this.alertId = alertId;
+        return this;
+    }
+    public String getAlertId() {
+        return this.alertId;
+    }
+
+    public StopAlertRequest setProxyUserId(String proxyUserId) {
+        this.proxyUserId = proxyUserId;
+        return this;
+    }
+    public String getProxyUserId() {
+        return this.proxyUserId;
+    }
+
+    public StopAlertRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

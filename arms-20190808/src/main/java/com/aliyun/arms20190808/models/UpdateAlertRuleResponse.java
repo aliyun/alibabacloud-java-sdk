@@ -4,21 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateAlertRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public String data;
-
-    @NameInMap("AlertId")
-    @Validation(required = true)
-    public Long alertId;
+    public UpdateAlertRuleResponseBody body;
 
     public static UpdateAlertRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateAlertRuleResponse self = new UpdateAlertRuleResponse();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAlertRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateAlertRuleResponse setBody(UpdateAlertRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateAlertRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

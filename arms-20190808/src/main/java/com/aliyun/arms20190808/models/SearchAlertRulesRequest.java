@@ -20,7 +20,6 @@ public class SearchAlertRulesRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Pid")
@@ -32,6 +31,70 @@ public class SearchAlertRulesRequest extends TeaModel {
     public static SearchAlertRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchAlertRulesRequest self = new SearchAlertRulesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchAlertRulesRequest setProxyUserId(String proxyUserId) {
+        this.proxyUserId = proxyUserId;
+        return this;
+    }
+    public String getProxyUserId() {
+        return this.proxyUserId;
+    }
+
+    public SearchAlertRulesRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
+    }
+
+    public SearchAlertRulesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public SearchAlertRulesRequest setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public SearchAlertRulesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public SearchAlertRulesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public SearchAlertRulesRequest setPid(String pid) {
+        this.pid = pid;
+        return this;
+    }
+    public String getPid() {
+        return this.pid;
+    }
+
+    public SearchAlertRulesRequest setAppType(String appType) {
+        this.appType = appType;
+        return this;
+    }
+    public String getAppType() {
+        return this.appType;
     }
 
 }

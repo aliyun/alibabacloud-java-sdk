@@ -4,57 +4,33 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class SearchTraceAppByNameResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TraceApps")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<SearchTraceAppByNameResponseTraceApps> traceApps;
+    public SearchTraceAppByNameResponseBody body;
 
     public static SearchTraceAppByNameResponse build(java.util.Map<String, ?> map) throws Exception {
         SearchTraceAppByNameResponse self = new SearchTraceAppByNameResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class SearchTraceAppByNameResponseTraceApps extends TeaModel {
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public Long appId;
+    public SearchTraceAppByNameResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Pid")
-        @Validation(required = true)
-        public String pid;
-
-        @NameInMap("AppName")
-        @Validation(required = true)
-        public String appName;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        @NameInMap("UserId")
-        @Validation(required = true)
-        public String userId;
-
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
-        @NameInMap("CreateTime")
-        @Validation(required = true)
-        public Long createTime;
-
-        @NameInMap("UpdateTime")
-        @Validation(required = true)
-        public Long updateTime;
-
-        public static SearchTraceAppByNameResponseTraceApps build(java.util.Map<String, ?> map) throws Exception {
-            SearchTraceAppByNameResponseTraceApps self = new SearchTraceAppByNameResponseTraceApps();
-            return TeaModel.build(map, self);
-        }
-
+    public SearchTraceAppByNameResponse setBody(SearchTraceAppByNameResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SearchTraceAppByNameResponseBody getBody() {
+        return this.body;
     }
 
 }

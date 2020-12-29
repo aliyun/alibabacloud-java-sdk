@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListPromClustersRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static ListPromClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPromClustersRequest self = new ListPromClustersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListPromClustersRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
