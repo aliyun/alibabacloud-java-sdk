@@ -119,14 +119,6 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("maintenance_window")
     public MaintenanceWindow maintenanceWindow;
 
-    // 创建集群参数。
-    @NameInMap("parameters")
-    public java.util.Map<String, ?> parameters;
-
-    // 集群创建的资源列表。
-    @NameInMap("outputs")
-    public java.util.List<DescribeClusterDetailResponseBodyOutputs> outputs;
-
     public static DescribeClusterDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterDetailResponseBody self = new DescribeClusterDetailResponseBody();
         return TeaModel.build(map, self);
@@ -362,66 +354,6 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public MaintenanceWindow getMaintenanceWindow() {
         return this.maintenanceWindow;
-    }
-
-    public DescribeClusterDetailResponseBody setParameters(java.util.Map<String, ?> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.Map<String, ?> getParameters() {
-        return this.parameters;
-    }
-
-    public DescribeClusterDetailResponseBody setOutputs(java.util.List<DescribeClusterDetailResponseBodyOutputs> outputs) {
-        this.outputs = outputs;
-        return this;
-    }
-    public java.util.List<DescribeClusterDetailResponseBodyOutputs> getOutputs() {
-        return this.outputs;
-    }
-
-    public static class DescribeClusterDetailResponseBodyOutputs extends TeaModel {
-        // 资源ID。
-        @NameInMap("OutputKey")
-        public String outputKey;
-
-        // 资源名称。
-        @NameInMap("OutputValue")
-        public String outputValue;
-
-        // 资源描述。
-        @NameInMap("Description")
-        public String description;
-
-        public static DescribeClusterDetailResponseBodyOutputs build(java.util.Map<String, ?> map) throws Exception {
-            DescribeClusterDetailResponseBodyOutputs self = new DescribeClusterDetailResponseBodyOutputs();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeClusterDetailResponseBodyOutputs setOutputKey(String outputKey) {
-            this.outputKey = outputKey;
-            return this;
-        }
-        public String getOutputKey() {
-            return this.outputKey;
-        }
-
-        public DescribeClusterDetailResponseBodyOutputs setOutputValue(String outputValue) {
-            this.outputValue = outputValue;
-            return this;
-        }
-        public String getOutputValue() {
-            return this.outputValue;
-        }
-
-        public DescribeClusterDetailResponseBodyOutputs setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
     }
 
 }
