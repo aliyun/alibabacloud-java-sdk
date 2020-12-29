@@ -17,7 +17,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("NatGateways")
-    public java.util.List<DescribeNatGatewaysResponseBodyNatGateways> natGateways;
+    public DescribeNatGatewaysResponseBodyNatGateways natGateways;
 
     public static DescribeNatGatewaysResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNatGatewaysResponseBody self = new DescribeNatGatewaysResponseBody();
@@ -56,15 +56,53 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeNatGatewaysResponseBody setNatGateways(java.util.List<DescribeNatGatewaysResponseBodyNatGateways> natGateways) {
+    public DescribeNatGatewaysResponseBody setNatGateways(DescribeNatGatewaysResponseBodyNatGateways natGateways) {
         this.natGateways = natGateways;
         return this;
     }
-    public java.util.List<DescribeNatGatewaysResponseBodyNatGateways> getNatGateways() {
+    public DescribeNatGatewaysResponseBodyNatGateways getNatGateways() {
         return this.natGateways;
     }
 
-    public static class DescribeNatGatewaysResponseBodyNatGateways extends TeaModel {
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayBandwidthPackageIds extends TeaModel {
+        @NameInMap("BandwidthPackageId")
+        public java.util.List<String> bandwidthPackageId;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayBandwidthPackageIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayBandwidthPackageIds self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayBandwidthPackageIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayBandwidthPackageIds setBandwidthPackageId(java.util.List<String> bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public java.util.List<String> getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+    }
+
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds extends TeaModel {
+        @NameInMap("ForwardTableId")
+        public java.util.List<String> forwardTableId;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds setForwardTableId(java.util.List<String> forwardTableId) {
+            this.forwardTableId = forwardTableId;
+            return this;
+        }
+        public java.util.List<String> getForwardTableId() {
+            return this.forwardTableId;
+        }
+
+    }
+
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGateway extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -75,7 +113,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public String vpcId;
 
         @NameInMap("BandwidthPackageIds")
-        public java.util.List<String> bandwidthPackageIds;
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayBandwidthPackageIds bandwidthPackageIds;
 
         @NameInMap("Spec")
         public String spec;
@@ -93,7 +131,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         public String natGatewayId;
 
         @NameInMap("ForwardTableIds")
-        public java.util.List<String> forwardTableIds;
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds forwardTableIds;
 
         @NameInMap("BusinessStatus")
         public String businessStatus;
@@ -101,12 +139,12 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        public static DescribeNatGatewaysResponseBodyNatGateways build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNatGatewaysResponseBodyNatGateways self = new DescribeNatGatewaysResponseBodyNatGateways();
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGateway build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGateway self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGateway();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setStatus(String status) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -114,7 +152,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setCreationTime(String creationTime) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -122,7 +160,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setVpcId(String vpcId) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -130,15 +168,15 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setBandwidthPackageIds(java.util.List<String> bandwidthPackageIds) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setBandwidthPackageIds(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayBandwidthPackageIds bandwidthPackageIds) {
             this.bandwidthPackageIds = bandwidthPackageIds;
             return this;
         }
-        public java.util.List<String> getBandwidthPackageIds() {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayBandwidthPackageIds getBandwidthPackageIds() {
             return this.bandwidthPackageIds;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setSpec(String spec) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setSpec(String spec) {
             this.spec = spec;
             return this;
         }
@@ -146,7 +184,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.spec;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setInstanceChargeType(String instanceChargeType) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setInstanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
             return this;
         }
@@ -154,7 +192,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.instanceChargeType;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setRegionId(String regionId) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -162,7 +200,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setDescription(String description) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -170,7 +208,7 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setNatGatewayId(String natGatewayId) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setNatGatewayId(String natGatewayId) {
             this.natGatewayId = natGatewayId;
             return this;
         }
@@ -178,15 +216,15 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.natGatewayId;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setForwardTableIds(java.util.List<String> forwardTableIds) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setForwardTableIds(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds forwardTableIds) {
             this.forwardTableIds = forwardTableIds;
             return this;
         }
-        public java.util.List<String> getForwardTableIds() {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayForwardTableIds getForwardTableIds() {
             return this.forwardTableIds;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setBusinessStatus(String businessStatus) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setBusinessStatus(String businessStatus) {
             this.businessStatus = businessStatus;
             return this;
         }
@@ -194,12 +232,31 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
             return this.businessStatus;
         }
 
-        public DescribeNatGatewaysResponseBodyNatGateways setName(String name) {
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class DescribeNatGatewaysResponseBodyNatGateways extends TeaModel {
+        @NameInMap("NatGateway")
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysNatGateway> natGateway;
+
+        public static DescribeNatGatewaysResponseBodyNatGateways build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGateways self = new DescribeNatGatewaysResponseBodyNatGateways();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGateways setNatGateway(java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysNatGateway> natGateway) {
+            this.natGateway = natGateway;
+            return this;
+        }
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysNatGateway> getNatGateway() {
+            return this.natGateway;
         }
 
     }

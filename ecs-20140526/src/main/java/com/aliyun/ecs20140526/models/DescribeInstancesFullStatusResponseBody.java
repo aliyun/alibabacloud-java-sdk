@@ -17,7 +17,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("InstanceFullStatusSet")
-    public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet> instanceFullStatusSet;
+    public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet instanceFullStatusSet;
 
     public static DescribeInstancesFullStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesFullStatusResponseBody self = new DescribeInstancesFullStatusResponseBody();
@@ -56,27 +56,27 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeInstancesFullStatusResponseBody setInstanceFullStatusSet(java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet> instanceFullStatusSet) {
+    public DescribeInstancesFullStatusResponseBody setInstanceFullStatusSet(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet instanceFullStatusSet) {
         this.instanceFullStatusSet = instanceFullStatusSet;
         return this;
     }
-    public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet> getInstanceFullStatusSet() {
+    public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet getInstanceFullStatusSet() {
         return this.instanceFullStatusSet;
     }
 
-    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetStatus extends TeaModel {
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
         @NameInMap("Name")
         public String name;
 
-        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetStatus self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetStatus();
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetStatus setCode(Integer code) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus setCode(Integer code) {
             this.code = code;
             return this;
         }
@@ -84,7 +84,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetStatus setName(String name) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus setName(String name) {
             this.name = name;
             return this;
         }
@@ -94,19 +94,19 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventType extends TeaModel {
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
         @NameInMap("Name")
         public String name;
 
-        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventType build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventType self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventType();
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventType setCode(Integer code) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType setCode(Integer code) {
             this.code = code;
             return this;
         }
@@ -114,7 +114,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventType setName(String name) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType setName(String name) {
             this.name = name;
             return this;
         }
@@ -124,7 +124,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks extends TeaModel {
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -140,12 +140,12 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         @NameInMap("DeviceSize")
         public String deviceSize;
 
-        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks();
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks setCreationTime(String creationTime) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -153,7 +153,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks setDeviceCategory(String deviceCategory) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk setDeviceCategory(String deviceCategory) {
             this.deviceCategory = deviceCategory;
             return this;
         }
@@ -161,7 +161,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.deviceCategory;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks setDeviceType(String deviceType) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk setDeviceType(String deviceType) {
             this.deviceType = deviceType;
             return this;
         }
@@ -169,7 +169,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.deviceType;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks setReleaseTime(String releaseTime) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk setReleaseTime(String releaseTime) {
             this.releaseTime = releaseTime;
             return this;
         }
@@ -177,7 +177,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.releaseTime;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks setDeviceSize(String deviceSize) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk setDeviceSize(String deviceSize) {
             this.deviceSize = deviceSize;
             return this;
         }
@@ -187,7 +187,26 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute extends TeaModel {
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks extends TeaModel {
+        @NameInMap("InactiveDisk")
+        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk> inactiveDisk;
+
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks setInactiveDisk(java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk> inactiveDisk) {
+            this.inactiveDisk = inactiveDisk;
+            return this;
+        }
+        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisksInactiveDisk> getInactiveDisk() {
+            return this.inactiveDisk;
+        }
+
+    }
+
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute extends TeaModel {
         @NameInMap("Device")
         public String device;
 
@@ -195,14 +214,14 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public String diskId;
 
         @NameInMap("InactiveDisks")
-        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks> inactiveDisks;
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks;
 
-        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute();
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute setDevice(String device) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute setDevice(String device) {
             this.device = device;
             return this;
         }
@@ -210,7 +229,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.device;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute setDiskId(String diskId) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute setDiskId(String diskId) {
             this.diskId = diskId;
             return this;
         }
@@ -218,29 +237,29 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.diskId;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute setInactiveDisks(java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks> inactiveDisks) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute setInactiveDisks(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks inactiveDisks) {
             this.inactiveDisks = inactiveDisks;
             return this;
         }
-        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttributeInactiveDisks> getInactiveDisks() {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttributeInactiveDisks getInactiveDisks() {
             return this.inactiveDisks;
         }
 
     }
 
-    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventCycleStatus extends TeaModel {
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
         @NameInMap("Name")
         public String name;
 
-        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventCycleStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventCycleStatus self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventCycleStatus();
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventCycleStatus setCode(Integer code) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus setCode(Integer code) {
             this.code = code;
             return this;
         }
@@ -248,7 +267,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventCycleStatus setName(String name) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus setName(String name) {
             this.name = name;
             return this;
         }
@@ -258,7 +277,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet extends TeaModel {
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType extends TeaModel {
         @NameInMap("EventPublishTime")
         public String eventPublishTime;
 
@@ -269,10 +288,10 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public String impactLevel;
 
         @NameInMap("EventType")
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventType eventType;
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType eventType;
 
         @NameInMap("ExtendedAttribute")
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute extendedAttribute;
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute extendedAttribute;
 
         @NameInMap("NotBefore")
         public String notBefore;
@@ -281,14 +300,14 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
         public String reason;
 
         @NameInMap("EventCycleStatus")
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventCycleStatus eventCycleStatus;
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus eventCycleStatus;
 
-        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet();
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet setEventPublishTime(String eventPublishTime) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType setEventPublishTime(String eventPublishTime) {
             this.eventPublishTime = eventPublishTime;
             return this;
         }
@@ -296,7 +315,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.eventPublishTime;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet setEventId(String eventId) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType setEventId(String eventId) {
             this.eventId = eventId;
             return this;
         }
@@ -304,7 +323,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.eventId;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet setImpactLevel(String impactLevel) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType setImpactLevel(String impactLevel) {
             this.impactLevel = impactLevel;
             return this;
         }
@@ -312,23 +331,23 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.impactLevel;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet setEventType(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventType eventType) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType setEventType(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType eventType) {
             this.eventType = eventType;
             return this;
         }
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventType getEventType() {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventType getEventType() {
             return this.eventType;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet setExtendedAttribute(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute extendedAttribute) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType setExtendedAttribute(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute extendedAttribute) {
             this.extendedAttribute = extendedAttribute;
             return this;
         }
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetExtendedAttribute getExtendedAttribute() {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeExtendedAttribute getExtendedAttribute() {
             return this.extendedAttribute;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet setNotBefore(String notBefore) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType setNotBefore(String notBefore) {
             this.notBefore = notBefore;
             return this;
         }
@@ -336,7 +355,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.notBefore;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet setReason(String reason) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -344,29 +363,48 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet setEventCycleStatus(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventCycleStatus eventCycleStatus) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType setEventCycleStatus(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus eventCycleStatus) {
             this.eventCycleStatus = eventCycleStatus;
             return this;
         }
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSetEventCycleStatus getEventCycleStatus() {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventTypeEventCycleStatus getEventCycleStatus() {
             return this.eventCycleStatus;
         }
 
     }
 
-    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetHealthStatus extends TeaModel {
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet extends TeaModel {
+        @NameInMap("ScheduledSystemEventType")
+        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType> scheduledSystemEventType;
+
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet setScheduledSystemEventType(java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType> scheduledSystemEventType) {
+            this.scheduledSystemEventType = scheduledSystemEventType;
+            return this;
+        }
+        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSetScheduledSystemEventType> getScheduledSystemEventType() {
+            return this.scheduledSystemEventType;
+        }
+
+    }
+
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus extends TeaModel {
         @NameInMap("Code")
         public Integer code;
 
         @NameInMap("Name")
         public String name;
 
-        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetHealthStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetHealthStatus self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetHealthStatus();
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetHealthStatus setCode(Integer code) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus setCode(Integer code) {
             this.code = code;
             return this;
         }
@@ -374,7 +412,7 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetHealthStatus setName(String name) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus setName(String name) {
             this.name = name;
             return this;
         }
@@ -384,41 +422,41 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet extends TeaModel {
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType extends TeaModel {
         @NameInMap("Status")
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetStatus status;
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus status;
 
         @NameInMap("ScheduledSystemEventSet")
-        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet> scheduledSystemEventSet;
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet scheduledSystemEventSet;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("HealthStatus")
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetHealthStatus healthStatus;
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus healthStatus;
 
-        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet();
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet setStatus(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetStatus status) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType setStatus(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus status) {
             this.status = status;
             return this;
         }
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetStatus getStatus() {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeStatus getStatus() {
             return this.status;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet setScheduledSystemEventSet(java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet> scheduledSystemEventSet) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType setScheduledSystemEventSet(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet scheduledSystemEventSet) {
             this.scheduledSystemEventSet = scheduledSystemEventSet;
             return this;
         }
-        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetScheduledSystemEventSet> getScheduledSystemEventSet() {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeScheduledSystemEventSet getScheduledSystemEventSet() {
             return this.scheduledSystemEventSet;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet setInstanceId(String instanceId) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -426,12 +464,31 @@ public class DescribeInstancesFullStatusResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet setHealthStatus(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetHealthStatus healthStatus) {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType setHealthStatus(DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
-        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetHealthStatus getHealthStatus() {
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusTypeHealthStatus getHealthStatus() {
             return this.healthStatus;
+        }
+
+    }
+
+    public static class DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet extends TeaModel {
+        @NameInMap("InstanceFullStatusType")
+        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType> instanceFullStatusType;
+
+        public static DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet self = new DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesFullStatusResponseBodyInstanceFullStatusSet setInstanceFullStatusType(java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType> instanceFullStatusType) {
+            this.instanceFullStatusType = instanceFullStatusType;
+            return this;
+        }
+        public java.util.List<DescribeInstancesFullStatusResponseBodyInstanceFullStatusSetInstanceFullStatusType> getInstanceFullStatusType() {
+            return this.instanceFullStatusType;
         }
 
     }

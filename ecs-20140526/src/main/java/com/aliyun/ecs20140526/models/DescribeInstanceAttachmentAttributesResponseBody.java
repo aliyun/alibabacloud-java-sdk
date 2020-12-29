@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
     @NameInMap("Instances")
-    public java.util.List<DescribeInstanceAttachmentAttributesResponseBodyInstances> instances;
+    public DescribeInstanceAttachmentAttributesResponseBodyInstances instances;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -24,11 +24,11 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceAttachmentAttributesResponseBody setInstances(java.util.List<DescribeInstanceAttachmentAttributesResponseBodyInstances> instances) {
+    public DescribeInstanceAttachmentAttributesResponseBody setInstances(DescribeInstanceAttachmentAttributesResponseBodyInstances instances) {
         this.instances = instances;
         return this;
     }
-    public java.util.List<DescribeInstanceAttachmentAttributesResponseBodyInstances> getInstances() {
+    public DescribeInstanceAttachmentAttributesResponseBodyInstances getInstances() {
         return this.instances;
     }
 
@@ -64,7 +64,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeInstanceAttachmentAttributesResponseBodyInstances extends TeaModel {
+    public static class DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance extends TeaModel {
         @NameInMap("PrivatePoolOptionsMatchCriteria")
         public String privatePoolOptionsMatchCriteria;
 
@@ -74,12 +74,12 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static DescribeInstanceAttachmentAttributesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceAttachmentAttributesResponseBodyInstances self = new DescribeInstanceAttachmentAttributesResponseBodyInstances();
+        public static DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance self = new DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceAttachmentAttributesResponseBodyInstances setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
+        public DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance setPrivatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
             this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
             return this;
         }
@@ -87,7 +87,7 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             return this.privatePoolOptionsMatchCriteria;
         }
 
-        public DescribeInstanceAttachmentAttributesResponseBodyInstances setPrivatePoolOptionsId(String privatePoolOptionsId) {
+        public DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance setPrivatePoolOptionsId(String privatePoolOptionsId) {
             this.privatePoolOptionsId = privatePoolOptionsId;
             return this;
         }
@@ -95,12 +95,31 @@ public class DescribeInstanceAttachmentAttributesResponseBody extends TeaModel {
             return this.privatePoolOptionsId;
         }
 
-        public DescribeInstanceAttachmentAttributesResponseBodyInstances setInstanceId(String instanceId) {
+        public DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeInstanceAttachmentAttributesResponseBodyInstances extends TeaModel {
+        @NameInMap("Instance")
+        public java.util.List<DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance> instance;
+
+        public static DescribeInstanceAttachmentAttributesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttachmentAttributesResponseBodyInstances self = new DescribeInstanceAttachmentAttributesResponseBodyInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttachmentAttributesResponseBodyInstances setInstance(java.util.List<DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance> instance) {
+            this.instance = instance;
+            return this;
+        }
+        public java.util.List<DescribeInstanceAttachmentAttributesResponseBodyInstancesInstance> getInstance() {
+            return this.instance;
         }
 
     }

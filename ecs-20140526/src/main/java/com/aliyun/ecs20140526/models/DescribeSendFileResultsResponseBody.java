@@ -17,7 +17,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     public Long pageNumber;
 
     @NameInMap("Invocations")
-    public java.util.List<DescribeSendFileResultsResponseBodyInvocations> invocations;
+    public DescribeSendFileResultsResponseBodyInvocations invocations;
 
     public static DescribeSendFileResultsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSendFileResultsResponseBody self = new DescribeSendFileResultsResponseBody();
@@ -56,15 +56,15 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeSendFileResultsResponseBody setInvocations(java.util.List<DescribeSendFileResultsResponseBodyInvocations> invocations) {
+    public DescribeSendFileResultsResponseBody setInvocations(DescribeSendFileResultsResponseBodyInvocations invocations) {
         this.invocations = invocations;
         return this;
     }
-    public java.util.List<DescribeSendFileResultsResponseBodyInvocations> getInvocations() {
+    public DescribeSendFileResultsResponseBodyInvocations getInvocations() {
         return this.invocations;
     }
 
-    public static class DescribeSendFileResultsResponseBodyInvocationsInvokeInstances extends TeaModel {
+    public static class DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -89,12 +89,12 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static DescribeSendFileResultsResponseBodyInvocationsInvokeInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSendFileResultsResponseBodyInvocationsInvokeInstances self = new DescribeSendFileResultsResponseBodyInvocationsInvokeInstances();
+        public static DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance self = new DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvokeInstances setCreationTime(String creationTime) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -102,7 +102,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvokeInstances setStartTime(String startTime) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -110,7 +110,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvokeInstances setInvocationStatus(String invocationStatus) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setInvocationStatus(String invocationStatus) {
             this.invocationStatus = invocationStatus;
             return this;
         }
@@ -118,7 +118,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.invocationStatus;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvokeInstances setFinishTime(String finishTime) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setFinishTime(String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
@@ -126,7 +126,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.finishTime;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvokeInstances setUpdateTime(String updateTime) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setUpdateTime(String updateTime) {
             this.updateTime = updateTime;
             return this;
         }
@@ -134,7 +134,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvokeInstances setErrorInfo(String errorInfo) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setErrorInfo(String errorInfo) {
             this.errorInfo = errorInfo;
             return this;
         }
@@ -142,7 +142,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.errorInfo;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvokeInstances setErrorCode(String errorCode) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
@@ -150,7 +150,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.errorCode;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocationsInvokeInstances setInstanceId(String instanceId) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -160,7 +160,26 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeSendFileResultsResponseBodyInvocations extends TeaModel {
+    public static class DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances extends TeaModel {
+        @NameInMap("InvokeInstance")
+        public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance> invokeInstance;
+
+        public static DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances self = new DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances setInvokeInstance(java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance> invokeInstance) {
+            this.invokeInstance = invokeInstance;
+            return this;
+        }
+        public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance> getInvokeInstance() {
+            return this.invokeInstance;
+        }
+
+    }
+
+    public static class DescribeSendFileResultsResponseBodyInvocationsInvocation extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -174,7 +193,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String targetDir;
 
         @NameInMap("InvokeInstances")
-        public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvokeInstances> invokeInstances;
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances invokeInstances;
 
         @NameInMap("FileOwner")
         public String fileOwner;
@@ -203,12 +222,12 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         @NameInMap("Overwrite")
         public String overwrite;
 
-        public static DescribeSendFileResultsResponseBodyInvocations build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSendFileResultsResponseBodyInvocations self = new DescribeSendFileResultsResponseBodyInvocations();
+        public static DescribeSendFileResultsResponseBodyInvocationsInvocation build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSendFileResultsResponseBodyInvocationsInvocation self = new DescribeSendFileResultsResponseBodyInvocationsInvocation();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setCreationTime(String creationTime) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -216,7 +235,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setContentType(String contentType) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setContentType(String contentType) {
             this.contentType = contentType;
             return this;
         }
@@ -224,7 +243,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.contentType;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setInvocationStatus(String invocationStatus) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setInvocationStatus(String invocationStatus) {
             this.invocationStatus = invocationStatus;
             return this;
         }
@@ -232,7 +251,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.invocationStatus;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setTargetDir(String targetDir) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setTargetDir(String targetDir) {
             this.targetDir = targetDir;
             return this;
         }
@@ -240,15 +259,15 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.targetDir;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setInvokeInstances(java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvokeInstances> invokeInstances) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setInvokeInstances(DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances invokeInstances) {
             this.invokeInstances = invokeInstances;
             return this;
         }
-        public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvokeInstances> getInvokeInstances() {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeInstances getInvokeInstances() {
             return this.invokeInstances;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setFileOwner(String fileOwner) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setFileOwner(String fileOwner) {
             this.fileOwner = fileOwner;
             return this;
         }
@@ -256,7 +275,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.fileOwner;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setVmCount(Integer vmCount) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setVmCount(Integer vmCount) {
             this.vmCount = vmCount;
             return this;
         }
@@ -264,7 +283,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.vmCount;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setDescription(String description) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -272,7 +291,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setFileMode(String fileMode) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setFileMode(String fileMode) {
             this.fileMode = fileMode;
             return this;
         }
@@ -280,7 +299,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.fileMode;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setFileGroup(String fileGroup) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setFileGroup(String fileGroup) {
             this.fileGroup = fileGroup;
             return this;
         }
@@ -288,7 +307,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.fileGroup;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setName(String name) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setName(String name) {
             this.name = name;
             return this;
         }
@@ -296,7 +315,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setInvokeId(String invokeId) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setInvokeId(String invokeId) {
             this.invokeId = invokeId;
             return this;
         }
@@ -304,7 +323,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.invokeId;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setContent(String content) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setContent(String content) {
             this.content = content;
             return this;
         }
@@ -312,12 +331,31 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             return this.content;
         }
 
-        public DescribeSendFileResultsResponseBodyInvocations setOverwrite(String overwrite) {
+        public DescribeSendFileResultsResponseBodyInvocationsInvocation setOverwrite(String overwrite) {
             this.overwrite = overwrite;
             return this;
         }
         public String getOverwrite() {
             return this.overwrite;
+        }
+
+    }
+
+    public static class DescribeSendFileResultsResponseBodyInvocations extends TeaModel {
+        @NameInMap("Invocation")
+        public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocation> invocation;
+
+        public static DescribeSendFileResultsResponseBodyInvocations build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSendFileResultsResponseBodyInvocations self = new DescribeSendFileResultsResponseBodyInvocations();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSendFileResultsResponseBodyInvocations setInvocation(java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocation> invocation) {
+            this.invocation = invocation;
+            return this;
+        }
+        public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocation> getInvocation() {
+            return this.invocation;
         }
 
     }

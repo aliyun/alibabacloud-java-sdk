@@ -8,7 +8,7 @@ public class RebootInstancesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("InstanceResponses")
-    public java.util.List<RebootInstancesResponseBodyInstanceResponses> instanceResponses;
+    public RebootInstancesResponseBodyInstanceResponses instanceResponses;
 
     public static RebootInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RebootInstancesResponseBody self = new RebootInstancesResponseBody();
@@ -23,15 +23,15 @@ public class RebootInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RebootInstancesResponseBody setInstanceResponses(java.util.List<RebootInstancesResponseBodyInstanceResponses> instanceResponses) {
+    public RebootInstancesResponseBody setInstanceResponses(RebootInstancesResponseBodyInstanceResponses instanceResponses) {
         this.instanceResponses = instanceResponses;
         return this;
     }
-    public java.util.List<RebootInstancesResponseBodyInstanceResponses> getInstanceResponses() {
+    public RebootInstancesResponseBodyInstanceResponses getInstanceResponses() {
         return this.instanceResponses;
     }
 
-    public static class RebootInstancesResponseBodyInstanceResponses extends TeaModel {
+    public static class RebootInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
@@ -47,12 +47,12 @@ public class RebootInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static RebootInstancesResponseBodyInstanceResponses build(java.util.Map<String, ?> map) throws Exception {
-            RebootInstancesResponseBodyInstanceResponses self = new RebootInstancesResponseBodyInstanceResponses();
+        public static RebootInstancesResponseBodyInstanceResponsesInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+            RebootInstancesResponseBodyInstanceResponsesInstanceResponse self = new RebootInstancesResponseBodyInstanceResponsesInstanceResponse();
             return TeaModel.build(map, self);
         }
 
-        public RebootInstancesResponseBodyInstanceResponses setCurrentStatus(String currentStatus) {
+        public RebootInstancesResponseBodyInstanceResponsesInstanceResponse setCurrentStatus(String currentStatus) {
             this.currentStatus = currentStatus;
             return this;
         }
@@ -60,7 +60,7 @@ public class RebootInstancesResponseBody extends TeaModel {
             return this.currentStatus;
         }
 
-        public RebootInstancesResponseBodyInstanceResponses setPreviousStatus(String previousStatus) {
+        public RebootInstancesResponseBodyInstanceResponsesInstanceResponse setPreviousStatus(String previousStatus) {
             this.previousStatus = previousStatus;
             return this;
         }
@@ -68,7 +68,7 @@ public class RebootInstancesResponseBody extends TeaModel {
             return this.previousStatus;
         }
 
-        public RebootInstancesResponseBodyInstanceResponses setCode(String code) {
+        public RebootInstancesResponseBodyInstanceResponsesInstanceResponse setCode(String code) {
             this.code = code;
             return this;
         }
@@ -76,7 +76,7 @@ public class RebootInstancesResponseBody extends TeaModel {
             return this.code;
         }
 
-        public RebootInstancesResponseBodyInstanceResponses setMessage(String message) {
+        public RebootInstancesResponseBodyInstanceResponsesInstanceResponse setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -84,12 +84,31 @@ public class RebootInstancesResponseBody extends TeaModel {
             return this.message;
         }
 
-        public RebootInstancesResponseBodyInstanceResponses setInstanceId(String instanceId) {
+        public RebootInstancesResponseBodyInstanceResponsesInstanceResponse setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class RebootInstancesResponseBodyInstanceResponses extends TeaModel {
+        @NameInMap("InstanceResponse")
+        public java.util.List<RebootInstancesResponseBodyInstanceResponsesInstanceResponse> instanceResponse;
+
+        public static RebootInstancesResponseBodyInstanceResponses build(java.util.Map<String, ?> map) throws Exception {
+            RebootInstancesResponseBodyInstanceResponses self = new RebootInstancesResponseBodyInstanceResponses();
+            return TeaModel.build(map, self);
+        }
+
+        public RebootInstancesResponseBodyInstanceResponses setInstanceResponse(java.util.List<RebootInstancesResponseBodyInstanceResponsesInstanceResponse> instanceResponse) {
+            this.instanceResponse = instanceResponse;
+            return this;
+        }
+        public java.util.List<RebootInstancesResponseBodyInstanceResponsesInstanceResponse> getInstanceResponse() {
+            return this.instanceResponse;
         }
 
     }

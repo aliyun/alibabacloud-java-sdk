@@ -17,7 +17,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("Demands")
-    public java.util.List<DescribeDemandsResponseBodyDemands> demands;
+    public DescribeDemandsResponseBodyDemands demands;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -59,11 +59,11 @@ public class DescribeDemandsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDemandsResponseBody setDemands(java.util.List<DescribeDemandsResponseBodyDemands> demands) {
+    public DescribeDemandsResponseBody setDemands(DescribeDemandsResponseBodyDemands demands) {
         this.demands = demands;
         return this;
     }
-    public java.util.List<DescribeDemandsResponseBodyDemands> getDemands() {
+    public DescribeDemandsResponseBodyDemands getDemands() {
         return this.demands;
     }
 
@@ -75,7 +75,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public static class DescribeDemandsResponseBodyDemandsSupplyInfos extends TeaModel {
+    public static class DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo extends TeaModel {
         @NameInMap("Amount")
         public Integer amount;
 
@@ -88,12 +88,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
         @NameInMap("SupplyStartTime")
         public String supplyStartTime;
 
-        public static DescribeDemandsResponseBodyDemandsSupplyInfos build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDemandsResponseBodyDemandsSupplyInfos self = new DescribeDemandsResponseBodyDemandsSupplyInfos();
+        public static DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo self = new DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDemandsResponseBodyDemandsSupplyInfos setAmount(Integer amount) {
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setAmount(Integer amount) {
             this.amount = amount;
             return this;
         }
@@ -101,7 +101,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.amount;
         }
 
-        public DescribeDemandsResponseBodyDemandsSupplyInfos setSupplyEndTime(String supplyEndTime) {
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyEndTime(String supplyEndTime) {
             this.supplyEndTime = supplyEndTime;
             return this;
         }
@@ -109,7 +109,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.supplyEndTime;
         }
 
-        public DescribeDemandsResponseBodyDemandsSupplyInfos setSupplyStatus(String supplyStatus) {
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyStatus(String supplyStatus) {
             this.supplyStatus = supplyStatus;
             return this;
         }
@@ -117,7 +117,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.supplyStatus;
         }
 
-        public DescribeDemandsResponseBodyDemandsSupplyInfos setSupplyStartTime(String supplyStartTime) {
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo setSupplyStartTime(String supplyStartTime) {
             this.supplyStartTime = supplyStartTime;
             return this;
         }
@@ -127,7 +127,26 @@ public class DescribeDemandsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDemandsResponseBodyDemands extends TeaModel {
+    public static class DescribeDemandsResponseBodyDemandsDemandSupplyInfos extends TeaModel {
+        @NameInMap("SupplyInfo")
+        public java.util.List<DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo> supplyInfo;
+
+        public static DescribeDemandsResponseBodyDemandsDemandSupplyInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDemandsResponseBodyDemandsDemandSupplyInfos self = new DescribeDemandsResponseBodyDemandsDemandSupplyInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfos setSupplyInfo(java.util.List<DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo> supplyInfo) {
+            this.supplyInfo = supplyInfo;
+            return this;
+        }
+        public java.util.List<DescribeDemandsResponseBodyDemandsDemandSupplyInfosSupplyInfo> getSupplyInfo() {
+            return this.supplyInfo;
+        }
+
+    }
+
+    public static class DescribeDemandsResponseBodyDemandsDemand extends TeaModel {
         @NameInMap("Comment")
         public String comment;
 
@@ -141,7 +160,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         public String demandTime;
 
         @NameInMap("SupplyInfos")
-        public java.util.List<DescribeDemandsResponseBodyDemandsSupplyInfos> supplyInfos;
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos;
 
         @NameInMap("DemandName")
         public String demandName;
@@ -185,12 +204,12 @@ public class DescribeDemandsResponseBody extends TeaModel {
         @NameInMap("DemandStatus")
         public String demandStatus;
 
-        public static DescribeDemandsResponseBodyDemands build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDemandsResponseBodyDemands self = new DescribeDemandsResponseBodyDemands();
+        public static DescribeDemandsResponseBodyDemandsDemand build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDemandsResponseBodyDemandsDemand self = new DescribeDemandsResponseBodyDemandsDemand();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDemandsResponseBodyDemands setComment(String comment) {
+        public DescribeDemandsResponseBodyDemandsDemand setComment(String comment) {
             this.comment = comment;
             return this;
         }
@@ -198,7 +217,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.comment;
         }
 
-        public DescribeDemandsResponseBodyDemands setDemandId(String demandId) {
+        public DescribeDemandsResponseBodyDemandsDemand setDemandId(String demandId) {
             this.demandId = demandId;
             return this;
         }
@@ -206,7 +225,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.demandId;
         }
 
-        public DescribeDemandsResponseBodyDemands setDemandDescription(String demandDescription) {
+        public DescribeDemandsResponseBodyDemandsDemand setDemandDescription(String demandDescription) {
             this.demandDescription = demandDescription;
             return this;
         }
@@ -214,7 +233,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.demandDescription;
         }
 
-        public DescribeDemandsResponseBodyDemands setDemandTime(String demandTime) {
+        public DescribeDemandsResponseBodyDemandsDemand setDemandTime(String demandTime) {
             this.demandTime = demandTime;
             return this;
         }
@@ -222,15 +241,15 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.demandTime;
         }
 
-        public DescribeDemandsResponseBodyDemands setSupplyInfos(java.util.List<DescribeDemandsResponseBodyDemandsSupplyInfos> supplyInfos) {
+        public DescribeDemandsResponseBodyDemandsDemand setSupplyInfos(DescribeDemandsResponseBodyDemandsDemandSupplyInfos supplyInfos) {
             this.supplyInfos = supplyInfos;
             return this;
         }
-        public java.util.List<DescribeDemandsResponseBodyDemandsSupplyInfos> getSupplyInfos() {
+        public DescribeDemandsResponseBodyDemandsDemandSupplyInfos getSupplyInfos() {
             return this.supplyInfos;
         }
 
-        public DescribeDemandsResponseBodyDemands setDemandName(String demandName) {
+        public DescribeDemandsResponseBodyDemandsDemand setDemandName(String demandName) {
             this.demandName = demandName;
             return this;
         }
@@ -238,7 +257,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.demandName;
         }
 
-        public DescribeDemandsResponseBodyDemands setInstanceType(String instanceType) {
+        public DescribeDemandsResponseBodyDemandsDemand setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -246,7 +265,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeDemandsResponseBodyDemands setInstanceChargeType(String instanceChargeType) {
+        public DescribeDemandsResponseBodyDemandsDemand setInstanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
             return this;
         }
@@ -254,7 +273,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.instanceChargeType;
         }
 
-        public DescribeDemandsResponseBodyDemands setPeriod(Integer period) {
+        public DescribeDemandsResponseBodyDemandsDemand setPeriod(Integer period) {
             this.period = period;
             return this;
         }
@@ -262,7 +281,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.period;
         }
 
-        public DescribeDemandsResponseBodyDemands setEndTime(String endTime) {
+        public DescribeDemandsResponseBodyDemandsDemand setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -270,7 +289,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.endTime;
         }
 
-        public DescribeDemandsResponseBodyDemands setAvailableAmount(Integer availableAmount) {
+        public DescribeDemandsResponseBodyDemandsDemand setAvailableAmount(Integer availableAmount) {
             this.availableAmount = availableAmount;
             return this;
         }
@@ -278,7 +297,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.availableAmount;
         }
 
-        public DescribeDemandsResponseBodyDemands setStartTime(String startTime) {
+        public DescribeDemandsResponseBodyDemandsDemand setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -286,7 +305,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeDemandsResponseBodyDemands setPeriodUnit(String periodUnit) {
+        public DescribeDemandsResponseBodyDemandsDemand setPeriodUnit(String periodUnit) {
             this.periodUnit = periodUnit;
             return this;
         }
@@ -294,7 +313,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.periodUnit;
         }
 
-        public DescribeDemandsResponseBodyDemands setZoneId(String zoneId) {
+        public DescribeDemandsResponseBodyDemandsDemand setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -302,7 +321,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeDemandsResponseBodyDemands setUsedAmount(Integer usedAmount) {
+        public DescribeDemandsResponseBodyDemandsDemand setUsedAmount(Integer usedAmount) {
             this.usedAmount = usedAmount;
             return this;
         }
@@ -310,7 +329,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.usedAmount;
         }
 
-        public DescribeDemandsResponseBodyDemands setTotalAmount(Integer totalAmount) {
+        public DescribeDemandsResponseBodyDemandsDemand setTotalAmount(Integer totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
@@ -318,7 +337,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.totalAmount;
         }
 
-        public DescribeDemandsResponseBodyDemands setDeliveringAmount(Integer deliveringAmount) {
+        public DescribeDemandsResponseBodyDemandsDemand setDeliveringAmount(Integer deliveringAmount) {
             this.deliveringAmount = deliveringAmount;
             return this;
         }
@@ -326,7 +345,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.deliveringAmount;
         }
 
-        public DescribeDemandsResponseBodyDemands setInstanceTypeFamily(String instanceTypeFamily) {
+        public DescribeDemandsResponseBodyDemandsDemand setInstanceTypeFamily(String instanceTypeFamily) {
             this.instanceTypeFamily = instanceTypeFamily;
             return this;
         }
@@ -334,12 +353,31 @@ public class DescribeDemandsResponseBody extends TeaModel {
             return this.instanceTypeFamily;
         }
 
-        public DescribeDemandsResponseBodyDemands setDemandStatus(String demandStatus) {
+        public DescribeDemandsResponseBodyDemandsDemand setDemandStatus(String demandStatus) {
             this.demandStatus = demandStatus;
             return this;
         }
         public String getDemandStatus() {
             return this.demandStatus;
+        }
+
+    }
+
+    public static class DescribeDemandsResponseBodyDemands extends TeaModel {
+        @NameInMap("Demand")
+        public java.util.List<DescribeDemandsResponseBodyDemandsDemand> demand;
+
+        public static DescribeDemandsResponseBodyDemands build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDemandsResponseBodyDemands self = new DescribeDemandsResponseBodyDemands();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDemandsResponseBodyDemands setDemand(java.util.List<DescribeDemandsResponseBodyDemandsDemand> demand) {
+            this.demand = demand;
+            return this;
+        }
+        public java.util.List<DescribeDemandsResponseBodyDemandsDemand> getDemand() {
+            return this.demand;
         }
 
     }

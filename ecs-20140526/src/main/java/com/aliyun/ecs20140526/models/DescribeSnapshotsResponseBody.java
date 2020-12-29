@@ -20,7 +20,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("Snapshots")
-    public java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots;
+    public DescribeSnapshotsResponseBodySnapshots snapshots;
 
     public static DescribeSnapshotsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsResponseBody self = new DescribeSnapshotsResponseBody();
@@ -67,27 +67,27 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeSnapshotsResponseBody setSnapshots(java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots) {
+    public DescribeSnapshotsResponseBody setSnapshots(DescribeSnapshotsResponseBodySnapshots snapshots) {
         this.snapshots = snapshots;
         return this;
     }
-    public java.util.List<DescribeSnapshotsResponseBodySnapshots> getSnapshots() {
+    public DescribeSnapshotsResponseBodySnapshots getSnapshots() {
         return this.snapshots;
     }
 
-    public static class DescribeSnapshotsResponseBodySnapshotsTags extends TeaModel {
+    public static class DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static DescribeSnapshotsResponseBodySnapshotsTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSnapshotsResponseBodySnapshotsTags self = new DescribeSnapshotsResponseBodySnapshotsTags();
+        public static DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag self = new DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSnapshotsResponseBodySnapshotsTags setTagValue(String tagValue) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -95,7 +95,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public DescribeSnapshotsResponseBodySnapshotsTags setTagKey(String tagKey) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
@@ -105,7 +105,26 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
+    public static class DescribeSnapshotsResponseBodySnapshotsSnapshotTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag> tag;
+
+        public static DescribeSnapshotsResponseBodySnapshotsSnapshotTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotsResponseBodySnapshotsSnapshotTags self = new DescribeSnapshotsResponseBodySnapshotsSnapshotTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotsResponseBodySnapshotsSnapshotTags setTag(java.util.List<DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeSnapshotsResponseBodySnapshotsSnapshotTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeSnapshotsResponseBodySnapshotsSnapshot extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -122,7 +141,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String sourceDiskSize;
 
         @NameInMap("Tags")
-        public java.util.List<DescribeSnapshotsResponseBodySnapshotsTags> tags;
+        public DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags;
 
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
@@ -178,12 +197,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         @NameInMap("ProductCode")
         public String productCode;
 
-        public static DescribeSnapshotsResponseBodySnapshots build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSnapshotsResponseBodySnapshots self = new DescribeSnapshotsResponseBodySnapshots();
+        public static DescribeSnapshotsResponseBodySnapshotsSnapshot build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotsResponseBodySnapshotsSnapshot self = new DescribeSnapshotsResponseBodySnapshotsSnapshot();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setCreationTime(String creationTime) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -191,7 +210,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setStatus(String status) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -199,7 +218,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setInstantAccess(Boolean instantAccess) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setInstantAccess(Boolean instantAccess) {
             this.instantAccess = instantAccess;
             return this;
         }
@@ -207,7 +226,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.instantAccess;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setRetentionDays(Integer retentionDays) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setRetentionDays(Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
@@ -215,7 +234,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.retentionDays;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSourceDiskSize(String sourceDiskSize) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceDiskSize(String sourceDiskSize) {
             this.sourceDiskSize = sourceDiskSize;
             return this;
         }
@@ -223,15 +242,15 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.sourceDiskSize;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setTags(java.util.List<DescribeSnapshotsResponseBodySnapshotsTags> tags) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setTags(DescribeSnapshotsResponseBodySnapshotsSnapshotTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeSnapshotsResponseBodySnapshotsTags> getTags() {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshotTags getTags() {
             return this.tags;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setLastModifiedTime(String lastModifiedTime) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setLastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
@@ -239,7 +258,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.lastModifiedTime;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setEncrypted(Boolean encrypted) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setEncrypted(Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
@@ -247,7 +266,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.encrypted;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSourceDiskId(String sourceDiskId) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceDiskId(String sourceDiskId) {
             this.sourceDiskId = sourceDiskId;
             return this;
         }
@@ -255,7 +274,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.sourceDiskId;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setDescription(String description) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -263,7 +282,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setInstantAccessRetentionDays(Integer instantAccessRetentionDays) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setInstantAccessRetentionDays(Integer instantAccessRetentionDays) {
             this.instantAccessRetentionDays = instantAccessRetentionDays;
             return this;
         }
@@ -271,7 +290,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.instantAccessRetentionDays;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setKMSKeyId(String KMSKeyId) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setKMSKeyId(String KMSKeyId) {
             this.KMSKeyId = KMSKeyId;
             return this;
         }
@@ -279,7 +298,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.KMSKeyId;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setProgress(String progress) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setProgress(String progress) {
             this.progress = progress;
             return this;
         }
@@ -287,7 +306,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setRemainTime(Integer remainTime) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setRemainTime(Integer remainTime) {
             this.remainTime = remainTime;
             return this;
         }
@@ -295,7 +314,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.remainTime;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSourceDiskType(String sourceDiskType) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceDiskType(String sourceDiskType) {
             this.sourceDiskType = sourceDiskType;
             return this;
         }
@@ -303,7 +322,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.sourceDiskType;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSourceStorageType(String sourceStorageType) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSourceStorageType(String sourceStorageType) {
             this.sourceStorageType = sourceStorageType;
             return this;
         }
@@ -311,7 +330,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.sourceStorageType;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setUsage(String usage) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setUsage(String usage) {
             this.usage = usage;
             return this;
         }
@@ -319,7 +338,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.usage;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSnapshotType(String snapshotType) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotType(String snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
@@ -327,7 +346,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.snapshotType;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSnapshotName(String snapshotName) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotName(String snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }
@@ -335,7 +354,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.snapshotName;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSnapshotId(String snapshotId) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotId(String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
@@ -343,7 +362,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.snapshotId;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setResourceGroupId(String resourceGroupId) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -351,7 +370,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setCategory(String category) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setCategory(String category) {
             this.category = category;
             return this;
         }
@@ -359,7 +378,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.category;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setSnapshotSN(String snapshotSN) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setSnapshotSN(String snapshotSN) {
             this.snapshotSN = snapshotSN;
             return this;
         }
@@ -367,12 +386,31 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             return this.snapshotSN;
         }
 
-        public DescribeSnapshotsResponseBodySnapshots setProductCode(String productCode) {
+        public DescribeSnapshotsResponseBodySnapshotsSnapshot setProductCode(String productCode) {
             this.productCode = productCode;
             return this;
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+    }
+
+    public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
+        @NameInMap("Snapshot")
+        public java.util.List<DescribeSnapshotsResponseBodySnapshotsSnapshot> snapshot;
+
+        public static DescribeSnapshotsResponseBodySnapshots build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotsResponseBodySnapshots self = new DescribeSnapshotsResponseBodySnapshots();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotsResponseBodySnapshots setSnapshot(java.util.List<DescribeSnapshotsResponseBodySnapshotsSnapshot> snapshot) {
+            this.snapshot = snapshot;
+            return this;
+        }
+        public java.util.List<DescribeSnapshotsResponseBodySnapshotsSnapshot> getSnapshot() {
+            return this.snapshot;
         }
 
     }

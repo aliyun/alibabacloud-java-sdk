@@ -8,7 +8,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
     public Integer totalCount;
 
     @NameInMap("Vpcs")
-    public java.util.List<DescribeVpcsResponseBodyVpcs> vpcs;
+    public DescribeVpcsResponseBodyVpcs vpcs;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -32,11 +32,11 @@ public class DescribeVpcsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeVpcsResponseBody setVpcs(java.util.List<DescribeVpcsResponseBodyVpcs> vpcs) {
+    public DescribeVpcsResponseBody setVpcs(DescribeVpcsResponseBodyVpcs vpcs) {
         this.vpcs = vpcs;
         return this;
     }
-    public java.util.List<DescribeVpcsResponseBodyVpcs> getVpcs() {
+    public DescribeVpcsResponseBodyVpcs getVpcs() {
         return this.vpcs;
     }
 
@@ -64,7 +64,45 @@ public class DescribeVpcsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeVpcsResponseBodyVpcs extends TeaModel {
+    public static class DescribeVpcsResponseBodyVpcsVpcVSwitchIds extends TeaModel {
+        @NameInMap("VSwitchId")
+        public java.util.List<String> vSwitchId;
+
+        public static DescribeVpcsResponseBodyVpcsVpcVSwitchIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcsResponseBodyVpcsVpcVSwitchIds self = new DescribeVpcsResponseBodyVpcsVpcVSwitchIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcsResponseBodyVpcsVpcVSwitchIds setVSwitchId(java.util.List<String> vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public java.util.List<String> getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+    }
+
+    public static class DescribeVpcsResponseBodyVpcsVpcUserCidrs extends TeaModel {
+        @NameInMap("UserCidr")
+        public java.util.List<String> userCidr;
+
+        public static DescribeVpcsResponseBodyVpcsVpcUserCidrs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcsResponseBodyVpcsVpcUserCidrs self = new DescribeVpcsResponseBodyVpcsVpcUserCidrs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcsResponseBodyVpcsVpcUserCidrs setUserCidr(java.util.List<String> userCidr) {
+            this.userCidr = userCidr;
+            return this;
+        }
+        public java.util.List<String> getUserCidr() {
+            return this.userCidr;
+        }
+
+    }
+
+    public static class DescribeVpcsResponseBodyVpcsVpc extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -90,20 +128,20 @@ public class DescribeVpcsResponseBody extends TeaModel {
         public String description;
 
         @NameInMap("VSwitchIds")
-        public java.util.List<String> vSwitchIds;
+        public DescribeVpcsResponseBodyVpcsVpcVSwitchIds vSwitchIds;
 
         @NameInMap("UserCidrs")
-        public java.util.List<String> userCidrs;
+        public DescribeVpcsResponseBodyVpcsVpcUserCidrs userCidrs;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeVpcsResponseBodyVpcs build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVpcsResponseBodyVpcs self = new DescribeVpcsResponseBodyVpcs();
+        public static DescribeVpcsResponseBodyVpcsVpc build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcsResponseBodyVpcsVpc self = new DescribeVpcsResponseBodyVpcsVpc();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVpcsResponseBodyVpcs setCreationTime(String creationTime) {
+        public DescribeVpcsResponseBodyVpcsVpc setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -111,7 +149,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeVpcsResponseBodyVpcs setVpcName(String vpcName) {
+        public DescribeVpcsResponseBodyVpcsVpc setVpcName(String vpcName) {
             this.vpcName = vpcName;
             return this;
         }
@@ -119,7 +157,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             return this.vpcName;
         }
 
-        public DescribeVpcsResponseBodyVpcs setStatus(String status) {
+        public DescribeVpcsResponseBodyVpcsVpc setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -127,7 +165,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeVpcsResponseBodyVpcs setVpcId(String vpcId) {
+        public DescribeVpcsResponseBodyVpcsVpc setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -135,7 +173,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeVpcsResponseBodyVpcs setVRouterId(String VRouterId) {
+        public DescribeVpcsResponseBodyVpcsVpc setVRouterId(String VRouterId) {
             this.VRouterId = VRouterId;
             return this;
         }
@@ -143,7 +181,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             return this.VRouterId;
         }
 
-        public DescribeVpcsResponseBodyVpcs setIsDefault(Boolean isDefault) {
+        public DescribeVpcsResponseBodyVpcsVpc setIsDefault(Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
@@ -151,7 +189,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             return this.isDefault;
         }
 
-        public DescribeVpcsResponseBodyVpcs setCidrBlock(String cidrBlock) {
+        public DescribeVpcsResponseBodyVpcsVpc setCidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
@@ -159,7 +197,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             return this.cidrBlock;
         }
 
-        public DescribeVpcsResponseBodyVpcs setDescription(String description) {
+        public DescribeVpcsResponseBodyVpcsVpc setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -167,28 +205,47 @@ public class DescribeVpcsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeVpcsResponseBodyVpcs setVSwitchIds(java.util.List<String> vSwitchIds) {
+        public DescribeVpcsResponseBodyVpcsVpc setVSwitchIds(DescribeVpcsResponseBodyVpcsVpcVSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
             return this;
         }
-        public java.util.List<String> getVSwitchIds() {
+        public DescribeVpcsResponseBodyVpcsVpcVSwitchIds getVSwitchIds() {
             return this.vSwitchIds;
         }
 
-        public DescribeVpcsResponseBodyVpcs setUserCidrs(java.util.List<String> userCidrs) {
+        public DescribeVpcsResponseBodyVpcsVpc setUserCidrs(DescribeVpcsResponseBodyVpcsVpcUserCidrs userCidrs) {
             this.userCidrs = userCidrs;
             return this;
         }
-        public java.util.List<String> getUserCidrs() {
+        public DescribeVpcsResponseBodyVpcsVpcUserCidrs getUserCidrs() {
             return this.userCidrs;
         }
 
-        public DescribeVpcsResponseBodyVpcs setRegionId(String regionId) {
+        public DescribeVpcsResponseBodyVpcsVpc setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeVpcsResponseBodyVpcs extends TeaModel {
+        @NameInMap("Vpc")
+        public java.util.List<DescribeVpcsResponseBodyVpcsVpc> vpc;
+
+        public static DescribeVpcsResponseBodyVpcs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcsResponseBodyVpcs self = new DescribeVpcsResponseBodyVpcs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVpcsResponseBodyVpcs setVpc(java.util.List<DescribeVpcsResponseBodyVpcsVpc> vpc) {
+            this.vpc = vpc;
+            return this;
+        }
+        public java.util.List<DescribeVpcsResponseBodyVpcsVpc> getVpc() {
+            return this.vpc;
         }
 
     }

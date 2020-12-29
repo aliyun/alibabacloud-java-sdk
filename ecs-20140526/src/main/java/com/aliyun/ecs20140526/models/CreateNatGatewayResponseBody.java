@@ -8,10 +8,10 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("ForwardTableIds")
-    public java.util.List<String> forwardTableIds;
+    public CreateNatGatewayResponseBodyForwardTableIds forwardTableIds;
 
     @NameInMap("BandwidthPackageIds")
-    public java.util.List<String> bandwidthPackageIds;
+    public CreateNatGatewayResponseBodyBandwidthPackageIds bandwidthPackageIds;
 
     @NameInMap("NatGatewayId")
     public String natGatewayId;
@@ -29,19 +29,19 @@ public class CreateNatGatewayResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateNatGatewayResponseBody setForwardTableIds(java.util.List<String> forwardTableIds) {
+    public CreateNatGatewayResponseBody setForwardTableIds(CreateNatGatewayResponseBodyForwardTableIds forwardTableIds) {
         this.forwardTableIds = forwardTableIds;
         return this;
     }
-    public java.util.List<String> getForwardTableIds() {
+    public CreateNatGatewayResponseBodyForwardTableIds getForwardTableIds() {
         return this.forwardTableIds;
     }
 
-    public CreateNatGatewayResponseBody setBandwidthPackageIds(java.util.List<String> bandwidthPackageIds) {
+    public CreateNatGatewayResponseBody setBandwidthPackageIds(CreateNatGatewayResponseBodyBandwidthPackageIds bandwidthPackageIds) {
         this.bandwidthPackageIds = bandwidthPackageIds;
         return this;
     }
-    public java.util.List<String> getBandwidthPackageIds() {
+    public CreateNatGatewayResponseBodyBandwidthPackageIds getBandwidthPackageIds() {
         return this.bandwidthPackageIds;
     }
 
@@ -51,6 +51,44 @@ public class CreateNatGatewayResponseBody extends TeaModel {
     }
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    public static class CreateNatGatewayResponseBodyForwardTableIds extends TeaModel {
+        @NameInMap("ForwardTableId")
+        public java.util.List<String> forwardTableId;
+
+        public static CreateNatGatewayResponseBodyForwardTableIds build(java.util.Map<String, ?> map) throws Exception {
+            CreateNatGatewayResponseBodyForwardTableIds self = new CreateNatGatewayResponseBodyForwardTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNatGatewayResponseBodyForwardTableIds setForwardTableId(java.util.List<String> forwardTableId) {
+            this.forwardTableId = forwardTableId;
+            return this;
+        }
+        public java.util.List<String> getForwardTableId() {
+            return this.forwardTableId;
+        }
+
+    }
+
+    public static class CreateNatGatewayResponseBodyBandwidthPackageIds extends TeaModel {
+        @NameInMap("BandwidthPackageId")
+        public java.util.List<String> bandwidthPackageId;
+
+        public static CreateNatGatewayResponseBodyBandwidthPackageIds build(java.util.Map<String, ?> map) throws Exception {
+            CreateNatGatewayResponseBodyBandwidthPackageIds self = new CreateNatGatewayResponseBodyBandwidthPackageIds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateNatGatewayResponseBodyBandwidthPackageIds setBandwidthPackageId(java.util.List<String> bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public java.util.List<String> getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
     }
 
 }

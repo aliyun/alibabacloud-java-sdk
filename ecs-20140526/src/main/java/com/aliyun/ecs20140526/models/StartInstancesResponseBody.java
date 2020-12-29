@@ -8,7 +8,7 @@ public class StartInstancesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("InstanceResponses")
-    public java.util.List<StartInstancesResponseBodyInstanceResponses> instanceResponses;
+    public StartInstancesResponseBodyInstanceResponses instanceResponses;
 
     public static StartInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         StartInstancesResponseBody self = new StartInstancesResponseBody();
@@ -23,15 +23,15 @@ public class StartInstancesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public StartInstancesResponseBody setInstanceResponses(java.util.List<StartInstancesResponseBodyInstanceResponses> instanceResponses) {
+    public StartInstancesResponseBody setInstanceResponses(StartInstancesResponseBodyInstanceResponses instanceResponses) {
         this.instanceResponses = instanceResponses;
         return this;
     }
-    public java.util.List<StartInstancesResponseBodyInstanceResponses> getInstanceResponses() {
+    public StartInstancesResponseBodyInstanceResponses getInstanceResponses() {
         return this.instanceResponses;
     }
 
-    public static class StartInstancesResponseBodyInstanceResponses extends TeaModel {
+    public static class StartInstancesResponseBodyInstanceResponsesInstanceResponse extends TeaModel {
         @NameInMap("CurrentStatus")
         public String currentStatus;
 
@@ -47,12 +47,12 @@ public class StartInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static StartInstancesResponseBodyInstanceResponses build(java.util.Map<String, ?> map) throws Exception {
-            StartInstancesResponseBodyInstanceResponses self = new StartInstancesResponseBodyInstanceResponses();
+        public static StartInstancesResponseBodyInstanceResponsesInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
+            StartInstancesResponseBodyInstanceResponsesInstanceResponse self = new StartInstancesResponseBodyInstanceResponsesInstanceResponse();
             return TeaModel.build(map, self);
         }
 
-        public StartInstancesResponseBodyInstanceResponses setCurrentStatus(String currentStatus) {
+        public StartInstancesResponseBodyInstanceResponsesInstanceResponse setCurrentStatus(String currentStatus) {
             this.currentStatus = currentStatus;
             return this;
         }
@@ -60,7 +60,7 @@ public class StartInstancesResponseBody extends TeaModel {
             return this.currentStatus;
         }
 
-        public StartInstancesResponseBodyInstanceResponses setPreviousStatus(String previousStatus) {
+        public StartInstancesResponseBodyInstanceResponsesInstanceResponse setPreviousStatus(String previousStatus) {
             this.previousStatus = previousStatus;
             return this;
         }
@@ -68,7 +68,7 @@ public class StartInstancesResponseBody extends TeaModel {
             return this.previousStatus;
         }
 
-        public StartInstancesResponseBodyInstanceResponses setCode(String code) {
+        public StartInstancesResponseBodyInstanceResponsesInstanceResponse setCode(String code) {
             this.code = code;
             return this;
         }
@@ -76,7 +76,7 @@ public class StartInstancesResponseBody extends TeaModel {
             return this.code;
         }
 
-        public StartInstancesResponseBodyInstanceResponses setMessage(String message) {
+        public StartInstancesResponseBodyInstanceResponsesInstanceResponse setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -84,12 +84,31 @@ public class StartInstancesResponseBody extends TeaModel {
             return this.message;
         }
 
-        public StartInstancesResponseBodyInstanceResponses setInstanceId(String instanceId) {
+        public StartInstancesResponseBodyInstanceResponsesInstanceResponse setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class StartInstancesResponseBodyInstanceResponses extends TeaModel {
+        @NameInMap("InstanceResponse")
+        public java.util.List<StartInstancesResponseBodyInstanceResponsesInstanceResponse> instanceResponse;
+
+        public static StartInstancesResponseBodyInstanceResponses build(java.util.Map<String, ?> map) throws Exception {
+            StartInstancesResponseBodyInstanceResponses self = new StartInstancesResponseBodyInstanceResponses();
+            return TeaModel.build(map, self);
+        }
+
+        public StartInstancesResponseBodyInstanceResponses setInstanceResponse(java.util.List<StartInstancesResponseBodyInstanceResponsesInstanceResponse> instanceResponse) {
+            this.instanceResponse = instanceResponse;
+            return this;
+        }
+        public java.util.List<StartInstancesResponseBodyInstanceResponsesInstanceResponse> getInstanceResponse() {
+            return this.instanceResponse;
         }
 
     }

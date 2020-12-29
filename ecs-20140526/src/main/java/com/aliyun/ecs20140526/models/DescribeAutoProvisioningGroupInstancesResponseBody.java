@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel {
     @NameInMap("Instances")
-    public java.util.List<DescribeAutoProvisioningGroupInstancesResponseBodyInstances> instances;
+    public DescribeAutoProvisioningGroupInstancesResponseBodyInstances instances;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -24,11 +24,11 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         return TeaModel.build(map, self);
     }
 
-    public DescribeAutoProvisioningGroupInstancesResponseBody setInstances(java.util.List<DescribeAutoProvisioningGroupInstancesResponseBodyInstances> instances) {
+    public DescribeAutoProvisioningGroupInstancesResponseBody setInstances(DescribeAutoProvisioningGroupInstancesResponseBodyInstances instances) {
         this.instances = instances;
         return this;
     }
-    public java.util.List<DescribeAutoProvisioningGroupInstancesResponseBodyInstances> getInstances() {
+    public DescribeAutoProvisioningGroupInstancesResponseBodyInstances getInstances() {
         return this.instances;
     }
 
@@ -64,7 +64,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         return this.pageNumber;
     }
 
-    public static class DescribeAutoProvisioningGroupInstancesResponseBodyInstances extends TeaModel {
+    public static class DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -101,12 +101,12 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         @NameInMap("Memory")
         public Integer memory;
 
-        public static DescribeAutoProvisioningGroupInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAutoProvisioningGroupInstancesResponseBodyInstances self = new DescribeAutoProvisioningGroupInstancesResponseBodyInstances();
+        public static DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance self = new DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setCreationTime(String creationTime) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -114,7 +114,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.creationTime;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setStatus(String status) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -122,7 +122,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.status;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setIsSpot(Boolean isSpot) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setIsSpot(Boolean isSpot) {
             this.isSpot = isSpot;
             return this;
         }
@@ -130,7 +130,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.isSpot;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setCPU(Integer CPU) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setCPU(Integer CPU) {
             this.CPU = CPU;
             return this;
         }
@@ -138,7 +138,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.CPU;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setNetworkType(String networkType) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setNetworkType(String networkType) {
             this.networkType = networkType;
             return this;
         }
@@ -146,7 +146,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.networkType;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setInstanceId(String instanceId) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -154,7 +154,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.instanceId;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setInstanceType(String instanceType) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -162,7 +162,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.instanceType;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setRegionId(String regionId) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -170,7 +170,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.regionId;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setIoOptimized(Boolean ioOptimized) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setIoOptimized(Boolean ioOptimized) {
             this.ioOptimized = ioOptimized;
             return this;
         }
@@ -178,7 +178,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.ioOptimized;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setOsType(String osType) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setOsType(String osType) {
             this.osType = osType;
             return this;
         }
@@ -186,7 +186,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.osType;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setZoneId(String zoneId) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -194,12 +194,31 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
             return this.zoneId;
         }
 
-        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setMemory(Integer memory) {
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance setMemory(Integer memory) {
             this.memory = memory;
             return this;
         }
         public Integer getMemory() {
             return this.memory;
+        }
+
+    }
+
+    public static class DescribeAutoProvisioningGroupInstancesResponseBodyInstances extends TeaModel {
+        @NameInMap("Instance")
+        public java.util.List<DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance> instance;
+
+        public static DescribeAutoProvisioningGroupInstancesResponseBodyInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAutoProvisioningGroupInstancesResponseBodyInstances self = new DescribeAutoProvisioningGroupInstancesResponseBodyInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAutoProvisioningGroupInstancesResponseBodyInstances setInstance(java.util.List<DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance> instance) {
+            this.instance = instance;
+            return this;
+        }
+        public java.util.List<DescribeAutoProvisioningGroupInstancesResponseBodyInstancesInstance> getInstance() {
+            return this.instance;
         }
 
     }

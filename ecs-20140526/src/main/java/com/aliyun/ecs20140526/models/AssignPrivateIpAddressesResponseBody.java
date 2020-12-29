@@ -31,12 +31,31 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         return this.assignedPrivateIpAddressesSet;
     }
 
+    public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet extends TeaModel {
+        @NameInMap("PrivateIpAddress")
+        public java.util.List<String> privateIpAddress;
+
+        public static AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet build(java.util.Map<String, ?> map) throws Exception {
+            AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet self = new AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet();
+            return TeaModel.build(map, self);
+        }
+
+        public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+            this.privateIpAddress = privateIpAddress;
+            return this;
+        }
+        public java.util.List<String> getPrivateIpAddress() {
+            return this.privateIpAddress;
+        }
+
+    }
+
     public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet extends TeaModel {
         @NameInMap("NetworkInterfaceId")
         public String networkInterfaceId;
 
         @NameInMap("PrivateIpSet")
-        public java.util.List<String> privateIpSet;
+        public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet privateIpSet;
 
         public static AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet build(java.util.Map<String, ?> map) throws Exception {
             AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet self = new AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet();
@@ -51,11 +70,11 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             return this.networkInterfaceId;
         }
 
-        public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet setPrivateIpSet(java.util.List<String> privateIpSet) {
+        public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet setPrivateIpSet(AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet privateIpSet) {
             this.privateIpSet = privateIpSet;
             return this;
         }
-        public java.util.List<String> getPrivateIpSet() {
+        public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSetPrivateIpSet getPrivateIpSet() {
             return this.privateIpSet;
         }
 

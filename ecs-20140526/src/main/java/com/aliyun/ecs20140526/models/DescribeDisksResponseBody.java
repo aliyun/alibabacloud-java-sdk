@@ -20,7 +20,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("Disks")
-    public java.util.List<DescribeDisksResponseBodyDisks> disks;
+    public DescribeDisksResponseBodyDisks disks;
 
     public static DescribeDisksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDisksResponseBody self = new DescribeDisksResponseBody();
@@ -67,24 +67,24 @@ public class DescribeDisksResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeDisksResponseBody setDisks(java.util.List<DescribeDisksResponseBodyDisks> disks) {
+    public DescribeDisksResponseBody setDisks(DescribeDisksResponseBodyDisks disks) {
         this.disks = disks;
         return this;
     }
-    public java.util.List<DescribeDisksResponseBodyDisks> getDisks() {
+    public DescribeDisksResponseBodyDisks getDisks() {
         return this.disks;
     }
 
-    public static class DescribeDisksResponseBodyDisksOperationLocks extends TeaModel {
+    public static class DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock extends TeaModel {
         @NameInMap("LockReason")
         public String lockReason;
 
-        public static DescribeDisksResponseBodyDisksOperationLocks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDisksResponseBodyDisksOperationLocks self = new DescribeDisksResponseBodyDisksOperationLocks();
+        public static DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock self = new DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDisksResponseBodyDisksOperationLocks setLockReason(String lockReason) {
+        public DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock setLockReason(String lockReason) {
             this.lockReason = lockReason;
             return this;
         }
@@ -94,19 +94,38 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDisksResponseBodyDisksTags extends TeaModel {
+    public static class DescribeDisksResponseBodyDisksDiskOperationLocks extends TeaModel {
+        @NameInMap("OperationLock")
+        public java.util.List<DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock> operationLock;
+
+        public static DescribeDisksResponseBodyDisksDiskOperationLocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDiskOperationLocks self = new DescribeDisksResponseBodyDisksDiskOperationLocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseBodyDisksDiskOperationLocks setOperationLock(java.util.List<DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock> operationLock) {
+            this.operationLock = operationLock;
+            return this;
+        }
+        public java.util.List<DescribeDisksResponseBodyDisksDiskOperationLocksOperationLock> getOperationLock() {
+            return this.operationLock;
+        }
+
+    }
+
+    public static class DescribeDisksResponseBodyDisksDiskTagsTag extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static DescribeDisksResponseBodyDisksTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDisksResponseBodyDisksTags self = new DescribeDisksResponseBodyDisksTags();
+        public static DescribeDisksResponseBodyDisksDiskTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDiskTagsTag self = new DescribeDisksResponseBodyDisksDiskTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDisksResponseBodyDisksTags setTagValue(String tagValue) {
+        public DescribeDisksResponseBodyDisksDiskTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -114,7 +133,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public DescribeDisksResponseBodyDisksTags setTagKey(String tagKey) {
+        public DescribeDisksResponseBodyDisksDiskTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
@@ -124,7 +143,26 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDisksResponseBodyDisksMountInstances extends TeaModel {
+    public static class DescribeDisksResponseBodyDisksDiskTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeDisksResponseBodyDisksDiskTagsTag> tag;
+
+        public static DescribeDisksResponseBodyDisksDiskTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDiskTags self = new DescribeDisksResponseBodyDisksDiskTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseBodyDisksDiskTags setTag(java.util.List<DescribeDisksResponseBodyDisksDiskTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeDisksResponseBodyDisksDiskTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance extends TeaModel {
         @NameInMap("Device")
         public String device;
 
@@ -134,12 +172,12 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static DescribeDisksResponseBodyDisksMountInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDisksResponseBodyDisksMountInstances self = new DescribeDisksResponseBodyDisksMountInstances();
+        public static DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance self = new DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDisksResponseBodyDisksMountInstances setDevice(String device) {
+        public DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance setDevice(String device) {
             this.device = device;
             return this;
         }
@@ -147,7 +185,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.device;
         }
 
-        public DescribeDisksResponseBodyDisksMountInstances setAttachedTime(String attachedTime) {
+        public DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance setAttachedTime(String attachedTime) {
             this.attachedTime = attachedTime;
             return this;
         }
@@ -155,7 +193,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.attachedTime;
         }
 
-        public DescribeDisksResponseBodyDisksMountInstances setInstanceId(String instanceId) {
+        public DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -165,7 +203,26 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDisksResponseBodyDisks extends TeaModel {
+    public static class DescribeDisksResponseBodyDisksDiskMountInstances extends TeaModel {
+        @NameInMap("MountInstance")
+        public java.util.List<DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance> mountInstance;
+
+        public static DescribeDisksResponseBodyDisksDiskMountInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDiskMountInstances self = new DescribeDisksResponseBodyDisksDiskMountInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseBodyDisksDiskMountInstances setMountInstance(java.util.List<DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance> mountInstance) {
+            this.mountInstance = mountInstance;
+            return this;
+        }
+        public java.util.List<DescribeDisksResponseBodyDisksDiskMountInstancesMountInstance> getMountInstance() {
+            return this.mountInstance;
+        }
+
+    }
+
+    public static class DescribeDisksResponseBodyDisksDisk extends TeaModel {
         @NameInMap("SerialNumber")
         public String serialNumber;
 
@@ -182,7 +239,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         public String performanceLevel;
 
         @NameInMap("OperationLocks")
-        public java.util.List<DescribeDisksResponseBodyDisksOperationLocks> operationLocks;
+        public DescribeDisksResponseBodyDisksDiskOperationLocks operationLocks;
 
         @NameInMap("BdfId")
         public String bdfId;
@@ -194,7 +251,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         public String storageSetId;
 
         @NameInMap("Tags")
-        public java.util.List<DescribeDisksResponseBodyDisksTags> tags;
+        public DescribeDisksResponseBodyDisksDiskTags tags;
 
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
@@ -203,7 +260,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         public String diskId;
 
         @NameInMap("MountInstances")
-        public java.util.List<DescribeDisksResponseBodyDisksMountInstances> mountInstances;
+        public DescribeDisksResponseBodyDisksDiskMountInstances mountInstances;
 
         @NameInMap("DeleteAutoSnapshot")
         public Boolean deleteAutoSnapshot;
@@ -286,12 +343,12 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("ProductCode")
         public String productCode;
 
-        public static DescribeDisksResponseBodyDisks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDisksResponseBodyDisks self = new DescribeDisksResponseBodyDisks();
+        public static DescribeDisksResponseBodyDisksDisk build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDisk self = new DescribeDisksResponseBodyDisksDisk();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDisksResponseBodyDisks setSerialNumber(String serialNumber) {
+        public DescribeDisksResponseBodyDisksDisk setSerialNumber(String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
@@ -299,7 +356,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.serialNumber;
         }
 
-        public DescribeDisksResponseBodyDisks setCreationTime(String creationTime) {
+        public DescribeDisksResponseBodyDisksDisk setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -307,7 +364,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeDisksResponseBodyDisks setStatus(String status) {
+        public DescribeDisksResponseBodyDisksDisk setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -315,7 +372,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeDisksResponseBodyDisks setType(String type) {
+        public DescribeDisksResponseBodyDisksDisk setType(String type) {
             this.type = type;
             return this;
         }
@@ -323,7 +380,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeDisksResponseBodyDisks setPerformanceLevel(String performanceLevel) {
+        public DescribeDisksResponseBodyDisksDisk setPerformanceLevel(String performanceLevel) {
             this.performanceLevel = performanceLevel;
             return this;
         }
@@ -331,15 +388,15 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.performanceLevel;
         }
 
-        public DescribeDisksResponseBodyDisks setOperationLocks(java.util.List<DescribeDisksResponseBodyDisksOperationLocks> operationLocks) {
+        public DescribeDisksResponseBodyDisksDisk setOperationLocks(DescribeDisksResponseBodyDisksDiskOperationLocks operationLocks) {
             this.operationLocks = operationLocks;
             return this;
         }
-        public java.util.List<DescribeDisksResponseBodyDisksOperationLocks> getOperationLocks() {
+        public DescribeDisksResponseBodyDisksDiskOperationLocks getOperationLocks() {
             return this.operationLocks;
         }
 
-        public DescribeDisksResponseBodyDisks setBdfId(String bdfId) {
+        public DescribeDisksResponseBodyDisksDisk setBdfId(String bdfId) {
             this.bdfId = bdfId;
             return this;
         }
@@ -347,7 +404,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.bdfId;
         }
 
-        public DescribeDisksResponseBodyDisks setEnableAutoSnapshot(Boolean enableAutoSnapshot) {
+        public DescribeDisksResponseBodyDisksDisk setEnableAutoSnapshot(Boolean enableAutoSnapshot) {
             this.enableAutoSnapshot = enableAutoSnapshot;
             return this;
         }
@@ -355,7 +412,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.enableAutoSnapshot;
         }
 
-        public DescribeDisksResponseBodyDisks setStorageSetId(String storageSetId) {
+        public DescribeDisksResponseBodyDisksDisk setStorageSetId(String storageSetId) {
             this.storageSetId = storageSetId;
             return this;
         }
@@ -363,15 +420,15 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.storageSetId;
         }
 
-        public DescribeDisksResponseBodyDisks setTags(java.util.List<DescribeDisksResponseBodyDisksTags> tags) {
+        public DescribeDisksResponseBodyDisksDisk setTags(DescribeDisksResponseBodyDisksDiskTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeDisksResponseBodyDisksTags> getTags() {
+        public DescribeDisksResponseBodyDisksDiskTags getTags() {
             return this.tags;
         }
 
-        public DescribeDisksResponseBodyDisks setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
+        public DescribeDisksResponseBodyDisksDisk setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
             this.storageSetPartitionNumber = storageSetPartitionNumber;
             return this;
         }
@@ -379,7 +436,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.storageSetPartitionNumber;
         }
 
-        public DescribeDisksResponseBodyDisks setDiskId(String diskId) {
+        public DescribeDisksResponseBodyDisksDisk setDiskId(String diskId) {
             this.diskId = diskId;
             return this;
         }
@@ -387,15 +444,15 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.diskId;
         }
 
-        public DescribeDisksResponseBodyDisks setMountInstances(java.util.List<DescribeDisksResponseBodyDisksMountInstances> mountInstances) {
+        public DescribeDisksResponseBodyDisksDisk setMountInstances(DescribeDisksResponseBodyDisksDiskMountInstances mountInstances) {
             this.mountInstances = mountInstances;
             return this;
         }
-        public java.util.List<DescribeDisksResponseBodyDisksMountInstances> getMountInstances() {
+        public DescribeDisksResponseBodyDisksDiskMountInstances getMountInstances() {
             return this.mountInstances;
         }
 
-        public DescribeDisksResponseBodyDisks setDeleteAutoSnapshot(Boolean deleteAutoSnapshot) {
+        public DescribeDisksResponseBodyDisksDisk setDeleteAutoSnapshot(Boolean deleteAutoSnapshot) {
             this.deleteAutoSnapshot = deleteAutoSnapshot;
             return this;
         }
@@ -403,7 +460,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.deleteAutoSnapshot;
         }
 
-        public DescribeDisksResponseBodyDisks setEncrypted(Boolean encrypted) {
+        public DescribeDisksResponseBodyDisksDisk setEncrypted(Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
@@ -411,7 +468,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.encrypted;
         }
 
-        public DescribeDisksResponseBodyDisks setIOPSRead(Integer IOPSRead) {
+        public DescribeDisksResponseBodyDisksDisk setIOPSRead(Integer IOPSRead) {
             this.IOPSRead = IOPSRead;
             return this;
         }
@@ -419,7 +476,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.IOPSRead;
         }
 
-        public DescribeDisksResponseBodyDisks setMountInstanceNum(Integer mountInstanceNum) {
+        public DescribeDisksResponseBodyDisksDisk setMountInstanceNum(Integer mountInstanceNum) {
             this.mountInstanceNum = mountInstanceNum;
             return this;
         }
@@ -427,7 +484,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.mountInstanceNum;
         }
 
-        public DescribeDisksResponseBodyDisks setDescription(String description) {
+        public DescribeDisksResponseBodyDisksDisk setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -435,7 +492,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeDisksResponseBodyDisks setDevice(String device) {
+        public DescribeDisksResponseBodyDisksDisk setDevice(String device) {
             this.device = device;
             return this;
         }
@@ -443,7 +500,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.device;
         }
 
-        public DescribeDisksResponseBodyDisks setDiskName(String diskName) {
+        public DescribeDisksResponseBodyDisksDisk setDiskName(String diskName) {
             this.diskName = diskName;
             return this;
         }
@@ -451,7 +508,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.diskName;
         }
 
-        public DescribeDisksResponseBodyDisks setPortable(Boolean portable) {
+        public DescribeDisksResponseBodyDisksDisk setPortable(Boolean portable) {
             this.portable = portable;
             return this;
         }
@@ -459,7 +516,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.portable;
         }
 
-        public DescribeDisksResponseBodyDisks setImageId(String imageId) {
+        public DescribeDisksResponseBodyDisksDisk setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
@@ -467,7 +524,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.imageId;
         }
 
-        public DescribeDisksResponseBodyDisks setDeleteWithInstance(Boolean deleteWithInstance) {
+        public DescribeDisksResponseBodyDisksDisk setDeleteWithInstance(Boolean deleteWithInstance) {
             this.deleteWithInstance = deleteWithInstance;
             return this;
         }
@@ -475,7 +532,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.deleteWithInstance;
         }
 
-        public DescribeDisksResponseBodyDisks setKMSKeyId(String KMSKeyId) {
+        public DescribeDisksResponseBodyDisksDisk setKMSKeyId(String KMSKeyId) {
             this.KMSKeyId = KMSKeyId;
             return this;
         }
@@ -483,7 +540,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.KMSKeyId;
         }
 
-        public DescribeDisksResponseBodyDisks setDetachedTime(String detachedTime) {
+        public DescribeDisksResponseBodyDisksDisk setDetachedTime(String detachedTime) {
             this.detachedTime = detachedTime;
             return this;
         }
@@ -491,7 +548,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.detachedTime;
         }
 
-        public DescribeDisksResponseBodyDisks setSourceSnapshotId(String sourceSnapshotId) {
+        public DescribeDisksResponseBodyDisksDisk setSourceSnapshotId(String sourceSnapshotId) {
             this.sourceSnapshotId = sourceSnapshotId;
             return this;
         }
@@ -499,7 +556,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.sourceSnapshotId;
         }
 
-        public DescribeDisksResponseBodyDisks setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+        public DescribeDisksResponseBodyDisksDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.autoSnapshotPolicyId = autoSnapshotPolicyId;
             return this;
         }
@@ -507,7 +564,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.autoSnapshotPolicyId;
         }
 
-        public DescribeDisksResponseBodyDisks setEnableAutomatedSnapshotPolicy(Boolean enableAutomatedSnapshotPolicy) {
+        public DescribeDisksResponseBodyDisksDisk setEnableAutomatedSnapshotPolicy(Boolean enableAutomatedSnapshotPolicy) {
             this.enableAutomatedSnapshotPolicy = enableAutomatedSnapshotPolicy;
             return this;
         }
@@ -515,7 +572,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.enableAutomatedSnapshotPolicy;
         }
 
-        public DescribeDisksResponseBodyDisks setIOPSWrite(Integer IOPSWrite) {
+        public DescribeDisksResponseBodyDisksDisk setIOPSWrite(Integer IOPSWrite) {
             this.IOPSWrite = IOPSWrite;
             return this;
         }
@@ -523,7 +580,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.IOPSWrite;
         }
 
-        public DescribeDisksResponseBodyDisks setInstanceId(String instanceId) {
+        public DescribeDisksResponseBodyDisksDisk setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -531,7 +588,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeDisksResponseBodyDisks setIOPS(Integer IOPS) {
+        public DescribeDisksResponseBodyDisksDisk setIOPS(Integer IOPS) {
             this.IOPS = IOPS;
             return this;
         }
@@ -539,7 +596,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.IOPS;
         }
 
-        public DescribeDisksResponseBodyDisks setRegionId(String regionId) {
+        public DescribeDisksResponseBodyDisksDisk setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -547,7 +604,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeDisksResponseBodyDisks setExpiredTime(String expiredTime) {
+        public DescribeDisksResponseBodyDisksDisk setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
@@ -555,7 +612,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeDisksResponseBodyDisks setSize(Integer size) {
+        public DescribeDisksResponseBodyDisksDisk setSize(Integer size) {
             this.size = size;
             return this;
         }
@@ -563,7 +620,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.size;
         }
 
-        public DescribeDisksResponseBodyDisks setResourceGroupId(String resourceGroupId) {
+        public DescribeDisksResponseBodyDisksDisk setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -571,7 +628,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeDisksResponseBodyDisks setDiskChargeType(String diskChargeType) {
+        public DescribeDisksResponseBodyDisksDisk setDiskChargeType(String diskChargeType) {
             this.diskChargeType = diskChargeType;
             return this;
         }
@@ -579,7 +636,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.diskChargeType;
         }
 
-        public DescribeDisksResponseBodyDisks setZoneId(String zoneId) {
+        public DescribeDisksResponseBodyDisksDisk setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -587,7 +644,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeDisksResponseBodyDisks setAttachedTime(String attachedTime) {
+        public DescribeDisksResponseBodyDisksDisk setAttachedTime(String attachedTime) {
             this.attachedTime = attachedTime;
             return this;
         }
@@ -595,7 +652,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.attachedTime;
         }
 
-        public DescribeDisksResponseBodyDisks setCategory(String category) {
+        public DescribeDisksResponseBodyDisksDisk setCategory(String category) {
             this.category = category;
             return this;
         }
@@ -603,12 +660,31 @@ public class DescribeDisksResponseBody extends TeaModel {
             return this.category;
         }
 
-        public DescribeDisksResponseBodyDisks setProductCode(String productCode) {
+        public DescribeDisksResponseBodyDisksDisk setProductCode(String productCode) {
             this.productCode = productCode;
             return this;
         }
         public String getProductCode() {
             return this.productCode;
+        }
+
+    }
+
+    public static class DescribeDisksResponseBodyDisks extends TeaModel {
+        @NameInMap("Disk")
+        public java.util.List<DescribeDisksResponseBodyDisksDisk> disk;
+
+        public static DescribeDisksResponseBodyDisks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisks self = new DescribeDisksResponseBodyDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseBodyDisks setDisk(java.util.List<DescribeDisksResponseBodyDisksDisk> disk) {
+            this.disk = disk;
+            return this;
+        }
+        public java.util.List<DescribeDisksResponseBodyDisksDisk> getDisk() {
+            return this.disk;
         }
 
     }

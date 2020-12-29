@@ -11,7 +11,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("TagResources")
-    public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
+    public ListTagResourcesResponseBodyTagResources tagResources;
 
     public static ListTagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesResponseBody self = new ListTagResourcesResponseBody();
@@ -34,15 +34,15 @@ public class ListTagResourcesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTagResourcesResponseBody setTagResources(java.util.List<ListTagResourcesResponseBodyTagResources> tagResources) {
+    public ListTagResourcesResponseBody setTagResources(ListTagResourcesResponseBodyTagResources tagResources) {
         this.tagResources = tagResources;
         return this;
     }
-    public java.util.List<ListTagResourcesResponseBodyTagResources> getTagResources() {
+    public ListTagResourcesResponseBodyTagResources getTagResources() {
         return this.tagResources;
     }
 
-    public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+    public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
@@ -55,12 +55,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static ListTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesResponseBodyTagResources self = new ListTagResourcesResponseBodyTagResources();
+        public static ListTagResourcesResponseBodyTagResourcesTagResource build(java.util.Map<String, ?> map) throws Exception {
+            ListTagResourcesResponseBodyTagResourcesTagResource self = new ListTagResourcesResponseBodyTagResourcesTagResource();
             return TeaModel.build(map, self);
         }
 
-        public ListTagResourcesResponseBodyTagResources setResourceType(String resourceType) {
+        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
@@ -68,7 +68,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             return this.resourceType;
         }
 
-        public ListTagResourcesResponseBodyTagResources setTagValue(String tagValue) {
+        public ListTagResourcesResponseBodyTagResourcesTagResource setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -76,7 +76,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public ListTagResourcesResponseBodyTagResources setResourceId(String resourceId) {
+        public ListTagResourcesResponseBodyTagResourcesTagResource setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
@@ -84,12 +84,31 @@ public class ListTagResourcesResponseBody extends TeaModel {
             return this.resourceId;
         }
 
-        public ListTagResourcesResponseBodyTagResources setTagKey(String tagKey) {
+        public ListTagResourcesResponseBodyTagResourcesTagResource setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+    }
+
+    public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
+        @NameInMap("TagResource")
+        public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource;
+
+        public static ListTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
+            ListTagResourcesResponseBodyTagResources self = new ListTagResourcesResponseBodyTagResources();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTagResourcesResponseBodyTagResources setTagResource(java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource) {
+            this.tagResource = tagResource;
+            return this;
+        }
+        public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> getTagResource() {
+            return this.tagResource;
         }
 
     }

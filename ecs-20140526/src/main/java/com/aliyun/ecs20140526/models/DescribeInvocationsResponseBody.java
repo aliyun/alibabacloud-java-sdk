@@ -17,7 +17,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
     public Long pageNumber;
 
     @NameInMap("Invocations")
-    public java.util.List<DescribeInvocationsResponseBodyInvocations> invocations;
+    public DescribeInvocationsResponseBodyInvocations invocations;
 
     public static DescribeInvocationsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInvocationsResponseBody self = new DescribeInvocationsResponseBody();
@@ -56,15 +56,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeInvocationsResponseBody setInvocations(java.util.List<DescribeInvocationsResponseBodyInvocations> invocations) {
+    public DescribeInvocationsResponseBody setInvocations(DescribeInvocationsResponseBodyInvocations invocations) {
         this.invocations = invocations;
         return this;
     }
-    public java.util.List<DescribeInvocationsResponseBodyInvocations> getInvocations() {
+    public DescribeInvocationsResponseBodyInvocations getInvocations() {
         return this.invocations;
     }
 
-    public static class DescribeInvocationsResponseBodyInvocationsInvokeInstances extends TeaModel {
+    public static class DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -107,12 +107,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("InstanceInvokeStatus")
         public String instanceInvokeStatus;
 
-        public static DescribeInvocationsResponseBodyInvocationsInvokeInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInvocationsResponseBodyInvocationsInvokeInstances self = new DescribeInvocationsResponseBodyInvocationsInvokeInstances();
+        public static DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance self = new DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setCreationTime(String creationTime) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -120,7 +120,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setInvocationStatus(String invocationStatus) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setInvocationStatus(String invocationStatus) {
             this.invocationStatus = invocationStatus;
             return this;
         }
@@ -128,7 +128,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.invocationStatus;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setFinishTime(String finishTime) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setFinishTime(String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
@@ -136,7 +136,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.finishTime;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setUpdateTime(String updateTime) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setUpdateTime(String updateTime) {
             this.updateTime = updateTime;
             return this;
         }
@@ -144,7 +144,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setRepeats(Integer repeats) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setRepeats(Integer repeats) {
             this.repeats = repeats;
             return this;
         }
@@ -152,7 +152,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.repeats;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setOutput(String output) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setOutput(String output) {
             this.output = output;
             return this;
         }
@@ -160,7 +160,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.output;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setInstanceId(String instanceId) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -168,7 +168,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setDropped(Integer dropped) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setDropped(Integer dropped) {
             this.dropped = dropped;
             return this;
         }
@@ -176,7 +176,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.dropped;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setStopTime(String stopTime) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setStopTime(String stopTime) {
             this.stopTime = stopTime;
             return this;
         }
@@ -184,7 +184,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.stopTime;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setExitCode(Long exitCode) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setExitCode(Long exitCode) {
             this.exitCode = exitCode;
             return this;
         }
@@ -192,7 +192,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.exitCode;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setStartTime(String startTime) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -200,7 +200,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setErrorInfo(String errorInfo) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setErrorInfo(String errorInfo) {
             this.errorInfo = errorInfo;
             return this;
         }
@@ -208,7 +208,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.errorInfo;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setErrorCode(String errorCode) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
@@ -216,7 +216,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.errorCode;
         }
 
-        public DescribeInvocationsResponseBodyInvocationsInvokeInstances setInstanceInvokeStatus(String instanceInvokeStatus) {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance setInstanceInvokeStatus(String instanceInvokeStatus) {
             this.instanceInvokeStatus = instanceInvokeStatus;
             return this;
         }
@@ -226,7 +226,26 @@ public class DescribeInvocationsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeInvocationsResponseBodyInvocations extends TeaModel {
+    public static class DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances extends TeaModel {
+        @NameInMap("InvokeInstance")
+        public java.util.List<DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance> invokeInstance;
+
+        public static DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances self = new DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances setInvokeInstance(java.util.List<DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance> invokeInstance) {
+            this.invokeInstance = invokeInstance;
+            return this;
+        }
+        public java.util.List<DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstancesInvokeInstance> getInvokeInstance() {
+            return this.invokeInstance;
+        }
+
+    }
+
+    public static class DescribeInvocationsResponseBodyInvocationsInvocation extends TeaModel {
         @NameInMap("Frequency")
         public String frequency;
 
@@ -237,7 +256,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         public String invocationStatus;
 
         @NameInMap("InvokeInstances")
-        public java.util.List<DescribeInvocationsResponseBodyInvocationsInvokeInstances> invokeInstances;
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances invokeInstances;
 
         @NameInMap("CommandId")
         public String commandId;
@@ -266,12 +285,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @NameInMap("Username")
         public String username;
 
-        public static DescribeInvocationsResponseBodyInvocations build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInvocationsResponseBodyInvocations self = new DescribeInvocationsResponseBodyInvocations();
+        public static DescribeInvocationsResponseBodyInvocationsInvocation build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationsResponseBodyInvocationsInvocation self = new DescribeInvocationsResponseBodyInvocationsInvocation();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInvocationsResponseBodyInvocations setFrequency(String frequency) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setFrequency(String frequency) {
             this.frequency = frequency;
             return this;
         }
@@ -279,7 +298,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.frequency;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setCreationTime(String creationTime) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -287,7 +306,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setInvocationStatus(String invocationStatus) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setInvocationStatus(String invocationStatus) {
             this.invocationStatus = invocationStatus;
             return this;
         }
@@ -295,15 +314,15 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.invocationStatus;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setInvokeInstances(java.util.List<DescribeInvocationsResponseBodyInvocationsInvokeInstances> invokeInstances) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setInvokeInstances(DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances invokeInstances) {
             this.invokeInstances = invokeInstances;
             return this;
         }
-        public java.util.List<DescribeInvocationsResponseBodyInvocationsInvokeInstances> getInvokeInstances() {
+        public DescribeInvocationsResponseBodyInvocationsInvocationInvokeInstances getInvokeInstances() {
             return this.invokeInstances;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setCommandId(String commandId) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setCommandId(String commandId) {
             this.commandId = commandId;
             return this;
         }
@@ -311,7 +330,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.commandId;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setInvokeStatus(String invokeStatus) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setInvokeStatus(String invokeStatus) {
             this.invokeStatus = invokeStatus;
             return this;
         }
@@ -319,7 +338,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.invokeStatus;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setCommandType(String commandType) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setCommandType(String commandType) {
             this.commandType = commandType;
             return this;
         }
@@ -327,7 +346,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.commandType;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setParameters(String parameters) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setParameters(String parameters) {
             this.parameters = parameters;
             return this;
         }
@@ -335,7 +354,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.parameters;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setTimed(Boolean timed) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setTimed(Boolean timed) {
             this.timed = timed;
             return this;
         }
@@ -343,7 +362,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.timed;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setCommandContent(String commandContent) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setCommandContent(String commandContent) {
             this.commandContent = commandContent;
             return this;
         }
@@ -351,7 +370,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.commandContent;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setCommandName(String commandName) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setCommandName(String commandName) {
             this.commandName = commandName;
             return this;
         }
@@ -359,7 +378,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.commandName;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setInvokeId(String invokeId) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setInvokeId(String invokeId) {
             this.invokeId = invokeId;
             return this;
         }
@@ -367,12 +386,31 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             return this.invokeId;
         }
 
-        public DescribeInvocationsResponseBodyInvocations setUsername(String username) {
+        public DescribeInvocationsResponseBodyInvocationsInvocation setUsername(String username) {
             this.username = username;
             return this;
         }
         public String getUsername() {
             return this.username;
+        }
+
+    }
+
+    public static class DescribeInvocationsResponseBodyInvocations extends TeaModel {
+        @NameInMap("Invocation")
+        public java.util.List<DescribeInvocationsResponseBodyInvocationsInvocation> invocation;
+
+        public static DescribeInvocationsResponseBodyInvocations build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInvocationsResponseBodyInvocations self = new DescribeInvocationsResponseBodyInvocations();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInvocationsResponseBodyInvocations setInvocation(java.util.List<DescribeInvocationsResponseBodyInvocationsInvocation> invocation) {
+            this.invocation = invocation;
+            return this;
+        }
+        public java.util.List<DescribeInvocationsResponseBodyInvocationsInvocation> getInvocation() {
+            return this.invocation;
         }
 
     }

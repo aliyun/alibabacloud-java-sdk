@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVRoutersResponseBody extends TeaModel {
     @NameInMap("VRouters")
-    public java.util.List<DescribeVRoutersResponseBodyVRouters> VRouters;
+    public DescribeVRoutersResponseBodyVRouters VRouters;
 
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -24,11 +24,11 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVRoutersResponseBody setVRouters(java.util.List<DescribeVRoutersResponseBodyVRouters> VRouters) {
+    public DescribeVRoutersResponseBody setVRouters(DescribeVRoutersResponseBodyVRouters VRouters) {
         this.VRouters = VRouters;
         return this;
     }
-    public java.util.List<DescribeVRoutersResponseBodyVRouters> getVRouters() {
+    public DescribeVRoutersResponseBodyVRouters getVRouters() {
         return this.VRouters;
     }
 
@@ -64,7 +64,26 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeVRoutersResponseBodyVRouters extends TeaModel {
+    public static class DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds extends TeaModel {
+        @NameInMap("RouteTableId")
+        public java.util.List<String> routeTableId;
+
+        public static DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds self = new DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds setRouteTableId(java.util.List<String> routeTableId) {
+            this.routeTableId = routeTableId;
+            return this;
+        }
+        public java.util.List<String> getRouteTableId() {
+            return this.routeTableId;
+        }
+
+    }
+
+    public static class DescribeVRoutersResponseBodyVRoutersVRouter extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -81,17 +100,17 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         public String VRouterName;
 
         @NameInMap("RouteTableIds")
-        public java.util.List<String> routeTableIds;
+        public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds routeTableIds;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeVRoutersResponseBodyVRouters build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVRoutersResponseBodyVRouters self = new DescribeVRoutersResponseBodyVRouters();
+        public static DescribeVRoutersResponseBodyVRoutersVRouter build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVRoutersResponseBodyVRoutersVRouter self = new DescribeVRoutersResponseBodyVRoutersVRouter();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVRoutersResponseBodyVRouters setVpcId(String vpcId) {
+        public DescribeVRoutersResponseBodyVRoutersVRouter setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -99,7 +118,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeVRoutersResponseBodyVRouters setCreationTime(String creationTime) {
+        public DescribeVRoutersResponseBodyVRoutersVRouter setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -107,7 +126,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeVRoutersResponseBodyVRouters setVRouterId(String VRouterId) {
+        public DescribeVRoutersResponseBodyVRoutersVRouter setVRouterId(String VRouterId) {
             this.VRouterId = VRouterId;
             return this;
         }
@@ -115,7 +134,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             return this.VRouterId;
         }
 
-        public DescribeVRoutersResponseBodyVRouters setDescription(String description) {
+        public DescribeVRoutersResponseBodyVRoutersVRouter setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -123,7 +142,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeVRoutersResponseBodyVRouters setVRouterName(String VRouterName) {
+        public DescribeVRoutersResponseBodyVRoutersVRouter setVRouterName(String VRouterName) {
             this.VRouterName = VRouterName;
             return this;
         }
@@ -131,20 +150,39 @@ public class DescribeVRoutersResponseBody extends TeaModel {
             return this.VRouterName;
         }
 
-        public DescribeVRoutersResponseBodyVRouters setRouteTableIds(java.util.List<String> routeTableIds) {
+        public DescribeVRoutersResponseBodyVRoutersVRouter setRouteTableIds(DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds routeTableIds) {
             this.routeTableIds = routeTableIds;
             return this;
         }
-        public java.util.List<String> getRouteTableIds() {
+        public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds getRouteTableIds() {
             return this.routeTableIds;
         }
 
-        public DescribeVRoutersResponseBodyVRouters setRegionId(String regionId) {
+        public DescribeVRoutersResponseBodyVRoutersVRouter setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeVRoutersResponseBodyVRouters extends TeaModel {
+        @NameInMap("VRouter")
+        public java.util.List<DescribeVRoutersResponseBodyVRoutersVRouter> VRouter;
+
+        public static DescribeVRoutersResponseBodyVRouters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVRoutersResponseBodyVRouters self = new DescribeVRoutersResponseBodyVRouters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVRoutersResponseBodyVRouters setVRouter(java.util.List<DescribeVRoutersResponseBodyVRoutersVRouter> VRouter) {
+            this.VRouter = VRouter;
+            return this;
+        }
+        public java.util.List<DescribeVRoutersResponseBodyVRoutersVRouter> getVRouter() {
+            return this.VRouter;
         }
 
     }

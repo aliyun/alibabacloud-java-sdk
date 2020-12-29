@@ -14,7 +14,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Results")
-    public java.util.List<DetachKeyPairResponseBodyResults> results;
+    public DetachKeyPairResponseBodyResults results;
 
     @NameInMap("FailCount")
     public String failCount;
@@ -48,11 +48,11 @@ public class DetachKeyPairResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DetachKeyPairResponseBody setResults(java.util.List<DetachKeyPairResponseBodyResults> results) {
+    public DetachKeyPairResponseBody setResults(DetachKeyPairResponseBodyResults results) {
         this.results = results;
         return this;
     }
-    public java.util.List<DetachKeyPairResponseBodyResults> getResults() {
+    public DetachKeyPairResponseBodyResults getResults() {
         return this.results;
     }
 
@@ -64,7 +64,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
         return this.failCount;
     }
 
-    public static class DetachKeyPairResponseBodyResults extends TeaModel {
+    public static class DetachKeyPairResponseBodyResultsResult extends TeaModel {
         @NameInMap("Success")
         public String success;
 
@@ -77,12 +77,12 @@ public class DetachKeyPairResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static DetachKeyPairResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
-            DetachKeyPairResponseBodyResults self = new DetachKeyPairResponseBodyResults();
+        public static DetachKeyPairResponseBodyResultsResult build(java.util.Map<String, ?> map) throws Exception {
+            DetachKeyPairResponseBodyResultsResult self = new DetachKeyPairResponseBodyResultsResult();
             return TeaModel.build(map, self);
         }
 
-        public DetachKeyPairResponseBodyResults setSuccess(String success) {
+        public DetachKeyPairResponseBodyResultsResult setSuccess(String success) {
             this.success = success;
             return this;
         }
@@ -90,7 +90,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             return this.success;
         }
 
-        public DetachKeyPairResponseBodyResults setCode(String code) {
+        public DetachKeyPairResponseBodyResultsResult setCode(String code) {
             this.code = code;
             return this;
         }
@@ -98,7 +98,7 @@ public class DetachKeyPairResponseBody extends TeaModel {
             return this.code;
         }
 
-        public DetachKeyPairResponseBodyResults setMessage(String message) {
+        public DetachKeyPairResponseBodyResultsResult setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -106,12 +106,31 @@ public class DetachKeyPairResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DetachKeyPairResponseBodyResults setInstanceId(String instanceId) {
+        public DetachKeyPairResponseBodyResultsResult setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class DetachKeyPairResponseBodyResults extends TeaModel {
+        @NameInMap("Result")
+        public java.util.List<DetachKeyPairResponseBodyResultsResult> result;
+
+        public static DetachKeyPairResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
+            DetachKeyPairResponseBodyResults self = new DetachKeyPairResponseBodyResults();
+            return TeaModel.build(map, self);
+        }
+
+        public DetachKeyPairResponseBodyResults setResult(java.util.List<DetachKeyPairResponseBodyResultsResult> result) {
+            this.result = result;
+            return this;
+        }
+        public java.util.List<DetachKeyPairResponseBodyResultsResult> getResult() {
+            return this.result;
         }
 
     }

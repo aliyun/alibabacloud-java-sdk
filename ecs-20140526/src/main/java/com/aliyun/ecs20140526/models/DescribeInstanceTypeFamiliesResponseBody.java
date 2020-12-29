@@ -8,7 +8,7 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("InstanceTypeFamilies")
-    public java.util.List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies> instanceTypeFamilies;
+    public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies instanceTypeFamilies;
 
     public static DescribeInstanceTypeFamiliesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceTypeFamiliesResponseBody self = new DescribeInstanceTypeFamiliesResponseBody();
@@ -23,27 +23,27 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstanceTypeFamiliesResponseBody setInstanceTypeFamilies(java.util.List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies> instanceTypeFamilies) {
+    public DescribeInstanceTypeFamiliesResponseBody setInstanceTypeFamilies(DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies instanceTypeFamilies) {
         this.instanceTypeFamilies = instanceTypeFamilies;
         return this;
     }
-    public java.util.List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies> getInstanceTypeFamilies() {
+    public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies getInstanceTypeFamilies() {
         return this.instanceTypeFamilies;
     }
 
-    public static class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies extends TeaModel {
+    public static class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily extends TeaModel {
         @NameInMap("InstanceTypeFamilyId")
         public String instanceTypeFamilyId;
 
         @NameInMap("Generation")
         public String generation;
 
-        public static DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies self = new DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies();
+        public static DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily self = new DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies setInstanceTypeFamilyId(String instanceTypeFamilyId) {
+        public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily setInstanceTypeFamilyId(String instanceTypeFamilyId) {
             this.instanceTypeFamilyId = instanceTypeFamilyId;
             return this;
         }
@@ -51,12 +51,31 @@ public class DescribeInstanceTypeFamiliesResponseBody extends TeaModel {
             return this.instanceTypeFamilyId;
         }
 
-        public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies setGeneration(String generation) {
+        public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily setGeneration(String generation) {
             this.generation = generation;
             return this;
         }
         public String getGeneration() {
             return this.generation;
+        }
+
+    }
+
+    public static class DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies extends TeaModel {
+        @NameInMap("InstanceTypeFamily")
+        public java.util.List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily> instanceTypeFamily;
+
+        public static DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies self = new DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamilies setInstanceTypeFamily(java.util.List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily> instanceTypeFamily) {
+            this.instanceTypeFamily = instanceTypeFamily;
+            return this;
+        }
+        public java.util.List<DescribeInstanceTypeFamiliesResponseBodyInstanceTypeFamiliesInstanceTypeFamily> getInstanceTypeFamily() {
+            return this.instanceTypeFamily;
         }
 
     }

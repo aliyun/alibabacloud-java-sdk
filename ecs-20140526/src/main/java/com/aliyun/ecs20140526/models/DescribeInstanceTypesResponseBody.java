@@ -8,7 +8,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("InstanceTypes")
-    public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypes> instanceTypes;
+    public DescribeInstanceTypesResponseBodyInstanceTypes instanceTypes;
 
     public static DescribeInstanceTypesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceTypesResponseBody self = new DescribeInstanceTypesResponseBody();
@@ -23,15 +23,15 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstanceTypesResponseBody setInstanceTypes(java.util.List<DescribeInstanceTypesResponseBodyInstanceTypes> instanceTypes) {
+    public DescribeInstanceTypesResponseBody setInstanceTypes(DescribeInstanceTypesResponseBodyInstanceTypes instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
     }
-    public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypes> getInstanceTypes() {
+    public DescribeInstanceTypesResponseBodyInstanceTypes getInstanceTypes() {
         return this.instanceTypes;
     }
 
-    public static class DescribeInstanceTypesResponseBodyInstanceTypes extends TeaModel {
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
         @NameInMap("EniTotalQuantity")
         public Integer eniTotalQuantity;
 
@@ -107,12 +107,12 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("EniTrunkSupported")
         public Boolean eniTrunkSupported;
 
-        public static DescribeInstanceTypesResponseBodyInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceTypesResponseBodyInstanceTypes self = new DescribeInstanceTypesResponseBodyInstanceTypes();
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceType self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceType();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setEniTotalQuantity(Integer eniTotalQuantity) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setEniTotalQuantity(Integer eniTotalQuantity) {
             this.eniTotalQuantity = eniTotalQuantity;
             return this;
         }
@@ -120,7 +120,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.eniTotalQuantity;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setLocalStorageCategory(String localStorageCategory) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setLocalStorageCategory(String localStorageCategory) {
             this.localStorageCategory = localStorageCategory;
             return this;
         }
@@ -128,7 +128,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.localStorageCategory;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setPrimaryEniQueueNumber(Integer primaryEniQueueNumber) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setPrimaryEniQueueNumber(Integer primaryEniQueueNumber) {
             this.primaryEniQueueNumber = primaryEniQueueNumber;
             return this;
         }
@@ -136,7 +136,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.primaryEniQueueNumber;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setMemorySize(Float memorySize) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setMemorySize(Float memorySize) {
             this.memorySize = memorySize;
             return this;
         }
@@ -144,7 +144,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.memorySize;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setLocalStorageCapacity(Long localStorageCapacity) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setLocalStorageCapacity(Long localStorageCapacity) {
             this.localStorageCapacity = localStorageCapacity;
             return this;
         }
@@ -152,7 +152,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.localStorageCapacity;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setInstanceFamilyLevel(String instanceFamilyLevel) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceFamilyLevel(String instanceFamilyLevel) {
             this.instanceFamilyLevel = instanceFamilyLevel;
             return this;
         }
@@ -160,7 +160,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.instanceFamilyLevel;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setInstancePpsRx(Long instancePpsRx) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstancePpsRx(Long instancePpsRx) {
             this.instancePpsRx = instancePpsRx;
             return this;
         }
@@ -168,7 +168,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.instancePpsRx;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setEniIpv6AddressQuantity(Integer eniIpv6AddressQuantity) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setEniIpv6AddressQuantity(Integer eniIpv6AddressQuantity) {
             this.eniIpv6AddressQuantity = eniIpv6AddressQuantity;
             return this;
         }
@@ -176,7 +176,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.eniIpv6AddressQuantity;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setMaximumQueueNumberPerEni(Integer maximumQueueNumberPerEni) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setMaximumQueueNumberPerEni(Integer maximumQueueNumberPerEni) {
             this.maximumQueueNumberPerEni = maximumQueueNumberPerEni;
             return this;
         }
@@ -184,7 +184,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.maximumQueueNumberPerEni;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setInstanceTypeId(String instanceTypeId) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeId(String instanceTypeId) {
             this.instanceTypeId = instanceTypeId;
             return this;
         }
@@ -192,7 +192,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.instanceTypeId;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setInstanceBandwidthRx(Integer instanceBandwidthRx) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceBandwidthRx(Integer instanceBandwidthRx) {
             this.instanceBandwidthRx = instanceBandwidthRx;
             return this;
         }
@@ -200,7 +200,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.instanceBandwidthRx;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setGPUSpec(String GPUSpec) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setGPUSpec(String GPUSpec) {
             this.GPUSpec = GPUSpec;
             return this;
         }
@@ -208,7 +208,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.GPUSpec;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setSecondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setSecondaryEniQueueNumber(Integer secondaryEniQueueNumber) {
             this.secondaryEniQueueNumber = secondaryEniQueueNumber;
             return this;
         }
@@ -216,7 +216,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.secondaryEniQueueNumber;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setInstanceBandwidthTx(Integer instanceBandwidthTx) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceBandwidthTx(Integer instanceBandwidthTx) {
             this.instanceBandwidthTx = instanceBandwidthTx;
             return this;
         }
@@ -224,7 +224,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.instanceBandwidthTx;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setGPUAmount(Integer GPUAmount) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setGPUAmount(Integer GPUAmount) {
             this.GPUAmount = GPUAmount;
             return this;
         }
@@ -232,7 +232,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.GPUAmount;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setTotalEniQueueQuantity(Integer totalEniQueueQuantity) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setTotalEniQueueQuantity(Integer totalEniQueueQuantity) {
             this.totalEniQueueQuantity = totalEniQueueQuantity;
             return this;
         }
@@ -240,7 +240,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.totalEniQueueQuantity;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setInitialCredit(Integer initialCredit) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInitialCredit(Integer initialCredit) {
             this.initialCredit = initialCredit;
             return this;
         }
@@ -248,7 +248,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.initialCredit;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setLocalStorageAmount(Integer localStorageAmount) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setLocalStorageAmount(Integer localStorageAmount) {
             this.localStorageAmount = localStorageAmount;
             return this;
         }
@@ -256,7 +256,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.localStorageAmount;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setBaselineCredit(Integer baselineCredit) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setBaselineCredit(Integer baselineCredit) {
             this.baselineCredit = baselineCredit;
             return this;
         }
@@ -264,7 +264,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.baselineCredit;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setInstancePpsTx(Long instancePpsTx) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstancePpsTx(Long instancePpsTx) {
             this.instancePpsTx = instancePpsTx;
             return this;
         }
@@ -272,7 +272,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.instancePpsTx;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setEniPrivateIpAddressQuantity(Integer eniPrivateIpAddressQuantity) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setEniPrivateIpAddressQuantity(Integer eniPrivateIpAddressQuantity) {
             this.eniPrivateIpAddressQuantity = eniPrivateIpAddressQuantity;
             return this;
         }
@@ -280,7 +280,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.eniPrivateIpAddressQuantity;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setInstanceTypeFamily(String instanceTypeFamily) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setInstanceTypeFamily(String instanceTypeFamily) {
             this.instanceTypeFamily = instanceTypeFamily;
             return this;
         }
@@ -288,7 +288,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.instanceTypeFamily;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setCpuCoreCount(Integer cpuCoreCount) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setCpuCoreCount(Integer cpuCoreCount) {
             this.cpuCoreCount = cpuCoreCount;
             return this;
         }
@@ -296,7 +296,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.cpuCoreCount;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setEniQuantity(Integer eniQuantity) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setEniQuantity(Integer eniQuantity) {
             this.eniQuantity = eniQuantity;
             return this;
         }
@@ -304,12 +304,31 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             return this.eniQuantity;
         }
 
-        public DescribeInstanceTypesResponseBodyInstanceTypes setEniTrunkSupported(Boolean eniTrunkSupported) {
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setEniTrunkSupported(Boolean eniTrunkSupported) {
             this.eniTrunkSupported = eniTrunkSupported;
             return this;
         }
         public Boolean getEniTrunkSupported() {
             return this.eniTrunkSupported;
+        }
+
+    }
+
+    public static class DescribeInstanceTypesResponseBodyInstanceTypes extends TeaModel {
+        @NameInMap("InstanceType")
+        public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceType> instanceType;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypes self = new DescribeInstanceTypesResponseBodyInstanceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypes setInstanceType(java.util.List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceType> instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceType> getInstanceType() {
+            return this.instanceType;
         }
 
     }

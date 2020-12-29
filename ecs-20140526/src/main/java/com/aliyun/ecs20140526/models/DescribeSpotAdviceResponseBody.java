@@ -8,7 +8,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("AvailableSpotZones")
-    public java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZones> availableSpotZones;
+    public DescribeSpotAdviceResponseBodyAvailableSpotZones availableSpotZones;
 
     @NameInMap("RegionId")
     public String regionId;
@@ -26,11 +26,11 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSpotAdviceResponseBody setAvailableSpotZones(java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZones> availableSpotZones) {
+    public DescribeSpotAdviceResponseBody setAvailableSpotZones(DescribeSpotAdviceResponseBodyAvailableSpotZones availableSpotZones) {
         this.availableSpotZones = availableSpotZones;
         return this;
     }
-    public java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZones> getAvailableSpotZones() {
+    public DescribeSpotAdviceResponseBodyAvailableSpotZones getAvailableSpotZones() {
         return this.availableSpotZones;
     }
 
@@ -42,7 +42,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources extends TeaModel {
+    public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource extends TeaModel {
         @NameInMap("InterruptRateDesc")
         public String interruptRateDesc;
 
@@ -55,12 +55,12 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         @NameInMap("InterruptionRate")
         public Float interruptionRate;
 
-        public static DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources self = new DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources();
+        public static DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource self = new DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources setInterruptRateDesc(String interruptRateDesc) {
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource setInterruptRateDesc(String interruptRateDesc) {
             this.interruptRateDesc = interruptRateDesc;
             return this;
         }
@@ -68,7 +68,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             return this.interruptRateDesc;
         }
 
-        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources setAverageSpotDiscount(Integer averageSpotDiscount) {
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource setAverageSpotDiscount(Integer averageSpotDiscount) {
             this.averageSpotDiscount = averageSpotDiscount;
             return this;
         }
@@ -76,7 +76,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             return this.averageSpotDiscount;
         }
 
-        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources setInstanceType(String instanceType) {
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -84,7 +84,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources setInterruptionRate(Float interruptionRate) {
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource setInterruptionRate(Float interruptionRate) {
             this.interruptionRate = interruptionRate;
             return this;
         }
@@ -94,32 +94,70 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeSpotAdviceResponseBodyAvailableSpotZones extends TeaModel {
+    public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources extends TeaModel {
+        @NameInMap("AvailableSpotResource")
+        public java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource> availableSpotResource;
+
+        public static DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources self = new DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources setAvailableSpotResource(java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource> availableSpotResource) {
+            this.availableSpotResource = availableSpotResource;
+            return this;
+        }
+        public java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResourcesAvailableSpotResource> getAvailableSpotResource() {
+            return this.availableSpotResource;
+        }
+
+    }
+
+    public static class DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone extends TeaModel {
         @NameInMap("AvailableSpotResources")
-        public java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources> availableSpotResources;
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources availableSpotResources;
 
         @NameInMap("ZoneId")
         public String zoneId;
+
+        public static DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone self = new DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone setAvailableSpotResources(DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources availableSpotResources) {
+            this.availableSpotResources = availableSpotResources;
+            return this;
+        }
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZoneAvailableSpotResources getAvailableSpotResources() {
+            return this.availableSpotResources;
+        }
+
+        public DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+    }
+
+    public static class DescribeSpotAdviceResponseBodyAvailableSpotZones extends TeaModel {
+        @NameInMap("AvailableSpotZone")
+        public java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone> availableSpotZone;
 
         public static DescribeSpotAdviceResponseBodyAvailableSpotZones build(java.util.Map<String, ?> map) throws Exception {
             DescribeSpotAdviceResponseBodyAvailableSpotZones self = new DescribeSpotAdviceResponseBodyAvailableSpotZones();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSpotAdviceResponseBodyAvailableSpotZones setAvailableSpotResources(java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources> availableSpotResources) {
-            this.availableSpotResources = availableSpotResources;
+        public DescribeSpotAdviceResponseBodyAvailableSpotZones setAvailableSpotZone(java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone> availableSpotZone) {
+            this.availableSpotZone = availableSpotZone;
             return this;
         }
-        public java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotResources> getAvailableSpotResources() {
-            return this.availableSpotResources;
-        }
-
-        public DescribeSpotAdviceResponseBodyAvailableSpotZones setZoneId(String zoneId) {
-            this.zoneId = zoneId;
-            return this;
-        }
-        public String getZoneId() {
-            return this.zoneId;
+        public java.util.List<DescribeSpotAdviceResponseBodyAvailableSpotZonesAvailableSpotZone> getAvailableSpotZone() {
+            return this.availableSpotZone;
         }
 
     }

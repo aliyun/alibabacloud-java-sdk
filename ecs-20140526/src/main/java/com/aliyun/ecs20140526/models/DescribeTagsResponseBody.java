@@ -17,7 +17,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("Tags")
-    public java.util.List<DescribeTagsResponseBodyTags> tags;
+    public DescribeTagsResponseBodyTags tags;
 
     public static DescribeTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagsResponseBody self = new DescribeTagsResponseBody();
@@ -56,15 +56,15 @@ public class DescribeTagsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeTagsResponseBody setTags(java.util.List<DescribeTagsResponseBodyTags> tags) {
+    public DescribeTagsResponseBody setTags(DescribeTagsResponseBodyTags tags) {
         this.tags = tags;
         return this;
     }
-    public java.util.List<DescribeTagsResponseBodyTags> getTags() {
+    public DescribeTagsResponseBodyTags getTags() {
         return this.tags;
     }
 
-    public static class DescribeTagsResponseBodyTagsResourceTypeCount extends TeaModel {
+    public static class DescribeTagsResponseBodyTagsTagResourceTypeCount extends TeaModel {
         @NameInMap("Instance")
         public Integer instance;
 
@@ -101,12 +101,12 @@ public class DescribeTagsResponseBody extends TeaModel {
         @NameInMap("Volume")
         public Integer volume;
 
-        public static DescribeTagsResponseBodyTagsResourceTypeCount build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTagsResponseBodyTagsResourceTypeCount self = new DescribeTagsResponseBodyTagsResourceTypeCount();
+        public static DescribeTagsResponseBodyTagsTagResourceTypeCount build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTagsResponseBodyTagsTagResourceTypeCount self = new DescribeTagsResponseBodyTagsTagResourceTypeCount();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setInstance(Integer instance) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setInstance(Integer instance) {
             this.instance = instance;
             return this;
         }
@@ -114,7 +114,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.instance;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setImage(Integer image) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setImage(Integer image) {
             this.image = image;
             return this;
         }
@@ -122,7 +122,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.image;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setSnapshotPolicy(Integer snapshotPolicy) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setSnapshotPolicy(Integer snapshotPolicy) {
             this.snapshotPolicy = snapshotPolicy;
             return this;
         }
@@ -130,7 +130,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.snapshotPolicy;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setDdh(Integer ddh) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setDdh(Integer ddh) {
             this.ddh = ddh;
             return this;
         }
@@ -138,7 +138,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.ddh;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setSecuritygroup(Integer securitygroup) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setSecuritygroup(Integer securitygroup) {
             this.securitygroup = securitygroup;
             return this;
         }
@@ -146,7 +146,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.securitygroup;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setSnapshot(Integer snapshot) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setSnapshot(Integer snapshot) {
             this.snapshot = snapshot;
             return this;
         }
@@ -154,7 +154,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.snapshot;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setReservedInstance(Integer reservedInstance) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setReservedInstance(Integer reservedInstance) {
             this.reservedInstance = reservedInstance;
             return this;
         }
@@ -162,7 +162,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.reservedInstance;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setEni(Integer eni) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setEni(Integer eni) {
             this.eni = eni;
             return this;
         }
@@ -170,7 +170,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.eni;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setLaunchTemplate(Integer launchTemplate) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setLaunchTemplate(Integer launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
@@ -178,7 +178,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.launchTemplate;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setKeyPair(Integer keyPair) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setKeyPair(Integer keyPair) {
             this.keyPair = keyPair;
             return this;
         }
@@ -186,7 +186,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.keyPair;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setDisk(Integer disk) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setDisk(Integer disk) {
             this.disk = disk;
             return this;
         }
@@ -194,7 +194,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.disk;
         }
 
-        public DescribeTagsResponseBodyTagsResourceTypeCount setVolume(Integer volume) {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount setVolume(Integer volume) {
             this.volume = volume;
             return this;
         }
@@ -204,9 +204,9 @@ public class DescribeTagsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeTagsResponseBodyTags extends TeaModel {
+    public static class DescribeTagsResponseBodyTagsTag extends TeaModel {
         @NameInMap("ResourceTypeCount")
-        public DescribeTagsResponseBodyTagsResourceTypeCount resourceTypeCount;
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount;
 
         @NameInMap("TagValue")
         public String tagValue;
@@ -214,20 +214,20 @@ public class DescribeTagsResponseBody extends TeaModel {
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static DescribeTagsResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTagsResponseBodyTags self = new DescribeTagsResponseBodyTags();
+        public static DescribeTagsResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTagsResponseBodyTagsTag self = new DescribeTagsResponseBodyTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTagsResponseBodyTags setResourceTypeCount(DescribeTagsResponseBodyTagsResourceTypeCount resourceTypeCount) {
+        public DescribeTagsResponseBodyTagsTag setResourceTypeCount(DescribeTagsResponseBodyTagsTagResourceTypeCount resourceTypeCount) {
             this.resourceTypeCount = resourceTypeCount;
             return this;
         }
-        public DescribeTagsResponseBodyTagsResourceTypeCount getResourceTypeCount() {
+        public DescribeTagsResponseBodyTagsTagResourceTypeCount getResourceTypeCount() {
             return this.resourceTypeCount;
         }
 
-        public DescribeTagsResponseBodyTags setTagValue(String tagValue) {
+        public DescribeTagsResponseBodyTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -235,12 +235,31 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public DescribeTagsResponseBodyTags setTagKey(String tagKey) {
+        public DescribeTagsResponseBodyTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+    }
+
+    public static class DescribeTagsResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeTagsResponseBodyTagsTag> tag;
+
+        public static DescribeTagsResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTagsResponseBodyTags self = new DescribeTagsResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTagsResponseBodyTags setTag(java.util.List<DescribeTagsResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeTagsResponseBodyTagsTag> getTag() {
+            return this.tag;
         }
 
     }

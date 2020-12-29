@@ -17,7 +17,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("StorageCapacityUnits")
-    public java.util.List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits> storageCapacityUnits;
+    public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits;
 
     public static DescribeStorageCapacityUnitsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageCapacityUnitsResponseBody self = new DescribeStorageCapacityUnitsResponseBody();
@@ -56,15 +56,15 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeStorageCapacityUnitsResponseBody setStorageCapacityUnits(java.util.List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits> storageCapacityUnits) {
+    public DescribeStorageCapacityUnitsResponseBody setStorageCapacityUnits(DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits storageCapacityUnits) {
         this.storageCapacityUnits = storageCapacityUnits;
         return this;
     }
-    public java.util.List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits> getStorageCapacityUnits() {
+    public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits getStorageCapacityUnits() {
         return this.storageCapacityUnits;
     }
 
-    public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits extends TeaModel {
+    public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -95,12 +95,12 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits build(java.util.Map<String, ?> map) throws Exception {
-            DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits self = new DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits();
+        public static DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit self = new DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit();
             return TeaModel.build(map, self);
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setCreationTime(String creationTime) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -108,7 +108,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setStatus(String status) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -116,7 +116,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setStartTime(String startTime) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -124,7 +124,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setCapacity(Integer capacity) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setCapacity(Integer capacity) {
             this.capacity = capacity;
             return this;
         }
@@ -132,7 +132,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.capacity;
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setDescription(String description) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -140,7 +140,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setAllocationStatus(String allocationStatus) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setAllocationStatus(String allocationStatus) {
             this.allocationStatus = allocationStatus;
             return this;
         }
@@ -148,7 +148,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.allocationStatus;
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setExpiredTime(String expiredTime) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
@@ -156,7 +156,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setStorageCapacityUnitId(String storageCapacityUnitId) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setStorageCapacityUnitId(String storageCapacityUnitId) {
             this.storageCapacityUnitId = storageCapacityUnitId;
             return this;
         }
@@ -164,7 +164,7 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.storageCapacityUnitId;
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setName(String name) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setName(String name) {
             this.name = name;
             return this;
         }
@@ -172,12 +172,31 @@ public class DescribeStorageCapacityUnitsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setRegionId(String regionId) {
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits extends TeaModel {
+        @NameInMap("StorageCapacityUnit")
+        public java.util.List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit> storageCapacityUnit;
+
+        public static DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits self = new DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnits setStorageCapacityUnit(java.util.List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit> storageCapacityUnit) {
+            this.storageCapacityUnit = storageCapacityUnit;
+            return this;
+        }
+        public java.util.List<DescribeStorageCapacityUnitsResponseBodyStorageCapacityUnitsStorageCapacityUnit> getStorageCapacityUnit() {
+            return this.storageCapacityUnit;
         }
 
     }

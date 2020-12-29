@@ -8,7 +8,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Topologys")
-    public java.util.List<DescribeInstanceTopologyResponseBodyTopologys> topologys;
+    public DescribeInstanceTopologyResponseBodyTopologys topologys;
 
     public static DescribeInstanceTopologyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceTopologyResponseBody self = new DescribeInstanceTopologyResponseBody();
@@ -23,27 +23,27 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeInstanceTopologyResponseBody setTopologys(java.util.List<DescribeInstanceTopologyResponseBodyTopologys> topologys) {
+    public DescribeInstanceTopologyResponseBody setTopologys(DescribeInstanceTopologyResponseBodyTopologys topologys) {
         this.topologys = topologys;
         return this;
     }
-    public java.util.List<DescribeInstanceTopologyResponseBodyTopologys> getTopologys() {
+    public DescribeInstanceTopologyResponseBodyTopologys getTopologys() {
         return this.topologys;
     }
 
-    public static class DescribeInstanceTopologyResponseBodyTopologys extends TeaModel {
+    public static class DescribeInstanceTopologyResponseBodyTopologysTopology extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("HostId")
         public String hostId;
 
-        public static DescribeInstanceTopologyResponseBodyTopologys build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceTopologyResponseBodyTopologys self = new DescribeInstanceTopologyResponseBodyTopologys();
+        public static DescribeInstanceTopologyResponseBodyTopologysTopology build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyTopologysTopology self = new DescribeInstanceTopologyResponseBodyTopologysTopology();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceTopologyResponseBodyTopologys setInstanceId(String instanceId) {
+        public DescribeInstanceTopologyResponseBodyTopologysTopology setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -51,12 +51,31 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstanceTopologyResponseBodyTopologys setHostId(String hostId) {
+        public DescribeInstanceTopologyResponseBodyTopologysTopology setHostId(String hostId) {
             this.hostId = hostId;
             return this;
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+    }
+
+    public static class DescribeInstanceTopologyResponseBodyTopologys extends TeaModel {
+        @NameInMap("Topology")
+        public java.util.List<DescribeInstanceTopologyResponseBodyTopologysTopology> topology;
+
+        public static DescribeInstanceTopologyResponseBodyTopologys build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTopologyResponseBodyTopologys self = new DescribeInstanceTopologyResponseBodyTopologys();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTopologyResponseBodyTopologys setTopology(java.util.List<DescribeInstanceTopologyResponseBodyTopologysTopology> topology) {
+            this.topology = topology;
+            return this;
+        }
+        public java.util.List<DescribeInstanceTopologyResponseBodyTopologysTopology> getTopology() {
+            return this.topology;
         }
 
     }

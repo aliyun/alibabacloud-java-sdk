@@ -8,7 +8,7 @@ public class DescribeClustersResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Clusters")
-    public java.util.List<DescribeClustersResponseBodyClusters> clusters;
+    public DescribeClustersResponseBodyClusters clusters;
 
     public static DescribeClustersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeClustersResponseBody self = new DescribeClustersResponseBody();
@@ -23,29 +23,48 @@ public class DescribeClustersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeClustersResponseBody setClusters(java.util.List<DescribeClustersResponseBodyClusters> clusters) {
+    public DescribeClustersResponseBody setClusters(DescribeClustersResponseBodyClusters clusters) {
         this.clusters = clusters;
         return this;
     }
-    public java.util.List<DescribeClustersResponseBodyClusters> getClusters() {
+    public DescribeClustersResponseBodyClusters getClusters() {
         return this.clusters;
     }
 
-    public static class DescribeClustersResponseBodyClusters extends TeaModel {
+    public static class DescribeClustersResponseBodyClustersCluster extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
+
+        public static DescribeClustersResponseBodyClustersCluster build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersResponseBodyClustersCluster self = new DescribeClustersResponseBodyClustersCluster();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClustersResponseBodyClustersCluster setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+    }
+
+    public static class DescribeClustersResponseBodyClusters extends TeaModel {
+        @NameInMap("Cluster")
+        public java.util.List<DescribeClustersResponseBodyClustersCluster> cluster;
 
         public static DescribeClustersResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
             DescribeClustersResponseBodyClusters self = new DescribeClustersResponseBodyClusters();
             return TeaModel.build(map, self);
         }
 
-        public DescribeClustersResponseBodyClusters setClusterId(String clusterId) {
-            this.clusterId = clusterId;
+        public DescribeClustersResponseBodyClusters setCluster(java.util.List<DescribeClustersResponseBodyClustersCluster> cluster) {
+            this.cluster = cluster;
             return this;
         }
-        public String getClusterId() {
-            return this.clusterId;
+        public java.util.List<DescribeClustersResponseBodyClustersCluster> getCluster() {
+            return this.cluster;
         }
 
     }

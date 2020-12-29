@@ -8,7 +8,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Regions")
-    public java.util.List<DescribeRegionsResponseBodyRegions> regions;
+    public DescribeRegionsResponseBodyRegions regions;
 
     public static DescribeRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponseBody self = new DescribeRegionsResponseBody();
@@ -23,15 +23,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeRegionsResponseBody setRegions(java.util.List<DescribeRegionsResponseBodyRegions> regions) {
+    public DescribeRegionsResponseBody setRegions(DescribeRegionsResponseBodyRegions regions) {
         this.regions = regions;
         return this;
     }
-    public java.util.List<DescribeRegionsResponseBodyRegions> getRegions() {
+    public DescribeRegionsResponseBodyRegions getRegions() {
         return this.regions;
     }
 
-    public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+    public static class DescribeRegionsResponseBodyRegionsRegion extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -44,12 +44,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRegionsResponseBodyRegions self = new DescribeRegionsResponseBodyRegions();
+        public static DescribeRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRegionsResponseBodyRegionsRegion self = new DescribeRegionsResponseBodyRegionsRegion();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRegionsResponseBodyRegions setStatus(String status) {
+        public DescribeRegionsResponseBodyRegionsRegion setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -57,7 +57,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeRegionsResponseBodyRegions setLocalName(String localName) {
+        public DescribeRegionsResponseBodyRegionsRegion setLocalName(String localName) {
             this.localName = localName;
             return this;
         }
@@ -65,7 +65,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.localName;
         }
 
-        public DescribeRegionsResponseBodyRegions setRegionEndpoint(String regionEndpoint) {
+        public DescribeRegionsResponseBodyRegionsRegion setRegionEndpoint(String regionEndpoint) {
             this.regionEndpoint = regionEndpoint;
             return this;
         }
@@ -73,12 +73,31 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.regionEndpoint;
         }
 
-        public DescribeRegionsResponseBodyRegions setRegionId(String regionId) {
+        public DescribeRegionsResponseBodyRegionsRegion setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+        @NameInMap("Region")
+        public java.util.List<DescribeRegionsResponseBodyRegionsRegion> region;
+
+        public static DescribeRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRegionsResponseBodyRegions self = new DescribeRegionsResponseBodyRegions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseBodyRegions setRegion(java.util.List<DescribeRegionsResponseBodyRegionsRegion> region) {
+            this.region = region;
+            return this;
+        }
+        public java.util.List<DescribeRegionsResponseBodyRegionsRegion> getRegion() {
+            return this.region;
         }
 
     }

@@ -8,7 +8,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     public Integer totalCount;
 
     @NameInMap("LaunchTemplateSets")
-    public java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSets> launchTemplateSets;
+    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -32,11 +32,11 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeLaunchTemplatesResponseBody setLaunchTemplateSets(java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSets> launchTemplateSets) {
+    public DescribeLaunchTemplatesResponseBody setLaunchTemplateSets(DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets) {
         this.launchTemplateSets = launchTemplateSets;
         return this;
     }
-    public java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSets> getLaunchTemplateSets() {
+    public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets getLaunchTemplateSets() {
         return this.launchTemplateSets;
     }
 
@@ -64,19 +64,19 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsTags extends TeaModel {
+    public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag extends TeaModel {
         @NameInMap("TagValue")
         public String tagValue;
 
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsTags self = new DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsTags();
+        public static DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag self = new DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsTags setTagValue(String tagValue) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -84,7 +84,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsTags setTagKey(String tagKey) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
@@ -94,7 +94,26 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSets extends TeaModel {
+    public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag> tag;
+
+        public static DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags self = new DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags setTag(java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet extends TeaModel {
         @NameInMap("LaunchTemplateName")
         public String launchTemplateName;
 
@@ -117,17 +136,17 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public String createdBy;
 
         @NameInMap("Tags")
-        public java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsTags> tags;
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags;
 
         @NameInMap("LatestVersionNumber")
         public Long latestVersionNumber;
 
-        public static DescribeLaunchTemplatesResponseBodyLaunchTemplateSets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLaunchTemplatesResponseBodyLaunchTemplateSets self = new DescribeLaunchTemplatesResponseBodyLaunchTemplateSets();
+        public static DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet self = new DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setLaunchTemplateName(String launchTemplateName) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setLaunchTemplateName(String launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
@@ -135,7 +154,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.launchTemplateName;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setDefaultVersionNumber(Long defaultVersionNumber) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setDefaultVersionNumber(Long defaultVersionNumber) {
             this.defaultVersionNumber = defaultVersionNumber;
             return this;
         }
@@ -143,7 +162,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.defaultVersionNumber;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setModifiedTime(String modifiedTime) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setModifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
@@ -151,7 +170,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.modifiedTime;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setLaunchTemplateId(String launchTemplateId) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setLaunchTemplateId(String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
@@ -159,7 +178,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.launchTemplateId;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setCreateTime(String createTime) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -167,7 +186,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setResourceGroupId(String resourceGroupId) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -175,7 +194,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setCreatedBy(String createdBy) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setCreatedBy(String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
@@ -183,20 +202,39 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             return this.createdBy;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setTags(java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsTags> tags) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setTags(DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsTags> getTags() {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTags getTags() {
             return this.tags;
         }
 
-        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setLatestVersionNumber(Long latestVersionNumber) {
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet setLatestVersionNumber(Long latestVersionNumber) {
             this.latestVersionNumber = latestVersionNumber;
             return this;
         }
         public Long getLatestVersionNumber() {
             return this.latestVersionNumber;
+        }
+
+    }
+
+    public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSets extends TeaModel {
+        @NameInMap("LaunchTemplateSet")
+        public java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet> launchTemplateSet;
+
+        public static DescribeLaunchTemplatesResponseBodyLaunchTemplateSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLaunchTemplatesResponseBodyLaunchTemplateSets self = new DescribeLaunchTemplatesResponseBodyLaunchTemplateSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets setLaunchTemplateSet(java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet> launchTemplateSet) {
+            this.launchTemplateSet = launchTemplateSet;
+            return this;
+        }
+        public java.util.List<DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSet> getLaunchTemplateSet() {
+            return this.launchTemplateSet;
         }
 
     }

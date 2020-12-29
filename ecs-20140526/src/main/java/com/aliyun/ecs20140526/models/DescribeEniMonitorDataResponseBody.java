@@ -11,7 +11,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("MonitorData")
-    public java.util.List<DescribeEniMonitorDataResponseBodyMonitorData> monitorData;
+    public DescribeEniMonitorDataResponseBodyMonitorData monitorData;
 
     public static DescribeEniMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEniMonitorDataResponseBody self = new DescribeEniMonitorDataResponseBody();
@@ -34,15 +34,15 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeEniMonitorDataResponseBody setMonitorData(java.util.List<DescribeEniMonitorDataResponseBodyMonitorData> monitorData) {
+    public DescribeEniMonitorDataResponseBody setMonitorData(DescribeEniMonitorDataResponseBodyMonitorData monitorData) {
         this.monitorData = monitorData;
         return this;
     }
-    public java.util.List<DescribeEniMonitorDataResponseBodyMonitorData> getMonitorData() {
+    public DescribeEniMonitorDataResponseBodyMonitorData getMonitorData() {
         return this.monitorData;
     }
 
-    public static class DescribeEniMonitorDataResponseBodyMonitorData extends TeaModel {
+    public static class DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData extends TeaModel {
         @NameInMap("PacketRx")
         public String packetRx;
 
@@ -67,12 +67,12 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         @NameInMap("IntranetRx")
         public String intranetRx;
 
-        public static DescribeEniMonitorDataResponseBodyMonitorData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEniMonitorDataResponseBodyMonitorData self = new DescribeEniMonitorDataResponseBodyMonitorData();
+        public static DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData self = new DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeEniMonitorDataResponseBodyMonitorData setPacketRx(String packetRx) {
+        public DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData setPacketRx(String packetRx) {
             this.packetRx = packetRx;
             return this;
         }
@@ -80,7 +80,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             return this.packetRx;
         }
 
-        public DescribeEniMonitorDataResponseBodyMonitorData setTimeStamp(String timeStamp) {
+        public DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
@@ -88,7 +88,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public DescribeEniMonitorDataResponseBodyMonitorData setDropPacketRx(String dropPacketRx) {
+        public DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData setDropPacketRx(String dropPacketRx) {
             this.dropPacketRx = dropPacketRx;
             return this;
         }
@@ -96,7 +96,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             return this.dropPacketRx;
         }
 
-        public DescribeEniMonitorDataResponseBodyMonitorData setEniId(String eniId) {
+        public DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData setEniId(String eniId) {
             this.eniId = eniId;
             return this;
         }
@@ -104,7 +104,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             return this.eniId;
         }
 
-        public DescribeEniMonitorDataResponseBodyMonitorData setDropPacketTx(String dropPacketTx) {
+        public DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData setDropPacketTx(String dropPacketTx) {
             this.dropPacketTx = dropPacketTx;
             return this;
         }
@@ -112,7 +112,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             return this.dropPacketTx;
         }
 
-        public DescribeEniMonitorDataResponseBodyMonitorData setPacketTx(String packetTx) {
+        public DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData setPacketTx(String packetTx) {
             this.packetTx = packetTx;
             return this;
         }
@@ -120,7 +120,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             return this.packetTx;
         }
 
-        public DescribeEniMonitorDataResponseBodyMonitorData setIntranetTx(String intranetTx) {
+        public DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData setIntranetTx(String intranetTx) {
             this.intranetTx = intranetTx;
             return this;
         }
@@ -128,12 +128,31 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             return this.intranetTx;
         }
 
-        public DescribeEniMonitorDataResponseBodyMonitorData setIntranetRx(String intranetRx) {
+        public DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData setIntranetRx(String intranetRx) {
             this.intranetRx = intranetRx;
             return this;
         }
         public String getIntranetRx() {
             return this.intranetRx;
+        }
+
+    }
+
+    public static class DescribeEniMonitorDataResponseBodyMonitorData extends TeaModel {
+        @NameInMap("EniMonitorData")
+        public java.util.List<DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData> eniMonitorData;
+
+        public static DescribeEniMonitorDataResponseBodyMonitorData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEniMonitorDataResponseBodyMonitorData self = new DescribeEniMonitorDataResponseBodyMonitorData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeEniMonitorDataResponseBodyMonitorData setEniMonitorData(java.util.List<DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData> eniMonitorData) {
+            this.eniMonitorData = eniMonitorData;
+            return this;
+        }
+        public java.util.List<DescribeEniMonitorDataResponseBodyMonitorDataEniMonitorData> getEniMonitorData() {
+            return this.eniMonitorData;
         }
 
     }

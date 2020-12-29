@@ -8,7 +8,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
     public Integer totalCount;
 
     @NameInMap("HaVips")
-    public java.util.List<DescribeHaVipsResponseBodyHaVips> haVips;
+    public DescribeHaVipsResponseBodyHaVips haVips;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -32,11 +32,11 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeHaVipsResponseBody setHaVips(java.util.List<DescribeHaVipsResponseBodyHaVips> haVips) {
+    public DescribeHaVipsResponseBody setHaVips(DescribeHaVipsResponseBodyHaVips haVips) {
         this.haVips = haVips;
         return this;
     }
-    public java.util.List<DescribeHaVipsResponseBodyHaVips> getHaVips() {
+    public DescribeHaVipsResponseBodyHaVips getHaVips() {
         return this.haVips;
     }
 
@@ -64,7 +64,45 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeHaVipsResponseBodyHaVips extends TeaModel {
+    public static class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances extends TeaModel {
+        @NameInMap("associatedInstance")
+        public java.util.List<String> associatedInstance;
+
+        public static DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances self = new DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances setAssociatedInstance(java.util.List<String> associatedInstance) {
+            this.associatedInstance = associatedInstance;
+            return this;
+        }
+        public java.util.List<String> getAssociatedInstance() {
+            return this.associatedInstance;
+        }
+
+    }
+
+    public static class DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses extends TeaModel {
+        @NameInMap("associatedEipAddresse")
+        public java.util.List<String> associatedEipAddresse;
+
+        public static DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses self = new DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses setAssociatedEipAddresse(java.util.List<String> associatedEipAddresse) {
+            this.associatedEipAddresse = associatedEipAddresse;
+            return this;
+        }
+        public java.util.List<String> getAssociatedEipAddresse() {
+            return this.associatedEipAddresse;
+        }
+
+    }
+
+    public static class DescribeHaVipsResponseBodyHaVipsHaVip extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -87,23 +125,23 @@ public class DescribeHaVipsResponseBody extends TeaModel {
         public String createTime;
 
         @NameInMap("AssociatedInstances")
-        public java.util.List<String> associatedInstances;
+        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances associatedInstances;
 
         @NameInMap("MasterInstanceId")
         public String masterInstanceId;
 
         @NameInMap("AssociatedEipAddresses")
-        public java.util.List<String> associatedEipAddresses;
+        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses associatedEipAddresses;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeHaVipsResponseBodyHaVips build(java.util.Map<String, ?> map) throws Exception {
-            DescribeHaVipsResponseBodyHaVips self = new DescribeHaVipsResponseBodyHaVips();
+        public static DescribeHaVipsResponseBodyHaVipsHaVip build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHaVipsResponseBodyHaVipsHaVip self = new DescribeHaVipsResponseBodyHaVipsHaVip();
             return TeaModel.build(map, self);
         }
 
-        public DescribeHaVipsResponseBodyHaVips setStatus(String status) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -111,7 +149,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setVpcId(String vpcId) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -119,7 +157,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setVSwitchId(String vSwitchId) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -127,7 +165,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setIpAddress(String ipAddress) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setIpAddress(String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
@@ -135,7 +173,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.ipAddress;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setDescription(String description) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -143,7 +181,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setHaVipId(String haVipId) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setHaVipId(String haVipId) {
             this.haVipId = haVipId;
             return this;
         }
@@ -151,7 +189,7 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.haVipId;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setCreateTime(String createTime) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -159,15 +197,15 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setAssociatedInstances(java.util.List<String> associatedInstances) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setAssociatedInstances(DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances associatedInstances) {
             this.associatedInstances = associatedInstances;
             return this;
         }
-        public java.util.List<String> getAssociatedInstances() {
+        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedInstances getAssociatedInstances() {
             return this.associatedInstances;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setMasterInstanceId(String masterInstanceId) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setMasterInstanceId(String masterInstanceId) {
             this.masterInstanceId = masterInstanceId;
             return this;
         }
@@ -175,20 +213,39 @@ public class DescribeHaVipsResponseBody extends TeaModel {
             return this.masterInstanceId;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setAssociatedEipAddresses(java.util.List<String> associatedEipAddresses) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setAssociatedEipAddresses(DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses associatedEipAddresses) {
             this.associatedEipAddresses = associatedEipAddresses;
             return this;
         }
-        public java.util.List<String> getAssociatedEipAddresses() {
+        public DescribeHaVipsResponseBodyHaVipsHaVipAssociatedEipAddresses getAssociatedEipAddresses() {
             return this.associatedEipAddresses;
         }
 
-        public DescribeHaVipsResponseBodyHaVips setRegionId(String regionId) {
+        public DescribeHaVipsResponseBodyHaVipsHaVip setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeHaVipsResponseBodyHaVips extends TeaModel {
+        @NameInMap("HaVip")
+        public java.util.List<DescribeHaVipsResponseBodyHaVipsHaVip> haVip;
+
+        public static DescribeHaVipsResponseBodyHaVips build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHaVipsResponseBodyHaVips self = new DescribeHaVipsResponseBodyHaVips();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHaVipsResponseBodyHaVips setHaVip(java.util.List<DescribeHaVipsResponseBodyHaVipsHaVip> haVip) {
+            this.haVip = haVip;
+            return this;
+        }
+        public java.util.List<DescribeHaVipsResponseBodyHaVipsHaVip> getHaVip() {
+            return this.haVip;
         }
 
     }

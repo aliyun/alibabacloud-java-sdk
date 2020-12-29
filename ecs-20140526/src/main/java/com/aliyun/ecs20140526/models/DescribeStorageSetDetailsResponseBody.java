@@ -17,7 +17,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("Disks")
-    public java.util.List<DescribeStorageSetDetailsResponseBodyDisks> disks;
+    public DescribeStorageSetDetailsResponseBodyDisks disks;
 
     public static DescribeStorageSetDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageSetDetailsResponseBody self = new DescribeStorageSetDetailsResponseBody();
@@ -56,15 +56,15 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeStorageSetDetailsResponseBody setDisks(java.util.List<DescribeStorageSetDetailsResponseBodyDisks> disks) {
+    public DescribeStorageSetDetailsResponseBody setDisks(DescribeStorageSetDetailsResponseBodyDisks disks) {
         this.disks = disks;
         return this;
     }
-    public java.util.List<DescribeStorageSetDetailsResponseBodyDisks> getDisks() {
+    public DescribeStorageSetDetailsResponseBodyDisks getDisks() {
         return this.disks;
     }
 
-    public static class DescribeStorageSetDetailsResponseBodyDisks extends TeaModel {
+    public static class DescribeStorageSetDetailsResponseBodyDisksDisk extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
@@ -89,12 +89,12 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeStorageSetDetailsResponseBodyDisks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeStorageSetDetailsResponseBodyDisks self = new DescribeStorageSetDetailsResponseBodyDisks();
+        public static DescribeStorageSetDetailsResponseBodyDisksDisk build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageSetDetailsResponseBodyDisksDisk self = new DescribeStorageSetDetailsResponseBodyDisksDisk();
             return TeaModel.build(map, self);
         }
 
-        public DescribeStorageSetDetailsResponseBodyDisks setCreationTime(String creationTime) {
+        public DescribeStorageSetDetailsResponseBodyDisksDisk setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -102,7 +102,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeStorageSetDetailsResponseBodyDisks setDiskName(String diskName) {
+        public DescribeStorageSetDetailsResponseBodyDisksDisk setDiskName(String diskName) {
             this.diskName = diskName;
             return this;
         }
@@ -110,7 +110,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             return this.diskName;
         }
 
-        public DescribeStorageSetDetailsResponseBodyDisks setZoneId(String zoneId) {
+        public DescribeStorageSetDetailsResponseBodyDisksDisk setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -118,7 +118,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeStorageSetDetailsResponseBodyDisks setStorageSetId(String storageSetId) {
+        public DescribeStorageSetDetailsResponseBodyDisksDisk setStorageSetId(String storageSetId) {
             this.storageSetId = storageSetId;
             return this;
         }
@@ -126,7 +126,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             return this.storageSetId;
         }
 
-        public DescribeStorageSetDetailsResponseBodyDisks setDiskId(String diskId) {
+        public DescribeStorageSetDetailsResponseBodyDisksDisk setDiskId(String diskId) {
             this.diskId = diskId;
             return this;
         }
@@ -134,7 +134,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             return this.diskId;
         }
 
-        public DescribeStorageSetDetailsResponseBodyDisks setCategory(String category) {
+        public DescribeStorageSetDetailsResponseBodyDisksDisk setCategory(String category) {
             this.category = category;
             return this;
         }
@@ -142,7 +142,7 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             return this.category;
         }
 
-        public DescribeStorageSetDetailsResponseBodyDisks setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
+        public DescribeStorageSetDetailsResponseBodyDisksDisk setStorageSetPartitionNumber(Integer storageSetPartitionNumber) {
             this.storageSetPartitionNumber = storageSetPartitionNumber;
             return this;
         }
@@ -150,12 +150,31 @@ public class DescribeStorageSetDetailsResponseBody extends TeaModel {
             return this.storageSetPartitionNumber;
         }
 
-        public DescribeStorageSetDetailsResponseBodyDisks setRegionId(String regionId) {
+        public DescribeStorageSetDetailsResponseBodyDisksDisk setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeStorageSetDetailsResponseBodyDisks extends TeaModel {
+        @NameInMap("Disk")
+        public java.util.List<DescribeStorageSetDetailsResponseBodyDisksDisk> disk;
+
+        public static DescribeStorageSetDetailsResponseBodyDisks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageSetDetailsResponseBodyDisks self = new DescribeStorageSetDetailsResponseBodyDisks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeStorageSetDetailsResponseBodyDisks setDisk(java.util.List<DescribeStorageSetDetailsResponseBodyDisksDisk> disk) {
+            this.disk = disk;
+            return this;
+        }
+        public java.util.List<DescribeStorageSetDetailsResponseBodyDisksDisk> getDisk() {
+            return this.disk;
         }
 
     }

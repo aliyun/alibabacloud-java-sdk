@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
     @NameInMap("FeeOfInstances")
-    public java.util.List<ModifyInstanceChargeTypeResponseBodyFeeOfInstances> feeOfInstances;
+    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -18,11 +18,11 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceChargeTypeResponseBody setFeeOfInstances(java.util.List<ModifyInstanceChargeTypeResponseBodyFeeOfInstances> feeOfInstances) {
+    public ModifyInstanceChargeTypeResponseBody setFeeOfInstances(ModifyInstanceChargeTypeResponseBodyFeeOfInstances feeOfInstances) {
         this.feeOfInstances = feeOfInstances;
         return this;
     }
-    public java.util.List<ModifyInstanceChargeTypeResponseBodyFeeOfInstances> getFeeOfInstances() {
+    public ModifyInstanceChargeTypeResponseBodyFeeOfInstances getFeeOfInstances() {
         return this.feeOfInstances;
     }
 
@@ -42,7 +42,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public static class ModifyInstanceChargeTypeResponseBodyFeeOfInstances extends TeaModel {
+    public static class ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -52,12 +52,12 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         @NameInMap("Fee")
         public String fee;
 
-        public static ModifyInstanceChargeTypeResponseBodyFeeOfInstances build(java.util.Map<String, ?> map) throws Exception {
-            ModifyInstanceChargeTypeResponseBodyFeeOfInstances self = new ModifyInstanceChargeTypeResponseBodyFeeOfInstances();
+        public static ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance build(java.util.Map<String, ?> map) throws Exception {
+            ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance self = new ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance();
             return TeaModel.build(map, self);
         }
 
-        public ModifyInstanceChargeTypeResponseBodyFeeOfInstances setInstanceId(String instanceId) {
+        public ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -65,7 +65,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ModifyInstanceChargeTypeResponseBodyFeeOfInstances setCurrency(String currency) {
+        public ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -73,12 +73,31 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public ModifyInstanceChargeTypeResponseBodyFeeOfInstances setFee(String fee) {
+        public ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance setFee(String fee) {
             this.fee = fee;
             return this;
         }
         public String getFee() {
             return this.fee;
+        }
+
+    }
+
+    public static class ModifyInstanceChargeTypeResponseBodyFeeOfInstances extends TeaModel {
+        @NameInMap("FeeOfInstance")
+        public java.util.List<ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> feeOfInstance;
+
+        public static ModifyInstanceChargeTypeResponseBodyFeeOfInstances build(java.util.Map<String, ?> map) throws Exception {
+            ModifyInstanceChargeTypeResponseBodyFeeOfInstances self = new ModifyInstanceChargeTypeResponseBodyFeeOfInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyInstanceChargeTypeResponseBodyFeeOfInstances setFeeOfInstance(java.util.List<ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> feeOfInstance) {
+            this.feeOfInstance = feeOfInstance;
+            return this;
+        }
+        public java.util.List<ModifyInstanceChargeTypeResponseBodyFeeOfInstancesFeeOfInstance> getFeeOfInstance() {
+            return this.feeOfInstance;
         }
 
     }

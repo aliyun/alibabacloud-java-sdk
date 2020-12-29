@@ -17,7 +17,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
     public Integer pageNumber;
 
     @NameInMap("MaintenanceAttributes")
-    public java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes> maintenanceAttributes;
+    public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes;
 
     public static DescribeInstanceMaintenanceAttributesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMaintenanceAttributesResponseBody self = new DescribeInstanceMaintenanceAttributesResponseBody();
@@ -56,27 +56,27 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         return this.pageNumber;
     }
 
-    public DescribeInstanceMaintenanceAttributesResponseBody setMaintenanceAttributes(java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes> maintenanceAttributes) {
+    public DescribeInstanceMaintenanceAttributesResponseBody setMaintenanceAttributes(DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes maintenanceAttributes) {
         this.maintenanceAttributes = maintenanceAttributes;
         return this;
     }
-    public java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes> getMaintenanceAttributes() {
+    public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes getMaintenanceAttributes() {
         return this.maintenanceAttributes;
     }
 
-    public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows extends TeaModel {
+    public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
         @NameInMap("StartTime")
         public String startTime;
 
-        public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows();
+        public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows setEndTime(String endTime) {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -84,7 +84,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             return this.endTime;
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows setStartTime(String startTime) {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -94,22 +94,60 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     }
 
-    public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance extends TeaModel {
+    public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows extends TeaModel {
+        @NameInMap("MaintenanceWindow")
+        public java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow> maintenanceWindow;
+
+        public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows setMaintenanceWindow(java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow> maintenanceWindow) {
+            this.maintenanceWindow = maintenanceWindow;
+            return this;
+        }
+        public java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindowsMaintenanceWindow> getMaintenanceWindow() {
+            return this.maintenanceWindow;
+        }
+
+    }
+
+    public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues extends TeaModel {
+        @NameInMap("SupportedValue")
+        public java.util.List<String> supportedValue;
+
+        public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues setSupportedValue(java.util.List<String> supportedValue) {
+            this.supportedValue = supportedValue;
+            return this;
+        }
+        public java.util.List<String> getSupportedValue() {
+            return this.supportedValue;
+        }
+
+    }
+
+    public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance extends TeaModel {
         @NameInMap("Value")
         public String value;
 
         @NameInMap("SupportedValues")
-        public java.util.List<String> supportedValues;
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues;
 
         @NameInMap("DefaultValue")
         public String defaultValue;
 
-        public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance();
+        public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance setValue(String value) {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance setValue(String value) {
             this.value = value;
             return this;
         }
@@ -117,15 +155,15 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             return this.value;
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance setSupportedValues(java.util.List<String> supportedValues) {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance setSupportedValues(DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues supportedValues) {
             this.supportedValues = supportedValues;
             return this;
         }
-        public java.util.List<String> getSupportedValues() {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenanceSupportedValues getSupportedValues() {
             return this.supportedValues;
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance setDefaultValue(String defaultValue) {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance setDefaultValue(String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
@@ -135,30 +173,30 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
 
     }
 
-    public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes extends TeaModel {
+    public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute extends TeaModel {
         @NameInMap("MaintenanceWindows")
-        public java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows> maintenanceWindows;
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
         @NameInMap("ActionOnMaintenance")
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance actionOnMaintenance;
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance;
 
-        public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes();
+        public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes setMaintenanceWindows(java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows> maintenanceWindows) {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute setMaintenanceWindows(DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows maintenanceWindows) {
             this.maintenanceWindows = maintenanceWindows;
             return this;
         }
-        public java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceWindows> getMaintenanceWindows() {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeMaintenanceWindows getMaintenanceWindows() {
             return this.maintenanceWindows;
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes setInstanceId(String instanceId) {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -166,12 +204,31 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             return this.instanceId;
         }
 
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes setActionOnMaintenance(DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance actionOnMaintenance) {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute setActionOnMaintenance(DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance actionOnMaintenance) {
             this.actionOnMaintenance = actionOnMaintenance;
             return this;
         }
-        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesActionOnMaintenance getActionOnMaintenance() {
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttributeActionOnMaintenance getActionOnMaintenance() {
             return this.actionOnMaintenance;
+        }
+
+    }
+
+    public static class DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes extends TeaModel {
+        @NameInMap("MaintenanceAttribute")
+        public java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute> maintenanceAttribute;
+
+        public static DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes self = new DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributes setMaintenanceAttribute(java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute> maintenanceAttribute) {
+            this.maintenanceAttribute = maintenanceAttribute;
+            return this;
+        }
+        public java.util.List<DescribeInstanceMaintenanceAttributesResponseBodyMaintenanceAttributesMaintenanceAttribute> getMaintenanceAttribute() {
+            return this.maintenanceAttribute;
         }
 
     }

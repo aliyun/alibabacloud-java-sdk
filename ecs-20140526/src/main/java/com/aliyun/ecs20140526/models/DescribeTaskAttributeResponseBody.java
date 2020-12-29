@@ -32,7 +32,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
     public String supportCancel;
 
     @NameInMap("OperationProgressSet")
-    public java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSet> operationProgressSet;
+    public DescribeTaskAttributeResponseBodyOperationProgressSet operationProgressSet;
 
     @NameInMap("CreationTime")
     public String creationTime;
@@ -120,11 +120,11 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         return this.supportCancel;
     }
 
-    public DescribeTaskAttributeResponseBody setOperationProgressSet(java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSet> operationProgressSet) {
+    public DescribeTaskAttributeResponseBody setOperationProgressSet(DescribeTaskAttributeResponseBodyOperationProgressSet operationProgressSet) {
         this.operationProgressSet = operationProgressSet;
         return this;
     }
-    public java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSet> getOperationProgressSet() {
+    public DescribeTaskAttributeResponseBodyOperationProgressSet getOperationProgressSet() {
         return this.operationProgressSet;
     }
 
@@ -152,19 +152,19 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public static class DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet extends TeaModel {
+    public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem extends TeaModel {
         @NameInMap("Value")
         public String value;
 
         @NameInMap("Name")
         public String name;
 
-        public static DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet self = new DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet();
+        public static DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem self = new DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet setValue(String value) {
+        public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem setValue(String value) {
             this.value = value;
             return this;
         }
@@ -172,7 +172,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             return this.value;
         }
 
-        public DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet setName(String name) {
+        public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem setName(String name) {
             this.name = name;
             return this;
         }
@@ -182,7 +182,26 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeTaskAttributeResponseBodyOperationProgressSet extends TeaModel {
+    public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet extends TeaModel {
+        @NameInMap("RelatedItem")
+        public java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem> relatedItem;
+
+        public static DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet self = new DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet setRelatedItem(java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem> relatedItem) {
+            this.relatedItem = relatedItem;
+            return this;
+        }
+        public java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSetRelatedItem> getRelatedItem() {
+            return this.relatedItem;
+        }
+
+    }
+
+    public static class DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress extends TeaModel {
         @NameInMap("ErrorCode")
         public String errorCode;
 
@@ -190,17 +209,17 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
         public String errorMsg;
 
         @NameInMap("RelatedItemSet")
-        public java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet> relatedItemSet;
+        public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet;
 
         @NameInMap("OperationStatus")
         public String operationStatus;
 
-        public static DescribeTaskAttributeResponseBodyOperationProgressSet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTaskAttributeResponseBodyOperationProgressSet self = new DescribeTaskAttributeResponseBodyOperationProgressSet();
+        public static DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress self = new DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTaskAttributeResponseBodyOperationProgressSet setErrorCode(String errorCode) {
+        public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress setErrorCode(String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
@@ -208,7 +227,7 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             return this.errorCode;
         }
 
-        public DescribeTaskAttributeResponseBodyOperationProgressSet setErrorMsg(String errorMsg) {
+        public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress setErrorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
             return this;
         }
@@ -216,20 +235,39 @@ public class DescribeTaskAttributeResponseBody extends TeaModel {
             return this.errorMsg;
         }
 
-        public DescribeTaskAttributeResponseBodyOperationProgressSet setRelatedItemSet(java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet> relatedItemSet) {
+        public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress setRelatedItemSet(DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet relatedItemSet) {
             this.relatedItemSet = relatedItemSet;
             return this;
         }
-        public java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSetRelatedItemSet> getRelatedItemSet() {
+        public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgressRelatedItemSet getRelatedItemSet() {
             return this.relatedItemSet;
         }
 
-        public DescribeTaskAttributeResponseBodyOperationProgressSet setOperationStatus(String operationStatus) {
+        public DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress setOperationStatus(String operationStatus) {
             this.operationStatus = operationStatus;
             return this;
         }
         public String getOperationStatus() {
             return this.operationStatus;
+        }
+
+    }
+
+    public static class DescribeTaskAttributeResponseBodyOperationProgressSet extends TeaModel {
+        @NameInMap("OperationProgress")
+        public java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress> operationProgress;
+
+        public static DescribeTaskAttributeResponseBodyOperationProgressSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTaskAttributeResponseBodyOperationProgressSet self = new DescribeTaskAttributeResponseBodyOperationProgressSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTaskAttributeResponseBodyOperationProgressSet setOperationProgress(java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress> operationProgress) {
+            this.operationProgress = operationProgress;
+            return this;
+        }
+        public java.util.List<DescribeTaskAttributeResponseBodyOperationProgressSetOperationProgress> getOperationProgress() {
+            return this.operationProgress;
         }
 
     }

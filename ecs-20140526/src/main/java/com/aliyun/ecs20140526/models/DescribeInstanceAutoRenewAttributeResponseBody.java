@@ -8,7 +8,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     public Integer totalCount;
 
     @NameInMap("InstanceRenewAttributes")
-    public java.util.List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes> instanceRenewAttributes;
+    public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes instanceRenewAttributes;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -32,11 +32,11 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeInstanceAutoRenewAttributeResponseBody setInstanceRenewAttributes(java.util.List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes> instanceRenewAttributes) {
+    public DescribeInstanceAutoRenewAttributeResponseBody setInstanceRenewAttributes(DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes instanceRenewAttributes) {
         this.instanceRenewAttributes = instanceRenewAttributes;
         return this;
     }
-    public java.util.List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes> getInstanceRenewAttributes() {
+    public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes getInstanceRenewAttributes() {
         return this.instanceRenewAttributes;
     }
 
@@ -64,7 +64,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes extends TeaModel {
+    public static class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute extends TeaModel {
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
@@ -80,12 +80,12 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         @NameInMap("AutoRenewEnabled")
         public Boolean autoRenewEnabled;
 
-        public static DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes self = new DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes();
+        public static DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute self = new DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes setPeriodUnit(String periodUnit) {
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setPeriodUnit(String periodUnit) {
             this.periodUnit = periodUnit;
             return this;
         }
@@ -93,7 +93,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             return this.periodUnit;
         }
 
-        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes setDuration(Integer duration) {
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setDuration(Integer duration) {
             this.duration = duration;
             return this;
         }
@@ -101,7 +101,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes setRenewalStatus(String renewalStatus) {
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setRenewalStatus(String renewalStatus) {
             this.renewalStatus = renewalStatus;
             return this;
         }
@@ -109,7 +109,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             return this.renewalStatus;
         }
 
-        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes setInstanceId(String instanceId) {
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -117,12 +117,31 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes setAutoRenewEnabled(Boolean autoRenewEnabled) {
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute setAutoRenewEnabled(Boolean autoRenewEnabled) {
             this.autoRenewEnabled = autoRenewEnabled;
             return this;
         }
         public Boolean getAutoRenewEnabled() {
             return this.autoRenewEnabled;
+        }
+
+    }
+
+    public static class DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes extends TeaModel {
+        @NameInMap("InstanceRenewAttribute")
+        public java.util.List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> instanceRenewAttribute;
+
+        public static DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes self = new DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributes setInstanceRenewAttribute(java.util.List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> instanceRenewAttribute) {
+            this.instanceRenewAttribute = instanceRenewAttribute;
+            return this;
+        }
+        public java.util.List<DescribeInstanceAutoRenewAttributeResponseBodyInstanceRenewAttributesInstanceRenewAttribute> getInstanceRenewAttribute() {
+            return this.instanceRenewAttribute;
         }
 
     }

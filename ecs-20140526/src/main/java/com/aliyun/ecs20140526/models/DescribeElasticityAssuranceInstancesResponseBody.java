@@ -17,7 +17,7 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     @NameInMap("ElasticityAssuranceItem")
-    public java.util.List<DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem> elasticityAssuranceItem;
+    public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem;
 
     public static DescribeElasticityAssuranceInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticityAssuranceInstancesResponseBody self = new DescribeElasticityAssuranceInstancesResponseBody();
@@ -56,29 +56,48 @@ public class DescribeElasticityAssuranceInstancesResponseBody extends TeaModel {
         return this.maxResults;
     }
 
-    public DescribeElasticityAssuranceInstancesResponseBody setElasticityAssuranceItem(java.util.List<DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem> elasticityAssuranceItem) {
+    public DescribeElasticityAssuranceInstancesResponseBody setElasticityAssuranceItem(DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem elasticityAssuranceItem) {
         this.elasticityAssuranceItem = elasticityAssuranceItem;
         return this;
     }
-    public java.util.List<DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem> getElasticityAssuranceItem() {
+    public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem getElasticityAssuranceItem() {
         return this.elasticityAssuranceItem;
     }
 
-    public static class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem extends TeaModel {
+    public static class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
+
+        public static DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet self = new DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+    }
+
+    public static class DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem extends TeaModel {
+        @NameInMap("InstanceIdSet")
+        public java.util.List<DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet> instanceIdSet;
 
         public static DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem self = new DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
+        public DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItem setInstanceIdSet(java.util.List<DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet> instanceIdSet) {
+            this.instanceIdSet = instanceIdSet;
             return this;
         }
-        public String getInstanceId() {
-            return this.instanceId;
+        public java.util.List<DescribeElasticityAssuranceInstancesResponseBodyElasticityAssuranceItemInstanceIdSet> getInstanceIdSet() {
+            return this.instanceIdSet;
         }
 
     }

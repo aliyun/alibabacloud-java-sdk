@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
     @NameInMap("ReservedInstanceIdSets")
-    public java.util.List<String> reservedInstanceIdSets;
+    public PurchaseReservedInstancesOfferingResponseBodyReservedInstanceIdSets reservedInstanceIdSets;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public PurchaseReservedInstancesOfferingResponseBody setReservedInstanceIdSets(java.util.List<String> reservedInstanceIdSets) {
+    public PurchaseReservedInstancesOfferingResponseBody setReservedInstanceIdSets(PurchaseReservedInstancesOfferingResponseBodyReservedInstanceIdSets reservedInstanceIdSets) {
         this.reservedInstanceIdSets = reservedInstanceIdSets;
         return this;
     }
-    public java.util.List<String> getReservedInstanceIdSets() {
+    public PurchaseReservedInstancesOfferingResponseBodyReservedInstanceIdSets getReservedInstanceIdSets() {
         return this.reservedInstanceIdSets;
     }
 
@@ -29,6 +29,25 @@ public class PurchaseReservedInstancesOfferingResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class PurchaseReservedInstancesOfferingResponseBodyReservedInstanceIdSets extends TeaModel {
+        @NameInMap("ReservedInstanceId")
+        public java.util.List<String> reservedInstanceId;
+
+        public static PurchaseReservedInstancesOfferingResponseBodyReservedInstanceIdSets build(java.util.Map<String, ?> map) throws Exception {
+            PurchaseReservedInstancesOfferingResponseBodyReservedInstanceIdSets self = new PurchaseReservedInstancesOfferingResponseBodyReservedInstanceIdSets();
+            return TeaModel.build(map, self);
+        }
+
+        public PurchaseReservedInstancesOfferingResponseBodyReservedInstanceIdSets setReservedInstanceId(java.util.List<String> reservedInstanceId) {
+            this.reservedInstanceId = reservedInstanceId;
+            return this;
+        }
+        public java.util.List<String> getReservedInstanceId() {
+            return this.reservedInstanceId;
+        }
+
     }
 
 }

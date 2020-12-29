@@ -8,7 +8,7 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("EipMonitorDatas")
-    public java.util.List<DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas> eipMonitorDatas;
+    public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas;
 
     public static DescribeNewProjectEipMonitorDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeNewProjectEipMonitorDataResponseBody self = new DescribeNewProjectEipMonitorDataResponseBody();
@@ -23,15 +23,15 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeNewProjectEipMonitorDataResponseBody setEipMonitorDatas(java.util.List<DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas> eipMonitorDatas) {
+    public DescribeNewProjectEipMonitorDataResponseBody setEipMonitorDatas(DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas eipMonitorDatas) {
         this.eipMonitorDatas = eipMonitorDatas;
         return this;
     }
-    public java.util.List<DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas> getEipMonitorDatas() {
+    public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas getEipMonitorDatas() {
         return this.eipMonitorDatas;
     }
 
-    public static class DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas extends TeaModel {
+    public static class DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData extends TeaModel {
         @NameInMap("EipTX")
         public Integer eipTX;
 
@@ -50,12 +50,12 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
         @NameInMap("EipRX")
         public Integer eipRX;
 
-        public static DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas build(java.util.Map<String, ?> map) throws Exception {
-            DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas self = new DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas();
+        public static DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData self = new DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas setEipTX(Integer eipTX) {
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipTX(Integer eipTX) {
             this.eipTX = eipTX;
             return this;
         }
@@ -63,7 +63,7 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
             return this.eipTX;
         }
 
-        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas setEipPackets(Integer eipPackets) {
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipPackets(Integer eipPackets) {
             this.eipPackets = eipPackets;
             return this;
         }
@@ -71,7 +71,7 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
             return this.eipPackets;
         }
 
-        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas setEipBandwidth(Integer eipBandwidth) {
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipBandwidth(Integer eipBandwidth) {
             this.eipBandwidth = eipBandwidth;
             return this;
         }
@@ -79,7 +79,7 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
             return this.eipBandwidth;
         }
 
-        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas setTimeStamp(String timeStamp) {
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
@@ -87,7 +87,7 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
             return this.timeStamp;
         }
 
-        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas setEipFlow(Integer eipFlow) {
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipFlow(Integer eipFlow) {
             this.eipFlow = eipFlow;
             return this;
         }
@@ -95,12 +95,31 @@ public class DescribeNewProjectEipMonitorDataResponseBody extends TeaModel {
             return this.eipFlow;
         }
 
-        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas setEipRX(Integer eipRX) {
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData setEipRX(Integer eipRX) {
             this.eipRX = eipRX;
             return this;
         }
         public Integer getEipRX() {
             return this.eipRX;
+        }
+
+    }
+
+    public static class DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas extends TeaModel {
+        @NameInMap("EipMonitorData")
+        public java.util.List<DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData> eipMonitorData;
+
+        public static DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas self = new DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas setEipMonitorData(java.util.List<DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData> eipMonitorData) {
+            this.eipMonitorData = eipMonitorData;
+            return this;
+        }
+        public java.util.List<DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatasEipMonitorData> getEipMonitorData() {
+            return this.eipMonitorData;
         }
 
     }
