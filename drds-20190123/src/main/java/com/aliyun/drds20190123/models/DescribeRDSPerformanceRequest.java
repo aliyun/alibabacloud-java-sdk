@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeRDSPerformanceRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("RdsInstanceId")
-    @Validation(required = true)
     public String rdsInstanceId;
 
     @NameInMap("Keys")
-    @Validation(required = true)
     public String keys;
 
     @NameInMap("StartTime")

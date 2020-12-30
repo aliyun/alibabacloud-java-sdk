@@ -4,45 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateOrderForRdsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
+    public CreateOrderForRdsResponseBody body;
 
     public static CreateOrderForRdsResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderForRdsResponse self = new CreateOrderForRdsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateOrderForRdsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateOrderForRdsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateOrderForRdsResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CreateOrderForRdsResponse setBody(CreateOrderForRdsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateOrderForRdsResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
+    public CreateOrderForRdsResponseBody getBody() {
+        return this.body;
     }
 
 }

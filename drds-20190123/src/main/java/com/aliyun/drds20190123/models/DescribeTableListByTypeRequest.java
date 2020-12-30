@@ -8,11 +8,9 @@ public class DescribeTableListByTypeRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("Query")
@@ -25,7 +23,6 @@ public class DescribeTableListByTypeRequest extends TeaModel {
     public Integer currentPage;
 
     @NameInMap("TableType")
-    @Validation(required = true)
     public String tableType;
 
     public static DescribeTableListByTypeRequest build(java.util.Map<String, ?> map) throws Exception {

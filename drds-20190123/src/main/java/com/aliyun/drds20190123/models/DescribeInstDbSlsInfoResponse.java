@@ -4,77 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstDbSlsInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("AuditInfo")
-    @Validation(required = true)
-    public DescribeInstDbSlsInfoResponseAuditInfo auditInfo;
+    public DescribeInstDbSlsInfoResponseBody body;
 
     public static DescribeInstDbSlsInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstDbSlsInfoResponse self = new DescribeInstDbSlsInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstDbSlsInfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeInstDbSlsInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeInstDbSlsInfoResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeInstDbSlsInfoResponse setBody(DescribeInstDbSlsInfoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeInstDbSlsInfoResponse setAuditInfo(DescribeInstDbSlsInfoResponseAuditInfo auditInfo) {
-        this.auditInfo = auditInfo;
-        return this;
-    }
-    public DescribeInstDbSlsInfoResponseAuditInfo getAuditInfo() {
-        return this.auditInfo;
-    }
-
-    public static class DescribeInstDbSlsInfoResponseAuditInfo extends TeaModel {
-        @NameInMap("Project")
-        @Validation(required = true)
-        public String project;
-
-        @NameInMap("LogStore")
-        @Validation(required = true)
-        public String logStore;
-
-        public static DescribeInstDbSlsInfoResponseAuditInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstDbSlsInfoResponseAuditInfo self = new DescribeInstDbSlsInfoResponseAuditInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeInstDbSlsInfoResponseAuditInfo setProject(String project) {
-            this.project = project;
-            return this;
-        }
-        public String getProject() {
-            return this.project;
-        }
-
-        public DescribeInstDbSlsInfoResponseAuditInfo setLogStore(String logStore) {
-            this.logStore = logStore;
-            return this;
-        }
-        public String getLogStore() {
-            return this.logStore;
-        }
-
+    public DescribeInstDbSlsInfoResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,65 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDBIpWhiteListResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("IpWhiteList")
-    @Validation(required = true)
-    public DescribeDrdsDBIpWhiteListResponseIpWhiteList ipWhiteList;
+    public DescribeDrdsDBIpWhiteListResponseBody body;
 
     public static DescribeDrdsDBIpWhiteListResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsDBIpWhiteListResponse self = new DescribeDrdsDBIpWhiteListResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsDBIpWhiteListResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDrdsDBIpWhiteListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDrdsDBIpWhiteListResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeDrdsDBIpWhiteListResponse setBody(DescribeDrdsDBIpWhiteListResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeDrdsDBIpWhiteListResponse setIpWhiteList(DescribeDrdsDBIpWhiteListResponseIpWhiteList ipWhiteList) {
-        this.ipWhiteList = ipWhiteList;
-        return this;
-    }
-    public DescribeDrdsDBIpWhiteListResponseIpWhiteList getIpWhiteList() {
-        return this.ipWhiteList;
-    }
-
-    public static class DescribeDrdsDBIpWhiteListResponseIpWhiteList extends TeaModel {
-        @NameInMap("Ip")
-        @Validation(required = true)
-        public java.util.List<String> ip;
-
-        public static DescribeDrdsDBIpWhiteListResponseIpWhiteList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDrdsDBIpWhiteListResponseIpWhiteList self = new DescribeDrdsDBIpWhiteListResponseIpWhiteList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDrdsDBIpWhiteListResponseIpWhiteList setIp(java.util.List<String> ip) {
-            this.ip = ip;
-            return this;
-        }
-        public java.util.List<String> getIp() {
-            return this.ip;
-        }
-
+    public DescribeDrdsDBIpWhiteListResponseBody getBody() {
+        return this.body;
     }
 
 }

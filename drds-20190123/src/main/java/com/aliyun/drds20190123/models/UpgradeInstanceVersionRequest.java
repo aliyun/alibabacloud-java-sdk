@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpgradeInstanceVersionRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("DrdsPassword")
+    public String drdsPassword;
 
     @NameInMap("Rpm")
     public String rpm;
@@ -33,6 +35,14 @@ public class UpgradeInstanceVersionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpgradeInstanceVersionRequest setDrdsPassword(String drdsPassword) {
+        this.drdsPassword = drdsPassword;
+        return this;
+    }
+    public String getDrdsPassword() {
+        return this.drdsPassword;
     }
 
     public UpgradeInstanceVersionRequest setRpm(String rpm) {

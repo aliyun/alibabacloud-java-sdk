@@ -4,45 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class RemoveBackupsSetResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Result")
-    @Validation(required = true)
-    public String result;
+    public RemoveBackupsSetResponseBody body;
 
     public static RemoveBackupsSetResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveBackupsSetResponse self = new RemoveBackupsSetResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveBackupsSetResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RemoveBackupsSetResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RemoveBackupsSetResponse setSuccess(Boolean success) {
-        this.success = success;
+    public RemoveBackupsSetResponse setBody(RemoveBackupsSetResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public RemoveBackupsSetResponse setResult(String result) {
-        this.result = result;
-        return this;
-    }
-    public String getResult() {
-        return this.result;
+    public RemoveBackupsSetResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,33 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class UpgradeHiStoreInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public String data;
+    public UpgradeHiStoreInstanceResponseBody body;
 
     public static UpgradeHiStoreInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         UpgradeHiStoreInstanceResponse self = new UpgradeHiStoreInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpgradeHiStoreInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpgradeHiStoreInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpgradeHiStoreInstanceResponse setData(String data) {
-        this.data = data;
+    public UpgradeHiStoreInstanceResponse setBody(UpgradeHiStoreInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public UpgradeHiStoreInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

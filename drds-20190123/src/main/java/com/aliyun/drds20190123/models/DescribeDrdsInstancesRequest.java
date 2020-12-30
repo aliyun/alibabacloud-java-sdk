@@ -7,9 +7,6 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeDrdsInstancesRequestTag> tag;
-
     @NameInMap("Description")
     public String description;
 
@@ -31,6 +28,12 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
     @NameInMap("Mix")
     public Boolean mix;
 
+    @NameInMap("ProductVersion")
+    public String productVersion;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeDrdsInstancesRequestTag> tag;
+
     public static DescribeDrdsInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsInstancesRequest self = new DescribeDrdsInstancesRequest();
         return TeaModel.build(map, self);
@@ -42,14 +45,6 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public DescribeDrdsInstancesRequest setTag(java.util.List<DescribeDrdsInstancesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeDrdsInstancesRequestTag> getTag() {
-        return this.tag;
     }
 
     public DescribeDrdsInstancesRequest setDescription(String description) {
@@ -106,6 +101,22 @@ public class DescribeDrdsInstancesRequest extends TeaModel {
     }
     public Boolean getMix() {
         return this.mix;
+    }
+
+    public DescribeDrdsInstancesRequest setProductVersion(String productVersion) {
+        this.productVersion = productVersion;
+        return this;
+    }
+    public String getProductVersion() {
+        return this.productVersion;
+    }
+
+    public DescribeDrdsInstancesRequest setTag(java.util.List<DescribeDrdsInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDrdsInstancesRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class DescribeDrdsInstancesRequestTag extends TeaModel {

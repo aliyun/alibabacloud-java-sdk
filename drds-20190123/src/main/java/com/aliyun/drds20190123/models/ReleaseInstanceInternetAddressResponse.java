@@ -4,33 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceInternetAddressResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean data;
+    public ReleaseInstanceInternetAddressResponseBody body;
 
     public static ReleaseInstanceInternetAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         ReleaseInstanceInternetAddressResponse self = new ReleaseInstanceInternetAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public ReleaseInstanceInternetAddressResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ReleaseInstanceInternetAddressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ReleaseInstanceInternetAddressResponse setData(Boolean data) {
-        this.data = data;
+    public ReleaseInstanceInternetAddressResponse setBody(ReleaseInstanceInternetAddressResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getData() {
-        return this.data;
+    public ReleaseInstanceInternetAddressResponseBody getBody() {
+        return this.body;
     }
 
 }
