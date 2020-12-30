@@ -11,7 +11,7 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("BackendServers")
-    public java.util.List<RemoveVServerGroupBackendServersResponseBodyBackendServers> backendServers;
+    public RemoveVServerGroupBackendServersResponseBodyBackendServers backendServers;
 
     public static RemoveVServerGroupBackendServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveVServerGroupBackendServersResponseBody self = new RemoveVServerGroupBackendServersResponseBody();
@@ -34,15 +34,15 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RemoveVServerGroupBackendServersResponseBody setBackendServers(java.util.List<RemoveVServerGroupBackendServersResponseBodyBackendServers> backendServers) {
+    public RemoveVServerGroupBackendServersResponseBody setBackendServers(RemoveVServerGroupBackendServersResponseBodyBackendServers backendServers) {
         this.backendServers = backendServers;
         return this;
     }
-    public java.util.List<RemoveVServerGroupBackendServersResponseBodyBackendServers> getBackendServers() {
+    public RemoveVServerGroupBackendServersResponseBodyBackendServers getBackendServers() {
         return this.backendServers;
     }
 
-    public static class RemoveVServerGroupBackendServersResponseBodyBackendServers extends TeaModel {
+    public static class RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -58,12 +58,12 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
-        public static RemoveVServerGroupBackendServersResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
-            RemoveVServerGroupBackendServersResponseBodyBackendServers self = new RemoveVServerGroupBackendServersResponseBodyBackendServers();
+        public static RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
+            RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer self = new RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
         }
 
-        public RemoveVServerGroupBackendServersResponseBodyBackendServers setType(String type) {
+        public RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer setType(String type) {
             this.type = type;
             return this;
         }
@@ -71,7 +71,7 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
             return this.type;
         }
 
-        public RemoveVServerGroupBackendServersResponseBodyBackendServers setWeight(Integer weight) {
+        public RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
             this.weight = weight;
             return this;
         }
@@ -79,7 +79,7 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
             return this.weight;
         }
 
-        public RemoveVServerGroupBackendServersResponseBodyBackendServers setDescription(String description) {
+        public RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -87,7 +87,7 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
             return this.description;
         }
 
-        public RemoveVServerGroupBackendServersResponseBodyBackendServers setPort(Integer port) {
+        public RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -95,12 +95,31 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
             return this.port;
         }
 
-        public RemoveVServerGroupBackendServersResponseBodyBackendServers setServerId(String serverId) {
+        public RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer setServerId(String serverId) {
             this.serverId = serverId;
             return this;
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+    }
+
+    public static class RemoveVServerGroupBackendServersResponseBodyBackendServers extends TeaModel {
+        @NameInMap("BackendServer")
+        public java.util.List<RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer> backendServer;
+
+        public static RemoveVServerGroupBackendServersResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
+            RemoveVServerGroupBackendServersResponseBodyBackendServers self = new RemoveVServerGroupBackendServersResponseBodyBackendServers();
+            return TeaModel.build(map, self);
+        }
+
+        public RemoveVServerGroupBackendServersResponseBodyBackendServers setBackendServer(java.util.List<RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer> backendServer) {
+            this.backendServer = backendServer;
+            return this;
+        }
+        public java.util.List<RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer> getBackendServer() {
+            return this.backendServer;
         }
 
     }

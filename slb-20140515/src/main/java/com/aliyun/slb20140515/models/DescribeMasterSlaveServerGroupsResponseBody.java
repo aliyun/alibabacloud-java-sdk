@@ -8,7 +8,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("MasterSlaveServerGroups")
-    public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups> masterSlaveServerGroups;
+    public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups masterSlaveServerGroups;
 
     public static DescribeMasterSlaveServerGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMasterSlaveServerGroupsResponseBody self = new DescribeMasterSlaveServerGroupsResponseBody();
@@ -23,27 +23,27 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeMasterSlaveServerGroupsResponseBody setMasterSlaveServerGroups(java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups> masterSlaveServerGroups) {
+    public DescribeMasterSlaveServerGroupsResponseBody setMasterSlaveServerGroups(DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups masterSlaveServerGroups) {
         this.masterSlaveServerGroups = masterSlaveServerGroups;
         return this;
     }
-    public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups> getMasterSlaveServerGroups() {
+    public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups getMasterSlaveServerGroups() {
         return this.masterSlaveServerGroups;
     }
 
-    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners extends TeaModel {
+    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
         @NameInMap("Port")
         public Integer port;
 
-        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners();
+        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners setProtocol(String protocol) {
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
@@ -51,7 +51,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             return this.protocol;
         }
 
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners setPort(Integer port) {
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -61,41 +61,60 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects extends TeaModel {
-        @NameInMap("Listeners")
-        public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners> listeners;
+    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners extends TeaModel {
+        @NameInMap("Listener")
+        public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener> listener;
 
-        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects();
+        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects setListeners(java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners> listeners) {
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners setListener(java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener> listener) {
+            this.listener = listener;
+            return this;
+        }
+        public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener> getListener() {
+            return this.listener;
+        }
+
+    }
+
+    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects extends TeaModel {
+        @NameInMap("Listeners")
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners listeners;
+
+        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects setListeners(DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners listeners) {
             this.listeners = listeners;
             return this;
         }
-        public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjectsListeners> getListeners() {
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListeners getListeners() {
             return this.listeners;
         }
 
     }
 
-    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups extends TeaModel {
+    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup extends TeaModel {
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
 
         @NameInMap("AssociatedObjects")
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects associatedObjects;
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects associatedObjects;
 
         @NameInMap("MasterSlaveServerGroupName")
         public String masterSlaveServerGroupName;
 
-        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups();
+        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
             this.masterSlaveServerGroupId = masterSlaveServerGroupId;
             return this;
         }
@@ -103,20 +122,39 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
             return this.masterSlaveServerGroupId;
         }
 
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups setAssociatedObjects(DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects associatedObjects) {
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setAssociatedObjects(DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects associatedObjects) {
             this.associatedObjects = associatedObjects;
             return this;
         }
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsAssociatedObjects getAssociatedObjects() {
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects getAssociatedObjects() {
             return this.associatedObjects;
         }
 
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups setMasterSlaveServerGroupName(String masterSlaveServerGroupName) {
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setMasterSlaveServerGroupName(String masterSlaveServerGroupName) {
             this.masterSlaveServerGroupName = masterSlaveServerGroupName;
             return this;
         }
         public String getMasterSlaveServerGroupName() {
             return this.masterSlaveServerGroupName;
+        }
+
+    }
+
+    public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups extends TeaModel {
+        @NameInMap("MasterSlaveServerGroup")
+        public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup> masterSlaveServerGroup;
+
+        public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroups setMasterSlaveServerGroup(java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup> masterSlaveServerGroup) {
+            this.masterSlaveServerGroup = masterSlaveServerGroup;
+            return this;
+        }
+        public java.util.List<DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup> getMasterSlaveServerGroup() {
+            return this.masterSlaveServerGroup;
         }
 
     }

@@ -8,7 +8,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("ServerCertificates")
-    public java.util.List<DescribeServerCertificatesResponseBodyServerCertificates> serverCertificates;
+    public DescribeServerCertificatesResponseBodyServerCertificates serverCertificates;
 
     public static DescribeServerCertificatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeServerCertificatesResponseBody self = new DescribeServerCertificatesResponseBody();
@@ -23,15 +23,34 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeServerCertificatesResponseBody setServerCertificates(java.util.List<DescribeServerCertificatesResponseBodyServerCertificates> serverCertificates) {
+    public DescribeServerCertificatesResponseBody setServerCertificates(DescribeServerCertificatesResponseBodyServerCertificates serverCertificates) {
         this.serverCertificates = serverCertificates;
         return this;
     }
-    public java.util.List<DescribeServerCertificatesResponseBodyServerCertificates> getServerCertificates() {
+    public DescribeServerCertificatesResponseBodyServerCertificates getServerCertificates() {
         return this.serverCertificates;
     }
 
-    public static class DescribeServerCertificatesResponseBodyServerCertificates extends TeaModel {
+    public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames extends TeaModel {
+        @NameInMap("SubjectAlternativeName")
+        public java.util.List<String> subjectAlternativeName;
+
+        public static DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames self = new DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames setSubjectAlternativeName(java.util.List<String> subjectAlternativeName) {
+            this.subjectAlternativeName = subjectAlternativeName;
+            return this;
+        }
+        public java.util.List<String> getSubjectAlternativeName() {
+            return this.subjectAlternativeName;
+        }
+
+    }
+
+    public static class DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate extends TeaModel {
         @NameInMap("AliCloudCertificateName")
         public String aliCloudCertificateName;
 
@@ -60,7 +79,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         public String fingerprint;
 
         @NameInMap("SubjectAlternativeNames")
-        public java.util.List<String> subjectAlternativeNames;
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames subjectAlternativeNames;
 
         @NameInMap("CommonName")
         public String commonName;
@@ -74,12 +93,12 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
         @NameInMap("AliCloudCertificateId")
         public String aliCloudCertificateId;
 
-        public static DescribeServerCertificatesResponseBodyServerCertificates build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServerCertificatesResponseBodyServerCertificates self = new DescribeServerCertificatesResponseBodyServerCertificates();
+        public static DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate self = new DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate();
             return TeaModel.build(map, self);
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setAliCloudCertificateName(String aliCloudCertificateName) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setAliCloudCertificateName(String aliCloudCertificateName) {
             this.aliCloudCertificateName = aliCloudCertificateName;
             return this;
         }
@@ -87,7 +106,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.aliCloudCertificateName;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setCreateTimeStamp(Long createTimeStamp) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setCreateTimeStamp(Long createTimeStamp) {
             this.createTimeStamp = createTimeStamp;
             return this;
         }
@@ -95,7 +114,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.createTimeStamp;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setExpireTime(String expireTime) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setExpireTime(String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
@@ -103,7 +122,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.expireTime;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setCreateTime(String createTime) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -111,7 +130,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setServerCertificateId(String serverCertificateId) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setServerCertificateId(String serverCertificateId) {
             this.serverCertificateId = serverCertificateId;
             return this;
         }
@@ -119,7 +138,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.serverCertificateId;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setExpireTimeStamp(Long expireTimeStamp) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setExpireTimeStamp(Long expireTimeStamp) {
             this.expireTimeStamp = expireTimeStamp;
             return this;
         }
@@ -127,7 +146,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.expireTimeStamp;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setRegionId(String regionId) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -135,7 +154,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setServerCertificateName(String serverCertificateName) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setServerCertificateName(String serverCertificateName) {
             this.serverCertificateName = serverCertificateName;
             return this;
         }
@@ -143,7 +162,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.serverCertificateName;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setFingerprint(String fingerprint) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setFingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
@@ -151,15 +170,15 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.fingerprint;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setSubjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setSubjectAlternativeNames(DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
-        public java.util.List<String> getSubjectAlternativeNames() {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificateSubjectAlternativeNames getSubjectAlternativeNames() {
             return this.subjectAlternativeNames;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setCommonName(String commonName) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setCommonName(String commonName) {
             this.commonName = commonName;
             return this;
         }
@@ -167,7 +186,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.commonName;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setResourceGroupId(String resourceGroupId) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -175,7 +194,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setIsAliCloudCertificate(Integer isAliCloudCertificate) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setIsAliCloudCertificate(Integer isAliCloudCertificate) {
             this.isAliCloudCertificate = isAliCloudCertificate;
             return this;
         }
@@ -183,12 +202,31 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
             return this.isAliCloudCertificate;
         }
 
-        public DescribeServerCertificatesResponseBodyServerCertificates setAliCloudCertificateId(String aliCloudCertificateId) {
+        public DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate setAliCloudCertificateId(String aliCloudCertificateId) {
             this.aliCloudCertificateId = aliCloudCertificateId;
             return this;
         }
         public String getAliCloudCertificateId() {
             return this.aliCloudCertificateId;
+        }
+
+    }
+
+    public static class DescribeServerCertificatesResponseBodyServerCertificates extends TeaModel {
+        @NameInMap("ServerCertificate")
+        public java.util.List<DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate> serverCertificate;
+
+        public static DescribeServerCertificatesResponseBodyServerCertificates build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServerCertificatesResponseBodyServerCertificates self = new DescribeServerCertificatesResponseBodyServerCertificates();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServerCertificatesResponseBodyServerCertificates setServerCertificate(java.util.List<DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate> serverCertificate) {
+            this.serverCertificate = serverCertificate;
+            return this;
+        }
+        public java.util.List<DescribeServerCertificatesResponseBodyServerCertificatesServerCertificate> getServerCertificate() {
+            return this.serverCertificate;
         }
 
     }

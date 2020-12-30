@@ -11,10 +11,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("ListenerPortsAndProtocal")
-    public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal> listenerPortsAndProtocal;
+    public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal listenerPortsAndProtocal;
 
     @NameInMap("BackendServers")
-    public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServers> backendServers;
+    public DescribeLoadBalancerAttributeResponseBodyBackendServers backendServers;
 
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
@@ -23,7 +23,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public String modificationProtectionReason;
 
     @NameInMap("ListenerPorts")
-    public java.util.List<Integer> listenerPorts;
+    public DescribeLoadBalancerAttributeResponseBodyListenerPorts listenerPorts;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -68,7 +68,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public String loadBalancerId;
 
     @NameInMap("ListenerPortsAndProtocol")
-    public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol> listenerPortsAndProtocol;
+    public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol listenerPortsAndProtocol;
 
     @NameInMap("ModificationProtectionStatus")
     public String modificationProtectionStatus;
@@ -127,19 +127,19 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setListenerPortsAndProtocal(java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal> listenerPortsAndProtocal) {
+    public DescribeLoadBalancerAttributeResponseBody setListenerPortsAndProtocal(DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal listenerPortsAndProtocal) {
         this.listenerPortsAndProtocal = listenerPortsAndProtocal;
         return this;
     }
-    public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal> getListenerPortsAndProtocal() {
+    public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal getListenerPortsAndProtocal() {
         return this.listenerPortsAndProtocal;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setBackendServers(java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServers> backendServers) {
+    public DescribeLoadBalancerAttributeResponseBody setBackendServers(DescribeLoadBalancerAttributeResponseBodyBackendServers backendServers) {
         this.backendServers = backendServers;
         return this;
     }
-    public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServers> getBackendServers() {
+    public DescribeLoadBalancerAttributeResponseBodyBackendServers getBackendServers() {
         return this.backendServers;
     }
 
@@ -159,11 +159,11 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return this.modificationProtectionReason;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setListenerPorts(java.util.List<Integer> listenerPorts) {
+    public DescribeLoadBalancerAttributeResponseBody setListenerPorts(DescribeLoadBalancerAttributeResponseBodyListenerPorts listenerPorts) {
         this.listenerPorts = listenerPorts;
         return this;
     }
-    public java.util.List<Integer> getListenerPorts() {
+    public DescribeLoadBalancerAttributeResponseBodyListenerPorts getListenerPorts() {
         return this.listenerPorts;
     }
 
@@ -279,11 +279,11 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return this.loadBalancerId;
     }
 
-    public DescribeLoadBalancerAttributeResponseBody setListenerPortsAndProtocol(java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol> listenerPortsAndProtocol) {
+    public DescribeLoadBalancerAttributeResponseBody setListenerPortsAndProtocol(DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol listenerPortsAndProtocol) {
         this.listenerPortsAndProtocol = listenerPortsAndProtocol;
         return this;
     }
-    public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol> getListenerPortsAndProtocol() {
+    public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol getListenerPortsAndProtocol() {
         return this.listenerPortsAndProtocol;
     }
 
@@ -383,19 +383,19 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         return this.createTimeStamp;
     }
 
-    public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal extends TeaModel {
+    public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal extends TeaModel {
         @NameInMap("ListenerProtocal")
         public String listenerProtocal;
 
         @NameInMap("ListenerPort")
         public Integer listenerPort;
 
-        public static DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal self = new DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal();
+        public static DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal self = new DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal setListenerProtocal(String listenerProtocal) {
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal setListenerProtocal(String listenerProtocal) {
             this.listenerProtocal = listenerProtocal;
             return this;
         }
@@ -403,7 +403,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             return this.listenerProtocal;
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal setListenerPort(Integer listenerPort) {
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal setListenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
             return this;
         }
@@ -413,7 +413,26 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeLoadBalancerAttributeResponseBodyBackendServers extends TeaModel {
+    public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal extends TeaModel {
+        @NameInMap("ListenerPortAndProtocal")
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal> listenerPortAndProtocal;
+
+        public static DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal self = new DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal setListenerPortAndProtocal(java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal> listenerPortAndProtocal) {
+            this.listenerPortAndProtocal = listenerPortAndProtocal;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal> getListenerPortAndProtocal() {
+            return this.listenerPortAndProtocal;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -426,12 +445,12 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
-        public static DescribeLoadBalancerAttributeResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerAttributeResponseBodyBackendServers self = new DescribeLoadBalancerAttributeResponseBodyBackendServers();
+        public static DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer self = new DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyBackendServers setType(String type) {
+        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setType(String type) {
             this.type = type;
             return this;
         }
@@ -439,7 +458,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyBackendServers setWeight(Integer weight) {
+        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setWeight(Integer weight) {
             this.weight = weight;
             return this;
         }
@@ -447,7 +466,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             return this.weight;
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyBackendServers setDescription(String description) {
+        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -455,7 +474,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyBackendServers setServerId(String serverId) {
+        public DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer setServerId(String serverId) {
             this.serverId = serverId;
             return this;
         }
@@ -465,7 +484,45 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol extends TeaModel {
+    public static class DescribeLoadBalancerAttributeResponseBodyBackendServers extends TeaModel {
+        @NameInMap("BackendServer")
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> backendServer;
+
+        public static DescribeLoadBalancerAttributeResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyBackendServers self = new DescribeLoadBalancerAttributeResponseBodyBackendServers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyBackendServers setBackendServer(java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> backendServer) {
+            this.backendServer = backendServer;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> getBackendServer() {
+            return this.backendServer;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerAttributeResponseBodyListenerPorts extends TeaModel {
+        @NameInMap("ListenerPort")
+        public java.util.List<Integer> listenerPort;
+
+        public static DescribeLoadBalancerAttributeResponseBodyListenerPorts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyListenerPorts self = new DescribeLoadBalancerAttributeResponseBodyListenerPorts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyListenerPorts setListenerPort(java.util.List<Integer> listenerPort) {
+            this.listenerPort = listenerPort;
+            return this;
+        }
+        public java.util.List<Integer> getListenerPort() {
+            return this.listenerPort;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol extends TeaModel {
         @NameInMap("ListenerProtocol")
         public String listenerProtocol;
 
@@ -481,12 +538,12 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         @NameInMap("ForwardPort")
         public Integer forwardPort;
 
-        public static DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol self = new DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol();
+        public static DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol self = new DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol setListenerProtocol(String listenerProtocol) {
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setListenerProtocol(String listenerProtocol) {
             this.listenerProtocol = listenerProtocol;
             return this;
         }
@@ -494,7 +551,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             return this.listenerProtocol;
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol setListenerForward(String listenerForward) {
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setListenerForward(String listenerForward) {
             this.listenerForward = listenerForward;
             return this;
         }
@@ -502,7 +559,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             return this.listenerForward;
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol setDescription(String description) {
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -510,7 +567,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol setListenerPort(Integer listenerPort) {
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setListenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
             return this;
         }
@@ -518,12 +575,31 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             return this.listenerPort;
         }
 
-        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol setForwardPort(Integer forwardPort) {
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol setForwardPort(Integer forwardPort) {
             this.forwardPort = forwardPort;
             return this;
         }
         public Integer getForwardPort() {
             return this.forwardPort;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol extends TeaModel {
+        @NameInMap("ListenerPortAndProtocol")
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol> listenerPortAndProtocol;
+
+        public static DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol self = new DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol setListenerPortAndProtocol(java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol> listenerPortAndProtocol) {
+            this.listenerPortAndProtocol = listenerPortAndProtocol;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol> getListenerPortAndProtocol() {
+            return this.listenerPortAndProtocol;
         }
 
     }

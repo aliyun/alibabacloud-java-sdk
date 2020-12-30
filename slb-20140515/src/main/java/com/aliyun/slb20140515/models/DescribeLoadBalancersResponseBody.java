@@ -17,7 +17,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("LoadBalancers")
-    public java.util.List<DescribeLoadBalancersResponseBodyLoadBalancers> loadBalancers;
+    public DescribeLoadBalancersResponseBodyLoadBalancers loadBalancers;
 
     public static DescribeLoadBalancersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancersResponseBody self = new DescribeLoadBalancersResponseBody();
@@ -56,15 +56,15 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeLoadBalancersResponseBody setLoadBalancers(java.util.List<DescribeLoadBalancersResponseBodyLoadBalancers> loadBalancers) {
+    public DescribeLoadBalancersResponseBody setLoadBalancers(DescribeLoadBalancersResponseBodyLoadBalancers loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
     }
-    public java.util.List<DescribeLoadBalancersResponseBodyLoadBalancers> getLoadBalancers() {
+    public DescribeLoadBalancersResponseBodyLoadBalancers getLoadBalancers() {
         return this.loadBalancers;
     }
 
-    public static class DescribeLoadBalancersResponseBodyLoadBalancers extends TeaModel {
+    public static class DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -125,12 +125,12 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         @NameInMap("MasterZoneId")
         public String masterZoneId;
 
-        public static DescribeLoadBalancersResponseBodyLoadBalancers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancersResponseBodyLoadBalancers self = new DescribeLoadBalancersResponseBodyLoadBalancers();
+        public static DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer self = new DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setVpcId(String vpcId) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -138,7 +138,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setCreateTimeStamp(Long createTimeStamp) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setCreateTimeStamp(Long createTimeStamp) {
             this.createTimeStamp = createTimeStamp;
             return this;
         }
@@ -146,7 +146,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.createTimeStamp;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setLoadBalancerId(String loadBalancerId) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setLoadBalancerId(String loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
             return this;
         }
@@ -154,7 +154,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.loadBalancerId;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setCreateTime(String createTime) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -162,7 +162,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setPayType(String payType) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setPayType(String payType) {
             this.payType = payType;
             return this;
         }
@@ -170,7 +170,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.payType;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setAddressType(String addressType) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setAddressType(String addressType) {
             this.addressType = addressType;
             return this;
         }
@@ -178,7 +178,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.addressType;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setNetworkType(String networkType) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setNetworkType(String networkType) {
             this.networkType = networkType;
             return this;
         }
@@ -186,7 +186,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.networkType;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setRegionId(String regionId) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -194,7 +194,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setModificationProtectionReason(String modificationProtectionReason) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setModificationProtectionReason(String modificationProtectionReason) {
             this.modificationProtectionReason = modificationProtectionReason;
             return this;
         }
@@ -202,7 +202,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.modificationProtectionReason;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setModificationProtectionStatus(String modificationProtectionStatus) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setModificationProtectionStatus(String modificationProtectionStatus) {
             this.modificationProtectionStatus = modificationProtectionStatus;
             return this;
         }
@@ -210,7 +210,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.modificationProtectionStatus;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setAddressIPVersion(String addressIPVersion) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setAddressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
             return this;
         }
@@ -218,7 +218,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.addressIPVersion;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setVSwitchId(String vSwitchId) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -226,7 +226,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setLoadBalancerStatus(String loadBalancerStatus) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setLoadBalancerStatus(String loadBalancerStatus) {
             this.loadBalancerStatus = loadBalancerStatus;
             return this;
         }
@@ -234,7 +234,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.loadBalancerStatus;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setLoadBalancerName(String loadBalancerName) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setLoadBalancerName(String loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
@@ -242,7 +242,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.loadBalancerName;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setResourceGroupId(String resourceGroupId) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -250,7 +250,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setInternetChargeType(String internetChargeType) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setInternetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
             return this;
         }
@@ -258,7 +258,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.internetChargeType;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setAddress(String address) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setAddress(String address) {
             this.address = address;
             return this;
         }
@@ -266,7 +266,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.address;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setSlaveZoneId(String slaveZoneId) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setSlaveZoneId(String slaveZoneId) {
             this.slaveZoneId = slaveZoneId;
             return this;
         }
@@ -274,7 +274,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.slaveZoneId;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setRegionIdAlias(String regionIdAlias) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setRegionIdAlias(String regionIdAlias) {
             this.regionIdAlias = regionIdAlias;
             return this;
         }
@@ -282,12 +282,31 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.regionIdAlias;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancers setMasterZoneId(String masterZoneId) {
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setMasterZoneId(String masterZoneId) {
             this.masterZoneId = masterZoneId;
             return this;
         }
         public String getMasterZoneId() {
             return this.masterZoneId;
+        }
+
+    }
+
+    public static class DescribeLoadBalancersResponseBodyLoadBalancers extends TeaModel {
+        @NameInMap("LoadBalancer")
+        public java.util.List<DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer> loadBalancer;
+
+        public static DescribeLoadBalancersResponseBodyLoadBalancers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancersResponseBodyLoadBalancers self = new DescribeLoadBalancersResponseBodyLoadBalancers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancers setLoadBalancer(java.util.List<DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer> loadBalancer) {
+            this.loadBalancer = loadBalancer;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer> getLoadBalancer() {
+            return this.loadBalancer;
         }
 
     }

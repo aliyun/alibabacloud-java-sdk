@@ -14,7 +14,7 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
     public String VServerGroupName;
 
     @NameInMap("BackendServers")
-    public java.util.List<SetVServerGroupAttributeResponseBodyBackendServers> backendServers;
+    public SetVServerGroupAttributeResponseBodyBackendServers backendServers;
 
     public static SetVServerGroupAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SetVServerGroupAttributeResponseBody self = new SetVServerGroupAttributeResponseBody();
@@ -45,15 +45,15 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         return this.VServerGroupName;
     }
 
-    public SetVServerGroupAttributeResponseBody setBackendServers(java.util.List<SetVServerGroupAttributeResponseBodyBackendServers> backendServers) {
+    public SetVServerGroupAttributeResponseBody setBackendServers(SetVServerGroupAttributeResponseBodyBackendServers backendServers) {
         this.backendServers = backendServers;
         return this;
     }
-    public java.util.List<SetVServerGroupAttributeResponseBodyBackendServers> getBackendServers() {
+    public SetVServerGroupAttributeResponseBodyBackendServers getBackendServers() {
         return this.backendServers;
     }
 
-    public static class SetVServerGroupAttributeResponseBodyBackendServers extends TeaModel {
+    public static class SetVServerGroupAttributeResponseBodyBackendServersBackendServer extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -69,12 +69,12 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
-        public static SetVServerGroupAttributeResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
-            SetVServerGroupAttributeResponseBodyBackendServers self = new SetVServerGroupAttributeResponseBodyBackendServers();
+        public static SetVServerGroupAttributeResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
+            SetVServerGroupAttributeResponseBodyBackendServersBackendServer self = new SetVServerGroupAttributeResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
         }
 
-        public SetVServerGroupAttributeResponseBodyBackendServers setType(String type) {
+        public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setType(String type) {
             this.type = type;
             return this;
         }
@@ -82,7 +82,7 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             return this.type;
         }
 
-        public SetVServerGroupAttributeResponseBodyBackendServers setWeight(Integer weight) {
+        public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setWeight(Integer weight) {
             this.weight = weight;
             return this;
         }
@@ -90,7 +90,7 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             return this.weight;
         }
 
-        public SetVServerGroupAttributeResponseBodyBackendServers setDescription(String description) {
+        public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -98,7 +98,7 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             return this.description;
         }
 
-        public SetVServerGroupAttributeResponseBodyBackendServers setPort(Integer port) {
+        public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -106,12 +106,31 @@ public class SetVServerGroupAttributeResponseBody extends TeaModel {
             return this.port;
         }
 
-        public SetVServerGroupAttributeResponseBodyBackendServers setServerId(String serverId) {
+        public SetVServerGroupAttributeResponseBodyBackendServersBackendServer setServerId(String serverId) {
             this.serverId = serverId;
             return this;
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+    }
+
+    public static class SetVServerGroupAttributeResponseBodyBackendServers extends TeaModel {
+        @NameInMap("BackendServer")
+        public java.util.List<SetVServerGroupAttributeResponseBodyBackendServersBackendServer> backendServer;
+
+        public static SetVServerGroupAttributeResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
+            SetVServerGroupAttributeResponseBodyBackendServers self = new SetVServerGroupAttributeResponseBodyBackendServers();
+            return TeaModel.build(map, self);
+        }
+
+        public SetVServerGroupAttributeResponseBodyBackendServers setBackendServer(java.util.List<SetVServerGroupAttributeResponseBodyBackendServersBackendServer> backendServer) {
+            this.backendServer = backendServer;
+            return this;
+        }
+        public java.util.List<SetVServerGroupAttributeResponseBodyBackendServersBackendServer> getBackendServer() {
+            return this.backendServer;
         }
 
     }

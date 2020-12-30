@@ -8,7 +8,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("CACertificates")
-    public java.util.List<DescribeCACertificatesResponseBodyCACertificates> CACertificates;
+    public DescribeCACertificatesResponseBodyCACertificates CACertificates;
 
     public static DescribeCACertificatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCACertificatesResponseBody self = new DescribeCACertificatesResponseBody();
@@ -23,15 +23,15 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCACertificatesResponseBody setCACertificates(java.util.List<DescribeCACertificatesResponseBodyCACertificates> CACertificates) {
+    public DescribeCACertificatesResponseBody setCACertificates(DescribeCACertificatesResponseBodyCACertificates CACertificates) {
         this.CACertificates = CACertificates;
         return this;
     }
-    public java.util.List<DescribeCACertificatesResponseBodyCACertificates> getCACertificates() {
+    public DescribeCACertificatesResponseBodyCACertificates getCACertificates() {
         return this.CACertificates;
     }
 
-    public static class DescribeCACertificatesResponseBodyCACertificates extends TeaModel {
+    public static class DescribeCACertificatesResponseBodyCACertificatesCACertificate extends TeaModel {
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
@@ -62,12 +62,12 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
         @NameInMap("CACertificateName")
         public String CACertificateName;
 
-        public static DescribeCACertificatesResponseBodyCACertificates build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCACertificatesResponseBodyCACertificates self = new DescribeCACertificatesResponseBodyCACertificates();
+        public static DescribeCACertificatesResponseBodyCACertificatesCACertificate build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCACertificatesResponseBodyCACertificatesCACertificate self = new DescribeCACertificatesResponseBodyCACertificatesCACertificate();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setCreateTimeStamp(Long createTimeStamp) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setCreateTimeStamp(Long createTimeStamp) {
             this.createTimeStamp = createTimeStamp;
             return this;
         }
@@ -75,7 +75,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.createTimeStamp;
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setExpireTime(String expireTime) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setExpireTime(String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
@@ -83,7 +83,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.expireTime;
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setCreateTime(String createTime) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -91,7 +91,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setExpireTimeStamp(Long expireTimeStamp) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setExpireTimeStamp(Long expireTimeStamp) {
             this.expireTimeStamp = expireTimeStamp;
             return this;
         }
@@ -99,7 +99,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.expireTimeStamp;
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setCACertificateId(String CACertificateId) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setCACertificateId(String CACertificateId) {
             this.CACertificateId = CACertificateId;
             return this;
         }
@@ -107,7 +107,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.CACertificateId;
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setRegionId(String regionId) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -115,7 +115,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setFingerprint(String fingerprint) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setFingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
             return this;
         }
@@ -123,7 +123,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.fingerprint;
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setResourceGroupId(String resourceGroupId) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -131,7 +131,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setCommonName(String commonName) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setCommonName(String commonName) {
             this.commonName = commonName;
             return this;
         }
@@ -139,12 +139,31 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
             return this.commonName;
         }
 
-        public DescribeCACertificatesResponseBodyCACertificates setCACertificateName(String CACertificateName) {
+        public DescribeCACertificatesResponseBodyCACertificatesCACertificate setCACertificateName(String CACertificateName) {
             this.CACertificateName = CACertificateName;
             return this;
         }
         public String getCACertificateName() {
             return this.CACertificateName;
+        }
+
+    }
+
+    public static class DescribeCACertificatesResponseBodyCACertificates extends TeaModel {
+        @NameInMap("CACertificate")
+        public java.util.List<DescribeCACertificatesResponseBodyCACertificatesCACertificate> CACertificate;
+
+        public static DescribeCACertificatesResponseBodyCACertificates build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCACertificatesResponseBodyCACertificates self = new DescribeCACertificatesResponseBodyCACertificates();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCACertificatesResponseBodyCACertificates setCACertificate(java.util.List<DescribeCACertificatesResponseBodyCACertificatesCACertificate> CACertificate) {
+            this.CACertificate = CACertificate;
+            return this;
+        }
+        public java.util.List<DescribeCACertificatesResponseBodyCACertificatesCACertificate> getCACertificate() {
+            return this.CACertificate;
         }
 
     }

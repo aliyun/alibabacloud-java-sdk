@@ -8,7 +8,7 @@ public class DescribeRulesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Rules")
-    public java.util.List<DescribeRulesResponseBodyRules> rules;
+    public DescribeRulesResponseBodyRules rules;
 
     public static DescribeRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRulesResponseBody self = new DescribeRulesResponseBody();
@@ -23,15 +23,15 @@ public class DescribeRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeRulesResponseBody setRules(java.util.List<DescribeRulesResponseBodyRules> rules) {
+    public DescribeRulesResponseBody setRules(DescribeRulesResponseBodyRules rules) {
         this.rules = rules;
         return this;
     }
-    public java.util.List<DescribeRulesResponseBodyRules> getRules() {
+    public DescribeRulesResponseBodyRules getRules() {
         return this.rules;
     }
 
-    public static class DescribeRulesResponseBodyRules extends TeaModel {
+    public static class DescribeRulesResponseBodyRulesRule extends TeaModel {
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
@@ -92,12 +92,12 @@ public class DescribeRulesResponseBody extends TeaModel {
         @NameInMap("HealthCheck")
         public String healthCheck;
 
-        public static DescribeRulesResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRulesResponseBodyRules self = new DescribeRulesResponseBodyRules();
+        public static DescribeRulesResponseBodyRulesRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRulesResponseBodyRulesRule self = new DescribeRulesResponseBodyRulesRule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRulesResponseBodyRules setVServerGroupId(String VServerGroupId) {
+        public DescribeRulesResponseBodyRulesRule setVServerGroupId(String VServerGroupId) {
             this.VServerGroupId = VServerGroupId;
             return this;
         }
@@ -105,7 +105,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.VServerGroupId;
         }
 
-        public DescribeRulesResponseBodyRules setHealthCheckHttpCode(String healthCheckHttpCode) {
+        public DescribeRulesResponseBodyRulesRule setHealthCheckHttpCode(String healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
             return this;
         }
@@ -113,7 +113,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.healthCheckHttpCode;
         }
 
-        public DescribeRulesResponseBodyRules setDomain(String domain) {
+        public DescribeRulesResponseBodyRulesRule setDomain(String domain) {
             this.domain = domain;
             return this;
         }
@@ -121,7 +121,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.domain;
         }
 
-        public DescribeRulesResponseBodyRules setCookie(String cookie) {
+        public DescribeRulesResponseBodyRulesRule setCookie(String cookie) {
             this.cookie = cookie;
             return this;
         }
@@ -129,7 +129,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.cookie;
         }
 
-        public DescribeRulesResponseBodyRules setUrl(String url) {
+        public DescribeRulesResponseBodyRulesRule setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -137,7 +137,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.url;
         }
 
-        public DescribeRulesResponseBodyRules setHealthCheckInterval(Integer healthCheckInterval) {
+        public DescribeRulesResponseBodyRulesRule setHealthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
             return this;
         }
@@ -145,7 +145,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.healthCheckInterval;
         }
 
-        public DescribeRulesResponseBodyRules setHealthCheckURI(String healthCheckURI) {
+        public DescribeRulesResponseBodyRulesRule setHealthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;
             return this;
         }
@@ -153,7 +153,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.healthCheckURI;
         }
 
-        public DescribeRulesResponseBodyRules setRuleId(String ruleId) {
+        public DescribeRulesResponseBodyRulesRule setRuleId(String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
@@ -161,7 +161,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.ruleId;
         }
 
-        public DescribeRulesResponseBodyRules setRuleName(String ruleName) {
+        public DescribeRulesResponseBodyRulesRule setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
@@ -169,7 +169,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.ruleName;
         }
 
-        public DescribeRulesResponseBodyRules setStickySessionType(String stickySessionType) {
+        public DescribeRulesResponseBodyRulesRule setStickySessionType(String stickySessionType) {
             this.stickySessionType = stickySessionType;
             return this;
         }
@@ -177,7 +177,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.stickySessionType;
         }
 
-        public DescribeRulesResponseBodyRules setScheduler(String scheduler) {
+        public DescribeRulesResponseBodyRulesRule setScheduler(String scheduler) {
             this.scheduler = scheduler;
             return this;
         }
@@ -185,7 +185,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.scheduler;
         }
 
-        public DescribeRulesResponseBodyRules setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        public DescribeRulesResponseBodyRulesRule setHealthCheckConnectPort(Integer healthCheckConnectPort) {
             this.healthCheckConnectPort = healthCheckConnectPort;
             return this;
         }
@@ -193,7 +193,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.healthCheckConnectPort;
         }
 
-        public DescribeRulesResponseBodyRules setHealthCheckTimeout(Integer healthCheckTimeout) {
+        public DescribeRulesResponseBodyRulesRule setHealthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;
             return this;
         }
@@ -201,7 +201,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.healthCheckTimeout;
         }
 
-        public DescribeRulesResponseBodyRules setListenerSync(String listenerSync) {
+        public DescribeRulesResponseBodyRulesRule setListenerSync(String listenerSync) {
             this.listenerSync = listenerSync;
             return this;
         }
@@ -209,7 +209,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.listenerSync;
         }
 
-        public DescribeRulesResponseBodyRules setHealthyThreshold(Integer healthyThreshold) {
+        public DescribeRulesResponseBodyRulesRule setHealthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
@@ -217,7 +217,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.healthyThreshold;
         }
 
-        public DescribeRulesResponseBodyRules setCookieTimeout(Integer cookieTimeout) {
+        public DescribeRulesResponseBodyRulesRule setCookieTimeout(Integer cookieTimeout) {
             this.cookieTimeout = cookieTimeout;
             return this;
         }
@@ -225,7 +225,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.cookieTimeout;
         }
 
-        public DescribeRulesResponseBodyRules setHealthCheckDomain(String healthCheckDomain) {
+        public DescribeRulesResponseBodyRulesRule setHealthCheckDomain(String healthCheckDomain) {
             this.healthCheckDomain = healthCheckDomain;
             return this;
         }
@@ -233,7 +233,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.healthCheckDomain;
         }
 
-        public DescribeRulesResponseBodyRules setUnhealthyThreshold(Integer unhealthyThreshold) {
+        public DescribeRulesResponseBodyRulesRule setUnhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
@@ -241,7 +241,7 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.unhealthyThreshold;
         }
 
-        public DescribeRulesResponseBodyRules setStickySession(String stickySession) {
+        public DescribeRulesResponseBodyRulesRule setStickySession(String stickySession) {
             this.stickySession = stickySession;
             return this;
         }
@@ -249,12 +249,31 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.stickySession;
         }
 
-        public DescribeRulesResponseBodyRules setHealthCheck(String healthCheck) {
+        public DescribeRulesResponseBodyRulesRule setHealthCheck(String healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
         public String getHealthCheck() {
             return this.healthCheck;
+        }
+
+    }
+
+    public static class DescribeRulesResponseBodyRules extends TeaModel {
+        @NameInMap("Rule")
+        public java.util.List<DescribeRulesResponseBodyRulesRule> rule;
+
+        public static DescribeRulesResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRulesResponseBodyRules self = new DescribeRulesResponseBodyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRulesResponseBodyRules setRule(java.util.List<DescribeRulesResponseBodyRulesRule> rule) {
+            this.rule = rule;
+            return this;
+        }
+        public java.util.List<DescribeRulesResponseBodyRulesRule> getRule() {
+            return this.rule;
         }
 
     }

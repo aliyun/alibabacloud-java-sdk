@@ -17,7 +17,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("Acls")
-    public java.util.List<DescribeAccessControlListsResponseBodyAcls> acls;
+    public DescribeAccessControlListsResponseBodyAcls acls;
 
     @NameInMap("Count")
     public Integer count;
@@ -59,11 +59,11 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeAccessControlListsResponseBody setAcls(java.util.List<DescribeAccessControlListsResponseBodyAcls> acls) {
+    public DescribeAccessControlListsResponseBody setAcls(DescribeAccessControlListsResponseBodyAcls acls) {
         this.acls = acls;
         return this;
     }
-    public java.util.List<DescribeAccessControlListsResponseBodyAcls> getAcls() {
+    public DescribeAccessControlListsResponseBodyAcls getAcls() {
         return this.acls;
     }
 
@@ -75,7 +75,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         return this.count;
     }
 
-    public static class DescribeAccessControlListsResponseBodyAcls extends TeaModel {
+    public static class DescribeAccessControlListsResponseBodyAclsAcl extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
 
@@ -88,12 +88,12 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         @NameInMap("AclName")
         public String aclName;
 
-        public static DescribeAccessControlListsResponseBodyAcls build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAccessControlListsResponseBodyAcls self = new DescribeAccessControlListsResponseBodyAcls();
+        public static DescribeAccessControlListsResponseBodyAclsAcl build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessControlListsResponseBodyAclsAcl self = new DescribeAccessControlListsResponseBodyAclsAcl();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAccessControlListsResponseBodyAcls setAclId(String aclId) {
+        public DescribeAccessControlListsResponseBodyAclsAcl setAclId(String aclId) {
             this.aclId = aclId;
             return this;
         }
@@ -101,7 +101,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             return this.aclId;
         }
 
-        public DescribeAccessControlListsResponseBodyAcls setAddressIPVersion(String addressIPVersion) {
+        public DescribeAccessControlListsResponseBodyAclsAcl setAddressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
             return this;
         }
@@ -109,7 +109,7 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             return this.addressIPVersion;
         }
 
-        public DescribeAccessControlListsResponseBodyAcls setResourceGroupId(String resourceGroupId) {
+        public DescribeAccessControlListsResponseBodyAclsAcl setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -117,12 +117,31 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeAccessControlListsResponseBodyAcls setAclName(String aclName) {
+        public DescribeAccessControlListsResponseBodyAclsAcl setAclName(String aclName) {
             this.aclName = aclName;
             return this;
         }
         public String getAclName() {
             return this.aclName;
+        }
+
+    }
+
+    public static class DescribeAccessControlListsResponseBodyAcls extends TeaModel {
+        @NameInMap("Acl")
+        public java.util.List<DescribeAccessControlListsResponseBodyAclsAcl> acl;
+
+        public static DescribeAccessControlListsResponseBodyAcls build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAccessControlListsResponseBodyAcls self = new DescribeAccessControlListsResponseBodyAcls();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAccessControlListsResponseBodyAcls setAcl(java.util.List<DescribeAccessControlListsResponseBodyAclsAcl> acl) {
+            this.acl = acl;
+            return this;
+        }
+        public java.util.List<DescribeAccessControlListsResponseBodyAclsAcl> getAcl() {
+            return this.acl;
         }
 
     }
