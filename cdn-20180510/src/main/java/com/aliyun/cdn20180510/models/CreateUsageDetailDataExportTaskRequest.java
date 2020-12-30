@@ -1,0 +1,100 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cdn20180510.models;
+
+import com.aliyun.tea.*;
+
+public class CreateUsageDetailDataExportTaskRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("EndTime")
+    public String endTime;
+
+    @NameInMap("Group")
+    public String group;
+
+    @NameInMap("DomainNames")
+    public String domainNames;
+
+    @NameInMap("Type")
+    public String type;
+
+    @NameInMap("TaskName")
+    public String taskName;
+
+    @NameInMap("Language")
+    public String language;
+
+    public static CreateUsageDetailDataExportTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateUsageDetailDataExportTaskRequest self = new CreateUsageDetailDataExportTaskRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateUsageDetailDataExportTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateUsageDetailDataExportTaskRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public CreateUsageDetailDataExportTaskRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public CreateUsageDetailDataExportTaskRequest setGroup(String group) {
+        this.group = group;
+        return this;
+    }
+    public String getGroup() {
+        return this.group;
+    }
+
+    public CreateUsageDetailDataExportTaskRequest setDomainNames(String domainNames) {
+        this.domainNames = domainNames;
+        return this;
+    }
+    public String getDomainNames() {
+        return this.domainNames;
+    }
+
+    public CreateUsageDetailDataExportTaskRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
+    }
+
+    public CreateUsageDetailDataExportTaskRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public CreateUsageDetailDataExportTaskRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
+    }
+
+}

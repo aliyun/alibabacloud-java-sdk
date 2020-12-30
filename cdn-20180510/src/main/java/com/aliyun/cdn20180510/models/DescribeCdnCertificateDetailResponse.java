@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cdn20180510.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeCdnCertificateDetailResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeCdnCertificateDetailResponseBody body;
+
+    public static DescribeCdnCertificateDetailResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeCdnCertificateDetailResponse self = new DescribeCdnCertificateDetailResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeCdnCertificateDetailResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeCdnCertificateDetailResponse setBody(DescribeCdnCertificateDetailResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeCdnCertificateDetailResponseBody getBody() {
+        return this.body;
+    }
+
+}

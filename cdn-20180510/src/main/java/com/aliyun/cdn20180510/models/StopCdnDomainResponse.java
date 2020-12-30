@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cdn20180510.models;
+
+import com.aliyun.tea.*;
+
+public class StopCdnDomainResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public StopCdnDomainResponseBody body;
+
+    public static StopCdnDomainResponse build(java.util.Map<String, ?> map) throws Exception {
+        StopCdnDomainResponse self = new StopCdnDomainResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public StopCdnDomainResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public StopCdnDomainResponse setBody(StopCdnDomainResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public StopCdnDomainResponseBody getBody() {
+        return this.body;
+    }
+
+}
