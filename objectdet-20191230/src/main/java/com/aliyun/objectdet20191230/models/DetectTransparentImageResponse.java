@@ -4,41 +4,33 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectTransparentImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public DetectTransparentImageResponseData data;
+    public DetectTransparentImageResponseBody body;
 
     public static DetectTransparentImageResponse build(java.util.Map<String, ?> map) throws Exception {
         DetectTransparentImageResponse self = new DetectTransparentImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DetectTransparentImageResponseDataElements extends TeaModel {
-        @NameInMap("TransparentImage")
-        @Validation(required = true)
-        public Integer transparentImage;
-
-        public static DetectTransparentImageResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
-            DetectTransparentImageResponseDataElements self = new DetectTransparentImageResponseDataElements();
-            return TeaModel.build(map, self);
-        }
-
+    public DetectTransparentImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DetectTransparentImageResponseData extends TeaModel {
-        @NameInMap("Elements")
-        @Validation(required = true)
-        public java.util.List<DetectTransparentImageResponseDataElements> elements;
-
-        public static DetectTransparentImageResponseData build(java.util.Map<String, ?> map) throws Exception {
-            DetectTransparentImageResponseData self = new DetectTransparentImageResponseData();
-            return TeaModel.build(map, self);
-        }
-
+    public DetectTransparentImageResponse setBody(DetectTransparentImageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DetectTransparentImageResponseBody getBody() {
+        return this.body;
     }
 
 }

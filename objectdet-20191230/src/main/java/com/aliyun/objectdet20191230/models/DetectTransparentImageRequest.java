@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class DetectTransparentImageRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static DetectTransparentImageRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectTransparentImageRequest self = new DetectTransparentImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DetectTransparentImageRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
     }
 
 }

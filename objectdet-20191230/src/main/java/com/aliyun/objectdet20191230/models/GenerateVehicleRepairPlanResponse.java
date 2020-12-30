@@ -3,21 +3,21 @@ package com.aliyun.objectdet20191230.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeVehicleDamageResponse extends TeaModel {
+public class GenerateVehicleRepairPlanResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public RecognizeVehicleDamageResponseBody body;
+    public GenerateVehicleRepairPlanResponseBody body;
 
-    public static RecognizeVehicleDamageResponse build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeVehicleDamageResponse self = new RecognizeVehicleDamageResponse();
+    public static GenerateVehicleRepairPlanResponse build(java.util.Map<String, ?> map) throws Exception {
+        GenerateVehicleRepairPlanResponse self = new GenerateVehicleRepairPlanResponse();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeVehicleDamageResponse setHeaders(java.util.Map<String, String> headers) {
+    public GenerateVehicleRepairPlanResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class RecognizeVehicleDamageResponse extends TeaModel {
         return this.headers;
     }
 
-    public RecognizeVehicleDamageResponse setBody(RecognizeVehicleDamageResponseBody body) {
+    public GenerateVehicleRepairPlanResponse setBody(GenerateVehicleRepairPlanResponseBody body) {
         this.body = body;
         return this;
     }
-    public RecognizeVehicleDamageResponseBody getBody() {
+    public GenerateVehicleRepairPlanResponseBody getBody() {
         return this.body;
     }
 
