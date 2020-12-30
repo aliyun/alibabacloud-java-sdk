@@ -4,15 +4,16 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeVerifyRecordsRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("BizType")
@@ -39,6 +40,14 @@ public class DescribeVerifyRecordsRequest extends TeaModel {
     public static DescribeVerifyRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVerifyRecordsRequest self = new DescribeVerifyRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVerifyRecordsRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public DescribeVerifyRecordsRequest setTotalCount(Integer totalCount) {

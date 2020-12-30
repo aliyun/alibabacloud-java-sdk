@@ -4,69 +4,33 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateVerifySettingResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("BizType")
+    @NameInMap("body")
     @Validation(required = true)
-    public String bizType;
-
-    @NameInMap("BizName")
-    @Validation(required = true)
-    public String bizName;
-
-    @NameInMap("Solution")
-    @Validation(required = true)
-    public String solution;
-
-    @NameInMap("StepList")
-    @Validation(required = true)
-    public java.util.List<String> stepList;
+    public CreateVerifySettingResponseBody body;
 
     public static CreateVerifySettingResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateVerifySettingResponse self = new CreateVerifySettingResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateVerifySettingResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateVerifySettingResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateVerifySettingResponse setBizType(String bizType) {
-        this.bizType = bizType;
+    public CreateVerifySettingResponse setBody(CreateVerifySettingResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getBizType() {
-        return this.bizType;
-    }
-
-    public CreateVerifySettingResponse setBizName(String bizName) {
-        this.bizName = bizName;
-        return this;
-    }
-    public String getBizName() {
-        return this.bizName;
-    }
-
-    public CreateVerifySettingResponse setSolution(String solution) {
-        this.solution = solution;
-        return this;
-    }
-    public String getSolution() {
-        return this.solution;
-    }
-
-    public CreateVerifySettingResponse setStepList(java.util.List<String> stepList) {
-        this.stepList = stepList;
-        return this;
-    }
-    public java.util.List<String> getStepList() {
-        return this.stepList;
+    public CreateVerifySettingResponseBody getBody() {
+        return this.body;
     }
 
 }

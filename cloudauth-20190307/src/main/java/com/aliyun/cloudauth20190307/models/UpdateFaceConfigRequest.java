@@ -11,11 +11,9 @@ public class UpdateFaceConfigRequest extends TeaModel {
     public String lang;
 
     @NameInMap("BizType")
-    @Validation(required = true)
     public String bizType;
 
     @NameInMap("BizName")
-    @Validation(required = true)
     public String bizName;
 
     public static UpdateFaceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
