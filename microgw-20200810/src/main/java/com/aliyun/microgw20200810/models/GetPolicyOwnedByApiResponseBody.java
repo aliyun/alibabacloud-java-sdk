@@ -8,9 +8,8 @@ public class GetPolicyOwnedByApiResponseBody extends TeaModel {
     @NameInMap("code")
     public Long code;
 
-    // data
     @NameInMap("data")
-    public java.util.Map<String, DataValue> data;
+    public java.util.List<GetPolicyOwnedByApiResponseBodyData> data;
 
     // message
     @NameInMap("message")
@@ -29,11 +28,11 @@ public class GetPolicyOwnedByApiResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetPolicyOwnedByApiResponseBody setData(java.util.Map<String, DataValue> data) {
+    public GetPolicyOwnedByApiResponseBody setData(java.util.List<GetPolicyOwnedByApiResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public java.util.Map<String, DataValue> getData() {
+    public java.util.List<GetPolicyOwnedByApiResponseBodyData> getData() {
         return this.data;
     }
 
@@ -43,6 +42,25 @@ public class GetPolicyOwnedByApiResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public static class GetPolicyOwnedByApiResponseBodyData extends TeaModel {
+        @NameInMap("scopes")
+        public java.util.Map<String, java.util.List<DataScopesValue>> scopes;
+
+        public static GetPolicyOwnedByApiResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetPolicyOwnedByApiResponseBodyData self = new GetPolicyOwnedByApiResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPolicyOwnedByApiResponseBodyData setScopes(java.util.Map<String, java.util.List<DataScopesValue>> scopes) {
+            this.scopes = scopes;
+            return this;
+        }
+        public java.util.Map<String, java.util.List<DataScopesValue>> getScopes() {
+            return this.scopes;
+        }
+
     }
 
 }

@@ -3,7 +3,7 @@ package com.aliyun.microgw20200810.models;
 
 import com.aliyun.tea.*;
 
-public class DataValue extends TeaModel {
+public class DataScopesValue extends TeaModel {
     // apiId
     @NameInMap("apiId")
     public Long apiId;
@@ -64,12 +64,12 @@ public class DataValue extends TeaModel {
     @NameInMap("updateDateTime")
     public String updateDateTime;
 
-    public static DataValue build(java.util.Map<String, ?> map) throws Exception {
-        DataValue self = new DataValue();
+    public static DataScopesValue build(java.util.Map<String, ?> map) throws Exception {
+        DataScopesValue self = new DataScopesValue();
         return TeaModel.build(map, self);
     }
 
-    public DataValue setApiId(Long apiId) {
+    public DataScopesValue setApiId(Long apiId) {
         this.apiId = apiId;
         return this;
     }
@@ -77,7 +77,7 @@ public class DataValue extends TeaModel {
         return this.apiId;
     }
 
-    public DataValue setApiName(String apiName) {
+    public DataScopesValue setApiName(String apiName) {
         this.apiName = apiName;
         return this;
     }
@@ -85,7 +85,7 @@ public class DataValue extends TeaModel {
         return this.apiName;
     }
 
-    public DataValue setCreationDateTime(String creationDateTime) {
+    public DataScopesValue setCreationDateTime(String creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
     }
@@ -93,7 +93,7 @@ public class DataValue extends TeaModel {
         return this.creationDateTime;
     }
 
-    public DataValue setDirection(String direction) {
+    public DataScopesValue setDirection(String direction) {
         this.direction = direction;
         return this;
     }
@@ -101,7 +101,7 @@ public class DataValue extends TeaModel {
         return this.direction;
     }
 
-    public DataValue setId(Long id) {
+    public DataScopesValue setId(Long id) {
         this.id = id;
         return this;
     }
@@ -109,7 +109,7 @@ public class DataValue extends TeaModel {
         return this.id;
     }
 
-    public DataValue setPolicyAliasName(String policyAliasName) {
+    public DataScopesValue setPolicyAliasName(String policyAliasName) {
         this.policyAliasName = policyAliasName;
         return this;
     }
@@ -117,7 +117,7 @@ public class DataValue extends TeaModel {
         return this.policyAliasName;
     }
 
-    public DataValue setPolicyContent(String policyContent) {
+    public DataScopesValue setPolicyContent(String policyContent) {
         this.policyContent = policyContent;
         return this;
     }
@@ -125,7 +125,7 @@ public class DataValue extends TeaModel {
         return this.policyContent;
     }
 
-    public DataValue setPolicyGroup(String policyGroup) {
+    public DataScopesValue setPolicyGroup(String policyGroup) {
         this.policyGroup = policyGroup;
         return this;
     }
@@ -133,7 +133,7 @@ public class DataValue extends TeaModel {
         return this.policyGroup;
     }
 
-    public DataValue setPolicyId(String policyId) {
+    public DataScopesValue setPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
@@ -141,7 +141,7 @@ public class DataValue extends TeaModel {
         return this.policyId;
     }
 
-    public DataValue setPolicyName(String policyName) {
+    public DataScopesValue setPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
@@ -149,7 +149,7 @@ public class DataValue extends TeaModel {
         return this.policyName;
     }
 
-    public DataValue setPriority(Long priority) {
+    public DataScopesValue setPriority(Long priority) {
         this.priority = priority;
         return this;
     }
@@ -157,7 +157,7 @@ public class DataValue extends TeaModel {
         return this.priority;
     }
 
-    public DataValue setScope(String scope) {
+    public DataScopesValue setScope(String scope) {
         this.scope = scope;
         return this;
     }
@@ -165,7 +165,7 @@ public class DataValue extends TeaModel {
         return this.scope;
     }
 
-    public DataValue setStatus(Boolean status) {
+    public DataScopesValue setStatus(Boolean status) {
         this.status = status;
         return this;
     }
@@ -173,7 +173,7 @@ public class DataValue extends TeaModel {
         return this.status;
     }
 
-    public DataValue setType(Long type) {
+    public DataScopesValue setType(Long type) {
         this.type = type;
         return this;
     }
@@ -181,7 +181,7 @@ public class DataValue extends TeaModel {
         return this.type;
     }
 
-    public DataValue setUpdateDateTime(String updateDateTime) {
+    public DataScopesValue setUpdateDateTime(String updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
