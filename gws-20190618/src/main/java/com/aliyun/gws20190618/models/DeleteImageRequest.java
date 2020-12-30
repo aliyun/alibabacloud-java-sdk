@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteImageRequest extends TeaModel {
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     public static DeleteImageRequest build(java.util.Map<String, ?> map) throws Exception {

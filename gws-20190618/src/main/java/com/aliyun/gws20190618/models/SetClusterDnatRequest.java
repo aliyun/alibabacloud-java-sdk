@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetClusterDnatRequest extends TeaModel {
     @NameInMap("ClusterId")
-    @Validation(required = true)
     public String clusterId;
 
     @NameInMap("NatId")
-    @Validation(required = true)
     public String natId;
 
     @NameInMap("NatEip")

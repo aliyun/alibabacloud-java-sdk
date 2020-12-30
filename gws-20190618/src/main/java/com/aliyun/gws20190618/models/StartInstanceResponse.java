@@ -4,21 +4,33 @@ package com.aliyun.gws20190618.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public StartInstanceResponseBody body;
 
     public static StartInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceResponse self = new StartInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public StartInstanceResponse setBody(StartInstanceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public StartInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

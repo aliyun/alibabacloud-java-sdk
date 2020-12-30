@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class SetInstanceUserRequest extends TeaModel {
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("UserUid")
-    @Validation(required = true)
     public Long userUid;
 
     @NameInMap("UserName")
-    @Validation(required = true)
     public String userName;
 
     public static SetInstanceUserRequest build(java.util.Map<String, ?> map) throws Exception {

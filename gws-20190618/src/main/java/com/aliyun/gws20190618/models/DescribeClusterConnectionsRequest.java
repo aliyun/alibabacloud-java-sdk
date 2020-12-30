@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterConnectionsRequest extends TeaModel {
     @NameInMap("ClusterId")
-    @Validation(required = true)
     public String clusterId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("TaskId")

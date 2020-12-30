@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetConnectTicketRequest extends TeaModel {
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("AppName")

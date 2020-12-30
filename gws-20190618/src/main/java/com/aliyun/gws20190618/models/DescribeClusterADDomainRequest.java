@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterADDomainRequest extends TeaModel {
     @NameInMap("ClusterId")
-    @Validation(required = true)
     public String clusterId;
 
     @NameInMap("TaskId")

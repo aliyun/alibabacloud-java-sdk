@@ -5,23 +5,18 @@ import com.aliyun.tea.*;
 
 public class SetClusterPolicyRequest extends TeaModel {
     @NameInMap("ClusterId")
-    @Validation(required = true)
     public String clusterId;
 
     @NameInMap("UsbRedirect")
-    @Validation(required = true)
     public String usbRedirect;
 
     @NameInMap("Watermark")
-    @Validation(required = true)
     public String watermark;
 
     @NameInMap("LocalDrive")
-    @Validation(required = true)
     public String localDrive;
 
     @NameInMap("Clipboard")
-    @Validation(required = true)
     public String clipboard;
 
     @NameInMap("UdpPort")
