@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>imageaudit20191230</artifactId>
-  <version>1.0.4</version>
+  <version>2.0.0</version>
   <packaging>jar</packaging>
   <name>imageaudit20191230</name>
   <description>Aliyun IMAFEAUDIT SDK for Java
@@ -86,7 +86,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.8</version>
+      <version>0.2.9</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -103,6 +103,11 @@
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
       <version>0.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-openapi</artifactId>
+      <version>0.0.7</version>
     </dependency>
   </dependencies>
   <build>
