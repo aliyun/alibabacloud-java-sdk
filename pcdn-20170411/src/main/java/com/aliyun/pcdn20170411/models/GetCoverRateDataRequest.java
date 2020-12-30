@@ -8,34 +8,27 @@ public class GetCoverRateDataRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("Domain")
     public String domain;
 
     @NameInMap("Region")
-    @Validation(required = true)
     public String region;
 
     @NameInMap("IspName")
-    @Validation(required = true)
     public String ispName;
 
     @NameInMap("PlatformType")
-    @Validation(required = true)
     public String platformType;
 
     @NameInMap("BusinessType")
-    @Validation(required = true)
     public String businessType;
 
     @NameInMap("StartDate")
-    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
-    @Validation(required = true)
     public String endDate;
 
     public static GetCoverRateDataRequest build(java.util.Map<String, ?> map) throws Exception {

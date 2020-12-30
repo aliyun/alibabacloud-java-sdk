@@ -8,27 +8,21 @@ public class AddConsumerRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("BusinessType")
-    @Validation(required = true)
     public String businessType;
 
     @NameInMap("Company")
-    @Validation(required = true)
     public String company;
 
     @NameInMap("Site")
-    @Validation(required = true)
     public String site;
 
     @NameInMap("Requirement")
-    @Validation(required = true)
     public String requirement;
 
     @NameInMap("Mobile")
-    @Validation(required = true)
     public String mobile;
 
     @NameInMap("Ca")

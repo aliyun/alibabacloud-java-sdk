@@ -8,15 +8,12 @@ public class GetFeeHistoryRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("Page")
-    @Validation(required = true)
     public String page;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public String pageSize;
 
     public static GetFeeHistoryRequest build(java.util.Map<String, ?> map) throws Exception {

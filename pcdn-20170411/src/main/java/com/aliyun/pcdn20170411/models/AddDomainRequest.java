@@ -8,15 +8,12 @@ public class AddDomainRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("BusinessType")
-    @Validation(required = true)
     public String businessType;
 
     @NameInMap("Domain")
-    @Validation(required = true)
     public String domain;
 
     @NameInMap("LiveFormat")

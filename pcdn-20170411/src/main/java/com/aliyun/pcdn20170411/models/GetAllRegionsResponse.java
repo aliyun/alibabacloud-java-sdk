@@ -4,97 +4,33 @@ package com.aliyun.pcdn20170411.models;
 import com.aliyun.tea.*;
 
 public class GetAllRegionsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("DataList")
-    @Validation(required = true)
-    public GetAllRegionsResponseDataList dataList;
+    public GetAllRegionsResponseBody body;
 
     public static GetAllRegionsResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAllRegionsResponse self = new GetAllRegionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAllRegionsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetAllRegionsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetAllRegionsResponse setCode(Integer code) {
-        this.code = code;
+    public GetAllRegionsResponse setBody(GetAllRegionsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public GetAllRegionsResponse setDataList(GetAllRegionsResponseDataList dataList) {
-        this.dataList = dataList;
-        return this;
-    }
-    public GetAllRegionsResponseDataList getDataList() {
-        return this.dataList;
-    }
-
-    public static class GetAllRegionsResponseDataListUsageData extends TeaModel {
-        @NameInMap("Code")
-        @Validation(required = true)
-        public String code;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        public static GetAllRegionsResponseDataListUsageData build(java.util.Map<String, ?> map) throws Exception {
-            GetAllRegionsResponseDataListUsageData self = new GetAllRegionsResponseDataListUsageData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAllRegionsResponseDataListUsageData setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public GetAllRegionsResponseDataListUsageData setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
-    public static class GetAllRegionsResponseDataList extends TeaModel {
-        @NameInMap("UsageData")
-        @Validation(required = true)
-        public java.util.List<GetAllRegionsResponseDataListUsageData> usageData;
-
-        public static GetAllRegionsResponseDataList build(java.util.Map<String, ?> map) throws Exception {
-            GetAllRegionsResponseDataList self = new GetAllRegionsResponseDataList();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAllRegionsResponseDataList setUsageData(java.util.List<GetAllRegionsResponseDataListUsageData> usageData) {
-            this.usageData = usageData;
-            return this;
-        }
-        public java.util.List<GetAllRegionsResponseDataListUsageData> getUsageData() {
-            return this.usageData;
-        }
-
+    public GetAllRegionsResponseBody getBody() {
+        return this.body;
     }
 
 }
