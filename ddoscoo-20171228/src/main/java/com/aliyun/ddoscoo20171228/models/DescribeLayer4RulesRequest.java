@@ -8,7 +8,6 @@ public class DescribeLayer4RulesRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ForwardProtocol")
@@ -18,11 +17,9 @@ public class DescribeLayer4RulesRequest extends TeaModel {
     public Integer frontendPort;
 
     @NameInMap("Offset")
-    @Validation(required = true)
     public Integer offset;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public String pageSize;
 
     public static DescribeLayer4RulesRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -14,7 +14,6 @@ public class CloseDomainSlsConfigRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Domain")
-    @Validation(required = true)
     public String domain;
 
     public static CloseDomainSlsConfigRequest build(java.util.Map<String, ?> map) throws Exception {

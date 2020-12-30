@@ -8,11 +8,9 @@ public class ConfigDomainAccessModeRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("Domain")
-    @Validation(required = true)
     public String domain;
 
     @NameInMap("AccessMode")
-    @Validation(required = true)
     public Integer accessMode;
 
     public static ConfigDomainAccessModeRequest build(java.util.Map<String, ?> map) throws Exception {

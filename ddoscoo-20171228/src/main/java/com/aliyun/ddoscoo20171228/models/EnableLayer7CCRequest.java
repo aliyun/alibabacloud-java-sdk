@@ -11,7 +11,6 @@ public class EnableLayer7CCRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Domain")
-    @Validation(required = true)
     public String domain;
 
     public static EnableLayer7CCRequest build(java.util.Map<String, ?> map) throws Exception {

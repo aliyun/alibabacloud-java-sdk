@@ -4,20 +4,40 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class CreateAsyncTaskRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
+    @NameInMap("Lang")
+    public String lang;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public Integer taskType;
 
     @NameInMap("TaskParams")
-    @Validation(required = true)
     public String taskParams;
 
     public static CreateAsyncTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAsyncTaskRequest self = new CreateAsyncTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAsyncTaskRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public CreateAsyncTaskRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public CreateAsyncTaskRequest setResourceGroupId(String resourceGroupId) {
