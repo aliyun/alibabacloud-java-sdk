@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DetectFaceAttributesRequest extends TeaModel {
     @NameInMap("MaterialValue")
-    @Validation(required = true)
     public String materialValue;
 
     @NameInMap("BizType")

@@ -4,8 +4,10 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class UpdateVerifySettingRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("BizType")
-    @Validation(required = true)
     public String bizType;
 
     @NameInMap("BizName")
@@ -26,6 +28,14 @@ public class UpdateVerifySettingRequest extends TeaModel {
     public static UpdateVerifySettingRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateVerifySettingRequest self = new UpdateVerifySettingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateVerifySettingRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public UpdateVerifySettingRequest setBizType(String bizType) {

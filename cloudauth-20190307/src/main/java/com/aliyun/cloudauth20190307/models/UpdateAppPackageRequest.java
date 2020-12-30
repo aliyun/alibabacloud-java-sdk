@@ -4,11 +4,13 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppPackageRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("Id")
     public Long id;
 
     @NameInMap("PackageUrl")
-    @Validation(required = true)
     public String packageUrl;
 
     @NameInMap("Platform")
@@ -20,6 +22,14 @@ public class UpdateAppPackageRequest extends TeaModel {
     public static UpdateAppPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppPackageRequest self = new UpdateAppPackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAppPackageRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public UpdateAppPackageRequest setId(Long id) {
