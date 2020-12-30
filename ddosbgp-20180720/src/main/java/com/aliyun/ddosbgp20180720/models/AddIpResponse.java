@@ -4,21 +4,33 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class AddIpResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AddIpResponseBody body;
 
     public static AddIpResponse build(java.util.Map<String, ?> map) throws Exception {
         AddIpResponse self = new AddIpResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddIpResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddIpResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddIpResponse setBody(AddIpResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddIpResponseBody getBody() {
+        return this.body;
     }
 
 }

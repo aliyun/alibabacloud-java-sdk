@@ -4,24 +4,22 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeOnDemandDdosEventRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Integer startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Integer endTime;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Ip")
@@ -36,6 +34,14 @@ public class DescribeOnDemandDdosEventRequest extends TeaModel {
     public static DescribeOnDemandDdosEventRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOnDemandDdosEventRequest self = new DescribeOnDemandDdosEventRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeOnDemandDdosEventRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public DescribeOnDemandDdosEventRequest setStartTime(Integer startTime) {

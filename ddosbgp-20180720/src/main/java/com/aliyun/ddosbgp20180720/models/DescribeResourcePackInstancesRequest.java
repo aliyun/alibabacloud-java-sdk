@@ -8,11 +8,9 @@ public class DescribeResourcePackInstancesRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("ResourceGroupId")
