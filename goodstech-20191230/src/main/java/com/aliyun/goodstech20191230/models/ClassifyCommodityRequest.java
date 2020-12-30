@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class ClassifyCommodityRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static ClassifyCommodityRequest build(java.util.Map<String, ?> map) throws Exception {
         ClassifyCommodityRequest self = new ClassifyCommodityRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ClassifyCommodityRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
     }
 
 }

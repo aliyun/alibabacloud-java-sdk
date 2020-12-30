@@ -5,24 +5,52 @@ import com.aliyun.tea.*;
 
 public class RecognizeFurnitureSpuRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     @NameInMap("XLength")
-    @Validation(required = true)
-    public Double XLength;
+    public Float XLength;
 
     @NameInMap("YLength")
-    @Validation(required = true)
-    public Double YLength;
+    public Float YLength;
 
     @NameInMap("ZLength")
-    @Validation(required = true)
-    public Double ZLength;
+    public Float ZLength;
 
     public static RecognizeFurnitureSpuRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeFurnitureSpuRequest self = new RecognizeFurnitureSpuRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeFurnitureSpuRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
+    public RecognizeFurnitureSpuRequest setXLength(Float XLength) {
+        this.XLength = XLength;
+        return this;
+    }
+    public Float getXLength() {
+        return this.XLength;
+    }
+
+    public RecognizeFurnitureSpuRequest setYLength(Float YLength) {
+        this.YLength = YLength;
+        return this;
+    }
+    public Float getYLength() {
+        return this.YLength;
+    }
+
+    public RecognizeFurnitureSpuRequest setZLength(Float ZLength) {
+        this.ZLength = ZLength;
+        return this;
+    }
+    public Float getZLength() {
+        return this.ZLength;
     }
 
 }
