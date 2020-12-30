@@ -1,0 +1,152 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.push20160801.models;
+
+import com.aliyun.tea.*;
+
+public class QueryDeviceInfoResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("DeviceInfo")
+    public QueryDeviceInfoResponseBodyDeviceInfo deviceInfo;
+
+    public static QueryDeviceInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        QueryDeviceInfoResponseBody self = new QueryDeviceInfoResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceInfoResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QueryDeviceInfoResponseBody setDeviceInfo(QueryDeviceInfoResponseBodyDeviceInfo deviceInfo) {
+        this.deviceInfo = deviceInfo;
+        return this;
+    }
+    public QueryDeviceInfoResponseBodyDeviceInfo getDeviceInfo() {
+        return this.deviceInfo;
+    }
+
+    public static class QueryDeviceInfoResponseBodyDeviceInfo extends TeaModel {
+        @NameInMap("Account")
+        public String account;
+
+        @NameInMap("LastOnlineTime")
+        public String lastOnlineTime;
+
+        @NameInMap("PhoneNumber")
+        public String phoneNumber;
+
+        @NameInMap("PushEnabled")
+        public Boolean pushEnabled;
+
+        @NameInMap("DeviceType")
+        public String deviceType;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
+
+        @NameInMap("Online")
+        public Boolean online;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("DeviceToken")
+        public String deviceToken;
+
+        @NameInMap("Alias")
+        public String alias;
+
+        public static QueryDeviceInfoResponseBodyDeviceInfo build(java.util.Map<String, ?> map) throws Exception {
+            QueryDeviceInfoResponseBodyDeviceInfo self = new QueryDeviceInfoResponseBodyDeviceInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setAccount(String account) {
+            this.account = account;
+            return this;
+        }
+        public String getAccount() {
+            return this.account;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setLastOnlineTime(String lastOnlineTime) {
+            this.lastOnlineTime = lastOnlineTime;
+            return this;
+        }
+        public String getLastOnlineTime() {
+            return this.lastOnlineTime;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setPhoneNumber(String phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            return this;
+        }
+        public String getPhoneNumber() {
+            return this.phoneNumber;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setPushEnabled(Boolean pushEnabled) {
+            this.pushEnabled = pushEnabled;
+            return this;
+        }
+        public Boolean getPushEnabled() {
+            return this.pushEnabled;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setDeviceType(String deviceType) {
+            this.deviceType = deviceType;
+            return this;
+        }
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setOnline(Boolean online) {
+            this.online = online;
+            return this;
+        }
+        public Boolean getOnline() {
+            return this.online;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setDeviceToken(String deviceToken) {
+            this.deviceToken = deviceToken;
+            return this;
+        }
+        public String getDeviceToken() {
+            return this.deviceToken;
+        }
+
+        public QueryDeviceInfoResponseBodyDeviceInfo setAlias(String alias) {
+            this.alias = alias;
+            return this;
+        }
+        public String getAlias() {
+            return this.alias;
+        }
+
+    }
+
+}
