@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AddBgpNetworkResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AddBgpNetworkResponseBody body;
 
     public static AddBgpNetworkResponse build(java.util.Map<String, ?> map) throws Exception {
         AddBgpNetworkResponse self = new AddBgpNetworkResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddBgpNetworkResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddBgpNetworkResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddBgpNetworkResponse setBody(AddBgpNetworkResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddBgpNetworkResponseBody getBody() {
+        return this.body;
     }
 
 }

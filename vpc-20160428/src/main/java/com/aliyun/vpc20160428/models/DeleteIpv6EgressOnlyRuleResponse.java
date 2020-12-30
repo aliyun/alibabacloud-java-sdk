@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpv6EgressOnlyRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteIpv6EgressOnlyRuleResponseBody body;
 
     public static DeleteIpv6EgressOnlyRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteIpv6EgressOnlyRuleResponse self = new DeleteIpv6EgressOnlyRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteIpv6EgressOnlyRuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteIpv6EgressOnlyRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteIpv6EgressOnlyRuleResponse setBody(DeleteIpv6EgressOnlyRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteIpv6EgressOnlyRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

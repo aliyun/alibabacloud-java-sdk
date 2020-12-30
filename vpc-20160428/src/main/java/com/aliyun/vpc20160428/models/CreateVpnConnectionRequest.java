@@ -4,30 +4,37 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpnConnectionRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("CustomerGatewayId")
-    @Validation(required = true)
     public String customerGatewayId;
 
     @NameInMap("VpnGatewayId")
-    @Validation(required = true)
     public String vpnGatewayId;
 
     @NameInMap("Name")
     public String name;
 
     @NameInMap("LocalSubnet")
-    @Validation(required = true)
     public String localSubnet;
 
     @NameInMap("RemoteSubnet")
-    @Validation(required = true)
     public String remoteSubnet;
 
     @NameInMap("EffectImmediately")
@@ -54,9 +61,44 @@ public class CreateVpnConnectionRequest extends TeaModel {
     @NameInMap("BgpConfig")
     public String bgpConfig;
 
+    @NameInMap("RemoteCaCertificate")
+    public String remoteCaCertificate;
+
     public static CreateVpnConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVpnConnectionRequest self = new CreateVpnConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateVpnConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateVpnConnectionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateVpnConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateVpnConnectionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateVpnConnectionRequest setRegionId(String regionId) {
@@ -177,6 +219,14 @@ public class CreateVpnConnectionRequest extends TeaModel {
     }
     public String getBgpConfig() {
         return this.bgpConfig;
+    }
+
+    public CreateVpnConnectionRequest setRemoteCaCertificate(String remoteCaCertificate) {
+        this.remoteCaCertificate = remoteCaCertificate;
+        return this;
+    }
+    public String getRemoteCaCertificate() {
+        return this.remoteCaCertificate;
     }
 
 }

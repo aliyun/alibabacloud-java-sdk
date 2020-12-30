@@ -5,12 +5,22 @@ import com.aliyun.tea.*;
 
 public class GetDhcpOptionsSetRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DhcpOptionsSetId")
-    @Validation(required = true)
     public String dhcpOptionsSetId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static GetDhcpOptionsSetRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDhcpOptionsSetRequest self = new GetDhcpOptionsSetRequest();
@@ -31,6 +41,38 @@ public class GetDhcpOptionsSetRequest extends TeaModel {
     }
     public String getDhcpOptionsSetId() {
         return this.dhcpOptionsSetId;
+    }
+
+    public GetDhcpOptionsSetRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GetDhcpOptionsSetRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GetDhcpOptionsSetRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public GetDhcpOptionsSetRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

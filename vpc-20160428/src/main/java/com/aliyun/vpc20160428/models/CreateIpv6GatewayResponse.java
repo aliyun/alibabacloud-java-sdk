@@ -4,33 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIpv6GatewayResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Ipv6GatewayId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String ipv6GatewayId;
+    public CreateIpv6GatewayResponseBody body;
 
     public static CreateIpv6GatewayResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateIpv6GatewayResponse self = new CreateIpv6GatewayResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateIpv6GatewayResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateIpv6GatewayResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateIpv6GatewayResponse setIpv6GatewayId(String ipv6GatewayId) {
-        this.ipv6GatewayId = ipv6GatewayId;
+    public CreateIpv6GatewayResponse setBody(CreateIpv6GatewayResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getIpv6GatewayId() {
-        return this.ipv6GatewayId;
+    public CreateIpv6GatewayResponseBody getBody() {
+        return this.body;
     }
 
 }

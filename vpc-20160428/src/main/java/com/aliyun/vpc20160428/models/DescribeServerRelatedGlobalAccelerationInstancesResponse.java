@@ -4,109 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeServerRelatedGlobalAccelerationInstancesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("GlobalAccelerationInstances")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstances globalAccelerationInstances;
+    public DescribeServerRelatedGlobalAccelerationInstancesResponseBody body;
 
     public static DescribeServerRelatedGlobalAccelerationInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeServerRelatedGlobalAccelerationInstancesResponse self = new DescribeServerRelatedGlobalAccelerationInstancesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeServerRelatedGlobalAccelerationInstancesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeServerRelatedGlobalAccelerationInstancesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeServerRelatedGlobalAccelerationInstancesResponse setGlobalAccelerationInstances(DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstances globalAccelerationInstances) {
-        this.globalAccelerationInstances = globalAccelerationInstances;
+    public DescribeServerRelatedGlobalAccelerationInstancesResponse setBody(DescribeServerRelatedGlobalAccelerationInstancesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstances getGlobalAccelerationInstances() {
-        return this.globalAccelerationInstances;
-    }
-
-    public static class DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance extends TeaModel {
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
-        @NameInMap("GlobalAccelerationInstanceId")
-        @Validation(required = true)
-        public String globalAccelerationInstanceId;
-
-        @NameInMap("IpAddress")
-        @Validation(required = true)
-        public String ipAddress;
-
-        @NameInMap("ServerIpAddress")
-        @Validation(required = true)
-        public String serverIpAddress;
-
-        public static DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance self = new DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
-        }
-
-        public DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
-            this.globalAccelerationInstanceId = globalAccelerationInstanceId;
-            return this;
-        }
-        public String getGlobalAccelerationInstanceId() {
-            return this.globalAccelerationInstanceId;
-        }
-
-        public DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance setIpAddress(String ipAddress) {
-            this.ipAddress = ipAddress;
-            return this;
-        }
-        public String getIpAddress() {
-            return this.ipAddress;
-        }
-
-        public DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance setServerIpAddress(String serverIpAddress) {
-            this.serverIpAddress = serverIpAddress;
-            return this;
-        }
-        public String getServerIpAddress() {
-            return this.serverIpAddress;
-        }
-
-    }
-
-    public static class DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstances extends TeaModel {
-        @NameInMap("GlobalAccelerationInstance")
-        @Validation(required = true)
-        public java.util.List<DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance> globalAccelerationInstance;
-
-        public static DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstances self = new DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstances();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstances setGlobalAccelerationInstance(java.util.List<DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance> globalAccelerationInstance) {
-            this.globalAccelerationInstance = globalAccelerationInstance;
-            return this;
-        }
-        public java.util.List<DescribeServerRelatedGlobalAccelerationInstancesResponseGlobalAccelerationInstancesGlobalAccelerationInstance> getGlobalAccelerationInstance() {
-            return this.globalAccelerationInstance;
-        }
-
+    public DescribeServerRelatedGlobalAccelerationInstancesResponseBody getBody() {
+        return this.body;
     }
 
 }

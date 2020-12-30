@@ -5,26 +5,34 @@ import com.aliyun.tea.*;
 
 public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Ipv6GatewayId")
-    @Validation(required = true)
     public String ipv6GatewayId;
 
     @NameInMap("Ipv6AddressId")
-    @Validation(required = true)
     public String ipv6AddressId;
 
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     @NameInMap("Bandwidth")
-    @Validation(required = true)
     public Integer bandwidth;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static AllocateIpv6InternetBandwidthRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateIpv6InternetBandwidthRequest self = new AllocateIpv6InternetBandwidthRequest();
@@ -77,6 +85,38 @@ public class AllocateIpv6InternetBandwidthRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public AllocateIpv6InternetBandwidthRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

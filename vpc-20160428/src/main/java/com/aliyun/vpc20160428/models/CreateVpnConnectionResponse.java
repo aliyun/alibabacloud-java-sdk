@@ -4,57 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpnConnectionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("VpnConnectionId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String vpnConnectionId;
-
-    @NameInMap("Name")
-    @Validation(required = true)
-    public String name;
-
-    @NameInMap("CreateTime")
-    @Validation(required = true)
-    public Long createTime;
+    public CreateVpnConnectionResponseBody body;
 
     public static CreateVpnConnectionResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateVpnConnectionResponse self = new CreateVpnConnectionResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateVpnConnectionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateVpnConnectionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateVpnConnectionResponse setVpnConnectionId(String vpnConnectionId) {
-        this.vpnConnectionId = vpnConnectionId;
+    public CreateVpnConnectionResponse setBody(CreateVpnConnectionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getVpnConnectionId() {
-        return this.vpnConnectionId;
-    }
-
-    public CreateVpnConnectionResponse setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateVpnConnectionResponse setCreateTime(Long createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public Long getCreateTime() {
-        return this.createTime;
+    public CreateVpnConnectionResponseBody getBody() {
+        return this.body;
     }
 
 }

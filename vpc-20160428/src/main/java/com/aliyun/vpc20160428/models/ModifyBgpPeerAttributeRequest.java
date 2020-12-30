@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyBgpPeerAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BgpPeerId")
-    @Validation(required = true)
     public String bgpPeerId;
 
     @NameInMap("BgpGroupId")
@@ -21,8 +19,20 @@ public class ModifyBgpPeerAttributeRequest extends TeaModel {
     @NameInMap("EnableBfd")
     public Boolean enableBfd;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("BfdMultiHop")
     public Integer bfdMultiHop;
@@ -72,12 +82,44 @@ public class ModifyBgpPeerAttributeRequest extends TeaModel {
         return this.enableBfd;
     }
 
+    public ModifyBgpPeerAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyBgpPeerAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyBgpPeerAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public ModifyBgpPeerAttributeRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyBgpPeerAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyBgpPeerAttributeRequest setBfdMultiHop(Integer bfdMultiHop) {

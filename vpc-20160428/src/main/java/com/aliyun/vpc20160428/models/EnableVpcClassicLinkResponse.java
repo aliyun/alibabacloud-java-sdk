@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class EnableVpcClassicLinkResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public EnableVpcClassicLinkResponseBody body;
 
     public static EnableVpcClassicLinkResponse build(java.util.Map<String, ?> map) throws Exception {
         EnableVpcClassicLinkResponse self = new EnableVpcClassicLinkResponse();
         return TeaModel.build(map, self);
     }
 
-    public EnableVpcClassicLinkResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public EnableVpcClassicLinkResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public EnableVpcClassicLinkResponse setBody(EnableVpcClassicLinkResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public EnableVpcClassicLinkResponseBody getBody() {
+        return this.body;
     }
 
 }

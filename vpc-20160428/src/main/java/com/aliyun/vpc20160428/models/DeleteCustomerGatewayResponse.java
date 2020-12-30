@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteCustomerGatewayResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteCustomerGatewayResponseBody body;
 
     public static DeleteCustomerGatewayResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteCustomerGatewayResponse self = new DeleteCustomerGatewayResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteCustomerGatewayResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteCustomerGatewayResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteCustomerGatewayResponse setBody(DeleteCustomerGatewayResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteCustomerGatewayResponseBody getBody() {
+        return this.body;
     }
 
 }

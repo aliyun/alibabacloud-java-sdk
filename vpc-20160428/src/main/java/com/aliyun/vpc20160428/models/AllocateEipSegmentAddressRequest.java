@@ -4,6 +4,18 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipSegmentAddressRequest extends TeaModel {
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -11,11 +23,9 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     public String bandwidth;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("EipMask")
-    @Validation(required = true)
     public String eipMask;
 
     @NameInMap("Netmode")
@@ -33,6 +43,38 @@ public class AllocateEipSegmentAddressRequest extends TeaModel {
     public static AllocateEipSegmentAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateEipSegmentAddressRequest self = new AllocateEipSegmentAddressRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AllocateEipSegmentAddressRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AllocateEipSegmentAddressRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public AllocateEipSegmentAddressRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AllocateEipSegmentAddressRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AllocateEipSegmentAddressRequest setClientToken(String clientToken) {

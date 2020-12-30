@@ -4,32 +4,63 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class GrantInstanceToCenRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("CenId")
-    @Validation(required = true)
     public String cenId;
 
     @NameInMap("CenOwnerId")
-    @Validation(required = true)
     public Long cenOwnerId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     public static GrantInstanceToCenRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantInstanceToCenRequest self = new GrantInstanceToCenRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GrantInstanceToCenRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GrantInstanceToCenRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GrantInstanceToCenRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public GrantInstanceToCenRequest setRegionId(String regionId) {
@@ -78,6 +109,14 @@ public class GrantInstanceToCenRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public GrantInstanceToCenRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

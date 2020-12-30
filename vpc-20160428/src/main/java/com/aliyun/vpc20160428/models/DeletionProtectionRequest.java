@@ -5,22 +5,27 @@ import com.aliyun.tea.*;
 
 public class DeletionProtectionRequest extends TeaModel {
     @NameInMap("ProtectionEnable")
-    @Validation(required = true)
     public Boolean protectionEnable;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static DeletionProtectionRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -50,6 +55,30 @@ public class DeletionProtectionRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DeletionProtectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeletionProtectionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DeletionProtectionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeletionProtectionRequest setClientToken(String clientToken) {

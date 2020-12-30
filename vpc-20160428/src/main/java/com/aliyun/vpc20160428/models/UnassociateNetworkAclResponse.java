@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UnassociateNetworkAclResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UnassociateNetworkAclResponseBody body;
 
     public static UnassociateNetworkAclResponse build(java.util.Map<String, ?> map) throws Exception {
         UnassociateNetworkAclResponse self = new UnassociateNetworkAclResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnassociateNetworkAclResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UnassociateNetworkAclResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UnassociateNetworkAclResponse setBody(UnassociateNetworkAclResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UnassociateNetworkAclResponseBody getBody() {
+        return this.body;
     }
 
 }

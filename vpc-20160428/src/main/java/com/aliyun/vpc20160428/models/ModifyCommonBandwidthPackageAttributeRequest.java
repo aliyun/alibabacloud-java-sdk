@@ -4,12 +4,22 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
     public String bandwidthPackageId;
 
     @NameInMap("Name")
@@ -21,6 +31,38 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     public static ModifyCommonBandwidthPackageAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCommonBandwidthPackageAttributeRequest self = new ModifyCommonBandwidthPackageAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCommonBandwidthPackageAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyCommonBandwidthPackageAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyCommonBandwidthPackageAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyCommonBandwidthPackageAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyCommonBandwidthPackageAttributeRequest setRegionId(String regionId) {

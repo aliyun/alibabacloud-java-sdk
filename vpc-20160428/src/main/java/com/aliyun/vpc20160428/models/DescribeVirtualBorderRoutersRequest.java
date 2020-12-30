@@ -4,8 +4,16 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
@@ -20,6 +28,30 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public static DescribeVirtualBorderRoutersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualBorderRoutersRequest self = new DescribeVirtualBorderRoutersRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVirtualBorderRoutersRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVirtualBorderRoutersRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeVirtualBorderRoutersRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeVirtualBorderRoutersRequest setRegionId(String regionId) {
@@ -56,11 +88,9 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
 
     public static class DescribeVirtualBorderRoutersRequestFilter extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public java.util.List<String> value;
 
         public static DescribeVirtualBorderRoutersRequestFilter build(java.util.Map<String, ?> map) throws Exception {

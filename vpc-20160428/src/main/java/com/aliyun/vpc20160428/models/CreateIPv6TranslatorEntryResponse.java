@@ -4,33 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorEntryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Ipv6TranslatorEntryId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String ipv6TranslatorEntryId;
+    public CreateIPv6TranslatorEntryResponseBody body;
 
     public static CreateIPv6TranslatorEntryResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateIPv6TranslatorEntryResponse self = new CreateIPv6TranslatorEntryResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateIPv6TranslatorEntryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateIPv6TranslatorEntryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateIPv6TranslatorEntryResponse setIpv6TranslatorEntryId(String ipv6TranslatorEntryId) {
-        this.ipv6TranslatorEntryId = ipv6TranslatorEntryId;
+    public CreateIPv6TranslatorEntryResponse setBody(CreateIPv6TranslatorEntryResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getIpv6TranslatorEntryId() {
-        return this.ipv6TranslatorEntryId;
+    public CreateIPv6TranslatorEntryResponseBody getBody() {
+        return this.body;
     }
 
 }

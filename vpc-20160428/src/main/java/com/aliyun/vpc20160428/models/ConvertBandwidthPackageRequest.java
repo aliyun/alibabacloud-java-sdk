@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class ConvertBandwidthPackageRequest extends TeaModel {
     @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
     public String bandwidthPackageId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -34,6 +41,30 @@ public class ConvertBandwidthPackageRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ConvertBandwidthPackageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ConvertBandwidthPackageRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ConvertBandwidthPackageRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ConvertBandwidthPackageRequest setClientToken(String clientToken) {

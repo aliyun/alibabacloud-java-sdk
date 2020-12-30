@@ -4,45 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateCommonBandwidthPackageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("BandwidthPackageId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String bandwidthPackageId;
-
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
-    public String resourceGroupId;
+    public CreateCommonBandwidthPackageResponseBody body;
 
     public static CreateCommonBandwidthPackageResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateCommonBandwidthPackageResponse self = new CreateCommonBandwidthPackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateCommonBandwidthPackageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateCommonBandwidthPackageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateCommonBandwidthPackageResponse setBandwidthPackageId(String bandwidthPackageId) {
-        this.bandwidthPackageId = bandwidthPackageId;
+    public CreateCommonBandwidthPackageResponse setBody(CreateCommonBandwidthPackageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getBandwidthPackageId() {
-        return this.bandwidthPackageId;
-    }
-
-    public CreateCommonBandwidthPackageResponse setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public CreateCommonBandwidthPackageResponseBody getBody() {
+        return this.body;
     }
 
 }

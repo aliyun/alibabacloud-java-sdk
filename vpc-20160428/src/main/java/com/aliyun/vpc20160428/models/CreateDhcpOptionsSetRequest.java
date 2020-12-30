@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateDhcpOptionsSetRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DomainNameServers")
@@ -19,6 +18,18 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
 
     @NameInMap("DomainName")
     public String domainName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -69,6 +80,38 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
+    }
+
+    public CreateDhcpOptionsSetRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateDhcpOptionsSetRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDhcpOptionsSetRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateDhcpOptionsSetRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateDhcpOptionsSetRequest setClientToken(String clientToken) {

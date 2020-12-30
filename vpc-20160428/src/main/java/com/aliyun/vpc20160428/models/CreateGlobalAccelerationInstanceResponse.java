@@ -4,45 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateGlobalAccelerationInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("GlobalAccelerationInstanceId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String globalAccelerationInstanceId;
-
-    @NameInMap("IpAddress")
-    @Validation(required = true)
-    public String ipAddress;
+    public CreateGlobalAccelerationInstanceResponseBody body;
 
     public static CreateGlobalAccelerationInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateGlobalAccelerationInstanceResponse self = new CreateGlobalAccelerationInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateGlobalAccelerationInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateGlobalAccelerationInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateGlobalAccelerationInstanceResponse setGlobalAccelerationInstanceId(String globalAccelerationInstanceId) {
-        this.globalAccelerationInstanceId = globalAccelerationInstanceId;
+    public CreateGlobalAccelerationInstanceResponse setBody(CreateGlobalAccelerationInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getGlobalAccelerationInstanceId() {
-        return this.globalAccelerationInstanceId;
-    }
-
-    public CreateGlobalAccelerationInstanceResponse setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
-        return this;
-    }
-    public String getIpAddress() {
-        return this.ipAddress;
+    public CreateGlobalAccelerationInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

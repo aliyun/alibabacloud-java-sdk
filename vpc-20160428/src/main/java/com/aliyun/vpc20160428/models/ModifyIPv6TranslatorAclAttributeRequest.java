@@ -4,24 +4,65 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorAclAttributeRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("AclId")
-    @Validation(required = true)
     public String aclId;
 
     @NameInMap("AclName")
-    @Validation(required = true)
     public String aclName;
 
     public static ModifyIPv6TranslatorAclAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIPv6TranslatorAclAttributeRequest self = new ModifyIPv6TranslatorAclAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyIPv6TranslatorAclAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyIPv6TranslatorAclAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyIPv6TranslatorAclAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyIPv6TranslatorAclAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ModifyIPv6TranslatorAclAttributeRequest setRegionId(String regionId) {

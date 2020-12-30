@@ -4,12 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateBgpGroupRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RouterId")
-    @Validation(required = true)
     public String routerId;
 
     @NameInMap("Name")
@@ -22,7 +29,6 @@ public class CreateBgpGroupRequest extends TeaModel {
     public Long localAsn;
 
     @NameInMap("PeerAsn")
-    @Validation(required = true)
     public Long peerAsn;
 
     @NameInMap("AuthKey")
@@ -34,12 +40,39 @@ public class CreateBgpGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("IpVersion")
     public String ipVersion;
 
     public static CreateBgpGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBgpGroupRequest self = new CreateBgpGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateBgpGroupRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateBgpGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateBgpGroupRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateBgpGroupRequest setRegionId(String regionId) {
@@ -112,6 +145,14 @@ public class CreateBgpGroupRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateBgpGroupRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateBgpGroupRequest setIpVersion(String ipVersion) {

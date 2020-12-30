@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListNatGatewayEcsMetricRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     @NameInMap("NatGatewayId")
-    @Validation(required = true)
     public String natGatewayId;
 
     @NameInMap("TimePoint")
-    @Validation(required = true)
     public Long timePoint;
 
     @NameInMap("OrderKey")

@@ -4,33 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateSnatEntryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SnatEntryId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String snatEntryId;
+    public CreateSnatEntryResponseBody body;
 
     public static CreateSnatEntryResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateSnatEntryResponse self = new CreateSnatEntryResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateSnatEntryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateSnatEntryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateSnatEntryResponse setSnatEntryId(String snatEntryId) {
-        this.snatEntryId = snatEntryId;
+    public CreateSnatEntryResponse setBody(CreateSnatEntryResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getSnatEntryId() {
-        return this.snatEntryId;
+    public CreateSnatEntryResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnPbrRouteEntryWeightResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifyVpnPbrRouteEntryWeightResponseBody body;
 
     public static ModifyVpnPbrRouteEntryWeightResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyVpnPbrRouteEntryWeightResponse self = new ModifyVpnPbrRouteEntryWeightResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyVpnPbrRouteEntryWeightResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyVpnPbrRouteEntryWeightResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyVpnPbrRouteEntryWeightResponse setBody(ModifyVpnPbrRouteEntryWeightResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyVpnPbrRouteEntryWeightResponseBody getBody() {
+        return this.body;
     }
 
 }

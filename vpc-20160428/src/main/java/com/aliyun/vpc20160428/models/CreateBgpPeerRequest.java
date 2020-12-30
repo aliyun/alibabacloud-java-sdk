@@ -4,12 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateBgpPeerRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BgpGroupId")
-    @Validation(required = true)
     public String bgpGroupId;
 
     @NameInMap("PeerIpAddress")
@@ -21,6 +28,9 @@ public class CreateBgpPeerRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("IpVersion")
     public String ipVersion;
 
@@ -30,6 +40,30 @@ public class CreateBgpPeerRequest extends TeaModel {
     public static CreateBgpPeerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBgpPeerRequest self = new CreateBgpPeerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateBgpPeerRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateBgpPeerRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateBgpPeerRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateBgpPeerRequest setRegionId(String regionId) {
@@ -70,6 +104,14 @@ public class CreateBgpPeerRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateBgpPeerRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateBgpPeerRequest setIpVersion(String ipVersion) {

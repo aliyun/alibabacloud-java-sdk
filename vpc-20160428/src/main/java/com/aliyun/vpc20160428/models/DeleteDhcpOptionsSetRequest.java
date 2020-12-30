@@ -5,12 +5,22 @@ import com.aliyun.tea.*;
 
 public class DeleteDhcpOptionsSetRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DhcpOptionsSetId")
-    @Validation(required = true)
     public String dhcpOptionsSetId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -37,6 +47,38 @@ public class DeleteDhcpOptionsSetRequest extends TeaModel {
     }
     public String getDhcpOptionsSetId() {
         return this.dhcpOptionsSetId;
+    }
+
+    public DeleteDhcpOptionsSetRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteDhcpOptionsSetRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteDhcpOptionsSetRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DeleteDhcpOptionsSetRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteDhcpOptionsSetRequest setClientToken(String clientToken) {

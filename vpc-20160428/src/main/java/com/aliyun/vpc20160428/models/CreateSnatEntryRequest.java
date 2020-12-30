@@ -4,12 +4,22 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateSnatEntryRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SnatTableId")
-    @Validation(required = true)
     public String snatTableId;
 
     @NameInMap("SourceVSwitchId")
@@ -19,7 +29,6 @@ public class CreateSnatEntryRequest extends TeaModel {
     public String sourceCIDR;
 
     @NameInMap("SnatIp")
-    @Validation(required = true)
     public String snatIp;
 
     @NameInMap("SnatEntryName")
@@ -31,6 +40,38 @@ public class CreateSnatEntryRequest extends TeaModel {
     public static CreateSnatEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnatEntryRequest self = new CreateSnatEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSnatEntryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateSnatEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateSnatEntryRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateSnatEntryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateSnatEntryRequest setRegionId(String regionId) {

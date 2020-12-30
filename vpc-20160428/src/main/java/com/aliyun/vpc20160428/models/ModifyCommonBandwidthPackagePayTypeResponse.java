@@ -4,57 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackagePayTypeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OrderId")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long orderId;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public ModifyCommonBandwidthPackagePayTypeResponseBody body;
 
     public static ModifyCommonBandwidthPackagePayTypeResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyCommonBandwidthPackagePayTypeResponse self = new ModifyCommonBandwidthPackagePayTypeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCommonBandwidthPackagePayTypeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyCommonBandwidthPackagePayTypeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ModifyCommonBandwidthPackagePayTypeResponse setOrderId(Long orderId) {
-        this.orderId = orderId;
+    public ModifyCommonBandwidthPackagePayTypeResponse setBody(ModifyCommonBandwidthPackagePayTypeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
-    public ModifyCommonBandwidthPackagePayTypeResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ModifyCommonBandwidthPackagePayTypeResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public ModifyCommonBandwidthPackagePayTypeResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,8 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpnGatewaysRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VpcId")
@@ -26,15 +37,47 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeVpnGatewaysRequestTag> tag;
-
     @NameInMap("IncludeReservationData")
     public Boolean includeReservationData;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeVpnGatewaysRequestTag> tag;
 
     public static DescribeVpnGatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpnGatewaysRequest self = new DescribeVpnGatewaysRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVpnGatewaysRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeVpnGatewaysRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVpnGatewaysRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeVpnGatewaysRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeVpnGatewaysRequest setRegionId(String regionId) {
@@ -93,20 +136,20 @@ public class DescribeVpnGatewaysRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeVpnGatewaysRequest setTag(java.util.List<DescribeVpnGatewaysRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeVpnGatewaysRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeVpnGatewaysRequest setIncludeReservationData(Boolean includeReservationData) {
         this.includeReservationData = includeReservationData;
         return this;
     }
     public Boolean getIncludeReservationData() {
         return this.includeReservationData;
+    }
+
+    public DescribeVpnGatewaysRequest setTag(java.util.List<DescribeVpnGatewaysRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeVpnGatewaysRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class DescribeVpnGatewaysRequestTag extends TeaModel {

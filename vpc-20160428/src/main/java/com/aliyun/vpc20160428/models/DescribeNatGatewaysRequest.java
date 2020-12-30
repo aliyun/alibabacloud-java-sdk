@@ -4,8 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeNatGatewaysRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NatGatewayId")
@@ -38,9 +49,47 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeNatGatewaysRequestTag> tag;
+
     public static DescribeNatGatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNatGatewaysRequest self = new DescribeNatGatewaysRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeNatGatewaysRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeNatGatewaysRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeNatGatewaysRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeNatGatewaysRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeNatGatewaysRequest setRegionId(String regionId) {
@@ -129,6 +178,30 @@ public class DescribeNatGatewaysRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DescribeNatGatewaysRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeNatGatewaysRequest setTag(java.util.List<DescribeNatGatewaysRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeNatGatewaysRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeNatGatewaysRequestTag extends TeaModel {
+        public static DescribeNatGatewaysRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysRequestTag self = new DescribeNatGatewaysRequestTag();
+            return TeaModel.build(map, self);
+        }
+
     }
 
 }

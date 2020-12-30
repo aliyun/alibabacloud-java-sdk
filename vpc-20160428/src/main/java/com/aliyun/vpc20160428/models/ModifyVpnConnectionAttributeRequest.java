@@ -4,15 +4,25 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyVpnConnectionAttributeRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("VpnConnectionId")
-    @Validation(required = true)
     public String vpnConnectionId;
 
     @NameInMap("Name")
@@ -48,9 +58,44 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
     @NameInMap("BgpConfig")
     public String bgpConfig;
 
+    @NameInMap("RemoteCaCertificate")
+    public String remoteCaCertificate;
+
     public static ModifyVpnConnectionAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVpnConnectionAttributeRequest self = new ModifyVpnConnectionAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyVpnConnectionAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyVpnConnectionAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyVpnConnectionAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyVpnConnectionAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ModifyVpnConnectionAttributeRequest setRegionId(String regionId) {
@@ -163,6 +208,14 @@ public class ModifyVpnConnectionAttributeRequest extends TeaModel {
     }
     public String getBgpConfig() {
         return this.bgpConfig;
+    }
+
+    public ModifyVpnConnectionAttributeRequest setRemoteCaCertificate(String remoteCaCertificate) {
+        this.remoteCaCertificate = remoteCaCertificate;
+        return this;
+    }
+    public String getRemoteCaCertificate() {
+        return this.remoteCaCertificate;
     }
 
 }

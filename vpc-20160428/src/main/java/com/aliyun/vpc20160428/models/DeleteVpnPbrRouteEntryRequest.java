@@ -4,31 +4,37 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("VpnGatewayId")
-    @Validation(required = true)
     public String vpnGatewayId;
 
     @NameInMap("RouteSource")
-    @Validation(required = true)
     public String routeSource;
 
     @NameInMap("RouteDest")
-    @Validation(required = true)
     public String routeDest;
 
     @NameInMap("NextHop")
-    @Validation(required = true)
     public String nextHop;
 
     @NameInMap("Weight")
-    @Validation(required = true)
     public Integer weight;
 
     @NameInMap("OverlayMode")
@@ -37,6 +43,38 @@ public class DeleteVpnPbrRouteEntryRequest extends TeaModel {
     public static DeleteVpnPbrRouteEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVpnPbrRouteEntryRequest self = new DeleteVpnPbrRouteEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteVpnPbrRouteEntryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DeleteVpnPbrRouteEntryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteVpnPbrRouteEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteVpnPbrRouteEntryRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DeleteVpnPbrRouteEntryRequest setRegionId(String regionId) {

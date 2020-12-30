@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AttachDhcpOptionsSetToVpcResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AttachDhcpOptionsSetToVpcResponseBody body;
 
     public static AttachDhcpOptionsSetToVpcResponse build(java.util.Map<String, ?> map) throws Exception {
         AttachDhcpOptionsSetToVpcResponse self = new AttachDhcpOptionsSetToVpcResponse();
         return TeaModel.build(map, self);
     }
 
-    public AttachDhcpOptionsSetToVpcResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AttachDhcpOptionsSetToVpcResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AttachDhcpOptionsSetToVpcResponse setBody(AttachDhcpOptionsSetToVpcResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AttachDhcpOptionsSetToVpcResponseBody getBody() {
+        return this.body;
     }
 
 }

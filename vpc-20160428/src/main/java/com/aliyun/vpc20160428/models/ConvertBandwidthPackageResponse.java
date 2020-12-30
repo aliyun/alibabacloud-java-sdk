@@ -4,33 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ConvertBandwidthPackageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ConvertInstanceId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String convertInstanceId;
+    public ConvertBandwidthPackageResponseBody body;
 
     public static ConvertBandwidthPackageResponse build(java.util.Map<String, ?> map) throws Exception {
         ConvertBandwidthPackageResponse self = new ConvertBandwidthPackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public ConvertBandwidthPackageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ConvertBandwidthPackageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ConvertBandwidthPackageResponse setConvertInstanceId(String convertInstanceId) {
-        this.convertInstanceId = convertInstanceId;
+    public ConvertBandwidthPackageResponse setBody(ConvertBandwidthPackageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getConvertInstanceId() {
-        return this.convertInstanceId;
+    public ConvertBandwidthPackageResponseBody getBody() {
+        return this.body;
     }
 
 }

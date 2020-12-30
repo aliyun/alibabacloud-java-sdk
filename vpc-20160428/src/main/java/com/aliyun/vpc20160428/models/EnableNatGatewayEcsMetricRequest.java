@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class EnableNatGatewayEcsMetricRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     @NameInMap("NatGatewayId")
-    @Validation(required = true)
     public String natGatewayId;
 
     public static EnableNatGatewayEcsMetricRequest build(java.util.Map<String, ?> map) throws Exception {

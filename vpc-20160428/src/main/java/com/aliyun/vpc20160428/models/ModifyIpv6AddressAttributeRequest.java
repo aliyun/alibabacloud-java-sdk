@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyIpv6AddressAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Ipv6AddressId")
-    @Validation(required = true)
     public String ipv6AddressId;
 
     @NameInMap("Name")
@@ -17,6 +15,18 @@ public class ModifyIpv6AddressAttributeRequest extends TeaModel {
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static ModifyIpv6AddressAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIpv6AddressAttributeRequest self = new ModifyIpv6AddressAttributeRequest();
@@ -53,6 +63,38 @@ public class ModifyIpv6AddressAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyIpv6AddressAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyIpv6AddressAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyIpv6AddressAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyIpv6AddressAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

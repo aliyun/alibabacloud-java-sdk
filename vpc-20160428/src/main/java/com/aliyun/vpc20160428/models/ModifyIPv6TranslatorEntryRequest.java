@@ -4,12 +4,22 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Ipv6TranslatorEntryId")
-    @Validation(required = true)
     public String ipv6TranslatorEntryId;
 
     @NameInMap("EntryName")
@@ -45,6 +55,38 @@ public class ModifyIPv6TranslatorEntryRequest extends TeaModel {
     public static ModifyIPv6TranslatorEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIPv6TranslatorEntryRequest self = new ModifyIPv6TranslatorEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyIPv6TranslatorEntryRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ModifyIPv6TranslatorEntryRequest setRegionId(String regionId) {

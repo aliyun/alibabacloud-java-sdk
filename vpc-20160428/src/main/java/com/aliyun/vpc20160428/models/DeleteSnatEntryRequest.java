@@ -4,16 +4,25 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnatEntryRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SnatTableId")
-    @Validation(required = true)
     public String snatTableId;
 
     @NameInMap("SnatEntryId")
-    @Validation(required = true)
     public String snatEntryId;
 
     @NameInMap("ClientToken")
@@ -22,6 +31,38 @@ public class DeleteSnatEntryRequest extends TeaModel {
     public static DeleteSnatEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSnatEntryRequest self = new DeleteSnatEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSnatEntryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteSnatEntryRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteSnatEntryRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DeleteSnatEntryRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteSnatEntryRequest setRegionId(String regionId) {

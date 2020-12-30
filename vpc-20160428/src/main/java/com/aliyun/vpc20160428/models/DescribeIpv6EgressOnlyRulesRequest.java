@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Ipv6GatewayId")
-    @Validation(required = true)
     public String ipv6GatewayId;
 
     @NameInMap("Ipv6EgressOnlyRuleId")
@@ -29,6 +27,18 @@ public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static DescribeIpv6EgressOnlyRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpv6EgressOnlyRulesRequest self = new DescribeIpv6EgressOnlyRulesRequest();
@@ -97,6 +107,38 @@ public class DescribeIpv6EgressOnlyRulesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeIpv6EgressOnlyRulesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeIpv6EgressOnlyRulesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeIpv6EgressOnlyRulesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeIpv6EgressOnlyRulesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

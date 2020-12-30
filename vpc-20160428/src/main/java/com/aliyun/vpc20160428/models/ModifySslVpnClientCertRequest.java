@@ -4,15 +4,25 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifySslVpnClientCertRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SslVpnClientCertId")
-    @Validation(required = true)
     public String sslVpnClientCertId;
 
     @NameInMap("Name")
@@ -21,6 +31,38 @@ public class ModifySslVpnClientCertRequest extends TeaModel {
     public static ModifySslVpnClientCertRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifySslVpnClientCertRequest self = new ModifySslVpnClientCertRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifySslVpnClientCertRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifySslVpnClientCertRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifySslVpnClientCertRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifySslVpnClientCertRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ModifySslVpnClientCertRequest setClientToken(String clientToken) {

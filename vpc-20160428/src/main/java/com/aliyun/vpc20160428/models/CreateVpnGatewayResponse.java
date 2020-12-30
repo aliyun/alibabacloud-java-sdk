@@ -4,57 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpnGatewayResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("VpnGatewayId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String vpnGatewayId;
-
-    @NameInMap("Name")
-    @Validation(required = true)
-    public String name;
-
-    @NameInMap("OrderId")
-    @Validation(required = true)
-    public Long orderId;
+    public CreateVpnGatewayResponseBody body;
 
     public static CreateVpnGatewayResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateVpnGatewayResponse self = new CreateVpnGatewayResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateVpnGatewayResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateVpnGatewayResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateVpnGatewayResponse setVpnGatewayId(String vpnGatewayId) {
-        this.vpnGatewayId = vpnGatewayId;
+    public CreateVpnGatewayResponse setBody(CreateVpnGatewayResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getVpnGatewayId() {
-        return this.vpnGatewayId;
-    }
-
-    public CreateVpnGatewayResponse setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateVpnGatewayResponse setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
+    public CreateVpnGatewayResponseBody getBody() {
+        return this.body;
     }
 
 }
