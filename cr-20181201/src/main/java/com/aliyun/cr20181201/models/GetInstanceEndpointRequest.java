@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cr20181201.models;
+
+import com.aliyun.tea.*;
+
+public class GetInstanceEndpointRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("EndpointType")
+    public String endpointType;
+
+    @NameInMap("ModuleName")
+    public String moduleName;
+
+    public static GetInstanceEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetInstanceEndpointRequest self = new GetInstanceEndpointRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public GetInstanceEndpointRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetInstanceEndpointRequest setEndpointType(String endpointType) {
+        this.endpointType = endpointType;
+        return this;
+    }
+    public String getEndpointType() {
+        return this.endpointType;
+    }
+
+    public GetInstanceEndpointRequest setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+        return this;
+    }
+    public String getModuleName() {
+        return this.moduleName;
+    }
+
+}
