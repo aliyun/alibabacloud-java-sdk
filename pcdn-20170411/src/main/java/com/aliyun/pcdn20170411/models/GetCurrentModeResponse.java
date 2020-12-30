@@ -4,81 +4,33 @@ package com.aliyun.pcdn20170411.models;
 import com.aliyun.tea.*;
 
 public class GetCurrentModeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("ModeCode")
-    @Validation(required = true)
-    public Integer modeCode;
-
-    @NameInMap("PaddingModeCode")
-    @Validation(required = true)
-    public Integer paddingModeCode;
-
-    @NameInMap("EffectiveAt")
-    @Validation(required = true)
-    public Integer effectiveAt;
-
-    @NameInMap("EstimateBandwidth")
-    @Validation(required = true)
-    public Integer estimateBandwidth;
+    public GetCurrentModeResponseBody body;
 
     public static GetCurrentModeResponse build(java.util.Map<String, ?> map) throws Exception {
         GetCurrentModeResponse self = new GetCurrentModeResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetCurrentModeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetCurrentModeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetCurrentModeResponse setCode(Integer code) {
-        this.code = code;
+    public GetCurrentModeResponse setBody(GetCurrentModeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public GetCurrentModeResponse setModeCode(Integer modeCode) {
-        this.modeCode = modeCode;
-        return this;
-    }
-    public Integer getModeCode() {
-        return this.modeCode;
-    }
-
-    public GetCurrentModeResponse setPaddingModeCode(Integer paddingModeCode) {
-        this.paddingModeCode = paddingModeCode;
-        return this;
-    }
-    public Integer getPaddingModeCode() {
-        return this.paddingModeCode;
-    }
-
-    public GetCurrentModeResponse setEffectiveAt(Integer effectiveAt) {
-        this.effectiveAt = effectiveAt;
-        return this;
-    }
-    public Integer getEffectiveAt() {
-        return this.effectiveAt;
-    }
-
-    public GetCurrentModeResponse setEstimateBandwidth(Integer estimateBandwidth) {
-        this.estimateBandwidth = estimateBandwidth;
-        return this;
-    }
-    public Integer getEstimateBandwidth() {
-        return this.estimateBandwidth;
+    public GetCurrentModeResponseBody getBody() {
+        return this.body;
     }
 
 }

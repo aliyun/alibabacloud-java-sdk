@@ -8,11 +8,9 @@ public class StartDomainRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("Domain")
-    @Validation(required = true)
     public String domain;
 
     public static StartDomainRequest build(java.util.Map<String, ?> map) throws Exception {

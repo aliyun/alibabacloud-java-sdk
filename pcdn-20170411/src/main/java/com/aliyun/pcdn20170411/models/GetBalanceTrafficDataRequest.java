@@ -8,14 +8,12 @@ public class GetBalanceTrafficDataRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("DataInterval")
     public Integer dataInterval;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     public static GetBalanceTrafficDataRequest build(java.util.Map<String, ?> map) throws Exception {

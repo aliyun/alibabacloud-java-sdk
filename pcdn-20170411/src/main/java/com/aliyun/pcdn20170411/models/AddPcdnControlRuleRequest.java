@@ -8,35 +8,27 @@ public class AddPcdnControlRuleRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Region")
-    @Validation(required = true)
     public String region;
 
     @NameInMap("IspName")
-    @Validation(required = true)
     public String ispName;
 
     @NameInMap("PlatformType")
-    @Validation(required = true)
     public String platformType;
 
     @NameInMap("BusinessType")
-    @Validation(required = true)
     public String businessType;
 
     @NameInMap("Market")
-    @Validation(required = true)
     public String market;
 
     @NameInMap("AppVersion")
-    @Validation(required = true)
     public String appVersion;
 
     public static AddPcdnControlRuleRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,45 +4,33 @@ package com.aliyun.pcdn20170411.models;
 import com.aliyun.tea.*;
 
 public class EditPcdnControlRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    public String resourceId;
+    public EditPcdnControlRuleResponseBody body;
 
     public static EditPcdnControlRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         EditPcdnControlRuleResponse self = new EditPcdnControlRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public EditPcdnControlRuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public EditPcdnControlRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public EditPcdnControlRuleResponse setCode(Integer code) {
-        this.code = code;
+    public EditPcdnControlRuleResponse setBody(EditPcdnControlRuleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public EditPcdnControlRuleResponse setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
+    public EditPcdnControlRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

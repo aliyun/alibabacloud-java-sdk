@@ -4,45 +4,33 @@ package com.aliyun.pcdn20170411.models;
 import com.aliyun.tea.*;
 
 public class DeleteDomainResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    public String resourceId;
+    public DeleteDomainResponseBody body;
 
     public static DeleteDomainResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDomainResponse self = new DeleteDomainResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDomainResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteDomainResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteDomainResponse setCode(Integer code) {
-        this.code = code;
+    public DeleteDomainResponse setBody(DeleteDomainResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public DeleteDomainResponse setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
+    public DeleteDomainResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -8,7 +8,6 @@ public class GetConsumerStatusRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     public static GetConsumerStatusRequest build(java.util.Map<String, ?> map) throws Exception {

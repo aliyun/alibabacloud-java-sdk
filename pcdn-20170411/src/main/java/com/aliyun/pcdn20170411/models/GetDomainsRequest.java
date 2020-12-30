@@ -8,15 +8,12 @@ public class GetDomainsRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("Page")
-    @Validation(required = true)
     public String page;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public String pageSize;
 
     @NameInMap("Domain")

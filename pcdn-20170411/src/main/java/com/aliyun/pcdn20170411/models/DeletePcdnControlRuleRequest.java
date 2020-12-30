@@ -8,11 +8,9 @@ public class DeletePcdnControlRuleRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     public static DeletePcdnControlRuleRequest build(java.util.Map<String, ?> map) throws Exception {

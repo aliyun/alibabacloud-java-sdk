@@ -8,7 +8,6 @@ public class GetLogsListRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("Domain")

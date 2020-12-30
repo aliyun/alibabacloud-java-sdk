@@ -4,45 +4,33 @@ package com.aliyun.pcdn20170411.models;
 import com.aliyun.tea.*;
 
 public class StartDomainResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    public String resourceId;
+    public StartDomainResponseBody body;
 
     public static StartDomainResponse build(java.util.Map<String, ?> map) throws Exception {
         StartDomainResponse self = new StartDomainResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartDomainResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartDomainResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StartDomainResponse setCode(Integer code) {
-        this.code = code;
+    public StartDomainResponse setBody(StartDomainResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public StartDomainResponse setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
+    public StartDomainResponseBody getBody() {
+        return this.body;
     }
 
 }

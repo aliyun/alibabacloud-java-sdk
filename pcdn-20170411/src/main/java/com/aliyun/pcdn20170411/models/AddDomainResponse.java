@@ -4,45 +4,33 @@ package com.aliyun.pcdn20170411.models;
 import com.aliyun.tea.*;
 
 public class AddDomainResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    public String resourceId;
+    public AddDomainResponseBody body;
 
     public static AddDomainResponse build(java.util.Map<String, ?> map) throws Exception {
         AddDomainResponse self = new AddDomainResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddDomainResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddDomainResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddDomainResponse setCode(Integer code) {
-        this.code = code;
+    public AddDomainResponse setBody(AddDomainResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public AddDomainResponse setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
+    public AddDomainResponseBody getBody() {
+        return this.body;
     }
 
 }

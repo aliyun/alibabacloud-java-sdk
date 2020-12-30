@@ -4,33 +4,33 @@ package com.aliyun.pcdn20170411.models;
 import com.aliyun.tea.*;
 
 public class DeletePcdnControlRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
+    public DeletePcdnControlRuleResponseBody body;
 
     public static DeletePcdnControlRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeletePcdnControlRuleResponse self = new DeletePcdnControlRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeletePcdnControlRuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeletePcdnControlRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeletePcdnControlRuleResponse setCode(Integer code) {
-        this.code = code;
+    public DeletePcdnControlRuleResponse setBody(DeletePcdnControlRuleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public DeletePcdnControlRuleResponseBody getBody() {
+        return this.body;
     }
 
 }
