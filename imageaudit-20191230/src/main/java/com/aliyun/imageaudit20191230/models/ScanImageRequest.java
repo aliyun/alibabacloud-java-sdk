@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ScanImageRequest extends TeaModel {
     @NameInMap("Task")
-    @Validation(required = true)
     public java.util.List<ScanImageRequestTask> task;
 
     @NameInMap("Scene")
-    @Validation(required = true)
     public java.util.List<String> scene;
 
     public static ScanImageRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -34,41 +32,24 @@ public class ScanImageRequest extends TeaModel {
     }
 
     public static class ScanImageRequestTask extends TeaModel {
-        @NameInMap("DataId")
-        public String dataId;
-
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
         @NameInMap("ImageTimeMillisecond")
         public Long imageTimeMillisecond;
 
         @NameInMap("Interval")
         public Integer interval;
 
+        @NameInMap("ImageURL")
+        public String imageURL;
+
         @NameInMap("MaxFrames")
         public Integer maxFrames;
+
+        @NameInMap("DataId")
+        public String dataId;
 
         public static ScanImageRequestTask build(java.util.Map<String, ?> map) throws Exception {
             ScanImageRequestTask self = new ScanImageRequestTask();
             return TeaModel.build(map, self);
-        }
-
-        public ScanImageRequestTask setDataId(String dataId) {
-            this.dataId = dataId;
-            return this;
-        }
-        public String getDataId() {
-            return this.dataId;
-        }
-
-        public ScanImageRequestTask setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
         }
 
         public ScanImageRequestTask setImageTimeMillisecond(Long imageTimeMillisecond) {
@@ -87,12 +68,28 @@ public class ScanImageRequest extends TeaModel {
             return this.interval;
         }
 
+        public ScanImageRequestTask setImageURL(String imageURL) {
+            this.imageURL = imageURL;
+            return this;
+        }
+        public String getImageURL() {
+            return this.imageURL;
+        }
+
         public ScanImageRequestTask setMaxFrames(Integer maxFrames) {
             this.maxFrames = maxFrames;
             return this;
         }
         public Integer getMaxFrames() {
             return this.maxFrames;
+        }
+
+        public ScanImageRequestTask setDataId(String dataId) {
+            this.dataId = dataId;
+            return this;
+        }
+        public String getDataId() {
+            return this.dataId;
         }
 
     }
