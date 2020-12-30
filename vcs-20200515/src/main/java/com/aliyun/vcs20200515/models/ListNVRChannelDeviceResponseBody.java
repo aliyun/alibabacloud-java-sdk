@@ -82,6 +82,12 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
         @NameInMap("SampleName")
         public String sampleName;
 
+        @NameInMap("RegionName")
+        public String regionName;
+
+        @NameInMap("CorpId")
+        public String corpId;
+
         public static ListNVRChannelDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListNVRChannelDeviceResponseBodyData self = new ListNVRChannelDeviceResponseBodyData();
             return TeaModel.build(map, self);
@@ -157,6 +163,22 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
         }
         public String getSampleName() {
             return this.sampleName;
+        }
+
+        public ListNVRChannelDeviceResponseBodyData setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
+        }
+
+        public ListNVRChannelDeviceResponseBodyData setCorpId(String corpId) {
+            this.corpId = corpId;
+            return this;
+        }
+        public String getCorpId() {
+            return this.corpId;
         }
 
     }

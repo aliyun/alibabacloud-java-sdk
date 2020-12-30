@@ -54,113 +54,6 @@ public class ListNVRDeviceResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class ListNVRDeviceResponseBodyDataChannelList extends TeaModel {
-        @NameInMap("DeviceCode")
-        public String deviceCode;
-
-        @NameInMap("DeviceName")
-        public String deviceName;
-
-        @NameInMap("DeviceType")
-        public String deviceType;
-
-        @NameInMap("DatasourceType")
-        public String datasourceType;
-
-        @NameInMap("DeviceStatus")
-        public String deviceStatus;
-
-        @NameInMap("StreamStatus")
-        public String streamStatus;
-
-        @NameInMap("ComptureStatus")
-        public String comptureStatus;
-
-        @NameInMap("DeviceSn")
-        public String deviceSn;
-
-        @NameInMap("SampleName")
-        public String sampleName;
-
-        public static ListNVRDeviceResponseBodyDataChannelList build(java.util.Map<String, ?> map) throws Exception {
-            ListNVRDeviceResponseBodyDataChannelList self = new ListNVRDeviceResponseBodyDataChannelList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListNVRDeviceResponseBodyDataChannelList setDeviceCode(String deviceCode) {
-            this.deviceCode = deviceCode;
-            return this;
-        }
-        public String getDeviceCode() {
-            return this.deviceCode;
-        }
-
-        public ListNVRDeviceResponseBodyDataChannelList setDeviceName(String deviceName) {
-            this.deviceName = deviceName;
-            return this;
-        }
-        public String getDeviceName() {
-            return this.deviceName;
-        }
-
-        public ListNVRDeviceResponseBodyDataChannelList setDeviceType(String deviceType) {
-            this.deviceType = deviceType;
-            return this;
-        }
-        public String getDeviceType() {
-            return this.deviceType;
-        }
-
-        public ListNVRDeviceResponseBodyDataChannelList setDatasourceType(String datasourceType) {
-            this.datasourceType = datasourceType;
-            return this;
-        }
-        public String getDatasourceType() {
-            return this.datasourceType;
-        }
-
-        public ListNVRDeviceResponseBodyDataChannelList setDeviceStatus(String deviceStatus) {
-            this.deviceStatus = deviceStatus;
-            return this;
-        }
-        public String getDeviceStatus() {
-            return this.deviceStatus;
-        }
-
-        public ListNVRDeviceResponseBodyDataChannelList setStreamStatus(String streamStatus) {
-            this.streamStatus = streamStatus;
-            return this;
-        }
-        public String getStreamStatus() {
-            return this.streamStatus;
-        }
-
-        public ListNVRDeviceResponseBodyDataChannelList setComptureStatus(String comptureStatus) {
-            this.comptureStatus = comptureStatus;
-            return this;
-        }
-        public String getComptureStatus() {
-            return this.comptureStatus;
-        }
-
-        public ListNVRDeviceResponseBodyDataChannelList setDeviceSn(String deviceSn) {
-            this.deviceSn = deviceSn;
-            return this;
-        }
-        public String getDeviceSn() {
-            return this.deviceSn;
-        }
-
-        public ListNVRDeviceResponseBodyDataChannelList setSampleName(String sampleName) {
-            this.sampleName = sampleName;
-            return this;
-        }
-        public String getSampleName() {
-            return this.sampleName;
-        }
-
-    }
-
     public static class ListNVRDeviceResponseBodyData extends TeaModel {
         @NameInMap("DeviceCode")
         public String deviceCode;
@@ -201,11 +94,11 @@ public class ListNVRDeviceResponseBody extends TeaModel {
         @NameInMap("DeviceSn")
         public String deviceSn;
 
-        @NameInMap("ChannelList")
-        public java.util.List<ListNVRDeviceResponseBodyDataChannelList> channelList;
-
         @NameInMap("Type")
         public String type;
+
+        @NameInMap("CorpId")
+        public String corpId;
 
         public static ListNVRDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListNVRDeviceResponseBodyData self = new ListNVRDeviceResponseBodyData();
@@ -316,20 +209,20 @@ public class ListNVRDeviceResponseBody extends TeaModel {
             return this.deviceSn;
         }
 
-        public ListNVRDeviceResponseBodyData setChannelList(java.util.List<ListNVRDeviceResponseBodyDataChannelList> channelList) {
-            this.channelList = channelList;
-            return this;
-        }
-        public java.util.List<ListNVRDeviceResponseBodyDataChannelList> getChannelList() {
-            return this.channelList;
-        }
-
         public ListNVRDeviceResponseBodyData setType(String type) {
             this.type = type;
             return this;
         }
         public String getType() {
             return this.type;
+        }
+
+        public ListNVRDeviceResponseBodyData setCorpId(String corpId) {
+            this.corpId = corpId;
+            return this;
+        }
+        public String getCorpId() {
+            return this.corpId;
         }
 
     }

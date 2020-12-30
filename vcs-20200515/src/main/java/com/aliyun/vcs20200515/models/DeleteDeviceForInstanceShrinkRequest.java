@@ -19,6 +19,9 @@ public class DeleteDeviceForInstanceShrinkRequest extends TeaModel {
     @NameInMap("DeleteInstanceFlag")
     public Boolean deleteInstanceFlag;
 
+    @NameInMap("DeviceCount")
+    public String deviceCount;
+
     public static DeleteDeviceForInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDeviceForInstanceShrinkRequest self = new DeleteDeviceForInstanceShrinkRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DeleteDeviceForInstanceShrinkRequest extends TeaModel {
     }
     public Boolean getDeleteInstanceFlag() {
         return this.deleteInstanceFlag;
+    }
+
+    public DeleteDeviceForInstanceShrinkRequest setDeviceCount(String deviceCount) {
+        this.deviceCount = deviceCount;
+        return this;
+    }
+    public String getDeviceCount() {
+        return this.deviceCount;
     }
 
 }
