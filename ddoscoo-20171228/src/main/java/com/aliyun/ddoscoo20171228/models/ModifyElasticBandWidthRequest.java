@@ -8,11 +8,9 @@ public class ModifyElasticBandWidthRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("ElasticBandwidth")
-    @Validation(required = true)
     public Integer elasticBandwidth;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     public static ModifyElasticBandWidthRequest build(java.util.Map<String, ?> map) throws Exception {

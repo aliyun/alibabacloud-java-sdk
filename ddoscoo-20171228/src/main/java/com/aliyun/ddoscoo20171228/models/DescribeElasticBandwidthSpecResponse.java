@@ -4,33 +4,33 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticBandwidthSpecResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ElasticBandwidthSpec")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<String> elasticBandwidthSpec;
+    public DescribeElasticBandwidthSpecResponseBody body;
 
     public static DescribeElasticBandwidthSpecResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticBandwidthSpecResponse self = new DescribeElasticBandwidthSpecResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeElasticBandwidthSpecResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeElasticBandwidthSpecResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeElasticBandwidthSpecResponse setElasticBandwidthSpec(java.util.List<String> elasticBandwidthSpec) {
-        this.elasticBandwidthSpec = elasticBandwidthSpec;
+    public DescribeElasticBandwidthSpecResponse setBody(DescribeElasticBandwidthSpecResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<String> getElasticBandwidthSpec() {
-        return this.elasticBandwidthSpec;
+    public DescribeElasticBandwidthSpecResponseBody getBody() {
+        return this.body;
     }
 
 }

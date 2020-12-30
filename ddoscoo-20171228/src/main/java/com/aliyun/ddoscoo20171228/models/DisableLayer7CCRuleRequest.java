@@ -11,7 +11,6 @@ public class DisableLayer7CCRuleRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Domain")
-    @Validation(required = true)
     public String domain;
 
     public static DisableLayer7CCRuleRequest build(java.util.Map<String, ?> map) throws Exception {

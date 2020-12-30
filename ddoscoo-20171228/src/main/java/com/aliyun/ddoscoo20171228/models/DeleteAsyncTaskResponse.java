@@ -4,21 +4,33 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DeleteAsyncTaskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteAsyncTaskResponseBody body;
 
     public static DeleteAsyncTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteAsyncTaskResponse self = new DeleteAsyncTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAsyncTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteAsyncTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteAsyncTaskResponse setBody(DeleteAsyncTaskResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteAsyncTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,44 +4,47 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigLayer7CCRuleRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Domain")
-    @Validation(required = true)
     public String domain;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Act")
-    @Validation(required = true)
     public String act;
 
     @NameInMap("Count")
-    @Validation(required = true)
     public Integer count;
 
     @NameInMap("Interval")
-    @Validation(required = true)
     public Integer interval;
 
     @NameInMap("Mode")
-    @Validation(required = true)
     public String mode;
 
     @NameInMap("Ttl")
-    @Validation(required = true)
     public Integer ttl;
 
     @NameInMap("Uri")
-    @Validation(required = true)
     public String uri;
 
     public static ConfigLayer7CCRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigLayer7CCRuleRequest self = new ConfigLayer7CCRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ConfigLayer7CCRuleRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public ConfigLayer7CCRuleRequest setResourceGroupId(String resourceGroupId) {

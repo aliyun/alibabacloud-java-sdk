@@ -8,7 +8,6 @@ public class DescribeDomainAccessModeRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("DomainList")
-    @Validation(required = true)
     public java.util.List<String> domainList;
 
     public static DescribeDomainAccessModeRequest build(java.util.Map<String, ?> map) throws Exception {

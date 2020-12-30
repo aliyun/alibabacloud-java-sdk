@@ -4,19 +4,19 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
@@ -25,6 +25,14 @@ public class TagResourcesRequest extends TeaModel {
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesRequest self = new TagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TagResourcesRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public TagResourcesRequest setRegionId(String regionId) {
@@ -67,36 +75,6 @@ public class TagResourcesRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class TagResourcesRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static TagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            TagResourcesRequestTag self = new TagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public TagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public TagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
-    }
-
     public static class ListTagResourcesRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -118,6 +96,36 @@ public class TagResourcesRequest extends TeaModel {
         }
 
         public ListTagResourcesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class TagResourcesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static TagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            TagResourcesRequestTag self = new TagResourcesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public TagResourcesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public TagResourcesRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

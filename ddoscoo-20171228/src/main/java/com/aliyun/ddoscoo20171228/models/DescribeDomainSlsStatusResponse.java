@@ -4,57 +4,33 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainSlsStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SlsStatus")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean slsStatus;
-
-    @NameInMap("SlsLogstore")
-    @Validation(required = true)
-    public String slsLogstore;
-
-    @NameInMap("SlsProject")
-    @Validation(required = true)
-    public String slsProject;
+    public DescribeDomainSlsStatusResponseBody body;
 
     public static DescribeDomainSlsStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainSlsStatusResponse self = new DescribeDomainSlsStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainSlsStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDomainSlsStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDomainSlsStatusResponse setSlsStatus(Boolean slsStatus) {
-        this.slsStatus = slsStatus;
+    public DescribeDomainSlsStatusResponse setBody(DescribeDomainSlsStatusResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSlsStatus() {
-        return this.slsStatus;
-    }
-
-    public DescribeDomainSlsStatusResponse setSlsLogstore(String slsLogstore) {
-        this.slsLogstore = slsLogstore;
-        return this;
-    }
-    public String getSlsLogstore() {
-        return this.slsLogstore;
-    }
-
-    public DescribeDomainSlsStatusResponse setSlsProject(String slsProject) {
-        this.slsProject = slsProject;
-        return this;
-    }
-    public String getSlsProject() {
-        return this.slsProject;
+    public DescribeDomainSlsStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

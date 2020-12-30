@@ -11,7 +11,6 @@ public class ModifyFullLogTtlRequest extends TeaModel {
     public String lang;
 
     @NameInMap("Ttl")
-    @Validation(required = true)
     public Integer ttl;
 
     @NameInMap("ResourceGroupId")

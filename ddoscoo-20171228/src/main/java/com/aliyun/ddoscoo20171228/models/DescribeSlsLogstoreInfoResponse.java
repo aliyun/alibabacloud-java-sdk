@@ -4,81 +4,33 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlsLogstoreInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Quota")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long quota;
-
-    @NameInMap("LogStore")
-    @Validation(required = true)
-    public String logStore;
-
-    @NameInMap("Used")
-    @Validation(required = true)
-    public Long used;
-
-    @NameInMap("Project")
-    @Validation(required = true)
-    public String project;
-
-    @NameInMap("Ttl")
-    @Validation(required = true)
-    public Integer ttl;
+    public DescribeSlsLogstoreInfoResponseBody body;
 
     public static DescribeSlsLogstoreInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlsLogstoreInfoResponse self = new DescribeSlsLogstoreInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSlsLogstoreInfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeSlsLogstoreInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeSlsLogstoreInfoResponse setQuota(Long quota) {
-        this.quota = quota;
+    public DescribeSlsLogstoreInfoResponse setBody(DescribeSlsLogstoreInfoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getQuota() {
-        return this.quota;
-    }
-
-    public DescribeSlsLogstoreInfoResponse setLogStore(String logStore) {
-        this.logStore = logStore;
-        return this;
-    }
-    public String getLogStore() {
-        return this.logStore;
-    }
-
-    public DescribeSlsLogstoreInfoResponse setUsed(Long used) {
-        this.used = used;
-        return this;
-    }
-    public Long getUsed() {
-        return this.used;
-    }
-
-    public DescribeSlsLogstoreInfoResponse setProject(String project) {
-        this.project = project;
-        return this;
-    }
-    public String getProject() {
-        return this.project;
-    }
-
-    public DescribeSlsLogstoreInfoResponse setTtl(Integer ttl) {
-        this.ttl = ttl;
-        return this;
-    }
-    public Integer getTtl() {
-        return this.ttl;
+    public DescribeSlsLogstoreInfoResponseBody getBody() {
+        return this.body;
     }
 
 }

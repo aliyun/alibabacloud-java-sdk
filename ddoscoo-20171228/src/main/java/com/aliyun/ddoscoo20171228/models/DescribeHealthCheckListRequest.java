@@ -8,7 +8,6 @@ public class DescribeHealthCheckListRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("Listeners")
-    @Validation(required = true)
     public String listeners;
 
     public static DescribeHealthCheckListRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,21 +4,33 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DisableLayer7CCResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DisableLayer7CCResponseBody body;
 
     public static DisableLayer7CCResponse build(java.util.Map<String, ?> map) throws Exception {
         DisableLayer7CCResponse self = new DisableLayer7CCResponse();
         return TeaModel.build(map, self);
     }
 
-    public DisableLayer7CCResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DisableLayer7CCResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DisableLayer7CCResponse setBody(DisableLayer7CCResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DisableLayer7CCResponseBody getBody() {
+        return this.body;
     }
 
 }

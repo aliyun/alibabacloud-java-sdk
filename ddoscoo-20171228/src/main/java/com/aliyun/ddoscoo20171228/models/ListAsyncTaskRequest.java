@@ -14,11 +14,9 @@ public class ListAsyncTaskRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static ListAsyncTaskRequest build(java.util.Map<String, ?> map) throws Exception {

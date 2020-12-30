@@ -17,19 +17,15 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String entityObject;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("PageNo")
-    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static DescribeOpEntitiesRequest build(java.util.Map<String, ?> map) throws Exception {
