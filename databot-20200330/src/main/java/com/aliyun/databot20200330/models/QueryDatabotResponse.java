@@ -4,45 +4,33 @@ package com.aliyun.databot20200330.models;
 import com.aliyun.tea.*;
 
 public class QueryDatabotResponse extends TeaModel {
-    @NameInMap("CostTime")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Long costTime;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.Map<String, ?> data;
+    public QueryDatabotResponseBody body;
 
     public static QueryDatabotResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryDatabotResponse self = new QueryDatabotResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryDatabotResponse setCostTime(Long costTime) {
-        this.costTime = costTime;
+    public QueryDatabotResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public Long getCostTime() {
-        return this.costTime;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public QueryDatabotResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryDatabotResponse setBody(QueryDatabotResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QueryDatabotResponse setData(java.util.Map<String, ?> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
+    public QueryDatabotResponseBody getBody() {
+        return this.body;
     }
 
 }
