@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dm20151123.models;
+
+import com.aliyun.tea.*;
+
+public class GetTrackListResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetTrackListResponseBody body;
+
+    public static GetTrackListResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetTrackListResponse self = new GetTrackListResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetTrackListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetTrackListResponse setBody(GetTrackListResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetTrackListResponseBody getBody() {
+        return this.body;
+    }
+
+}
