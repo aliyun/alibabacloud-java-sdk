@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListSparkJobRequest extends TeaModel {
     @NameInMap("VcName")
-    @Validation(required = true)
     public String vcName;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static ListSparkJobRequest build(java.util.Map<String, ?> map) throws Exception {

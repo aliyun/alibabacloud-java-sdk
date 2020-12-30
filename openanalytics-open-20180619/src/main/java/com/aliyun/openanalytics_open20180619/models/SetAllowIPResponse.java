@@ -4,33 +4,33 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class SetAllowIPResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RegionId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String regionId;
+    public SetAllowIPResponseBody body;
 
     public static SetAllowIPResponse build(java.util.Map<String, ?> map) throws Exception {
         SetAllowIPResponse self = new SetAllowIPResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetAllowIPResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetAllowIPResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetAllowIPResponse setRegionId(String regionId) {
-        this.regionId = regionId;
+    public SetAllowIPResponse setBody(SetAllowIPResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public SetAllowIPResponseBody getBody() {
+        return this.body;
     }
 
 }

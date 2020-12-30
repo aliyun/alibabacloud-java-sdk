@@ -4,69 +4,33 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ErrorCode")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("ErrorInfo")
-    @Validation(required = true)
-    public String errorInfo;
-
-    @NameInMap("Result")
-    @Validation(required = true)
-    public String result;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public CreateInstanceResponseBody body;
 
     public static CreateInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceResponse self = new CreateInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CreateInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateInstanceResponse setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public CreateInstanceResponse setBody(CreateInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public CreateInstanceResponse setErrorInfo(String errorInfo) {
-        this.errorInfo = errorInfo;
-        return this;
-    }
-    public String getErrorInfo() {
-        return this.errorInfo;
-    }
-
-    public CreateInstanceResponse setResult(String result) {
-        this.result = result;
-        return this;
-    }
-    public String getResult() {
-        return this.result;
-    }
-
-    public CreateInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public CreateInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

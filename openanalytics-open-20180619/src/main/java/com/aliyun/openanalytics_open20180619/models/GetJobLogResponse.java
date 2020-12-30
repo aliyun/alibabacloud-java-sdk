@@ -4,33 +4,33 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class GetJobLogResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public GetJobLogResponseBody body;
 
     public static GetJobLogResponse build(java.util.Map<String, ?> map) throws Exception {
         GetJobLogResponse self = new GetJobLogResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetJobLogResponse setData(String data) {
-        this.data = data;
+    public GetJobLogResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetJobLogResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetJobLogResponse setBody(GetJobLogResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public GetJobLogResponseBody getBody() {
+        return this.body;
     }
 
 }

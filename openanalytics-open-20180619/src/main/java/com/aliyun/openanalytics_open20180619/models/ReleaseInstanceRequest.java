@@ -8,7 +8,6 @@ public class ReleaseInstanceRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     public static ReleaseInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

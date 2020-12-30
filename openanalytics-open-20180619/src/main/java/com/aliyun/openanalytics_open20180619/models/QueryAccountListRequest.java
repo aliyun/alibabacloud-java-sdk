@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryAccountListRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     public static QueryAccountListRequest build(java.util.Map<String, ?> map) throws Exception {

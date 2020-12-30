@@ -5,23 +5,18 @@ import com.aliyun.tea.*;
 
 public class AddEndPointRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkType")
-    @Validation(required = true)
     public String networkType;
 
     @NameInMap("VpcID")
-    @Validation(required = true)
     public String vpcID;
 
     @NameInMap("Vswitch")
-    @Validation(required = true)
     public String vswitch;
 
     @NameInMap("Zone")
-    @Validation(required = true)
     public String zone;
 
     @NameInMap("Product")

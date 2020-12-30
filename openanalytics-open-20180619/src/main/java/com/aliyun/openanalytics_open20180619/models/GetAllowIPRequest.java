@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetAllowIPRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkType")
-    @Validation(required = true)
     public String networkType;
 
     @NameInMap("Product")

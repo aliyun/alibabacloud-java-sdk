@@ -8,15 +8,12 @@ public class CreateInstanceRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("ChargeType")
-    @Validation(required = true)
     public String chargeType;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("Component")
-    @Validation(required = true)
     public String component;
 
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

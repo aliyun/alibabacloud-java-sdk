@@ -4,69 +4,33 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class ReleaseInstanceResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ErrorCode")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("ErrorInfo")
-    @Validation(required = true)
-    public String errorInfo;
-
-    @NameInMap("Result")
-    @Validation(required = true)
-    public String result;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public ReleaseInstanceResponseBody body;
 
     public static ReleaseInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         ReleaseInstanceResponse self = new ReleaseInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ReleaseInstanceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public ReleaseInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ReleaseInstanceResponse setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public ReleaseInstanceResponse setBody(ReleaseInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public ReleaseInstanceResponse setErrorInfo(String errorInfo) {
-        this.errorInfo = errorInfo;
-        return this;
-    }
-    public String getErrorInfo() {
-        return this.errorInfo;
-    }
-
-    public ReleaseInstanceResponse setResult(String result) {
-        this.result = result;
-        return this;
-    }
-    public String getResult() {
-        return this.result;
-    }
-
-    public ReleaseInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public ReleaseInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

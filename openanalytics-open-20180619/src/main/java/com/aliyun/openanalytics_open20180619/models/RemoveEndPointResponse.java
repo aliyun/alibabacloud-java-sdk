@@ -4,33 +4,33 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class RemoveEndPointResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RegionId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String regionId;
+    public RemoveEndPointResponseBody body;
 
     public static RemoveEndPointResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveEndPointResponse self = new RemoveEndPointResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveEndPointResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RemoveEndPointResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RemoveEndPointResponse setRegionId(String regionId) {
-        this.regionId = regionId;
+    public RemoveEndPointResponse setBody(RemoveEndPointResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
+    public RemoveEndPointResponseBody getBody() {
+        return this.body;
     }
 
 }

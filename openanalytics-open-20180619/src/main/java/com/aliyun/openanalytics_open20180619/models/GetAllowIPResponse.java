@@ -4,45 +4,33 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class GetAllowIPResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RegionId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String regionId;
-
-    @NameInMap("AllowIP")
-    @Validation(required = true)
-    public String allowIP;
+    public GetAllowIPResponseBody body;
 
     public static GetAllowIPResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAllowIPResponse self = new GetAllowIPResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAllowIPResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetAllowIPResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetAllowIPResponse setRegionId(String regionId) {
-        this.regionId = regionId;
+    public GetAllowIPResponse setBody(GetAllowIPResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public GetAllowIPResponse setAllowIP(String allowIP) {
-        this.allowIP = allowIP;
-        return this;
-    }
-    public String getAllowIP() {
-        return this.allowIP;
+    public GetAllowIPResponseBody getBody() {
+        return this.body;
     }
 
 }

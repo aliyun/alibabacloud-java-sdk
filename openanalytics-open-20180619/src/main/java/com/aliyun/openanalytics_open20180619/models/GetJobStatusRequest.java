@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetJobStatusRequest extends TeaModel {
     @NameInMap("JobId")
-    @Validation(required = true)
     public String jobId;
 
     @NameInMap("VcName")
-    @Validation(required = true)
     public String vcName;
 
     public static GetJobStatusRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SubmitSparkJobRequest extends TeaModel {
     @NameInMap("VcName")
-    @Validation(required = true)
     public String vcName;
 
     @NameInMap("ConfigJson")
-    @Validation(required = true)
     public String configJson;
 
     public static SubmitSparkJobRequest build(java.util.Map<String, ?> map) throws Exception {

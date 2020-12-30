@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetAllowIPRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkType")
-    @Validation(required = true)
     public String networkType;
 
     @NameInMap("Product")
     public String product;
 
     @NameInMap("AllowIP")
-    @Validation(required = true)
     public String allowIP;
 
     @NameInMap("Append")

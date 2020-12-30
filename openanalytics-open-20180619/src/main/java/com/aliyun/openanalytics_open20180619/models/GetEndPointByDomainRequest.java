@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetEndPointByDomainRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DomainURL")
-    @Validation(required = true)
     public String domainURL;
 
     @NameInMap("RegionID")

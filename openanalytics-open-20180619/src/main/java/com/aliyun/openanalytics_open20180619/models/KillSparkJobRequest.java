@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class KillSparkJobRequest extends TeaModel {
     @NameInMap("VcName")
-    @Validation(required = true)
     public String vcName;
 
     @NameInMap("JobId")
-    @Validation(required = true)
     public String jobId;
 
     public static KillSparkJobRequest build(java.util.Map<String, ?> map) throws Exception {
