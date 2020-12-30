@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterRequest extends TeaModel {
     @NameInMap("ClusterId")
-    @Validation(required = true)
     public String clusterId;
 
     public static DeleteClusterRequest build(java.util.Map<String, ?> map) throws Exception {

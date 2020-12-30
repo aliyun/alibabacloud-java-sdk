@@ -4,65 +4,33 @@ package com.aliyun.gws20190618.models;
 import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AvailableResources")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeAvailableResourceResponseAvailableResources> availableResources;
+    public DescribeAvailableResourceResponseBody body;
 
     public static DescribeAvailableResourceResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeAvailableResourceResponse self = new DescribeAvailableResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAvailableResourceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeAvailableResourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeAvailableResourceResponse setAvailableResources(java.util.List<DescribeAvailableResourceResponseAvailableResources> availableResources) {
-        this.availableResources = availableResources;
+    public DescribeAvailableResourceResponse setBody(DescribeAvailableResourceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeAvailableResourceResponseAvailableResources> getAvailableResources() {
-        return this.availableResources;
-    }
-
-    public static class DescribeAvailableResourceResponseAvailableResources extends TeaModel {
-        @NameInMap("ClusterType")
-        @Validation(required = true)
-        public String clusterType;
-
-        @NameInMap("Zone")
-        @Validation(required = true)
-        public String zone;
-
-        public static DescribeAvailableResourceResponseAvailableResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourceResponseAvailableResources self = new DescribeAvailableResourceResponseAvailableResources();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableResourceResponseAvailableResources setClusterType(String clusterType) {
-            this.clusterType = clusterType;
-            return this;
-        }
-        public String getClusterType() {
-            return this.clusterType;
-        }
-
-        public DescribeAvailableResourceResponseAvailableResources setZone(String zone) {
-            this.zone = zone;
-            return this;
-        }
-        public String getZone() {
-            return this.zone;
-        }
-
+    public DescribeAvailableResourceResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetInstanceNameRequest extends TeaModel {
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     public static SetInstanceNameRequest build(java.util.Map<String, ?> map) throws Exception {

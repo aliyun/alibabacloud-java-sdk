@@ -4,33 +4,33 @@ package com.aliyun.gws20190618.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ClusterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String clusterId;
+    public CreateClusterResponseBody body;
 
     public static CreateClusterResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateClusterResponse self = new CreateClusterResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateClusterResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateClusterResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateClusterResponse setClusterId(String clusterId) {
-        this.clusterId = clusterId;
+    public CreateClusterResponse setBody(CreateClusterResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getClusterId() {
-        return this.clusterId;
+    public CreateClusterResponseBody getBody() {
+        return this.body;
     }
 
 }

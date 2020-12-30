@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetImageNameRequest extends TeaModel {
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     public static SetImageNameRequest build(java.util.Map<String, ?> map) throws Exception {

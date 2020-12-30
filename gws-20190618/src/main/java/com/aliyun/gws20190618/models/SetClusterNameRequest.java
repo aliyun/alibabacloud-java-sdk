@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetClusterNameRequest extends TeaModel {
     @NameInMap("ClusterId")
-    @Validation(required = true)
     public String clusterId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     public static SetClusterNameRequest build(java.util.Map<String, ?> map) throws Exception {

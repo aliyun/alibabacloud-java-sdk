@@ -4,21 +4,33 @@ package com.aliyun.gws20190618.models;
 import com.aliyun.tea.*;
 
 public class SetClusterDnatResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SetClusterDnatResponseBody body;
 
     public static SetClusterDnatResponse build(java.util.Map<String, ?> map) throws Exception {
         SetClusterDnatResponse self = new SetClusterDnatResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetClusterDnatResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetClusterDnatResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SetClusterDnatResponse setBody(SetClusterDnatResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SetClusterDnatResponseBody getBody() {
+        return this.body;
     }
 
 }

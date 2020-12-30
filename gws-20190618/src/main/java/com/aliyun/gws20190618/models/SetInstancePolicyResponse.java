@@ -4,33 +4,33 @@ package com.aliyun.gws20190618.models;
 import com.aliyun.tea.*;
 
 public class SetInstancePolicyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TaskId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String taskId;
+    public SetInstancePolicyResponseBody body;
 
     public static SetInstancePolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         SetInstancePolicyResponse self = new SetInstancePolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetInstancePolicyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetInstancePolicyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetInstancePolicyResponse setTaskId(String taskId) {
-        this.taskId = taskId;
+    public SetInstancePolicyResponse setBody(SetInstancePolicyResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public SetInstancePolicyResponseBody getBody() {
+        return this.body;
     }
 
 }

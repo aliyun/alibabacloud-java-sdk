@@ -4,45 +4,33 @@ package com.aliyun.gws20190618.models;
 import com.aliyun.tea.*;
 
 public class IsUserAdminResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsAdmin")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isAdmin;
-
-    @NameInMap("IsAllow")
-    @Validation(required = true)
-    public Boolean isAllow;
+    public IsUserAdminResponseBody body;
 
     public static IsUserAdminResponse build(java.util.Map<String, ?> map) throws Exception {
         IsUserAdminResponse self = new IsUserAdminResponse();
         return TeaModel.build(map, self);
     }
 
-    public IsUserAdminResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public IsUserAdminResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public IsUserAdminResponse setIsAdmin(Boolean isAdmin) {
-        this.isAdmin = isAdmin;
+    public IsUserAdminResponse setBody(IsUserAdminResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getIsAdmin() {
-        return this.isAdmin;
-    }
-
-    public IsUserAdminResponse setIsAllow(Boolean isAllow) {
-        this.isAllow = isAllow;
-        return this;
-    }
-    public Boolean getIsAllow() {
-        return this.isAllow;
+    public IsUserAdminResponseBody getBody() {
+        return this.body;
     }
 
 }

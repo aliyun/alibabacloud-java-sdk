@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ClusterId")
-    @Validation(required = true)
     public String clusterId;
 
     @NameInMap("VSwitchId")
@@ -15,15 +14,12 @@ public class CreateInstanceRequest extends TeaModel {
     public String name;
 
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     @NameInMap("SystemDiskSize")
-    @Validation(required = true)
     public Integer systemDiskSize;
 
     @NameInMap("SystemDiskCategory")
-    @Validation(required = true)
     public String systemDiskCategory;
 
     @NameInMap("AllocatePublicAddress")
@@ -39,7 +35,6 @@ public class CreateInstanceRequest extends TeaModel {
     public Integer internetMaxBandwidthOut;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("InstanceChargeType")
@@ -55,7 +50,6 @@ public class CreateInstanceRequest extends TeaModel {
     public String periodUnit;
 
     @NameInMap("WorkMode")
-    @Validation(required = true)
     public String workMode;
 
     @NameInMap("AppList")

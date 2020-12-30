@@ -4,33 +4,33 @@ package com.aliyun.gws20190618.models;
 import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AlreadyExists")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean alreadyExists;
+    public CreateServiceLinkedRoleResponseBody body;
 
     public static CreateServiceLinkedRoleResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceLinkedRoleResponse self = new CreateServiceLinkedRoleResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateServiceLinkedRoleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateServiceLinkedRoleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateServiceLinkedRoleResponse setAlreadyExists(Boolean alreadyExists) {
-        this.alreadyExists = alreadyExists;
+    public CreateServiceLinkedRoleResponse setBody(CreateServiceLinkedRoleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getAlreadyExists() {
-        return this.alreadyExists;
+    public CreateServiceLinkedRoleResponseBody getBody() {
+        return this.body;
     }
 
 }

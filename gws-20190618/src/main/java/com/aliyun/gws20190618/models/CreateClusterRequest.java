@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     @NameInMap("VpcId")
-    @Validation(required = true)
     public String vpcId;
 
     @NameInMap("ClusterType")
-    @Validation(required = true)
     public String clusterType;
 
     @NameInMap("VSwitchId")

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Name")

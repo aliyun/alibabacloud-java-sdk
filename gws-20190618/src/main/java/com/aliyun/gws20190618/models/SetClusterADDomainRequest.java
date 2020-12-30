@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetClusterADDomainRequest extends TeaModel {
     @NameInMap("ClusterId")
-    @Validation(required = true)
     public String clusterId;
 
     @NameInMap("DomainDnsIp")
-    @Validation(required = true)
     public String domainDnsIp;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("DomainPassword")
-    @Validation(required = true)
     public String domainPassword;
 
     @NameInMap("DomainAdmin")

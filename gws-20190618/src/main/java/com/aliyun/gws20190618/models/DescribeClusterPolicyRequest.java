@@ -11,7 +11,6 @@ public class DescribeClusterPolicyRequest extends TeaModel {
     public Boolean asyncMode;
 
     @NameInMap("ClusterId")
-    @Validation(required = true)
     public String clusterId;
 
     public static DescribeClusterPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
