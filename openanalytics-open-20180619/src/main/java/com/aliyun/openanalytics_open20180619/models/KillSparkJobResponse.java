@@ -4,33 +4,33 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class KillSparkJobResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public KillSparkJobResponseBody body;
 
     public static KillSparkJobResponse build(java.util.Map<String, ?> map) throws Exception {
         KillSparkJobResponse self = new KillSparkJobResponse();
         return TeaModel.build(map, self);
     }
 
-    public KillSparkJobResponse setData(String data) {
-        this.data = data;
+    public KillSparkJobResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public KillSparkJobResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public KillSparkJobResponse setBody(KillSparkJobResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public KillSparkJobResponseBody getBody() {
+        return this.body;
     }
 
 }

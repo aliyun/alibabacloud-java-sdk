@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetEndPointRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("EndPointID")
-    @Validation(required = true)
     public String endPointID;
 
     public static GetEndPointRequest build(java.util.Map<String, ?> map) throws Exception {

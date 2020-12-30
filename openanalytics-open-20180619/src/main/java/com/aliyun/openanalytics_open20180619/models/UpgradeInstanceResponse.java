@@ -4,69 +4,33 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class UpgradeInstanceResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ErrorCode")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("ErrorInfo")
-    @Validation(required = true)
-    public String errorInfo;
-
-    @NameInMap("Result")
-    @Validation(required = true)
-    public String result;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public UpgradeInstanceResponseBody body;
 
     public static UpgradeInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         UpgradeInstanceResponse self = new UpgradeInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpgradeInstanceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public UpgradeInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpgradeInstanceResponse setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public UpgradeInstanceResponse setBody(UpgradeInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public UpgradeInstanceResponse setErrorInfo(String errorInfo) {
-        this.errorInfo = errorInfo;
-        return this;
-    }
-    public String getErrorInfo() {
-        return this.errorInfo;
-    }
-
-    public UpgradeInstanceResponse setResult(String result) {
-        this.result = result;
-        return this;
-    }
-    public String getResult() {
-        return this.result;
-    }
-
-    public UpgradeInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public UpgradeInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

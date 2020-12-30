@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ResetMainPasswordRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("UseRandomPassword")
-    @Validation(required = true)
     public Boolean useRandomPassword;
 
     @NameInMap("InitPassword")

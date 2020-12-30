@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateAccountPasswordRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("AccountName")
-    @Validation(required = true)
     public String accountName;
 
     @NameInMap("IsShort")

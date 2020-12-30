@@ -4,65 +4,33 @@ package com.aliyun.openanalytics_open20180619.models;
 import com.aliyun.tea.*;
 
 public class ValidateVirtualClusterNameResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ValidateVirtualClusterNameResponseData data;
+    public ValidateVirtualClusterNameResponseBody body;
 
     public static ValidateVirtualClusterNameResponse build(java.util.Map<String, ?> map) throws Exception {
         ValidateVirtualClusterNameResponse self = new ValidateVirtualClusterNameResponse();
         return TeaModel.build(map, self);
     }
 
-    public ValidateVirtualClusterNameResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ValidateVirtualClusterNameResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ValidateVirtualClusterNameResponse setData(ValidateVirtualClusterNameResponseData data) {
-        this.data = data;
+    public ValidateVirtualClusterNameResponse setBody(ValidateVirtualClusterNameResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ValidateVirtualClusterNameResponseData getData() {
-        return this.data;
-    }
-
-    public static class ValidateVirtualClusterNameResponseData extends TeaModel {
-        @NameInMap("Legal")
-        @Validation(required = true)
-        public String legal;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        public static ValidateVirtualClusterNameResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ValidateVirtualClusterNameResponseData self = new ValidateVirtualClusterNameResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ValidateVirtualClusterNameResponseData setLegal(String legal) {
-            this.legal = legal;
-            return this;
-        }
-        public String getLegal() {
-            return this.legal;
-        }
-
-        public ValidateVirtualClusterNameResponseData setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
+    public ValidateVirtualClusterNameResponseBody getBody() {
+        return this.body;
     }
 
 }
