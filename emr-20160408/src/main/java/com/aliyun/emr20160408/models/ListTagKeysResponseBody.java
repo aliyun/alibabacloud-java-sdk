@@ -1,0 +1,119 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.emr20160408.models;
+
+import com.aliyun.tea.*;
+
+public class ListTagKeysResponseBody extends TeaModel {
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("Keys")
+    public ListTagKeysResponseBodyKeys keys;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static ListTagKeysResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListTagKeysResponseBody self = new ListTagKeysResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ListTagKeysResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListTagKeysResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagKeysResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListTagKeysResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListTagKeysResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListTagKeysResponseBody setKeys(ListTagKeysResponseBodyKeys keys) {
+        this.keys = keys;
+        return this;
+    }
+    public ListTagKeysResponseBodyKeys getKeys() {
+        return this.keys;
+    }
+
+    public ListTagKeysResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListTagKeysResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class ListTagKeysResponseBodyKeys extends TeaModel {
+        @NameInMap("Key")
+        public java.util.List<String> key;
+
+        public static ListTagKeysResponseBodyKeys build(java.util.Map<String, ?> map) throws Exception {
+            ListTagKeysResponseBodyKeys self = new ListTagKeysResponseBodyKeys();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTagKeysResponseBodyKeys setKey(java.util.List<String> key) {
+            this.key = key;
+            return this;
+        }
+        public java.util.List<String> getKey() {
+            return this.key;
+        }
+
+    }
+
+}
