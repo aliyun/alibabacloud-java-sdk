@@ -4,37 +4,33 @@ package com.aliyun.goodstech20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeFurnitureAttributeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public RecognizeFurnitureAttributeResponseData data;
+    public RecognizeFurnitureAttributeResponseBody body;
 
     public static RecognizeFurnitureAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
         RecognizeFurnitureAttributeResponse self = new RecognizeFurnitureAttributeResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class RecognizeFurnitureAttributeResponseData extends TeaModel {
-        @NameInMap("PredStyleId")
-        @Validation(required = true)
-        public String predStyleId;
+    public RecognizeFurnitureAttributeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("PredStyle")
-        @Validation(required = true)
-        public String predStyle;
-
-        @NameInMap("PredProbability")
-        @Validation(required = true)
-        public Double predProbability;
-
-        public static RecognizeFurnitureAttributeResponseData build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeFurnitureAttributeResponseData self = new RecognizeFurnitureAttributeResponseData();
-            return TeaModel.build(map, self);
-        }
-
+    public RecognizeFurnitureAttributeResponse setBody(RecognizeFurnitureAttributeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RecognizeFurnitureAttributeResponseBody getBody() {
+        return this.body;
     }
 
 }
