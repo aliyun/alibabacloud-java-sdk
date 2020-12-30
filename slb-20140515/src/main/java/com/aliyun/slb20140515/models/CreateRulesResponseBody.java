@@ -8,7 +8,7 @@ public class CreateRulesResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Rules")
-    public java.util.List<CreateRulesResponseBodyRules> rules;
+    public CreateRulesResponseBodyRules rules;
 
     public static CreateRulesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRulesResponseBody self = new CreateRulesResponseBody();
@@ -23,27 +23,27 @@ public class CreateRulesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateRulesResponseBody setRules(java.util.List<CreateRulesResponseBodyRules> rules) {
+    public CreateRulesResponseBody setRules(CreateRulesResponseBodyRules rules) {
         this.rules = rules;
         return this;
     }
-    public java.util.List<CreateRulesResponseBodyRules> getRules() {
+    public CreateRulesResponseBodyRules getRules() {
         return this.rules;
     }
 
-    public static class CreateRulesResponseBodyRules extends TeaModel {
+    public static class CreateRulesResponseBodyRulesRule extends TeaModel {
         @NameInMap("RuleName")
         public String ruleName;
 
         @NameInMap("RuleId")
         public String ruleId;
 
-        public static CreateRulesResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
-            CreateRulesResponseBodyRules self = new CreateRulesResponseBodyRules();
+        public static CreateRulesResponseBodyRulesRule build(java.util.Map<String, ?> map) throws Exception {
+            CreateRulesResponseBodyRulesRule self = new CreateRulesResponseBodyRulesRule();
             return TeaModel.build(map, self);
         }
 
-        public CreateRulesResponseBodyRules setRuleName(String ruleName) {
+        public CreateRulesResponseBodyRulesRule setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
@@ -51,12 +51,31 @@ public class CreateRulesResponseBody extends TeaModel {
             return this.ruleName;
         }
 
-        public CreateRulesResponseBodyRules setRuleId(String ruleId) {
+        public CreateRulesResponseBodyRulesRule setRuleId(String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
         public String getRuleId() {
             return this.ruleId;
+        }
+
+    }
+
+    public static class CreateRulesResponseBodyRules extends TeaModel {
+        @NameInMap("Rule")
+        public java.util.List<CreateRulesResponseBodyRulesRule> rule;
+
+        public static CreateRulesResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
+            CreateRulesResponseBodyRules self = new CreateRulesResponseBodyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRulesResponseBodyRules setRule(java.util.List<CreateRulesResponseBodyRulesRule> rule) {
+            this.rule = rule;
+            return this;
+        }
+        public java.util.List<CreateRulesResponseBodyRulesRule> getRule() {
+            return this.rule;
         }
 
     }

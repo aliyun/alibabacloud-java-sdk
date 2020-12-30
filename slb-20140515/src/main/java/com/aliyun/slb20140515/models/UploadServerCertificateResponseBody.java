@@ -20,7 +20,7 @@ public class UploadServerCertificateResponseBody extends TeaModel {
     public String createTime;
 
     @NameInMap("SubjectAlternativeNames")
-    public java.util.List<String> subjectAlternativeNames;
+    public UploadServerCertificateResponseBodySubjectAlternativeNames subjectAlternativeNames;
 
     @NameInMap("AliCloudCertificateId")
     public String aliCloudCertificateId;
@@ -94,11 +94,11 @@ public class UploadServerCertificateResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public UploadServerCertificateResponseBody setSubjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
+    public UploadServerCertificateResponseBody setSubjectAlternativeNames(UploadServerCertificateResponseBodySubjectAlternativeNames subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
     }
-    public java.util.List<String> getSubjectAlternativeNames() {
+    public UploadServerCertificateResponseBodySubjectAlternativeNames getSubjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
 
@@ -172,6 +172,25 @@ public class UploadServerCertificateResponseBody extends TeaModel {
     }
     public String getCommonName() {
         return this.commonName;
+    }
+
+    public static class UploadServerCertificateResponseBodySubjectAlternativeNames extends TeaModel {
+        @NameInMap("SubjectAlternativeName")
+        public java.util.List<String> subjectAlternativeName;
+
+        public static UploadServerCertificateResponseBodySubjectAlternativeNames build(java.util.Map<String, ?> map) throws Exception {
+            UploadServerCertificateResponseBodySubjectAlternativeNames self = new UploadServerCertificateResponseBodySubjectAlternativeNames();
+            return TeaModel.build(map, self);
+        }
+
+        public UploadServerCertificateResponseBodySubjectAlternativeNames setSubjectAlternativeName(java.util.List<String> subjectAlternativeName) {
+            this.subjectAlternativeName = subjectAlternativeName;
+            return this;
+        }
+        public java.util.List<String> getSubjectAlternativeName() {
+            return this.subjectAlternativeName;
+        }
+
     }
 
 }

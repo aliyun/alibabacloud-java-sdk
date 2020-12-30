@@ -8,7 +8,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("DomainExtensions")
-    public java.util.List<DescribeDomainExtensionsResponseBodyDomainExtensions> domainExtensions;
+    public DescribeDomainExtensionsResponseBodyDomainExtensions domainExtensions;
 
     public static DescribeDomainExtensionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainExtensionsResponseBody self = new DescribeDomainExtensionsResponseBody();
@@ -23,15 +23,15 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDomainExtensionsResponseBody setDomainExtensions(java.util.List<DescribeDomainExtensionsResponseBodyDomainExtensions> domainExtensions) {
+    public DescribeDomainExtensionsResponseBody setDomainExtensions(DescribeDomainExtensionsResponseBodyDomainExtensions domainExtensions) {
         this.domainExtensions = domainExtensions;
         return this;
     }
-    public java.util.List<DescribeDomainExtensionsResponseBodyDomainExtensions> getDomainExtensions() {
+    public DescribeDomainExtensionsResponseBodyDomainExtensions getDomainExtensions() {
         return this.domainExtensions;
     }
 
-    public static class DescribeDomainExtensionsResponseBodyDomainExtensions extends TeaModel {
+    public static class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
@@ -41,12 +41,12 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
         @NameInMap("DomainExtensionId")
         public String domainExtensionId;
 
-        public static DescribeDomainExtensionsResponseBodyDomainExtensions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainExtensionsResponseBodyDomainExtensions self = new DescribeDomainExtensionsResponseBodyDomainExtensions();
+        public static DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension self = new DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainExtensionsResponseBodyDomainExtensions setDomain(String domain) {
+        public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setDomain(String domain) {
             this.domain = domain;
             return this;
         }
@@ -54,7 +54,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             return this.domain;
         }
 
-        public DescribeDomainExtensionsResponseBodyDomainExtensions setServerCertificateId(String serverCertificateId) {
+        public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setServerCertificateId(String serverCertificateId) {
             this.serverCertificateId = serverCertificateId;
             return this;
         }
@@ -62,12 +62,31 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             return this.serverCertificateId;
         }
 
-        public DescribeDomainExtensionsResponseBodyDomainExtensions setDomainExtensionId(String domainExtensionId) {
+        public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setDomainExtensionId(String domainExtensionId) {
             this.domainExtensionId = domainExtensionId;
             return this;
         }
         public String getDomainExtensionId() {
             return this.domainExtensionId;
+        }
+
+    }
+
+    public static class DescribeDomainExtensionsResponseBodyDomainExtensions extends TeaModel {
+        @NameInMap("DomainExtension")
+        public java.util.List<DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension> domainExtension;
+
+        public static DescribeDomainExtensionsResponseBodyDomainExtensions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainExtensionsResponseBodyDomainExtensions self = new DescribeDomainExtensionsResponseBodyDomainExtensions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainExtensionsResponseBodyDomainExtensions setDomainExtension(java.util.List<DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension> domainExtension) {
+            this.domainExtension = domainExtension;
+            return this;
+        }
+        public java.util.List<DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension> getDomainExtension() {
+            return this.domainExtension;
         }
 
     }

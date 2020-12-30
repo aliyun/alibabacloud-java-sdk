@@ -14,7 +14,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     public String healthCheck;
 
     @NameInMap("DomainExtensions")
-    public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions> domainExtensions;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions domainExtensions;
 
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
@@ -116,7 +116,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     public String aclId;
 
     @NameInMap("Rules")
-    public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules> rules;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules rules;
 
     @NameInMap("XForwardedFor_ClientCertIssuerDN")
     public String XForwardedFor_ClientCertIssuerDN;
@@ -165,11 +165,11 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.healthCheck;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setDomainExtensions(java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions> domainExtensions) {
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setDomainExtensions(DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions domainExtensions) {
         this.domainExtensions = domainExtensions;
         return this;
     }
-    public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions> getDomainExtensions() {
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions getDomainExtensions() {
         return this.domainExtensions;
     }
 
@@ -437,11 +437,11 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.aclId;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setRules(java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules> rules) {
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setRules(DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules rules) {
         this.rules = rules;
         return this;
     }
-    public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules> getRules() {
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules getRules() {
         return this.rules;
     }
 
@@ -493,7 +493,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.XForwardedFor_ClientCertFingerprint;
     }
 
-    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions extends TeaModel {
+    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
@@ -503,12 +503,12 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         @NameInMap("DomainExtensionId")
         public String domainExtensionId;
 
-        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions();
+        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions setDomain(String domain) {
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension setDomain(String domain) {
             this.domain = domain;
             return this;
         }
@@ -516,7 +516,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             return this.domain;
         }
 
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions setServerCertificateId(String serverCertificateId) {
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension setServerCertificateId(String serverCertificateId) {
             this.serverCertificateId = serverCertificateId;
             return this;
         }
@@ -524,7 +524,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             return this.serverCertificateId;
         }
 
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions setDomainExtensionId(String domainExtensionId) {
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension setDomainExtensionId(String domainExtensionId) {
             this.domainExtensionId = domainExtensionId;
             return this;
         }
@@ -534,7 +534,26 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     }
 
-    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules extends TeaModel {
+    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions extends TeaModel {
+        @NameInMap("DomainExtension")
+        public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> domainExtension;
+
+        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions setDomainExtension(java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> domainExtension) {
+            this.domainExtension = domainExtension;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> getDomainExtension() {
+            return this.domainExtension;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule extends TeaModel {
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
@@ -550,12 +569,12 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         @NameInMap("RuleId")
         public String ruleId;
 
-        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules();
+        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules setVServerGroupId(String VServerGroupId) {
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule setVServerGroupId(String VServerGroupId) {
             this.VServerGroupId = VServerGroupId;
             return this;
         }
@@ -563,7 +582,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             return this.VServerGroupId;
         }
 
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules setDomain(String domain) {
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule setDomain(String domain) {
             this.domain = domain;
             return this;
         }
@@ -571,7 +590,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             return this.domain;
         }
 
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules setUrl(String url) {
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -579,7 +598,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             return this.url;
         }
 
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules setRuleName(String ruleName) {
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
@@ -587,12 +606,31 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             return this.ruleName;
         }
 
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules setRuleId(String ruleId) {
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule setRuleId(String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
         public String getRuleId() {
             return this.ruleId;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules extends TeaModel {
+        @NameInMap("Rule")
+        public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule> rule;
+
+        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules setRule(java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule> rule) {
+            this.rule = rule;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule> getRule() {
+            return this.rule;
         }
 
     }

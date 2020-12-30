@@ -8,7 +8,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("BackendServers")
-    public java.util.List<DescribeHealthStatusResponseBodyBackendServers> backendServers;
+    public DescribeHealthStatusResponseBodyBackendServers backendServers;
 
     public static DescribeHealthStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeHealthStatusResponseBody self = new DescribeHealthStatusResponseBody();
@@ -23,15 +23,15 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeHealthStatusResponseBody setBackendServers(java.util.List<DescribeHealthStatusResponseBodyBackendServers> backendServers) {
+    public DescribeHealthStatusResponseBody setBackendServers(DescribeHealthStatusResponseBodyBackendServers backendServers) {
         this.backendServers = backendServers;
         return this;
     }
-    public java.util.List<DescribeHealthStatusResponseBodyBackendServers> getBackendServers() {
+    public DescribeHealthStatusResponseBodyBackendServers getBackendServers() {
         return this.backendServers;
     }
 
-    public static class DescribeHealthStatusResponseBodyBackendServers extends TeaModel {
+    public static class DescribeHealthStatusResponseBodyBackendServersBackendServer extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -56,12 +56,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
-        public static DescribeHealthStatusResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeHealthStatusResponseBodyBackendServers self = new DescribeHealthStatusResponseBodyBackendServers();
+        public static DescribeHealthStatusResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHealthStatusResponseBodyBackendServersBackendServer self = new DescribeHealthStatusResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
         }
 
-        public DescribeHealthStatusResponseBodyBackendServers setType(String type) {
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setType(String type) {
             this.type = type;
             return this;
         }
@@ -69,7 +69,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeHealthStatusResponseBodyBackendServers setEniHost(String eniHost) {
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setEniHost(String eniHost) {
             this.eniHost = eniHost;
             return this;
         }
@@ -77,7 +77,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             return this.eniHost;
         }
 
-        public DescribeHealthStatusResponseBodyBackendServers setProtocol(String protocol) {
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
@@ -85,7 +85,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             return this.protocol;
         }
 
-        public DescribeHealthStatusResponseBodyBackendServers setServerHealthStatus(String serverHealthStatus) {
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setServerHealthStatus(String serverHealthStatus) {
             this.serverHealthStatus = serverHealthStatus;
             return this;
         }
@@ -93,7 +93,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             return this.serverHealthStatus;
         }
 
-        public DescribeHealthStatusResponseBodyBackendServers setListenerPort(Integer listenerPort) {
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setListenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
             return this;
         }
@@ -101,7 +101,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             return this.listenerPort;
         }
 
-        public DescribeHealthStatusResponseBodyBackendServers setServerIp(String serverIp) {
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setServerIp(String serverIp) {
             this.serverIp = serverIp;
             return this;
         }
@@ -109,7 +109,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             return this.serverIp;
         }
 
-        public DescribeHealthStatusResponseBodyBackendServers setPort(Integer port) {
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -117,12 +117,31 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeHealthStatusResponseBodyBackendServers setServerId(String serverId) {
+        public DescribeHealthStatusResponseBodyBackendServersBackendServer setServerId(String serverId) {
             this.serverId = serverId;
             return this;
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+    }
+
+    public static class DescribeHealthStatusResponseBodyBackendServers extends TeaModel {
+        @NameInMap("BackendServer")
+        public java.util.List<DescribeHealthStatusResponseBodyBackendServersBackendServer> backendServer;
+
+        public static DescribeHealthStatusResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHealthStatusResponseBodyBackendServers self = new DescribeHealthStatusResponseBodyBackendServers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHealthStatusResponseBodyBackendServers setBackendServer(java.util.List<DescribeHealthStatusResponseBodyBackendServersBackendServer> backendServer) {
+            this.backendServer = backendServer;
+            return this;
+        }
+        public java.util.List<DescribeHealthStatusResponseBodyBackendServersBackendServer> getBackendServer() {
+            return this.backendServer;
         }
 
     }

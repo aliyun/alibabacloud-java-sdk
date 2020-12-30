@@ -11,7 +11,7 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("BackendServers")
-    public java.util.List<ModifyVServerGroupBackendServersResponseBodyBackendServers> backendServers;
+    public ModifyVServerGroupBackendServersResponseBodyBackendServers backendServers;
 
     public static ModifyVServerGroupBackendServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyVServerGroupBackendServersResponseBody self = new ModifyVServerGroupBackendServersResponseBody();
@@ -34,15 +34,15 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ModifyVServerGroupBackendServersResponseBody setBackendServers(java.util.List<ModifyVServerGroupBackendServersResponseBodyBackendServers> backendServers) {
+    public ModifyVServerGroupBackendServersResponseBody setBackendServers(ModifyVServerGroupBackendServersResponseBodyBackendServers backendServers) {
         this.backendServers = backendServers;
         return this;
     }
-    public java.util.List<ModifyVServerGroupBackendServersResponseBodyBackendServers> getBackendServers() {
+    public ModifyVServerGroupBackendServersResponseBodyBackendServers getBackendServers() {
         return this.backendServers;
     }
 
-    public static class ModifyVServerGroupBackendServersResponseBodyBackendServers extends TeaModel {
+    public static class ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -58,12 +58,12 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
-        public static ModifyVServerGroupBackendServersResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
-            ModifyVServerGroupBackendServersResponseBodyBackendServers self = new ModifyVServerGroupBackendServersResponseBodyBackendServers();
+        public static ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer self = new ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
         }
 
-        public ModifyVServerGroupBackendServersResponseBodyBackendServers setType(String type) {
+        public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setType(String type) {
             this.type = type;
             return this;
         }
@@ -71,7 +71,7 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
             return this.type;
         }
 
-        public ModifyVServerGroupBackendServersResponseBodyBackendServers setWeight(Integer weight) {
+        public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
             this.weight = weight;
             return this;
         }
@@ -79,7 +79,7 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
             return this.weight;
         }
 
-        public ModifyVServerGroupBackendServersResponseBodyBackendServers setDescription(String description) {
+        public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -87,7 +87,7 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ModifyVServerGroupBackendServersResponseBodyBackendServers setPort(Integer port) {
+        public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -95,12 +95,31 @@ public class ModifyVServerGroupBackendServersResponseBody extends TeaModel {
             return this.port;
         }
 
-        public ModifyVServerGroupBackendServersResponseBodyBackendServers setServerId(String serverId) {
+        public ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer setServerId(String serverId) {
             this.serverId = serverId;
             return this;
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+    }
+
+    public static class ModifyVServerGroupBackendServersResponseBodyBackendServers extends TeaModel {
+        @NameInMap("BackendServer")
+        public java.util.List<ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer> backendServer;
+
+        public static ModifyVServerGroupBackendServersResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
+            ModifyVServerGroupBackendServersResponseBodyBackendServers self = new ModifyVServerGroupBackendServersResponseBodyBackendServers();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyVServerGroupBackendServersResponseBodyBackendServers setBackendServer(java.util.List<ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer> backendServer) {
+            this.backendServer = backendServer;
+            return this;
+        }
+        public java.util.List<ModifyVServerGroupBackendServersResponseBodyBackendServersBackendServer> getBackendServer() {
+            return this.backendServer;
         }
 
     }

@@ -80,7 +80,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     public Integer healthCheckTimeout;
 
     @NameInMap("Rules")
-    public java.util.List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules> rules;
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules rules;
 
     @NameInMap("ListenerForward")
     public String listenerForward;
@@ -314,11 +314,11 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         return this.healthCheckTimeout;
     }
 
-    public DescribeLoadBalancerHTTPListenerAttributeResponseBody setRules(java.util.List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules> rules) {
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBody setRules(DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules rules) {
         this.rules = rules;
         return this;
     }
-    public java.util.List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules> getRules() {
+    public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules getRules() {
         return this.rules;
     }
 
@@ -394,7 +394,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         return this.XForwardedFor_proto;
     }
 
-    public static class DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules extends TeaModel {
+    public static class DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule extends TeaModel {
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
@@ -410,12 +410,12 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         @NameInMap("RuleId")
         public String ruleId;
 
-        public static DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules self = new DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules();
+        public static DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule self = new DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules setVServerGroupId(String VServerGroupId) {
+        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule setVServerGroupId(String VServerGroupId) {
             this.VServerGroupId = VServerGroupId;
             return this;
         }
@@ -423,7 +423,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             return this.VServerGroupId;
         }
 
-        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules setDomain(String domain) {
+        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule setDomain(String domain) {
             this.domain = domain;
             return this;
         }
@@ -431,7 +431,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             return this.domain;
         }
 
-        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules setUrl(String url) {
+        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -439,7 +439,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             return this.url;
         }
 
-        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules setRuleName(String ruleName) {
+        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
@@ -447,12 +447,31 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
             return this.ruleName;
         }
 
-        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules setRuleId(String ruleId) {
+        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule setRuleId(String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
         public String getRuleId() {
             return this.ruleId;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules extends TeaModel {
+        @NameInMap("Rule")
+        public java.util.List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule> rule;
+
+        public static DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules self = new DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules setRule(java.util.List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule> rule) {
+            this.rule = rule;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule> getRule() {
+            return this.rule;
         }
 
     }

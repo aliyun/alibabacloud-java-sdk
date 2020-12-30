@@ -11,7 +11,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
     public String loadBalancerId;
 
     @NameInMap("BackendServers")
-    public java.util.List<RemoveBackendServersResponseBodyBackendServers> backendServers;
+    public RemoveBackendServersResponseBodyBackendServers backendServers;
 
     public static RemoveBackendServersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveBackendServersResponseBody self = new RemoveBackendServersResponseBody();
@@ -34,15 +34,15 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         return this.loadBalancerId;
     }
 
-    public RemoveBackendServersResponseBody setBackendServers(java.util.List<RemoveBackendServersResponseBodyBackendServers> backendServers) {
+    public RemoveBackendServersResponseBody setBackendServers(RemoveBackendServersResponseBodyBackendServers backendServers) {
         this.backendServers = backendServers;
         return this;
     }
-    public java.util.List<RemoveBackendServersResponseBodyBackendServers> getBackendServers() {
+    public RemoveBackendServersResponseBodyBackendServers getBackendServers() {
         return this.backendServers;
     }
 
-    public static class RemoveBackendServersResponseBodyBackendServers extends TeaModel {
+    public static class RemoveBackendServersResponseBodyBackendServersBackendServer extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -55,12 +55,12 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         @NameInMap("ServerId")
         public String serverId;
 
-        public static RemoveBackendServersResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
-            RemoveBackendServersResponseBodyBackendServers self = new RemoveBackendServersResponseBodyBackendServers();
+        public static RemoveBackendServersResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
+            RemoveBackendServersResponseBodyBackendServersBackendServer self = new RemoveBackendServersResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
         }
 
-        public RemoveBackendServersResponseBodyBackendServers setType(String type) {
+        public RemoveBackendServersResponseBodyBackendServersBackendServer setType(String type) {
             this.type = type;
             return this;
         }
@@ -68,7 +68,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             return this.type;
         }
 
-        public RemoveBackendServersResponseBodyBackendServers setWeight(Integer weight) {
+        public RemoveBackendServersResponseBodyBackendServersBackendServer setWeight(Integer weight) {
             this.weight = weight;
             return this;
         }
@@ -76,7 +76,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             return this.weight;
         }
 
-        public RemoveBackendServersResponseBodyBackendServers setDescription(String description) {
+        public RemoveBackendServersResponseBodyBackendServersBackendServer setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -84,12 +84,31 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             return this.description;
         }
 
-        public RemoveBackendServersResponseBodyBackendServers setServerId(String serverId) {
+        public RemoveBackendServersResponseBodyBackendServersBackendServer setServerId(String serverId) {
             this.serverId = serverId;
             return this;
         }
         public String getServerId() {
             return this.serverId;
+        }
+
+    }
+
+    public static class RemoveBackendServersResponseBodyBackendServers extends TeaModel {
+        @NameInMap("BackendServer")
+        public java.util.List<RemoveBackendServersResponseBodyBackendServersBackendServer> backendServer;
+
+        public static RemoveBackendServersResponseBodyBackendServers build(java.util.Map<String, ?> map) throws Exception {
+            RemoveBackendServersResponseBodyBackendServers self = new RemoveBackendServersResponseBodyBackendServers();
+            return TeaModel.build(map, self);
+        }
+
+        public RemoveBackendServersResponseBodyBackendServers setBackendServer(java.util.List<RemoveBackendServersResponseBodyBackendServersBackendServer> backendServer) {
+            this.backendServer = backendServer;
+            return this;
+        }
+        public java.util.List<RemoveBackendServersResponseBodyBackendServersBackendServer> getBackendServer() {
+            return this.backendServer;
         }
 
     }

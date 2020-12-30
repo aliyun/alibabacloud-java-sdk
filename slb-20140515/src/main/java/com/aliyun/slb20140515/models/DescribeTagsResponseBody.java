@@ -17,7 +17,7 @@ public class DescribeTagsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("TagSets")
-    public java.util.List<DescribeTagsResponseBodyTagSets> tagSets;
+    public DescribeTagsResponseBodyTagSets tagSets;
 
     public static DescribeTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagsResponseBody self = new DescribeTagsResponseBody();
@@ -56,15 +56,15 @@ public class DescribeTagsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeTagsResponseBody setTagSets(java.util.List<DescribeTagsResponseBodyTagSets> tagSets) {
+    public DescribeTagsResponseBody setTagSets(DescribeTagsResponseBodyTagSets tagSets) {
         this.tagSets = tagSets;
         return this;
     }
-    public java.util.List<DescribeTagsResponseBodyTagSets> getTagSets() {
+    public DescribeTagsResponseBodyTagSets getTagSets() {
         return this.tagSets;
     }
 
-    public static class DescribeTagsResponseBodyTagSets extends TeaModel {
+    public static class DescribeTagsResponseBodyTagSetsTagSet extends TeaModel {
         @NameInMap("InstanceCount")
         public Integer instanceCount;
 
@@ -74,12 +74,12 @@ public class DescribeTagsResponseBody extends TeaModel {
         @NameInMap("TagKey")
         public String tagKey;
 
-        public static DescribeTagsResponseBodyTagSets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTagsResponseBodyTagSets self = new DescribeTagsResponseBodyTagSets();
+        public static DescribeTagsResponseBodyTagSetsTagSet build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTagsResponseBodyTagSetsTagSet self = new DescribeTagsResponseBodyTagSetsTagSet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTagsResponseBodyTagSets setInstanceCount(Integer instanceCount) {
+        public DescribeTagsResponseBodyTagSetsTagSet setInstanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
@@ -87,7 +87,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.instanceCount;
         }
 
-        public DescribeTagsResponseBodyTagSets setTagValue(String tagValue) {
+        public DescribeTagsResponseBodyTagSetsTagSet setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
@@ -95,12 +95,31 @@ public class DescribeTagsResponseBody extends TeaModel {
             return this.tagValue;
         }
 
-        public DescribeTagsResponseBodyTagSets setTagKey(String tagKey) {
+        public DescribeTagsResponseBodyTagSetsTagSet setTagKey(String tagKey) {
             this.tagKey = tagKey;
             return this;
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+    }
+
+    public static class DescribeTagsResponseBodyTagSets extends TeaModel {
+        @NameInMap("TagSet")
+        public java.util.List<DescribeTagsResponseBodyTagSetsTagSet> tagSet;
+
+        public static DescribeTagsResponseBodyTagSets build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTagsResponseBodyTagSets self = new DescribeTagsResponseBodyTagSets();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTagsResponseBodyTagSets setTagSet(java.util.List<DescribeTagsResponseBodyTagSetsTagSet> tagSet) {
+            this.tagSet = tagSet;
+            return this;
+        }
+        public java.util.List<DescribeTagsResponseBodyTagSetsTagSet> getTagSet() {
+            return this.tagSet;
         }
 
     }

@@ -17,7 +17,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     public String masterSlaveServerGroupName;
 
     @NameInMap("MasterSlaveBackendServers")
-    public java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers> masterSlaveBackendServers;
+    public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
 
     public static DescribeMasterSlaveServerGroupAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMasterSlaveServerGroupAttributeResponseBody self = new DescribeMasterSlaveServerGroupAttributeResponseBody();
@@ -56,15 +56,15 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         return this.masterSlaveServerGroupName;
     }
 
-    public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveBackendServers(java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers> masterSlaveBackendServers) {
+    public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveBackendServers(DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers) {
         this.masterSlaveBackendServers = masterSlaveBackendServers;
         return this;
     }
-    public java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers> getMasterSlaveBackendServers() {
+    public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers getMasterSlaveBackendServers() {
         return this.masterSlaveBackendServers;
     }
 
-    public static class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers extends TeaModel {
+    public static class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -83,12 +83,12 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         @NameInMap("ServerType")
         public String serverType;
 
-        public static DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers self = new DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers();
+        public static DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer self = new DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers setType(String type) {
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setType(String type) {
             this.type = type;
             return this;
         }
@@ -96,7 +96,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             return this.type;
         }
 
-        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers setWeight(Integer weight) {
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setWeight(Integer weight) {
             this.weight = weight;
             return this;
         }
@@ -104,7 +104,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             return this.weight;
         }
 
-        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers setDescription(String description) {
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -112,7 +112,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             return this.description;
         }
 
-        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers setPort(Integer port) {
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -120,7 +120,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             return this.port;
         }
 
-        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers setServerId(String serverId) {
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setServerId(String serverId) {
             this.serverId = serverId;
             return this;
         }
@@ -128,12 +128,31 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
             return this.serverId;
         }
 
-        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers setServerType(String serverType) {
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer setServerType(String serverType) {
             this.serverType = serverType;
             return this;
         }
         public String getServerType() {
             return this.serverType;
+        }
+
+    }
+
+    public static class DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers extends TeaModel {
+        @NameInMap("MasterSlaveBackendServer")
+        public java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer> masterSlaveBackendServer;
+
+        public static DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers self = new DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers setMasterSlaveBackendServer(java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer> masterSlaveBackendServer) {
+            this.masterSlaveBackendServer = masterSlaveBackendServer;
+            return this;
+        }
+        public java.util.List<DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServersMasterSlaveBackendServer> getMasterSlaveBackendServer() {
+            return this.masterSlaveBackendServer;
         }
 
     }
