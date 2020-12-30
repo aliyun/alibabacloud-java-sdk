@@ -4,12 +4,13 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DeleteSchedruleOnDemandRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RuleName")
-    @Validation(required = true)
     public String ruleName;
 
     @NameInMap("RegionId")
@@ -18,6 +19,14 @@ public class DeleteSchedruleOnDemandRequest extends TeaModel {
     public static DeleteSchedruleOnDemandRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSchedruleOnDemandRequest self = new DeleteSchedruleOnDemandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSchedruleOnDemandRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public DeleteSchedruleOnDemandRequest setInstanceId(String instanceId) {

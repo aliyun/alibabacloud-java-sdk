@@ -4,69 +4,33 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcePackStatisticsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AvailablePackNum")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer availablePackNum;
-
-    @NameInMap("TotalCurrCapacity")
-    @Validation(required = true)
-    public Long totalCurrCapacity;
-
-    @NameInMap("TotalUsedCapacity")
-    @Validation(required = true)
-    public Long totalUsedCapacity;
-
-    @NameInMap("TotalInitCapacity")
-    @Validation(required = true)
-    public Long totalInitCapacity;
+    public DescribeResourcePackStatisticsResponseBody body;
 
     public static DescribeResourcePackStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourcePackStatisticsResponse self = new DescribeResourcePackStatisticsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeResourcePackStatisticsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeResourcePackStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeResourcePackStatisticsResponse setAvailablePackNum(Integer availablePackNum) {
-        this.availablePackNum = availablePackNum;
+    public DescribeResourcePackStatisticsResponse setBody(DescribeResourcePackStatisticsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getAvailablePackNum() {
-        return this.availablePackNum;
-    }
-
-    public DescribeResourcePackStatisticsResponse setTotalCurrCapacity(Long totalCurrCapacity) {
-        this.totalCurrCapacity = totalCurrCapacity;
-        return this;
-    }
-    public Long getTotalCurrCapacity() {
-        return this.totalCurrCapacity;
-    }
-
-    public DescribeResourcePackStatisticsResponse setTotalUsedCapacity(Long totalUsedCapacity) {
-        this.totalUsedCapacity = totalUsedCapacity;
-        return this;
-    }
-    public Long getTotalUsedCapacity() {
-        return this.totalUsedCapacity;
-    }
-
-    public DescribeResourcePackStatisticsResponse setTotalInitCapacity(Long totalInitCapacity) {
-        this.totalInitCapacity = totalInitCapacity;
-        return this;
-    }
-    public Long getTotalInitCapacity() {
-        return this.totalInitCapacity;
+    public DescribeResourcePackStatisticsResponseBody getBody() {
+        return this.body;
     }
 
 }

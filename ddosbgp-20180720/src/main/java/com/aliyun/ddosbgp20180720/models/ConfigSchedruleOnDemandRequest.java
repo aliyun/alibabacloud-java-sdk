@@ -4,47 +4,40 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class ConfigSchedruleOnDemandRequest extends TeaModel {
+    @NameInMap("SourceIp")
+    public String sourceIp;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RuleName")
-    @Validation(required = true)
     public String ruleName;
 
     @NameInMap("RuleConditionMbps")
-    @Validation(required = true)
     public String ruleConditionMbps;
 
     @NameInMap("RuleConditionKpps")
-    @Validation(required = true)
     public String ruleConditionKpps;
 
     @NameInMap("RuleConditionCnt")
-    @Validation(required = true)
     public String ruleConditionCnt;
 
     @NameInMap("RuleAction")
-    @Validation(required = true)
     public String ruleAction;
 
     @NameInMap("RuleSwitch")
-    @Validation(required = true)
     public String ruleSwitch;
 
     @NameInMap("RuleUndoMode")
-    @Validation(required = true)
     public String ruleUndoMode;
 
     @NameInMap("RuleUndoBeginTime")
-    @Validation(required = true)
     public String ruleUndoBeginTime;
 
     @NameInMap("RuleUndoEndTime")
     public String ruleUndoEndTime;
 
     @NameInMap("TimeZone")
-    @Validation(required = true)
     public String timeZone;
 
     @NameInMap("RegionId")
@@ -53,6 +46,14 @@ public class ConfigSchedruleOnDemandRequest extends TeaModel {
     public static ConfigSchedruleOnDemandRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigSchedruleOnDemandRequest self = new ConfigSchedruleOnDemandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ConfigSchedruleOnDemandRequest setSourceIp(String sourceIp) {
+        this.sourceIp = sourceIp;
+        return this;
+    }
+    public String getSourceIp() {
+        return this.sourceIp;
     }
 
     public ConfigSchedruleOnDemandRequest setInstanceId(String instanceId) {
