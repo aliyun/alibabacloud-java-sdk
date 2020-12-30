@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    public java.util.List<String> resourceId;
-
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("All")
     public Boolean all;
+
+    @NameInMap("NoRole")
+    public Boolean noRole;
+
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
 
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
@@ -35,14 +35,6 @@ public class UntagResourcesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public UntagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
-    }
-
     public UntagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -57,6 +49,22 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public Boolean getAll() {
         return this.all;
+    }
+
+    public UntagResourcesRequest setNoRole(Boolean noRole) {
+        this.noRole = noRole;
+        return this;
+    }
+    public Boolean getNoRole() {
+        return this.noRole;
+    }
+
+    public UntagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public UntagResourcesRequest setTagKey(java.util.List<String> tagKey) {

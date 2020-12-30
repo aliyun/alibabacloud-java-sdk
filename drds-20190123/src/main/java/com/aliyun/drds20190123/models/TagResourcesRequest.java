@@ -4,33 +4,24 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
-    @NameInMap("Tag")
-    @Validation(required = true)
-    public java.util.List<TagResourcesRequestTag> tag;
-
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    public java.util.List<String> resourceId;
-
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
+
+    @NameInMap("NoRole")
+    public Boolean noRole;
+
+    @NameInMap("Tag")
+    public java.util.List<TagResourcesRequestTag> tag;
+
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
 
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesRequest self = new TagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<TagResourcesRequestTag> getTag() {
-        return this.tag;
     }
 
     public TagResourcesRequest setRegionId(String regionId) {
@@ -41,14 +32,6 @@ public class TagResourcesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
-    }
-
     public TagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -57,34 +40,28 @@ public class TagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public static class TagResourcesRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
+    public TagResourcesRequest setNoRole(Boolean noRole) {
+        this.noRole = noRole;
+        return this;
+    }
+    public Boolean getNoRole() {
+        return this.noRole;
+    }
 
-        @NameInMap("Value")
-        public String value;
+    public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<TagResourcesRequestTag> getTag() {
+        return this.tag;
+    }
 
-        public static TagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            TagResourcesRequestTag self = new TagResourcesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public TagResourcesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public TagResourcesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {
@@ -108,6 +85,36 @@ public class TagResourcesRequest extends TeaModel {
         }
 
         public ListTagResourcesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class TagResourcesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static TagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            TagResourcesRequestTag self = new TagResourcesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public TagResourcesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public TagResourcesRequestTag setValue(String value) {
             this.value = value;
             return this;
         }

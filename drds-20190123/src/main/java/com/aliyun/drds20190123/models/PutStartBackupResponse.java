@@ -4,45 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class PutStartBackupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Result")
+    @NameInMap("body")
     @Validation(required = true)
-    public String result;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    public PutStartBackupResponseBody body;
 
     public static PutStartBackupResponse build(java.util.Map<String, ?> map) throws Exception {
         PutStartBackupResponse self = new PutStartBackupResponse();
         return TeaModel.build(map, self);
     }
 
-    public PutStartBackupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PutStartBackupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PutStartBackupResponse setResult(String result) {
-        this.result = result;
+    public PutStartBackupResponse setBody(PutStartBackupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getResult() {
-        return this.result;
-    }
-
-    public PutStartBackupResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public PutStartBackupResponseBody getBody() {
+        return this.body;
     }
 
 }

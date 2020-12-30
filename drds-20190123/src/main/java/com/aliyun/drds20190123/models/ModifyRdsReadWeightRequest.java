@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyRdsReadWeightRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("InstanceNames")
-    @Validation(required = true)
     public String instanceNames;
 
     @NameInMap("Weights")
-    @Validation(required = true)
     public String weights;
 
     public static ModifyRdsReadWeightRequest build(java.util.Map<String, ?> map) throws Exception {

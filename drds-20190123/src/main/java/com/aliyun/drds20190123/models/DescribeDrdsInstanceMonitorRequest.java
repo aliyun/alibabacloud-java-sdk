@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceMonitorRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("Key")
-    @Validation(required = true)
     public String key;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("PeriodMultiple")

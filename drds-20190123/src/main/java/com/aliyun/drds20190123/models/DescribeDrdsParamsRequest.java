@@ -8,11 +8,9 @@ public class DescribeDrdsParamsRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("ParamLevel")
-    @Validation(required = true)
     public String paramLevel;
 
     @NameInMap("DbName")

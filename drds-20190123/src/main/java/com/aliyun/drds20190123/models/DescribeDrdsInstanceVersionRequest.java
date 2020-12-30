@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceVersionRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("RegionId")

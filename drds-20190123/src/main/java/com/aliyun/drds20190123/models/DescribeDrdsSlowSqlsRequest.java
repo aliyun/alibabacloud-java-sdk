@@ -5,23 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeDrdsSlowSqlsRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("ExeTime")
-    @Validation(required = true)
     public Long exeTime;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("PageNumber")

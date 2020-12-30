@@ -4,45 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateShardTaskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public Boolean data;
+    public CreateShardTaskResponseBody body;
 
     public static CreateShardTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateShardTaskResponse self = new CreateShardTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateShardTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateShardTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateShardTaskResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CreateShardTaskResponse setBody(CreateShardTaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateShardTaskResponse setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
+    public CreateShardTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

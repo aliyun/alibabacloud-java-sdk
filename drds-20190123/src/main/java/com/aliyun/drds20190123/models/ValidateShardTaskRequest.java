@@ -8,23 +8,18 @@ public class ValidateShardTaskRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("SourceTableName")
-    @Validation(required = true)
     public String sourceTableName;
 
     @NameInMap("TargetTableName")
-    @Validation(required = true)
     public String targetTableName;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public String taskType;
 
     public static ValidateShardTaskRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeDrdsDBClusterRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("DbInstanceId")
-    @Validation(required = true)
     public String dbInstanceId;
 
     public static DescribeDrdsDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
