@@ -5,18 +5,25 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("RenewalStatus")
     public String renewalStatus;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -59,6 +66,30 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     }
     public String getRenewalStatus() {
         return this.renewalStatus;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeInstanceAutoRenewAttributeRequest setPageSize(Integer pageSize) {

@@ -4,12 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyBgpGroupAttributeRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BgpGroupId")
-    @Validation(required = true)
     public String bgpGroupId;
 
     @NameInMap("Name")
@@ -33,9 +40,36 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     public static ModifyBgpGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyBgpGroupAttributeRequest self = new ModifyBgpGroupAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyBgpGroupAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyBgpGroupAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyBgpGroupAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ModifyBgpGroupAttributeRequest setRegionId(String regionId) {
@@ -108,6 +142,14 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyBgpGroupAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

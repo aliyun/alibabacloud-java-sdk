@@ -4,11 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("VpcId")
     public String vpcId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VpcName")
@@ -29,15 +37,48 @@ public class DescribeVpcsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("VpcOwnerId")
     public Long vpcOwnerId;
+
+    @NameInMap("AdvancedFeature")
+    public Boolean advancedFeature;
 
     @NameInMap("DhcpOptionsSetId")
     public String dhcpOptionsSetId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeVpcsRequestTag> tag;
+
     public static DescribeVpcsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcsRequest self = new DescribeVpcsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVpcsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVpcsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeVpcsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeVpcsRequest setVpcId(String vpcId) {
@@ -104,6 +145,14 @@ public class DescribeVpcsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeVpcsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public DescribeVpcsRequest setVpcOwnerId(Long vpcOwnerId) {
         this.vpcOwnerId = vpcOwnerId;
         return this;
@@ -112,12 +161,36 @@ public class DescribeVpcsRequest extends TeaModel {
         return this.vpcOwnerId;
     }
 
+    public DescribeVpcsRequest setAdvancedFeature(Boolean advancedFeature) {
+        this.advancedFeature = advancedFeature;
+        return this;
+    }
+    public Boolean getAdvancedFeature() {
+        return this.advancedFeature;
+    }
+
     public DescribeVpcsRequest setDhcpOptionsSetId(String dhcpOptionsSetId) {
         this.dhcpOptionsSetId = dhcpOptionsSetId;
         return this;
     }
     public String getDhcpOptionsSetId() {
         return this.dhcpOptionsSetId;
+    }
+
+    public DescribeVpcsRequest setTag(java.util.List<DescribeVpcsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeVpcsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeVpcsRequestTag extends TeaModel {
+        public static DescribeVpcsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVpcsRequestTag self = new DescribeVpcsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
     }
 
 }

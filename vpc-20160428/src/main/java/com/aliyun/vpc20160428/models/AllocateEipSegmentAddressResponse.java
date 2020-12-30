@@ -4,45 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipSegmentAddressResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("EipSegmentInstanceId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String eipSegmentInstanceId;
-
-    @NameInMap("OrderId")
-    @Validation(required = true)
-    public Long orderId;
+    public AllocateEipSegmentAddressResponseBody body;
 
     public static AllocateEipSegmentAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         AllocateEipSegmentAddressResponse self = new AllocateEipSegmentAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public AllocateEipSegmentAddressResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AllocateEipSegmentAddressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AllocateEipSegmentAddressResponse setEipSegmentInstanceId(String eipSegmentInstanceId) {
-        this.eipSegmentInstanceId = eipSegmentInstanceId;
+    public AllocateEipSegmentAddressResponse setBody(AllocateEipSegmentAddressResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getEipSegmentInstanceId() {
-        return this.eipSegmentInstanceId;
-    }
-
-    public AllocateEipSegmentAddressResponse setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
+    public AllocateEipSegmentAddressResponseBody getBody() {
+        return this.body;
     }
 
 }

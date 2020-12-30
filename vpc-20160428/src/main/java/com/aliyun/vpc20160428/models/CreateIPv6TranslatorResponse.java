@@ -4,69 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Ipv6TranslatorId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String ipv6TranslatorId;
-
-    @NameInMap("Name")
-    @Validation(required = true)
-    public String name;
-
-    @NameInMap("Spec")
-    @Validation(required = true)
-    public String spec;
-
-    @NameInMap("OrderId")
-    @Validation(required = true)
-    public Long orderId;
+    public CreateIPv6TranslatorResponseBody body;
 
     public static CreateIPv6TranslatorResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateIPv6TranslatorResponse self = new CreateIPv6TranslatorResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateIPv6TranslatorResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateIPv6TranslatorResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateIPv6TranslatorResponse setIpv6TranslatorId(String ipv6TranslatorId) {
-        this.ipv6TranslatorId = ipv6TranslatorId;
+    public CreateIPv6TranslatorResponse setBody(CreateIPv6TranslatorResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getIpv6TranslatorId() {
-        return this.ipv6TranslatorId;
-    }
-
-    public CreateIPv6TranslatorResponse setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateIPv6TranslatorResponse setSpec(String spec) {
-        this.spec = spec;
-        return this;
-    }
-    public String getSpec() {
-        return this.spec;
-    }
-
-    public CreateIPv6TranslatorResponse setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
+    public CreateIPv6TranslatorResponseBody getBody() {
+        return this.body;
     }
 
 }

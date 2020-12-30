@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class AssociateRouteTableRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RouteTableId")
-    @Validation(required = true)
     public String routeTableId;
 
     @NameInMap("VSwitchId")
-    @Validation(required = true)
     public String vSwitchId;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static AssociateRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {
         AssociateRouteTableRequest self = new AssociateRouteTableRequest();
@@ -54,6 +63,38 @@ public class AssociateRouteTableRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AssociateRouteTableRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AssociateRouteTableRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AssociateRouteTableRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public AssociateRouteTableRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

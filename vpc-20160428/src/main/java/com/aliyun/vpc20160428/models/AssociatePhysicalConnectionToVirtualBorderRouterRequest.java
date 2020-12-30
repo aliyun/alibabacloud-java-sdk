@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VbrId")
-    @Validation(required = true)
     public String vbrId;
 
     @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
     public String physicalConnectionId;
 
     @NameInMap("VlanId")
-    @Validation(required = true)
     public String vlanId;
 
     @NameInMap("CircuitCode")
@@ -32,8 +28,20 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
     @NameInMap("PeeringSubnetMask")
     public String peeringSubnetMask;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("LocalIpv6GatewayIp")
     public String localIpv6GatewayIp;
@@ -116,12 +124,44 @@ public class AssociatePhysicalConnectionToVirtualBorderRouterRequest extends Tea
         return this.peeringSubnetMask;
     }
 
+    public AssociatePhysicalConnectionToVirtualBorderRouterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AssociatePhysicalConnectionToVirtualBorderRouterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AssociatePhysicalConnectionToVirtualBorderRouterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public AssociatePhysicalConnectionToVirtualBorderRouterRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AssociatePhysicalConnectionToVirtualBorderRouterRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AssociatePhysicalConnectionToVirtualBorderRouterRequest setLocalIpv6GatewayIp(String localIpv6GatewayIp) {

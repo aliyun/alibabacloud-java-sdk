@@ -4,33 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateExpressCloudConnectionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("EccId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String eccId;
+    public CreateExpressCloudConnectionResponseBody body;
 
     public static CreateExpressCloudConnectionResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateExpressCloudConnectionResponse self = new CreateExpressCloudConnectionResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateExpressCloudConnectionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateExpressCloudConnectionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateExpressCloudConnectionResponse setEccId(String eccId) {
-        this.eccId = eccId;
+    public CreateExpressCloudConnectionResponse setBody(CreateExpressCloudConnectionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getEccId() {
-        return this.eccId;
+    public CreateExpressCloudConnectionResponseBody getBody() {
+        return this.body;
     }
 
 }

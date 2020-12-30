@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class RemoveIPv6TranslatorAclListEntryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RemoveIPv6TranslatorAclListEntryResponseBody body;
 
     public static RemoveIPv6TranslatorAclListEntryResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveIPv6TranslatorAclListEntryResponse self = new RemoveIPv6TranslatorAclListEntryResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveIPv6TranslatorAclListEntryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RemoveIPv6TranslatorAclListEntryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RemoveIPv6TranslatorAclListEntryResponse setBody(RemoveIPv6TranslatorAclListEntryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RemoveIPv6TranslatorAclListEntryResponseBody getBody() {
+        return this.body;
     }
 
 }

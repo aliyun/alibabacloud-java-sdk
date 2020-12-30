@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AddGlobalAccelerationInstanceIpResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AddGlobalAccelerationInstanceIpResponseBody body;
 
     public static AddGlobalAccelerationInstanceIpResponse build(java.util.Map<String, ?> map) throws Exception {
         AddGlobalAccelerationInstanceIpResponse self = new AddGlobalAccelerationInstanceIpResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddGlobalAccelerationInstanceIpResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddGlobalAccelerationInstanceIpResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddGlobalAccelerationInstanceIpResponse setBody(AddGlobalAccelerationInstanceIpResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddGlobalAccelerationInstanceIpResponseBody getBody() {
+        return this.body;
     }
 
 }

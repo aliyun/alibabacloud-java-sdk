@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyBgpGroupAttributeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifyBgpGroupAttributeResponseBody body;
 
     public static ModifyBgpGroupAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyBgpGroupAttributeResponse self = new ModifyBgpGroupAttributeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyBgpGroupAttributeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyBgpGroupAttributeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyBgpGroupAttributeResponse setBody(ModifyBgpGroupAttributeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyBgpGroupAttributeResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,33 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeactiveFlowLogResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public String success;
+    public DeactiveFlowLogResponseBody body;
 
     public static DeactiveFlowLogResponse build(java.util.Map<String, ?> map) throws Exception {
         DeactiveFlowLogResponse self = new DeactiveFlowLogResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeactiveFlowLogResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeactiveFlowLogResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeactiveFlowLogResponse setSuccess(String success) {
-        this.success = success;
+    public DeactiveFlowLogResponse setBody(DeactiveFlowLogResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getSuccess() {
-        return this.success;
+    public DeactiveFlowLogResponseBody getBody() {
+        return this.body;
     }
 
 }

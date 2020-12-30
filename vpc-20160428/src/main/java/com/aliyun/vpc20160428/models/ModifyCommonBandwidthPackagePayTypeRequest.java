@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackagePayTypeRequest extends TeaModel {
     @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
     public String bandwidthPackageId;
 
     @NameInMap("PayType")
@@ -20,11 +19,23 @@ public class ModifyCommonBandwidthPackagePayTypeRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     @NameInMap("KbpsBandwidth")
     public String kbpsBandwidth;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("ResourceBid")
     public String resourceBid;
@@ -33,7 +44,6 @@ public class ModifyCommonBandwidthPackagePayTypeRequest extends TeaModel {
     public Long resourceUid;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static ModifyCommonBandwidthPackagePayTypeRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -81,6 +91,30 @@ public class ModifyCommonBandwidthPackagePayTypeRequest extends TeaModel {
         return this.autoPay;
     }
 
+    public ModifyCommonBandwidthPackagePayTypeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyCommonBandwidthPackagePayTypeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyCommonBandwidthPackagePayTypeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public ModifyCommonBandwidthPackagePayTypeRequest setBandwidth(String bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -95,6 +129,14 @@ public class ModifyCommonBandwidthPackagePayTypeRequest extends TeaModel {
     }
     public String getKbpsBandwidth() {
         return this.kbpsBandwidth;
+    }
+
+    public ModifyCommonBandwidthPackagePayTypeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyCommonBandwidthPackagePayTypeRequest setResourceBid(String resourceBid) {

@@ -4,8 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipAddressesRequest extends TeaModel {
+    @NameInMap("Filter")
+    public java.util.List<DescribeEipAddressesRequestFilter> filter;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("IncludeReservationData")
@@ -35,8 +46,8 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("ISP")
     public String ISP;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeEipAddressesRequestFilter> filter;
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("LockReason")
     public String lockReason;
@@ -53,9 +64,44 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeEipAddressesRequestTag> tag;
+
     public static DescribeEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipAddressesRequest self = new DescribeEipAddressesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEipAddressesRequest setFilter(java.util.List<DescribeEipAddressesRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeEipAddressesRequestFilter> getFilter() {
+        return this.filter;
+    }
+
+    public DescribeEipAddressesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeEipAddressesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeEipAddressesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeEipAddressesRequest setRegionId(String regionId) {
@@ -138,12 +184,12 @@ public class DescribeEipAddressesRequest extends TeaModel {
         return this.ISP;
     }
 
-    public DescribeEipAddressesRequest setFilter(java.util.List<DescribeEipAddressesRequestFilter> filter) {
-        this.filter = filter;
+    public DescribeEipAddressesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
         return this;
     }
-    public java.util.List<DescribeEipAddressesRequestFilter> getFilter() {
-        return this.filter;
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeEipAddressesRequest setLockReason(String lockReason) {
@@ -186,6 +232,14 @@ public class DescribeEipAddressesRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public DescribeEipAddressesRequest setTag(java.util.List<DescribeEipAddressesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeEipAddressesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public static class DescribeEipAddressesRequestFilter extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -212,6 +266,14 @@ public class DescribeEipAddressesRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class DescribeEipAddressesRequestTag extends TeaModel {
+        public static DescribeEipAddressesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeEipAddressesRequestTag self = new DescribeEipAddressesRequestTag();
+            return TeaModel.build(map, self);
         }
 
     }

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DhcpOptionsSetId")
-    @Validation(required = true)
     public String dhcpOptionsSetId;
 
     @NameInMap("DomainNameServers")
@@ -23,6 +21,18 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
 
     @NameInMap("DhcpOptionsSetDescription")
     public String dhcpOptionsSetDescription;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -81,6 +91,38 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
     }
     public String getDhcpOptionsSetDescription() {
         return this.dhcpOptionsSetDescription;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public UpdateDhcpOptionsSetAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public UpdateDhcpOptionsSetAttributeRequest setClientToken(String clientToken) {

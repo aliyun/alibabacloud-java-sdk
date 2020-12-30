@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteVpnPbrRouteEntryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteVpnPbrRouteEntryResponseBody body;
 
     public static DeleteVpnPbrRouteEntryResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteVpnPbrRouteEntryResponse self = new DeleteVpnPbrRouteEntryResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteVpnPbrRouteEntryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteVpnPbrRouteEntryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteVpnPbrRouteEntryResponse setBody(DeleteVpnPbrRouteEntryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteVpnPbrRouteEntryResponseBody getBody() {
+        return this.body;
     }
 
 }

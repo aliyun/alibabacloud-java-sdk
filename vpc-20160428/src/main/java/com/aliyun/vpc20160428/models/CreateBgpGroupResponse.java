@@ -4,33 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateBgpGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("BgpGroupId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String bgpGroupId;
+    public CreateBgpGroupResponseBody body;
 
     public static CreateBgpGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateBgpGroupResponse self = new CreateBgpGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateBgpGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateBgpGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateBgpGroupResponse setBgpGroupId(String bgpGroupId) {
-        this.bgpGroupId = bgpGroupId;
+    public CreateBgpGroupResponse setBody(CreateBgpGroupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getBgpGroupId() {
-        return this.bgpGroupId;
+    public CreateBgpGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

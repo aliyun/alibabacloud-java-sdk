@@ -4,8 +4,16 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipAddressProRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("IpAddress")
@@ -41,12 +49,39 @@ public class AllocateEipAddressProRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     public static AllocateEipAddressProRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateEipAddressProRequest self = new AllocateEipAddressProRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AllocateEipAddressProRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AllocateEipAddressProRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AllocateEipAddressProRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public AllocateEipAddressProRequest setRegionId(String regionId) {
@@ -143,6 +178,14 @@ public class AllocateEipAddressProRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public AllocateEipAddressProRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public AllocateEipAddressProRequest setClientToken(String clientToken) {

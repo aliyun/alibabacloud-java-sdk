@@ -4,45 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateHaVipResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("HaVipId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String haVipId;
-
-    @NameInMap("IpAddress")
-    @Validation(required = true)
-    public String ipAddress;
+    public CreateHaVipResponseBody body;
 
     public static CreateHaVipResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateHaVipResponse self = new CreateHaVipResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateHaVipResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateHaVipResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateHaVipResponse setHaVipId(String haVipId) {
-        this.haVipId = haVipId;
+    public CreateHaVipResponse setBody(CreateHaVipResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getHaVipId() {
-        return this.haVipId;
-    }
-
-    public CreateHaVipResponse setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
-        return this;
-    }
-    public String getIpAddress() {
-        return this.ipAddress;
+    public CreateHaVipResponseBody getBody() {
+        return this.body;
     }
 
 }

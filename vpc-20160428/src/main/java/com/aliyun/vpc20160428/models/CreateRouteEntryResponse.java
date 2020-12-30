@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteEntryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CreateRouteEntryResponseBody body;
 
     public static CreateRouteEntryResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateRouteEntryResponse self = new CreateRouteEntryResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateRouteEntryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateRouteEntryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateRouteEntryResponse setBody(CreateRouteEntryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateRouteEntryResponseBody getBody() {
+        return this.body;
     }
 
 }

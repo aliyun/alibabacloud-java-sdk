@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouteTableResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteRouteTableResponseBody body;
 
     public static DeleteRouteTableResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteRouteTableResponse self = new DeleteRouteTableResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteRouteTableResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteRouteTableResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteRouteTableResponse setBody(DeleteRouteTableResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteRouteTableResponseBody getBody() {
+        return this.body;
     }
 
 }

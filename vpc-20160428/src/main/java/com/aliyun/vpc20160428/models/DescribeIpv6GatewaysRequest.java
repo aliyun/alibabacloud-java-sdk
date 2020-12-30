@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeIpv6GatewaysRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Ipv6GatewayId")
@@ -22,6 +21,18 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static DescribeIpv6GatewaysRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpv6GatewaysRequest self = new DescribeIpv6GatewaysRequest();
@@ -74,6 +85,38 @@ public class DescribeIpv6GatewaysRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeIpv6GatewaysRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeIpv6GatewaysRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeIpv6GatewaysRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeIpv6GatewaysRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

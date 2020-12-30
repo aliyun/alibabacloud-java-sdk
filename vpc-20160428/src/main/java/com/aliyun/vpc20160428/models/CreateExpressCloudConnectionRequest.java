@@ -4,8 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateExpressCloudConnectionRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Name")
@@ -18,18 +29,15 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
     public String peerCity;
 
     @NameInMap("PeerLocation")
-    @Validation(required = true)
     public String peerLocation;
 
     @NameInMap("IdcSP")
-    @Validation(required = true)
     public String idcSP;
 
     @NameInMap("PortType")
     public String portType;
 
     @NameInMap("Bandwidth")
-    @Validation(required = true)
     public Integer bandwidth;
 
     @NameInMap("ContactTel")
@@ -47,6 +55,38 @@ public class CreateExpressCloudConnectionRequest extends TeaModel {
     public static CreateExpressCloudConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateExpressCloudConnectionRequest self = new CreateExpressCloudConnectionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateExpressCloudConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateExpressCloudConnectionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateExpressCloudConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateExpressCloudConnectionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateExpressCloudConnectionRequest setRegionId(String regionId) {

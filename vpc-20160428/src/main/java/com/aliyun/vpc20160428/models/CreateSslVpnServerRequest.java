@@ -4,26 +4,34 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateSslVpnServerRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VpnGatewayId")
-    @Validation(required = true)
     public String vpnGatewayId;
 
     @NameInMap("Name")
     public String name;
 
     @NameInMap("ClientIpPool")
-    @Validation(required = true)
     public String clientIpPool;
 
     @NameInMap("LocalSubnet")
-    @Validation(required = true)
     public String localSubnet;
 
     @NameInMap("Proto")
@@ -47,6 +55,38 @@ public class CreateSslVpnServerRequest extends TeaModel {
     public static CreateSslVpnServerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSslVpnServerRequest self = new CreateSslVpnServerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSslVpnServerRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public CreateSslVpnServerRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateSslVpnServerRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateSslVpnServerRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public CreateSslVpnServerRequest setClientToken(String clientToken) {

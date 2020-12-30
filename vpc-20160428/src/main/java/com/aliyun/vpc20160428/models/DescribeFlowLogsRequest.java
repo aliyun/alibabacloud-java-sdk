@@ -4,8 +4,16 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowLogsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("FlowLogName")
@@ -41,12 +49,39 @@ public class DescribeFlowLogsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("VpcId")
     public String vpcId;
 
     public static DescribeFlowLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFlowLogsRequest self = new DescribeFlowLogsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeFlowLogsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeFlowLogsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeFlowLogsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeFlowLogsRequest setRegionId(String regionId) {
@@ -143,6 +178,14 @@ public class DescribeFlowLogsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeFlowLogsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeFlowLogsRequest setVpcId(String vpcId) {

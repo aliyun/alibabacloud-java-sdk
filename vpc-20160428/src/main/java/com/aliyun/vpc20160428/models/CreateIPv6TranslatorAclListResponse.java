@@ -4,33 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorAclListResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AclId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String aclId;
+    public CreateIPv6TranslatorAclListResponseBody body;
 
     public static CreateIPv6TranslatorAclListResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateIPv6TranslatorAclListResponse self = new CreateIPv6TranslatorAclListResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateIPv6TranslatorAclListResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateIPv6TranslatorAclListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateIPv6TranslatorAclListResponse setAclId(String aclId) {
-        this.aclId = aclId;
+    public CreateIPv6TranslatorAclListResponse setBody(CreateIPv6TranslatorAclListResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getAclId() {
-        return this.aclId;
+    public CreateIPv6TranslatorAclListResponseBody getBody() {
+        return this.body;
     }
 
 }

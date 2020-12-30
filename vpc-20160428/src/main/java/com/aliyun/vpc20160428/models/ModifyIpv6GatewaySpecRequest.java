@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class ModifyIpv6GatewaySpecRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Ipv6GatewayId")
-    @Validation(required = true)
     public String ipv6GatewayId;
 
     @NameInMap("Spec")
-    @Validation(required = true)
     public String spec;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static ModifyIpv6GatewaySpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIpv6GatewaySpecRequest self = new ModifyIpv6GatewaySpecRequest();
@@ -54,6 +63,38 @@ public class ModifyIpv6GatewaySpecRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyIpv6GatewaySpecRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyIpv6GatewaySpecRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyIpv6GatewaySpecRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyIpv6GatewaySpecRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

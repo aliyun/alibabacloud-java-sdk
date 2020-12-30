@@ -5,19 +5,28 @@ import com.aliyun.tea.*;
 
 public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RouterInterfaceId")
-    @Validation(required = true)
     public String routerInterfaceId;
 
     @NameInMap("Spec")
-    @Validation(required = true)
     public String spec;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static ModifyRouterInterfaceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRouterInterfaceSpecRequest self = new ModifyRouterInterfaceSpecRequest();
@@ -48,12 +57,44 @@ public class ModifyRouterInterfaceSpecRequest extends TeaModel {
         return this.spec;
     }
 
+    public ModifyRouterInterfaceSpecRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyRouterInterfaceSpecRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyRouterInterfaceSpecRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public ModifyRouterInterfaceSpecRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyRouterInterfaceSpecRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

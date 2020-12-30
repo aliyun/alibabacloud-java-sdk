@@ -4,8 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressCloudConnectionsRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
@@ -20,6 +31,38 @@ public class DescribeExpressCloudConnectionsRequest extends TeaModel {
     public static DescribeExpressCloudConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExpressCloudConnectionsRequest self = new DescribeExpressCloudConnectionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeExpressCloudConnectionsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DescribeExpressCloudConnectionsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeExpressCloudConnectionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeExpressCloudConnectionsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeExpressCloudConnectionsRequest setRegionId(String regionId) {
@@ -56,11 +99,9 @@ public class DescribeExpressCloudConnectionsRequest extends TeaModel {
 
     public static class DescribeExpressCloudConnectionsRequestFilter extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public java.util.List<String> value;
 
         public static DescribeExpressCloudConnectionsRequestFilter build(java.util.Map<String, ?> map) throws Exception {

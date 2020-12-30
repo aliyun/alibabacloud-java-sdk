@@ -4,33 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateDhcpOptionsSetResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DhcpOptionsSetId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String dhcpOptionsSetId;
+    public CreateDhcpOptionsSetResponseBody body;
 
     public static CreateDhcpOptionsSetResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDhcpOptionsSetResponse self = new CreateDhcpOptionsSetResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDhcpOptionsSetResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateDhcpOptionsSetResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateDhcpOptionsSetResponse setDhcpOptionsSetId(String dhcpOptionsSetId) {
-        this.dhcpOptionsSetId = dhcpOptionsSetId;
+    public CreateDhcpOptionsSetResponse setBody(CreateDhcpOptionsSetResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getDhcpOptionsSetId() {
-        return this.dhcpOptionsSetId;
+    public CreateDhcpOptionsSetResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,15 +4,19 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends TeaModel {
-    @NameInMap("Filter")
-    public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter;
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
     public String physicalConnectionId;
 
     @NameInMap("PageNumber")
@@ -21,17 +25,36 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Filter")
+    public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter;
+
     public static DescribeVirtualBorderRoutersForPhysicalConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualBorderRoutersForPhysicalConnectionRequest self = new DescribeVirtualBorderRoutersForPhysicalConnectionRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVirtualBorderRoutersForPhysicalConnectionRequest setFilter(java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter) {
-        this.filter = filter;
+    public DescribeVirtualBorderRoutersForPhysicalConnectionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> getFilter() {
-        return this.filter;
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVirtualBorderRoutersForPhysicalConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeVirtualBorderRoutersForPhysicalConnectionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DescribeVirtualBorderRoutersForPhysicalConnectionRequest setRegionId(String regionId) {
@@ -66,13 +89,19 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
         return this.pageSize;
     }
 
+    public DescribeVirtualBorderRoutersForPhysicalConnectionRequest setFilter(java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> getFilter() {
+        return this.filter;
+    }
+
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public java.util.List<String> value;
 
         public static DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter build(java.util.Map<String, ?> map) throws Exception {

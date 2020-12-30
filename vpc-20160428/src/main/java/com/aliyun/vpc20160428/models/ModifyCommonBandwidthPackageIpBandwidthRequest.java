@@ -4,25 +4,65 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyCommonBandwidthPackageIpBandwidthRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
     public String bandwidthPackageId;
 
     @NameInMap("EipId")
-    @Validation(required = true)
     public String eipId;
 
     @NameInMap("Bandwidth")
-    @Validation(required = true)
     public String bandwidth;
 
     public static ModifyCommonBandwidthPackageIpBandwidthRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCommonBandwidthPackageIpBandwidthRequest self = new ModifyCommonBandwidthPackageIpBandwidthRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyCommonBandwidthPackageIpBandwidthRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyCommonBandwidthPackageIpBandwidthRequest setRegionId(String regionId) {

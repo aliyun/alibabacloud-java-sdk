@@ -4,45 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateSslVpnClientCertResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Name")
+    @NameInMap("body")
     @Validation(required = true)
-    public String name;
-
-    @NameInMap("SslVpnClientCertId")
-    @Validation(required = true)
-    public String sslVpnClientCertId;
+    public CreateSslVpnClientCertResponseBody body;
 
     public static CreateSslVpnClientCertResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateSslVpnClientCertResponse self = new CreateSslVpnClientCertResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateSslVpnClientCertResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateSslVpnClientCertResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateSslVpnClientCertResponse setName(String name) {
-        this.name = name;
+    public CreateSslVpnClientCertResponse setBody(CreateSslVpnClientCertResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getName() {
-        return this.name;
-    }
-
-    public CreateSslVpnClientCertResponse setSslVpnClientCertId(String sslVpnClientCertId) {
-        this.sslVpnClientCertId = sslVpnClientCertId;
-        return this;
-    }
-    public String getSslVpnClientCertId() {
-        return this.sslVpnClientCertId;
+    public CreateSslVpnClientCertResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,20 +4,62 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteSslVpnServerRequest extends TeaModel {
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("SslVpnServerId")
-    @Validation(required = true)
     public String sslVpnServerId;
 
     public static DeleteSslVpnServerRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSslVpnServerRequest self = new DeleteSslVpnServerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSslVpnServerRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public DeleteSslVpnServerRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteSslVpnServerRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteSslVpnServerRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public DeleteSslVpnServerRequest setRegionId(String regionId) {

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VbrId")
-    @Validation(required = true)
     public String vbrId;
 
     @NameInMap("VlanId")
@@ -45,8 +43,20 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("AssociatedPhysicalConnections")
     public String associatedPhysicalConnections;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     @NameInMap("LocalIpv6GatewayIp")
     public String localIpv6GatewayIp;
@@ -59,6 +69,9 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
 
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
+
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
 
     public static ModifyVirtualBorderRouterAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyVirtualBorderRouterAttributeRequest self = new ModifyVirtualBorderRouterAttributeRequest();
@@ -169,12 +182,44 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
         return this.associatedPhysicalConnections;
     }
 
+    public ModifyVirtualBorderRouterAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public ModifyVirtualBorderRouterAttributeRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyVirtualBorderRouterAttributeRequest setLocalIpv6GatewayIp(String localIpv6GatewayIp) {
@@ -207,6 +252,14 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     }
     public Boolean getEnableIpv6() {
         return this.enableIpv6;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
     }
 
 }

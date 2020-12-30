@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteExpressCloudConnectionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteExpressCloudConnectionResponseBody body;
 
     public static DeleteExpressCloudConnectionResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteExpressCloudConnectionResponse self = new DeleteExpressCloudConnectionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteExpressCloudConnectionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteExpressCloudConnectionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteExpressCloudConnectionResponse setBody(DeleteExpressCloudConnectionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteExpressCloudConnectionResponseBody getBody() {
+        return this.body;
     }
 
 }

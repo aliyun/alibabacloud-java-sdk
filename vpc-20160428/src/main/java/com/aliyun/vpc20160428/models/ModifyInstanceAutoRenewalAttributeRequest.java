@@ -5,23 +5,18 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("PricingCycle")
-    @Validation(required = true)
     public String pricingCycle;
 
     @NameInMap("Duration")
-    @Validation(required = true)
     public Integer duration;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("ClientToken")
@@ -29,6 +24,15 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
 
     @NameInMap("RenewalStatus")
     public String renewalStatus;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyInstanceAutoRenewalAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAutoRenewalAttributeRequest self = new ModifyInstanceAutoRenewalAttributeRequest();
@@ -89,6 +93,30 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends TeaModel {
     }
     public String getRenewalStatus() {
         return this.renewalStatus;
+    }
+
+    public ModifyInstanceAutoRenewalAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyInstanceAutoRenewalAttributeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyInstanceAutoRenewalAttributeRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

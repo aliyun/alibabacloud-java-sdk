@@ -4,69 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("VpcId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String vpcId;
-
-    @NameInMap("VRouterId")
-    @Validation(required = true)
-    public String VRouterId;
-
-    @NameInMap("RouteTableId")
-    @Validation(required = true)
-    public String routeTableId;
-
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
-    public String resourceGroupId;
+    public CreateVpcResponseBody body;
 
     public static CreateVpcResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcResponse self = new CreateVpcResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateVpcResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateVpcResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateVpcResponse setVpcId(String vpcId) {
-        this.vpcId = vpcId;
+    public CreateVpcResponse setBody(CreateVpcResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getVpcId() {
-        return this.vpcId;
-    }
-
-    public CreateVpcResponse setVRouterId(String VRouterId) {
-        this.VRouterId = VRouterId;
-        return this;
-    }
-    public String getVRouterId() {
-        return this.VRouterId;
-    }
-
-    public CreateVpcResponse setRouteTableId(String routeTableId) {
-        this.routeTableId = routeTableId;
-        return this;
-    }
-    public String getRouteTableId() {
-        return this.routeTableId;
-    }
-
-    public CreateVpcResponse setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public CreateVpcResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,69 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipAddressProResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AllocationId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String allocationId;
-
-    @NameInMap("EipAddress")
-    @Validation(required = true)
-    public String eipAddress;
-
-    @NameInMap("OrderId")
-    @Validation(required = true)
-    public Long orderId;
-
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
-    public String resourceGroupId;
+    public AllocateEipAddressProResponseBody body;
 
     public static AllocateEipAddressProResponse build(java.util.Map<String, ?> map) throws Exception {
         AllocateEipAddressProResponse self = new AllocateEipAddressProResponse();
         return TeaModel.build(map, self);
     }
 
-    public AllocateEipAddressProResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AllocateEipAddressProResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AllocateEipAddressProResponse setAllocationId(String allocationId) {
-        this.allocationId = allocationId;
+    public AllocateEipAddressProResponse setBody(AllocateEipAddressProResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getAllocationId() {
-        return this.allocationId;
-    }
-
-    public AllocateEipAddressProResponse setEipAddress(String eipAddress) {
-        this.eipAddress = eipAddress;
-        return this;
-    }
-    public String getEipAddress() {
-        return this.eipAddress;
-    }
-
-    public AllocateEipAddressProResponse setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
-    }
-
-    public AllocateEipAddressProResponse setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public AllocateEipAddressProResponseBody getBody() {
+        return this.body;
     }
 
 }

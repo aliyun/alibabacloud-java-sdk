@@ -5,24 +5,34 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
-
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    public String regionId;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
 
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
@@ -35,22 +45,6 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
-    }
-
-    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<ListTagResourcesRequestTag> getTag() {
-        return this.tag;
     }
 
     public ListTagResourcesRequest setRegionId(String regionId) {
@@ -69,6 +63,38 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public ListTagResourcesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ListTagResourcesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ListTagResourcesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ListTagResourcesRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
     public ListTagResourcesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -77,13 +103,27 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
+    }
+
+    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListTagResourcesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public static class ListTagResourcesRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {

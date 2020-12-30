@@ -4,21 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class UnassociateHaVipResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UnassociateHaVipResponseBody body;
 
     public static UnassociateHaVipResponse build(java.util.Map<String, ?> map) throws Exception {
         UnassociateHaVipResponse self = new UnassociateHaVipResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnassociateHaVipResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UnassociateHaVipResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UnassociateHaVipResponse setBody(UnassociateHaVipResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UnassociateHaVipResponseBody getBody() {
+        return this.body;
     }
 
 }

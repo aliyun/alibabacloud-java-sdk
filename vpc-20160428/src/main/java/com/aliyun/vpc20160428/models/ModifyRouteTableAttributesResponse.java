@@ -4,57 +4,33 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouteTableAttributesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    public ModifyRouteTableAttributesResponseBody body;
 
     public static ModifyRouteTableAttributesResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyRouteTableAttributesResponse self = new ModifyRouteTableAttributesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyRouteTableAttributesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyRouteTableAttributesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ModifyRouteTableAttributesResponse setCode(String code) {
-        this.code = code;
+    public ModifyRouteTableAttributesResponse setBody(ModifyRouteTableAttributesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ModifyRouteTableAttributesResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ModifyRouteTableAttributesResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public ModifyRouteTableAttributesResponseBody getBody() {
+        return this.body;
     }
 
 }

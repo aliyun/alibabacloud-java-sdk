@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyNetworkAclAttributesRequest extends TeaModel {
     @NameInMap("NetworkAclId")
-    @Validation(required = true)
     public String networkAclId;
 
     @NameInMap("NetworkAclName")
@@ -15,8 +14,16 @@ public class ModifyNetworkAclAttributesRequest extends TeaModel {
     public String description;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -56,6 +63,30 @@ public class ModifyNetworkAclAttributesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyNetworkAclAttributesRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyNetworkAclAttributesRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyNetworkAclAttributesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyNetworkAclAttributesRequest setClientToken(String clientToken) {

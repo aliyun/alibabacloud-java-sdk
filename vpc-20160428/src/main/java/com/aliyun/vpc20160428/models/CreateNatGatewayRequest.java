@@ -4,12 +4,22 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNatGatewayRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VpcId")
-    @Validation(required = true)
     public String vpcId;
 
     @NameInMap("Name")
@@ -23,9 +33,6 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     @NameInMap("Spec")
     public String spec;
-
-    @NameInMap("BandwidthPackage")
-    public java.util.List<CreateNatGatewayRequestBandwidthPackage> bandwidthPackage;
 
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -48,9 +55,44 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    @NameInMap("BandwidthPackage")
+    public java.util.List<CreateNatGatewayRequestBandwidthPackage> bandwidthPackage;
+
     public static CreateNatGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNatGatewayRequest self = new CreateNatGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateNatGatewayRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateNatGatewayRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateNatGatewayRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateNatGatewayRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateNatGatewayRequest setRegionId(String regionId) {
@@ -99,14 +141,6 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
     public String getSpec() {
         return this.spec;
-    }
-
-    public CreateNatGatewayRequest setBandwidthPackage(java.util.List<CreateNatGatewayRequestBandwidthPackage> bandwidthPackage) {
-        this.bandwidthPackage = bandwidthPackage;
-        return this;
-    }
-    public java.util.List<CreateNatGatewayRequestBandwidthPackage> getBandwidthPackage() {
-        return this.bandwidthPackage;
     }
 
     public CreateNatGatewayRequest setInstanceChargeType(String instanceChargeType) {
@@ -165,58 +199,18 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.internetChargeType;
     }
 
+    public CreateNatGatewayRequest setBandwidthPackage(java.util.List<CreateNatGatewayRequestBandwidthPackage> bandwidthPackage) {
+        this.bandwidthPackage = bandwidthPackage;
+        return this;
+    }
+    public java.util.List<CreateNatGatewayRequestBandwidthPackage> getBandwidthPackage() {
+        return this.bandwidthPackage;
+    }
+
     public static class CreateNatGatewayRequestBandwidthPackage extends TeaModel {
-        @NameInMap("IpCount")
-        @Validation(required = true)
-        public Integer ipCount;
-
-        @NameInMap("Bandwidth")
-        @Validation(required = true)
-        public Integer bandwidth;
-
-        @NameInMap("Zone")
-        @Validation(required = true)
-        public String zone;
-
-        @NameInMap("ISP")
-        @Validation(required = true)
-        public String ISP;
-
         public static CreateNatGatewayRequestBandwidthPackage build(java.util.Map<String, ?> map) throws Exception {
             CreateNatGatewayRequestBandwidthPackage self = new CreateNatGatewayRequestBandwidthPackage();
             return TeaModel.build(map, self);
-        }
-
-        public CreateNatGatewayRequestBandwidthPackage setIpCount(Integer ipCount) {
-            this.ipCount = ipCount;
-            return this;
-        }
-        public Integer getIpCount() {
-            return this.ipCount;
-        }
-
-        public CreateNatGatewayRequestBandwidthPackage setBandwidth(Integer bandwidth) {
-            this.bandwidth = bandwidth;
-            return this;
-        }
-        public Integer getBandwidth() {
-            return this.bandwidth;
-        }
-
-        public CreateNatGatewayRequestBandwidthPackage setZone(String zone) {
-            this.zone = zone;
-            return this;
-        }
-        public String getZone() {
-            return this.zone;
-        }
-
-        public CreateNatGatewayRequestBandwidthPackage setISP(String ISP) {
-            this.ISP = ISP;
-            return this;
-        }
-        public String getISP() {
-            return this.ISP;
         }
 
     }
