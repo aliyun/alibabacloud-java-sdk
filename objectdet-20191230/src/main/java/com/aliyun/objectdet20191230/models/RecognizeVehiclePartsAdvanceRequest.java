@@ -13,4 +13,12 @@ public class RecognizeVehiclePartsAdvanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public RecognizeVehiclePartsAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
 }

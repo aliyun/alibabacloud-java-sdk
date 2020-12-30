@@ -4,41 +4,33 @@ package com.aliyun.objectdet20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectWhiteBaseImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public DetectWhiteBaseImageResponseData data;
+    public DetectWhiteBaseImageResponseBody body;
 
     public static DetectWhiteBaseImageResponse build(java.util.Map<String, ?> map) throws Exception {
         DetectWhiteBaseImageResponse self = new DetectWhiteBaseImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DetectWhiteBaseImageResponseDataElements extends TeaModel {
-        @NameInMap("WhiteBase")
-        @Validation(required = true)
-        public Integer whiteBase;
-
-        public static DetectWhiteBaseImageResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
-            DetectWhiteBaseImageResponseDataElements self = new DetectWhiteBaseImageResponseDataElements();
-            return TeaModel.build(map, self);
-        }
-
+    public DetectWhiteBaseImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DetectWhiteBaseImageResponseData extends TeaModel {
-        @NameInMap("Elements")
-        @Validation(required = true)
-        public java.util.List<DetectWhiteBaseImageResponseDataElements> elements;
-
-        public static DetectWhiteBaseImageResponseData build(java.util.Map<String, ?> map) throws Exception {
-            DetectWhiteBaseImageResponseData self = new DetectWhiteBaseImageResponseData();
-            return TeaModel.build(map, self);
-        }
-
+    public DetectWhiteBaseImageResponse setBody(DetectWhiteBaseImageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DetectWhiteBaseImageResponseBody getBody() {
+        return this.body;
     }
 
 }

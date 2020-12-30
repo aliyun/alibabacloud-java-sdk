@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class RecognizeVehiclePartsRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static RecognizeVehiclePartsRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVehiclePartsRequest self = new RecognizeVehiclePartsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeVehiclePartsRequest setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+        return this;
+    }
+    public String getImageURL() {
+        return this.imageURL;
     }
 
 }
