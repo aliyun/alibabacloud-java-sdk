@@ -17,4 +17,20 @@ public class ExecuteChangeSetResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ExecuteChangeSetResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ExecuteChangeSetResponse setBody(ExecuteChangeSetResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ExecuteChangeSetResponseBody getBody() {
+        return this.body;
+    }
+
 }

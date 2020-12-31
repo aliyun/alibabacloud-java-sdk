@@ -3,305 +3,479 @@ package com.aliyun.ros20150901;
 
 import com.aliyun.tea.*;
 import com.aliyun.ros20150901.models.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.teaopenapi.*;
+import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
+import com.aliyun.endpointutil.*;
 
-public class Client extends com.aliyun.tearoa.Client {
-    public Client(com.aliyun.tearoa.models.Config config) throws Exception {
+public class Client extends com.aliyun.teaopenapi.Client {
+
+    public Client(Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
         this.checkConfig(config);
-        this._endpointHost = this.getEndpoint(_productId, _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpointHost);
+        this._endpoint = this.getEndpoint("ros", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
-
-    public CreateChangeSetResponse createChangeSetWithOptions(CreateChangeSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "POST", "AK", "/changeSets", null, request.headers, null, runtime), new CreateChangeSetResponse());
-    }
-
-    public CreateChangeSetResponse createChangeSet(CreateChangeSetRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createChangeSetWithOptions(request, runtime);
-    }
-
-    public DescribeChangeSetDetailResponse describeChangeSetDetailWithOptions(String stackName, String stackId, String changeSetName, DescribeChangeSetDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + stackName + "/" + stackId + "/changeSets/" + changeSetName + "", null, request.headers, null, runtime), new DescribeChangeSetDetailResponse());
-    }
-
-    public DescribeChangeSetDetailResponse describeChangeSetDetail(String stackName, String stackId, String changeSetName, DescribeChangeSetDetailRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeChangeSetDetailWithOptions(stackName, stackId, changeSetName, request, runtime);
-    }
-
-    public DescribeChangeSetsResponse describeChangeSetsWithOptions(String stackName, String stackId, DescribeChangeSetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + stackName + "/" + stackId + "/changeSets", null, request.headers, null, runtime), new DescribeChangeSetsResponse());
-    }
-
-    public DescribeChangeSetsResponse describeChangeSets(String stackName, String stackId, DescribeChangeSetsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeChangeSetsWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public ExecuteChangeSetResponse executeChangeSetWithOptions(String stackName, String stackId, String changeSetName, ExecuteChangeSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "PUT", "AK", "/stacks/" + stackName + "/" + stackId + "/changeSets/" + changeSetName + "/execute", null, request.headers, null, runtime), new ExecuteChangeSetResponse());
-    }
-
-    public ExecuteChangeSetResponse executeChangeSet(String stackName, String stackId, String changeSetName, ExecuteChangeSetRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.executeChangeSetWithOptions(stackName, stackId, changeSetName, request, runtime);
-    }
-
-    public DeleteChangeSetResponse deleteChangeSetWithOptions(String stackName, String stackId, String changeSetName, DeleteChangeSetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "DELETE", "AK", "/stacks/" + stackName + "/" + stackId + "/changeSets/" + changeSetName + "", null, request.headers, null, runtime), new DeleteChangeSetResponse());
-    }
-
-    public DeleteChangeSetResponse deleteChangeSet(String stackName, String stackId, String changeSetName, DeleteChangeSetRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteChangeSetWithOptions(stackName, stackId, changeSetName, request, runtime);
-    }
-
-    public ContinueCreateStackResponse continueCreateStackWithOptions(String stackName, String stackId, ContinueCreateStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "POST", "AK", "/stacks/" + stackName + "/" + stackId + "/continue", null, request.headers, null, runtime), new ContinueCreateStackResponse());
-    }
-
-    public ContinueCreateStackResponse continueCreateStack(String stackName, String stackId, ContinueCreateStackRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.continueCreateStackWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public CancelUpdateStackResponse cancelUpdateStackWithOptions(String stackName, String stackId, CancelUpdateStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "PUT", "AK", "/stacks/" + stackName + "/" + stackId + "/cancel", null, request.headers, null, runtime), new CancelUpdateStackResponse());
-    }
-
-    public CancelUpdateStackResponse cancelUpdateStack(String stackName, String stackId, CancelUpdateStackRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.cancelUpdateStackWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public GetStackPolicyResponse getStackPolicyWithOptions(String stackName, String stackId, GetStackPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + stackName + "/" + stackId + "/policy", null, request.headers, null, runtime), new GetStackPolicyResponse());
-    }
-
-    public GetStackPolicyResponse getStackPolicy(String stackName, String stackId, GetStackPolicyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getStackPolicyWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public SetStackPolicyResponse setStackPolicyWithOptions(String stackName, String stackId, SetStackPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "POST", "AK", "/stacks/" + stackName + "/" + stackId + "/policy", null, request.headers, null, runtime), new SetStackPolicyResponse());
-    }
-
-    public SetStackPolicyResponse setStackPolicy(String stackName, String stackId, SetStackPolicyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.setStackPolicyWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public UpdateStackResponse updateStackWithOptions(String stackName, String stackId, UpdateStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "PUT", "AK", "/stacks/" + stackName + "/" + stackId + "", null, request.headers, null, runtime), new UpdateStackResponse());
-    }
-
-    public UpdateStackResponse updateStack(String stackName, String stackId, UpdateStackRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateStackWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public WaitConditionsResponse waitConditionsWithOptions(WaitConditionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "POST", "Anonymous", "/waitcondition", com.aliyun.teautil.Common.stringifyMapValue(TeaModel.buildMap(request.query)), request.headers, null, runtime), new WaitConditionsResponse());
-    }
-
-    public WaitConditionsResponse waitConditions(WaitConditionsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.waitConditionsWithOptions(request, runtime);
-    }
-
-    public InquiryStackResponse inquiryStackWithOptions(InquiryStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "POST", "AK", "/stacks/inquiry", null, request.headers, null, runtime), new InquiryStackResponse());
-    }
-
-    public InquiryStackResponse inquiryStack(InquiryStackRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.inquiryStackWithOptions(request, runtime);
-    }
-
-    public PreviewStackResponse previewStackWithOptions(PreviewStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "POST", "AK", "/stacks/preview", null, request.headers, null, runtime), new PreviewStackResponse());
-    }
-
-    public PreviewStackResponse previewStack(PreviewStackRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.previewStackWithOptions(request, runtime);
-    }
-
-    public DoActionsResponse doActionsWithOptions(String stackName, String stackId, DoActionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "POST", "AK", "/stacks/" + stackName + "/" + stackId + "/actions", null, request.headers, null, runtime), new DoActionsResponse());
-    }
-
-    public DoActionsResponse doActions(String stackName, String stackId, DoActionsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.doActionsWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public DescribeRegionsResponse describeRegionsWithOptions(DescribeRegionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/regions", null, request.headers, null, runtime), new DescribeRegionsResponse());
-    }
-
-    public DescribeRegionsResponse describeRegions(DescribeRegionsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeRegionsWithOptions(request, runtime);
-    }
-
-    public DescribeEventsResponse describeEventsWithOptions(String stackName, String stackId, DescribeEventsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + stackName + "/" + stackId + "/events", com.aliyun.teautil.Common.stringifyMapValue(TeaModel.buildMap(request.query)), request.headers, null, runtime), new DescribeEventsResponse());
-    }
-
-    public DescribeEventsResponse describeEvents(String stackName, String stackId, DescribeEventsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeEventsWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public DeleteStackResponse deleteStackWithOptions(String stackName, String stackId, DeleteStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "DELETE", "AK", "/stacks/" + stackName + "/" + stackId + "", com.aliyun.teautil.Common.stringifyMapValue(TeaModel.buildMap(request.query)), request.headers, null, runtime), new DeleteStackResponse());
-    }
-
-    public DeleteStackResponse deleteStack(String stackName, String stackId, DeleteStackRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteStackWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public CreateStacksResponse createStacksWithOptions(CreateStacksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "POST", "AK", "/stacks", null, request.headers, null, runtime), new CreateStacksResponse());
-    }
-
-    public CreateStacksResponse createStacks(CreateStacksRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createStacksWithOptions(request, runtime);
-    }
-
-    public AbandonStackResponse abandonStackWithOptions(String stackName, String stackId, AbandonStackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "DELETE", "AK", "/stacks/" + stackName + "/" + stackId + "/abandon", null, request.headers, null, runtime), new AbandonStackResponse());
-    }
-
-    public AbandonStackResponse abandonStack(String stackName, String stackId, AbandonStackRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.abandonStackWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public DescribeResourceTypesResponse describeResourceTypesWithOptions(DescribeResourceTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/resource_types", com.aliyun.teautil.Common.stringifyMapValue(TeaModel.buildMap(request.query)), request.headers, null, runtime), new DescribeResourceTypesResponse());
-    }
-
-    public DescribeResourceTypesResponse describeResourceTypes(DescribeResourceTypesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeResourceTypesWithOptions(request, runtime);
-    }
-
-    public DescribeResourceTypeDetailResponse describeResourceTypeDetailWithOptions(String typeName, DescribeResourceTypeDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/resource_types/" + typeName + "", null, request.headers, null, runtime), new DescribeResourceTypeDetailResponse());
-    }
-
-    public DescribeResourceTypeDetailResponse describeResourceTypeDetail(String typeName, DescribeResourceTypeDetailRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeResourceTypeDetailWithOptions(typeName, request, runtime);
-    }
-
-    public DescribeResourcesResponse describeResourcesWithOptions(String stackName, String stackId, DescribeResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + stackName + "/" + stackId + "/resources", null, request.headers, null, runtime), new DescribeResourcesResponse());
-    }
-
-    public DescribeResourcesResponse describeResources(String stackName, String stackId, DescribeResourcesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeResourcesWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public DescribeResourceDetailResponse describeResourceDetailWithOptions(String stackName, String stackId, String resourceName, DescribeResourceDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + stackName + "/" + stackId + "/resources/" + resourceName + "", null, request.headers, null, runtime), new DescribeResourceDetailResponse());
-    }
-
-    public DescribeResourceDetailResponse describeResourceDetail(String stackName, String stackId, String resourceName, DescribeResourceDetailRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeResourceDetailWithOptions(stackName, stackId, resourceName, request, runtime);
-    }
-
-    public DescribeResourceTypeTemplateResponse describeResourceTypeTemplateWithOptions(String typeName, DescribeResourceTypeTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/resource_types/" + typeName + "/template", null, request.headers, null, runtime), new DescribeResourceTypeTemplateResponse());
-    }
-
-    public DescribeResourceTypeTemplateResponse describeResourceTypeTemplate(String typeName, DescribeResourceTypeTemplateRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeResourceTypeTemplateWithOptions(typeName, request, runtime);
-    }
-
-    public DescribeStacksResponse describeStacksWithOptions(DescribeStacksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/stacks", com.aliyun.teautil.Common.stringifyMapValue(TeaModel.buildMap(request.query)), request.headers, null, runtime), new DescribeStacksResponse());
-    }
-
-    public DescribeStacksResponse describeStacks(DescribeStacksRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeStacksWithOptions(request, runtime);
-    }
-
-    public DescribeStackDetailResponse describeStackDetailWithOptions(String stackName, String stackId, DescribeStackDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + stackName + "/" + stackId + "", null, request.headers, null, runtime), new DescribeStackDetailResponse());
-    }
-
-    public DescribeStackDetailResponse describeStackDetail(String stackName, String stackId, DescribeStackDetailRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeStackDetailWithOptions(stackName, stackId, request, runtime);
-    }
-
-    public ValidateTemplateResponse validateTemplateWithOptions(ValidateTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "POST", "AK", "/validate", null, request.headers, null, runtime), new ValidateTemplateResponse());
-    }
-
-    public ValidateTemplateResponse validateTemplate(ValidateTemplateRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.validateTemplateWithOptions(request, runtime);
-    }
-
-    public DescribeTemplateResponse describeTemplateWithOptions(String stackName, String stackId, DescribeTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + stackName + "/" + stackId + "/template", null, request.headers, null, runtime), new DescribeTemplateResponse());
-    }
-
-    public DescribeTemplateResponse describeTemplate(String stackName, String stackId, DescribeTemplateRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeTemplateWithOptions(stackName, stackId, request, runtime);
-    }
 
     public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
         if (!com.aliyun.teautil.Common.empty(endpoint)) {
             return endpoint;
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get("regionId"))) {
-            return endpointMap.get("regionId");
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
         }
 
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
+    }
+
+    public AbandonStackResponse abandonStack(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.abandonStackWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public AbandonStackResponse abandonStackWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("AbandonStack", "2015-09-01", "HTTPS", "DELETE", "AK", "/stacks/" + StackName + "/{StackId}/abandon", "none", req, runtime), new AbandonStackResponse());
+    }
+
+    public CancelUpdateStackResponse cancelUpdateStack(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cancelUpdateStackWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public CancelUpdateStackResponse cancelUpdateStackWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("CancelUpdateStack", "2015-09-01", "HTTPS", "PUT", "AK", "/stacks/" + StackName + "/{StackId}/cancel", "none", req, runtime), new CancelUpdateStackResponse());
+    }
+
+    public ContinueCreateStackResponse continueCreateStack(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.continueCreateStackWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public ContinueCreateStackResponse continueCreateStackWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("ContinueCreateStack", "2015-09-01", "HTTPS", "POST", "AK", "/stacks/" + StackName + "/{StackId}/continue", "none", req, runtime), new ContinueCreateStackResponse());
+    }
+
+    public CreateChangeSetResponse createChangeSet() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createChangeSetWithOptions(headers, runtime);
+    }
+
+    public CreateChangeSetResponse createChangeSetWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("CreateChangeSet", "2015-09-01", "HTTPS", "POST", "AK", "/changeSets", "json", req, runtime), new CreateChangeSetResponse());
+    }
+
+    public CreateStacksResponse createStacks() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createStacksWithOptions(headers, runtime);
+    }
+
+    public CreateStacksResponse createStacksWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("CreateStacks", "2015-09-01", "HTTPS", "POST", "AK", "/stacks", "none", req, runtime), new CreateStacksResponse());
+    }
+
+    public DeleteChangeSetResponse deleteChangeSet(String StackName, String StackId, String ChangeSetName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteChangeSetWithOptions(StackName, StackId, ChangeSetName, headers, runtime);
+    }
+
+    public DeleteChangeSetResponse deleteChangeSetWithOptions(String StackName, String StackId, String ChangeSetName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DeleteChangeSet", "2015-09-01", "HTTPS", "DELETE", "AK", "/stacks/" + StackName + "/{StackId}/changeSets/{ChangeSetName}", "json", req, runtime), new DeleteChangeSetResponse());
+    }
+
+    public DeleteStackResponse deleteStack(String StackName, String StackId, DeleteStackRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteStackWithOptions(StackName, StackId, request, headers, runtime);
+    }
+
+    public DeleteStackResponse deleteStackWithOptions(String StackName, String StackId, DeleteStackRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("DeleteStack", "2015-09-01", "HTTPS", "DELETE", "AK", "/stacks/" + StackName + "/{StackId}", "none", req, runtime), new DeleteStackResponse());
+    }
+
+    public DescribeChangeSetDetailResponse describeChangeSetDetail(String StackName, String StackId, String ChangeSetName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeChangeSetDetailWithOptions(StackName, StackId, ChangeSetName, headers, runtime);
+    }
+
+    public DescribeChangeSetDetailResponse describeChangeSetDetailWithOptions(String StackName, String StackId, String ChangeSetName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeChangeSetDetail", "2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + StackName + "/{StackId}/changeSets/{ChangeSetName}", "json", req, runtime), new DescribeChangeSetDetailResponse());
+    }
+
+    public DescribeChangeSetsResponse describeChangeSets(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeChangeSetsWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public DescribeChangeSetsResponse describeChangeSetsWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeChangeSets", "2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + StackName + "/{StackId}/changeSets", "json", req, runtime), new DescribeChangeSetsResponse());
+    }
+
+    public DescribeEventsResponse describeEvents(String StackName, String StackId, DescribeEventsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeEventsWithOptions(StackName, StackId, request, headers, runtime);
+    }
+
+    public DescribeEventsResponse describeEventsWithOptions(String StackName, String StackId, DescribeEventsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceStatus)) {
+            query.put("ResourceStatus", request.resourceStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
+            query.put("ResourceName", request.resourceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeEvents", "2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + StackName + "/{StackId}/events", "none", req, runtime), new DescribeEventsResponse());
+    }
+
+    public DescribeRegionsResponse describeRegions() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeRegionsWithOptions(headers, runtime);
+    }
+
+    public DescribeRegionsResponse describeRegionsWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeRegions", "2015-09-01", "HTTPS", "GET", "AK", "/regions", "none", req, runtime), new DescribeRegionsResponse());
+    }
+
+    public DescribeResourceDetailResponse describeResourceDetail(String StackName, String StackId, String ResourceName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeResourceDetailWithOptions(StackName, StackId, ResourceName, headers, runtime);
+    }
+
+    public DescribeResourceDetailResponse describeResourceDetailWithOptions(String StackName, String StackId, String ResourceName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeResourceDetail", "2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + StackName + "/{StackId}/resources/{ResourceName}", "none", req, runtime), new DescribeResourceDetailResponse());
+    }
+
+    public DescribeResourcesResponse describeResources(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeResourcesWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public DescribeResourcesResponse describeResourcesWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeResources", "2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + StackName + "/{StackId}/resources", "none", req, runtime), new DescribeResourcesResponse());
+    }
+
+    public DescribeResourceTypeDetailResponse describeResourceTypeDetail(String TypeName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeResourceTypeDetailWithOptions(TypeName, headers, runtime);
+    }
+
+    public DescribeResourceTypeDetailResponse describeResourceTypeDetailWithOptions(String TypeName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeResourceTypeDetail", "2015-09-01", "HTTPS", "GET", "AK", "/resource_types/" + TypeName + "", "none", req, runtime), new DescribeResourceTypeDetailResponse());
+    }
+
+    public DescribeResourceTypesResponse describeResourceTypes(DescribeResourceTypesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeResourceTypesWithOptions(request, headers, runtime);
+    }
+
+    public DescribeResourceTypesResponse describeResourceTypesWithOptions(DescribeResourceTypesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.supportStatus)) {
+            query.put("SupportStatus", request.supportStatus);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeResourceTypes", "2015-09-01", "HTTPS", "GET", "AK", "/resource_types", "none", req, runtime), new DescribeResourceTypesResponse());
+    }
+
+    public DescribeResourceTypeTemplateResponse describeResourceTypeTemplate(String TypeName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeResourceTypeTemplateWithOptions(TypeName, headers, runtime);
+    }
+
+    public DescribeResourceTypeTemplateResponse describeResourceTypeTemplateWithOptions(String TypeName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeResourceTypeTemplate", "2015-09-01", "HTTPS", "GET", "AK", "/resource_types/" + TypeName + "/template", "none", req, runtime), new DescribeResourceTypeTemplateResponse());
+    }
+
+    public DescribeStackDetailResponse describeStackDetail(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeStackDetailWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public DescribeStackDetailResponse describeStackDetailWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeStackDetail", "2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + StackName + "/{StackId}", "none", req, runtime), new DescribeStackDetailResponse());
+    }
+
+    public DescribeStacksResponse describeStacks(DescribeStacksRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeStacksWithOptions(request, headers, runtime);
+    }
+
+    public DescribeStacksResponse describeStacksWithOptions(DescribeStacksRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stackId)) {
+            query.put("StackId", request.stackId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeStacks", "2015-09-01", "HTTPS", "GET", "AK", "/stacks", "none", req, runtime), new DescribeStacksResponse());
+    }
+
+    public DescribeTemplateResponse describeTemplate(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeTemplateWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public DescribeTemplateResponse describeTemplateWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeTemplate", "2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + StackName + "/{StackId}/template", "none", req, runtime), new DescribeTemplateResponse());
+    }
+
+    public DoActionsResponse doActions(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.doActionsWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public DoActionsResponse doActionsWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DoActions", "2015-09-01", "HTTPS", "POST", "AK", "/stacks/" + StackName + "/{StackId}/actions", "none", req, runtime), new DoActionsResponse());
+    }
+
+    public ExecuteChangeSetResponse executeChangeSet(String StackName, String StackId, String ChangeSetName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.executeChangeSetWithOptions(StackName, StackId, ChangeSetName, headers, runtime);
+    }
+
+    public ExecuteChangeSetResponse executeChangeSetWithOptions(String StackName, String StackId, String ChangeSetName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("ExecuteChangeSet", "2015-09-01", "HTTPS", "PUT", "AK", "/stacks/" + StackName + "/{StackId}/changeSets/{ChangeSetName}/execute", "json", req, runtime), new ExecuteChangeSetResponse());
+    }
+
+    public GetStackPolicyResponse getStackPolicy(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getStackPolicyWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public GetStackPolicyResponse getStackPolicyWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("GetStackPolicy", "2015-09-01", "HTTPS", "GET", "AK", "/stacks/" + StackName + "/{StackId}/policy", "none", req, runtime), new GetStackPolicyResponse());
+    }
+
+    public InquiryStackResponse inquiryStack() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.inquiryStackWithOptions(headers, runtime);
+    }
+
+    public InquiryStackResponse inquiryStackWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("InquiryStack", "2015-09-01", "HTTPS", "POST", "AK", "/stacks/inquiry", "none", req, runtime), new InquiryStackResponse());
+    }
+
+    public PreviewStackResponse previewStack() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.previewStackWithOptions(headers, runtime);
+    }
+
+    public PreviewStackResponse previewStackWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("PreviewStack", "2015-09-01", "HTTPS", "POST", "AK", "/stacks/preview", "none", req, runtime), new PreviewStackResponse());
+    }
+
+    public SetStackPolicyResponse setStackPolicy(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.setStackPolicyWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public SetStackPolicyResponse setStackPolicyWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("SetStackPolicy", "2015-09-01", "HTTPS", "POST", "AK", "/stacks/" + StackName + "/{StackId}/policy", "none", req, runtime), new SetStackPolicyResponse());
+    }
+
+    public UpdateStackResponse updateStack(String StackName, String StackId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateStackWithOptions(StackName, StackId, headers, runtime);
+    }
+
+    public UpdateStackResponse updateStackWithOptions(String StackName, String StackId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("UpdateStack", "2015-09-01", "HTTPS", "PUT", "AK", "/stacks/" + StackName + "/{StackId}", "none", req, runtime), new UpdateStackResponse());
+    }
+
+    public ValidateTemplateResponse validateTemplate() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.validateTemplateWithOptions(headers, runtime);
+    }
+
+    public ValidateTemplateResponse validateTemplateWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("ValidateTemplate", "2015-09-01", "HTTPS", "POST", "AK", "/validate", "none", req, runtime), new ValidateTemplateResponse());
+    }
+
+    public WaitConditionsResponse waitConditions(WaitConditionsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.waitConditionsWithOptions(request, headers, runtime);
+    }
+
+    public WaitConditionsResponse waitConditionsWithOptions(WaitConditionsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.stackname)) {
+            query.put("stackname", request.stackname);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stackid)) {
+            query.put("stackid", request.stackid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("resource", request.resource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expire)) {
+            query.put("expire", request.expire);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signature)) {
+            query.put("signature", request.signature);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("WaitConditions", "2015-09-01", "HTTPS", "POST", "AK", "/waitcondition", "none", req, runtime), new WaitConditionsResponse());
     }
 }

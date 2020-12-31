@@ -17,4 +17,20 @@ public class DescribeChangeSetsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeChangeSetsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeChangeSetsResponse setBody(DescribeChangeSetsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeChangeSetsResponseBody getBody() {
+        return this.body;
+    }
+
 }
