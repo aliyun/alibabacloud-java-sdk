@@ -203,6 +203,10 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("num_of_nodes")
     public Long numOfNodes;
 
+    // 集群节点所在虚拟交换机。
+    @NameInMap("vswitch_ids")
+    public java.util.List<String> vswitchIds;
+
     // 集群Worker节点所在虚拟交换机
     @NameInMap("worker_vswitch_ids")
     public java.util.List<String> workerVswitchIds;
@@ -690,6 +694,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public Long getNumOfNodes() {
         return this.numOfNodes;
+    }
+
+    public CreateClusterRequest setVswitchIds(java.util.List<String> vswitchIds) {
+        this.vswitchIds = vswitchIds;
+        return this;
+    }
+    public java.util.List<String> getVswitchIds() {
+        return this.vswitchIds;
     }
 
     public CreateClusterRequest setWorkerVswitchIds(java.util.List<String> workerVswitchIds) {
