@@ -13,4 +13,12 @@ public class UpdateStackResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateStackResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
 }
