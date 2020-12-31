@@ -20,8 +20,11 @@ public class CreateAuthTicketRequest extends TeaModel {
     @NameInMap("ticketType")
     public String ticketType;
 
-    @NameInMap("validDuration")
-    public Long validDuration;
+    @NameInMap("duration")
+    public Long duration;
+
+    @NameInMap("jwtSignatureTypeEnum")
+    public String jwtSignatureTypeEnum;
 
     public static CreateAuthTicketRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAuthTicketRequest self = new CreateAuthTicketRequest();
@@ -60,12 +63,20 @@ public class CreateAuthTicketRequest extends TeaModel {
         return this.ticketType;
     }
 
-    public CreateAuthTicketRequest setValidDuration(Long validDuration) {
-        this.validDuration = validDuration;
+    public CreateAuthTicketRequest setDuration(Long duration) {
+        this.duration = duration;
         return this;
     }
-    public Long getValidDuration() {
-        return this.validDuration;
+    public Long getDuration() {
+        return this.duration;
+    }
+
+    public CreateAuthTicketRequest setJwtSignatureTypeEnum(String jwtSignatureTypeEnum) {
+        this.jwtSignatureTypeEnum = jwtSignatureTypeEnum;
+        return this;
+    }
+    public String getJwtSignatureTypeEnum() {
+        return this.jwtSignatureTypeEnum;
     }
 
 }

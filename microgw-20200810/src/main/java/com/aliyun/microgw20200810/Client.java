@@ -726,9 +726,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("RecycleApi", "2020-08-10", "HTTPS", "POST", "AK", "/v1/api/" + apiId + "/recycle", "json", req, runtime), new RecycleApiResponse());
     }
 
-    /**
-     * createAuthTicket
-     */
     public CreateAuthTicketResponse createAuthTicket(CreateAuthTicketRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -754,8 +751,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ticketType", request.ticketType);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.validDuration)) {
-            body.put("validDuration", request.validDuration);
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            body.put("duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jwtSignatureTypeEnum)) {
+            body.put("jwtSignatureTypeEnum", request.jwtSignatureTypeEnum);
         }
 
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
