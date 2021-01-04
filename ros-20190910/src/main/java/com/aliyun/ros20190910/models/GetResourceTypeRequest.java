@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetResourceTypeRequest extends TeaModel {
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     public static GetResourceTypeRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CancelUpdateStackRequest extends TeaModel {
     @NameInMap("StackId")
-    @Validation(required = true)
     public String stackId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("CancelType")

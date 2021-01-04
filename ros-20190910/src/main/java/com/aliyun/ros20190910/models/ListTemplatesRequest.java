@@ -13,11 +13,11 @@ public class ListTemplatesRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
-    @NameInMap("Tag")
-    public java.util.List<ListTemplatesRequestTag> tag;
-
     @NameInMap("ShareType")
     public String shareType;
+
+    @NameInMap("Tag")
+    public java.util.List<ListTemplatesRequestTag> tag;
 
     public static ListTemplatesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTemplatesRequest self = new ListTemplatesRequest();
@@ -48,20 +48,20 @@ public class ListTemplatesRequest extends TeaModel {
         return this.templateName;
     }
 
-    public ListTemplatesRequest setTag(java.util.List<ListTemplatesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<ListTemplatesRequestTag> getTag() {
-        return this.tag;
-    }
-
     public ListTemplatesRequest setShareType(String shareType) {
         this.shareType = shareType;
         return this;
     }
     public String getShareType() {
         return this.shareType;
+    }
+
+    public ListTemplatesRequest setTag(java.util.List<ListTemplatesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListTemplatesRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class ListTemplatesRequestTag extends TeaModel {

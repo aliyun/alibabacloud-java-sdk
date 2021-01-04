@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetStackPolicyRequest extends TeaModel {
     @NameInMap("StackId")
-    @Validation(required = true)
     public String stackId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static GetStackPolicyRequest build(java.util.Map<String, ?> map) throws Exception {

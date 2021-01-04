@@ -4,45 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class UpdateStackTemplateByResourcesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OldTemplateBody")
+    @NameInMap("body")
     @Validation(required = true)
-    public String oldTemplateBody;
-
-    @NameInMap("NewTemplateBody")
-    @Validation(required = true)
-    public String newTemplateBody;
+    public UpdateStackTemplateByResourcesResponseBody body;
 
     public static UpdateStackTemplateByResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackTemplateByResourcesResponse self = new UpdateStackTemplateByResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateStackTemplateByResourcesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateStackTemplateByResourcesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateStackTemplateByResourcesResponse setOldTemplateBody(String oldTemplateBody) {
-        this.oldTemplateBody = oldTemplateBody;
+    public UpdateStackTemplateByResourcesResponse setBody(UpdateStackTemplateByResourcesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOldTemplateBody() {
-        return this.oldTemplateBody;
-    }
-
-    public UpdateStackTemplateByResourcesResponse setNewTemplateBody(String newTemplateBody) {
-        this.newTemplateBody = newTemplateBody;
-        return this;
-    }
-    public String getNewTemplateBody() {
-        return this.newTemplateBody;
+    public UpdateStackTemplateByResourcesResponseBody getBody() {
+        return this.body;
     }
 
 }
