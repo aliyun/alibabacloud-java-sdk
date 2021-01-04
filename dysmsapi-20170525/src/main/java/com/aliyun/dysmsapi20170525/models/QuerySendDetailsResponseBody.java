@@ -17,7 +17,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
     public String code;
 
     @NameInMap("SmsSendDetailDTOs")
-    public java.util.List<QuerySendDetailsResponseBodySmsSendDetailDTOs> smsSendDetailDTOs;
+    public QuerySendDetailsResponseBodySmsSendDetailDTOs smsSendDetailDTOs;
 
     public static QuerySendDetailsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySendDetailsResponseBody self = new QuerySendDetailsResponseBody();
@@ -56,15 +56,15 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public QuerySendDetailsResponseBody setSmsSendDetailDTOs(java.util.List<QuerySendDetailsResponseBodySmsSendDetailDTOs> smsSendDetailDTOs) {
+    public QuerySendDetailsResponseBody setSmsSendDetailDTOs(QuerySendDetailsResponseBodySmsSendDetailDTOs smsSendDetailDTOs) {
         this.smsSendDetailDTOs = smsSendDetailDTOs;
         return this;
     }
-    public java.util.List<QuerySendDetailsResponseBodySmsSendDetailDTOs> getSmsSendDetailDTOs() {
+    public QuerySendDetailsResponseBodySmsSendDetailDTOs getSmsSendDetailDTOs() {
         return this.smsSendDetailDTOs;
     }
 
-    public static class QuerySendDetailsResponseBodySmsSendDetailDTOs extends TeaModel {
+    public static class QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO extends TeaModel {
         @NameInMap("ErrCode")
         public String errCode;
 
@@ -89,12 +89,12 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         @NameInMap("SendStatus")
         public Long sendStatus;
 
-        public static QuerySendDetailsResponseBodySmsSendDetailDTOs build(java.util.Map<String, ?> map) throws Exception {
-            QuerySendDetailsResponseBodySmsSendDetailDTOs self = new QuerySendDetailsResponseBodySmsSendDetailDTOs();
+        public static QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO build(java.util.Map<String, ?> map) throws Exception {
+            QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO self = new QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO();
             return TeaModel.build(map, self);
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOs setErrCode(String errCode) {
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setErrCode(String errCode) {
             this.errCode = errCode;
             return this;
         }
@@ -102,7 +102,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             return this.errCode;
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOs setTemplateCode(String templateCode) {
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setTemplateCode(String templateCode) {
             this.templateCode = templateCode;
             return this;
         }
@@ -110,7 +110,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             return this.templateCode;
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOs setOutId(String outId) {
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setOutId(String outId) {
             this.outId = outId;
             return this;
         }
@@ -118,7 +118,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             return this.outId;
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOs setReceiveDate(String receiveDate) {
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setReceiveDate(String receiveDate) {
             this.receiveDate = receiveDate;
             return this;
         }
@@ -126,7 +126,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             return this.receiveDate;
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOs setSendDate(String sendDate) {
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setSendDate(String sendDate) {
             this.sendDate = sendDate;
             return this;
         }
@@ -134,7 +134,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             return this.sendDate;
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOs setPhoneNum(String phoneNum) {
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setPhoneNum(String phoneNum) {
             this.phoneNum = phoneNum;
             return this;
         }
@@ -142,7 +142,7 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             return this.phoneNum;
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOs setContent(String content) {
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setContent(String content) {
             this.content = content;
             return this;
         }
@@ -150,12 +150,31 @@ public class QuerySendDetailsResponseBody extends TeaModel {
             return this.content;
         }
 
-        public QuerySendDetailsResponseBodySmsSendDetailDTOs setSendStatus(Long sendStatus) {
+        public QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO setSendStatus(Long sendStatus) {
             this.sendStatus = sendStatus;
             return this;
         }
         public Long getSendStatus() {
             return this.sendStatus;
+        }
+
+    }
+
+    public static class QuerySendDetailsResponseBodySmsSendDetailDTOs extends TeaModel {
+        @NameInMap("SmsSendDetailDTO")
+        public java.util.List<QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO> smsSendDetailDTO;
+
+        public static QuerySendDetailsResponseBodySmsSendDetailDTOs build(java.util.Map<String, ?> map) throws Exception {
+            QuerySendDetailsResponseBodySmsSendDetailDTOs self = new QuerySendDetailsResponseBodySmsSendDetailDTOs();
+            return TeaModel.build(map, self);
+        }
+
+        public QuerySendDetailsResponseBodySmsSendDetailDTOs setSmsSendDetailDTO(java.util.List<QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO> smsSendDetailDTO) {
+            this.smsSendDetailDTO = smsSendDetailDTO;
+            return this;
+        }
+        public java.util.List<QuerySendDetailsResponseBodySmsSendDetailDTOsSmsSendDetailDTO> getSmsSendDetailDTO() {
+            return this.smsSendDetailDTO;
         }
 
     }
