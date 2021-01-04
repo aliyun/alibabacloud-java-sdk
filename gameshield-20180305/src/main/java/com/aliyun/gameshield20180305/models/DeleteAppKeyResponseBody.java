@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.gameshield20180305.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteAppKeyResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("PromptInfo")
+    public java.util.Map<String, ?> promptInfo;
+
+    public static DeleteAppKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAppKeyResponseBody self = new DeleteAppKeyResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteAppKeyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeleteAppKeyResponseBody setPromptInfo(java.util.Map<String, ?> promptInfo) {
+        this.promptInfo = promptInfo;
+        return this;
+    }
+    public java.util.Map<String, ?> getPromptInfo() {
+        return this.promptInfo;
+    }
+
+}
