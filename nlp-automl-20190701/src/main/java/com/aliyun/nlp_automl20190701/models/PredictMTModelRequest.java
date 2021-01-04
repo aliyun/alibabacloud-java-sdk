@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class PredictMTModelRequest extends TeaModel {
     @NameInMap("ModelId")
-    @Validation(required = true)
     public String modelId;
 
     @NameInMap("ModelVersion")
     public String modelVersion;
 
     @NameInMap("Content")
-    @Validation(required = true)
     public String content;
 
     @NameInMap("Product")

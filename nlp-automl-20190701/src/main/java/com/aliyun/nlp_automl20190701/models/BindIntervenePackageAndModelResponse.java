@@ -4,57 +4,33 @@ package com.aliyun.nlp_automl20190701.models;
 import com.aliyun.tea.*;
 
 public class BindIntervenePackageAndModelResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Integer code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public String success;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public BindIntervenePackageAndModelResponseBody body;
 
     public static BindIntervenePackageAndModelResponse build(java.util.Map<String, ?> map) throws Exception {
         BindIntervenePackageAndModelResponse self = new BindIntervenePackageAndModelResponse();
         return TeaModel.build(map, self);
     }
 
-    public BindIntervenePackageAndModelResponse setCode(Integer code) {
-        this.code = code;
+    public BindIntervenePackageAndModelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public BindIntervenePackageAndModelResponse setMessage(Integer message) {
-        this.message = message;
+    public BindIntervenePackageAndModelResponse setBody(BindIntervenePackageAndModelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getMessage() {
-        return this.message;
-    }
-
-    public BindIntervenePackageAndModelResponse setSuccess(String success) {
-        this.success = success;
-        return this;
-    }
-    public String getSuccess() {
-        return this.success;
-    }
-
-    public BindIntervenePackageAndModelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public BindIntervenePackageAndModelResponseBody getBody() {
+        return this.body;
     }
 
 }
