@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class DetectStackResourceDriftRequest extends TeaModel {
     @NameInMap("StackId")
-    @Validation(required = true)
     public String stackId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("LogicalResourceId")
-    @Validation(required = true)
     public String logicalResourceId;
 
     public static DetectStackResourceDriftRequest build(java.util.Map<String, ?> map) throws Exception {

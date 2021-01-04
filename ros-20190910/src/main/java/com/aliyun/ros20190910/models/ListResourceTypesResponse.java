@@ -4,33 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTypesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ResourceTypes")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<String> resourceTypes;
+    public ListResourceTypesResponseBody body;
 
     public static ListResourceTypesResponse build(java.util.Map<String, ?> map) throws Exception {
         ListResourceTypesResponse self = new ListResourceTypesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListResourceTypesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListResourceTypesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ListResourceTypesResponse setResourceTypes(java.util.List<String> resourceTypes) {
-        this.resourceTypes = resourceTypes;
+    public ListResourceTypesResponse setBody(ListResourceTypesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<String> getResourceTypes() {
-        return this.resourceTypes;
+    public ListResourceTypesResponseBody getBody() {
+        return this.body;
     }
 
 }

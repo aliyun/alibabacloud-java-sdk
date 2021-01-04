@@ -5,26 +5,24 @@ import com.aliyun.tea.*;
 
 public class SignalResourceRequest extends TeaModel {
     @NameInMap("StackId")
-    @Validation(required = true)
     public String stackId;
 
     @NameInMap("Status")
-    @Validation(required = true)
     public String status;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("UniqueId")
-    @Validation(required = true)
     public String uniqueId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("Data")
+    public String data;
+
     @NameInMap("LogicalResourceId")
-    @Validation(required = true)
     public String logicalResourceId;
 
     public static SignalResourceRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -70,6 +68,14 @@ public class SignalResourceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public SignalResourceRequest setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
     public SignalResourceRequest setLogicalResourceId(String logicalResourceId) {

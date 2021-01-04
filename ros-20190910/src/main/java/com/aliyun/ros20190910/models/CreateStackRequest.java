@@ -7,11 +7,11 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
 
+    @NameInMap("ChannelId")
+    public String channelId;
+
     @NameInMap("TemplateBody")
     public String templateBody;
-
-    @NameInMap("Parameters")
-    public java.util.List<CreateStackRequestParameters> parameters;
 
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
@@ -23,21 +23,22 @@ public class CreateStackRequest extends TeaModel {
     public String stackPolicyBody;
 
     @NameInMap("StackName")
-    @Validation(required = true)
     public String stackName;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("ActivityId")
+    public String activityId;
+
+    @NameInMap("OrderSource")
+    public String orderSource;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("TemplateURL")
     public String templateURL;
-
-    @NameInMap("NotificationURLs")
-    public java.util.List<String> notificationURLs;
 
     @NameInMap("RamRoleName")
     public String ramRoleName;
@@ -54,6 +55,12 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("TemplateVersion")
     public String templateVersion;
 
+    @NameInMap("Parameters")
+    public java.util.List<CreateStackRequestParameters> parameters;
+
+    @NameInMap("NotificationURLs")
+    public java.util.List<String> notificationURLs;
+
     public static CreateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackRequest self = new CreateStackRequest();
         return TeaModel.build(map, self);
@@ -67,20 +74,20 @@ public class CreateStackRequest extends TeaModel {
         return this.disableRollback;
     }
 
+    public CreateStackRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
+    }
+
     public CreateStackRequest setTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
     }
     public String getTemplateBody() {
         return this.templateBody;
-    }
-
-    public CreateStackRequest setParameters(java.util.List<CreateStackRequestParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<CreateStackRequestParameters> getParameters() {
-        return this.parameters;
     }
 
     public CreateStackRequest setStackPolicyURL(String stackPolicyURL) {
@@ -123,6 +130,22 @@ public class CreateStackRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateStackRequest setActivityId(String activityId) {
+        this.activityId = activityId;
+        return this;
+    }
+    public String getActivityId() {
+        return this.activityId;
+    }
+
+    public CreateStackRequest setOrderSource(String orderSource) {
+        this.orderSource = orderSource;
+        return this;
+    }
+    public String getOrderSource() {
+        return this.orderSource;
+    }
+
     public CreateStackRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -137,14 +160,6 @@ public class CreateStackRequest extends TeaModel {
     }
     public String getTemplateURL() {
         return this.templateURL;
-    }
-
-    public CreateStackRequest setNotificationURLs(java.util.List<String> notificationURLs) {
-        this.notificationURLs = notificationURLs;
-        return this;
-    }
-    public java.util.List<String> getNotificationURLs() {
-        return this.notificationURLs;
     }
 
     public CreateStackRequest setRamRoleName(String ramRoleName) {
@@ -187,45 +202,27 @@ public class CreateStackRequest extends TeaModel {
         return this.templateVersion;
     }
 
-    public static class CreateStackRequestParameters extends TeaModel {
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
-        public String parameterValue;
+    public CreateStackRequest setParameters(java.util.List<CreateStackRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<CreateStackRequestParameters> getParameters() {
+        return this.parameters;
+    }
 
-        @NameInMap("ParameterKey")
-        @Validation(required = true)
-        public String parameterKey;
-
-        public static CreateStackRequestParameters build(java.util.Map<String, ?> map) throws Exception {
-            CreateStackRequestParameters self = new CreateStackRequestParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateStackRequestParameters setParameterValue(String parameterValue) {
-            this.parameterValue = parameterValue;
-            return this;
-        }
-        public String getParameterValue() {
-            return this.parameterValue;
-        }
-
-        public CreateStackRequestParameters setParameterKey(String parameterKey) {
-            this.parameterKey = parameterKey;
-            return this;
-        }
-        public String getParameterKey() {
-            return this.parameterKey;
-        }
-
+    public CreateStackRequest setNotificationURLs(java.util.List<String> notificationURLs) {
+        this.notificationURLs = notificationURLs;
+        return this;
+    }
+    public java.util.List<String> getNotificationURLs() {
+        return this.notificationURLs;
     }
 
     public static class ContinueCreateStackRequestParameters extends TeaModel {
         @NameInMap("ParameterKey")
-        @Validation(required = true)
         public String parameterKey;
 
         @NameInMap("ParameterValue")
-        @Validation(required = true)
         public String parameterValue;
 
         public static ContinueCreateStackRequestParameters build(java.util.Map<String, ?> map) throws Exception {
@@ -242,6 +239,36 @@ public class CreateStackRequest extends TeaModel {
         }
 
         public ContinueCreateStackRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
+        }
+
+    }
+
+    public static class CreateStackRequestParameters extends TeaModel {
+        @NameInMap("ParameterKey")
+        public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
+
+        public static CreateStackRequestParameters build(java.util.Map<String, ?> map) throws Exception {
+            CreateStackRequestParameters self = new CreateStackRequestParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateStackRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
+        public CreateStackRequestParameters setParameterValue(String parameterValue) {
             this.parameterValue = parameterValue;
             return this;
         }

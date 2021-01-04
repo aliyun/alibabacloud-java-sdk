@@ -4,33 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class CreateStackInstancesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OperationId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String operationId;
+    public CreateStackInstancesResponseBody body;
 
     public static CreateStackInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateStackInstancesResponse self = new CreateStackInstancesResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateStackInstancesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateStackInstancesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateStackInstancesResponse setOperationId(String operationId) {
-        this.operationId = operationId;
+    public CreateStackInstancesResponse setBody(CreateStackInstancesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOperationId() {
-        return this.operationId;
+    public CreateStackInstancesResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,21 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class SignalResourceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SignalResourceResponseBody body;
 
     public static SignalResourceResponse build(java.util.Map<String, ?> map) throws Exception {
         SignalResourceResponse self = new SignalResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public SignalResourceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SignalResourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SignalResourceResponse setBody(SignalResourceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SignalResourceResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,69 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTypeResponse extends TeaModel {
-    @NameInMap("Attributes")
+    @NameInMap("headers")
     @Validation(required = true)
-    public java.util.Map<String, ?> attributes;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Properties")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.Map<String, ?> properties;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("ResourceType")
-    @Validation(required = true)
-    public String resourceType;
-
-    @NameInMap("SupportDriftDetection")
-    @Validation(required = true)
-    public Boolean supportDriftDetection;
+    public GetResourceTypeResponseBody body;
 
     public static GetResourceTypeResponse build(java.util.Map<String, ?> map) throws Exception {
         GetResourceTypeResponse self = new GetResourceTypeResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetResourceTypeResponse setAttributes(java.util.Map<String, ?> attributes) {
-        this.attributes = attributes;
+    public GetResourceTypeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public java.util.Map<String, ?> getAttributes() {
-        return this.attributes;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetResourceTypeResponse setProperties(java.util.Map<String, ?> properties) {
-        this.properties = properties;
+    public GetResourceTypeResponse setBody(GetResourceTypeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.Map<String, ?> getProperties() {
-        return this.properties;
-    }
-
-    public GetResourceTypeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetResourceTypeResponse setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
-    public GetResourceTypeResponse setSupportDriftDetection(Boolean supportDriftDetection) {
-        this.supportDriftDetection = supportDriftDetection;
-        return this;
-    }
-    public Boolean getSupportDriftDetection() {
-        return this.supportDriftDetection;
+    public GetResourceTypeResponseBody getBody() {
+        return this.body;
     }
 
 }

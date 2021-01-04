@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateStackGroupRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackGroupName")
-    @Validation(required = true)
     public String stackGroupName;
 
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("Parameters")
-    public java.util.List<UpdateStackGroupRequestParameters> parameters;
 
     @NameInMap("AccountIds")
     public java.util.Map<String, ?> accountIds;
@@ -51,6 +46,9 @@ public class UpdateStackGroupRequest extends TeaModel {
     @NameInMap("TemplateVersion")
     public String templateVersion;
 
+    @NameInMap("Parameters")
+    public java.util.List<UpdateStackGroupRequestParameters> parameters;
+
     public static UpdateStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackGroupRequest self = new UpdateStackGroupRequest();
         return TeaModel.build(map, self);
@@ -78,14 +76,6 @@ public class UpdateStackGroupRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public UpdateStackGroupRequest setParameters(java.util.List<UpdateStackGroupRequestParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<UpdateStackGroupRequestParameters> getParameters() {
-        return this.parameters;
     }
 
     public UpdateStackGroupRequest setAccountIds(java.util.Map<String, ?> accountIds) {
@@ -176,26 +166,24 @@ public class UpdateStackGroupRequest extends TeaModel {
         return this.templateVersion;
     }
 
-    public static class UpdateStackGroupRequestParameters extends TeaModel {
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
-        public String parameterValue;
+    public UpdateStackGroupRequest setParameters(java.util.List<UpdateStackGroupRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<UpdateStackGroupRequestParameters> getParameters() {
+        return this.parameters;
+    }
 
+    public static class UpdateStackGroupRequestParameters extends TeaModel {
         @NameInMap("ParameterKey")
-        @Validation(required = true)
         public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
 
         public static UpdateStackGroupRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             UpdateStackGroupRequestParameters self = new UpdateStackGroupRequestParameters();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateStackGroupRequestParameters setParameterValue(String parameterValue) {
-            this.parameterValue = parameterValue;
-            return this;
-        }
-        public String getParameterValue() {
-            return this.parameterValue;
         }
 
         public UpdateStackGroupRequestParameters setParameterKey(String parameterKey) {
@@ -204,6 +192,14 @@ public class UpdateStackGroupRequest extends TeaModel {
         }
         public String getParameterKey() {
             return this.parameterKey;
+        }
+
+        public UpdateStackGroupRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
         }
 
     }

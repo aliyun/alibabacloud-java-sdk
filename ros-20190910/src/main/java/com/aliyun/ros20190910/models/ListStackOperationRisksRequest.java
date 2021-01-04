@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListStackOperationRisksRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackId")
-    @Validation(required = true)
     public String stackId;
 
     @NameInMap("OperationType")
