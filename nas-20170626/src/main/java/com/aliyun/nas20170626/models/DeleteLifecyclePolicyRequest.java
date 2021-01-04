@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteLifecyclePolicyRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("LifecyclePolicyName")
-    @Validation(required = true)
     public String lifecyclePolicyName;
 
     public static DeleteLifecyclePolicyRequest build(java.util.Map<String, ?> map) throws Exception {

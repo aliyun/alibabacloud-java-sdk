@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateAccessRuleRequest extends TeaModel {
     @NameInMap("AccessGroupName")
-    @Validation(required = true)
     public String accessGroupName;
 
     @NameInMap("SourceCidrIp")
-    @Validation(required = true)
     public String sourceCidrIp;
 
     @NameInMap("RWAccessType")
@@ -23,6 +21,9 @@ public class CreateAccessRuleRequest extends TeaModel {
 
     @NameInMap("FileSystemType")
     public String fileSystemType;
+
+    @NameInMap("Ipv6SourceCidrIp")
+    public String ipv6SourceCidrIp;
 
     public static CreateAccessRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccessRuleRequest self = new CreateAccessRuleRequest();
@@ -75,6 +76,14 @@ public class CreateAccessRuleRequest extends TeaModel {
     }
     public String getFileSystemType() {
         return this.fileSystemType;
+    }
+
+    public CreateAccessRuleRequest setIpv6SourceCidrIp(String ipv6SourceCidrIp) {
+        this.ipv6SourceCidrIp = ipv6SourceCidrIp;
+        return this;
+    }
+    public String getIpv6SourceCidrIp() {
+        return this.ipv6SourceCidrIp;
     }
 
 }

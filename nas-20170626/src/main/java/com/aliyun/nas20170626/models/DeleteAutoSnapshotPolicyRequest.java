@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("AutoSnapshotPolicyId")
-    @Validation(required = true)
     public String autoSnapshotPolicyId;
 
     public static DeleteAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {

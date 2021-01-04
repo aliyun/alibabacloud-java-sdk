@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteSnapshotRequest extends TeaModel {
     @NameInMap("SnapshotId")
-    @Validation(required = true)
     public String snapshotId;
 
     public static DeleteSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {

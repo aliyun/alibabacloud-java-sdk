@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeMountTargetsRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("MountTargetDomain")
@@ -16,6 +15,9 @@ public class DescribeMountTargetsRequest extends TeaModel {
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("DualStackMountTargetDomain")
+    public String dualStackMountTargetDomain;
 
     public static DescribeMountTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMountTargetsRequest self = new DescribeMountTargetsRequest();
@@ -52,6 +54,14 @@ public class DescribeMountTargetsRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeMountTargetsRequest setDualStackMountTargetDomain(String dualStackMountTargetDomain) {
+        this.dualStackMountTargetDomain = dualStackMountTargetDomain;
+        return this;
+    }
+    public String getDualStackMountTargetDomain() {
+        return this.dualStackMountTargetDomain;
     }
 
 }

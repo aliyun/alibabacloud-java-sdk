@@ -4,33 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateFileSystemResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("FileSystemId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String fileSystemId;
+    public CreateFileSystemResponseBody body;
 
     public static CreateFileSystemResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateFileSystemResponse self = new CreateFileSystemResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateFileSystemResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateFileSystemResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateFileSystemResponse setFileSystemId(String fileSystemId) {
-        this.fileSystemId = fileSystemId;
+    public CreateFileSystemResponse setBody(CreateFileSystemResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getFileSystemId() {
-        return this.fileSystemId;
+    public CreateFileSystemResponseBody getBody() {
+        return this.body;
     }
 
 }

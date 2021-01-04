@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("AutoSnapshotPolicyId")
-    @Validation(required = true)
     public String autoSnapshotPolicyId;
 
     @NameInMap("AutoSnapshotPolicyName")

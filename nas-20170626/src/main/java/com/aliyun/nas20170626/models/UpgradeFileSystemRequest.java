@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpgradeFileSystemRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("Capacity")
-    @Validation(required = true)
     public Long capacity;
 
     @NameInMap("DryRun")

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyAccessGroupRequest extends TeaModel {
     @NameInMap("AccessGroupName")
-    @Validation(required = true)
     public String accessGroupName;
 
     @NameInMap("Description")

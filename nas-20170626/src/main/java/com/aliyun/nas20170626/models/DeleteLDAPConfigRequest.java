@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteLDAPConfigRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     public static DeleteLDAPConfigRequest build(java.util.Map<String, ?> map) throws Exception {

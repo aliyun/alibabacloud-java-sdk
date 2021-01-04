@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ResetFileSystemRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("SnapshotId")
-    @Validation(required = true)
     public String snapshotId;
 
     public static ResetFileSystemRequest build(java.util.Map<String, ?> map) throws Exception {

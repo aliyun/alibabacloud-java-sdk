@@ -4,21 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccessGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteAccessGroupResponseBody body;
 
     public static DeleteAccessGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteAccessGroupResponse self = new DeleteAccessGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAccessGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteAccessGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteAccessGroupResponse setBody(DeleteAccessGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteAccessGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

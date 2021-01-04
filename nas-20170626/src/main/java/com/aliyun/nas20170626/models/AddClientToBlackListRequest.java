@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class AddClientToBlackListRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("ClientIP")
-    @Validation(required = true)
     public String clientIP;
 
     @NameInMap("ClientToken")
-    @Validation(required = true)
     public String clientToken;
 
     public static AddClientToBlackListRequest build(java.util.Map<String, ?> map) throws Exception {

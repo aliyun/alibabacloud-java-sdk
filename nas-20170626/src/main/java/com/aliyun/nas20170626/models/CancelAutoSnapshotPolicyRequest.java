@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CancelAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("FileSystemIds")
-    @Validation(required = true)
     public String fileSystemIds;
 
     public static CancelAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {

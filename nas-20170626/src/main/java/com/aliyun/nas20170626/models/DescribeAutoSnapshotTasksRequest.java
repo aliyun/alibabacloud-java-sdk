@@ -11,7 +11,6 @@ public class DescribeAutoSnapshotTasksRequest extends TeaModel {
     public String autoSnapshotPolicyIds;
 
     @NameInMap("FileSystemType")
-    @Validation(required = true)
     public String fileSystemType;
 
     @NameInMap("PageSize")

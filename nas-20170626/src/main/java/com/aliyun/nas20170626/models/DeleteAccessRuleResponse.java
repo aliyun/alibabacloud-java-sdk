@@ -4,21 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccessRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteAccessRuleResponseBody body;
 
     public static DeleteAccessRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteAccessRuleResponse self = new DeleteAccessRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAccessRuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteAccessRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteAccessRuleResponse setBody(DeleteAccessRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteAccessRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

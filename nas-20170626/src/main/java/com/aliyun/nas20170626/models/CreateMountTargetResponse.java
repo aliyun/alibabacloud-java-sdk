@@ -4,33 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateMountTargetResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("MountTargetDomain")
+    @NameInMap("body")
     @Validation(required = true)
-    public String mountTargetDomain;
+    public CreateMountTargetResponseBody body;
 
     public static CreateMountTargetResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateMountTargetResponse self = new CreateMountTargetResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateMountTargetResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateMountTargetResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateMountTargetResponse setMountTargetDomain(String mountTargetDomain) {
-        this.mountTargetDomain = mountTargetDomain;
+    public CreateMountTargetResponse setBody(CreateMountTargetResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMountTargetDomain() {
-        return this.mountTargetDomain;
+    public CreateMountTargetResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateMountTargetRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("AccessGroupName")
-    @Validation(required = true)
     public String accessGroupName;
 
     @NameInMap("NetworkType")
-    @Validation(required = true)
     public String networkType;
 
     @NameInMap("VpcId")
@@ -24,6 +21,12 @@ public class CreateMountTargetRequest extends TeaModel {
 
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
+
+    @NameInMap("EnableIpv6")
+    public Boolean enableIpv6;
+
+    @NameInMap("DryRun")
+    public Boolean dryRun;
 
     public static CreateMountTargetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMountTargetRequest self = new CreateMountTargetRequest();
@@ -76,6 +79,22 @@ public class CreateMountTargetRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public CreateMountTargetRequest setEnableIpv6(Boolean enableIpv6) {
+        this.enableIpv6 = enableIpv6;
+        return this;
+    }
+    public Boolean getEnableIpv6() {
+        return this.enableIpv6;
+    }
+
+    public CreateMountTargetRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
 }

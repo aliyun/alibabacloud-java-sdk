@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("SnapshotName")
