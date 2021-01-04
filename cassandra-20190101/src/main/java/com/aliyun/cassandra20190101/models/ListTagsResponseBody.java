@@ -1,0 +1,83 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cassandra20190101.models;
+
+import com.aliyun.tea.*;
+
+public class ListTagsResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Tags")
+    public ListTagsResponseBodyTags tags;
+
+    public static ListTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListTagsResponseBody self = new ListTagsResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ListTagsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListTagsResponseBody setTags(ListTagsResponseBodyTags tags) {
+        this.tags = tags;
+        return this;
+    }
+    public ListTagsResponseBodyTags getTags() {
+        return this.tags;
+    }
+
+    public static class ListTagsResponseBodyTagsTag extends TeaModel {
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        public static ListTagsResponseBodyTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            ListTagsResponseBodyTagsTag self = new ListTagsResponseBodyTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTagsResponseBodyTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public ListTagsResponseBodyTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+    }
+
+    public static class ListTagsResponseBodyTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<ListTagsResponseBodyTagsTag> tag;
+
+        public static ListTagsResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            ListTagsResponseBodyTags self = new ListTagsResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTagsResponseBodyTags setTag(java.util.List<ListTagsResponseBodyTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ListTagsResponseBodyTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+}
