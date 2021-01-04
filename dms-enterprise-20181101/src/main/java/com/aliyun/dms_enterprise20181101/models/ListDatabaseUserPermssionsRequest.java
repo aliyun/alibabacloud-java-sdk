@@ -1,0 +1,89 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dms_enterprise20181101.models;
+
+import com.aliyun.tea.*;
+
+public class ListDatabaseUserPermssionsRequest extends TeaModel {
+    @NameInMap("Tid")
+    public Long tid;
+
+    @NameInMap("PermType")
+    public String permType;
+
+    @NameInMap("DbId")
+    public String dbId;
+
+    @NameInMap("Logic")
+    public Boolean logic;
+
+    @NameInMap("UserName")
+    public String userName;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    public static ListDatabaseUserPermssionsRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListDatabaseUserPermssionsRequest self = new ListDatabaseUserPermssionsRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ListDatabaseUserPermssionsRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
+    }
+
+    public ListDatabaseUserPermssionsRequest setPermType(String permType) {
+        this.permType = permType;
+        return this;
+    }
+    public String getPermType() {
+        return this.permType;
+    }
+
+    public ListDatabaseUserPermssionsRequest setDbId(String dbId) {
+        this.dbId = dbId;
+        return this;
+    }
+    public String getDbId() {
+        return this.dbId;
+    }
+
+    public ListDatabaseUserPermssionsRequest setLogic(Boolean logic) {
+        this.logic = logic;
+        return this;
+    }
+    public Boolean getLogic() {
+        return this.logic;
+    }
+
+    public ListDatabaseUserPermssionsRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public ListDatabaseUserPermssionsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListDatabaseUserPermssionsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+}
