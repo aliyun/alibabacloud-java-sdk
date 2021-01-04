@@ -4,57 +4,33 @@ package com.aliyun.nlp_automl20190701.models;
 import com.aliyun.tea.*;
 
 public class GetPredictDocResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ResultContent")
+    @NameInMap("body")
     @Validation(required = true)
-    public String resultContent;
-
-    @NameInMap("Status")
-    @Validation(required = true)
-    public Integer status;
-
-    @NameInMap("XLIFFInfo")
-    @Validation(required = true)
-    public String XLIFFInfo;
+    public GetPredictDocResponseBody body;
 
     public static GetPredictDocResponse build(java.util.Map<String, ?> map) throws Exception {
         GetPredictDocResponse self = new GetPredictDocResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetPredictDocResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetPredictDocResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetPredictDocResponse setResultContent(String resultContent) {
-        this.resultContent = resultContent;
+    public GetPredictDocResponse setBody(GetPredictDocResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getResultContent() {
-        return this.resultContent;
-    }
-
-    public GetPredictDocResponse setStatus(Integer status) {
-        this.status = status;
-        return this;
-    }
-    public Integer getStatus() {
-        return this.status;
-    }
-
-    public GetPredictDocResponse setXLIFFInfo(String XLIFFInfo) {
-        this.XLIFFInfo = XLIFFInfo;
-        return this;
-    }
-    public String getXLIFFInfo() {
-        return this.XLIFFInfo;
+    public GetPredictDocResponseBody getBody() {
+        return this.body;
     }
 
 }

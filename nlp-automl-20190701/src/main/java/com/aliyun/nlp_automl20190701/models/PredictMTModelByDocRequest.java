@@ -5,23 +5,22 @@ import com.aliyun.tea.*;
 
 public class PredictMTModelByDocRequest extends TeaModel {
     @NameInMap("FileContent")
-    @Validation(required = true)
     public String fileContent;
 
     @NameInMap("FileType")
-    @Validation(required = true)
     public String fileType;
 
     @NameInMap("ModelId")
-    @Validation(required = true)
     public Integer modelId;
 
     @NameInMap("NeedXLIFF")
     public Boolean needXLIFF;
 
     @NameInMap("ModelVersion")
-    @Validation(required = true)
     public String modelVersion;
+
+    @NameInMap("Product")
+    public String product;
 
     public static PredictMTModelByDocRequest build(java.util.Map<String, ?> map) throws Exception {
         PredictMTModelByDocRequest self = new PredictMTModelByDocRequest();
@@ -66,6 +65,14 @@ public class PredictMTModelByDocRequest extends TeaModel {
     }
     public String getModelVersion() {
         return this.modelVersion;
+    }
+
+    public PredictMTModelByDocRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
 }

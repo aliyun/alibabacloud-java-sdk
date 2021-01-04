@@ -4,57 +4,33 @@ package com.aliyun.nlp_automl20190701.models;
 import com.aliyun.tea.*;
 
 public class PredictMTModelResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Integer code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer message;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public PredictMTModelResponseBody body;
 
     public static PredictMTModelResponse build(java.util.Map<String, ?> map) throws Exception {
         PredictMTModelResponse self = new PredictMTModelResponse();
         return TeaModel.build(map, self);
     }
 
-    public PredictMTModelResponse setCode(Integer code) {
-        this.code = code;
+    public PredictMTModelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PredictMTModelResponse setMessage(Integer message) {
-        this.message = message;
+    public PredictMTModelResponse setBody(PredictMTModelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getMessage() {
-        return this.message;
-    }
-
-    public PredictMTModelResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public PredictMTModelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public PredictMTModelResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,57 +4,33 @@ package com.aliyun.nlp_automl20190701.models;
 import com.aliyun.tea.*;
 
 public class AddMtIntervenePackageResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Integer code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer message;
-
-    @NameInMap("PackageId")
-    @Validation(required = true)
-    public String packageId;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public AddMtIntervenePackageResponseBody body;
 
     public static AddMtIntervenePackageResponse build(java.util.Map<String, ?> map) throws Exception {
         AddMtIntervenePackageResponse self = new AddMtIntervenePackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddMtIntervenePackageResponse setCode(Integer code) {
-        this.code = code;
+    public AddMtIntervenePackageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddMtIntervenePackageResponse setMessage(Integer message) {
-        this.message = message;
+    public AddMtIntervenePackageResponse setBody(AddMtIntervenePackageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getMessage() {
-        return this.message;
-    }
-
-    public AddMtIntervenePackageResponse setPackageId(String packageId) {
-        this.packageId = packageId;
-        return this;
-    }
-    public String getPackageId() {
-        return this.packageId;
-    }
-
-    public AddMtIntervenePackageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public AddMtIntervenePackageResponseBody getBody() {
+        return this.body;
     }
 
 }

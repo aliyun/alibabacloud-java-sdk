@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetPredictDocRequest extends TeaModel {
     @NameInMap("DocId")
-    @Validation(required = true)
     public Long docId;
 
     @NameInMap("Product")

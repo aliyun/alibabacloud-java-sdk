@@ -11,11 +11,9 @@ public class InvokeActionRequest extends TeaModel {
     public String invokeRegion;
 
     @NameInMap("InvokeAction")
-    @Validation(required = true)
     public String invokeAction;
 
     @NameInMap("InvokeParams")
-    @Validation(required = true)
     public String invokeParams;
 
     public static InvokeActionRequest build(java.util.Map<String, ?> map) throws Exception {

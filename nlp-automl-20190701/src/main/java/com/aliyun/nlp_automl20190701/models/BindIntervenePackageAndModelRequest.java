@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class BindIntervenePackageAndModelRequest extends TeaModel {
     @NameInMap("PackageId")
-    @Validation(required = true)
     public Long packageId;
 
     @NameInMap("ModelId")
-    @Validation(required = true)
     public Long modelId;
 
     @NameInMap("ModelVersion")
     public String modelVersion;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
+
+    @NameInMap("TenantId")
+    public Long tenantId;
+
+    @NameInMap("Product")
+    public String product;
 
     public static BindIntervenePackageAndModelRequest build(java.util.Map<String, ?> map) throws Exception {
         BindIntervenePackageAndModelRequest self = new BindIntervenePackageAndModelRequest();
@@ -54,6 +57,22 @@ public class BindIntervenePackageAndModelRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public BindIntervenePackageAndModelRequest setTenantId(Long tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Long getTenantId() {
+        return this.tenantId;
+    }
+
+    public BindIntervenePackageAndModelRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
 }

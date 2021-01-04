@@ -5,18 +5,22 @@ import com.aliyun.tea.*;
 
 public class AddMTInterveneWordRequest extends TeaModel {
     @NameInMap("SourceText")
-    @Validation(required = true)
     public String sourceText;
 
     @NameInMap("TargetText")
     public String targetText;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public String projectId;
 
     @NameInMap("PackageId")
     public String packageId;
+
+    @NameInMap("TenantId")
+    public Integer tenantId;
+
+    @NameInMap("Product")
+    public String product;
 
     public static AddMTInterveneWordRequest build(java.util.Map<String, ?> map) throws Exception {
         AddMTInterveneWordRequest self = new AddMTInterveneWordRequest();
@@ -53,6 +57,22 @@ public class AddMTInterveneWordRequest extends TeaModel {
     }
     public String getPackageId() {
         return this.packageId;
+    }
+
+    public AddMTInterveneWordRequest setTenantId(Integer tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public Integer getTenantId() {
+        return this.tenantId;
+    }
+
+    public AddMTInterveneWordRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
 }
