@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddTagsRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("Tag")
-    @Validation(required = true)
     public java.util.List<AddTagsRequestTag> tag;
 
     public static AddTagsRequest build(java.util.Map<String, ?> map) throws Exception {

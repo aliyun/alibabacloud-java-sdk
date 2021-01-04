@@ -4,33 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateLifecyclePolicyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
+    public CreateLifecyclePolicyResponseBody body;
 
     public static CreateLifecyclePolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateLifecyclePolicyResponse self = new CreateLifecyclePolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateLifecyclePolicyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateLifecyclePolicyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateLifecyclePolicyResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CreateLifecyclePolicyResponse setBody(CreateLifecyclePolicyResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public CreateLifecyclePolicyResponseBody getBody() {
+        return this.body;
     }
 
 }

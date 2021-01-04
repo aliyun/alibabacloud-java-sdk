@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeLogAnalysisRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageSize")

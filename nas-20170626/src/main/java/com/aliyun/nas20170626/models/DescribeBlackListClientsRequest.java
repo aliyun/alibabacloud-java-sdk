@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeBlackListClientsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("ClientIP")

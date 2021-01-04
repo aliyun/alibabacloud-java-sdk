@@ -4,77 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DescribeLDAPConfigResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Ldap")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeLDAPConfigResponseLdap ldap;
+    public DescribeLDAPConfigResponseBody body;
 
     public static DescribeLDAPConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLDAPConfigResponse self = new DescribeLDAPConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLDAPConfigResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLDAPConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLDAPConfigResponse setLdap(DescribeLDAPConfigResponseLdap ldap) {
-        this.ldap = ldap;
+    public DescribeLDAPConfigResponse setBody(DescribeLDAPConfigResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeLDAPConfigResponseLdap getLdap() {
-        return this.ldap;
-    }
-
-    public static class DescribeLDAPConfigResponseLdap extends TeaModel {
-        @NameInMap("BindDN")
-        @Validation(required = true)
-        public String bindDN;
-
-        @NameInMap("URI")
-        @Validation(required = true)
-        public String URI;
-
-        @NameInMap("SearchBase")
-        @Validation(required = true)
-        public String searchBase;
-
-        public static DescribeLDAPConfigResponseLdap build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLDAPConfigResponseLdap self = new DescribeLDAPConfigResponseLdap();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLDAPConfigResponseLdap setBindDN(String bindDN) {
-            this.bindDN = bindDN;
-            return this;
-        }
-        public String getBindDN() {
-            return this.bindDN;
-        }
-
-        public DescribeLDAPConfigResponseLdap setURI(String URI) {
-            this.URI = URI;
-            return this;
-        }
-        public String getURI() {
-            return this.URI;
-        }
-
-        public DescribeLDAPConfigResponseLdap setSearchBase(String searchBase) {
-            this.searchBase = searchBase;
-            return this;
-        }
-        public String getSearchBase() {
-            return this.searchBase;
-        }
-
+    public DescribeLDAPConfigResponseBody getBody() {
+        return this.body;
     }
 
 }

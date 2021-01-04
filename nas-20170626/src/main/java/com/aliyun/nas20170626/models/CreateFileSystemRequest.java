@@ -20,14 +20,12 @@ public class CreateFileSystemRequest extends TeaModel {
     public Long bandwidth;
 
     @NameInMap("StorageType")
-    @Validation(required = true)
     public String storageType;
 
     @NameInMap("ZoneId")
     public String zoneId;
 
     @NameInMap("ProtocolType")
-    @Validation(required = true)
     public String protocolType;
 
     @NameInMap("EncryptType")
@@ -47,6 +45,9 @@ public class CreateFileSystemRequest extends TeaModel {
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("KmsKeyId")
+    public String kmsKeyId;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -166,6 +167,14 @@ public class CreateFileSystemRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateFileSystemRequest setKmsKeyId(String kmsKeyId) {
+        this.kmsKeyId = kmsKeyId;
+        return this;
+    }
+    public String getKmsKeyId() {
+        return this.kmsKeyId;
     }
 
     public CreateFileSystemRequest setDryRun(Boolean dryRun) {

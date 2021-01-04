@@ -4,33 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AccessRuleId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String accessRuleId;
+    public CreateAccessRuleResponseBody body;
 
     public static CreateAccessRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAccessRuleResponse self = new CreateAccessRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateAccessRuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateAccessRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateAccessRuleResponse setAccessRuleId(String accessRuleId) {
-        this.accessRuleId = accessRuleId;
+    public CreateAccessRuleResponse setBody(CreateAccessRuleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getAccessRuleId() {
-        return this.accessRuleId;
+    public CreateAccessRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

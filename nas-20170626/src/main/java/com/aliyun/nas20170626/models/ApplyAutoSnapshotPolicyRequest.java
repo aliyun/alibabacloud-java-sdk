@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("AutoSnapshotPolicyId")
-    @Validation(required = true)
     public String autoSnapshotPolicyId;
 
     @NameInMap("FileSystemIds")
-    @Validation(required = true)
     public String fileSystemIds;
 
     public static ApplyAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {

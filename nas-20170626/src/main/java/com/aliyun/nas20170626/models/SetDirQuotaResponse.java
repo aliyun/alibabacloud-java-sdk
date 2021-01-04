@@ -4,33 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class SetDirQuotaResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
+    public SetDirQuotaResponseBody body;
 
     public static SetDirQuotaResponse build(java.util.Map<String, ?> map) throws Exception {
         SetDirQuotaResponse self = new SetDirQuotaResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDirQuotaResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetDirQuotaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetDirQuotaResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SetDirQuotaResponse setBody(SetDirQuotaResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public SetDirQuotaResponseBody getBody() {
+        return this.body;
     }
 
 }

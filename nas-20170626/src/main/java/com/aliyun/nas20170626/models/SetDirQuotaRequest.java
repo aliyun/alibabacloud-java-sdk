@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetDirQuotaRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("Path")
-    @Validation(required = true)
     public String path;
 
     @NameInMap("QuotaType")
-    @Validation(required = true)
     public String quotaType;
 
     @NameInMap("UserType")
-    @Validation(required = true)
     public String userType;
 
     @NameInMap("UserId")

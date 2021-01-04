@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RemoveTagsRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("Tag")
-    @Validation(required = true)
     public java.util.List<RemoveTagsRequestTag> tag;
 
     public static RemoveTagsRequest build(java.util.Map<String, ?> map) throws Exception {

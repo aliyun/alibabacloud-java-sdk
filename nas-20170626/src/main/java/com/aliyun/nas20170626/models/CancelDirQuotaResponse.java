@@ -4,33 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class CancelDirQuotaResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
+    public CancelDirQuotaResponseBody body;
 
     public static CancelDirQuotaResponse build(java.util.Map<String, ?> map) throws Exception {
         CancelDirQuotaResponse self = new CancelDirQuotaResponse();
         return TeaModel.build(map, self);
     }
 
-    public CancelDirQuotaResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CancelDirQuotaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CancelDirQuotaResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CancelDirQuotaResponse setBody(CancelDirQuotaResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public CancelDirQuotaResponseBody getBody() {
+        return this.body;
     }
 
 }

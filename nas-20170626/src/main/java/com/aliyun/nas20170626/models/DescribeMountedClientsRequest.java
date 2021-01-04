@@ -5,21 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribeMountedClientsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("ClientIP")
     public String clientIP;
 
     @NameInMap("MountTargetDomain")
-    @Validation(required = true)
     public String mountTargetDomain;
 
     @NameInMap("PageNumber")

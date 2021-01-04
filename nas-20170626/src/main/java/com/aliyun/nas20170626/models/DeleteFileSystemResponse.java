@@ -4,21 +4,33 @@ package com.aliyun.nas20170626.models;
 import com.aliyun.tea.*;
 
 public class DeleteFileSystemResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteFileSystemResponseBody body;
 
     public static DeleteFileSystemResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteFileSystemResponse self = new DeleteFileSystemResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteFileSystemResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteFileSystemResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteFileSystemResponse setBody(DeleteFileSystemResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteFileSystemResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyMountTargetRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("MountTargetDomain")
-    @Validation(required = true)
     public String mountTargetDomain;
 
     @NameInMap("AccessGroupName")
@@ -17,6 +15,9 @@ public class ModifyMountTargetRequest extends TeaModel {
 
     @NameInMap("Status")
     public String status;
+
+    @NameInMap("DualStackMountTargetDomain")
+    public String dualStackMountTargetDomain;
 
     public static ModifyMountTargetRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyMountTargetRequest self = new ModifyMountTargetRequest();
@@ -53,6 +54,14 @@ public class ModifyMountTargetRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ModifyMountTargetRequest setDualStackMountTargetDomain(String dualStackMountTargetDomain) {
+        this.dualStackMountTargetDomain = dualStackMountTargetDomain;
+        return this;
+    }
+    public String getDualStackMountTargetDomain() {
+        return this.dualStackMountTargetDomain;
     }
 
 }

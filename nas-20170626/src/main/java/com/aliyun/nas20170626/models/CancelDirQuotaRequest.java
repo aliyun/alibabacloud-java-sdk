@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CancelDirQuotaRequest extends TeaModel {
     @NameInMap("FileSystemId")
-    @Validation(required = true)
     public String fileSystemId;
 
     @NameInMap("Path")
-    @Validation(required = true)
     public String path;
 
     @NameInMap("UserType")
-    @Validation(required = true)
     public String userType;
 
     @NameInMap("UserId")

@@ -14,7 +14,6 @@ public class DescribeAutoSnapshotPoliciesRequest extends TeaModel {
     public Integer pageNumber;
 
     @NameInMap("FileSystemType")
-    @Validation(required = true)
     public String fileSystemType;
 
     public static DescribeAutoSnapshotPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {

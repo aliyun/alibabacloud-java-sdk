@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessRuleRequest extends TeaModel {
     @NameInMap("AccessGroupName")
-    @Validation(required = true)
     public String accessGroupName;
 
     @NameInMap("AccessRuleId")
-    @Validation(required = true)
     public String accessRuleId;
 
     @NameInMap("FileSystemType")

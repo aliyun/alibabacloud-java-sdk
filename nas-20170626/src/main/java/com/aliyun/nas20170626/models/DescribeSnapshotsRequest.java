@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("FileSystemType")
-    @Validation(required = true)
     public String fileSystemType;
 
     @NameInMap("FileSystemId")
