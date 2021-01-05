@@ -1,3 +1,6 @@
+2021-01-05 Version: 1.4.3
+- CreateOrder API Upgrade.
+
 2020-12-28 Version: 1.4.2
 - Add API QueryOutAccountBindStatus.
 

@@ -28,10 +28,6 @@ public class CreateOrderRequest extends TeaModel {
     @Validation(required = true)
     public Long amount;
 
-    @NameInMap("GameIdList")
-    @Validation(required = true)
-    public String gameIdList;
-
     @NameInMap("IdempotentCode")
     @Validation(required = true)
     public String idempotentCode;
@@ -90,14 +86,6 @@ public class CreateOrderRequest extends TeaModel {
     }
     public Long getAmount() {
         return this.amount;
-    }
-
-    public CreateOrderRequest setGameIdList(String gameIdList) {
-        this.gameIdList = gameIdList;
-        return this;
-    }
-    public String getGameIdList() {
-        return this.gameIdList;
     }
 
     public CreateOrderRequest setIdempotentCode(String idempotentCode) {
