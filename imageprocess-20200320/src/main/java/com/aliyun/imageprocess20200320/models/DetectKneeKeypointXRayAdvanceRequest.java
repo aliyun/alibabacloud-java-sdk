@@ -9,15 +9,12 @@ public class DetectKneeKeypointXRayAdvanceRequest extends TeaModel {
     public java.io.InputStream imageUrlObject;
 
     @NameInMap("DataFormat")
-    @Validation(required = true)
     public String dataFormat;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     @NameInMap("TracerId")

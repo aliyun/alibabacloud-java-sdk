@@ -4,25 +4,32 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class ScreenChestCTRequest extends TeaModel {
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("DataFormat")
-    @Validation(required = true)
     public String dataFormat;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     @NameInMap("URLList")
-    @Validation(required = true)
     public java.util.List<ScreenChestCTRequestURLList> URLList;
 
     public static ScreenChestCTRequest build(java.util.Map<String, ?> map) throws Exception {
         ScreenChestCTRequest self = new ScreenChestCTRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ScreenChestCTRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public ScreenChestCTRequest setDataFormat(String dataFormat) {
@@ -59,7 +66,6 @@ public class ScreenChestCTRequest extends TeaModel {
 
     public static class ScreenChestCTRequestURLList extends TeaModel {
         @NameInMap("URL")
-        @Validation(required = true)
         public String URL;
 
         public static ScreenChestCTRequestURLList build(java.util.Map<String, ?> map) throws Exception {

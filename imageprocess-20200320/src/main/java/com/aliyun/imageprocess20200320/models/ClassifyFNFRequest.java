@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class ClassifyFNFRequest extends TeaModel {
     @NameInMap("ImageUrl")
-    @Validation(required = true)
     public String imageUrl;
 
     @NameInMap("DataFormat")
-    @Validation(required = true)
     public String dataFormat;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     @NameInMap("TracerId")

@@ -4,37 +4,35 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectRibFractureRequest extends TeaModel {
-    @NameInMap("URLList")
-    @Validation(required = true)
-    public java.util.List<DetectRibFractureRequestURLList> URLList;
+    @NameInMap("Async")
+    public Boolean async;
 
     @NameInMap("DataFormat")
-    @Validation(required = true)
     public String dataFormat;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     @NameInMap("SourceType")
-    @Validation(required = true)
     public String sourceType;
+
+    @NameInMap("URLList")
+    public java.util.List<DetectRibFractureRequestURLList> URLList;
 
     public static DetectRibFractureRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectRibFractureRequest self = new DetectRibFractureRequest();
         return TeaModel.build(map, self);
     }
 
-    public DetectRibFractureRequest setURLList(java.util.List<DetectRibFractureRequestURLList> URLList) {
-        this.URLList = URLList;
+    public DetectRibFractureRequest setAsync(Boolean async) {
+        this.async = async;
         return this;
     }
-    public java.util.List<DetectRibFractureRequestURLList> getURLList() {
-        return this.URLList;
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public DetectRibFractureRequest setDataFormat(String dataFormat) {
@@ -69,9 +67,16 @@ public class DetectRibFractureRequest extends TeaModel {
         return this.sourceType;
     }
 
+    public DetectRibFractureRequest setURLList(java.util.List<DetectRibFractureRequestURLList> URLList) {
+        this.URLList = URLList;
+        return this;
+    }
+    public java.util.List<DetectRibFractureRequestURLList> getURLList() {
+        return this.URLList;
+    }
+
     public static class DetectRibFractureRequestURLList extends TeaModel {
         @NameInMap("URL")
-        @Validation(required = true)
         public String URL;
 
         public static DetectRibFractureRequestURLList build(java.util.Map<String, ?> map) throws Exception {

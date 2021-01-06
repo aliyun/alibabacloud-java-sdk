@@ -9,15 +9,12 @@ public class DetectKneeXRayAdvanceRequest extends TeaModel {
     public java.io.InputStream urlObject;
 
     @NameInMap("DataFormat")
-    @Validation(required = true)
     public String dataFormat;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     public static DetectKneeXRayAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,37 +4,35 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class CalcCACSRequest extends TeaModel {
-    @NameInMap("URLList")
-    @Validation(required = true)
-    public java.util.List<CalcCACSRequestURLList> URLList;
+    @NameInMap("Async")
+    public Boolean async;
 
     @NameInMap("DataFormat")
-    @Validation(required = true)
     public String dataFormat;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     @NameInMap("DataSourceType")
-    @Validation(required = true)
     public String dataSourceType;
+
+    @NameInMap("URLList")
+    public java.util.List<CalcCACSRequestURLList> URLList;
 
     public static CalcCACSRequest build(java.util.Map<String, ?> map) throws Exception {
         CalcCACSRequest self = new CalcCACSRequest();
         return TeaModel.build(map, self);
     }
 
-    public CalcCACSRequest setURLList(java.util.List<CalcCACSRequestURLList> URLList) {
-        this.URLList = URLList;
+    public CalcCACSRequest setAsync(Boolean async) {
+        this.async = async;
         return this;
     }
-    public java.util.List<CalcCACSRequestURLList> getURLList() {
-        return this.URLList;
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public CalcCACSRequest setDataFormat(String dataFormat) {
@@ -69,9 +67,16 @@ public class CalcCACSRequest extends TeaModel {
         return this.dataSourceType;
     }
 
+    public CalcCACSRequest setURLList(java.util.List<CalcCACSRequestURLList> URLList) {
+        this.URLList = URLList;
+        return this;
+    }
+    public java.util.List<CalcCACSRequestURLList> getURLList() {
+        return this.URLList;
+    }
+
     public static class CalcCACSRequestURLList extends TeaModel {
         @NameInMap("URL")
-        @Validation(required = true)
         public String URL;
 
         public static CalcCACSRequestURLList build(java.util.Map<String, ?> map) throws Exception {
