@@ -4,73 +4,33 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectKneeXRayResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public DetectKneeXRayResponseData data;
+    public DetectKneeXRayResponseBody body;
 
     public static DetectKneeXRayResponse build(java.util.Map<String, ?> map) throws Exception {
         DetectKneeXRayResponse self = new DetectKneeXRayResponse();
         return TeaModel.build(map, self);
     }
 
-    public DetectKneeXRayResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DetectKneeXRayResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DetectKneeXRayResponse setData(DetectKneeXRayResponseData data) {
-        this.data = data;
+    public DetectKneeXRayResponse setBody(DetectKneeXRayResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DetectKneeXRayResponseData getData() {
-        return this.data;
-    }
-
-    public static class DetectKneeXRayResponseDataKLDetections extends TeaModel {
-        @NameInMap("Detections")
-        @Validation(required = true)
-        public java.util.List<Float> detections;
-
-        public static DetectKneeXRayResponseDataKLDetections build(java.util.Map<String, ?> map) throws Exception {
-            DetectKneeXRayResponseDataKLDetections self = new DetectKneeXRayResponseDataKLDetections();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectKneeXRayResponseDataKLDetections setDetections(java.util.List<Float> detections) {
-            this.detections = detections;
-            return this;
-        }
-        public java.util.List<Float> getDetections() {
-            return this.detections;
-        }
-
-    }
-
-    public static class DetectKneeXRayResponseData extends TeaModel {
-        @NameInMap("KLDetections")
-        @Validation(required = true)
-        public java.util.List<DetectKneeXRayResponseDataKLDetections> KLDetections;
-
-        public static DetectKneeXRayResponseData build(java.util.Map<String, ?> map) throws Exception {
-            DetectKneeXRayResponseData self = new DetectKneeXRayResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectKneeXRayResponseData setKLDetections(java.util.List<DetectKneeXRayResponseDataKLDetections> KLDetections) {
-            this.KLDetections = KLDetections;
-            return this;
-        }
-        public java.util.List<DetectKneeXRayResponseDataKLDetections> getKLDetections() {
-            return this.KLDetections;
-        }
-
+    public DetectKneeXRayResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class DetectKneeXRayRequest extends TeaModel {
     @NameInMap("Url")
-    @Validation(required = true)
     public String url;
 
     @NameInMap("DataFormat")
-    @Validation(required = true)
     public String dataFormat;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     public static DetectKneeXRayRequest build(java.util.Map<String, ?> map) throws Exception {

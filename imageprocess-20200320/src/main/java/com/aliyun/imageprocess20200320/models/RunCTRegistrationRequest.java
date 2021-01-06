@@ -4,28 +4,25 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class RunCTRegistrationRequest extends TeaModel {
-    @NameInMap("ReferenceList")
-    @Validation(required = true)
-    public java.util.List<RunCTRegistrationRequestReferenceList> referenceList;
+    @NameInMap("Async")
+    public Boolean async;
 
     @NameInMap("DataFormat")
-    @Validation(required = true)
     public String dataFormat;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     @NameInMap("DataSourceType")
-    @Validation(required = true)
     public String dataSourceType;
 
+    @NameInMap("ReferenceList")
+    public java.util.List<RunCTRegistrationRequestReferenceList> referenceList;
+
     @NameInMap("FloatingList")
-    @Validation(required = true)
     public java.util.List<RunCTRegistrationRequestFloatingList> floatingList;
 
     public static RunCTRegistrationRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -33,12 +30,12 @@ public class RunCTRegistrationRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RunCTRegistrationRequest setReferenceList(java.util.List<RunCTRegistrationRequestReferenceList> referenceList) {
-        this.referenceList = referenceList;
+    public RunCTRegistrationRequest setAsync(Boolean async) {
+        this.async = async;
         return this;
     }
-    public java.util.List<RunCTRegistrationRequestReferenceList> getReferenceList() {
-        return this.referenceList;
+    public Boolean getAsync() {
+        return this.async;
     }
 
     public RunCTRegistrationRequest setDataFormat(String dataFormat) {
@@ -73,6 +70,14 @@ public class RunCTRegistrationRequest extends TeaModel {
         return this.dataSourceType;
     }
 
+    public RunCTRegistrationRequest setReferenceList(java.util.List<RunCTRegistrationRequestReferenceList> referenceList) {
+        this.referenceList = referenceList;
+        return this;
+    }
+    public java.util.List<RunCTRegistrationRequestReferenceList> getReferenceList() {
+        return this.referenceList;
+    }
+
     public RunCTRegistrationRequest setFloatingList(java.util.List<RunCTRegistrationRequestFloatingList> floatingList) {
         this.floatingList = floatingList;
         return this;
@@ -83,7 +88,6 @@ public class RunCTRegistrationRequest extends TeaModel {
 
     public static class RunCTRegistrationRequestReferenceList extends TeaModel {
         @NameInMap("ReferenceURL")
-        @Validation(required = true)
         public String referenceURL;
 
         public static RunCTRegistrationRequestReferenceList build(java.util.Map<String, ?> map) throws Exception {
@@ -103,7 +107,6 @@ public class RunCTRegistrationRequest extends TeaModel {
 
     public static class RunCTRegistrationRequestFloatingList extends TeaModel {
         @NameInMap("FloatingURL")
-        @Validation(required = true)
         public String floatingURL;
 
         public static RunCTRegistrationRequestFloatingList build(java.util.Map<String, ?> map) throws Exception {

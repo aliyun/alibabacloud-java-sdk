@@ -4,53 +4,33 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectSkinDiseaseResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public DetectSkinDiseaseResponseData data;
+    public DetectSkinDiseaseResponseBody body;
 
     public static DetectSkinDiseaseResponse build(java.util.Map<String, ?> map) throws Exception {
         DetectSkinDiseaseResponse self = new DetectSkinDiseaseResponse();
         return TeaModel.build(map, self);
     }
 
-    public DetectSkinDiseaseResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DetectSkinDiseaseResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DetectSkinDiseaseResponse setData(DetectSkinDiseaseResponseData data) {
-        this.data = data;
+    public DetectSkinDiseaseResponse setBody(DetectSkinDiseaseResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DetectSkinDiseaseResponseData getData() {
-        return this.data;
-    }
-
-    public static class DetectSkinDiseaseResponseData extends TeaModel {
-        @NameInMap("Results")
-        @Validation(required = true)
-        public java.util.Map<String, ?> results;
-
-        public static DetectSkinDiseaseResponseData build(java.util.Map<String, ?> map) throws Exception {
-            DetectSkinDiseaseResponseData self = new DetectSkinDiseaseResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public DetectSkinDiseaseResponseData setResults(java.util.Map<String, ?> results) {
-            this.results = results;
-            return this;
-        }
-        public java.util.Map<String, ?> getResults() {
-            return this.results;
-        }
-
+    public DetectSkinDiseaseResponseBody getBody() {
+        return this.body;
     }
 
 }

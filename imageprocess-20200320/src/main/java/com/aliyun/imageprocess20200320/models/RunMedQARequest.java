@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class RunMedQARequest extends TeaModel {
     @NameInMap("Question")
-    @Validation(required = true)
     public String question;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     public static RunMedQARequest build(java.util.Map<String, ?> map) throws Exception {

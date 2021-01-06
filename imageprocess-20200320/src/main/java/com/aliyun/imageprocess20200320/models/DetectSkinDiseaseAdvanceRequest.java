@@ -9,11 +9,9 @@ public class DetectSkinDiseaseAdvanceRequest extends TeaModel {
     public java.io.InputStream urlObject;
 
     @NameInMap("OrgId")
-    @Validation(required = true)
     public String orgId;
 
     @NameInMap("OrgName")
-    @Validation(required = true)
     public String orgName;
 
     public static DetectSkinDiseaseAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
