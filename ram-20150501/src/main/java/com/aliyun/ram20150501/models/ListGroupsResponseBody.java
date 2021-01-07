@@ -8,7 +8,7 @@ public class ListGroupsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Groups")
-    public java.util.List<ListGroupsResponseBodyGroups> groups;
+    public ListGroupsResponseBodyGroups groups;
 
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
@@ -29,11 +29,11 @@ public class ListGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListGroupsResponseBody setGroups(java.util.List<ListGroupsResponseBodyGroups> groups) {
+    public ListGroupsResponseBody setGroups(ListGroupsResponseBodyGroups groups) {
         this.groups = groups;
         return this;
     }
-    public java.util.List<ListGroupsResponseBodyGroups> getGroups() {
+    public ListGroupsResponseBodyGroups getGroups() {
         return this.groups;
     }
 
@@ -53,7 +53,7 @@ public class ListGroupsResponseBody extends TeaModel {
         return this.marker;
     }
 
-    public static class ListGroupsResponseBodyGroups extends TeaModel {
+    public static class ListGroupsResponseBodyGroupsGroup extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
@@ -69,12 +69,12 @@ public class ListGroupsResponseBody extends TeaModel {
         @NameInMap("CreateDate")
         public String createDate;
 
-        public static ListGroupsResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
-            ListGroupsResponseBodyGroups self = new ListGroupsResponseBodyGroups();
+        public static ListGroupsResponseBodyGroupsGroup build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupsResponseBodyGroupsGroup self = new ListGroupsResponseBodyGroupsGroup();
             return TeaModel.build(map, self);
         }
 
-        public ListGroupsResponseBodyGroups setGroupId(String groupId) {
+        public ListGroupsResponseBodyGroupsGroup setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
         }
@@ -82,7 +82,7 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public ListGroupsResponseBodyGroups setUpdateDate(String updateDate) {
+        public ListGroupsResponseBodyGroupsGroup setUpdateDate(String updateDate) {
             this.updateDate = updateDate;
             return this;
         }
@@ -90,7 +90,7 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.updateDate;
         }
 
-        public ListGroupsResponseBodyGroups setGroupName(String groupName) {
+        public ListGroupsResponseBodyGroupsGroup setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
         }
@@ -98,7 +98,7 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public ListGroupsResponseBodyGroups setComments(String comments) {
+        public ListGroupsResponseBodyGroupsGroup setComments(String comments) {
             this.comments = comments;
             return this;
         }
@@ -106,12 +106,31 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.comments;
         }
 
-        public ListGroupsResponseBodyGroups setCreateDate(String createDate) {
+        public ListGroupsResponseBodyGroupsGroup setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
         }
         public String getCreateDate() {
             return this.createDate;
+        }
+
+    }
+
+    public static class ListGroupsResponseBodyGroups extends TeaModel {
+        @NameInMap("Group")
+        public java.util.List<ListGroupsResponseBodyGroupsGroup> group;
+
+        public static ListGroupsResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupsResponseBodyGroups self = new ListGroupsResponseBodyGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGroupsResponseBodyGroups setGroup(java.util.List<ListGroupsResponseBodyGroupsGroup> group) {
+            this.group = group;
+            return this;
+        }
+        public java.util.List<ListGroupsResponseBodyGroupsGroup> getGroup() {
+            return this.group;
         }
 
     }

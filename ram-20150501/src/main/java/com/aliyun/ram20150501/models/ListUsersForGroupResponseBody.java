@@ -14,7 +14,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     public String marker;
 
     @NameInMap("Users")
-    public java.util.List<ListUsersForGroupResponseBodyUsers> users;
+    public ListUsersForGroupResponseBodyUsers users;
 
     public static ListUsersForGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUsersForGroupResponseBody self = new ListUsersForGroupResponseBody();
@@ -45,15 +45,15 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         return this.marker;
     }
 
-    public ListUsersForGroupResponseBody setUsers(java.util.List<ListUsersForGroupResponseBodyUsers> users) {
+    public ListUsersForGroupResponseBody setUsers(ListUsersForGroupResponseBodyUsers users) {
         this.users = users;
         return this;
     }
-    public java.util.List<ListUsersForGroupResponseBodyUsers> getUsers() {
+    public ListUsersForGroupResponseBodyUsers getUsers() {
         return this.users;
     }
 
-    public static class ListUsersForGroupResponseBodyUsers extends TeaModel {
+    public static class ListUsersForGroupResponseBodyUsersUser extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -63,12 +63,12 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         @NameInMap("UserName")
         public String userName;
 
-        public static ListUsersForGroupResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
-            ListUsersForGroupResponseBodyUsers self = new ListUsersForGroupResponseBodyUsers();
+        public static ListUsersForGroupResponseBodyUsersUser build(java.util.Map<String, ?> map) throws Exception {
+            ListUsersForGroupResponseBodyUsersUser self = new ListUsersForGroupResponseBodyUsersUser();
             return TeaModel.build(map, self);
         }
 
-        public ListUsersForGroupResponseBodyUsers setDisplayName(String displayName) {
+        public ListUsersForGroupResponseBodyUsersUser setDisplayName(String displayName) {
             this.displayName = displayName;
             return this;
         }
@@ -76,7 +76,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public ListUsersForGroupResponseBodyUsers setJoinDate(String joinDate) {
+        public ListUsersForGroupResponseBodyUsersUser setJoinDate(String joinDate) {
             this.joinDate = joinDate;
             return this;
         }
@@ -84,12 +84,31 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             return this.joinDate;
         }
 
-        public ListUsersForGroupResponseBodyUsers setUserName(String userName) {
+        public ListUsersForGroupResponseBodyUsersUser setUserName(String userName) {
             this.userName = userName;
             return this;
         }
         public String getUserName() {
             return this.userName;
+        }
+
+    }
+
+    public static class ListUsersForGroupResponseBodyUsers extends TeaModel {
+        @NameInMap("User")
+        public java.util.List<ListUsersForGroupResponseBodyUsersUser> user;
+
+        public static ListUsersForGroupResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
+            ListUsersForGroupResponseBodyUsers self = new ListUsersForGroupResponseBodyUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUsersForGroupResponseBodyUsers setUser(java.util.List<ListUsersForGroupResponseBodyUsersUser> user) {
+            this.user = user;
+            return this;
+        }
+        public java.util.List<ListUsersForGroupResponseBodyUsersUser> getUser() {
+            return this.user;
         }
 
     }

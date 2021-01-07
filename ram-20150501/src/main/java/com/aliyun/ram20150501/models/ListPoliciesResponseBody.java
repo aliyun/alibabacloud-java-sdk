@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesResponseBody extends TeaModel {
     @NameInMap("Policies")
-    public java.util.List<ListPoliciesResponseBodyPolicies> policies;
+    public ListPoliciesResponseBodyPolicies policies;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -21,11 +21,11 @@ public class ListPoliciesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListPoliciesResponseBody setPolicies(java.util.List<ListPoliciesResponseBodyPolicies> policies) {
+    public ListPoliciesResponseBody setPolicies(ListPoliciesResponseBodyPolicies policies) {
         this.policies = policies;
         return this;
     }
-    public java.util.List<ListPoliciesResponseBodyPolicies> getPolicies() {
+    public ListPoliciesResponseBodyPolicies getPolicies() {
         return this.policies;
     }
 
@@ -53,7 +53,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         return this.marker;
     }
 
-    public static class ListPoliciesResponseBodyPolicies extends TeaModel {
+    public static class ListPoliciesResponseBodyPoliciesPolicy extends TeaModel {
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
@@ -75,12 +75,12 @@ public class ListPoliciesResponseBody extends TeaModel {
         @NameInMap("PolicyType")
         public String policyType;
 
-        public static ListPoliciesResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
-            ListPoliciesResponseBodyPolicies self = new ListPoliciesResponseBodyPolicies();
+        public static ListPoliciesResponseBodyPoliciesPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ListPoliciesResponseBodyPoliciesPolicy self = new ListPoliciesResponseBodyPoliciesPolicy();
             return TeaModel.build(map, self);
         }
 
-        public ListPoliciesResponseBodyPolicies setDefaultVersion(String defaultVersion) {
+        public ListPoliciesResponseBodyPoliciesPolicy setDefaultVersion(String defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
@@ -88,7 +88,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             return this.defaultVersion;
         }
 
-        public ListPoliciesResponseBodyPolicies setDescription(String description) {
+        public ListPoliciesResponseBodyPoliciesPolicy setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -96,7 +96,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListPoliciesResponseBodyPolicies setUpdateDate(String updateDate) {
+        public ListPoliciesResponseBodyPoliciesPolicy setUpdateDate(String updateDate) {
             this.updateDate = updateDate;
             return this;
         }
@@ -104,7 +104,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             return this.updateDate;
         }
 
-        public ListPoliciesResponseBodyPolicies setAttachmentCount(Integer attachmentCount) {
+        public ListPoliciesResponseBodyPoliciesPolicy setAttachmentCount(Integer attachmentCount) {
             this.attachmentCount = attachmentCount;
             return this;
         }
@@ -112,7 +112,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             return this.attachmentCount;
         }
 
-        public ListPoliciesResponseBodyPolicies setPolicyName(String policyName) {
+        public ListPoliciesResponseBodyPoliciesPolicy setPolicyName(String policyName) {
             this.policyName = policyName;
             return this;
         }
@@ -120,7 +120,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             return this.policyName;
         }
 
-        public ListPoliciesResponseBodyPolicies setCreateDate(String createDate) {
+        public ListPoliciesResponseBodyPoliciesPolicy setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
         }
@@ -128,12 +128,31 @@ public class ListPoliciesResponseBody extends TeaModel {
             return this.createDate;
         }
 
-        public ListPoliciesResponseBodyPolicies setPolicyType(String policyType) {
+        public ListPoliciesResponseBodyPoliciesPolicy setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+    }
+
+    public static class ListPoliciesResponseBodyPolicies extends TeaModel {
+        @NameInMap("Policy")
+        public java.util.List<ListPoliciesResponseBodyPoliciesPolicy> policy;
+
+        public static ListPoliciesResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ListPoliciesResponseBodyPolicies self = new ListPoliciesResponseBodyPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPoliciesResponseBodyPolicies setPolicy(java.util.List<ListPoliciesResponseBodyPoliciesPolicy> policy) {
+            this.policy = policy;
+            return this;
+        }
+        public java.util.List<ListPoliciesResponseBodyPoliciesPolicy> getPolicy() {
+            return this.policy;
         }
 
     }
