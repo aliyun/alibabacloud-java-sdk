@@ -8,7 +8,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Groups")
-    public java.util.List<ListGroupsForUserResponseBodyGroups> groups;
+    public ListGroupsForUserResponseBodyGroups groups;
 
     public static ListGroupsForUserResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsForUserResponseBody self = new ListGroupsForUserResponseBody();
@@ -23,15 +23,15 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListGroupsForUserResponseBody setGroups(java.util.List<ListGroupsForUserResponseBodyGroups> groups) {
+    public ListGroupsForUserResponseBody setGroups(ListGroupsForUserResponseBodyGroups groups) {
         this.groups = groups;
         return this;
     }
-    public java.util.List<ListGroupsForUserResponseBodyGroups> getGroups() {
+    public ListGroupsForUserResponseBodyGroups getGroups() {
         return this.groups;
     }
 
-    public static class ListGroupsForUserResponseBodyGroups extends TeaModel {
+    public static class ListGroupsForUserResponseBodyGroupsGroup extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
@@ -44,12 +44,12 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         @NameInMap("JoinDate")
         public String joinDate;
 
-        public static ListGroupsForUserResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
-            ListGroupsForUserResponseBodyGroups self = new ListGroupsForUserResponseBodyGroups();
+        public static ListGroupsForUserResponseBodyGroupsGroup build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupsForUserResponseBodyGroupsGroup self = new ListGroupsForUserResponseBodyGroupsGroup();
             return TeaModel.build(map, self);
         }
 
-        public ListGroupsForUserResponseBodyGroups setGroupId(String groupId) {
+        public ListGroupsForUserResponseBodyGroupsGroup setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
         }
@@ -57,7 +57,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public ListGroupsForUserResponseBodyGroups setGroupName(String groupName) {
+        public ListGroupsForUserResponseBodyGroupsGroup setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
         }
@@ -65,7 +65,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public ListGroupsForUserResponseBodyGroups setComments(String comments) {
+        public ListGroupsForUserResponseBodyGroupsGroup setComments(String comments) {
             this.comments = comments;
             return this;
         }
@@ -73,12 +73,31 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             return this.comments;
         }
 
-        public ListGroupsForUserResponseBodyGroups setJoinDate(String joinDate) {
+        public ListGroupsForUserResponseBodyGroupsGroup setJoinDate(String joinDate) {
             this.joinDate = joinDate;
             return this;
         }
         public String getJoinDate() {
             return this.joinDate;
+        }
+
+    }
+
+    public static class ListGroupsForUserResponseBodyGroups extends TeaModel {
+        @NameInMap("Group")
+        public java.util.List<ListGroupsForUserResponseBodyGroupsGroup> group;
+
+        public static ListGroupsForUserResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupsForUserResponseBodyGroups self = new ListGroupsForUserResponseBodyGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGroupsForUserResponseBodyGroups setGroup(java.util.List<ListGroupsForUserResponseBodyGroupsGroup> group) {
+            this.group = group;
+            return this;
+        }
+        public java.util.List<ListGroupsForUserResponseBodyGroupsGroup> getGroup() {
+            return this.group;
         }
 
     }

@@ -8,13 +8,13 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Groups")
-    public java.util.List<ListEntitiesForPolicyResponseBodyGroups> groups;
+    public ListEntitiesForPolicyResponseBodyGroups groups;
 
     @NameInMap("Roles")
-    public java.util.List<ListEntitiesForPolicyResponseBodyRoles> roles;
+    public ListEntitiesForPolicyResponseBodyRoles roles;
 
     @NameInMap("Users")
-    public java.util.List<ListEntitiesForPolicyResponseBodyUsers> users;
+    public ListEntitiesForPolicyResponseBodyUsers users;
 
     public static ListEntitiesForPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListEntitiesForPolicyResponseBody self = new ListEntitiesForPolicyResponseBody();
@@ -29,31 +29,31 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListEntitiesForPolicyResponseBody setGroups(java.util.List<ListEntitiesForPolicyResponseBodyGroups> groups) {
+    public ListEntitiesForPolicyResponseBody setGroups(ListEntitiesForPolicyResponseBodyGroups groups) {
         this.groups = groups;
         return this;
     }
-    public java.util.List<ListEntitiesForPolicyResponseBodyGroups> getGroups() {
+    public ListEntitiesForPolicyResponseBodyGroups getGroups() {
         return this.groups;
     }
 
-    public ListEntitiesForPolicyResponseBody setRoles(java.util.List<ListEntitiesForPolicyResponseBodyRoles> roles) {
+    public ListEntitiesForPolicyResponseBody setRoles(ListEntitiesForPolicyResponseBodyRoles roles) {
         this.roles = roles;
         return this;
     }
-    public java.util.List<ListEntitiesForPolicyResponseBodyRoles> getRoles() {
+    public ListEntitiesForPolicyResponseBodyRoles getRoles() {
         return this.roles;
     }
 
-    public ListEntitiesForPolicyResponseBody setUsers(java.util.List<ListEntitiesForPolicyResponseBodyUsers> users) {
+    public ListEntitiesForPolicyResponseBody setUsers(ListEntitiesForPolicyResponseBodyUsers users) {
         this.users = users;
         return this;
     }
-    public java.util.List<ListEntitiesForPolicyResponseBodyUsers> getUsers() {
+    public ListEntitiesForPolicyResponseBodyUsers getUsers() {
         return this.users;
     }
 
-    public static class ListEntitiesForPolicyResponseBodyGroups extends TeaModel {
+    public static class ListEntitiesForPolicyResponseBodyGroupsGroup extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
@@ -63,12 +63,12 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         @NameInMap("AttachDate")
         public String attachDate;
 
-        public static ListEntitiesForPolicyResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
-            ListEntitiesForPolicyResponseBodyGroups self = new ListEntitiesForPolicyResponseBodyGroups();
+        public static ListEntitiesForPolicyResponseBodyGroupsGroup build(java.util.Map<String, ?> map) throws Exception {
+            ListEntitiesForPolicyResponseBodyGroupsGroup self = new ListEntitiesForPolicyResponseBodyGroupsGroup();
             return TeaModel.build(map, self);
         }
 
-        public ListEntitiesForPolicyResponseBodyGroups setGroupName(String groupName) {
+        public ListEntitiesForPolicyResponseBodyGroupsGroup setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
         }
@@ -76,7 +76,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public ListEntitiesForPolicyResponseBodyGroups setComments(String comments) {
+        public ListEntitiesForPolicyResponseBodyGroupsGroup setComments(String comments) {
             this.comments = comments;
             return this;
         }
@@ -84,7 +84,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             return this.comments;
         }
 
-        public ListEntitiesForPolicyResponseBodyGroups setAttachDate(String attachDate) {
+        public ListEntitiesForPolicyResponseBodyGroupsGroup setAttachDate(String attachDate) {
             this.attachDate = attachDate;
             return this;
         }
@@ -94,7 +94,26 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
 
     }
 
-    public static class ListEntitiesForPolicyResponseBodyRoles extends TeaModel {
+    public static class ListEntitiesForPolicyResponseBodyGroups extends TeaModel {
+        @NameInMap("Group")
+        public java.util.List<ListEntitiesForPolicyResponseBodyGroupsGroup> group;
+
+        public static ListEntitiesForPolicyResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
+            ListEntitiesForPolicyResponseBodyGroups self = new ListEntitiesForPolicyResponseBodyGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEntitiesForPolicyResponseBodyGroups setGroup(java.util.List<ListEntitiesForPolicyResponseBodyGroupsGroup> group) {
+            this.group = group;
+            return this;
+        }
+        public java.util.List<ListEntitiesForPolicyResponseBodyGroupsGroup> getGroup() {
+            return this.group;
+        }
+
+    }
+
+    public static class ListEntitiesForPolicyResponseBodyRolesRole extends TeaModel {
         @NameInMap("Description")
         public String description;
 
@@ -110,12 +129,12 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         @NameInMap("RoleId")
         public String roleId;
 
-        public static ListEntitiesForPolicyResponseBodyRoles build(java.util.Map<String, ?> map) throws Exception {
-            ListEntitiesForPolicyResponseBodyRoles self = new ListEntitiesForPolicyResponseBodyRoles();
+        public static ListEntitiesForPolicyResponseBodyRolesRole build(java.util.Map<String, ?> map) throws Exception {
+            ListEntitiesForPolicyResponseBodyRolesRole self = new ListEntitiesForPolicyResponseBodyRolesRole();
             return TeaModel.build(map, self);
         }
 
-        public ListEntitiesForPolicyResponseBodyRoles setDescription(String description) {
+        public ListEntitiesForPolicyResponseBodyRolesRole setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -123,7 +142,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListEntitiesForPolicyResponseBodyRoles setRoleName(String roleName) {
+        public ListEntitiesForPolicyResponseBodyRolesRole setRoleName(String roleName) {
             this.roleName = roleName;
             return this;
         }
@@ -131,7 +150,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             return this.roleName;
         }
 
-        public ListEntitiesForPolicyResponseBodyRoles setAttachDate(String attachDate) {
+        public ListEntitiesForPolicyResponseBodyRolesRole setAttachDate(String attachDate) {
             this.attachDate = attachDate;
             return this;
         }
@@ -139,7 +158,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             return this.attachDate;
         }
 
-        public ListEntitiesForPolicyResponseBodyRoles setArn(String arn) {
+        public ListEntitiesForPolicyResponseBodyRolesRole setArn(String arn) {
             this.arn = arn;
             return this;
         }
@@ -147,7 +166,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             return this.arn;
         }
 
-        public ListEntitiesForPolicyResponseBodyRoles setRoleId(String roleId) {
+        public ListEntitiesForPolicyResponseBodyRolesRole setRoleId(String roleId) {
             this.roleId = roleId;
             return this;
         }
@@ -157,7 +176,26 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
 
     }
 
-    public static class ListEntitiesForPolicyResponseBodyUsers extends TeaModel {
+    public static class ListEntitiesForPolicyResponseBodyRoles extends TeaModel {
+        @NameInMap("Role")
+        public java.util.List<ListEntitiesForPolicyResponseBodyRolesRole> role;
+
+        public static ListEntitiesForPolicyResponseBodyRoles build(java.util.Map<String, ?> map) throws Exception {
+            ListEntitiesForPolicyResponseBodyRoles self = new ListEntitiesForPolicyResponseBodyRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEntitiesForPolicyResponseBodyRoles setRole(java.util.List<ListEntitiesForPolicyResponseBodyRolesRole> role) {
+            this.role = role;
+            return this;
+        }
+        public java.util.List<ListEntitiesForPolicyResponseBodyRolesRole> getRole() {
+            return this.role;
+        }
+
+    }
+
+    public static class ListEntitiesForPolicyResponseBodyUsersUser extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -170,12 +208,12 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         @NameInMap("AttachDate")
         public String attachDate;
 
-        public static ListEntitiesForPolicyResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
-            ListEntitiesForPolicyResponseBodyUsers self = new ListEntitiesForPolicyResponseBodyUsers();
+        public static ListEntitiesForPolicyResponseBodyUsersUser build(java.util.Map<String, ?> map) throws Exception {
+            ListEntitiesForPolicyResponseBodyUsersUser self = new ListEntitiesForPolicyResponseBodyUsersUser();
             return TeaModel.build(map, self);
         }
 
-        public ListEntitiesForPolicyResponseBodyUsers setDisplayName(String displayName) {
+        public ListEntitiesForPolicyResponseBodyUsersUser setDisplayName(String displayName) {
             this.displayName = displayName;
             return this;
         }
@@ -183,7 +221,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public ListEntitiesForPolicyResponseBodyUsers setUserId(String userId) {
+        public ListEntitiesForPolicyResponseBodyUsersUser setUserId(String userId) {
             this.userId = userId;
             return this;
         }
@@ -191,7 +229,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public ListEntitiesForPolicyResponseBodyUsers setUserName(String userName) {
+        public ListEntitiesForPolicyResponseBodyUsersUser setUserName(String userName) {
             this.userName = userName;
             return this;
         }
@@ -199,12 +237,31 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             return this.userName;
         }
 
-        public ListEntitiesForPolicyResponseBodyUsers setAttachDate(String attachDate) {
+        public ListEntitiesForPolicyResponseBodyUsersUser setAttachDate(String attachDate) {
             this.attachDate = attachDate;
             return this;
         }
         public String getAttachDate() {
             return this.attachDate;
+        }
+
+    }
+
+    public static class ListEntitiesForPolicyResponseBodyUsers extends TeaModel {
+        @NameInMap("User")
+        public java.util.List<ListEntitiesForPolicyResponseBodyUsersUser> user;
+
+        public static ListEntitiesForPolicyResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
+            ListEntitiesForPolicyResponseBodyUsers self = new ListEntitiesForPolicyResponseBodyUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEntitiesForPolicyResponseBodyUsers setUser(java.util.List<ListEntitiesForPolicyResponseBodyUsersUser> user) {
+            this.user = user;
+            return this;
+        }
+        public java.util.List<ListEntitiesForPolicyResponseBodyUsersUser> getUser() {
+            return this.user;
         }
 
     }

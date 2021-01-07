@@ -14,7 +14,7 @@ public class ListUsersResponseBody extends TeaModel {
     public String marker;
 
     @NameInMap("Users")
-    public java.util.List<ListUsersResponseBodyUsers> users;
+    public ListUsersResponseBodyUsers users;
 
     public static ListUsersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListUsersResponseBody self = new ListUsersResponseBody();
@@ -45,15 +45,15 @@ public class ListUsersResponseBody extends TeaModel {
         return this.marker;
     }
 
-    public ListUsersResponseBody setUsers(java.util.List<ListUsersResponseBodyUsers> users) {
+    public ListUsersResponseBody setUsers(ListUsersResponseBodyUsers users) {
         this.users = users;
         return this;
     }
-    public java.util.List<ListUsersResponseBodyUsers> getUsers() {
+    public ListUsersResponseBodyUsers getUsers() {
         return this.users;
     }
 
-    public static class ListUsersResponseBodyUsers extends TeaModel {
+    public static class ListUsersResponseBodyUsersUser extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
@@ -78,12 +78,12 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("UserName")
         public String userName;
 
-        public static ListUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
-            ListUsersResponseBodyUsers self = new ListUsersResponseBodyUsers();
+        public static ListUsersResponseBodyUsersUser build(java.util.Map<String, ?> map) throws Exception {
+            ListUsersResponseBodyUsersUser self = new ListUsersResponseBodyUsersUser();
             return TeaModel.build(map, self);
         }
 
-        public ListUsersResponseBodyUsers setDisplayName(String displayName) {
+        public ListUsersResponseBodyUsersUser setDisplayName(String displayName) {
             this.displayName = displayName;
             return this;
         }
@@ -91,7 +91,7 @@ public class ListUsersResponseBody extends TeaModel {
             return this.displayName;
         }
 
-        public ListUsersResponseBodyUsers setEmail(String email) {
+        public ListUsersResponseBodyUsersUser setEmail(String email) {
             this.email = email;
             return this;
         }
@@ -99,7 +99,7 @@ public class ListUsersResponseBody extends TeaModel {
             return this.email;
         }
 
-        public ListUsersResponseBodyUsers setUpdateDate(String updateDate) {
+        public ListUsersResponseBodyUsersUser setUpdateDate(String updateDate) {
             this.updateDate = updateDate;
             return this;
         }
@@ -107,7 +107,7 @@ public class ListUsersResponseBody extends TeaModel {
             return this.updateDate;
         }
 
-        public ListUsersResponseBodyUsers setMobilePhone(String mobilePhone) {
+        public ListUsersResponseBodyUsersUser setMobilePhone(String mobilePhone) {
             this.mobilePhone = mobilePhone;
             return this;
         }
@@ -115,7 +115,7 @@ public class ListUsersResponseBody extends TeaModel {
             return this.mobilePhone;
         }
 
-        public ListUsersResponseBodyUsers setUserId(String userId) {
+        public ListUsersResponseBodyUsersUser setUserId(String userId) {
             this.userId = userId;
             return this;
         }
@@ -123,7 +123,7 @@ public class ListUsersResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public ListUsersResponseBodyUsers setComments(String comments) {
+        public ListUsersResponseBodyUsersUser setComments(String comments) {
             this.comments = comments;
             return this;
         }
@@ -131,7 +131,7 @@ public class ListUsersResponseBody extends TeaModel {
             return this.comments;
         }
 
-        public ListUsersResponseBodyUsers setCreateDate(String createDate) {
+        public ListUsersResponseBodyUsersUser setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
         }
@@ -139,12 +139,31 @@ public class ListUsersResponseBody extends TeaModel {
             return this.createDate;
         }
 
-        public ListUsersResponseBodyUsers setUserName(String userName) {
+        public ListUsersResponseBodyUsersUser setUserName(String userName) {
             this.userName = userName;
             return this;
         }
         public String getUserName() {
             return this.userName;
+        }
+
+    }
+
+    public static class ListUsersResponseBodyUsers extends TeaModel {
+        @NameInMap("User")
+        public java.util.List<ListUsersResponseBodyUsersUser> user;
+
+        public static ListUsersResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
+            ListUsersResponseBodyUsers self = new ListUsersResponseBodyUsers();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUsersResponseBodyUsers setUser(java.util.List<ListUsersResponseBodyUsersUser> user) {
+            this.user = user;
+            return this;
+        }
+        public java.util.List<ListUsersResponseBodyUsersUser> getUser() {
+            return this.user;
         }
 
     }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesForRoleResponseBody extends TeaModel {
     @NameInMap("Policies")
-    public java.util.List<ListPoliciesForRoleResponseBodyPolicies> policies;
+    public ListPoliciesForRoleResponseBodyPolicies policies;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListPoliciesForRoleResponseBody setPolicies(java.util.List<ListPoliciesForRoleResponseBodyPolicies> policies) {
+    public ListPoliciesForRoleResponseBody setPolicies(ListPoliciesForRoleResponseBodyPolicies policies) {
         this.policies = policies;
         return this;
     }
-    public java.util.List<ListPoliciesForRoleResponseBodyPolicies> getPolicies() {
+    public ListPoliciesForRoleResponseBodyPolicies getPolicies() {
         return this.policies;
     }
 
@@ -31,7 +31,7 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListPoliciesForRoleResponseBodyPolicies extends TeaModel {
+    public static class ListPoliciesForRoleResponseBodyPoliciesPolicy extends TeaModel {
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
@@ -47,12 +47,12 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         @NameInMap("PolicyType")
         public String policyType;
 
-        public static ListPoliciesForRoleResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
-            ListPoliciesForRoleResponseBodyPolicies self = new ListPoliciesForRoleResponseBodyPolicies();
+        public static ListPoliciesForRoleResponseBodyPoliciesPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ListPoliciesForRoleResponseBodyPoliciesPolicy self = new ListPoliciesForRoleResponseBodyPoliciesPolicy();
             return TeaModel.build(map, self);
         }
 
-        public ListPoliciesForRoleResponseBodyPolicies setDefaultVersion(String defaultVersion) {
+        public ListPoliciesForRoleResponseBodyPoliciesPolicy setDefaultVersion(String defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
@@ -60,7 +60,7 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             return this.defaultVersion;
         }
 
-        public ListPoliciesForRoleResponseBodyPolicies setDescription(String description) {
+        public ListPoliciesForRoleResponseBodyPoliciesPolicy setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -68,7 +68,7 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListPoliciesForRoleResponseBodyPolicies setPolicyName(String policyName) {
+        public ListPoliciesForRoleResponseBodyPoliciesPolicy setPolicyName(String policyName) {
             this.policyName = policyName;
             return this;
         }
@@ -76,7 +76,7 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             return this.policyName;
         }
 
-        public ListPoliciesForRoleResponseBodyPolicies setAttachDate(String attachDate) {
+        public ListPoliciesForRoleResponseBodyPoliciesPolicy setAttachDate(String attachDate) {
             this.attachDate = attachDate;
             return this;
         }
@@ -84,12 +84,31 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             return this.attachDate;
         }
 
-        public ListPoliciesForRoleResponseBodyPolicies setPolicyType(String policyType) {
+        public ListPoliciesForRoleResponseBodyPoliciesPolicy setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+    }
+
+    public static class ListPoliciesForRoleResponseBodyPolicies extends TeaModel {
+        @NameInMap("Policy")
+        public java.util.List<ListPoliciesForRoleResponseBodyPoliciesPolicy> policy;
+
+        public static ListPoliciesForRoleResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ListPoliciesForRoleResponseBodyPolicies self = new ListPoliciesForRoleResponseBodyPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPoliciesForRoleResponseBodyPolicies setPolicy(java.util.List<ListPoliciesForRoleResponseBodyPoliciesPolicy> policy) {
+            this.policy = policy;
+            return this;
+        }
+        public java.util.List<ListPoliciesForRoleResponseBodyPoliciesPolicy> getPolicy() {
+            return this.policy;
         }
 
     }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesForUserResponseBody extends TeaModel {
     @NameInMap("Policies")
-    public java.util.List<ListPoliciesForUserResponseBodyPolicies> policies;
+    public ListPoliciesForUserResponseBodyPolicies policies;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListPoliciesForUserResponseBody setPolicies(java.util.List<ListPoliciesForUserResponseBodyPolicies> policies) {
+    public ListPoliciesForUserResponseBody setPolicies(ListPoliciesForUserResponseBodyPolicies policies) {
         this.policies = policies;
         return this;
     }
-    public java.util.List<ListPoliciesForUserResponseBodyPolicies> getPolicies() {
+    public ListPoliciesForUserResponseBodyPolicies getPolicies() {
         return this.policies;
     }
 
@@ -31,7 +31,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListPoliciesForUserResponseBodyPolicies extends TeaModel {
+    public static class ListPoliciesForUserResponseBodyPoliciesPolicy extends TeaModel {
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
@@ -47,12 +47,12 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         @NameInMap("PolicyType")
         public String policyType;
 
-        public static ListPoliciesForUserResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
-            ListPoliciesForUserResponseBodyPolicies self = new ListPoliciesForUserResponseBodyPolicies();
+        public static ListPoliciesForUserResponseBodyPoliciesPolicy build(java.util.Map<String, ?> map) throws Exception {
+            ListPoliciesForUserResponseBodyPoliciesPolicy self = new ListPoliciesForUserResponseBodyPoliciesPolicy();
             return TeaModel.build(map, self);
         }
 
-        public ListPoliciesForUserResponseBodyPolicies setDefaultVersion(String defaultVersion) {
+        public ListPoliciesForUserResponseBodyPoliciesPolicy setDefaultVersion(String defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
@@ -60,7 +60,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             return this.defaultVersion;
         }
 
-        public ListPoliciesForUserResponseBodyPolicies setDescription(String description) {
+        public ListPoliciesForUserResponseBodyPoliciesPolicy setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -68,7 +68,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListPoliciesForUserResponseBodyPolicies setPolicyName(String policyName) {
+        public ListPoliciesForUserResponseBodyPoliciesPolicy setPolicyName(String policyName) {
             this.policyName = policyName;
             return this;
         }
@@ -76,7 +76,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             return this.policyName;
         }
 
-        public ListPoliciesForUserResponseBodyPolicies setAttachDate(String attachDate) {
+        public ListPoliciesForUserResponseBodyPoliciesPolicy setAttachDate(String attachDate) {
             this.attachDate = attachDate;
             return this;
         }
@@ -84,12 +84,31 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             return this.attachDate;
         }
 
-        public ListPoliciesForUserResponseBodyPolicies setPolicyType(String policyType) {
+        public ListPoliciesForUserResponseBodyPoliciesPolicy setPolicyType(String policyType) {
             this.policyType = policyType;
             return this;
         }
         public String getPolicyType() {
             return this.policyType;
+        }
+
+    }
+
+    public static class ListPoliciesForUserResponseBodyPolicies extends TeaModel {
+        @NameInMap("Policy")
+        public java.util.List<ListPoliciesForUserResponseBodyPoliciesPolicy> policy;
+
+        public static ListPoliciesForUserResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
+            ListPoliciesForUserResponseBodyPolicies self = new ListPoliciesForUserResponseBodyPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPoliciesForUserResponseBodyPolicies setPolicy(java.util.List<ListPoliciesForUserResponseBodyPoliciesPolicy> policy) {
+            this.policy = policy;
+            return this;
+        }
+        public java.util.List<ListPoliciesForUserResponseBodyPoliciesPolicy> getPolicy() {
+            return this.policy;
         }
 
     }

@@ -11,7 +11,7 @@ public class ListRolesResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     @NameInMap("Roles")
-    public java.util.List<ListRolesResponseBodyRoles> roles;
+    public ListRolesResponseBodyRoles roles;
 
     @NameInMap("Marker")
     public String marker;
@@ -37,11 +37,11 @@ public class ListRolesResponseBody extends TeaModel {
         return this.isTruncated;
     }
 
-    public ListRolesResponseBody setRoles(java.util.List<ListRolesResponseBodyRoles> roles) {
+    public ListRolesResponseBody setRoles(ListRolesResponseBodyRoles roles) {
         this.roles = roles;
         return this;
     }
-    public java.util.List<ListRolesResponseBodyRoles> getRoles() {
+    public ListRolesResponseBodyRoles getRoles() {
         return this.roles;
     }
 
@@ -53,7 +53,7 @@ public class ListRolesResponseBody extends TeaModel {
         return this.marker;
     }
 
-    public static class ListRolesResponseBodyRoles extends TeaModel {
+    public static class ListRolesResponseBodyRolesRole extends TeaModel {
         @NameInMap("Description")
         public String description;
 
@@ -75,12 +75,12 @@ public class ListRolesResponseBody extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
-        public static ListRolesResponseBodyRoles build(java.util.Map<String, ?> map) throws Exception {
-            ListRolesResponseBodyRoles self = new ListRolesResponseBodyRoles();
+        public static ListRolesResponseBodyRolesRole build(java.util.Map<String, ?> map) throws Exception {
+            ListRolesResponseBodyRolesRole self = new ListRolesResponseBodyRolesRole();
             return TeaModel.build(map, self);
         }
 
-        public ListRolesResponseBodyRoles setDescription(String description) {
+        public ListRolesResponseBodyRolesRole setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -88,7 +88,7 @@ public class ListRolesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public ListRolesResponseBodyRoles setUpdateDate(String updateDate) {
+        public ListRolesResponseBodyRolesRole setUpdateDate(String updateDate) {
             this.updateDate = updateDate;
             return this;
         }
@@ -96,7 +96,7 @@ public class ListRolesResponseBody extends TeaModel {
             return this.updateDate;
         }
 
-        public ListRolesResponseBodyRoles setMaxSessionDuration(Long maxSessionDuration) {
+        public ListRolesResponseBodyRolesRole setMaxSessionDuration(Long maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
@@ -104,7 +104,7 @@ public class ListRolesResponseBody extends TeaModel {
             return this.maxSessionDuration;
         }
 
-        public ListRolesResponseBodyRoles setRoleName(String roleName) {
+        public ListRolesResponseBodyRolesRole setRoleName(String roleName) {
             this.roleName = roleName;
             return this;
         }
@@ -112,7 +112,7 @@ public class ListRolesResponseBody extends TeaModel {
             return this.roleName;
         }
 
-        public ListRolesResponseBodyRoles setCreateDate(String createDate) {
+        public ListRolesResponseBodyRolesRole setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
         }
@@ -120,7 +120,7 @@ public class ListRolesResponseBody extends TeaModel {
             return this.createDate;
         }
 
-        public ListRolesResponseBodyRoles setRoleId(String roleId) {
+        public ListRolesResponseBodyRolesRole setRoleId(String roleId) {
             this.roleId = roleId;
             return this;
         }
@@ -128,12 +128,31 @@ public class ListRolesResponseBody extends TeaModel {
             return this.roleId;
         }
 
-        public ListRolesResponseBodyRoles setArn(String arn) {
+        public ListRolesResponseBodyRolesRole setArn(String arn) {
             this.arn = arn;
             return this;
         }
         public String getArn() {
             return this.arn;
+        }
+
+    }
+
+    public static class ListRolesResponseBodyRoles extends TeaModel {
+        @NameInMap("Role")
+        public java.util.List<ListRolesResponseBodyRolesRole> role;
+
+        public static ListRolesResponseBodyRoles build(java.util.Map<String, ?> map) throws Exception {
+            ListRolesResponseBodyRoles self = new ListRolesResponseBodyRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRolesResponseBodyRoles setRole(java.util.List<ListRolesResponseBodyRolesRole> role) {
+            this.role = role;
+            return this;
+        }
+        public java.util.List<ListRolesResponseBodyRolesRole> getRole() {
+            return this.role;
         }
 
     }

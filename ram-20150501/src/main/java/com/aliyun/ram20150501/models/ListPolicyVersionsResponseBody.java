@@ -8,7 +8,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("PolicyVersions")
-    public java.util.List<ListPolicyVersionsResponseBodyPolicyVersions> policyVersions;
+    public ListPolicyVersionsResponseBodyPolicyVersions policyVersions;
 
     public static ListPolicyVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPolicyVersionsResponseBody self = new ListPolicyVersionsResponseBody();
@@ -23,15 +23,15 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListPolicyVersionsResponseBody setPolicyVersions(java.util.List<ListPolicyVersionsResponseBodyPolicyVersions> policyVersions) {
+    public ListPolicyVersionsResponseBody setPolicyVersions(ListPolicyVersionsResponseBodyPolicyVersions policyVersions) {
         this.policyVersions = policyVersions;
         return this;
     }
-    public java.util.List<ListPolicyVersionsResponseBodyPolicyVersions> getPolicyVersions() {
+    public ListPolicyVersionsResponseBodyPolicyVersions getPolicyVersions() {
         return this.policyVersions;
     }
 
-    public static class ListPolicyVersionsResponseBodyPolicyVersions extends TeaModel {
+    public static class ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion extends TeaModel {
         @NameInMap("IsDefaultVersion")
         public Boolean isDefaultVersion;
 
@@ -44,12 +44,12 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         @NameInMap("CreateDate")
         public String createDate;
 
-        public static ListPolicyVersionsResponseBodyPolicyVersions build(java.util.Map<String, ?> map) throws Exception {
-            ListPolicyVersionsResponseBodyPolicyVersions self = new ListPolicyVersionsResponseBodyPolicyVersions();
+        public static ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion build(java.util.Map<String, ?> map) throws Exception {
+            ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion self = new ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion();
             return TeaModel.build(map, self);
         }
 
-        public ListPolicyVersionsResponseBodyPolicyVersions setIsDefaultVersion(Boolean isDefaultVersion) {
+        public ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion setIsDefaultVersion(Boolean isDefaultVersion) {
             this.isDefaultVersion = isDefaultVersion;
             return this;
         }
@@ -57,7 +57,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             return this.isDefaultVersion;
         }
 
-        public ListPolicyVersionsResponseBodyPolicyVersions setPolicyDocument(String policyDocument) {
+        public ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion setPolicyDocument(String policyDocument) {
             this.policyDocument = policyDocument;
             return this;
         }
@@ -65,7 +65,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             return this.policyDocument;
         }
 
-        public ListPolicyVersionsResponseBodyPolicyVersions setVersionId(String versionId) {
+        public ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion setVersionId(String versionId) {
             this.versionId = versionId;
             return this;
         }
@@ -73,12 +73,31 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             return this.versionId;
         }
 
-        public ListPolicyVersionsResponseBodyPolicyVersions setCreateDate(String createDate) {
+        public ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion setCreateDate(String createDate) {
             this.createDate = createDate;
             return this;
         }
         public String getCreateDate() {
             return this.createDate;
+        }
+
+    }
+
+    public static class ListPolicyVersionsResponseBodyPolicyVersions extends TeaModel {
+        @NameInMap("PolicyVersion")
+        public java.util.List<ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion> policyVersion;
+
+        public static ListPolicyVersionsResponseBodyPolicyVersions build(java.util.Map<String, ?> map) throws Exception {
+            ListPolicyVersionsResponseBodyPolicyVersions self = new ListPolicyVersionsResponseBodyPolicyVersions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPolicyVersionsResponseBodyPolicyVersions setPolicyVersion(java.util.List<ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion> policyVersion) {
+            this.policyVersion = policyVersion;
+            return this;
+        }
+        public java.util.List<ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion> getPolicyVersion() {
+            return this.policyVersion;
         }
 
     }
