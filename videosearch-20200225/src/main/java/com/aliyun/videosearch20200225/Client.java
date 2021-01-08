@@ -3,10 +3,15 @@ package com.aliyun.videosearch20200225;
 
 import com.aliyun.tea.*;
 import com.aliyun.videosearch20200225.models.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.tearpc.*;
+import com.aliyun.tearpc.models.*;
+import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.tearpc.Client {
 
-    public Client(com.aliyun.tearpc.models.Config config) throws Exception {
+    public Client(Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
@@ -18,53 +23,113 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
-    public GetStorageHistoryResponse getStorageHistoryWithOptions(GetStorageHistoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateBatchTaskResponse createBatchTaskWithOptions(CreateBatchTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateBatchTask", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new CreateBatchTaskResponse());
+    }
+
+    public CreateBatchTaskResponse createBatchTask(CreateBatchTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createBatchTaskWithOptions(request, runtime);
+    }
+
+    public GetStorageHistoryResponse getStorageHistoryWithOptions(GetStorageHistoryRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetStorageHistory", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new GetStorageHistoryResponse());
     }
 
     public GetStorageHistoryResponse getStorageHistory(GetStorageHistoryRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.getStorageHistoryWithOptions(request, runtime);
     }
 
-    public AddStorageVideoTaskResponse addStorageVideoTaskWithOptions(AddStorageVideoTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListBatchTaskResponse listBatchTaskWithOptions(ListBatchTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListBatchTask", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new ListBatchTaskResponse());
+    }
+
+    public ListBatchTaskResponse listBatchTask(ListBatchTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listBatchTaskWithOptions(request, runtime);
+    }
+
+    public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListInstances", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new ListInstancesResponse());
+    }
+
+    public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listInstancesWithOptions(request, runtime);
+    }
+
+    public ListStorageVideoTasksResponse listStorageVideoTasksWithOptions(ListStorageVideoTasksRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListStorageVideoTasks", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new ListStorageVideoTasksResponse());
+    }
+
+    public ListStorageVideoTasksResponse listStorageVideoTasks(ListStorageVideoTasksRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listStorageVideoTasksWithOptions(request, runtime);
+    }
+
+    public ListSearchVideoTasksResponse listSearchVideoTasksWithOptions(ListSearchVideoTasksRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListSearchVideoTasks", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new ListSearchVideoTasksResponse());
+    }
+
+    public ListSearchVideoTasksResponse listSearchVideoTasks(ListSearchVideoTasksRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listSearchVideoTasksWithOptions(request, runtime);
+    }
+
+    public AddStorageVideoTaskResponse addStorageVideoTaskWithOptions(AddStorageVideoTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("AddStorageVideoTask", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new AddStorageVideoTaskResponse());
     }
 
     public AddStorageVideoTaskResponse addStorageVideoTask(AddStorageVideoTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.addStorageVideoTaskWithOptions(request, runtime);
     }
 
-    public AddDeletionVideoTaskResponse addDeletionVideoTaskWithOptions(AddDeletionVideoTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetInstanceResponse getInstanceWithOptions(GetInstanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetInstance", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new GetInstanceResponse());
+    }
+
+    public GetInstanceResponse getInstance(GetInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getInstanceWithOptions(request, runtime);
+    }
+
+    public AddDeletionVideoTaskResponse addDeletionVideoTaskWithOptions(AddDeletionVideoTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("AddDeletionVideoTask", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new AddDeletionVideoTaskResponse());
     }
 
     public AddDeletionVideoTaskResponse addDeletionVideoTask(AddDeletionVideoTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.addDeletionVideoTaskWithOptions(request, runtime);
     }
 
-    public GetTaskStatusResponse getTaskStatusWithOptions(GetTaskStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetTaskStatusResponse getTaskStatusWithOptions(GetTaskStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetTaskStatus", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new GetTaskStatusResponse());
     }
 
     public GetTaskStatusResponse getTaskStatus(GetTaskStatusRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.getTaskStatusWithOptions(request, runtime);
     }
 
-    public AddSearchVideoTaskResponse addSearchVideoTaskWithOptions(AddSearchVideoTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public AddSearchVideoTaskResponse addSearchVideoTaskWithOptions(AddSearchVideoTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("AddSearchVideoTask", "HTTPS", "POST", "2020-02-25", "AK", null, TeaModel.buildMap(request), runtime), new AddSearchVideoTaskResponse());
     }
 
     public AddSearchVideoTaskResponse addSearchVideoTask(AddSearchVideoTaskRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.addSearchVideoTaskWithOptions(request, runtime);
     }
 
