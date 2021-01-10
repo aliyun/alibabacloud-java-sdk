@@ -17,4 +17,20 @@ public class DescribeAppGroupResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAppGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeAppGroupResponse setBody(DescribeAppGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeAppGroupResponseBody getBody() {
+        return this.body;
+    }
+
 }

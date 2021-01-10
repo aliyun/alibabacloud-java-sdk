@@ -17,4 +17,20 @@ public class CreateModelResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateModelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateModelResponse setBody(CreateModelResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateModelResponseBody getBody() {
+        return this.body;
+    }
+
 }

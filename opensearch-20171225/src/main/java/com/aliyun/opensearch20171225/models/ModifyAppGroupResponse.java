@@ -17,4 +17,20 @@ public class ModifyAppGroupResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyAppGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyAppGroupResponse setBody(ModifyAppGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyAppGroupResponseBody getBody() {
+        return this.body;
+    }
+
 }

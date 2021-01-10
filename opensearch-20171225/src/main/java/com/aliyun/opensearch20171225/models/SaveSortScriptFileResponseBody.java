@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class SaveSortScriptFileResponseBody extends TeaModel {
     @NameInMap("requestId")
-    @Validation(required = true)
     public String requestId;
 
     public static SaveSortScriptFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveSortScriptFileResponseBody self = new SaveSortScriptFileResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SaveSortScriptFileResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -17,4 +17,20 @@ public class GetModelProgressResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetModelProgressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetModelProgressResponse setBody(GetModelProgressResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetModelProgressResponseBody getBody() {
+        return this.body;
+    }
+
 }

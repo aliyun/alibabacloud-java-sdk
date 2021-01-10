@@ -17,4 +17,20 @@ public class DeleteSortScriptResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteSortScriptResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteSortScriptResponse setBody(DeleteSortScriptResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteSortScriptResponseBody getBody() {
+        return this.body;
+    }
+
 }

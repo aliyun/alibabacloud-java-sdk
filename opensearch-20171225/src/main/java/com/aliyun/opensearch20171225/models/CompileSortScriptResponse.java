@@ -17,4 +17,20 @@ public class CompileSortScriptResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CompileSortScriptResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CompileSortScriptResponse setBody(CompileSortScriptResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CompileSortScriptResponseBody getBody() {
+        return this.body;
+    }
+
 }
