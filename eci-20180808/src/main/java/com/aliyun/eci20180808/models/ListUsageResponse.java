@@ -3,21 +3,21 @@ package com.aliyun.eci20180808.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateContainerGroupResponse extends TeaModel {
+public class ListUsageResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public UpdateContainerGroupResponseBody body;
+    public ListUsageResponseBody body;
 
-    public static UpdateContainerGroupResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateContainerGroupResponse self = new UpdateContainerGroupResponse();
+    public static ListUsageResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListUsageResponse self = new ListUsageResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateContainerGroupResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListUsageResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class UpdateContainerGroupResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateContainerGroupResponse setBody(UpdateContainerGroupResponseBody body) {
+    public ListUsageResponse setBody(ListUsageResponseBody body) {
         this.body = body;
         return this;
     }
-    public UpdateContainerGroupResponseBody getBody() {
+    public ListUsageResponseBody getBody() {
         return this.body;
     }
 

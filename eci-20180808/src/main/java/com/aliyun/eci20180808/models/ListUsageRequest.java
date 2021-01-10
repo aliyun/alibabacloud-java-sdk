@@ -3,7 +3,7 @@ package com.aliyun.eci20180808.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeRegionsRequest extends TeaModel {
+public class ListUsageRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -19,12 +19,12 @@ public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeRegionsRequest self = new DescribeRegionsRequest();
+    public static ListUsageRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListUsageRequest self = new ListUsageRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsRequest setOwnerId(Long ownerId) {
+    public ListUsageRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -32,7 +32,7 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeRegionsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ListUsageRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -40,7 +40,7 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public DescribeRegionsRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ListUsageRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -48,7 +48,7 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeRegionsRequest setOwnerAccount(String ownerAccount) {
+    public ListUsageRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -56,7 +56,7 @@ public class DescribeRegionsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeRegionsRequest setRegionId(String regionId) {
+    public ListUsageRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
