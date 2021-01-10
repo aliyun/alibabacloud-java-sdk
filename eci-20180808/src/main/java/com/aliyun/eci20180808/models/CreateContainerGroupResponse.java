@@ -4,17 +4,33 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class CreateContainerGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ContainerGroupId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String containerGroupId;
+    public CreateContainerGroupResponseBody body;
 
     public static CreateContainerGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateContainerGroupResponse self = new CreateContainerGroupResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateContainerGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateContainerGroupResponse setBody(CreateContainerGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateContainerGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

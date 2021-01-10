@@ -4,21 +4,33 @@ package com.aliyun.eci20180808.models;
 import com.aliyun.tea.*;
 
 public class DescribeContainerLogResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ContainerName")
+    @NameInMap("body")
     @Validation(required = true)
-    public String containerName;
-
-    @NameInMap("Content")
-    @Validation(required = true)
-    public String content;
+    public DescribeContainerLogResponseBody body;
 
     public static DescribeContainerLogResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeContainerLogResponse self = new DescribeContainerLogResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeContainerLogResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeContainerLogResponse setBody(DescribeContainerLogResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeContainerLogResponseBody getBody() {
+        return this.body;
     }
 
 }
