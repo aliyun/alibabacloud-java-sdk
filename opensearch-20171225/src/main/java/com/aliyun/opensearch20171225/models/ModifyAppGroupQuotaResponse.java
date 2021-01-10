@@ -17,4 +17,20 @@ public class ModifyAppGroupQuotaResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyAppGroupQuotaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyAppGroupQuotaResponse setBody(ModifyAppGroupQuotaResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyAppGroupQuotaResponseBody getBody() {
+        return this.body;
+    }
+
 }

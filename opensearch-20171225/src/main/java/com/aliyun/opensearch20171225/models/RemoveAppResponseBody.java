@@ -4,17 +4,31 @@ package com.aliyun.opensearch20171225.models;
 import com.aliyun.tea.*;
 
 public class RemoveAppResponseBody extends TeaModel {
-    @NameInMap("requestId")
-    @Validation(required = true)
-    public String requestId;
-
     @NameInMap("result")
-    @Validation(required = true)
     public java.util.List<Integer> result;
+
+    @NameInMap("requestId")
+    public String requestId;
 
     public static RemoveAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RemoveAppResponseBody self = new RemoveAppResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public RemoveAppResponseBody setResult(java.util.List<Integer> result) {
+        this.result = result;
+        return this;
+    }
+    public java.util.List<Integer> getResult() {
+        return this.result;
+    }
+
+    public RemoveAppResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

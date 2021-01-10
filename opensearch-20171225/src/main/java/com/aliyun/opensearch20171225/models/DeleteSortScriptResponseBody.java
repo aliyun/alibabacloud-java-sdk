@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteSortScriptResponseBody extends TeaModel {
     @NameInMap("requestId")
-    @Validation(required = true)
     public String requestId;
 
     public static DeleteSortScriptResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSortScriptResponseBody self = new DeleteSortScriptResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSortScriptResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

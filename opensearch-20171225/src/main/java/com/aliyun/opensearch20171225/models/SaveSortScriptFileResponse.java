@@ -17,4 +17,20 @@ public class SaveSortScriptFileResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public SaveSortScriptFileResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SaveSortScriptFileResponse setBody(SaveSortScriptFileResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SaveSortScriptFileResponseBody getBody() {
+        return this.body;
+    }
+
 }

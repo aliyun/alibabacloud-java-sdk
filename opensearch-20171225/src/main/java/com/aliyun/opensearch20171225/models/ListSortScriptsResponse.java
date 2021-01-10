@@ -17,4 +17,20 @@ public class ListSortScriptsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListSortScriptsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListSortScriptsResponse setBody(ListSortScriptsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListSortScriptsResponseBody getBody() {
+        return this.body;
+    }
+
 }

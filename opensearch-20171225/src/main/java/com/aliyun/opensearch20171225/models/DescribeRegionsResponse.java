@@ -17,4 +17,20 @@ public class DescribeRegionsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRegionsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeRegionsResponse setBody(DescribeRegionsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeRegionsResponseBody getBody() {
+        return this.body;
+    }
+
 }

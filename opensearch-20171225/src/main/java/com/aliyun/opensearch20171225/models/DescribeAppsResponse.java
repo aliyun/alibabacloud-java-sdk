@@ -17,4 +17,20 @@ public class DescribeAppsResponse extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAppsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeAppsResponse setBody(DescribeAppsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeAppsResponseBody getBody() {
+        return this.body;
+    }
+
 }
