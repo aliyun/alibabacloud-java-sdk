@@ -5,27 +5,21 @@ import com.aliyun.tea.*;
 
 public class SubmitReturnGoodLogisticsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("LogisticsNo")
-    @Validation(required = true)
     public String logisticsNo;
 
     @NameInMap("CpCode")
-    @Validation(required = true)
     public String cpCode;
 
     @NameInMap("SubLmOrderId")
-    @Validation(required = true)
     public String subLmOrderId;
 
     @NameInMap("DisputeId")
-    @Validation(required = true)
     public Long disputeId;
 
     @NameInMap("UseAnonymousTbAccount")

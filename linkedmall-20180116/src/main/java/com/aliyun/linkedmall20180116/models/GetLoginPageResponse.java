@@ -4,77 +4,33 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetLoginPageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("UrlData")
-    @Validation(required = true)
-    public GetLoginPageResponseUrlData urlData;
+    public GetLoginPageResponseBody body;
 
     public static GetLoginPageResponse build(java.util.Map<String, ?> map) throws Exception {
         GetLoginPageResponse self = new GetLoginPageResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetLoginPageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetLoginPageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetLoginPageResponse setCode(String code) {
-        this.code = code;
+    public GetLoginPageResponse setBody(GetLoginPageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetLoginPageResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetLoginPageResponse setUrlData(GetLoginPageResponseUrlData urlData) {
-        this.urlData = urlData;
-        return this;
-    }
-    public GetLoginPageResponseUrlData getUrlData() {
-        return this.urlData;
-    }
-
-    public static class GetLoginPageResponseUrlData extends TeaModel {
-        @NameInMap("ReturnUrl")
-        @Validation(required = true)
-        public String returnUrl;
-
-        public static GetLoginPageResponseUrlData build(java.util.Map<String, ?> map) throws Exception {
-            GetLoginPageResponseUrlData self = new GetLoginPageResponseUrlData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetLoginPageResponseUrlData setReturnUrl(String returnUrl) {
-            this.returnUrl = returnUrl;
-            return this;
-        }
-        public String getReturnUrl() {
-            return this.returnUrl;
-        }
-
+    public GetLoginPageResponseBody getBody() {
+        return this.body;
     }
 
 }

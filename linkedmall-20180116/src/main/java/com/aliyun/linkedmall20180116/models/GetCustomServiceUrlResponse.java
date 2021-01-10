@@ -4,77 +4,33 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class GetCustomServiceUrlResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("UrlData")
-    @Validation(required = true)
-    public GetCustomServiceUrlResponseUrlData urlData;
+    public GetCustomServiceUrlResponseBody body;
 
     public static GetCustomServiceUrlResponse build(java.util.Map<String, ?> map) throws Exception {
         GetCustomServiceUrlResponse self = new GetCustomServiceUrlResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetCustomServiceUrlResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetCustomServiceUrlResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetCustomServiceUrlResponse setCode(String code) {
-        this.code = code;
+    public GetCustomServiceUrlResponse setBody(GetCustomServiceUrlResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetCustomServiceUrlResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetCustomServiceUrlResponse setUrlData(GetCustomServiceUrlResponseUrlData urlData) {
-        this.urlData = urlData;
-        return this;
-    }
-    public GetCustomServiceUrlResponseUrlData getUrlData() {
-        return this.urlData;
-    }
-
-    public static class GetCustomServiceUrlResponseUrlData extends TeaModel {
-        @NameInMap("ReturnUrl")
-        @Validation(required = true)
-        public String returnUrl;
-
-        public static GetCustomServiceUrlResponseUrlData build(java.util.Map<String, ?> map) throws Exception {
-            GetCustomServiceUrlResponseUrlData self = new GetCustomServiceUrlResponseUrlData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetCustomServiceUrlResponseUrlData setReturnUrl(String returnUrl) {
-            this.returnUrl = returnUrl;
-            return this;
-        }
-        public String getReturnUrl() {
-            return this.returnUrl;
-        }
-
+    public GetCustomServiceUrlResponseBody getBody() {
+        return this.body;
     }
 
 }

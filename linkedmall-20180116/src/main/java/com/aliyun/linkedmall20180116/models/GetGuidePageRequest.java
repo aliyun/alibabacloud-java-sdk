@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetGuidePageRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     public static GetGuidePageRequest build(java.util.Map<String, ?> map) throws Exception {

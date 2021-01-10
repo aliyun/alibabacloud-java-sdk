@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class AddSupplierNewItemsRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ItemList")
@@ -33,18 +32,26 @@ public class AddSupplierNewItemsRequest extends TeaModel {
     }
 
     public static class AddSupplierNewItemsRequestItemList extends TeaModel {
+        @NameInMap("LmItemId")
+        public String lmItemId;
+
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("SkuList")
-        public java.util.List<Long> skuList;
-
-        @NameInMap("LmItemId")
-        public String lmItemId;
+        public java.util.List<Integer> skuList;
 
         public static AddSupplierNewItemsRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             AddSupplierNewItemsRequestItemList self = new AddSupplierNewItemsRequestItemList();
             return TeaModel.build(map, self);
+        }
+
+        public AddSupplierNewItemsRequestItemList setLmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
+            return this;
+        }
+        public String getLmItemId() {
+            return this.lmItemId;
         }
 
         public AddSupplierNewItemsRequestItemList setItemId(Long itemId) {
@@ -55,20 +62,12 @@ public class AddSupplierNewItemsRequest extends TeaModel {
             return this.itemId;
         }
 
-        public AddSupplierNewItemsRequestItemList setSkuList(java.util.List<Long> skuList) {
+        public AddSupplierNewItemsRequestItemList setSkuList(java.util.List<Integer> skuList) {
             this.skuList = skuList;
             return this;
         }
-        public java.util.List<Long> getSkuList() {
+        public java.util.List<Integer> getSkuList() {
             return this.skuList;
-        }
-
-        public AddSupplierNewItemsRequestItemList setLmItemId(String lmItemId) {
-            this.lmItemId = lmItemId;
-            return this;
-        }
-        public String getLmItemId() {
-            return this.lmItemId;
         }
 
     }

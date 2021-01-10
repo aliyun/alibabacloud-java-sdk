@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateOrderRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("OutTradeId")
-    @Validation(required = true)
     public String outTradeId;
 
     @NameInMap("ItemId")
@@ -27,9 +24,6 @@ public class CreateOrderRequest extends TeaModel {
 
     @NameInMap("ExtJson")
     public String extJson;
-
-    @NameInMap("ItemList")
-    public java.util.List<CreateOrderRequestItemList> itemList;
 
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
@@ -48,6 +42,9 @@ public class CreateOrderRequest extends TeaModel {
 
     @NameInMap("LmItemId")
     public String lmItemId;
+
+    @NameInMap("ItemList")
+    public java.util.List<CreateOrderRequestItemList> itemList;
 
     public static CreateOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderRequest self = new CreateOrderRequest();
@@ -110,14 +107,6 @@ public class CreateOrderRequest extends TeaModel {
         return this.extJson;
     }
 
-    public CreateOrderRequest setItemList(java.util.List<CreateOrderRequestItemList> itemList) {
-        this.itemList = itemList;
-        return this;
-    }
-    public java.util.List<CreateOrderRequestItemList> getItemList() {
-        return this.itemList;
-    }
-
     public CreateOrderRequest setDeliveryAddress(String deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
         return this;
@@ -166,30 +155,38 @@ public class CreateOrderRequest extends TeaModel {
         return this.lmItemId;
     }
 
+    public CreateOrderRequest setItemList(java.util.List<CreateOrderRequestItemList> itemList) {
+        this.itemList = itemList;
+        return this;
+    }
+    public java.util.List<CreateOrderRequestItemList> getItemList() {
+        return this.itemList;
+    }
+
     public static class CreateOrderRequestItemList extends TeaModel {
-        @NameInMap("ItemId")
-        public Long itemId;
+        @NameInMap("LmItemId")
+        public String lmItemId;
 
         @NameInMap("SkuId")
         public Long skuId;
 
+        @NameInMap("ItemId")
+        public Long itemId;
+
         @NameInMap("Quantity")
         public Integer quantity;
-
-        @NameInMap("LmItemId")
-        public String lmItemId;
 
         public static CreateOrderRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             CreateOrderRequestItemList self = new CreateOrderRequestItemList();
             return TeaModel.build(map, self);
         }
 
-        public CreateOrderRequestItemList setItemId(Long itemId) {
-            this.itemId = itemId;
+        public CreateOrderRequestItemList setLmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
             return this;
         }
-        public Long getItemId() {
-            return this.itemId;
+        public String getLmItemId() {
+            return this.lmItemId;
         }
 
         public CreateOrderRequestItemList setSkuId(Long skuId) {
@@ -200,20 +197,20 @@ public class CreateOrderRequest extends TeaModel {
             return this.skuId;
         }
 
+        public CreateOrderRequestItemList setItemId(Long itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public Long getItemId() {
+            return this.itemId;
+        }
+
         public CreateOrderRequestItemList setQuantity(Integer quantity) {
             this.quantity = quantity;
             return this;
         }
         public Integer getQuantity() {
             return this.quantity;
-        }
-
-        public CreateOrderRequestItemList setLmItemId(String lmItemId) {
-            this.lmItemId = lmItemId;
-            return this;
-        }
-        public String getLmItemId() {
-            return this.lmItemId;
         }
 
     }

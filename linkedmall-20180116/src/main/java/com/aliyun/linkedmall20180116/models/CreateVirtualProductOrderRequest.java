@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualProductOrderRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("OutTradeId")
-    @Validation(required = true)
     public String outTradeId;
 
     @NameInMap("ItemId")
@@ -27,9 +24,6 @@ public class CreateVirtualProductOrderRequest extends TeaModel {
 
     @NameInMap("ExtJson")
     public String extJson;
-
-    @NameInMap("ItemList")
-    public java.util.List<CreateVirtualProductOrderRequestItemList> itemList;
 
     @NameInMap("DeliveryAddress")
     public String deliveryAddress;
@@ -48,6 +42,9 @@ public class CreateVirtualProductOrderRequest extends TeaModel {
 
     @NameInMap("LmItemId")
     public String lmItemId;
+
+    @NameInMap("ItemList")
+    public java.util.List<CreateVirtualProductOrderRequestItemList> itemList;
 
     public static CreateVirtualProductOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVirtualProductOrderRequest self = new CreateVirtualProductOrderRequest();
@@ -110,14 +107,6 @@ public class CreateVirtualProductOrderRequest extends TeaModel {
         return this.extJson;
     }
 
-    public CreateVirtualProductOrderRequest setItemList(java.util.List<CreateVirtualProductOrderRequestItemList> itemList) {
-        this.itemList = itemList;
-        return this;
-    }
-    public java.util.List<CreateVirtualProductOrderRequestItemList> getItemList() {
-        return this.itemList;
-    }
-
     public CreateVirtualProductOrderRequest setDeliveryAddress(String deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
         return this;
@@ -166,30 +155,38 @@ public class CreateVirtualProductOrderRequest extends TeaModel {
         return this.lmItemId;
     }
 
+    public CreateVirtualProductOrderRequest setItemList(java.util.List<CreateVirtualProductOrderRequestItemList> itemList) {
+        this.itemList = itemList;
+        return this;
+    }
+    public java.util.List<CreateVirtualProductOrderRequestItemList> getItemList() {
+        return this.itemList;
+    }
+
     public static class CreateVirtualProductOrderRequestItemList extends TeaModel {
-        @NameInMap("ItemId")
-        public Long itemId;
+        @NameInMap("LmItemId")
+        public String lmItemId;
 
         @NameInMap("SkuId")
         public Long skuId;
 
+        @NameInMap("ItemId")
+        public Long itemId;
+
         @NameInMap("Quantity")
         public Integer quantity;
-
-        @NameInMap("LmItemId")
-        public String lmItemId;
 
         public static CreateVirtualProductOrderRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             CreateVirtualProductOrderRequestItemList self = new CreateVirtualProductOrderRequestItemList();
             return TeaModel.build(map, self);
         }
 
-        public CreateVirtualProductOrderRequestItemList setItemId(Long itemId) {
-            this.itemId = itemId;
+        public CreateVirtualProductOrderRequestItemList setLmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
             return this;
         }
-        public Long getItemId() {
-            return this.itemId;
+        public String getLmItemId() {
+            return this.lmItemId;
         }
 
         public CreateVirtualProductOrderRequestItemList setSkuId(Long skuId) {
@@ -200,20 +197,20 @@ public class CreateVirtualProductOrderRequest extends TeaModel {
             return this.skuId;
         }
 
+        public CreateVirtualProductOrderRequestItemList setItemId(Long itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public Long getItemId() {
+            return this.itemId;
+        }
+
         public CreateVirtualProductOrderRequestItemList setQuantity(Integer quantity) {
             this.quantity = quantity;
             return this;
         }
         public Integer getQuantity() {
             return this.quantity;
-        }
-
-        public CreateVirtualProductOrderRequestItemList setLmItemId(String lmItemId) {
-            this.lmItemId = lmItemId;
-            return this;
-        }
-        public String getLmItemId() {
-            return this.lmItemId;
         }
 
     }

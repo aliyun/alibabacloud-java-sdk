@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryOrderItemInfoByPaymentIdForAiZhanYouRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("PaymentId")
-    @Validation(required = true)
     public String paymentId;
 
     public static QueryOrderItemInfoByPaymentIdForAiZhanYouRequest build(java.util.Map<String, ?> map) throws Exception {

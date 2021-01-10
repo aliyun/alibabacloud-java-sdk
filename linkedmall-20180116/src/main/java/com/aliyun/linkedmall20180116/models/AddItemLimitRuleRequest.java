@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class AddItemLimitRuleRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("SubBizCode")
@@ -21,19 +20,15 @@ public class AddItemLimitRuleRequest extends TeaModel {
     public Long itemId;
 
     @NameInMap("UpperNum")
-    @Validation(required = true)
     public Integer upperNum;
 
     @NameInMap("RuleType")
-    @Validation(required = true)
     public Integer ruleType;
 
     @NameInMap("BeginTime")
-    @Validation(required = true)
     public Long beginTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     public static AddItemLimitRuleRequest build(java.util.Map<String, ?> map) throws Exception {
