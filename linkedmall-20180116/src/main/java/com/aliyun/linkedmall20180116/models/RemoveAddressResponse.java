@@ -4,45 +4,33 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RemoveAddressResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public RemoveAddressResponseBody body;
 
     public static RemoveAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveAddressResponse self = new RemoveAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveAddressResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RemoveAddressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RemoveAddressResponse setCode(String code) {
-        this.code = code;
+    public RemoveAddressResponse setBody(RemoveAddressResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public RemoveAddressResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public RemoveAddressResponseBody getBody() {
+        return this.body;
     }
 
 }

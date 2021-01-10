@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class NotifyPayOrderStatusRequest extends TeaModel {
     @NameInMap("ChannelId")
-    @Validation(required = true)
     public String channelId;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     @NameInMap("OperationDate")

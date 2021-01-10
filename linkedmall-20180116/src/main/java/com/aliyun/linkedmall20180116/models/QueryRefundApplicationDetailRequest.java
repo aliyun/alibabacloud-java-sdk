@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class QueryRefundApplicationDetailRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
-    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("SubLmOrderId")
-    @Validation(required = true)
     public String subLmOrderId;
 
     @NameInMap("UseAnonymousTbAccount")

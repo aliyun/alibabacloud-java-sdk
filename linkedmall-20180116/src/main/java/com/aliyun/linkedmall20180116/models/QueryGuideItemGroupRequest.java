@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryGuideItemGroupRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     @NameInMap("PageNumber")

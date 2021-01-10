@@ -4,45 +4,33 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class ConfirmDisburseResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public ConfirmDisburseResponseBody body;
 
     public static ConfirmDisburseResponse build(java.util.Map<String, ?> map) throws Exception {
         ConfirmDisburseResponse self = new ConfirmDisburseResponse();
         return TeaModel.build(map, self);
     }
 
-    public ConfirmDisburseResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ConfirmDisburseResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ConfirmDisburseResponse setCode(String code) {
-        this.code = code;
+    public ConfirmDisburseResponse setBody(ConfirmDisburseResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ConfirmDisburseResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public ConfirmDisburseResponseBody getBody() {
+        return this.body;
     }
 
 }

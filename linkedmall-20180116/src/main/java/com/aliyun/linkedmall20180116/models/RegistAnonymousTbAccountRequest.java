@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RegistAnonymousTbAccountRequest extends TeaModel {
     @NameInMap("BizId")
-    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ThirdPartyUserId")
-    @Validation(required = true)
     public String thirdPartyUserId;
 
     public static RegistAnonymousTbAccountRequest build(java.util.Map<String, ?> map) throws Exception {
