@@ -1,0 +1,67 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mts20140618.models;
+
+import com.aliyun.tea.*;
+
+public class QueryMediaInfoJobListRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("MediaInfoJobIds")
+    public String mediaInfoJobIds;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    public static QueryMediaInfoJobListRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryMediaInfoJobListRequest self = new QueryMediaInfoJobListRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryMediaInfoJobListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public QueryMediaInfoJobListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryMediaInfoJobListRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public QueryMediaInfoJobListRequest setMediaInfoJobIds(String mediaInfoJobIds) {
+        this.mediaInfoJobIds = mediaInfoJobIds;
+        return this;
+    }
+    public String getMediaInfoJobIds() {
+        return this.mediaInfoJobIds;
+    }
+
+    public QueryMediaInfoJobListRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+}

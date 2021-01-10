@@ -1,0 +1,97 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mts20140618.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteMediaWorkflowResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("MediaWorkflow")
+    public DeleteMediaWorkflowResponseBodyMediaWorkflow mediaWorkflow;
+
+    public static DeleteMediaWorkflowResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteMediaWorkflowResponseBody self = new DeleteMediaWorkflowResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteMediaWorkflowResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeleteMediaWorkflowResponseBody setMediaWorkflow(DeleteMediaWorkflowResponseBodyMediaWorkflow mediaWorkflow) {
+        this.mediaWorkflow = mediaWorkflow;
+        return this;
+    }
+    public DeleteMediaWorkflowResponseBodyMediaWorkflow getMediaWorkflow() {
+        return this.mediaWorkflow;
+    }
+
+    public static class DeleteMediaWorkflowResponseBodyMediaWorkflow extends TeaModel {
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("MediaWorkflowId")
+        public String mediaWorkflowId;
+
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Topology")
+        public String topology;
+
+        public static DeleteMediaWorkflowResponseBodyMediaWorkflow build(java.util.Map<String, ?> map) throws Exception {
+            DeleteMediaWorkflowResponseBodyMediaWorkflow self = new DeleteMediaWorkflowResponseBodyMediaWorkflow();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteMediaWorkflowResponseBodyMediaWorkflow setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public DeleteMediaWorkflowResponseBodyMediaWorkflow setMediaWorkflowId(String mediaWorkflowId) {
+            this.mediaWorkflowId = mediaWorkflowId;
+            return this;
+        }
+        public String getMediaWorkflowId() {
+            return this.mediaWorkflowId;
+        }
+
+        public DeleteMediaWorkflowResponseBodyMediaWorkflow setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public DeleteMediaWorkflowResponseBodyMediaWorkflow setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DeleteMediaWorkflowResponseBodyMediaWorkflow setTopology(String topology) {
+            this.topology = topology;
+            return this;
+        }
+        public String getTopology() {
+            return this.topology;
+        }
+
+    }
+
+}
