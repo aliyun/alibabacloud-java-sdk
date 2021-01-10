@@ -11,7 +11,6 @@ public class CreateDepartmentRequest extends TeaModel {
     public String label;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("ClientToken")

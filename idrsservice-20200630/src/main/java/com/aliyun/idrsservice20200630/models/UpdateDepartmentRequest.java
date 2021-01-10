@@ -14,7 +14,6 @@ public class UpdateDepartmentRequest extends TeaModel {
     public String name;
 
     @NameInMap("Id")
-    @Validation(required = true)
     public String id;
 
     public static UpdateDepartmentRequest build(java.util.Map<String, ?> map) throws Exception {

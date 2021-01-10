@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class ExitLiveRequest extends TeaModel {
     @NameInMap("Channel")
-    @Validation(required = true)
     public String channel;
 
     @NameInMap("UserId")
-    @Validation(required = true)
     public String userId;
+
+    @NameInMap("RtcCode")
+    public String rtcCode;
 
     public static ExitLiveRequest build(java.util.Map<String, ?> map) throws Exception {
         ExitLiveRequest self = new ExitLiveRequest();
@@ -31,6 +32,14 @@ public class ExitLiveRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
+    }
+
+    public ExitLiveRequest setRtcCode(String rtcCode) {
+        this.rtcCode = rtcCode;
+        return this;
+    }
+    public String getRtcCode() {
+        return this.rtcCode;
     }
 
 }

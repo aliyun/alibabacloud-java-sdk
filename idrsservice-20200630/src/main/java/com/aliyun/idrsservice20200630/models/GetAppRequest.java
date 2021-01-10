@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetAppRequest extends TeaModel {
     @NameInMap("Id")
-    @Validation(required = true)
     public String id;
 
     @NameInMap("PackageName")
-    @Validation(required = true)
     public String packageName;
 
     @NameInMap("DeviceId")
-    @Validation(required = true)
     public String deviceId;
 
     public static GetAppRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetRuleRequest extends TeaModel {
     @NameInMap("Id")
-    @Validation(required = true)
     public String id;
 
     public static GetRuleRequest build(java.util.Map<String, ?> map) throws Exception {

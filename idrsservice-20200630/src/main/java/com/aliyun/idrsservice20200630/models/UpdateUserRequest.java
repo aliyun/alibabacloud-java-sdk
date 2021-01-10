@@ -17,7 +17,6 @@ public class UpdateUserRequest extends TeaModel {
     public String role;
 
     @NameInMap("Id")
-    @Validation(required = true)
     public String id;
 
     public static UpdateUserRequest build(java.util.Map<String, ?> map) throws Exception {

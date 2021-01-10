@@ -4,57 +4,33 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateUserDepartmentsResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.Map<String, ?> data;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public CreateUserDepartmentsResponseBody body;
 
     public static CreateUserDepartmentsResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateUserDepartmentsResponse self = new CreateUserDepartmentsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateUserDepartmentsResponse setCode(String code) {
-        this.code = code;
+    public CreateUserDepartmentsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateUserDepartmentsResponse setData(java.util.Map<String, ?> data) {
-        this.data = data;
+    public CreateUserDepartmentsResponse setBody(CreateUserDepartmentsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.Map<String, ?> getData() {
-        return this.data;
-    }
-
-    public CreateUserDepartmentsResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public CreateUserDepartmentsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public CreateUserDepartmentsResponseBody getBody() {
+        return this.body;
     }
 
 }

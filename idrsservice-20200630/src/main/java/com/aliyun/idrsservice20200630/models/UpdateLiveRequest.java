@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateLiveRequest extends TeaModel {
     @NameInMap("LiveId")
-    @Validation(required = true)
     public String liveId;
 
     @NameInMap("Status")
-    @Validation(required = true)
     public String status;
 
     @NameInMap("UserId")
-    @Validation(required = true)
     public String userId;
 
     public static UpdateLiveRequest build(java.util.Map<String, ?> map) throws Exception {

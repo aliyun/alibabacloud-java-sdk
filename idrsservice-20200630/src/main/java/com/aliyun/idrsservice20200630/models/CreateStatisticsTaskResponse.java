@@ -4,45 +4,33 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateStatisticsTaskResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public CreateStatisticsTaskResponseBody body;
 
     public static CreateStatisticsTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateStatisticsTaskResponse self = new CreateStatisticsTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateStatisticsTaskResponse setCode(String code) {
-        this.code = code;
+    public CreateStatisticsTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateStatisticsTaskResponse setMessage(String message) {
-        this.message = message;
+    public CreateStatisticsTaskResponse setBody(CreateStatisticsTaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public CreateStatisticsTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
+    public CreateStatisticsTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

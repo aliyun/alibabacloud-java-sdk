@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateRuleRequest extends TeaModel {
     @NameInMap("Id")
-    @Validation(required = true)
     public String id;
 
     @NameInMap("Name")

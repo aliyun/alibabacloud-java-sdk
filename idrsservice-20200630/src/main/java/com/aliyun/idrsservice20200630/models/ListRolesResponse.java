@@ -4,57 +4,33 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class ListRolesResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<String> data;
+    public ListRolesResponseBody body;
 
     public static ListRolesResponse build(java.util.Map<String, ?> map) throws Exception {
         ListRolesResponse self = new ListRolesResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListRolesResponse setCode(String code) {
-        this.code = code;
+    public ListRolesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ListRolesResponse setMessage(String message) {
-        this.message = message;
+    public ListRolesResponse setBody(ListRolesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ListRolesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ListRolesResponse setData(java.util.List<String> data) {
-        this.data = data;
-        return this;
-    }
-    public java.util.List<String> getData() {
-        return this.data;
+    public ListRolesResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetTaskGroupRequest extends TeaModel {
     @NameInMap("Id")
-    @Validation(required = true)
     public String id;
 
     public static GetTaskGroupRequest build(java.util.Map<String, ?> map) throws Exception {

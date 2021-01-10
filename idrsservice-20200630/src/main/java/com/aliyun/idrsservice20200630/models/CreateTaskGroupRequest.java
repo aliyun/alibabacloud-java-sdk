@@ -4,9 +4,6 @@ package com.aliyun.idrsservice20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskGroupRequest extends TeaModel {
-    @NameInMap("Day")
-    public java.util.List<Integer> day;
-
     @NameInMap("AppId")
     public String appId;
 
@@ -17,7 +14,6 @@ public class CreateTaskGroupRequest extends TeaModel {
     public String groupName;
 
     @NameInMap("RuleId")
-    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("RunnableTimeFrom")
@@ -29,24 +25,18 @@ public class CreateTaskGroupRequest extends TeaModel {
     @NameInMap("TriggerPeriod")
     public String triggerPeriod;
 
-    @NameInMap("VideoUrl")
-    @Validation(required = true)
-    public java.util.List<String> videoUrl;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("Day")
+    public java.util.List<Integer> day;
+
+    @NameInMap("VideoUrl")
+    public java.util.List<String> videoUrl;
 
     public static CreateTaskGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskGroupRequest self = new CreateTaskGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTaskGroupRequest setDay(java.util.List<Integer> day) {
-        this.day = day;
-        return this;
-    }
-    public java.util.List<Integer> getDay() {
-        return this.day;
     }
 
     public CreateTaskGroupRequest setAppId(String appId) {
@@ -105,20 +95,28 @@ public class CreateTaskGroupRequest extends TeaModel {
         return this.triggerPeriod;
     }
 
-    public CreateTaskGroupRequest setVideoUrl(java.util.List<String> videoUrl) {
-        this.videoUrl = videoUrl;
-        return this;
-    }
-    public java.util.List<String> getVideoUrl() {
-        return this.videoUrl;
-    }
-
     public CreateTaskGroupRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateTaskGroupRequest setDay(java.util.List<Integer> day) {
+        this.day = day;
+        return this;
+    }
+    public java.util.List<Integer> getDay() {
+        return this.day;
+    }
+
+    public CreateTaskGroupRequest setVideoUrl(java.util.List<String> videoUrl) {
+        this.videoUrl = videoUrl;
+        return this;
+    }
+    public java.util.List<String> getVideoUrl() {
+        return this.videoUrl;
     }
 
 }

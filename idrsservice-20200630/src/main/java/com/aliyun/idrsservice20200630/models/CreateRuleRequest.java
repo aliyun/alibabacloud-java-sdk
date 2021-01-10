@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateRuleRequest extends TeaModel {
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Content")
-    @Validation(required = true)
     public String content;
 
     @NameInMap("ClientToken")

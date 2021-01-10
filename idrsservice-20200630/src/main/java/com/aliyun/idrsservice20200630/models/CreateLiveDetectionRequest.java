@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateLiveDetectionRequest extends TeaModel {
     @NameInMap("LiveId")
-    @Validation(required = true)
     public String liveId;
 
     @NameInMap("UserId")
-    @Validation(required = true)
     public String userId;
 
     @NameInMap("RuleId")
-    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("MetaUrl")
-    @Validation(required = true)
     public String metaUrl;
 
     @NameInMap("ClientToken")
