@@ -4,12 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveRecordVodConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
@@ -18,6 +19,14 @@ public class DeleteLiveRecordVodConfigRequest extends TeaModel {
     public static DeleteLiveRecordVodConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLiveRecordVodConfigRequest self = new DeleteLiveRecordVodConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteLiveRecordVodConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteLiveRecordVodConfigRequest setDomainName(String domainName) {

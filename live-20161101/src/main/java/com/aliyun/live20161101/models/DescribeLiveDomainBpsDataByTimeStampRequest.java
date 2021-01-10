@@ -4,25 +4,32 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainBpsDataByTimeStampRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("TimePoint")
-    @Validation(required = true)
     public String timePoint;
 
     @NameInMap("IspNames")
-    @Validation(required = true)
     public String ispNames;
 
     @NameInMap("LocationNames")
-    @Validation(required = true)
     public String locationNames;
 
     public static DescribeLiveDomainBpsDataByTimeStampRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainBpsDataByTimeStampRequest self = new DescribeLiveDomainBpsDataByTimeStampRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainBpsDataByTimeStampRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveDomainBpsDataByTimeStampRequest setDomainName(String domainName) {

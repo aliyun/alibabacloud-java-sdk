@@ -4,21 +4,29 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CopyCasterRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterName")
-    @Validation(required = true)
     public String casterName;
 
     @NameInMap("SrcCasterId")
-    @Validation(required = true)
     public String srcCasterId;
 
     @NameInMap("ClientToken")
-    @Validation(required = true)
     public String clientToken;
 
     public static CopyCasterRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyCasterRequest self = new CopyCasterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CopyCasterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CopyCasterRequest setCasterName(String casterName) {

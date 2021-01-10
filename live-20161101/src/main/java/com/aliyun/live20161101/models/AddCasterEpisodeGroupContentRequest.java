@@ -4,17 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeGroupContentRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("ClientToken")
-    @Validation(required = true)
     public String clientToken;
 
     @NameInMap("Content")
-    @Validation(required = true)
     public String content;
 
     public static AddCasterEpisodeGroupContentRequest build(java.util.Map<String, ?> map) throws Exception {
         AddCasterEpisodeGroupContentRequest self = new AddCasterEpisodeGroupContentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddCasterEpisodeGroupContentRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddCasterEpisodeGroupContentRequest setClientToken(String clientToken) {

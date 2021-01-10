@@ -7,12 +7,13 @@ public class DeleteLiveDomainMappingRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PushDomain")
-    @Validation(required = true)
     public String pushDomain;
 
     @NameInMap("PullDomain")
-    @Validation(required = true)
     public String pullDomain;
 
     public static DeleteLiveDomainMappingRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -26,6 +27,14 @@ public class DeleteLiveDomainMappingRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DeleteLiveDomainMappingRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteLiveDomainMappingRequest setPushDomain(String pushDomain) {

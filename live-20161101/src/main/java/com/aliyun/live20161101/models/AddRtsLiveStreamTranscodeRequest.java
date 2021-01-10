@@ -4,20 +4,19 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Domain")
-    @Validation(required = true)
     public String domain;
 
     @NameInMap("App")
-    @Validation(required = true)
     public String app;
 
     @NameInMap("Template")
-    @Validation(required = true)
     public String template;
 
     @NameInMap("TemplateType")
-    @Validation(required = true)
     public String templateType;
 
     @NameInMap("Height")
@@ -65,6 +64,14 @@ public class AddRtsLiveStreamTranscodeRequest extends TeaModel {
     public static AddRtsLiveStreamTranscodeRequest build(java.util.Map<String, ?> map) throws Exception {
         AddRtsLiveStreamTranscodeRequest self = new AddRtsLiveStreamTranscodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddRtsLiveStreamTranscodeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddRtsLiveStreamTranscodeRequest setDomain(String domain) {

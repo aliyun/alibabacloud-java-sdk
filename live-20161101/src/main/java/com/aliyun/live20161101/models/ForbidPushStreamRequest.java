@@ -4,12 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ForbidPushStreamRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("RoomId")
-    @Validation(required = true)
     public String roomId;
 
     @NameInMap("UserData")
@@ -21,6 +22,14 @@ public class ForbidPushStreamRequest extends TeaModel {
     public static ForbidPushStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         ForbidPushStreamRequest self = new ForbidPushStreamRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ForbidPushStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ForbidPushStreamRequest setAppId(String appId) {

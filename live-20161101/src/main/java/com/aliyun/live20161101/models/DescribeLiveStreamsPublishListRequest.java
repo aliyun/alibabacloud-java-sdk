@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsPublishListRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
@@ -15,11 +17,9 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     public String streamName;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("PageSize")
@@ -40,6 +40,14 @@ public class DescribeLiveStreamsPublishListRequest extends TeaModel {
     public static DescribeLiveStreamsPublishListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamsPublishListRequest self = new DescribeLiveStreamsPublishListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveStreamsPublishListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamsPublishListRequest setDomainName(String domainName) {

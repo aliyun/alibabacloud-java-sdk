@@ -7,12 +7,13 @@ public class AddLiveDomainMappingRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PushDomain")
-    @Validation(required = true)
     public String pushDomain;
 
     @NameInMap("PullDomain")
-    @Validation(required = true)
     public String pullDomain;
 
     public static AddLiveDomainMappingRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -26,6 +27,14 @@ public class AddLiveDomainMappingRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public AddLiveDomainMappingRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddLiveDomainMappingRequest setPushDomain(String pushDomain) {

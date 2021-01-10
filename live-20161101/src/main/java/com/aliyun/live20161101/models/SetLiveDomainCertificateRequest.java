@@ -4,11 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetLiveDomainCertificateRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("CertName")
@@ -18,7 +20,6 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     public String certType;
 
     @NameInMap("SSLProtocol")
-    @Validation(required = true)
     public String SSLProtocol;
 
     @NameInMap("SSLPub")
@@ -33,6 +34,14 @@ public class SetLiveDomainCertificateRequest extends TeaModel {
     public static SetLiveDomainCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLiveDomainCertificateRequest self = new SetLiveDomainCertificateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetLiveDomainCertificateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetLiveDomainCertificateRequest setSecurityToken(String securityToken) {

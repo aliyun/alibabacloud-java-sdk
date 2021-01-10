@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ControlHtmlResourceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("StreamId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String streamId;
+    public ControlHtmlResourceResponseBody body;
 
     public static ControlHtmlResourceResponse build(java.util.Map<String, ?> map) throws Exception {
         ControlHtmlResourceResponse self = new ControlHtmlResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ControlHtmlResourceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ControlHtmlResourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ControlHtmlResourceResponse setStreamId(String streamId) {
-        this.streamId = streamId;
+    public ControlHtmlResourceResponse setBody(ControlHtmlResourceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getStreamId() {
-        return this.streamId;
+    public ControlHtmlResourceResponseBody getBody() {
+        return this.body;
     }
 
 }

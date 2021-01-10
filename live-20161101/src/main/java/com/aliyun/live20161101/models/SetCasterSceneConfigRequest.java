@@ -4,12 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetCasterSceneConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("SceneId")
-    @Validation(required = true)
     public String sceneId;
 
     @NameInMap("LayoutId")
@@ -21,6 +22,14 @@ public class SetCasterSceneConfigRequest extends TeaModel {
     public static SetCasterSceneConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetCasterSceneConfigRequest self = new SetCasterSceneConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetCasterSceneConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetCasterSceneConfigRequest setCasterId(String casterId) {

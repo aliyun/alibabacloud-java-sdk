@@ -4,37 +4,41 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeGroupRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("ClientToken")
-    @Validation(required = true)
     public String clientToken;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
-    @NameInMap("Item")
-    @Validation(required = true)
-    public java.util.List<AddCasterEpisodeGroupRequestItem> item;
-
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("RepeatNum")
-    @Validation(required = true)
     public Integer repeatNum;
 
     @NameInMap("SideOutputUrl")
-    @Validation(required = true)
     public String sideOutputUrl;
 
     @NameInMap("CallbackUrl")
-    @Validation(required = true)
     public String callbackUrl;
+
+    @NameInMap("Item")
+    public java.util.List<AddCasterEpisodeGroupRequestItem> item;
 
     public static AddCasterEpisodeGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddCasterEpisodeGroupRequest self = new AddCasterEpisodeGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddCasterEpisodeGroupRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddCasterEpisodeGroupRequest setClientToken(String clientToken) {
@@ -51,14 +55,6 @@ public class AddCasterEpisodeGroupRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public AddCasterEpisodeGroupRequest setItem(java.util.List<AddCasterEpisodeGroupRequestItem> item) {
-        this.item = item;
-        return this;
-    }
-    public java.util.List<AddCasterEpisodeGroupRequestItem> getItem() {
-        return this.item;
     }
 
     public AddCasterEpisodeGroupRequest setStartTime(String startTime) {
@@ -91,6 +87,14 @@ public class AddCasterEpisodeGroupRequest extends TeaModel {
     }
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    public AddCasterEpisodeGroupRequest setItem(java.util.List<AddCasterEpisodeGroupRequestItem> item) {
+        this.item = item;
+        return this;
+    }
+    public java.util.List<AddCasterEpisodeGroupRequestItem> getItem() {
+        return this.item;
     }
 
     public static class AddCasterEpisodeGroupRequestItem extends TeaModel {

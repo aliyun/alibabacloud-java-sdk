@@ -7,25 +7,20 @@ public class AddLiveAppRecordConfigRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("OssEndpoint")
-    @Validation(required = true)
     public String ossEndpoint;
 
     @NameInMap("OssBucket")
-    @Validation(required = true)
     public String ossBucket;
-
-    @NameInMap("RecordFormat")
-    @Validation(required = true)
-    public java.util.List<AddLiveAppRecordConfigRequestRecordFormat> recordFormat;
 
     @NameInMap("StreamName")
     public String streamName;
@@ -39,6 +34,9 @@ public class AddLiveAppRecordConfigRequest extends TeaModel {
     @NameInMap("OnDemand")
     public Integer onDemand;
 
+    @NameInMap("RecordFormat")
+    public java.util.List<AddLiveAppRecordConfigRequestRecordFormat> recordFormat;
+
     public static AddLiveAppRecordConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLiveAppRecordConfigRequest self = new AddLiveAppRecordConfigRequest();
         return TeaModel.build(map, self);
@@ -50,6 +48,14 @@ public class AddLiveAppRecordConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public AddLiveAppRecordConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddLiveAppRecordConfigRequest setDomainName(String domainName) {
@@ -84,14 +90,6 @@ public class AddLiveAppRecordConfigRequest extends TeaModel {
         return this.ossBucket;
     }
 
-    public AddLiveAppRecordConfigRequest setRecordFormat(java.util.List<AddLiveAppRecordConfigRequestRecordFormat> recordFormat) {
-        this.recordFormat = recordFormat;
-        return this;
-    }
-    public java.util.List<AddLiveAppRecordConfigRequestRecordFormat> getRecordFormat() {
-        return this.recordFormat;
-    }
-
     public AddLiveAppRecordConfigRequest setStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -124,38 +122,30 @@ public class AddLiveAppRecordConfigRequest extends TeaModel {
         return this.onDemand;
     }
 
+    public AddLiveAppRecordConfigRequest setRecordFormat(java.util.List<AddLiveAppRecordConfigRequestRecordFormat> recordFormat) {
+        this.recordFormat = recordFormat;
+        return this;
+    }
+    public java.util.List<AddLiveAppRecordConfigRequestRecordFormat> getRecordFormat() {
+        return this.recordFormat;
+    }
+
     public static class AddLiveAppRecordConfigRequestRecordFormat extends TeaModel {
-        @NameInMap("Format")
-        public String format;
-
-        @NameInMap("OssObjectPrefix")
-        public String ossObjectPrefix;
-
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;
 
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
+        @NameInMap("OssObjectPrefix")
+        public String ossObjectPrefix;
+
+        @NameInMap("Format")
+        public String format;
+
         public static AddLiveAppRecordConfigRequestRecordFormat build(java.util.Map<String, ?> map) throws Exception {
             AddLiveAppRecordConfigRequestRecordFormat self = new AddLiveAppRecordConfigRequestRecordFormat();
             return TeaModel.build(map, self);
-        }
-
-        public AddLiveAppRecordConfigRequestRecordFormat setFormat(String format) {
-            this.format = format;
-            return this;
-        }
-        public String getFormat() {
-            return this.format;
-        }
-
-        public AddLiveAppRecordConfigRequestRecordFormat setOssObjectPrefix(String ossObjectPrefix) {
-            this.ossObjectPrefix = ossObjectPrefix;
-            return this;
-        }
-        public String getOssObjectPrefix() {
-            return this.ossObjectPrefix;
         }
 
         public AddLiveAppRecordConfigRequestRecordFormat setSliceOssObjectPrefix(String sliceOssObjectPrefix) {
@@ -172,6 +162,22 @@ public class AddLiveAppRecordConfigRequest extends TeaModel {
         }
         public Integer getCycleDuration() {
             return this.cycleDuration;
+        }
+
+        public AddLiveAppRecordConfigRequestRecordFormat setOssObjectPrefix(String ossObjectPrefix) {
+            this.ossObjectPrefix = ossObjectPrefix;
+            return this;
+        }
+        public String getOssObjectPrefix() {
+            return this.ossObjectPrefix;
+        }
+
+        public AddLiveAppRecordConfigRequestRecordFormat setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
         }
 
     }

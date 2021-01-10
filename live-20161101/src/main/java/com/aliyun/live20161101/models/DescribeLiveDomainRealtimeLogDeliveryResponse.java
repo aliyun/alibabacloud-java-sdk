@@ -4,69 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRealtimeLogDeliveryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Project")
+    @NameInMap("body")
     @Validation(required = true)
-    public String project;
-
-    @NameInMap("Region")
-    @Validation(required = true)
-    public String region;
-
-    @NameInMap("Logstore")
-    @Validation(required = true)
-    public String logstore;
-
-    @NameInMap("Status")
-    @Validation(required = true)
-    public String status;
+    public DescribeLiveDomainRealtimeLogDeliveryResponseBody body;
 
     public static DescribeLiveDomainRealtimeLogDeliveryResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainRealtimeLogDeliveryResponse self = new DescribeLiveDomainRealtimeLogDeliveryResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveDomainRealtimeLogDeliveryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLiveDomainRealtimeLogDeliveryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLiveDomainRealtimeLogDeliveryResponse setProject(String project) {
-        this.project = project;
+    public DescribeLiveDomainRealtimeLogDeliveryResponse setBody(DescribeLiveDomainRealtimeLogDeliveryResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getProject() {
-        return this.project;
-    }
-
-    public DescribeLiveDomainRealtimeLogDeliveryResponse setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
-    }
-
-    public DescribeLiveDomainRealtimeLogDeliveryResponse setLogstore(String logstore) {
-        this.logstore = logstore;
-        return this;
-    }
-    public String getLogstore() {
-        return this.logstore;
-    }
-
-    public DescribeLiveDomainRealtimeLogDeliveryResponse setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
+    public DescribeLiveDomainRealtimeLogDeliveryResponseBody getBody() {
+        return this.body;
     }
 
 }

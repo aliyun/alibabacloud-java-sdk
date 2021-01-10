@@ -4,12 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateCasterSceneAudioRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("SceneId")
-    @Validation(required = true)
     public String sceneId;
 
     @NameInMap("FollowEnable")
@@ -24,6 +25,14 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
     public static UpdateCasterSceneAudioRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCasterSceneAudioRequest self = new UpdateCasterSceneAudioRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateCasterSceneAudioRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpdateCasterSceneAudioRequest setCasterId(String casterId) {
@@ -70,11 +79,11 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
         @NameInMap("VolumeRate")
         public Float volumeRate;
 
-        @NameInMap("ValidChannel")
-        public String validChannel;
-
         @NameInMap("FixedDelayDuration")
         public Integer fixedDelayDuration;
+
+        @NameInMap("ValidChannel")
+        public String validChannel;
 
         public static UpdateCasterSceneAudioRequestAudioLayer build(java.util.Map<String, ?> map) throws Exception {
             UpdateCasterSceneAudioRequestAudioLayer self = new UpdateCasterSceneAudioRequestAudioLayer();
@@ -89,20 +98,20 @@ public class UpdateCasterSceneAudioRequest extends TeaModel {
             return this.volumeRate;
         }
 
-        public UpdateCasterSceneAudioRequestAudioLayer setValidChannel(String validChannel) {
-            this.validChannel = validChannel;
-            return this;
-        }
-        public String getValidChannel() {
-            return this.validChannel;
-        }
-
         public UpdateCasterSceneAudioRequestAudioLayer setFixedDelayDuration(Integer fixedDelayDuration) {
             this.fixedDelayDuration = fixedDelayDuration;
             return this;
         }
         public Integer getFixedDelayDuration() {
             return this.fixedDelayDuration;
+        }
+
+        public UpdateCasterSceneAudioRequestAudioLayer setValidChannel(String validChannel) {
+            this.validChannel = validChannel;
+            return this;
+        }
+        public String getValidChannel() {
+            return this.validChannel;
         }
 
     }

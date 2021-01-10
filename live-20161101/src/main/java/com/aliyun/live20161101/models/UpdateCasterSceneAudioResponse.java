@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateCasterSceneAudioResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateCasterSceneAudioResponseBody body;
 
     public static UpdateCasterSceneAudioResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateCasterSceneAudioResponse self = new UpdateCasterSceneAudioResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateCasterSceneAudioResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateCasterSceneAudioResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateCasterSceneAudioResponse setBody(UpdateCasterSceneAudioResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateCasterSceneAudioResponseBody getBody() {
+        return this.body;
     }
 
 }

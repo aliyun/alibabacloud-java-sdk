@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateBoardCallbackRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("AuthKey")
@@ -15,7 +17,6 @@ public class UpdateBoardCallbackRequest extends TeaModel {
     public String authSwitch;
 
     @NameInMap("CallbackEnable")
-    @Validation(required = true)
     public Integer callbackEnable;
 
     @NameInMap("CallbackUri")
@@ -27,6 +28,14 @@ public class UpdateBoardCallbackRequest extends TeaModel {
     public static UpdateBoardCallbackRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateBoardCallbackRequest self = new UpdateBoardCallbackRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateBoardCallbackRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpdateBoardCallbackRequest setAppId(String appId) {

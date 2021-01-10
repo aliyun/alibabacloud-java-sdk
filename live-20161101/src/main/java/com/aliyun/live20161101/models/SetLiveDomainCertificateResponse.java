@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetLiveDomainCertificateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SetLiveDomainCertificateResponseBody body;
 
     public static SetLiveDomainCertificateResponse build(java.util.Map<String, ?> map) throws Exception {
         SetLiveDomainCertificateResponse self = new SetLiveDomainCertificateResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetLiveDomainCertificateResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetLiveDomainCertificateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SetLiveDomainCertificateResponse setBody(SetLiveDomainCertificateResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SetLiveDomainCertificateResponseBody getBody() {
+        return this.body;
     }
 
 }

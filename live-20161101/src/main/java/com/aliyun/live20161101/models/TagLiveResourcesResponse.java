@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class TagLiveResourcesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public TagLiveResourcesResponseBody body;
 
     public static TagLiveResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
         TagLiveResourcesResponse self = new TagLiveResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public TagLiveResourcesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public TagLiveResourcesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public TagLiveResourcesResponse setBody(TagLiveResourcesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public TagLiveResourcesResponseBody getBody() {
+        return this.body;
     }
 
 }

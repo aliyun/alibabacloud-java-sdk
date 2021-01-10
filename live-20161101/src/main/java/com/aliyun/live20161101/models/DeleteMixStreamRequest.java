@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMixStreamRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
@@ -15,12 +17,19 @@ public class DeleteMixStreamRequest extends TeaModel {
     public String streamName;
 
     @NameInMap("MixStreamId")
-    @Validation(required = true)
     public String mixStreamId;
 
     public static DeleteMixStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMixStreamRequest self = new DeleteMixStreamRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMixStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteMixStreamRequest setDomainName(String domainName) {

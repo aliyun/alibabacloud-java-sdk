@@ -7,8 +7,10 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("NotifyUrl")
@@ -31,6 +33,14 @@ public class UpdateLiveRecordNotifyConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public UpdateLiveRecordNotifyConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpdateLiveRecordNotifyConfigRequest setDomainName(String domainName) {

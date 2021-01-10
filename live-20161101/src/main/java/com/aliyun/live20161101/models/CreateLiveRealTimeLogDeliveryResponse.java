@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateLiveRealTimeLogDeliveryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CreateLiveRealTimeLogDeliveryResponseBody body;
 
     public static CreateLiveRealTimeLogDeliveryResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveRealTimeLogDeliveryResponse self = new CreateLiveRealTimeLogDeliveryResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateLiveRealTimeLogDeliveryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateLiveRealTimeLogDeliveryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateLiveRealTimeLogDeliveryResponse setBody(CreateLiveRealTimeLogDeliveryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateLiveRealTimeLogDeliveryResponseBody getBody() {
+        return this.body;
     }
 
 }

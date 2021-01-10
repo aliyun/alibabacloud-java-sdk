@@ -4,12 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterVideoResourceRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("ResourceName")
@@ -39,6 +40,14 @@ public class ModifyCasterVideoResourceRequest extends TeaModel {
     public static ModifyCasterVideoResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCasterVideoResourceRequest self = new ModifyCasterVideoResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCasterVideoResourceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyCasterVideoResourceRequest setCasterId(String casterId) {

@@ -7,24 +7,22 @@ public class AddLiveAppSnapshotConfigRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("TimeInterval")
-    @Validation(required = true)
     public Integer timeInterval;
 
     @NameInMap("OssEndpoint")
-    @Validation(required = true)
     public String ossEndpoint;
 
     @NameInMap("OssBucket")
-    @Validation(required = true)
     public String ossBucket;
 
     @NameInMap("OverwriteOssObject")
@@ -47,6 +45,14 @@ public class AddLiveAppSnapshotConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public AddLiveAppSnapshotConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddLiveAppSnapshotConfigRequest setDomainName(String domainName) {

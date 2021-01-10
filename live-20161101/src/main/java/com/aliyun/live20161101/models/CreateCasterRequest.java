@@ -4,19 +4,19 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateCasterRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterName")
     public String casterName;
 
     @NameInMap("ClientToken")
-    @Validation(required = true)
     public String clientToken;
 
     @NameInMap("NormType")
-    @Validation(required = true)
     public Integer normType;
 
     @NameInMap("ChargeType")
-    @Validation(required = true)
     public String chargeType;
 
     @NameInMap("PurchaseTime")
@@ -31,6 +31,14 @@ public class CreateCasterRequest extends TeaModel {
     public static CreateCasterRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCasterRequest self = new CreateCasterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCasterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateCasterRequest setCasterName(String casterName) {

@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class EditHtmlResourceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("HtmlResourceId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String htmlResourceId;
+    public EditHtmlResourceResponseBody body;
 
     public static EditHtmlResourceResponse build(java.util.Map<String, ?> map) throws Exception {
         EditHtmlResourceResponse self = new EditHtmlResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public EditHtmlResourceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public EditHtmlResourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public EditHtmlResourceResponse setHtmlResourceId(String htmlResourceId) {
-        this.htmlResourceId = htmlResourceId;
+    public EditHtmlResourceResponse setBody(EditHtmlResourceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getHtmlResourceId() {
-        return this.htmlResourceId;
+    public EditHtmlResourceResponseBody getBody() {
+        return this.body;
     }
 
 }

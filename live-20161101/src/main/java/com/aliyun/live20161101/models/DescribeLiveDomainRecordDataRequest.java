@@ -4,15 +4,16 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRecordDataRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("RecordType")
@@ -21,6 +22,14 @@ public class DescribeLiveDomainRecordDataRequest extends TeaModel {
     public static DescribeLiveDomainRecordDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainRecordDataRequest self = new DescribeLiveDomainRecordDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainRecordDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveDomainRecordDataRequest setDomainName(String domainName) {

@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterLayoutResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("LayoutId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String layoutId;
+    public ModifyCasterLayoutResponseBody body;
 
     public static ModifyCasterLayoutResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyCasterLayoutResponse self = new ModifyCasterLayoutResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCasterLayoutResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyCasterLayoutResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ModifyCasterLayoutResponse setLayoutId(String layoutId) {
-        this.layoutId = layoutId;
+    public ModifyCasterLayoutResponse setBody(ModifyCasterLayoutResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getLayoutId() {
-        return this.layoutId;
+    public ModifyCasterLayoutResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,45 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCasterComponentResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CasterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String casterId;
-
-    @NameInMap("ComponentId")
-    @Validation(required = true)
-    public String componentId;
+    public DeleteCasterComponentResponseBody body;
 
     public static DeleteCasterComponentResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteCasterComponentResponse self = new DeleteCasterComponentResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteCasterComponentResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteCasterComponentResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteCasterComponentResponse setCasterId(String casterId) {
-        this.casterId = casterId;
+    public DeleteCasterComponentResponse setBody(DeleteCasterComponentResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCasterId() {
-        return this.casterId;
-    }
-
-    public DeleteCasterComponentResponse setComponentId(String componentId) {
-        this.componentId = componentId;
-        return this;
-    }
-    public String getComponentId() {
-        return this.componentId;
+    public DeleteCasterComponentResponseBody getBody() {
+        return this.body;
     }
 
 }

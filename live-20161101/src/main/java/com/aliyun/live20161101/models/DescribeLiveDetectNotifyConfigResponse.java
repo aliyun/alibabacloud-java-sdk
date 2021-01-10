@@ -4,65 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDetectNotifyConfigResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("LiveDetectNotifyConfig")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig liveDetectNotifyConfig;
+    public DescribeLiveDetectNotifyConfigResponseBody body;
 
     public static DescribeLiveDetectNotifyConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDetectNotifyConfigResponse self = new DescribeLiveDetectNotifyConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveDetectNotifyConfigResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLiveDetectNotifyConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLiveDetectNotifyConfigResponse setLiveDetectNotifyConfig(DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig liveDetectNotifyConfig) {
-        this.liveDetectNotifyConfig = liveDetectNotifyConfig;
+    public DescribeLiveDetectNotifyConfigResponse setBody(DescribeLiveDetectNotifyConfigResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig getLiveDetectNotifyConfig() {
-        return this.liveDetectNotifyConfig;
-    }
-
-    public static class DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig extends TeaModel {
-        @NameInMap("DomainName")
-        @Validation(required = true)
-        public String domainName;
-
-        @NameInMap("NotifyUrl")
-        @Validation(required = true)
-        public String notifyUrl;
-
-        public static DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig self = new DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
-        public DescribeLiveDetectNotifyConfigResponseLiveDetectNotifyConfig setNotifyUrl(String notifyUrl) {
-            this.notifyUrl = notifyUrl;
-            return this;
-        }
-        public String getNotifyUrl() {
-            return this.notifyUrl;
-        }
-
+    public DescribeLiveDetectNotifyConfigResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRealTimeBpsDataRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("IspNameEn")
@@ -23,6 +25,14 @@ public class DescribeLiveDomainRealTimeBpsDataRequest extends TeaModel {
     public static DescribeLiveDomainRealTimeBpsDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainRealTimeBpsDataRequest self = new DescribeLiveDomainRealTimeBpsDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainRealTimeBpsDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveDomainRealTimeBpsDataRequest setDomainName(String domainName) {

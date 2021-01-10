@@ -4,20 +4,29 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainConfigsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("FunctionNames")
-    @Validation(required = true)
     public String functionNames;
 
     public static DescribeLiveDomainConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainConfigsRequest self = new DescribeLiveDomainConfigsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainConfigsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveDomainConfigsRequest setSecurityToken(String securityToken) {

@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveAudioAuditConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
@@ -17,6 +19,14 @@ public class DescribeLiveAudioAuditConfigRequest extends TeaModel {
     public static DescribeLiveAudioAuditConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveAudioAuditConfigRequest self = new DescribeLiveAudioAuditConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveAudioAuditConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveAudioAuditConfigRequest setDomainName(String domainName) {

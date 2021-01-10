@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDetectPornDataRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
     public String domainName;
 
@@ -34,6 +37,14 @@ public class DescribeLiveDetectPornDataRequest extends TeaModel {
     public static DescribeLiveDetectPornDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDetectPornDataRequest self = new DescribeLiveDetectPornDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDetectPornDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveDetectPornDataRequest setDomainName(String domainName) {

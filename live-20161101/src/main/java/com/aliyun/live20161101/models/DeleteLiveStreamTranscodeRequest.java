@@ -7,16 +7,16 @@ public class DeleteLiveStreamTranscodeRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Domain")
-    @Validation(required = true)
     public String domain;
 
     @NameInMap("App")
-    @Validation(required = true)
     public String app;
 
     @NameInMap("Template")
-    @Validation(required = true)
     public String template;
 
     public static DeleteLiveStreamTranscodeRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -30,6 +30,14 @@ public class DeleteLiveStreamTranscodeRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DeleteLiveStreamTranscodeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteLiveStreamTranscodeRequest setDomain(String domain) {

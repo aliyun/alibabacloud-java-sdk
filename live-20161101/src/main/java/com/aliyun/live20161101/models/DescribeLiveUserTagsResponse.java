@@ -4,65 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveUserTagsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Tags")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeLiveUserTagsResponseTags> tags;
+    public DescribeLiveUserTagsResponseBody body;
 
     public static DescribeLiveUserTagsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveUserTagsResponse self = new DescribeLiveUserTagsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveUserTagsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLiveUserTagsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLiveUserTagsResponse setTags(java.util.List<DescribeLiveUserTagsResponseTags> tags) {
-        this.tags = tags;
+    public DescribeLiveUserTagsResponse setBody(DescribeLiveUserTagsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<DescribeLiveUserTagsResponseTags> getTags() {
-        return this.tags;
-    }
-
-    public static class DescribeLiveUserTagsResponseTags extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
-        public String key;
-
-        @NameInMap("Value")
-        @Validation(required = true)
-        public java.util.List<String> value;
-
-        public static DescribeLiveUserTagsResponseTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLiveUserTagsResponseTags self = new DescribeLiveUserTagsResponseTags();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveUserTagsResponseTags setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public DescribeLiveUserTagsResponseTags setValue(java.util.List<String> value) {
-            this.value = value;
-            return this;
-        }
-        public java.util.List<String> getValue() {
-            return this.value;
-        }
-
+    public DescribeLiveUserTagsResponseBody getBody() {
+        return this.body;
     }
 
 }

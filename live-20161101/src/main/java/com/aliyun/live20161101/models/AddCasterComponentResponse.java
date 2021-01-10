@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterComponentResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ComponentId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String componentId;
+    public AddCasterComponentResponseBody body;
 
     public static AddCasterComponentResponse build(java.util.Map<String, ?> map) throws Exception {
         AddCasterComponentResponse self = new AddCasterComponentResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddCasterComponentResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddCasterComponentResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddCasterComponentResponse setComponentId(String componentId) {
-        this.componentId = componentId;
+    public AddCasterComponentResponse setBody(AddCasterComponentResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getComponentId() {
-        return this.componentId;
+    public AddCasterComponentResponseBody getBody() {
+        return this.body;
     }
 
 }

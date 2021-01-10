@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetCasterSyncGroupRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("SyncGroup")
@@ -14,6 +16,14 @@ public class SetCasterSyncGroupRequest extends TeaModel {
     public static SetCasterSyncGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         SetCasterSyncGroupRequest self = new SetCasterSyncGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetCasterSyncGroupRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetCasterSyncGroupRequest setCasterId(String casterId) {

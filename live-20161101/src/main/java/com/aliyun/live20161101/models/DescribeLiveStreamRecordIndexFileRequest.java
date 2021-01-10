@@ -7,20 +7,19 @@ public class DescribeLiveStreamRecordIndexFileRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     @NameInMap("RecordId")
-    @Validation(required = true)
     public String recordId;
 
     public static DescribeLiveStreamRecordIndexFileRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -34,6 +33,14 @@ public class DescribeLiveStreamRecordIndexFileRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeLiveStreamRecordIndexFileRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamRecordIndexFileRequest setDomainName(String domainName) {

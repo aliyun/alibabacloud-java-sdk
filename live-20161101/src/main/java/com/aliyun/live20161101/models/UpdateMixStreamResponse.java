@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateMixStreamResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("MixStreamId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String mixStreamId;
+    public UpdateMixStreamResponseBody body;
 
     public static UpdateMixStreamResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateMixStreamResponse self = new UpdateMixStreamResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateMixStreamResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateMixStreamResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateMixStreamResponse setMixStreamId(String mixStreamId) {
-        this.mixStreamId = mixStreamId;
+    public UpdateMixStreamResponse setBody(UpdateMixStreamResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMixStreamId() {
-        return this.mixStreamId;
+    public UpdateMixStreamResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,17 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CompleteBoardRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("BoardId")
-    @Validation(required = true)
     public String boardId;
 
     public static CompleteBoardRequest build(java.util.Map<String, ?> map) throws Exception {
         CompleteBoardRequest self = new CompleteBoardRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CompleteBoardRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CompleteBoardRequest setAppId(String appId) {

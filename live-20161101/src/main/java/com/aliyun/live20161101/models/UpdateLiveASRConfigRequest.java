@@ -4,16 +4,16 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveASRConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     @NameInMap("MnsTopic")
@@ -31,6 +31,14 @@ public class UpdateLiveASRConfigRequest extends TeaModel {
     public static UpdateLiveASRConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLiveASRConfigRequest self = new UpdateLiveASRConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateLiveASRConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpdateLiveASRConfigRequest setDomainName(String domainName) {

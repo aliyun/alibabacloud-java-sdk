@@ -4,24 +4,26 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ForbidLiveStreamRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     @NameInMap("LiveStreamType")
-    @Validation(required = true)
     public String liveStreamType;
 
     @NameInMap("Oneshot")
     public String oneshot;
+
+    @NameInMap("ControlStreamAction")
+    public String controlStreamAction;
 
     @NameInMap("ResumeTime")
     public String resumeTime;
@@ -29,6 +31,14 @@ public class ForbidLiveStreamRequest extends TeaModel {
     public static ForbidLiveStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         ForbidLiveStreamRequest self = new ForbidLiveStreamRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ForbidLiveStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ForbidLiveStreamRequest setDomainName(String domainName) {
@@ -69,6 +79,14 @@ public class ForbidLiveStreamRequest extends TeaModel {
     }
     public String getOneshot() {
         return this.oneshot;
+    }
+
+    public ForbidLiveStreamRequest setControlStreamAction(String controlStreamAction) {
+        this.controlStreamAction = controlStreamAction;
+        return this;
+    }
+    public String getControlStreamAction() {
+        return this.controlStreamAction;
     }
 
     public ForbidLiveStreamRequest setResumeTime(String resumeTime) {

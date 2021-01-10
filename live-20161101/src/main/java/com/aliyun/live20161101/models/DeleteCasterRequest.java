@@ -7,8 +7,10 @@ public class DeleteCasterRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     public static DeleteCasterRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -22,6 +24,14 @@ public class DeleteCasterRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DeleteCasterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteCasterRequest setCasterId(String casterId) {

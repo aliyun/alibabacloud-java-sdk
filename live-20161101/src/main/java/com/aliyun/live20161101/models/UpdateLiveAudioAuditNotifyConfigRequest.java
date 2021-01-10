@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveAudioAuditNotifyConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("Callback")
@@ -17,6 +19,14 @@ public class UpdateLiveAudioAuditNotifyConfigRequest extends TeaModel {
     public static UpdateLiveAudioAuditNotifyConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLiveAudioAuditNotifyConfigRequest self = new UpdateLiveAudioAuditNotifyConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateLiveAudioAuditNotifyConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpdateLiveAudioAuditNotifyConfigRequest setDomainName(String domainName) {

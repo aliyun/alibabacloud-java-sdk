@@ -4,16 +4,16 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveAudioAuditConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     @NameInMap("OssBucket")
@@ -31,6 +31,14 @@ public class UpdateLiveAudioAuditConfigRequest extends TeaModel {
     public static UpdateLiveAudioAuditConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLiveAudioAuditConfigRequest self = new UpdateLiveAudioAuditConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateLiveAudioAuditConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpdateLiveAudioAuditConfigRequest setDomainName(String domainName) {

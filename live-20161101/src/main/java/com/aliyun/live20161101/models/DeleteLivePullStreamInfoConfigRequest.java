@@ -7,16 +7,16 @@ public class DeleteLivePullStreamInfoConfigRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     public static DeleteLivePullStreamInfoConfigRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -30,6 +30,14 @@ public class DeleteLivePullStreamInfoConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DeleteLivePullStreamInfoConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteLivePullStreamInfoConfigRequest setDomainName(String domainName) {

@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AllowPushStreamResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AllowPushStreamResponseBody body;
 
     public static AllowPushStreamResponse build(java.util.Map<String, ?> map) throws Exception {
         AllowPushStreamResponse self = new AllowPushStreamResponse();
         return TeaModel.build(map, self);
     }
 
-    public AllowPushStreamResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AllowPushStreamResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AllowPushStreamResponse setBody(AllowPushStreamResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AllowPushStreamResponseBody getBody() {
+        return this.body;
     }
 
 }

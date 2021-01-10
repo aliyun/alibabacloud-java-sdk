@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StopCasterResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public StopCasterResponseBody body;
 
     public static StopCasterResponse build(java.util.Map<String, ?> map) throws Exception {
         StopCasterResponse self = new StopCasterResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopCasterResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StopCasterResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public StopCasterResponse setBody(StopCasterResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public StopCasterResponseBody getBody() {
+        return this.body;
     }
 
 }

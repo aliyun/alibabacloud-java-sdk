@@ -4,33 +4,41 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLivePullStreamInfoConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     @NameInMap("SourceUrl")
-    @Validation(required = true)
     public String sourceUrl;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
+
+    @NameInMap("PullAlways")
+    public String pullAlways;
 
     public static AddLivePullStreamInfoConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLivePullStreamInfoConfigRequest self = new AddLivePullStreamInfoConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddLivePullStreamInfoConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddLivePullStreamInfoConfigRequest setDomainName(String domainName) {
@@ -79,6 +87,14 @@ public class AddLivePullStreamInfoConfigRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public AddLivePullStreamInfoConfigRequest setPullAlways(String pullAlways) {
+        this.pullAlways = pullAlways;
+        return this;
+    }
+    public String getPullAlways() {
+        return this.pullAlways;
     }
 
 }

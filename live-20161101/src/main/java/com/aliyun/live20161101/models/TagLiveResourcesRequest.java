@@ -4,21 +4,29 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class TagLiveResourcesRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public java.util.List<String> resourceId;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("Tag")
-    @Validation(required = true)
     public java.util.List<TagLiveResourcesRequestTag> tag;
 
     public static TagLiveResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagLiveResourcesRequest self = new TagLiveResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public TagLiveResourcesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public TagLiveResourcesRequest setResourceId(java.util.List<String> resourceId) {
@@ -47,7 +55,6 @@ public class TagLiveResourcesRequest extends TeaModel {
 
     public static class TagLiveResourcesRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")

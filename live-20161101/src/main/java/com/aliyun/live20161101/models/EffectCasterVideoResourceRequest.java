@@ -4,21 +4,29 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class EffectCasterVideoResourceRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("SceneId")
-    @Validation(required = true)
     public String sceneId;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     public static EffectCasterVideoResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         EffectCasterVideoResourceRequest self = new EffectCasterVideoResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EffectCasterVideoResourceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public EffectCasterVideoResourceRequest setCasterId(String casterId) {

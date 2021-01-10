@@ -4,45 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterVideoResourceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CasterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String casterId;
-
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    public String resourceId;
+    public ModifyCasterVideoResourceResponseBody body;
 
     public static ModifyCasterVideoResourceResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyCasterVideoResourceResponse self = new ModifyCasterVideoResourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyCasterVideoResourceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyCasterVideoResourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ModifyCasterVideoResourceResponse setCasterId(String casterId) {
-        this.casterId = casterId;
+    public ModifyCasterVideoResourceResponse setBody(ModifyCasterVideoResourceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCasterId() {
-        return this.casterId;
-    }
-
-    public ModifyCasterVideoResourceResponse setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public String getResourceId() {
-        return this.resourceId;
+    public ModifyCasterVideoResourceResponseBody getBody() {
+        return this.body;
     }
 
 }
