@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLiveASRConfigResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AddLiveASRConfigResponseBody body;
 
     public static AddLiveASRConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         AddLiveASRConfigResponse self = new AddLiveASRConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddLiveASRConfigResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddLiveASRConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddLiveASRConfigResponse setBody(AddLiveASRConfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddLiveASRConfigResponseBody getBody() {
+        return this.body;
     }
 
 }

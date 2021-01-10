@@ -4,69 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ApplyRecordTokenResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SecurityToken")
+    @NameInMap("body")
     @Validation(required = true)
-    public String securityToken;
-
-    @NameInMap("AccessKeySecret")
-    @Validation(required = true)
-    public String accessKeySecret;
-
-    @NameInMap("AccessKeyId")
-    @Validation(required = true)
-    public String accessKeyId;
-
-    @NameInMap("Expiration")
-    @Validation(required = true)
-    public String expiration;
+    public ApplyRecordTokenResponseBody body;
 
     public static ApplyRecordTokenResponse build(java.util.Map<String, ?> map) throws Exception {
         ApplyRecordTokenResponse self = new ApplyRecordTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public ApplyRecordTokenResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ApplyRecordTokenResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ApplyRecordTokenResponse setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public ApplyRecordTokenResponse setBody(ApplyRecordTokenResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    public ApplyRecordTokenResponse setAccessKeySecret(String accessKeySecret) {
-        this.accessKeySecret = accessKeySecret;
-        return this;
-    }
-    public String getAccessKeySecret() {
-        return this.accessKeySecret;
-    }
-
-    public ApplyRecordTokenResponse setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public ApplyRecordTokenResponse setExpiration(String expiration) {
-        this.expiration = expiration;
-        return this;
-    }
-    public String getExpiration() {
-        return this.expiration;
+    public ApplyRecordTokenResponseBody getBody() {
+        return this.body;
     }
 
 }

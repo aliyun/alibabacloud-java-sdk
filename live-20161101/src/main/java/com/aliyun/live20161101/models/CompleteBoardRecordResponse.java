@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CompleteBoardRecordResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OssPath")
+    @NameInMap("body")
     @Validation(required = true)
-    public String ossPath;
+    public CompleteBoardRecordResponseBody body;
 
     public static CompleteBoardRecordResponse build(java.util.Map<String, ?> map) throws Exception {
         CompleteBoardRecordResponse self = new CompleteBoardRecordResponse();
         return TeaModel.build(map, self);
     }
 
-    public CompleteBoardRecordResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CompleteBoardRecordResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CompleteBoardRecordResponse setOssPath(String ossPath) {
-        this.ossPath = ossPath;
+    public CompleteBoardRecordResponse setBody(CompleteBoardRecordResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOssPath() {
-        return this.ossPath;
+    public CompleteBoardRecordResponseBody getBody() {
+        return this.body;
     }
 
 }

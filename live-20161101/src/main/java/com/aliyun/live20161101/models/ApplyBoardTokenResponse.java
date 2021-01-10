@@ -4,45 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ApplyBoardTokenResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Token")
+    @NameInMap("body")
     @Validation(required = true)
-    public String token;
-
-    @NameInMap("Expired")
-    @Validation(required = true)
-    public String expired;
+    public ApplyBoardTokenResponseBody body;
 
     public static ApplyBoardTokenResponse build(java.util.Map<String, ?> map) throws Exception {
         ApplyBoardTokenResponse self = new ApplyBoardTokenResponse();
         return TeaModel.build(map, self);
     }
 
-    public ApplyBoardTokenResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ApplyBoardTokenResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ApplyBoardTokenResponse setToken(String token) {
-        this.token = token;
+    public ApplyBoardTokenResponse setBody(ApplyBoardTokenResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getToken() {
-        return this.token;
-    }
-
-    public ApplyBoardTokenResponse setExpired(String expired) {
-        this.expired = expired;
-        return this;
-    }
-    public String getExpired() {
-        return this.expired;
+    public ApplyBoardTokenResponseBody getBody() {
+        return this.body;
     }
 
 }

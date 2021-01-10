@@ -4,12 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpBpsPeakDataRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("DomainSwitch")
@@ -21,6 +22,14 @@ public class DescribeUpBpsPeakDataRequest extends TeaModel {
     public static DescribeUpBpsPeakDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUpBpsPeakDataRequest self = new DescribeUpBpsPeakDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeUpBpsPeakDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeUpBpsPeakDataRequest setStartTime(String startTime) {

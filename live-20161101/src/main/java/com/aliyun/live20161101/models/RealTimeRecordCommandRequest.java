@@ -4,25 +4,32 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class RealTimeRecordCommandRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Command")
-    @Validation(required = true)
     public String command;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     public static RealTimeRecordCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         RealTimeRecordCommandRequest self = new RealTimeRecordCommandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RealTimeRecordCommandRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public RealTimeRecordCommandRequest setCommand(String command) {

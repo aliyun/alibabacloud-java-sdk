@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartCasterSceneResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("StreamUrl")
+    @NameInMap("body")
     @Validation(required = true)
-    public String streamUrl;
+    public StartCasterSceneResponseBody body;
 
     public static StartCasterSceneResponse build(java.util.Map<String, ?> map) throws Exception {
         StartCasterSceneResponse self = new StartCasterSceneResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartCasterSceneResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartCasterSceneResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StartCasterSceneResponse setStreamUrl(String streamUrl) {
-        this.streamUrl = streamUrl;
+    public StartCasterSceneResponse setBody(StartCasterSceneResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getStreamUrl() {
-        return this.streamUrl;
+    public StartCasterSceneResponseBody getBody() {
+        return this.body;
     }
 
 }

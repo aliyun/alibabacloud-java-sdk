@@ -4,20 +4,40 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class BatchSetLiveDomainConfigsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
     @NameInMap("DomainNames")
-    @Validation(required = true)
     public String domainNames;
 
     @NameInMap("Functions")
-    @Validation(required = true)
     public String functions;
 
     public static BatchSetLiveDomainConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchSetLiveDomainConfigsRequest self = new BatchSetLiveDomainConfigsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchSetLiveDomainConfigsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public BatchSetLiveDomainConfigsRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public BatchSetLiveDomainConfigsRequest setSecurityToken(String securityToken) {

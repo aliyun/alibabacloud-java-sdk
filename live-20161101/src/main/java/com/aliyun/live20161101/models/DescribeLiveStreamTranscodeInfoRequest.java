@@ -4,13 +4,23 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamTranscodeInfoRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainTranscodeName")
-    @Validation(required = true)
     public String domainTranscodeName;
 
     public static DescribeLiveStreamTranscodeInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamTranscodeInfoRequest self = new DescribeLiveStreamTranscodeInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveStreamTranscodeInfoRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamTranscodeInfoRequest setDomainTranscodeName(String domainTranscodeName) {

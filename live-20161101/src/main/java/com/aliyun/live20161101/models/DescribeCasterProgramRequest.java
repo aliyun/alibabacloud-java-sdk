@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterProgramRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("EpisodeId")
@@ -32,6 +34,14 @@ public class DescribeCasterProgramRequest extends TeaModel {
     public static DescribeCasterProgramRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterProgramRequest self = new DescribeCasterProgramRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCasterProgramRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeCasterProgramRequest setCasterId(String casterId) {

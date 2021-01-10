@@ -4,45 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCasterEpisodeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CasterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String casterId;
-
-    @NameInMap("EpisodeId")
-    @Validation(required = true)
-    public String episodeId;
+    public DeleteCasterEpisodeResponseBody body;
 
     public static DeleteCasterEpisodeResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteCasterEpisodeResponse self = new DeleteCasterEpisodeResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteCasterEpisodeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteCasterEpisodeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteCasterEpisodeResponse setCasterId(String casterId) {
-        this.casterId = casterId;
+    public DeleteCasterEpisodeResponse setBody(DeleteCasterEpisodeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCasterId() {
-        return this.casterId;
-    }
-
-    public DeleteCasterEpisodeResponse setEpisodeId(String episodeId) {
-        this.episodeId = episodeId;
-        return this;
-    }
-    public String getEpisodeId() {
-        return this.episodeId;
+    public DeleteCasterEpisodeResponseBody getBody() {
+        return this.body;
     }
 
 }

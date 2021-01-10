@@ -7,24 +7,22 @@ public class DescribeLiveStreamHistoryUserNumRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     public static DescribeLiveStreamHistoryUserNumRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -38,6 +36,14 @@ public class DescribeLiveStreamHistoryUserNumRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeLiveStreamHistoryUserNumRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamHistoryUserNumRequest setDomainName(String domainName) {

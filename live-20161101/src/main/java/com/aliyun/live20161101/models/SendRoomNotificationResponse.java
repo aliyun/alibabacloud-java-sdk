@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SendRoomNotificationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("MessageId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String messageId;
+    public SendRoomNotificationResponseBody body;
 
     public static SendRoomNotificationResponse build(java.util.Map<String, ?> map) throws Exception {
         SendRoomNotificationResponse self = new SendRoomNotificationResponse();
         return TeaModel.build(map, self);
     }
 
-    public SendRoomNotificationResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SendRoomNotificationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SendRoomNotificationResponse setMessageId(String messageId) {
-        this.messageId = messageId;
+    public SendRoomNotificationResponse setBody(SendRoomNotificationResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessageId() {
-        return this.messageId;
+    public SendRoomNotificationResponseBody getBody() {
+        return this.body;
     }
 
 }

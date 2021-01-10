@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveCertificateListRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -13,6 +16,14 @@ public class DescribeLiveCertificateListRequest extends TeaModel {
     public static DescribeLiveCertificateListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveCertificateListRequest self = new DescribeLiveCertificateListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveCertificateListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveCertificateListRequest setSecurityToken(String securityToken) {

@@ -7,30 +7,29 @@ public class AddLiveSnapshotDetectPornConfigRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("OssEndpoint")
-    @Validation(required = true)
     public String ossEndpoint;
 
     @NameInMap("OssBucket")
-    @Validation(required = true)
     public String ossBucket;
 
     @NameInMap("OssObject")
     public String ossObject;
 
-    @NameInMap("Scene")
-    public java.util.List<String> scene;
-
     @NameInMap("Interval")
     public Integer interval;
+
+    @NameInMap("Scene")
+    public java.util.List<String> scene;
 
     public static AddLiveSnapshotDetectPornConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLiveSnapshotDetectPornConfigRequest self = new AddLiveSnapshotDetectPornConfigRequest();
@@ -43,6 +42,14 @@ public class AddLiveSnapshotDetectPornConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public AddLiveSnapshotDetectPornConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddLiveSnapshotDetectPornConfigRequest setDomainName(String domainName) {
@@ -85,20 +92,20 @@ public class AddLiveSnapshotDetectPornConfigRequest extends TeaModel {
         return this.ossObject;
     }
 
-    public AddLiveSnapshotDetectPornConfigRequest setScene(java.util.List<String> scene) {
-        this.scene = scene;
-        return this;
-    }
-    public java.util.List<String> getScene() {
-        return this.scene;
-    }
-
     public AddLiveSnapshotDetectPornConfigRequest setInterval(Integer interval) {
         this.interval = interval;
         return this;
     }
     public Integer getInterval() {
         return this.interval;
+    }
+
+    public AddLiveSnapshotDetectPornConfigRequest setScene(java.util.List<String> scene) {
+        this.scene = scene;
+        return this;
+    }
+    public java.util.List<String> getScene() {
+        return this.scene;
     }
 
 }

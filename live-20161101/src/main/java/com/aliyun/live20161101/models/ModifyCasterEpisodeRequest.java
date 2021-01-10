@@ -4,12 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterEpisodeRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("EpisodeId")
-    @Validation(required = true)
     public String episodeId;
 
     @NameInMap("EpisodeName")
@@ -17,9 +18,6 @@ public class ModifyCasterEpisodeRequest extends TeaModel {
 
     @NameInMap("ResourceId")
     public String resourceId;
-
-    @NameInMap("ComponentId")
-    public java.util.List<String> componentId;
 
     @NameInMap("StartTime")
     public String startTime;
@@ -30,9 +28,20 @@ public class ModifyCasterEpisodeRequest extends TeaModel {
     @NameInMap("SwitchType")
     public String switchType;
 
+    @NameInMap("ComponentId")
+    public java.util.List<String> componentId;
+
     public static ModifyCasterEpisodeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCasterEpisodeRequest self = new ModifyCasterEpisodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCasterEpisodeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyCasterEpisodeRequest setCasterId(String casterId) {
@@ -67,14 +76,6 @@ public class ModifyCasterEpisodeRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public ModifyCasterEpisodeRequest setComponentId(java.util.List<String> componentId) {
-        this.componentId = componentId;
-        return this;
-    }
-    public java.util.List<String> getComponentId() {
-        return this.componentId;
-    }
-
     public ModifyCasterEpisodeRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -97,6 +98,14 @@ public class ModifyCasterEpisodeRequest extends TeaModel {
     }
     public String getSwitchType() {
         return this.switchType;
+    }
+
+    public ModifyCasterEpisodeRequest setComponentId(java.util.List<String> componentId) {
+        this.componentId = componentId;
+        return this;
+    }
+    public java.util.List<String> getComponentId() {
+        return this.componentId;
     }
 
 }

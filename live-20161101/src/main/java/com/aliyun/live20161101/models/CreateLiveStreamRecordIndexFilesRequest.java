@@ -7,36 +7,31 @@ public class CreateLiveStreamRecordIndexFilesRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     @NameInMap("OssEndpoint")
-    @Validation(required = true)
     public String ossEndpoint;
 
     @NameInMap("OssBucket")
-    @Validation(required = true)
     public String ossBucket;
 
     @NameInMap("OssObject")
-    @Validation(required = true)
     public String ossObject;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     public static CreateLiveStreamRecordIndexFilesRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -50,6 +45,14 @@ public class CreateLiveStreamRecordIndexFilesRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public CreateLiveStreamRecordIndexFilesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateLiveStreamRecordIndexFilesRequest setDomainName(String domainName) {

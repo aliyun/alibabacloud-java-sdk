@@ -4,16 +4,16 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecordsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("PageNum")
-    @Validation(required = true)
     public Integer pageNum;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("RecordState")
@@ -22,6 +22,14 @@ public class DescribeRecordsRequest extends TeaModel {
     public static DescribeRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecordsRequest self = new DescribeRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRecordsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeRecordsRequest setAppId(String appId) {

@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveLazyPullStreamConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
@@ -17,6 +19,14 @@ public class DescribeLiveLazyPullStreamConfigRequest extends TeaModel {
     public static DescribeLiveLazyPullStreamConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveLazyPullStreamConfigRequest self = new DescribeLiveLazyPullStreamConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveLazyPullStreamConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveLazyPullStreamConfigRequest setDomainName(String domainName) {

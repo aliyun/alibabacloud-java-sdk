@@ -4,20 +4,32 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveTagResourcesRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public java.util.List<String> resourceId;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("Tag")
     public java.util.List<DescribeLiveTagResourcesRequestTag> tag;
 
+    @NameInMap("Scope")
+    public String scope;
+
     public static DescribeLiveTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveTagResourcesRequest self = new DescribeLiveTagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveTagResourcesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
@@ -42,6 +54,14 @@ public class DescribeLiveTagResourcesRequest extends TeaModel {
     }
     public java.util.List<DescribeLiveTagResourcesRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeLiveTagResourcesRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
     }
 
     public static class DescribeLiveTagResourcesRequestTag extends TeaModel {

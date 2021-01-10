@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetLiveStreamDelayConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("HlsDelay")
@@ -29,6 +31,14 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
     public static SetLiveStreamDelayConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLiveStreamDelayConfigRequest self = new SetLiveStreamDelayConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetLiveStreamDelayConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetLiveStreamDelayConfigRequest setDomainName(String domainName) {

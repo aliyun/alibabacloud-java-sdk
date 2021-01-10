@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetCasterSyncGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SetCasterSyncGroupResponseBody body;
 
     public static SetCasterSyncGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         SetCasterSyncGroupResponse self = new SetCasterSyncGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetCasterSyncGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetCasterSyncGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SetCasterSyncGroupResponse setBody(SetCasterSyncGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SetCasterSyncGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

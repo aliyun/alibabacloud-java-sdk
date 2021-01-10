@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMixStreamResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("MixStreamId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String mixStreamId;
+    public DeleteMixStreamResponseBody body;
 
     public static DeleteMixStreamResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteMixStreamResponse self = new DeleteMixStreamResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteMixStreamResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteMixStreamResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteMixStreamResponse setMixStreamId(String mixStreamId) {
-        this.mixStreamId = mixStreamId;
+    public DeleteMixStreamResponse setBody(DeleteMixStreamResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMixStreamId() {
-        return this.mixStreamId;
+    public DeleteMixStreamResponseBody getBody() {
+        return this.body;
     }
 
 }

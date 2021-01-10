@@ -4,21 +4,29 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRealtimeLogDeliveryDomainsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Project")
-    @Validation(required = true)
     public String project;
 
     @NameInMap("Logstore")
-    @Validation(required = true)
     public String logstore;
 
     @NameInMap("Region")
-    @Validation(required = true)
     public String region;
 
     public static ListLiveRealtimeLogDeliveryDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLiveRealtimeLogDeliveryDomainsRequest self = new ListLiveRealtimeLogDeliveryDomainsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListLiveRealtimeLogDeliveryDomainsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ListLiveRealtimeLogDeliveryDomainsRequest setProject(String project) {

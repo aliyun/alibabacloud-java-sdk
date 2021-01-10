@@ -4,26 +4,25 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterComponentRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("ComponentName")
     public String componentName;
 
     @NameInMap("LocationId")
-    @Validation(required = true)
     public String locationId;
 
     @NameInMap("ComponentType")
-    @Validation(required = true)
     public String componentType;
 
     @NameInMap("Effect")
     public String effect;
 
     @NameInMap("ComponentLayer")
-    @Validation(required = true)
     public String componentLayer;
 
     @NameInMap("LayerOrder")
@@ -44,6 +43,14 @@ public class AddCasterComponentRequest extends TeaModel {
     public static AddCasterComponentRequest build(java.util.Map<String, ?> map) throws Exception {
         AddCasterComponentRequest self = new AddCasterComponentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddCasterComponentRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddCasterComponentRequest setCasterId(String casterId) {

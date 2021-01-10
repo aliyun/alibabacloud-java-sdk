@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartBoardRecordResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RecordId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String recordId;
+    public StartBoardRecordResponseBody body;
 
     public static StartBoardRecordResponse build(java.util.Map<String, ?> map) throws Exception {
         StartBoardRecordResponse self = new StartBoardRecordResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartBoardRecordResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartBoardRecordResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StartBoardRecordResponse setRecordId(String recordId) {
-        this.recordId = recordId;
+    public StartBoardRecordResponse setBody(StartBoardRecordResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRecordId() {
-        return this.recordId;
+    public StartBoardRecordResponseBody getBody() {
+        return this.body;
     }
 
 }

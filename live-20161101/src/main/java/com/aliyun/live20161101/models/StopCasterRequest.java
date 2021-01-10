@@ -4,13 +4,23 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StopCasterRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     public static StopCasterRequest build(java.util.Map<String, ?> map) throws Exception {
         StopCasterRequest self = new StopCasterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StopCasterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public StopCasterRequest setCasterId(String casterId) {

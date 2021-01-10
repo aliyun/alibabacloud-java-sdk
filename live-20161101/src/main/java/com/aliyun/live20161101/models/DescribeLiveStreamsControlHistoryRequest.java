@@ -4,35 +4,38 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsControlHistoryRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
     public String appName;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
+
+    @NameInMap("Page")
+    public Integer page;
+
+    @NameInMap("Rows")
+    public Integer rows;
 
     public static DescribeLiveStreamsControlHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamsControlHistoryRequest self = new DescribeLiveStreamsControlHistoryRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveStreamsControlHistoryRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
+    public DescribeLiveStreamsControlHistoryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
         return this;
     }
-    public String getSecurityToken() {
-        return this.securityToken;
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamsControlHistoryRequest setDomainName(String domainName) {
@@ -65,6 +68,22 @@ public class DescribeLiveStreamsControlHistoryRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeLiveStreamsControlHistoryRequest setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
+    public DescribeLiveStreamsControlHistoryRequest setRows(Integer rows) {
+        this.rows = rows;
+        return this;
+    }
+    public Integer getRows() {
+        return this.rows;
     }
 
 }

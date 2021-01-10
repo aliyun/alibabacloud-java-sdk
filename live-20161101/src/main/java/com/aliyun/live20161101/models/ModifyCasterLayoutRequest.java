@@ -4,33 +4,38 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterLayoutRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("LayoutId")
-    @Validation(required = true)
     public String layoutId;
 
     @NameInMap("VideoLayer")
-    @Validation(required = true)
     public java.util.List<ModifyCasterLayoutRequestVideoLayer> videoLayer;
 
     @NameInMap("AudioLayer")
-    @Validation(required = true)
     public java.util.List<ModifyCasterLayoutRequestAudioLayer> audioLayer;
 
     @NameInMap("BlendList")
-    @Validation(required = true)
     public java.util.List<String> blendList;
 
     @NameInMap("MixList")
-    @Validation(required = true)
     public java.util.List<String> mixList;
 
     public static ModifyCasterLayoutRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCasterLayoutRequest self = new ModifyCasterLayoutRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCasterLayoutRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyCasterLayoutRequest setCasterId(String casterId) {
@@ -82,67 +87,27 @@ public class ModifyCasterLayoutRequest extends TeaModel {
     }
 
     public static class ModifyCasterLayoutRequestVideoLayer extends TeaModel {
-        @NameInMap("FillMode")
-        public String fillMode;
+        @NameInMap("FixedDelayDuration")
+        public Integer fixedDelayDuration;
 
         @NameInMap("HeightNormalized")
         public Float heightNormalized;
 
-        @NameInMap("WidthNormalized")
-        public Float widthNormalized;
+        @NameInMap("FillMode")
+        public String fillMode;
 
         @NameInMap("PositionRefer")
         public String positionRefer;
 
         @NameInMap("PositionNormalized")
-        public java.util.List<Float> positionNormalized;
+        public java.util.List<Integer> positionNormalized;
 
-        @NameInMap("FixedDelayDuration")
-        public Integer fixedDelayDuration;
+        @NameInMap("WidthNormalized")
+        public Float widthNormalized;
 
         public static ModifyCasterLayoutRequestVideoLayer build(java.util.Map<String, ?> map) throws Exception {
             ModifyCasterLayoutRequestVideoLayer self = new ModifyCasterLayoutRequestVideoLayer();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyCasterLayoutRequestVideoLayer setFillMode(String fillMode) {
-            this.fillMode = fillMode;
-            return this;
-        }
-        public String getFillMode() {
-            return this.fillMode;
-        }
-
-        public ModifyCasterLayoutRequestVideoLayer setHeightNormalized(Float heightNormalized) {
-            this.heightNormalized = heightNormalized;
-            return this;
-        }
-        public Float getHeightNormalized() {
-            return this.heightNormalized;
-        }
-
-        public ModifyCasterLayoutRequestVideoLayer setWidthNormalized(Float widthNormalized) {
-            this.widthNormalized = widthNormalized;
-            return this;
-        }
-        public Float getWidthNormalized() {
-            return this.widthNormalized;
-        }
-
-        public ModifyCasterLayoutRequestVideoLayer setPositionRefer(String positionRefer) {
-            this.positionRefer = positionRefer;
-            return this;
-        }
-        public String getPositionRefer() {
-            return this.positionRefer;
-        }
-
-        public ModifyCasterLayoutRequestVideoLayer setPositionNormalized(java.util.List<Float> positionNormalized) {
-            this.positionNormalized = positionNormalized;
-            return this;
-        }
-        public java.util.List<Float> getPositionNormalized() {
-            return this.positionNormalized;
         }
 
         public ModifyCasterLayoutRequestVideoLayer setFixedDelayDuration(Integer fixedDelayDuration) {
@@ -153,17 +118,57 @@ public class ModifyCasterLayoutRequest extends TeaModel {
             return this.fixedDelayDuration;
         }
 
+        public ModifyCasterLayoutRequestVideoLayer setHeightNormalized(Float heightNormalized) {
+            this.heightNormalized = heightNormalized;
+            return this;
+        }
+        public Float getHeightNormalized() {
+            return this.heightNormalized;
+        }
+
+        public ModifyCasterLayoutRequestVideoLayer setFillMode(String fillMode) {
+            this.fillMode = fillMode;
+            return this;
+        }
+        public String getFillMode() {
+            return this.fillMode;
+        }
+
+        public ModifyCasterLayoutRequestVideoLayer setPositionRefer(String positionRefer) {
+            this.positionRefer = positionRefer;
+            return this;
+        }
+        public String getPositionRefer() {
+            return this.positionRefer;
+        }
+
+        public ModifyCasterLayoutRequestVideoLayer setPositionNormalized(java.util.List<Integer> positionNormalized) {
+            this.positionNormalized = positionNormalized;
+            return this;
+        }
+        public java.util.List<Integer> getPositionNormalized() {
+            return this.positionNormalized;
+        }
+
+        public ModifyCasterLayoutRequestVideoLayer setWidthNormalized(Float widthNormalized) {
+            this.widthNormalized = widthNormalized;
+            return this;
+        }
+        public Float getWidthNormalized() {
+            return this.widthNormalized;
+        }
+
     }
 
     public static class ModifyCasterLayoutRequestAudioLayer extends TeaModel {
         @NameInMap("VolumeRate")
         public Float volumeRate;
 
-        @NameInMap("ValidChannel")
-        public String validChannel;
-
         @NameInMap("FixedDelayDuration")
         public Integer fixedDelayDuration;
+
+        @NameInMap("ValidChannel")
+        public String validChannel;
 
         public static ModifyCasterLayoutRequestAudioLayer build(java.util.Map<String, ?> map) throws Exception {
             ModifyCasterLayoutRequestAudioLayer self = new ModifyCasterLayoutRequestAudioLayer();
@@ -178,20 +183,20 @@ public class ModifyCasterLayoutRequest extends TeaModel {
             return this.volumeRate;
         }
 
-        public ModifyCasterLayoutRequestAudioLayer setValidChannel(String validChannel) {
-            this.validChannel = validChannel;
-            return this;
-        }
-        public String getValidChannel() {
-            return this.validChannel;
-        }
-
         public ModifyCasterLayoutRequestAudioLayer setFixedDelayDuration(Integer fixedDelayDuration) {
             this.fixedDelayDuration = fixedDelayDuration;
             return this;
         }
         public Integer getFixedDelayDuration() {
             return this.fixedDelayDuration;
+        }
+
+        public ModifyCasterLayoutRequestAudioLayer setValidChannel(String validChannel) {
+            this.validChannel = validChannel;
+            return this;
+        }
+        public String getValidChannel() {
+            return this.validChannel;
         }
 
     }

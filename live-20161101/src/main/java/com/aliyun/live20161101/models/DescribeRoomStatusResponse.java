@@ -4,33 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoomStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RoomStatus")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer roomStatus;
+    public DescribeRoomStatusResponseBody body;
 
     public static DescribeRoomStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeRoomStatusResponse self = new DescribeRoomStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRoomStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeRoomStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeRoomStatusResponse setRoomStatus(Integer roomStatus) {
-        this.roomStatus = roomStatus;
+    public DescribeRoomStatusResponse setBody(DescribeRoomStatusResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getRoomStatus() {
-        return this.roomStatus;
+    public DescribeRoomStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

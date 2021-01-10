@@ -4,45 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCasterLayoutResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CasterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String casterId;
-
-    @NameInMap("LayoutId")
-    @Validation(required = true)
-    public String layoutId;
+    public DeleteCasterLayoutResponseBody body;
 
     public static DeleteCasterLayoutResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteCasterLayoutResponse self = new DeleteCasterLayoutResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteCasterLayoutResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteCasterLayoutResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteCasterLayoutResponse setCasterId(String casterId) {
-        this.casterId = casterId;
+    public DeleteCasterLayoutResponse setBody(DeleteCasterLayoutResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCasterId() {
-        return this.casterId;
-    }
-
-    public DeleteCasterLayoutResponse setLayoutId(String layoutId) {
-        this.layoutId = layoutId;
-        return this;
-    }
-    public String getLayoutId() {
-        return this.layoutId;
+    public DeleteCasterLayoutResponseBody getBody() {
+        return this.body;
     }
 
 }

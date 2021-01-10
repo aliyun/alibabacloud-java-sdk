@@ -4,12 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("EpisodeType")
-    @Validation(required = true)
     public String episodeType;
 
     @NameInMap("EpisodeName")
@@ -18,24 +19,29 @@ public class AddCasterEpisodeRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
-    @NameInMap("ComponentId")
-    public java.util.List<String> componentId;
-
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("SwitchType")
-    @Validation(required = true)
     public String switchType;
+
+    @NameInMap("ComponentId")
+    public java.util.List<String> componentId;
 
     public static AddCasterEpisodeRequest build(java.util.Map<String, ?> map) throws Exception {
         AddCasterEpisodeRequest self = new AddCasterEpisodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddCasterEpisodeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddCasterEpisodeRequest setCasterId(String casterId) {
@@ -70,14 +76,6 @@ public class AddCasterEpisodeRequest extends TeaModel {
         return this.resourceId;
     }
 
-    public AddCasterEpisodeRequest setComponentId(java.util.List<String> componentId) {
-        this.componentId = componentId;
-        return this;
-    }
-    public java.util.List<String> getComponentId() {
-        return this.componentId;
-    }
-
     public AddCasterEpisodeRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -100,6 +98,14 @@ public class AddCasterEpisodeRequest extends TeaModel {
     }
     public String getSwitchType() {
         return this.switchType;
+    }
+
+    public AddCasterEpisodeRequest setComponentId(java.util.List<String> componentId) {
+        this.componentId = componentId;
+        return this;
+    }
+    public java.util.List<String> getComponentId() {
+        return this.componentId;
     }
 
 }

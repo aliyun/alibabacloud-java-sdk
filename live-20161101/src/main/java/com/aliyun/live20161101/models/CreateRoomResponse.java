@@ -4,57 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateRoomResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AppId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String appId;
-
-    @NameInMap("RoomId")
-    @Validation(required = true)
-    public String roomId;
-
-    @NameInMap("AnchorId")
-    @Validation(required = true)
-    public String anchorId;
+    public CreateRoomResponseBody body;
 
     public static CreateRoomResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateRoomResponse self = new CreateRoomResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateRoomResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateRoomResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateRoomResponse setAppId(String appId) {
-        this.appId = appId;
+    public CreateRoomResponse setBody(CreateRoomResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
-    }
-
-    public CreateRoomResponse setRoomId(String roomId) {
-        this.roomId = roomId;
-        return this;
-    }
-    public String getRoomId() {
-        return this.roomId;
-    }
-
-    public CreateRoomResponse setAnchorId(String anchorId) {
-        this.anchorId = anchorId;
-        return this;
-    }
-    public String getAnchorId() {
-        return this.anchorId;
+    public CreateRoomResponseBody getBody() {
+        return this.body;
     }
 
 }

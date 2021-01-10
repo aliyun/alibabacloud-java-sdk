@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
     public String domainName;
 
@@ -19,6 +22,14 @@ public class DescribeLiveDomainTimeShiftDataRequest extends TeaModel {
     public static DescribeLiveDomainTimeShiftDataRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainTimeShiftDataRequest self = new DescribeLiveDomainTimeShiftDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainTimeShiftDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveDomainTimeShiftDataRequest setDomainName(String domainName) {

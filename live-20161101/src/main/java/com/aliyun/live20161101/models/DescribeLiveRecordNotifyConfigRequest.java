@@ -7,8 +7,10 @@ public class DescribeLiveRecordNotifyConfigRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     public static DescribeLiveRecordNotifyConfigRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -22,6 +24,14 @@ public class DescribeLiveRecordNotifyConfigRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeLiveRecordNotifyConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveRecordNotifyConfigRequest setDomainName(String domainName) {

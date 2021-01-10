@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class EditHtmlResourceRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("HtmlResourceId")
     public String htmlResourceId;
 
@@ -22,6 +25,14 @@ public class EditHtmlResourceRequest extends TeaModel {
     public static EditHtmlResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         EditHtmlResourceRequest self = new EditHtmlResourceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EditHtmlResourceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public EditHtmlResourceRequest setHtmlResourceId(String htmlResourceId) {

@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveAsrConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
@@ -17,6 +19,14 @@ public class DescribeLiveAsrConfigRequest extends TeaModel {
     public static DescribeLiveAsrConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveAsrConfigRequest self = new DescribeLiveAsrConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveAsrConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveAsrConfigRequest setDomainName(String domainName) {

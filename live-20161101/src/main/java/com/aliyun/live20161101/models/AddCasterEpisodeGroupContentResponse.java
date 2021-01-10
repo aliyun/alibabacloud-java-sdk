@@ -4,65 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeGroupContentResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ProgramId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String programId;
-
-    @NameInMap("ItemIds")
-    @Validation(required = true)
-    public AddCasterEpisodeGroupContentResponseItemIds itemIds;
+    public AddCasterEpisodeGroupContentResponseBody body;
 
     public static AddCasterEpisodeGroupContentResponse build(java.util.Map<String, ?> map) throws Exception {
         AddCasterEpisodeGroupContentResponse self = new AddCasterEpisodeGroupContentResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddCasterEpisodeGroupContentResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddCasterEpisodeGroupContentResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddCasterEpisodeGroupContentResponse setProgramId(String programId) {
-        this.programId = programId;
+    public AddCasterEpisodeGroupContentResponse setBody(AddCasterEpisodeGroupContentResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getProgramId() {
-        return this.programId;
-    }
-
-    public AddCasterEpisodeGroupContentResponse setItemIds(AddCasterEpisodeGroupContentResponseItemIds itemIds) {
-        this.itemIds = itemIds;
-        return this;
-    }
-    public AddCasterEpisodeGroupContentResponseItemIds getItemIds() {
-        return this.itemIds;
-    }
-
-    public static class AddCasterEpisodeGroupContentResponseItemIds extends TeaModel {
-        @NameInMap("ItemId")
-        @Validation(required = true)
-        public java.util.List<String> itemId;
-
-        public static AddCasterEpisodeGroupContentResponseItemIds build(java.util.Map<String, ?> map) throws Exception {
-            AddCasterEpisodeGroupContentResponseItemIds self = new AddCasterEpisodeGroupContentResponseItemIds();
-            return TeaModel.build(map, self);
-        }
-
-        public AddCasterEpisodeGroupContentResponseItemIds setItemId(java.util.List<String> itemId) {
-            this.itemId = itemId;
-            return this;
-        }
-        public java.util.List<String> getItemId() {
-            return this.itemId;
-        }
-
+    public AddCasterEpisodeGroupContentResponseBody getBody() {
+        return this.body;
     }
 
 }

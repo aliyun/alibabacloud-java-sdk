@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLiveAppSnapshotConfigResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AddLiveAppSnapshotConfigResponseBody body;
 
     public static AddLiveAppSnapshotConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         AddLiveAppSnapshotConfigResponse self = new AddLiveAppSnapshotConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddLiveAppSnapshotConfigResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddLiveAppSnapshotConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AddLiveAppSnapshotConfigResponse setBody(AddLiveAppSnapshotConfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddLiveAppSnapshotConfigResponseBody getBody() {
+        return this.body;
     }
 
 }

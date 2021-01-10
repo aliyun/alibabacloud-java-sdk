@@ -4,25 +4,32 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StopLiveIndexRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public String taskId;
 
     public static StopLiveIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         StopLiveIndexRequest self = new StopLiveIndexRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StopLiveIndexRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public StopLiveIndexRequest setDomainName(String domainName) {

@@ -7,12 +7,13 @@ public class DescribeLiveStreamsFrameRateAndBitRateDataRequest extends TeaModel 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
@@ -35,6 +36,14 @@ public class DescribeLiveStreamsFrameRateAndBitRateDataRequest extends TeaModel 
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeLiveStreamsFrameRateAndBitRateDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamsFrameRateAndBitRateDataRequest setDomainName(String domainName) {

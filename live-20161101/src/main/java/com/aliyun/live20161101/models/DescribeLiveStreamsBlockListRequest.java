@@ -7,8 +7,10 @@ public class DescribeLiveStreamsBlockListRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("PageNum")
@@ -28,6 +30,14 @@ public class DescribeLiveStreamsBlockListRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeLiveStreamsBlockListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveStreamsBlockListRequest setDomainName(String domainName) {

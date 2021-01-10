@@ -4,85 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainSnapshotDataResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SnapshotDataInfos")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeLiveDomainSnapshotDataResponseSnapshotDataInfos snapshotDataInfos;
+    public DescribeLiveDomainSnapshotDataResponseBody body;
 
     public static DescribeLiveDomainSnapshotDataResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainSnapshotDataResponse self = new DescribeLiveDomainSnapshotDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveDomainSnapshotDataResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLiveDomainSnapshotDataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLiveDomainSnapshotDataResponse setSnapshotDataInfos(DescribeLiveDomainSnapshotDataResponseSnapshotDataInfos snapshotDataInfos) {
-        this.snapshotDataInfos = snapshotDataInfos;
+    public DescribeLiveDomainSnapshotDataResponse setBody(DescribeLiveDomainSnapshotDataResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeLiveDomainSnapshotDataResponseSnapshotDataInfos getSnapshotDataInfos() {
-        return this.snapshotDataInfos;
-    }
-
-    public static class DescribeLiveDomainSnapshotDataResponseSnapshotDataInfosSnapshotDataInfo extends TeaModel {
-        @NameInMap("Date")
-        @Validation(required = true)
-        public String date;
-
-        @NameInMap("Total")
-        @Validation(required = true)
-        public Integer total;
-
-        public static DescribeLiveDomainSnapshotDataResponseSnapshotDataInfosSnapshotDataInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLiveDomainSnapshotDataResponseSnapshotDataInfosSnapshotDataInfo self = new DescribeLiveDomainSnapshotDataResponseSnapshotDataInfosSnapshotDataInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDomainSnapshotDataResponseSnapshotDataInfosSnapshotDataInfo setDate(String date) {
-            this.date = date;
-            return this;
-        }
-        public String getDate() {
-            return this.date;
-        }
-
-        public DescribeLiveDomainSnapshotDataResponseSnapshotDataInfosSnapshotDataInfo setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
-        }
-
-    }
-
-    public static class DescribeLiveDomainSnapshotDataResponseSnapshotDataInfos extends TeaModel {
-        @NameInMap("SnapshotDataInfo")
-        @Validation(required = true)
-        public java.util.List<DescribeLiveDomainSnapshotDataResponseSnapshotDataInfosSnapshotDataInfo> snapshotDataInfo;
-
-        public static DescribeLiveDomainSnapshotDataResponseSnapshotDataInfos build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLiveDomainSnapshotDataResponseSnapshotDataInfos self = new DescribeLiveDomainSnapshotDataResponseSnapshotDataInfos();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDomainSnapshotDataResponseSnapshotDataInfos setSnapshotDataInfo(java.util.List<DescribeLiveDomainSnapshotDataResponseSnapshotDataInfosSnapshotDataInfo> snapshotDataInfo) {
-            this.snapshotDataInfo = snapshotDataInfo;
-            return this;
-        }
-        public java.util.List<DescribeLiveDomainSnapshotDataResponseSnapshotDataInfosSnapshotDataInfo> getSnapshotDataInfo() {
-            return this.snapshotDataInfo;
-        }
-
+    public DescribeLiveDomainSnapshotDataResponseBody getBody() {
+        return this.body;
     }
 
 }

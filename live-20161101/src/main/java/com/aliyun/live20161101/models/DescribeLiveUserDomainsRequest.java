@@ -7,6 +7,9 @@ public class DescribeLiveUserDomainsRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("LiveDomainType")
     public String liveDomainType;
 
@@ -42,6 +45,14 @@ public class DescribeLiveUserDomainsRequest extends TeaModel {
     }
     public String getSecurityToken() {
         return this.securityToken;
+    }
+
+    public DescribeLiveUserDomainsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeLiveUserDomainsRequest setLiveDomainType(String liveDomainType) {

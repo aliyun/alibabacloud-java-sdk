@@ -4,24 +4,22 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SendRoomUserNotificationRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("RoomId")
-    @Validation(required = true)
     public String roomId;
 
     @NameInMap("AppUid")
-    @Validation(required = true)
     public String appUid;
 
     @NameInMap("ToAppUid")
-    @Validation(required = true)
     public String toAppUid;
 
     @NameInMap("Data")
-    @Validation(required = true)
     public String data;
 
     @NameInMap("Priority")
@@ -30,6 +28,14 @@ public class SendRoomUserNotificationRequest extends TeaModel {
     public static SendRoomUserNotificationRequest build(java.util.Map<String, ?> map) throws Exception {
         SendRoomUserNotificationRequest self = new SendRoomUserNotificationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendRoomUserNotificationRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SendRoomUserNotificationRequest setAppId(String appId) {

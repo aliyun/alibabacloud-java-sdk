@@ -4,25 +4,32 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveRealtimeLogDeliveryRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("Project")
-    @Validation(required = true)
     public String project;
 
     @NameInMap("Logstore")
-    @Validation(required = true)
     public String logstore;
 
     @NameInMap("Region")
-    @Validation(required = true)
     public String region;
 
     public static DeleteLiveRealtimeLogDeliveryRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLiveRealtimeLogDeliveryRequest self = new DeleteLiveRealtimeLogDeliveryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteLiveRealtimeLogDeliveryRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DeleteLiveRealtimeLogDeliveryRequest setDomainName(String domainName) {

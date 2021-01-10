@@ -4,69 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveCertificateDetailResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Cert")
+    @NameInMap("body")
     @Validation(required = true)
-    public String cert;
-
-    @NameInMap("Key")
-    @Validation(required = true)
-    public String key;
-
-    @NameInMap("CertId")
-    @Validation(required = true)
-    public Long certId;
-
-    @NameInMap("CertName")
-    @Validation(required = true)
-    public String certName;
+    public DescribeLiveCertificateDetailResponseBody body;
 
     public static DescribeLiveCertificateDetailResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveCertificateDetailResponse self = new DescribeLiveCertificateDetailResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveCertificateDetailResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLiveCertificateDetailResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLiveCertificateDetailResponse setCert(String cert) {
-        this.cert = cert;
+    public DescribeLiveCertificateDetailResponse setBody(DescribeLiveCertificateDetailResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCert() {
-        return this.cert;
-    }
-
-    public DescribeLiveCertificateDetailResponse setKey(String key) {
-        this.key = key;
-        return this;
-    }
-    public String getKey() {
-        return this.key;
-    }
-
-    public DescribeLiveCertificateDetailResponse setCertId(Long certId) {
-        this.certId = certId;
-        return this;
-    }
-    public Long getCertId() {
-        return this.certId;
-    }
-
-    public DescribeLiveCertificateDetailResponse setCertName(String certName) {
-        this.certName = certName;
-        return this;
-    }
-    public String getCertName() {
-        return this.certName;
+    public DescribeLiveCertificateDetailResponseBody getBody() {
+        return this.body;
     }
 
 }

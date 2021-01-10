@@ -4,37 +4,41 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddTrancodeSEIRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("StreamName")
-    @Validation(required = true)
     public String streamName;
 
     @NameInMap("Text")
-    @Validation(required = true)
     public String text;
 
     @NameInMap("Pattern")
-    @Validation(required = true)
     public String pattern;
 
     @NameInMap("Repeat")
-    @Validation(required = true)
     public Integer repeat;
 
     @NameInMap("Delay")
-    @Validation(required = true)
     public Integer delay;
 
     public static AddTrancodeSEIRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTrancodeSEIRequest self = new AddTrancodeSEIRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddTrancodeSEIRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public AddTrancodeSEIRequest setDomainName(String domainName) {

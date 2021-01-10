@@ -4,24 +4,32 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeBoardEventsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
     public String endTime;
 
     @NameInMap("BoardId")
-    @Validation(required = true)
     public String boardId;
 
     public static DescribeBoardEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBoardEventsRequest self = new DescribeBoardEventsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBoardEventsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeBoardEventsRequest setAppId(String appId) {

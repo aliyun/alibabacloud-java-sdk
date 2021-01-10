@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRoomListRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("RoomId")
@@ -35,6 +37,14 @@ public class DescribeRoomListRequest extends TeaModel {
     public static DescribeRoomListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRoomListRequest self = new DescribeRoomListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRoomListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeRoomListRequest setAppId(String appId) {

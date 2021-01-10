@@ -4,20 +4,19 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateMixStreamRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("LayoutId")
-    @Validation(required = true)
     public String layoutId;
 
     @NameInMap("InputStreamList")
-    @Validation(required = true)
     public String inputStreamList;
 
     @NameInMap("OutputConfig")
-    @Validation(required = true)
     public String outputConfig;
 
     @NameInMap("CallbackConfig")
@@ -26,6 +25,14 @@ public class CreateMixStreamRequest extends TeaModel {
     public static CreateMixStreamRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMixStreamRequest self = new CreateMixStreamRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMixStreamRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateMixStreamRequest setDomainName(String domainName) {

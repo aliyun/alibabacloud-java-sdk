@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>live20161101</artifactId>
-  <version>0.0.1</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
   <name>live20161101</name>
   <description>Alibaba Cloud ApsaraVideo for Live (20161101) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.8</version>
+      <version>0.2.9</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -57,6 +57,16 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
       <version>[1.0.3, 2.0.0)</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-openapi</artifactId>
+      <version>0.0.8</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.1.0</version>
     </dependency>
   </dependencies>
   <build>

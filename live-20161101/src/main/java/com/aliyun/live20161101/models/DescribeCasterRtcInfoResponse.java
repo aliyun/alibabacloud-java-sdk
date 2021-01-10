@@ -4,45 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterRtcInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CasterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String casterId;
-
-    @NameInMap("AuthToken")
-    @Validation(required = true)
-    public String authToken;
+    public DescribeCasterRtcInfoResponseBody body;
 
     public static DescribeCasterRtcInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterRtcInfoResponse self = new DescribeCasterRtcInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCasterRtcInfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeCasterRtcInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeCasterRtcInfoResponse setCasterId(String casterId) {
-        this.casterId = casterId;
+    public DescribeCasterRtcInfoResponse setBody(DescribeCasterRtcInfoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCasterId() {
-        return this.casterId;
-    }
-
-    public DescribeCasterRtcInfoResponse setAuthToken(String authToken) {
-        this.authToken = authToken;
-        return this;
-    }
-    public String getAuthToken() {
-        return this.authToken;
+    public DescribeCasterRtcInfoResponseBody getBody() {
+        return this.body;
     }
 
 }

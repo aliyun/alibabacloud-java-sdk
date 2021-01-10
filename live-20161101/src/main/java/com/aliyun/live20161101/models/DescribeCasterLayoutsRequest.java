@@ -4,8 +4,10 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterLayoutsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CasterId")
-    @Validation(required = true)
     public String casterId;
 
     @NameInMap("LayoutId")
@@ -14,6 +16,14 @@ public class DescribeCasterLayoutsRequest extends TeaModel {
     public static DescribeCasterLayoutsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterLayoutsRequest self = new DescribeCasterLayoutsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCasterLayoutsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeCasterLayoutsRequest setCasterId(String casterId) {

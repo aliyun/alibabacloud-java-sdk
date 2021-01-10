@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartLiveDomainResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public StartLiveDomainResponseBody body;
 
     public static StartLiveDomainResponse build(java.util.Map<String, ?> map) throws Exception {
         StartLiveDomainResponse self = new StartLiveDomainResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartLiveDomainResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartLiveDomainResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public StartLiveDomainResponse setBody(StartLiveDomainResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public StartLiveDomainResponseBody getBody() {
+        return this.body;
     }
 
 }

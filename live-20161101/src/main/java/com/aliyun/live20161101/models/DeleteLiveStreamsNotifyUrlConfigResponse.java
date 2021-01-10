@@ -4,21 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveStreamsNotifyUrlConfigResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteLiveStreamsNotifyUrlConfigResponseBody body;
 
     public static DeleteLiveStreamsNotifyUrlConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteLiveStreamsNotifyUrlConfigResponse self = new DeleteLiveStreamsNotifyUrlConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteLiveStreamsNotifyUrlConfigResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteLiveStreamsNotifyUrlConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteLiveStreamsNotifyUrlConfigResponse setBody(DeleteLiveStreamsNotifyUrlConfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteLiveStreamsNotifyUrlConfigResponseBody getBody() {
+        return this.body;
     }
 
 }

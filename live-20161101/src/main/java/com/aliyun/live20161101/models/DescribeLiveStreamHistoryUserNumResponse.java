@@ -4,85 +4,33 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamHistoryUserNumResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("LiveStreamUserNumInfos")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos liveStreamUserNumInfos;
+    public DescribeLiveStreamHistoryUserNumResponseBody body;
 
     public static DescribeLiveStreamHistoryUserNumResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamHistoryUserNumResponse self = new DescribeLiveStreamHistoryUserNumResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveStreamHistoryUserNumResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLiveStreamHistoryUserNumResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLiveStreamHistoryUserNumResponse setLiveStreamUserNumInfos(DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos liveStreamUserNumInfos) {
-        this.liveStreamUserNumInfos = liveStreamUserNumInfos;
+    public DescribeLiveStreamHistoryUserNumResponse setBody(DescribeLiveStreamHistoryUserNumResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos getLiveStreamUserNumInfos() {
-        return this.liveStreamUserNumInfos;
-    }
-
-    public static class DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo extends TeaModel {
-        @NameInMap("StreamTime")
-        @Validation(required = true)
-        public String streamTime;
-
-        @NameInMap("UserNum")
-        @Validation(required = true)
-        public String userNum;
-
-        public static DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo self = new DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo setStreamTime(String streamTime) {
-            this.streamTime = streamTime;
-            return this;
-        }
-        public String getStreamTime() {
-            return this.streamTime;
-        }
-
-        public DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo setUserNum(String userNum) {
-            this.userNum = userNum;
-            return this;
-        }
-        public String getUserNum() {
-            return this.userNum;
-        }
-
-    }
-
-    public static class DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos extends TeaModel {
-        @NameInMap("LiveStreamUserNumInfo")
-        @Validation(required = true)
-        public java.util.List<DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo> liveStreamUserNumInfo;
-
-        public static DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos self = new DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfos setLiveStreamUserNumInfo(java.util.List<DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo> liveStreamUserNumInfo) {
-            this.liveStreamUserNumInfo = liveStreamUserNumInfo;
-            return this;
-        }
-        public java.util.List<DescribeLiveStreamHistoryUserNumResponseLiveStreamUserNumInfosLiveStreamUserNumInfo> getLiveStreamUserNumInfo() {
-            return this.liveStreamUserNumInfo;
-        }
-
+    public DescribeLiveStreamHistoryUserNumResponseBody getBody() {
+        return this.body;
     }
 
 }
