@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class ListOTAModuleVersionsByDeviceResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ListOTAModuleVersionsByDeviceResponseBody body;
+
+    public static ListOTAModuleVersionsByDeviceResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListOTAModuleVersionsByDeviceResponse self = new ListOTAModuleVersionsByDeviceResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ListOTAModuleVersionsByDeviceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListOTAModuleVersionsByDeviceResponse setBody(ListOTAModuleVersionsByDeviceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListOTAModuleVersionsByDeviceResponseBody getBody() {
+        return this.body;
+    }
+
+}

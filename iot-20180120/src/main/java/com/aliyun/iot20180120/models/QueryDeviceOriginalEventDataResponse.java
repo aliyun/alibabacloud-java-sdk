@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class QueryDeviceOriginalEventDataResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public QueryDeviceOriginalEventDataResponseBody body;
+
+    public static QueryDeviceOriginalEventDataResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryDeviceOriginalEventDataResponse self = new QueryDeviceOriginalEventDataResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceOriginalEventDataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public QueryDeviceOriginalEventDataResponse setBody(QueryDeviceOriginalEventDataResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public QueryDeviceOriginalEventDataResponseBody getBody() {
+        return this.body;
+    }
+
+}

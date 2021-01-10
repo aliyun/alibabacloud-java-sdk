@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class QueryDetailSceneRuleLogResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public QueryDetailSceneRuleLogResponseBody body;
+
+    public static QueryDetailSceneRuleLogResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryDetailSceneRuleLogResponse self = new QueryDetailSceneRuleLogResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryDetailSceneRuleLogResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public QueryDetailSceneRuleLogResponse setBody(QueryDetailSceneRuleLogResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public QueryDetailSceneRuleLogResponseBody getBody() {
+        return this.body;
+    }
+
+}

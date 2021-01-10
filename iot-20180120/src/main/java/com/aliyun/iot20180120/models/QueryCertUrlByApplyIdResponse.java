@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class QueryCertUrlByApplyIdResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public QueryCertUrlByApplyIdResponseBody body;
+
+    public static QueryCertUrlByApplyIdResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryCertUrlByApplyIdResponse self = new QueryCertUrlByApplyIdResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryCertUrlByApplyIdResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public QueryCertUrlByApplyIdResponse setBody(QueryCertUrlByApplyIdResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public QueryCertUrlByApplyIdResponseBody getBody() {
+        return this.body;
+    }
+
+}
