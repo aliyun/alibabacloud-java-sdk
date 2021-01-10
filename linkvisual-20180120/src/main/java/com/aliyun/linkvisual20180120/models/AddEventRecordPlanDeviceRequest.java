@@ -4,12 +4,16 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddEventRecordPlanDeviceRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     @NameInMap("PlanId")
-    @Validation(required = true)
     public String planId;
 
     @NameInMap("StreamType")
@@ -18,6 +22,22 @@ public class AddEventRecordPlanDeviceRequest extends TeaModel {
     public static AddEventRecordPlanDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddEventRecordPlanDeviceRequest self = new AddEventRecordPlanDeviceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddEventRecordPlanDeviceRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public AddEventRecordPlanDeviceRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public AddEventRecordPlanDeviceRequest setIotId(String iotId) {

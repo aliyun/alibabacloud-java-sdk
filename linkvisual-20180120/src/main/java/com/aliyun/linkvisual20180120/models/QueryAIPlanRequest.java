@@ -4,21 +4,40 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryAIPlanRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     public static QueryAIPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAIPlanRequest self = new QueryAIPlanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAIPlanRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryAIPlanRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryAIPlanRequest setAppId(String appId) {

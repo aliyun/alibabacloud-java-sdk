@@ -4,16 +4,19 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryPictureFilesRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     @NameInMap("BeginTime")
-    @Validation(required = true)
     public Long beginTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("CurrentPage")
@@ -28,9 +31,28 @@ public class QueryPictureFilesRequest extends TeaModel {
     @NameInMap("PictureSource")
     public Integer pictureSource;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     public static QueryPictureFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPictureFilesRequest self = new QueryPictureFilesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryPictureFilesRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryPictureFilesRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryPictureFilesRequest setIotId(String iotId) {
@@ -87,6 +109,14 @@ public class QueryPictureFilesRequest extends TeaModel {
     }
     public Integer getPictureSource() {
         return this.pictureSource;
+    }
+
+    public QueryPictureFilesRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

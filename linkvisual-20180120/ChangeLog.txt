@@ -1,3 +1,6 @@
+2021-01-10 Version: 2.0.0
+- Generated java 2018-01-20 for Linkvisual.
+
 2020-08-24 Version: 1.0.0
 - Supported AI for LV.
 

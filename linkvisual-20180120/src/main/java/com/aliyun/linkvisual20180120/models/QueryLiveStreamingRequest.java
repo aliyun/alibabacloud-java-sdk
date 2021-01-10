@@ -4,8 +4,13 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryLiveStreamingRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     @NameInMap("StreamType")
@@ -20,9 +25,28 @@ public class QueryLiveStreamingRequest extends TeaModel {
     @NameInMap("Scheme")
     public String scheme;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     public static QueryLiveStreamingRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryLiveStreamingRequest self = new QueryLiveStreamingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryLiveStreamingRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryLiveStreamingRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryLiveStreamingRequest setIotId(String iotId) {
@@ -63,6 +87,14 @@ public class QueryLiveStreamingRequest extends TeaModel {
     }
     public String getScheme() {
         return this.scheme;
+    }
+
+    public QueryLiveStreamingRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

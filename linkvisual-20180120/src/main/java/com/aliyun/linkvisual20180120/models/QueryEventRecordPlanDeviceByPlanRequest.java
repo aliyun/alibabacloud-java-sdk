@@ -4,8 +4,13 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEventRecordPlanDeviceByPlanRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("PlanId")
-    @Validation(required = true)
     public String planId;
 
     @NameInMap("CurrentPage")
@@ -17,6 +22,22 @@ public class QueryEventRecordPlanDeviceByPlanRequest extends TeaModel {
     public static QueryEventRecordPlanDeviceByPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryEventRecordPlanDeviceByPlanRequest self = new QueryEventRecordPlanDeviceByPlanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEventRecordPlanDeviceByPlanRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryEventRecordPlanDeviceByPlanRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryEventRecordPlanDeviceByPlanRequest setPlanId(String planId) {

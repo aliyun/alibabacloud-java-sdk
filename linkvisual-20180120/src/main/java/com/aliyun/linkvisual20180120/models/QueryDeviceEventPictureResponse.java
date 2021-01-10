@@ -4,69 +4,33 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceEventPictureResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
+    public QueryDeviceEventPictureResponseBody body;
 
     public static QueryDeviceEventPictureResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceEventPictureResponse self = new QueryDeviceEventPictureResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryDeviceEventPictureResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryDeviceEventPictureResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public QueryDeviceEventPictureResponse setSuccess(Boolean success) {
-        this.success = success;
+    public QueryDeviceEventPictureResponse setBody(QueryDeviceEventPictureResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public QueryDeviceEventPictureResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public QueryDeviceEventPictureResponse setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public QueryDeviceEventPictureResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
+    public QueryDeviceEventPictureResponseBody getBody() {
+        return this.body;
     }
 
 }

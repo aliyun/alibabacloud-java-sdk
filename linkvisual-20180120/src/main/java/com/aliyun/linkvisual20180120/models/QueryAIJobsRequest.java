@@ -4,24 +4,43 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryAIJobsRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("ActionId")
-    @Validation(required = true)
     public String actionId;
 
     @NameInMap("IotId")
     public String iotId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     public static QueryAIJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAIJobsRequest self = new QueryAIJobsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAIJobsRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryAIJobsRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryAIJobsRequest setActionId(String actionId) {

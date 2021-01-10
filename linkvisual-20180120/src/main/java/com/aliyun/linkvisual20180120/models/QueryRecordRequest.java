@@ -4,19 +4,22 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryRecordRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     @NameInMap("StreamType")
     public Integer streamType;
 
     @NameInMap("BeginTime")
-    @Validation(required = true)
     public Integer beginTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Integer endTime;
 
     @NameInMap("RecordType")
@@ -28,9 +31,31 @@ public class QueryRecordRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("NeedSnapshot")
+    public Boolean needSnapshot;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     public static QueryRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRecordRequest self = new QueryRecordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryRecordRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryRecordRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryRecordRequest setIotId(String iotId) {
@@ -87,6 +112,22 @@ public class QueryRecordRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryRecordRequest setNeedSnapshot(Boolean needSnapshot) {
+        this.needSnapshot = needSnapshot;
+        return this;
+    }
+    public Boolean getNeedSnapshot() {
+        return this.needSnapshot;
+    }
+
+    public QueryRecordRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }
