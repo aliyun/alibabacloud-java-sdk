@@ -10,11 +10,11 @@ public class CreateStatisticsTaskRequest extends TeaModel {
     @NameInMap("DateTo")
     public String dateTo;
 
-    @NameInMap("DepartmentId")
-    public java.util.List<String> departmentId;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("DepartmentId")
+    public java.util.List<String> departmentId;
 
     public static CreateStatisticsTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStatisticsTaskRequest self = new CreateStatisticsTaskRequest();
@@ -37,20 +37,20 @@ public class CreateStatisticsTaskRequest extends TeaModel {
         return this.dateTo;
     }
 
-    public CreateStatisticsTaskRequest setDepartmentId(java.util.List<String> departmentId) {
-        this.departmentId = departmentId;
-        return this;
-    }
-    public java.util.List<String> getDepartmentId() {
-        return this.departmentId;
-    }
-
     public CreateStatisticsTaskRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateStatisticsTaskRequest setDepartmentId(java.util.List<String> departmentId) {
+        this.departmentId = departmentId;
+        return this;
+    }
+    public java.util.List<String> getDepartmentId() {
+        return this.departmentId;
     }
 
 }

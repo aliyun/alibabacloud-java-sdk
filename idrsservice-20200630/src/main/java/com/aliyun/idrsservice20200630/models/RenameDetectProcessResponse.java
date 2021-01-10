@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.idrsservice20200630.models;
+
+import com.aliyun.tea.*;
+
+public class RenameDetectProcessResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RenameDetectProcessResponseBody body;
+
+    public static RenameDetectProcessResponse build(java.util.Map<String, ?> map) throws Exception {
+        RenameDetectProcessResponse self = new RenameDetectProcessResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public RenameDetectProcessResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RenameDetectProcessResponse setBody(RenameDetectProcessResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RenameDetectProcessResponseBody getBody() {
+        return this.body;
+    }
+
+}

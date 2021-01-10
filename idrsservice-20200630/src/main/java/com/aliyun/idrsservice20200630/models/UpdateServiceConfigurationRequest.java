@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class UpdateServiceConfigurationRequest extends TeaModel {
     @NameInMap("TaskItemQueueSize")
-    @Validation(required = true)
     public Integer taskItemQueueSize;
 
     @NameInMap("ClientQueueSize")
-    @Validation(required = true)
     public Integer clientQueueSize;
 
     @NameInMap("LiveRecordEveryOne")
-    @Validation(required = true)
     public Boolean liveRecordEveryOne;
 
     @NameInMap("LiveRecordAll")
-    @Validation(required = true)
     public Boolean liveRecordAll;
 
     @NameInMap("LiveRecordLayout")
-    @Validation(required = true)
     public Integer liveRecordLayout;
 
     @NameInMap("LiveRecordTaskProfile")
-    @Validation(required = true)
     public String liveRecordTaskProfile;
+
+    @NameInMap("LiveRecordMaxClient")
+    public Integer liveRecordMaxClient;
+
+    @NameInMap("LiveRecordVideoResolution")
+    public Integer liveRecordVideoResolution;
 
     public static UpdateServiceConfigurationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceConfigurationRequest self = new UpdateServiceConfigurationRequest();
@@ -79,6 +79,22 @@ public class UpdateServiceConfigurationRequest extends TeaModel {
     }
     public String getLiveRecordTaskProfile() {
         return this.liveRecordTaskProfile;
+    }
+
+    public UpdateServiceConfigurationRequest setLiveRecordMaxClient(Integer liveRecordMaxClient) {
+        this.liveRecordMaxClient = liveRecordMaxClient;
+        return this;
+    }
+    public Integer getLiveRecordMaxClient() {
+        return this.liveRecordMaxClient;
+    }
+
+    public UpdateServiceConfigurationRequest setLiveRecordVideoResolution(Integer liveRecordVideoResolution) {
+        this.liveRecordVideoResolution = liveRecordVideoResolution;
+        return this;
+    }
+    public Integer getLiveRecordVideoResolution() {
+        return this.liveRecordVideoResolution;
     }
 
 }

@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.idrsservice20200630.models;
+
+import com.aliyun.tea.*;
+
+public class GetDetectProcessResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetDetectProcessResponseBody body;
+
+    public static GetDetectProcessResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetDetectProcessResponse self = new GetDetectProcessResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetDetectProcessResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetDetectProcessResponse setBody(GetDetectProcessResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetDetectProcessResponseBody getBody() {
+        return this.body;
+    }
+
+}

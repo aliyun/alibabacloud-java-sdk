@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateUserDepartmentsRequest extends TeaModel {
     @NameInMap("UserId")
-    @Validation(required = true)
     public java.util.List<String> userId;
 
     @NameInMap("DepartmentId")
-    @Validation(required = true)
     public java.util.List<String> departmentId;
 
     public static CreateUserDepartmentsRequest build(java.util.Map<String, ?> map) throws Exception {

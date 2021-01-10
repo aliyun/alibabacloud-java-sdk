@@ -5,23 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateStatisticsRecordRequest extends TeaModel {
     @NameInMap("DeviceId")
-    @Validation(required = true)
     public String deviceId;
 
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("DeviceType")
-    @Validation(required = true)
     public Integer deviceType;
 
     @NameInMap("BeginAt")
-    @Validation(required = true)
     public String beginAt;
 
     @NameInMap("EndAt")
-    @Validation(required = true)
     public String endAt;
 
     @NameInMap("ClientToken")

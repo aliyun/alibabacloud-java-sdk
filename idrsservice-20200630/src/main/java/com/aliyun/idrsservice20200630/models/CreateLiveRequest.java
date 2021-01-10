@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateLiveRequest extends TeaModel {
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
-    @NameInMap("AppId")
-    @Validation(required = true)
-    public String appId;
+    @NameInMap("RtcCode")
+    public String rtcCode;
 
     @NameInMap("UserId")
-    @Validation(required = true)
     public String userId;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("AppId")
+    public String appId;
 
     public static CreateLiveRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLiveRequest self = new CreateLiveRequest();
@@ -32,12 +32,12 @@ public class CreateLiveRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateLiveRequest setAppId(String appId) {
-        this.appId = appId;
+    public CreateLiveRequest setRtcCode(String rtcCode) {
+        this.rtcCode = rtcCode;
         return this;
     }
-    public String getAppId() {
-        return this.appId;
+    public String getRtcCode() {
+        return this.rtcCode;
     }
 
     public CreateLiveRequest setUserId(String userId) {
@@ -54,6 +54,14 @@ public class CreateLiveRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateLiveRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
 }
