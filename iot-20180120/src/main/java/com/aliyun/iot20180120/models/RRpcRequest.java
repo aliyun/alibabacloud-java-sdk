@@ -1,0 +1,100 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class RRpcRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    @NameInMap("ProductKey")
+    public String productKey;
+
+    @NameInMap("DeviceName")
+    public String deviceName;
+
+    @NameInMap("Timeout")
+    public Integer timeout;
+
+    @NameInMap("RequestBase64Byte")
+    public String requestBase64Byte;
+
+    @NameInMap("Topic")
+    public String topic;
+
+    public static RRpcRequest build(java.util.Map<String, ?> map) throws Exception {
+        RRpcRequest self = new RRpcRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public RRpcRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public RRpcRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
+    }
+
+    public RRpcRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+    public RRpcRequest setProductKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+    public String getProductKey() {
+        return this.productKey;
+    }
+
+    public RRpcRequest setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public String getDeviceName() {
+        return this.deviceName;
+    }
+
+    public RRpcRequest setTimeout(Integer timeout) {
+        this.timeout = timeout;
+        return this;
+    }
+    public Integer getTimeout() {
+        return this.timeout;
+    }
+
+    public RRpcRequest setRequestBase64Byte(String requestBase64Byte) {
+        this.requestBase64Byte = requestBase64Byte;
+        return this;
+    }
+    public String getRequestBase64Byte() {
+        return this.requestBase64Byte;
+    }
+
+    public RRpcRequest setTopic(String topic) {
+        this.topic = topic;
+        return this;
+    }
+    public String getTopic() {
+        return this.topic;
+    }
+
+}

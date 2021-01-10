@@ -1,0 +1,56 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class GetDataAPIServiceDetailRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
+    @NameInMap("ApiSrn")
+    public String apiSrn;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
+    public static GetDataAPIServiceDetailRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetDataAPIServiceDetailRequest self = new GetDataAPIServiceDetailRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public GetDataAPIServiceDetailRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public GetDataAPIServiceDetailRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
+    }
+
+    public GetDataAPIServiceDetailRequest setApiSrn(String apiSrn) {
+        this.apiSrn = apiSrn;
+        return this;
+    }
+    public String getApiSrn() {
+        return this.apiSrn;
+    }
+
+    public GetDataAPIServiceDetailRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
+
+}

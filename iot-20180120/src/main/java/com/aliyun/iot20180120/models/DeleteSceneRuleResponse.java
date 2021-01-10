@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteSceneRuleResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteSceneRuleResponseBody body;
+
+    public static DeleteSceneRuleResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSceneRuleResponse self = new DeleteSceneRuleResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteSceneRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteSceneRuleResponse setBody(DeleteSceneRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteSceneRuleResponseBody getBody() {
+        return this.body;
+    }
+
+}

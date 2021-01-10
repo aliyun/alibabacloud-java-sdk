@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.iot20180120.models;
+
+import com.aliyun.tea.*;
+
+public class EnableSceneRuleResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public EnableSceneRuleResponseBody body;
+
+    public static EnableSceneRuleResponse build(java.util.Map<String, ?> map) throws Exception {
+        EnableSceneRuleResponse self = new EnableSceneRuleResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public EnableSceneRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public EnableSceneRuleResponse setBody(EnableSceneRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public EnableSceneRuleResponseBody getBody() {
+        return this.body;
+    }
+
+}
