@@ -4,12 +4,16 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateAIPlanRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("PlanTemplateId")
-    @Validation(required = true)
     public String planTemplateId;
 
     @NameInMap("Description")
@@ -18,6 +22,22 @@ public class CreateAIPlanRequest extends TeaModel {
     public static CreateAIPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAIPlanRequest self = new CreateAIPlanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAIPlanRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public CreateAIPlanRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public CreateAIPlanRequest setAppId(String appId) {

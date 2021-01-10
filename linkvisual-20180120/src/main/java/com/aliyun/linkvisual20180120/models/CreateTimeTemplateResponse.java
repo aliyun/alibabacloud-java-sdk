@@ -4,69 +4,33 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateTimeTemplateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
+    public CreateTimeTemplateResponseBody body;
 
     public static CreateTimeTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateTimeTemplateResponse self = new CreateTimeTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateTimeTemplateResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateTimeTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateTimeTemplateResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CreateTimeTemplateResponse setBody(CreateTimeTemplateResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateTimeTemplateResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateTimeTemplateResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateTimeTemplateResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
+    public CreateTimeTemplateResponseBody getBody() {
+        return this.body;
     }
 
 }

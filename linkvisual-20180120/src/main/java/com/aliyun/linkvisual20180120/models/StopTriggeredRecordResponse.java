@@ -4,57 +4,33 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class StopTriggeredRecordResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
+    public StopTriggeredRecordResponseBody body;
 
     public static StopTriggeredRecordResponse build(java.util.Map<String, ?> map) throws Exception {
         StopTriggeredRecordResponse self = new StopTriggeredRecordResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopTriggeredRecordResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StopTriggeredRecordResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StopTriggeredRecordResponse setSuccess(Boolean success) {
-        this.success = success;
+    public StopTriggeredRecordResponse setBody(StopTriggeredRecordResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public StopTriggeredRecordResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public StopTriggeredRecordResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public StopTriggeredRecordResponseBody getBody() {
+        return this.body;
     }
 
 }

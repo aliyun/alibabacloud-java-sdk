@@ -4,12 +4,16 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceFileVodRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     @NameInMap("FileName")
-    @Validation(required = true)
     public String fileName;
 
     @NameInMap("ShouldEncrypt")
@@ -21,6 +25,22 @@ public class QueryDeviceFileVodRequest extends TeaModel {
     public static QueryDeviceFileVodRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceFileVodRequest self = new QueryDeviceFileVodRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceFileVodRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryDeviceFileVodRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryDeviceFileVodRequest setIotId(String iotId) {

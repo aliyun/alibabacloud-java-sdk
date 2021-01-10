@@ -4,57 +4,33 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateDevicePurifyPlanResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
+    public UpdateDevicePurifyPlanResponseBody body;
 
     public static UpdateDevicePurifyPlanResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateDevicePurifyPlanResponse self = new UpdateDevicePurifyPlanResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDevicePurifyPlanResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateDevicePurifyPlanResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateDevicePurifyPlanResponse setSuccess(Boolean success) {
-        this.success = success;
+    public UpdateDevicePurifyPlanResponse setBody(UpdateDevicePurifyPlanResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public UpdateDevicePurifyPlanResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public UpdateDevicePurifyPlanResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
+    public UpdateDevicePurifyPlanResponseBody getBody() {
+        return this.body;
     }
 
 }

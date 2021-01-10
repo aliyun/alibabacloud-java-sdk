@@ -4,17 +4,37 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class StopTriggeredRecordRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     @NameInMap("RecordId")
-    @Validation(required = true)
     public String recordId;
 
     public static StopTriggeredRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         StopTriggeredRecordRequest self = new StopTriggeredRecordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StopTriggeredRecordRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public StopTriggeredRecordRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public StopTriggeredRecordRequest setIotId(String iotId) {

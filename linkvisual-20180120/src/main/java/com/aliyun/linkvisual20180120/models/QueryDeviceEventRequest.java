@@ -4,19 +4,22 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceEventRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     @NameInMap("EventType")
     public Integer eventType;
 
     @NameInMap("BeginTime")
-    @Validation(required = true)
     public Long beginTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("CurrentPage")
@@ -25,9 +28,28 @@ public class QueryDeviceEventRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     public static QueryDeviceEventRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceEventRequest self = new QueryDeviceEventRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceEventRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryDeviceEventRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryDeviceEventRequest setIotId(String iotId) {
@@ -76,6 +98,14 @@ public class QueryDeviceEventRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryDeviceEventRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

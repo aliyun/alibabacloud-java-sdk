@@ -4,21 +4,40 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDevicePurifyPlanRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotId")
-    @Validation(required = true)
     public String iotId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Integer startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Integer endTime;
 
     public static CreateDevicePurifyPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDevicePurifyPlanRequest self = new CreateDevicePurifyPlanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDevicePurifyPlanRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public CreateDevicePurifyPlanRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public CreateDevicePurifyPlanRequest setIotId(String iotId) {
