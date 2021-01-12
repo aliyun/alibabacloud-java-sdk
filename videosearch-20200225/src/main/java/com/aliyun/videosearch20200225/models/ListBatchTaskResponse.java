@@ -64,7 +64,7 @@ public class ListBatchTaskResponse extends TeaModel {
 
         @NameInMap("ModifiedTime")
         @Validation(required = true)
-        public String modifiedTime;
+        public Long modifiedTime;
 
         @NameInMap("ProcessMessage")
         @Validation(required = true)
@@ -131,11 +131,11 @@ public class ListBatchTaskResponse extends TeaModel {
             return this.metaFile;
         }
 
-        public ListBatchTaskResponseDataList setModifiedTime(String modifiedTime) {
+        public ListBatchTaskResponseDataList setModifiedTime(Long modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }
-        public String getModifiedTime() {
+        public Long getModifiedTime() {
             return this.modifiedTime;
         }
 
