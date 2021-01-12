@@ -10,6 +10,9 @@ public class ExtractPedestrianFeatureAttrRequest extends TeaModel {
     @NameInMap("Mode")
     public String mode;
 
+    @NameInMap("ServiceVersion")
+    public String serviceVersion;
+
     public static ExtractPedestrianFeatureAttrRequest build(java.util.Map<String, ?> map) throws Exception {
         ExtractPedestrianFeatureAttrRequest self = new ExtractPedestrianFeatureAttrRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ExtractPedestrianFeatureAttrRequest extends TeaModel {
     }
     public String getMode() {
         return this.mode;
+    }
+
+    public ExtractPedestrianFeatureAttrRequest setServiceVersion(String serviceVersion) {
+        this.serviceVersion = serviceVersion;
+        return this;
+    }
+    public String getServiceVersion() {
+        return this.serviceVersion;
     }
 
 }
