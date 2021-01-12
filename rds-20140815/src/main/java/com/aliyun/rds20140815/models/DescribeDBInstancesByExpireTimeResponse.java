@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.rds20140815.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeDBInstancesByExpireTimeResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeDBInstancesByExpireTimeResponseBody body;
+
+    public static DescribeDBInstancesByExpireTimeResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBInstancesByExpireTimeResponse self = new DescribeDBInstancesByExpireTimeResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstancesByExpireTimeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeDBInstancesByExpireTimeResponse setBody(DescribeDBInstancesByExpireTimeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeDBInstancesByExpireTimeResponseBody getBody() {
+        return this.body;
+    }
+
+}
