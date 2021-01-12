@@ -65,10 +65,6 @@ public class GetBodyPersonResponseBody extends TeaModel {
     }
 
     public static class GetBodyPersonResponseBodyData extends TeaModel {
-        // 搜索引擎实例Id
-        @NameInMap("InstanceId")
-        public Long instanceId;
-
         // 数据库ID
         @NameInMap("DbId")
         public Long dbId;
@@ -92,14 +88,6 @@ public class GetBodyPersonResponseBody extends TeaModel {
         public static GetBodyPersonResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetBodyPersonResponseBodyData self = new GetBodyPersonResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetBodyPersonResponseBodyData setInstanceId(Long instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public Long getInstanceId() {
-            return this.instanceId;
         }
 
         public GetBodyPersonResponseBodyData setDbId(Long dbId) {
