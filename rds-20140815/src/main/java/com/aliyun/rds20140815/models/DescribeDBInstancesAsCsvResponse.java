@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.rds20140815.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeDBInstancesAsCsvResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeDBInstancesAsCsvResponseBody body;
+
+    public static DescribeDBInstancesAsCsvResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBInstancesAsCsvResponse self = new DescribeDBInstancesAsCsvResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeDBInstancesAsCsvResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeDBInstancesAsCsvResponse setBody(DescribeDBInstancesAsCsvResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeDBInstancesAsCsvResponseBody getBody() {
+        return this.body;
+    }
+
+}
