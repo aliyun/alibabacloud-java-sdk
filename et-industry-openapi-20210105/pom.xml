@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>et_industry_openapi20210105</artifactId>
-  <version>1.8.0</version>
+  <version>3.1.0</version>
   <packaging>jar</packaging>
   <name>et_industry_openapi20210105</name>
   <description>Alibaba Cloud et-industry-openapi (20210105) SDK for Java
