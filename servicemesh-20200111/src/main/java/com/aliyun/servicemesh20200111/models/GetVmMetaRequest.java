@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVmMetaRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
+    @Validation(required = true)
     public String serviceMeshId;
 
     @NameInMap("TrustDomain")

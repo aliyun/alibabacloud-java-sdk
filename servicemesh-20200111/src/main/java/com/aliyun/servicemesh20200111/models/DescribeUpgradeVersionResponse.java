@@ -4,33 +4,77 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpgradeVersionResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Version")
     @Validation(required = true)
-    public DescribeUpgradeVersionResponseBody body;
+    public DescribeUpgradeVersionResponseVersion version;
 
     public static DescribeUpgradeVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeUpgradeVersionResponse self = new DescribeUpgradeVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUpgradeVersionResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeUpgradeVersionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeUpgradeVersionResponse setBody(DescribeUpgradeVersionResponseBody body) {
-        this.body = body;
+    public DescribeUpgradeVersionResponse setVersion(DescribeUpgradeVersionResponseVersion version) {
+        this.version = version;
         return this;
     }
-    public DescribeUpgradeVersionResponseBody getBody() {
-        return this.body;
+    public DescribeUpgradeVersionResponseVersion getVersion() {
+        return this.version;
+    }
+
+    public static class DescribeUpgradeVersionResponseVersion extends TeaModel {
+        @NameInMap("IstioVersion")
+        @Validation(required = true)
+        public String istioVersion;
+
+        @NameInMap("IstioOperatorVersion")
+        @Validation(required = true)
+        public String istioOperatorVersion;
+
+        @NameInMap("KubernetesVersion")
+        @Validation(required = true)
+        public String kubernetesVersion;
+
+        public static DescribeUpgradeVersionResponseVersion build(java.util.Map<String, ?> map) throws Exception {
+            DescribeUpgradeVersionResponseVersion self = new DescribeUpgradeVersionResponseVersion();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeUpgradeVersionResponseVersion setIstioVersion(String istioVersion) {
+            this.istioVersion = istioVersion;
+            return this;
+        }
+        public String getIstioVersion() {
+            return this.istioVersion;
+        }
+
+        public DescribeUpgradeVersionResponseVersion setIstioOperatorVersion(String istioOperatorVersion) {
+            this.istioOperatorVersion = istioOperatorVersion;
+            return this;
+        }
+        public String getIstioOperatorVersion() {
+            return this.istioOperatorVersion;
+        }
+
+        public DescribeUpgradeVersionResponseVersion setKubernetesVersion(String kubernetesVersion) {
+            this.kubernetesVersion = kubernetesVersion;
+            return this;
+        }
+        public String getKubernetesVersion() {
+            return this.kubernetesVersion;
+        }
+
     }
 
 }

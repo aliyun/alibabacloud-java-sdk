@@ -4,33 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class RemoveVmAppFromMeshResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public RemoveVmAppFromMeshResponseBody body;
+    public String data;
 
     public static RemoveVmAppFromMeshResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveVmAppFromMeshResponse self = new RemoveVmAppFromMeshResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveVmAppFromMeshResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public RemoveVmAppFromMeshResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public RemoveVmAppFromMeshResponse setBody(RemoveVmAppFromMeshResponseBody body) {
-        this.body = body;
+    public RemoveVmAppFromMeshResponse setData(String data) {
+        this.data = data;
         return this;
     }
-    public RemoveVmAppFromMeshResponseBody getBody() {
-        return this.body;
+    public String getData() {
+        return this.data;
     }
 
 }

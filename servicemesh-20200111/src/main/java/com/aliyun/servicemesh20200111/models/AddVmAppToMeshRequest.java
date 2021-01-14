@@ -5,21 +5,27 @@ import com.aliyun.tea.*;
 
 public class AddVmAppToMeshRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
+    @Validation(required = true)
     public String serviceMeshId;
 
     @NameInMap("Namespace")
+    @Validation(required = true)
     public String namespace;
 
     @NameInMap("ServiceName")
+    @Validation(required = true)
     public String serviceName;
 
     @NameInMap("Ips")
+    @Validation(required = true)
     public String ips;
 
     @NameInMap("Ports")
+    @Validation(required = true)
     public String ports;
 
     @NameInMap("Labels")
+    @Validation(required = true)
     public String labels;
 
     @NameInMap("Annotations")
@@ -27,9 +33,6 @@ public class AddVmAppToMeshRequest extends TeaModel {
 
     @NameInMap("ServiceAccount")
     public String serviceAccount;
-
-    @NameInMap("UseWorkload")
-    public Boolean useWorkload;
 
     @NameInMap("Force")
     public Boolean force;
@@ -101,14 +104,6 @@ public class AddVmAppToMeshRequest extends TeaModel {
     }
     public String getServiceAccount() {
         return this.serviceAccount;
-    }
-
-    public AddVmAppToMeshRequest setUseWorkload(Boolean useWorkload) {
-        this.useWorkload = useWorkload;
-        return this;
-    }
-    public Boolean getUseWorkload() {
-        return this.useWorkload;
     }
 
     public AddVmAppToMeshRequest setForce(Boolean force) {

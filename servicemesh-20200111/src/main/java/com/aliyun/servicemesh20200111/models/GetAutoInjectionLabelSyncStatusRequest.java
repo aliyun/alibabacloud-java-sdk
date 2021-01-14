@@ -3,17 +3,17 @@ package com.aliyun.servicemesh20200111.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeUpgradeVersionRequest extends TeaModel {
+public class GetAutoInjectionLabelSyncStatusRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
     @Validation(required = true)
     public String serviceMeshId;
 
-    public static DescribeUpgradeVersionRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeUpgradeVersionRequest self = new DescribeUpgradeVersionRequest();
+    public static GetAutoInjectionLabelSyncStatusRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetAutoInjectionLabelSyncStatusRequest self = new GetAutoInjectionLabelSyncStatusRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUpgradeVersionRequest setServiceMeshId(String serviceMeshId) {
+    public GetAutoInjectionLabelSyncStatusRequest setServiceMeshId(String serviceMeshId) {
         this.serviceMeshId = serviceMeshId;
         return this;
     }

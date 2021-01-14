@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeMeshVersionRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
+    @Validation(required = true)
     public String serviceMeshId;
 
     public static UpgradeMeshVersionRequest build(java.util.Map<String, ?> map) throws Exception {

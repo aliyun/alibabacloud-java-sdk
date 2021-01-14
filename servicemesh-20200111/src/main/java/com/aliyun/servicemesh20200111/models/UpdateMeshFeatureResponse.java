@@ -4,33 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpdateMeshFeatureResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public UpdateMeshFeatureResponseBody body;
+    public String requestId;
 
     public static UpdateMeshFeatureResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateMeshFeatureResponse self = new UpdateMeshFeatureResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateMeshFeatureResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateMeshFeatureResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public UpdateMeshFeatureResponse setBody(UpdateMeshFeatureResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public UpdateMeshFeatureResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
