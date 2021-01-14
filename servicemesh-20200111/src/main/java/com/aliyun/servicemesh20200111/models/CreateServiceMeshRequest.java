@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("IstioVersion")
     public String istioVersion;
 
     @NameInMap("VpcId")
+    @Validation(required = true)
     public String vpcId;
 
     @NameInMap("ApiServerPublicEip")
@@ -19,12 +21,6 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("PilotPublicEip")
     public Boolean pilotPublicEip;
 
-    @NameInMap("StrictMTLS")
-    public Boolean strictMTLS;
-
-    @NameInMap("OutboundTrafficPolicy")
-    public String outboundTrafficPolicy;
-
     @NameInMap("Tracing")
     public Boolean tracing;
 
@@ -32,6 +28,7 @@ public class CreateServiceMeshRequest extends TeaModel {
     public String name;
 
     @NameInMap("VSwitches")
+    @Validation(required = true)
     public String vSwitches;
 
     @NameInMap("TraceSampling")
@@ -67,18 +64,6 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("AuditProject")
     public String auditProject;
 
-    @NameInMap("CADisableSecretAutoGeneration")
-    public Boolean CADisableSecretAutoGeneration;
-
-    @NameInMap("CAListenedNamespaces")
-    public String CAListenedNamespaces;
-
-    @NameInMap("AppNamespaces")
-    public String appNamespaces;
-
-    @NameInMap("ClusterDomain")
-    public String clusterDomain;
-
     @NameInMap("ProxyRequestCPU")
     public String proxyRequestCPU;
 
@@ -105,6 +90,18 @@ public class CreateServiceMeshRequest extends TeaModel {
 
     @NameInMap("OpaEnabled")
     public Boolean opaEnabled;
+
+    @NameInMap("KialiEnabled")
+    public Boolean kialiEnabled;
+
+    @NameInMap("AccessLogEnabled")
+    public Boolean accessLogEnabled;
+
+    @NameInMap("CustomizedPrometheus")
+    public Boolean customizedPrometheus;
+
+    @NameInMap("PrometheusUrl")
+    public String prometheusUrl;
 
     public static CreateServiceMeshRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceMeshRequest self = new CreateServiceMeshRequest();
@@ -149,22 +146,6 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public Boolean getPilotPublicEip() {
         return this.pilotPublicEip;
-    }
-
-    public CreateServiceMeshRequest setStrictMTLS(Boolean strictMTLS) {
-        this.strictMTLS = strictMTLS;
-        return this;
-    }
-    public Boolean getStrictMTLS() {
-        return this.strictMTLS;
-    }
-
-    public CreateServiceMeshRequest setOutboundTrafficPolicy(String outboundTrafficPolicy) {
-        this.outboundTrafficPolicy = outboundTrafficPolicy;
-        return this;
-    }
-    public String getOutboundTrafficPolicy() {
-        return this.outboundTrafficPolicy;
     }
 
     public CreateServiceMeshRequest setTracing(Boolean tracing) {
@@ -279,38 +260,6 @@ public class CreateServiceMeshRequest extends TeaModel {
         return this.auditProject;
     }
 
-    public CreateServiceMeshRequest setCADisableSecretAutoGeneration(Boolean CADisableSecretAutoGeneration) {
-        this.CADisableSecretAutoGeneration = CADisableSecretAutoGeneration;
-        return this;
-    }
-    public Boolean getCADisableSecretAutoGeneration() {
-        return this.CADisableSecretAutoGeneration;
-    }
-
-    public CreateServiceMeshRequest setCAListenedNamespaces(String CAListenedNamespaces) {
-        this.CAListenedNamespaces = CAListenedNamespaces;
-        return this;
-    }
-    public String getCAListenedNamespaces() {
-        return this.CAListenedNamespaces;
-    }
-
-    public CreateServiceMeshRequest setAppNamespaces(String appNamespaces) {
-        this.appNamespaces = appNamespaces;
-        return this;
-    }
-    public String getAppNamespaces() {
-        return this.appNamespaces;
-    }
-
-    public CreateServiceMeshRequest setClusterDomain(String clusterDomain) {
-        this.clusterDomain = clusterDomain;
-        return this;
-    }
-    public String getClusterDomain() {
-        return this.clusterDomain;
-    }
-
     public CreateServiceMeshRequest setProxyRequestCPU(String proxyRequestCPU) {
         this.proxyRequestCPU = proxyRequestCPU;
         return this;
@@ -381,6 +330,38 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public Boolean getOpaEnabled() {
         return this.opaEnabled;
+    }
+
+    public CreateServiceMeshRequest setKialiEnabled(Boolean kialiEnabled) {
+        this.kialiEnabled = kialiEnabled;
+        return this;
+    }
+    public Boolean getKialiEnabled() {
+        return this.kialiEnabled;
+    }
+
+    public CreateServiceMeshRequest setAccessLogEnabled(Boolean accessLogEnabled) {
+        this.accessLogEnabled = accessLogEnabled;
+        return this;
+    }
+    public Boolean getAccessLogEnabled() {
+        return this.accessLogEnabled;
+    }
+
+    public CreateServiceMeshRequest setCustomizedPrometheus(Boolean customizedPrometheus) {
+        this.customizedPrometheus = customizedPrometheus;
+        return this;
+    }
+    public Boolean getCustomizedPrometheus() {
+        return this.customizedPrometheus;
+    }
+
+    public CreateServiceMeshRequest setPrometheusUrl(String prometheusUrl) {
+        this.prometheusUrl = prometheusUrl;
+        return this;
+    }
+    public String getPrometheusUrl() {
+        return this.prometheusUrl;
     }
 
 }

@@ -4,33 +4,45 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class AddClusterIntoServiceMeshResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public AddClusterIntoServiceMeshResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
 
     public static AddClusterIntoServiceMeshResponse build(java.util.Map<String, ?> map) throws Exception {
         AddClusterIntoServiceMeshResponse self = new AddClusterIntoServiceMeshResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddClusterIntoServiceMeshResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddClusterIntoServiceMeshResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddClusterIntoServiceMeshResponse setBody(AddClusterIntoServiceMeshResponseBody body) {
-        this.body = body;
+    public AddClusterIntoServiceMeshResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public AddClusterIntoServiceMeshResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddClusterIntoServiceMeshResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

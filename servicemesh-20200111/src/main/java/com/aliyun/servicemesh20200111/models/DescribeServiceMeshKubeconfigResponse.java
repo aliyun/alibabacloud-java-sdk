@@ -4,33 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceMeshKubeconfigResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Kubeconfig")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String kubeconfig;
 
-    @NameInMap("body")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public DescribeServiceMeshKubeconfigResponseBody body;
+    public String requestId;
 
     public static DescribeServiceMeshKubeconfigResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeServiceMeshKubeconfigResponse self = new DescribeServiceMeshKubeconfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeServiceMeshKubeconfigResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeServiceMeshKubeconfigResponse setKubeconfig(String kubeconfig) {
+        this.kubeconfig = kubeconfig;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getKubeconfig() {
+        return this.kubeconfig;
     }
 
-    public DescribeServiceMeshKubeconfigResponse setBody(DescribeServiceMeshKubeconfigResponseBody body) {
-        this.body = body;
+    public DescribeServiceMeshKubeconfigResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeServiceMeshKubeconfigResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

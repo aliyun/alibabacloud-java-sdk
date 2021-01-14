@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDiagnosisRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
+    @Validation(required = true)
     public String serviceMeshId;
 
     public static GetDiagnosisRequest build(java.util.Map<String, ?> map) throws Exception {

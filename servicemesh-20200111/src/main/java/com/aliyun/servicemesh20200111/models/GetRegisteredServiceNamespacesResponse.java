@@ -4,33 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetRegisteredServiceNamespacesResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Namespaces")
     @Validation(required = true)
-    public GetRegisteredServiceNamespacesResponseBody body;
+    public java.util.List<String> namespaces;
 
     public static GetRegisteredServiceNamespacesResponse build(java.util.Map<String, ?> map) throws Exception {
         GetRegisteredServiceNamespacesResponse self = new GetRegisteredServiceNamespacesResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetRegisteredServiceNamespacesResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetRegisteredServiceNamespacesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetRegisteredServiceNamespacesResponse setBody(GetRegisteredServiceNamespacesResponseBody body) {
-        this.body = body;
+    public GetRegisteredServiceNamespacesResponse setNamespaces(java.util.List<String> namespaces) {
+        this.namespaces = namespaces;
         return this;
     }
-    public GetRegisteredServiceNamespacesResponseBody getBody() {
-        return this.body;
+    public java.util.List<String> getNamespaces() {
+        return this.namespaces;
     }
 
 }

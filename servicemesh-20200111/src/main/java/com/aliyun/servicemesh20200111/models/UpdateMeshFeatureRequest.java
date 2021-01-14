@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
+    @Validation(required = true)
     public String serviceMeshId;
 
     @NameInMap("Tracing")
@@ -37,23 +38,11 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("OPALimitMemory")
     public String OPALimitMemory;
 
-    @NameInMap("PilotPublicEip")
-    public Boolean pilotPublicEip;
-
     @NameInMap("EnableAudit")
     public Boolean enableAudit;
 
     @NameInMap("AuditProject")
     public String auditProject;
-
-    @NameInMap("CADisableSecretAutoGeneration")
-    public Boolean CADisableSecretAutoGeneration;
-
-    @NameInMap("CAListenedNamespaces")
-    public String CAListenedNamespaces;
-
-    @NameInMap("AppNamespaces")
-    public String appNamespaces;
 
     @NameInMap("ClusterDomain")
     public String clusterDomain;
@@ -111,6 +100,18 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("Http10Enabled")
     public Boolean http10Enabled;
+
+    @NameInMap("KialiEnabled")
+    public Boolean kialiEnabled;
+
+    @NameInMap("CustomizedPrometheus")
+    public Boolean customizedPrometheus;
+
+    @NameInMap("PrometheusUrl")
+    public String prometheusUrl;
+
+    @NameInMap("AccessLogEnabled")
+    public Boolean accessLogEnabled;
 
     public static UpdateMeshFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMeshFeatureRequest self = new UpdateMeshFeatureRequest();
@@ -205,14 +206,6 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.OPALimitMemory;
     }
 
-    public UpdateMeshFeatureRequest setPilotPublicEip(Boolean pilotPublicEip) {
-        this.pilotPublicEip = pilotPublicEip;
-        return this;
-    }
-    public Boolean getPilotPublicEip() {
-        return this.pilotPublicEip;
-    }
-
     public UpdateMeshFeatureRequest setEnableAudit(Boolean enableAudit) {
         this.enableAudit = enableAudit;
         return this;
@@ -227,30 +220,6 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public String getAuditProject() {
         return this.auditProject;
-    }
-
-    public UpdateMeshFeatureRequest setCADisableSecretAutoGeneration(Boolean CADisableSecretAutoGeneration) {
-        this.CADisableSecretAutoGeneration = CADisableSecretAutoGeneration;
-        return this;
-    }
-    public Boolean getCADisableSecretAutoGeneration() {
-        return this.CADisableSecretAutoGeneration;
-    }
-
-    public UpdateMeshFeatureRequest setCAListenedNamespaces(String CAListenedNamespaces) {
-        this.CAListenedNamespaces = CAListenedNamespaces;
-        return this;
-    }
-    public String getCAListenedNamespaces() {
-        return this.CAListenedNamespaces;
-    }
-
-    public UpdateMeshFeatureRequest setAppNamespaces(String appNamespaces) {
-        this.appNamespaces = appNamespaces;
-        return this;
-    }
-    public String getAppNamespaces() {
-        return this.appNamespaces;
     }
 
     public UpdateMeshFeatureRequest setClusterDomain(String clusterDomain) {
@@ -403,6 +372,38 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getHttp10Enabled() {
         return this.http10Enabled;
+    }
+
+    public UpdateMeshFeatureRequest setKialiEnabled(Boolean kialiEnabled) {
+        this.kialiEnabled = kialiEnabled;
+        return this;
+    }
+    public Boolean getKialiEnabled() {
+        return this.kialiEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setCustomizedPrometheus(Boolean customizedPrometheus) {
+        this.customizedPrometheus = customizedPrometheus;
+        return this;
+    }
+    public Boolean getCustomizedPrometheus() {
+        return this.customizedPrometheus;
+    }
+
+    public UpdateMeshFeatureRequest setPrometheusUrl(String prometheusUrl) {
+        this.prometheusUrl = prometheusUrl;
+        return this;
+    }
+    public String getPrometheusUrl() {
+        return this.prometheusUrl;
+    }
+
+    public UpdateMeshFeatureRequest setAccessLogEnabled(Boolean accessLogEnabled) {
+        this.accessLogEnabled = accessLogEnabled;
+        return this;
+    }
+    public Boolean getAccessLogEnabled() {
+        return this.accessLogEnabled;
     }
 
 }

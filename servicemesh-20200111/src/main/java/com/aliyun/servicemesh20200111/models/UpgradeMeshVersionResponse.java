@@ -4,33 +4,21 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class UpgradeMeshVersionResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public UpgradeMeshVersionResponseBody body;
+    public String requestId;
 
     public static UpgradeMeshVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         UpgradeMeshVersionResponse self = new UpgradeMeshVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpgradeMeshVersionResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpgradeMeshVersionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public UpgradeMeshVersionResponse setBody(UpgradeMeshVersionResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public UpgradeMeshVersionResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
