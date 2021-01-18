@@ -1,3 +1,6 @@
+2021-01-18 Version: 2.0.0
+- Add api ExecuteServerSideVerification.
+
 2020-09-16 Version: 1.1.9.ROA
 - Add api DetectIPCPedestrianOptimized.
 
