@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteItemLimitRuleRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("SubBizCode")
@@ -20,6 +21,7 @@ public class DeleteItemLimitRuleRequest extends TeaModel {
     public Long itemId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public Long ruleId;
 
     public static DeleteItemLimitRuleRequest build(java.util.Map<String, ?> map) throws Exception {

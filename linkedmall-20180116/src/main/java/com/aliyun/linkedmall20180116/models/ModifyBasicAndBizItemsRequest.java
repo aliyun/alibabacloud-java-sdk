@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifyBasicAndBizItemsRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("SubBizId")
     public String subBizId;
 
     @NameInMap("ItemList")
+    @Validation(required = true)
     public java.util.List<ModifyBasicAndBizItemsRequestItemList> itemList;
 
     public static ModifyBasicAndBizItemsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -43,17 +45,14 @@ public class ModifyBasicAndBizItemsRequest extends TeaModel {
     }
 
     public static class ModifyBasicAndBizItemsRequestItemListSkuList extends TeaModel {
-        @NameInMap("StatusAction")
-        public Long statusAction;
-
-        @NameInMap("PriceCent")
-        public Long priceCent;
+        @NameInMap("SkuId")
+        public Long skuId;
 
         @NameInMap("SupplierPrice")
         public Long supplierPrice;
 
-        @NameInMap("SkuId")
-        public Long skuId;
+        @NameInMap("PriceCent")
+        public Long priceCent;
 
         @NameInMap("Points")
         public Long points;
@@ -67,25 +66,20 @@ public class ModifyBasicAndBizItemsRequest extends TeaModel {
         @NameInMap("Quantity")
         public Integer quantity;
 
+        @NameInMap("StatusAction")
+        public Long statusAction;
+
         public static ModifyBasicAndBizItemsRequestItemListSkuList build(java.util.Map<String, ?> map) throws Exception {
             ModifyBasicAndBizItemsRequestItemListSkuList self = new ModifyBasicAndBizItemsRequestItemListSkuList();
             return TeaModel.build(map, self);
         }
 
-        public ModifyBasicAndBizItemsRequestItemListSkuList setStatusAction(Long statusAction) {
-            this.statusAction = statusAction;
+        public ModifyBasicAndBizItemsRequestItemListSkuList setSkuId(Long skuId) {
+            this.skuId = skuId;
             return this;
         }
-        public Long getStatusAction() {
-            return this.statusAction;
-        }
-
-        public ModifyBasicAndBizItemsRequestItemListSkuList setPriceCent(Long priceCent) {
-            this.priceCent = priceCent;
-            return this;
-        }
-        public Long getPriceCent() {
-            return this.priceCent;
+        public Long getSkuId() {
+            return this.skuId;
         }
 
         public ModifyBasicAndBizItemsRequestItemListSkuList setSupplierPrice(Long supplierPrice) {
@@ -96,12 +90,12 @@ public class ModifyBasicAndBizItemsRequest extends TeaModel {
             return this.supplierPrice;
         }
 
-        public ModifyBasicAndBizItemsRequestItemListSkuList setSkuId(Long skuId) {
-            this.skuId = skuId;
+        public ModifyBasicAndBizItemsRequestItemListSkuList setPriceCent(Long priceCent) {
+            this.priceCent = priceCent;
             return this;
         }
-        public Long getSkuId() {
-            return this.skuId;
+        public Long getPriceCent() {
+            return this.priceCent;
         }
 
         public ModifyBasicAndBizItemsRequestItemListSkuList setPoints(Long points) {
@@ -136,29 +130,29 @@ public class ModifyBasicAndBizItemsRequest extends TeaModel {
             return this.quantity;
         }
 
+        public ModifyBasicAndBizItemsRequestItemListSkuList setStatusAction(Long statusAction) {
+            this.statusAction = statusAction;
+            return this;
+        }
+        public Long getStatusAction() {
+            return this.statusAction;
+        }
+
     }
 
     public static class ModifyBasicAndBizItemsRequestItemList extends TeaModel {
-        @NameInMap("LmItemId")
-        public String lmItemId;
-
         @NameInMap("ItemId")
         public Long itemId;
 
         @NameInMap("SkuList")
         public java.util.List<ModifyBasicAndBizItemsRequestItemListSkuList> skuList;
 
+        @NameInMap("LmItemId")
+        public String lmItemId;
+
         public static ModifyBasicAndBizItemsRequestItemList build(java.util.Map<String, ?> map) throws Exception {
             ModifyBasicAndBizItemsRequestItemList self = new ModifyBasicAndBizItemsRequestItemList();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyBasicAndBizItemsRequestItemList setLmItemId(String lmItemId) {
-            this.lmItemId = lmItemId;
-            return this;
-        }
-        public String getLmItemId() {
-            return this.lmItemId;
         }
 
         public ModifyBasicAndBizItemsRequestItemList setItemId(Long itemId) {
@@ -175,6 +169,14 @@ public class ModifyBasicAndBizItemsRequest extends TeaModel {
         }
         public java.util.List<ModifyBasicAndBizItemsRequestItemListSkuList> getSkuList() {
             return this.skuList;
+        }
+
+        public ModifyBasicAndBizItemsRequestItemList setLmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
+            return this;
+        }
+        public String getLmItemId() {
+            return this.lmItemId;
         }
 
     }

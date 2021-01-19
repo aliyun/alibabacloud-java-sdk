@@ -4,33 +4,57 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class DeleteItemLimitRuleResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Message")
     @Validation(required = true)
-    public DeleteItemLimitRuleResponseBody body;
+    public String message;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Model")
+    @Validation(required = true)
+    public Boolean model;
 
     public static DeleteItemLimitRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteItemLimitRuleResponse self = new DeleteItemLimitRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteItemLimitRuleResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteItemLimitRuleResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public DeleteItemLimitRuleResponse setBody(DeleteItemLimitRuleResponseBody body) {
-        this.body = body;
+    public DeleteItemLimitRuleResponse setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public DeleteItemLimitRuleResponseBody getBody() {
-        return this.body;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DeleteItemLimitRuleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeleteItemLimitRuleResponse setModel(Boolean model) {
+        this.model = model;
+        return this;
+    }
+    public Boolean getModel() {
+        return this.model;
     }
 
 }

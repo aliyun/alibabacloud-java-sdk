@@ -4,33 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class AddSupplierNewItemsResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public AddSupplierNewItemsResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
 
     public static AddSupplierNewItemsResponse build(java.util.Map<String, ?> map) throws Exception {
         AddSupplierNewItemsResponse self = new AddSupplierNewItemsResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddSupplierNewItemsResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddSupplierNewItemsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddSupplierNewItemsResponse setBody(AddSupplierNewItemsResponseBody body) {
-        this.body = body;
+    public AddSupplierNewItemsResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public AddSupplierNewItemsResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddSupplierNewItemsResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

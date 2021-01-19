@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveAddressRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ThirdPartyUserId")
@@ -14,6 +15,7 @@ public class RemoveAddressRequest extends TeaModel {
     public Boolean useAnonymousTbAccount;
 
     @NameInMap("AddressInfo")
+    @Validation(required = true)
     public String addressInfo;
 
     public static RemoveAddressRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CancelRefundRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("SubLmOrderId")
+    @Validation(required = true)
     public String subLmOrderId;
 
     @NameInMap("DisputeId")
+    @Validation(required = true)
     public Long disputeId;
 
     @NameInMap("UseAnonymousTbAccount")

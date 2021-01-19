@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class NotifyWithholdFundRequest extends TeaModel {
     @NameInMap("ChannelId")
+    @Validation(required = true)
     public String channelId;
 
     @NameInMap("RequestId")
+    @Validation(required = true)
     public String requestId;
 
     @NameInMap("OperationDate")
@@ -20,6 +22,7 @@ public class NotifyWithholdFundRequest extends TeaModel {
     public Long amount;
 
     @NameInMap("TenantOrderId")
+    @Validation(required = true)
     public String tenantOrderId;
 
     public static NotifyWithholdFundRequest build(java.util.Map<String, ?> map) throws Exception {

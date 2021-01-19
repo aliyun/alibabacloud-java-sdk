@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAddressRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("Ip")

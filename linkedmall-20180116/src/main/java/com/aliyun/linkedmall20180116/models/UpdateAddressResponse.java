@@ -4,33 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class UpdateAddressResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public UpdateAddressResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
 
     public static UpdateAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateAddressResponse self = new UpdateAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAddressResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateAddressResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateAddressResponse setBody(UpdateAddressResponseBody body) {
-        this.body = body;
+    public UpdateAddressResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public UpdateAddressResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateAddressResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }
