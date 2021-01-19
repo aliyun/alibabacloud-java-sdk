@@ -20,6 +20,14 @@ public class ExtractFaceAttributeCRORequest extends TeaModel {
     @NameInMap("Types")
     public java.util.List<String> types;
 
+    // 是否监控场景
+    @NameInMap("Monitor")
+    public Boolean monitor;
+
+    // 版本
+    @NameInMap("Version")
+    public String version;
+
     public static ExtractFaceAttributeCRORequest build(java.util.Map<String, ?> map) throws Exception {
         ExtractFaceAttributeCRORequest self = new ExtractFaceAttributeCRORequest();
         return TeaModel.build(map, self);
@@ -55,6 +63,22 @@ public class ExtractFaceAttributeCRORequest extends TeaModel {
     }
     public java.util.List<String> getTypes() {
         return this.types;
+    }
+
+    public ExtractFaceAttributeCRORequest setMonitor(Boolean monitor) {
+        this.monitor = monitor;
+        return this;
+    }
+    public Boolean getMonitor() {
+        return this.monitor;
+    }
+
+    public ExtractFaceAttributeCRORequest setVersion(String version) {
+        this.version = version;
+        return this;
+    }
+    public String getVersion() {
+        return this.version;
     }
 
 }
