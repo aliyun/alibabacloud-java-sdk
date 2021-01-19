@@ -4,33 +4,45 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class RefuseMerchantSyncTaskResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public RefuseMerchantSyncTaskResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
 
     public static RefuseMerchantSyncTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         RefuseMerchantSyncTaskResponse self = new RefuseMerchantSyncTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public RefuseMerchantSyncTaskResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public RefuseMerchantSyncTaskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public RefuseMerchantSyncTaskResponse setBody(RefuseMerchantSyncTaskResponseBody body) {
-        this.body = body;
+    public RefuseMerchantSyncTaskResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public RefuseMerchantSyncTaskResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public RefuseMerchantSyncTaskResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

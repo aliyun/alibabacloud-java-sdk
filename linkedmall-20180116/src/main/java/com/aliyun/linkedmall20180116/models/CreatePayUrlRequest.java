@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreatePayUrlRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("BuyInfo")
+    @Validation(required = true)
     public String buyInfo;
 
     @NameInMap("UseAnonymousTbAccount")

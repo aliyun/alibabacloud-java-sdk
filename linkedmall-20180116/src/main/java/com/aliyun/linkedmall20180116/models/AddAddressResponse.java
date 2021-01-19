@@ -4,33 +4,57 @@ package com.aliyun.linkedmall20180116.models;
 import com.aliyun.tea.*;
 
 public class AddAddressResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public AddAddressResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("AddressId")
+    @Validation(required = true)
+    public Long addressId;
 
     public static AddAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         AddAddressResponse self = new AddAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddAddressResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddAddressResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddAddressResponse setBody(AddAddressResponseBody body) {
-        this.body = body;
+    public AddAddressResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public AddAddressResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddAddressResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public AddAddressResponse setAddressId(Long addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+    public Long getAddressId() {
+        return this.addressId;
     }
 
 }

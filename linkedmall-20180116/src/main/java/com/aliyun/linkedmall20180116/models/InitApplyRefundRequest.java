@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class InitApplyRefundRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("SubLmOrderId")
+    @Validation(required = true)
     public String subLmOrderId;
 
     @NameInMap("BizClaimType")
+    @Validation(required = true)
     public Integer bizClaimType;
 
     @NameInMap("GoodsStatus")
+    @Validation(required = true)
     public Integer goodsStatus;
 
     @NameInMap("UseAnonymousTbAccount")

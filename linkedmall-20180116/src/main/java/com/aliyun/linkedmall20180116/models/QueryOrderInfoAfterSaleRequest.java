@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class QueryOrderInfoAfterSaleRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ChannelUserId")
+    @Validation(required = true)
     public String channelUserId;
 
     @NameInMap("LmOrderId")
+    @Validation(required = true)
     public String lmOrderId;
 
     @NameInMap("UseAnonymousTbAccount")

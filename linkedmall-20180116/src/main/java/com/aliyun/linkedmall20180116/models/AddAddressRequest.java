@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAddressRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("ThirdPartyUserId")
@@ -14,6 +15,7 @@ public class AddAddressRequest extends TeaModel {
     public Boolean useAnonymousTbAccount;
 
     @NameInMap("AddressInfo")
+    @Validation(required = true)
     public String addressInfo;
 
     public static AddAddressRequest build(java.util.Map<String, ?> map) throws Exception {

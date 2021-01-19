@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class RemoveMessagesRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("MessageIds")
+    @Validation(required = true)
     public String messageIds;
 
     @NameInMap("ExtJson")

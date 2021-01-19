@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class ApplyRefundRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("SubLmOrderId")
+    @Validation(required = true)
     public String subLmOrderId;
 
     @NameInMap("BizClaimType")
+    @Validation(required = true)
     public Integer bizClaimType;
 
     @NameInMap("ApplyRefundFee")
+    @Validation(required = true)
     public Long applyRefundFee;
 
     @NameInMap("ApplyRefundCount")
@@ -27,6 +32,9 @@ public class ApplyRefundRequest extends TeaModel {
 
     @NameInMap("LeaveMessage")
     public String leaveMessage;
+
+    @NameInMap("LeavePictureList")
+    public java.util.List<ApplyRefundRequestLeavePictureList> leavePictureList;
 
     @NameInMap("GoodsStatus")
     public Integer goodsStatus;
@@ -39,9 +47,6 @@ public class ApplyRefundRequest extends TeaModel {
 
     @NameInMap("AccountType")
     public String accountType;
-
-    @NameInMap("LeavePictureList")
-    public java.util.List<ApplyRefundRequestLeavePictureList> leavePictureList;
 
     public static ApplyRefundRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyRefundRequest self = new ApplyRefundRequest();
@@ -112,6 +117,14 @@ public class ApplyRefundRequest extends TeaModel {
         return this.leaveMessage;
     }
 
+    public ApplyRefundRequest setLeavePictureList(java.util.List<ApplyRefundRequestLeavePictureList> leavePictureList) {
+        this.leavePictureList = leavePictureList;
+        return this;
+    }
+    public java.util.List<ApplyRefundRequestLeavePictureList> getLeavePictureList() {
+        return this.leavePictureList;
+    }
+
     public ApplyRefundRequest setGoodsStatus(Integer goodsStatus) {
         this.goodsStatus = goodsStatus;
         return this;
@@ -142,14 +155,6 @@ public class ApplyRefundRequest extends TeaModel {
     }
     public String getAccountType() {
         return this.accountType;
-    }
-
-    public ApplyRefundRequest setLeavePictureList(java.util.List<ApplyRefundRequestLeavePictureList> leavePictureList) {
-        this.leavePictureList = leavePictureList;
-        return this;
-    }
-    public java.util.List<ApplyRefundRequestLeavePictureList> getLeavePictureList() {
-        return this.leavePictureList;
     }
 
     public static class ApplyRefundRequestLeavePictureList extends TeaModel {

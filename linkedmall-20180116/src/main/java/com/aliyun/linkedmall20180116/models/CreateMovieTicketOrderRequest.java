@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateMovieTicketOrderRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("BizUid")
+    @Validation(required = true)
     public String bizUid;
 
     @NameInMap("OutTradeId")
     public String outTradeId;
 
     @NameInMap("LockSeatAppKey")
+    @Validation(required = true)
     public String lockSeatAppKey;
 
     @NameInMap("ExtJson")

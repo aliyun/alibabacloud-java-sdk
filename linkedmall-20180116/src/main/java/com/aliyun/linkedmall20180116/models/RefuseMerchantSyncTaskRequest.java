@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RefuseMerchantSyncTaskRequest extends TeaModel {
     @NameInMap("BizId")
+    @Validation(required = true)
     public String bizId;
 
     @NameInMap("TaskId")
