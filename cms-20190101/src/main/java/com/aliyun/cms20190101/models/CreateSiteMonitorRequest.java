@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSiteMonitorRequest extends TeaModel {
     @NameInMap("Address")
-    @Validation(required = true)
     public String address;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public String taskType;
 
     @NameInMap("TaskName")
-    @Validation(required = true)
     public String taskName;
 
     @NameInMap("Interval")
@@ -31,6 +28,62 @@ public class CreateSiteMonitorRequest extends TeaModel {
     public static CreateSiteMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSiteMonitorRequest self = new CreateSiteMonitorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSiteMonitorRequest setAddress(String address) {
+        this.address = address;
+        return this;
+    }
+    public String getAddress() {
+        return this.address;
+    }
+
+    public CreateSiteMonitorRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
+    }
+
+    public CreateSiteMonitorRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public CreateSiteMonitorRequest setInterval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+    public String getInterval() {
+        return this.interval;
+    }
+
+    public CreateSiteMonitorRequest setIspCities(String ispCities) {
+        this.ispCities = ispCities;
+        return this;
+    }
+    public String getIspCities() {
+        return this.ispCities;
+    }
+
+    public CreateSiteMonitorRequest setOptionsJson(String optionsJson) {
+        this.optionsJson = optionsJson;
+        return this;
+    }
+    public String getOptionsJson() {
+        return this.optionsJson;
+    }
+
+    public CreateSiteMonitorRequest setAlertIds(String alertIds) {
+        this.alertIds = alertIds;
+        return this;
+    }
+    public String getAlertIds() {
+        return this.alertIds;
     }
 
 }

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRuleTargetsRequest extends TeaModel {
     @NameInMap("RuleId")
-    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("TargetIds")
@@ -14,6 +13,22 @@ public class DeleteMetricRuleTargetsRequest extends TeaModel {
     public static DeleteMetricRuleTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMetricRuleTargetsRequest self = new DeleteMetricRuleTargetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMetricRuleTargetsRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
+    }
+
+    public DeleteMetricRuleTargetsRequest setTargetIds(java.util.List<String> targetIds) {
+        this.targetIds = targetIds;
+        return this;
+    }
+    public java.util.List<String> getTargetIds() {
+        return this.targetIds;
     }
 
 }

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorAgentProcessRequest extends TeaModel {
     @NameInMap("ProcessName")
-    @Validation(required = true)
     public String processName;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ProcessUser")
@@ -18,6 +16,30 @@ public class CreateMonitorAgentProcessRequest extends TeaModel {
     public static CreateMonitorAgentProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorAgentProcessRequest self = new CreateMonitorAgentProcessRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMonitorAgentProcessRequest setProcessName(String processName) {
+        this.processName = processName;
+        return this;
+    }
+    public String getProcessName() {
+        return this.processName;
+    }
+
+    public CreateMonitorAgentProcessRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateMonitorAgentProcessRequest setProcessUser(String processUser) {
+        this.processUser = processUser;
+        return this;
+    }
+    public String getProcessUser() {
+        return this.processUser;
     }
 
 }

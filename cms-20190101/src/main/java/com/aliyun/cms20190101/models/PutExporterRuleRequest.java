@@ -7,9 +7,6 @@ public class PutExporterRuleRequest extends TeaModel {
     @NameInMap("RuleName")
     public String ruleName;
 
-    @NameInMap("DstNames")
-    public java.util.List<String> dstNames;
-
     @NameInMap("Namespace")
     public String namespace;
 
@@ -22,9 +19,60 @@ public class PutExporterRuleRequest extends TeaModel {
     @NameInMap("Describe")
     public String describe;
 
+    @NameInMap("DstNames")
+    public java.util.List<String> dstNames;
+
     public static PutExporterRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         PutExporterRuleRequest self = new PutExporterRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutExporterRuleRequest setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+    public String getRuleName() {
+        return this.ruleName;
+    }
+
+    public PutExporterRuleRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public PutExporterRuleRequest setMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    public String getMetricName() {
+        return this.metricName;
+    }
+
+    public PutExporterRuleRequest setTargetWindows(String targetWindows) {
+        this.targetWindows = targetWindows;
+        return this;
+    }
+    public String getTargetWindows() {
+        return this.targetWindows;
+    }
+
+    public PutExporterRuleRequest setDescribe(String describe) {
+        this.describe = describe;
+        return this;
+    }
+    public String getDescribe() {
+        return this.describe;
+    }
+
+    public PutExporterRuleRequest setDstNames(java.util.List<String> dstNames) {
+        this.dstNames = dstNames;
+        return this;
+    }
+    public java.util.List<String> getDstNames() {
+        return this.dstNames;
     }
 
 }

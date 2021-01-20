@@ -4,77 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class ApplyMetricRuleTemplateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Resource")
-    @Validation(required = true)
-    public ApplyMetricRuleTemplateResponseResource resource;
+    public ApplyMetricRuleTemplateResponseBody body;
 
     public static ApplyMetricRuleTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         ApplyMetricRuleTemplateResponse self = new ApplyMetricRuleTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ApplyMetricRuleTemplateResponseResourceAlertResults extends TeaModel {
-        @NameInMap("GroupId")
-        @Validation(required = true)
-        public Long groupId;
-
-        @NameInMap("RuleId")
-        @Validation(required = true)
-        public String ruleId;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        @NameInMap("RuleName")
-        @Validation(required = true)
-        public String ruleName;
-
-        @NameInMap("Code")
-        @Validation(required = true)
-        public String code;
-
-        @NameInMap("Success")
-        @Validation(required = true)
-        public Boolean success;
-
-        public static ApplyMetricRuleTemplateResponseResourceAlertResults build(java.util.Map<String, ?> map) throws Exception {
-            ApplyMetricRuleTemplateResponseResourceAlertResults self = new ApplyMetricRuleTemplateResponseResourceAlertResults();
-            return TeaModel.build(map, self);
-        }
-
+    public ApplyMetricRuleTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class ApplyMetricRuleTemplateResponseResource extends TeaModel {
-        @NameInMap("GroupId")
-        @Validation(required = true)
-        public Long groupId;
-
-        @NameInMap("AlertResults")
-        @Validation(required = true)
-        public java.util.List<ApplyMetricRuleTemplateResponseResourceAlertResults> alertResults;
-
-        public static ApplyMetricRuleTemplateResponseResource build(java.util.Map<String, ?> map) throws Exception {
-            ApplyMetricRuleTemplateResponseResource self = new ApplyMetricRuleTemplateResponseResource();
-            return TeaModel.build(map, self);
-        }
-
+    public ApplyMetricRuleTemplateResponse setBody(ApplyMetricRuleTemplateResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ApplyMetricRuleTemplateResponseBody getBody() {
+        return this.body;
     }
 
 }

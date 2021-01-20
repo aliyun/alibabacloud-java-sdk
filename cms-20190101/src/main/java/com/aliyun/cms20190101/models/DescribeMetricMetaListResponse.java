@@ -4,85 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricMetaListResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("TotalCount")
-    @Validation(required = true)
-    public String totalCount;
-
-    @NameInMap("Resources")
-    @Validation(required = true)
-    public DescribeMetricMetaListResponseResources resources;
+    public DescribeMetricMetaListResponseBody body;
 
     public static DescribeMetricMetaListResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricMetaListResponse self = new DescribeMetricMetaListResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeMetricMetaListResponseResourcesResource extends TeaModel {
-        @NameInMap("Namespace")
-        @Validation(required = true)
-        public String namespace;
-
-        @NameInMap("MetricName")
-        @Validation(required = true)
-        public String metricName;
-
-        @NameInMap("Statistics")
-        @Validation(required = true)
-        public String statistics;
-
-        @NameInMap("Unit")
-        @Validation(required = true)
-        public String unit;
-
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("Dimensions")
-        @Validation(required = true)
-        public String dimensions;
-
-        @NameInMap("Periods")
-        @Validation(required = true)
-        public String periods;
-
-        @NameInMap("Labels")
-        @Validation(required = true)
-        public String labels;
-
-        public static DescribeMetricMetaListResponseResourcesResource build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMetricMetaListResponseResourcesResource self = new DescribeMetricMetaListResponseResourcesResource();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeMetricMetaListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeMetricMetaListResponseResources extends TeaModel {
-        @NameInMap("Resource")
-        @Validation(required = true)
-        public java.util.List<DescribeMetricMetaListResponseResourcesResource> resource;
-
-        public static DescribeMetricMetaListResponseResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMetricMetaListResponseResources self = new DescribeMetricMetaListResponseResources();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeMetricMetaListResponse setBody(DescribeMetricMetaListResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeMetricMetaListResponseBody getBody() {
+        return this.body;
     }
 
 }

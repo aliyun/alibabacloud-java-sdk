@@ -12,4 +12,12 @@ public class DescribeProductResourceTagKeyListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeProductResourceTagKeyListRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
 }

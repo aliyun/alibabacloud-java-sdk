@@ -4,21 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutCustomMetricResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public PutCustomMetricResponseBody body;
 
     public static PutCustomMetricResponse build(java.util.Map<String, ?> map) throws Exception {
         PutCustomMetricResponse self = new PutCustomMetricResponse();
         return TeaModel.build(map, self);
+    }
+
+    public PutCustomMetricResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public PutCustomMetricResponse setBody(PutCustomMetricResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public PutCustomMetricResponseBody getBody() {
+        return this.body;
     }
 
 }

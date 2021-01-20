@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutMetricRuleTargetsRequest extends TeaModel {
     @NameInMap("RuleId")
-    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("Targets")
-    @Validation(required = true)
     public java.util.List<PutMetricRuleTargetsRequestTargets> targets;
 
     public static PutMetricRuleTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -17,21 +15,59 @@ public class PutMetricRuleTargetsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public static class PutMetricRuleTargetsRequestTargets extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
-        public String id;
+    public PutMetricRuleTargetsRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
+    }
 
+    public PutMetricRuleTargetsRequest setTargets(java.util.List<PutMetricRuleTargetsRequestTargets> targets) {
+        this.targets = targets;
+        return this;
+    }
+    public java.util.List<PutMetricRuleTargetsRequestTargets> getTargets() {
+        return this.targets;
+    }
+
+    public static class PutMetricRuleTargetsRequestTargets extends TeaModel {
         @NameInMap("Arn")
-        @Validation(required = true)
         public String arn;
 
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("Id")
+        public String id;
+
         public static PutMetricRuleTargetsRequestTargets build(java.util.Map<String, ?> map) throws Exception {
             PutMetricRuleTargetsRequestTargets self = new PutMetricRuleTargetsRequestTargets();
             return TeaModel.build(map, self);
+        }
+
+        public PutMetricRuleTargetsRequestTargets setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
+        }
+
+        public PutMetricRuleTargetsRequestTargets setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public PutMetricRuleTargetsRequestTargets setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

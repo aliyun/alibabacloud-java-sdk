@@ -24,4 +24,44 @@ public class DescribeMetricMetaListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeMetricMetaListRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public DescribeMetricMetaListRequest setLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    public String getLabels() {
+        return this.labels;
+    }
+
+    public DescribeMetricMetaListRequest setMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    public String getMetricName() {
+        return this.metricName;
+    }
+
+    public DescribeMetricMetaListRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeMetricMetaListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

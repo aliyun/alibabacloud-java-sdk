@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateDynamicTagGroupRequest extends TeaModel {
     @NameInMap("TagKey")
-    @Validation(required = true)
     public String tagKey;
 
     @NameInMap("EnableSubscribeEvent")
@@ -14,10 +13,6 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     @NameInMap("EnableInstallAgent")
     public Boolean enableInstallAgent;
 
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    public String regionId;
-
     @NameInMap("MatchExpressFilterRelation")
     public String matchExpressFilterRelation;
 
@@ -25,7 +20,6 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public java.util.List<CreateDynamicTagGroupRequestMatchExpress> matchExpress;
 
     @NameInMap("ContactGroupList")
-    @Validation(required = true)
     public java.util.List<String> contactGroupList;
 
     @NameInMap("TemplateIdList")
@@ -34,6 +28,62 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public static CreateDynamicTagGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDynamicTagGroupRequest self = new CreateDynamicTagGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDynamicTagGroupRequest setTagKey(String tagKey) {
+        this.tagKey = tagKey;
+        return this;
+    }
+    public String getTagKey() {
+        return this.tagKey;
+    }
+
+    public CreateDynamicTagGroupRequest setEnableSubscribeEvent(Boolean enableSubscribeEvent) {
+        this.enableSubscribeEvent = enableSubscribeEvent;
+        return this;
+    }
+    public Boolean getEnableSubscribeEvent() {
+        return this.enableSubscribeEvent;
+    }
+
+    public CreateDynamicTagGroupRequest setEnableInstallAgent(Boolean enableInstallAgent) {
+        this.enableInstallAgent = enableInstallAgent;
+        return this;
+    }
+    public Boolean getEnableInstallAgent() {
+        return this.enableInstallAgent;
+    }
+
+    public CreateDynamicTagGroupRequest setMatchExpressFilterRelation(String matchExpressFilterRelation) {
+        this.matchExpressFilterRelation = matchExpressFilterRelation;
+        return this;
+    }
+    public String getMatchExpressFilterRelation() {
+        return this.matchExpressFilterRelation;
+    }
+
+    public CreateDynamicTagGroupRequest setMatchExpress(java.util.List<CreateDynamicTagGroupRequestMatchExpress> matchExpress) {
+        this.matchExpress = matchExpress;
+        return this;
+    }
+    public java.util.List<CreateDynamicTagGroupRequestMatchExpress> getMatchExpress() {
+        return this.matchExpress;
+    }
+
+    public CreateDynamicTagGroupRequest setContactGroupList(java.util.List<String> contactGroupList) {
+        this.contactGroupList = contactGroupList;
+        return this;
+    }
+    public java.util.List<String> getContactGroupList() {
+        return this.contactGroupList;
+    }
+
+    public CreateDynamicTagGroupRequest setTemplateIdList(java.util.List<String> templateIdList) {
+        this.templateIdList = templateIdList;
+        return this;
+    }
+    public java.util.List<String> getTemplateIdList() {
+        return this.templateIdList;
     }
 
     public static class CreateDynamicTagGroupRequestMatchExpress extends TeaModel {
@@ -46,6 +96,22 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
         public static CreateDynamicTagGroupRequestMatchExpress build(java.util.Map<String, ?> map) throws Exception {
             CreateDynamicTagGroupRequestMatchExpress self = new CreateDynamicTagGroupRequestMatchExpress();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDynamicTagGroupRequestMatchExpress setTagValueMatchFunction(String tagValueMatchFunction) {
+            this.tagValueMatchFunction = tagValueMatchFunction;
+            return this;
+        }
+        public String getTagValueMatchFunction() {
+            return this.tagValueMatchFunction;
+        }
+
+        public CreateDynamicTagGroupRequestMatchExpress setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

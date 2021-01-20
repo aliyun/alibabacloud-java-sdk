@@ -15,4 +15,20 @@ public class DescribeTagKeyListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeTagKeyListRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeTagKeyListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

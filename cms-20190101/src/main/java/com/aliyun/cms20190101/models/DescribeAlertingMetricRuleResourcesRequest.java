@@ -21,4 +21,36 @@ public class DescribeAlertingMetricRuleResourcesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAlertingMetricRuleResourcesRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
+    }
+
+    public DescribeAlertingMetricRuleResourcesRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeAlertingMetricRuleResourcesRequest setPage(Integer page) {
+        this.page = page;
+        return this;
+    }
+    public Integer getPage() {
+        return this.page;
+    }
+
+    public DescribeAlertingMetricRuleResourcesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

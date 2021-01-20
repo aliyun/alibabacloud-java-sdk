@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupInstancesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public CreateMonitorGroupInstancesResponseBody body;
 
     public static CreateMonitorGroupInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorGroupInstancesResponse self = new CreateMonitorGroupInstancesResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMonitorGroupInstancesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateMonitorGroupInstancesResponse setBody(CreateMonitorGroupInstancesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateMonitorGroupInstancesResponseBody getBody() {
+        return this.body;
     }
 
 }

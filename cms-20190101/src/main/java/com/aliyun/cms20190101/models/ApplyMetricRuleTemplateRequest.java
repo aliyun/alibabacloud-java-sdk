@@ -8,11 +8,9 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     public Long silenceTime;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public Long groupId;
 
     @NameInMap("TemplateIds")
-    @Validation(required = true)
     public String templateIds;
 
     @NameInMap("EnableStartTime")
@@ -33,6 +31,70 @@ public class ApplyMetricRuleTemplateRequest extends TeaModel {
     public static ApplyMetricRuleTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyMetricRuleTemplateRequest self = new ApplyMetricRuleTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ApplyMetricRuleTemplateRequest setSilenceTime(Long silenceTime) {
+        this.silenceTime = silenceTime;
+        return this;
+    }
+    public Long getSilenceTime() {
+        return this.silenceTime;
+    }
+
+    public ApplyMetricRuleTemplateRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
+    public ApplyMetricRuleTemplateRequest setTemplateIds(String templateIds) {
+        this.templateIds = templateIds;
+        return this;
+    }
+    public String getTemplateIds() {
+        return this.templateIds;
+    }
+
+    public ApplyMetricRuleTemplateRequest setEnableStartTime(Long enableStartTime) {
+        this.enableStartTime = enableStartTime;
+        return this;
+    }
+    public Long getEnableStartTime() {
+        return this.enableStartTime;
+    }
+
+    public ApplyMetricRuleTemplateRequest setEnableEndTime(Long enableEndTime) {
+        this.enableEndTime = enableEndTime;
+        return this;
+    }
+    public Long getEnableEndTime() {
+        return this.enableEndTime;
+    }
+
+    public ApplyMetricRuleTemplateRequest setNotifyLevel(Long notifyLevel) {
+        this.notifyLevel = notifyLevel;
+        return this;
+    }
+    public Long getNotifyLevel() {
+        return this.notifyLevel;
+    }
+
+    public ApplyMetricRuleTemplateRequest setApplyMode(String applyMode) {
+        this.applyMode = applyMode;
+        return this;
+    }
+    public String getApplyMode() {
+        return this.applyMode;
+    }
+
+    public ApplyMetricRuleTemplateRequest setWebhook(String webhook) {
+        this.webhook = webhook;
+        return this;
+    }
+    public String getWebhook() {
+        return this.webhook;
     }
 
 }

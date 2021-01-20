@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteSiteMonitorsRequest extends TeaModel {
     @NameInMap("TaskIds")
-    @Validation(required = true)
     public String taskIds;
 
     @NameInMap("IsDeleteAlarms")
@@ -14,6 +13,22 @@ public class DeleteSiteMonitorsRequest extends TeaModel {
     public static DeleteSiteMonitorsRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSiteMonitorsRequest self = new DeleteSiteMonitorsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSiteMonitorsRequest setTaskIds(String taskIds) {
+        this.taskIds = taskIds;
+        return this;
+    }
+    public String getTaskIds() {
+        return this.taskIds;
+    }
+
+    public DeleteSiteMonitorsRequest setIsDeleteAlarms(Boolean isDeleteAlarms) {
+        this.isDeleteAlarms = isDeleteAlarms;
+        return this;
+    }
+    public Boolean getIsDeleteAlarms() {
+        return this.isDeleteAlarms;
     }
 
 }

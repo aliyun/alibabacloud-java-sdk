@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupDynamicRuleRequest extends TeaModel {
     @NameInMap("GroupId")
-    @Validation(required = true)
     public Long groupId;
 
     @NameInMap("Category")
-    @Validation(required = true)
     public String category;
 
     public static DeleteMonitorGroupDynamicRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupDynamicRuleRequest self = new DeleteMonitorGroupDynamicRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMonitorGroupDynamicRuleRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
+    public DeleteMonitorGroupDynamicRuleRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
 }

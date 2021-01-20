@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMonitorGroupDynamicRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public PutMonitorGroupDynamicRuleResponseBody body;
 
     public static PutMonitorGroupDynamicRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         PutMonitorGroupDynamicRuleResponse self = new PutMonitorGroupDynamicRuleResponse();
         return TeaModel.build(map, self);
+    }
+
+    public PutMonitorGroupDynamicRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public PutMonitorGroupDynamicRuleResponse setBody(PutMonitorGroupDynamicRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public PutMonitorGroupDynamicRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteContactRequest extends TeaModel {
     @NameInMap("ContactName")
-    @Validation(required = true)
     public String contactName;
 
     public static DeleteContactRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteContactRequest self = new DeleteContactRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteContactRequest setContactName(String contactName) {
+        this.contactName = contactName;
+        return this;
+    }
+    public String getContactName() {
+        return this.contactName;
     }
 
 }

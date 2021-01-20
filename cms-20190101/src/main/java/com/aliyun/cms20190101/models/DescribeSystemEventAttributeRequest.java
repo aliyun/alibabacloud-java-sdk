@@ -42,4 +42,92 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeSystemEventAttributeRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
+    }
+
+    public DescribeSystemEventAttributeRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
+    }
+
+    public DescribeSystemEventAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeSystemEventAttributeRequest setLevel(String level) {
+        this.level = level;
+        return this;
+    }
+    public String getLevel() {
+        return this.level;
+    }
+
+    public DescribeSystemEventAttributeRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DescribeSystemEventAttributeRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeSystemEventAttributeRequest setSearchKeywords(String searchKeywords) {
+        this.searchKeywords = searchKeywords;
+        return this;
+    }
+    public String getSearchKeywords() {
+        return this.searchKeywords;
+    }
+
+    public DescribeSystemEventAttributeRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeSystemEventAttributeRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeSystemEventAttributeRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeSystemEventAttributeRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
 }

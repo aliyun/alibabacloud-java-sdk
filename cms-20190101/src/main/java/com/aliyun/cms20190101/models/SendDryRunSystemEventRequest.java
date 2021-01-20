@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SendDryRunSystemEventRequest extends TeaModel {
     @NameInMap("Product")
-    @Validation(required = true)
     public String product;
 
     @NameInMap("EventName")
-    @Validation(required = true)
     public String eventName;
 
     @NameInMap("GroupId")
@@ -21,6 +19,38 @@ public class SendDryRunSystemEventRequest extends TeaModel {
     public static SendDryRunSystemEventRequest build(java.util.Map<String, ?> map) throws Exception {
         SendDryRunSystemEventRequest self = new SendDryRunSystemEventRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SendDryRunSystemEventRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
+    }
+
+    public SendDryRunSystemEventRequest setEventName(String eventName) {
+        this.eventName = eventName;
+        return this;
+    }
+    public String getEventName() {
+        return this.eventName;
+    }
+
+    public SendDryRunSystemEventRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public SendDryRunSystemEventRequest setEventContent(String eventContent) {
+        this.eventContent = eventContent;
+        return this;
+    }
+    public String getEventContent() {
+        return this.eventContent;
     }
 
 }

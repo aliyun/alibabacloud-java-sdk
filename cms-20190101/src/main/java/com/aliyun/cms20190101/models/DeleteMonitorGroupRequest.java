@@ -12,4 +12,12 @@ public class DeleteMonitorGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeleteMonitorGroupRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
 }

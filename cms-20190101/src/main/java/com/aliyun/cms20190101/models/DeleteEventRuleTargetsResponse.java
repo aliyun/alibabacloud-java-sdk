@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteEventRuleTargetsResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public DeleteEventRuleTargetsResponseBody body;
 
     public static DeleteEventRuleTargetsResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteEventRuleTargetsResponse self = new DeleteEventRuleTargetsResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteEventRuleTargetsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteEventRuleTargetsResponse setBody(DeleteEventRuleTargetsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteEventRuleTargetsResponseBody getBody() {
+        return this.body;
     }
 
 }

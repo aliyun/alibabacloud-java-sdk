@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DisableActiveMetricRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public DisableActiveMetricRuleResponseBody body;
 
     public static DisableActiveMetricRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DisableActiveMetricRuleResponse self = new DisableActiveMetricRuleResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DisableActiveMetricRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DisableActiveMetricRuleResponse setBody(DisableActiveMetricRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DisableActiveMetricRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

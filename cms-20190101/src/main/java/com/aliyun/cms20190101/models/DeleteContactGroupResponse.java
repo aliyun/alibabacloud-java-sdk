@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteContactGroupResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public DeleteContactGroupResponseBody body;
 
     public static DeleteContactGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteContactGroupResponse self = new DeleteContactGroupResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteContactGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteContactGroupResponse setBody(DeleteContactGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteContactGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupDynamicRuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public DeleteMonitorGroupDynamicRuleResponseBody body;
 
     public static DeleteMonitorGroupDynamicRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupDynamicRuleResponse self = new DeleteMonitorGroupDynamicRuleResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMonitorGroupDynamicRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteMonitorGroupDynamicRuleResponse setBody(DeleteMonitorGroupDynamicRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteMonitorGroupDynamicRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

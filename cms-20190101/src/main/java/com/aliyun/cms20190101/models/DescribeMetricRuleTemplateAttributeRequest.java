@@ -15,4 +15,20 @@ public class DescribeMetricRuleTemplateAttributeRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeMetricRuleTemplateAttributeRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeMetricRuleTemplateAttributeRequest setTemplateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
 }

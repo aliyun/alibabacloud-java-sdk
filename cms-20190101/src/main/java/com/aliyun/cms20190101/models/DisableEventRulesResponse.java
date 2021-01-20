@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DisableEventRulesResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public DisableEventRulesResponseBody body;
 
     public static DisableEventRulesResponse build(java.util.Map<String, ?> map) throws Exception {
         DisableEventRulesResponse self = new DisableEventRulesResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DisableEventRulesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DisableEventRulesResponse setBody(DisableEventRulesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DisableEventRulesResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -30,4 +30,60 @@ public class DescribeCustomEventHistogramRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCustomEventHistogramRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public DescribeCustomEventHistogramRequest setLevel(String level) {
+        this.level = level;
+        return this;
+    }
+    public String getLevel() {
+        return this.level;
+    }
+
+    public DescribeCustomEventHistogramRequest setEventId(String eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public String getEventId() {
+        return this.eventId;
+    }
+
+    public DescribeCustomEventHistogramRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public DescribeCustomEventHistogramRequest setSearchKeywords(String searchKeywords) {
+        this.searchKeywords = searchKeywords;
+        return this;
+    }
+    public String getSearchKeywords() {
+        return this.searchKeywords;
+    }
+
+    public DescribeCustomEventHistogramRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeCustomEventHistogramRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
 }
