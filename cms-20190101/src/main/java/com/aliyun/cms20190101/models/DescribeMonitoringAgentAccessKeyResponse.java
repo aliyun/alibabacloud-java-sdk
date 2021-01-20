@@ -4,33 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitoringAgentAccessKeyResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Integer code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("AccessKey")
-    @Validation(required = true)
-    public String accessKey;
-
-    @NameInMap("SecretKey")
-    @Validation(required = true)
-    public String secretKey;
+    public DescribeMonitoringAgentAccessKeyResponseBody body;
 
     public static DescribeMonitoringAgentAccessKeyResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitoringAgentAccessKeyResponse self = new DescribeMonitoringAgentAccessKeyResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitoringAgentAccessKeyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeMonitoringAgentAccessKeyResponse setBody(DescribeMonitoringAgentAccessKeyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeMonitoringAgentAccessKeyResponseBody getBody() {
+        return this.body;
     }
 
 }

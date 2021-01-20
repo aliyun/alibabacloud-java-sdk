@@ -4,61 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTargetsResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Targets")
-    @Validation(required = true)
-    public DescribeMetricRuleTargetsResponseTargets targets;
+    public DescribeMetricRuleTargetsResponseBody body;
 
     public static DescribeMetricRuleTargetsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleTargetsResponse self = new DescribeMetricRuleTargetsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeMetricRuleTargetsResponseTargetsTarget extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
-        public String id;
-
-        @NameInMap("Arn")
-        @Validation(required = true)
-        public String arn;
-
-        @NameInMap("Level")
-        @Validation(required = true)
-        public String level;
-
-        public static DescribeMetricRuleTargetsResponseTargetsTarget build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMetricRuleTargetsResponseTargetsTarget self = new DescribeMetricRuleTargetsResponseTargetsTarget();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeMetricRuleTargetsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeMetricRuleTargetsResponseTargets extends TeaModel {
-        @NameInMap("Target")
-        @Validation(required = true)
-        public java.util.List<DescribeMetricRuleTargetsResponseTargetsTarget> target;
-
-        public static DescribeMetricRuleTargetsResponseTargets build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMetricRuleTargetsResponseTargets self = new DescribeMetricRuleTargetsResponseTargets();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeMetricRuleTargetsResponse setBody(DescribeMetricRuleTargetsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeMetricRuleTargetsResponseBody getBody() {
+        return this.body;
     }
 
 }

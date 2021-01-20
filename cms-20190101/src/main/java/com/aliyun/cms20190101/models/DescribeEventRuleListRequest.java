@@ -21,4 +21,36 @@ public class DescribeEventRuleListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeEventRuleListRequest setNamePrefix(String namePrefix) {
+        this.namePrefix = namePrefix;
+        return this;
+    }
+    public String getNamePrefix() {
+        return this.namePrefix;
+    }
+
+    public DescribeEventRuleListRequest setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeEventRuleListRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeEventRuleListRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
 }

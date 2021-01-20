@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyMonitorGroupInstancesRequest extends TeaModel {
     @NameInMap("GroupId")
-    @Validation(required = true)
     public Long groupId;
 
     @NameInMap("Instances")
-    @Validation(required = true)
     public java.util.List<ModifyMonitorGroupInstancesRequestInstances> instances;
 
     public static ModifyMonitorGroupInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -17,26 +15,70 @@ public class ModifyMonitorGroupInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyMonitorGroupInstancesRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
+    public ModifyMonitorGroupInstancesRequest setInstances(java.util.List<ModifyMonitorGroupInstancesRequestInstances> instances) {
+        this.instances = instances;
+        return this;
+    }
+    public java.util.List<ModifyMonitorGroupInstancesRequestInstances> getInstances() {
+        return this.instances;
+    }
+
     public static class ModifyMonitorGroupInstancesRequestInstances extends TeaModel {
+        @NameInMap("InstanceName")
+        public String instanceName;
+
         @NameInMap("Category")
-        @Validation(required = true)
         public String category;
 
         @NameInMap("InstanceId")
-        @Validation(required = true)
         public String instanceId;
 
         @NameInMap("RegionId")
-        @Validation(required = true)
         public String regionId;
-
-        @NameInMap("InstanceName")
-        @Validation(required = true)
-        public String instanceName;
 
         public static ModifyMonitorGroupInstancesRequestInstances build(java.util.Map<String, ?> map) throws Exception {
             ModifyMonitorGroupInstancesRequestInstances self = new ModifyMonitorGroupInstancesRequestInstances();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyMonitorGroupInstancesRequestInstances setInstanceName(String instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public String getInstanceName() {
+            return this.instanceName;
+        }
+
+        public ModifyMonitorGroupInstancesRequestInstances setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public ModifyMonitorGroupInstancesRequestInstances setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ModifyMonitorGroupInstancesRequestInstances setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
     }

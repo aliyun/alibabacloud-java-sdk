@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutContactResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public PutContactResponseBody body;
 
     public static PutContactResponse build(java.util.Map<String, ?> map) throws Exception {
         PutContactResponse self = new PutContactResponse();
         return TeaModel.build(map, self);
+    }
+
+    public PutContactResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public PutContactResponse setBody(PutContactResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public PutContactResponseBody getBody() {
+        return this.body;
     }
 
 }

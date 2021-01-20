@@ -4,45 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeProductResourceTagKeyListResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("NextToken")
-    @Validation(required = true)
-    public String nextToken;
-
-    @NameInMap("TagKeys")
-    @Validation(required = true)
-    public DescribeProductResourceTagKeyListResponseTagKeys tagKeys;
+    public DescribeProductResourceTagKeyListResponseBody body;
 
     public static DescribeProductResourceTagKeyListResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeProductResourceTagKeyListResponse self = new DescribeProductResourceTagKeyListResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeProductResourceTagKeyListResponseTagKeys extends TeaModel {
-        @NameInMap("TagKey")
-        @Validation(required = true)
-        public java.util.List<String> tagKey;
+    public DescribeProductResourceTagKeyListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static DescribeProductResourceTagKeyListResponseTagKeys build(java.util.Map<String, ?> map) throws Exception {
-            DescribeProductResourceTagKeyListResponseTagKeys self = new DescribeProductResourceTagKeyListResponseTagKeys();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeProductResourceTagKeyListResponse setBody(DescribeProductResourceTagKeyListResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeProductResourceTagKeyListResponseBody getBody() {
+        return this.body;
     }
 
 }

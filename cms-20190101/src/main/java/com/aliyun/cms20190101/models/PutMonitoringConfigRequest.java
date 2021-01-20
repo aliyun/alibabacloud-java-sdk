@@ -15,4 +15,20 @@ public class PutMonitoringConfigRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PutMonitoringConfigRequest setAutoInstall(Boolean autoInstall) {
+        this.autoInstall = autoInstall;
+        return this;
+    }
+    public Boolean getAutoInstall() {
+        return this.autoInstall;
+    }
+
+    public PutMonitoringConfigRequest setEnableInstallAgentNewECS(Boolean enableInstallAgentNewECS) {
+        this.enableInstallAgentNewECS = enableInstallAgentNewECS;
+        return this;
+    }
+    public Boolean getEnableInstallAgentNewECS() {
+        return this.enableInstallAgentNewECS;
+    }
+
 }

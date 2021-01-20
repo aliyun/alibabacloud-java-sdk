@@ -4,31 +4,25 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateHostAvailabilityRequest extends TeaModel {
+    @NameInMap("TaskOption")
+    public CreateHostAvailabilityRequestTaskOption taskOption;
+
+    @NameInMap("AlertConfig")
+    public CreateHostAvailabilityRequestAlertConfig alertConfig;
+
     @NameInMap("GroupId")
-    @Validation(required = true)
     public Long groupId;
 
     @NameInMap("TaskName")
-    @Validation(required = true)
     public String taskName;
 
     @NameInMap("TaskScope")
     public String taskScope;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public String taskType;
 
-    @NameInMap("TaskOption")
-    @Validation(required = true)
-    public CreateHostAvailabilityRequestTaskOption taskOption;
-
-    @NameInMap("AlertConfig")
-    @Validation(required = true)
-    public CreateHostAvailabilityRequestAlertConfig alertConfig;
-
     @NameInMap("AlertConfigEscalationList")
-    @Validation(required = true)
     public java.util.List<CreateHostAvailabilityRequestAlertConfigEscalationList> alertConfigEscalationList;
 
     @NameInMap("InstanceList")
@@ -37,6 +31,70 @@ public class CreateHostAvailabilityRequest extends TeaModel {
     public static CreateHostAvailabilityRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHostAvailabilityRequest self = new CreateHostAvailabilityRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateHostAvailabilityRequest setTaskOption(CreateHostAvailabilityRequestTaskOption taskOption) {
+        this.taskOption = taskOption;
+        return this;
+    }
+    public CreateHostAvailabilityRequestTaskOption getTaskOption() {
+        return this.taskOption;
+    }
+
+    public CreateHostAvailabilityRequest setAlertConfig(CreateHostAvailabilityRequestAlertConfig alertConfig) {
+        this.alertConfig = alertConfig;
+        return this;
+    }
+    public CreateHostAvailabilityRequestAlertConfig getAlertConfig() {
+        return this.alertConfig;
+    }
+
+    public CreateHostAvailabilityRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
+    public CreateHostAvailabilityRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public CreateHostAvailabilityRequest setTaskScope(String taskScope) {
+        this.taskScope = taskScope;
+        return this;
+    }
+    public String getTaskScope() {
+        return this.taskScope;
+    }
+
+    public CreateHostAvailabilityRequest setTaskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+    public String getTaskType() {
+        return this.taskType;
+    }
+
+    public CreateHostAvailabilityRequest setAlertConfigEscalationList(java.util.List<CreateHostAvailabilityRequestAlertConfigEscalationList> alertConfigEscalationList) {
+        this.alertConfigEscalationList = alertConfigEscalationList;
+        return this;
+    }
+    public java.util.List<CreateHostAvailabilityRequestAlertConfigEscalationList> getAlertConfigEscalationList() {
+        return this.alertConfigEscalationList;
+    }
+
+    public CreateHostAvailabilityRequest setInstanceList(java.util.List<String> instanceList) {
+        this.instanceList = instanceList;
+        return this;
+    }
+    public java.util.List<String> getInstanceList() {
+        return this.instanceList;
     }
 
     public static class CreateHostAvailabilityRequestTaskOption extends TeaModel {
@@ -48,6 +106,9 @@ public class CreateHostAvailabilityRequest extends TeaModel {
 
         @NameInMap("HttpResponseCharset")
         public String httpResponseCharset;
+
+        @NameInMap("HttpPostContent")
+        public String httpPostContent;
 
         @NameInMap("HttpResponseMatchContent")
         public String httpResponseMatchContent;
@@ -63,11 +124,66 @@ public class CreateHostAvailabilityRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateHostAvailabilityRequestTaskOption setHttpURI(String httpURI) {
+            this.httpURI = httpURI;
+            return this;
+        }
+        public String getHttpURI() {
+            return this.httpURI;
+        }
+
+        public CreateHostAvailabilityRequestTaskOption setTelnetOrPingHost(String telnetOrPingHost) {
+            this.telnetOrPingHost = telnetOrPingHost;
+            return this;
+        }
+        public String getTelnetOrPingHost() {
+            return this.telnetOrPingHost;
+        }
+
+        public CreateHostAvailabilityRequestTaskOption setHttpResponseCharset(String httpResponseCharset) {
+            this.httpResponseCharset = httpResponseCharset;
+            return this;
+        }
+        public String getHttpResponseCharset() {
+            return this.httpResponseCharset;
+        }
+
+        public CreateHostAvailabilityRequestTaskOption setHttpPostContent(String httpPostContent) {
+            this.httpPostContent = httpPostContent;
+            return this;
+        }
+        public String getHttpPostContent() {
+            return this.httpPostContent;
+        }
+
+        public CreateHostAvailabilityRequestTaskOption setHttpResponseMatchContent(String httpResponseMatchContent) {
+            this.httpResponseMatchContent = httpResponseMatchContent;
+            return this;
+        }
+        public String getHttpResponseMatchContent() {
+            return this.httpResponseMatchContent;
+        }
+
+        public CreateHostAvailabilityRequestTaskOption setHttpMethod(String httpMethod) {
+            this.httpMethod = httpMethod;
+            return this;
+        }
+        public String getHttpMethod() {
+            return this.httpMethod;
+        }
+
+        public CreateHostAvailabilityRequestTaskOption setHttpNegative(Boolean httpNegative) {
+            this.httpNegative = httpNegative;
+            return this;
+        }
+        public Boolean getHttpNegative() {
+            return this.httpNegative;
+        }
+
     }
 
     public static class CreateHostAvailabilityRequestAlertConfig extends TeaModel {
         @NameInMap("NotifyType")
-        @Validation(required = true)
         public Integer notifyType;
 
         @NameInMap("StartTime")
@@ -87,32 +203,107 @@ public class CreateHostAvailabilityRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public CreateHostAvailabilityRequestAlertConfig setNotifyType(Integer notifyType) {
+            this.notifyType = notifyType;
+            return this;
+        }
+        public Integer getNotifyType() {
+            return this.notifyType;
+        }
+
+        public CreateHostAvailabilityRequestAlertConfig setStartTime(Integer startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Integer getStartTime() {
+            return this.startTime;
+        }
+
+        public CreateHostAvailabilityRequestAlertConfig setEndTime(Integer endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Integer getEndTime() {
+            return this.endTime;
+        }
+
+        public CreateHostAvailabilityRequestAlertConfig setSilenceTime(Integer silenceTime) {
+            this.silenceTime = silenceTime;
+            return this;
+        }
+        public Integer getSilenceTime() {
+            return this.silenceTime;
+        }
+
+        public CreateHostAvailabilityRequestAlertConfig setWebHook(String webHook) {
+            this.webHook = webHook;
+            return this;
+        }
+        public String getWebHook() {
+            return this.webHook;
+        }
+
     }
 
     public static class CreateHostAvailabilityRequestAlertConfigEscalationList extends TeaModel {
+        @NameInMap("Value")
+        public String value;
+
         @NameInMap("MetricName")
-        @Validation(required = true)
         public String metricName;
 
-        @NameInMap("Aggregate")
-        @Validation(required = true)
-        public String aggregate;
-
         @NameInMap("Times")
-        @Validation(required = true)
         public Integer times;
 
         @NameInMap("Operator")
-        @Validation(required = true)
         public String operator;
 
-        @NameInMap("Value")
-        @Validation(required = true)
-        public String value;
+        @NameInMap("Aggregate")
+        public String aggregate;
 
         public static CreateHostAvailabilityRequestAlertConfigEscalationList build(java.util.Map<String, ?> map) throws Exception {
             CreateHostAvailabilityRequestAlertConfigEscalationList self = new CreateHostAvailabilityRequestAlertConfigEscalationList();
             return TeaModel.build(map, self);
+        }
+
+        public CreateHostAvailabilityRequestAlertConfigEscalationList setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public CreateHostAvailabilityRequestAlertConfigEscalationList setMetricName(String metricName) {
+            this.metricName = metricName;
+            return this;
+        }
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        public CreateHostAvailabilityRequestAlertConfigEscalationList setTimes(Integer times) {
+            this.times = times;
+            return this;
+        }
+        public Integer getTimes() {
+            return this.times;
+        }
+
+        public CreateHostAvailabilityRequestAlertConfigEscalationList setOperator(String operator) {
+            this.operator = operator;
+            return this;
+        }
+        public String getOperator() {
+            return this.operator;
+        }
+
+        public CreateHostAvailabilityRequestAlertConfigEscalationList setAggregate(String aggregate) {
+            this.aggregate = aggregate;
+            return this;
+        }
+        public String getAggregate() {
+            return this.aggregate;
         }
 
     }

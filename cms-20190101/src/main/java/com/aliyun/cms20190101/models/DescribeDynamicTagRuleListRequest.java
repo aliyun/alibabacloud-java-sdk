@@ -18,4 +18,28 @@ public class DescribeDynamicTagRuleListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDynamicTagRuleListRequest setTagKey(String tagKey) {
+        this.tagKey = tagKey;
+        return this;
+    }
+    public String getTagKey() {
+        return this.tagKey;
+    }
+
+    public DescribeDynamicTagRuleListRequest setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDynamicTagRuleListRequest setPageSize(String pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public String getPageSize() {
+        return this.pageSize;
+    }
+
 }

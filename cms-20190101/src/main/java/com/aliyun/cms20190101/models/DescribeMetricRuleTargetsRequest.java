@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTargetsRequest extends TeaModel {
     @NameInMap("RuleId")
-    @Validation(required = true)
     public String ruleId;
 
     public static DescribeMetricRuleTargetsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricRuleTargetsRequest self = new DescribeMetricRuleTargetsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricRuleTargetsRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
     }
 
 }

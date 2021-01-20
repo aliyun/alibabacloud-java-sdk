@@ -4,29 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMetricRuleTemplateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Id")
-    @Validation(required = true)
-    public Long id;
+    public CreateMetricRuleTemplateResponseBody body;
 
     public static CreateMetricRuleTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateMetricRuleTemplateResponse self = new CreateMetricRuleTemplateResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMetricRuleTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateMetricRuleTemplateResponse setBody(CreateMetricRuleTemplateResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateMetricRuleTemplateResponseBody getBody() {
+        return this.body;
     }
 
 }

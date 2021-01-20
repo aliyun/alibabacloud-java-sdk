@@ -4,29 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutEventRuleResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
+    public PutEventRuleResponseBody body;
 
     public static PutEventRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         PutEventRuleResponse self = new PutEventRuleResponse();
         return TeaModel.build(map, self);
+    }
+
+    public PutEventRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public PutEventRuleResponse setBody(PutEventRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public PutEventRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

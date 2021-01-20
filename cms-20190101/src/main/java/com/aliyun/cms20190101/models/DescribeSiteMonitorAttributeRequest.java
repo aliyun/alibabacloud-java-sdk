@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorAttributeRequest extends TeaModel {
     @NameInMap("TaskId")
-    @Validation(required = true)
     public String taskId;
 
     @NameInMap("IncludeAlert")
@@ -14,6 +13,22 @@ public class DescribeSiteMonitorAttributeRequest extends TeaModel {
     public static DescribeSiteMonitorAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorAttributeRequest self = new DescribeSiteMonitorAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSiteMonitorAttributeRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public DescribeSiteMonitorAttributeRequest setIncludeAlert(Boolean includeAlert) {
+        this.includeAlert = includeAlert;
+        return this;
+    }
+    public Boolean getIncludeAlert() {
+        return this.includeAlert;
     }
 
 }

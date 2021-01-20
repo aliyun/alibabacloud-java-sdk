@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupCategoriesRequest extends TeaModel {
     @NameInMap("GroupId")
-    @Validation(required = true)
     public Long groupId;
 
     public static DescribeMonitorGroupCategoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorGroupCategoriesRequest self = new DescribeMonitorGroupCategoriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMonitorGroupCategoriesRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
     }
 
 }

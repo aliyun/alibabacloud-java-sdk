@@ -4,77 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutResourceMetricRulesResponse extends TeaModel {
-    @NameInMap("Success")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean success;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("FailedListResult")
-    @Validation(required = true)
-    public PutResourceMetricRulesResponseFailedListResult failedListResult;
+    public PutResourceMetricRulesResponseBody body;
 
     public static PutResourceMetricRulesResponse build(java.util.Map<String, ?> map) throws Exception {
         PutResourceMetricRulesResponse self = new PutResourceMetricRulesResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class PutResourceMetricRulesResponseFailedListResultTargetResult extends TeaModel {
-        @NameInMap("Code")
-        @Validation(required = true)
-        public String code;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        @NameInMap("Success")
-        @Validation(required = true)
-        public Boolean success;
-
-        public static PutResourceMetricRulesResponseFailedListResultTargetResult build(java.util.Map<String, ?> map) throws Exception {
-            PutResourceMetricRulesResponseFailedListResultTargetResult self = new PutResourceMetricRulesResponseFailedListResultTargetResult();
-            return TeaModel.build(map, self);
-        }
-
+    public PutResourceMetricRulesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class PutResourceMetricRulesResponseFailedListResultTarget extends TeaModel {
-        @NameInMap("RuleId")
-        @Validation(required = true)
-        public String ruleId;
-
-        @NameInMap("Result")
-        @Validation(required = true)
-        public PutResourceMetricRulesResponseFailedListResultTargetResult result;
-
-        public static PutResourceMetricRulesResponseFailedListResultTarget build(java.util.Map<String, ?> map) throws Exception {
-            PutResourceMetricRulesResponseFailedListResultTarget self = new PutResourceMetricRulesResponseFailedListResultTarget();
-            return TeaModel.build(map, self);
-        }
-
+    public PutResourceMetricRulesResponse setBody(PutResourceMetricRulesResponseBody body) {
+        this.body = body;
+        return this;
     }
-
-    public static class PutResourceMetricRulesResponseFailedListResult extends TeaModel {
-        @NameInMap("Target")
-        @Validation(required = true)
-        public java.util.List<PutResourceMetricRulesResponseFailedListResultTarget> target;
-
-        public static PutResourceMetricRulesResponseFailedListResult build(java.util.Map<String, ?> map) throws Exception {
-            PutResourceMetricRulesResponseFailedListResult self = new PutResourceMetricRulesResponseFailedListResult();
-            return TeaModel.build(map, self);
-        }
-
+    public PutResourceMetricRulesResponseBody getBody() {
+        return this.body;
     }
 
 }

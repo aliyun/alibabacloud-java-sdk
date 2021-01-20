@@ -1,0 +1,86 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cms20190101.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteSiteMonitorsResponseBody extends TeaModel {
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Data")
+    public DeleteSiteMonitorsResponseBodyData data;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Success")
+    public String success;
+
+    public static DeleteSiteMonitorsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSiteMonitorsResponseBody self = new DeleteSiteMonitorsResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteSiteMonitorsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public DeleteSiteMonitorsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeleteSiteMonitorsResponseBody setData(DeleteSiteMonitorsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public DeleteSiteMonitorsResponseBodyData getData() {
+        return this.data;
+    }
+
+    public DeleteSiteMonitorsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteSiteMonitorsResponseBody setSuccess(String success) {
+        this.success = success;
+        return this;
+    }
+    public String getSuccess() {
+        return this.success;
+    }
+
+    public static class DeleteSiteMonitorsResponseBodyData extends TeaModel {
+        @NameInMap("count")
+        public Integer count;
+
+        public static DeleteSiteMonitorsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            DeleteSiteMonitorsResponseBodyData self = new DeleteSiteMonitorsResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteSiteMonitorsResponseBodyData setCount(Integer count) {
+            this.count = count;
+            return this;
+        }
+        public Integer getCount() {
+            return this.count;
+        }
+
+    }
+
+}

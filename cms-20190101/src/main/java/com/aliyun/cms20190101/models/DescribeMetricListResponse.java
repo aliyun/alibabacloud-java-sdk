@@ -4,37 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMetricListResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("NextToken")
-    @Validation(required = true)
-    public String nextToken;
-
-    @NameInMap("Datapoints")
-    @Validation(required = true)
-    public String datapoints;
-
-    @NameInMap("Period")
-    @Validation(required = true)
-    public String period;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    public DescribeMetricListResponseBody body;
 
     public static DescribeMetricListResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricListResponse self = new DescribeMetricListResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeMetricListResponse setBody(DescribeMetricListResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeMetricListResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
     @NameInMap("Id")
-    @Validation(required = true)
     public String id;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     @NameInMap("MatchExpressFilterRelation")
     public String matchExpressFilterRelation;
 
     @NameInMap("AlertConfig")
-    @Validation(required = true)
     public java.util.List<ModifyGroupMonitoringAgentProcessRequestAlertConfig> alertConfig;
 
     public static ModifyGroupMonitoringAgentProcessRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -24,46 +21,141 @@ public class ModifyGroupMonitoringAgentProcessRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModifyGroupMonitoringAgentProcessRequest setId(String id) {
+        this.id = id;
+        return this;
+    }
+    public String getId() {
+        return this.id;
+    }
+
+    public ModifyGroupMonitoringAgentProcessRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public ModifyGroupMonitoringAgentProcessRequest setMatchExpressFilterRelation(String matchExpressFilterRelation) {
+        this.matchExpressFilterRelation = matchExpressFilterRelation;
+        return this;
+    }
+    public String getMatchExpressFilterRelation() {
+        return this.matchExpressFilterRelation;
+    }
+
+    public ModifyGroupMonitoringAgentProcessRequest setAlertConfig(java.util.List<ModifyGroupMonitoringAgentProcessRequestAlertConfig> alertConfig) {
+        this.alertConfig = alertConfig;
+        return this;
+    }
+    public java.util.List<ModifyGroupMonitoringAgentProcessRequestAlertConfig> getAlertConfig() {
+        return this.alertConfig;
+    }
+
     public static class ModifyGroupMonitoringAgentProcessRequestAlertConfig extends TeaModel {
-        @NameInMap("EffectiveInterval")
-        @Validation(required = true)
-        public String effectiveInterval;
-
-        @NameInMap("NoEffectiveInterval")
-        @Validation(required = true)
-        public String noEffectiveInterval;
-
         @NameInMap("SilenceTime")
-        @Validation(required = true)
         public String silenceTime;
 
-        @NameInMap("Webhook")
-        @Validation(required = true)
-        public String webhook;
-
-        @NameInMap("EscalationsLevel")
-        @Validation(required = true)
-        public String escalationsLevel;
-
         @NameInMap("ComparisonOperator")
-        @Validation(required = true)
         public String comparisonOperator;
 
-        @NameInMap("Statistics")
-        @Validation(required = true)
-        public String statistics;
-
-        @NameInMap("Threshold")
-        @Validation(required = true)
-        public String threshold;
+        @NameInMap("Webhook")
+        public String webhook;
 
         @NameInMap("Times")
-        @Validation(required = true)
         public String times;
+
+        @NameInMap("EscalationsLevel")
+        public String escalationsLevel;
+
+        @NameInMap("NoEffectiveInterval")
+        public String noEffectiveInterval;
+
+        @NameInMap("EffectiveInterval")
+        public String effectiveInterval;
+
+        @NameInMap("Threshold")
+        public String threshold;
+
+        @NameInMap("Statistics")
+        public String statistics;
 
         public static ModifyGroupMonitoringAgentProcessRequestAlertConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyGroupMonitoringAgentProcessRequestAlertConfig self = new ModifyGroupMonitoringAgentProcessRequestAlertConfig();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setSilenceTime(String silenceTime) {
+            this.silenceTime = silenceTime;
+            return this;
+        }
+        public String getSilenceTime() {
+            return this.silenceTime;
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setComparisonOperator(String comparisonOperator) {
+            this.comparisonOperator = comparisonOperator;
+            return this;
+        }
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setWebhook(String webhook) {
+            this.webhook = webhook;
+            return this;
+        }
+        public String getWebhook() {
+            return this.webhook;
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setTimes(String times) {
+            this.times = times;
+            return this;
+        }
+        public String getTimes() {
+            return this.times;
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setEscalationsLevel(String escalationsLevel) {
+            this.escalationsLevel = escalationsLevel;
+            return this;
+        }
+        public String getEscalationsLevel() {
+            return this.escalationsLevel;
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setNoEffectiveInterval(String noEffectiveInterval) {
+            this.noEffectiveInterval = noEffectiveInterval;
+            return this;
+        }
+        public String getNoEffectiveInterval() {
+            return this.noEffectiveInterval;
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setEffectiveInterval(String effectiveInterval) {
+            this.effectiveInterval = effectiveInterval;
+            return this;
+        }
+        public String getEffectiveInterval() {
+            return this.effectiveInterval;
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setThreshold(String threshold) {
+            this.threshold = threshold;
+            return this;
+        }
+        public String getThreshold() {
+            return this.threshold;
+        }
+
+        public ModifyGroupMonitoringAgentProcessRequestAlertConfig setStatistics(String statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+        public String getStatistics() {
+            return this.statistics;
         }
 
     }

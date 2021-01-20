@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
     @NameInMap("TaskId")
-    @Validation(required = true)
     public String taskId;
 
     @NameInMap("TimeRange")
@@ -15,12 +14,43 @@ public class DescribeSiteMonitorStatisticsRequest extends TeaModel {
     public String startTime;
 
     @NameInMap("MetricName")
-    @Validation(required = true)
     public String metricName;
 
     public static DescribeSiteMonitorStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorStatisticsRequest self = new DescribeSiteMonitorStatisticsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSiteMonitorStatisticsRequest setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public DescribeSiteMonitorStatisticsRequest setTimeRange(String timeRange) {
+        this.timeRange = timeRange;
+        return this;
+    }
+    public String getTimeRange() {
+        return this.timeRange;
+    }
+
+    public DescribeSiteMonitorStatisticsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeSiteMonitorStatisticsRequest setMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    public String getMetricName() {
+        return this.metricName;
     }
 
 }

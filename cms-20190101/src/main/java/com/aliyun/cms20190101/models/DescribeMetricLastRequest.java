@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricLastRequest extends TeaModel {
     @NameInMap("Namespace")
-    @Validation(required = true)
     public String namespace;
 
     @NameInMap("MetricName")
-    @Validation(required = true)
     public String metricName;
 
     @NameInMap("Period")
@@ -36,6 +34,78 @@ public class DescribeMetricLastRequest extends TeaModel {
     public static DescribeMetricLastRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMetricLastRequest self = new DescribeMetricLastRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMetricLastRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public DescribeMetricLastRequest setMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    public String getMetricName() {
+        return this.metricName;
+    }
+
+    public DescribeMetricLastRequest setPeriod(String period) {
+        this.period = period;
+        return this;
+    }
+    public String getPeriod() {
+        return this.period;
+    }
+
+    public DescribeMetricLastRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeMetricLastRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeMetricLastRequest setDimensions(String dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+    public String getDimensions() {
+        return this.dimensions;
+    }
+
+    public DescribeMetricLastRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public DescribeMetricLastRequest setLength(String length) {
+        this.length = length;
+        return this;
+    }
+    public String getLength() {
+        return this.length;
+    }
+
+    public DescribeMetricLastRequest setExpress(String express) {
+        this.express = express;
+        return this;
+    }
+    public String getExpress() {
+        return this.express;
     }
 
 }

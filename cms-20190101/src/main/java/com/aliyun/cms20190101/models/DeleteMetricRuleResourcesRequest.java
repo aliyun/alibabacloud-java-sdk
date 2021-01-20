@@ -8,12 +8,27 @@ public class DeleteMetricRuleResourcesRequest extends TeaModel {
     public String ruleId;
 
     @NameInMap("Resources")
-    @Validation(required = true)
     public String resources;
 
     public static DeleteMetricRuleResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMetricRuleResourcesRequest self = new DeleteMetricRuleResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMetricRuleResourcesRequest setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
+    }
+
+    public DeleteMetricRuleResourcesRequest setResources(String resources) {
+        this.resources = resources;
+        return this;
+    }
+    public String getResources() {
+        return this.resources;
     }
 
 }

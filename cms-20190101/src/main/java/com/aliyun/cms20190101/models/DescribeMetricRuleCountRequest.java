@@ -15,4 +15,20 @@ public class DescribeMetricRuleCountRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeMetricRuleCountRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    public DescribeMetricRuleCountRequest setMetricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+    public String getMetricName() {
+        return this.metricName;
+    }
+
 }

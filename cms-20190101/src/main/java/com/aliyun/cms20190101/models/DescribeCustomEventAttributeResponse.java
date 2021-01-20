@@ -4,69 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCustomEventAttributeResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public String success;
-
-    @NameInMap("CustomEvents")
-    @Validation(required = true)
-    public DescribeCustomEventAttributeResponseCustomEvents customEvents;
+    public DescribeCustomEventAttributeResponseBody body;
 
     public static DescribeCustomEventAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomEventAttributeResponse self = new DescribeCustomEventAttributeResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeCustomEventAttributeResponseCustomEventsCustomEvent extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
-        public String id;
-
-        @NameInMap("Content")
-        @Validation(required = true)
-        public String content;
-
-        @NameInMap("GroupId")
-        @Validation(required = true)
-        public String groupId;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("Time")
-        @Validation(required = true)
-        public String time;
-
-        public static DescribeCustomEventAttributeResponseCustomEventsCustomEvent build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCustomEventAttributeResponseCustomEventsCustomEvent self = new DescribeCustomEventAttributeResponseCustomEventsCustomEvent();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeCustomEventAttributeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeCustomEventAttributeResponseCustomEvents extends TeaModel {
-        @NameInMap("CustomEvent")
-        @Validation(required = true)
-        public java.util.List<DescribeCustomEventAttributeResponseCustomEventsCustomEvent> customEvent;
-
-        public static DescribeCustomEventAttributeResponseCustomEvents build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCustomEventAttributeResponseCustomEvents self = new DescribeCustomEventAttributeResponseCustomEvents();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeCustomEventAttributeResponse setBody(DescribeCustomEventAttributeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeCustomEventAttributeResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -24,4 +24,44 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeHostAvailabilityListRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
+    }
+
+    public DescribeHostAvailabilityListRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public DescribeHostAvailabilityListRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeHostAvailabilityListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeHostAvailabilityListRequest setGroupId(Long groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public Long getGroupId() {
+        return this.groupId;
+    }
+
 }

@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DeleteExporterRuleResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    public DeleteExporterRuleResponseBody body;
 
     public static DeleteExporterRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteExporterRuleResponse self = new DeleteExporterRuleResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteExporterRuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteExporterRuleResponse setBody(DeleteExporterRuleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteExporterRuleResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class EnableActiveMetricRuleRequest extends TeaModel {
     @NameInMap("Product")
-    @Validation(required = true)
     public String product;
 
     public static EnableActiveMetricRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableActiveMetricRuleRequest self = new EnableActiveMetricRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EnableActiveMetricRuleRequest setProduct(String product) {
+        this.product = product;
+        return this;
+    }
+    public String getProduct() {
+        return this.product;
     }
 
 }

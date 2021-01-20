@@ -11,12 +11,35 @@ public class DescribeTagValueListRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("TagKey")
-    @Validation(required = true)
     public String tagKey;
 
     public static DescribeTagValueListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagValueListRequest self = new DescribeTagValueListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeTagValueListRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeTagValueListRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public DescribeTagValueListRequest setTagKey(String tagKey) {
+        this.tagKey = tagKey;
+        return this;
+    }
+    public String getTagKey() {
+        return this.tagKey;
     }
 
 }

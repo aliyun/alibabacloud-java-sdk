@@ -8,7 +8,6 @@ public class CreateMonitoringAgentProcessRequest extends TeaModel {
     public String processName;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ProcessUser")
@@ -17,6 +16,30 @@ public class CreateMonitoringAgentProcessRequest extends TeaModel {
     public static CreateMonitoringAgentProcessRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitoringAgentProcessRequest self = new CreateMonitoringAgentProcessRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMonitoringAgentProcessRequest setProcessName(String processName) {
+        this.processName = processName;
+        return this;
+    }
+    public String getProcessName() {
+        return this.processName;
+    }
+
+    public CreateMonitoringAgentProcessRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateMonitoringAgentProcessRequest setProcessUser(String processUser) {
+        this.processUser = processUser;
+        return this;
+    }
+    public String getProcessUser() {
+        return this.processUser;
     }
 
 }

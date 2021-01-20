@@ -4,25 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class InstallMonitoringAgentResponse extends TeaModel {
-    @NameInMap("Code")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String code;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public InstallMonitoringAgentResponseBody body;
 
     public static InstallMonitoringAgentResponse build(java.util.Map<String, ?> map) throws Exception {
         InstallMonitoringAgentResponse self = new InstallMonitoringAgentResponse();
         return TeaModel.build(map, self);
+    }
+
+    public InstallMonitoringAgentResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public InstallMonitoringAgentResponse setBody(InstallMonitoringAgentResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public InstallMonitoringAgentResponseBody getBody() {
+        return this.body;
     }
 
 }

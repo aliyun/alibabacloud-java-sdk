@@ -12,26 +12,62 @@ public class PutCustomEventRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PutCustomEventRequest setEventInfo(java.util.List<PutCustomEventRequestEventInfo> eventInfo) {
+        this.eventInfo = eventInfo;
+        return this;
+    }
+    public java.util.List<PutCustomEventRequestEventInfo> getEventInfo() {
+        return this.eventInfo;
+    }
+
     public static class PutCustomEventRequestEventInfo extends TeaModel {
-        @NameInMap("EventName")
-        @Validation(required = true)
-        public String eventName;
-
-        @NameInMap("Content")
-        @Validation(required = true)
-        public String content;
-
         @NameInMap("Time")
-        @Validation(required = true)
         public String time;
 
+        @NameInMap("EventName")
+        public String eventName;
+
         @NameInMap("GroupId")
-        @Validation(required = true)
         public String groupId;
+
+        @NameInMap("Content")
+        public String content;
 
         public static PutCustomEventRequestEventInfo build(java.util.Map<String, ?> map) throws Exception {
             PutCustomEventRequestEventInfo self = new PutCustomEventRequestEventInfo();
             return TeaModel.build(map, self);
+        }
+
+        public PutCustomEventRequestEventInfo setTime(String time) {
+            this.time = time;
+            return this;
+        }
+        public String getTime() {
+            return this.time;
+        }
+
+        public PutCustomEventRequestEventInfo setEventName(String eventName) {
+            this.eventName = eventName;
+            return this;
+        }
+        public String getEventName() {
+            return this.eventName;
+        }
+
+        public PutCustomEventRequestEventInfo setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public PutCustomEventRequestEventInfo setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
         }
 
     }

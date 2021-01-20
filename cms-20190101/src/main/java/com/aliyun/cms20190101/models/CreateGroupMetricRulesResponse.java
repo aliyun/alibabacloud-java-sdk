@@ -4,69 +4,33 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupMetricRulesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Resources")
-    @Validation(required = true)
-    public CreateGroupMetricRulesResponseResources resources;
+    public CreateGroupMetricRulesResponseBody body;
 
     public static CreateGroupMetricRulesResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupMetricRulesResponse self = new CreateGroupMetricRulesResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class CreateGroupMetricRulesResponseResourcesAlertResult extends TeaModel {
-        @NameInMap("RuleId")
-        @Validation(required = true)
-        public String ruleId;
-
-        @NameInMap("RuleName")
-        @Validation(required = true)
-        public String ruleName;
-
-        @NameInMap("Message")
-        @Validation(required = true)
-        public String message;
-
-        @NameInMap("Code")
-        @Validation(required = true)
-        public Integer code;
-
-        @NameInMap("Success")
-        @Validation(required = true)
-        public Boolean success;
-
-        public static CreateGroupMetricRulesResponseResourcesAlertResult build(java.util.Map<String, ?> map) throws Exception {
-            CreateGroupMetricRulesResponseResourcesAlertResult self = new CreateGroupMetricRulesResponseResourcesAlertResult();
-            return TeaModel.build(map, self);
-        }
-
+    public CreateGroupMetricRulesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class CreateGroupMetricRulesResponseResources extends TeaModel {
-        @NameInMap("AlertResult")
-        @Validation(required = true)
-        public java.util.List<CreateGroupMetricRulesResponseResourcesAlertResult> alertResult;
-
-        public static CreateGroupMetricRulesResponseResources build(java.util.Map<String, ?> map) throws Exception {
-            CreateGroupMetricRulesResponseResources self = new CreateGroupMetricRulesResponseResources();
-            return TeaModel.build(map, self);
-        }
-
+    public CreateGroupMetricRulesResponse setBody(CreateGroupMetricRulesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateGroupMetricRulesResponseBody getBody() {
+        return this.body;
     }
 
 }

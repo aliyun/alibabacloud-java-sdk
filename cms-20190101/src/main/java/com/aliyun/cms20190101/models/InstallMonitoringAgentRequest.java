@@ -8,12 +8,27 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     public Boolean force;
 
     @NameInMap("InstanceIds")
-    @Validation(required = true)
     public java.util.List<String> instanceIds;
 
     public static InstallMonitoringAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallMonitoringAgentRequest self = new InstallMonitoringAgentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InstallMonitoringAgentRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    public InstallMonitoringAgentRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
 }

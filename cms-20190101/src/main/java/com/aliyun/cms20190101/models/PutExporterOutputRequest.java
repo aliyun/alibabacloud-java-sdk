@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutExporterOutputRequest extends TeaModel {
     @NameInMap("DestName")
-    @Validation(required = true)
     public String destName;
 
     @NameInMap("ConfigJson")
-    @Validation(required = true)
     public String configJson;
 
     @NameInMap("Desc")
@@ -21,6 +19,38 @@ public class PutExporterOutputRequest extends TeaModel {
     public static PutExporterOutputRequest build(java.util.Map<String, ?> map) throws Exception {
         PutExporterOutputRequest self = new PutExporterOutputRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutExporterOutputRequest setDestName(String destName) {
+        this.destName = destName;
+        return this;
+    }
+    public String getDestName() {
+        return this.destName;
+    }
+
+    public PutExporterOutputRequest setConfigJson(String configJson) {
+        this.configJson = configJson;
+        return this;
+    }
+    public String getConfigJson() {
+        return this.configJson;
+    }
+
+    public PutExporterOutputRequest setDesc(String desc) {
+        this.desc = desc;
+        return this;
+    }
+    public String getDesc() {
+        return this.desc;
+    }
+
+    public PutExporterOutputRequest setDestType(String destType) {
+        this.destType = destType;
+        return this;
+    }
+    public String getDestType() {
+        return this.destType;
     }
 
 }

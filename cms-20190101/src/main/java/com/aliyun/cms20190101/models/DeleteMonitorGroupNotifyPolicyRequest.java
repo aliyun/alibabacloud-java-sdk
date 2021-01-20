@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupNotifyPolicyRequest extends TeaModel {
     @NameInMap("PolicyType")
-    @Validation(required = true)
     public String policyType;
 
     @NameInMap("GroupId")
@@ -14,6 +13,22 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends TeaModel {
     public static DeleteMonitorGroupNotifyPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteMonitorGroupNotifyPolicyRequest self = new DeleteMonitorGroupNotifyPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteMonitorGroupNotifyPolicyRequest setPolicyType(String policyType) {
+        this.policyType = policyType;
+        return this;
+    }
+    public String getPolicyType() {
+        return this.policyType;
+    }
+
+    public DeleteMonitorGroupNotifyPolicyRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
     }
 
 }
