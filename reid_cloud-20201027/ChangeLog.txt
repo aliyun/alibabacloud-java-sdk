@@ -1,3 +1,6 @@
+2021-01-20 Version: 2.0.0
+- Supported cro algorithm v200.
+
 2021-01-19 Version: 2.0.0
 - Supported cro algorithm v200.
 
