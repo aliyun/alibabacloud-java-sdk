@@ -4,33 +4,45 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("NextToken")
     @Validation(required = true)
-    public ListTagKeysResponseBody body;
+    public String nextToken;
+
+    @NameInMap("Keys")
+    @Validation(required = true)
+    public java.util.List<String> keys;
 
     public static ListTagKeysResponse build(java.util.Map<String, ?> map) throws Exception {
         ListTagKeysResponse self = new ListTagKeysResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListTagKeysResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ListTagKeysResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ListTagKeysResponse setBody(ListTagKeysResponseBody body) {
-        this.body = body;
+    public ListTagKeysResponse setNextToken(String nextToken) {
+        this.nextToken = nextToken;
         return this;
     }
-    public ListTagKeysResponseBody getBody() {
-        return this.body;
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagKeysResponse setKeys(java.util.List<String> keys) {
+        this.keys = keys;
+        return this;
+    }
+    public java.util.List<String> getKeys() {
+        return this.keys;
     }
 
 }

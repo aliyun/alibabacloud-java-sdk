@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class SetStackPolicyRequest extends TeaModel {
     @NameInMap("StackId")
+    @Validation(required = true)
     public String stackId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackPolicyBody")

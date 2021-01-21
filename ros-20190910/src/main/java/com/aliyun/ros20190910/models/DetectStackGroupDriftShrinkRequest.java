@@ -8,9 +8,11 @@ public class DetectStackGroupDriftShrinkRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackGroupName")
+    @Validation(required = true)
     public String stackGroupName;
 
     @NameInMap("OperationPreferences")

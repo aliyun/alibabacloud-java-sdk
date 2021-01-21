@@ -7,8 +7,8 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("StackId")
     public String stackId;
 
-    @NameInMap("ChannelId")
-    public String channelId;
+    @NameInMap("Parameters")
+    public java.util.List<CreateChangeSetRequestParameters> parameters;
 
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
@@ -29,6 +29,7 @@ public class CreateChangeSetRequest extends TeaModel {
     public String description;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ClientToken")
@@ -43,26 +44,21 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("TemplateBody")
     public String templateBody;
 
-    @NameInMap("UpdateAllowPolicy")
-    public String updateAllowPolicy;
-
     @NameInMap("TimeoutInMinutes")
     public Long timeoutInMinutes;
-
-    @NameInMap("ActivityId")
-    public String activityId;
-
-    @NameInMap("OrderSource")
-    public String orderSource;
 
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
 
     @NameInMap("ChangeSetName")
+    @Validation(required = true)
     public String changeSetName;
 
     @NameInMap("StackPolicyDuringUpdateBody")
     public String stackPolicyDuringUpdateBody;
+
+    @NameInMap("NotificationURLs")
+    public java.util.List<String> notificationURLs;
 
     @NameInMap("RamRoleName")
     public String ramRoleName;
@@ -70,20 +66,14 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("ReplacementOption")
     public String replacementOption;
 
+    @NameInMap("ResourcesToImport")
+    public java.util.List<CreateChangeSetRequestResourcesToImport> resourcesToImport;
+
     @NameInMap("TemplateId")
     public String templateId;
 
     @NameInMap("TemplateVersion")
     public String templateVersion;
-
-    @NameInMap("Parameters")
-    public java.util.List<CreateChangeSetRequestParameters> parameters;
-
-    @NameInMap("NotificationURLs")
-    public java.util.List<String> notificationURLs;
-
-    @NameInMap("ResourcesToImport")
-    public java.util.List<CreateChangeSetRequestResourcesToImport> resourcesToImport;
 
     public static CreateChangeSetRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateChangeSetRequest self = new CreateChangeSetRequest();
@@ -98,12 +88,12 @@ public class CreateChangeSetRequest extends TeaModel {
         return this.stackId;
     }
 
-    public CreateChangeSetRequest setChannelId(String channelId) {
-        this.channelId = channelId;
+    public CreateChangeSetRequest setParameters(java.util.List<CreateChangeSetRequestParameters> parameters) {
+        this.parameters = parameters;
         return this;
     }
-    public String getChannelId() {
-        return this.channelId;
+    public java.util.List<CreateChangeSetRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public CreateChangeSetRequest setStackPolicyURL(String stackPolicyURL) {
@@ -194,36 +184,12 @@ public class CreateChangeSetRequest extends TeaModel {
         return this.templateBody;
     }
 
-    public CreateChangeSetRequest setUpdateAllowPolicy(String updateAllowPolicy) {
-        this.updateAllowPolicy = updateAllowPolicy;
-        return this;
-    }
-    public String getUpdateAllowPolicy() {
-        return this.updateAllowPolicy;
-    }
-
     public CreateChangeSetRequest setTimeoutInMinutes(Long timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
     }
     public Long getTimeoutInMinutes() {
         return this.timeoutInMinutes;
-    }
-
-    public CreateChangeSetRequest setActivityId(String activityId) {
-        this.activityId = activityId;
-        return this;
-    }
-    public String getActivityId() {
-        return this.activityId;
-    }
-
-    public CreateChangeSetRequest setOrderSource(String orderSource) {
-        this.orderSource = orderSource;
-        return this;
-    }
-    public String getOrderSource() {
-        return this.orderSource;
     }
 
     public CreateChangeSetRequest setDisableRollback(Boolean disableRollback) {
@@ -250,6 +216,14 @@ public class CreateChangeSetRequest extends TeaModel {
         return this.stackPolicyDuringUpdateBody;
     }
 
+    public CreateChangeSetRequest setNotificationURLs(java.util.List<String> notificationURLs) {
+        this.notificationURLs = notificationURLs;
+        return this;
+    }
+    public java.util.List<String> getNotificationURLs() {
+        return this.notificationURLs;
+    }
+
     public CreateChangeSetRequest setRamRoleName(String ramRoleName) {
         this.ramRoleName = ramRoleName;
         return this;
@@ -264,6 +238,14 @@ public class CreateChangeSetRequest extends TeaModel {
     }
     public String getReplacementOption() {
         return this.replacementOption;
+    }
+
+    public CreateChangeSetRequest setResourcesToImport(java.util.List<CreateChangeSetRequestResourcesToImport> resourcesToImport) {
+        this.resourcesToImport = resourcesToImport;
+        return this;
+    }
+    public java.util.List<CreateChangeSetRequestResourcesToImport> getResourcesToImport() {
+        return this.resourcesToImport;
     }
 
     public CreateChangeSetRequest setTemplateId(String templateId) {
@@ -282,48 +264,18 @@ public class CreateChangeSetRequest extends TeaModel {
         return this.templateVersion;
     }
 
-    public CreateChangeSetRequest setParameters(java.util.List<CreateChangeSetRequestParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<CreateChangeSetRequestParameters> getParameters() {
-        return this.parameters;
-    }
-
-    public CreateChangeSetRequest setNotificationURLs(java.util.List<String> notificationURLs) {
-        this.notificationURLs = notificationURLs;
-        return this;
-    }
-    public java.util.List<String> getNotificationURLs() {
-        return this.notificationURLs;
-    }
-
-    public CreateChangeSetRequest setResourcesToImport(java.util.List<CreateChangeSetRequestResourcesToImport> resourcesToImport) {
-        this.resourcesToImport = resourcesToImport;
-        return this;
-    }
-    public java.util.List<CreateChangeSetRequestResourcesToImport> getResourcesToImport() {
-        return this.resourcesToImport;
-    }
-
     public static class CreateChangeSetRequestParameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        public String parameterKey;
-
         @NameInMap("ParameterValue")
+        @Validation(required = true)
         public String parameterValue;
+
+        @NameInMap("ParameterKey")
+        @Validation(required = true)
+        public String parameterKey;
 
         public static CreateChangeSetRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             CreateChangeSetRequestParameters self = new CreateChangeSetRequestParameters();
             return TeaModel.build(map, self);
-        }
-
-        public CreateChangeSetRequestParameters setParameterKey(String parameterKey) {
-            this.parameterKey = parameterKey;
-            return this;
-        }
-        public String getParameterKey() {
-            return this.parameterKey;
         }
 
         public CreateChangeSetRequestParameters setParameterValue(String parameterValue) {
@@ -334,29 +286,32 @@ public class CreateChangeSetRequest extends TeaModel {
             return this.parameterValue;
         }
 
+        public CreateChangeSetRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
+        }
+
     }
 
     public static class CreateChangeSetRequestResourcesToImport extends TeaModel {
-        @NameInMap("ResourceIdentifier")
-        public String resourceIdentifier;
-
         @NameInMap("LogicalResourceId")
+        @Validation(required = true)
         public String logicalResourceId;
 
         @NameInMap("ResourceType")
+        @Validation(required = true)
         public String resourceType;
+
+        @NameInMap("ResourceIdentifier")
+        @Validation(required = true)
+        public String resourceIdentifier;
 
         public static CreateChangeSetRequestResourcesToImport build(java.util.Map<String, ?> map) throws Exception {
             CreateChangeSetRequestResourcesToImport self = new CreateChangeSetRequestResourcesToImport();
             return TeaModel.build(map, self);
-        }
-
-        public CreateChangeSetRequestResourcesToImport setResourceIdentifier(String resourceIdentifier) {
-            this.resourceIdentifier = resourceIdentifier;
-            return this;
-        }
-        public String getResourceIdentifier() {
-            return this.resourceIdentifier;
         }
 
         public CreateChangeSetRequestResourcesToImport setLogicalResourceId(String logicalResourceId) {
@@ -373,6 +328,14 @@ public class CreateChangeSetRequest extends TeaModel {
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public CreateChangeSetRequestResourcesToImport setResourceIdentifier(String resourceIdentifier) {
+            this.resourceIdentifier = resourceIdentifier;
+            return this;
+        }
+        public String getResourceIdentifier() {
+            return this.resourceIdentifier;
         }
 
     }

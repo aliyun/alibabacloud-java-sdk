@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class DeleteStackRequest extends TeaModel {
     @NameInMap("StackId")
+    @Validation(required = true)
     public String stackId;
 
     @NameInMap("RetainAllResources")
     public Boolean retainAllResources;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("RamRoleName")
-    public String ramRoleName;
 
     @NameInMap("RetainResources")
     public java.util.List<String> retainResources;
+
+    @NameInMap("RamRoleName")
+    public String ramRoleName;
 
     public static DeleteStackRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteStackRequest self = new DeleteStackRequest();
@@ -48,20 +50,20 @@ public class DeleteStackRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DeleteStackRequest setRamRoleName(String ramRoleName) {
-        this.ramRoleName = ramRoleName;
-        return this;
-    }
-    public String getRamRoleName() {
-        return this.ramRoleName;
-    }
-
     public DeleteStackRequest setRetainResources(java.util.List<String> retainResources) {
         this.retainResources = retainResources;
         return this;
     }
     public java.util.List<String> getRetainResources() {
         return this.retainResources;
+    }
+
+    public DeleteStackRequest setRamRoleName(String ramRoleName) {
+        this.ramRoleName = ramRoleName;
+        return this;
+    }
+    public String getRamRoleName() {
+        return this.ramRoleName;
     }
 
 }

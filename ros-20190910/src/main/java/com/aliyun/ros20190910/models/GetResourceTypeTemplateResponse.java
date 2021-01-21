@@ -4,33 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetResourceTypeTemplateResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("TemplateBody")
     @Validation(required = true)
-    public GetResourceTypeTemplateResponseBody body;
+    public java.util.Map<String, ?> templateBody;
 
     public static GetResourceTypeTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         GetResourceTypeTemplateResponse self = new GetResourceTypeTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetResourceTypeTemplateResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetResourceTypeTemplateResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetResourceTypeTemplateResponse setBody(GetResourceTypeTemplateResponseBody body) {
-        this.body = body;
+    public GetResourceTypeTemplateResponse setTemplateBody(java.util.Map<String, ?> templateBody) {
+        this.templateBody = templateBody;
         return this;
     }
-    public GetResourceTypeTemplateResponseBody getBody() {
-        return this.body;
+    public java.util.Map<String, ?> getTemplateBody() {
+        return this.templateBody;
     }
 
 }

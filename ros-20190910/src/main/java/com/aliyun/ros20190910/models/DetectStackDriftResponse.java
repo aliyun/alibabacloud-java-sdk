@@ -4,33 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DetectStackDriftResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("DriftDetectionId")
     @Validation(required = true)
-    public DetectStackDriftResponseBody body;
+    public String driftDetectionId;
 
     public static DetectStackDriftResponse build(java.util.Map<String, ?> map) throws Exception {
         DetectStackDriftResponse self = new DetectStackDriftResponse();
         return TeaModel.build(map, self);
     }
 
-    public DetectStackDriftResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DetectStackDriftResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DetectStackDriftResponse setBody(DetectStackDriftResponseBody body) {
-        this.body = body;
+    public DetectStackDriftResponse setDriftDetectionId(String driftDetectionId) {
+        this.driftDetectionId = driftDetectionId;
         return this;
     }
-    public DetectStackDriftResponseBody getBody() {
-        return this.body;
+    public String getDriftDetectionId() {
+        return this.driftDetectionId;
     }
 
 }

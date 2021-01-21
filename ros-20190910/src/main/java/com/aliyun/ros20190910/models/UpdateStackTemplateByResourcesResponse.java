@@ -4,33 +4,45 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class UpdateStackTemplateByResourcesResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("OldTemplateBody")
     @Validation(required = true)
-    public UpdateStackTemplateByResourcesResponseBody body;
+    public String oldTemplateBody;
+
+    @NameInMap("NewTemplateBody")
+    @Validation(required = true)
+    public String newTemplateBody;
 
     public static UpdateStackTemplateByResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackTemplateByResourcesResponse self = new UpdateStackTemplateByResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateStackTemplateByResourcesResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateStackTemplateByResourcesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateStackTemplateByResourcesResponse setBody(UpdateStackTemplateByResourcesResponseBody body) {
-        this.body = body;
+    public UpdateStackTemplateByResourcesResponse setOldTemplateBody(String oldTemplateBody) {
+        this.oldTemplateBody = oldTemplateBody;
         return this;
     }
-    public UpdateStackTemplateByResourcesResponseBody getBody() {
-        return this.body;
+    public String getOldTemplateBody() {
+        return this.oldTemplateBody;
+    }
+
+    public UpdateStackTemplateByResourcesResponse setNewTemplateBody(String newTemplateBody) {
+        this.newTemplateBody = newTemplateBody;
+        return this;
+    }
+    public String getNewTemplateBody() {
+        return this.newTemplateBody;
     }
 
 }

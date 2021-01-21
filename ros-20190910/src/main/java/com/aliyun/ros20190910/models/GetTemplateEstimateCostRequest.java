@@ -8,7 +8,11 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     public String templateURL;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("Parameters")
+    public java.util.List<GetTemplateEstimateCostRequestParameters> parameters;
 
     @NameInMap("TemplateBody")
     public String templateBody;
@@ -21,9 +25,6 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
 
     @NameInMap("TemplateVersion")
     public String templateVersion;
-
-    @NameInMap("Parameters")
-    public java.util.List<GetTemplateEstimateCostRequestParameters> parameters;
 
     public static GetTemplateEstimateCostRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTemplateEstimateCostRequest self = new GetTemplateEstimateCostRequest();
@@ -44,6 +45,14 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetTemplateEstimateCostRequest setParameters(java.util.List<GetTemplateEstimateCostRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<GetTemplateEstimateCostRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public GetTemplateEstimateCostRequest setTemplateBody(String templateBody) {
@@ -78,32 +87,18 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
         return this.templateVersion;
     }
 
-    public GetTemplateEstimateCostRequest setParameters(java.util.List<GetTemplateEstimateCostRequestParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<GetTemplateEstimateCostRequestParameters> getParameters() {
-        return this.parameters;
-    }
-
     public static class GetTemplateEstimateCostRequestParameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        public String parameterKey;
-
         @NameInMap("ParameterValue")
+        @Validation(required = true)
         public String parameterValue;
+
+        @NameInMap("ParameterKey")
+        @Validation(required = true)
+        public String parameterKey;
 
         public static GetTemplateEstimateCostRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             GetTemplateEstimateCostRequestParameters self = new GetTemplateEstimateCostRequestParameters();
             return TeaModel.build(map, self);
-        }
-
-        public GetTemplateEstimateCostRequestParameters setParameterKey(String parameterKey) {
-            this.parameterKey = parameterKey;
-            return this;
-        }
-        public String getParameterKey() {
-            return this.parameterKey;
         }
 
         public GetTemplateEstimateCostRequestParameters setParameterValue(String parameterValue) {
@@ -112,6 +107,14 @@ public class GetTemplateEstimateCostRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+        public GetTemplateEstimateCostRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
         }
 
     }

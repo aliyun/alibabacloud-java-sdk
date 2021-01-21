@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class SetTemplatePermissionRequest extends TeaModel {
     @NameInMap("ShareOption")
+    @Validation(required = true)
     public String shareOption;
 
     @NameInMap("VersionOption")
     public String versionOption;
 
+    @NameInMap("AccountIds")
+    @Validation(required = true)
+    public java.util.List<String> accountIds;
+
     @NameInMap("TemplateVersion")
     public String templateVersion;
 
     @NameInMap("TemplateId")
+    @Validation(required = true)
     public String templateId;
-
-    @NameInMap("AccountIds")
-    public java.util.List<String> accountIds;
 
     public static SetTemplatePermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         SetTemplatePermissionRequest self = new SetTemplatePermissionRequest();
@@ -40,6 +43,14 @@ public class SetTemplatePermissionRequest extends TeaModel {
         return this.versionOption;
     }
 
+    public SetTemplatePermissionRequest setAccountIds(java.util.List<String> accountIds) {
+        this.accountIds = accountIds;
+        return this;
+    }
+    public java.util.List<String> getAccountIds() {
+        return this.accountIds;
+    }
+
     public SetTemplatePermissionRequest setTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
@@ -54,14 +65,6 @@ public class SetTemplatePermissionRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
-    }
-
-    public SetTemplatePermissionRequest setAccountIds(java.util.List<String> accountIds) {
-        this.accountIds = accountIds;
-        return this;
-    }
-    public java.util.List<String> getAccountIds() {
-        return this.accountIds;
     }
 
 }

@@ -4,33 +4,33 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class GetStackPolicyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("StackPolicyBody")
     @Validation(required = true)
-    public GetStackPolicyResponseBody body;
+    public java.util.Map<String, ?> stackPolicyBody;
 
     public static GetStackPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         GetStackPolicyResponse self = new GetStackPolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetStackPolicyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetStackPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetStackPolicyResponse setBody(GetStackPolicyResponseBody body) {
-        this.body = body;
+    public GetStackPolicyResponse setStackPolicyBody(java.util.Map<String, ?> stackPolicyBody) {
+        this.stackPolicyBody = stackPolicyBody;
         return this;
     }
-    public GetStackPolicyResponseBody getBody() {
-        return this.body;
+    public java.util.Map<String, ?> getStackPolicyBody() {
+        return this.stackPolicyBody;
     }
 
 }

@@ -17,6 +17,7 @@ public class UpdateTemplateRequest extends TeaModel {
     public String templateBody;
 
     @NameInMap("TemplateId")
+    @Validation(required = true)
     public String templateId;
 
     public static UpdateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {

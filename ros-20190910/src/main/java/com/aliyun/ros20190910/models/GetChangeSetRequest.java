@@ -8,9 +8,11 @@ public class GetChangeSetRequest extends TeaModel {
     public Boolean showTemplate;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ChangeSetId")
+    @Validation(required = true)
     public String changeSetId;
 
     public static GetChangeSetRequest build(java.util.Map<String, ?> map) throws Exception {

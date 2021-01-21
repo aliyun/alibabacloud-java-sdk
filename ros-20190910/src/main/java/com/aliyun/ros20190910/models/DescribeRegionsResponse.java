@@ -4,33 +4,77 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Regions")
     @Validation(required = true)
-    public DescribeRegionsResponseBody body;
+    public java.util.List<DescribeRegionsResponseRegions> regions;
 
     public static DescribeRegionsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponse self = new DescribeRegionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeRegionsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeRegionsResponse setBody(DescribeRegionsResponseBody body) {
-        this.body = body;
+    public DescribeRegionsResponse setRegions(java.util.List<DescribeRegionsResponseRegions> regions) {
+        this.regions = regions;
         return this;
     }
-    public DescribeRegionsResponseBody getBody() {
-        return this.body;
+    public java.util.List<DescribeRegionsResponseRegions> getRegions() {
+        return this.regions;
+    }
+
+    public static class DescribeRegionsResponseRegions extends TeaModel {
+        @NameInMap("RegionId")
+        @Validation(required = true)
+        public String regionId;
+
+        @NameInMap("LocalName")
+        @Validation(required = true)
+        public String localName;
+
+        @NameInMap("RegionEndpoint")
+        @Validation(required = true)
+        public String regionEndpoint;
+
+        public static DescribeRegionsResponseRegions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRegionsResponseRegions self = new DescribeRegionsResponseRegions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRegionsResponseRegions setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public DescribeRegionsResponseRegions setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        public DescribeRegionsResponseRegions setRegionEndpoint(String regionEndpoint) {
+            this.regionEndpoint = regionEndpoint;
+            return this;
+        }
+        public String getRegionEndpoint() {
+            return this.regionEndpoint;
+        }
+
     }
 
 }
