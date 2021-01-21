@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class StopStackGroupOperationRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OperationId")
-    @Validation(required = true)
     public String operationId;
 
     public static StopStackGroupOperationRequest build(java.util.Map<String, ?> map) throws Exception {

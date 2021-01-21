@@ -14,7 +14,6 @@ public class CreateTemplateRequest extends TeaModel {
     public String templateBody;
 
     @NameInMap("TemplateName")
-    @Validation(required = true)
     public String templateName;
 
     public static CreateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {

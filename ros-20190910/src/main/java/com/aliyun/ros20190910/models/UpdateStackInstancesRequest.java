@@ -5,22 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateStackInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackGroupName")
-    @Validation(required = true)
     public String stackGroupName;
 
-    @NameInMap("ParameterOverrides")
-    public java.util.List<UpdateStackInstancesRequestParameterOverrides> parameterOverrides;
-
     @NameInMap("AccountIds")
-    @Validation(required = true)
     public java.util.Map<String, ?> accountIds;
 
     @NameInMap("RegionIds")
-    @Validation(required = true)
     public java.util.Map<String, ?> regionIds;
 
     @NameInMap("ClientToken")
@@ -34,6 +27,9 @@ public class UpdateStackInstancesRequest extends TeaModel {
 
     @NameInMap("TimeoutInMinutes")
     public Long timeoutInMinutes;
+
+    @NameInMap("ParameterOverrides")
+    public java.util.List<UpdateStackInstancesRequestParameterOverrides> parameterOverrides;
 
     public static UpdateStackInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackInstancesRequest self = new UpdateStackInstancesRequest();
@@ -54,14 +50,6 @@ public class UpdateStackInstancesRequest extends TeaModel {
     }
     public String getStackGroupName() {
         return this.stackGroupName;
-    }
-
-    public UpdateStackInstancesRequest setParameterOverrides(java.util.List<UpdateStackInstancesRequestParameterOverrides> parameterOverrides) {
-        this.parameterOverrides = parameterOverrides;
-        return this;
-    }
-    public java.util.List<UpdateStackInstancesRequestParameterOverrides> getParameterOverrides() {
-        return this.parameterOverrides;
     }
 
     public UpdateStackInstancesRequest setAccountIds(java.util.Map<String, ?> accountIds) {
@@ -112,26 +100,24 @@ public class UpdateStackInstancesRequest extends TeaModel {
         return this.timeoutInMinutes;
     }
 
-    public static class UpdateStackInstancesRequestParameterOverrides extends TeaModel {
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
-        public String parameterValue;
+    public UpdateStackInstancesRequest setParameterOverrides(java.util.List<UpdateStackInstancesRequestParameterOverrides> parameterOverrides) {
+        this.parameterOverrides = parameterOverrides;
+        return this;
+    }
+    public java.util.List<UpdateStackInstancesRequestParameterOverrides> getParameterOverrides() {
+        return this.parameterOverrides;
+    }
 
+    public static class UpdateStackInstancesRequestParameterOverrides extends TeaModel {
         @NameInMap("ParameterKey")
-        @Validation(required = true)
         public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
 
         public static UpdateStackInstancesRequestParameterOverrides build(java.util.Map<String, ?> map) throws Exception {
             UpdateStackInstancesRequestParameterOverrides self = new UpdateStackInstancesRequestParameterOverrides();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateStackInstancesRequestParameterOverrides setParameterValue(String parameterValue) {
-            this.parameterValue = parameterValue;
-            return this;
-        }
-        public String getParameterValue() {
-            return this.parameterValue;
         }
 
         public UpdateStackInstancesRequestParameterOverrides setParameterKey(String parameterKey) {
@@ -140,6 +126,14 @@ public class UpdateStackInstancesRequest extends TeaModel {
         }
         public String getParameterKey() {
             return this.parameterKey;
+        }
+
+        public UpdateStackInstancesRequestParameterOverrides setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
         }
 
     }

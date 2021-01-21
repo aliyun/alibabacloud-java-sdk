@@ -5,18 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateStackGroupShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackGroupName")
-    @Validation(required = true)
     public String stackGroupName;
 
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("Parameters")
-    public java.util.List<UpdateStackGroupShrinkRequestParameters> parameters;
 
     @NameInMap("AccountIds")
     public String accountIdsShrink;
@@ -51,6 +46,9 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
     @NameInMap("TemplateVersion")
     public String templateVersion;
 
+    @NameInMap("Parameters")
+    public java.util.List<UpdateStackGroupShrinkRequestParameters> parameters;
+
     public static UpdateStackGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackGroupShrinkRequest self = new UpdateStackGroupShrinkRequest();
         return TeaModel.build(map, self);
@@ -78,14 +76,6 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public UpdateStackGroupShrinkRequest setParameters(java.util.List<UpdateStackGroupShrinkRequestParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<UpdateStackGroupShrinkRequestParameters> getParameters() {
-        return this.parameters;
     }
 
     public UpdateStackGroupShrinkRequest setAccountIdsShrink(String accountIdsShrink) {
@@ -176,26 +166,24 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
         return this.templateVersion;
     }
 
-    public static class UpdateStackGroupShrinkRequestParameters extends TeaModel {
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
-        public String parameterValue;
+    public UpdateStackGroupShrinkRequest setParameters(java.util.List<UpdateStackGroupShrinkRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<UpdateStackGroupShrinkRequestParameters> getParameters() {
+        return this.parameters;
+    }
 
+    public static class UpdateStackGroupShrinkRequestParameters extends TeaModel {
         @NameInMap("ParameterKey")
-        @Validation(required = true)
         public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
 
         public static UpdateStackGroupShrinkRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             UpdateStackGroupShrinkRequestParameters self = new UpdateStackGroupShrinkRequestParameters();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateStackGroupShrinkRequestParameters setParameterValue(String parameterValue) {
-            this.parameterValue = parameterValue;
-            return this;
-        }
-        public String getParameterValue() {
-            return this.parameterValue;
         }
 
         public UpdateStackGroupShrinkRequestParameters setParameterKey(String parameterKey) {
@@ -204,6 +192,14 @@ public class UpdateStackGroupShrinkRequest extends TeaModel {
         }
         public String getParameterKey() {
             return this.parameterKey;
+        }
+
+        public UpdateStackGroupShrinkRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
+            return this;
+        }
+        public String getParameterValue() {
+            return this.parameterValue;
         }
 
     }
