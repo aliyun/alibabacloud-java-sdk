@@ -11,14 +11,17 @@ public class ModifyAppRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("IndustryId")
-    public Integer industryId;
-
     @NameInMap("BundleId")
     public String bundleId;
 
     @NameInMap("PackageName")
     public String packageName;
+
+    @NameInMap("EncodedIcon")
+    public String encodedIcon;
+
+    @NameInMap("IndustryId")
+    public Integer industryId;
 
     public static ModifyAppRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAppRequest self = new ModifyAppRequest();
@@ -41,14 +44,6 @@ public class ModifyAppRequest extends TeaModel {
         return this.name;
     }
 
-    public ModifyAppRequest setIndustryId(Integer industryId) {
-        this.industryId = industryId;
-        return this;
-    }
-    public Integer getIndustryId() {
-        return this.industryId;
-    }
-
     public ModifyAppRequest setBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -63,6 +58,22 @@ public class ModifyAppRequest extends TeaModel {
     }
     public String getPackageName() {
         return this.packageName;
+    }
+
+    public ModifyAppRequest setEncodedIcon(String encodedIcon) {
+        this.encodedIcon = encodedIcon;
+        return this;
+    }
+    public String getEncodedIcon() {
+        return this.encodedIcon;
+    }
+
+    public ModifyAppRequest setIndustryId(Integer industryId) {
+        this.industryId = industryId;
+        return this;
+    }
+    public Integer getIndustryId() {
+        return this.industryId;
     }
 
 }

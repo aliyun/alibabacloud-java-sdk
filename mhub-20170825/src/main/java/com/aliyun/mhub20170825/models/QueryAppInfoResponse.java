@@ -74,6 +74,26 @@ public class QueryAppInfoResponse extends TeaModel {
         @Validation(required = true)
         public String certProductExpiration;
 
+        @NameInMap("EncodedIcon")
+        @Validation(required = true)
+        public String encodedIcon;
+
+        @NameInMap("IndustryId")
+        @Validation(required = true)
+        public Integer industryId;
+
+        @NameInMap("CreateTime")
+        @Validation(required = true)
+        public Integer createTime;
+
+        @NameInMap("ProductId")
+        @Validation(required = true)
+        public Long productId;
+
+        @NameInMap("Status")
+        @Validation(required = true)
+        public Integer status;
+
         public static QueryAppInfoResponseAppInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryAppInfoResponseAppInfo self = new QueryAppInfoResponseAppInfo();
             return TeaModel.build(map, self);
@@ -157,6 +177,46 @@ public class QueryAppInfoResponse extends TeaModel {
         }
         public String getCertProductExpiration() {
             return this.certProductExpiration;
+        }
+
+        public QueryAppInfoResponseAppInfo setEncodedIcon(String encodedIcon) {
+            this.encodedIcon = encodedIcon;
+            return this;
+        }
+        public String getEncodedIcon() {
+            return this.encodedIcon;
+        }
+
+        public QueryAppInfoResponseAppInfo setIndustryId(Integer industryId) {
+            this.industryId = industryId;
+            return this;
+        }
+        public Integer getIndustryId() {
+            return this.industryId;
+        }
+
+        public QueryAppInfoResponseAppInfo setCreateTime(Integer createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Integer getCreateTime() {
+            return this.createTime;
+        }
+
+        public QueryAppInfoResponseAppInfo setProductId(Long productId) {
+            this.productId = productId;
+            return this;
+        }
+        public Long getProductId() {
+            return this.productId;
+        }
+
+        public QueryAppInfoResponseAppInfo setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
         }
 
     }

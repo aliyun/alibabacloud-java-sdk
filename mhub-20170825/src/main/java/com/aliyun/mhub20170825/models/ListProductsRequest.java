@@ -13,6 +13,9 @@ public class ListProductsRequest extends TeaModel {
     @NameInMap("Simple")
     public Boolean simple;
 
+    @NameInMap("ProductName")
+    public String productName;
+
     public static ListProductsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductsRequest self = new ListProductsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListProductsRequest extends TeaModel {
     }
     public Boolean getSimple() {
         return this.simple;
+    }
+
+    public ListProductsRequest setProductName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+    public String getProductName() {
+        return this.productName;
     }
 
 }
