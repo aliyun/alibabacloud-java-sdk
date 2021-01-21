@@ -1,3 +1,6 @@
+2021-01-21 Version: 1.0.5
+- Expose product and application API.
+
 2020-10-26 Version: 1.0.4
 - Add productId on the response of CreateProduct api.
 

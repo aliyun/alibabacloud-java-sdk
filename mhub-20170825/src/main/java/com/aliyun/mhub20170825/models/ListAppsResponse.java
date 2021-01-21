@@ -82,6 +82,14 @@ public class ListAppsResponse extends TeaModel {
         @Validation(required = true)
         public String packageName;
 
+        @NameInMap("EncodedIcon")
+        @Validation(required = true)
+        public String encodedIcon;
+
+        @NameInMap("IndustryId")
+        @Validation(required = true)
+        public Integer industryId;
+
         public static ListAppsResponseAppInfosAppInfo build(java.util.Map<String, ?> map) throws Exception {
             ListAppsResponseAppInfosAppInfo self = new ListAppsResponseAppInfosAppInfo();
             return TeaModel.build(map, self);
@@ -133,6 +141,22 @@ public class ListAppsResponse extends TeaModel {
         }
         public String getPackageName() {
             return this.packageName;
+        }
+
+        public ListAppsResponseAppInfosAppInfo setEncodedIcon(String encodedIcon) {
+            this.encodedIcon = encodedIcon;
+            return this;
+        }
+        public String getEncodedIcon() {
+            return this.encodedIcon;
+        }
+
+        public ListAppsResponseAppInfosAppInfo setIndustryId(Integer industryId) {
+            this.industryId = industryId;
+            return this;
+        }
+        public Integer getIndustryId() {
+            return this.industryId;
         }
 
     }

@@ -21,6 +21,12 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("PackageName")
     public String packageName;
 
+    @NameInMap("EncodedIcon")
+    public String encodedIcon;
+
+    @NameInMap("IndustryId")
+    public String industryId;
+
     public static CreateAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppRequest self = new CreateAppRequest();
         return TeaModel.build(map, self);
@@ -64,6 +70,22 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getPackageName() {
         return this.packageName;
+    }
+
+    public CreateAppRequest setEncodedIcon(String encodedIcon) {
+        this.encodedIcon = encodedIcon;
+        return this;
+    }
+    public String getEncodedIcon() {
+        return this.encodedIcon;
+    }
+
+    public CreateAppRequest setIndustryId(String industryId) {
+        this.industryId = industryId;
+        return this;
+    }
+    public String getIndustryId() {
+        return this.industryId;
     }
 
 }

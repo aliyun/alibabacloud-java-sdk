@@ -82,6 +82,10 @@ public class ListProductsResponse extends TeaModel {
         @Validation(required = true)
         public Integer industryId;
 
+        @NameInMap("CreateTime")
+        @Validation(required = true)
+        public String createTime;
+
         public static ListProductsResponseProductInfosProductInfo build(java.util.Map<String, ?> map) throws Exception {
             ListProductsResponseProductInfosProductInfo self = new ListProductsResponseProductInfosProductInfo();
             return TeaModel.build(map, self);
@@ -133,6 +137,14 @@ public class ListProductsResponse extends TeaModel {
         }
         public Integer getIndustryId() {
             return this.industryId;
+        }
+
+        public ListProductsResponseProductInfosProductInfo setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
         }
 
     }
