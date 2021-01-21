@@ -5,19 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListStackResourceDriftsRequest extends TeaModel {
     @NameInMap("StackId")
+    @Validation(required = true)
     public String stackId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    @NameInMap("NextToken")
-    public String nextToken;
-
     @NameInMap("ResourceDriftStatus")
     public java.util.List<String> resourceDriftStatus;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     public static ListStackResourceDriftsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStackResourceDriftsRequest self = new ListStackResourceDriftsRequest();
@@ -48,20 +50,20 @@ public class ListStackResourceDriftsRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListStackResourceDriftsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
     public ListStackResourceDriftsRequest setResourceDriftStatus(java.util.List<String> resourceDriftStatus) {
         this.resourceDriftStatus = resourceDriftStatus;
         return this;
     }
     public java.util.List<String> getResourceDriftStatus() {
         return this.resourceDriftStatus;
+    }
+
+    public ListStackResourceDriftsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

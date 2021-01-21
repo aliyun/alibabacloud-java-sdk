@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListStackGroupsRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Status")

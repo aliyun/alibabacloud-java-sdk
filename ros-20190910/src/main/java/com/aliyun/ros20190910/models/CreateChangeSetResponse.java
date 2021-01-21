@@ -4,33 +4,45 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class CreateChangeSetResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("ChangeSetId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String changeSetId;
 
-    @NameInMap("body")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public CreateChangeSetResponseBody body;
+    public String requestId;
+
+    @NameInMap("StackId")
+    @Validation(required = true)
+    public String stackId;
 
     public static CreateChangeSetResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateChangeSetResponse self = new CreateChangeSetResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateChangeSetResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateChangeSetResponse setChangeSetId(String changeSetId) {
+        this.changeSetId = changeSetId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getChangeSetId() {
+        return this.changeSetId;
     }
 
-    public CreateChangeSetResponse setBody(CreateChangeSetResponseBody body) {
-        this.body = body;
+    public CreateChangeSetResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public CreateChangeSetResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateChangeSetResponse setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
     }
 
 }

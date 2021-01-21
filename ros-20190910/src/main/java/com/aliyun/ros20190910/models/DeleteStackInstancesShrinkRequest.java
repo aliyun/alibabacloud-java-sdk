@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class DeleteStackInstancesShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackGroupName")
+    @Validation(required = true)
     public String stackGroupName;
 
     @NameInMap("AccountIds")
+    @Validation(required = true)
     public String accountIdsShrink;
 
     @NameInMap("RegionIds")
+    @Validation(required = true)
     public String regionIdsShrink;
 
     @NameInMap("RetainStacks")
+    @Validation(required = true)
     public Boolean retainStacks;
 
     @NameInMap("ClientToken")

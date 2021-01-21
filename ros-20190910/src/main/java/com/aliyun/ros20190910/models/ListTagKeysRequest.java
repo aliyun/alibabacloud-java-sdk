@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
+    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("NextToken")

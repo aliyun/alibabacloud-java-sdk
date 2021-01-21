@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class SetDeletionProtectionRequest extends TeaModel {
     @NameInMap("StackId")
+    @Validation(required = true)
     public String stackId;
 
     @NameInMap("DeletionProtection")
+    @Validation(required = true)
     public String deletionProtection;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     public static SetDeletionProtectionRequest build(java.util.Map<String, ?> map) throws Exception {

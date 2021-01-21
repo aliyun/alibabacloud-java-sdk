@@ -4,33 +4,21 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class DeleteStackGroupResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public DeleteStackGroupResponseBody body;
+    public String requestId;
 
     public static DeleteStackGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteStackGroupResponse self = new DeleteStackGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteStackGroupResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteStackGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DeleteStackGroupResponse setBody(DeleteStackGroupResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteStackGroupResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -10,6 +10,9 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("TimeoutInMinutes")
     public Long timeoutInMinutes;
 
+    @NameInMap("Parameters")
+    public java.util.List<PreviewStackRequestParameters> parameters;
+
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -17,12 +20,14 @@ public class PreviewStackRequest extends TeaModel {
     public String stackPolicyURL;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackPolicyBody")
     public String stackPolicyBody;
 
     @NameInMap("StackName")
+    @Validation(required = true)
     public String stackName;
 
     @NameInMap("ClientToken")
@@ -36,9 +41,6 @@ public class PreviewStackRequest extends TeaModel {
 
     @NameInMap("TemplateVersion")
     public String templateVersion;
-
-    @NameInMap("Parameters")
-    public java.util.List<PreviewStackRequestParameters> parameters;
 
     public static PreviewStackRequest build(java.util.Map<String, ?> map) throws Exception {
         PreviewStackRequest self = new PreviewStackRequest();
@@ -59,6 +61,14 @@ public class PreviewStackRequest extends TeaModel {
     }
     public Long getTimeoutInMinutes() {
         return this.timeoutInMinutes;
+    }
+
+    public PreviewStackRequest setParameters(java.util.List<PreviewStackRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<PreviewStackRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public PreviewStackRequest setTemplateBody(String templateBody) {
@@ -133,32 +143,18 @@ public class PreviewStackRequest extends TeaModel {
         return this.templateVersion;
     }
 
-    public PreviewStackRequest setParameters(java.util.List<PreviewStackRequestParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<PreviewStackRequestParameters> getParameters() {
-        return this.parameters;
-    }
-
     public static class PreviewStackRequestParameters extends TeaModel {
-        @NameInMap("ParameterKey")
-        public String parameterKey;
-
         @NameInMap("ParameterValue")
+        @Validation(required = true)
         public String parameterValue;
+
+        @NameInMap("ParameterKey")
+        @Validation(required = true)
+        public String parameterKey;
 
         public static PreviewStackRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             PreviewStackRequestParameters self = new PreviewStackRequestParameters();
             return TeaModel.build(map, self);
-        }
-
-        public PreviewStackRequestParameters setParameterKey(String parameterKey) {
-            this.parameterKey = parameterKey;
-            return this;
-        }
-        public String getParameterKey() {
-            return this.parameterKey;
         }
 
         public PreviewStackRequestParameters setParameterValue(String parameterValue) {
@@ -167,6 +163,14 @@ public class PreviewStackRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+        public PreviewStackRequestParameters setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
         }
 
     }

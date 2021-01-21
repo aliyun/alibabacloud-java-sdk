@@ -5,22 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListStackEventsRequest extends TeaModel {
     @NameInMap("StackId")
+    @Validation(required = true)
     public String stackId;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("RegionId")
-    public String regionId;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
 
     @NameInMap("Status")
     public java.util.List<String> status;
 
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("ResourceType")
     public java.util.List<String> resourceType;
+
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    public String regionId;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
 
     @NameInMap("LogicalResourceId")
     public java.util.List<String> logicalResourceId;
@@ -38,12 +40,28 @@ public class ListStackEventsRequest extends TeaModel {
         return this.stackId;
     }
 
+    public ListStackEventsRequest setStatus(java.util.List<String> status) {
+        this.status = status;
+        return this;
+    }
+    public java.util.List<String> getStatus() {
+        return this.status;
+    }
+
     public ListStackEventsRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListStackEventsRequest setResourceType(java.util.List<String> resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public java.util.List<String> getResourceType() {
+        return this.resourceType;
     }
 
     public ListStackEventsRequest setRegionId(String regionId) {
@@ -60,22 +78,6 @@ public class ListStackEventsRequest extends TeaModel {
     }
     public Long getPageNumber() {
         return this.pageNumber;
-    }
-
-    public ListStackEventsRequest setStatus(java.util.List<String> status) {
-        this.status = status;
-        return this;
-    }
-    public java.util.List<String> getStatus() {
-        return this.status;
-    }
-
-    public ListStackEventsRequest setResourceType(java.util.List<String> resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public java.util.List<String> getResourceType() {
-        return this.resourceType;
     }
 
     public ListStackEventsRequest setLogicalResourceId(java.util.List<String> logicalResourceId) {

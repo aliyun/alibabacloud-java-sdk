@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetStackGroupRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackGroupName")
+    @Validation(required = true)
     public String stackGroupName;
 
     public static GetStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {

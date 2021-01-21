@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ExecuteChangeSetRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ChangeSetId")
+    @Validation(required = true)
     public String changeSetId;
 
     @NameInMap("ClientToken")

@@ -5,15 +5,22 @@ import com.aliyun.tea.*;
 
 public class UpdateStackInstancesShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackGroupName")
+    @Validation(required = true)
     public String stackGroupName;
 
+    @NameInMap("ParameterOverrides")
+    public java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> parameterOverrides;
+
     @NameInMap("AccountIds")
+    @Validation(required = true)
     public String accountIdsShrink;
 
     @NameInMap("RegionIds")
+    @Validation(required = true)
     public String regionIdsShrink;
 
     @NameInMap("ClientToken")
@@ -27,9 +34,6 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
 
     @NameInMap("TimeoutInMinutes")
     public Long timeoutInMinutes;
-
-    @NameInMap("ParameterOverrides")
-    public java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> parameterOverrides;
 
     public static UpdateStackInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackInstancesShrinkRequest self = new UpdateStackInstancesShrinkRequest();
@@ -50,6 +54,14 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
     }
     public String getStackGroupName() {
         return this.stackGroupName;
+    }
+
+    public UpdateStackInstancesShrinkRequest setParameterOverrides(java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> parameterOverrides) {
+        this.parameterOverrides = parameterOverrides;
+        return this;
+    }
+    public java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> getParameterOverrides() {
+        return this.parameterOverrides;
     }
 
     public UpdateStackInstancesShrinkRequest setAccountIdsShrink(String accountIdsShrink) {
@@ -100,32 +112,18 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
         return this.timeoutInMinutes;
     }
 
-    public UpdateStackInstancesShrinkRequest setParameterOverrides(java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> parameterOverrides) {
-        this.parameterOverrides = parameterOverrides;
-        return this;
-    }
-    public java.util.List<UpdateStackInstancesShrinkRequestParameterOverrides> getParameterOverrides() {
-        return this.parameterOverrides;
-    }
-
     public static class UpdateStackInstancesShrinkRequestParameterOverrides extends TeaModel {
-        @NameInMap("ParameterKey")
-        public String parameterKey;
-
         @NameInMap("ParameterValue")
+        @Validation(required = true)
         public String parameterValue;
+
+        @NameInMap("ParameterKey")
+        @Validation(required = true)
+        public String parameterKey;
 
         public static UpdateStackInstancesShrinkRequestParameterOverrides build(java.util.Map<String, ?> map) throws Exception {
             UpdateStackInstancesShrinkRequestParameterOverrides self = new UpdateStackInstancesShrinkRequestParameterOverrides();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateStackInstancesShrinkRequestParameterOverrides setParameterKey(String parameterKey) {
-            this.parameterKey = parameterKey;
-            return this;
-        }
-        public String getParameterKey() {
-            return this.parameterKey;
         }
 
         public UpdateStackInstancesShrinkRequestParameterOverrides setParameterValue(String parameterValue) {
@@ -134,6 +132,14 @@ public class UpdateStackInstancesShrinkRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+        public UpdateStackInstancesShrinkRequestParameterOverrides setParameterKey(String parameterKey) {
+            this.parameterKey = parameterKey;
+            return this;
+        }
+        public String getParameterKey() {
+            return this.parameterKey;
         }
 
     }

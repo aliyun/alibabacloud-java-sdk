@@ -4,6 +4,9 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ListStacksRequest extends TeaModel {
+    @NameInMap("Status")
+    public java.util.List<String> status;
+
     @NameInMap("PageSize")
     public Long pageSize;
 
@@ -11,7 +14,11 @@ public class ListStacksRequest extends TeaModel {
     public String parentStackId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("StackName")
+    public java.util.List<String> stackName;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -19,21 +26,23 @@ public class ListStacksRequest extends TeaModel {
     @NameInMap("ShowNestedStack")
     public Boolean showNestedStack;
 
-    @NameInMap("StackId")
-    public String stackId;
-
-    @NameInMap("Status")
-    public java.util.List<String> status;
-
-    @NameInMap("StackName")
-    public java.util.List<String> stackName;
-
     @NameInMap("Tag")
     public java.util.List<ListStacksRequestTag> tag;
+
+    @NameInMap("StackId")
+    public String stackId;
 
     public static ListStacksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListStacksRequest self = new ListStacksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListStacksRequest setStatus(java.util.List<String> status) {
+        this.status = status;
+        return this;
+    }
+    public java.util.List<String> getStatus() {
+        return this.status;
     }
 
     public ListStacksRequest setPageSize(Long pageSize) {
@@ -60,6 +69,14 @@ public class ListStacksRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ListStacksRequest setStackName(java.util.List<String> stackName) {
+        this.stackName = stackName;
+        return this;
+    }
+    public java.util.List<String> getStackName() {
+        return this.stackName;
+    }
+
     public ListStacksRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -76,36 +93,20 @@ public class ListStacksRequest extends TeaModel {
         return this.showNestedStack;
     }
 
-    public ListStacksRequest setStackId(String stackId) {
-        this.stackId = stackId;
-        return this;
-    }
-    public String getStackId() {
-        return this.stackId;
-    }
-
-    public ListStacksRequest setStatus(java.util.List<String> status) {
-        this.status = status;
-        return this;
-    }
-    public java.util.List<String> getStatus() {
-        return this.status;
-    }
-
-    public ListStacksRequest setStackName(java.util.List<String> stackName) {
-        this.stackName = stackName;
-        return this;
-    }
-    public java.util.List<String> getStackName() {
-        return this.stackName;
-    }
-
     public ListStacksRequest setTag(java.util.List<ListStacksRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<ListStacksRequestTag> getTag() {
         return this.tag;
+    }
+
+    public ListStacksRequest setStackId(String stackId) {
+        this.stackId = stackId;
+        return this;
+    }
+    public String getStackId() {
+        return this.stackId;
     }
 
     public static class ListStacksRequestTag extends TeaModel {

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListStackGroupOperationResultsRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OperationId")
+    @Validation(required = true)
     public String operationId;
 
     @NameInMap("PageSize")

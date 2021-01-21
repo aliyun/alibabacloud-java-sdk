@@ -4,33 +4,45 @@ package com.aliyun.ros20190910.models;
 import com.aliyun.tea.*;
 
 public class ValidateTemplateResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Description")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String description;
 
-    @NameInMap("body")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public ValidateTemplateResponseBody body;
+    public String requestId;
+
+    @NameInMap("Parameters")
+    @Validation(required = true)
+    public java.util.List<java.util.Map<String, ?>> parameters;
 
     public static ValidateTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         ValidateTemplateResponse self = new ValidateTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public ValidateTemplateResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ValidateTemplateResponse setDescription(String description) {
+        this.description = description;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getDescription() {
+        return this.description;
     }
 
-    public ValidateTemplateResponse setBody(ValidateTemplateResponseBody body) {
-        this.body = body;
+    public ValidateTemplateResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public ValidateTemplateResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ValidateTemplateResponse setParameters(java.util.List<java.util.Map<String, ?>> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, ?>> getParameters() {
+        return this.parameters;
     }
 
 }

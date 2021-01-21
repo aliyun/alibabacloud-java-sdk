@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteChangeSetRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ChangeSetId")
+    @Validation(required = true)
     public String changeSetId;
 
     public static DeleteChangeSetRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListStackResourcesRequest extends TeaModel {
     @NameInMap("StackId")
+    @Validation(required = true)
     public String stackId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     public static ListStackResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
