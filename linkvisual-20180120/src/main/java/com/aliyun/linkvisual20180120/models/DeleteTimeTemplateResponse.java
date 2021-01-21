@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteTimeTemplateResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public DeleteTimeTemplateResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static DeleteTimeTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteTimeTemplateResponse self = new DeleteTimeTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteTimeTemplateResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteTimeTemplateResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DeleteTimeTemplateResponse setBody(DeleteTimeTemplateResponseBody body) {
-        this.body = body;
+    public DeleteTimeTemplateResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DeleteTimeTemplateResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DeleteTimeTemplateResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public DeleteTimeTemplateResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

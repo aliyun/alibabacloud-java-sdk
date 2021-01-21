@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddEventRecordPlanDeviceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public AddEventRecordPlanDeviceResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static AddEventRecordPlanDeviceResponse build(java.util.Map<String, ?> map) throws Exception {
         AddEventRecordPlanDeviceResponse self = new AddEventRecordPlanDeviceResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddEventRecordPlanDeviceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddEventRecordPlanDeviceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddEventRecordPlanDeviceResponse setBody(AddEventRecordPlanDeviceResponseBody body) {
-        this.body = body;
+    public AddEventRecordPlanDeviceResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public AddEventRecordPlanDeviceResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public AddEventRecordPlanDeviceResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public AddEventRecordPlanDeviceResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

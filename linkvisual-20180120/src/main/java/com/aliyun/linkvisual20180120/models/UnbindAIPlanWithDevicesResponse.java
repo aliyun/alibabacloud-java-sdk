@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UnbindAIPlanWithDevicesResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public UnbindAIPlanWithDevicesResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static UnbindAIPlanWithDevicesResponse build(java.util.Map<String, ?> map) throws Exception {
         UnbindAIPlanWithDevicesResponse self = new UnbindAIPlanWithDevicesResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnbindAIPlanWithDevicesResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UnbindAIPlanWithDevicesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UnbindAIPlanWithDevicesResponse setBody(UnbindAIPlanWithDevicesResponseBody body) {
-        this.body = body;
+    public UnbindAIPlanWithDevicesResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public UnbindAIPlanWithDevicesResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UnbindAIPlanWithDevicesResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public UnbindAIPlanWithDevicesResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

@@ -4,16 +4,12 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEventRecordPlanRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("PlanId")
+    @Validation(required = true)
     public String planId;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("EventTypes")
@@ -23,30 +19,16 @@ public class UpdateEventRecordPlanRequest extends TeaModel {
     public Integer preRecordDuration;
 
     @NameInMap("RecordDuration")
+    @Validation(required = true)
     public Integer recordDuration;
 
     @NameInMap("TemplateId")
+    @Validation(required = true)
     public String templateId;
 
     public static UpdateEventRecordPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEventRecordPlanRequest self = new UpdateEventRecordPlanRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateEventRecordPlanRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public UpdateEventRecordPlanRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public UpdateEventRecordPlanRequest setPlanId(String planId) {

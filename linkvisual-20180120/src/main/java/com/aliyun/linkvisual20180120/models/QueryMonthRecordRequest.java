@@ -4,16 +4,12 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryMonthRecordRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotId")
+    @Validation(required = true)
     public String iotId;
 
     @NameInMap("Month")
+    @Validation(required = true)
     public String month;
 
     @NameInMap("IotInstanceId")
@@ -22,22 +18,6 @@ public class QueryMonthRecordRequest extends TeaModel {
     public static QueryMonthRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMonthRecordRequest self = new QueryMonthRecordRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryMonthRecordRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryMonthRecordRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryMonthRecordRequest setIotId(String iotId) {

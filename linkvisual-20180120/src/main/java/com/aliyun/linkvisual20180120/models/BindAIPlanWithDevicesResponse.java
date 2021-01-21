@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class BindAIPlanWithDevicesResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public BindAIPlanWithDevicesResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static BindAIPlanWithDevicesResponse build(java.util.Map<String, ?> map) throws Exception {
         BindAIPlanWithDevicesResponse self = new BindAIPlanWithDevicesResponse();
         return TeaModel.build(map, self);
     }
 
-    public BindAIPlanWithDevicesResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public BindAIPlanWithDevicesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public BindAIPlanWithDevicesResponse setBody(BindAIPlanWithDevicesResponseBody body) {
-        this.body = body;
+    public BindAIPlanWithDevicesResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public BindAIPlanWithDevicesResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public BindAIPlanWithDevicesResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public BindAIPlanWithDevicesResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

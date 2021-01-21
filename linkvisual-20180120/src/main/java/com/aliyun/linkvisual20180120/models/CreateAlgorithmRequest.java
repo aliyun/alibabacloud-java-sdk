@@ -4,13 +4,8 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateAlgorithmRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("Description")
@@ -19,22 +14,6 @@ public class CreateAlgorithmRequest extends TeaModel {
     public static CreateAlgorithmRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAlgorithmRequest self = new CreateAlgorithmRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAlgorithmRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateAlgorithmRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateAlgorithmRequest setName(String name) {

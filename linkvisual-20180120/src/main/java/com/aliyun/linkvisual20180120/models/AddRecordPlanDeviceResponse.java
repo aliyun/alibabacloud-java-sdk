@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddRecordPlanDeviceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public AddRecordPlanDeviceResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static AddRecordPlanDeviceResponse build(java.util.Map<String, ?> map) throws Exception {
         AddRecordPlanDeviceResponse self = new AddRecordPlanDeviceResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddRecordPlanDeviceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddRecordPlanDeviceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddRecordPlanDeviceResponse setBody(AddRecordPlanDeviceResponseBody body) {
-        this.body = body;
+    public AddRecordPlanDeviceResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public AddRecordPlanDeviceResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public AddRecordPlanDeviceResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public AddRecordPlanDeviceResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

@@ -4,33 +4,69 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmDetailByIdResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public GetAlgorithmDetailByIdResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public java.util.Map<String, ?> data;
 
     public static GetAlgorithmDetailByIdResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAlgorithmDetailByIdResponse self = new GetAlgorithmDetailByIdResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAlgorithmDetailByIdResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetAlgorithmDetailByIdResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetAlgorithmDetailByIdResponse setBody(GetAlgorithmDetailByIdResponseBody body) {
-        this.body = body;
+    public GetAlgorithmDetailByIdResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public GetAlgorithmDetailByIdResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetAlgorithmDetailByIdResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetAlgorithmDetailByIdResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetAlgorithmDetailByIdResponse setData(java.util.Map<String, ?> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.Map<String, ?> getData() {
+        return this.data;
     }
 
 }

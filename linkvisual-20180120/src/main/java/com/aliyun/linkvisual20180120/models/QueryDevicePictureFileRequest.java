@@ -4,16 +4,12 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicePictureFileRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotId")
+    @Validation(required = true)
     public String iotId;
 
     @NameInMap("CaptureId")
+    @Validation(required = true)
     public String captureId;
 
     @NameInMap("PictureType")
@@ -25,22 +21,6 @@ public class QueryDevicePictureFileRequest extends TeaModel {
     public static QueryDevicePictureFileRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDevicePictureFileRequest self = new QueryDevicePictureFileRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDevicePictureFileRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryDevicePictureFileRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryDevicePictureFileRequest setIotId(String iotId) {

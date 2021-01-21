@@ -4,40 +4,21 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddRecordPlanDeviceRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotId")
+    @Validation(required = true)
     public String iotId;
 
     @NameInMap("PlanId")
+    @Validation(required = true)
     public String planId;
 
     @NameInMap("StreamType")
+    @Validation(required = true)
     public Integer streamType;
 
     public static AddRecordPlanDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         AddRecordPlanDeviceRequest self = new AddRecordPlanDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddRecordPlanDeviceRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public AddRecordPlanDeviceRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public AddRecordPlanDeviceRequest setIotId(String iotId) {

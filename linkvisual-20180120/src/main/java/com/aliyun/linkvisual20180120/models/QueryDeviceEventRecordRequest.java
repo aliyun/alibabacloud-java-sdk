@@ -4,16 +4,12 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceEventRecordRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotId")
+    @Validation(required = true)
     public String iotId;
 
     @NameInMap("EventId")
+    @Validation(required = true)
     public String eventId;
 
     @NameInMap("IotInstanceId")
@@ -22,22 +18,6 @@ public class QueryDeviceEventRecordRequest extends TeaModel {
     public static QueryDeviceEventRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceEventRecordRequest self = new QueryDeviceEventRecordRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceEventRecordRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryDeviceEventRecordRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryDeviceEventRecordRequest setIotId(String iotId) {

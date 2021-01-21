@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class StopTriggeredRecordResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public StopTriggeredRecordResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static StopTriggeredRecordResponse build(java.util.Map<String, ?> map) throws Exception {
         StopTriggeredRecordResponse self = new StopTriggeredRecordResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopTriggeredRecordResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public StopTriggeredRecordResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public StopTriggeredRecordResponse setBody(StopTriggeredRecordResponseBody body) {
-        this.body = body;
+    public StopTriggeredRecordResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public StopTriggeredRecordResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public StopTriggeredRecordResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public StopTriggeredRecordResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

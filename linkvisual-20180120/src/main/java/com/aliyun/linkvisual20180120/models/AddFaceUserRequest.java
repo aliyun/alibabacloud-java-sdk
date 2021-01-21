@@ -4,19 +4,16 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class AddFaceUserRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IsolationId")
+    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("FacePicUrl")
+    @Validation(required = true)
     public String facePicUrl;
 
     @NameInMap("CustomUserId")
+    @Validation(required = true)
     public String customUserId;
 
     @NameInMap("Name")
@@ -28,22 +25,6 @@ public class AddFaceUserRequest extends TeaModel {
     public static AddFaceUserRequest build(java.util.Map<String, ?> map) throws Exception {
         AddFaceUserRequest self = new AddFaceUserRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddFaceUserRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public AddFaceUserRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public AddFaceUserRequest setIsolationId(String isolationId) {

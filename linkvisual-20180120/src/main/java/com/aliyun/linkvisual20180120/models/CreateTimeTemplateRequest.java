@@ -4,16 +4,12 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateTimeTemplateRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("AllDay")
+    @Validation(required = true)
     public Integer allDay;
 
     @NameInMap("TimeSections")
@@ -22,22 +18,6 @@ public class CreateTimeTemplateRequest extends TeaModel {
     public static CreateTimeTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTimeTemplateRequest self = new CreateTimeTemplateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTimeTemplateRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateTimeTemplateRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateTimeTemplateRequest setName(String name) {

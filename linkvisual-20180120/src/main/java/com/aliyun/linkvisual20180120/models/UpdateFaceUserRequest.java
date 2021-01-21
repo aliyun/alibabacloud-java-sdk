@@ -4,16 +4,12 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaceUserRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IsolationId")
+    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("UserId")
+    @Validation(required = true)
     public String userId;
 
     @NameInMap("Name")
@@ -31,22 +27,6 @@ public class UpdateFaceUserRequest extends TeaModel {
     public static UpdateFaceUserRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFaceUserRequest self = new UpdateFaceUserRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateFaceUserRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public UpdateFaceUserRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public UpdateFaceUserRequest setIsolationId(String isolationId) {

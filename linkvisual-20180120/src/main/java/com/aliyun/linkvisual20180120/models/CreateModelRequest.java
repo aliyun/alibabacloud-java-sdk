@@ -4,28 +4,28 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateModelRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("AlgorithmId")
+    @Validation(required = true)
     public Long algorithmId;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("ModelPackageStandard")
+    @Validation(required = true)
     public String modelPackageStandard;
 
     @NameInMap("Hardware")
+    @Validation(required = true)
     public String hardware;
 
     @NameInMap("UploadModelPath")
+    @Validation(required = true)
     public String uploadModelPath;
 
     @NameInMap("NeedEncrypt")
+    @Validation(required = true)
     public Boolean needEncrypt;
 
     @NameInMap("Description")
@@ -34,22 +34,6 @@ public class CreateModelRequest extends TeaModel {
     public static CreateModelRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateModelRequest self = new CreateModelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateModelRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateModelRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateModelRequest setAlgorithmId(Long algorithmId) {

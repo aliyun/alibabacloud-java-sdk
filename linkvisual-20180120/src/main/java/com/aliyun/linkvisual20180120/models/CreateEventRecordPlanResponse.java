@@ -4,33 +4,69 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateEventRecordPlanResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public CreateEventRecordPlanResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public String data;
 
     public static CreateEventRecordPlanResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateEventRecordPlanResponse self = new CreateEventRecordPlanResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateEventRecordPlanResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateEventRecordPlanResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateEventRecordPlanResponse setBody(CreateEventRecordPlanResponseBody body) {
-        this.body = body;
+    public CreateEventRecordPlanResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateEventRecordPlanResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateEventRecordPlanResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateEventRecordPlanResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateEventRecordPlanResponse setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }

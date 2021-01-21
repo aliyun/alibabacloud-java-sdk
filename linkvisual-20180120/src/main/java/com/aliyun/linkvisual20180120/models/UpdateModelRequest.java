@@ -4,13 +4,8 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateModelRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("ModelId")
+    @Validation(required = true)
     public Long modelId;
 
     @NameInMap("Name")
@@ -25,22 +20,6 @@ public class UpdateModelRequest extends TeaModel {
     public static UpdateModelRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateModelRequest self = new UpdateModelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateModelRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public UpdateModelRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public UpdateModelRequest setModelId(Long modelId) {

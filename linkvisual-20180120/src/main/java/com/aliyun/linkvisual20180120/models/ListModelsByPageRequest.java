@@ -4,13 +4,8 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class ListModelsByPageRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("AlgorithmId")
+    @Validation(required = true)
     public Long algorithmId;
 
     @NameInMap("SizeType")
@@ -26,30 +21,16 @@ public class ListModelsByPageRequest extends TeaModel {
     public String namePattern;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     public static ListModelsByPageRequest build(java.util.Map<String, ?> map) throws Exception {
         ListModelsByPageRequest self = new ListModelsByPageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListModelsByPageRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public ListModelsByPageRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public ListModelsByPageRequest setAlgorithmId(Long algorithmId) {

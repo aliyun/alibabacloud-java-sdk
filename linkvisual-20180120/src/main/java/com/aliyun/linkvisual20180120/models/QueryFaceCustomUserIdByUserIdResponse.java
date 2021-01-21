@@ -4,33 +4,69 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceCustomUserIdByUserIdResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public QueryFaceCustomUserIdByUserIdResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public String data;
 
     public static QueryFaceCustomUserIdByUserIdResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryFaceCustomUserIdByUserIdResponse self = new QueryFaceCustomUserIdByUserIdResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryFaceCustomUserIdByUserIdResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public QueryFaceCustomUserIdByUserIdResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public QueryFaceCustomUserIdByUserIdResponse setBody(QueryFaceCustomUserIdByUserIdResponseBody body) {
-        this.body = body;
+    public QueryFaceCustomUserIdByUserIdResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public QueryFaceCustomUserIdByUserIdResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public QueryFaceCustomUserIdByUserIdResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public QueryFaceCustomUserIdByUserIdResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryFaceCustomUserIdByUserIdResponse setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }
