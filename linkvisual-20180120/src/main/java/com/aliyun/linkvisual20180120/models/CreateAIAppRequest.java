@@ -4,22 +4,20 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateAIAppRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("AppTemplateId")
+    @Validation(required = true)
     public String appTemplateId;
 
     @NameInMap("AppTemplateVersion")
+    @Validation(required = true)
     public String appTemplateVersion;
 
     @NameInMap("Level")
+    @Validation(required = true)
     public Integer level;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("Description")
@@ -28,22 +26,6 @@ public class CreateAIAppRequest extends TeaModel {
     public static CreateAIAppRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAIAppRequest self = new CreateAIAppRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAIAppRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateAIAppRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateAIAppRequest setAppTemplateId(String appTemplateId) {

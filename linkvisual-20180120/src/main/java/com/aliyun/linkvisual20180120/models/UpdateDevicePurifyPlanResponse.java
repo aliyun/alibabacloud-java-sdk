@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateDevicePurifyPlanResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public UpdateDevicePurifyPlanResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static UpdateDevicePurifyPlanResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateDevicePurifyPlanResponse self = new UpdateDevicePurifyPlanResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDevicePurifyPlanResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateDevicePurifyPlanResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateDevicePurifyPlanResponse setBody(UpdateDevicePurifyPlanResponseBody body) {
-        this.body = body;
+    public UpdateDevicePurifyPlanResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public UpdateDevicePurifyPlanResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UpdateDevicePurifyPlanResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public UpdateDevicePurifyPlanResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

@@ -4,33 +4,69 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryRecordUrlResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public QueryRecordUrlResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public String data;
 
     public static QueryRecordUrlResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryRecordUrlResponse self = new QueryRecordUrlResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryRecordUrlResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public QueryRecordUrlResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public QueryRecordUrlResponse setBody(QueryRecordUrlResponseBody body) {
-        this.body = body;
+    public QueryRecordUrlResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public QueryRecordUrlResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public QueryRecordUrlResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public QueryRecordUrlResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryRecordUrlResponse setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }

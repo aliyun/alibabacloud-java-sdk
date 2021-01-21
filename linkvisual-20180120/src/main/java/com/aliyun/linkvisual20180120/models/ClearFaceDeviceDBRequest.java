@@ -4,43 +4,24 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class ClearFaceDeviceDBRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IsolationId")
+    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public String deviceName;
 
     public static ClearFaceDeviceDBRequest build(java.util.Map<String, ?> map) throws Exception {
         ClearFaceDeviceDBRequest self = new ClearFaceDeviceDBRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ClearFaceDeviceDBRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public ClearFaceDeviceDBRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public ClearFaceDeviceDBRequest setIsolationId(String isolationId) {

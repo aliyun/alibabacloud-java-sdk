@@ -4,40 +4,21 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class RemoveFaceUserFromUserGroupRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IsolationId")
+    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("UserId")
+    @Validation(required = true)
     public String userId;
 
     @NameInMap("UserGroupId")
+    @Validation(required = true)
     public String userGroupId;
 
     public static RemoveFaceUserFromUserGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveFaceUserFromUserGroupRequest self = new RemoveFaceUserFromUserGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RemoveFaceUserFromUserGroupRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public RemoveFaceUserFromUserGroupRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public RemoveFaceUserFromUserGroupRequest setIsolationId(String isolationId) {

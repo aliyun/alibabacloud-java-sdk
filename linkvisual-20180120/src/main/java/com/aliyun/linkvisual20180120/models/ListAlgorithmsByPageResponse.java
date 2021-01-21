@@ -4,33 +4,69 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class ListAlgorithmsByPageResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public ListAlgorithmsByPageResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public java.util.Map<String, ?> data;
 
     public static ListAlgorithmsByPageResponse build(java.util.Map<String, ?> map) throws Exception {
         ListAlgorithmsByPageResponse self = new ListAlgorithmsByPageResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListAlgorithmsByPageResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ListAlgorithmsByPageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ListAlgorithmsByPageResponse setBody(ListAlgorithmsByPageResponseBody body) {
-        this.body = body;
+    public ListAlgorithmsByPageResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public ListAlgorithmsByPageResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListAlgorithmsByPageResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListAlgorithmsByPageResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ListAlgorithmsByPageResponse setData(java.util.Map<String, ?> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.Map<String, ?> getData() {
+        return this.data;
     }
 
 }

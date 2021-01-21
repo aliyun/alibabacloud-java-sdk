@@ -4,40 +4,21 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateFaceUserGroupAndDeviceGroupRelationRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IsolationId")
+    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("ControlId")
+    @Validation(required = true)
     public String controlId;
 
     @NameInMap("Relation")
+    @Validation(required = true)
     public String relation;
 
     public static UpdateFaceUserGroupAndDeviceGroupRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFaceUserGroupAndDeviceGroupRelationRequest self = new UpdateFaceUserGroupAndDeviceGroupRelationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateFaceUserGroupAndDeviceGroupRelationRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public UpdateFaceUserGroupAndDeviceGroupRelationRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public UpdateFaceUserGroupAndDeviceGroupRelationRequest setIsolationId(String isolationId) {

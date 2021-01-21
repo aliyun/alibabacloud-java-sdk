@@ -4,43 +4,25 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceAllUserIdsByGroupIdRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IsolationId")
+    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("UserGroupId")
+    @Validation(required = true)
     public String userGroupId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNo")
+    @Validation(required = true)
     public Integer pageNo;
 
     public static QueryFaceAllUserIdsByGroupIdRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFaceAllUserIdsByGroupIdRequest self = new QueryFaceAllUserIdsByGroupIdRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFaceAllUserIdsByGroupIdRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryFaceAllUserIdsByGroupIdRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryFaceAllUserIdsByGroupIdRequest setIsolationId(String isolationId) {

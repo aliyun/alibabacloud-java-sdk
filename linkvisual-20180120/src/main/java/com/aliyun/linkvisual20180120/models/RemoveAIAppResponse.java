@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class RemoveAIAppResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public RemoveAIAppResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static RemoveAIAppResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveAIAppResponse self = new RemoveAIAppResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveAIAppResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public RemoveAIAppResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public RemoveAIAppResponse setBody(RemoveAIAppResponseBody body) {
-        this.body = body;
+    public RemoveAIAppResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public RemoveAIAppResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public RemoveAIAppResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public RemoveAIAppResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

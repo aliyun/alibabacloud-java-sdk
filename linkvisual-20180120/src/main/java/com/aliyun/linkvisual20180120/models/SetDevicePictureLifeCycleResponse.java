@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class SetDevicePictureLifeCycleResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public SetDevicePictureLifeCycleResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static SetDevicePictureLifeCycleResponse build(java.util.Map<String, ?> map) throws Exception {
         SetDevicePictureLifeCycleResponse self = new SetDevicePictureLifeCycleResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDevicePictureLifeCycleResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SetDevicePictureLifeCycleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SetDevicePictureLifeCycleResponse setBody(SetDevicePictureLifeCycleResponseBody body) {
-        this.body = body;
+    public SetDevicePictureLifeCycleResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SetDevicePictureLifeCycleResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SetDevicePictureLifeCycleResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public SetDevicePictureLifeCycleResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

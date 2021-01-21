@@ -4,43 +4,24 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryFaceAllDeviceGroupRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IsolationId")
+    @Validation(required = true)
     public String isolationId;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNo")
+    @Validation(required = true)
     public Integer pageNo;
 
     public static QueryFaceAllDeviceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryFaceAllDeviceGroupRequest self = new QueryFaceAllDeviceGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryFaceAllDeviceGroupRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryFaceAllDeviceGroupRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryFaceAllDeviceGroupRequest setIsolationId(String isolationId) {

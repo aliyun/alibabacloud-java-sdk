@@ -4,55 +4,41 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class PictureSearchPictureRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("AppInstanceId")
+    @Validation(required = true)
     public String appInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("SearchPicUrl")
+    @Validation(required = true)
     public String searchPicUrl;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("Threshold")
+    @Validation(required = true)
     public Float threshold;
 
     @NameInMap("ContainPicUrl")
+    @Validation(required = true)
     public Boolean containPicUrl;
 
     public static PictureSearchPictureRequest build(java.util.Map<String, ?> map) throws Exception {
         PictureSearchPictureRequest self = new PictureSearchPictureRequest();
         return TeaModel.build(map, self);
-    }
-
-    public PictureSearchPictureRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public PictureSearchPictureRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public PictureSearchPictureRequest setAppInstanceId(String appInstanceId) {

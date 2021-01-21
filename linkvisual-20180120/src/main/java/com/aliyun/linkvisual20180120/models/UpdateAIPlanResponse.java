@@ -4,33 +4,57 @@ package com.aliyun.linkvisual20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateAIPlanResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public UpdateAIPlanResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static UpdateAIPlanResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateAIPlanResponse self = new UpdateAIPlanResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAIPlanResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateAIPlanResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateAIPlanResponse setBody(UpdateAIPlanResponseBody body) {
-        this.body = body;
+    public UpdateAIPlanResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public UpdateAIPlanResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UpdateAIPlanResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public UpdateAIPlanResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }
