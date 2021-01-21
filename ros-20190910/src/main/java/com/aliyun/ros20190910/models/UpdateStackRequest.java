@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateStackRequest extends TeaModel {
     @NameInMap("StackId")
-    @Validation(required = true)
     public String stackId;
 
     @NameInMap("ClientToken")
@@ -20,11 +19,11 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("TemplateBody")
     public String templateBody;
 
-    @NameInMap("Parameters")
-    public java.util.List<UpdateStackRequestParameters> parameters;
-
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
+
+    @NameInMap("UpdateAllowPolicy")
+    public String updateAllowPolicy;
 
     @NameInMap("StackPolicyDuringUpdateURL")
     public String stackPolicyDuringUpdateURL;
@@ -36,11 +35,13 @@ public class UpdateStackRequest extends TeaModel {
     public Boolean usePreviousParameters;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DisableRollback")
     public Boolean disableRollback;
+
+    @NameInMap("EnableRecover")
+    public Boolean enableRecover;
 
     @NameInMap("TemplateURL")
     public String templateURL;
@@ -57,8 +58,8 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("TemplateVersion")
     public String templateVersion;
 
-    @NameInMap("Tags")
-    public java.util.List<UpdateStackRequestTags> tags;
+    @NameInMap("Parameters")
+    public java.util.List<UpdateStackRequestParameters> parameters;
 
     public static UpdateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackRequest self = new UpdateStackRequest();
@@ -105,20 +106,20 @@ public class UpdateStackRequest extends TeaModel {
         return this.templateBody;
     }
 
-    public UpdateStackRequest setParameters(java.util.List<UpdateStackRequestParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<UpdateStackRequestParameters> getParameters() {
-        return this.parameters;
-    }
-
     public UpdateStackRequest setStackPolicyURL(String stackPolicyURL) {
         this.stackPolicyURL = stackPolicyURL;
         return this;
     }
     public String getStackPolicyURL() {
         return this.stackPolicyURL;
+    }
+
+    public UpdateStackRequest setUpdateAllowPolicy(String updateAllowPolicy) {
+        this.updateAllowPolicy = updateAllowPolicy;
+        return this;
+    }
+    public String getUpdateAllowPolicy() {
+        return this.updateAllowPolicy;
     }
 
     public UpdateStackRequest setStackPolicyDuringUpdateURL(String stackPolicyDuringUpdateURL) {
@@ -161,6 +162,14 @@ public class UpdateStackRequest extends TeaModel {
         return this.disableRollback;
     }
 
+    public UpdateStackRequest setEnableRecover(Boolean enableRecover) {
+        this.enableRecover = enableRecover;
+        return this;
+    }
+    public Boolean getEnableRecover() {
+        return this.enableRecover;
+    }
+
     public UpdateStackRequest setTemplateURL(String templateURL) {
         this.templateURL = templateURL;
         return this;
@@ -201,34 +210,24 @@ public class UpdateStackRequest extends TeaModel {
         return this.templateVersion;
     }
 
-    public UpdateStackRequest setTags(java.util.List<UpdateStackRequestTags> tags) {
-        this.tags = tags;
+    public UpdateStackRequest setParameters(java.util.List<UpdateStackRequestParameters> parameters) {
+        this.parameters = parameters;
         return this;
     }
-    public java.util.List<UpdateStackRequestTags> getTags() {
-        return this.tags;
+    public java.util.List<UpdateStackRequestParameters> getParameters() {
+        return this.parameters;
     }
 
     public static class UpdateStackRequestParameters extends TeaModel {
-        @NameInMap("ParameterValue")
-        @Validation(required = true)
-        public String parameterValue;
-
         @NameInMap("ParameterKey")
-        @Validation(required = true)
         public String parameterKey;
+
+        @NameInMap("ParameterValue")
+        public String parameterValue;
 
         public static UpdateStackRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             UpdateStackRequestParameters self = new UpdateStackRequestParameters();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateStackRequestParameters setParameterValue(String parameterValue) {
-            this.parameterValue = parameterValue;
-            return this;
-        }
-        public String getParameterValue() {
-            return this.parameterValue;
         }
 
         public UpdateStackRequestParameters setParameterKey(String parameterKey) {
@@ -239,35 +238,12 @@ public class UpdateStackRequest extends TeaModel {
             return this.parameterKey;
         }
 
-    }
-
-    public static class UpdateStackRequestTags extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static UpdateStackRequestTags build(java.util.Map<String, ?> map) throws Exception {
-            UpdateStackRequestTags self = new UpdateStackRequestTags();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateStackRequestTags setKey(String key) {
-            this.key = key;
+        public UpdateStackRequestParameters setParameterValue(String parameterValue) {
+            this.parameterValue = parameterValue;
             return this;
         }
-        public String getKey() {
-            return this.key;
-        }
-
-        public UpdateStackRequestTags setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
+        public String getParameterValue() {
+            return this.parameterValue;
         }
 
     }

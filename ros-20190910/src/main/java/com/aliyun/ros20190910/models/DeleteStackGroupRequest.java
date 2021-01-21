@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteStackGroupRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StackGroupName")
-    @Validation(required = true)
     public String stackGroupName;
 
     public static DeleteStackGroupRequest build(java.util.Map<String, ?> map) throws Exception {

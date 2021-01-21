@@ -5,14 +5,9 @@ import com.aliyun.tea.*;
 
 public class ContinueCreateStackRequest extends TeaModel {
     @NameInMap("StackId")
-    @Validation(required = true)
     public String stackId;
 
-    @NameInMap("RecreatingResources")
-    public java.util.List<String> recreatingResources;
-
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RamRoleName")
@@ -27,9 +22,6 @@ public class ContinueCreateStackRequest extends TeaModel {
     @NameInMap("TemplateURL")
     public String templateURL;
 
-    @NameInMap("Parameters")
-    public java.util.List<ContinueCreateStackRequestParameters> parameters;
-
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -38,6 +30,12 @@ public class ContinueCreateStackRequest extends TeaModel {
 
     @NameInMap("TemplateVersion")
     public String templateVersion;
+
+    @NameInMap("RecreatingResources")
+    public java.util.List<String> recreatingResources;
+
+    @NameInMap("Parameters")
+    public java.util.List<ContinueCreateStackRequestParameters> parameters;
 
     public static ContinueCreateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         ContinueCreateStackRequest self = new ContinueCreateStackRequest();
@@ -50,14 +48,6 @@ public class ContinueCreateStackRequest extends TeaModel {
     }
     public String getStackId() {
         return this.stackId;
-    }
-
-    public ContinueCreateStackRequest setRecreatingResources(java.util.List<String> recreatingResources) {
-        this.recreatingResources = recreatingResources;
-        return this;
-    }
-    public java.util.List<String> getRecreatingResources() {
-        return this.recreatingResources;
     }
 
     public ContinueCreateStackRequest setRegionId(String regionId) {
@@ -100,14 +90,6 @@ public class ContinueCreateStackRequest extends TeaModel {
         return this.templateURL;
     }
 
-    public ContinueCreateStackRequest setParameters(java.util.List<ContinueCreateStackRequestParameters> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.List<ContinueCreateStackRequestParameters> getParameters() {
-        return this.parameters;
-    }
-
     public ContinueCreateStackRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -132,13 +114,27 @@ public class ContinueCreateStackRequest extends TeaModel {
         return this.templateVersion;
     }
 
+    public ContinueCreateStackRequest setRecreatingResources(java.util.List<String> recreatingResources) {
+        this.recreatingResources = recreatingResources;
+        return this;
+    }
+    public java.util.List<String> getRecreatingResources() {
+        return this.recreatingResources;
+    }
+
+    public ContinueCreateStackRequest setParameters(java.util.List<ContinueCreateStackRequestParameters> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+    public java.util.List<ContinueCreateStackRequestParameters> getParameters() {
+        return this.parameters;
+    }
+
     public static class ContinueCreateStackRequestParameters extends TeaModel {
         @NameInMap("ParameterKey")
-        @Validation(required = true)
         public String parameterKey;
 
         @NameInMap("ParameterValue")
-        @Validation(required = true)
         public String parameterValue;
 
         public static ContinueCreateStackRequestParameters build(java.util.Map<String, ?> map) throws Exception {

@@ -11,7 +11,6 @@ public class ListTemplateVersionsRequest extends TeaModel {
     public Long maxResults;
 
     @NameInMap("TemplateId")
-    @Validation(required = true)
     public String templateId;
 
     public static ListTemplateVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
