@@ -84,7 +84,7 @@ public class QueryAppInfoResponse extends TeaModel {
 
         @NameInMap("CreateTime")
         @Validation(required = true)
-        public Integer createTime;
+        public String createTime;
 
         @NameInMap("ProductId")
         @Validation(required = true)
@@ -195,11 +195,11 @@ public class QueryAppInfoResponse extends TeaModel {
             return this.industryId;
         }
 
-        public QueryAppInfoResponseAppInfo setCreateTime(Integer createTime) {
+        public QueryAppInfoResponseAppInfo setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
-        public Integer getCreateTime() {
+        public String getCreateTime() {
             return this.createTime;
         }
 

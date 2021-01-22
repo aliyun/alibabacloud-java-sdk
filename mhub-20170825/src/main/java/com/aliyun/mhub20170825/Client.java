@@ -29,16 +29,6 @@ public class Client extends com.aliyun.tearpc.Client {
         return this.openEmasServiceWithOptions(request, runtime);
     }
 
-    public QueryVersionInfosResponse queryVersionInfosWithOptions(QueryVersionInfosRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("QueryVersionInfos", "HTTPS", "POST", "2017-08-25", "AK", null, TeaModel.buildMap(request), runtime), new QueryVersionInfosResponse());
-    }
-
-    public QueryVersionInfosResponse queryVersionInfos(QueryVersionInfosRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryVersionInfosWithOptions(request, runtime);
-    }
-
     public QueryProductInfoResponse queryProductInfoWithOptions(QueryProductInfoRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("QueryProductInfo", "HTTPS", "POST", "2017-08-25", "AK", null, TeaModel.buildMap(request), runtime), new QueryProductInfoResponse());

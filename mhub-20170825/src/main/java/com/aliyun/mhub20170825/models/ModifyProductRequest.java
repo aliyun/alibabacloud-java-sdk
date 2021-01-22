@@ -12,18 +12,6 @@ public class ModifyProductRequest extends TeaModel {
     @Validation(required = true)
     public String name;
 
-    @NameInMap("IndustryId")
-    public Integer industryId;
-
-    @NameInMap("EncodedIcon")
-    public String encodedIcon;
-
-    @NameInMap("IconName")
-    public String iconName;
-
-    @NameInMap("RemoveIcon")
-    public Boolean removeIcon;
-
     public static ModifyProductRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyProductRequest self = new ModifyProductRequest();
         return TeaModel.build(map, self);
@@ -43,38 +31,6 @@ public class ModifyProductRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public ModifyProductRequest setIndustryId(Integer industryId) {
-        this.industryId = industryId;
-        return this;
-    }
-    public Integer getIndustryId() {
-        return this.industryId;
-    }
-
-    public ModifyProductRequest setEncodedIcon(String encodedIcon) {
-        this.encodedIcon = encodedIcon;
-        return this;
-    }
-    public String getEncodedIcon() {
-        return this.encodedIcon;
-    }
-
-    public ModifyProductRequest setIconName(String iconName) {
-        this.iconName = iconName;
-        return this;
-    }
-    public String getIconName() {
-        return this.iconName;
-    }
-
-    public ModifyProductRequest setRemoveIcon(Boolean removeIcon) {
-        this.removeIcon = removeIcon;
-        return this;
-    }
-    public Boolean getRemoveIcon() {
-        return this.removeIcon;
     }
 
 }
