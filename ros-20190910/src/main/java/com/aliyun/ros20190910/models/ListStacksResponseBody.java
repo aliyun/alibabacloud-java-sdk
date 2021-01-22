@@ -64,6 +64,36 @@ public class ListStacksResponseBody extends TeaModel {
         return this.stacks;
     }
 
+    public static class ListStacksResponseBodyStacksTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListStacksResponseBodyStacksTags build(java.util.Map<String, ?> map) throws Exception {
+            ListStacksResponseBodyStacksTags self = new ListStacksResponseBodyStacksTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListStacksResponseBodyStacksTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListStacksResponseBodyStacksTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListStacksResponseBodyStacks extends TeaModel {
         @NameInMap("Status")
         public String status;
@@ -82,6 +112,9 @@ public class ListStacksResponseBody extends TeaModel {
 
         @NameInMap("DisableRollback")
         public Boolean disableRollback;
+
+        @NameInMap("Tags")
+        public java.util.List<ListStacksResponseBodyStacksTags> tags;
 
         @NameInMap("StackName")
         public String stackName;
@@ -155,6 +188,14 @@ public class ListStacksResponseBody extends TeaModel {
         }
         public Boolean getDisableRollback() {
             return this.disableRollback;
+        }
+
+        public ListStacksResponseBodyStacks setTags(java.util.List<ListStacksResponseBodyStacksTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListStacksResponseBodyStacksTags> getTags() {
+            return this.tags;
         }
 
         public ListStacksResponseBodyStacks setStackName(String stackName) {

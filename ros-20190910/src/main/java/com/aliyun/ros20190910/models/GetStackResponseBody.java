@@ -64,6 +64,9 @@ public class GetStackResponseBody extends TeaModel {
     @NameInMap("StackName")
     public String stackName;
 
+    @NameInMap("Tags")
+    public java.util.List<GetStackResponseBodyTags> tags;
+
     @NameInMap("TimeoutInMinutes")
     public Integer timeoutInMinutes;
 
@@ -235,6 +238,14 @@ public class GetStackResponseBody extends TeaModel {
         return this.stackName;
     }
 
+    public GetStackResponseBody setTags(java.util.List<GetStackResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetStackResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public GetStackResponseBody setTimeoutInMinutes(Integer timeoutInMinutes) {
         this.timeoutInMinutes = timeoutInMinutes;
         return this;
@@ -277,6 +288,36 @@ public class GetStackResponseBody extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class GetStackResponseBodyTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetStackResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetStackResponseBodyTags self = new GetStackResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStackResponseBodyTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetStackResponseBodyTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
