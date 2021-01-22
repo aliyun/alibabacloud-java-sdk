@@ -8,15 +8,6 @@ public class CreateProductRequest extends TeaModel {
     @Validation(required = true)
     public String name;
 
-    @NameInMap("IndustryId")
-    public Integer industryId;
-
-    @NameInMap("IconName")
-    public String iconName;
-
-    @NameInMap("EncodedIcon")
-    public String encodedIcon;
-
     public static CreateProductRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductRequest self = new CreateProductRequest();
         return TeaModel.build(map, self);
@@ -28,30 +19,6 @@ public class CreateProductRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateProductRequest setIndustryId(Integer industryId) {
-        this.industryId = industryId;
-        return this;
-    }
-    public Integer getIndustryId() {
-        return this.industryId;
-    }
-
-    public CreateProductRequest setIconName(String iconName) {
-        this.iconName = iconName;
-        return this;
-    }
-    public String getIconName() {
-        return this.iconName;
-    }
-
-    public CreateProductRequest setEncodedIcon(String encodedIcon) {
-        this.encodedIcon = encodedIcon;
-        return this;
-    }
-    public String getEncodedIcon() {
-        return this.encodedIcon;
     }
 
 }
