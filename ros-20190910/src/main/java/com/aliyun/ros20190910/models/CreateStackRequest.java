@@ -61,6 +61,9 @@ public class CreateStackRequest extends TeaModel {
     @NameInMap("NotificationURLs")
     public java.util.List<String> notificationURLs;
 
+    @NameInMap("Tags")
+    public java.util.List<CreateStackRequestTags> tags;
+
     public static CreateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStackRequest self = new CreateStackRequest();
         return TeaModel.build(map, self);
@@ -218,6 +221,14 @@ public class CreateStackRequest extends TeaModel {
         return this.notificationURLs;
     }
 
+    public CreateStackRequest setTags(java.util.List<CreateStackRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateStackRequestTags> getTags() {
+        return this.tags;
+    }
+
     public static class ContinueCreateStackRequestParameters extends TeaModel {
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -274,6 +285,36 @@ public class CreateStackRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class CreateStackRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateStackRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateStackRequestTags self = new CreateStackRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateStackRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateStackRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

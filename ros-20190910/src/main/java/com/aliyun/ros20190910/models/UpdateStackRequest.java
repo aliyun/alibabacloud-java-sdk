@@ -61,6 +61,9 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("Parameters")
     public java.util.List<UpdateStackRequestParameters> parameters;
 
+    @NameInMap("Tags")
+    public java.util.List<UpdateStackRequestTags> tags;
+
     public static UpdateStackRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateStackRequest self = new UpdateStackRequest();
         return TeaModel.build(map, self);
@@ -218,6 +221,14 @@ public class UpdateStackRequest extends TeaModel {
         return this.parameters;
     }
 
+    public UpdateStackRequest setTags(java.util.List<UpdateStackRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<UpdateStackRequestTags> getTags() {
+        return this.tags;
+    }
+
     public static class UpdateStackRequestParameters extends TeaModel {
         @NameInMap("ParameterKey")
         public String parameterKey;
@@ -244,6 +255,36 @@ public class UpdateStackRequest extends TeaModel {
         }
         public String getParameterValue() {
             return this.parameterValue;
+        }
+
+    }
+
+    public static class UpdateStackRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static UpdateStackRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStackRequestTags self = new UpdateStackRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStackRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public UpdateStackRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
