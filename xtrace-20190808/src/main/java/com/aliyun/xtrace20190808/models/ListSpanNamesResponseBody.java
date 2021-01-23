@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSpanNamesResponseBody extends TeaModel {
     @NameInMap("SpanNames")
-    public java.util.List<String> spanNames;
+    public ListSpanNamesResponseBodySpanNames spanNames;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class ListSpanNamesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListSpanNamesResponseBody setSpanNames(java.util.List<String> spanNames) {
+    public ListSpanNamesResponseBody setSpanNames(ListSpanNamesResponseBodySpanNames spanNames) {
         this.spanNames = spanNames;
         return this;
     }
-    public java.util.List<String> getSpanNames() {
+    public ListSpanNamesResponseBodySpanNames getSpanNames() {
         return this.spanNames;
     }
 
@@ -29,6 +29,25 @@ public class ListSpanNamesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class ListSpanNamesResponseBodySpanNames extends TeaModel {
+        @NameInMap("SpanName")
+        public java.util.List<String> spanName;
+
+        public static ListSpanNamesResponseBodySpanNames build(java.util.Map<String, ?> map) throws Exception {
+            ListSpanNamesResponseBodySpanNames self = new ListSpanNamesResponseBodySpanNames();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSpanNamesResponseBodySpanNames setSpanName(java.util.List<String> spanName) {
+            this.spanName = spanName;
+            return this;
+        }
+        public java.util.List<String> getSpanName() {
+            return this.spanName;
+        }
+
     }
 
 }

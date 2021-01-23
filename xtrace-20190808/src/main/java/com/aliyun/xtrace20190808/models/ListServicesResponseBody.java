@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServicesResponseBody extends TeaModel {
     @NameInMap("Services")
-    public java.util.List<ListServicesResponseBodyServices> services;
+    public ListServicesResponseBodyServices services;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class ListServicesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListServicesResponseBody setServices(java.util.List<ListServicesResponseBodyServices> services) {
+    public ListServicesResponseBody setServices(ListServicesResponseBodyServices services) {
         this.services = services;
         return this;
     }
-    public java.util.List<ListServicesResponseBodyServices> getServices() {
+    public ListServicesResponseBodyServices getServices() {
         return this.services;
     }
 
@@ -31,7 +31,7 @@ public class ListServicesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class ListServicesResponseBodyServices extends TeaModel {
+    public static class ListServicesResponseBodyServicesService extends TeaModel {
         @NameInMap("Pid")
         public String pid;
 
@@ -41,12 +41,12 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static ListServicesResponseBodyServices build(java.util.Map<String, ?> map) throws Exception {
-            ListServicesResponseBodyServices self = new ListServicesResponseBodyServices();
+        public static ListServicesResponseBodyServicesService build(java.util.Map<String, ?> map) throws Exception {
+            ListServicesResponseBodyServicesService self = new ListServicesResponseBodyServicesService();
             return TeaModel.build(map, self);
         }
 
-        public ListServicesResponseBodyServices setPid(String pid) {
+        public ListServicesResponseBodyServicesService setPid(String pid) {
             this.pid = pid;
             return this;
         }
@@ -54,7 +54,7 @@ public class ListServicesResponseBody extends TeaModel {
             return this.pid;
         }
 
-        public ListServicesResponseBodyServices setServiceName(String serviceName) {
+        public ListServicesResponseBodyServicesService setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
@@ -62,12 +62,31 @@ public class ListServicesResponseBody extends TeaModel {
             return this.serviceName;
         }
 
-        public ListServicesResponseBodyServices setRegionId(String regionId) {
+        public ListServicesResponseBodyServicesService setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class ListServicesResponseBodyServices extends TeaModel {
+        @NameInMap("Service")
+        public java.util.List<ListServicesResponseBodyServicesService> service;
+
+        public static ListServicesResponseBodyServices build(java.util.Map<String, ?> map) throws Exception {
+            ListServicesResponseBodyServices self = new ListServicesResponseBodyServices();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServicesResponseBodyServices setService(java.util.List<ListServicesResponseBodyServicesService> service) {
+            this.service = service;
+            return this;
+        }
+        public java.util.List<ListServicesResponseBodyServicesService> getService() {
+            return this.service;
         }
 
     }

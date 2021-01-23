@@ -8,7 +8,7 @@ public class ListIpOrHostsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("IpNames")
-    public java.util.List<String> ipNames;
+    public ListIpOrHostsResponseBodyIpNames ipNames;
 
     public static ListIpOrHostsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIpOrHostsResponseBody self = new ListIpOrHostsResponseBody();
@@ -23,12 +23,31 @@ public class ListIpOrHostsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListIpOrHostsResponseBody setIpNames(java.util.List<String> ipNames) {
+    public ListIpOrHostsResponseBody setIpNames(ListIpOrHostsResponseBodyIpNames ipNames) {
         this.ipNames = ipNames;
         return this;
     }
-    public java.util.List<String> getIpNames() {
+    public ListIpOrHostsResponseBodyIpNames getIpNames() {
         return this.ipNames;
+    }
+
+    public static class ListIpOrHostsResponseBodyIpNames extends TeaModel {
+        @NameInMap("IpName")
+        public java.util.List<String> ipName;
+
+        public static ListIpOrHostsResponseBodyIpNames build(java.util.Map<String, ?> map) throws Exception {
+            ListIpOrHostsResponseBodyIpNames self = new ListIpOrHostsResponseBodyIpNames();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIpOrHostsResponseBodyIpNames setIpName(java.util.List<String> ipName) {
+            this.ipName = ipName;
+            return this;
+        }
+        public java.util.List<String> getIpName() {
+            return this.ipName;
+        }
+
     }
 
 }
