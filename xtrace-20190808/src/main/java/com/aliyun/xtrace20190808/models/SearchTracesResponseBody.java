@@ -31,7 +31,7 @@ public class SearchTracesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class SearchTracesResponseBodyPageBeanTraceInfos extends TeaModel {
+    public static class SearchTracesResponseBodyPageBeanTraceInfosTraceInfo extends TeaModel {
         @NameInMap("OperationName")
         public String operationName;
 
@@ -50,12 +50,12 @@ public class SearchTracesResponseBody extends TeaModel {
         @NameInMap("TraceID")
         public String traceID;
 
-        public static SearchTracesResponseBodyPageBeanTraceInfos build(java.util.Map<String, ?> map) throws Exception {
-            SearchTracesResponseBodyPageBeanTraceInfos self = new SearchTracesResponseBodyPageBeanTraceInfos();
+        public static SearchTracesResponseBodyPageBeanTraceInfosTraceInfo build(java.util.Map<String, ?> map) throws Exception {
+            SearchTracesResponseBodyPageBeanTraceInfosTraceInfo self = new SearchTracesResponseBodyPageBeanTraceInfosTraceInfo();
             return TeaModel.build(map, self);
         }
 
-        public SearchTracesResponseBodyPageBeanTraceInfos setOperationName(String operationName) {
+        public SearchTracesResponseBodyPageBeanTraceInfosTraceInfo setOperationName(String operationName) {
             this.operationName = operationName;
             return this;
         }
@@ -63,7 +63,7 @@ public class SearchTracesResponseBody extends TeaModel {
             return this.operationName;
         }
 
-        public SearchTracesResponseBodyPageBeanTraceInfos setServiceIp(String serviceIp) {
+        public SearchTracesResponseBodyPageBeanTraceInfosTraceInfo setServiceIp(String serviceIp) {
             this.serviceIp = serviceIp;
             return this;
         }
@@ -71,7 +71,7 @@ public class SearchTracesResponseBody extends TeaModel {
             return this.serviceIp;
         }
 
-        public SearchTracesResponseBodyPageBeanTraceInfos setDuration(Long duration) {
+        public SearchTracesResponseBodyPageBeanTraceInfosTraceInfo setDuration(Long duration) {
             this.duration = duration;
             return this;
         }
@@ -79,7 +79,7 @@ public class SearchTracesResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public SearchTracesResponseBodyPageBeanTraceInfos setTimestamp(Long timestamp) {
+        public SearchTracesResponseBodyPageBeanTraceInfosTraceInfo setTimestamp(Long timestamp) {
             this.timestamp = timestamp;
             return this;
         }
@@ -87,7 +87,7 @@ public class SearchTracesResponseBody extends TeaModel {
             return this.timestamp;
         }
 
-        public SearchTracesResponseBodyPageBeanTraceInfos setServiceName(String serviceName) {
+        public SearchTracesResponseBodyPageBeanTraceInfosTraceInfo setServiceName(String serviceName) {
             this.serviceName = serviceName;
             return this;
         }
@@ -95,7 +95,7 @@ public class SearchTracesResponseBody extends TeaModel {
             return this.serviceName;
         }
 
-        public SearchTracesResponseBodyPageBeanTraceInfos setTraceID(String traceID) {
+        public SearchTracesResponseBodyPageBeanTraceInfosTraceInfo setTraceID(String traceID) {
             this.traceID = traceID;
             return this;
         }
@@ -105,9 +105,28 @@ public class SearchTracesResponseBody extends TeaModel {
 
     }
 
+    public static class SearchTracesResponseBodyPageBeanTraceInfos extends TeaModel {
+        @NameInMap("TraceInfo")
+        public java.util.List<SearchTracesResponseBodyPageBeanTraceInfosTraceInfo> traceInfo;
+
+        public static SearchTracesResponseBodyPageBeanTraceInfos build(java.util.Map<String, ?> map) throws Exception {
+            SearchTracesResponseBodyPageBeanTraceInfos self = new SearchTracesResponseBodyPageBeanTraceInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchTracesResponseBodyPageBeanTraceInfos setTraceInfo(java.util.List<SearchTracesResponseBodyPageBeanTraceInfosTraceInfo> traceInfo) {
+            this.traceInfo = traceInfo;
+            return this;
+        }
+        public java.util.List<SearchTracesResponseBodyPageBeanTraceInfosTraceInfo> getTraceInfo() {
+            return this.traceInfo;
+        }
+
+    }
+
     public static class SearchTracesResponseBodyPageBean extends TeaModel {
         @NameInMap("TraceInfos")
-        public java.util.List<SearchTracesResponseBodyPageBeanTraceInfos> traceInfos;
+        public SearchTracesResponseBodyPageBeanTraceInfos traceInfos;
 
         @NameInMap("PageSize")
         public Integer pageSize;
@@ -123,11 +142,11 @@ public class SearchTracesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public SearchTracesResponseBodyPageBean setTraceInfos(java.util.List<SearchTracesResponseBodyPageBeanTraceInfos> traceInfos) {
+        public SearchTracesResponseBodyPageBean setTraceInfos(SearchTracesResponseBodyPageBeanTraceInfos traceInfos) {
             this.traceInfos = traceInfos;
             return this;
         }
-        public java.util.List<SearchTracesResponseBodyPageBeanTraceInfos> getTraceInfos() {
+        public SearchTracesResponseBodyPageBeanTraceInfos getTraceInfos() {
             return this.traceInfos;
         }
 

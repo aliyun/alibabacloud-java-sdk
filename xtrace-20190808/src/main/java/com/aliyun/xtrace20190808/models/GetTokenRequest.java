@@ -13,6 +13,9 @@ public class GetTokenRequest extends TeaModel {
     @NameInMap("ProxyUserId")
     public String proxyUserId;
 
+    @NameInMap("IsForce")
+    public Boolean isForce;
+
     public static GetTokenRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTokenRequest self = new GetTokenRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetTokenRequest extends TeaModel {
     }
     public String getProxyUserId() {
         return this.proxyUserId;
+    }
+
+    public GetTokenRequest setIsForce(Boolean isForce) {
+        this.isForce = isForce;
+        return this;
+    }
+    public Boolean getIsForce() {
+        return this.isForce;
     }
 
 }

@@ -31,32 +31,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public CheckServiceLinkedRoleForDeletingResponse checkServiceLinkedRoleForDeletingWithOptions(CheckServiceLinkedRoleForDeletingRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CheckServiceLinkedRoleForDeleting", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime), new CheckServiceLinkedRoleForDeletingResponse());
-    }
-
-    public CheckServiceLinkedRoleForDeletingResponse checkServiceLinkedRoleForDeleting(CheckServiceLinkedRoleForDeletingRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.checkServiceLinkedRoleForDeletingWithOptions(request, runtime);
-    }
-
-    public GetSamplingResponse getSamplingWithOptions(GetSamplingRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetSampling", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime), new GetSamplingResponse());
-    }
-
-    public GetSamplingResponse getSampling(GetSamplingRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getSamplingWithOptions(request, runtime);
-    }
-
     public GetTagKeyResponse getTagKeyWithOptions(GetTagKeyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -161,16 +135,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listSpanNamesWithOptions(request, runtime);
     }
 
-    public OpenXtraceServiceResponse openXtraceServiceWithOptions(RuntimeOptions runtime) throws Exception {
-        OpenApiRequest req = new OpenApiRequest();
-        return TeaModel.toModel(this.doRPCRequest("OpenXtraceService", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime), new OpenXtraceServiceResponse());
-    }
-
-    public OpenXtraceServiceResponse openXtraceService() throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.openXtraceServiceWithOptions(runtime);
-    }
-
     public QueryMetricResponse queryMetricWithOptions(QueryMetricRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -195,18 +159,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchTracesResponse searchTraces(SearchTracesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.searchTracesWithOptions(request, runtime);
-    }
-
-    public UpdateSamplingResponse updateSamplingWithOptions(UpdateSamplingRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateSampling", "2019-08-08", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateSamplingResponse());
-    }
-
-    public UpdateSamplingResponse updateSampling(UpdateSamplingRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateSamplingWithOptions(request, runtime);
     }
 }

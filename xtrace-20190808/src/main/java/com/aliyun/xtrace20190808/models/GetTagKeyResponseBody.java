@@ -8,7 +8,7 @@ public class GetTagKeyResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("TagKeys")
-    public java.util.List<String> tagKeys;
+    public GetTagKeyResponseBodyTagKeys tagKeys;
 
     public static GetTagKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTagKeyResponseBody self = new GetTagKeyResponseBody();
@@ -23,12 +23,31 @@ public class GetTagKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetTagKeyResponseBody setTagKeys(java.util.List<String> tagKeys) {
+    public GetTagKeyResponseBody setTagKeys(GetTagKeyResponseBodyTagKeys tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
-    public java.util.List<String> getTagKeys() {
+    public GetTagKeyResponseBodyTagKeys getTagKeys() {
         return this.tagKeys;
+    }
+
+    public static class GetTagKeyResponseBodyTagKeys extends TeaModel {
+        @NameInMap("TagKey")
+        public java.util.List<String> tagKey;
+
+        public static GetTagKeyResponseBodyTagKeys build(java.util.Map<String, ?> map) throws Exception {
+            GetTagKeyResponseBodyTagKeys self = new GetTagKeyResponseBodyTagKeys();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTagKeyResponseBodyTagKeys setTagKey(java.util.List<String> tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public java.util.List<String> getTagKey() {
+            return this.tagKey;
+        }
+
     }
 
 }
