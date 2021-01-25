@@ -3,7 +3,7 @@ package com.aliyun.servicemesh20200111.models;
 
 import com.aliyun.tea.*;
 
-public class GetDiagnosisResponse extends TeaModel {
+public class GetServiceRegistrySourceResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
@@ -12,20 +12,16 @@ public class GetDiagnosisResponse extends TeaModel {
     @Validation(required = true)
     public String result;
 
-    @NameInMap("RunAt")
-    @Validation(required = true)
-    public String runAt;
-
     @NameInMap("Status")
     @Validation(required = true)
     public String status;
 
-    public static GetDiagnosisResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDiagnosisResponse self = new GetDiagnosisResponse();
+    public static GetServiceRegistrySourceResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetServiceRegistrySourceResponse self = new GetServiceRegistrySourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDiagnosisResponse setRequestId(String requestId) {
+    public GetServiceRegistrySourceResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -33,7 +29,7 @@ public class GetDiagnosisResponse extends TeaModel {
         return this.requestId;
     }
 
-    public GetDiagnosisResponse setResult(String result) {
+    public GetServiceRegistrySourceResponse setResult(String result) {
         this.result = result;
         return this;
     }
@@ -41,15 +37,7 @@ public class GetDiagnosisResponse extends TeaModel {
         return this.result;
     }
 
-    public GetDiagnosisResponse setRunAt(String runAt) {
-        this.runAt = runAt;
-        return this;
-    }
-    public String getRunAt() {
-        return this.runAt;
-    }
-
-    public GetDiagnosisResponse setStatus(String status) {
+    public GetServiceRegistrySourceResponse setStatus(String status) {
         this.status = status;
         return this;
     }
