@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 import com.aliyun.servicemesh20200111.models.*;
 import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
+import com.aliyun.common.*;
 import com.aliyun.tearpc.*;
 import com.aliyun.tearpc.models.*;
 import com.aliyun.endpointutil.*;
@@ -18,6 +19,32 @@ public class Client extends com.aliyun.tearpc.Client {
         this._endpoint = this.getEndpoint("servicemesh", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
 
+
+    public GetServiceRegistrySourceResponse getServiceRegistrySourceWithOptions(GetServiceRegistrySourceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetServiceRegistrySource", "HTTPS", "POST", "2020-01-11", "AK", null, TeaModel.buildMap(request), runtime), new GetServiceRegistrySourceResponse());
+    }
+
+    public GetServiceRegistrySourceResponse getServiceRegistrySource(GetServiceRegistrySourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getServiceRegistrySourceWithOptions(request, runtime);
+    }
+
+    public SetServiceRegistrySourceResponse setServiceRegistrySourceWithOptions(SetServiceRegistrySourceRequest tmp, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        SetServiceRegistrySourceShrinkRequest request = new SetServiceRegistrySourceShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.config)) {
+            request.configShrink = com.aliyun.teautil.Common.toJSONString(tmp.config);
+        }
+
+        return TeaModel.toModel(this.doRequest("SetServiceRegistrySource", "HTTPS", "POST", "2020-01-11", "AK", null, TeaModel.buildMap(request), runtime), new SetServiceRegistrySourceResponse());
+    }
+
+    public SetServiceRegistrySourceResponse setServiceRegistrySource(SetServiceRegistrySourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setServiceRegistrySourceWithOptions(request, runtime);
+    }
 
     public GetAutoInjectionLabelSyncStatusResponse getAutoInjectionLabelSyncStatusWithOptions(GetAutoInjectionLabelSyncStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);

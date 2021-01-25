@@ -602,6 +602,10 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
         @Validation(required = true)
         public Boolean enabled;
 
+        @NameInMap("Url")
+        @Validation(required = true)
+        public String url;
+
         public static DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigKiali build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigKiali self = new DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigKiali();
             return TeaModel.build(map, self);
@@ -613,6 +617,14 @@ public class DescribeServiceMeshDetailResponse extends TeaModel {
         }
         public Boolean getEnabled() {
             return this.enabled;
+        }
+
+        public DescribeServiceMeshDetailResponseServiceMeshSpecMeshConfigKiali setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
