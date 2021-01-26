@@ -3,21 +3,21 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class ScaleClusterResponse extends TeaModel {
+public class OpenAckServiceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public ScaleClusterResponseBody body;
+    public OpenAckServiceResponseBody body;
 
-    public static ScaleClusterResponse build(java.util.Map<String, ?> map) throws Exception {
-        ScaleClusterResponse self = new ScaleClusterResponse();
+    public static OpenAckServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        OpenAckServiceResponse self = new OpenAckServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ScaleClusterResponse setHeaders(java.util.Map<String, String> headers) {
+    public OpenAckServiceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class ScaleClusterResponse extends TeaModel {
         return this.headers;
     }
 
-    public ScaleClusterResponse setBody(ScaleClusterResponseBody body) {
+    public OpenAckServiceResponse setBody(OpenAckServiceResponseBody body) {
         this.body = body;
         return this;
     }
-    public ScaleClusterResponseBody getBody() {
+    public OpenAckServiceResponseBody getBody() {
         return this.body;
     }
 

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeTemplatesResponseBody extends TeaModel {
     // 模板列表。
     @NameInMap("templates")
-    public java.util.List<DescribeTemplatesResponseBodyTemplates> templates;
+    public DescribeTemplatesResponseBodyTemplates templates;
 
     // 分页信息。
     @NameInMap("page_info")
@@ -17,11 +17,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeTemplatesResponseBody setTemplates(java.util.List<DescribeTemplatesResponseBodyTemplates> templates) {
+    public DescribeTemplatesResponseBody setTemplates(DescribeTemplatesResponseBodyTemplates templates) {
         this.templates = templates;
         return this;
     }
-    public java.util.List<DescribeTemplatesResponseBodyTemplates> getTemplates() {
+    public DescribeTemplatesResponseBodyTemplates getTemplates() {
         return this.templates;
     }
 
@@ -33,7 +33,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         return this.pageInfo;
     }
 
-    public static class DescribeTemplatesResponseBodyTemplates extends TeaModel {
+    public static class DescribeTemplatesResponseBodyTemplatesTemplate extends TeaModel {
         // 模板访问权限，取值为：private、pubilc或shared。。
         @NameInMap("acl")
         public String acl;
@@ -74,12 +74,12 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @NameInMap("template_with_hist_id")
         public String templateWithHistId;
 
-        public static DescribeTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTemplatesResponseBodyTemplates self = new DescribeTemplatesResponseBodyTemplates();
+        public static DescribeTemplatesResponseBodyTemplatesTemplate build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTemplatesResponseBodyTemplatesTemplate self = new DescribeTemplatesResponseBodyTemplatesTemplate();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTemplatesResponseBodyTemplates setAcl(String acl) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setAcl(String acl) {
             this.acl = acl;
             return this;
         }
@@ -87,7 +87,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.acl;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setId(String id) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setId(String id) {
             this.id = id;
             return this;
         }
@@ -95,7 +95,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.id;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setName(String name) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setName(String name) {
             this.name = name;
             return this;
         }
@@ -103,7 +103,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setDescription(String description) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -111,7 +111,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setTags(String tags) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setTags(String tags) {
             this.tags = tags;
             return this;
         }
@@ -119,7 +119,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.tags;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setTemplate(String template) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setTemplate(String template) {
             this.template = template;
             return this;
         }
@@ -127,7 +127,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.template;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setTemplateType(String templateType) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setTemplateType(String templateType) {
             this.templateType = templateType;
             return this;
         }
@@ -135,7 +135,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.templateType;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setCreated(String created) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setCreated(String created) {
             this.created = created;
             return this;
         }
@@ -143,7 +143,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.created;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setUpdated(String updated) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setUpdated(String updated) {
             this.updated = updated;
             return this;
         }
@@ -151,12 +151,31 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.updated;
         }
 
-        public DescribeTemplatesResponseBodyTemplates setTemplateWithHistId(String templateWithHistId) {
+        public DescribeTemplatesResponseBodyTemplatesTemplate setTemplateWithHistId(String templateWithHistId) {
             this.templateWithHistId = templateWithHistId;
             return this;
         }
         public String getTemplateWithHistId() {
             return this.templateWithHistId;
+        }
+
+    }
+
+    public static class DescribeTemplatesResponseBodyTemplates extends TeaModel {
+        @NameInMap("template")
+        public java.util.List<DescribeTemplatesResponseBodyTemplatesTemplate> template;
+
+        public static DescribeTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTemplatesResponseBodyTemplates self = new DescribeTemplatesResponseBodyTemplates();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeTemplatesResponseBodyTemplates setTemplate(java.util.List<DescribeTemplatesResponseBodyTemplatesTemplate> template) {
+            this.template = template;
+            return this;
+        }
+        public java.util.List<DescribeTemplatesResponseBodyTemplatesTemplate> getTemplate() {
+            return this.template;
         }
 
     }
