@@ -31,6 +31,9 @@ public class QueryOrdersRequest extends TeaModel {
     @NameInMap("CreateTimeStart")
     public String createTimeStart;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     public static QueryOrdersRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryOrdersRequest self = new QueryOrdersRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class QueryOrdersRequest extends TeaModel {
     }
     public String getCreateTimeStart() {
         return this.createTimeStart;
+    }
+
+    public QueryOrdersRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

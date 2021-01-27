@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryMonthlyBillRequest extends TeaModel {
     @NameInMap("BillingCycle")
-    @Validation(required = true)
     public String billingCycle;
 
     public static QueryMonthlyBillRequest build(java.util.Map<String, ?> map) throws Exception {

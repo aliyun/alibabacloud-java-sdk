@@ -8,8 +8,10 @@ public class SetRenewalRequest extends TeaModel {
     public Integer renewalPeriod;
 
     @NameInMap("InstanceIDs")
-    @Validation(required = true)
     public String instanceIDs;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ProductCode")
     public String productCode;
@@ -24,7 +26,6 @@ public class SetRenewalRequest extends TeaModel {
     public String renewalPeriodUnit;
 
     @NameInMap("RenewalStatus")
-    @Validation(required = true)
     public String renewalStatus;
 
     public static SetRenewalRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -46,6 +47,14 @@ public class SetRenewalRequest extends TeaModel {
     }
     public String getInstanceIDs() {
         return this.instanceIDs;
+    }
+
+    public SetRenewalRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetRenewalRequest setProductCode(String productCode) {

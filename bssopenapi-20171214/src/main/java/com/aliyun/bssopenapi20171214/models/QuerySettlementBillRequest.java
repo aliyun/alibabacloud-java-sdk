@@ -7,11 +7,13 @@ public class QuerySettlementBillRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
     @NameInMap("BillingCycle")
-    @Validation(required = true)
     public String billingCycle;
 
     @NameInMap("StartTime")
@@ -46,6 +48,14 @@ public class QuerySettlementBillRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QuerySettlementBillRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QuerySettlementBillRequest setPageNum(Integer pageNum) {

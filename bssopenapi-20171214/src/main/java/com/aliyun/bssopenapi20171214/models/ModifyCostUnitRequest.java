@@ -21,21 +21,26 @@ public class ModifyCostUnitRequest extends TeaModel {
     }
 
     public static class ModifyCostUnitRequestUnitEntityList extends TeaModel {
+        @NameInMap("NewUnitName")
+        public String newUnitName;
+
         @NameInMap("OwnerUid")
-        @Validation(required = true)
         public Long ownerUid;
 
         @NameInMap("UnitId")
-        @Validation(required = true)
         public Long unitId;
-
-        @NameInMap("NewUnitName")
-        @Validation(required = true)
-        public String newUnitName;
 
         public static ModifyCostUnitRequestUnitEntityList build(java.util.Map<String, ?> map) throws Exception {
             ModifyCostUnitRequestUnitEntityList self = new ModifyCostUnitRequestUnitEntityList();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyCostUnitRequestUnitEntityList setNewUnitName(String newUnitName) {
+            this.newUnitName = newUnitName;
+            return this;
+        }
+        public String getNewUnitName() {
+            return this.newUnitName;
         }
 
         public ModifyCostUnitRequestUnitEntityList setOwnerUid(Long ownerUid) {
@@ -52,14 +57,6 @@ public class ModifyCostUnitRequest extends TeaModel {
         }
         public Long getUnitId() {
             return this.unitId;
-        }
-
-        public ModifyCostUnitRequestUnitEntityList setNewUnitName(String newUnitName) {
-            this.newUnitName = newUnitName;
-            return this;
-        }
-        public String getNewUnitName() {
-            return this.newUnitName;
         }
 
     }

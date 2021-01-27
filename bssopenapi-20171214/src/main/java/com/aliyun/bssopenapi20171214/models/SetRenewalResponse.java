@@ -4,57 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetRenewalResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public SetRenewalResponseBody body;
 
     public static SetRenewalResponse build(java.util.Map<String, ?> map) throws Exception {
         SetRenewalResponse self = new SetRenewalResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetRenewalResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetRenewalResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetRenewalResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SetRenewalResponse setBody(SetRenewalResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public SetRenewalResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public SetRenewalResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public SetRenewalResponseBody getBody() {
+        return this.body;
     }
 
 }

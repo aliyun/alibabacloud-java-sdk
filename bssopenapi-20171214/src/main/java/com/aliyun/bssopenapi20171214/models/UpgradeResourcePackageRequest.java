@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class UpgradeResourcePackageRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -16,6 +19,14 @@ public class UpgradeResourcePackageRequest extends TeaModel {
     public static UpgradeResourcePackageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeResourcePackageRequest self = new UpgradeResourcePackageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeResourcePackageRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public UpgradeResourcePackageRequest setInstanceId(String instanceId) {

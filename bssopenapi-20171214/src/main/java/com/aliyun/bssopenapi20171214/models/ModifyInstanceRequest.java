@@ -5,28 +5,28 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceRequest extends TeaModel {
     @NameInMap("ProductCode")
-    @Validation(required = true)
     public String productCode;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("ProductType")
     public String productType;
 
     @NameInMap("SubscriptionType")
-    @Validation(required = true)
     public String subscriptionType;
 
     @NameInMap("ModifyType")
-    @Validation(required = true)
     public String modifyType;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Parameter")
-    public java.util.List<ModifyInstanceRequestParameter> parameter;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("Parameter")
+    public java.util.List<ModifyInstanceRequestParameter> parameter;
 
     public static ModifyInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceRequest self = new ModifyInstanceRequest();
@@ -39,6 +39,14 @@ public class ModifyInstanceRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public ModifyInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyInstanceRequest setProductType(String productType) {
@@ -73,14 +81,6 @@ public class ModifyInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifyInstanceRequest setParameter(java.util.List<ModifyInstanceRequestParameter> parameter) {
-        this.parameter = parameter;
-        return this;
-    }
-    public java.util.List<ModifyInstanceRequestParameter> getParameter() {
-        return this.parameter;
-    }
-
     public ModifyInstanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -89,13 +89,19 @@ public class ModifyInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public ModifyInstanceRequest setParameter(java.util.List<ModifyInstanceRequestParameter> parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    public java.util.List<ModifyInstanceRequestParameter> getParameter() {
+        return this.parameter;
+    }
+
     public static class ModifyInstanceRequestParameter extends TeaModel {
         @NameInMap("Code")
-        @Validation(required = true)
         public String code;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static ModifyInstanceRequestParameter build(java.util.Map<String, ?> map) throws Exception {

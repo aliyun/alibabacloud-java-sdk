@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetOrderDetailRequest extends TeaModel {
     @NameInMap("OrderId")
-    @Validation(required = true)
     public String orderId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static GetOrderDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetOrderDetailRequest self = new GetOrderDetailRequest();
@@ -19,6 +21,14 @@ public class GetOrderDetailRequest extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public GetOrderDetailRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

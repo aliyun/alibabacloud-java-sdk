@@ -4,12 +4,13 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateResellerUserQuotaRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Amount")
-    @Validation(required = true)
     public String amount;
 
     @NameInMap("Currency")
-    @Validation(required = true)
     public String currency;
 
     @NameInMap("OutBizId")
@@ -18,6 +19,14 @@ public class CreateResellerUserQuotaRequest extends TeaModel {
     public static CreateResellerUserQuotaRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateResellerUserQuotaRequest self = new CreateResellerUserQuotaRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateResellerUserQuotaRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public CreateResellerUserQuotaRequest setAmount(String amount) {
