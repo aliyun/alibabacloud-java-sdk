@@ -5,24 +5,19 @@ import com.aliyun.tea.*;
 
 public class AllocateCostUnitResourceRequest extends TeaModel {
     @NameInMap("FromUnitUserId")
-    @Validation(required = true)
     public Long fromUnitUserId;
 
     @NameInMap("FromUnitId")
-    @Validation(required = true)
     public Long fromUnitId;
 
-    @NameInMap("ResourceInstanceList")
-    @Validation(required = true)
-    public java.util.List<AllocateCostUnitResourceRequestResourceInstanceList> resourceInstanceList;
-
     @NameInMap("ToUnitUserId")
-    @Validation(required = true)
     public Long toUnitUserId;
 
     @NameInMap("ToUnitId")
-    @Validation(required = true)
     public Long toUnitId;
+
+    @NameInMap("ResourceInstanceList")
+    public java.util.List<AllocateCostUnitResourceRequestResourceInstanceList> resourceInstanceList;
 
     public static AllocateCostUnitResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateCostUnitResourceRequest self = new AllocateCostUnitResourceRequest();
@@ -45,14 +40,6 @@ public class AllocateCostUnitResourceRequest extends TeaModel {
         return this.fromUnitId;
     }
 
-    public AllocateCostUnitResourceRequest setResourceInstanceList(java.util.List<AllocateCostUnitResourceRequestResourceInstanceList> resourceInstanceList) {
-        this.resourceInstanceList = resourceInstanceList;
-        return this;
-    }
-    public java.util.List<AllocateCostUnitResourceRequestResourceInstanceList> getResourceInstanceList() {
-        return this.resourceInstanceList;
-    }
-
     public AllocateCostUnitResourceRequest setToUnitUserId(Long toUnitUserId) {
         this.toUnitUserId = toUnitUserId;
         return this;
@@ -69,41 +56,38 @@ public class AllocateCostUnitResourceRequest extends TeaModel {
         return this.toUnitId;
     }
 
+    public AllocateCostUnitResourceRequest setResourceInstanceList(java.util.List<AllocateCostUnitResourceRequestResourceInstanceList> resourceInstanceList) {
+        this.resourceInstanceList = resourceInstanceList;
+        return this;
+    }
+    public java.util.List<AllocateCostUnitResourceRequestResourceInstanceList> getResourceInstanceList() {
+        return this.resourceInstanceList;
+    }
+
     public static class AllocateCostUnitResourceRequestResourceInstanceList extends TeaModel {
-        @NameInMap("ResourceUserId")
-        @Validation(required = true)
-        public Long resourceUserId;
-
-        @NameInMap("ResourceId")
-        @Validation(required = true)
-        public String resourceId;
-
-        @NameInMap("CommodityCode")
-        @Validation(required = true)
-        public String commodityCode;
-
         @NameInMap("ApportionCode")
         public String apportionCode;
+
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("ResourceUserId")
+        public Long resourceUserId;
 
         public static AllocateCostUnitResourceRequestResourceInstanceList build(java.util.Map<String, ?> map) throws Exception {
             AllocateCostUnitResourceRequestResourceInstanceList self = new AllocateCostUnitResourceRequestResourceInstanceList();
             return TeaModel.build(map, self);
         }
 
-        public AllocateCostUnitResourceRequestResourceInstanceList setResourceUserId(Long resourceUserId) {
-            this.resourceUserId = resourceUserId;
+        public AllocateCostUnitResourceRequestResourceInstanceList setApportionCode(String apportionCode) {
+            this.apportionCode = apportionCode;
             return this;
         }
-        public Long getResourceUserId() {
-            return this.resourceUserId;
-        }
-
-        public AllocateCostUnitResourceRequestResourceInstanceList setResourceId(String resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public String getResourceId() {
-            return this.resourceId;
+        public String getApportionCode() {
+            return this.apportionCode;
         }
 
         public AllocateCostUnitResourceRequestResourceInstanceList setCommodityCode(String commodityCode) {
@@ -114,12 +98,20 @@ public class AllocateCostUnitResourceRequest extends TeaModel {
             return this.commodityCode;
         }
 
-        public AllocateCostUnitResourceRequestResourceInstanceList setApportionCode(String apportionCode) {
-            this.apportionCode = apportionCode;
+        public AllocateCostUnitResourceRequestResourceInstanceList setResourceId(String resourceId) {
+            this.resourceId = resourceId;
             return this;
         }
-        public String getApportionCode() {
-            return this.apportionCode;
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public AllocateCostUnitResourceRequestResourceInstanceList setResourceUserId(Long resourceUserId) {
+            this.resourceUserId = resourceUserId;
+            return this;
+        }
+        public Long getResourceUserId() {
+            return this.resourceUserId;
         }
 
     }

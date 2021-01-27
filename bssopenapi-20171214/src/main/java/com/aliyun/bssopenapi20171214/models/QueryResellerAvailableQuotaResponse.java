@@ -4,69 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryResellerAvailableQuotaResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
+    public QueryResellerAvailableQuotaResponseBody body;
 
     public static QueryResellerAvailableQuotaResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryResellerAvailableQuotaResponse self = new QueryResellerAvailableQuotaResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryResellerAvailableQuotaResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryResellerAvailableQuotaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public QueryResellerAvailableQuotaResponse setCode(String code) {
-        this.code = code;
+    public QueryResellerAvailableQuotaResponse setBody(QueryResellerAvailableQuotaResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryResellerAvailableQuotaResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryResellerAvailableQuotaResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public QueryResellerAvailableQuotaResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
+    public QueryResellerAvailableQuotaResponseBody getBody() {
+        return this.body;
     }
 
 }

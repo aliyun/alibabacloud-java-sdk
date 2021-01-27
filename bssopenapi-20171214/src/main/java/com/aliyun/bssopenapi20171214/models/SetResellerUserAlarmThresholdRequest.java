@@ -4,8 +4,10 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetResellerUserAlarmThresholdRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("AlarmType")
-    @Validation(required = true)
     public String alarmType;
 
     @NameInMap("AlarmThresholds")
@@ -14,6 +16,14 @@ public class SetResellerUserAlarmThresholdRequest extends TeaModel {
     public static SetResellerUserAlarmThresholdRequest build(java.util.Map<String, ?> map) throws Exception {
         SetResellerUserAlarmThresholdRequest self = new SetResellerUserAlarmThresholdRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetResellerUserAlarmThresholdRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public SetResellerUserAlarmThresholdRequest setAlarmType(String alarmType) {

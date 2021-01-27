@@ -4,20 +4,19 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryUserOmsDataRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Table")
-    @Validation(required = true)
     public String table;
 
     @NameInMap("DataType")
-    @Validation(required = true)
     public String dataType;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("Marker")
@@ -29,6 +28,14 @@ public class QueryUserOmsDataRequest extends TeaModel {
     public static QueryUserOmsDataRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryUserOmsDataRequest self = new QueryUserOmsDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryUserOmsDataRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QueryUserOmsDataRequest setTable(String table) {

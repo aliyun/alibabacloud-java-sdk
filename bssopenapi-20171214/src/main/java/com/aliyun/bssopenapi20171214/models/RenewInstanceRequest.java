@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     @NameInMap("ProductCode")
-    @Validation(required = true)
     public String productCode;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RenewPeriod")
-    @Validation(required = true)
     public Integer renewPeriod;
 
     @NameInMap("ClientToken")
@@ -21,6 +18,9 @@ public class RenewInstanceRequest extends TeaModel {
 
     @NameInMap("ProductType")
     public String productType;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static RenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceRequest self = new RenewInstanceRequest();
@@ -65,6 +65,14 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public RenewInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class EnableBillGenerationRequest extends TeaModel {
     @NameInMap("ProductCode")
-    @Validation(required = true)
     public String productCode;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static EnableBillGenerationRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableBillGenerationRequest self = new EnableBillGenerationRequest();
@@ -19,6 +21,14 @@ public class EnableBillGenerationRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public EnableBillGenerationRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

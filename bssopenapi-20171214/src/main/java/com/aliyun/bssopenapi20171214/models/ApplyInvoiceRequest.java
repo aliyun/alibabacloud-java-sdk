@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ApplyInvoiceRequest extends TeaModel {
     @NameInMap("InvoiceAmount")
-    @Validation(required = true)
     public Long invoiceAmount;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("CustomerId")
-    @Validation(required = true)
     public Long customerId;
 
     @NameInMap("AddressId")
-    @Validation(required = true)
     public Long addressId;
 
     @NameInMap("InvoicingType")
@@ -23,15 +23,13 @@ public class ApplyInvoiceRequest extends TeaModel {
     public Integer processWay;
 
     @NameInMap("ApplyUserNick")
-    @Validation(required = true)
     public String applyUserNick;
-
-    @NameInMap("SelectedIds")
-    @Validation(required = true)
-    public java.util.List<Long> selectedIds;
 
     @NameInMap("InvoiceByAmount")
     public Boolean invoiceByAmount;
+
+    @NameInMap("SelectedIds")
+    public java.util.List<Integer> selectedIds;
 
     public static ApplyInvoiceRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyInvoiceRequest self = new ApplyInvoiceRequest();
@@ -44,6 +42,14 @@ public class ApplyInvoiceRequest extends TeaModel {
     }
     public Long getInvoiceAmount() {
         return this.invoiceAmount;
+    }
+
+    public ApplyInvoiceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ApplyInvoiceRequest setCustomerId(Long customerId) {
@@ -86,20 +92,20 @@ public class ApplyInvoiceRequest extends TeaModel {
         return this.applyUserNick;
     }
 
-    public ApplyInvoiceRequest setSelectedIds(java.util.List<Long> selectedIds) {
-        this.selectedIds = selectedIds;
-        return this;
-    }
-    public java.util.List<Long> getSelectedIds() {
-        return this.selectedIds;
-    }
-
     public ApplyInvoiceRequest setInvoiceByAmount(Boolean invoiceByAmount) {
         this.invoiceByAmount = invoiceByAmount;
         return this;
     }
     public Boolean getInvoiceByAmount() {
         return this.invoiceByAmount;
+    }
+
+    public ApplyInvoiceRequest setSelectedIds(java.util.List<Integer> selectedIds) {
+        this.selectedIds = selectedIds;
+        return this;
+    }
+    public java.util.List<Integer> getSelectedIds() {
+        return this.selectedIds;
     }
 
 }

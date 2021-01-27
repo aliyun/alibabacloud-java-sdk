@@ -10,6 +10,9 @@ public class QueryEvaluateListRequest extends TeaModel {
     @NameInMap("OutBizId")
     public String outBizId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -62,6 +65,14 @@ public class QueryEvaluateListRequest extends TeaModel {
     }
     public String getOutBizId() {
         return this.outBizId;
+    }
+
+    public QueryEvaluateListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QueryEvaluateListRequest setPageNum(Integer pageNum) {

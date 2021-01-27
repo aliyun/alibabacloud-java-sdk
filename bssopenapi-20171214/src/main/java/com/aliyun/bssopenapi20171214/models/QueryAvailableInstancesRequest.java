@@ -7,6 +7,9 @@ public class QueryAvailableInstancesRequest extends TeaModel {
     @NameInMap("Region")
     public String region;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -51,6 +54,14 @@ public class QueryAvailableInstancesRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public QueryAvailableInstancesRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QueryAvailableInstancesRequest setPageNum(Integer pageNum) {

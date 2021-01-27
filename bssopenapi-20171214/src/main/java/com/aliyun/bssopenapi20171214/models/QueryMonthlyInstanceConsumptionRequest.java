@@ -7,6 +7,9 @@ public class QueryMonthlyInstanceConsumptionRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("PageNum")
     public Integer pageNum;
 
@@ -14,7 +17,6 @@ public class QueryMonthlyInstanceConsumptionRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("BillingCycle")
-    @Validation(required = true)
     public String billingCycle;
 
     @NameInMap("ProductType")
@@ -34,6 +36,14 @@ public class QueryMonthlyInstanceConsumptionRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public QueryMonthlyInstanceConsumptionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QueryMonthlyInstanceConsumptionRequest setPageNum(Integer pageNum) {

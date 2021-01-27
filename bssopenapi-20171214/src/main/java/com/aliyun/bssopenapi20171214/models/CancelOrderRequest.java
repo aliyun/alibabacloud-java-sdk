@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class CancelOrderRequest extends TeaModel {
     @NameInMap("OrderId")
-    @Validation(required = true)
     public String orderId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static CancelOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelOrderRequest self = new CancelOrderRequest();
@@ -19,6 +21,14 @@ public class CancelOrderRequest extends TeaModel {
     }
     public String getOrderId() {
         return this.orderId;
+    }
+
+    public CancelOrderRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

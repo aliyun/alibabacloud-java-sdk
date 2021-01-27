@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryBillRequest extends TeaModel {
     @NameInMap("BillingCycle")
-    @Validation(required = true)
     public String billingCycle;
 
     @NameInMap("Type")
@@ -25,6 +24,9 @@ public class QueryBillRequest extends TeaModel {
 
     @NameInMap("IsDisplayLocalCurrency")
     public Boolean isDisplayLocalCurrency;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -94,6 +96,14 @@ public class QueryBillRequest extends TeaModel {
     }
     public Boolean getIsDisplayLocalCurrency() {
         return this.isDisplayLocalCurrency;
+    }
+
+    public QueryBillRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QueryBillRequest setPageNum(Integer pageNum) {

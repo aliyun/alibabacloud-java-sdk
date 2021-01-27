@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryInstanceBillRequest extends TeaModel {
     @NameInMap("BillingCycle")
-    @Validation(required = true)
     public String billingCycle;
 
     @NameInMap("ProductCode")
@@ -16,6 +15,9 @@ public class QueryInstanceBillRequest extends TeaModel {
 
     @NameInMap("SubscriptionType")
     public String subscriptionType;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("IsBillingItem")
     public Boolean isBillingItem;
@@ -73,6 +75,14 @@ public class QueryInstanceBillRequest extends TeaModel {
     }
     public String getSubscriptionType() {
         return this.subscriptionType;
+    }
+
+    public QueryInstanceBillRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QueryInstanceBillRequest setIsBillingItem(Boolean isBillingItem) {

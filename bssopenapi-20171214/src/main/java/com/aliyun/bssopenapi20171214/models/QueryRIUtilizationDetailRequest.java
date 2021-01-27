@@ -11,18 +11,15 @@ public class QueryRIUtilizationDetailRequest extends TeaModel {
     public String instanceSpec;
 
     @NameInMap("RICommodityCode")
-    @Validation(required = true)
     public String RICommodityCode;
 
     @NameInMap("DeductedInstanceId")
     public String deductedInstanceId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("PageNum")

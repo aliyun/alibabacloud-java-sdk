@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QuerySplitItemBillRequest extends TeaModel {
     @NameInMap("BillingCycle")
-    @Validation(required = true)
     public String billingCycle;
 
     @NameInMap("ProductCode")
@@ -16,6 +15,9 @@ public class QuerySplitItemBillRequest extends TeaModel {
 
     @NameInMap("SubscriptionType")
     public String subscriptionType;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     @NameInMap("PageNum")
     public Integer pageNum;
@@ -61,6 +63,14 @@ public class QuerySplitItemBillRequest extends TeaModel {
     }
     public String getSubscriptionType() {
         return this.subscriptionType;
+    }
+
+    public QuerySplitItemBillRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public QuerySplitItemBillRequest setPageNum(Integer pageNum) {

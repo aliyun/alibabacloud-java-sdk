@@ -4,6 +4,9 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetResourcePackagePriceRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("ProductCode")
     public String productCode;
 
@@ -31,6 +34,14 @@ public class GetResourcePackagePriceRequest extends TeaModel {
     public static GetResourcePackagePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetResourcePackagePriceRequest self = new GetResourcePackagePriceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetResourcePackagePriceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public GetResourcePackagePriceRequest setProductCode(String productCode) {
