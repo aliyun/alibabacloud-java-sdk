@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ga20191120.models;
+
+import com.aliyun.tea.*;
+
+public class ConfigEndpointProbeResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ConfigEndpointProbeResponseBody body;
+
+    public static ConfigEndpointProbeResponse build(java.util.Map<String, ?> map) throws Exception {
+        ConfigEndpointProbeResponse self = new ConfigEndpointProbeResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ConfigEndpointProbeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ConfigEndpointProbeResponse setBody(ConfigEndpointProbeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ConfigEndpointProbeResponseBody getBody() {
+        return this.body;
+    }
+
+}
