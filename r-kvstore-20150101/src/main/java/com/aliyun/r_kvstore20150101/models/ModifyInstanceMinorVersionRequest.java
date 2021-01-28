@@ -1,0 +1,111 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.r_kvstore20150101.models;
+
+import com.aliyun.tea.*;
+
+public class ModifyInstanceMinorVersionRequest extends TeaModel {
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("Minorversion")
+    public String minorversion;
+
+    @NameInMap("EffectTime")
+    public String effectTime;
+
+    @NameInMap("EffectiveTime")
+    public String effectiveTime;
+
+    public static ModifyInstanceMinorVersionRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyInstanceMinorVersionRequest self = new ModifyInstanceMinorVersionRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceMinorVersionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public ModifyInstanceMinorVersionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyInstanceMinorVersionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyInstanceMinorVersionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyInstanceMinorVersionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyInstanceMinorVersionRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyInstanceMinorVersionRequest setMinorversion(String minorversion) {
+        this.minorversion = minorversion;
+        return this;
+    }
+    public String getMinorversion() {
+        return this.minorversion;
+    }
+
+    public ModifyInstanceMinorVersionRequest setEffectTime(String effectTime) {
+        this.effectTime = effectTime;
+        return this;
+    }
+    public String getEffectTime() {
+        return this.effectTime;
+    }
+
+    public ModifyInstanceMinorVersionRequest setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+    public String getEffectiveTime() {
+        return this.effectiveTime;
+    }
+
+}
