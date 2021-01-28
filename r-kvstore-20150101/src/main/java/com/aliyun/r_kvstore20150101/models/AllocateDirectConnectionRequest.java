@@ -1,0 +1,122 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.r_kvstore20150101.models;
+
+import com.aliyun.tea.*;
+
+public class AllocateDirectConnectionRequest extends TeaModel {
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("ConnectionString")
+    public String connectionString;
+
+    @NameInMap("Port")
+    public String port;
+
+    @NameInMap("OnlyAllocateIp")
+    public Boolean onlyAllocateIp;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    public static AllocateDirectConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
+        AllocateDirectConnectionRequest self = new AllocateDirectConnectionRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public AllocateDirectConnectionRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public AllocateDirectConnectionRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AllocateDirectConnectionRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public AllocateDirectConnectionRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public AllocateDirectConnectionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public AllocateDirectConnectionRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public AllocateDirectConnectionRequest setConnectionString(String connectionString) {
+        this.connectionString = connectionString;
+        return this;
+    }
+    public String getConnectionString() {
+        return this.connectionString;
+    }
+
+    public AllocateDirectConnectionRequest setPort(String port) {
+        this.port = port;
+        return this;
+    }
+    public String getPort() {
+        return this.port;
+    }
+
+    public AllocateDirectConnectionRequest setOnlyAllocateIp(Boolean onlyAllocateIp) {
+        this.onlyAllocateIp = onlyAllocateIp;
+        return this;
+    }
+    public Boolean getOnlyAllocateIp() {
+        return this.onlyAllocateIp;
+    }
+
+    public AllocateDirectConnectionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+}
