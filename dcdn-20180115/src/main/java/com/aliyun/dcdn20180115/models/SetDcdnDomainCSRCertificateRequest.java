@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dcdn20180115.models;
+
+import com.aliyun.tea.*;
+
+public class SetDcdnDomainCSRCertificateRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ServerCertificate")
+    public String serverCertificate;
+
+    @NameInMap("DomainName")
+    public String domainName;
+
+    public static SetDcdnDomainCSRCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
+        SetDcdnDomainCSRCertificateRequest self = new SetDcdnDomainCSRCertificateRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public SetDcdnDomainCSRCertificateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SetDcdnDomainCSRCertificateRequest setServerCertificate(String serverCertificate) {
+        this.serverCertificate = serverCertificate;
+        return this;
+    }
+    public String getServerCertificate() {
+        return this.serverCertificate;
+    }
+
+    public SetDcdnDomainCSRCertificateRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+}

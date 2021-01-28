@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dcdn20180115.models;
+
+import com.aliyun.tea.*;
+
+public class VerifyDcdnDomainOwnerResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public VerifyDcdnDomainOwnerResponseBody body;
+
+    public static VerifyDcdnDomainOwnerResponse build(java.util.Map<String, ?> map) throws Exception {
+        VerifyDcdnDomainOwnerResponse self = new VerifyDcdnDomainOwnerResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public VerifyDcdnDomainOwnerResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public VerifyDcdnDomainOwnerResponse setBody(VerifyDcdnDomainOwnerResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public VerifyDcdnDomainOwnerResponseBody getBody() {
+        return this.body;
+    }
+
+}

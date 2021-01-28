@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dcdn20180115.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteDcdnSpecificConfigResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteDcdnSpecificConfigResponseBody body;
+
+    public static DeleteDcdnSpecificConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteDcdnSpecificConfigResponse self = new DeleteDcdnSpecificConfigResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteDcdnSpecificConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteDcdnSpecificConfigResponse setBody(DeleteDcdnSpecificConfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteDcdnSpecificConfigResponseBody getBody() {
+        return this.body;
+    }
+
+}
