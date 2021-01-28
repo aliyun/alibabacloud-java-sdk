@@ -44,7 +44,7 @@
       <version>0.2.2</version>
       <exclusions>
         <exclusion>
-          <groupId>com.aliyung</groupId>
+          <groupId>com.aliyun</groupId>
           <artifactId>tea</artifactId>
         </exclusion>
       </exclusions>
