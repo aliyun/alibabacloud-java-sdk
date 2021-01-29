@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RecognizeVerificationcodeRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static RecognizeVerificationcodeRequest build(java.util.Map<String, ?> map) throws Exception {

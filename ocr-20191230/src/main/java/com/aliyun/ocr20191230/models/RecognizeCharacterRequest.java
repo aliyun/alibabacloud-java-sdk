@@ -4,21 +4,29 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeCharacterRequest extends TeaModel {
+    @NameInMap("ImageType")
+    public Integer imageType;
+
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     @NameInMap("MinHeight")
-    @Validation(required = true)
     public Integer minHeight;
 
     @NameInMap("OutputProbability")
-    @Validation(required = true)
     public Boolean outputProbability;
 
     public static RecognizeCharacterRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeCharacterRequest self = new RecognizeCharacterRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeCharacterRequest setImageType(Integer imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public Integer getImageType() {
+        return this.imageType;
     }
 
     public RecognizeCharacterRequest setImageURL(String imageURL) {

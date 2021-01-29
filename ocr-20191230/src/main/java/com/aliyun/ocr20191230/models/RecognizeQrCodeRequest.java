@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RecognizeQrCodeRequest extends TeaModel {
     @NameInMap("Tasks")
-    @Validation(required = true)
     public java.util.List<RecognizeQrCodeRequestTasks> tasks;
 
     public static RecognizeQrCodeRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -23,7 +22,6 @@ public class RecognizeQrCodeRequest extends TeaModel {
 
     public static class RecognizeQrCodeRequestTasks extends TeaModel {
         @NameInMap("ImageURL")
-        @Validation(required = true)
         public String imageURL;
 
         public static RecognizeQrCodeRequestTasks build(java.util.Map<String, ?> map) throws Exception {

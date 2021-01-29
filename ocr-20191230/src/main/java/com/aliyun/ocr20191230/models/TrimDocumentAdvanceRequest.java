@@ -9,12 +9,13 @@ public class TrimDocumentAdvanceRequest extends TeaModel {
     public java.io.InputStream fileURLObject;
 
     @NameInMap("FileType")
-    @Validation(required = true)
     public String fileType;
 
     @NameInMap("OutputType")
-    @Validation(required = true)
     public String outputType;
+
+    @NameInMap("Async")
+    public Boolean async;
 
     public static TrimDocumentAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         TrimDocumentAdvanceRequest self = new TrimDocumentAdvanceRequest();
@@ -43,6 +44,14 @@ public class TrimDocumentAdvanceRequest extends TeaModel {
     }
     public String getOutputType() {
         return this.outputType;
+    }
+
+    public TrimDocumentAdvanceRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
 }

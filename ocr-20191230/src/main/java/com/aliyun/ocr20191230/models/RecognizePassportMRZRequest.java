@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RecognizePassportMRZRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static RecognizePassportMRZRequest build(java.util.Map<String, ?> map) throws Exception {
