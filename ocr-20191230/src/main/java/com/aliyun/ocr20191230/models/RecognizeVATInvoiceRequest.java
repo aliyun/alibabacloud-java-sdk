@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RecognizeVATInvoiceRequest extends TeaModel {
     @NameInMap("FileURL")
-    @Validation(required = true)
     public String fileURL;
 
     @NameInMap("FileType")
-    @Validation(required = true)
     public String fileType;
 
     public static RecognizeVATInvoiceRequest build(java.util.Map<String, ?> map) throws Exception {

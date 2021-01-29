@@ -4,53 +4,33 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVerificationcodeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public RecognizeVerificationcodeResponseData data;
+    public RecognizeVerificationcodeResponseBody body;
 
     public static RecognizeVerificationcodeResponse build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVerificationcodeResponse self = new RecognizeVerificationcodeResponse();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeVerificationcodeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RecognizeVerificationcodeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RecognizeVerificationcodeResponse setData(RecognizeVerificationcodeResponseData data) {
-        this.data = data;
+    public RecognizeVerificationcodeResponse setBody(RecognizeVerificationcodeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public RecognizeVerificationcodeResponseData getData() {
-        return this.data;
-    }
-
-    public static class RecognizeVerificationcodeResponseData extends TeaModel {
-        @NameInMap("Content")
-        @Validation(required = true)
-        public String content;
-
-        public static RecognizeVerificationcodeResponseData build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeVerificationcodeResponseData self = new RecognizeVerificationcodeResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeVerificationcodeResponseData setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
+    public RecognizeVerificationcodeResponseBody getBody() {
+        return this.body;
     }
 
 }

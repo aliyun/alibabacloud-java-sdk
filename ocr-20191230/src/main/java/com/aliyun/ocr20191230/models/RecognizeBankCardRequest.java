@@ -4,13 +4,23 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeBankCardRequest extends TeaModel {
+    @NameInMap("ImageType")
+    public Integer imageType;
+
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static RecognizeBankCardRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeBankCardRequest self = new RecognizeBankCardRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RecognizeBankCardRequest setImageType(Integer imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public Integer getImageType() {
+        return this.imageType;
     }
 
     public RecognizeBankCardRequest setImageURL(String imageURL) {

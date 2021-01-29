@@ -8,24 +8,22 @@ public class RecognizeTableAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
+    @NameInMap("ImageType")
+    public Integer imageType;
+
     @NameInMap("OutputFormat")
-    @Validation(required = true)
     public String outputFormat;
 
     @NameInMap("UseFinanceModel")
-    @Validation(required = true)
     public Boolean useFinanceModel;
 
     @NameInMap("AssureDirection")
-    @Validation(required = true)
     public Boolean assureDirection;
 
     @NameInMap("HasLine")
-    @Validation(required = true)
     public Boolean hasLine;
 
     @NameInMap("SkipDetection")
-    @Validation(required = true)
     public Boolean skipDetection;
 
     public static RecognizeTableAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -39,6 +37,14 @@ public class RecognizeTableAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
+    }
+
+    public RecognizeTableAdvanceRequest setImageType(Integer imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public Integer getImageType() {
+        return this.imageType;
     }
 
     public RecognizeTableAdvanceRequest setOutputFormat(String outputFormat) {

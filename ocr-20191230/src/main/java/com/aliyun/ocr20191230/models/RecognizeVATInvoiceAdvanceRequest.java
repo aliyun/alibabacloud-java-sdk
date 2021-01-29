@@ -9,7 +9,6 @@ public class RecognizeVATInvoiceAdvanceRequest extends TeaModel {
     public java.io.InputStream fileURLObject;
 
     @NameInMap("FileType")
-    @Validation(required = true)
     public String fileType;
 
     public static RecognizeVATInvoiceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
