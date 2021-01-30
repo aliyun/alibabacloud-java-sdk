@@ -4,9 +4,6 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CancelRobotTaskRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -22,6 +19,38 @@ public class CancelRobotTaskRequest extends TeaModel {
     public static CancelRobotTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelRobotTaskRequest self = new CancelRobotTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CancelRobotTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CancelRobotTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CancelRobotTaskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CancelRobotTaskRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

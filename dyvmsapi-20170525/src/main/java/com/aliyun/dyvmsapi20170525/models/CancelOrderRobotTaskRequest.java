@@ -4,9 +4,6 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CancelOrderRobotTaskRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,12 +14,43 @@ public class CancelOrderRobotTaskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public Long taskId;
 
     public static CancelOrderRobotTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelOrderRobotTaskRequest self = new CancelOrderRobotTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CancelOrderRobotTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CancelOrderRobotTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CancelOrderRobotTaskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CancelOrderRobotTaskRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

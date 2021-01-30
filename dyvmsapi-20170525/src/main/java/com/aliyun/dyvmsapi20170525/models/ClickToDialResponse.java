@@ -4,25 +4,33 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ClickToDialResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CallId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String callId;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public ClickToDialResponseBody body;
 
     public static ClickToDialResponse build(java.util.Map<String, ?> map) throws Exception {
         ClickToDialResponse self = new ClickToDialResponse();
         return TeaModel.build(map, self);
+    }
+
+    public ClickToDialResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ClickToDialResponse setBody(ClickToDialResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ClickToDialResponseBody getBody() {
+        return this.body;
     }
 
 }

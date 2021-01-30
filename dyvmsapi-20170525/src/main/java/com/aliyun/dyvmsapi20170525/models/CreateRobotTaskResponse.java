@@ -4,25 +4,33 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateRobotTaskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public String data;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public CreateRobotTaskResponseBody body;
 
     public static CreateRobotTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateRobotTaskResponse self = new CreateRobotTaskResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRobotTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateRobotTaskResponse setBody(CreateRobotTaskResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateRobotTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,25 +4,33 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRtcNumberAuthStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Module")
+    @NameInMap("body")
     @Validation(required = true)
-    public String module;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public QueryRtcNumberAuthStatusResponseBody body;
 
     public static QueryRtcNumberAuthStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryRtcNumberAuthStatusResponse self = new QueryRtcNumberAuthStatusResponse();
         return TeaModel.build(map, self);
+    }
+
+    public QueryRtcNumberAuthStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public QueryRtcNumberAuthStatusResponse setBody(QueryRtcNumberAuthStatusResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public QueryRtcNumberAuthStatusResponseBody getBody() {
+        return this.body;
     }
 
 }
