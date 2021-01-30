@@ -4,9 +4,6 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryRobotInfoListRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -22,6 +19,38 @@ public class QueryRobotInfoListRequest extends TeaModel {
     public static QueryRobotInfoListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRobotInfoListRequest self = new QueryRobotInfoListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryRobotInfoListRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public QueryRobotInfoListRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public QueryRobotInfoListRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public QueryRobotInfoListRequest setAuditStatus(String auditStatus) {
+        this.auditStatus = auditStatus;
+        return this;
+    }
+    public String getAuditStatus() {
+        return this.auditStatus;
     }
 
 }

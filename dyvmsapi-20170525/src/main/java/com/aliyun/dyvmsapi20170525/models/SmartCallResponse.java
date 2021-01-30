@@ -4,25 +4,33 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class SmartCallResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("CallId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String callId;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public SmartCallResponseBody body;
 
     public static SmartCallResponse build(java.util.Map<String, ?> map) throws Exception {
         SmartCallResponse self = new SmartCallResponse();
         return TeaModel.build(map, self);
+    }
+
+    public SmartCallResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SmartCallResponse setBody(SmartCallResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SmartCallResponseBody getBody() {
+        return this.body;
     }
 
 }

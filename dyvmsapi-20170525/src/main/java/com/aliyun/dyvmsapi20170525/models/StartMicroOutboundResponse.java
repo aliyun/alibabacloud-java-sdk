@@ -4,33 +4,33 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class StartMicroOutboundResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("CustomerInfo")
-    @Validation(required = true)
-    public String customerInfo;
-
-    @NameInMap("InvokeCmdId")
-    @Validation(required = true)
-    public String invokeCmdId;
-
-    @NameInMap("InvokeCreateTime")
-    @Validation(required = true)
-    public String invokeCreateTime;
+    public StartMicroOutboundResponseBody body;
 
     public static StartMicroOutboundResponse build(java.util.Map<String, ?> map) throws Exception {
         StartMicroOutboundResponse self = new StartMicroOutboundResponse();
         return TeaModel.build(map, self);
+    }
+
+    public StartMicroOutboundResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public StartMicroOutboundResponse setBody(StartMicroOutboundResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public StartMicroOutboundResponseBody getBody() {
+        return this.body;
     }
 
 }

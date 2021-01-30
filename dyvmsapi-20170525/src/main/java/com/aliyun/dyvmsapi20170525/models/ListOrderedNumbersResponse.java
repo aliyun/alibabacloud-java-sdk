@@ -4,25 +4,33 @@ package com.aliyun.dyvmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class ListOrderedNumbersResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Numbers")
-    @Validation(required = true)
-    public java.util.List<String> numbers;
+    public ListOrderedNumbersResponseBody body;
 
     public static ListOrderedNumbersResponse build(java.util.Map<String, ?> map) throws Exception {
         ListOrderedNumbersResponse self = new ListOrderedNumbersResponse();
         return TeaModel.build(map, self);
+    }
+
+    public ListOrderedNumbersResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListOrderedNumbersResponse setBody(ListOrderedNumbersResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListOrderedNumbersResponseBody getBody() {
+        return this.body;
     }
 
 }
