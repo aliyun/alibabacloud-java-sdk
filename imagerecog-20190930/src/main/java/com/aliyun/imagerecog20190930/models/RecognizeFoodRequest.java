@@ -3,16 +3,17 @@ package com.aliyun.imagerecog20190930.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeVehicleTypeRequest extends TeaModel {
+public class RecognizeFoodRequest extends TeaModel {
+    // A short description of struct
     @NameInMap("ImageURL")
     public String imageURL;
 
-    public static RecognizeVehicleTypeRequest build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeVehicleTypeRequest self = new RecognizeVehicleTypeRequest();
+    public static RecognizeFoodRequest build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeFoodRequest self = new RecognizeFoodRequest();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeVehicleTypeRequest setImageURL(String imageURL) {
+    public RecognizeFoodRequest setImageURL(String imageURL) {
         this.imageURL = imageURL;
         return this;
     }

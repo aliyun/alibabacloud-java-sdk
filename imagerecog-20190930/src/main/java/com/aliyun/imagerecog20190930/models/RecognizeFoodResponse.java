@@ -3,21 +3,21 @@ package com.aliyun.imagerecog20190930.models;
 
 import com.aliyun.tea.*;
 
-public class DetectImageElementsResponse extends TeaModel {
+public class RecognizeFoodResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DetectImageElementsResponseBody body;
+    public RecognizeFoodResponseBody body;
 
-    public static DetectImageElementsResponse build(java.util.Map<String, ?> map) throws Exception {
-        DetectImageElementsResponse self = new DetectImageElementsResponse();
+    public static RecognizeFoodResponse build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeFoodResponse self = new RecognizeFoodResponse();
         return TeaModel.build(map, self);
     }
 
-    public DetectImageElementsResponse setHeaders(java.util.Map<String, String> headers) {
+    public RecognizeFoodResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DetectImageElementsResponse extends TeaModel {
         return this.headers;
     }
 
-    public DetectImageElementsResponse setBody(DetectImageElementsResponseBody body) {
+    public RecognizeFoodResponse setBody(RecognizeFoodResponseBody body) {
         this.body = body;
         return this;
     }
-    public DetectImageElementsResponseBody getBody() {
+    public RecognizeFoodResponseBody getBody() {
         return this.body;
     }
 

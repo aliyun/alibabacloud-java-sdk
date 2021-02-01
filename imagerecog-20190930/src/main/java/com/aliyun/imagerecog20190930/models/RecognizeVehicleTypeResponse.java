@@ -4,97 +4,33 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeVehicleTypeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public RecognizeVehicleTypeResponseData data;
+    public RecognizeVehicleTypeResponseBody body;
 
     public static RecognizeVehicleTypeResponse build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVehicleTypeResponse self = new RecognizeVehicleTypeResponse();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeVehicleTypeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RecognizeVehicleTypeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RecognizeVehicleTypeResponse setData(RecognizeVehicleTypeResponseData data) {
-        this.data = data;
+    public RecognizeVehicleTypeResponse setBody(RecognizeVehicleTypeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public RecognizeVehicleTypeResponseData getData() {
-        return this.data;
-    }
-
-    public static class RecognizeVehicleTypeResponseDataElements extends TeaModel {
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("Score")
-        @Validation(required = true)
-        public Float score;
-
-        public static RecognizeVehicleTypeResponseDataElements build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeVehicleTypeResponseDataElements self = new RecognizeVehicleTypeResponseDataElements();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeVehicleTypeResponseDataElements setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public RecognizeVehicleTypeResponseDataElements setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
-        }
-
-    }
-
-    public static class RecognizeVehicleTypeResponseData extends TeaModel {
-        @NameInMap("Threshold")
-        @Validation(required = true)
-        public Float threshold;
-
-        @NameInMap("Elements")
-        @Validation(required = true)
-        public java.util.List<RecognizeVehicleTypeResponseDataElements> elements;
-
-        public static RecognizeVehicleTypeResponseData build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeVehicleTypeResponseData self = new RecognizeVehicleTypeResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeVehicleTypeResponseData setThreshold(Float threshold) {
-            this.threshold = threshold;
-            return this;
-        }
-        public Float getThreshold() {
-            return this.threshold;
-        }
-
-        public RecognizeVehicleTypeResponseData setElements(java.util.List<RecognizeVehicleTypeResponseDataElements> elements) {
-            this.elements = elements;
-            return this;
-        }
-        public java.util.List<RecognizeVehicleTypeResponseDataElements> getElements() {
-            return this.elements;
-        }
-
+    public RecognizeVehicleTypeResponseBody getBody() {
+        return this.body;
     }
 
 }

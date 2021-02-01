@@ -9,7 +9,6 @@ public class EvaluateCertificateQualityAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     public static EvaluateCertificateQualityAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RecognizeLogoRequest extends TeaModel {
     @NameInMap("Tasks")
-    @Validation(required = true)
     public java.util.List<RecognizeLogoRequestTasks> tasks;
 
     public static RecognizeLogoRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -23,7 +22,6 @@ public class RecognizeLogoRequest extends TeaModel {
 
     public static class RecognizeLogoRequestTasks extends TeaModel {
         @NameInMap("ImageURL")
-        @Validation(required = true)
         public String imageURL;
 
         public static RecognizeLogoRequestTasks build(java.util.Map<String, ?> map) throws Exception {

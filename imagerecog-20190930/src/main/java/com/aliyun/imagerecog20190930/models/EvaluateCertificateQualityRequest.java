@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class EvaluateCertificateQualityRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     public static EvaluateCertificateQualityRequest build(java.util.Map<String, ?> map) throws Exception {

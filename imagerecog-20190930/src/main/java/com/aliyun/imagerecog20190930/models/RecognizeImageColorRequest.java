@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RecognizeImageColorRequest extends TeaModel {
     @NameInMap("Url")
-    @Validation(required = true)
     public String url;
 
     @NameInMap("ColorCount")
