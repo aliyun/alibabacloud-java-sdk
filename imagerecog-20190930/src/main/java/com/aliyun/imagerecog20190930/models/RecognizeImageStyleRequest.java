@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RecognizeImageStyleRequest extends TeaModel {
     @NameInMap("Url")
-    @Validation(required = true)
     public String url;
 
     public static RecognizeImageStyleRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,53 +4,33 @@ package com.aliyun.imagerecog20190930.models;
 import com.aliyun.tea.*;
 
 public class RecognizeImageStyleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public RecognizeImageStyleResponseData data;
+    public RecognizeImageStyleResponseBody body;
 
     public static RecognizeImageStyleResponse build(java.util.Map<String, ?> map) throws Exception {
         RecognizeImageStyleResponse self = new RecognizeImageStyleResponse();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeImageStyleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RecognizeImageStyleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RecognizeImageStyleResponse setData(RecognizeImageStyleResponseData data) {
-        this.data = data;
+    public RecognizeImageStyleResponse setBody(RecognizeImageStyleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public RecognizeImageStyleResponseData getData() {
-        return this.data;
-    }
-
-    public static class RecognizeImageStyleResponseData extends TeaModel {
-        @NameInMap("Styles")
-        @Validation(required = true)
-        public java.util.List<String> styles;
-
-        public static RecognizeImageStyleResponseData build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeImageStyleResponseData self = new RecognizeImageStyleResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeImageStyleResponseData setStyles(java.util.List<String> styles) {
-            this.styles = styles;
-            return this;
-        }
-        public java.util.List<String> getStyles() {
-            return this.styles;
-        }
-
+    public RecognizeImageStyleResponseBody getBody() {
+        return this.body;
     }
 
 }

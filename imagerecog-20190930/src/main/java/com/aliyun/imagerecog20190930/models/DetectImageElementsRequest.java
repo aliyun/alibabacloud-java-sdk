@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DetectImageElementsRequest extends TeaModel {
     @NameInMap("Url")
-    @Validation(required = true)
     public String url;
 
     public static DetectImageElementsRequest build(java.util.Map<String, ?> map) throws Exception {

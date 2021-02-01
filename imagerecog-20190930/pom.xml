@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>imagerecog20190930</artifactId>
-  <version>0.0.5</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
   <name>imagerecog20190930</name>
   <description>Aliyun IMAGERECOG SDK for Java
@@ -118,6 +118,16 @@
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
       <version>0.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-openapi</artifactId>
+      <version>0.0.8</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>openapiutil</artifactId>
+      <version>0.1.1</version>
     </dependency>
   </dependencies>
   <build>
