@@ -3,21 +3,21 @@ package com.aliyun.videorecog20200320.models;
 
 import com.aliyun.tea.*;
 
-public class GetAsyncJobResultResponse extends TeaModel {
+public class UnderstandVideoContentResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public GetAsyncJobResultResponseBody body;
+    public UnderstandVideoContentResponseBody body;
 
-    public static GetAsyncJobResultResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetAsyncJobResultResponse self = new GetAsyncJobResultResponse();
+    public static UnderstandVideoContentResponse build(java.util.Map<String, ?> map) throws Exception {
+        UnderstandVideoContentResponse self = new UnderstandVideoContentResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAsyncJobResultResponse setHeaders(java.util.Map<String, String> headers) {
+    public UnderstandVideoContentResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class GetAsyncJobResultResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetAsyncJobResultResponse setBody(GetAsyncJobResultResponseBody body) {
+    public UnderstandVideoContentResponse setBody(UnderstandVideoContentResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetAsyncJobResultResponseBody getBody() {
+    public UnderstandVideoContentResponseBody getBody() {
         return this.body;
     }
 

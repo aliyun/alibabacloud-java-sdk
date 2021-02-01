@@ -4,45 +4,33 @@ package com.aliyun.videorecog20200320.models;
 import com.aliyun.tea.*;
 
 public class GenerateVideoCoverResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public GenerateVideoCoverResponseData data;
+    public GenerateVideoCoverResponseBody body;
 
     public static GenerateVideoCoverResponse build(java.util.Map<String, ?> map) throws Exception {
         GenerateVideoCoverResponse self = new GenerateVideoCoverResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GenerateVideoCoverResponseDataOutputs extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        @NameInMap("Confidence")
-        @Validation(required = true)
-        public Double confidence;
-
-        public static GenerateVideoCoverResponseDataOutputs build(java.util.Map<String, ?> map) throws Exception {
-            GenerateVideoCoverResponseDataOutputs self = new GenerateVideoCoverResponseDataOutputs();
-            return TeaModel.build(map, self);
-        }
-
+    public GenerateVideoCoverResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class GenerateVideoCoverResponseData extends TeaModel {
-        @NameInMap("Outputs")
-        @Validation(required = true)
-        public java.util.List<GenerateVideoCoverResponseDataOutputs> outputs;
-
-        public static GenerateVideoCoverResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GenerateVideoCoverResponseData self = new GenerateVideoCoverResponseData();
-            return TeaModel.build(map, self);
-        }
-
+    public GenerateVideoCoverResponse setBody(GenerateVideoCoverResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GenerateVideoCoverResponseBody getBody() {
+        return this.body;
     }
 
 }

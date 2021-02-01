@@ -4,29 +4,33 @@ package com.aliyun.videorecog20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectVideoShotResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public DetectVideoShotResponseData data;
+    public DetectVideoShotResponseBody body;
 
     public static DetectVideoShotResponse build(java.util.Map<String, ?> map) throws Exception {
         DetectVideoShotResponse self = new DetectVideoShotResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DetectVideoShotResponseData extends TeaModel {
-        @NameInMap("ShotFrameIds")
-        @Validation(required = true)
-        public java.util.List<Integer> shotFrameIds;
+    public DetectVideoShotResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static DetectVideoShotResponseData build(java.util.Map<String, ?> map) throws Exception {
-            DetectVideoShotResponseData self = new DetectVideoShotResponseData();
-            return TeaModel.build(map, self);
-        }
-
+    public DetectVideoShotResponse setBody(DetectVideoShotResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DetectVideoShotResponseBody getBody() {
+        return this.body;
     }
 
 }
