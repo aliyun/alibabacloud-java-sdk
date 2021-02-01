@@ -87,6 +87,9 @@ public class DescribeDevicesResponseBody extends TeaModel {
         @NameInMap("Vendor")
         public String vendor;
 
+        @NameInMap("CapturedPictureId")
+        public String capturedPictureId;
+
         public static DescribeDevicesResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeDevicesResponseBodyDataRecords self = new DescribeDevicesResponseBodyDataRecords();
             return TeaModel.build(map, self);
@@ -178,6 +181,14 @@ public class DescribeDevicesResponseBody extends TeaModel {
         }
         public String getVendor() {
             return this.vendor;
+        }
+
+        public DescribeDevicesResponseBodyDataRecords setCapturedPictureId(String capturedPictureId) {
+            this.capturedPictureId = capturedPictureId;
+            return this;
+        }
+        public String getCapturedPictureId() {
+            return this.capturedPictureId;
         }
 
     }

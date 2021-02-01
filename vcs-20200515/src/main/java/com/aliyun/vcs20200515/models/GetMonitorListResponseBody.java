@@ -81,8 +81,8 @@ public class GetMonitorListResponseBody extends TeaModel {
         @NameInMap("Expression")
         public String expression;
 
-        @NameInMap("NotifierExtra")
-        public String notifierExtra;
+        @NameInMap("NotifierExtendValues")
+        public String notifierExtendValues;
 
         @NameInMap("Attributes")
         public String attributes;
@@ -176,12 +176,12 @@ public class GetMonitorListResponseBody extends TeaModel {
             return this.expression;
         }
 
-        public GetMonitorListResponseBodyDataRecords setNotifierExtra(String notifierExtra) {
-            this.notifierExtra = notifierExtra;
+        public GetMonitorListResponseBodyDataRecords setNotifierExtendValues(String notifierExtendValues) {
+            this.notifierExtendValues = notifierExtendValues;
             return this;
         }
-        public String getNotifierExtra() {
-            return this.notifierExtra;
+        public String getNotifierExtendValues() {
+            return this.notifierExtendValues;
         }
 
         public GetMonitorListResponseBodyDataRecords setAttributes(String attributes) {
@@ -230,8 +230,8 @@ public class GetMonitorListResponseBody extends TeaModel {
         @NameInMap("Records")
         public java.util.List<GetMonitorListResponseBodyDataRecords> records;
 
-        @NameInMap("PageNo")
-        public Integer pageNo;
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
 
         @NameInMap("TotalPage")
         public Integer totalPage;
@@ -255,12 +255,12 @@ public class GetMonitorListResponseBody extends TeaModel {
             return this.records;
         }
 
-        public GetMonitorListResponseBodyData setPageNo(Integer pageNo) {
-            this.pageNo = pageNo;
+        public GetMonitorListResponseBodyData setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
             return this;
         }
-        public Integer getPageNo() {
-            return this.pageNo;
+        public Integer getPageNumber() {
+            return this.pageNumber;
         }
 
         public GetMonitorListResponseBodyData setTotalPage(Integer totalPage) {
