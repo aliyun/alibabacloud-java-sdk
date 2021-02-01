@@ -7,8 +7,8 @@ public class GetMonitorListRequest extends TeaModel {
     @NameInMap("CorpId")
     public String corpId;
 
-    @NameInMap("PageNo")
-    public Integer pageNo;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -26,12 +26,12 @@ public class GetMonitorListRequest extends TeaModel {
         return this.corpId;
     }
 
-    public GetMonitorListRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
+    public GetMonitorListRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getPageNo() {
-        return this.pageNo;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public GetMonitorListRequest setPageSize(Integer pageSize) {
