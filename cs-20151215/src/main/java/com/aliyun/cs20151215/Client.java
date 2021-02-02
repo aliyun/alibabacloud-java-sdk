@@ -294,6 +294,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("CreateKubernetesTrigger", "2015-12-15", "HTTPS", "POST", "AK", "/triggers", "json", req, runtime), new CreateKubernetesTriggerResponse());
     }
 
+    public GrantPermissionsResponse grantPermissions(String uid, GrantPermissionsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.grantPermissionsWithOptions(uid, request, headers, runtime);
+    }
+
+    public GrantPermissionsResponse grantPermissionsWithOptions(String uid, GrantPermissionsRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.teautil.Common.toArray(request.body))
+        ));
+        return TeaModel.toModel(this.doROARequest("GrantPermissions", "2015-12-15", "HTTPS", "POST", "AK", "/permissions/users/" + uid + "", "none", req, runtime), new GrantPermissionsResponse());
+    }
+
     public DescribeClusterDetailResponse describeClusterDetail(String ClusterId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -305,6 +320,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers)
         ));
         return TeaModel.toModel(this.doROARequest("DescribeClusterDetail", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "", "json", req, runtime), new DescribeClusterDetailResponse());
+    }
+
+    public DescribeUserPermissionResponse describeUserPermission(String uid) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeUserPermissionWithOptions(uid, headers, runtime);
+    }
+
+    public DescribeUserPermissionResponse describeUserPermissionWithOptions(String uid, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeUserPermission", "2015-12-15", "HTTPS", "GET", "AK", "/permissions/users/" + uid + "", "array", req, runtime), new DescribeUserPermissionResponse());
     }
 
     public ModifyClusterNodePoolResponse modifyClusterNodePool(String ClusterId, String NodepoolId, ModifyClusterNodePoolRequest request) throws Exception {
