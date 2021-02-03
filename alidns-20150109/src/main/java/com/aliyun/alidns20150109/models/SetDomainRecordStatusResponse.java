@@ -4,33 +4,45 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDomainRecordStatusResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("RecordId")
     @Validation(required = true)
-    public SetDomainRecordStatusResponseBody body;
+    public String recordId;
+
+    @NameInMap("Status")
+    @Validation(required = true)
+    public String status;
 
     public static SetDomainRecordStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         SetDomainRecordStatusResponse self = new SetDomainRecordStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDomainRecordStatusResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SetDomainRecordStatusResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SetDomainRecordStatusResponse setBody(SetDomainRecordStatusResponseBody body) {
-        this.body = body;
+    public SetDomainRecordStatusResponse setRecordId(String recordId) {
+        this.recordId = recordId;
         return this;
     }
-    public SetDomainRecordStatusResponseBody getBody() {
-        return this.body;
+    public String getRecordId() {
+        return this.recordId;
+    }
+
+    public SetDomainRecordStatusResponse setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

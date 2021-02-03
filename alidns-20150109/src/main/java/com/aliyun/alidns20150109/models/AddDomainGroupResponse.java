@@ -4,33 +4,45 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainGroupResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("GroupId")
     @Validation(required = true)
-    public AddDomainGroupResponseBody body;
+    public String groupId;
+
+    @NameInMap("GroupName")
+    @Validation(required = true)
+    public String groupName;
 
     public static AddDomainGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         AddDomainGroupResponse self = new AddDomainGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddDomainGroupResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddDomainGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddDomainGroupResponse setBody(AddDomainGroupResponseBody body) {
-        this.body = body;
+    public AddDomainGroupResponse setGroupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
-    public AddDomainGroupResponseBody getBody() {
-        return this.body;
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public AddDomainGroupResponse setGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public String getGroupName() {
+        return this.groupName;
     }
 
 }

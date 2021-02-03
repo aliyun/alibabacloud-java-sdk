@@ -4,33 +4,45 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddCustomLineResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("LineId")
     @Validation(required = true)
-    public AddCustomLineResponseBody body;
+    public Long lineId;
+
+    @NameInMap("LineCode")
+    @Validation(required = true)
+    public String lineCode;
 
     public static AddCustomLineResponse build(java.util.Map<String, ?> map) throws Exception {
         AddCustomLineResponse self = new AddCustomLineResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddCustomLineResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddCustomLineResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddCustomLineResponse setBody(AddCustomLineResponseBody body) {
-        this.body = body;
+    public AddCustomLineResponse setLineId(Long lineId) {
+        this.lineId = lineId;
         return this;
     }
-    public AddCustomLineResponseBody getBody() {
-        return this.body;
+    public Long getLineId() {
+        return this.lineId;
+    }
+
+    public AddCustomLineResponse setLineCode(String lineCode) {
+        this.lineCode = lineCode;
+        return this;
+    }
+    public String getLineCode() {
+        return this.lineCode;
     }
 
 }

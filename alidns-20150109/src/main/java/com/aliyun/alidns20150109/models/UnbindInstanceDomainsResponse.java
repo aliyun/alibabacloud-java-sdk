@@ -4,33 +4,45 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UnbindInstanceDomainsResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("SuccessCount")
     @Validation(required = true)
-    public UnbindInstanceDomainsResponseBody body;
+    public Integer successCount;
+
+    @NameInMap("FailedCount")
+    @Validation(required = true)
+    public Integer failedCount;
 
     public static UnbindInstanceDomainsResponse build(java.util.Map<String, ?> map) throws Exception {
         UnbindInstanceDomainsResponse self = new UnbindInstanceDomainsResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnbindInstanceDomainsResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UnbindInstanceDomainsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UnbindInstanceDomainsResponse setBody(UnbindInstanceDomainsResponseBody body) {
-        this.body = body;
+    public UnbindInstanceDomainsResponse setSuccessCount(Integer successCount) {
+        this.successCount = successCount;
         return this;
     }
-    public UnbindInstanceDomainsResponseBody getBody() {
-        return this.body;
+    public Integer getSuccessCount() {
+        return this.successCount;
+    }
+
+    public UnbindInstanceDomainsResponse setFailedCount(Integer failedCount) {
+        this.failedCount = failedCount;
+        return this;
+    }
+    public Integer getFailedCount() {
+        return this.failedCount;
     }
 
 }

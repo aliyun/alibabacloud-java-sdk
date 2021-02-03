@@ -11,6 +11,7 @@ public class DeleteDomainRecordRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("RecordId")
+    @Validation(required = true)
     public String recordId;
 
     public static DeleteDomainRecordRequest build(java.util.Map<String, ?> map) throws Exception {

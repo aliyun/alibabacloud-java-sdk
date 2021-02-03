@@ -11,9 +11,11 @@ public class UpdateDNSSLBWeightRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("RecordId")
+    @Validation(required = true)
     public String recordId;
 
     @NameInMap("Weight")
+    @Validation(required = true)
     public Integer weight;
 
     public static UpdateDNSSLBWeightRequest build(java.util.Map<String, ?> map) throws Exception {

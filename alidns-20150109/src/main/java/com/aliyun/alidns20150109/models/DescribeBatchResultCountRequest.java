@@ -7,9 +7,6 @@ public class DescribeBatchResultCountRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("TaskId")
     public Long taskId;
 
@@ -27,14 +24,6 @@ public class DescribeBatchResultCountRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeBatchResultCountRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeBatchResultCountRequest setTaskId(Long taskId) {

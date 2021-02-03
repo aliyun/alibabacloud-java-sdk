@@ -4,33 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class OperateBatchDomainResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("TaskId")
     @Validation(required = true)
-    public OperateBatchDomainResponseBody body;
+    public Long taskId;
 
     public static OperateBatchDomainResponse build(java.util.Map<String, ?> map) throws Exception {
         OperateBatchDomainResponse self = new OperateBatchDomainResponse();
         return TeaModel.build(map, self);
     }
 
-    public OperateBatchDomainResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public OperateBatchDomainResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public OperateBatchDomainResponse setBody(OperateBatchDomainResponseBody body) {
-        this.body = body;
+    public OperateBatchDomainResponse setTaskId(Long taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public OperateBatchDomainResponseBody getBody() {
-        return this.body;
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

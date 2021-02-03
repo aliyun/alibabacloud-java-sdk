@@ -11,6 +11,7 @@ public class DescribeSubDomainRecordsRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("SubDomain")
+    @Validation(required = true)
     public String subDomain;
 
     @NameInMap("PageNumber")

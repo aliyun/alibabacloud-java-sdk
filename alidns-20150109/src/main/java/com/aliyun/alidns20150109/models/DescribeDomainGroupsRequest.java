@@ -7,9 +7,6 @@ public class DescribeDomainGroupsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("KeyWord")
     public String keyWord;
 
@@ -30,14 +27,6 @@ public class DescribeDomainGroupsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeDomainGroupsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeDomainGroupsRequest setKeyWord(String keyWord) {

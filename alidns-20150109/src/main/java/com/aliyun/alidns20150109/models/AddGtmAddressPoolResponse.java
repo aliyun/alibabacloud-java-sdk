@@ -4,33 +4,45 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddGtmAddressPoolResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("AddrPoolId")
     @Validation(required = true)
-    public AddGtmAddressPoolResponseBody body;
+    public String addrPoolId;
+
+    @NameInMap("MonitorConfigId")
+    @Validation(required = true)
+    public String monitorConfigId;
 
     public static AddGtmAddressPoolResponse build(java.util.Map<String, ?> map) throws Exception {
         AddGtmAddressPoolResponse self = new AddGtmAddressPoolResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddGtmAddressPoolResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddGtmAddressPoolResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddGtmAddressPoolResponse setBody(AddGtmAddressPoolResponseBody body) {
-        this.body = body;
+    public AddGtmAddressPoolResponse setAddrPoolId(String addrPoolId) {
+        this.addrPoolId = addrPoolId;
         return this;
     }
-    public AddGtmAddressPoolResponseBody getBody() {
-        return this.body;
+    public String getAddrPoolId() {
+        return this.addrPoolId;
+    }
+
+    public AddGtmAddressPoolResponse setMonitorConfigId(String monitorConfigId) {
+        this.monitorConfigId = monitorConfigId;
+        return this;
+    }
+    public String getMonitorConfigId() {
+        return this.monitorConfigId;
     }
 
 }

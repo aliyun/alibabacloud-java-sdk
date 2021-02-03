@@ -4,23 +4,28 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDnsGtmAddressPoolRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     @NameInMap("LbaStrategy")
+    @Validation(required = true)
     public String lbaStrategy;
+
+    @NameInMap("Addr")
+    @Validation(required = true)
+    public java.util.List<AddDnsGtmAddressPoolRequestAddr> addr;
 
     @NameInMap("MonitorStatus")
     public String monitorStatus;
@@ -40,23 +45,12 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
     @NameInMap("MonitorExtendInfo")
     public String monitorExtendInfo;
 
-    @NameInMap("Addr")
-    public java.util.List<AddDnsGtmAddressPoolRequestAddr> addr;
-
     @NameInMap("IspCityNode")
     public java.util.List<AddDnsGtmAddressPoolRequestIspCityNode> ispCityNode;
 
     public static AddDnsGtmAddressPoolRequest build(java.util.Map<String, ?> map) throws Exception {
         AddDnsGtmAddressPoolRequest self = new AddDnsGtmAddressPoolRequest();
         return TeaModel.build(map, self);
-    }
-
-    public AddDnsGtmAddressPoolRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public AddDnsGtmAddressPoolRequest setLang(String lang) {
@@ -97,6 +91,14 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
     }
     public String getLbaStrategy() {
         return this.lbaStrategy;
+    }
+
+    public AddDnsGtmAddressPoolRequest setAddr(java.util.List<AddDnsGtmAddressPoolRequestAddr> addr) {
+        this.addr = addr;
+        return this;
+    }
+    public java.util.List<AddDnsGtmAddressPoolRequestAddr> getAddr() {
+        return this.addr;
     }
 
     public AddDnsGtmAddressPoolRequest setMonitorStatus(String monitorStatus) {
@@ -147,14 +149,6 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
         return this.monitorExtendInfo;
     }
 
-    public AddDnsGtmAddressPoolRequest setAddr(java.util.List<AddDnsGtmAddressPoolRequestAddr> addr) {
-        this.addr = addr;
-        return this;
-    }
-    public java.util.List<AddDnsGtmAddressPoolRequestAddr> getAddr() {
-        return this.addr;
-    }
-
     public AddDnsGtmAddressPoolRequest setIspCityNode(java.util.List<AddDnsGtmAddressPoolRequestIspCityNode> ispCityNode) {
         this.ispCityNode = ispCityNode;
         return this;
@@ -164,48 +158,27 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
     }
 
     public static class AddDnsGtmAddressPoolRequestAddr extends TeaModel {
-        @NameInMap("AttributeInfo")
-        public String attributeInfo;
-
-        @NameInMap("Remark")
-        public String remark;
+        @NameInMap("Addr")
+        @Validation(required = true)
+        public String addr;
 
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
 
-        @NameInMap("Addr")
-        public String addr;
-
         @NameInMap("Mode")
+        @Validation(required = true)
         public String mode;
+
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("AttributeInfo")
+        @Validation(required = true)
+        public String attributeInfo;
 
         public static AddDnsGtmAddressPoolRequestAddr build(java.util.Map<String, ?> map) throws Exception {
             AddDnsGtmAddressPoolRequestAddr self = new AddDnsGtmAddressPoolRequestAddr();
             return TeaModel.build(map, self);
-        }
-
-        public AddDnsGtmAddressPoolRequestAddr setAttributeInfo(String attributeInfo) {
-            this.attributeInfo = attributeInfo;
-            return this;
-        }
-        public String getAttributeInfo() {
-            return this.attributeInfo;
-        }
-
-        public AddDnsGtmAddressPoolRequestAddr setRemark(String remark) {
-            this.remark = remark;
-            return this;
-        }
-        public String getRemark() {
-            return this.remark;
-        }
-
-        public AddDnsGtmAddressPoolRequestAddr setLbaWeight(Integer lbaWeight) {
-            this.lbaWeight = lbaWeight;
-            return this;
-        }
-        public Integer getLbaWeight() {
-            return this.lbaWeight;
         }
 
         public AddDnsGtmAddressPoolRequestAddr setAddr(String addr) {
@@ -216,12 +189,36 @@ public class AddDnsGtmAddressPoolRequest extends TeaModel {
             return this.addr;
         }
 
+        public AddDnsGtmAddressPoolRequestAddr setLbaWeight(Integer lbaWeight) {
+            this.lbaWeight = lbaWeight;
+            return this;
+        }
+        public Integer getLbaWeight() {
+            return this.lbaWeight;
+        }
+
         public AddDnsGtmAddressPoolRequestAddr setMode(String mode) {
             this.mode = mode;
             return this;
         }
         public String getMode() {
             return this.mode;
+        }
+
+        public AddDnsGtmAddressPoolRequestAddr setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public AddDnsGtmAddressPoolRequestAddr setAttributeInfo(String attributeInfo) {
+            this.attributeInfo = attributeInfo;
+            return this;
+        }
+        public String getAttributeInfo() {
+            return this.attributeInfo;
         }
 
     }

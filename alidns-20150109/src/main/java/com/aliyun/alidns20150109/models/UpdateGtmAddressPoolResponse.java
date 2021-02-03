@@ -4,33 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateGtmAddressPoolResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public UpdateGtmAddressPoolResponseBody body;
+    public String requestId;
 
     public static UpdateGtmAddressPoolResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateGtmAddressPoolResponse self = new UpdateGtmAddressPoolResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateGtmAddressPoolResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateGtmAddressPoolResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public UpdateGtmAddressPoolResponse setBody(UpdateGtmAddressPoolResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public UpdateGtmAddressPoolResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,33 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmAvailableAlertGroupResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("AvailableAlertGroup")
     @Validation(required = true)
-    public DescribeGtmAvailableAlertGroupResponseBody body;
+    public String availableAlertGroup;
 
     public static DescribeGtmAvailableAlertGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmAvailableAlertGroupResponse self = new DescribeGtmAvailableAlertGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeGtmAvailableAlertGroupResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeGtmAvailableAlertGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeGtmAvailableAlertGroupResponse setBody(DescribeGtmAvailableAlertGroupResponseBody body) {
-        this.body = body;
+    public DescribeGtmAvailableAlertGroupResponse setAvailableAlertGroup(String availableAlertGroup) {
+        this.availableAlertGroup = availableAlertGroup;
         return this;
     }
-    public DescribeGtmAvailableAlertGroupResponseBody getBody() {
-        return this.body;
+    public String getAvailableAlertGroup() {
+        return this.availableAlertGroup;
     }
 
 }

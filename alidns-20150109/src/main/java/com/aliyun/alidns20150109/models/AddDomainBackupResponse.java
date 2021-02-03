@@ -4,33 +4,45 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDomainBackupResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("DomainName")
     @Validation(required = true)
-    public AddDomainBackupResponseBody body;
+    public String domainName;
+
+    @NameInMap("PeriodType")
+    @Validation(required = true)
+    public String periodType;
 
     public static AddDomainBackupResponse build(java.util.Map<String, ?> map) throws Exception {
         AddDomainBackupResponse self = new AddDomainBackupResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddDomainBackupResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddDomainBackupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddDomainBackupResponse setBody(AddDomainBackupResponseBody body) {
-        this.body = body;
+    public AddDomainBackupResponse setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public AddDomainBackupResponseBody getBody() {
-        return this.body;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public AddDomainBackupResponse setPeriodType(String periodType) {
+        this.periodType = periodType;
+        return this;
+    }
+    public String getPeriodType() {
+        return this.periodType;
     }
 
 }

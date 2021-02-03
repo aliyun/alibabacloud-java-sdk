@@ -7,10 +7,8 @@ public class DescribeGtmAccessStrategyAvailableConfigRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     public static DescribeGtmAccessStrategyAvailableConfigRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -24,14 +22,6 @@ public class DescribeGtmAccessStrategyAvailableConfigRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeGtmAccessStrategyAvailableConfigRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeGtmAccessStrategyAvailableConfigRequest setInstanceId(String instanceId) {

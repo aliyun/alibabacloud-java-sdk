@@ -4,33 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDomainDnssecStatusResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public SetDomainDnssecStatusResponseBody body;
+    public String requestId;
 
     public static SetDomainDnssecStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         SetDomainDnssecStatusResponse self = new SetDomainDnssecStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDomainDnssecStatusResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SetDomainDnssecStatusResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public SetDomainDnssecStatusResponse setBody(SetDomainDnssecStatusResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public SetDomainDnssecStatusResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

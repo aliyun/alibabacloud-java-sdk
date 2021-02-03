@@ -7,10 +7,8 @@ public class DescribeGtmInstanceStatusRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     public static DescribeGtmInstanceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -24,14 +22,6 @@ public class DescribeGtmInstanceStatusRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeGtmInstanceStatusRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeGtmInstanceStatusRequest setInstanceId(String instanceId) {

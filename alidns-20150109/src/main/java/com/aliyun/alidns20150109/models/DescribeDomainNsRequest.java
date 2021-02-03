@@ -7,14 +7,9 @@ public class DescribeDomainNsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("DomainName")
+    @Validation(required = true)
     public String domainName;
-
-    @NameInMap("DomainType")
-    public String domainType;
 
     public static DescribeDomainNsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainNsRequest self = new DescribeDomainNsRequest();
@@ -29,28 +24,12 @@ public class DescribeDomainNsRequest extends TeaModel {
         return this.lang;
     }
 
-    public DescribeDomainNsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public DescribeDomainNsRequest setDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDomainNsRequest setDomainType(String domainType) {
-        this.domainType = domainType;
-        return this;
-    }
-    public String getDomainType() {
-        return this.domainType;
     }
 
 }
