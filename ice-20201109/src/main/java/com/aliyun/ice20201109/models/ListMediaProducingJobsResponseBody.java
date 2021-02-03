@@ -45,9 +45,6 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
         @NameInMap("MediaURL")
         public String mediaURL;
 
-        @NameInMap("Timeline")
-        public String timeline;
-
         @NameInMap("TemplateId")
         public String templateId;
 
@@ -110,14 +107,6 @@ public class ListMediaProducingJobsResponseBody extends TeaModel {
         }
         public String getMediaURL() {
             return this.mediaURL;
-        }
-
-        public ListMediaProducingJobsResponseBodyMediaProducingJobList setTimeline(String timeline) {
-            this.timeline = timeline;
-            return this;
-        }
-        public String getTimeline() {
-            return this.timeline;
         }
 
         public ListMediaProducingJobsResponseBodyMediaProducingJobList setTemplateId(String templateId) {
