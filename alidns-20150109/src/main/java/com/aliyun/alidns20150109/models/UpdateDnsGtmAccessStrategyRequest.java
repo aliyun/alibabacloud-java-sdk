@@ -7,26 +7,25 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("StrategyId")
-    @Validation(required = true)
     public String strategyId;
 
     @NameInMap("StrategyName")
-    @Validation(required = true)
     public String strategyName;
 
     @NameInMap("Lines")
     public String lines;
 
     @NameInMap("DefaultAddrPoolType")
-    @Validation(required = true)
     public String defaultAddrPoolType;
 
     @NameInMap("DefaultLbaStrategy")
     public String defaultLbaStrategy;
 
     @NameInMap("DefaultMinAvailableAddrNum")
-    @Validation(required = true)
     public Integer defaultMinAvailableAddrNum;
 
     @NameInMap("DefaultMaxReturnAddrNum")
@@ -51,7 +50,6 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     public String failoverLatencyOptimization;
 
     @NameInMap("DefaultAddrPool")
-    @Validation(required = true)
     public java.util.List<UpdateDnsGtmAccessStrategyRequestDefaultAddrPool> defaultAddrPool;
 
     @NameInMap("FailoverAddrPool")
@@ -68,6 +66,14 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public UpdateDnsGtmAccessStrategyRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public UpdateDnsGtmAccessStrategyRequest setStrategyId(String strategyId) {
@@ -191,23 +197,15 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
     }
 
     public static class UpdateDnsGtmAccessStrategyRequestDefaultAddrPool extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
         @NameInMap("LbaWeight")
         public Integer lbaWeight;
+
+        @NameInMap("Id")
+        public String id;
 
         public static UpdateDnsGtmAccessStrategyRequestDefaultAddrPool build(java.util.Map<String, ?> map) throws Exception {
             UpdateDnsGtmAccessStrategyRequestDefaultAddrPool self = new UpdateDnsGtmAccessStrategyRequestDefaultAddrPool();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateDnsGtmAccessStrategyRequestDefaultAddrPool setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
         }
 
         public UpdateDnsGtmAccessStrategyRequestDefaultAddrPool setLbaWeight(Integer lbaWeight) {
@@ -218,26 +216,26 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
             return this.lbaWeight;
         }
 
-    }
-
-    public static class UpdateDnsGtmAccessStrategyRequestFailoverAddrPool extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("LbaWeight")
-        public Integer lbaWeight;
-
-        public static UpdateDnsGtmAccessStrategyRequestFailoverAddrPool build(java.util.Map<String, ?> map) throws Exception {
-            UpdateDnsGtmAccessStrategyRequestFailoverAddrPool self = new UpdateDnsGtmAccessStrategyRequestFailoverAddrPool();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateDnsGtmAccessStrategyRequestFailoverAddrPool setId(String id) {
+        public UpdateDnsGtmAccessStrategyRequestDefaultAddrPool setId(String id) {
             this.id = id;
             return this;
         }
         public String getId() {
             return this.id;
+        }
+
+    }
+
+    public static class UpdateDnsGtmAccessStrategyRequestFailoverAddrPool extends TeaModel {
+        @NameInMap("LbaWeight")
+        public Integer lbaWeight;
+
+        @NameInMap("Id")
+        public String id;
+
+        public static UpdateDnsGtmAccessStrategyRequestFailoverAddrPool build(java.util.Map<String, ?> map) throws Exception {
+            UpdateDnsGtmAccessStrategyRequestFailoverAddrPool self = new UpdateDnsGtmAccessStrategyRequestFailoverAddrPool();
+            return TeaModel.build(map, self);
         }
 
         public UpdateDnsGtmAccessStrategyRequestFailoverAddrPool setLbaWeight(Integer lbaWeight) {
@@ -246,6 +244,14 @@ public class UpdateDnsGtmAccessStrategyRequest extends TeaModel {
         }
         public Integer getLbaWeight() {
             return this.lbaWeight;
+        }
+
+        public UpdateDnsGtmAccessStrategyRequestFailoverAddrPool setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

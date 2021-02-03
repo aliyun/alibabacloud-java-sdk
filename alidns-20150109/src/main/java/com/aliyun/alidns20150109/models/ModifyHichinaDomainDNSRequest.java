@@ -11,7 +11,6 @@ public class ModifyHichinaDomainDNSRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     public static ModifyHichinaDomainDNSRequest build(java.util.Map<String, ?> map) throws Exception {

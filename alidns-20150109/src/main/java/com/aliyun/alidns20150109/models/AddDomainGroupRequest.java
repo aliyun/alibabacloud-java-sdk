@@ -7,8 +7,10 @@ public class AddDomainGroupRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("GroupName")
-    @Validation(required = true)
     public String groupName;
 
     public static AddDomainGroupRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -22,6 +24,14 @@ public class AddDomainGroupRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public AddDomainGroupRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public AddDomainGroupRequest setGroupName(String groupName) {

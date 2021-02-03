@@ -4,45 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDNSSLBWeightResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RecordId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String recordId;
-
-    @NameInMap("Weight")
-    @Validation(required = true)
-    public Integer weight;
+    public UpdateDNSSLBWeightResponseBody body;
 
     public static UpdateDNSSLBWeightResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateDNSSLBWeightResponse self = new UpdateDNSSLBWeightResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDNSSLBWeightResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateDNSSLBWeightResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateDNSSLBWeightResponse setRecordId(String recordId) {
-        this.recordId = recordId;
+    public UpdateDNSSLBWeightResponse setBody(UpdateDNSSLBWeightResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRecordId() {
-        return this.recordId;
-    }
-
-    public UpdateDNSSLBWeightResponse setWeight(Integer weight) {
-        this.weight = weight;
-        return this;
-    }
-    public Integer getWeight() {
-        return this.weight;
+    public UpdateDNSSLBWeightResponseBody getBody() {
+        return this.body;
     }
 
 }

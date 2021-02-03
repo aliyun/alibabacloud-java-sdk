@@ -7,6 +7,9 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -14,7 +17,6 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     public Long pageSize;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     public static DescribeInstanceDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -28,6 +30,14 @@ public class DescribeInstanceDomainsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeInstanceDomainsRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public DescribeInstanceDomainsRequest setPageNumber(Long pageNumber) {

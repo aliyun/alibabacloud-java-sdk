@@ -4,33 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteDomainRecordResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RecordId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String recordId;
+    public DeleteDomainRecordResponseBody body;
 
     public static DeleteDomainRecordResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDomainRecordResponse self = new DeleteDomainRecordResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDomainRecordResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteDomainRecordResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteDomainRecordResponse setRecordId(String recordId) {
-        this.recordId = recordId;
+    public DeleteDomainRecordResponse setBody(DeleteDomainRecordResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRecordId() {
-        return this.recordId;
+    public DeleteDomainRecordResponseBody getBody() {
+        return this.body;
     }
 
 }

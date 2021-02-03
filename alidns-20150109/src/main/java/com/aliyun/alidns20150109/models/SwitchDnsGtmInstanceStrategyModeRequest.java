@@ -7,12 +7,13 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("StrategyMode")
-    @Validation(required = true)
     public String strategyMode;
 
     public static SwitchDnsGtmInstanceStrategyModeRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -26,6 +27,14 @@ public class SwitchDnsGtmInstanceStrategyModeRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public SwitchDnsGtmInstanceStrategyModeRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public SwitchDnsGtmInstanceStrategyModeRequest setInstanceId(String instanceId) {

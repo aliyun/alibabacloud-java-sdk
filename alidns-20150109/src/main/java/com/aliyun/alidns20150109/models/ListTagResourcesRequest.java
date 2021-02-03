@@ -7,18 +7,23 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("Size")
+    public Integer size;
 
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
-
-    @NameInMap("NextToken")
-    public String nextToken;
 
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
@@ -33,12 +38,36 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.lang;
     }
 
+    public ListTagResourcesRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
     public ListTagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public ListTagResourcesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public ListTagResourcesRequest setSize(Integer size) {
+        this.size = size;
+        return this;
+    }
+    public Integer getSize() {
+        return this.size;
     }
 
     public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
@@ -55,14 +84,6 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public java.util.List<String> getResourceId() {
         return this.resourceId;
-    }
-
-    public ListTagResourcesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

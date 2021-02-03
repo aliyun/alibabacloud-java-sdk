@@ -4,85 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainStatisticsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Statistics")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeDomainStatisticsResponseStatistics statistics;
+    public DescribeDomainStatisticsResponseBody body;
 
     public static DescribeDomainStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainStatisticsResponse self = new DescribeDomainStatisticsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDomainStatisticsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDomainStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDomainStatisticsResponse setStatistics(DescribeDomainStatisticsResponseStatistics statistics) {
-        this.statistics = statistics;
+    public DescribeDomainStatisticsResponse setBody(DescribeDomainStatisticsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeDomainStatisticsResponseStatistics getStatistics() {
-        return this.statistics;
-    }
-
-    public static class DescribeDomainStatisticsResponseStatisticsStatistic extends TeaModel {
-        @NameInMap("Timestamp")
-        @Validation(required = true)
-        public Long timestamp;
-
-        @NameInMap("Count")
-        @Validation(required = true)
-        public Long count;
-
-        public static DescribeDomainStatisticsResponseStatisticsStatistic build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainStatisticsResponseStatisticsStatistic self = new DescribeDomainStatisticsResponseStatisticsStatistic();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainStatisticsResponseStatisticsStatistic setTimestamp(Long timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public Long getTimestamp() {
-            return this.timestamp;
-        }
-
-        public DescribeDomainStatisticsResponseStatisticsStatistic setCount(Long count) {
-            this.count = count;
-            return this;
-        }
-        public Long getCount() {
-            return this.count;
-        }
-
-    }
-
-    public static class DescribeDomainStatisticsResponseStatistics extends TeaModel {
-        @NameInMap("Statistic")
-        @Validation(required = true)
-        public java.util.List<DescribeDomainStatisticsResponseStatisticsStatistic> statistic;
-
-        public static DescribeDomainStatisticsResponseStatistics build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDomainStatisticsResponseStatistics self = new DescribeDomainStatisticsResponseStatistics();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDomainStatisticsResponseStatistics setStatistic(java.util.List<DescribeDomainStatisticsResponseStatisticsStatistic> statistic) {
-            this.statistic = statistic;
-            return this;
-        }
-        public java.util.List<DescribeDomainStatisticsResponseStatisticsStatistic> getStatistic() {
-            return this.statistic;
-        }
-
+    public DescribeDomainStatisticsResponseBody getBody() {
+        return this.body;
     }
 
 }

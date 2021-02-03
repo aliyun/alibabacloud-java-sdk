@@ -7,15 +7,16 @@ public class AddGtmRecoveryPlanRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Remark")
     public String remark;
 
     @NameInMap("FaultAddrPool")
-    @Validation(required = true)
     public String faultAddrPool;
 
     public static AddGtmRecoveryPlanRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -29,6 +30,14 @@ public class AddGtmRecoveryPlanRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public AddGtmRecoveryPlanRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public AddGtmRecoveryPlanRequest setName(String name) {

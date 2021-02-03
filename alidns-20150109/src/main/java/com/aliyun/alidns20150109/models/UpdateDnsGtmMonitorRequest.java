@@ -4,15 +4,16 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDnsGtmMonitorRequest extends TeaModel {
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("MonitorConfigId")
-    @Validation(required = true)
     public String monitorConfigId;
 
     @NameInMap("ProtocolType")
-    @Validation(required = true)
     public String protocolType;
 
     @NameInMap("Interval")
@@ -25,16 +26,22 @@ public class UpdateDnsGtmMonitorRequest extends TeaModel {
     public Integer timeout;
 
     @NameInMap("MonitorExtendInfo")
-    @Validation(required = true)
     public String monitorExtendInfo;
 
     @NameInMap("IspCityNode")
-    @Validation(required = true)
     public java.util.List<UpdateDnsGtmMonitorRequestIspCityNode> ispCityNode;
 
     public static UpdateDnsGtmMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDnsGtmMonitorRequest self = new UpdateDnsGtmMonitorRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateDnsGtmMonitorRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public UpdateDnsGtmMonitorRequest setLang(String lang) {

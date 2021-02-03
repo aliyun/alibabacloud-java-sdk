@@ -11,7 +11,6 @@ public class ChangeDomainOfDnsProductRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("NewDomain")

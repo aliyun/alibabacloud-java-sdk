@@ -7,8 +7,10 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("InstanceName")
@@ -43,6 +45,14 @@ public class UpdateGtmInstanceGlobalConfigRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public UpdateGtmInstanceGlobalConfigRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public UpdateGtmInstanceGlobalConfigRequest setInstanceId(String instanceId) {

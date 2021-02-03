@@ -4,21 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDnsGtmAccessModeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public SetDnsGtmAccessModeResponseBody body;
 
     public static SetDnsGtmAccessModeResponse build(java.util.Map<String, ?> map) throws Exception {
         SetDnsGtmAccessModeResponse self = new SetDnsGtmAccessModeResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDnsGtmAccessModeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetDnsGtmAccessModeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SetDnsGtmAccessModeResponse setBody(SetDnsGtmAccessModeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SetDnsGtmAccessModeResponseBody getBody() {
+        return this.body;
     }
 
 }

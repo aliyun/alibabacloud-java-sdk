@@ -7,16 +7,19 @@ public class TagResourcesRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
+    @NameInMap("OverWrite")
+    public Boolean overWrite;
+
     @NameInMap("Tag")
-    @Validation(required = true)
     public java.util.List<TagResourcesRequestTag> tag;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public java.util.List<String> resourceId;
 
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -32,12 +35,28 @@ public class TagResourcesRequest extends TeaModel {
         return this.lang;
     }
 
+    public TagResourcesRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
+    }
+
     public TagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public TagResourcesRequest setOverWrite(Boolean overWrite) {
+        this.overWrite = overWrite;
+        return this;
+    }
+    public Boolean getOverWrite() {
+        return this.overWrite;
     }
 
     public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {

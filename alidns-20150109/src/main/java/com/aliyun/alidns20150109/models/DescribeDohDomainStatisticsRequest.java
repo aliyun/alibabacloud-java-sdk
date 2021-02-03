@@ -8,7 +8,6 @@ public class DescribeDohDomainStatisticsRequest extends TeaModel {
     public String lang;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("StartDate")

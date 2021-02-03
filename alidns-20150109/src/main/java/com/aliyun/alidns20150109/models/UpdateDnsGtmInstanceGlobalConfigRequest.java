@@ -7,8 +7,10 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("InstanceName")
@@ -46,6 +48,14 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public UpdateDnsGtmInstanceGlobalConfigRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public UpdateDnsGtmInstanceGlobalConfigRequest setInstanceId(String instanceId) {
@@ -121,11 +131,11 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends TeaModel {
     }
 
     public static class UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig extends TeaModel {
-        @NameInMap("NoticeType")
-        public String noticeType;
-
         @NameInMap("SmsNotice")
         public Boolean smsNotice;
+
+        @NameInMap("NoticeType")
+        public String noticeType;
 
         @NameInMap("EmailNotice")
         public Boolean emailNotice;
@@ -135,20 +145,20 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig setNoticeType(String noticeType) {
-            this.noticeType = noticeType;
-            return this;
-        }
-        public String getNoticeType() {
-            return this.noticeType;
-        }
-
         public UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig setSmsNotice(Boolean smsNotice) {
             this.smsNotice = smsNotice;
             return this;
         }
         public Boolean getSmsNotice() {
             return this.smsNotice;
+        }
+
+        public UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig setNoticeType(String noticeType) {
+            this.noticeType = noticeType;
+            return this;
+        }
+        public String getNoticeType() {
+            return this.noticeType;
         }
 
         public UpdateDnsGtmInstanceGlobalConfigRequestAlertConfig setEmailNotice(Boolean emailNotice) {

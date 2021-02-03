@@ -4,16 +4,26 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteDnsGtmAddressPoolRequest extends TeaModel {
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("AddrPoolId")
-    @Validation(required = true)
     public String addrPoolId;
 
     public static DeleteDnsGtmAddressPoolRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDnsGtmAddressPoolRequest self = new DeleteDnsGtmAddressPoolRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDnsGtmAddressPoolRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public DeleteDnsGtmAddressPoolRequest setLang(String lang) {
