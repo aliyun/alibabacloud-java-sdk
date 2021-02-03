@@ -7,8 +7,10 @@ public class GetMainDomainNameRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("InputString")
-    @Validation(required = true)
     public String inputString;
 
     public static GetMainDomainNameRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -22,6 +24,14 @@ public class GetMainDomainNameRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public GetMainDomainNameRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public GetMainDomainNameRequest setInputString(String inputString) {

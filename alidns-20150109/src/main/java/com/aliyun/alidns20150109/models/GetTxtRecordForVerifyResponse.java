@@ -4,57 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class GetTxtRecordForVerifyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DomainName")
+    @NameInMap("body")
     @Validation(required = true)
-    public String domainName;
-
-    @NameInMap("RR")
-    @Validation(required = true)
-    public String RR;
-
-    @NameInMap("Value")
-    @Validation(required = true)
-    public String value;
+    public GetTxtRecordForVerifyResponseBody body;
 
     public static GetTxtRecordForVerifyResponse build(java.util.Map<String, ?> map) throws Exception {
         GetTxtRecordForVerifyResponse self = new GetTxtRecordForVerifyResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetTxtRecordForVerifyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetTxtRecordForVerifyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetTxtRecordForVerifyResponse setDomainName(String domainName) {
-        this.domainName = domainName;
+    public GetTxtRecordForVerifyResponse setBody(GetTxtRecordForVerifyResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public GetTxtRecordForVerifyResponse setRR(String RR) {
-        this.RR = RR;
-        return this;
-    }
-    public String getRR() {
-        return this.RR;
-    }
-
-    public GetTxtRecordForVerifyResponse setValue(String value) {
-        this.value = value;
-        return this;
-    }
-    public String getValue() {
-        return this.value;
+    public GetTxtRecordForVerifyResponseBody getBody() {
+        return this.body;
     }
 
 }

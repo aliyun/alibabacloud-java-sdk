@@ -4,21 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class MoveGtmResourceGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public MoveGtmResourceGroupResponseBody body;
 
     public static MoveGtmResourceGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         MoveGtmResourceGroupResponse self = new MoveGtmResourceGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public MoveGtmResourceGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public MoveGtmResourceGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public MoveGtmResourceGroupResponse setBody(MoveGtmResourceGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public MoveGtmResourceGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

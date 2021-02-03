@@ -7,24 +7,22 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("StrategyName")
-    @Validation(required = true)
     public String strategyName;
 
     @NameInMap("DefaultAddrPoolId")
-    @Validation(required = true)
     public String defaultAddrPoolId;
 
     @NameInMap("FailoverAddrPoolId")
-    @Validation(required = true)
     public String failoverAddrPoolId;
 
     @NameInMap("AccessLines")
-    @Validation(required = true)
     public String accessLines;
 
     public static AddGtmAccessStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -38,6 +36,14 @@ public class AddGtmAccessStrategyRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public AddGtmAccessStrategyRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public AddGtmAccessStrategyRequest setInstanceId(String instanceId) {

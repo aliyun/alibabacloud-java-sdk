@@ -7,6 +7,9 @@ public class DescribeDnsGtmInstancesRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -30,6 +33,14 @@ public class DescribeDnsGtmInstancesRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDnsGtmInstancesRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public DescribeDnsGtmInstancesRequest setPageNumber(Integer pageNumber) {

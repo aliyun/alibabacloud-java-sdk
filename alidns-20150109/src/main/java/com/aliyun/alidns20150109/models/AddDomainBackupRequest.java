@@ -8,12 +8,13 @@ public class AddDomainBackupRequest extends TeaModel {
     public String lang;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("PeriodType")
-    @Validation(required = true)
     public String periodType;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static AddDomainBackupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddDomainBackupRequest self = new AddDomainBackupRequest();
@@ -42,6 +43,14 @@ public class AddDomainBackupRequest extends TeaModel {
     }
     public String getPeriodType() {
         return this.periodType;
+    }
+
+    public AddDomainBackupRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

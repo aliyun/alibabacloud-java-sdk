@@ -7,15 +7,16 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("All")
     public Boolean all;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public java.util.List<String> resourceId;
 
     @NameInMap("TagKey")
@@ -32,6 +33,14 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public UntagResourcesRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public UntagResourcesRequest setResourceType(String resourceType) {

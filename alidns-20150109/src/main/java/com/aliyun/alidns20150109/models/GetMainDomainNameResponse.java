@@ -4,57 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class GetMainDomainNameResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DomainName")
+    @NameInMap("body")
     @Validation(required = true)
-    public String domainName;
-
-    @NameInMap("RR")
-    @Validation(required = true)
-    public String RR;
-
-    @NameInMap("DomainLevel")
-    @Validation(required = true)
-    public Long domainLevel;
+    public GetMainDomainNameResponseBody body;
 
     public static GetMainDomainNameResponse build(java.util.Map<String, ?> map) throws Exception {
         GetMainDomainNameResponse self = new GetMainDomainNameResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetMainDomainNameResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetMainDomainNameResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetMainDomainNameResponse setDomainName(String domainName) {
-        this.domainName = domainName;
+    public GetMainDomainNameResponse setBody(GetMainDomainNameResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
-    }
-
-    public GetMainDomainNameResponse setRR(String RR) {
-        this.RR = RR;
-        return this;
-    }
-    public String getRR() {
-        return this.RR;
-    }
-
-    public GetMainDomainNameResponse setDomainLevel(Long domainLevel) {
-        this.domainLevel = domainLevel;
-        return this;
-    }
-    public Long getDomainLevel() {
-        return this.domainLevel;
+    public GetMainDomainNameResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -7,12 +7,13 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("Addrs")
-    @Validation(required = true)
     public String addrs;
 
     public static DescribeDnsGtmAddrAttributeInfoRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -26,6 +27,14 @@ public class DescribeDnsGtmAddrAttributeInfoRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDnsGtmAddrAttributeInfoRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public DescribeDnsGtmAddrAttributeInfoRequest setType(String type) {

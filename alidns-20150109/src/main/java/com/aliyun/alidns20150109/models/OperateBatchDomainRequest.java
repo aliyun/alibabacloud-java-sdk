@@ -7,12 +7,13 @@ public class OperateBatchDomainRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("DomainRecordInfo")
-    @Validation(required = true)
     public java.util.List<OperateBatchDomainRequestDomainRecordInfo> domainRecordInfo;
 
     public static OperateBatchDomainRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -26,6 +27,14 @@ public class OperateBatchDomainRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public OperateBatchDomainRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public OperateBatchDomainRequest setType(String type) {
@@ -45,15 +54,8 @@ public class OperateBatchDomainRequest extends TeaModel {
     }
 
     public static class OperateBatchDomainRequestDomainRecordInfo extends TeaModel {
-        @NameInMap("Domain")
-        @Validation(required = true)
-        public String domain;
-
         @NameInMap("Type")
         public String type;
-
-        @NameInMap("Rr")
-        public String rr;
 
         @NameInMap("Value")
         public String value;
@@ -61,14 +63,20 @@ public class OperateBatchDomainRequest extends TeaModel {
         @NameInMap("Ttl")
         public Integer ttl;
 
-        @NameInMap("Priority")
-        public Integer priority;
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("Line")
         public String line;
 
         @NameInMap("NewRr")
         public String newRr;
+
+        @NameInMap("Rr")
+        public String rr;
+
+        @NameInMap("Priority")
+        public Integer priority;
 
         @NameInMap("NewType")
         public String newType;
@@ -81,28 +89,12 @@ public class OperateBatchDomainRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public OperateBatchDomainRequestDomainRecordInfo setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
         public OperateBatchDomainRequestDomainRecordInfo setType(String type) {
             this.type = type;
             return this;
         }
         public String getType() {
             return this.type;
-        }
-
-        public OperateBatchDomainRequestDomainRecordInfo setRr(String rr) {
-            this.rr = rr;
-            return this;
-        }
-        public String getRr() {
-            return this.rr;
         }
 
         public OperateBatchDomainRequestDomainRecordInfo setValue(String value) {
@@ -121,12 +113,12 @@ public class OperateBatchDomainRequest extends TeaModel {
             return this.ttl;
         }
 
-        public OperateBatchDomainRequestDomainRecordInfo setPriority(Integer priority) {
-            this.priority = priority;
+        public OperateBatchDomainRequestDomainRecordInfo setDomain(String domain) {
+            this.domain = domain;
             return this;
         }
-        public Integer getPriority() {
-            return this.priority;
+        public String getDomain() {
+            return this.domain;
         }
 
         public OperateBatchDomainRequestDomainRecordInfo setLine(String line) {
@@ -143,6 +135,22 @@ public class OperateBatchDomainRequest extends TeaModel {
         }
         public String getNewRr() {
             return this.newRr;
+        }
+
+        public OperateBatchDomainRequestDomainRecordInfo setRr(String rr) {
+            this.rr = rr;
+            return this;
+        }
+        public String getRr() {
+            return this.rr;
+        }
+
+        public OperateBatchDomainRequestDomainRecordInfo setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public OperateBatchDomainRequestDomainRecordInfo setNewType(String newType) {

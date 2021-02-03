@@ -7,6 +7,9 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -14,11 +17,16 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
     public Long pageSize;
 
     @NameInMap("StartDate")
-    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
     public String endDate;
+
+    @NameInMap("OrderBy")
+    public String orderBy;
+
+    @NameInMap("Direction")
+    public String direction;
 
     @NameInMap("SearchMode")
     public String searchMode;
@@ -40,6 +48,14 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDomainStatisticsSummaryRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public DescribeDomainStatisticsSummaryRequest setPageNumber(Long pageNumber) {
@@ -72,6 +88,22 @@ public class DescribeDomainStatisticsSummaryRequest extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public DescribeDomainStatisticsSummaryRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    public DescribeDomainStatisticsSummaryRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
     }
 
     public DescribeDomainStatisticsSummaryRequest setSearchMode(String searchMode) {

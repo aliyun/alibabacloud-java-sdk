@@ -7,16 +7,16 @@ public class AddCustomLineRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("LineName")
-    @Validation(required = true)
     public String lineName;
 
     @NameInMap("IpSegment")
-    @Validation(required = true)
     public java.util.List<AddCustomLineRequestIpSegment> ipSegment;
 
     public static AddCustomLineRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -30,6 +30,14 @@ public class AddCustomLineRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public AddCustomLineRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public AddCustomLineRequest setDomainName(String domainName) {
@@ -57,23 +65,15 @@ public class AddCustomLineRequest extends TeaModel {
     }
 
     public static class AddCustomLineRequestIpSegment extends TeaModel {
-        @NameInMap("StartIp")
-        public String startIp;
-
         @NameInMap("EndIp")
         public String endIp;
+
+        @NameInMap("StartIp")
+        public String startIp;
 
         public static AddCustomLineRequestIpSegment build(java.util.Map<String, ?> map) throws Exception {
             AddCustomLineRequestIpSegment self = new AddCustomLineRequestIpSegment();
             return TeaModel.build(map, self);
-        }
-
-        public AddCustomLineRequestIpSegment setStartIp(String startIp) {
-            this.startIp = startIp;
-            return this;
-        }
-        public String getStartIp() {
-            return this.startIp;
         }
 
         public AddCustomLineRequestIpSegment setEndIp(String endIp) {
@@ -82,6 +82,14 @@ public class AddCustomLineRequest extends TeaModel {
         }
         public String getEndIp() {
             return this.endIp;
+        }
+
+        public AddCustomLineRequestIpSegment setStartIp(String startIp) {
+            this.startIp = startIp;
+            return this;
+        }
+        public String getStartIp() {
+            return this.startIp;
         }
 
     }

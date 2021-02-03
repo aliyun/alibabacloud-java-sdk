@@ -11,11 +11,9 @@ public class DeleteSubDomainRecordsRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("RR")
-    @Validation(required = true)
     public String RR;
 
     @NameInMap("Type")

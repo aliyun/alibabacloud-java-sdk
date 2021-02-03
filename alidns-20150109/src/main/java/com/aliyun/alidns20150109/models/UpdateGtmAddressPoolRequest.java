@@ -4,30 +4,38 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateGtmAddressPoolRequest extends TeaModel {
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("AddrPoolId")
-    @Validation(required = true)
     public String addrPoolId;
 
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("MinAvailableAddrNum")
     public Integer minAvailableAddrNum;
 
     @NameInMap("Addr")
-    @Validation(required = true)
     public java.util.List<UpdateGtmAddressPoolRequestAddr> addr;
 
     public static UpdateGtmAddressPoolRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateGtmAddressPoolRequest self = new UpdateGtmAddressPoolRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateGtmAddressPoolRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public UpdateGtmAddressPoolRequest setLang(String lang) {

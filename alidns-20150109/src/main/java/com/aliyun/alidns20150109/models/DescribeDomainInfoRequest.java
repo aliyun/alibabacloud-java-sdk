@@ -7,8 +7,10 @@ public class DescribeDomainInfoRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("NeedDetailAttributes")
@@ -25,6 +27,14 @@ public class DescribeDomainInfoRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDomainInfoRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public DescribeDomainInfoRequest setDomainName(String domainName) {

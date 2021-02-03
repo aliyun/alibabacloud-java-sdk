@@ -7,6 +7,9 @@ public class DescribeDomainsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("KeyWord")
     public String keyWord;
 
@@ -25,8 +28,23 @@ public class DescribeDomainsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
+    @NameInMap("Direction")
+    public String direction;
+
     @NameInMap("Starmark")
     public Boolean starmark;
+
+    @NameInMap("StartDate")
+    public String startDate;
+
+    @NameInMap("EndDate")
+    public String endDate;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeDomainsRequestTag> tag;
 
     public static DescribeDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainsRequest self = new DescribeDomainsRequest();
@@ -39,6 +57,14 @@ public class DescribeDomainsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeDomainsRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public DescribeDomainsRequest setKeyWord(String keyWord) {
@@ -89,12 +115,60 @@ public class DescribeDomainsRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public DescribeDomainsRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    public DescribeDomainsRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
+    }
+
     public DescribeDomainsRequest setStarmark(Boolean starmark) {
         this.starmark = starmark;
         return this;
     }
     public Boolean getStarmark() {
         return this.starmark;
+    }
+
+    public DescribeDomainsRequest setStartDate(String startDate) {
+        this.startDate = startDate;
+        return this;
+    }
+    public String getStartDate() {
+        return this.startDate;
+    }
+
+    public DescribeDomainsRequest setEndDate(String endDate) {
+        this.endDate = endDate;
+        return this;
+    }
+    public String getEndDate() {
+        return this.endDate;
+    }
+
+    public DescribeDomainsRequest setTag(java.util.List<DescribeDomainsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDomainsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeDomainsRequestTag extends TeaModel {
+        public static DescribeDomainsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainsRequestTag self = new DescribeDomainsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
     }
 
 }

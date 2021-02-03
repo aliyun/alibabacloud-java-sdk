@@ -4,21 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteDnsGtmAddressPoolResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteDnsGtmAddressPoolResponseBody body;
 
     public static DeleteDnsGtmAddressPoolResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDnsGtmAddressPoolResponse self = new DeleteDnsGtmAddressPoolResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDnsGtmAddressPoolResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteDnsGtmAddressPoolResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteDnsGtmAddressPoolResponse setBody(DeleteDnsGtmAddressPoolResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteDnsGtmAddressPoolResponseBody getBody() {
+        return this.body;
     }
 
 }

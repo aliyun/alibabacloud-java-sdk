@@ -11,7 +11,6 @@ public class DescribeDomainRecordInfoRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("RecordId")
-    @Validation(required = true)
     public String recordId;
 
     public static DescribeDomainRecordInfoRequest build(java.util.Map<String, ?> map) throws Exception {

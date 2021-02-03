@@ -19,6 +19,12 @@ public class DescribeDohSubDomainStatisticsSummaryRequest extends TeaModel {
     @NameInMap("EndDate")
     public String endDate;
 
+    @NameInMap("OrderBy")
+    public String orderBy;
+
+    @NameInMap("Direction")
+    public String direction;
+
     @NameInMap("SubDomain")
     public String subDomain;
 
@@ -68,6 +74,22 @@ public class DescribeDohSubDomainStatisticsSummaryRequest extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public DescribeDohSubDomainStatisticsSummaryRequest setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    public DescribeDohSubDomainStatisticsSummaryRequest setDirection(String direction) {
+        this.direction = direction;
+        return this;
+    }
+    public String getDirection() {
+        return this.direction;
     }
 
     public DescribeDohSubDomainStatisticsSummaryRequest setSubDomain(String subDomain) {

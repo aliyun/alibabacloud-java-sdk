@@ -8,15 +8,16 @@ public class TransferDomainRequest extends TeaModel {
     public String lang;
 
     @NameInMap("DomainNames")
-    @Validation(required = true)
     public String domainNames;
 
     @NameInMap("Remark")
     public String remark;
 
     @NameInMap("TargetUserId")
-    @Validation(required = true)
     public Long targetUserId;
+
+    @NameInMap("UserClientIp")
+    public String userClientIp;
 
     public static TransferDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferDomainRequest self = new TransferDomainRequest();
@@ -53,6 +54,14 @@ public class TransferDomainRequest extends TeaModel {
     }
     public Long getTargetUserId() {
         return this.targetUserId;
+    }
+
+    public TransferDomainRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

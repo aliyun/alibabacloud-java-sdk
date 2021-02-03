@@ -4,45 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DeleteSubDomainRecordsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RR")
+    @NameInMap("body")
     @Validation(required = true)
-    public String RR;
-
-    @NameInMap("TotalCount")
-    @Validation(required = true)
-    public String totalCount;
+    public DeleteSubDomainRecordsResponseBody body;
 
     public static DeleteSubDomainRecordsResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteSubDomainRecordsResponse self = new DeleteSubDomainRecordsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSubDomainRecordsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteSubDomainRecordsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteSubDomainRecordsResponse setRR(String RR) {
-        this.RR = RR;
+    public DeleteSubDomainRecordsResponse setBody(DeleteSubDomainRecordsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRR() {
-        return this.RR;
-    }
-
-    public DeleteSubDomainRecordsResponse setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
+    public DeleteSubDomainRecordsResponseBody getBody() {
+        return this.body;
     }
 
 }

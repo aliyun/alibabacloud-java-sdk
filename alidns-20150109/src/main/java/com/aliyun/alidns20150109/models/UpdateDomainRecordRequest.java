@@ -11,19 +11,15 @@ public class UpdateDomainRecordRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("RecordId")
-    @Validation(required = true)
     public String recordId;
 
     @NameInMap("RR")
-    @Validation(required = true)
     public String RR;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("Value")
-    @Validation(required = true)
     public String value;
 
     @NameInMap("TTL")

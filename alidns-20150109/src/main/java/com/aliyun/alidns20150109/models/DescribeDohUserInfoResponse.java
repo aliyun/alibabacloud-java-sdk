@@ -4,57 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDohUserInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PdnsId")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long pdnsId;
-
-    @NameInMap("DomainCount")
-    @Validation(required = true)
-    public Integer domainCount;
-
-    @NameInMap("SubDomainCount")
-    @Validation(required = true)
-    public Integer subDomainCount;
+    public DescribeDohUserInfoResponseBody body;
 
     public static DescribeDohUserInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDohUserInfoResponse self = new DescribeDohUserInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDohUserInfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDohUserInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDohUserInfoResponse setPdnsId(Long pdnsId) {
-        this.pdnsId = pdnsId;
+    public DescribeDohUserInfoResponse setBody(DescribeDohUserInfoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getPdnsId() {
-        return this.pdnsId;
-    }
-
-    public DescribeDohUserInfoResponse setDomainCount(Integer domainCount) {
-        this.domainCount = domainCount;
-        return this;
-    }
-    public Integer getDomainCount() {
-        return this.domainCount;
-    }
-
-    public DescribeDohUserInfoResponse setSubDomainCount(Integer subDomainCount) {
-        this.subDomainCount = subDomainCount;
-        return this;
-    }
-    public Integer getSubDomainCount() {
-        return this.subDomainCount;
+    public DescribeDohUserInfoResponseBody getBody() {
+        return this.body;
     }
 
 }

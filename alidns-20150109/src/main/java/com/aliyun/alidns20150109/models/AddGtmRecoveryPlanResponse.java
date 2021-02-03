@@ -4,33 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddGtmRecoveryPlanResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RecoveryPlanId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String recoveryPlanId;
+    public AddGtmRecoveryPlanResponseBody body;
 
     public static AddGtmRecoveryPlanResponse build(java.util.Map<String, ?> map) throws Exception {
         AddGtmRecoveryPlanResponse self = new AddGtmRecoveryPlanResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddGtmRecoveryPlanResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AddGtmRecoveryPlanResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AddGtmRecoveryPlanResponse setRecoveryPlanId(String recoveryPlanId) {
-        this.recoveryPlanId = recoveryPlanId;
+    public AddGtmRecoveryPlanResponse setBody(AddGtmRecoveryPlanResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRecoveryPlanId() {
-        return this.recoveryPlanId;
+    public AddGtmRecoveryPlanResponseBody getBody() {
+        return this.body;
     }
 
 }

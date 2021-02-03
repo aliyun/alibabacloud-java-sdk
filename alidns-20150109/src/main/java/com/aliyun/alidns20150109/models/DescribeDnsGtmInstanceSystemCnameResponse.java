@@ -4,33 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceSystemCnameResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SystemCname")
+    @NameInMap("body")
     @Validation(required = true)
-    public String systemCname;
+    public DescribeDnsGtmInstanceSystemCnameResponseBody body;
 
     public static DescribeDnsGtmInstanceSystemCnameResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsGtmInstanceSystemCnameResponse self = new DescribeDnsGtmInstanceSystemCnameResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDnsGtmInstanceSystemCnameResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDnsGtmInstanceSystemCnameResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDnsGtmInstanceSystemCnameResponse setSystemCname(String systemCname) {
-        this.systemCname = systemCname;
+    public DescribeDnsGtmInstanceSystemCnameResponse setBody(DescribeDnsGtmInstanceSystemCnameResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getSystemCname() {
-        return this.systemCname;
+    public DescribeDnsGtmInstanceSystemCnameResponseBody getBody() {
+        return this.body;
     }
 
 }

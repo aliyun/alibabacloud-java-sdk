@@ -4,21 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDnsGtmInstanceGlobalConfigResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateDnsGtmInstanceGlobalConfigResponseBody body;
 
     public static UpdateDnsGtmInstanceGlobalConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateDnsGtmInstanceGlobalConfigResponse self = new UpdateDnsGtmInstanceGlobalConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDnsGtmInstanceGlobalConfigResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateDnsGtmInstanceGlobalConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateDnsGtmInstanceGlobalConfigResponse setBody(UpdateDnsGtmInstanceGlobalConfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateDnsGtmInstanceGlobalConfigResponseBody getBody() {
+        return this.body;
     }
 
 }

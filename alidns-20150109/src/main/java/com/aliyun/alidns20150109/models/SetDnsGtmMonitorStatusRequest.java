@@ -4,20 +4,29 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SetDnsGtmMonitorStatusRequest extends TeaModel {
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("MonitorConfigId")
-    @Validation(required = true)
     public String monitorConfigId;
 
     @NameInMap("Status")
-    @Validation(required = true)
     public String status;
 
     public static SetDnsGtmMonitorStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDnsGtmMonitorStatusRequest self = new SetDnsGtmMonitorStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SetDnsGtmMonitorStatusRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
     public SetDnsGtmMonitorStatusRequest setLang(String lang) {

@@ -10,6 +10,9 @@ public class DescribeCustomLineRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
+    @NameInMap("UserClientIp")
+    public String userClientIp;
+
     public static DescribeCustomLineRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCustomLineRequest self = new DescribeCustomLineRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeCustomLineRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeCustomLineRequest setUserClientIp(String userClientIp) {
+        this.userClientIp = userClientIp;
+        return this;
+    }
+    public String getUserClientIp() {
+        return this.userClientIp;
     }
 
 }

@@ -11,7 +11,6 @@ public class DescribeRecordLogsRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("PageNumber")
