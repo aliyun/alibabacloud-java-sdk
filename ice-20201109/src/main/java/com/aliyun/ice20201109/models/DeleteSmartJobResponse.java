@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ice20201109.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteSmartJobResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteSmartJobResponseBody body;
+
+    public static DeleteSmartJobResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteSmartJobResponse self = new DeleteSmartJobResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteSmartJobResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteSmartJobResponse setBody(DeleteSmartJobResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteSmartJobResponseBody getBody() {
+        return this.body;
+    }
+
+}

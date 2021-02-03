@@ -129,6 +129,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteMediaInfosWithOptions(request, runtime);
     }
 
+    public DeleteSmartJobResponse deleteSmartJobWithOptions(DeleteSmartJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteSmartJob", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteSmartJobResponse());
+    }
+
+    public DeleteSmartJobResponse deleteSmartJob(DeleteSmartJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteSmartJobWithOptions(request, runtime);
+    }
+
     public DescribeIceProductStatusResponse describeIceProductStatusWithOptions(RuntimeOptions runtime) throws Exception {
         OpenApiRequest req = new OpenApiRequest();
         return TeaModel.toModel(this.doRPCRequest("DescribeIceProductStatus", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeIceProductStatusResponse());
@@ -190,6 +203,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMediaProducingJobWithOptions(request, runtime);
     }
 
+    public GetSmartHandleJobResponse getSmartHandleJobWithOptions(GetSmartHandleJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetSmartHandleJob", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime), new GetSmartHandleJobResponse());
+    }
+
+    public GetSmartHandleJobResponse getSmartHandleJob(GetSmartHandleJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getSmartHandleJobWithOptions(request, runtime);
+    }
+
     public ListAllPublicMediaTagsResponse listAllPublicMediaTagsWithOptions(ListAllPublicMediaTagsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -242,6 +269,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listPublicMediaBasicInfosWithOptions(request, runtime);
     }
 
+    public ListSmartJobsResponse listSmartJobsWithOptions(ListSmartJobsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListSmartJobs", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime), new ListSmartJobsResponse());
+    }
+
+    public ListSmartJobsResponse listSmartJobs(ListSmartJobsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listSmartJobsWithOptions(request, runtime);
+    }
+
     public RegisterMediaInfoResponse registerMediaInfoWithOptions(RegisterMediaInfoRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -268,6 +309,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.searchEditingProjectWithOptions(request, runtime);
     }
 
+    public SubmitASRJobResponse submitASRJobWithOptions(SubmitASRJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitASRJob", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitASRJobResponse());
+    }
+
+    public SubmitASRJobResponse submitASRJob(SubmitASRJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitASRJobWithOptions(request, runtime);
+    }
+
+    public SubmitIRJobResponse submitIRJobWithOptions(SubmitIRJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitIRJob", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitIRJobResponse());
+    }
+
+    public SubmitIRJobResponse submitIRJob(SubmitIRJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitIRJobWithOptions(request, runtime);
+    }
+
+    public SubmitKeyWordCutJobResponse submitKeyWordCutJobWithOptions(SubmitKeyWordCutJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitKeyWordCutJob", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime), new SubmitKeyWordCutJobResponse());
+    }
+
+    public SubmitKeyWordCutJobResponse submitKeyWordCutJob(SubmitKeyWordCutJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitKeyWordCutJobWithOptions(request, runtime);
+    }
+
     public SubmitMediaProducingJobResponse submitMediaProducingJobWithOptions(SubmitMediaProducingJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -279,6 +360,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitMediaProducingJobResponse submitMediaProducingJob(SubmitMediaProducingJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitMediaProducingJobWithOptions(request, runtime);
+    }
+
+    public SubmitPPTCutJobResponse submitPPTCutJobWithOptions(SubmitPPTCutJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitPPTCutJob", "2020-11-09", "HTTPS", "GET", "AK", "json", req, runtime), new SubmitPPTCutJobResponse());
+    }
+
+    public SubmitPPTCutJobResponse submitPPTCutJob(SubmitPPTCutJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitPPTCutJobWithOptions(request, runtime);
+    }
+
+    public SubmitSmartJobResponse submitSmartJobWithOptions(SubmitSmartJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitSmartJob", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitSmartJobResponse());
+    }
+
+    public SubmitSmartJobResponse submitSmartJob(SubmitSmartJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitSmartJobWithOptions(request, runtime);
+    }
+
+    public SubmitSubtitleProduceJobResponse submitSubtitleProduceJobWithOptions(SubmitSubtitleProduceJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitSubtitleProduceJob", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitSubtitleProduceJobResponse());
+    }
+
+    public SubmitSubtitleProduceJobResponse submitSubtitleProduceJob(SubmitSubtitleProduceJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitSubtitleProduceJobWithOptions(request, runtime);
     }
 
     public UpdateEditingProjectResponse updateEditingProjectWithOptions(UpdateEditingProjectRequest request, RuntimeOptions runtime) throws Exception {
@@ -305,5 +426,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateMediaInfoResponse updateMediaInfo(UpdateMediaInfoRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateMediaInfoWithOptions(request, runtime);
+    }
+
+    public UpdateSmartJobResponse updateSmartJobWithOptions(UpdateSmartJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateSmartJob", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateSmartJobResponse());
+    }
+
+    public UpdateSmartJobResponse updateSmartJob(UpdateSmartJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateSmartJobWithOptions(request, runtime);
     }
 }
