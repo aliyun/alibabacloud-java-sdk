@@ -8,13 +8,12 @@ public class MoveDomainResourceGroupRequest extends TeaModel {
     public String lang;
 
     @NameInMap("ResourceId")
+    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("NewResourceGroupId")
+    @Validation(required = true)
     public String newResourceGroupId;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     public static MoveDomainResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         MoveDomainResourceGroupRequest self = new MoveDomainResourceGroupRequest();
@@ -43,14 +42,6 @@ public class MoveDomainResourceGroupRequest extends TeaModel {
     }
     public String getNewResourceGroupId() {
         return this.newResourceGroupId;
-    }
-
-    public MoveDomainResourceGroupRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
 }

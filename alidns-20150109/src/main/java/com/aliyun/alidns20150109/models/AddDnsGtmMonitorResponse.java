@@ -4,33 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddDnsGtmMonitorResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("MonitorConfigId")
     @Validation(required = true)
-    public AddDnsGtmMonitorResponseBody body;
+    public String monitorConfigId;
 
     public static AddDnsGtmMonitorResponse build(java.util.Map<String, ?> map) throws Exception {
         AddDnsGtmMonitorResponse self = new AddDnsGtmMonitorResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddDnsGtmMonitorResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddDnsGtmMonitorResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddDnsGtmMonitorResponse setBody(AddDnsGtmMonitorResponseBody body) {
-        this.body = body;
+    public AddDnsGtmMonitorResponse setMonitorConfigId(String monitorConfigId) {
+        this.monitorConfigId = monitorConfigId;
         return this;
     }
-    public AddDnsGtmMonitorResponseBody getBody() {
-        return this.body;
+    public String getMonitorConfigId() {
+        return this.monitorConfigId;
     }
 
 }

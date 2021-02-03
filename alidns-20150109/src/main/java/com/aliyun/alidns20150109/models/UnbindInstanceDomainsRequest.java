@@ -7,13 +7,12 @@ public class UnbindInstanceDomainsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("DomainNames")
+    @Validation(required = true)
     public String domainNames;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     public static UnbindInstanceDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -27,14 +26,6 @@ public class UnbindInstanceDomainsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public UnbindInstanceDomainsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public UnbindInstanceDomainsRequest setDomainNames(String domainNames) {

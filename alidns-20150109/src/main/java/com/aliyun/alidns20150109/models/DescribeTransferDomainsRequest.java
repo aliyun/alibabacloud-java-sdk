@@ -7,9 +7,6 @@ public class DescribeTransferDomainsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("PageNumber")
     public Long pageNumber;
 
@@ -17,6 +14,7 @@ public class DescribeTransferDomainsRequest extends TeaModel {
     public Long pageSize;
 
     @NameInMap("TransferType")
+    @Validation(required = true)
     public String transferType;
 
     @NameInMap("DomainName")
@@ -39,14 +37,6 @@ public class DescribeTransferDomainsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeTransferDomainsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeTransferDomainsRequest setPageNumber(Long pageNumber) {

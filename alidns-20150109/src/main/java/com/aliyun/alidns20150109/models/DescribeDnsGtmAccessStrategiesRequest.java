@@ -7,10 +7,8 @@ public class DescribeDnsGtmAccessStrategiesRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("PageNumber")
@@ -20,6 +18,7 @@ public class DescribeDnsGtmAccessStrategiesRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("StrategyMode")
+    @Validation(required = true)
     public String strategyMode;
 
     public static DescribeDnsGtmAccessStrategiesRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -33,14 +32,6 @@ public class DescribeDnsGtmAccessStrategiesRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeDnsGtmAccessStrategiesRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeDnsGtmAccessStrategiesRequest setInstanceId(String instanceId) {

@@ -7,17 +7,15 @@ public class UpdateCustomLineRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("LineName")
     public String lineName;
 
-    @NameInMap("LineId")
-    public Long lineId;
-
     @NameInMap("IpSegment")
     public java.util.List<UpdateCustomLineRequestIpSegment> ipSegment;
+
+    @NameInMap("LineId")
+    @Validation(required = true)
+    public Long lineId;
 
     public static UpdateCustomLineRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCustomLineRequest self = new UpdateCustomLineRequest();
@@ -32,28 +30,12 @@ public class UpdateCustomLineRequest extends TeaModel {
         return this.lang;
     }
 
-    public UpdateCustomLineRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
-    }
-
     public UpdateCustomLineRequest setLineName(String lineName) {
         this.lineName = lineName;
         return this;
     }
     public String getLineName() {
         return this.lineName;
-    }
-
-    public UpdateCustomLineRequest setLineId(Long lineId) {
-        this.lineId = lineId;
-        return this;
-    }
-    public Long getLineId() {
-        return this.lineId;
     }
 
     public UpdateCustomLineRequest setIpSegment(java.util.List<UpdateCustomLineRequestIpSegment> ipSegment) {
@@ -64,24 +46,24 @@ public class UpdateCustomLineRequest extends TeaModel {
         return this.ipSegment;
     }
 
-    public static class UpdateCustomLineRequestIpSegment extends TeaModel {
-        @NameInMap("EndIp")
-        public String endIp;
+    public UpdateCustomLineRequest setLineId(Long lineId) {
+        this.lineId = lineId;
+        return this;
+    }
+    public Long getLineId() {
+        return this.lineId;
+    }
 
+    public static class UpdateCustomLineRequestIpSegment extends TeaModel {
         @NameInMap("StartIp")
         public String startIp;
+
+        @NameInMap("EndIp")
+        public String endIp;
 
         public static UpdateCustomLineRequestIpSegment build(java.util.Map<String, ?> map) throws Exception {
             UpdateCustomLineRequestIpSegment self = new UpdateCustomLineRequestIpSegment();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateCustomLineRequestIpSegment setEndIp(String endIp) {
-            this.endIp = endIp;
-            return this;
-        }
-        public String getEndIp() {
-            return this.endIp;
         }
 
         public UpdateCustomLineRequestIpSegment setStartIp(String startIp) {
@@ -90,6 +72,14 @@ public class UpdateCustomLineRequest extends TeaModel {
         }
         public String getStartIp() {
             return this.startIp;
+        }
+
+        public UpdateCustomLineRequestIpSegment setEndIp(String endIp) {
+            this.endIp = endIp;
+            return this;
+        }
+        public String getEndIp() {
+            return this.endIp;
         }
 
     }

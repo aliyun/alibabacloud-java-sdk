@@ -11,10 +11,8 @@ public class GetTxtRecordForVerifyRequest extends TeaModel {
     public String domainName;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
-
-    @NameInMap("UserClientIp")
-    public String userClientIp;
 
     public static GetTxtRecordForVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         GetTxtRecordForVerifyRequest self = new GetTxtRecordForVerifyRequest();
@@ -43,14 +41,6 @@ public class GetTxtRecordForVerifyRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
-    }
-
-    public GetTxtRecordForVerifyRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
 }

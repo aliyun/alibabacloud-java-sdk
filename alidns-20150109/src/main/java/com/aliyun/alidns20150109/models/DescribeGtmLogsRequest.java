@@ -4,9 +4,6 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeGtmLogsRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("Lang")
     public String lang;
 
@@ -31,14 +28,6 @@ public class DescribeGtmLogsRequest extends TeaModel {
     public static DescribeGtmLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGtmLogsRequest self = new DescribeGtmLogsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGtmLogsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeGtmLogsRequest setLang(String lang) {

@@ -4,33 +4,21 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class SwitchDnsGtmInstanceStrategyModeResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public SwitchDnsGtmInstanceStrategyModeResponseBody body;
+    public String requestId;
 
     public static SwitchDnsGtmInstanceStrategyModeResponse build(java.util.Map<String, ?> map) throws Exception {
         SwitchDnsGtmInstanceStrategyModeResponse self = new SwitchDnsGtmInstanceStrategyModeResponse();
         return TeaModel.build(map, self);
     }
 
-    public SwitchDnsGtmInstanceStrategyModeResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SwitchDnsGtmInstanceStrategyModeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public SwitchDnsGtmInstanceStrategyModeResponse setBody(SwitchDnsGtmInstanceStrategyModeResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public SwitchDnsGtmInstanceStrategyModeResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -4,13 +4,11 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class DescribeDnsGtmInstanceAddressPoolsRequest extends TeaModel {
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("Lang")
     public String lang;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("PageNumber")
@@ -22,14 +20,6 @@ public class DescribeDnsGtmInstanceAddressPoolsRequest extends TeaModel {
     public static DescribeDnsGtmInstanceAddressPoolsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDnsGtmInstanceAddressPoolsRequest self = new DescribeDnsGtmInstanceAddressPoolsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDnsGtmInstanceAddressPoolsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeDnsGtmInstanceAddressPoolsRequest setLang(String lang) {

@@ -7,13 +7,12 @@ public class UpdateDomainGroupRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("GroupId")
+    @Validation(required = true)
     public String groupId;
 
     @NameInMap("GroupName")
+    @Validation(required = true)
     public String groupName;
 
     public static UpdateDomainGroupRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -27,14 +26,6 @@ public class UpdateDomainGroupRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public UpdateDomainGroupRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public UpdateDomainGroupRequest setGroupId(String groupId) {

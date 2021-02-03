@@ -11,6 +11,7 @@ public class DescribeDnsProductInstanceRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     public static DescribeDnsProductInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,33 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class TransferDomainResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("TaskId")
     @Validation(required = true)
-    public TransferDomainResponseBody body;
+    public Long taskId;
 
     public static TransferDomainResponse build(java.util.Map<String, ?> map) throws Exception {
         TransferDomainResponse self = new TransferDomainResponse();
         return TeaModel.build(map, self);
     }
 
-    public TransferDomainResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public TransferDomainResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public TransferDomainResponse setBody(TransferDomainResponseBody body) {
-        this.body = body;
+    public TransferDomainResponse setTaskId(Long taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public TransferDomainResponseBody getBody() {
-        return this.body;
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

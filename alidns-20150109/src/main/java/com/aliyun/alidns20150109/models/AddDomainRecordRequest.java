@@ -11,15 +11,19 @@ public class AddDomainRecordRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("DomainName")
+    @Validation(required = true)
     public String domainName;
 
     @NameInMap("RR")
+    @Validation(required = true)
     public String RR;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     @NameInMap("Value")
+    @Validation(required = true)
     public String value;
 
     @NameInMap("TTL")

@@ -4,33 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class AddGtmAccessStrategyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("StrategyId")
     @Validation(required = true)
-    public AddGtmAccessStrategyResponseBody body;
+    public String strategyId;
 
     public static AddGtmAccessStrategyResponse build(java.util.Map<String, ?> map) throws Exception {
         AddGtmAccessStrategyResponse self = new AddGtmAccessStrategyResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddGtmAccessStrategyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddGtmAccessStrategyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddGtmAccessStrategyResponse setBody(AddGtmAccessStrategyResponseBody body) {
-        this.body = body;
+    public AddGtmAccessStrategyResponse setStrategyId(String strategyId) {
+        this.strategyId = strategyId;
         return this;
     }
-    public AddGtmAccessStrategyResponseBody getBody() {
-        return this.body;
+    public String getStrategyId() {
+        return this.strategyId;
     }
 
 }

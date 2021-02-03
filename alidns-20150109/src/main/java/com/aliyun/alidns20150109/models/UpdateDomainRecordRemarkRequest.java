@@ -11,6 +11,7 @@ public class UpdateDomainRecordRemarkRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("RecordId")
+    @Validation(required = true)
     public String recordId;
 
     @NameInMap("Remark")

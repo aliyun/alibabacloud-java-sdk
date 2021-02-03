@@ -11,9 +11,11 @@ public class SetDomainRecordStatusRequest extends TeaModel {
     public String userClientIp;
 
     @NameInMap("RecordId")
+    @Validation(required = true)
     public String recordId;
 
     @NameInMap("Status")
+    @Validation(required = true)
     public String status;
 
     public static SetDomainRecordStatusRequest build(java.util.Map<String, ?> map) throws Exception {

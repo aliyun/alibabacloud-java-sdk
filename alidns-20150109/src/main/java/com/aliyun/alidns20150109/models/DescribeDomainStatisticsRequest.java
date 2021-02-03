@@ -7,13 +7,12 @@ public class DescribeDomainStatisticsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("DomainName")
+    @Validation(required = true)
     public String domainName;
 
     @NameInMap("StartDate")
+    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
@@ -33,14 +32,6 @@ public class DescribeDomainStatisticsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeDomainStatisticsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeDomainStatisticsRequest setDomainName(String domainName) {

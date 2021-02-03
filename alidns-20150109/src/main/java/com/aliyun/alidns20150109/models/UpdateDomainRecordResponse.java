@@ -4,33 +4,33 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class UpdateDomainRecordResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("RecordId")
     @Validation(required = true)
-    public UpdateDomainRecordResponseBody body;
+    public String recordId;
 
     public static UpdateDomainRecordResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateDomainRecordResponse self = new UpdateDomainRecordResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDomainRecordResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateDomainRecordResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateDomainRecordResponse setBody(UpdateDomainRecordResponseBody body) {
-        this.body = body;
+    public UpdateDomainRecordResponse setRecordId(String recordId) {
+        this.recordId = recordId;
         return this;
     }
-    public UpdateDomainRecordResponseBody getBody() {
-        return this.body;
+    public String getRecordId() {
+        return this.recordId;
     }
 
 }

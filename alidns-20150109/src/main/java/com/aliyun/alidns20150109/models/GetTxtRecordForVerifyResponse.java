@@ -4,33 +4,57 @@ package com.aliyun.alidns20150109.models;
 import com.aliyun.tea.*;
 
 public class GetTxtRecordForVerifyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("DomainName")
     @Validation(required = true)
-    public GetTxtRecordForVerifyResponseBody body;
+    public String domainName;
+
+    @NameInMap("RR")
+    @Validation(required = true)
+    public String RR;
+
+    @NameInMap("Value")
+    @Validation(required = true)
+    public String value;
 
     public static GetTxtRecordForVerifyResponse build(java.util.Map<String, ?> map) throws Exception {
         GetTxtRecordForVerifyResponse self = new GetTxtRecordForVerifyResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetTxtRecordForVerifyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetTxtRecordForVerifyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetTxtRecordForVerifyResponse setBody(GetTxtRecordForVerifyResponseBody body) {
-        this.body = body;
+    public GetTxtRecordForVerifyResponse setDomainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
-    public GetTxtRecordForVerifyResponseBody getBody() {
-        return this.body;
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public GetTxtRecordForVerifyResponse setRR(String RR) {
+        this.RR = RR;
+        return this;
+    }
+    public String getRR() {
+        return this.RR;
+    }
+
+    public GetTxtRecordForVerifyResponse setValue(String value) {
+        this.value = value;
+        return this;
+    }
+    public String getValue() {
+        return this.value;
     }
 
 }

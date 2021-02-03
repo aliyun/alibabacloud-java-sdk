@@ -7,10 +7,8 @@ public class DescribeDnsGtmAccessStrategyRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("StrategyId")
+    @Validation(required = true)
     public String strategyId;
 
     public static DescribeDnsGtmAccessStrategyRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -24,14 +22,6 @@ public class DescribeDnsGtmAccessStrategyRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeDnsGtmAccessStrategyRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeDnsGtmAccessStrategyRequest setStrategyId(String strategyId) {
