@@ -4,33 +4,57 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class UnsubscribeBillToOSSResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public UnsubscribeBillToOSSResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
 
     public static UnsubscribeBillToOSSResponse build(java.util.Map<String, ?> map) throws Exception {
         UnsubscribeBillToOSSResponse self = new UnsubscribeBillToOSSResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnsubscribeBillToOSSResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UnsubscribeBillToOSSResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UnsubscribeBillToOSSResponse setBody(UnsubscribeBillToOSSResponseBody body) {
-        this.body = body;
+    public UnsubscribeBillToOSSResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public UnsubscribeBillToOSSResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UnsubscribeBillToOSSResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UnsubscribeBillToOSSResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

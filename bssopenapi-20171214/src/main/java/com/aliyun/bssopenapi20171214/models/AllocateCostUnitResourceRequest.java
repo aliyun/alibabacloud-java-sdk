@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class AllocateCostUnitResourceRequest extends TeaModel {
     @NameInMap("FromUnitUserId")
+    @Validation(required = true)
     public Long fromUnitUserId;
 
     @NameInMap("FromUnitId")
+    @Validation(required = true)
     public Long fromUnitId;
 
     @NameInMap("ToUnitUserId")
+    @Validation(required = true)
     public Long toUnitUserId;
 
     @NameInMap("ToUnitId")
+    @Validation(required = true)
     public Long toUnitId;
 
     @NameInMap("ResourceInstanceList")
+    @Validation(required = true)
     public java.util.List<AllocateCostUnitResourceRequestResourceInstanceList> resourceInstanceList;
 
     public static AllocateCostUnitResourceRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -69,12 +74,15 @@ public class AllocateCostUnitResourceRequest extends TeaModel {
         public String apportionCode;
 
         @NameInMap("CommodityCode")
+        @Validation(required = true)
         public String commodityCode;
 
         @NameInMap("ResourceId")
+        @Validation(required = true)
         public String resourceId;
 
         @NameInMap("ResourceUserId")
+        @Validation(required = true)
         public Long resourceUserId;
 
         public static AllocateCostUnitResourceRequestResourceInstanceList build(java.util.Map<String, ?> map) throws Exception {

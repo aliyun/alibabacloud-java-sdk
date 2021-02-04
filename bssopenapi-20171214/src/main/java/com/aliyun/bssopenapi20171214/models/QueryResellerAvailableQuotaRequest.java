@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryResellerAvailableQuotaRequest extends TeaModel {
     @NameInMap("OwnerId")
+    @Validation(required = true)
     public Long ownerId;
 
     @NameInMap("ItemCodes")

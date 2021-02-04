@@ -4,33 +4,69 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetResellerUserStatusResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public SetResellerUserStatusResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public Boolean data;
 
     public static SetResellerUserStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         SetResellerUserStatusResponse self = new SetResellerUserStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetResellerUserStatusResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SetResellerUserStatusResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SetResellerUserStatusResponse setBody(SetResellerUserStatusResponseBody body) {
-        this.body = body;
+    public SetResellerUserStatusResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public SetResellerUserStatusResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public SetResellerUserStatusResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public SetResellerUserStatusResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SetResellerUserStatusResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
 }

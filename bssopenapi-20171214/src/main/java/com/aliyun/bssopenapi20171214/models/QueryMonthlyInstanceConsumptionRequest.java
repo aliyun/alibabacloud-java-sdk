@@ -17,6 +17,7 @@ public class QueryMonthlyInstanceConsumptionRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("BillingCycle")
+    @Validation(required = true)
     public String billingCycle;
 
     @NameInMap("ProductType")

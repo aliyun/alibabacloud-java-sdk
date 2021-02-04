@@ -4,33 +4,89 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public RenewInstanceResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public RenewInstanceResponseData data;
 
     public static RenewInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceResponse self = new RenewInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public RenewInstanceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public RenewInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public RenewInstanceResponse setBody(RenewInstanceResponseBody body) {
-        this.body = body;
+    public RenewInstanceResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public RenewInstanceResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public RenewInstanceResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public RenewInstanceResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public RenewInstanceResponse setData(RenewInstanceResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public RenewInstanceResponseData getData() {
+        return this.data;
+    }
+
+    public static class RenewInstanceResponseData extends TeaModel {
+        @NameInMap("OrderId")
+        @Validation(required = true)
+        public String orderId;
+
+        public static RenewInstanceResponseData build(java.util.Map<String, ?> map) throws Exception {
+            RenewInstanceResponseData self = new RenewInstanceResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public RenewInstanceResponseData setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
+        }
+
     }
 
 }

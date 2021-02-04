@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateResellerUserQuotaRequest extends TeaModel {
     @NameInMap("OwnerId")
+    @Validation(required = true)
     public Long ownerId;
 
     @NameInMap("Amount")
+    @Validation(required = true)
     public String amount;
 
     @NameInMap("Currency")
+    @Validation(required = true)
     public String currency;
 
     @NameInMap("OutBizId")

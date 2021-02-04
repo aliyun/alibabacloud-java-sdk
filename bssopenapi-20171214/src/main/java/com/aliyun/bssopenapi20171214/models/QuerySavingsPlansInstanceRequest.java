@@ -5,24 +5,29 @@ import com.aliyun.tea.*;
 
 public class QuerySavingsPlansInstanceRequest extends TeaModel {
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Locale")
     public String locale;
 
     @NameInMap("PageNum")
+    @Validation(required = true)
     public Integer pageNum;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RequestId")
+    @Validation(required = true)
     public String requestId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public String endTime;
 
     public static QuerySavingsPlansInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

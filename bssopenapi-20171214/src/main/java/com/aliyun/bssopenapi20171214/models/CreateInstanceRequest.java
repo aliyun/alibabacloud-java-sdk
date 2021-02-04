@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ProductCode")
+    @Validation(required = true)
     public String productCode;
+
+    @NameInMap("Parameter")
+    public java.util.List<CreateInstanceRequestParameter> parameter;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -14,6 +18,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String productType;
 
     @NameInMap("SubscriptionType")
+    @Validation(required = true)
     public String subscriptionType;
 
     @NameInMap("Period")
@@ -28,8 +33,8 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("Parameter")
-    public java.util.List<CreateInstanceRequestParameter> parameter;
+    @NameInMap("Logistics")
+    public String logistics;
 
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
@@ -42,6 +47,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getProductCode() {
         return this.productCode;
+    }
+
+    public CreateInstanceRequest setParameter(java.util.List<CreateInstanceRequestParameter> parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestParameter> getParameter() {
+        return this.parameter;
     }
 
     public CreateInstanceRequest setOwnerId(Long ownerId) {
@@ -100,19 +113,21 @@ public class CreateInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateInstanceRequest setParameter(java.util.List<CreateInstanceRequestParameter> parameter) {
-        this.parameter = parameter;
+    public CreateInstanceRequest setLogistics(String logistics) {
+        this.logistics = logistics;
         return this;
     }
-    public java.util.List<CreateInstanceRequestParameter> getParameter() {
-        return this.parameter;
+    public String getLogistics() {
+        return this.logistics;
     }
 
     public static class CreateInstanceRequestParameter extends TeaModel {
         @NameInMap("Code")
+        @Validation(required = true)
         public String code;
 
         @NameInMap("Value")
+        @Validation(required = true)
         public String value;
 
         public static CreateInstanceRequestParameter build(java.util.Map<String, ?> map) throws Exception {

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAgAccountRequest extends TeaModel {
     @NameInMap("LoginEmail")
+    @Validation(required = true)
     public String loginEmail;
 
     @NameInMap("AccountAttr")

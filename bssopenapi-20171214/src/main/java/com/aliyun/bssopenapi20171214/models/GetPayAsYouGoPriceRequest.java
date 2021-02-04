@@ -8,18 +8,21 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
     public Long ownerId;
 
     @NameInMap("ProductCode")
+    @Validation(required = true)
     public String productCode;
 
     @NameInMap("ProductType")
     public String productType;
 
     @NameInMap("SubscriptionType")
+    @Validation(required = true)
     public String subscriptionType;
 
     @NameInMap("Region")
     public String region;
 
     @NameInMap("ModuleList")
+    @Validation(required = true)
     public java.util.List<GetPayAsYouGoPriceRequestModuleList> moduleList;
 
     public static GetPayAsYouGoPriceRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -76,26 +79,21 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceRequestModuleList extends TeaModel {
-        @NameInMap("Config")
-        public String config;
-
         @NameInMap("ModuleCode")
+        @Validation(required = true)
         public String moduleCode;
 
+        @NameInMap("Config")
+        @Validation(required = true)
+        public String config;
+
         @NameInMap("PriceType")
+        @Validation(required = true)
         public String priceType;
 
         public static GetPayAsYouGoPriceRequestModuleList build(java.util.Map<String, ?> map) throws Exception {
             GetPayAsYouGoPriceRequestModuleList self = new GetPayAsYouGoPriceRequestModuleList();
             return TeaModel.build(map, self);
-        }
-
-        public GetPayAsYouGoPriceRequestModuleList setConfig(String config) {
-            this.config = config;
-            return this;
-        }
-        public String getConfig() {
-            return this.config;
         }
 
         public GetPayAsYouGoPriceRequestModuleList setModuleCode(String moduleCode) {
@@ -104,6 +102,14 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
         }
         public String getModuleCode() {
             return this.moduleCode;
+        }
+
+        public GetPayAsYouGoPriceRequestModuleList setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public GetPayAsYouGoPriceRequestModuleList setPriceType(String priceType) {

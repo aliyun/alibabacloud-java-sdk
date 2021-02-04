@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySplitItemBillRequest extends TeaModel {
     @NameInMap("BillingCycle")
+    @Validation(required = true)
     public String billingCycle;
 
     @NameInMap("ProductCode")

@@ -8,15 +8,19 @@ public class QueryUserOmsDataRequest extends TeaModel {
     public Long ownerId;
 
     @NameInMap("Table")
+    @Validation(required = true)
     public String table;
 
     @NameInMap("DataType")
+    @Validation(required = true)
     public String dataType;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public String endTime;
 
     @NameInMap("Marker")
