@@ -77,6 +77,12 @@ public class DetectIPCObjectResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<DetectIPCObjectResponseBodyDataElements> elements;
 
+        @NameInMap("Width")
+        public Long width;
+
+        @NameInMap("Height")
+        public Long height;
+
         public static DetectIPCObjectResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DetectIPCObjectResponseBodyData self = new DetectIPCObjectResponseBodyData();
             return TeaModel.build(map, self);
@@ -88,6 +94,22 @@ public class DetectIPCObjectResponseBody extends TeaModel {
         }
         public java.util.List<DetectIPCObjectResponseBodyDataElements> getElements() {
             return this.elements;
+        }
+
+        public DetectIPCObjectResponseBodyData setWidth(Long width) {
+            this.width = width;
+            return this;
+        }
+        public Long getWidth() {
+            return this.width;
+        }
+
+        public DetectIPCObjectResponseBodyData setHeight(Long height) {
+            this.height = height;
+            return this;
+        }
+        public Long getHeight() {
+            return this.height;
         }
 
     }
