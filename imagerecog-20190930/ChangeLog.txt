@@ -1,3 +1,6 @@
+2021-02-04 Version: 1.0.1
+- Update TaggingImage.
+
 2021-02-01 Version: 1.0.0
 - Release RecognizeFood.
 

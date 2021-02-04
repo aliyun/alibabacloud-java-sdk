@@ -11,6 +11,9 @@ public class TaggingImageAdvanceRequest extends TeaModel {
     @NameInMap("ImageType")
     public Integer imageType;
 
+    @NameInMap("Async")
+    public Boolean async;
+
     public static TaggingImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         TaggingImageAdvanceRequest self = new TaggingImageAdvanceRequest();
         return TeaModel.build(map, self);
@@ -30,6 +33,14 @@ public class TaggingImageAdvanceRequest extends TeaModel {
     }
     public Integer getImageType() {
         return this.imageType;
+    }
+
+    public TaggingImageAdvanceRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
 }

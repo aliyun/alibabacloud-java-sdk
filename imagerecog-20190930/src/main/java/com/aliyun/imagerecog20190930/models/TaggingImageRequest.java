@@ -10,6 +10,9 @@ public class TaggingImageRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
+    @NameInMap("Async")
+    public Boolean async;
+
     public static TaggingImageRequest build(java.util.Map<String, ?> map) throws Exception {
         TaggingImageRequest self = new TaggingImageRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class TaggingImageRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
+    }
+
+    public TaggingImageRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
 }
