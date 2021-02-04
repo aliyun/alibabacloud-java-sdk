@@ -4,33 +4,69 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SetResellerUserAlarmThresholdResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public SetResellerUserAlarmThresholdResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public Boolean data;
 
     public static SetResellerUserAlarmThresholdResponse build(java.util.Map<String, ?> map) throws Exception {
         SetResellerUserAlarmThresholdResponse self = new SetResellerUserAlarmThresholdResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetResellerUserAlarmThresholdResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SetResellerUserAlarmThresholdResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SetResellerUserAlarmThresholdResponse setBody(SetResellerUserAlarmThresholdResponseBody body) {
-        this.body = body;
+    public SetResellerUserAlarmThresholdResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public SetResellerUserAlarmThresholdResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public SetResellerUserAlarmThresholdResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public SetResellerUserAlarmThresholdResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SetResellerUserAlarmThresholdResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
 }

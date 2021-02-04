@@ -4,33 +4,69 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateResellerUserQuotaResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public CreateResellerUserQuotaResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public Boolean data;
 
     public static CreateResellerUserQuotaResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateResellerUserQuotaResponse self = new CreateResellerUserQuotaResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateResellerUserQuotaResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateResellerUserQuotaResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateResellerUserQuotaResponse setBody(CreateResellerUserQuotaResponseBody body) {
-        this.body = body;
+    public CreateResellerUserQuotaResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public CreateResellerUserQuotaResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateResellerUserQuotaResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CreateResellerUserQuotaResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateResellerUserQuotaResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
 }

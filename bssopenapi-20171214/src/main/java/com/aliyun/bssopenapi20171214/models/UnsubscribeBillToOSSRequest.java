@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnsubscribeBillToOSSRequest extends TeaModel {
     @NameInMap("SubscribeType")
+    @Validation(required = true)
     public String subscribeType;
 
     @NameInMap("MultAccountRelSubscribe")

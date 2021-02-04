@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class SetCreditLabelActionRequest extends TeaModel {
     @NameInMap("ActionType")
+    @Validation(required = true)
     public String actionType;
 
     @NameInMap("Uid")
+    @Validation(required = true)
     public String uid;
 
     @NameInMap("ClearCycle")
     public String clearCycle;
 
     @NameInMap("CreditAmount")
+    @Validation(required = true)
     public String creditAmount;
 
     @NameInMap("CurrencyCode")
@@ -47,12 +50,14 @@ public class SetCreditLabelActionRequest extends TeaModel {
     public String operator;
 
     @NameInMap("RequestId")
+    @Validation(required = true)
     public String requestId;
 
     @NameInMap("SiteCode")
     public String siteCode;
 
     @NameInMap("Source")
+    @Validation(required = true)
     public String source;
 
     public static SetCreditLabelActionRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryCostUnitResourceRequest extends TeaModel {
     @NameInMap("OwnerUid")
+    @Validation(required = true)
     public Long ownerUid;
 
     @NameInMap("UnitId")
+    @Validation(required = true)
     public Long unitId;
 
     @NameInMap("PageNum")

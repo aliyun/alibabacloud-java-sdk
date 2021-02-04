@@ -8,24 +8,29 @@ public class QuerySavingsPlansDeductLogRequest extends TeaModel {
     public String instanceType;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Locale")
     public String locale;
 
     @NameInMap("PageNum")
+    @Validation(required = true)
     public Integer pageNum;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("RequestId")
+    @Validation(required = true)
     public String requestId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public String endTime;
 
     public static QuerySavingsPlansDeductLogRequest build(java.util.Map<String, ?> map) throws Exception {

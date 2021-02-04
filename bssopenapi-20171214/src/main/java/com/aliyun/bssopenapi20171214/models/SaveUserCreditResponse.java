@@ -4,33 +4,57 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SaveUserCreditResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Code")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String code;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public SaveUserCreditResponseBody body;
+    public Boolean success;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
 
     public static SaveUserCreditResponse build(java.util.Map<String, ?> map) throws Exception {
         SaveUserCreditResponse self = new SaveUserCreditResponse();
         return TeaModel.build(map, self);
     }
 
-    public SaveUserCreditResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SaveUserCreditResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getCode() {
+        return this.code;
     }
 
-    public SaveUserCreditResponse setBody(SaveUserCreditResponseBody body) {
-        this.body = body;
+    public SaveUserCreditResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SaveUserCreditResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SaveUserCreditResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public SaveUserCreditResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

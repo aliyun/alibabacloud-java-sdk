@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetOrderDetailRequest extends TeaModel {
     @NameInMap("OrderId")
+    @Validation(required = true)
     public String orderId;
 
     @NameInMap("OwnerId")

@@ -8,6 +8,7 @@ public class SetRenewalRequest extends TeaModel {
     public Integer renewalPeriod;
 
     @NameInMap("InstanceIDs")
+    @Validation(required = true)
     public String instanceIDs;
 
     @NameInMap("OwnerId")
@@ -26,6 +27,7 @@ public class SetRenewalRequest extends TeaModel {
     public String renewalPeriodUnit;
 
     @NameInMap("RenewalStatus")
+    @Validation(required = true)
     public String renewalStatus;
 
     public static SetRenewalRequest build(java.util.Map<String, ?> map) throws Exception {

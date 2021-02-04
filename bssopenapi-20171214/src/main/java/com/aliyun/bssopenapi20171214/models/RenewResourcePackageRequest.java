@@ -8,15 +8,18 @@ public class RenewResourcePackageRequest extends TeaModel {
     public Long ownerId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("EffectiveDate")
     public String effectiveDate;
 
     @NameInMap("Duration")
+    @Validation(required = true)
     public Integer duration;
 
     @NameInMap("PricingCycle")
+    @Validation(required = true)
     public String pricingCycle;
 
     public static RenewResourcePackageRequest build(java.util.Map<String, ?> map) throws Exception {

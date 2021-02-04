@@ -8,6 +8,7 @@ public class QueryProductListRequest extends TeaModel {
     public Boolean queryTotalCount;
 
     @NameInMap("PageNum")
+    @Validation(required = true)
     public Integer pageNum;
 
     @NameInMap("PageSize")
