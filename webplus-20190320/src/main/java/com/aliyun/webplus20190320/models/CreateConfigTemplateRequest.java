@@ -31,6 +31,9 @@ public class CreateConfigTemplateRequest extends TeaModel {
     @NameInMap("OptionSettings")
     public String optionSettings;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateConfigTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConfigTemplateRequest self = new CreateConfigTemplateRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class CreateConfigTemplateRequest extends TeaModel {
     }
     public String getOptionSettings() {
         return this.optionSettings;
+    }
+
+    public CreateConfigTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -13,6 +13,9 @@ public class GatherAppEnvLogRequest extends TeaModel {
     @NameInMap("LogPath")
     public String logPath;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static GatherAppEnvLogRequest build(java.util.Map<String, ?> map) throws Exception {
         GatherAppEnvLogRequest self = new GatherAppEnvLogRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GatherAppEnvLogRequest extends TeaModel {
     }
     public String getLogPath() {
         return this.logPath;
+    }
+
+    public GatherAppEnvLogRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

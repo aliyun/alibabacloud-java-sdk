@@ -31,6 +31,9 @@ public class DescribeAppEnvsRequest extends TeaModel {
     @NameInMap("StackSearch")
     public String stackSearch;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeAppEnvsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAppEnvsRequest self = new DescribeAppEnvsRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class DescribeAppEnvsRequest extends TeaModel {
     }
     public String getStackSearch() {
         return this.stackSearch;
+    }
+
+    public DescribeAppEnvsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

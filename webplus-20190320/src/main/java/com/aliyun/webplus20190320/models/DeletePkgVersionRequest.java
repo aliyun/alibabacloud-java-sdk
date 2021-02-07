@@ -7,6 +7,9 @@ public class DeletePkgVersionRequest extends TeaModel {
     @NameInMap("PkgVersionId")
     public String pkgVersionId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DeletePkgVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePkgVersionRequest self = new DeletePkgVersionRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DeletePkgVersionRequest extends TeaModel {
     }
     public String getPkgVersionId() {
         return this.pkgVersionId;
+    }
+
+    public DeletePkgVersionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -16,6 +16,9 @@ public class DescribeStacksRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeStacksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeStacksRequest self = new DescribeStacksRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DescribeStacksRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
+    }
+
+    public DescribeStacksRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

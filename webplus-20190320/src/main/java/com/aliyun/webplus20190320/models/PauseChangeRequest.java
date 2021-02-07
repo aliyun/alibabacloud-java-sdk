@@ -7,6 +7,9 @@ public class PauseChangeRequest extends TeaModel {
     @NameInMap("ChangeId")
     public String changeId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static PauseChangeRequest build(java.util.Map<String, ?> map) throws Exception {
         PauseChangeRequest self = new PauseChangeRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class PauseChangeRequest extends TeaModel {
     }
     public String getChangeId() {
         return this.changeId;
+    }
+
+    public PauseChangeRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -10,6 +10,9 @@ public class RebuildAppEnvRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static RebuildAppEnvRequest build(java.util.Map<String, ?> map) throws Exception {
         RebuildAppEnvRequest self = new RebuildAppEnvRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class RebuildAppEnvRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public RebuildAppEnvRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

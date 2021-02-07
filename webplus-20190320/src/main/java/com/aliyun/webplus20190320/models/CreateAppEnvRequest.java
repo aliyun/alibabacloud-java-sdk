@@ -37,6 +37,9 @@ public class CreateAppEnvRequest extends TeaModel {
     @NameInMap("ExtraProperties")
     public String extraProperties;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateAppEnvRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppEnvRequest self = new CreateAppEnvRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class CreateAppEnvRequest extends TeaModel {
     }
     public String getExtraProperties() {
         return this.extraProperties;
+    }
+
+    public CreateAppEnvRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

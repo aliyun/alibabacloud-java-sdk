@@ -22,6 +22,9 @@ public class DeployAppEnvRequest extends TeaModel {
     @NameInMap("PkgVersionId")
     public String pkgVersionId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DeployAppEnvRequest build(java.util.Map<String, ?> map) throws Exception {
         DeployAppEnvRequest self = new DeployAppEnvRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class DeployAppEnvRequest extends TeaModel {
     }
     public String getPkgVersionId() {
         return this.pkgVersionId;
+    }
+
+    public DeployAppEnvRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

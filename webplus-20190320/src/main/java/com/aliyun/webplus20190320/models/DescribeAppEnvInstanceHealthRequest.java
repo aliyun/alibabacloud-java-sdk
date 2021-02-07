@@ -7,6 +7,9 @@ public class DescribeAppEnvInstanceHealthRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeAppEnvInstanceHealthRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAppEnvInstanceHealthRequest self = new DescribeAppEnvInstanceHealthRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribeAppEnvInstanceHealthRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public DescribeAppEnvInstanceHealthRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -7,6 +7,9 @@ public class CreateOrderRequest extends TeaModel {
     @NameInMap("ProductName")
     public String productName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderRequest self = new CreateOrderRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class CreateOrderRequest extends TeaModel {
     }
     public String getProductName() {
         return this.productName;
+    }
+
+    public CreateOrderRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

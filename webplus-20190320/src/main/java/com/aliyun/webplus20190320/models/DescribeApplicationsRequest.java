@@ -28,6 +28,9 @@ public class DescribeApplicationsRequest extends TeaModel {
     @NameInMap("CategorySearch")
     public String categorySearch;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationsRequest self = new DescribeApplicationsRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class DescribeApplicationsRequest extends TeaModel {
     }
     public String getCategorySearch() {
         return this.categorySearch;
+    }
+
+    public DescribeApplicationsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

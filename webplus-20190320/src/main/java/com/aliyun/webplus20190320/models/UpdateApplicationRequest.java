@@ -10,6 +10,9 @@ public class UpdateApplicationRequest extends TeaModel {
     @NameInMap("AppDescription")
     public String appDescription;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static UpdateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateApplicationRequest self = new UpdateApplicationRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class UpdateApplicationRequest extends TeaModel {
     }
     public String getAppDescription() {
         return this.appDescription;
+    }
+
+    public UpdateApplicationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -7,6 +7,9 @@ public class DeleteApplicationRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DeleteApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteApplicationRequest self = new DeleteApplicationRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DeleteApplicationRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DeleteApplicationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

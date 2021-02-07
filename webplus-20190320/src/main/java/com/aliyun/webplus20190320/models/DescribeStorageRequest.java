@@ -7,6 +7,9 @@ public class DescribeStorageRequest extends TeaModel {
     @NameInMap("UsingSharedStorage")
     public Boolean usingSharedStorage;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeStorageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageRequest self = new DescribeStorageRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribeStorageRequest extends TeaModel {
     }
     public Boolean getUsingSharedStorage() {
         return this.usingSharedStorage;
+    }
+
+    public DescribeStorageRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
