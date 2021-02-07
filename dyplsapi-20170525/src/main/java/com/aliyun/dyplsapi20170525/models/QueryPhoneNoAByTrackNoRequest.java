@@ -14,9 +14,11 @@ public class QueryPhoneNoAByTrackNoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("PhoneNoX")
+    @Validation(required = true)
     public String phoneNoX;
 
     @NameInMap("trackNo")
+    @Validation(required = true)
     public String trackNo;
 
     public static QueryPhoneNoAByTrackNoRequest build(java.util.Map<String, ?> map) throws Exception {

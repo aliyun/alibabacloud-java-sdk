@@ -4,33 +4,57 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class UpdatePhoneNumberResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public UpdatePhoneNumberResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public String data;
 
     public static UpdatePhoneNumberResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdatePhoneNumberResponse self = new UpdatePhoneNumberResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePhoneNumberResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdatePhoneNumberResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdatePhoneNumberResponse setBody(UpdatePhoneNumberResponseBody body) {
-        this.body = body;
+    public UpdatePhoneNumberResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public UpdatePhoneNumberResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdatePhoneNumberResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public UpdatePhoneNumberResponse setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }

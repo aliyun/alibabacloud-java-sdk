@@ -13,19 +13,20 @@ public class UpdateDefaultBRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     @NameInMap("PoolKey")
+    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("SubsId")
+    @Validation(required = true)
     public Long subsId;
 
     @NameInMap("SecretNo")
+    @Validation(required = true)
     public String secretNo;
 
     @NameInMap("PhoneNo")
+    @Validation(required = true)
     public String phoneNo;
 
     public static UpdateDefaultBRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -55,14 +56,6 @@ public class UpdateDefaultBRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UpdateDefaultBRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
     public UpdateDefaultBRequest setPoolKey(String poolKey) {

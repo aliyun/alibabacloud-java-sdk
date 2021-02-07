@@ -14,15 +14,19 @@ public class AddAxnTrackNoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("PoolKey")
+    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("PhoneNoX")
+    @Validation(required = true)
     public String phoneNoX;
 
     @NameInMap("trackNo")
+    @Validation(required = true)
     public String trackNo;
 
     @NameInMap("SubsId")
+    @Validation(required = true)
     public String subsId;
 
     public static AddAxnTrackNoRequest build(java.util.Map<String, ?> map) throws Exception {

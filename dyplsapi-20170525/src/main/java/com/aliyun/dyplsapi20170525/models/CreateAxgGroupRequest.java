@@ -14,6 +14,7 @@ public class CreateAxgGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("PoolKey")
+    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("Name")

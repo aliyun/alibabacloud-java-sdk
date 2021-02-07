@@ -17,6 +17,7 @@ public class QuerySubsIdRequest extends TeaModel {
     public String poolKey;
 
     @NameInMap("PhoneNoX")
+    @Validation(required = true)
     public String phoneNoX;
 
     public static QuerySubsIdRequest build(java.util.Map<String, ?> map) throws Exception {

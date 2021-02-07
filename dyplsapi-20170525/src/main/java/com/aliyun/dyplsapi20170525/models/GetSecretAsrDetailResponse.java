@@ -4,33 +4,57 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class GetSecretAsrDetailResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public GetSecretAsrDetailResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public String data;
 
     public static GetSecretAsrDetailResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSecretAsrDetailResponse self = new GetSecretAsrDetailResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSecretAsrDetailResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetSecretAsrDetailResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetSecretAsrDetailResponse setBody(GetSecretAsrDetailResponseBody body) {
-        this.body = body;
+    public GetSecretAsrDetailResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public GetSecretAsrDetailResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetSecretAsrDetailResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetSecretAsrDetailResponse setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }

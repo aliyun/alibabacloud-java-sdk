@@ -4,33 +4,45 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class OperateBlackNoResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public OperateBlackNoResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
 
     public static OperateBlackNoResponse build(java.util.Map<String, ?> map) throws Exception {
         OperateBlackNoResponse self = new OperateBlackNoResponse();
         return TeaModel.build(map, self);
     }
 
-    public OperateBlackNoResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public OperateBlackNoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public OperateBlackNoResponse setBody(OperateBlackNoResponseBody body) {
-        this.body = body;
+    public OperateBlackNoResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public OperateBlackNoResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public OperateBlackNoResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }
