@@ -10,6 +10,9 @@ public class GatherAppEnvStatsRequest extends TeaModel {
     @NameInMap("TargetInstances")
     public String targetInstances;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static GatherAppEnvStatsRequest build(java.util.Map<String, ?> map) throws Exception {
         GatherAppEnvStatsRequest self = new GatherAppEnvStatsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GatherAppEnvStatsRequest extends TeaModel {
     }
     public String getTargetInstances() {
         return this.targetInstances;
+    }
+
+    public GatherAppEnvStatsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

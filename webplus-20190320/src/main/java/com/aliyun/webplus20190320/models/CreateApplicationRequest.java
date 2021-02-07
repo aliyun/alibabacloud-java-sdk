@@ -16,6 +16,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("UsingSharedStorage")
     public Boolean usingSharedStorage;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateApplicationRequest self = new CreateApplicationRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public Boolean getUsingSharedStorage() {
         return this.usingSharedStorage;
+    }
+
+    public CreateApplicationRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

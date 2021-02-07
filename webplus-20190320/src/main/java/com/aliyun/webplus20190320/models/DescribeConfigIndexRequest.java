@@ -16,6 +16,9 @@ public class DescribeConfigIndexRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeConfigIndexRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeConfigIndexRequest self = new DescribeConfigIndexRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class DescribeConfigIndexRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public DescribeConfigIndexRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

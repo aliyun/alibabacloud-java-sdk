@@ -7,6 +7,9 @@ public class DescribeAppEnvStatusRequest extends TeaModel {
     @NameInMap("EnvId")
     public String envId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeAppEnvStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAppEnvStatusRequest self = new DescribeAppEnvStatusRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class DescribeAppEnvStatusRequest extends TeaModel {
     }
     public String getEnvId() {
         return this.envId;
+    }
+
+    public DescribeAppEnvStatusRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -16,6 +16,9 @@ public class ValidateConfigSettingRequest extends TeaModel {
     @NameInMap("OptionSettings")
     public String optionSettings;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static ValidateConfigSettingRequest build(java.util.Map<String, ?> map) throws Exception {
         ValidateConfigSettingRequest self = new ValidateConfigSettingRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ValidateConfigSettingRequest extends TeaModel {
     }
     public String getOptionSettings() {
         return this.optionSettings;
+    }
+
+    public ValidateConfigSettingRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

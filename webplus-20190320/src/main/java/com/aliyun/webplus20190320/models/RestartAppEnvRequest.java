@@ -19,6 +19,9 @@ public class RestartAppEnvRequest extends TeaModel {
     @NameInMap("PauseBetweenBatches")
     public Boolean pauseBetweenBatches;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static RestartAppEnvRequest build(java.util.Map<String, ?> map) throws Exception {
         RestartAppEnvRequest self = new RestartAppEnvRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class RestartAppEnvRequest extends TeaModel {
     }
     public Boolean getPauseBetweenBatches() {
         return this.pauseBetweenBatches;
+    }
+
+    public RestartAppEnvRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

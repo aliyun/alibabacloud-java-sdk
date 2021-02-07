@@ -28,6 +28,9 @@ public class DescribeEventsRequest extends TeaModel {
     @NameInMap("ReverseByTimestamp")
     public Boolean reverseByTimestamp;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEventsRequest self = new DescribeEventsRequest();
         return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class DescribeEventsRequest extends TeaModel {
     }
     public Boolean getReverseByTimestamp() {
         return this.reverseByTimestamp;
+    }
+
+    public DescribeEventsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>webplus20190320</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>webplus20190320</name>
   <description>Alibaba Cloud WebPlus (20190320) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.7</version>
+      <version>0.0.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.0.8</version>
+      <version>0.1.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

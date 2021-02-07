@@ -37,6 +37,9 @@ public class UpdateAppEnvRequest extends TeaModel {
     @NameInMap("PauseBetweenBatches")
     public Boolean pauseBetweenBatches;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static UpdateAppEnvRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppEnvRequest self = new UpdateAppEnvRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class UpdateAppEnvRequest extends TeaModel {
     }
     public Boolean getPauseBetweenBatches() {
         return this.pauseBetweenBatches;
+    }
+
+    public UpdateAppEnvRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

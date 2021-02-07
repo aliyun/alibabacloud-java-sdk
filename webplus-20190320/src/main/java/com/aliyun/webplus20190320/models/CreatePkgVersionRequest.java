@@ -16,6 +16,9 @@ public class CreatePkgVersionRequest extends TeaModel {
     @NameInMap("PackageSource")
     public String packageSource;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static CreatePkgVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePkgVersionRequest self = new CreatePkgVersionRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreatePkgVersionRequest extends TeaModel {
     }
     public String getPackageSource() {
         return this.packageSource;
+    }
+
+    public CreatePkgVersionRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

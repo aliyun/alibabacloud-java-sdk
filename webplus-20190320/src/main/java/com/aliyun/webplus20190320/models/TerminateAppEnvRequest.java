@@ -10,6 +10,9 @@ public class TerminateAppEnvRequest extends TeaModel {
     @NameInMap("DryRun")
     public String dryRun;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static TerminateAppEnvRequest build(java.util.Map<String, ?> map) throws Exception {
         TerminateAppEnvRequest self = new TerminateAppEnvRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class TerminateAppEnvRequest extends TeaModel {
     }
     public String getDryRun() {
         return this.dryRun;
+    }
+
+    public TerminateAppEnvRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

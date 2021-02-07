@@ -13,6 +13,9 @@ public class DescribeConfigOptionsRequest extends TeaModel {
     @NameInMap("ProfileName")
     public String profileName;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeConfigOptionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeConfigOptionsRequest self = new DescribeConfigOptionsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DescribeConfigOptionsRequest extends TeaModel {
     }
     public String getProfileName() {
         return this.profileName;
+    }
+
+    public DescribeConfigOptionsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }
