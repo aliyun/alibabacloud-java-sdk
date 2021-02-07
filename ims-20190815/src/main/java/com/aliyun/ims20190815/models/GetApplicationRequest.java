@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetApplicationRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static GetApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         GetApplicationRequest self = new GetApplicationRequest();
@@ -19,6 +21,14 @@ public class GetApplicationRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public GetApplicationRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

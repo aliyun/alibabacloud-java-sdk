@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class UnbindMFADeviceRequest extends TeaModel {
     @NameInMap("UserPrincipalName")
-    @Validation(required = true)
     public String userPrincipalName;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static UnbindMFADeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindMFADeviceRequest self = new UnbindMFADeviceRequest();
@@ -19,6 +21,14 @@ public class UnbindMFADeviceRequest extends TeaModel {
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
+    }
+
+    public UnbindMFADeviceRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

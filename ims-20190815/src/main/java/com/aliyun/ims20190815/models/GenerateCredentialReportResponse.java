@@ -4,33 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GenerateCredentialReportResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("State")
+    @NameInMap("body")
     @Validation(required = true)
-    public String state;
+    public GenerateCredentialReportResponseBody body;
 
     public static GenerateCredentialReportResponse build(java.util.Map<String, ?> map) throws Exception {
         GenerateCredentialReportResponse self = new GenerateCredentialReportResponse();
         return TeaModel.build(map, self);
     }
 
-    public GenerateCredentialReportResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GenerateCredentialReportResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GenerateCredentialReportResponse setState(String state) {
-        this.state = state;
+    public GenerateCredentialReportResponse setBody(GenerateCredentialReportResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getState() {
-        return this.state;
+    public GenerateCredentialReportResponseBody getBody() {
+        return this.body;
     }
 
 }

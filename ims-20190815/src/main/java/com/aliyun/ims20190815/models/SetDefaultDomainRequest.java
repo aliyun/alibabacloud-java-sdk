@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class SetDefaultDomainRequest extends TeaModel {
     @NameInMap("DefaultDomainName")
-    @Validation(required = true)
     public String defaultDomainName;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static SetDefaultDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDefaultDomainRequest self = new SetDefaultDomainRequest();
@@ -19,6 +21,14 @@ public class SetDefaultDomainRequest extends TeaModel {
     }
     public String getDefaultDomainName() {
         return this.defaultDomainName;
+    }
+
+    public SetDefaultDomainRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

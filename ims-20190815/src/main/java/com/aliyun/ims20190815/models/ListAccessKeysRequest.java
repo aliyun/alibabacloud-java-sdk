@@ -7,6 +7,9 @@ public class ListAccessKeysRequest extends TeaModel {
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
 
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
+
     public static ListAccessKeysRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAccessKeysRequest self = new ListAccessKeysRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class ListAccessKeysRequest extends TeaModel {
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
+    }
+
+    public ListAccessKeysRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

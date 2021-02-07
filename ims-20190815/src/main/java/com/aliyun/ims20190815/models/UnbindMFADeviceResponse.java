@@ -4,53 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UnbindMFADeviceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("MFADevice")
+    @NameInMap("body")
     @Validation(required = true)
-    public UnbindMFADeviceResponseMFADevice MFADevice;
+    public UnbindMFADeviceResponseBody body;
 
     public static UnbindMFADeviceResponse build(java.util.Map<String, ?> map) throws Exception {
         UnbindMFADeviceResponse self = new UnbindMFADeviceResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnbindMFADeviceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UnbindMFADeviceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UnbindMFADeviceResponse setMFADevice(UnbindMFADeviceResponseMFADevice MFADevice) {
-        this.MFADevice = MFADevice;
+    public UnbindMFADeviceResponse setBody(UnbindMFADeviceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public UnbindMFADeviceResponseMFADevice getMFADevice() {
-        return this.MFADevice;
-    }
-
-    public static class UnbindMFADeviceResponseMFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
-        @Validation(required = true)
-        public String serialNumber;
-
-        public static UnbindMFADeviceResponseMFADevice build(java.util.Map<String, ?> map) throws Exception {
-            UnbindMFADeviceResponseMFADevice self = new UnbindMFADeviceResponseMFADevice();
-            return TeaModel.build(map, self);
-        }
-
-        public UnbindMFADeviceResponseMFADevice setSerialNumber(String serialNumber) {
-            this.serialNumber = serialNumber;
-            return this;
-        }
-        public String getSerialNumber() {
-            return this.serialNumber;
-        }
-
+    public UnbindMFADeviceResponseBody getBody() {
+        return this.body;
     }
 
 }

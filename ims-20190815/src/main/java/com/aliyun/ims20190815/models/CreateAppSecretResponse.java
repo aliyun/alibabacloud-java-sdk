@@ -4,89 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateAppSecretResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AppSecret")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreateAppSecretResponseAppSecret appSecret;
+    public CreateAppSecretResponseBody body;
 
     public static CreateAppSecretResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAppSecretResponse self = new CreateAppSecretResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateAppSecretResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateAppSecretResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateAppSecretResponse setAppSecret(CreateAppSecretResponseAppSecret appSecret) {
-        this.appSecret = appSecret;
+    public CreateAppSecretResponse setBody(CreateAppSecretResponseBody body) {
+        this.body = body;
         return this;
     }
-    public CreateAppSecretResponseAppSecret getAppSecret() {
-        return this.appSecret;
-    }
-
-    public static class CreateAppSecretResponseAppSecret extends TeaModel {
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public String appId;
-
-        @NameInMap("AppSecretId")
-        @Validation(required = true)
-        public String appSecretId;
-
-        @NameInMap("AppSecretValue")
-        @Validation(required = true)
-        public String appSecretValue;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        public static CreateAppSecretResponseAppSecret build(java.util.Map<String, ?> map) throws Exception {
-            CreateAppSecretResponseAppSecret self = new CreateAppSecretResponseAppSecret();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateAppSecretResponseAppSecret setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public CreateAppSecretResponseAppSecret setAppSecretId(String appSecretId) {
-            this.appSecretId = appSecretId;
-            return this;
-        }
-        public String getAppSecretId() {
-            return this.appSecretId;
-        }
-
-        public CreateAppSecretResponseAppSecret setAppSecretValue(String appSecretValue) {
-            this.appSecretValue = appSecretValue;
-            return this;
-        }
-        public String getAppSecretValue() {
-            return this.appSecretValue;
-        }
-
-        public CreateAppSecretResponseAppSecret setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
-        }
-
+    public CreateAppSecretResponseBody getBody() {
+        return this.body;
     }
 
 }

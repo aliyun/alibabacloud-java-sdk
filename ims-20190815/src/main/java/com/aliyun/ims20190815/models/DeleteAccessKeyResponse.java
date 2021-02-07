@@ -4,21 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccessKeyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteAccessKeyResponseBody body;
 
     public static DeleteAccessKeyResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteAccessKeyResponse self = new DeleteAccessKeyResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAccessKeyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteAccessKeyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteAccessKeyResponse setBody(DeleteAccessKeyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteAccessKeyResponseBody getBody() {
+        return this.body;
     }
 
 }

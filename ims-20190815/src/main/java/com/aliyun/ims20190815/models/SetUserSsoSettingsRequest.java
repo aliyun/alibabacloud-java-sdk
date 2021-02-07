@@ -13,6 +13,9 @@ public class SetUserSsoSettingsRequest extends TeaModel {
     @NameInMap("AuxiliaryDomain")
     public String auxiliaryDomain;
 
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
+
     public static SetUserSsoSettingsRequest build(java.util.Map<String, ?> map) throws Exception {
         SetUserSsoSettingsRequest self = new SetUserSsoSettingsRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class SetUserSsoSettingsRequest extends TeaModel {
     }
     public String getAuxiliaryDomain() {
         return this.auxiliaryDomain;
+    }
+
+    public SetUserSsoSettingsRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }
