@@ -31,19 +31,19 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsTrendTopicInputTpsResponseBodyDataRecords extends TeaModel {
+    public static class OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo extends TeaModel {
         @NameInMap("Y")
         public Float y;
 
         @NameInMap("X")
         public Long x;
 
-        public static OnsTrendTopicInputTpsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
-            OnsTrendTopicInputTpsResponseBodyDataRecords self = new OnsTrendTopicInputTpsResponseBodyDataRecords();
+        public static OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo self = new OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsTrendTopicInputTpsResponseBodyDataRecords setY(Float y) {
+        public OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo setY(Float y) {
             this.y = y;
             return this;
         }
@@ -51,7 +51,7 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
             return this.y;
         }
 
-        public OnsTrendTopicInputTpsResponseBodyDataRecords setX(Long x) {
+        public OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo setX(Long x) {
             this.x = x;
             return this;
         }
@@ -61,9 +61,28 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
 
     }
 
+    public static class OnsTrendTopicInputTpsResponseBodyDataRecords extends TeaModel {
+        @NameInMap("StatsDataDo")
+        public java.util.List<OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo> statsDataDo;
+
+        public static OnsTrendTopicInputTpsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
+            OnsTrendTopicInputTpsResponseBodyDataRecords self = new OnsTrendTopicInputTpsResponseBodyDataRecords();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsTrendTopicInputTpsResponseBodyDataRecords setStatsDataDo(java.util.List<OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo> statsDataDo) {
+            this.statsDataDo = statsDataDo;
+            return this;
+        }
+        public java.util.List<OnsTrendTopicInputTpsResponseBodyDataRecordsStatsDataDo> getStatsDataDo() {
+            return this.statsDataDo;
+        }
+
+    }
+
     public static class OnsTrendTopicInputTpsResponseBodyData extends TeaModel {
         @NameInMap("Records")
-        public java.util.List<OnsTrendTopicInputTpsResponseBodyDataRecords> records;
+        public OnsTrendTopicInputTpsResponseBodyDataRecords records;
 
         @NameInMap("XUnit")
         public String XUnit;
@@ -79,11 +98,11 @@ public class OnsTrendTopicInputTpsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public OnsTrendTopicInputTpsResponseBodyData setRecords(java.util.List<OnsTrendTopicInputTpsResponseBodyDataRecords> records) {
+        public OnsTrendTopicInputTpsResponseBodyData setRecords(OnsTrendTopicInputTpsResponseBodyDataRecords records) {
             this.records = records;
             return this;
         }
-        public java.util.List<OnsTrendTopicInputTpsResponseBodyDataRecords> getRecords() {
+        public OnsTrendTopicInputTpsResponseBodyDataRecords getRecords() {
             return this.records;
         }
 

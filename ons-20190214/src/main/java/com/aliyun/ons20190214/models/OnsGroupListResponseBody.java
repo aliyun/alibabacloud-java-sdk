@@ -8,10 +8,7 @@ public class OnsGroupListResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public java.util.List<OnsGroupListResponseBodyData> data;
-
-    @NameInMap("HelpUrl")
-    public String helpUrl;
+    public OnsGroupListResponseBodyData data;
 
     public static OnsGroupListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsGroupListResponseBody self = new OnsGroupListResponseBody();
@@ -26,35 +23,27 @@ public class OnsGroupListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OnsGroupListResponseBody setData(java.util.List<OnsGroupListResponseBodyData> data) {
+    public OnsGroupListResponseBody setData(OnsGroupListResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<OnsGroupListResponseBodyData> getData() {
+    public OnsGroupListResponseBodyData getData() {
         return this.data;
     }
 
-    public OnsGroupListResponseBody setHelpUrl(String helpUrl) {
-        this.helpUrl = helpUrl;
-        return this;
-    }
-    public String getHelpUrl() {
-        return this.helpUrl;
-    }
-
-    public static class OnsGroupListResponseBodyDataTags extends TeaModel {
+    public static class OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static OnsGroupListResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
-            OnsGroupListResponseBodyDataTags self = new OnsGroupListResponseBodyDataTags();
+        public static OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag self = new OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public OnsGroupListResponseBodyDataTags setKey(String key) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -62,7 +51,7 @@ public class OnsGroupListResponseBody extends TeaModel {
             return this.key;
         }
 
-        public OnsGroupListResponseBodyDataTags setValue(String value) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -72,7 +61,26 @@ public class OnsGroupListResponseBody extends TeaModel {
 
     }
 
-    public static class OnsGroupListResponseBodyData extends TeaModel {
+    public static class OnsGroupListResponseBodyDataSubscribeInfoDoTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag> tag;
+
+        public static OnsGroupListResponseBodyDataSubscribeInfoDoTags build(java.util.Map<String, ?> map) throws Exception {
+            OnsGroupListResponseBodyDataSubscribeInfoDoTags self = new OnsGroupListResponseBodyDataSubscribeInfoDoTags();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsGroupListResponseBodyDataSubscribeInfoDoTags setTag(java.util.List<OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<OnsGroupListResponseBodyDataSubscribeInfoDoTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class OnsGroupListResponseBodyDataSubscribeInfoDo extends TeaModel {
         @NameInMap("Owner")
         public String owner;
 
@@ -92,7 +100,7 @@ public class OnsGroupListResponseBody extends TeaModel {
         public Long createTime;
 
         @NameInMap("Tags")
-        public java.util.List<OnsGroupListResponseBodyDataTags> tags;
+        public OnsGroupListResponseBodyDataSubscribeInfoDoTags tags;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -100,12 +108,12 @@ public class OnsGroupListResponseBody extends TeaModel {
         @NameInMap("GroupType")
         public String groupType;
 
-        public static OnsGroupListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            OnsGroupListResponseBodyData self = new OnsGroupListResponseBodyData();
+        public static OnsGroupListResponseBodyDataSubscribeInfoDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsGroupListResponseBodyDataSubscribeInfoDo self = new OnsGroupListResponseBodyDataSubscribeInfoDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsGroupListResponseBodyData setOwner(String owner) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDo setOwner(String owner) {
             this.owner = owner;
             return this;
         }
@@ -113,7 +121,7 @@ public class OnsGroupListResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public OnsGroupListResponseBodyData setUpdateTime(Long updateTime) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDo setUpdateTime(Long updateTime) {
             this.updateTime = updateTime;
             return this;
         }
@@ -121,7 +129,7 @@ public class OnsGroupListResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public OnsGroupListResponseBodyData setIndependentNaming(Boolean independentNaming) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDo setIndependentNaming(Boolean independentNaming) {
             this.independentNaming = independentNaming;
             return this;
         }
@@ -129,7 +137,7 @@ public class OnsGroupListResponseBody extends TeaModel {
             return this.independentNaming;
         }
 
-        public OnsGroupListResponseBodyData setGroupId(String groupId) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDo setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
         }
@@ -137,7 +145,7 @@ public class OnsGroupListResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public OnsGroupListResponseBodyData setRemark(String remark) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDo setRemark(String remark) {
             this.remark = remark;
             return this;
         }
@@ -145,7 +153,7 @@ public class OnsGroupListResponseBody extends TeaModel {
             return this.remark;
         }
 
-        public OnsGroupListResponseBodyData setCreateTime(Long createTime) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDo setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -153,15 +161,15 @@ public class OnsGroupListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public OnsGroupListResponseBodyData setTags(java.util.List<OnsGroupListResponseBodyDataTags> tags) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDo setTags(OnsGroupListResponseBodyDataSubscribeInfoDoTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<OnsGroupListResponseBodyDataTags> getTags() {
+        public OnsGroupListResponseBodyDataSubscribeInfoDoTags getTags() {
             return this.tags;
         }
 
-        public OnsGroupListResponseBodyData setInstanceId(String instanceId) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -169,12 +177,31 @@ public class OnsGroupListResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public OnsGroupListResponseBodyData setGroupType(String groupType) {
+        public OnsGroupListResponseBodyDataSubscribeInfoDo setGroupType(String groupType) {
             this.groupType = groupType;
             return this;
         }
         public String getGroupType() {
             return this.groupType;
+        }
+
+    }
+
+    public static class OnsGroupListResponseBodyData extends TeaModel {
+        @NameInMap("SubscribeInfoDo")
+        public java.util.List<OnsGroupListResponseBodyDataSubscribeInfoDo> subscribeInfoDo;
+
+        public static OnsGroupListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            OnsGroupListResponseBodyData self = new OnsGroupListResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsGroupListResponseBodyData setSubscribeInfoDo(java.util.List<OnsGroupListResponseBodyDataSubscribeInfoDo> subscribeInfoDo) {
+            this.subscribeInfoDo = subscribeInfoDo;
+            return this;
+        }
+        public java.util.List<OnsGroupListResponseBodyDataSubscribeInfoDo> getSubscribeInfoDo() {
+            return this.subscribeInfoDo;
         }
 
     }

@@ -8,7 +8,7 @@ public class OnsMqttGroupIdListResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public java.util.List<OnsMqttGroupIdListResponseBodyData> data;
+    public OnsMqttGroupIdListResponseBodyData data;
 
     public static OnsMqttGroupIdListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsMqttGroupIdListResponseBody self = new OnsMqttGroupIdListResponseBody();
@@ -23,15 +23,15 @@ public class OnsMqttGroupIdListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OnsMqttGroupIdListResponseBody setData(java.util.List<OnsMqttGroupIdListResponseBodyData> data) {
+    public OnsMqttGroupIdListResponseBody setData(OnsMqttGroupIdListResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<OnsMqttGroupIdListResponseBodyData> getData() {
+    public OnsMqttGroupIdListResponseBodyData getData() {
         return this.data;
     }
 
-    public static class OnsMqttGroupIdListResponseBodyData extends TeaModel {
+    public static class OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo extends TeaModel {
         @NameInMap("UpdateTime")
         public Long updateTime;
 
@@ -47,12 +47,12 @@ public class OnsMqttGroupIdListResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static OnsMqttGroupIdListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            OnsMqttGroupIdListResponseBodyData self = new OnsMqttGroupIdListResponseBodyData();
+        public static OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo self = new OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsMqttGroupIdListResponseBodyData setUpdateTime(Long updateTime) {
+        public OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo setUpdateTime(Long updateTime) {
             this.updateTime = updateTime;
             return this;
         }
@@ -60,7 +60,7 @@ public class OnsMqttGroupIdListResponseBody extends TeaModel {
             return this.updateTime;
         }
 
-        public OnsMqttGroupIdListResponseBodyData setIndependentNaming(Boolean independentNaming) {
+        public OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo setIndependentNaming(Boolean independentNaming) {
             this.independentNaming = independentNaming;
             return this;
         }
@@ -68,7 +68,7 @@ public class OnsMqttGroupIdListResponseBody extends TeaModel {
             return this.independentNaming;
         }
 
-        public OnsMqttGroupIdListResponseBodyData setGroupId(String groupId) {
+        public OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
         }
@@ -76,7 +76,7 @@ public class OnsMqttGroupIdListResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public OnsMqttGroupIdListResponseBodyData setCreateTime(Long createTime) {
+        public OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -84,12 +84,31 @@ public class OnsMqttGroupIdListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public OnsMqttGroupIdListResponseBodyData setInstanceId(String instanceId) {
+        public OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class OnsMqttGroupIdListResponseBodyData extends TeaModel {
+        @NameInMap("MqttGroupIdDo")
+        public java.util.List<OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo> mqttGroupIdDo;
+
+        public static OnsMqttGroupIdListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            OnsMqttGroupIdListResponseBodyData self = new OnsMqttGroupIdListResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMqttGroupIdListResponseBodyData setMqttGroupIdDo(java.util.List<OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo> mqttGroupIdDo) {
+            this.mqttGroupIdDo = mqttGroupIdDo;
+            return this;
+        }
+        public java.util.List<OnsMqttGroupIdListResponseBodyDataMqttGroupIdDo> getMqttGroupIdDo() {
+            return this.mqttGroupIdDo;
         }
 
     }

@@ -31,19 +31,19 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsMessageGetByMsgIdResponseBodyDataPropertyList extends TeaModel {
+    public static class OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty extends TeaModel {
         @NameInMap("Value")
         public String value;
 
         @NameInMap("Name")
         public String name;
 
-        public static OnsMessageGetByMsgIdResponseBodyDataPropertyList build(java.util.Map<String, ?> map) throws Exception {
-            OnsMessageGetByMsgIdResponseBodyDataPropertyList self = new OnsMessageGetByMsgIdResponseBodyDataPropertyList();
+        public static OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty self = new OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty();
             return TeaModel.build(map, self);
         }
 
-        public OnsMessageGetByMsgIdResponseBodyDataPropertyList setValue(String value) {
+        public OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty setValue(String value) {
             this.value = value;
             return this;
         }
@@ -51,12 +51,31 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.value;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyDataPropertyList setName(String name) {
+        public OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class OnsMessageGetByMsgIdResponseBodyDataPropertyList extends TeaModel {
+        @NameInMap("MessageProperty")
+        public java.util.List<OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty> messageProperty;
+
+        public static OnsMessageGetByMsgIdResponseBodyDataPropertyList build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageGetByMsgIdResponseBodyDataPropertyList self = new OnsMessageGetByMsgIdResponseBodyDataPropertyList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMessageGetByMsgIdResponseBodyDataPropertyList setMessageProperty(java.util.List<OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty> messageProperty) {
+            this.messageProperty = messageProperty;
+            return this;
+        }
+        public java.util.List<OnsMessageGetByMsgIdResponseBodyDataPropertyListMessageProperty> getMessageProperty() {
+            return this.messageProperty;
         }
 
     }
@@ -84,7 +103,7 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
         public String topic;
 
         @NameInMap("PropertyList")
-        public java.util.List<OnsMessageGetByMsgIdResponseBodyDataPropertyList> propertyList;
+        public OnsMessageGetByMsgIdResponseBodyDataPropertyList propertyList;
 
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
@@ -156,11 +175,11 @@ public class OnsMessageGetByMsgIdResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public OnsMessageGetByMsgIdResponseBodyData setPropertyList(java.util.List<OnsMessageGetByMsgIdResponseBodyDataPropertyList> propertyList) {
+        public OnsMessageGetByMsgIdResponseBodyData setPropertyList(OnsMessageGetByMsgIdResponseBodyDataPropertyList propertyList) {
             this.propertyList = propertyList;
             return this;
         }
-        public java.util.List<OnsMessageGetByMsgIdResponseBodyDataPropertyList> getPropertyList() {
+        public OnsMessageGetByMsgIdResponseBodyDataPropertyList getPropertyList() {
             return this.propertyList;
         }
 

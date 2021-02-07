@@ -31,7 +31,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         return this.traceData;
     }
 
-    public static class OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList extends TeaModel {
+    public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -50,12 +50,12 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         @NameInMap("CostTime")
         public Integer costTime;
 
-        public static OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList build(java.util.Map<String, ?> map) throws Exception {
-            OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList self = new OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList();
+        public static OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo self = new OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList setStatus(String status) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -63,7 +63,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.status;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList setSubTime(Long subTime) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo setSubTime(Long subTime) {
             this.subTime = subTime;
             return this;
         }
@@ -71,7 +71,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.subTime;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList setReconsumeTimes(Integer reconsumeTimes) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo setReconsumeTimes(Integer reconsumeTimes) {
             this.reconsumeTimes = reconsumeTimes;
             return this;
         }
@@ -79,7 +79,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.reconsumeTimes;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList setSubGroupName(String subGroupName) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo setSubGroupName(String subGroupName) {
             this.subGroupName = subGroupName;
             return this;
         }
@@ -87,7 +87,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.subGroupName;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList setClientHost(String clientHost) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo setClientHost(String clientHost) {
             this.clientHost = clientHost;
             return this;
         }
@@ -95,7 +95,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.clientHost;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList setCostTime(Integer costTime) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo setCostTime(Integer costTime) {
             this.costTime = costTime;
             return this;
         }
@@ -105,9 +105,28 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
 
     }
 
-    public static class OnsTraceGetResultResponseBodyTraceDataTraceListSubList extends TeaModel {
+    public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList extends TeaModel {
+        @NameInMap("SubClientInfoDo")
+        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo> subClientInfoDo;
+
+        public static OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList build(java.util.Map<String, ?> map) throws Exception {
+            OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList self = new OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList setSubClientInfoDo(java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo> subClientInfoDo) {
+            this.subClientInfoDo = subClientInfoDo;
+            return this;
+        }
+        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientListSubClientInfoDo> getSubClientInfoDo() {
+            return this.subClientInfoDo;
+        }
+
+    }
+
+    public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo extends TeaModel {
         @NameInMap("ClientList")
-        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList> clientList;
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList clientList;
 
         @NameInMap("FailCount")
         public Integer failCount;
@@ -118,20 +137,20 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         @NameInMap("SuccessCount")
         public Integer successCount;
 
-        public static OnsTraceGetResultResponseBodyTraceDataTraceListSubList build(java.util.Map<String, ?> map) throws Exception {
-            OnsTraceGetResultResponseBodyTraceDataTraceListSubList self = new OnsTraceGetResultResponseBodyTraceDataTraceListSubList();
+        public static OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo self = new OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubList setClientList(java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList> clientList) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo setClientList(OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList clientList) {
             this.clientList = clientList;
             return this;
         }
-        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListSubListClientList> getClientList() {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDoClientList getClientList() {
             return this.clientList;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubList setFailCount(Integer failCount) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo setFailCount(Integer failCount) {
             this.failCount = failCount;
             return this;
         }
@@ -139,7 +158,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.failCount;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubList setSubGroupName(String subGroupName) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo setSubGroupName(String subGroupName) {
             this.subGroupName = subGroupName;
             return this;
         }
@@ -147,7 +166,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.subGroupName;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceListSubList setSuccessCount(Integer successCount) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo setSuccessCount(Integer successCount) {
             this.successCount = successCount;
             return this;
         }
@@ -157,7 +176,26 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
 
     }
 
-    public static class OnsTraceGetResultResponseBodyTraceDataTraceList extends TeaModel {
+    public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList extends TeaModel {
+        @NameInMap("SubMapDo")
+        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo> subMapDo;
+
+        public static OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList build(java.util.Map<String, ?> map) throws Exception {
+            OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList self = new OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList setSubMapDo(java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo> subMapDo) {
+            this.subMapDo = subMapDo;
+            return this;
+        }
+        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubListSubMapDo> getSubMapDo() {
+            return this.subMapDo;
+        }
+
+    }
+
+    public static class OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -168,7 +206,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         public Long pubTime;
 
         @NameInMap("SubList")
-        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListSubList> subList;
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList subList;
 
         @NameInMap("Topic")
         public String topic;
@@ -188,12 +226,12 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         @NameInMap("BornHost")
         public String bornHost;
 
-        public static OnsTraceGetResultResponseBodyTraceDataTraceList build(java.util.Map<String, ?> map) throws Exception {
-            OnsTraceGetResultResponseBodyTraceDataTraceList self = new OnsTraceGetResultResponseBodyTraceDataTraceList();
+        public static OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo self = new OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setStatus(String status) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -201,7 +239,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.status;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setMsgKey(String msgKey) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setMsgKey(String msgKey) {
             this.msgKey = msgKey;
             return this;
         }
@@ -209,7 +247,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.msgKey;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setPubTime(Long pubTime) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setPubTime(Long pubTime) {
             this.pubTime = pubTime;
             return this;
         }
@@ -217,15 +255,15 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.pubTime;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setSubList(java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListSubList> subList) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setSubList(OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList subList) {
             this.subList = subList;
             return this;
         }
-        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListSubList> getSubList() {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDoSubList getSubList() {
             return this.subList;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setTopic(String topic) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setTopic(String topic) {
             this.topic = topic;
             return this;
         }
@@ -233,7 +271,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setCostTime(Integer costTime) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setCostTime(Integer costTime) {
             this.costTime = costTime;
             return this;
         }
@@ -241,7 +279,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.costTime;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setTag(String tag) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setTag(String tag) {
             this.tag = tag;
             return this;
         }
@@ -249,7 +287,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.tag;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setMsgId(String msgId) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setMsgId(String msgId) {
             this.msgId = msgId;
             return this;
         }
@@ -257,7 +295,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.msgId;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setPubGroupName(String pubGroupName) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setPubGroupName(String pubGroupName) {
             this.pubGroupName = pubGroupName;
             return this;
         }
@@ -265,12 +303,31 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.pubGroupName;
         }
 
-        public OnsTraceGetResultResponseBodyTraceDataTraceList setBornHost(String bornHost) {
+        public OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo setBornHost(String bornHost) {
             this.bornHost = bornHost;
             return this;
         }
         public String getBornHost() {
             return this.bornHost;
+        }
+
+    }
+
+    public static class OnsTraceGetResultResponseBodyTraceDataTraceList extends TeaModel {
+        @NameInMap("TraceMapDo")
+        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo> traceMapDo;
+
+        public static OnsTraceGetResultResponseBodyTraceDataTraceList build(java.util.Map<String, ?> map) throws Exception {
+            OnsTraceGetResultResponseBodyTraceDataTraceList self = new OnsTraceGetResultResponseBodyTraceDataTraceList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsTraceGetResultResponseBodyTraceDataTraceList setTraceMapDo(java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo> traceMapDo) {
+            this.traceMapDo = traceMapDo;
+            return this;
+        }
+        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceListTraceMapDo> getTraceMapDo() {
+            return this.traceMapDo;
         }
 
     }
@@ -301,7 +358,7 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
         public String msgId;
 
         @NameInMap("TraceList")
-        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceList> traceList;
+        public OnsTraceGetResultResponseBodyTraceDataTraceList traceList;
 
         @NameInMap("QueryId")
         public String queryId;
@@ -375,11 +432,11 @@ public class OnsTraceGetResultResponseBody extends TeaModel {
             return this.msgId;
         }
 
-        public OnsTraceGetResultResponseBodyTraceData setTraceList(java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceList> traceList) {
+        public OnsTraceGetResultResponseBodyTraceData setTraceList(OnsTraceGetResultResponseBodyTraceDataTraceList traceList) {
             this.traceList = traceList;
             return this;
         }
-        public java.util.List<OnsTraceGetResultResponseBodyTraceDataTraceList> getTraceList() {
+        public OnsTraceGetResultResponseBodyTraceDataTraceList getTraceList() {
             return this.traceList;
         }
 

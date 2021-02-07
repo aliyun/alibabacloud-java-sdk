@@ -31,19 +31,19 @@ public class OnsMqttQueryMsgTransTrendResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsMqttQueryMsgTransTrendResponseBodyDataRecords extends TeaModel {
+    public static class OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo extends TeaModel {
         @NameInMap("Y")
         public Float y;
 
         @NameInMap("X")
         public Long x;
 
-        public static OnsMqttQueryMsgTransTrendResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
-            OnsMqttQueryMsgTransTrendResponseBodyDataRecords self = new OnsMqttQueryMsgTransTrendResponseBodyDataRecords();
+        public static OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo self = new OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsMqttQueryMsgTransTrendResponseBodyDataRecords setY(Float y) {
+        public OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo setY(Float y) {
             this.y = y;
             return this;
         }
@@ -51,7 +51,7 @@ public class OnsMqttQueryMsgTransTrendResponseBody extends TeaModel {
             return this.y;
         }
 
-        public OnsMqttQueryMsgTransTrendResponseBodyDataRecords setX(Long x) {
+        public OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo setX(Long x) {
             this.x = x;
             return this;
         }
@@ -61,9 +61,28 @@ public class OnsMqttQueryMsgTransTrendResponseBody extends TeaModel {
 
     }
 
+    public static class OnsMqttQueryMsgTransTrendResponseBodyDataRecords extends TeaModel {
+        @NameInMap("StatsDataDo")
+        public java.util.List<OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo> statsDataDo;
+
+        public static OnsMqttQueryMsgTransTrendResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
+            OnsMqttQueryMsgTransTrendResponseBodyDataRecords self = new OnsMqttQueryMsgTransTrendResponseBodyDataRecords();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMqttQueryMsgTransTrendResponseBodyDataRecords setStatsDataDo(java.util.List<OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo> statsDataDo) {
+            this.statsDataDo = statsDataDo;
+            return this;
+        }
+        public java.util.List<OnsMqttQueryMsgTransTrendResponseBodyDataRecordsStatsDataDo> getStatsDataDo() {
+            return this.statsDataDo;
+        }
+
+    }
+
     public static class OnsMqttQueryMsgTransTrendResponseBodyData extends TeaModel {
         @NameInMap("Records")
-        public java.util.List<OnsMqttQueryMsgTransTrendResponseBodyDataRecords> records;
+        public OnsMqttQueryMsgTransTrendResponseBodyDataRecords records;
 
         @NameInMap("XUnit")
         public String XUnit;
@@ -79,11 +98,11 @@ public class OnsMqttQueryMsgTransTrendResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public OnsMqttQueryMsgTransTrendResponseBodyData setRecords(java.util.List<OnsMqttQueryMsgTransTrendResponseBodyDataRecords> records) {
+        public OnsMqttQueryMsgTransTrendResponseBodyData setRecords(OnsMqttQueryMsgTransTrendResponseBodyDataRecords records) {
             this.records = records;
             return this;
         }
-        public java.util.List<OnsMqttQueryMsgTransTrendResponseBodyDataRecords> getRecords() {
+        public OnsMqttQueryMsgTransTrendResponseBodyDataRecords getRecords() {
             return this.records;
         }
 

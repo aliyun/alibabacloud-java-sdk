@@ -8,7 +8,7 @@ public class OnsMessageTraceResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public java.util.List<OnsMessageTraceResponseBodyData> data;
+    public OnsMessageTraceResponseBodyData data;
 
     public static OnsMessageTraceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsMessageTraceResponseBody self = new OnsMessageTraceResponseBody();
@@ -23,15 +23,15 @@ public class OnsMessageTraceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OnsMessageTraceResponseBody setData(java.util.List<OnsMessageTraceResponseBodyData> data) {
+    public OnsMessageTraceResponseBody setData(OnsMessageTraceResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<OnsMessageTraceResponseBodyData> getData() {
+    public OnsMessageTraceResponseBodyData getData() {
         return this.data;
     }
 
-    public static class OnsMessageTraceResponseBodyData extends TeaModel {
+    public static class OnsMessageTraceResponseBodyDataMessageTrack extends TeaModel {
         @NameInMap("TrackType")
         public String trackType;
 
@@ -41,12 +41,12 @@ public class OnsMessageTraceResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static OnsMessageTraceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            OnsMessageTraceResponseBodyData self = new OnsMessageTraceResponseBodyData();
+        public static OnsMessageTraceResponseBodyDataMessageTrack build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageTraceResponseBodyDataMessageTrack self = new OnsMessageTraceResponseBodyDataMessageTrack();
             return TeaModel.build(map, self);
         }
 
-        public OnsMessageTraceResponseBodyData setTrackType(String trackType) {
+        public OnsMessageTraceResponseBodyDataMessageTrack setTrackType(String trackType) {
             this.trackType = trackType;
             return this;
         }
@@ -54,7 +54,7 @@ public class OnsMessageTraceResponseBody extends TeaModel {
             return this.trackType;
         }
 
-        public OnsMessageTraceResponseBodyData setConsumerGroup(String consumerGroup) {
+        public OnsMessageTraceResponseBodyDataMessageTrack setConsumerGroup(String consumerGroup) {
             this.consumerGroup = consumerGroup;
             return this;
         }
@@ -62,12 +62,31 @@ public class OnsMessageTraceResponseBody extends TeaModel {
             return this.consumerGroup;
         }
 
-        public OnsMessageTraceResponseBodyData setInstanceId(String instanceId) {
+        public OnsMessageTraceResponseBodyDataMessageTrack setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class OnsMessageTraceResponseBodyData extends TeaModel {
+        @NameInMap("MessageTrack")
+        public java.util.List<OnsMessageTraceResponseBodyDataMessageTrack> messageTrack;
+
+        public static OnsMessageTraceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageTraceResponseBodyData self = new OnsMessageTraceResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMessageTraceResponseBodyData setMessageTrack(java.util.List<OnsMessageTraceResponseBodyDataMessageTrack> messageTrack) {
+            this.messageTrack = messageTrack;
+            return this;
+        }
+        public java.util.List<OnsMessageTraceResponseBodyDataMessageTrack> getMessageTrack() {
+            return this.messageTrack;
         }
 
     }

@@ -31,7 +31,7 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsConsumerGetConnectionResponseBodyDataConnectionList extends TeaModel {
+    public static class OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo extends TeaModel {
         @NameInMap("Version")
         public String version;
 
@@ -44,12 +44,12 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
         @NameInMap("ClientId")
         public String clientId;
 
-        public static OnsConsumerGetConnectionResponseBodyDataConnectionList build(java.util.Map<String, ?> map) throws Exception {
-            OnsConsumerGetConnectionResponseBodyDataConnectionList self = new OnsConsumerGetConnectionResponseBodyDataConnectionList();
+        public static OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo self = new OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsConsumerGetConnectionResponseBodyDataConnectionList setVersion(String version) {
+        public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setVersion(String version) {
             this.version = version;
             return this;
         }
@@ -57,7 +57,7 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             return this.version;
         }
 
-        public OnsConsumerGetConnectionResponseBodyDataConnectionList setClientAddr(String clientAddr) {
+        public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setClientAddr(String clientAddr) {
             this.clientAddr = clientAddr;
             return this;
         }
@@ -65,7 +65,7 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             return this.clientAddr;
         }
 
-        public OnsConsumerGetConnectionResponseBodyDataConnectionList setLanguage(String language) {
+        public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setLanguage(String language) {
             this.language = language;
             return this;
         }
@@ -73,7 +73,7 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
             return this.language;
         }
 
-        public OnsConsumerGetConnectionResponseBodyDataConnectionList setClientId(String clientId) {
+        public OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo setClientId(String clientId) {
             this.clientId = clientId;
             return this;
         }
@@ -83,20 +83,39 @@ public class OnsConsumerGetConnectionResponseBody extends TeaModel {
 
     }
 
+    public static class OnsConsumerGetConnectionResponseBodyDataConnectionList extends TeaModel {
+        @NameInMap("ConnectionDo")
+        public java.util.List<OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo> connectionDo;
+
+        public static OnsConsumerGetConnectionResponseBodyDataConnectionList build(java.util.Map<String, ?> map) throws Exception {
+            OnsConsumerGetConnectionResponseBodyDataConnectionList self = new OnsConsumerGetConnectionResponseBodyDataConnectionList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsConsumerGetConnectionResponseBodyDataConnectionList setConnectionDo(java.util.List<OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo> connectionDo) {
+            this.connectionDo = connectionDo;
+            return this;
+        }
+        public java.util.List<OnsConsumerGetConnectionResponseBodyDataConnectionListConnectionDo> getConnectionDo() {
+            return this.connectionDo;
+        }
+
+    }
+
     public static class OnsConsumerGetConnectionResponseBodyData extends TeaModel {
         @NameInMap("ConnectionList")
-        public java.util.List<OnsConsumerGetConnectionResponseBodyDataConnectionList> connectionList;
+        public OnsConsumerGetConnectionResponseBodyDataConnectionList connectionList;
 
         public static OnsConsumerGetConnectionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             OnsConsumerGetConnectionResponseBodyData self = new OnsConsumerGetConnectionResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public OnsConsumerGetConnectionResponseBodyData setConnectionList(java.util.List<OnsConsumerGetConnectionResponseBodyDataConnectionList> connectionList) {
+        public OnsConsumerGetConnectionResponseBodyData setConnectionList(OnsConsumerGetConnectionResponseBodyDataConnectionList connectionList) {
             this.connectionList = connectionList;
             return this;
         }
-        public java.util.List<OnsConsumerGetConnectionResponseBodyDataConnectionList> getConnectionList() {
+        public OnsConsumerGetConnectionResponseBodyDataConnectionList getConnectionList() {
             return this.connectionList;
         }
 

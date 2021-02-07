@@ -31,7 +31,7 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsTopicSubDetailResponseBodyDataSubscriptionDataList extends TeaModel {
+    public static class OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList extends TeaModel {
         @NameInMap("GroupId")
         public String groupId;
 
@@ -41,12 +41,12 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
         @NameInMap("SubString")
         public String subString;
 
-        public static OnsTopicSubDetailResponseBodyDataSubscriptionDataList build(java.util.Map<String, ?> map) throws Exception {
-            OnsTopicSubDetailResponseBodyDataSubscriptionDataList self = new OnsTopicSubDetailResponseBodyDataSubscriptionDataList();
+        public static OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList build(java.util.Map<String, ?> map) throws Exception {
+            OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList self = new OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList();
             return TeaModel.build(map, self);
         }
 
-        public OnsTopicSubDetailResponseBodyDataSubscriptionDataList setGroupId(String groupId) {
+        public OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
         }
@@ -54,7 +54,7 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        public OnsTopicSubDetailResponseBodyDataSubscriptionDataList setMessageModel(String messageModel) {
+        public OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList setMessageModel(String messageModel) {
             this.messageModel = messageModel;
             return this;
         }
@@ -62,7 +62,7 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             return this.messageModel;
         }
 
-        public OnsTopicSubDetailResponseBodyDataSubscriptionDataList setSubString(String subString) {
+        public OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList setSubString(String subString) {
             this.subString = subString;
             return this;
         }
@@ -72,9 +72,28 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
 
     }
 
+    public static class OnsTopicSubDetailResponseBodyDataSubscriptionDataList extends TeaModel {
+        @NameInMap("SubscriptionDataList")
+        public java.util.List<OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> subscriptionDataList;
+
+        public static OnsTopicSubDetailResponseBodyDataSubscriptionDataList build(java.util.Map<String, ?> map) throws Exception {
+            OnsTopicSubDetailResponseBodyDataSubscriptionDataList self = new OnsTopicSubDetailResponseBodyDataSubscriptionDataList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsTopicSubDetailResponseBodyDataSubscriptionDataList setSubscriptionDataList(java.util.List<OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> subscriptionDataList) {
+            this.subscriptionDataList = subscriptionDataList;
+            return this;
+        }
+        public java.util.List<OnsTopicSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> getSubscriptionDataList() {
+            return this.subscriptionDataList;
+        }
+
+    }
+
     public static class OnsTopicSubDetailResponseBodyData extends TeaModel {
         @NameInMap("SubscriptionDataList")
-        public java.util.List<OnsTopicSubDetailResponseBodyDataSubscriptionDataList> subscriptionDataList;
+        public OnsTopicSubDetailResponseBodyDataSubscriptionDataList subscriptionDataList;
 
         @NameInMap("Topic")
         public String topic;
@@ -84,11 +103,11 @@ public class OnsTopicSubDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public OnsTopicSubDetailResponseBodyData setSubscriptionDataList(java.util.List<OnsTopicSubDetailResponseBodyDataSubscriptionDataList> subscriptionDataList) {
+        public OnsTopicSubDetailResponseBodyData setSubscriptionDataList(OnsTopicSubDetailResponseBodyDataSubscriptionDataList subscriptionDataList) {
             this.subscriptionDataList = subscriptionDataList;
             return this;
         }
-        public java.util.List<OnsTopicSubDetailResponseBodyDataSubscriptionDataList> getSubscriptionDataList() {
+        public OnsTopicSubDetailResponseBodyDataSubscriptionDataList getSubscriptionDataList() {
             return this.subscriptionDataList;
         }
 

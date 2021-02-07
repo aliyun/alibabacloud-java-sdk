@@ -31,19 +31,19 @@ public class OnsMqttQueryHistoryOnlineResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsMqttQueryHistoryOnlineResponseBodyDataRecords extends TeaModel {
+    public static class OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo extends TeaModel {
         @NameInMap("Y")
         public Float y;
 
         @NameInMap("X")
         public Long x;
 
-        public static OnsMqttQueryHistoryOnlineResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
-            OnsMqttQueryHistoryOnlineResponseBodyDataRecords self = new OnsMqttQueryHistoryOnlineResponseBodyDataRecords();
+        public static OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo self = new OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsMqttQueryHistoryOnlineResponseBodyDataRecords setY(Float y) {
+        public OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo setY(Float y) {
             this.y = y;
             return this;
         }
@@ -51,7 +51,7 @@ public class OnsMqttQueryHistoryOnlineResponseBody extends TeaModel {
             return this.y;
         }
 
-        public OnsMqttQueryHistoryOnlineResponseBodyDataRecords setX(Long x) {
+        public OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo setX(Long x) {
             this.x = x;
             return this;
         }
@@ -61,9 +61,28 @@ public class OnsMqttQueryHistoryOnlineResponseBody extends TeaModel {
 
     }
 
+    public static class OnsMqttQueryHistoryOnlineResponseBodyDataRecords extends TeaModel {
+        @NameInMap("StatsDataDo")
+        public java.util.List<OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo> statsDataDo;
+
+        public static OnsMqttQueryHistoryOnlineResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
+            OnsMqttQueryHistoryOnlineResponseBodyDataRecords self = new OnsMqttQueryHistoryOnlineResponseBodyDataRecords();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMqttQueryHistoryOnlineResponseBodyDataRecords setStatsDataDo(java.util.List<OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo> statsDataDo) {
+            this.statsDataDo = statsDataDo;
+            return this;
+        }
+        public java.util.List<OnsMqttQueryHistoryOnlineResponseBodyDataRecordsStatsDataDo> getStatsDataDo() {
+            return this.statsDataDo;
+        }
+
+    }
+
     public static class OnsMqttQueryHistoryOnlineResponseBodyData extends TeaModel {
         @NameInMap("Records")
-        public java.util.List<OnsMqttQueryHistoryOnlineResponseBodyDataRecords> records;
+        public OnsMqttQueryHistoryOnlineResponseBodyDataRecords records;
 
         @NameInMap("XUnit")
         public String XUnit;
@@ -79,11 +98,11 @@ public class OnsMqttQueryHistoryOnlineResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public OnsMqttQueryHistoryOnlineResponseBodyData setRecords(java.util.List<OnsMqttQueryHistoryOnlineResponseBodyDataRecords> records) {
+        public OnsMqttQueryHistoryOnlineResponseBodyData setRecords(OnsMqttQueryHistoryOnlineResponseBodyDataRecords records) {
             this.records = records;
             return this;
         }
-        public java.util.List<OnsMqttQueryHistoryOnlineResponseBodyDataRecords> getRecords() {
+        public OnsMqttQueryHistoryOnlineResponseBodyDataRecords getRecords() {
             return this.records;
         }
 

@@ -31,19 +31,19 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
         return this.msgFoundDo;
     }
 
-    public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListPropertyList extends TeaModel {
+    public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty extends TeaModel {
         @NameInMap("Value")
         public String value;
 
         @NameInMap("Name")
         public String name;
 
-        public static OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListPropertyList build(java.util.Map<String, ?> map) throws Exception {
-            OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListPropertyList self = new OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListPropertyList();
+        public static OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty self = new OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty();
             return TeaModel.build(map, self);
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListPropertyList setValue(String value) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty setValue(String value) {
             this.value = value;
             return this;
         }
@@ -51,7 +51,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.value;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListPropertyList setName(String name) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty setName(String name) {
             this.name = name;
             return this;
         }
@@ -61,7 +61,26 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
 
     }
 
-    public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList extends TeaModel {
+    public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList extends TeaModel {
+        @NameInMap("MessageProperty")
+        public java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty> messageProperty;
+
+        public static OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList self = new OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList setMessageProperty(java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty> messageProperty) {
+            this.messageProperty = messageProperty;
+            return this;
+        }
+        public java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty> getMessageProperty() {
+            return this.messageProperty;
+        }
+
+    }
+
+    public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo extends TeaModel {
         @NameInMap("StoreSize")
         public Integer storeSize;
 
@@ -84,7 +103,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
         public String topic;
 
         @NameInMap("PropertyList")
-        public java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListPropertyList> propertyList;
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList propertyList;
 
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
@@ -95,12 +114,12 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
         @NameInMap("BornHost")
         public String bornHost;
 
-        public static OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList build(java.util.Map<String, ?> map) throws Exception {
-            OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList self = new OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList();
+        public static OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo self = new OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setStoreSize(Integer storeSize) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreSize(Integer storeSize) {
             this.storeSize = storeSize;
             return this;
         }
@@ -108,7 +127,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.storeSize;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setReconsumeTimes(Integer reconsumeTimes) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setReconsumeTimes(Integer reconsumeTimes) {
             this.reconsumeTimes = reconsumeTimes;
             return this;
         }
@@ -116,7 +135,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.reconsumeTimes;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setStoreTimestamp(Long storeTimestamp) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreTimestamp(Long storeTimestamp) {
             this.storeTimestamp = storeTimestamp;
             return this;
         }
@@ -124,7 +143,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.storeTimestamp;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setInstanceId(String instanceId) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -132,7 +151,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setMsgId(String msgId) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setMsgId(String msgId) {
             this.msgId = msgId;
             return this;
         }
@@ -140,7 +159,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.msgId;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setStoreHost(String storeHost) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreHost(String storeHost) {
             this.storeHost = storeHost;
             return this;
         }
@@ -148,7 +167,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.storeHost;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setTopic(String topic) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setTopic(String topic) {
             this.topic = topic;
             return this;
         }
@@ -156,15 +175,15 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setPropertyList(java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListPropertyList> propertyList) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setPropertyList(OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList propertyList) {
             this.propertyList = propertyList;
             return this;
         }
-        public java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListPropertyList> getPropertyList() {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList getPropertyList() {
             return this.propertyList;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setBornTimestamp(Long bornTimestamp) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBornTimestamp(Long bornTimestamp) {
             this.bornTimestamp = bornTimestamp;
             return this;
         }
@@ -172,7 +191,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.bornTimestamp;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setBodyCRC(Integer bodyCRC) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBodyCRC(Integer bodyCRC) {
             this.bodyCRC = bodyCRC;
             return this;
         }
@@ -180,7 +199,7 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.bodyCRC;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setBornHost(String bornHost) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBornHost(String bornHost) {
             this.bornHost = bornHost;
             return this;
         }
@@ -190,12 +209,31 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
 
     }
 
+    public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList extends TeaModel {
+        @NameInMap("OnsRestMessageDo")
+        public java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo> onsRestMessageDo;
+
+        public static OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList self = new OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList setOnsRestMessageDo(java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo> onsRestMessageDo) {
+            this.onsRestMessageDo = onsRestMessageDo;
+            return this;
+        }
+        public java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo> getOnsRestMessageDo() {
+            return this.onsRestMessageDo;
+        }
+
+    }
+
     public static class OnsMessagePageQueryByTopicResponseBodyMsgFoundDo extends TeaModel {
         @NameInMap("CurrentPage")
         public Long currentPage;
 
         @NameInMap("MsgFoundList")
-        public java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList> msgFoundList;
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList msgFoundList;
 
         @NameInMap("MaxPageCount")
         public Long maxPageCount;
@@ -216,11 +254,11 @@ public class OnsMessagePageQueryByTopicResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDo setMsgFoundList(java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList> msgFoundList) {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDo setMsgFoundList(OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList msgFoundList) {
             this.msgFoundList = msgFoundList;
             return this;
         }
-        public java.util.List<OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList> getMsgFoundList() {
+        public OnsMessagePageQueryByTopicResponseBodyMsgFoundDoMsgFoundList getMsgFoundList() {
             return this.msgFoundList;
         }
 
