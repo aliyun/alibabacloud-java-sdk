@@ -14,20 +14,19 @@ public class CreateSubscriptionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("PoolKey")
-    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("SecretNo")
-    @Validation(required = true)
     public String secretNo;
 
     @NameInMap("PhoneNo")
-    @Validation(required = true)
     public String phoneNo;
 
     @NameInMap("BindToken")
-    @Validation(required = true)
     public String bindToken;
+
+    @NameInMap("ProdCode")
+    public String prodCode;
 
     public static CreateSubscriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSubscriptionRequest self = new CreateSubscriptionRequest();
@@ -88,6 +87,14 @@ public class CreateSubscriptionRequest extends TeaModel {
     }
     public String getBindToken() {
         return this.bindToken;
+    }
+
+    public CreateSubscriptionRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
     }
 
 }

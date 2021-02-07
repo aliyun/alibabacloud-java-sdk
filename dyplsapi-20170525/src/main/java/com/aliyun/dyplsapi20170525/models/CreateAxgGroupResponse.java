@@ -4,57 +4,33 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class CreateAxgGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("GroupId")
-    @Validation(required = true)
-    public Long groupId;
+    public CreateAxgGroupResponseBody body;
 
     public static CreateAxgGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAxgGroupResponse self = new CreateAxgGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateAxgGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateAxgGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateAxgGroupResponse setCode(String code) {
-        this.code = code;
+    public CreateAxgGroupResponse setBody(CreateAxgGroupResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateAxgGroupResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public CreateAxgGroupResponse setGroupId(Long groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public Long getGroupId() {
-        return this.groupId;
+    public CreateAxgGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

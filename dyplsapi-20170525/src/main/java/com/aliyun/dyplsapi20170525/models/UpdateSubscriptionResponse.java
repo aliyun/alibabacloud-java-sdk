@@ -4,45 +4,33 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class UpdateSubscriptionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public UpdateSubscriptionResponseBody body;
 
     public static UpdateSubscriptionResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateSubscriptionResponse self = new UpdateSubscriptionResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateSubscriptionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateSubscriptionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateSubscriptionResponse setCode(String code) {
-        this.code = code;
+    public UpdateSubscriptionResponse setBody(UpdateSubscriptionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public UpdateSubscriptionResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public UpdateSubscriptionResponseBody getBody() {
+        return this.body;
     }
 
 }

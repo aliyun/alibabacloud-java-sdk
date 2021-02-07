@@ -14,11 +14,9 @@ public class ReleaseSecretNoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("PoolKey")
-    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("SecretNo")
-    @Validation(required = true)
     public String secretNo;
 
     public static ReleaseSecretNoRequest build(java.util.Map<String, ?> map) throws Exception {

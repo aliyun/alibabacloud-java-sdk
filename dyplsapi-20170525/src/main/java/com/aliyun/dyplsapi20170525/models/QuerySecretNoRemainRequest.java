@@ -14,11 +14,9 @@ public class QuerySecretNoRemainRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("SpecId")
-    @Validation(required = true)
     public Long specId;
 
     @NameInMap("City")
-    @Validation(required = true)
     public String city;
 
     @NameInMap("SecretNo")

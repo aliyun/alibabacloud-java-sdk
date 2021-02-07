@@ -14,20 +14,19 @@ public class UpdatePhoneSwitchRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("PoolKey")
-    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("SubsId")
-    @Validation(required = true)
     public Long subsId;
 
     @NameInMap("SecretNo")
-    @Validation(required = true)
     public String secretNo;
 
     @NameInMap("SwitchStatus")
-    @Validation(required = true)
     public Integer switchStatus;
+
+    @NameInMap("ProdCode")
+    public String prodCode;
 
     public static UpdatePhoneSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePhoneSwitchRequest self = new UpdatePhoneSwitchRequest();
@@ -88,6 +87,14 @@ public class UpdatePhoneSwitchRequest extends TeaModel {
     }
     public Integer getSwitchStatus() {
         return this.switchStatus;
+    }
+
+    public UpdatePhoneSwitchRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
     }
 
 }

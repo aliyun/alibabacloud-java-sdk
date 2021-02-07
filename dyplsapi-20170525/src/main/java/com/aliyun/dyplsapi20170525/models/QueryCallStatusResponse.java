@@ -4,89 +4,33 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QueryCallStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("SecretCallStatusDTO")
-    @Validation(required = true)
-    public QueryCallStatusResponseSecretCallStatusDTO secretCallStatusDTO;
+    public QueryCallStatusResponseBody body;
 
     public static QueryCallStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryCallStatusResponse self = new QueryCallStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryCallStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public QueryCallStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public QueryCallStatusResponse setCode(String code) {
-        this.code = code;
+    public QueryCallStatusResponse setBody(QueryCallStatusResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryCallStatusResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryCallStatusResponse setSecretCallStatusDTO(QueryCallStatusResponseSecretCallStatusDTO secretCallStatusDTO) {
-        this.secretCallStatusDTO = secretCallStatusDTO;
-        return this;
-    }
-    public QueryCallStatusResponseSecretCallStatusDTO getSecretCallStatusDTO() {
-        return this.secretCallStatusDTO;
-    }
-
-    public static class QueryCallStatusResponseSecretCallStatusDTO extends TeaModel {
-        @NameInMap("Status")
-        @Validation(required = true)
-        public Integer status;
-
-        @NameInMap("CalledNo")
-        @Validation(required = true)
-        public String calledNo;
-
-        public static QueryCallStatusResponseSecretCallStatusDTO build(java.util.Map<String, ?> map) throws Exception {
-            QueryCallStatusResponseSecretCallStatusDTO self = new QueryCallStatusResponseSecretCallStatusDTO();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryCallStatusResponseSecretCallStatusDTO setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public QueryCallStatusResponseSecretCallStatusDTO setCalledNo(String calledNo) {
-            this.calledNo = calledNo;
-            return this;
-        }
-        public String getCalledNo() {
-            return this.calledNo;
-        }
-
+    public QueryCallStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

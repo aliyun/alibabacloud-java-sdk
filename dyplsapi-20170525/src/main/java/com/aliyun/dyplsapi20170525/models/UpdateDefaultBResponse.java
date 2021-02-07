@@ -4,57 +4,33 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class UpdateDefaultBResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
+    public UpdateDefaultBResponseBody body;
 
     public static UpdateDefaultBResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateDefaultBResponse self = new UpdateDefaultBResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateDefaultBResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateDefaultBResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateDefaultBResponse setCode(String code) {
-        this.code = code;
+    public UpdateDefaultBResponse setBody(UpdateDefaultBResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public UpdateDefaultBResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public UpdateDefaultBResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
+    public UpdateDefaultBResponseBody getBody() {
+        return this.body;
     }
 
 }

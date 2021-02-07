@@ -20,11 +20,9 @@ public class QuerySubscriptionDetailRequest extends TeaModel {
     public String productType;
 
     @NameInMap("SubsId")
-    @Validation(required = true)
     public String subsId;
 
     @NameInMap("PhoneNoX")
-    @Validation(required = true)
     public String phoneNoX;
 
     public static QuerySubscriptionDetailRequest build(java.util.Map<String, ?> map) throws Exception {
