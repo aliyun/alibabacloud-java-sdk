@@ -4,33 +4,45 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddAxnTrackNoResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public AddAxnTrackNoResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
 
     public static AddAxnTrackNoResponse build(java.util.Map<String, ?> map) throws Exception {
         AddAxnTrackNoResponse self = new AddAxnTrackNoResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddAxnTrackNoResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddAxnTrackNoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddAxnTrackNoResponse setBody(AddAxnTrackNoResponseBody body) {
-        this.body = body;
+    public AddAxnTrackNoResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public AddAxnTrackNoResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddAxnTrackNoResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

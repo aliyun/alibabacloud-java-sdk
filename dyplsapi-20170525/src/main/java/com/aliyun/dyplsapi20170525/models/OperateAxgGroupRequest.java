@@ -14,15 +14,19 @@ public class OperateAxgGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("PoolKey")
+    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("GroupId")
+    @Validation(required = true)
     public Long groupId;
 
     @NameInMap("OperateType")
+    @Validation(required = true)
     public String operateType;
 
     @NameInMap("Numbers")
+    @Validation(required = true)
     public String numbers;
 
     public static OperateAxgGroupRequest build(java.util.Map<String, ?> map) throws Exception {

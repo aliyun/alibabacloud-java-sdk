@@ -17,9 +17,11 @@ public class BindAxgRequest extends TeaModel {
     public String poolKey;
 
     @NameInMap("PhoneNoA")
+    @Validation(required = true)
     public String phoneNoA;
 
     @NameInMap("GroupId")
+    @Validation(required = true)
     public String groupId;
 
     @NameInMap("PhoneNoB")
@@ -29,6 +31,7 @@ public class BindAxgRequest extends TeaModel {
     public String phoneNoX;
 
     @NameInMap("Expiration")
+    @Validation(required = true)
     public String expiration;
 
     @NameInMap("ExpectCity")

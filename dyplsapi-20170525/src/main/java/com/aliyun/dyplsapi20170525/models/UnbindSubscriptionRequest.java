@@ -20,9 +20,11 @@ public class UnbindSubscriptionRequest extends TeaModel {
     public String productType;
 
     @NameInMap("SubsId")
+    @Validation(required = true)
     public String subsId;
 
     @NameInMap("SecretNo")
+    @Validation(required = true)
     public String secretNo;
 
     public static UnbindSubscriptionRequest build(java.util.Map<String, ?> map) throws Exception {

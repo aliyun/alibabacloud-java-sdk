@@ -4,25 +4,19 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecretBlacklistRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("PoolKey")
+    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("BlackNo")
+    @Validation(required = true)
     public String blackNo;
 
     @NameInMap("Remark")
     public String remark;
 
     @NameInMap("BlackType")
+    @Validation(required = true)
     public String blackType;
 
     @NameInMap("WayControl")
@@ -31,30 +25,6 @@ public class DeleteSecretBlacklistRequest extends TeaModel {
     public static DeleteSecretBlacklistRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSecretBlacklistRequest self = new DeleteSecretBlacklistRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteSecretBlacklistRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    public DeleteSecretBlacklistRequest setResourceOwnerAccount(String resourceOwnerAccount) {
-        this.resourceOwnerAccount = resourceOwnerAccount;
-        return this;
-    }
-    public String getResourceOwnerAccount() {
-        return this.resourceOwnerAccount;
-    }
-
-    public DeleteSecretBlacklistRequest setResourceOwnerId(Long resourceOwnerId) {
-        this.resourceOwnerId = resourceOwnerId;
-        return this;
-    }
-    public Long getResourceOwnerId() {
-        return this.resourceOwnerId;
     }
 
     public DeleteSecretBlacklistRequest setPoolKey(String poolKey) {

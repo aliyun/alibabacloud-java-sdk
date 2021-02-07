@@ -14,12 +14,15 @@ public class OperateBlackNoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("PoolKey")
+    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("BlackNo")
+    @Validation(required = true)
     public String blackNo;
 
     @NameInMap("OperateType")
+    @Validation(required = true)
     public String operateType;
 
     @NameInMap("Tips")

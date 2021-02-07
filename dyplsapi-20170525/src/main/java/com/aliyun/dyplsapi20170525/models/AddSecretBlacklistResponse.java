@@ -4,33 +4,45 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddSecretBlacklistResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public AddSecretBlacklistResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
 
     public static AddSecretBlacklistResponse build(java.util.Map<String, ?> map) throws Exception {
         AddSecretBlacklistResponse self = new AddSecretBlacklistResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddSecretBlacklistResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AddSecretBlacklistResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public AddSecretBlacklistResponse setBody(AddSecretBlacklistResponseBody body) {
-        this.body = body;
+    public AddSecretBlacklistResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public AddSecretBlacklistResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddSecretBlacklistResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

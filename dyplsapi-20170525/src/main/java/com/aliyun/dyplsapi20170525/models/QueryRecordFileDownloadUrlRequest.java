@@ -20,6 +20,7 @@ public class QueryRecordFileDownloadUrlRequest extends TeaModel {
     public String productType;
 
     @NameInMap("CallId")
+    @Validation(required = true)
     public String callId;
 
     @NameInMap("CallTime")

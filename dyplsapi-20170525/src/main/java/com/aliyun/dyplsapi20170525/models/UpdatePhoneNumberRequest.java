@@ -13,22 +13,24 @@ public class UpdatePhoneNumberRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("ProdCode")
-    public String prodCode;
-
     @NameInMap("PoolKey")
+    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("SubsId")
+    @Validation(required = true)
     public Long subsId;
 
     @NameInMap("SecretNo")
+    @Validation(required = true)
     public String secretNo;
 
     @NameInMap("NewPhoneNo")
+    @Validation(required = true)
     public String newPhoneNo;
 
     @NameInMap("BindToken")
+    @Validation(required = true)
     public String bindToken;
 
     public static UpdatePhoneNumberRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -58,14 +60,6 @@ public class UpdatePhoneNumberRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public UpdatePhoneNumberRequest setProdCode(String prodCode) {
-        this.prodCode = prodCode;
-        return this;
-    }
-    public String getProdCode() {
-        return this.prodCode;
     }
 
     public UpdatePhoneNumberRequest setPoolKey(String poolKey) {

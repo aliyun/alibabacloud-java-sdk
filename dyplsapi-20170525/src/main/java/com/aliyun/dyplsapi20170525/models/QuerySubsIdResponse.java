@@ -4,33 +4,57 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySubsIdResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public QuerySubsIdResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("SubsId")
+    @Validation(required = true)
+    public String subsId;
 
     public static QuerySubsIdResponse build(java.util.Map<String, ?> map) throws Exception {
         QuerySubsIdResponse self = new QuerySubsIdResponse();
         return TeaModel.build(map, self);
     }
 
-    public QuerySubsIdResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public QuerySubsIdResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public QuerySubsIdResponse setBody(QuerySubsIdResponseBody body) {
-        this.body = body;
+    public QuerySubsIdResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public QuerySubsIdResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public QuerySubsIdResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QuerySubsIdResponse setSubsId(String subsId) {
+        this.subsId = subsId;
+        return this;
+    }
+    public String getSubsId() {
+        return this.subsId;
     }
 
 }
