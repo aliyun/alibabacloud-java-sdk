@@ -14,19 +14,15 @@ public class GetTotalPublicUrlRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("CheckSubs")
-    @Validation(required = true)
     public Boolean checkSubs;
 
     @NameInMap("PartnerKey")
-    @Validation(required = true)
     public String partnerKey;
 
     @NameInMap("CallId")
-    @Validation(required = true)
     public String callId;
 
     @NameInMap("CallTime")
-    @Validation(required = true)
     public String callTime;
 
     public static GetTotalPublicUrlRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -17,7 +17,6 @@ public class QueryCallStatusRequest extends TeaModel {
     public String poolKey;
 
     @NameInMap("SubsId")
-    @Validation(required = true)
     public String subsId;
 
     @NameInMap("CallNo")

@@ -4,57 +4,33 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class UpdatePhoneSwitchResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
+    public UpdatePhoneSwitchResponseBody body;
 
     public static UpdatePhoneSwitchResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdatePhoneSwitchResponse self = new UpdatePhoneSwitchResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdatePhoneSwitchResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdatePhoneSwitchResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdatePhoneSwitchResponse setCode(String code) {
-        this.code = code;
+    public UpdatePhoneSwitchResponse setBody(UpdatePhoneSwitchResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public UpdatePhoneSwitchResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public UpdatePhoneSwitchResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
+    public UpdatePhoneSwitchResponseBody getBody() {
+        return this.body;
     }
 
 }

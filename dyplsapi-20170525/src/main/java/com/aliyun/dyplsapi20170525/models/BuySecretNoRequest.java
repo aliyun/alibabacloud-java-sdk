@@ -14,15 +14,12 @@ public class BuySecretNoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("PoolKey")
-    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("SpecId")
-    @Validation(required = true)
     public Long specId;
 
     @NameInMap("City")
-    @Validation(required = true)
     public String city;
 
     @NameInMap("SecretNo")

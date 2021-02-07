@@ -4,45 +4,33 @@ package com.aliyun.dyplsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecretBlacklistResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public DeleteSecretBlacklistResponseBody body;
 
     public static DeleteSecretBlacklistResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteSecretBlacklistResponse self = new DeleteSecretBlacklistResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSecretBlacklistResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteSecretBlacklistResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteSecretBlacklistResponse setCode(String code) {
-        this.code = code;
+    public DeleteSecretBlacklistResponse setBody(DeleteSecretBlacklistResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DeleteSecretBlacklistResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public DeleteSecretBlacklistResponseBody getBody() {
+        return this.body;
     }
 
 }

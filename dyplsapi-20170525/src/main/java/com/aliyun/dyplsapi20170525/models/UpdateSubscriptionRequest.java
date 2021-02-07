@@ -20,11 +20,9 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public String productType;
 
     @NameInMap("SubsId")
-    @Validation(required = true)
     public String subsId;
 
     @NameInMap("PhoneNoX")
-    @Validation(required = true)
     public String phoneNoX;
 
     @NameInMap("PhoneNoA")
@@ -52,7 +50,6 @@ public class UpdateSubscriptionRequest extends TeaModel {
     public Boolean isRecordingEnabled;
 
     @NameInMap("OperateType")
-    @Validation(required = true)
     public String operateType;
 
     @NameInMap("RingConfig")

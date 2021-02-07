@@ -13,16 +13,16 @@ public class GetSubscriptionDetailRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ProdCode")
+    public String prodCode;
+
     @NameInMap("PoolKey")
-    @Validation(required = true)
     public String poolKey;
 
     @NameInMap("SubsId")
-    @Validation(required = true)
     public Long subsId;
 
     @NameInMap("SecretNo")
-    @Validation(required = true)
     public String secretNo;
 
     public static GetSubscriptionDetailRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -52,6 +52,14 @@ public class GetSubscriptionDetailRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public GetSubscriptionDetailRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
     }
 
     public GetSubscriptionDetailRequest setPoolKey(String poolKey) {

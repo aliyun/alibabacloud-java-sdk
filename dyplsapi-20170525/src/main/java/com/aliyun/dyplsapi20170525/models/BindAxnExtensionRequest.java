@@ -17,7 +17,6 @@ public class BindAxnExtensionRequest extends TeaModel {
     public String poolKey;
 
     @NameInMap("PhoneNoA")
-    @Validation(required = true)
     public String phoneNoA;
 
     @NameInMap("Extension")
@@ -30,7 +29,6 @@ public class BindAxnExtensionRequest extends TeaModel {
     public String phoneNoX;
 
     @NameInMap("Expiration")
-    @Validation(required = true)
     public String expiration;
 
     @NameInMap("ExpectCity")

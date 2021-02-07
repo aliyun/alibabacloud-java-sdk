@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dyplsapi20170525</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>dyplsapi20170525</name>
   <description>Alibaba Cloud Dyplsapi (20170525) SDK for Java
