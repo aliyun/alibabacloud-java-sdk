@@ -8,7 +8,7 @@ public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public java.util.List<String> data;
+    public OnsDLQMessageResendByIdResponseBodyData data;
 
     public static OnsDLQMessageResendByIdResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsDLQMessageResendByIdResponseBody self = new OnsDLQMessageResendByIdResponseBody();
@@ -23,12 +23,31 @@ public class OnsDLQMessageResendByIdResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OnsDLQMessageResendByIdResponseBody setData(java.util.List<String> data) {
+    public OnsDLQMessageResendByIdResponseBody setData(OnsDLQMessageResendByIdResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<String> getData() {
+    public OnsDLQMessageResendByIdResponseBodyData getData() {
         return this.data;
+    }
+
+    public static class OnsDLQMessageResendByIdResponseBodyData extends TeaModel {
+        @NameInMap("MsgId")
+        public java.util.List<String> msgId;
+
+        public static OnsDLQMessageResendByIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            OnsDLQMessageResendByIdResponseBodyData self = new OnsDLQMessageResendByIdResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsDLQMessageResendByIdResponseBodyData setMsgId(java.util.List<String> msgId) {
+            this.msgId = msgId;
+            return this;
+        }
+        public java.util.List<String> getMsgId() {
+            return this.msgId;
+        }
+
     }
 
 }

@@ -31,7 +31,7 @@ public class OnsMqttQueryClientByClientIdResponseBody extends TeaModel {
         return this.mqttClientInfoDo;
     }
 
-    public static class OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData extends TeaModel {
+    public static class OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo extends TeaModel {
         @NameInMap("SubTopic")
         public String subTopic;
 
@@ -41,12 +41,12 @@ public class OnsMqttQueryClientByClientIdResponseBody extends TeaModel {
         @NameInMap("Qos")
         public Integer qos;
 
-        public static OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData build(java.util.Map<String, ?> map) throws Exception {
-            OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData self = new OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData();
+        public static OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo self = new OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData setSubTopic(String subTopic) {
+        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo setSubTopic(String subTopic) {
             this.subTopic = subTopic;
             return this;
         }
@@ -54,7 +54,7 @@ public class OnsMqttQueryClientByClientIdResponseBody extends TeaModel {
             return this.subTopic;
         }
 
-        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData setParentTopic(String parentTopic) {
+        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo setParentTopic(String parentTopic) {
             this.parentTopic = parentTopic;
             return this;
         }
@@ -62,12 +62,31 @@ public class OnsMqttQueryClientByClientIdResponseBody extends TeaModel {
             return this.parentTopic;
         }
 
-        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData setQos(Integer qos) {
+        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo setQos(Integer qos) {
             this.qos = qos;
             return this;
         }
         public Integer getQos() {
             return this.qos;
+        }
+
+    }
+
+    public static class OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData extends TeaModel {
+        @NameInMap("SubscriptionDo")
+        public java.util.List<OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo> subscriptionDo;
+
+        public static OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData build(java.util.Map<String, ?> map) throws Exception {
+            OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData self = new OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData setSubscriptionDo(java.util.List<OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo> subscriptionDo) {
+            this.subscriptionDo = subscriptionDo;
+            return this;
+        }
+        public java.util.List<OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonDataSubscriptionDo> getSubscriptionDo() {
+            return this.subscriptionDo;
         }
 
     }
@@ -86,7 +105,7 @@ public class OnsMqttQueryClientByClientIdResponseBody extends TeaModel {
         public String clientId;
 
         @NameInMap("SubScriptonData")
-        public java.util.List<OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData> subScriptonData;
+        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData subScriptonData;
 
         public static OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDo build(java.util.Map<String, ?> map) throws Exception {
             OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDo self = new OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDo();
@@ -125,11 +144,11 @@ public class OnsMqttQueryClientByClientIdResponseBody extends TeaModel {
             return this.clientId;
         }
 
-        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDo setSubScriptonData(java.util.List<OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData> subScriptonData) {
+        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDo setSubScriptonData(OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData subScriptonData) {
             this.subScriptonData = subScriptonData;
             return this;
         }
-        public java.util.List<OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData> getSubScriptonData() {
+        public OnsMqttQueryClientByClientIdResponseBodyMqttClientInfoDoSubScriptonData getSubScriptonData() {
             return this.subScriptonData;
         }
 

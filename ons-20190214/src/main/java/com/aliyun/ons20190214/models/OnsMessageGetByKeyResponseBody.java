@@ -8,7 +8,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public java.util.List<OnsMessageGetByKeyResponseBodyData> data;
+    public OnsMessageGetByKeyResponseBodyData data;
 
     public static OnsMessageGetByKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsMessageGetByKeyResponseBody self = new OnsMessageGetByKeyResponseBody();
@@ -23,27 +23,27 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OnsMessageGetByKeyResponseBody setData(java.util.List<OnsMessageGetByKeyResponseBodyData> data) {
+    public OnsMessageGetByKeyResponseBody setData(OnsMessageGetByKeyResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<OnsMessageGetByKeyResponseBodyData> getData() {
+    public OnsMessageGetByKeyResponseBodyData getData() {
         return this.data;
     }
 
-    public static class OnsMessageGetByKeyResponseBodyDataPropertyList extends TeaModel {
+    public static class OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty extends TeaModel {
         @NameInMap("Value")
         public String value;
 
         @NameInMap("Name")
         public String name;
 
-        public static OnsMessageGetByKeyResponseBodyDataPropertyList build(java.util.Map<String, ?> map) throws Exception {
-            OnsMessageGetByKeyResponseBodyDataPropertyList self = new OnsMessageGetByKeyResponseBodyDataPropertyList();
+        public static OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty self = new OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty();
             return TeaModel.build(map, self);
         }
 
-        public OnsMessageGetByKeyResponseBodyDataPropertyList setValue(String value) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty setValue(String value) {
             this.value = value;
             return this;
         }
@@ -51,7 +51,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.value;
         }
 
-        public OnsMessageGetByKeyResponseBodyDataPropertyList setName(String name) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty setName(String name) {
             this.name = name;
             return this;
         }
@@ -61,7 +61,26 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
 
     }
 
-    public static class OnsMessageGetByKeyResponseBodyData extends TeaModel {
+    public static class OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList extends TeaModel {
+        @NameInMap("MessageProperty")
+        public java.util.List<OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty> messageProperty;
+
+        public static OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList self = new OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList setMessageProperty(java.util.List<OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty> messageProperty) {
+            this.messageProperty = messageProperty;
+            return this;
+        }
+        public java.util.List<OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyListMessageProperty> getMessageProperty() {
+            return this.messageProperty;
+        }
+
+    }
+
+    public static class OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo extends TeaModel {
         @NameInMap("StoreSize")
         public Integer storeSize;
 
@@ -84,7 +103,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
         public String topic;
 
         @NameInMap("PropertyList")
-        public java.util.List<OnsMessageGetByKeyResponseBodyDataPropertyList> propertyList;
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList propertyList;
 
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
@@ -95,12 +114,12 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
         @NameInMap("BornHost")
         public String bornHost;
 
-        public static OnsMessageGetByKeyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            OnsMessageGetByKeyResponseBodyData self = new OnsMessageGetByKeyResponseBodyData();
+        public static OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo self = new OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsMessageGetByKeyResponseBodyData setStoreSize(Integer storeSize) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setStoreSize(Integer storeSize) {
             this.storeSize = storeSize;
             return this;
         }
@@ -108,7 +127,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.storeSize;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setReconsumeTimes(Integer reconsumeTimes) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setReconsumeTimes(Integer reconsumeTimes) {
             this.reconsumeTimes = reconsumeTimes;
             return this;
         }
@@ -116,7 +135,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.reconsumeTimes;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setStoreTimestamp(Long storeTimestamp) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setStoreTimestamp(Long storeTimestamp) {
             this.storeTimestamp = storeTimestamp;
             return this;
         }
@@ -124,7 +143,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.storeTimestamp;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setInstanceId(String instanceId) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -132,7 +151,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setMsgId(String msgId) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setMsgId(String msgId) {
             this.msgId = msgId;
             return this;
         }
@@ -140,7 +159,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.msgId;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setStoreHost(String storeHost) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setStoreHost(String storeHost) {
             this.storeHost = storeHost;
             return this;
         }
@@ -148,7 +167,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.storeHost;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setTopic(String topic) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setTopic(String topic) {
             this.topic = topic;
             return this;
         }
@@ -156,15 +175,15 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setPropertyList(java.util.List<OnsMessageGetByKeyResponseBodyDataPropertyList> propertyList) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setPropertyList(OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList propertyList) {
             this.propertyList = propertyList;
             return this;
         }
-        public java.util.List<OnsMessageGetByKeyResponseBodyDataPropertyList> getPropertyList() {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDoPropertyList getPropertyList() {
             return this.propertyList;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setBornTimestamp(Long bornTimestamp) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setBornTimestamp(Long bornTimestamp) {
             this.bornTimestamp = bornTimestamp;
             return this;
         }
@@ -172,7 +191,7 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.bornTimestamp;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setBodyCRC(Integer bodyCRC) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setBodyCRC(Integer bodyCRC) {
             this.bodyCRC = bodyCRC;
             return this;
         }
@@ -180,12 +199,31 @@ public class OnsMessageGetByKeyResponseBody extends TeaModel {
             return this.bodyCRC;
         }
 
-        public OnsMessageGetByKeyResponseBodyData setBornHost(String bornHost) {
+        public OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo setBornHost(String bornHost) {
             this.bornHost = bornHost;
             return this;
         }
         public String getBornHost() {
             return this.bornHost;
+        }
+
+    }
+
+    public static class OnsMessageGetByKeyResponseBodyData extends TeaModel {
+        @NameInMap("OnsRestMessageDo")
+        public java.util.List<OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo> onsRestMessageDo;
+
+        public static OnsMessageGetByKeyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            OnsMessageGetByKeyResponseBodyData self = new OnsMessageGetByKeyResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsMessageGetByKeyResponseBodyData setOnsRestMessageDo(java.util.List<OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo> onsRestMessageDo) {
+            this.onsRestMessageDo = onsRestMessageDo;
+            return this;
+        }
+        public java.util.List<OnsMessageGetByKeyResponseBodyDataOnsRestMessageDo> getOnsRestMessageDo() {
+            return this.onsRestMessageDo;
         }
 
     }

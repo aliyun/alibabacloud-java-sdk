@@ -31,19 +31,19 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
         return this.msgFoundDo;
     }
 
-    public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList extends TeaModel {
+    public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty extends TeaModel {
         @NameInMap("Value")
         public String value;
 
         @NameInMap("Name")
         public String name;
 
-        public static OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList build(java.util.Map<String, ?> map) throws Exception {
-            OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList self = new OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList();
+        public static OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty build(java.util.Map<String, ?> map) throws Exception {
+            OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty self = new OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty();
             return TeaModel.build(map, self);
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList setValue(String value) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty setValue(String value) {
             this.value = value;
             return this;
         }
@@ -51,7 +51,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.value;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList setName(String name) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty setName(String name) {
             this.name = name;
             return this;
         }
@@ -61,7 +61,26 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
 
     }
 
-    public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList extends TeaModel {
+    public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList extends TeaModel {
+        @NameInMap("MessageProperty")
+        public java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty> messageProperty;
+
+        public static OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList build(java.util.Map<String, ?> map) throws Exception {
+            OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList self = new OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList setMessageProperty(java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty> messageProperty) {
+            this.messageProperty = messageProperty;
+            return this;
+        }
+        public java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyListMessageProperty> getMessageProperty() {
+            return this.messageProperty;
+        }
+
+    }
+
+    public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo extends TeaModel {
         @NameInMap("StoreSize")
         public Integer storeSize;
 
@@ -84,7 +103,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
         public String topic;
 
         @NameInMap("PropertyList")
-        public java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList> propertyList;
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList propertyList;
 
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
@@ -95,12 +114,12 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
         @NameInMap("BornHost")
         public String bornHost;
 
-        public static OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList build(java.util.Map<String, ?> map) throws Exception {
-            OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList self = new OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList();
+        public static OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo self = new OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setStoreSize(Integer storeSize) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreSize(Integer storeSize) {
             this.storeSize = storeSize;
             return this;
         }
@@ -108,7 +127,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.storeSize;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setReconsumeTimes(Integer reconsumeTimes) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setReconsumeTimes(Integer reconsumeTimes) {
             this.reconsumeTimes = reconsumeTimes;
             return this;
         }
@@ -116,7 +135,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.reconsumeTimes;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setStoreTimestamp(Long storeTimestamp) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreTimestamp(Long storeTimestamp) {
             this.storeTimestamp = storeTimestamp;
             return this;
         }
@@ -124,7 +143,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.storeTimestamp;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setInstanceId(String instanceId) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -132,7 +151,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setMsgId(String msgId) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setMsgId(String msgId) {
             this.msgId = msgId;
             return this;
         }
@@ -140,7 +159,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.msgId;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setStoreHost(String storeHost) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setStoreHost(String storeHost) {
             this.storeHost = storeHost;
             return this;
         }
@@ -148,7 +167,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.storeHost;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setTopic(String topic) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setTopic(String topic) {
             this.topic = topic;
             return this;
         }
@@ -156,15 +175,15 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setPropertyList(java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList> propertyList) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setPropertyList(OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList propertyList) {
             this.propertyList = propertyList;
             return this;
         }
-        public java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListPropertyList> getPropertyList() {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDoPropertyList getPropertyList() {
             return this.propertyList;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setBornTimestamp(Long bornTimestamp) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBornTimestamp(Long bornTimestamp) {
             this.bornTimestamp = bornTimestamp;
             return this;
         }
@@ -172,7 +191,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.bornTimestamp;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setBodyCRC(Integer bodyCRC) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBodyCRC(Integer bodyCRC) {
             this.bodyCRC = bodyCRC;
             return this;
         }
@@ -180,7 +199,7 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.bodyCRC;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setBornHost(String bornHost) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo setBornHost(String bornHost) {
             this.bornHost = bornHost;
             return this;
         }
@@ -190,12 +209,31 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
 
     }
 
+    public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList extends TeaModel {
+        @NameInMap("OnsRestMessageDo")
+        public java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo> onsRestMessageDo;
+
+        public static OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList build(java.util.Map<String, ?> map) throws Exception {
+            OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList self = new OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList setOnsRestMessageDo(java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo> onsRestMessageDo) {
+            this.onsRestMessageDo = onsRestMessageDo;
+            return this;
+        }
+        public java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundListOnsRestMessageDo> getOnsRestMessageDo() {
+            return this.onsRestMessageDo;
+        }
+
+    }
+
     public static class OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo extends TeaModel {
         @NameInMap("CurrentPage")
         public Long currentPage;
 
         @NameInMap("MsgFoundList")
-        public java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList> msgFoundList;
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList msgFoundList;
 
         @NameInMap("MaxPageCount")
         public Long maxPageCount;
@@ -216,11 +254,11 @@ public class OnsDLQMessagePageQueryByGroupIdResponseBody extends TeaModel {
             return this.currentPage;
         }
 
-        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo setMsgFoundList(java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList> msgFoundList) {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDo setMsgFoundList(OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList msgFoundList) {
             this.msgFoundList = msgFoundList;
             return this;
         }
-        public java.util.List<OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList> getMsgFoundList() {
+        public OnsDLQMessagePageQueryByGroupIdResponseBodyMsgFoundDoMsgFoundList getMsgFoundList() {
             return this.msgFoundList;
         }
 

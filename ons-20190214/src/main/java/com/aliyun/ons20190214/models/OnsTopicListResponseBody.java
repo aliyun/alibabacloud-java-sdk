@@ -8,10 +8,7 @@ public class OnsTopicListResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public java.util.List<OnsTopicListResponseBodyData> data;
-
-    @NameInMap("HelpUrl")
-    public String helpUrl;
+    public OnsTopicListResponseBodyData data;
 
     public static OnsTopicListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsTopicListResponseBody self = new OnsTopicListResponseBody();
@@ -26,35 +23,27 @@ public class OnsTopicListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OnsTopicListResponseBody setData(java.util.List<OnsTopicListResponseBodyData> data) {
+    public OnsTopicListResponseBody setData(OnsTopicListResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<OnsTopicListResponseBodyData> getData() {
+    public OnsTopicListResponseBodyData getData() {
         return this.data;
     }
 
-    public OnsTopicListResponseBody setHelpUrl(String helpUrl) {
-        this.helpUrl = helpUrl;
-        return this;
-    }
-    public String getHelpUrl() {
-        return this.helpUrl;
-    }
-
-    public static class OnsTopicListResponseBodyDataTags extends TeaModel {
+    public static class OnsTopicListResponseBodyDataPublishInfoDoTagsTag extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static OnsTopicListResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
-            OnsTopicListResponseBodyDataTags self = new OnsTopicListResponseBodyDataTags();
+        public static OnsTopicListResponseBodyDataPublishInfoDoTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            OnsTopicListResponseBodyDataPublishInfoDoTagsTag self = new OnsTopicListResponseBodyDataPublishInfoDoTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public OnsTopicListResponseBodyDataTags setKey(String key) {
+        public OnsTopicListResponseBodyDataPublishInfoDoTagsTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -62,7 +51,7 @@ public class OnsTopicListResponseBody extends TeaModel {
             return this.key;
         }
 
-        public OnsTopicListResponseBodyDataTags setValue(String value) {
+        public OnsTopicListResponseBodyDataPublishInfoDoTagsTag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -72,7 +61,26 @@ public class OnsTopicListResponseBody extends TeaModel {
 
     }
 
-    public static class OnsTopicListResponseBodyData extends TeaModel {
+    public static class OnsTopicListResponseBodyDataPublishInfoDoTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<OnsTopicListResponseBodyDataPublishInfoDoTagsTag> tag;
+
+        public static OnsTopicListResponseBodyDataPublishInfoDoTags build(java.util.Map<String, ?> map) throws Exception {
+            OnsTopicListResponseBodyDataPublishInfoDoTags self = new OnsTopicListResponseBodyDataPublishInfoDoTags();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsTopicListResponseBodyDataPublishInfoDoTags setTag(java.util.List<OnsTopicListResponseBodyDataPublishInfoDoTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<OnsTopicListResponseBodyDataPublishInfoDoTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class OnsTopicListResponseBodyDataPublishInfoDo extends TeaModel {
         @NameInMap("MessageType")
         public Integer messageType;
 
@@ -98,17 +106,17 @@ public class OnsTopicListResponseBody extends TeaModel {
         public String topic;
 
         @NameInMap("Tags")
-        public java.util.List<OnsTopicListResponseBodyDataTags> tags;
+        public OnsTopicListResponseBodyDataPublishInfoDoTags tags;
 
         @NameInMap("InstanceId")
         public String instanceId;
 
-        public static OnsTopicListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            OnsTopicListResponseBodyData self = new OnsTopicListResponseBodyData();
+        public static OnsTopicListResponseBodyDataPublishInfoDo build(java.util.Map<String, ?> map) throws Exception {
+            OnsTopicListResponseBodyDataPublishInfoDo self = new OnsTopicListResponseBodyDataPublishInfoDo();
             return TeaModel.build(map, self);
         }
 
-        public OnsTopicListResponseBodyData setMessageType(Integer messageType) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setMessageType(Integer messageType) {
             this.messageType = messageType;
             return this;
         }
@@ -116,7 +124,7 @@ public class OnsTopicListResponseBody extends TeaModel {
             return this.messageType;
         }
 
-        public OnsTopicListResponseBodyData setRelationName(String relationName) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setRelationName(String relationName) {
             this.relationName = relationName;
             return this;
         }
@@ -124,7 +132,7 @@ public class OnsTopicListResponseBody extends TeaModel {
             return this.relationName;
         }
 
-        public OnsTopicListResponseBodyData setOwner(String owner) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setOwner(String owner) {
             this.owner = owner;
             return this;
         }
@@ -132,7 +140,7 @@ public class OnsTopicListResponseBody extends TeaModel {
             return this.owner;
         }
 
-        public OnsTopicListResponseBodyData setIndependentNaming(Boolean independentNaming) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setIndependentNaming(Boolean independentNaming) {
             this.independentNaming = independentNaming;
             return this;
         }
@@ -140,7 +148,7 @@ public class OnsTopicListResponseBody extends TeaModel {
             return this.independentNaming;
         }
 
-        public OnsTopicListResponseBodyData setRemark(String remark) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setRemark(String remark) {
             this.remark = remark;
             return this;
         }
@@ -148,7 +156,7 @@ public class OnsTopicListResponseBody extends TeaModel {
             return this.remark;
         }
 
-        public OnsTopicListResponseBodyData setRelation(Integer relation) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setRelation(Integer relation) {
             this.relation = relation;
             return this;
         }
@@ -156,7 +164,7 @@ public class OnsTopicListResponseBody extends TeaModel {
             return this.relation;
         }
 
-        public OnsTopicListResponseBodyData setCreateTime(Long createTime) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -164,7 +172,7 @@ public class OnsTopicListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public OnsTopicListResponseBodyData setTopic(String topic) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setTopic(String topic) {
             this.topic = topic;
             return this;
         }
@@ -172,20 +180,39 @@ public class OnsTopicListResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public OnsTopicListResponseBodyData setTags(java.util.List<OnsTopicListResponseBodyDataTags> tags) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setTags(OnsTopicListResponseBodyDataPublishInfoDoTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<OnsTopicListResponseBodyDataTags> getTags() {
+        public OnsTopicListResponseBodyDataPublishInfoDoTags getTags() {
             return this.tags;
         }
 
-        public OnsTopicListResponseBodyData setInstanceId(String instanceId) {
+        public OnsTopicListResponseBodyDataPublishInfoDo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+    }
+
+    public static class OnsTopicListResponseBodyData extends TeaModel {
+        @NameInMap("PublishInfoDo")
+        public java.util.List<OnsTopicListResponseBodyDataPublishInfoDo> publishInfoDo;
+
+        public static OnsTopicListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            OnsTopicListResponseBodyData self = new OnsTopicListResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsTopicListResponseBodyData setPublishInfoDo(java.util.List<OnsTopicListResponseBodyDataPublishInfoDo> publishInfoDo) {
+            this.publishInfoDo = publishInfoDo;
+            return this;
+        }
+        public java.util.List<OnsTopicListResponseBodyDataPublishInfoDo> getPublishInfoDo() {
+            return this.publishInfoDo;
         }
 
     }

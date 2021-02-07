@@ -31,19 +31,19 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsGroupSubDetailResponseBodyDataSubscriptionDataList extends TeaModel {
+    public static class OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList extends TeaModel {
         @NameInMap("SubString")
         public String subString;
 
         @NameInMap("Topic")
         public String topic;
 
-        public static OnsGroupSubDetailResponseBodyDataSubscriptionDataList build(java.util.Map<String, ?> map) throws Exception {
-            OnsGroupSubDetailResponseBodyDataSubscriptionDataList self = new OnsGroupSubDetailResponseBodyDataSubscriptionDataList();
+        public static OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList build(java.util.Map<String, ?> map) throws Exception {
+            OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList self = new OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList();
             return TeaModel.build(map, self);
         }
 
-        public OnsGroupSubDetailResponseBodyDataSubscriptionDataList setSubString(String subString) {
+        public OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList setSubString(String subString) {
             this.subString = subString;
             return this;
         }
@@ -51,7 +51,7 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
             return this.subString;
         }
 
-        public OnsGroupSubDetailResponseBodyDataSubscriptionDataList setTopic(String topic) {
+        public OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList setTopic(String topic) {
             this.topic = topic;
             return this;
         }
@@ -61,9 +61,28 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
 
     }
 
+    public static class OnsGroupSubDetailResponseBodyDataSubscriptionDataList extends TeaModel {
+        @NameInMap("SubscriptionDataList")
+        public java.util.List<OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> subscriptionDataList;
+
+        public static OnsGroupSubDetailResponseBodyDataSubscriptionDataList build(java.util.Map<String, ?> map) throws Exception {
+            OnsGroupSubDetailResponseBodyDataSubscriptionDataList self = new OnsGroupSubDetailResponseBodyDataSubscriptionDataList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsGroupSubDetailResponseBodyDataSubscriptionDataList setSubscriptionDataList(java.util.List<OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> subscriptionDataList) {
+            this.subscriptionDataList = subscriptionDataList;
+            return this;
+        }
+        public java.util.List<OnsGroupSubDetailResponseBodyDataSubscriptionDataListSubscriptionDataList> getSubscriptionDataList() {
+            return this.subscriptionDataList;
+        }
+
+    }
+
     public static class OnsGroupSubDetailResponseBodyData extends TeaModel {
         @NameInMap("SubscriptionDataList")
-        public java.util.List<OnsGroupSubDetailResponseBodyDataSubscriptionDataList> subscriptionDataList;
+        public OnsGroupSubDetailResponseBodyDataSubscriptionDataList subscriptionDataList;
 
         @NameInMap("GroupId")
         public String groupId;
@@ -79,11 +98,11 @@ public class OnsGroupSubDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public OnsGroupSubDetailResponseBodyData setSubscriptionDataList(java.util.List<OnsGroupSubDetailResponseBodyDataSubscriptionDataList> subscriptionDataList) {
+        public OnsGroupSubDetailResponseBodyData setSubscriptionDataList(OnsGroupSubDetailResponseBodyDataSubscriptionDataList subscriptionDataList) {
             this.subscriptionDataList = subscriptionDataList;
             return this;
         }
-        public java.util.List<OnsGroupSubDetailResponseBodyDataSubscriptionDataList> getSubscriptionDataList() {
+        public OnsGroupSubDetailResponseBodyDataSubscriptionDataList getSubscriptionDataList() {
             return this.subscriptionDataList;
         }
 

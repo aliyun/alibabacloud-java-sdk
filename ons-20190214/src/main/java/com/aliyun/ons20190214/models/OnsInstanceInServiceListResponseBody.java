@@ -8,7 +8,7 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public java.util.List<OnsInstanceInServiceListResponseBodyData> data;
+    public OnsInstanceInServiceListResponseBodyData data;
 
     public static OnsInstanceInServiceListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         OnsInstanceInServiceListResponseBody self = new OnsInstanceInServiceListResponseBody();
@@ -23,27 +23,27 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public OnsInstanceInServiceListResponseBody setData(java.util.List<OnsInstanceInServiceListResponseBodyData> data) {
+    public OnsInstanceInServiceListResponseBody setData(OnsInstanceInServiceListResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<OnsInstanceInServiceListResponseBodyData> getData() {
+    public OnsInstanceInServiceListResponseBodyData getData() {
         return this.data;
     }
 
-    public static class OnsInstanceInServiceListResponseBodyDataTags extends TeaModel {
+    public static class OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static OnsInstanceInServiceListResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
-            OnsInstanceInServiceListResponseBodyDataTags self = new OnsInstanceInServiceListResponseBodyDataTags();
+        public static OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag self = new OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public OnsInstanceInServiceListResponseBodyDataTags setKey(String key) {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -51,7 +51,7 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
             return this.key;
         }
 
-        public OnsInstanceInServiceListResponseBodyDataTags setValue(String value) {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -61,7 +61,26 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
 
     }
 
-    public static class OnsInstanceInServiceListResponseBodyData extends TeaModel {
+    public static class OnsInstanceInServiceListResponseBodyDataInstanceVOTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag> tag;
+
+        public static OnsInstanceInServiceListResponseBodyDataInstanceVOTags build(java.util.Map<String, ?> map) throws Exception {
+            OnsInstanceInServiceListResponseBodyDataInstanceVOTags self = new OnsInstanceInServiceListResponseBodyDataInstanceVOTags();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsInstanceInServiceListResponseBodyDataInstanceVOTags setTag(java.util.List<OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<OnsInstanceInServiceListResponseBodyDataInstanceVOTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class OnsInstanceInServiceListResponseBodyDataInstanceVO extends TeaModel {
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
@@ -75,7 +94,7 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
         public Integer instanceStatus;
 
         @NameInMap("Tags")
-        public java.util.List<OnsInstanceInServiceListResponseBodyDataTags> tags;
+        public OnsInstanceInServiceListResponseBodyDataInstanceVOTags tags;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -83,12 +102,12 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public Integer instanceType;
 
-        public static OnsInstanceInServiceListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            OnsInstanceInServiceListResponseBodyData self = new OnsInstanceInServiceListResponseBodyData();
+        public static OnsInstanceInServiceListResponseBodyDataInstanceVO build(java.util.Map<String, ?> map) throws Exception {
+            OnsInstanceInServiceListResponseBodyDataInstanceVO self = new OnsInstanceInServiceListResponseBodyDataInstanceVO();
             return TeaModel.build(map, self);
         }
 
-        public OnsInstanceInServiceListResponseBodyData setIndependentNaming(Boolean independentNaming) {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVO setIndependentNaming(Boolean independentNaming) {
             this.independentNaming = independentNaming;
             return this;
         }
@@ -96,7 +115,7 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
             return this.independentNaming;
         }
 
-        public OnsInstanceInServiceListResponseBodyData setInstanceName(String instanceName) {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVO setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
@@ -104,7 +123,7 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
             return this.instanceName;
         }
 
-        public OnsInstanceInServiceListResponseBodyData setReleaseTime(Long releaseTime) {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVO setReleaseTime(Long releaseTime) {
             this.releaseTime = releaseTime;
             return this;
         }
@@ -112,7 +131,7 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
             return this.releaseTime;
         }
 
-        public OnsInstanceInServiceListResponseBodyData setInstanceStatus(Integer instanceStatus) {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVO setInstanceStatus(Integer instanceStatus) {
             this.instanceStatus = instanceStatus;
             return this;
         }
@@ -120,15 +139,15 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
             return this.instanceStatus;
         }
 
-        public OnsInstanceInServiceListResponseBodyData setTags(java.util.List<OnsInstanceInServiceListResponseBodyDataTags> tags) {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVO setTags(OnsInstanceInServiceListResponseBodyDataInstanceVOTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<OnsInstanceInServiceListResponseBodyDataTags> getTags() {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVOTags getTags() {
             return this.tags;
         }
 
-        public OnsInstanceInServiceListResponseBodyData setInstanceId(String instanceId) {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVO setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -136,12 +155,31 @@ public class OnsInstanceInServiceListResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public OnsInstanceInServiceListResponseBodyData setInstanceType(Integer instanceType) {
+        public OnsInstanceInServiceListResponseBodyDataInstanceVO setInstanceType(Integer instanceType) {
             this.instanceType = instanceType;
             return this;
         }
         public Integer getInstanceType() {
             return this.instanceType;
+        }
+
+    }
+
+    public static class OnsInstanceInServiceListResponseBodyData extends TeaModel {
+        @NameInMap("InstanceVO")
+        public java.util.List<OnsInstanceInServiceListResponseBodyDataInstanceVO> instanceVO;
+
+        public static OnsInstanceInServiceListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            OnsInstanceInServiceListResponseBodyData self = new OnsInstanceInServiceListResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsInstanceInServiceListResponseBodyData setInstanceVO(java.util.List<OnsInstanceInServiceListResponseBodyDataInstanceVO> instanceVO) {
+            this.instanceVO = instanceVO;
+            return this;
+        }
+        public java.util.List<OnsInstanceInServiceListResponseBodyDataInstanceVO> getInstanceVO() {
+            return this.instanceVO;
         }
 
     }

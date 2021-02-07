@@ -31,19 +31,19 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class OnsDLQMessageGetByIdResponseBodyDataPropertyList extends TeaModel {
+    public static class OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty extends TeaModel {
         @NameInMap("Value")
         public String value;
 
         @NameInMap("Name")
         public String name;
 
-        public static OnsDLQMessageGetByIdResponseBodyDataPropertyList build(java.util.Map<String, ?> map) throws Exception {
-            OnsDLQMessageGetByIdResponseBodyDataPropertyList self = new OnsDLQMessageGetByIdResponseBodyDataPropertyList();
+        public static OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty build(java.util.Map<String, ?> map) throws Exception {
+            OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty self = new OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty();
             return TeaModel.build(map, self);
         }
 
-        public OnsDLQMessageGetByIdResponseBodyDataPropertyList setValue(String value) {
+        public OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty setValue(String value) {
             this.value = value;
             return this;
         }
@@ -51,12 +51,31 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
             return this.value;
         }
 
-        public OnsDLQMessageGetByIdResponseBodyDataPropertyList setName(String name) {
+        public OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+    }
+
+    public static class OnsDLQMessageGetByIdResponseBodyDataPropertyList extends TeaModel {
+        @NameInMap("MessageProperty")
+        public java.util.List<OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty> messageProperty;
+
+        public static OnsDLQMessageGetByIdResponseBodyDataPropertyList build(java.util.Map<String, ?> map) throws Exception {
+            OnsDLQMessageGetByIdResponseBodyDataPropertyList self = new OnsDLQMessageGetByIdResponseBodyDataPropertyList();
+            return TeaModel.build(map, self);
+        }
+
+        public OnsDLQMessageGetByIdResponseBodyDataPropertyList setMessageProperty(java.util.List<OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty> messageProperty) {
+            this.messageProperty = messageProperty;
+            return this;
+        }
+        public java.util.List<OnsDLQMessageGetByIdResponseBodyDataPropertyListMessageProperty> getMessageProperty() {
+            return this.messageProperty;
         }
 
     }
@@ -84,7 +103,7 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
         public String topic;
 
         @NameInMap("PropertyList")
-        public java.util.List<OnsDLQMessageGetByIdResponseBodyDataPropertyList> propertyList;
+        public OnsDLQMessageGetByIdResponseBodyDataPropertyList propertyList;
 
         @NameInMap("BornTimestamp")
         public Long bornTimestamp;
@@ -156,11 +175,11 @@ public class OnsDLQMessageGetByIdResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public OnsDLQMessageGetByIdResponseBodyData setPropertyList(java.util.List<OnsDLQMessageGetByIdResponseBodyDataPropertyList> propertyList) {
+        public OnsDLQMessageGetByIdResponseBodyData setPropertyList(OnsDLQMessageGetByIdResponseBodyDataPropertyList propertyList) {
             this.propertyList = propertyList;
             return this;
         }
-        public java.util.List<OnsDLQMessageGetByIdResponseBodyDataPropertyList> getPropertyList() {
+        public OnsDLQMessageGetByIdResponseBodyDataPropertyList getPropertyList() {
             return this.propertyList;
         }
 
