@@ -5,20 +5,19 @@ import com.aliyun.tea.*;
 
 public class BindMFADeviceRequest extends TeaModel {
     @NameInMap("SerialNumber")
-    @Validation(required = true)
     public String serialNumber;
 
     @NameInMap("UserPrincipalName")
-    @Validation(required = true)
     public String userPrincipalName;
 
     @NameInMap("AuthenticationCode1")
-    @Validation(required = true)
     public String authenticationCode1;
 
     @NameInMap("AuthenticationCode2")
-    @Validation(required = true)
     public String authenticationCode2;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static BindMFADeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         BindMFADeviceRequest self = new BindMFADeviceRequest();
@@ -55,6 +54,14 @@ public class BindMFADeviceRequest extends TeaModel {
     }
     public String getAuthenticationCode2() {
         return this.authenticationCode2;
+    }
+
+    public BindMFADeviceRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

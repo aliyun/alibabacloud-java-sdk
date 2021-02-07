@@ -10,6 +10,9 @@ public class ListGroupsRequest extends TeaModel {
     @NameInMap("MaxItems")
     public Integer maxItems;
 
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
+
     public static ListGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsRequest self = new ListGroupsRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListGroupsRequest extends TeaModel {
     }
     public Integer getMaxItems() {
         return this.maxItems;
+    }
+
+    public ListGroupsRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

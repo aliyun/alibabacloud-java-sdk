@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAppSecretRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static CreateAppSecretRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppSecretRequest self = new CreateAppSecretRequest();
@@ -19,6 +21,14 @@ public class CreateAppSecretRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public CreateAppSecretRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

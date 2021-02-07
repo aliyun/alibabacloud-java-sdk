@@ -37,6 +37,9 @@ public class SetPasswordPolicyRequest extends TeaModel {
     @NameInMap("PasswordNotContainUserName")
     public Boolean passwordNotContainUserName;
 
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
+
     public static SetPasswordPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         SetPasswordPolicyRequest self = new SetPasswordPolicyRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class SetPasswordPolicyRequest extends TeaModel {
     }
     public Boolean getPasswordNotContainUserName() {
         return this.passwordNotContainUserName;
+    }
+
+    public SetPasswordPolicyRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

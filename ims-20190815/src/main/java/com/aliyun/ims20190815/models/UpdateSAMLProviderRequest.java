@@ -5,11 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateSAMLProviderRequest extends TeaModel {
     @NameInMap("SAMLProviderName")
-    @Validation(required = true)
     public String SAMLProviderName;
+
+    @NameInMap("NewSAMLMetadataDocument")
+    public String newSAMLMetadataDocument;
 
     @NameInMap("NewDescription")
     public String newDescription;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     @NameInMap("NewEncodedSAMLMetadataDocument")
     public String newEncodedSAMLMetadataDocument;
@@ -27,12 +32,28 @@ public class UpdateSAMLProviderRequest extends TeaModel {
         return this.SAMLProviderName;
     }
 
+    public UpdateSAMLProviderRequest setNewSAMLMetadataDocument(String newSAMLMetadataDocument) {
+        this.newSAMLMetadataDocument = newSAMLMetadataDocument;
+        return this;
+    }
+    public String getNewSAMLMetadataDocument() {
+        return this.newSAMLMetadataDocument;
+    }
+
     public UpdateSAMLProviderRequest setNewDescription(String newDescription) {
         this.newDescription = newDescription;
         return this;
     }
     public String getNewDescription() {
         return this.newDescription;
+    }
+
+    public UpdateSAMLProviderRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
     public UpdateSAMLProviderRequest setNewEncodedSAMLMetadataDocument(String newEncodedSAMLMetadataDocument) {

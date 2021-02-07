@@ -22,6 +22,9 @@ public class SetSecurityPreferenceRequest extends TeaModel {
     @NameInMap("LoginNetworkMasks")
     public String loginNetworkMasks;
 
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
+
     public static SetSecurityPreferenceRequest build(java.util.Map<String, ?> map) throws Exception {
         SetSecurityPreferenceRequest self = new SetSecurityPreferenceRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class SetSecurityPreferenceRequest extends TeaModel {
     }
     public String getLoginNetworkMasks() {
         return this.loginNetworkMasks;
+    }
+
+    public SetSecurityPreferenceRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

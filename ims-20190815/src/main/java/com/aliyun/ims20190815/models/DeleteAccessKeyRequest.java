@@ -5,11 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessKeyRequest extends TeaModel {
     @NameInMap("UserAccessKeyId")
-    @Validation(required = true)
     public String userAccessKeyId;
 
     @NameInMap("UserPrincipalName")
     public String userPrincipalName;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static DeleteAccessKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAccessKeyRequest self = new DeleteAccessKeyRequest();
@@ -30,6 +32,14 @@ public class DeleteAccessKeyRequest extends TeaModel {
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
+    }
+
+    public DeleteAccessKeyRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

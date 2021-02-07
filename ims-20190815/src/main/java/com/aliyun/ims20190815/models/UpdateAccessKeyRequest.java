@@ -8,12 +8,13 @@ public class UpdateAccessKeyRequest extends TeaModel {
     public String userPrincipalName;
 
     @NameInMap("UserAccessKeyId")
-    @Validation(required = true)
     public String userAccessKeyId;
 
     @NameInMap("Status")
-    @Validation(required = true)
     public String status;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static UpdateAccessKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAccessKeyRequest self = new UpdateAccessKeyRequest();
@@ -42,6 +43,14 @@ public class UpdateAccessKeyRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public UpdateAccessKeyRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

@@ -8,8 +8,10 @@ public class GetAccessKeyLastUsedRequest extends TeaModel {
     public String userPrincipalName;
 
     @NameInMap("UserAccessKeyId")
-    @Validation(required = true)
     public String userAccessKeyId;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static GetAccessKeyLastUsedRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAccessKeyLastUsedRequest self = new GetAccessKeyLastUsedRequest();
@@ -30,6 +32,14 @@ public class GetAccessKeyLastUsedRequest extends TeaModel {
     }
     public String getUserAccessKeyId() {
         return this.userAccessKeyId;
+    }
+
+    public GetAccessKeyLastUsedRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

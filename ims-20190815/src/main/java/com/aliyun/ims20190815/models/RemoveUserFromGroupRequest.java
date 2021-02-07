@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class RemoveUserFromGroupRequest extends TeaModel {
     @NameInMap("UserPrincipalName")
-    @Validation(required = true)
     public String userPrincipalName;
+
+    @NameInMap("GroupPrincipalName")
+    public String groupPrincipalName;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     @NameInMap("GroupName")
     public String groupName;
@@ -22,6 +27,22 @@ public class RemoveUserFromGroupRequest extends TeaModel {
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
+    }
+
+    public RemoveUserFromGroupRequest setGroupPrincipalName(String groupPrincipalName) {
+        this.groupPrincipalName = groupPrincipalName;
+        return this;
+    }
+    public String getGroupPrincipalName() {
+        return this.groupPrincipalName;
+    }
+
+    public RemoveUserFromGroupRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
     public RemoveUserFromGroupRequest setGroupName(String groupName) {

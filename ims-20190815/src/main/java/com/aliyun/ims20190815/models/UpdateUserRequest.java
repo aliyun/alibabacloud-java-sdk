@@ -25,6 +25,9 @@ public class UpdateUserRequest extends TeaModel {
     @NameInMap("NewComments")
     public String newComments;
 
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
+
     public static UpdateUserRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateUserRequest self = new UpdateUserRequest();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class UpdateUserRequest extends TeaModel {
     }
     public String getNewComments() {
         return this.newComments;
+    }
+
+    public UpdateUserRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

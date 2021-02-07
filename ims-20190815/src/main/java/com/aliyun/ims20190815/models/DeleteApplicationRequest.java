@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static DeleteApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteApplicationRequest self = new DeleteApplicationRequest();
@@ -19,6 +21,14 @@ public class DeleteApplicationRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public DeleteApplicationRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

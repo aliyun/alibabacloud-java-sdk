@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteVirtualMFADeviceRequest extends TeaModel {
     @NameInMap("SerialNumber")
-    @Validation(required = true)
     public String serialNumber;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static DeleteVirtualMFADeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteVirtualMFADeviceRequest self = new DeleteVirtualMFADeviceRequest();
@@ -19,6 +21,14 @@ public class DeleteVirtualMFADeviceRequest extends TeaModel {
     }
     public String getSerialNumber() {
         return this.serialNumber;
+    }
+
+    public DeleteVirtualMFADeviceRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("NewDisplayName")
@@ -28,6 +27,9 @@ public class UpdateApplicationRequest extends TeaModel {
 
     @NameInMap("NewIsMultiTenant")
     public Boolean newIsMultiTenant;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     public static UpdateApplicationRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateApplicationRequest self = new UpdateApplicationRequest();
@@ -96,6 +98,14 @@ public class UpdateApplicationRequest extends TeaModel {
     }
     public Boolean getNewIsMultiTenant() {
         return this.newIsMultiTenant;
+    }
+
+    public UpdateApplicationRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
 }

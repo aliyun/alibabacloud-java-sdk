@@ -5,11 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateSAMLProviderRequest extends TeaModel {
     @NameInMap("SAMLProviderName")
-    @Validation(required = true)
     public String SAMLProviderName;
+
+    @NameInMap("SAMLMetadataDocument")
+    public String SAMLMetadataDocument;
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("AkProxySuffix")
+    public String akProxySuffix;
 
     @NameInMap("EncodedSAMLMetadataDocument")
     public String encodedSAMLMetadataDocument;
@@ -27,12 +32,28 @@ public class CreateSAMLProviderRequest extends TeaModel {
         return this.SAMLProviderName;
     }
 
+    public CreateSAMLProviderRequest setSAMLMetadataDocument(String SAMLMetadataDocument) {
+        this.SAMLMetadataDocument = SAMLMetadataDocument;
+        return this;
+    }
+    public String getSAMLMetadataDocument() {
+        return this.SAMLMetadataDocument;
+    }
+
     public CreateSAMLProviderRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateSAMLProviderRequest setAkProxySuffix(String akProxySuffix) {
+        this.akProxySuffix = akProxySuffix;
+        return this;
+    }
+    public String getAkProxySuffix() {
+        return this.akProxySuffix;
     }
 
     public CreateSAMLProviderRequest setEncodedSAMLMetadataDocument(String encodedSAMLMetadataDocument) {

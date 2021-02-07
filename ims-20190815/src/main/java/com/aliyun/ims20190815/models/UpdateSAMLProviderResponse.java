@@ -4,101 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateSAMLProviderResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SAMLProvider")
+    @NameInMap("body")
     @Validation(required = true)
-    public UpdateSAMLProviderResponseSAMLProvider SAMLProvider;
+    public UpdateSAMLProviderResponseBody body;
 
     public static UpdateSAMLProviderResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateSAMLProviderResponse self = new UpdateSAMLProviderResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateSAMLProviderResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateSAMLProviderResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateSAMLProviderResponse setSAMLProvider(UpdateSAMLProviderResponseSAMLProvider SAMLProvider) {
-        this.SAMLProvider = SAMLProvider;
+    public UpdateSAMLProviderResponse setBody(UpdateSAMLProviderResponseBody body) {
+        this.body = body;
         return this;
     }
-    public UpdateSAMLProviderResponseSAMLProvider getSAMLProvider() {
-        return this.SAMLProvider;
-    }
-
-    public static class UpdateSAMLProviderResponseSAMLProvider extends TeaModel {
-        @NameInMap("SAMLProviderName")
-        @Validation(required = true)
-        public String SAMLProviderName;
-
-        @NameInMap("Arn")
-        @Validation(required = true)
-        public String arn;
-
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("CreateDate")
-        @Validation(required = true)
-        public String createDate;
-
-        @NameInMap("UpdateDate")
-        @Validation(required = true)
-        public String updateDate;
-
-        public static UpdateSAMLProviderResponseSAMLProvider build(java.util.Map<String, ?> map) throws Exception {
-            UpdateSAMLProviderResponseSAMLProvider self = new UpdateSAMLProviderResponseSAMLProvider();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateSAMLProviderResponseSAMLProvider setSAMLProviderName(String SAMLProviderName) {
-            this.SAMLProviderName = SAMLProviderName;
-            return this;
-        }
-        public String getSAMLProviderName() {
-            return this.SAMLProviderName;
-        }
-
-        public UpdateSAMLProviderResponseSAMLProvider setArn(String arn) {
-            this.arn = arn;
-            return this;
-        }
-        public String getArn() {
-            return this.arn;
-        }
-
-        public UpdateSAMLProviderResponseSAMLProvider setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public UpdateSAMLProviderResponseSAMLProvider setCreateDate(String createDate) {
-            this.createDate = createDate;
-            return this;
-        }
-        public String getCreateDate() {
-            return this.createDate;
-        }
-
-        public UpdateSAMLProviderResponseSAMLProvider setUpdateDate(String updateDate) {
-            this.updateDate = updateDate;
-            return this;
-        }
-        public String getUpdateDate() {
-            return this.updateDate;
-        }
-
+    public UpdateSAMLProviderResponseBody getBody() {
+        return this.body;
     }
 
 }
