@@ -217,6 +217,34 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("DescribeClusterAttachScripts", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + ClusterId + "/attachscript", "string", req, runtime), new DescribeClusterAttachScriptsResponse());
     }
 
+    public RemoveClusterNodesResponse removeClusterNodes(String ClusterId, RemoveClusterNodesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.removeClusterNodesWithOptions(ClusterId, request, headers, runtime);
+    }
+
+    public RemoveClusterNodesResponse removeClusterNodesWithOptions(String ClusterId, RemoveClusterNodesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.drainNode)) {
+            body.put("drain_node", request.drainNode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodes)) {
+            body.put("nodes", request.nodes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseNode)) {
+            body.put("release_node", request.releaseNode);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("RemoveClusterNodes", "2015-12-15", "HTTPS", "POST", "AK", "/api/v2/clusters/" + ClusterId + "/nodes/remove", "none", req, runtime), new RemoveClusterNodesResponse());
+    }
+
     public DescribeKubernetesVersionMetadataResponse describeKubernetesVersionMetadata(DescribeKubernetesVersionMetadataRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -531,6 +559,111 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         return TeaModel.toModel(this.doROARequest("DescribeClusterUserKubeconfig", "2015-12-15", "HTTPS", "GET", "AK", "/k8s/" + ClusterId + "/user_config", "json", req, runtime), new DescribeClusterUserKubeconfigResponse());
+    }
+
+    public ScaleClusterResponse scaleCluster(String ClusterId, ScaleClusterRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.scaleClusterWithOptions(ClusterId, request, headers, runtime);
+    }
+
+    public ScaleClusterResponse scaleClusterWithOptions(String ClusterId, ScaleClusterRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cloudMonitorFlags)) {
+            body.put("cloud_monitor_flags", request.cloudMonitorFlags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.count)) {
+            body.put("count", request.count);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuPolicy)) {
+            body.put("cpu_policy", request.cpuPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disableRollback)) {
+            body.put("disable_rollback", request.disableRollback);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyPair)) {
+            body.put("key_pair", request.keyPair);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginPassword)) {
+            body.put("login_password", request.loginPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taints)) {
+            body.put("taints", request.taints);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vswitchIds)) {
+            body.put("vswitch_ids", request.vswitchIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerAutoRenew)) {
+            body.put("worker_auto_renew", request.workerAutoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerAutoRenewPeriod)) {
+            body.put("worker_auto_renew_period", request.workerAutoRenewPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerDataDisk)) {
+            body.put("worker_data_disk", request.workerDataDisk);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerDataDisks)) {
+            body.put("worker_data_disks", request.workerDataDisks);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerInstanceChargeType)) {
+            body.put("worker_instance_charge_type", request.workerInstanceChargeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerInstanceTypes)) {
+            body.put("worker_instance_types", request.workerInstanceTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerPeriod)) {
+            body.put("worker_period", request.workerPeriod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerPeriodUnit)) {
+            body.put("worker_period_unit", request.workerPeriodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerSystemDiskCategory)) {
+            body.put("worker_system_disk_category", request.workerSystemDiskCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workerSystemDiskSize)) {
+            body.put("worker_system_disk_size", request.workerSystemDiskSize);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("ScaleCluster", "2015-12-15", "HTTPS", "PUT", "AK", "/clusters/" + ClusterId + "", "json", req, runtime), new ScaleClusterResponse());
+    }
+
+    public DescribeClusterAddonUpgradeStatusResponse describeClusterAddonUpgradeStatus(String ClusterId, String ComponentId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeClusterAddonUpgradeStatusWithOptions(ClusterId, ComponentId, headers, runtime);
+    }
+
+    public DescribeClusterAddonUpgradeStatusResponse describeClusterAddonUpgradeStatusWithOptions(String ClusterId, String ComponentId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeClusterAddonUpgradeStatus", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/components/" + ComponentId + "/upgradestatus", "json", req, runtime), new DescribeClusterAddonUpgradeStatusResponse());
     }
 
     public DescribeAddonsResponse describeAddons(DescribeAddonsRequest request) throws Exception {
@@ -1133,6 +1266,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequestWithForm("DeleteCluster", "2015-12-15", "HTTPS", "DELETE", "AK", "/clusters/" + ClusterId + "", "none", req, runtime), new DeleteClusterResponse());
     }
 
+    public MigrateClusterResponse migrateCluster(String clusterId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.migrateClusterWithOptions(clusterId, headers, runtime);
+    }
+
+    public MigrateClusterResponse migrateClusterWithOptions(String clusterId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("MigrateCluster", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterId + "/migrate", "none", req, runtime), new MigrateClusterResponse());
+    }
+
     public DescribeClusterAddonsVersionResponse describeClusterAddonsVersion(String ClusterId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1310,6 +1456,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("UpgradeClusterAddons", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + ClusterId + "/components/upgrade", "none", req, runtime), new UpgradeClusterAddonsResponse());
     }
 
+    public DescribeClusterNamespacesResponse describeClusterNamespaces(String ClusterId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeClusterNamespacesWithOptions(ClusterId, headers, runtime);
+    }
+
+    public DescribeClusterNamespacesResponse describeClusterNamespacesWithOptions(String ClusterId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeClusterNamespaces", "2015-12-15", "HTTPS", "GET", "AK", "/k8s/" + ClusterId + "/namespaces", "none", req, runtime), new DescribeClusterNamespacesResponse());
+    }
+
     public DeleteKubernetesTriggerResponse deleteKubernetesTrigger(String Id) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1395,6 +1554,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers)
         ));
         return TeaModel.toModel(this.doROARequest("DescribeClusterNodePools", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "/nodepools", "json", req, runtime), new DescribeClusterNodePoolsResponse());
+    }
+
+    public DescribeClusterV2UserKubeconfigResponse describeClusterV2UserKubeconfig(String ClusterId, DescribeClusterV2UserKubeconfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeClusterV2UserKubeconfigWithOptions(ClusterId, request, headers, runtime);
+    }
+
+    public DescribeClusterV2UserKubeconfigResponse describeClusterV2UserKubeconfigWithOptions(String ClusterId, DescribeClusterV2UserKubeconfigRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
+            query.put("PrivateIpAddress", request.privateIpAddress);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeClusterV2UserKubeconfig", "2015-12-15", "HTTPS", "GET", "AK", "/api/v2/k8s/" + ClusterId + "/user_config", "json", req, runtime), new DescribeClusterV2UserKubeconfigResponse());
     }
 
     public ScaleOutClusterResponse scaleOutCluster(String ClusterId, ScaleOutClusterRequest request) throws Exception {
@@ -1495,6 +1674,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         return TeaModel.toModel(this.doROARequest("ScaleOutCluster", "2015-12-15", "HTTPS", "POST", "AK", "/api/v2/clusters/" + ClusterId + "", "json", req, runtime), new ScaleOutClusterResponse());
+    }
+
+    public UpdateK8sClusterUserConfigExpireResponse updateK8sClusterUserConfigExpire(String ClusterId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateK8sClusterUserConfigExpireWithOptions(ClusterId, headers, runtime);
+    }
+
+    public UpdateK8sClusterUserConfigExpireResponse updateK8sClusterUserConfigExpireWithOptions(String ClusterId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("UpdateK8sClusterUserConfigExpire", "2015-12-15", "HTTPS", "POST", "AK", "/k8s/" + ClusterId + "/user_config/expire", "none", req, runtime), new UpdateK8sClusterUserConfigExpireResponse());
     }
 
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
