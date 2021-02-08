@@ -17,9 +17,11 @@ public class ModifyStorageCapacityUnitAttributeRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StorageCapacityUnitId")
+    @Validation(required = true)
     public String storageCapacityUnitId;
 
     @NameInMap("Name")

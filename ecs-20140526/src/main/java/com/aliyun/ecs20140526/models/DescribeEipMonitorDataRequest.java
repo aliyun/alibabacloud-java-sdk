@@ -17,12 +17,15 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("AllocationId")
+    @Validation(required = true)
     public String allocationId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public String endTime;
 
     @NameInMap("Period")

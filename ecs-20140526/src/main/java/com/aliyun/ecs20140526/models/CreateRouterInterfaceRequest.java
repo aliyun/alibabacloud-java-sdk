@@ -5,21 +5,27 @@ import com.aliyun.tea.*;
 
 public class CreateRouterInterfaceRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Role")
+    @Validation(required = true)
     public String role;
 
     @NameInMap("OppositeRegionId")
+    @Validation(required = true)
     public String oppositeRegionId;
 
     @NameInMap("Spec")
+    @Validation(required = true)
     public String spec;
 
     @NameInMap("RouterType")
+    @Validation(required = true)
     public String routerType;
 
     @NameInMap("RouterId")
+    @Validation(required = true)
     public String routerId;
 
     @NameInMap("OppositeInterfaceId")

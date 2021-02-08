@@ -14,16 +14,18 @@ public class CreateKeyPairRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("KeyPairName")
+    @Validation(required = true)
     public String keyPairName;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<CreateKeyPairRequestTag> tag;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static CreateKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKeyPairRequest self = new CreateKeyPairRequest();
@@ -70,20 +72,20 @@ public class CreateKeyPairRequest extends TeaModel {
         return this.keyPairName;
     }
 
-    public CreateKeyPairRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public CreateKeyPairRequest setTag(java.util.List<CreateKeyPairRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<CreateKeyPairRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateKeyPairRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class CreateKeyPairRequestTag extends TeaModel {

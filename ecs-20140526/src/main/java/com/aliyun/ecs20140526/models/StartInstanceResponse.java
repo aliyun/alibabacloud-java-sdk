@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartInstanceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public StartInstanceResponseBody body;
+    public String requestId;
 
     public static StartInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceResponse self = new StartInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartInstanceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public StartInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public StartInstanceResponse setBody(StartInstanceResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public StartInstanceResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

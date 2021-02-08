@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceSpecRequest extends TeaModel {
-    @NameInMap("Temporary")
-    public ModifyInstanceSpecRequestTemporary temporary;
-
-    @NameInMap("SystemDisk")
-    public ModifyInstanceSpecRequestSystemDisk systemDisk;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -20,6 +14,7 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("InstanceType")
@@ -34,11 +29,17 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("Temporary")
+    public ModifyInstanceSpecRequestTemporary temporary;
+
     @NameInMap("Async")
     public Boolean async;
 
     @NameInMap("AllowMigrateAcrossZone")
     public Boolean allowMigrateAcrossZone;
+
+    @NameInMap("SystemDisk")
+    public ModifyInstanceSpecRequestSystemDisk systemDisk;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -46,22 +47,6 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     public static ModifyInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceSpecRequest self = new ModifyInstanceSpecRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyInstanceSpecRequest setTemporary(ModifyInstanceSpecRequestTemporary temporary) {
-        this.temporary = temporary;
-        return this;
-    }
-    public ModifyInstanceSpecRequestTemporary getTemporary() {
-        return this.temporary;
-    }
-
-    public ModifyInstanceSpecRequest setSystemDisk(ModifyInstanceSpecRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public ModifyInstanceSpecRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
     }
 
     public ModifyInstanceSpecRequest setOwnerId(Long ownerId) {
@@ -128,6 +113,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
         return this.ownerAccount;
     }
 
+    public ModifyInstanceSpecRequest setTemporary(ModifyInstanceSpecRequestTemporary temporary) {
+        this.temporary = temporary;
+        return this;
+    }
+    public ModifyInstanceSpecRequestTemporary getTemporary() {
+        return this.temporary;
+    }
+
     public ModifyInstanceSpecRequest setAsync(Boolean async) {
         this.async = async;
         return this;
@@ -142,6 +135,14 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public Boolean getAllowMigrateAcrossZone() {
         return this.allowMigrateAcrossZone;
+    }
+
+    public ModifyInstanceSpecRequest setSystemDisk(ModifyInstanceSpecRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public ModifyInstanceSpecRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
     public ModifyInstanceSpecRequest setClientToken(String clientToken) {

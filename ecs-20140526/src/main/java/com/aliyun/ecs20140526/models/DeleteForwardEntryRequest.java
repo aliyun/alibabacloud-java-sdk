@@ -17,12 +17,15 @@ public class DeleteForwardEntryRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ForwardTableId")
+    @Validation(required = true)
     public String forwardTableId;
 
     @NameInMap("ForwardEntryId")
+    @Validation(required = true)
     public String forwardEntryId;
 
     public static DeleteForwardEntryRequest build(java.util.Map<String, ?> map) throws Exception {

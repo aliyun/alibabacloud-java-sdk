@@ -17,7 +17,11 @@ public class DescribeCommandsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("Provider")
+    public String provider;
 
     @NameInMap("CommandId")
     public String commandId;
@@ -83,6 +87,14 @@ public class DescribeCommandsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeCommandsRequest setProvider(String provider) {
+        this.provider = provider;
+        return this;
+    }
+    public String getProvider() {
+        return this.provider;
     }
 
     public DescribeCommandsRequest setCommandId(String commandId) {

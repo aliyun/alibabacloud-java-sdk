@@ -20,9 +20,11 @@ public class DeleteHaVipRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("HaVipId")
+    @Validation(required = true)
     public String haVipId;
 
     public static DeleteHaVipRequest build(java.util.Map<String, ?> map) throws Exception {

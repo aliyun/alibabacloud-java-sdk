@@ -14,12 +14,15 @@ public class ModifyDiskChargeTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DiskIds")
+    @Validation(required = true)
     public String diskIds;
 
     @NameInMap("AutoPay")

@@ -17,16 +17,17 @@ public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static DescribeInstanceMaintenanceAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMaintenanceAttributesRequest self = new DescribeInstanceMaintenanceAttributesRequest();
@@ -73,6 +74,14 @@ public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeInstanceMaintenanceAttributesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
     public DescribeInstanceMaintenanceAttributesRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -87,14 +96,6 @@ public class DescribeInstanceMaintenanceAttributesRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeInstanceMaintenanceAttributesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

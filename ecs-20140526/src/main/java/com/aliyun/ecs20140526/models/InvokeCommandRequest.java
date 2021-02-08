@@ -17,9 +17,11 @@ public class InvokeCommandRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("CommandId")
+    @Validation(required = true)
     public String commandId;
 
     @NameInMap("Timed")
@@ -28,14 +30,18 @@ public class InvokeCommandRequest extends TeaModel {
     @NameInMap("Frequency")
     public String frequency;
 
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    public java.util.List<String> instanceId;
+
     @NameInMap("Parameters")
     public java.util.Map<String, ?> parameters;
 
     @NameInMap("Username")
     public String username;
 
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
+    @NameInMap("WindowsPasswordName")
+    public String windowsPasswordName;
 
     public static InvokeCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeCommandRequest self = new InvokeCommandRequest();
@@ -106,6 +112,14 @@ public class InvokeCommandRequest extends TeaModel {
         return this.frequency;
     }
 
+    public InvokeCommandRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
     public InvokeCommandRequest setParameters(java.util.Map<String, ?> parameters) {
         this.parameters = parameters;
         return this;
@@ -122,12 +136,12 @@ public class InvokeCommandRequest extends TeaModel {
         return this.username;
     }
 
-    public InvokeCommandRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
+    public InvokeCommandRequest setWindowsPasswordName(String windowsPasswordName) {
+        this.windowsPasswordName = windowsPasswordName;
         return this;
     }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
+    public String getWindowsPasswordName() {
+        return this.windowsPasswordName;
     }
 
 }

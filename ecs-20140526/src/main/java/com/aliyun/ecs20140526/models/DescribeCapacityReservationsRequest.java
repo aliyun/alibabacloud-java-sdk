@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationsRequest extends TeaModel {
-    @NameInMap("PrivatePoolOptions")
-    public DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -20,6 +17,7 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("MaxResults")
@@ -27,6 +25,9 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
 
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("PrivatePoolOptions")
+    public DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions;
 
     @NameInMap("Platform")
     public String platform;
@@ -43,20 +44,9 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("PackageType")
-    public String packageType;
-
     public static DescribeCapacityReservationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCapacityReservationsRequest self = new DescribeCapacityReservationsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCapacityReservationsRequest setPrivatePoolOptions(DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public DescribeCapacityReservationsRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
     }
 
     public DescribeCapacityReservationsRequest setOwnerId(Long ownerId) {
@@ -115,6 +105,14 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         return this.nextToken;
     }
 
+    public DescribeCapacityReservationsRequest setPrivatePoolOptions(DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public DescribeCapacityReservationsRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
+    }
+
     public DescribeCapacityReservationsRequest setPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -153,14 +151,6 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DescribeCapacityReservationsRequest setPackageType(String packageType) {
-        this.packageType = packageType;
-        return this;
-    }
-    public String getPackageType() {
-        return this.packageType;
     }
 
     public static class DescribeCapacityReservationsRequestPrivatePoolOptions extends TeaModel {

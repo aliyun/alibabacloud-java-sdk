@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyForwardEntryResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public ModifyForwardEntryResponseBody body;
+    public String requestId;
 
     public static ModifyForwardEntryResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyForwardEntryResponse self = new ModifyForwardEntryResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyForwardEntryResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ModifyForwardEntryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public ModifyForwardEntryResponse setBody(ModifyForwardEntryResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public ModifyForwardEntryResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

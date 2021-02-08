@@ -14,6 +14,7 @@ public class DescribeInstanceAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("OwnerAccount")

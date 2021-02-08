@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class TerminateVirtualBorderRouterResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public TerminateVirtualBorderRouterResponseBody body;
+    public String requestId;
 
     public static TerminateVirtualBorderRouterResponse build(java.util.Map<String, ?> map) throws Exception {
         TerminateVirtualBorderRouterResponse self = new TerminateVirtualBorderRouterResponse();
         return TeaModel.build(map, self);
     }
 
-    public TerminateVirtualBorderRouterResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public TerminateVirtualBorderRouterResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public TerminateVirtualBorderRouterResponse setBody(TerminateVirtualBorderRouterResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public TerminateVirtualBorderRouterResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

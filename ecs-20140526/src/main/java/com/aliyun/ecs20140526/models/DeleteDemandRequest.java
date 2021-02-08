@@ -20,9 +20,11 @@ public class DeleteDemandRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DemandId")
+    @Validation(required = true)
     public String demandId;
 
     @NameInMap("Reason")

@@ -14,13 +14,19 @@ public class AttachInstanceRamRoleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RamRoleName")
+    @Validation(required = true)
     public String ramRoleName;
 
     @NameInMap("InstanceIds")
+    @Validation(required = true)
     public String instanceIds;
+
+    @NameInMap("Policy")
+    public String policy;
 
     public static AttachInstanceRamRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachInstanceRamRoleRequest self = new AttachInstanceRamRoleRequest();
@@ -73,6 +79,14 @@ public class AttachInstanceRamRoleRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public AttachInstanceRamRoleRequest setPolicy(String policy) {
+        this.policy = policy;
+        return this;
+    }
+    public String getPolicy() {
+        return this.policy;
     }
 
 }

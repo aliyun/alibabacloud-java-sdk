@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReleaseCapacityReservationRequest extends TeaModel {
-    @NameInMap("PrivatePoolOptions")
-    public ReleaseCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -20,7 +17,11 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("PrivatePoolOptions")
+    public ReleaseCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -28,14 +29,6 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
     public static ReleaseCapacityReservationRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseCapacityReservationRequest self = new ReleaseCapacityReservationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ReleaseCapacityReservationRequest setPrivatePoolOptions(ReleaseCapacityReservationRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public ReleaseCapacityReservationRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
     }
 
     public ReleaseCapacityReservationRequest setOwnerId(Long ownerId) {
@@ -78,6 +71,14 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
         return this.regionId;
     }
 
+    public ReleaseCapacityReservationRequest setPrivatePoolOptions(ReleaseCapacityReservationRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public ReleaseCapacityReservationRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
+    }
+
     public ReleaseCapacityReservationRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -88,6 +89,7 @@ public class ReleaseCapacityReservationRequest extends TeaModel {
 
     public static class ReleaseCapacityReservationRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("Id")
+        @Validation(required = true)
         public String id;
 
         public static ReleaseCapacityReservationRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {

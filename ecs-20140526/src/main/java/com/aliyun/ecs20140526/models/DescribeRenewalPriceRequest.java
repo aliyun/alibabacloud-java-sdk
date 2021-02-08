@@ -17,12 +17,14 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
     public String resourceType;
 
     @NameInMap("ResourceId")
+    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("Period")

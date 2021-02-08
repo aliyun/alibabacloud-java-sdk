@@ -4,33 +4,45 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateRouterInterfaceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("RouterInterfaceId")
     @Validation(required = true)
-    public CreateRouterInterfaceResponseBody body;
+    public String routerInterfaceId;
+
+    @NameInMap("OrderId")
+    @Validation(required = true)
+    public Long orderId;
 
     public static CreateRouterInterfaceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateRouterInterfaceResponse self = new CreateRouterInterfaceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateRouterInterfaceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateRouterInterfaceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateRouterInterfaceResponse setBody(CreateRouterInterfaceResponseBody body) {
-        this.body = body;
+    public CreateRouterInterfaceResponse setRouterInterfaceId(String routerInterfaceId) {
+        this.routerInterfaceId = routerInterfaceId;
         return this;
     }
-    public CreateRouterInterfaceResponseBody getBody() {
-        return this.body;
+    public String getRouterInterfaceId() {
+        return this.routerInterfaceId;
+    }
+
+    public CreateRouterInterfaceResponse setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
 }

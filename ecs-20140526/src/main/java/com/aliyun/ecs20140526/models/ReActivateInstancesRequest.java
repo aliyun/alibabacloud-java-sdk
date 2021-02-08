@@ -17,6 +17,7 @@ public class ReActivateInstancesRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("OwnerAccount")

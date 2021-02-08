@@ -4,33 +4,57 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("InstanceId")
     @Validation(required = true)
-    public CreateInstanceResponseBody body;
+    public String instanceId;
+
+    @NameInMap("TradePrice")
+    @Validation(required = true)
+    public Float tradePrice;
+
+    @NameInMap("OrderId")
+    @Validation(required = true)
+    public String orderId;
 
     public static CreateInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceResponse self = new CreateInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateInstanceResponse setBody(CreateInstanceResponseBody body) {
-        this.body = body;
+    public CreateInstanceResponse setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public CreateInstanceResponseBody getBody() {
-        return this.body;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public CreateInstanceResponse setTradePrice(Float tradePrice) {
+        this.tradePrice = tradePrice;
+        return this;
+    }
+    public Float getTradePrice() {
+        return this.tradePrice;
+    }
+
+    public CreateInstanceResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
 }

@@ -20,6 +20,7 @@ public class DescribeStorageSetsRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StorageSetIds")

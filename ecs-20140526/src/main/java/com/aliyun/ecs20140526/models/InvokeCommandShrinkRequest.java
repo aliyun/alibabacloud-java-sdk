@@ -17,9 +17,11 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("CommandId")
+    @Validation(required = true)
     public String commandId;
 
     @NameInMap("Timed")
@@ -28,14 +30,18 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     @NameInMap("Frequency")
     public String frequency;
 
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    public java.util.List<String> instanceId;
+
     @NameInMap("Parameters")
     public String parametersShrink;
 
     @NameInMap("Username")
     public String username;
 
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
+    @NameInMap("WindowsPasswordName")
+    public String windowsPasswordName;
 
     public static InvokeCommandShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeCommandShrinkRequest self = new InvokeCommandShrinkRequest();
@@ -106,6 +112,14 @@ public class InvokeCommandShrinkRequest extends TeaModel {
         return this.frequency;
     }
 
+    public InvokeCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
     public InvokeCommandShrinkRequest setParametersShrink(String parametersShrink) {
         this.parametersShrink = parametersShrink;
         return this;
@@ -122,12 +136,12 @@ public class InvokeCommandShrinkRequest extends TeaModel {
         return this.username;
     }
 
-    public InvokeCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
+    public InvokeCommandShrinkRequest setWindowsPasswordName(String windowsPasswordName) {
+        this.windowsPasswordName = windowsPasswordName;
         return this;
     }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
+    public String getWindowsPasswordName() {
+        return this.windowsPasswordName;
     }
 
 }

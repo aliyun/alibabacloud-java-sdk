@@ -14,12 +14,15 @@ public class ExportImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageId")
+    @Validation(required = true)
     public String imageId;
 
     @NameInMap("OSSBucket")
+    @Validation(required = true)
     public String OSSBucket;
 
     @NameInMap("OSSPrefix")

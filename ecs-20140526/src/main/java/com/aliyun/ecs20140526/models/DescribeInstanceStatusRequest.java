@@ -13,7 +13,11 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
@@ -30,9 +34,6 @@ public class DescribeInstanceStatusRequest extends TeaModel {
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static DescribeInstanceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceStatusRequest self = new DescribeInstanceStatusRequest();
@@ -61,6 +62,14 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribeInstanceStatusRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
     public DescribeInstanceStatusRequest setRegionId(String regionId) {
@@ -109,14 +118,6 @@ public class DescribeInstanceStatusRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeInstanceStatusRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

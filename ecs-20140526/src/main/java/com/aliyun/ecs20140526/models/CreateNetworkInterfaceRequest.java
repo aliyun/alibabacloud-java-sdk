@@ -17,6 +17,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Tag")
@@ -26,6 +27,7 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     public String vSwitchId;
 
     @NameInMap("PrimaryIpAddress")
@@ -33,6 +35,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
+
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
 
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
@@ -49,6 +54,9 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     @NameInMap("BusinessType")
     public String businessType;
 
+    @NameInMap("PrivateIpAddress")
+    public java.util.List<String> privateIpAddress;
+
     @NameInMap("SecondaryPrivateIpAddressCount")
     public Integer secondaryPrivateIpAddressCount;
 
@@ -57,12 +65,6 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
 
     @NameInMap("ClientToken")
     public String clientToken;
-
-    @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
-
-    @NameInMap("PrivateIpAddress")
-    public java.util.List<String> privateIpAddress;
 
     public static CreateNetworkInterfaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateNetworkInterfaceRequest self = new CreateNetworkInterfaceRequest();
@@ -149,6 +151,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         return this.securityGroupId;
     }
 
+    public CreateNetworkInterfaceRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
+    }
+
     public CreateNetworkInterfaceRequest setNetworkInterfaceName(String networkInterfaceName) {
         this.networkInterfaceName = networkInterfaceName;
         return this;
@@ -189,6 +199,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         return this.businessType;
     }
 
+    public CreateNetworkInterfaceRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public java.util.List<String> getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
     public CreateNetworkInterfaceRequest setSecondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -211,22 +229,6 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public CreateNetworkInterfaceRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-        this.securityGroupIds = securityGroupIds;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupIds() {
-        return this.securityGroupIds;
-    }
-
-    public CreateNetworkInterfaceRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public java.util.List<String> getPrivateIpAddress() {
-        return this.privateIpAddress;
     }
 
     public static class CreateNetworkInterfaceRequestTag extends TeaModel {

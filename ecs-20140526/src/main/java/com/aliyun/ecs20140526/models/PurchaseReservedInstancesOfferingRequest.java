@@ -17,6 +17,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Tag")
@@ -32,6 +33,7 @@ public class PurchaseReservedInstancesOfferingRequest extends TeaModel {
     public String reservedInstanceName;
 
     @NameInMap("InstanceType")
+    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("Scope")

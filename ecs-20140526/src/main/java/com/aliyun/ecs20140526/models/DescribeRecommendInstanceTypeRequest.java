@@ -29,6 +29,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String instanceType;
 
     @NameInMap("NetworkType")
+    @Validation(required = true)
     public String networkType;
 
     @NameInMap("InstanceChargeType")
@@ -40,25 +41,17 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
+    @NameInMap("InstanceTypeFamily")
+    public java.util.List<String> instanceTypeFamily;
+
     @NameInMap("PriorityStrategy")
     public String priorityStrategy;
 
     @NameInMap("MaxPrice")
     public Float maxPrice;
 
-    @NameInMap("InstanceBandwidthRx")
-    public Integer instanceBandwidthRx;
-
-    @NameInMap("InstanceBandwidthTx")
-    public Integer instanceBandwidthTx;
-
-    @NameInMap("InstancePpsRx")
-    public Integer instancePpsRx;
-
-    @NameInMap("InstancePpsTx")
-    public Integer instancePpsTx;
-
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
@@ -67,11 +60,11 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     @NameInMap("SystemDiskCategory")
     public String systemDiskCategory;
 
+    @NameInMap("ZoneMatchMode")
+    public String zoneMatchMode;
+
     @NameInMap("Scene")
     public String scene;
-
-    @NameInMap("InstanceTypeFamily")
-    public java.util.List<String> instanceTypeFamily;
 
     public static DescribeRecommendInstanceTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecommendInstanceTypeRequest self = new DescribeRecommendInstanceTypeRequest();
@@ -174,6 +167,14 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
         return this.ioOptimized;
     }
 
+    public DescribeRecommendInstanceTypeRequest setInstanceTypeFamily(java.util.List<String> instanceTypeFamily) {
+        this.instanceTypeFamily = instanceTypeFamily;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypeFamily() {
+        return this.instanceTypeFamily;
+    }
+
     public DescribeRecommendInstanceTypeRequest setPriorityStrategy(String priorityStrategy) {
         this.priorityStrategy = priorityStrategy;
         return this;
@@ -188,38 +189,6 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     }
     public Float getMaxPrice() {
         return this.maxPrice;
-    }
-
-    public DescribeRecommendInstanceTypeRequest setInstanceBandwidthRx(Integer instanceBandwidthRx) {
-        this.instanceBandwidthRx = instanceBandwidthRx;
-        return this;
-    }
-    public Integer getInstanceBandwidthRx() {
-        return this.instanceBandwidthRx;
-    }
-
-    public DescribeRecommendInstanceTypeRequest setInstanceBandwidthTx(Integer instanceBandwidthTx) {
-        this.instanceBandwidthTx = instanceBandwidthTx;
-        return this;
-    }
-    public Integer getInstanceBandwidthTx() {
-        return this.instanceBandwidthTx;
-    }
-
-    public DescribeRecommendInstanceTypeRequest setInstancePpsRx(Integer instancePpsRx) {
-        this.instancePpsRx = instancePpsRx;
-        return this;
-    }
-    public Integer getInstancePpsRx() {
-        return this.instancePpsRx;
-    }
-
-    public DescribeRecommendInstanceTypeRequest setInstancePpsTx(Integer instancePpsTx) {
-        this.instancePpsTx = instancePpsTx;
-        return this;
-    }
-    public Integer getInstancePpsTx() {
-        return this.instancePpsTx;
     }
 
     public DescribeRecommendInstanceTypeRequest setRegionId(String regionId) {
@@ -246,20 +215,20 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
         return this.systemDiskCategory;
     }
 
+    public DescribeRecommendInstanceTypeRequest setZoneMatchMode(String zoneMatchMode) {
+        this.zoneMatchMode = zoneMatchMode;
+        return this;
+    }
+    public String getZoneMatchMode() {
+        return this.zoneMatchMode;
+    }
+
     public DescribeRecommendInstanceTypeRequest setScene(String scene) {
         this.scene = scene;
         return this;
     }
     public String getScene() {
         return this.scene;
-    }
-
-    public DescribeRecommendInstanceTypeRequest setInstanceTypeFamily(java.util.List<String> instanceTypeFamily) {
-        this.instanceTypeFamily = instanceTypeFamily;
-        return this;
-    }
-    public java.util.List<String> getInstanceTypeFamily() {
-        return this.instanceTypeFamily;
     }
 
 }

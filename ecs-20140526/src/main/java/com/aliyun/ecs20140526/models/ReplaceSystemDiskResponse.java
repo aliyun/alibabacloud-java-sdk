@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReplaceSystemDiskResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("DiskId")
     @Validation(required = true)
-    public ReplaceSystemDiskResponseBody body;
+    public String diskId;
 
     public static ReplaceSystemDiskResponse build(java.util.Map<String, ?> map) throws Exception {
         ReplaceSystemDiskResponse self = new ReplaceSystemDiskResponse();
         return TeaModel.build(map, self);
     }
 
-    public ReplaceSystemDiskResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ReplaceSystemDiskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ReplaceSystemDiskResponse setBody(ReplaceSystemDiskResponseBody body) {
-        this.body = body;
+    public ReplaceSystemDiskResponse setDiskId(String diskId) {
+        this.diskId = diskId;
         return this;
     }
-    public ReplaceSystemDiskResponseBody getBody() {
-        return this.body;
+    public String getDiskId() {
+        return this.diskId;
     }
 
 }

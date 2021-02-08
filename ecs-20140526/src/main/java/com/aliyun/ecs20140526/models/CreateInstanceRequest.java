@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceRequest extends TeaModel {
-    @NameInMap("SystemDisk")
-    public CreateInstanceRequestSystemDisk systemDisk;
-
-    @NameInMap("PrivatePoolOptions")
-    public CreateInstanceRequestPrivatePoolOptions privatePoolOptions;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -20,6 +14,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageId")
@@ -29,6 +24,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String imageFamily;
 
     @NameInMap("InstanceType")
+    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("SecurityGroupId")
@@ -82,6 +78,15 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("InnerIpAddress")
     public String innerIpAddress;
 
+    @NameInMap("SystemDisk")
+    public CreateInstanceRequestSystemDisk systemDisk;
+
+    @NameInMap("DataDisk")
+    public java.util.List<CreateInstanceRequestDataDisk> dataDisk;
+
+    @NameInMap("Arn")
+    public java.util.List<CreateInstanceRequestArn> arn;
+
     @NameInMap("NodeControllerId")
     public String nodeControllerId;
 
@@ -111,6 +116,9 @@ public class CreateInstanceRequest extends TeaModel {
 
     @NameInMap("PeriodUnit")
     public String periodUnit;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateInstanceRequestTag> tag;
 
     @NameInMap("UserData")
     public String userData;
@@ -154,12 +162,6 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
-    @NameInMap("CapacityReservationId")
-    public String capacityReservationId;
-
-    @NameInMap("CapacityReservationPreference")
-    public String capacityReservationPreference;
-
     @NameInMap("Affinity")
     public String affinity;
 
@@ -181,34 +183,12 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
 
-    @NameInMap("DataDisk")
-    public java.util.List<CreateInstanceRequestDataDisk> dataDisk;
-
-    @NameInMap("Arn")
-    public java.util.List<CreateInstanceRequestArn> arn;
-
-    @NameInMap("Tag")
-    public java.util.List<CreateInstanceRequestTag> tag;
+    @NameInMap("PrivatePoolOptions")
+    public CreateInstanceRequestPrivatePoolOptions privatePoolOptions;
 
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateInstanceRequest setSystemDisk(CreateInstanceRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public CreateInstanceRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
-    }
-
-    public CreateInstanceRequest setPrivatePoolOptions(CreateInstanceRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public CreateInstanceRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
     }
 
     public CreateInstanceRequest setOwnerId(Long ownerId) {
@@ -403,6 +383,30 @@ public class CreateInstanceRequest extends TeaModel {
         return this.innerIpAddress;
     }
 
+    public CreateInstanceRequest setSystemDisk(CreateInstanceRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public CreateInstanceRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    public CreateInstanceRequest setDataDisk(java.util.List<CreateInstanceRequestDataDisk> dataDisk) {
+        this.dataDisk = dataDisk;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestDataDisk> getDataDisk() {
+        return this.dataDisk;
+    }
+
+    public CreateInstanceRequest setArn(java.util.List<CreateInstanceRequestArn> arn) {
+        this.arn = arn;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestArn> getArn() {
+        return this.arn;
+    }
+
     public CreateInstanceRequest setNodeControllerId(String nodeControllerId) {
         this.nodeControllerId = nodeControllerId;
         return this;
@@ -481,6 +485,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public CreateInstanceRequest setTag(java.util.List<CreateInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateInstanceRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateInstanceRequest setUserData(String userData) {
@@ -595,22 +607,6 @@ public class CreateInstanceRequest extends TeaModel {
         return this.deletionProtection;
     }
 
-    public CreateInstanceRequest setCapacityReservationId(String capacityReservationId) {
-        this.capacityReservationId = capacityReservationId;
-        return this;
-    }
-    public String getCapacityReservationId() {
-        return this.capacityReservationId;
-    }
-
-    public CreateInstanceRequest setCapacityReservationPreference(String capacityReservationPreference) {
-        this.capacityReservationPreference = capacityReservationPreference;
-        return this;
-    }
-    public String getCapacityReservationPreference() {
-        return this.capacityReservationPreference;
-    }
-
     public CreateInstanceRequest setAffinity(String affinity) {
         this.affinity = affinity;
         return this;
@@ -667,28 +663,12 @@ public class CreateInstanceRequest extends TeaModel {
         return this.httpPutResponseHopLimit;
     }
 
-    public CreateInstanceRequest setDataDisk(java.util.List<CreateInstanceRequestDataDisk> dataDisk) {
-        this.dataDisk = dataDisk;
+    public CreateInstanceRequest setPrivatePoolOptions(CreateInstanceRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
         return this;
     }
-    public java.util.List<CreateInstanceRequestDataDisk> getDataDisk() {
-        return this.dataDisk;
-    }
-
-    public CreateInstanceRequest setArn(java.util.List<CreateInstanceRequestArn> arn) {
-        this.arn = arn;
-        return this;
-    }
-    public java.util.List<CreateInstanceRequestArn> getArn() {
-        return this.arn;
-    }
-
-    public CreateInstanceRequest setTag(java.util.List<CreateInstanceRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateInstanceRequestTag> getTag() {
-        return this.tag;
+    public CreateInstanceRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public static class CreateInstanceRequestSystemDisk extends TeaModel {
@@ -754,6 +734,206 @@ public class CreateInstanceRequest extends TeaModel {
 
     }
 
+    public static class CreateInstanceRequestDataDisk extends TeaModel {
+        @NameInMap("Size")
+        public Integer size;
+
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DiskName")
+        public String diskName;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Device")
+        public String device;
+
+        @NameInMap("DeleteWithInstance")
+        public Boolean deleteWithInstance;
+
+        @NameInMap("Encrypted")
+        public Boolean encrypted;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("EncryptAlgorithm")
+        public String encryptAlgorithm;
+
+        public static CreateInstanceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestDataDisk self = new CreateInstanceRequestDataDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public CreateInstanceRequestDataDisk setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        public CreateInstanceRequestDataDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public CreateInstanceRequestDataDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        public CreateInstanceRequestDataDisk setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateInstanceRequestDataDisk setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
+        public CreateInstanceRequestDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        public CreateInstanceRequestDataDisk setEncrypted(Boolean encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+        public CreateInstanceRequestDataDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        public CreateInstanceRequestDataDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public CreateInstanceRequestDataDisk setEncryptAlgorithm(String encryptAlgorithm) {
+            this.encryptAlgorithm = encryptAlgorithm;
+            return this;
+        }
+        public String getEncryptAlgorithm() {
+            return this.encryptAlgorithm;
+        }
+
+    }
+
+    public static class CreateInstanceRequestArn extends TeaModel {
+        @NameInMap("AssumeRoleFor")
+        public Long assumeRoleFor;
+
+        @NameInMap("Rolearn")
+        public String rolearn;
+
+        @NameInMap("RoleType")
+        public String roleType;
+
+        public static CreateInstanceRequestArn build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestArn self = new CreateInstanceRequestArn();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestArn setAssumeRoleFor(Long assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
+            return this;
+        }
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+        public CreateInstanceRequestArn setRolearn(String rolearn) {
+            this.rolearn = rolearn;
+            return this;
+        }
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
+        public CreateInstanceRequestArn setRoleType(String roleType) {
+            this.roleType = roleType;
+            return this;
+        }
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+    }
+
+    public static class CreateInstanceRequestTag extends TeaModel {
+        @NameInMap("value")
+        public String value;
+
+        @NameInMap("key")
+        public String key;
+
+        public static CreateInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestTag self = new CreateInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public CreateInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+    }
+
     public static class CreateInstanceRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("MatchCriteria")
         public String matchCriteria;
@@ -780,206 +960,6 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getId() {
             return this.id;
-        }
-
-    }
-
-    public static class CreateInstanceRequestDataDisk extends TeaModel {
-        @NameInMap("PerformanceLevel")
-        public String performanceLevel;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("SnapshotId")
-        public String snapshotId;
-
-        @NameInMap("Size")
-        public Integer size;
-
-        @NameInMap("Device")
-        public String device;
-
-        @NameInMap("DiskName")
-        public String diskName;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
-
-        @NameInMap("DeleteWithInstance")
-        public Boolean deleteWithInstance;
-
-        @NameInMap("EncryptAlgorithm")
-        public String encryptAlgorithm;
-
-        @NameInMap("Encrypted")
-        public Boolean encrypted;
-
-        public static CreateInstanceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceRequestDataDisk self = new CreateInstanceRequestDataDisk();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceRequestDataDisk setPerformanceLevel(String performanceLevel) {
-            this.performanceLevel = performanceLevel;
-            return this;
-        }
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-        public CreateInstanceRequestDataDisk setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public CreateInstanceRequestDataDisk setSnapshotId(String snapshotId) {
-            this.snapshotId = snapshotId;
-            return this;
-        }
-        public String getSnapshotId() {
-            return this.snapshotId;
-        }
-
-        public CreateInstanceRequestDataDisk setSize(Integer size) {
-            this.size = size;
-            return this;
-        }
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public CreateInstanceRequestDataDisk setDevice(String device) {
-            this.device = device;
-            return this;
-        }
-        public String getDevice() {
-            return this.device;
-        }
-
-        public CreateInstanceRequestDataDisk setDiskName(String diskName) {
-            this.diskName = diskName;
-            return this;
-        }
-        public String getDiskName() {
-            return this.diskName;
-        }
-
-        public CreateInstanceRequestDataDisk setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public CreateInstanceRequestDataDisk setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
-        }
-
-        public CreateInstanceRequestDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
-            this.deleteWithInstance = deleteWithInstance;
-            return this;
-        }
-        public Boolean getDeleteWithInstance() {
-            return this.deleteWithInstance;
-        }
-
-        public CreateInstanceRequestDataDisk setEncryptAlgorithm(String encryptAlgorithm) {
-            this.encryptAlgorithm = encryptAlgorithm;
-            return this;
-        }
-        public String getEncryptAlgorithm() {
-            return this.encryptAlgorithm;
-        }
-
-        public CreateInstanceRequestDataDisk setEncrypted(Boolean encrypted) {
-            this.encrypted = encrypted;
-            return this;
-        }
-        public Boolean getEncrypted() {
-            return this.encrypted;
-        }
-
-    }
-
-    public static class CreateInstanceRequestArn extends TeaModel {
-        @NameInMap("RoleType")
-        public String roleType;
-
-        @NameInMap("Rolearn")
-        public String rolearn;
-
-        @NameInMap("AssumeRoleFor")
-        public Long assumeRoleFor;
-
-        public static CreateInstanceRequestArn build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceRequestArn self = new CreateInstanceRequestArn();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceRequestArn setRoleType(String roleType) {
-            this.roleType = roleType;
-            return this;
-        }
-        public String getRoleType() {
-            return this.roleType;
-        }
-
-        public CreateInstanceRequestArn setRolearn(String rolearn) {
-            this.rolearn = rolearn;
-            return this;
-        }
-        public String getRolearn() {
-            return this.rolearn;
-        }
-
-        public CreateInstanceRequestArn setAssumeRoleFor(Long assumeRoleFor) {
-            this.assumeRoleFor = assumeRoleFor;
-            return this;
-        }
-        public Long getAssumeRoleFor() {
-            return this.assumeRoleFor;
-        }
-
-    }
-
-    public static class CreateInstanceRequestTag extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateInstanceRequestTag self = new CreateInstanceRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateInstanceRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateInstanceRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
     }

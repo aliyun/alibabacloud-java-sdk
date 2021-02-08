@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CancelAutoSnapshotPolicyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public CancelAutoSnapshotPolicyResponseBody body;
+    public String requestId;
 
     public static CancelAutoSnapshotPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         CancelAutoSnapshotPolicyResponse self = new CancelAutoSnapshotPolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public CancelAutoSnapshotPolicyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CancelAutoSnapshotPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public CancelAutoSnapshotPolicyResponse setBody(CancelAutoSnapshotPolicyResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public CancelAutoSnapshotPolicyResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

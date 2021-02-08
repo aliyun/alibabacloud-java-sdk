@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EipNotifyPaidRequest extends TeaModel {
     @NameInMap("data")
+    @Validation(required = true)
     public String data;
 
     @NameInMap("OwnerId")

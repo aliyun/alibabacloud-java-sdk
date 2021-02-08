@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AcceptInquiredSystemEventResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public AcceptInquiredSystemEventResponseBody body;
+    public String requestId;
 
     public static AcceptInquiredSystemEventResponse build(java.util.Map<String, ?> map) throws Exception {
         AcceptInquiredSystemEventResponse self = new AcceptInquiredSystemEventResponse();
         return TeaModel.build(map, self);
     }
 
-    public AcceptInquiredSystemEventResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AcceptInquiredSystemEventResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public AcceptInquiredSystemEventResponse setBody(AcceptInquiredSystemEventResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public AcceptInquiredSystemEventResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

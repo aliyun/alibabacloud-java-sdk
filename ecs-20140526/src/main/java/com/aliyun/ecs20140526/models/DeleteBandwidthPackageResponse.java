@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteBandwidthPackageResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public DeleteBandwidthPackageResponseBody body;
+    public String requestId;
 
     public static DeleteBandwidthPackageResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteBandwidthPackageResponse self = new DeleteBandwidthPackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteBandwidthPackageResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteBandwidthPackageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DeleteBandwidthPackageResponse setBody(DeleteBandwidthPackageResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteBandwidthPackageResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
