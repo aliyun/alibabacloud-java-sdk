@@ -14,9 +14,11 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     public String vSwitchId;
 
     @NameInMap("PrivateIpAddress")
@@ -25,11 +27,11 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
     @NameInMap("VpcId")
     public String vpcId;
 
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
     @NameInMap("SecurityGroupId")
     public java.util.List<String> securityGroupId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
 
     public static ModifyInstanceVpcAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceVpcAttributeRequest self = new ModifyInstanceVpcAttributeRequest();
@@ -92,20 +94,20 @@ public class ModifyInstanceVpcAttributeRequest extends TeaModel {
         return this.vpcId;
     }
 
-    public ModifyInstanceVpcAttributeRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
     public ModifyInstanceVpcAttributeRequest setSecurityGroupId(java.util.List<String> securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
     }
     public java.util.List<String> getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public ModifyInstanceVpcAttributeRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
 }

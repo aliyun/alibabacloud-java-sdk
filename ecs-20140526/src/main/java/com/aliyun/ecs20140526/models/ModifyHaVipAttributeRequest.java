@@ -20,9 +20,11 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("HaVipId")
+    @Validation(required = true)
     public String haVipId;
 
     @NameInMap("Description")

@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceVncPasswdResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("VncPasswd")
     @Validation(required = true)
-    public DescribeInstanceVncPasswdResponseBody body;
+    public String vncPasswd;
 
     public static DescribeInstanceVncPasswdResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceVncPasswdResponse self = new DescribeInstanceVncPasswdResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceVncPasswdResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeInstanceVncPasswdResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeInstanceVncPasswdResponse setBody(DescribeInstanceVncPasswdResponseBody body) {
-        this.body = body;
+    public DescribeInstanceVncPasswdResponse setVncPasswd(String vncPasswd) {
+        this.vncPasswd = vncPasswd;
         return this;
     }
-    public DescribeInstanceVncPasswdResponseBody getBody() {
-        return this.body;
+    public String getVncPasswd() {
+        return this.vncPasswd;
     }
 
 }

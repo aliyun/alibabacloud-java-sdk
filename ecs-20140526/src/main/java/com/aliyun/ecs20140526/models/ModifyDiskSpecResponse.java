@@ -4,33 +4,45 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskSpecResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("TaskId")
     @Validation(required = true)
-    public ModifyDiskSpecResponseBody body;
+    public String taskId;
+
+    @NameInMap("OrderId")
+    @Validation(required = true)
+    public String orderId;
 
     public static ModifyDiskSpecResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskSpecResponse self = new ModifyDiskSpecResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDiskSpecResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ModifyDiskSpecResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ModifyDiskSpecResponse setBody(ModifyDiskSpecResponseBody body) {
-        this.body = body;
+    public ModifyDiskSpecResponse setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public ModifyDiskSpecResponseBody getBody() {
-        return this.body;
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    public ModifyDiskSpecResponse setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
     }
 
 }

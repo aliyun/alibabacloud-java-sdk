@@ -17,12 +17,14 @@ public class PurchaseStorageCapacityUnitRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Name")
     public String name;
 
     @NameInMap("Capacity")
+    @Validation(required = true)
     public Integer capacity;
 
     @NameInMap("Description")

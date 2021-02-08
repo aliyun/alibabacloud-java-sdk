@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AssignIpv6AddressesResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public AssignIpv6AddressesResponseBody body;
+    public String requestId;
 
     public static AssignIpv6AddressesResponse build(java.util.Map<String, ?> map) throws Exception {
         AssignIpv6AddressesResponse self = new AssignIpv6AddressesResponse();
         return TeaModel.build(map, self);
     }
 
-    public AssignIpv6AddressesResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public AssignIpv6AddressesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public AssignIpv6AddressesResponse setBody(AssignIpv6AddressesResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public AssignIpv6AddressesResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

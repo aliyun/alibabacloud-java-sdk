@@ -17,9 +17,11 @@ public class ModifyDedicatedHostAutoRenewAttributeRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("DedicatedHostIds")
+    @Validation(required = true)
     public String dedicatedHostIds;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Duration")

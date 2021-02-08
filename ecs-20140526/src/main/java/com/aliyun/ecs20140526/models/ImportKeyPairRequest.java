@@ -14,19 +14,22 @@ public class ImportKeyPairRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("KeyPairName")
+    @Validation(required = true)
     public String keyPairName;
 
     @NameInMap("PublicKeyBody")
+    @Validation(required = true)
     public String publicKeyBody;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<ImportKeyPairRequestTag> tag;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static ImportKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportKeyPairRequest self = new ImportKeyPairRequest();
@@ -81,20 +84,20 @@ public class ImportKeyPairRequest extends TeaModel {
         return this.publicKeyBody;
     }
 
-    public ImportKeyPairRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public ImportKeyPairRequest setTag(java.util.List<ImportKeyPairRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<ImportKeyPairRequestTag> getTag() {
         return this.tag;
+    }
+
+    public ImportKeyPairRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public static class ImportKeyPairRequestTag extends TeaModel {

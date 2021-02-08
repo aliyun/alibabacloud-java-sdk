@@ -14,6 +14,7 @@ public class CreateDeploymentSetRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OnUnableToRedeployFailedInstance")

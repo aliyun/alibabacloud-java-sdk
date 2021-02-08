@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateHaVipResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("HaVipId")
     @Validation(required = true)
-    public CreateHaVipResponseBody body;
+    public String haVipId;
 
     public static CreateHaVipResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateHaVipResponse self = new CreateHaVipResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateHaVipResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateHaVipResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateHaVipResponse setBody(CreateHaVipResponseBody body) {
-        this.body = body;
+    public CreateHaVipResponse setHaVipId(String haVipId) {
+        this.haVipId = haVipId;
         return this;
     }
-    public CreateHaVipResponseBody getBody() {
-        return this.body;
+    public String getHaVipId() {
+        return this.haVipId;
     }
 
 }

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class EipFillProductRequest extends TeaModel {
     @NameInMap("data")
+    @Validation(required = true)
     public String data;
 
     @NameInMap("OwnerId")

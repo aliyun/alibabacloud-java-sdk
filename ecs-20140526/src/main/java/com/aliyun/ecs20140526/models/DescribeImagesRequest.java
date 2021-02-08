@@ -14,6 +14,7 @@ public class DescribeImagesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Status")
@@ -64,20 +65,20 @@ public class DescribeImagesRequest extends TeaModel {
     @NameInMap("Usage")
     public String usage;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeImagesRequestTag> tag;
+
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     @NameInMap("ActionType")
     public String actionType;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeImagesRequestTag> tag;
-
     @NameInMap("Filter")
     public java.util.List<DescribeImagesRequestFilter> filter;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static DescribeImagesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagesRequest self = new DescribeImagesRequest();
@@ -244,6 +245,14 @@ public class DescribeImagesRequest extends TeaModel {
         return this.usage;
     }
 
+    public DescribeImagesRequest setTag(java.util.List<DescribeImagesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeImagesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeImagesRequest setDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -260,22 +269,6 @@ public class DescribeImagesRequest extends TeaModel {
         return this.actionType;
     }
 
-    public DescribeImagesRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public DescribeImagesRequest setTag(java.util.List<DescribeImagesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeImagesRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeImagesRequest setFilter(java.util.List<DescribeImagesRequestFilter> filter) {
         this.filter = filter;
         return this;
@@ -284,24 +277,24 @@ public class DescribeImagesRequest extends TeaModel {
         return this.filter;
     }
 
+    public DescribeImagesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static class DescribeImagesRequestTag extends TeaModel {
+        @NameInMap("value")
+        public String value;
+
         @NameInMap("key")
         public String key;
-
-        @NameInMap("Value")
-        public String value;
 
         public static DescribeImagesRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeImagesRequestTag self = new DescribeImagesRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeImagesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
         public DescribeImagesRequestTag setValue(String value) {
@@ -310,6 +303,14 @@ public class DescribeImagesRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+        public DescribeImagesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }

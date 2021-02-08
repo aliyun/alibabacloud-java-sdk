@@ -14,9 +14,11 @@ public class DeleteKeyPairsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("KeyPairNames")
+    @Validation(required = true)
     public String keyPairNames;
 
     public static DeleteKeyPairsRequest build(java.util.Map<String, ?> map) throws Exception {

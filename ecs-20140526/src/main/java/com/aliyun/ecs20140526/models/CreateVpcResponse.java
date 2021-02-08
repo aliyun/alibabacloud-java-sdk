@@ -4,33 +4,57 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("VpcId")
     @Validation(required = true)
-    public CreateVpcResponseBody body;
+    public String vpcId;
+
+    @NameInMap("VRouterId")
+    @Validation(required = true)
+    public String VRouterId;
+
+    @NameInMap("RouteTableId")
+    @Validation(required = true)
+    public String routeTableId;
 
     public static CreateVpcResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcResponse self = new CreateVpcResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateVpcResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateVpcResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateVpcResponse setBody(CreateVpcResponseBody body) {
-        this.body = body;
+    public CreateVpcResponse setVpcId(String vpcId) {
+        this.vpcId = vpcId;
         return this;
     }
-    public CreateVpcResponseBody getBody() {
-        return this.body;
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    public CreateVpcResponse setVRouterId(String VRouterId) {
+        this.VRouterId = VRouterId;
+        return this;
+    }
+    public String getVRouterId() {
+        return this.VRouterId;
+    }
+
+    public CreateVpcResponse setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+    public String getRouteTableId() {
+        return this.routeTableId;
     }
 
 }

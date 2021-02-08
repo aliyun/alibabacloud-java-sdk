@@ -14,9 +14,11 @@ public class ModifyAutoSnapshotPolicyExRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("regionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("autoSnapshotPolicyId")
+    @Validation(required = true)
     public String autoSnapshotPolicyId;
 
     @NameInMap("autoSnapshotPolicyName")

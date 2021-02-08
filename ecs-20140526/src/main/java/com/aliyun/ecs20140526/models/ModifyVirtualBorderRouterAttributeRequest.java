@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VbrId")
+    @Validation(required = true)
     public String vbrId;
 
     @NameInMap("VlanId")

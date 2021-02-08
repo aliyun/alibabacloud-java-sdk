@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageShareGroupPermissionRequest extends TeaModel {
-    @NameInMap("AddGroup")
-    public java.util.List<String> addGroup;
-
-    @NameInMap("RemoveGroup")
-    public java.util.List<String> removeGroup;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -20,10 +14,18 @@ public class ModifyImageShareGroupPermissionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageId")
+    @Validation(required = true)
     public String imageId;
+
+    @NameInMap("AddGroup")
+    public java.util.List<String> addGroup;
+
+    @NameInMap("RemoveGroup")
+    public java.util.List<String> removeGroup;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -31,22 +33,6 @@ public class ModifyImageShareGroupPermissionRequest extends TeaModel {
     public static ModifyImageShareGroupPermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyImageShareGroupPermissionRequest self = new ModifyImageShareGroupPermissionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyImageShareGroupPermissionRequest setAddGroup(java.util.List<String> addGroup) {
-        this.addGroup = addGroup;
-        return this;
-    }
-    public java.util.List<String> getAddGroup() {
-        return this.addGroup;
-    }
-
-    public ModifyImageShareGroupPermissionRequest setRemoveGroup(java.util.List<String> removeGroup) {
-        this.removeGroup = removeGroup;
-        return this;
-    }
-    public java.util.List<String> getRemoveGroup() {
-        return this.removeGroup;
     }
 
     public ModifyImageShareGroupPermissionRequest setOwnerId(Long ownerId) {
@@ -87,6 +73,22 @@ public class ModifyImageShareGroupPermissionRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public ModifyImageShareGroupPermissionRequest setAddGroup(java.util.List<String> addGroup) {
+        this.addGroup = addGroup;
+        return this;
+    }
+    public java.util.List<String> getAddGroup() {
+        return this.addGroup;
+    }
+
+    public ModifyImageShareGroupPermissionRequest setRemoveGroup(java.util.List<String> removeGroup) {
+        this.removeGroup = removeGroup;
+        return this;
+    }
+    public java.util.List<String> getRemoveGroup() {
+        return this.removeGroup;
     }
 
     public ModifyImageShareGroupPermissionRequest setOwnerAccount(String ownerAccount) {

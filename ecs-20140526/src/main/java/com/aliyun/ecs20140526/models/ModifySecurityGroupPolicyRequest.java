@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifySecurityGroupPolicyRequest extends TeaModel {
     @NameInMap("SecurityGroupId")
+    @Validation(required = true)
     public String securityGroupId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InnerAccessPolicy")
+    @Validation(required = true)
     public String innerAccessPolicy;
 
     @NameInMap("ClientToken")

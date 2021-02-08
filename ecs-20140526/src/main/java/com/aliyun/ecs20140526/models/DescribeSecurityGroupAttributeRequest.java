@@ -14,9 +14,11 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("SecurityGroupId")
+    @Validation(required = true)
     public String securityGroupId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NicType")

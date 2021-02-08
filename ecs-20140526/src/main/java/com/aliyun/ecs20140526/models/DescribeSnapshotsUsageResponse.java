@@ -4,33 +4,45 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsUsageResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("SnapshotCount")
     @Validation(required = true)
-    public DescribeSnapshotsUsageResponseBody body;
+    public Integer snapshotCount;
+
+    @NameInMap("SnapshotSize")
+    @Validation(required = true)
+    public Long snapshotSize;
 
     public static DescribeSnapshotsUsageResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsUsageResponse self = new DescribeSnapshotsUsageResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSnapshotsUsageResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeSnapshotsUsageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeSnapshotsUsageResponse setBody(DescribeSnapshotsUsageResponseBody body) {
-        this.body = body;
+    public DescribeSnapshotsUsageResponse setSnapshotCount(Integer snapshotCount) {
+        this.snapshotCount = snapshotCount;
         return this;
     }
-    public DescribeSnapshotsUsageResponseBody getBody() {
-        return this.body;
+    public Integer getSnapshotCount() {
+        return this.snapshotCount;
+    }
+
+    public DescribeSnapshotsUsageResponse setSnapshotSize(Long snapshotSize) {
+        this.snapshotSize = snapshotSize;
+        return this;
+    }
+    public Long getSnapshotSize() {
+        return this.snapshotSize;
     }
 
 }

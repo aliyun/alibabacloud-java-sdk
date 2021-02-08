@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyDedicatedHostAutoReleaseTimeResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public ModifyDedicatedHostAutoReleaseTimeResponseBody body;
+    public String requestId;
 
     public static ModifyDedicatedHostAutoReleaseTimeResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyDedicatedHostAutoReleaseTimeResponse self = new ModifyDedicatedHostAutoReleaseTimeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDedicatedHostAutoReleaseTimeResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ModifyDedicatedHostAutoReleaseTimeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public ModifyDedicatedHostAutoReleaseTimeResponse setBody(ModifyDedicatedHostAutoReleaseTimeResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public ModifyDedicatedHostAutoReleaseTimeResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -17,12 +17,15 @@ public class DescribeDiskMonitorDataRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("DiskId")
+    @Validation(required = true)
     public String diskId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public String endTime;
 
     @NameInMap("Period")

@@ -17,12 +17,15 @@ public class UnassignIpv6AddressesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkInterfaceId")
+    @Validation(required = true)
     public String networkInterfaceId;
 
     @NameInMap("Ipv6Address")
+    @Validation(required = true)
     public java.util.List<String> ipv6Address;
 
     public static UnassignIpv6AddressesRequest build(java.util.Map<String, ?> map) throws Exception {

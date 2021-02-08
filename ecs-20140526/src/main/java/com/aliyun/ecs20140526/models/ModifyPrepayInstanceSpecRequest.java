@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecRequest extends TeaModel {
-    @NameInMap("SystemDisk")
-    public ModifyPrepayInstanceSpecRequestSystemDisk systemDisk;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,12 +14,15 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceType")
+    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("OperatorType")
@@ -36,6 +36,9 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
 
     @NameInMap("MigrateAcrossZone")
     public Boolean migrateAcrossZone;
+
+    @NameInMap("SystemDisk")
+    public ModifyPrepayInstanceSpecRequestSystemDisk systemDisk;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -52,14 +55,6 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     public static ModifyPrepayInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPrepayInstanceSpecRequest self = new ModifyPrepayInstanceSpecRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyPrepayInstanceSpecRequest setSystemDisk(ModifyPrepayInstanceSpecRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public ModifyPrepayInstanceSpecRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
     }
 
     public ModifyPrepayInstanceSpecRequest setOwnerId(Long ownerId) {
@@ -140,6 +135,14 @@ public class ModifyPrepayInstanceSpecRequest extends TeaModel {
     }
     public Boolean getMigrateAcrossZone() {
         return this.migrateAcrossZone;
+    }
+
+    public ModifyPrepayInstanceSpecRequest setSystemDisk(ModifyPrepayInstanceSpecRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public ModifyPrepayInstanceSpecRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
     public ModifyPrepayInstanceSpecRequest setOwnerAccount(String ownerAccount) {

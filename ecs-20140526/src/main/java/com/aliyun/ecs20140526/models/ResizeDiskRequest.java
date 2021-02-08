@@ -14,12 +14,14 @@ public class ResizeDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("DiskId")
+    @Validation(required = true)
     public String diskId;
 
     @NameInMap("Type")
     public String type;
 
     @NameInMap("NewSize")
+    @Validation(required = true)
     public Integer newSize;
 
     @NameInMap("ClientToken")

@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyRouterInterfaceSpecResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Spec")
     @Validation(required = true)
-    public ModifyRouterInterfaceSpecResponseBody body;
+    public String spec;
 
     public static ModifyRouterInterfaceSpecResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyRouterInterfaceSpecResponse self = new ModifyRouterInterfaceSpecResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyRouterInterfaceSpecResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ModifyRouterInterfaceSpecResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ModifyRouterInterfaceSpecResponse setBody(ModifyRouterInterfaceSpecResponseBody body) {
-        this.body = body;
+    public ModifyRouterInterfaceSpecResponse setSpec(String spec) {
+        this.spec = spec;
         return this;
     }
-    public ModifyRouterInterfaceSpecResponseBody getBody() {
-        return this.body;
+    public String getSpec() {
+        return this.spec;
     }
 
 }

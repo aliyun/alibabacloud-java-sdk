@@ -20,9 +20,11 @@ public class RenewInstanceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Period")
+    @Validation(required = true)
     public Integer period;
 
     @NameInMap("PeriodUnit")

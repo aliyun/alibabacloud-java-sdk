@@ -4,33 +4,57 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyReservedInstanceAttributeResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Code")
     @Validation(required = true)
-    public ModifyReservedInstanceAttributeResponseBody body;
+    public String code;
+
+    @NameInMap("Message")
+    @Validation(required = true)
+    public String message;
+
+    @NameInMap("HttpStatusCode")
+    @Validation(required = true)
+    public Integer httpStatusCode;
 
     public static ModifyReservedInstanceAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyReservedInstanceAttributeResponse self = new ModifyReservedInstanceAttributeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyReservedInstanceAttributeResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ModifyReservedInstanceAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ModifyReservedInstanceAttributeResponse setBody(ModifyReservedInstanceAttributeResponseBody body) {
-        this.body = body;
+    public ModifyReservedInstanceAttributeResponse setCode(String code) {
+        this.code = code;
         return this;
     }
-    public ModifyReservedInstanceAttributeResponseBody getBody() {
-        return this.body;
+    public String getCode() {
+        return this.code;
+    }
+
+    public ModifyReservedInstanceAttributeResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ModifyReservedInstanceAttributeResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }

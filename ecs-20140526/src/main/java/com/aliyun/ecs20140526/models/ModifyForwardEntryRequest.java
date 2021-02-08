@@ -17,9 +17,11 @@ public class ModifyForwardEntryRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("ForwardTableId")
+    @Validation(required = true)
     public String forwardTableId;
 
     @NameInMap("ForwardEntryId")
+    @Validation(required = true)
     public String forwardEntryId;
 
     @NameInMap("ExternalIp")
@@ -38,6 +40,7 @@ public class ModifyForwardEntryRequest extends TeaModel {
     public String ipProtocol;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     public static ModifyForwardEntryRequest build(java.util.Map<String, ?> map) throws Exception {

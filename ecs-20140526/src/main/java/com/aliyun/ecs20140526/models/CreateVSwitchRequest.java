@@ -14,12 +14,15 @@ public class CreateVSwitchRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("ZoneId")
+    @Validation(required = true)
     public String zoneId;
 
     @NameInMap("CidrBlock")
+    @Validation(required = true)
     public String cidrBlock;
 
     @NameInMap("VpcId")
+    @Validation(required = true)
     public String vpcId;
 
     @NameInMap("RegionId")
