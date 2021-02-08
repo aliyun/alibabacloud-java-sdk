@@ -19,6 +19,9 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("Rr")
+    public String rr;
+
     public static DescribeDNSSLBSubDomainsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDNSSLBSubDomainsRequest self = new DescribeDNSSLBSubDomainsRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribeDNSSLBSubDomainsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDNSSLBSubDomainsRequest setRr(String rr) {
+        this.rr = rr;
+        return this;
+    }
+    public String getRr() {
+        return this.rr;
     }
 
 }

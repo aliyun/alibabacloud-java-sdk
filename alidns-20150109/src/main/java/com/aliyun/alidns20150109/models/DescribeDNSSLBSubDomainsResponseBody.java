@@ -64,6 +64,55 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         return this.slbSubDomains;
     }
 
+    public static class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm extends TeaModel {
+        @NameInMap("Line")
+        public String line;
+
+        @NameInMap("Open")
+        public Boolean open;
+
+        public static DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm self = new DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm setLine(String line) {
+            this.line = line;
+            return this;
+        }
+        public String getLine() {
+            return this.line;
+        }
+
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm setOpen(Boolean open) {
+            this.open = open;
+            return this;
+        }
+        public Boolean getOpen() {
+            return this.open;
+        }
+
+    }
+
+    public static class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms extends TeaModel {
+        @NameInMap("LineAlgorithm")
+        public java.util.List<DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm> lineAlgorithm;
+
+        public static DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms self = new DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms setLineAlgorithm(java.util.List<DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm> lineAlgorithm) {
+            this.lineAlgorithm = lineAlgorithm;
+            return this;
+        }
+        public java.util.List<DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithmsLineAlgorithm> getLineAlgorithm() {
+            return this.lineAlgorithm;
+        }
+
+    }
+
     public static class DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain extends TeaModel {
         @NameInMap("Type")
         public String type;
@@ -76,6 +125,9 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
 
         @NameInMap("SubDomain")
         public String subDomain;
+
+        @NameInMap("LineAlgorithms")
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms lineAlgorithms;
 
         public static DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain build(java.util.Map<String, ?> map) throws Exception {
             DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain self = new DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain();
@@ -112,6 +164,14 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
         }
         public String getSubDomain() {
             return this.subDomain;
+        }
+
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomain setLineAlgorithms(DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms lineAlgorithms) {
+            this.lineAlgorithms = lineAlgorithms;
+            return this;
+        }
+        public DescribeDNSSLBSubDomainsResponseBodySlbSubDomainsSlbSubDomainLineAlgorithms getLineAlgorithms() {
+            return this.lineAlgorithms;
         }
 
     }
