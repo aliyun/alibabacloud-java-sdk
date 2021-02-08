@@ -604,6 +604,12 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
         @NameInMap("PersonNumber")
         public Integer personNumber;
 
+        @NameInMap("Width")
+        public Long width;
+
+        @NameInMap("Height")
+        public Long height;
+
         public static PedestrianDetectAttributeResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             PedestrianDetectAttributeResponseBodyData self = new PedestrianDetectAttributeResponseBodyData();
             return TeaModel.build(map, self);
@@ -631,6 +637,22 @@ public class PedestrianDetectAttributeResponseBody extends TeaModel {
         }
         public Integer getPersonNumber() {
             return this.personNumber;
+        }
+
+        public PedestrianDetectAttributeResponseBodyData setWidth(Long width) {
+            this.width = width;
+            return this;
+        }
+        public Long getWidth() {
+            return this.width;
+        }
+
+        public PedestrianDetectAttributeResponseBodyData setHeight(Long height) {
+            this.height = height;
+            return this;
+        }
+        public Long getHeight() {
+            return this.height;
         }
 
     }
