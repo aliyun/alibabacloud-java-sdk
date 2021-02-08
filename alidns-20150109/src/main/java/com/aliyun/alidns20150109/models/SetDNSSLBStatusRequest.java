@@ -22,6 +22,9 @@ public class SetDNSSLBStatusRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    @NameInMap("Line")
+    public String line;
+
     public static SetDNSSLBStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDNSSLBStatusRequest self = new SetDNSSLBStatusRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class SetDNSSLBStatusRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public SetDNSSLBStatusRequest setLine(String line) {
+        this.line = line;
+        return this;
+    }
+    public String getLine() {
+        return this.line;
     }
 
 }
