@@ -350,6 +350,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("DescribeClusterDetail", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/" + ClusterId + "", "json", req, runtime), new DescribeClusterDetailResponse());
     }
 
+    public PauseComponentUpgradeResponse pauseComponentUpgrade(String clusterid, String componentid) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.pauseComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
+    }
+
+    public PauseComponentUpgradeResponse pauseComponentUpgradeWithOptions(String clusterid, String componentid, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("PauseComponentUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterid + "/components/" + componentid + "/pause", "none", req, runtime), new PauseComponentUpgradeResponse());
+    }
+
     public DescribeClustersResponse describeClusters(DescribeClustersRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1022,6 +1035,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("UpgradeCluster", "2015-12-15", "HTTPS", "POST", "AK", "/api/v2/clusters/" + ClusterId + "/upgrade", "none", req, runtime), new UpgradeClusterResponse());
     }
 
+    public CancelWorkflowResponse cancelWorkflow(String workflowName, CancelWorkflowRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cancelWorkflowWithOptions(workflowName, request, headers, runtime);
+    }
+
+    public CancelWorkflowResponse cancelWorkflowWithOptions(String workflowName, CancelWorkflowRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.action)) {
+            body.put("action", request.action);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("CancelWorkflow", "2015-12-15", "HTTPS", "PUT", "AK", "/gs/workflow/" + workflowName + "", "none", req, runtime), new CancelWorkflowResponse());
+    }
+
     public AttachInstancesResponse attachInstances(String ClusterId, AttachInstancesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1266,6 +1299,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequestWithForm("DeleteCluster", "2015-12-15", "HTTPS", "DELETE", "AK", "/clusters/" + ClusterId + "", "none", req, runtime), new DeleteClusterResponse());
     }
 
+    public CancelComponentUpgradeResponse cancelComponentUpgrade(String clusterId, String componentId) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.cancelComponentUpgradeWithOptions(clusterId, componentId, headers, runtime);
+    }
+
+    public CancelComponentUpgradeResponse cancelComponentUpgradeWithOptions(String clusterId, String componentId, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("CancelComponentUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterId + "/components/" + componentId + "/cancel", "none", req, runtime), new CancelComponentUpgradeResponse());
+    }
+
     public MigrateClusterResponse migrateCluster(String clusterId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1325,6 +1371,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("body", com.aliyun.teautil.Common.toArray(request.addons))
         ));
         return TeaModel.toModel(this.doROARequest("UnInstallClusterAddons", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + ClusterId + "/components/uninstall", "none", req, runtime), new UnInstallClusterAddonsResponse());
+    }
+
+    public ResumeComponentUpgradeResponse resumeComponentUpgrade(String clusterid, String componentid) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.resumeComponentUpgradeWithOptions(clusterid, componentid, headers, runtime);
+    }
+
+    public ResumeComponentUpgradeResponse resumeComponentUpgradeWithOptions(String clusterid, String componentid, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("ResumeComponentUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/clusters/" + clusterid + "/components/" + componentid + "/resume", "none", req, runtime), new ResumeComponentUpgradeResponse());
     }
 
     public DescribeClustersV1Response describeClustersV1(DescribeClustersV1Request request) throws Exception {
@@ -1392,6 +1451,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("DescribeTaskInfo", "2015-12-15", "HTTPS", "GET", "AK", "/tasks/" + taskId + "", "json", req, runtime), new DescribeTaskInfoResponse());
     }
 
+    public DescirbeWorkflowResponse descirbeWorkflow(String workflowName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.descirbeWorkflowWithOptions(workflowName, headers, runtime);
+    }
+
+    public DescirbeWorkflowResponse descirbeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescirbeWorkflow", "2015-12-15", "HTTPS", "GET", "AK", "/gs/workflow/" + workflowName + "", "json", req, runtime), new DescirbeWorkflowResponse());
+    }
+
     public CancelClusterUpgradeResponse cancelClusterUpgrade(String ClusterId) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1403,6 +1475,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers)
         ));
         return TeaModel.toModel(this.doROARequest("CancelClusterUpgrade", "2015-12-15", "HTTPS", "POST", "AK", "/api/v2/clusters/" + ClusterId + "/upgrade/cancel", "none", req, runtime), new CancelClusterUpgradeResponse());
+    }
+
+    public RemoveWorkflowResponse removeWorkflow(String workflowName) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.removeWorkflowWithOptions(workflowName, headers, runtime);
+    }
+
+    public RemoveWorkflowResponse removeWorkflowWithOptions(String workflowName, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("RemoveWorkflow", "2015-12-15", "HTTPS", "DELETE", "AK", "/gs/workflow/" + workflowName + "", "none", req, runtime), new RemoveWorkflowResponse());
     }
 
     public UpdateTemplateResponse updateTemplate(String TemplateId, UpdateTemplateRequest request) throws Exception {
@@ -1528,6 +1613,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.doROARequest("DescribeClusterAddonsUpgradeStatus", "2015-12-15", "HTTPS", "GET", "AK", "/clusters/[ClusterId]/components/upgradestatus", "json", req, runtime), new DescribeClusterAddonsUpgradeStatusResponse());
     }
 
+    public DescribeWorkflowsResponse describeWorkflows() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeWorkflowsWithOptions(headers, runtime);
+    }
+
+    public DescribeWorkflowsResponse describeWorkflowsWithOptions(java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        return TeaModel.toModel(this.doROARequest("DescribeWorkflows", "2015-12-15", "HTTPS", "GET", "AK", "/gs/workflows", "json", req, runtime), new DescribeWorkflowsResponse());
+    }
+
     public InstallClusterAddonsResponse installClusterAddons(String ClusterId, InstallClusterAddonsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
@@ -1574,6 +1672,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         return TeaModel.toModel(this.doROARequest("DescribeClusterV2UserKubeconfig", "2015-12-15", "HTTPS", "GET", "AK", "/api/v2/k8s/" + ClusterId + "/user_config", "json", req, runtime), new DescribeClusterV2UserKubeconfigResponse());
+    }
+
+    public StartWorkflowResponse startWorkflow(StartWorkflowRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startWorkflowWithOptions(request, headers, runtime);
+    }
+
+    public StartWorkflowResponse startWorkflowWithOptions(StartWorkflowRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowType)) {
+            body.put("workflow_type", request.workflowType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            body.put("service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mappingOssRegion)) {
+            body.put("mapping_oss_region", request.mappingOssRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mappingFastqFirstFilename)) {
+            body.put("mapping_fastq_first_filename", request.mappingFastqFirstFilename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mappingFastqSecondFilename)) {
+            body.put("mapping_fastq_second_filename", request.mappingFastqSecondFilename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mappingBucketName)) {
+            body.put("mapping_bucket_name", request.mappingBucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mappingFastqPath)) {
+            body.put("mapping_fastq_path", request.mappingFastqPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mappingReferencePath)) {
+            body.put("mapping_reference_path", request.mappingReferencePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mappingIsMarkDup)) {
+            body.put("mapping_is_mark_dup", request.mappingIsMarkDup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mappingBamOutPath)) {
+            body.put("mapping_bam_out_path", request.mappingBamOutPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mappingBamOutFilename)) {
+            body.put("mapping_bam_out_filename", request.mappingBamOutFilename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wgsOssRegion)) {
+            body.put("wgs_oss_region", request.wgsOssRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wgsFastqFirstFilename)) {
+            body.put("wgs_fastq_first_filename", request.wgsFastqFirstFilename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wgsFastqSecondFilename)) {
+            body.put("wgs_fastq_second_filename", request.wgsFastqSecondFilename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wgsBucketName)) {
+            body.put("wgs_bucket_name", request.wgsBucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wgsFastqPath)) {
+            body.put("wgs_fastq_path", request.wgsFastqPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wgsReferencePath)) {
+            body.put("wgs_reference_path", request.wgsReferencePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wgsVcfOutPath)) {
+            body.put("wgs_vcf_out_path", request.wgsVcfOutPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.wgsVcfOutFilename)) {
+            body.put("wgs_vcf_out_filename", request.wgsVcfOutFilename);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        return TeaModel.toModel(this.doROARequest("StartWorkflow", "2015-12-15", "HTTPS", "POST", "AK", "/gs/workflow", "json", req, runtime), new StartWorkflowResponse());
     }
 
     public ScaleOutClusterResponse scaleOutCluster(String ClusterId, ScaleOutClusterRequest request) throws Exception {
