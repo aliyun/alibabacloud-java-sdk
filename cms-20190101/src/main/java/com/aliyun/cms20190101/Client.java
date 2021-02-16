@@ -566,20 +566,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAlertHistoryListWithOptions(request, runtime);
     }
 
-    public DescribeAlertingMetricRuleResourcesResponse describeAlertingMetricRuleResourcesWithOptions(DescribeAlertingMetricRuleResourcesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeAlertingMetricRuleResources", "2019-01-01", "HTTPS", "GET", "AK", "json", req, runtime), new DescribeAlertingMetricRuleResourcesResponse());
-    }
-
-    public DescribeAlertingMetricRuleResourcesResponse describeAlertingMetricRuleResources(DescribeAlertingMetricRuleResourcesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.describeAlertingMetricRuleResourcesWithOptions(request, runtime);
-    }
-
     public DescribeAlertLogCountResponse describeAlertLogCountWithOptions(DescribeAlertLogCountRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
