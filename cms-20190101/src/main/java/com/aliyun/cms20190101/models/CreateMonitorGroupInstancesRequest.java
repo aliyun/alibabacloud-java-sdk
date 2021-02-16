@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupInstancesRequest extends TeaModel {
     @NameInMap("GroupId")
-    public Long groupId;
+    public String groupId;
 
     @NameInMap("Instances")
     public java.util.List<CreateMonitorGroupInstancesRequestInstances> instances;
@@ -15,11 +15,11 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateMonitorGroupInstancesRequest setGroupId(Long groupId) {
+    public CreateMonitorGroupInstancesRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
-    public Long getGroupId() {
+    public String getGroupId() {
         return this.groupId;
     }
 
