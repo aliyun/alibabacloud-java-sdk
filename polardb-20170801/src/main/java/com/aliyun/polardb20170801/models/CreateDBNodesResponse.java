@@ -4,37 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBNodesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DBClusterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String DBClusterId;
-
-    @NameInMap("OrderId")
-    @Validation(required = true)
-    public String orderId;
-
-    @NameInMap("DBNodeIds")
-    @Validation(required = true)
-    public CreateDBNodesResponseDBNodeIds DBNodeIds;
+    public CreateDBNodesResponseBody body;
 
     public static CreateDBNodesResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDBNodesResponse self = new CreateDBNodesResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class CreateDBNodesResponseDBNodeIds extends TeaModel {
-        @NameInMap("DBNodeId")
-        @Validation(required = true)
-        public java.util.List<String> DBNodeId;
+    public CreateDBNodesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static CreateDBNodesResponseDBNodeIds build(java.util.Map<String, ?> map) throws Exception {
-            CreateDBNodesResponseDBNodeIds self = new CreateDBNodesResponseDBNodeIds();
-            return TeaModel.build(map, self);
-        }
-
+    public CreateDBNodesResponse setBody(CreateDBNodesResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateDBNodesResponseBody getBody() {
+        return this.body;
     }
 
 }

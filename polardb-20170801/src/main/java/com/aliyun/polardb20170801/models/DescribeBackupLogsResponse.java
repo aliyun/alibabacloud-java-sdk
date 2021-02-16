@@ -4,81 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupLogsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TotalRecordCount")
+    @NameInMap("body")
     @Validation(required = true)
-    public String totalRecordCount;
-
-    @NameInMap("PageNumber")
-    @Validation(required = true)
-    public String pageNumber;
-
-    @NameInMap("PageRecordCount")
-    @Validation(required = true)
-    public String pageRecordCount;
-
-    @NameInMap("Items")
-    @Validation(required = true)
-    public DescribeBackupLogsResponseItems items;
+    public DescribeBackupLogsResponseBody body;
 
     public static DescribeBackupLogsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupLogsResponse self = new DescribeBackupLogsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeBackupLogsResponseItemsBackupLog extends TeaModel {
-        @NameInMap("BackupLogId")
-        @Validation(required = true)
-        public String backupLogId;
-
-        @NameInMap("BackupLogName")
-        @Validation(required = true)
-        public String backupLogName;
-
-        @NameInMap("BackupLogStartTime")
-        @Validation(required = true)
-        public String backupLogStartTime;
-
-        @NameInMap("BackupLogEndTime")
-        @Validation(required = true)
-        public String backupLogEndTime;
-
-        @NameInMap("BackupLogSize")
-        @Validation(required = true)
-        public String backupLogSize;
-
-        @NameInMap("DownloadLink")
-        @Validation(required = true)
-        public String downloadLink;
-
-        @NameInMap("IntranetDownloadLink")
-        @Validation(required = true)
-        public String intranetDownloadLink;
-
-        @NameInMap("LinkExpiredTime")
-        @Validation(required = true)
-        public String linkExpiredTime;
-
-        public static DescribeBackupLogsResponseItemsBackupLog build(java.util.Map<String, ?> map) throws Exception {
-            DescribeBackupLogsResponseItemsBackupLog self = new DescribeBackupLogsResponseItemsBackupLog();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeBackupLogsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeBackupLogsResponseItems extends TeaModel {
-        @NameInMap("BackupLog")
-        @Validation(required = true)
-        public java.util.List<DescribeBackupLogsResponseItemsBackupLog> backupLog;
-
-        public static DescribeBackupLogsResponseItems build(java.util.Map<String, ?> map) throws Exception {
-            DescribeBackupLogsResponseItems self = new DescribeBackupLogsResponseItems();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeBackupLogsResponse setBody(DescribeBackupLogsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeBackupLogsResponseBody getBody() {
+        return this.body;
     }
 
 }

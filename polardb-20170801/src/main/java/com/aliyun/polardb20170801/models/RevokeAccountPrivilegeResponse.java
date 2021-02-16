@@ -4,13 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class RevokeAccountPrivilegeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public RevokeAccountPrivilegeResponseBody body;
 
     public static RevokeAccountPrivilegeResponse build(java.util.Map<String, ?> map) throws Exception {
         RevokeAccountPrivilegeResponse self = new RevokeAccountPrivilegeResponse();
         return TeaModel.build(map, self);
+    }
+
+    public RevokeAccountPrivilegeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RevokeAccountPrivilegeResponse setBody(RevokeAccountPrivilegeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RevokeAccountPrivilegeResponseBody getBody() {
+        return this.body;
     }
 
 }
