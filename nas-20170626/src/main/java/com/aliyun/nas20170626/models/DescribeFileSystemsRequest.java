@@ -40,6 +40,9 @@ public class DescribeFileSystemsRequest extends TeaModel {
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     @NameInMap("Tag")
     public java.util.List<DescribeFileSystemsRequestTag> tag;
 
@@ -142,6 +145,14 @@ public class DescribeFileSystemsRequest extends TeaModel {
     }
     public String getSortOrder() {
         return this.sortOrder;
+    }
+
+    public DescribeFileSystemsRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public DescribeFileSystemsRequest setTag(java.util.List<DescribeFileSystemsRequestTag> tag) {
