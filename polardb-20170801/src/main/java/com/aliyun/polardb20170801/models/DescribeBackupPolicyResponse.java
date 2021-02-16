@@ -4,41 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("BackupRetentionPeriod")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer backupRetentionPeriod;
-
-    @NameInMap("PreferredNextBackupTime")
-    @Validation(required = true)
-    public String preferredNextBackupTime;
-
-    @NameInMap("PreferredBackupTime")
-    @Validation(required = true)
-    public String preferredBackupTime;
-
-    @NameInMap("PreferredBackupPeriod")
-    @Validation(required = true)
-    public String preferredBackupPeriod;
-
-    @NameInMap("DataLevel1BackupRetentionPeriod")
-    @Validation(required = true)
-    public String dataLevel1BackupRetentionPeriod;
-
-    @NameInMap("DataLevel2BackupRetentionPeriod")
-    @Validation(required = true)
-    public String dataLevel2BackupRetentionPeriod;
-
-    @NameInMap("BackupRetentionPolicyOnClusterDeletion")
-    @Validation(required = true)
-    public String backupRetentionPolicyOnClusterDeletion;
+    public DescribeBackupPolicyResponseBody body;
 
     public static DescribeBackupPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPolicyResponse self = new DescribeBackupPolicyResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBackupPolicyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeBackupPolicyResponse setBody(DescribeBackupPolicyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeBackupPolicyResponseBody getBody() {
+        return this.body;
     }
 
 }

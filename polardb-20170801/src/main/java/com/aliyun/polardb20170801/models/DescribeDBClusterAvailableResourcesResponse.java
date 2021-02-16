@@ -4,69 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAvailableResourcesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AvailableZones")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeDBClusterAvailableResourcesResponseAvailableZones> availableZones;
+    public DescribeDBClusterAvailableResourcesResponseBody body;
 
     public static DescribeDBClusterAvailableResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterAvailableResourcesResponse self = new DescribeDBClusterAvailableResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEnginesAvailableResources extends TeaModel {
-        @NameInMap("DBNodeClass")
-        @Validation(required = true)
-        public String DBNodeClass;
-
-        @NameInMap("Category")
-        @Validation(required = true)
-        public String category;
-
-        public static DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEnginesAvailableResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEnginesAvailableResources self = new DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEnginesAvailableResources();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeDBClusterAvailableResourcesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEngines extends TeaModel {
-        @NameInMap("Engine")
-        @Validation(required = true)
-        public String engine;
-
-        @NameInMap("AvailableResources")
-        @Validation(required = true)
-        public java.util.List<DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEnginesAvailableResources> availableResources;
-
-        public static DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEngines build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEngines self = new DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEngines();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeDBClusterAvailableResourcesResponse setBody(DescribeDBClusterAvailableResourcesResponseBody body) {
+        this.body = body;
+        return this;
     }
-
-    public static class DescribeDBClusterAvailableResourcesResponseAvailableZones extends TeaModel {
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
-        @NameInMap("ZoneId")
-        @Validation(required = true)
-        public String zoneId;
-
-        @NameInMap("SupportedEngines")
-        @Validation(required = true)
-        public java.util.List<DescribeDBClusterAvailableResourcesResponseAvailableZonesSupportedEngines> supportedEngines;
-
-        public static DescribeDBClusterAvailableResourcesResponseAvailableZones build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAvailableResourcesResponseAvailableZones self = new DescribeDBClusterAvailableResourcesResponseAvailableZones();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeDBClusterAvailableResourcesResponseBody getBody() {
+        return this.body;
     }
 
 }

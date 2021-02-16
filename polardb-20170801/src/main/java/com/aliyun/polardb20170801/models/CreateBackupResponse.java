@@ -4,17 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateBackupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("BackupJobId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String backupJobId;
+    public CreateBackupResponseBody body;
 
     public static CreateBackupResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateBackupResponse self = new CreateBackupResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateBackupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateBackupResponse setBody(CreateBackupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateBackupResponseBody getBody() {
+        return this.body;
     }
 
 }

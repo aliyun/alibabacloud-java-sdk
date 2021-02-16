@@ -4,25 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class CreateDBClusterResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DBClusterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String DBClusterId;
-
-    @NameInMap("OrderId")
-    @Validation(required = true)
-    public String orderId;
-
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
-    public String resourceGroupId;
+    public CreateDBClusterResponseBody body;
 
     public static CreateDBClusterResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDBClusterResponse self = new CreateDBClusterResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBClusterResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateDBClusterResponse setBody(CreateDBClusterResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateDBClusterResponseBody getBody() {
+        return this.body;
     }
 
 }

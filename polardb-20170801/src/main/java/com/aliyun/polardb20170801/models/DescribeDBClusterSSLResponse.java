@@ -4,41 +4,33 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterSSLResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Items")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<DescribeDBClusterSSLResponseItems> items;
+    public DescribeDBClusterSSLResponseBody body;
 
     public static DescribeDBClusterSSLResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterSSLResponse self = new DescribeDBClusterSSLResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeDBClusterSSLResponseItems extends TeaModel {
-        @NameInMap("DBEndpointId")
-        @Validation(required = true)
-        public String DBEndpointId;
+    public DescribeDBClusterSSLResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("SSLEnabled")
-        @Validation(required = true)
-        public String SSLEnabled;
-
-        @NameInMap("SSLConnectionString")
-        @Validation(required = true)
-        public String SSLConnectionString;
-
-        @NameInMap("SSLExpireTime")
-        @Validation(required = true)
-        public String SSLExpireTime;
-
-        public static DescribeDBClusterSSLResponseItems build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterSSLResponseItems self = new DescribeDBClusterSSLResponseItems();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeDBClusterSSLResponse setBody(DescribeDBClusterSSLResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeDBClusterSSLResponseBody getBody() {
+        return this.body;
     }
 
 }
