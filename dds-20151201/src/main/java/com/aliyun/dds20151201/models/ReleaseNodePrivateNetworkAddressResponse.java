@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dds20151201.models;
+
+import com.aliyun.tea.*;
+
+public class ReleaseNodePrivateNetworkAddressResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ReleaseNodePrivateNetworkAddressResponseBody body;
+
+    public static ReleaseNodePrivateNetworkAddressResponse build(java.util.Map<String, ?> map) throws Exception {
+        ReleaseNodePrivateNetworkAddressResponse self = new ReleaseNodePrivateNetworkAddressResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ReleaseNodePrivateNetworkAddressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ReleaseNodePrivateNetworkAddressResponse setBody(ReleaseNodePrivateNetworkAddressResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ReleaseNodePrivateNetworkAddressResponseBody getBody() {
+        return this.body;
+    }
+
+}
