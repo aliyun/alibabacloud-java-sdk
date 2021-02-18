@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dts20200101.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeSynchronizationJobReplicatorCompareResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeSynchronizationJobReplicatorCompareResponseBody body;
+
+    public static DescribeSynchronizationJobReplicatorCompareResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeSynchronizationJobReplicatorCompareResponse self = new DescribeSynchronizationJobReplicatorCompareResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeSynchronizationJobReplicatorCompareResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeSynchronizationJobReplicatorCompareResponse setBody(DescribeSynchronizationJobReplicatorCompareResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeSynchronizationJobReplicatorCompareResponseBody getBody() {
+        return this.body;
+    }
+
+}
