@@ -103,6 +103,24 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("PrometheusUrl")
     public String prometheusUrl;
 
+    @NameInMap("RedisFilterEnabled")
+    public Boolean redisFilterEnabled;
+
+    @NameInMap("MysqlFilterEnabled")
+    public Boolean mysqlFilterEnabled;
+
+    @NameInMap("ThriftFilterEnabled")
+    public Boolean thriftFilterEnabled;
+
+    @NameInMap("WebAssemblyFilterEnabled")
+    public Boolean webAssemblyFilterEnabled;
+
+    @NameInMap("MSEEnabled")
+    public Boolean MSEEnabled;
+
+    @NameInMap("DNSProxyingEnabled")
+    public Boolean DNSProxyingEnabled;
+
     public static CreateServiceMeshRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceMeshRequest self = new CreateServiceMeshRequest();
         return TeaModel.build(map, self);
@@ -362,6 +380,54 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public String getPrometheusUrl() {
         return this.prometheusUrl;
+    }
+
+    public CreateServiceMeshRequest setRedisFilterEnabled(Boolean redisFilterEnabled) {
+        this.redisFilterEnabled = redisFilterEnabled;
+        return this;
+    }
+    public Boolean getRedisFilterEnabled() {
+        return this.redisFilterEnabled;
+    }
+
+    public CreateServiceMeshRequest setMysqlFilterEnabled(Boolean mysqlFilterEnabled) {
+        this.mysqlFilterEnabled = mysqlFilterEnabled;
+        return this;
+    }
+    public Boolean getMysqlFilterEnabled() {
+        return this.mysqlFilterEnabled;
+    }
+
+    public CreateServiceMeshRequest setThriftFilterEnabled(Boolean thriftFilterEnabled) {
+        this.thriftFilterEnabled = thriftFilterEnabled;
+        return this;
+    }
+    public Boolean getThriftFilterEnabled() {
+        return this.thriftFilterEnabled;
+    }
+
+    public CreateServiceMeshRequest setWebAssemblyFilterEnabled(Boolean webAssemblyFilterEnabled) {
+        this.webAssemblyFilterEnabled = webAssemblyFilterEnabled;
+        return this;
+    }
+    public Boolean getWebAssemblyFilterEnabled() {
+        return this.webAssemblyFilterEnabled;
+    }
+
+    public CreateServiceMeshRequest setMSEEnabled(Boolean MSEEnabled) {
+        this.MSEEnabled = MSEEnabled;
+        return this;
+    }
+    public Boolean getMSEEnabled() {
+        return this.MSEEnabled;
+    }
+
+    public CreateServiceMeshRequest setDNSProxyingEnabled(Boolean DNSProxyingEnabled) {
+        this.DNSProxyingEnabled = DNSProxyingEnabled;
+        return this;
+    }
+    public Boolean getDNSProxyingEnabled() {
+        return this.DNSProxyingEnabled;
     }
 
 }
