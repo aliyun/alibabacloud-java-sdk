@@ -113,6 +113,24 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("AccessLogEnabled")
     public Boolean accessLogEnabled;
 
+    @NameInMap("MSEEnabled")
+    public Boolean MSEEnabled;
+
+    @NameInMap("RedisFilterEnabled")
+    public Boolean redisFilterEnabled;
+
+    @NameInMap("MysqlFilterEnabled")
+    public Boolean mysqlFilterEnabled;
+
+    @NameInMap("ThriftFilterEnabled")
+    public Boolean thriftFilterEnabled;
+
+    @NameInMap("WebAssemblyFilterEnabled")
+    public Boolean webAssemblyFilterEnabled;
+
+    @NameInMap("DNSProxyingEnabled")
+    public Boolean DNSProxyingEnabled;
+
     public static UpdateMeshFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMeshFeatureRequest self = new UpdateMeshFeatureRequest();
         return TeaModel.build(map, self);
@@ -404,6 +422,54 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getAccessLogEnabled() {
         return this.accessLogEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setMSEEnabled(Boolean MSEEnabled) {
+        this.MSEEnabled = MSEEnabled;
+        return this;
+    }
+    public Boolean getMSEEnabled() {
+        return this.MSEEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setRedisFilterEnabled(Boolean redisFilterEnabled) {
+        this.redisFilterEnabled = redisFilterEnabled;
+        return this;
+    }
+    public Boolean getRedisFilterEnabled() {
+        return this.redisFilterEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setMysqlFilterEnabled(Boolean mysqlFilterEnabled) {
+        this.mysqlFilterEnabled = mysqlFilterEnabled;
+        return this;
+    }
+    public Boolean getMysqlFilterEnabled() {
+        return this.mysqlFilterEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setThriftFilterEnabled(Boolean thriftFilterEnabled) {
+        this.thriftFilterEnabled = thriftFilterEnabled;
+        return this;
+    }
+    public Boolean getThriftFilterEnabled() {
+        return this.thriftFilterEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setWebAssemblyFilterEnabled(Boolean webAssemblyFilterEnabled) {
+        this.webAssemblyFilterEnabled = webAssemblyFilterEnabled;
+        return this;
+    }
+    public Boolean getWebAssemblyFilterEnabled() {
+        return this.webAssemblyFilterEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setDNSProxyingEnabled(Boolean DNSProxyingEnabled) {
+        this.DNSProxyingEnabled = DNSProxyingEnabled;
+        return this;
+    }
+    public Boolean getDNSProxyingEnabled() {
+        return this.DNSProxyingEnabled;
     }
 
 }
