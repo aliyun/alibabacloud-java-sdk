@@ -18,7 +18,7 @@ public class RefreshUsersPermissionsResponseBody extends TeaModel {
     public String errorMsg;
 
     @NameInMap("Result")
-    public RefreshUsersPermissionsResponseBodyResult result;
+    public Boolean result;
 
     public static RefreshUsersPermissionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RefreshUsersPermissionsResponseBody self = new RefreshUsersPermissionsResponseBody();
@@ -57,42 +57,12 @@ public class RefreshUsersPermissionsResponseBody extends TeaModel {
         return this.errorMsg;
     }
 
-    public RefreshUsersPermissionsResponseBody setResult(RefreshUsersPermissionsResponseBodyResult result) {
+    public RefreshUsersPermissionsResponseBody setResult(Boolean result) {
         this.result = result;
         return this;
     }
-    public RefreshUsersPermissionsResponseBodyResult getResult() {
+    public Boolean getResult() {
         return this.result;
-    }
-
-    public static class RefreshUsersPermissionsResponseBodyResult extends TeaModel {
-        @NameInMap("Code")
-        public String code;
-
-        @NameInMap("Message")
-        public String message;
-
-        public static RefreshUsersPermissionsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
-            RefreshUsersPermissionsResponseBodyResult self = new RefreshUsersPermissionsResponseBodyResult();
-            return TeaModel.build(map, self);
-        }
-
-        public RefreshUsersPermissionsResponseBodyResult setCode(String code) {
-            this.code = code;
-            return this;
-        }
-        public String getCode() {
-            return this.code;
-        }
-
-        public RefreshUsersPermissionsResponseBodyResult setMessage(String message) {
-            this.message = message;
-            return this;
-        }
-        public String getMessage() {
-            return this.message;
-        }
-
     }
 
 }
