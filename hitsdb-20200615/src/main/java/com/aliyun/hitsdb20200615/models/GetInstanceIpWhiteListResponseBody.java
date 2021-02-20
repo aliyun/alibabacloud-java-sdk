@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.hitsdb20200615.models;
+
+import com.aliyun.tea.*;
+
+public class GetInstanceIpWhiteListResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("IpList")
+    public java.util.List<String> ipList;
+
+    public static GetInstanceIpWhiteListResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetInstanceIpWhiteListResponseBody self = new GetInstanceIpWhiteListResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public GetInstanceIpWhiteListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public GetInstanceIpWhiteListResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetInstanceIpWhiteListResponseBody setIpList(java.util.List<String> ipList) {
+        this.ipList = ipList;
+        return this;
+    }
+    public java.util.List<String> getIpList() {
+        return this.ipList;
+    }
+
+}
