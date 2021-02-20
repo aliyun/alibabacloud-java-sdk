@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("KeyPairName")
-    @Validation(required = true)
     public String keyPairName;
 
     @NameInMap("PublicKeyBody")
-    @Validation(required = true)
     public String publicKeyBody;
 
     public static ImportKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {

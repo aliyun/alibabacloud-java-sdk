@@ -5,34 +5,27 @@ import com.aliyun.tea.*;
 
 public class PreCreateEnsServiceRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsServiceName")
-    @Validation(required = true)
     public String ensServiceName;
 
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     @NameInMap("InstanceSpec")
-    @Validation(required = true)
     public String instanceSpec;
 
     @NameInMap("SystemDiskSize")
-    @Validation(required = true)
     public String systemDiskSize;
 
     @NameInMap("DataDiskSize")
     public String dataDiskSize;
 
     @NameInMap("BandwidthType")
-    @Validation(required = true)
     public String bandwidthType;
 
     @NameInMap("InstanceBandwithdLimit")
-    @Validation(required = true)
     public String instanceBandwithdLimit;
 
     @NameInMap("Password")
@@ -45,18 +38,15 @@ public class PreCreateEnsServiceRequest extends TeaModel {
     public String userData;
 
     @NameInMap("NetLevel")
-    @Validation(required = true)
     public String netLevel;
 
     @NameInMap("SchedulingStrategy")
-    @Validation(required = true)
     public String schedulingStrategy;
 
     @NameInMap("SchedulingPriceStrategy")
     public String schedulingPriceStrategy;
 
     @NameInMap("BuyResourcesDetail")
-    @Validation(required = true)
     public String buyResourcesDetail;
 
     public static PreCreateEnsServiceRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Password")

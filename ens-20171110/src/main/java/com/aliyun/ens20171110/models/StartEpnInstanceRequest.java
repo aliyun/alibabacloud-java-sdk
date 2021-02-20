@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class StartEpnInstanceRequest extends TeaModel {
     @NameInMap("EPNInstanceId")
-    @Validation(required = true)
     public String EPNInstanceId;
 
     public static StartEpnInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RemovePublicIpsFromEpnInstanceRequest extends TeaModel {
     @NameInMap("EPNInstanceId")
-    @Validation(required = true)
     public String EPNInstanceId;
 
     @NameInMap("InstanceInfos")
-    @Validation(required = true)
     public String instanceInfos;
 
     public static RemovePublicIpsFromEpnInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

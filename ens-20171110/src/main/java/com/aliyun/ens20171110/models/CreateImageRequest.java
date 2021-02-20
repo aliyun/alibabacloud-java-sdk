@@ -8,15 +8,12 @@ public class CreateImageRequest extends TeaModel {
     public String product;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ImageName")
-    @Validation(required = true)
     public String imageName;
 
     @NameInMap("DeleteAfterImageUpload")

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableResourceRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     public static DescribeAvailableResourceRequest build(java.util.Map<String, ?> map) throws Exception {

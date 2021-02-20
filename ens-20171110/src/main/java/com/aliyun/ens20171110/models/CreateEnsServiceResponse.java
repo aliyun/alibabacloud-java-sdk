@@ -4,33 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEnsServiceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
+    public CreateEnsServiceResponseBody body;
 
     public static CreateEnsServiceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateEnsServiceResponse self = new CreateEnsServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateEnsServiceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateEnsServiceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateEnsServiceResponse setCode(Integer code) {
-        this.code = code;
+    public CreateEnsServiceResponse setBody(CreateEnsServiceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public CreateEnsServiceResponseBody getBody() {
+        return this.body;
     }
 
 }

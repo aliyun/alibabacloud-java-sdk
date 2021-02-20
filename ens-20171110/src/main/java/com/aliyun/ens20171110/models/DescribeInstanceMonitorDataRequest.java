@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMonitorDataRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("InstanceId")

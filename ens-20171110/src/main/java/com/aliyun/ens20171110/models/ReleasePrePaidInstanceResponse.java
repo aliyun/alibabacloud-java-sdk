@@ -4,21 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ReleasePrePaidInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ReleasePrePaidInstanceResponseBody body;
 
     public static ReleasePrePaidInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         ReleasePrePaidInstanceResponse self = new ReleasePrePaidInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ReleasePrePaidInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ReleasePrePaidInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ReleasePrePaidInstanceResponse setBody(ReleasePrePaidInstanceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ReleasePrePaidInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

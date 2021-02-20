@@ -8,7 +8,6 @@ public class DescribeImagesRequest extends TeaModel {
     public String product;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsRegionId")

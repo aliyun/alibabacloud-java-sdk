@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyImageSharePermissionRequest extends TeaModel {
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     @NameInMap("AddAccounts")

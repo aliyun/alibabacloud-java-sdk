@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateEnsServiceRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsServiceId")
-    @Validation(required = true)
     public String ensServiceId;
 
     @NameInMap("OrderType")
-    @Validation(required = true)
     public String orderType;
 
     public static CreateEnsServiceRequest build(java.util.Map<String, ?> map) throws Exception {

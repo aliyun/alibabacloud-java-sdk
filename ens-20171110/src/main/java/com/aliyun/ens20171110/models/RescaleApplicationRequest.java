@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class RescaleApplicationRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("RescaleType")
-    @Validation(required = true)
     public String rescaleType;
 
     @NameInMap("RescaleLevel")
     public String rescaleLevel;
 
     @NameInMap("ResourceSelector")
-    @Validation(required = true)
     public String resourceSelector;
 
     @NameInMap("ToAppVersion")

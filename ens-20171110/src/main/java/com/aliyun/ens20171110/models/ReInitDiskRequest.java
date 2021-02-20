@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ReInitDiskRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("DiskId")
-    @Validation(required = true)
     public String diskId;
 
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     public static ReInitDiskRequest build(java.util.Map<String, ?> map) throws Exception {

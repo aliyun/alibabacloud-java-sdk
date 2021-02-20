@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteEpnInstanceRequest extends TeaModel {
     @NameInMap("EPNInstanceId")
-    @Validation(required = true)
     public String EPNInstanceId;
 
     public static DeleteEpnInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

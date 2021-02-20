@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityGroupRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("SecurityGroupName")

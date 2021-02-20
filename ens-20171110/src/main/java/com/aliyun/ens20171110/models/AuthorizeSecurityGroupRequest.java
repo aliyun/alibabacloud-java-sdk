@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class AuthorizeSecurityGroupRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("IpProtocol")
-    @Validation(required = true)
     public String ipProtocol;
 
     @NameInMap("PortRange")
-    @Validation(required = true)
     public String portRange;
 
     @NameInMap("SecurityGroupId")
-    @Validation(required = true)
     public String securityGroupId;
 
     @NameInMap("Policy")
@@ -27,7 +23,6 @@ public class AuthorizeSecurityGroupRequest extends TeaModel {
     public Integer priority;
 
     @NameInMap("SourceCidrIp")
-    @Validation(required = true)
     public String sourceCidrIp;
 
     @NameInMap("SourcePortRange")

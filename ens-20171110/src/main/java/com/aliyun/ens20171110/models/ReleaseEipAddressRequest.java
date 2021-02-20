@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ReleaseEipAddressRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsRegionId")
-    @Validation(required = true)
     public String ensRegionId;
 
     @NameInMap("Eips")
-    @Validation(required = true)
     public String eips;
 
     public static ReleaseEipAddressRequest build(java.util.Map<String, ?> map) throws Exception {

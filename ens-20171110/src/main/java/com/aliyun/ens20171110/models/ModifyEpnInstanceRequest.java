@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyEpnInstanceRequest extends TeaModel {
     @NameInMap("EPNInstanceId")
-    @Validation(required = true)
     public String EPNInstanceId;
 
     @NameInMap("EPNInstanceName")

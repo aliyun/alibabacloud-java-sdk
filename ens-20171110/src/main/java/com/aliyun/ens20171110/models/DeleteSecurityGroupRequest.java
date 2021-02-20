@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityGroupRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("SecurityGroupId")
-    @Validation(required = true)
     public String securityGroupId;
 
     public static DeleteSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {

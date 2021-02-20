@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsNetSaleDistrictRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("NetLevelCode")
-    @Validation(required = true)
     public String netLevelCode;
 
     @NameInMap("NetDistrictCode")

@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class ExportImageRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     @NameInMap("OSSBucket")
-    @Validation(required = true)
     public String OSSBucket;
 
     @NameInMap("OSSRegionId")
-    @Validation(required = true)
     public String OSSRegionId;
 
     @NameInMap("OSSPrefix")

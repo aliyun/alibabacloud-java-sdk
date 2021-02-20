@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsRegionIdResourceRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("OrderByParams")

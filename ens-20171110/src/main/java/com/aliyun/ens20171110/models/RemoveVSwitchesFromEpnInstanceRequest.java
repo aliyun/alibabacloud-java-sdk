@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RemoveVSwitchesFromEpnInstanceRequest extends TeaModel {
     @NameInMap("EPNInstanceId")
-    @Validation(required = true)
     public String EPNInstanceId;
 
     @NameInMap("VSwitchesInfo")
-    @Validation(required = true)
     public String vSwitchesInfo;
 
     public static RemoveVSwitchesFromEpnInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

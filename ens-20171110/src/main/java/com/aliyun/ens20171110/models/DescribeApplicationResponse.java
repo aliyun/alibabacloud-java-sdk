@@ -4,33 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeApplicationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Application")
+    @NameInMap("body")
     @Validation(required = true)
-    public String application;
+    public DescribeApplicationResponseBody body;
 
     public static DescribeApplicationResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeApplicationResponse self = new DescribeApplicationResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeApplicationResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeApplicationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeApplicationResponse setApplication(String application) {
-        this.application = application;
+    public DescribeApplicationResponse setBody(DescribeApplicationResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getApplication() {
-        return this.application;
+    public DescribeApplicationResponseBody getBody() {
+        return this.body;
     }
 
 }

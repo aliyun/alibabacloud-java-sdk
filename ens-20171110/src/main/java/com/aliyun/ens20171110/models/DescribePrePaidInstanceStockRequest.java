@@ -5,23 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribePrePaidInstanceStockRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsRegionId")
-    @Validation(required = true)
     public String ensRegionId;
 
     @NameInMap("SystemDiskSize")
-    @Validation(required = true)
     public Integer systemDiskSize;
 
     @NameInMap("DataDiskSize")
-    @Validation(required = true)
     public Integer dataDiskSize;
 
     @NameInMap("InstanceSpec")
-    @Validation(required = true)
     public String instanceSpec;
 
     public static DescribePrePaidInstanceStockRequest build(java.util.Map<String, ?> map) throws Exception {

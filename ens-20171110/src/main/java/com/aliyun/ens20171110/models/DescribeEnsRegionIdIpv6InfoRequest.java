@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsRegionIdIpv6InfoRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsRegionId")
-    @Validation(required = true)
     public String ensRegionId;
 
     public static DescribeEnsRegionIdIpv6InfoRequest build(java.util.Map<String, ?> map) throws Exception {

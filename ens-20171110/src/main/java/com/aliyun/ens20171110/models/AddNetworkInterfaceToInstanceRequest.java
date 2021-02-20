@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddNetworkInterfaceToInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Networks")
-    @Validation(required = true)
     public String networks;
 
     public static AddNetworkInterfaceToInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

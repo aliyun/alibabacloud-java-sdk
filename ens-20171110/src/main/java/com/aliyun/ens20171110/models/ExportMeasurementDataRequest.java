@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ExportMeasurementDataRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("StartDate")
-    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
-    @Validation(required = true)
     public String endDate;
 
     public static ExportMeasurementDataRequest build(java.util.Map<String, ?> map) throws Exception {

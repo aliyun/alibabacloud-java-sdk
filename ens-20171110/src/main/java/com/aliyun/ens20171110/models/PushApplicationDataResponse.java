@@ -4,109 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class PushApplicationDataResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PushResults")
+    @NameInMap("body")
     @Validation(required = true)
-    public PushApplicationDataResponsePushResults pushResults;
+    public PushApplicationDataResponseBody body;
 
     public static PushApplicationDataResponse build(java.util.Map<String, ?> map) throws Exception {
         PushApplicationDataResponse self = new PushApplicationDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public PushApplicationDataResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PushApplicationDataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PushApplicationDataResponse setPushResults(PushApplicationDataResponsePushResults pushResults) {
-        this.pushResults = pushResults;
+    public PushApplicationDataResponse setBody(PushApplicationDataResponseBody body) {
+        this.body = body;
         return this;
     }
-    public PushApplicationDataResponsePushResults getPushResults() {
-        return this.pushResults;
-    }
-
-    public static class PushApplicationDataResponsePushResultsPushResult extends TeaModel {
-        @NameInMap("Version")
-        @Validation(required = true)
-        public String version;
-
-        @NameInMap("ResultDescrip")
-        @Validation(required = true)
-        public String resultDescrip;
-
-        @NameInMap("ResultCode")
-        @Validation(required = true)
-        public Integer resultCode;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        public static PushApplicationDataResponsePushResultsPushResult build(java.util.Map<String, ?> map) throws Exception {
-            PushApplicationDataResponsePushResultsPushResult self = new PushApplicationDataResponsePushResultsPushResult();
-            return TeaModel.build(map, self);
-        }
-
-        public PushApplicationDataResponsePushResultsPushResult setVersion(String version) {
-            this.version = version;
-            return this;
-        }
-        public String getVersion() {
-            return this.version;
-        }
-
-        public PushApplicationDataResponsePushResultsPushResult setResultDescrip(String resultDescrip) {
-            this.resultDescrip = resultDescrip;
-            return this;
-        }
-        public String getResultDescrip() {
-            return this.resultDescrip;
-        }
-
-        public PushApplicationDataResponsePushResultsPushResult setResultCode(Integer resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-        public Integer getResultCode() {
-            return this.resultCode;
-        }
-
-        public PushApplicationDataResponsePushResultsPushResult setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
-    public static class PushApplicationDataResponsePushResults extends TeaModel {
-        @NameInMap("PushResult")
-        @Validation(required = true)
-        public java.util.List<PushApplicationDataResponsePushResultsPushResult> pushResult;
-
-        public static PushApplicationDataResponsePushResults build(java.util.Map<String, ?> map) throws Exception {
-            PushApplicationDataResponsePushResults self = new PushApplicationDataResponsePushResults();
-            return TeaModel.build(map, self);
-        }
-
-        public PushApplicationDataResponsePushResults setPushResult(java.util.List<PushApplicationDataResponsePushResultsPushResult> pushResult) {
-            this.pushResult = pushResult;
-            return this;
-        }
-        public java.util.List<PushApplicationDataResponsePushResultsPushResult> getPushResult() {
-            return this.pushResult;
-        }
-
+    public PushApplicationDataResponseBody getBody() {
+        return this.body;
     }
 
 }

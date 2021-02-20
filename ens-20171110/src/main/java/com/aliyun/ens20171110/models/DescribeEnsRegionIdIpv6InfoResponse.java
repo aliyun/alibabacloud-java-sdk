@@ -4,65 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRegionIdIpv6InfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SupportIpv6Info")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeEnsRegionIdIpv6InfoResponseSupportIpv6Info supportIpv6Info;
+    public DescribeEnsRegionIdIpv6InfoResponseBody body;
 
     public static DescribeEnsRegionIdIpv6InfoResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsRegionIdIpv6InfoResponse self = new DescribeEnsRegionIdIpv6InfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEnsRegionIdIpv6InfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeEnsRegionIdIpv6InfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeEnsRegionIdIpv6InfoResponse setSupportIpv6Info(DescribeEnsRegionIdIpv6InfoResponseSupportIpv6Info supportIpv6Info) {
-        this.supportIpv6Info = supportIpv6Info;
+    public DescribeEnsRegionIdIpv6InfoResponse setBody(DescribeEnsRegionIdIpv6InfoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeEnsRegionIdIpv6InfoResponseSupportIpv6Info getSupportIpv6Info() {
-        return this.supportIpv6Info;
-    }
-
-    public static class DescribeEnsRegionIdIpv6InfoResponseSupportIpv6Info extends TeaModel {
-        @NameInMap("SupportIpv6")
-        @Validation(required = true)
-        public Boolean supportIpv6;
-
-        @NameInMap("EnsRegionId")
-        @Validation(required = true)
-        public String ensRegionId;
-
-        public static DescribeEnsRegionIdIpv6InfoResponseSupportIpv6Info build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEnsRegionIdIpv6InfoResponseSupportIpv6Info self = new DescribeEnsRegionIdIpv6InfoResponseSupportIpv6Info();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeEnsRegionIdIpv6InfoResponseSupportIpv6Info setSupportIpv6(Boolean supportIpv6) {
-            this.supportIpv6 = supportIpv6;
-            return this;
-        }
-        public Boolean getSupportIpv6() {
-            return this.supportIpv6;
-        }
-
-        public DescribeEnsRegionIdIpv6InfoResponseSupportIpv6Info setEnsRegionId(String ensRegionId) {
-            this.ensRegionId = ensRegionId;
-            return this;
-        }
-        public String getEnsRegionId() {
-            return this.ensRegionId;
-        }
-
+    public DescribeEnsRegionIdIpv6InfoResponseBody getBody() {
+        return this.body;
     }
 
 }

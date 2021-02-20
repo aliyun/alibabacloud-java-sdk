@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeEpnBandWidthDataRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsRegionId")
@@ -15,15 +14,12 @@ public class DescribeEpnBandWidthDataRequest extends TeaModel {
     public String instanceId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("Period")
-    @Validation(required = true)
     public String period;
 
     @NameInMap("Isp")

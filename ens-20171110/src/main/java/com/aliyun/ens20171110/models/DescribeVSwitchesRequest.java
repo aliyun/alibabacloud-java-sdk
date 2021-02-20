@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsRegionId")

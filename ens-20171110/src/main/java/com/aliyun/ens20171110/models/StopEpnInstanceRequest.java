@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class StopEpnInstanceRequest extends TeaModel {
     @NameInMap("EPNInstanceId")
-    @Validation(required = true)
     public String EPNInstanceId;
 
     public static StopEpnInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
