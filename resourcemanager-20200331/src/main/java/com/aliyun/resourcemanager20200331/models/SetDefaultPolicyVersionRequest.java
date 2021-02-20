@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetDefaultPolicyVersionRequest extends TeaModel {
     @NameInMap("PolicyName")
-    @Validation(required = true)
     public String policyName;
 
     @NameInMap("VersionId")
-    @Validation(required = true)
     public String versionId;
 
     public static SetDefaultPolicyVersionRequest build(java.util.Map<String, ?> map) throws Exception {

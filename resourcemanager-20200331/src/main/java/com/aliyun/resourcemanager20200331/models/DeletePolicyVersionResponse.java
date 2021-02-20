@@ -4,21 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DeletePolicyVersionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeletePolicyVersionResponseBody body;
 
     public static DeletePolicyVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         DeletePolicyVersionResponse self = new DeletePolicyVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeletePolicyVersionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeletePolicyVersionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeletePolicyVersionResponse setBody(DeletePolicyVersionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeletePolicyVersionResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class InviteAccountToResourceDirectoryRequest extends TeaModel {
     @NameInMap("TargetEntity")
-    @Validation(required = true)
     public String targetEntity;
 
     @NameInMap("TargetType")
-    @Validation(required = true)
     public String targetType;
 
     @NameInMap("Note")

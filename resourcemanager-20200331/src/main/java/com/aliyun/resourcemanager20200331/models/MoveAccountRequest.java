@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class MoveAccountRequest extends TeaModel {
     @NameInMap("AccountId")
-    @Validation(required = true)
     public String accountId;
 
     @NameInMap("DestinationFolderId")
-    @Validation(required = true)
     public String destinationFolderId;
 
     public static MoveAccountRequest build(java.util.Map<String, ?> map) throws Exception {

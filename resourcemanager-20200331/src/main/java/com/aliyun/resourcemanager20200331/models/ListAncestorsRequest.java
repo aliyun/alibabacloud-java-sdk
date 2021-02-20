@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListAncestorsRequest extends TeaModel {
     @NameInMap("ChildId")
-    @Validation(required = true)
     public String childId;
 
     public static ListAncestorsRequest build(java.util.Map<String, ?> map) throws Exception {

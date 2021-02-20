@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteFolderRequest extends TeaModel {
     @NameInMap("FolderId")
-    @Validation(required = true)
     public String folderId;
 
     public static DeleteFolderRequest build(java.util.Map<String, ?> map) throws Exception {

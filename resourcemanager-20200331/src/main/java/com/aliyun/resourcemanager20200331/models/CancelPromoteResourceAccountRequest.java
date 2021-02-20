@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CancelPromoteResourceAccountRequest extends TeaModel {
     @NameInMap("RecordId")
-    @Validation(required = true)
     public String recordId;
 
     public static CancelPromoteResourceAccountRequest build(java.util.Map<String, ?> map) throws Exception {

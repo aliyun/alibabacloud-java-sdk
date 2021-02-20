@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetFolderRequest extends TeaModel {
     @NameInMap("FolderId")
-    @Validation(required = true)
     public String folderId;
 
     public static GetFolderRequest build(java.util.Map<String, ?> map) throws Exception {

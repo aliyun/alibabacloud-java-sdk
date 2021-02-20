@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateAccountRequest extends TeaModel {
     @NameInMap("NewDisplayName")
-    @Validation(required = true)
     public String newDisplayName;
 
     @NameInMap("AccountId")
-    @Validation(required = true)
     public String accountId;
 
     public static UpdateAccountRequest build(java.util.Map<String, ?> map) throws Exception {

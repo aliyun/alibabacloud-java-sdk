@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeletePolicyRequest extends TeaModel {
     @NameInMap("PolicyName")
-    @Validation(required = true)
     public String policyName;
 
     public static DeletePolicyRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateCloudAccountRequest extends TeaModel {
     @NameInMap("DisplayName")
-    @Validation(required = true)
     public String displayName;
 
     @NameInMap("ParentFolderId")
     public String parentFolderId;
 
     @NameInMap("Email")
-    @Validation(required = true)
     public String email;
 
     @NameInMap("PayerAccountId")

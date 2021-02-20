@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class AcceptHandshakeRequest extends TeaModel {
     @NameInMap("HandshakeId")
-    @Validation(required = true)
     public String handshakeId;
 
     public static AcceptHandshakeRequest build(java.util.Map<String, ?> map) throws Exception {

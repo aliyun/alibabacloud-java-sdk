@@ -5,23 +5,18 @@ import com.aliyun.tea.*;
 
 public class DetachPolicyRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
-    @Validation(required = true)
     public String resourceGroupId;
 
     @NameInMap("PolicyType")
-    @Validation(required = true)
     public String policyType;
 
     @NameInMap("PolicyName")
-    @Validation(required = true)
     public String policyName;
 
     @NameInMap("PrincipalType")
-    @Validation(required = true)
     public String principalType;
 
     @NameInMap("PrincipalName")
-    @Validation(required = true)
     public String principalName;
 
     public static DetachPolicyRequest build(java.util.Map<String, ?> map) throws Exception {

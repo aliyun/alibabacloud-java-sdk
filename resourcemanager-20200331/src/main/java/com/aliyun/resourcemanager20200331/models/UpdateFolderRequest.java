@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateFolderRequest extends TeaModel {
     @NameInMap("FolderId")
-    @Validation(required = true)
     public String folderId;
 
     @NameInMap("NewFolderName")
-    @Validation(required = true)
     public String newFolderName;
 
     public static UpdateFolderRequest build(java.util.Map<String, ?> map) throws Exception {

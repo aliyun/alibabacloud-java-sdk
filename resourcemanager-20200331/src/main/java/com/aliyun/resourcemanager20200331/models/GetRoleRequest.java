@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetRoleRequest extends TeaModel {
     @NameInMap("RoleName")
-    @Validation(required = true)
     public String roleName;
 
     @NameInMap("Language")

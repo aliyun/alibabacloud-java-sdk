@@ -4,21 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DeleteRoleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteRoleResponseBody body;
 
     public static DeleteRoleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteRoleResponse self = new DeleteRoleResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteRoleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteRoleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteRoleResponse setBody(DeleteRoleResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteRoleResponseBody getBody() {
+        return this.body;
     }
 
 }

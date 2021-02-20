@@ -8,7 +8,6 @@ public class CreateFolderRequest extends TeaModel {
     public String parentFolderId;
 
     @NameInMap("FolderName")
-    @Validation(required = true)
     public String folderName;
 
     public static CreateFolderRequest build(java.util.Map<String, ?> map) throws Exception {

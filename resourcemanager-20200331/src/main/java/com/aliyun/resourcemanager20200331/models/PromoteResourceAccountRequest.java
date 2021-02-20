@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class PromoteResourceAccountRequest extends TeaModel {
     @NameInMap("AccountId")
-    @Validation(required = true)
     public String accountId;
 
     @NameInMap("Email")
-    @Validation(required = true)
     public String email;
 
     public static PromoteResourceAccountRequest build(java.util.Map<String, ?> map) throws Exception {

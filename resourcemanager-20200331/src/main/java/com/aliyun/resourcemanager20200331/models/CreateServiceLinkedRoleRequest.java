@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateServiceLinkedRoleRequest extends TeaModel {
     @NameInMap("ServiceName")
-    @Validation(required = true)
     public String serviceName;
 
     @NameInMap("CustomSuffix")

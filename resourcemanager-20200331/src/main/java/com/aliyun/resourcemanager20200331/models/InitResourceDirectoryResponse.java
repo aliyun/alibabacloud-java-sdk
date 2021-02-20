@@ -4,101 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class InitResourceDirectoryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ResourceDirectory")
+    @NameInMap("body")
     @Validation(required = true)
-    public InitResourceDirectoryResponseResourceDirectory resourceDirectory;
+    public InitResourceDirectoryResponseBody body;
 
     public static InitResourceDirectoryResponse build(java.util.Map<String, ?> map) throws Exception {
         InitResourceDirectoryResponse self = new InitResourceDirectoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public InitResourceDirectoryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public InitResourceDirectoryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public InitResourceDirectoryResponse setResourceDirectory(InitResourceDirectoryResponseResourceDirectory resourceDirectory) {
-        this.resourceDirectory = resourceDirectory;
+    public InitResourceDirectoryResponse setBody(InitResourceDirectoryResponseBody body) {
+        this.body = body;
         return this;
     }
-    public InitResourceDirectoryResponseResourceDirectory getResourceDirectory() {
-        return this.resourceDirectory;
-    }
-
-    public static class InitResourceDirectoryResponseResourceDirectory extends TeaModel {
-        @NameInMap("ResourceDirectoryId")
-        @Validation(required = true)
-        public String resourceDirectoryId;
-
-        @NameInMap("MasterAccountId")
-        @Validation(required = true)
-        public String masterAccountId;
-
-        @NameInMap("MasterAccountName")
-        @Validation(required = true)
-        public String masterAccountName;
-
-        @NameInMap("RootFolderId")
-        @Validation(required = true)
-        public String rootFolderId;
-
-        @NameInMap("CreateTime")
-        @Validation(required = true)
-        public String createTime;
-
-        public static InitResourceDirectoryResponseResourceDirectory build(java.util.Map<String, ?> map) throws Exception {
-            InitResourceDirectoryResponseResourceDirectory self = new InitResourceDirectoryResponseResourceDirectory();
-            return TeaModel.build(map, self);
-        }
-
-        public InitResourceDirectoryResponseResourceDirectory setResourceDirectoryId(String resourceDirectoryId) {
-            this.resourceDirectoryId = resourceDirectoryId;
-            return this;
-        }
-        public String getResourceDirectoryId() {
-            return this.resourceDirectoryId;
-        }
-
-        public InitResourceDirectoryResponseResourceDirectory setMasterAccountId(String masterAccountId) {
-            this.masterAccountId = masterAccountId;
-            return this;
-        }
-        public String getMasterAccountId() {
-            return this.masterAccountId;
-        }
-
-        public InitResourceDirectoryResponseResourceDirectory setMasterAccountName(String masterAccountName) {
-            this.masterAccountName = masterAccountName;
-            return this;
-        }
-        public String getMasterAccountName() {
-            return this.masterAccountName;
-        }
-
-        public InitResourceDirectoryResponseResourceDirectory setRootFolderId(String rootFolderId) {
-            this.rootFolderId = rootFolderId;
-            return this;
-        }
-        public String getRootFolderId() {
-            return this.rootFolderId;
-        }
-
-        public InitResourceDirectoryResponseResourceDirectory setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
+    public InitResourceDirectoryResponseBody getBody() {
+        return this.body;
     }
 
 }

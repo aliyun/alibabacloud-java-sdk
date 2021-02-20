@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateResourceAccountRequest extends TeaModel {
     @NameInMap("DisplayName")
-    @Validation(required = true)
     public String displayName;
 
     @NameInMap("ParentFolderId")
