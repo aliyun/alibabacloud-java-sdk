@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class AttachEnsInstancesRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Scripts")
-    @Validation(required = true)
     public String scripts;
 
     public static AttachEnsInstancesRequest build(java.util.Map<String, ?> map) throws Exception {

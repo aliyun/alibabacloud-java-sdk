@@ -4,39 +4,49 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
-    @NameInMap("Version")
-    @Validation(required = true)
-    public String version;
-
-    @NameInMap("InstanceType")
-    @Validation(required = true)
-    public String instanceType;
-
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
-    public String ensRegionId;
-
-    @NameInMap("Period")
-    @Validation(required = true)
-    public Integer period;
-
     @NameInMap("SystemDisk")
     public DescribePriceRequestSystemDisk systemDisk;
-
-    @NameInMap("Quantity")
-    @Validation(required = true)
-    public Integer quantity;
 
     @NameInMap("DataDisk")
     public java.util.List<DescribePriceRequestDataDisk> dataDisk;
 
+    @NameInMap("Version")
+    public String version;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    @NameInMap("EnsRegionId")
+    public String ensRegionId;
+
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("Quantity")
+    public Integer quantity;
+
     @NameInMap("InternetChargeType")
-    @Validation(required = true)
     public String internetChargeType;
 
     public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceRequest self = new DescribePriceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public DescribePriceRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    public DescribePriceRequest setDataDisk(java.util.List<DescribePriceRequestDataDisk> dataDisk) {
+        this.dataDisk = dataDisk;
+        return this;
+    }
+    public java.util.List<DescribePriceRequestDataDisk> getDataDisk() {
+        return this.dataDisk;
     }
 
     public DescribePriceRequest setVersion(String version) {
@@ -71,28 +81,12 @@ public class DescribePriceRequest extends TeaModel {
         return this.period;
     }
 
-    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public DescribePriceRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
-    }
-
     public DescribePriceRequest setQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     public Integer getQuantity() {
         return this.quantity;
-    }
-
-    public DescribePriceRequest setDataDisk(java.util.List<DescribePriceRequestDataDisk> dataDisk) {
-        this.dataDisk = dataDisk;
-        return this;
-    }
-    public java.util.List<DescribePriceRequestDataDisk> getDataDisk() {
-        return this.dataDisk;
     }
 
     public DescribePriceRequest setInternetChargeType(String internetChargeType) {
@@ -105,7 +99,6 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestSystemDisk extends TeaModel {
         @NameInMap("Size")
-        @Validation(required = true)
         public Integer size;
 
         public static DescribePriceRequestSystemDisk build(java.util.Map<String, ?> map) throws Exception {
@@ -125,7 +118,6 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestDataDisk extends TeaModel {
         @NameInMap("Size")
-        @Validation(required = true)
         public Integer size;
 
         public static DescribePriceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {

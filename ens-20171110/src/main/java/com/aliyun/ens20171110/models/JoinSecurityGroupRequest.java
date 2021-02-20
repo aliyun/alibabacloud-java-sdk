@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class JoinSecurityGroupRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("SecurityGroupId")
-    @Validation(required = true)
     public String securityGroupId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     public static JoinSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {

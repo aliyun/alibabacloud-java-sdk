@@ -4,33 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageAttributeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
+    public ModifyImageAttributeResponseBody body;
 
     public static ModifyImageAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyImageAttributeResponse self = new ModifyImageAttributeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyImageAttributeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyImageAttributeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ModifyImageAttributeResponse setCode(Integer code) {
-        this.code = code;
+    public ModifyImageAttributeResponse setBody(ModifyImageAttributeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public ModifyImageAttributeResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,45 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ImportKeyPairResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("KeyPairName")
+    @NameInMap("body")
     @Validation(required = true)
-    public String keyPairName;
-
-    @NameInMap("KeyPairFingerPrint")
-    @Validation(required = true)
-    public String keyPairFingerPrint;
+    public ImportKeyPairResponseBody body;
 
     public static ImportKeyPairResponse build(java.util.Map<String, ?> map) throws Exception {
         ImportKeyPairResponse self = new ImportKeyPairResponse();
         return TeaModel.build(map, self);
     }
 
-    public ImportKeyPairResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ImportKeyPairResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ImportKeyPairResponse setKeyPairName(String keyPairName) {
-        this.keyPairName = keyPairName;
+    public ImportKeyPairResponse setBody(ImportKeyPairResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getKeyPairName() {
-        return this.keyPairName;
-    }
-
-    public ImportKeyPairResponse setKeyPairFingerPrint(String keyPairFingerPrint) {
-        this.keyPairFingerPrint = keyPairFingerPrint;
-        return this;
-    }
-    public String getKeyPairFingerPrint() {
-        return this.keyPairFingerPrint;
+    public ImportKeyPairResponseBody getBody() {
+        return this.body;
     }
 
 }

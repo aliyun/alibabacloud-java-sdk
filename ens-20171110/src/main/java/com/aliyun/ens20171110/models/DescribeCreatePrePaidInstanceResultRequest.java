@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeCreatePrePaidInstanceResultRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     public static DescribeCreatePrePaidInstanceResultRequest build(java.util.Map<String, ?> map) throws Exception {

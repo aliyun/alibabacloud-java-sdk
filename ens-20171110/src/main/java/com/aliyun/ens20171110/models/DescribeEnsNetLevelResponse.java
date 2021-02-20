@@ -4,85 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsNetLevelResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("EnsNetLevels")
-    @Validation(required = true)
-    public DescribeEnsNetLevelResponseEnsNetLevels ensNetLevels;
+    public DescribeEnsNetLevelResponseBody body;
 
     public static DescribeEnsNetLevelResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsNetLevelResponse self = new DescribeEnsNetLevelResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeEnsNetLevelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeEnsNetLevelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeEnsNetLevelResponse setCode(Integer code) {
-        this.code = code;
+    public DescribeEnsNetLevelResponse setBody(DescribeEnsNetLevelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public DescribeEnsNetLevelResponse setEnsNetLevels(DescribeEnsNetLevelResponseEnsNetLevels ensNetLevels) {
-        this.ensNetLevels = ensNetLevels;
-        return this;
-    }
-    public DescribeEnsNetLevelResponseEnsNetLevels getEnsNetLevels() {
-        return this.ensNetLevels;
-    }
-
-    public static class DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel extends TeaModel {
-        @NameInMap("EnsNetLevelCode")
-        @Validation(required = true)
-        public String ensNetLevelCode;
-
-        public static DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel self = new DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel setEnsNetLevelCode(String ensNetLevelCode) {
-            this.ensNetLevelCode = ensNetLevelCode;
-            return this;
-        }
-        public String getEnsNetLevelCode() {
-            return this.ensNetLevelCode;
-        }
-
-    }
-
-    public static class DescribeEnsNetLevelResponseEnsNetLevels extends TeaModel {
-        @NameInMap("EnsNetLevel")
-        @Validation(required = true)
-        public java.util.List<DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel> ensNetLevel;
-
-        public static DescribeEnsNetLevelResponseEnsNetLevels build(java.util.Map<String, ?> map) throws Exception {
-            DescribeEnsNetLevelResponseEnsNetLevels self = new DescribeEnsNetLevelResponseEnsNetLevels();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeEnsNetLevelResponseEnsNetLevels setEnsNetLevel(java.util.List<DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel> ensNetLevel) {
-            this.ensNetLevel = ensNetLevel;
-            return this;
-        }
-        public java.util.List<DescribeEnsNetLevelResponseEnsNetLevelsEnsNetLevel> getEnsNetLevel() {
-            return this.ensNetLevel;
-        }
-
+    public DescribeEnsNetLevelResponseBody getBody() {
+        return this.body;
     }
 
 }

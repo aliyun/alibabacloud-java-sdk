@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class RollbackApplicationRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("FromAppVersion")
-    @Validation(required = true)
     public String fromAppVersion;
 
     @NameInMap("ToAppVersion")

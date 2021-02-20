@@ -8,15 +8,12 @@ public class ModifyImageAttributeRequest extends TeaModel {
     public String product;
 
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     @NameInMap("ImageName")
-    @Validation(required = true)
     public String imageName;
 
     public static ModifyImageAttributeRequest build(java.util.Map<String, ?> map) throws Exception {

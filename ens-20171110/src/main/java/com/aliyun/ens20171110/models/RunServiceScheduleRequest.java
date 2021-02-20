@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class RunServiceScheduleRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("Uuid")
-    @Validation(required = true)
     public String uuid;
 
     @NameInMap("ClientIp")
-    @Validation(required = true)
     public String clientIp;
 
     @NameInMap("ServiceAction")
-    @Validation(required = true)
     public String serviceAction;
 
     @NameInMap("PodConfigName")

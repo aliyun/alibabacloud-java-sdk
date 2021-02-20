@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeImageInfosRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("OsType")

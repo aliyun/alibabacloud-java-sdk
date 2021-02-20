@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class JoinPublicIpsToEpnInstanceRequest extends TeaModel {
     @NameInMap("EPNInstanceId")
-    @Validation(required = true)
     public String EPNInstanceId;
 
     @NameInMap("InstanceInfos")
-    @Validation(required = true)
     public String instanceInfos;
 
     public static JoinPublicIpsToEpnInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

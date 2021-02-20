@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsRegionId")
-    @Validation(required = true)
     public String ensRegionId;
 
     @NameInMap("Eips")

@@ -4,33 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ExportMeasurementDataResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("FilePath")
+    @NameInMap("body")
     @Validation(required = true)
-    public String filePath;
+    public ExportMeasurementDataResponseBody body;
 
     public static ExportMeasurementDataResponse build(java.util.Map<String, ?> map) throws Exception {
         ExportMeasurementDataResponse self = new ExportMeasurementDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public ExportMeasurementDataResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ExportMeasurementDataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ExportMeasurementDataResponse setFilePath(String filePath) {
-        this.filePath = filePath;
+    public ExportMeasurementDataResponse setBody(ExportMeasurementDataResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getFilePath() {
-        return this.filePath;
+    public ExportMeasurementDataResponseBody getBody() {
+        return this.body;
     }
 
 }

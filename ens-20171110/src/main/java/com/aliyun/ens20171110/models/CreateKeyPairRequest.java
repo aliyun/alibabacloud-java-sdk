@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateKeyPairRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("KeyPairName")
-    @Validation(required = true)
     public String keyPairName;
 
     public static CreateKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {

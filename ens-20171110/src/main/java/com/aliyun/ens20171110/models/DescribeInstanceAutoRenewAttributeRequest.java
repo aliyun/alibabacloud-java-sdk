@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("InstanceIds")
-    @Validation(required = true)
     public String instanceIds;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     public static DescribeInstanceAutoRenewAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAutoRenewAttributeRequest self = new DescribeInstanceAutoRenewAttributeRequest();
@@ -31,6 +32,14 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     }
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    public DescribeInstanceAutoRenewAttributeRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
 }

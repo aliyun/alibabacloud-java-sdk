@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class PushApplicationDataRequest extends TeaModel {
     @NameInMap("Data")
-    @Validation(required = true)
     public String data;
 
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("Timeout")

@@ -4,33 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class StopInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
+    public StopInstanceResponseBody body;
 
     public static StopInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         StopInstanceResponse self = new StopInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public StopInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StopInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StopInstanceResponse setCode(Integer code) {
-        this.code = code;
+    public StopInstanceResponse setBody(StopInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public StopInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

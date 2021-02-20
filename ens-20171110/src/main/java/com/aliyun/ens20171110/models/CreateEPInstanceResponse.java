@@ -4,33 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateEPInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("EPNInstanceId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String EPNInstanceId;
+    public CreateEPInstanceResponseBody body;
 
     public static CreateEPInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateEPInstanceResponse self = new CreateEPInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateEPInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateEPInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateEPInstanceResponse setEPNInstanceId(String EPNInstanceId) {
-        this.EPNInstanceId = EPNInstanceId;
+    public CreateEPInstanceResponse setBody(CreateEPInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getEPNInstanceId() {
-        return this.EPNInstanceId;
+    public CreateEPInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

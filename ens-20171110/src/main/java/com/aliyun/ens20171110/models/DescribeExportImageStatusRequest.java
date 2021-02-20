@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeExportImageStatusRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     public static DescribeExportImageStatusRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class AllocateEipAddressRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsRegionId")
-    @Validation(required = true)
     public String ensRegionId;
 
     @NameInMap("Count")
-    @Validation(required = true)
     public Integer count;
 
     @NameInMap("MinCount")

@@ -5,22 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreateEpnInstanceRequest extends TeaModel {
     @NameInMap("EPNInstanceType")
-    @Validation(required = true)
     public String EPNInstanceType;
 
     @NameInMap("EPNInstanceName")
     public String EPNInstanceName;
 
     @NameInMap("InternetChargeType")
-    @Validation(required = true)
     public String internetChargeType;
 
     @NameInMap("NetworkingModel")
-    @Validation(required = true)
     public String networkingModel;
 
     @NameInMap("InternetMaxBandwidthOut")
-    @Validation(required = true)
     public Integer internetMaxBandwidthOut;
 
     public static CreateEpnInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

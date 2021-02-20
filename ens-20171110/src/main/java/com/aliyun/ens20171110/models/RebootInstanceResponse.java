@@ -4,33 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class RebootInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
+    public RebootInstanceResponseBody body;
 
     public static RebootInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         RebootInstanceResponse self = new RebootInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public RebootInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RebootInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RebootInstanceResponse setCode(Integer code) {
-        this.code = code;
+    public RebootInstanceResponse setBody(RebootInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
+    public RebootInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

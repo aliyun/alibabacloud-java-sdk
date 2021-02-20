@@ -4,69 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class PreCreateEnsServiceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer code;
-
-    @NameInMap("EnsServiceId")
-    @Validation(required = true)
-    public String ensServiceId;
-
-    @NameInMap("NetLevel")
-    @Validation(required = true)
-    public String netLevel;
-
-    @NameInMap("BuyResourcesDetail")
-    @Validation(required = true)
-    public String buyResourcesDetail;
+    public PreCreateEnsServiceResponseBody body;
 
     public static PreCreateEnsServiceResponse build(java.util.Map<String, ?> map) throws Exception {
         PreCreateEnsServiceResponse self = new PreCreateEnsServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public PreCreateEnsServiceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PreCreateEnsServiceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PreCreateEnsServiceResponse setCode(Integer code) {
-        this.code = code;
+    public PreCreateEnsServiceResponse setBody(PreCreateEnsServiceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Integer getCode() {
-        return this.code;
-    }
-
-    public PreCreateEnsServiceResponse setEnsServiceId(String ensServiceId) {
-        this.ensServiceId = ensServiceId;
-        return this;
-    }
-    public String getEnsServiceId() {
-        return this.ensServiceId;
-    }
-
-    public PreCreateEnsServiceResponse setNetLevel(String netLevel) {
-        this.netLevel = netLevel;
-        return this;
-    }
-    public String getNetLevel() {
-        return this.netLevel;
-    }
-
-    public PreCreateEnsServiceResponse setBuyResourcesDetail(String buyResourcesDetail) {
-        this.buyResourcesDetail = buyResourcesDetail;
-        return this;
-    }
-    public String getBuyResourcesDetail() {
-        return this.buyResourcesDetail;
+    public PreCreateEnsServiceResponseBody getBody() {
+        return this.body;
     }
 
 }

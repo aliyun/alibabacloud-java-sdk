@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteVSwitchRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("VSwitchId")
-    @Validation(required = true)
     public String vSwitchId;
 
     public static DeleteVSwitchRequest build(java.util.Map<String, ?> map) throws Exception {

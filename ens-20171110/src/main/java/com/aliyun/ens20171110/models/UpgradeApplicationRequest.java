@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpgradeApplicationRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("Template")
-    @Validation(required = true)
     public String template;
 
     @NameInMap("Timeout")

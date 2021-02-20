@@ -4,65 +4,33 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeCreatePrePaidInstanceResultResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("InstanceCreateResult")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult instanceCreateResult;
+    public DescribeCreatePrePaidInstanceResultResponseBody body;
 
     public static DescribeCreatePrePaidInstanceResultResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeCreatePrePaidInstanceResultResponse self = new DescribeCreatePrePaidInstanceResultResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCreatePrePaidInstanceResultResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeCreatePrePaidInstanceResultResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeCreatePrePaidInstanceResultResponse setInstanceCreateResult(DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult instanceCreateResult) {
-        this.instanceCreateResult = instanceCreateResult;
+    public DescribeCreatePrePaidInstanceResultResponse setBody(DescribeCreatePrePaidInstanceResultResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult getInstanceCreateResult() {
-        return this.instanceCreateResult;
-    }
-
-    public static class DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult extends TeaModel {
-        @NameInMap("InstanceCreateStatus")
-        @Validation(required = true)
-        public String instanceCreateStatus;
-
-        @NameInMap("InstanceId")
-        @Validation(required = true)
-        public String instanceId;
-
-        public static DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult self = new DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult setInstanceCreateStatus(String instanceCreateStatus) {
-            this.instanceCreateStatus = instanceCreateStatus;
-            return this;
-        }
-        public String getInstanceCreateStatus() {
-            return this.instanceCreateStatus;
-        }
-
-        public DescribeCreatePrePaidInstanceResultResponseInstanceCreateResult setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
-        }
-
+    public DescribeCreatePrePaidInstanceResultResponseBody getBody() {
+        return this.body;
     }
 
 }

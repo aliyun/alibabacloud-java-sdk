@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("AppVersions")

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     public static DescribeInstanceSpecRequest build(java.util.Map<String, ?> map) throws Exception {

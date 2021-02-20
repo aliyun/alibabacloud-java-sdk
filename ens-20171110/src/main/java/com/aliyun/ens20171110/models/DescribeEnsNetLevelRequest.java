@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsNetLevelRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     public static DescribeEnsNetLevelRequest build(java.util.Map<String, ?> map) throws Exception {

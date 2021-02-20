@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeServcieScheduleRequest extends TeaModel {
     @NameInMap("AppId")
-    @Validation(required = true)
     public String appId;
 
     @NameInMap("Uuid")
-    @Validation(required = true)
     public String uuid;
 
     @NameInMap("PodConfigName")

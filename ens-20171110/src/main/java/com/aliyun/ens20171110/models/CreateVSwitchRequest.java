@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateVSwitchRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("EnsRegionId")
-    @Validation(required = true)
     public String ensRegionId;
 
     @NameInMap("CidrBlock")
-    @Validation(required = true)
     public String cidrBlock;
 
     @NameInMap("VSwitchName")

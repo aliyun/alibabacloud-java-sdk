@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Template")
-    @Validation(required = true)
     public String template;
 
     @NameInMap("Timeout")

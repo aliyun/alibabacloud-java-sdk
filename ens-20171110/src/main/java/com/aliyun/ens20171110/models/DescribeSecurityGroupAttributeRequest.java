@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     @NameInMap("Version")
-    @Validation(required = true)
     public String version;
 
     @NameInMap("SecurityGroupId")
-    @Validation(required = true)
     public String securityGroupId;
 
     public static DescribeSecurityGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
