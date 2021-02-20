@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ResendPromoteResourceAccountEmailRequest extends TeaModel {
     @NameInMap("RecordId")
-    @Validation(required = true)
     public String recordId;
 
     public static ResendPromoteResourceAccountEmailRequest build(java.util.Map<String, ?> map) throws Exception {

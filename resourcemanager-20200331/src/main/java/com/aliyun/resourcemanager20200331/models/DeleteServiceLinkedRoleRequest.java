@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceLinkedRoleRequest extends TeaModel {
     @NameInMap("RoleName")
-    @Validation(required = true)
     public String roleName;
 
     public static DeleteServiceLinkedRoleRequest build(java.util.Map<String, ?> map) throws Exception {

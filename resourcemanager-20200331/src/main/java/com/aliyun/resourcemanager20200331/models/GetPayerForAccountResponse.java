@@ -4,45 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class GetPayerForAccountResponse extends TeaModel {
-    @NameInMap("PayerAccountName")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String payerAccountName;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("PayerAccountId")
-    @Validation(required = true)
-    public String payerAccountId;
+    public GetPayerForAccountResponseBody body;
 
     public static GetPayerForAccountResponse build(java.util.Map<String, ?> map) throws Exception {
         GetPayerForAccountResponse self = new GetPayerForAccountResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetPayerForAccountResponse setPayerAccountName(String payerAccountName) {
-        this.payerAccountName = payerAccountName;
+    public GetPayerForAccountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getPayerAccountName() {
-        return this.payerAccountName;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetPayerForAccountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetPayerForAccountResponse setBody(GetPayerForAccountResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public GetPayerForAccountResponse setPayerAccountId(String payerAccountId) {
-        this.payerAccountId = payerAccountId;
-        return this;
-    }
-    public String getPayerAccountId() {
-        return this.payerAccountId;
+    public GetPayerForAccountResponseBody getBody() {
+        return this.body;
     }
 
 }

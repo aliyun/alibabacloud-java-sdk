@@ -4,21 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class CancelPromoteResourceAccountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CancelPromoteResourceAccountResponseBody body;
 
     public static CancelPromoteResourceAccountResponse build(java.util.Map<String, ?> map) throws Exception {
         CancelPromoteResourceAccountResponse self = new CancelPromoteResourceAccountResponse();
         return TeaModel.build(map, self);
     }
 
-    public CancelPromoteResourceAccountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CancelPromoteResourceAccountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CancelPromoteResourceAccountResponse setBody(CancelPromoteResourceAccountResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CancelPromoteResourceAccountResponseBody getBody() {
+        return this.body;
     }
 
 }

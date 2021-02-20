@@ -4,89 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class UpdateFolderResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Folder")
+    @NameInMap("body")
     @Validation(required = true)
-    public UpdateFolderResponseFolder folder;
+    public UpdateFolderResponseBody body;
 
     public static UpdateFolderResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateFolderResponse self = new UpdateFolderResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateFolderResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateFolderResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateFolderResponse setFolder(UpdateFolderResponseFolder folder) {
-        this.folder = folder;
+    public UpdateFolderResponse setBody(UpdateFolderResponseBody body) {
+        this.body = body;
         return this;
     }
-    public UpdateFolderResponseFolder getFolder() {
-        return this.folder;
-    }
-
-    public static class UpdateFolderResponseFolder extends TeaModel {
-        @NameInMap("CreateTime")
-        @Validation(required = true)
-        public String createTime;
-
-        @NameInMap("FolderId")
-        @Validation(required = true)
-        public String folderId;
-
-        @NameInMap("FolderName")
-        @Validation(required = true)
-        public String folderName;
-
-        @NameInMap("ParentFolderId")
-        @Validation(required = true)
-        public String parentFolderId;
-
-        public static UpdateFolderResponseFolder build(java.util.Map<String, ?> map) throws Exception {
-            UpdateFolderResponseFolder self = new UpdateFolderResponseFolder();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateFolderResponseFolder setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public UpdateFolderResponseFolder setFolderId(String folderId) {
-            this.folderId = folderId;
-            return this;
-        }
-        public String getFolderId() {
-            return this.folderId;
-        }
-
-        public UpdateFolderResponseFolder setFolderName(String folderName) {
-            this.folderName = folderName;
-            return this;
-        }
-        public String getFolderName() {
-            return this.folderName;
-        }
-
-        public UpdateFolderResponseFolder setParentFolderId(String parentFolderId) {
-            this.parentFolderId = parentFolderId;
-            return this;
-        }
-        public String getParentFolderId() {
-            return this.parentFolderId;
-        }
-
+    public UpdateFolderResponseBody getBody() {
+        return this.body;
     }
 
 }

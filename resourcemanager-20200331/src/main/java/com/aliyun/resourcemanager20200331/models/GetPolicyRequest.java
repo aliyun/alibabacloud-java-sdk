@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetPolicyRequest extends TeaModel {
     @NameInMap("PolicyName")
-    @Validation(required = true)
     public String policyName;
 
     @NameInMap("PolicyType")
-    @Validation(required = true)
     public String policyType;
 
     @NameInMap("Language")

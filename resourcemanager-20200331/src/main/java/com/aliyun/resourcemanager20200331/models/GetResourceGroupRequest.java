@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
-    @Validation(required = true)
     public String resourceGroupId;
 
     public static GetResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {

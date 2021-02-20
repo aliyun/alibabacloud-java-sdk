@@ -4,97 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class ListAncestorsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Folders")
+    @NameInMap("body")
     @Validation(required = true)
-    public ListAncestorsResponseFolders folders;
+    public ListAncestorsResponseBody body;
 
     public static ListAncestorsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListAncestorsResponse self = new ListAncestorsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListAncestorsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListAncestorsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ListAncestorsResponse setFolders(ListAncestorsResponseFolders folders) {
-        this.folders = folders;
+    public ListAncestorsResponse setBody(ListAncestorsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ListAncestorsResponseFolders getFolders() {
-        return this.folders;
-    }
-
-    public static class ListAncestorsResponseFoldersFolder extends TeaModel {
-        @NameInMap("CreateTime")
-        @Validation(required = true)
-        public String createTime;
-
-        @NameInMap("FolderId")
-        @Validation(required = true)
-        public String folderId;
-
-        @NameInMap("FolderName")
-        @Validation(required = true)
-        public String folderName;
-
-        public static ListAncestorsResponseFoldersFolder build(java.util.Map<String, ?> map) throws Exception {
-            ListAncestorsResponseFoldersFolder self = new ListAncestorsResponseFoldersFolder();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAncestorsResponseFoldersFolder setCreateTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        public ListAncestorsResponseFoldersFolder setFolderId(String folderId) {
-            this.folderId = folderId;
-            return this;
-        }
-        public String getFolderId() {
-            return this.folderId;
-        }
-
-        public ListAncestorsResponseFoldersFolder setFolderName(String folderName) {
-            this.folderName = folderName;
-            return this;
-        }
-        public String getFolderName() {
-            return this.folderName;
-        }
-
-    }
-
-    public static class ListAncestorsResponseFolders extends TeaModel {
-        @NameInMap("Folder")
-        @Validation(required = true)
-        public java.util.List<ListAncestorsResponseFoldersFolder> folder;
-
-        public static ListAncestorsResponseFolders build(java.util.Map<String, ?> map) throws Exception {
-            ListAncestorsResponseFolders self = new ListAncestorsResponseFolders();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAncestorsResponseFolders setFolder(java.util.List<ListAncestorsResponseFoldersFolder> folder) {
-            this.folder = folder;
-            return this;
-        }
-        public java.util.List<ListAncestorsResponseFoldersFolder> getFolder() {
-            return this.folder;
-        }
-
+    public ListAncestorsResponseBody getBody() {
+        return this.body;
     }
 
 }

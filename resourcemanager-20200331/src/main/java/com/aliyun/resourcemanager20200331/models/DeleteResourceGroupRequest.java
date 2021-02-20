@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceGroupRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
-    @Validation(required = true)
     public String resourceGroupId;
 
     public static DeleteResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {

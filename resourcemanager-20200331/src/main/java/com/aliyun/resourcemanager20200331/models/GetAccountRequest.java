@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetAccountRequest extends TeaModel {
     @NameInMap("AccountId")
-    @Validation(required = true)
     public String accountId;
 
     public static GetAccountRequest build(java.util.Map<String, ?> map) throws Exception {

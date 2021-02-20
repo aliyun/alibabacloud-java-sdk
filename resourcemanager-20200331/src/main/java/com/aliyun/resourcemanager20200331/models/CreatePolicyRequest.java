@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreatePolicyRequest extends TeaModel {
     @NameInMap("PolicyName")
-    @Validation(required = true)
     public String policyName;
 
     @NameInMap("Description")
     public String description;
 
     @NameInMap("PolicyDocument")
-    @Validation(required = true)
     public String policyDocument;
 
     public static CreatePolicyRequest build(java.util.Map<String, ?> map) throws Exception {

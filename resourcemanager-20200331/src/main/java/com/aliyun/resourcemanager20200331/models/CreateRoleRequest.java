@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateRoleRequest extends TeaModel {
     @NameInMap("RoleName")
-    @Validation(required = true)
     public String roleName;
 
     @NameInMap("Description")
     public String description;
 
     @NameInMap("AssumeRolePolicyDocument")
-    @Validation(required = true)
     public String assumeRolePolicyDocument;
 
     @NameInMap("MaxSessionDuration")

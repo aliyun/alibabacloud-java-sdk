@@ -4,21 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DestroyResourceDirectoryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DestroyResourceDirectoryResponseBody body;
 
     public static DestroyResourceDirectoryResponse build(java.util.Map<String, ?> map) throws Exception {
         DestroyResourceDirectoryResponse self = new DestroyResourceDirectoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public DestroyResourceDirectoryResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DestroyResourceDirectoryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DestroyResourceDirectoryResponse setBody(DestroyResourceDirectoryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DestroyResourceDirectoryResponseBody getBody() {
+        return this.body;
     }
 
 }

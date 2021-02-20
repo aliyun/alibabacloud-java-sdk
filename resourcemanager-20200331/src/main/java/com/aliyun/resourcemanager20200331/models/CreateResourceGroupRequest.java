@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateResourceGroupRequest extends TeaModel {
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("DisplayName")
-    @Validation(required = true)
     public String displayName;
 
     public static CreateResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {

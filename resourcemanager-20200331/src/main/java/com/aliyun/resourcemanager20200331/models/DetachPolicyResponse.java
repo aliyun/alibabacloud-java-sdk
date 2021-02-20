@@ -4,21 +4,33 @@ package com.aliyun.resourcemanager20200331.models;
 import com.aliyun.tea.*;
 
 public class DetachPolicyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DetachPolicyResponseBody body;
 
     public static DetachPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         DetachPolicyResponse self = new DetachPolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public DetachPolicyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DetachPolicyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DetachPolicyResponse setBody(DetachPolicyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DetachPolicyResponseBody getBody() {
+        return this.body;
     }
 
 }

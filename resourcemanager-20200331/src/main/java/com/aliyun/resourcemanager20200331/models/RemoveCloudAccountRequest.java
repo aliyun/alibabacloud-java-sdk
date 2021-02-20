@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RemoveCloudAccountRequest extends TeaModel {
     @NameInMap("AccountId")
-    @Validation(required = true)
     public String accountId;
 
     public static RemoveCloudAccountRequest build(java.util.Map<String, ?> map) throws Exception {
