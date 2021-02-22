@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.yuqing20210126.models;
+
+import com.aliyun.tea.*;
+
+public class AggregateSearchYuqingResponseBody extends TeaModel {
+    // Id of the request
+    @NameInMap("requestId")
+    public String requestId;
+
+    // 聚合结果列表
+    @NameInMap("aggResultList")
+    public java.util.List<StatisticPoint> aggResultList;
+
+    public static AggregateSearchYuqingResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AggregateSearchYuqingResponseBody self = new AggregateSearchYuqingResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public AggregateSearchYuqingResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AggregateSearchYuqingResponseBody setAggResultList(java.util.List<StatisticPoint> aggResultList) {
+        this.aggResultList = aggResultList;
+        return this;
+    }
+    public java.util.List<StatisticPoint> getAggResultList() {
+        return this.aggResultList;
+    }
+
+}
