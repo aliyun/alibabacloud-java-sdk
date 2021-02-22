@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class SegmentSkinRequest extends TeaModel {
     @NameInMap("URL")
-    @Validation(required = true)
     public String URL;
 
     public static SegmentSkinRequest build(java.util.Map<String, ?> map) throws Exception {

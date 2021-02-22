@@ -4,53 +4,33 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentSceneResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public SegmentSceneResponseData data;
+    public SegmentSceneResponseBody body;
 
     public static SegmentSceneResponse build(java.util.Map<String, ?> map) throws Exception {
         SegmentSceneResponse self = new SegmentSceneResponse();
         return TeaModel.build(map, self);
     }
 
-    public SegmentSceneResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SegmentSceneResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SegmentSceneResponse setData(SegmentSceneResponseData data) {
-        this.data = data;
+    public SegmentSceneResponse setBody(SegmentSceneResponseBody body) {
+        this.body = body;
         return this;
     }
-    public SegmentSceneResponseData getData() {
-        return this.data;
-    }
-
-    public static class SegmentSceneResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static SegmentSceneResponseData build(java.util.Map<String, ?> map) throws Exception {
-            SegmentSceneResponseData self = new SegmentSceneResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public SegmentSceneResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public SegmentSceneResponseBody getBody() {
+        return this.body;
     }
 
 }

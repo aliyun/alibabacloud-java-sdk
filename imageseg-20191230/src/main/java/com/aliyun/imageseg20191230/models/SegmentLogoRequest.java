@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class SegmentLogoRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static SegmentLogoRequest build(java.util.Map<String, ?> map) throws Exception {

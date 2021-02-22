@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ChangeSkyRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     @NameInMap("ReplaceImageURL")
-    @Validation(required = true)
     public String replaceImageURL;
 
     public static ChangeSkyRequest build(java.util.Map<String, ?> map) throws Exception {
