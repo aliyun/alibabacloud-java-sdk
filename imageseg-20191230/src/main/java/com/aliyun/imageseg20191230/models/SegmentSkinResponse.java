@@ -4,53 +4,33 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentSkinResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public SegmentSkinResponseData data;
+    public SegmentSkinResponseBody body;
 
     public static SegmentSkinResponse build(java.util.Map<String, ?> map) throws Exception {
         SegmentSkinResponse self = new SegmentSkinResponse();
         return TeaModel.build(map, self);
     }
 
-    public SegmentSkinResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SegmentSkinResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SegmentSkinResponse setData(SegmentSkinResponseData data) {
-        this.data = data;
+    public SegmentSkinResponse setBody(SegmentSkinResponseBody body) {
+        this.body = body;
         return this;
     }
-    public SegmentSkinResponseData getData() {
-        return this.data;
-    }
-
-    public static class SegmentSkinResponseData extends TeaModel {
-        @NameInMap("URL")
-        @Validation(required = true)
-        public String URL;
-
-        public static SegmentSkinResponseData build(java.util.Map<String, ?> map) throws Exception {
-            SegmentSkinResponseData self = new SegmentSkinResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public SegmentSkinResponseData setURL(String URL) {
-            this.URL = URL;
-            return this;
-        }
-        public String getURL() {
-            return this.URL;
-        }
-
+    public SegmentSkinResponseBody getBody() {
+        return this.body;
     }
 
 }

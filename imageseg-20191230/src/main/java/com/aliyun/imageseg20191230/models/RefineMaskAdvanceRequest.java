@@ -9,7 +9,6 @@ public class RefineMaskAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("MaskImageURL")
-    @Validation(required = true)
     public String maskImageURL;
 
     public static RefineMaskAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

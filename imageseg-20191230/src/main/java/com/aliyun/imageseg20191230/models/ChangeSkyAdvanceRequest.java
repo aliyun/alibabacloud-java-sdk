@@ -9,7 +9,6 @@ public class ChangeSkyAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("ReplaceImageURL")
-    @Validation(required = true)
     public String replaceImageURL;
 
     public static ChangeSkyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

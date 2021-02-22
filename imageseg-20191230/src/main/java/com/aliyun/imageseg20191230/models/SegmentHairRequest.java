@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class SegmentHairRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static SegmentHairRequest build(java.util.Map<String, ?> map) throws Exception {

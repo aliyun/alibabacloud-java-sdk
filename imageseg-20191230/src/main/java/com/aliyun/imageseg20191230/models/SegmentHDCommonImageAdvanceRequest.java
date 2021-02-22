@@ -8,6 +8,9 @@ public class SegmentHDCommonImageAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageUrlObject;
 
+    @NameInMap("Async")
+    public Boolean async;
+
     public static SegmentHDCommonImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SegmentHDCommonImageAdvanceRequest self = new SegmentHDCommonImageAdvanceRequest();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class SegmentHDCommonImageAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageUrlObject() {
         return this.imageUrlObject;
+    }
+
+    public SegmentHDCommonImageAdvanceRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
 }

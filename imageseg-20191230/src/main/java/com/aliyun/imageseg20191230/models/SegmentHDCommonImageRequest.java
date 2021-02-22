@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class SegmentHDCommonImageRequest extends TeaModel {
     @NameInMap("ImageUrl")
-    @Validation(required = true)
     public String imageUrl;
+
+    @NameInMap("Async")
+    public Boolean async;
 
     public static SegmentHDCommonImageRequest build(java.util.Map<String, ?> map) throws Exception {
         SegmentHDCommonImageRequest self = new SegmentHDCommonImageRequest();
@@ -19,6 +21,14 @@ public class SegmentHDCommonImageRequest extends TeaModel {
     }
     public String getImageUrl() {
         return this.imageUrl;
+    }
+
+    public SegmentHDCommonImageRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
     }
 
 }

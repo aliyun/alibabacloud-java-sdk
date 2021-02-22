@@ -4,53 +4,33 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class ChangeSkyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ChangeSkyResponseData data;
+    public ChangeSkyResponseBody body;
 
     public static ChangeSkyResponse build(java.util.Map<String, ?> map) throws Exception {
         ChangeSkyResponse self = new ChangeSkyResponse();
         return TeaModel.build(map, self);
     }
 
-    public ChangeSkyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ChangeSkyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ChangeSkyResponse setData(ChangeSkyResponseData data) {
-        this.data = data;
+    public ChangeSkyResponse setBody(ChangeSkyResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ChangeSkyResponseData getData() {
-        return this.data;
-    }
-
-    public static class ChangeSkyResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static ChangeSkyResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ChangeSkyResponseData self = new ChangeSkyResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ChangeSkyResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public ChangeSkyResponseBody getBody() {
+        return this.body;
     }
 
 }

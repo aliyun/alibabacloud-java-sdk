@@ -4,53 +4,33 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentFoodResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public SegmentFoodResponseData data;
+    public SegmentFoodResponseBody body;
 
     public static SegmentFoodResponse build(java.util.Map<String, ?> map) throws Exception {
         SegmentFoodResponse self = new SegmentFoodResponse();
         return TeaModel.build(map, self);
     }
 
-    public SegmentFoodResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SegmentFoodResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SegmentFoodResponse setData(SegmentFoodResponseData data) {
-        this.data = data;
+    public SegmentFoodResponse setBody(SegmentFoodResponseBody body) {
+        this.body = body;
         return this;
     }
-    public SegmentFoodResponseData getData() {
-        return this.data;
-    }
-
-    public static class SegmentFoodResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static SegmentFoodResponseData build(java.util.Map<String, ?> map) throws Exception {
-            SegmentFoodResponseData self = new SegmentFoodResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public SegmentFoodResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public SegmentFoodResponseBody getBody() {
+        return this.body;
     }
 
 }

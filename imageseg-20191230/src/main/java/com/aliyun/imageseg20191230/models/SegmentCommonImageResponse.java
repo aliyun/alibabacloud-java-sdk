@@ -4,53 +4,33 @@ package com.aliyun.imageseg20191230.models;
 import com.aliyun.tea.*;
 
 public class SegmentCommonImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public SegmentCommonImageResponseData data;
+    public SegmentCommonImageResponseBody body;
 
     public static SegmentCommonImageResponse build(java.util.Map<String, ?> map) throws Exception {
         SegmentCommonImageResponse self = new SegmentCommonImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public SegmentCommonImageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SegmentCommonImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SegmentCommonImageResponse setData(SegmentCommonImageResponseData data) {
-        this.data = data;
+    public SegmentCommonImageResponse setBody(SegmentCommonImageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public SegmentCommonImageResponseData getData() {
-        return this.data;
-    }
-
-    public static class SegmentCommonImageResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static SegmentCommonImageResponseData build(java.util.Map<String, ?> map) throws Exception {
-            SegmentCommonImageResponseData self = new SegmentCommonImageResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public SegmentCommonImageResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public SegmentCommonImageResponseBody getBody() {
+        return this.body;
     }
 
 }
