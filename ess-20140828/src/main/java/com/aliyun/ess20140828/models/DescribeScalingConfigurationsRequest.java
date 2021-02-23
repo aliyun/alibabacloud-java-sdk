@@ -4,12 +4,6 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingConfigurationsRequest extends TeaModel {
-    @NameInMap("ScalingConfigurationId")
-    public java.util.List<String> scalingConfigurationId;
-
-    @NameInMap("ScalingConfigurationName")
-    public java.util.List<String> scalingConfigurationName;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -34,25 +28,15 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("ScalingConfigurationId")
+    public java.util.List<String> scalingConfigurationId;
+
+    @NameInMap("ScalingConfigurationName")
+    public java.util.List<String> scalingConfigurationName;
+
     public static DescribeScalingConfigurationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScalingConfigurationsRequest self = new DescribeScalingConfigurationsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScalingConfigurationsRequest setScalingConfigurationId(java.util.List<String> scalingConfigurationId) {
-        this.scalingConfigurationId = scalingConfigurationId;
-        return this;
-    }
-    public java.util.List<String> getScalingConfigurationId() {
-        return this.scalingConfigurationId;
-    }
-
-    public DescribeScalingConfigurationsRequest setScalingConfigurationName(java.util.List<String> scalingConfigurationName) {
-        this.scalingConfigurationName = scalingConfigurationName;
-        return this;
-    }
-    public java.util.List<String> getScalingConfigurationName() {
-        return this.scalingConfigurationName;
     }
 
     public DescribeScalingConfigurationsRequest setOwnerId(Long ownerId) {
@@ -117,6 +101,22 @@ public class DescribeScalingConfigurationsRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribeScalingConfigurationsRequest setScalingConfigurationId(java.util.List<String> scalingConfigurationId) {
+        this.scalingConfigurationId = scalingConfigurationId;
+        return this;
+    }
+    public java.util.List<String> getScalingConfigurationId() {
+        return this.scalingConfigurationId;
+    }
+
+    public DescribeScalingConfigurationsRequest setScalingConfigurationName(java.util.List<String> scalingConfigurationName) {
+        this.scalingConfigurationName = scalingConfigurationName;
+        return this;
+    }
+    public java.util.List<String> getScalingConfigurationName() {
+        return this.scalingConfigurationName;
     }
 
 }

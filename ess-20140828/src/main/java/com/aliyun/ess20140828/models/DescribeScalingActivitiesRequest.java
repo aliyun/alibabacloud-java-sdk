@@ -4,9 +4,6 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingActivitiesRequest extends TeaModel {
-    @NameInMap("ScalingActivityId")
-    public java.util.List<String> scalingActivityId;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -34,17 +31,12 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("ScalingActivityId")
+    public java.util.List<String> scalingActivityId;
+
     public static DescribeScalingActivitiesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScalingActivitiesRequest self = new DescribeScalingActivitiesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScalingActivitiesRequest setScalingActivityId(java.util.List<String> scalingActivityId) {
-        this.scalingActivityId = scalingActivityId;
-        return this;
-    }
-    public java.util.List<String> getScalingActivityId() {
-        return this.scalingActivityId;
     }
 
     public DescribeScalingActivitiesRequest setOwnerId(Long ownerId) {
@@ -117,6 +109,14 @@ public class DescribeScalingActivitiesRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribeScalingActivitiesRequest setScalingActivityId(java.util.List<String> scalingActivityId) {
+        this.scalingActivityId = scalingActivityId;
+        return this;
+    }
+    public java.util.List<String> getScalingActivityId() {
+        return this.scalingActivityId;
     }
 
 }
