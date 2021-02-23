@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
-    @Validation(required = true)
     public java.util.List<TagResourcesRequestTag> tag;
 
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -47,11 +44,9 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
@@ -79,11 +74,9 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         @NameInMap("Key")
-        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
-        @Validation(required = true)
         public String value;
 
         public static TagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {

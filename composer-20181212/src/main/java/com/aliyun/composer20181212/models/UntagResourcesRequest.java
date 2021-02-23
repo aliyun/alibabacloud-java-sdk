@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public java.util.List<String> resourceId;
 
     @NameInMap("TagKey")

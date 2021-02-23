@@ -4,45 +4,33 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class InvokeFlowResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("InvocationId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String invocationId;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    public InvokeFlowResponseBody body;
 
     public static InvokeFlowResponse build(java.util.Map<String, ?> map) throws Exception {
         InvokeFlowResponse self = new InvokeFlowResponse();
         return TeaModel.build(map, self);
     }
 
-    public InvokeFlowResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public InvokeFlowResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public InvokeFlowResponse setInvocationId(String invocationId) {
-        this.invocationId = invocationId;
+    public InvokeFlowResponse setBody(InvokeFlowResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getInvocationId() {
-        return this.invocationId;
-    }
-
-    public InvokeFlowResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public InvokeFlowResponseBody getBody() {
+        return this.body;
     }
 
 }

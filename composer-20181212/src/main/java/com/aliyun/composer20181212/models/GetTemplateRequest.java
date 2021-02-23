@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetTemplateRequest extends TeaModel {
     @NameInMap("TemplateId")
-    @Validation(required = true)
     public String templateId;
 
     public static GetTemplateRequest build(java.util.Map<String, ?> map) throws Exception {

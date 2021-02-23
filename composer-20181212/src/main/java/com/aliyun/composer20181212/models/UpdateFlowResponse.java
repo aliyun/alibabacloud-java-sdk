@@ -4,45 +4,33 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class UpdateFlowResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("CurrentVersionId")
-    @Validation(required = true)
-    public Integer currentVersionId;
+    public UpdateFlowResponseBody body;
 
     public static UpdateFlowResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateFlowResponse self = new UpdateFlowResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateFlowResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateFlowResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateFlowResponse setSuccess(Boolean success) {
-        this.success = success;
+    public UpdateFlowResponse setBody(UpdateFlowResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public UpdateFlowResponse setCurrentVersionId(Integer currentVersionId) {
-        this.currentVersionId = currentVersionId;
-        return this;
-    }
-    public Integer getCurrentVersionId() {
-        return this.currentVersionId;
+    public UpdateFlowResponseBody getBody() {
+        return this.body;
     }
 
 }

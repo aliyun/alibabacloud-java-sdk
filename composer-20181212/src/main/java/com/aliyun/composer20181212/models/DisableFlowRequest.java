@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DisableFlowRequest extends TeaModel {
     @NameInMap("FlowId")
-    @Validation(required = true)
     public String flowId;
 
     public static DisableFlowRequest build(java.util.Map<String, ?> map) throws Exception {

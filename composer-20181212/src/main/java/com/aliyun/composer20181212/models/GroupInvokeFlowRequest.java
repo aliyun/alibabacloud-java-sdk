@@ -4,25 +4,29 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class GroupInvokeFlowRequest extends TeaModel {
+    // FlowId
     @NameInMap("FlowId")
-    @Validation(required = true)
     public String flowId;
 
+    // GroupKey
     @NameInMap("GroupKey")
-    @Validation(required = true)
     public String groupKey;
 
+    // Data
     @NameInMap("Data")
-    @Validation(required = true)
     public String data;
 
+    // ClientToken
     @NameInMap("ClientToken")
-    @Validation(required = true)
     public String clientToken;
 
+    // TotalCount
     @NameInMap("TotalCount")
-    @Validation(required = true)
     public Integer totalCount;
+
+    // Tags
+    @NameInMap("Tags")
+    public String tags;
 
     public static GroupInvokeFlowRequest build(java.util.Map<String, ?> map) throws Exception {
         GroupInvokeFlowRequest self = new GroupInvokeFlowRequest();
@@ -67,6 +71,14 @@ public class GroupInvokeFlowRequest extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public GroupInvokeFlowRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }

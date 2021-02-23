@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class InvokeFlowRequest extends TeaModel {
     @NameInMap("FlowId")
-    @Validation(required = true)
     public String flowId;
 
     @NameInMap("Parameters")
