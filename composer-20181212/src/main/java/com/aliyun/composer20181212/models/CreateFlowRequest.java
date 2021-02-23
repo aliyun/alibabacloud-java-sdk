@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateFlowRequest extends TeaModel {
     @NameInMap("FlowName")
-    @Validation(required = true)
     public String flowName;
 
     @NameInMap("FlowDescription")

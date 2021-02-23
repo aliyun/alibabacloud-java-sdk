@@ -4,33 +4,33 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateFlowResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("FlowId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String flowId;
+    public CreateFlowResponseBody body;
 
     public static CreateFlowResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowResponse self = new CreateFlowResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateFlowResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateFlowResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateFlowResponse setFlowId(String flowId) {
-        this.flowId = flowId;
+    public CreateFlowResponse setBody(CreateFlowResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getFlowId() {
-        return this.flowId;
+    public CreateFlowResponseBody getBody() {
+        return this.body;
     }
 
 }

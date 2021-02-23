@@ -4,13 +4,13 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class GetVersionRequest extends TeaModel {
+    // 工作流 ID
     @NameInMap("FlowId")
-    @Validation(required = true)
     public String flowId;
 
+    // 工作流版本 ID
     @NameInMap("VersionId")
-    @Validation(required = true)
-    public Integer versionId;
+    public String versionId;
 
     public static GetVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         GetVersionRequest self = new GetVersionRequest();
@@ -25,11 +25,11 @@ public class GetVersionRequest extends TeaModel {
         return this.flowId;
     }
 
-    public GetVersionRequest setVersionId(Integer versionId) {
+    public GetVersionRequest setVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
-    public Integer getVersionId() {
+    public String getVersionId() {
         return this.versionId;
     }
 

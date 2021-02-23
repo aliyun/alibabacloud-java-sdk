@@ -4,33 +4,33 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class CloneFlowResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("FlowId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String flowId;
+    public CloneFlowResponseBody body;
 
     public static CloneFlowResponse build(java.util.Map<String, ?> map) throws Exception {
         CloneFlowResponse self = new CloneFlowResponse();
         return TeaModel.build(map, self);
     }
 
-    public CloneFlowResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CloneFlowResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CloneFlowResponse setFlowId(String flowId) {
-        this.flowId = flowId;
+    public CloneFlowResponse setBody(CloneFlowResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getFlowId() {
-        return this.flowId;
+    public CloneFlowResponseBody getBody() {
+        return this.body;
     }
 
 }

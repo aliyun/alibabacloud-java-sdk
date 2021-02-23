@@ -4,45 +4,33 @@ package com.aliyun.composer20181212.models;
 import com.aliyun.tea.*;
 
 public class DisableFlowResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("FlowStatus")
-    @Validation(required = true)
-    public String flowStatus;
+    public DisableFlowResponseBody body;
 
     public static DisableFlowResponse build(java.util.Map<String, ?> map) throws Exception {
         DisableFlowResponse self = new DisableFlowResponse();
         return TeaModel.build(map, self);
     }
 
-    public DisableFlowResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DisableFlowResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DisableFlowResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DisableFlowResponse setBody(DisableFlowResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DisableFlowResponse setFlowStatus(String flowStatus) {
-        this.flowStatus = flowStatus;
-        return this;
-    }
-    public String getFlowStatus() {
-        return this.flowStatus;
+    public DisableFlowResponseBody getBody() {
+        return this.body;
     }
 
 }
