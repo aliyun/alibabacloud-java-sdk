@@ -4,15 +4,6 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeScalingRulesRequest extends TeaModel {
-    @NameInMap("ScalingRuleId")
-    public java.util.List<String> scalingRuleId;
-
-    @NameInMap("ScalingRuleName")
-    public java.util.List<String> scalingRuleName;
-
-    @NameInMap("ScalingRuleAri")
-    public java.util.List<String> scalingRuleAri;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -43,33 +34,18 @@ public class DescribeScalingRulesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("ScalingRuleId")
+    public java.util.List<String> scalingRuleId;
+
+    @NameInMap("ScalingRuleName")
+    public java.util.List<String> scalingRuleName;
+
+    @NameInMap("ScalingRuleAri")
+    public java.util.List<String> scalingRuleAri;
+
     public static DescribeScalingRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScalingRulesRequest self = new DescribeScalingRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScalingRulesRequest setScalingRuleId(java.util.List<String> scalingRuleId) {
-        this.scalingRuleId = scalingRuleId;
-        return this;
-    }
-    public java.util.List<String> getScalingRuleId() {
-        return this.scalingRuleId;
-    }
-
-    public DescribeScalingRulesRequest setScalingRuleName(java.util.List<String> scalingRuleName) {
-        this.scalingRuleName = scalingRuleName;
-        return this;
-    }
-    public java.util.List<String> getScalingRuleName() {
-        return this.scalingRuleName;
-    }
-
-    public DescribeScalingRulesRequest setScalingRuleAri(java.util.List<String> scalingRuleAri) {
-        this.scalingRuleAri = scalingRuleAri;
-        return this;
-    }
-    public java.util.List<String> getScalingRuleAri() {
-        return this.scalingRuleAri;
     }
 
     public DescribeScalingRulesRequest setOwnerId(Long ownerId) {
@@ -150,6 +126,30 @@ public class DescribeScalingRulesRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribeScalingRulesRequest setScalingRuleId(java.util.List<String> scalingRuleId) {
+        this.scalingRuleId = scalingRuleId;
+        return this;
+    }
+    public java.util.List<String> getScalingRuleId() {
+        return this.scalingRuleId;
+    }
+
+    public DescribeScalingRulesRequest setScalingRuleName(java.util.List<String> scalingRuleName) {
+        this.scalingRuleName = scalingRuleName;
+        return this;
+    }
+    public java.util.List<String> getScalingRuleName() {
+        return this.scalingRuleName;
+    }
+
+    public DescribeScalingRulesRequest setScalingRuleAri(java.util.List<String> scalingRuleAri) {
+        this.scalingRuleAri = scalingRuleAri;
+        return this;
+    }
+    public java.util.List<String> getScalingRuleAri() {
+        return this.scalingRuleAri;
     }
 
 }

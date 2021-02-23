@@ -4,15 +4,6 @@ package com.aliyun.ess20140828.models;
 import com.aliyun.tea.*;
 
 public class DescribeScheduledTasksRequest extends TeaModel {
-    @NameInMap("ScheduledAction")
-    public java.util.List<String> scheduledAction;
-
-    @NameInMap("ScheduledTaskId")
-    public java.util.List<String> scheduledTaskId;
-
-    @NameInMap("ScheduledTaskName")
-    public java.util.List<String> scheduledTaskName;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -37,33 +28,18 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     @NameInMap("ScalingGroupId")
     public String scalingGroupId;
 
+    @NameInMap("ScheduledAction")
+    public java.util.List<String> scheduledAction;
+
+    @NameInMap("ScheduledTaskId")
+    public java.util.List<String> scheduledTaskId;
+
+    @NameInMap("ScheduledTaskName")
+    public java.util.List<String> scheduledTaskName;
+
     public static DescribeScheduledTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeScheduledTasksRequest self = new DescribeScheduledTasksRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeScheduledTasksRequest setScheduledAction(java.util.List<String> scheduledAction) {
-        this.scheduledAction = scheduledAction;
-        return this;
-    }
-    public java.util.List<String> getScheduledAction() {
-        return this.scheduledAction;
-    }
-
-    public DescribeScheduledTasksRequest setScheduledTaskId(java.util.List<String> scheduledTaskId) {
-        this.scheduledTaskId = scheduledTaskId;
-        return this;
-    }
-    public java.util.List<String> getScheduledTaskId() {
-        return this.scheduledTaskId;
-    }
-
-    public DescribeScheduledTasksRequest setScheduledTaskName(java.util.List<String> scheduledTaskName) {
-        this.scheduledTaskName = scheduledTaskName;
-        return this;
-    }
-    public java.util.List<String> getScheduledTaskName() {
-        return this.scheduledTaskName;
     }
 
     public DescribeScheduledTasksRequest setOwnerId(Long ownerId) {
@@ -128,6 +104,30 @@ public class DescribeScheduledTasksRequest extends TeaModel {
     }
     public String getScalingGroupId() {
         return this.scalingGroupId;
+    }
+
+    public DescribeScheduledTasksRequest setScheduledAction(java.util.List<String> scheduledAction) {
+        this.scheduledAction = scheduledAction;
+        return this;
+    }
+    public java.util.List<String> getScheduledAction() {
+        return this.scheduledAction;
+    }
+
+    public DescribeScheduledTasksRequest setScheduledTaskId(java.util.List<String> scheduledTaskId) {
+        this.scheduledTaskId = scheduledTaskId;
+        return this;
+    }
+    public java.util.List<String> getScheduledTaskId() {
+        return this.scheduledTaskId;
+    }
+
+    public DescribeScheduledTasksRequest setScheduledTaskName(java.util.List<String> scheduledTaskName) {
+        this.scheduledTaskName = scheduledTaskName;
+        return this;
+    }
+    public java.util.List<String> getScheduledTaskName() {
+        return this.scheduledTaskName;
     }
 
 }
