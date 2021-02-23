@@ -30,7 +30,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
 
     // 任务执行详情。
     @NameInMap("task_result")
-    public DescribeTaskInfoResponseBodyTaskResult taskResult;
+    public java.util.List<DescribeTaskInfoResponseBodyTaskResult> taskResult;
 
     public static DescribeTaskInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTaskInfoResponseBody self = new DescribeTaskInfoResponseBody();
@@ -85,15 +85,15 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         return this.taskType;
     }
 
-    public DescribeTaskInfoResponseBody setTaskResult(DescribeTaskInfoResponseBodyTaskResult taskResult) {
+    public DescribeTaskInfoResponseBody setTaskResult(java.util.List<DescribeTaskInfoResponseBodyTaskResult> taskResult) {
         this.taskResult = taskResult;
         return this;
     }
-    public DescribeTaskInfoResponseBodyTaskResult getTaskResult() {
+    public java.util.List<DescribeTaskInfoResponseBodyTaskResult> getTaskResult() {
         return this.taskResult;
     }
 
-    public static class DescribeTaskInfoResponseBodyTaskResultTask extends TeaModel {
+    public static class DescribeTaskInfoResponseBodyTaskResult extends TeaModel {
         // 操作的资源，例如：实例ID。
         @NameInMap("data")
         public String data;
@@ -102,12 +102,12 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
-        public static DescribeTaskInfoResponseBodyTaskResultTask build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTaskInfoResponseBodyTaskResultTask self = new DescribeTaskInfoResponseBodyTaskResultTask();
+        public static DescribeTaskInfoResponseBodyTaskResult build(java.util.Map<String, ?> map) throws Exception {
+            DescribeTaskInfoResponseBodyTaskResult self = new DescribeTaskInfoResponseBodyTaskResult();
             return TeaModel.build(map, self);
         }
 
-        public DescribeTaskInfoResponseBodyTaskResultTask setData(String data) {
+        public DescribeTaskInfoResponseBodyTaskResult setData(String data) {
             this.data = data;
             return this;
         }
@@ -115,31 +115,12 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             return this.data;
         }
 
-        public DescribeTaskInfoResponseBodyTaskResultTask setStatus(String status) {
+        public DescribeTaskInfoResponseBodyTaskResult setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
-        }
-
-    }
-
-    public static class DescribeTaskInfoResponseBodyTaskResult extends TeaModel {
-        @NameInMap("task")
-        public java.util.List<DescribeTaskInfoResponseBodyTaskResultTask> task;
-
-        public static DescribeTaskInfoResponseBodyTaskResult build(java.util.Map<String, ?> map) throws Exception {
-            DescribeTaskInfoResponseBodyTaskResult self = new DescribeTaskInfoResponseBodyTaskResult();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeTaskInfoResponseBodyTaskResult setTask(java.util.List<DescribeTaskInfoResponseBodyTaskResultTask> task) {
-            this.task = task;
-            return this;
-        }
-        public java.util.List<DescribeTaskInfoResponseBodyTaskResultTask> getTask() {
-            return this.task;
         }
 
     }

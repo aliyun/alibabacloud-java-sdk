@@ -58,6 +58,10 @@ public class GetKubernetesTriggerResponse extends TeaModel {
         @NameInMap("action")
         public String action;
 
+        // Token
+        @NameInMap("token")
+        public String token;
+
         public static GetKubernetesTriggerResponseBody build(java.util.Map<String, ?> map) throws Exception {
             GetKubernetesTriggerResponseBody self = new GetKubernetesTriggerResponseBody();
             return TeaModel.build(map, self);
@@ -109,6 +113,14 @@ public class GetKubernetesTriggerResponse extends TeaModel {
         }
         public String getAction() {
             return this.action;
+        }
+
+        public GetKubernetesTriggerResponseBody setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
         }
 
     }
