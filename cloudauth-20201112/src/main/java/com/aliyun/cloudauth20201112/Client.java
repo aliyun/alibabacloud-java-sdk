@@ -3,10 +3,26 @@ package com.aliyun.cloudauth20201112;
 
 import com.aliyun.tea.*;
 import com.aliyun.cloudauth20201112.models.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.oss.*;
+import com.aliyun.oss.models.*;
+import com.aliyun.tearpc.*;
+import com.aliyun.tearpc.models.*;
+import com.aliyun.openplatform20191219.*;
+import com.aliyun.openplatform20191219.models.*;
+import com.aliyun.ossutil.*;
+import com.aliyun.ossutil.models.*;
+import com.aliyun.fileform.*;
+import com.aliyun.fileform.models.*;
+import com.aliyun.teaopenapi.*;
+import com.aliyun.teaopenapi.models.*;
+import com.aliyun.openapiutil.*;
+import com.aliyun.endpointutil.*;
 
-public class Client extends com.aliyun.tearpc.Client {
+public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(com.aliyun.tearpc.models.Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
         this.checkConfig(config);
@@ -14,9 +30,29 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
-    public LivenessDetectResponse livenessDetect(LivenessDetectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
+        if (!com.aliyun.teautil.Common.empty(endpoint)) {
+            return endpoint;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
+        }
+
+        return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
+    }
+
+    public LivenessDetectResponse livenessDetectWithOptions(LivenessDetectRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        return TeaModel.toModel(this.doRequest("LivenessDetect", "HTTPS", "POST", "2020-11-12", "AK", null, TeaModel.buildMap(request), runtime), new LivenessDetectResponse());
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("LivenessDetect", "2020-11-12", "HTTPS", "POST", "AK", "json", req, runtime), new LivenessDetectResponse());
+    }
+
+    public LivenessDetectResponse livenessDetect(LivenessDetectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.livenessDetectWithOptions(request, runtime);
     }
 
     public LivenessDetectResponse livenessDetectAdvance(LivenessDetectAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -32,11 +68,11 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("regionId", _regionId)
         ));
         com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+        AuthorizeFileUploadRequest authRequest = AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
             new TeaPair("product", "Cloudauth"),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
+        AuthorizeFileUploadResponse authResponse = new AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
@@ -44,23 +80,23 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("regionId", _regionId)
         ));
         com.aliyun.oss.Client ossClient = null;
-        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
+        FileField fileObj = new FileField();
+        PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
+        PostObjectRequest uploadRequest = new PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.common.Common.convert(runtime, ossRuntime);
-        LivenessDetectRequest livenessDetectreq = new LivenessDetectRequest();
-        com.aliyun.common.Common.convert(request, livenessDetectreq);
+        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        LivenessDetectRequest livenessDetectReq = new LivenessDetectRequest();
+        com.aliyun.openapiutil.Client.convert(request, livenessDetectReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
         ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
+        fileObj = FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
             new TeaPair("content", request.mediaFileObject),
             new TeaPair("contentType", "")
         ));
-        ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", authResponse.accessKeyId),
             new TeaPair("policy", authResponse.encodedPolicy),
             new TeaPair("signature", authResponse.signature),
@@ -68,25 +104,13 @@ public class Client extends com.aliyun.tearpc.Client {
             new TeaPair("file", fileObj),
             new TeaPair("successActionStatus", "201")
         ));
-        uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
+        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
             new TeaPair("bucketName", authResponse.bucket),
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        livenessDetectreq.mediaFile = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        LivenessDetectResponse livenessDetectResp = this.livenessDetect(livenessDetectreq, runtime);
+        livenessDetectReq.mediaFile = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        LivenessDetectResponse livenessDetectResp = this.livenessDetectWithOptions(livenessDetectReq, runtime);
         return livenessDetectResp;
-    }
-
-    public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
-        if (!com.aliyun.teautil.Common.empty(endpoint)) {
-            return endpoint;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
-            return endpointMap.get(regionId);
-        }
-
-        return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 }
