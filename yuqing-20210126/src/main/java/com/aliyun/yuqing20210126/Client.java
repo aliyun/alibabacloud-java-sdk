@@ -213,7 +213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("AggregateSearchYuqing", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/aggSearch.json", "json", req, runtime), new AggregateSearchYuqingResponse());
+        return TeaModel.toModel(this.doROARequest("AggregateSearchYuqing", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/aggSearch.json", "json", req, runtime), new AggregateSearchYuqingResponse());
     }
 
     public GetAnalysisComponentResultResponse getAnalysisComponentResult(GetAnalysisComponentResultRequest request) throws Exception {
@@ -273,7 +273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("QueryAnalysisComponent", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/queryAnalysisComponent.json", "json", req, runtime), new QueryAnalysisComponentResponse());
+        return TeaModel.toModel(this.doROARequest("QueryAnalysisComponent", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/queryAnalysisComponent.json", "json", req, runtime), new QueryAnalysisComponentResponse());
     }
 
     public UpdatePropagationResponse updatePropagation(UpdatePropagationRequest request) throws Exception {
@@ -357,7 +357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListYuqingMessages", "2021-01-26", "HTTPS", "GET", "AK", "/openapi/aliyun/searchMessages.json", "json", req, runtime), new ListYuqingMessagesResponse());
+        return TeaModel.toModel(this.doROARequest("ListYuqingMessages", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/searchMessages.json", "json", req, runtime), new ListYuqingMessagesResponse());
     }
 
     public QueryProjectListResponse queryProjectList(QueryProjectListRequest request) throws Exception {
