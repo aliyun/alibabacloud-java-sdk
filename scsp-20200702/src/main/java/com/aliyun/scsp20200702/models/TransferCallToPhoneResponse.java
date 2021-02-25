@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.scsp20200702.models;
+
+import com.aliyun.tea.*;
+
+public class TransferCallToPhoneResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public TransferCallToPhoneResponseBody body;
+
+    public static TransferCallToPhoneResponse build(java.util.Map<String, ?> map) throws Exception {
+        TransferCallToPhoneResponse self = new TransferCallToPhoneResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public TransferCallToPhoneResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public TransferCallToPhoneResponse setBody(TransferCallToPhoneResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public TransferCallToPhoneResponseBody getBody() {
+        return this.body;
+    }
+
+}
