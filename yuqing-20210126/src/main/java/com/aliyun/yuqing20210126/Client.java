@@ -185,22 +185,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AggregateSearchYuqingResponse aggregateSearchYuqingWithOptions(AggregateSearchYuqingRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.searchCondition))) {
-            query.put("searchCondition", request.searchCondition);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.aggregateFunction)) {
-            query.put("aggregateFunction", request.aggregateFunction);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.groupByKey)) {
-            query.put("groupByKey", request.groupByKey);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.groupLimits)) {
-            query.put("groupLimits", request.groupLimits);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.teamHashId)) {
             query.put("teamHashId", request.teamHashId);
         }
@@ -209,11 +193,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("requestId", request.requestId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.searchCondition))) {
+            body.put("searchCondition", request.searchCondition);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aggregateFunction)) {
+            body.put("aggregateFunction", request.aggregateFunction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupByKey)) {
+            body.put("groupByKey", request.groupByKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupLimits)) {
+            body.put("groupLimits", request.groupLimits);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("AggregateSearchYuqing", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/aggSearch.json", "json", req, runtime), new AggregateSearchYuqingResponse());
+        return TeaModel.toModel(this.doROARequestWithForm("AggregateSearchYuqing", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/aggSearch.json", "json", req, runtime), new AggregateSearchYuqingResponse());
     }
 
     public GetAnalysisComponentResultResponse getAnalysisComponentResult(GetAnalysisComponentResultRequest request) throws Exception {
@@ -253,14 +255,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryAnalysisComponentResponse queryAnalysisComponentWithOptions(QueryAnalysisComponentRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.analyseType)) {
-            query.put("analyseType", request.analyseType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.searchCondition))) {
-            query.put("searchCondition", request.searchCondition);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.teamHashId)) {
             query.put("teamHashId", request.teamHashId);
         }
@@ -269,11 +263,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("requestId", request.requestId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.analyseType)) {
+            body.put("analyseType", request.analyseType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.searchCondition))) {
+            body.put("searchCondition", request.searchCondition);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("QueryAnalysisComponent", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/queryAnalysisComponent.json", "json", req, runtime), new QueryAnalysisComponentResponse());
+        return TeaModel.toModel(this.doROARequestWithForm("QueryAnalysisComponent", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/queryAnalysisComponent.json", "json", req, runtime), new QueryAnalysisComponentResponse());
     }
 
     public UpdatePropagationResponse updatePropagation(UpdatePropagationRequest request) throws Exception {
@@ -285,10 +289,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdatePropagationResponse updatePropagationWithOptions(UpdatePropagationRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.weiboUrls)) {
-            query.put("weiboUrls", request.weiboUrls);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.teamHashId)) {
             query.put("teamHashId", request.teamHashId);
         }
@@ -297,11 +297,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("requestId", request.requestId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.weiboUrls)) {
+            body.put("weiboUrls", request.weiboUrls);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("UpdatePropagation", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/updatePropagation.json", "json", req, runtime), new UpdatePropagationResponse());
+        return TeaModel.toModel(this.doROARequestWithForm("UpdatePropagation", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/updatePropagation.json", "json", req, runtime), new UpdatePropagationResponse());
     }
 
     public GetMessageDetailResponse getMessageDetail(GetMessageDetailRequest request) throws Exception {
@@ -341,10 +347,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListYuqingMessagesResponse listYuqingMessagesWithOptions(ListYuqingMessagesRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.searchCondition))) {
-            query.put("searchCondition", request.searchCondition);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.teamHashId)) {
             query.put("teamHashId", request.teamHashId);
         }
@@ -353,11 +355,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("requestId", request.requestId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(request.searchCondition))) {
+            body.put("searchCondition", request.searchCondition);
+        }
+
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
-        return TeaModel.toModel(this.doROARequest("ListYuqingMessages", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/searchMessages.json", "json", req, runtime), new ListYuqingMessagesResponse());
+        return TeaModel.toModel(this.doROARequestWithForm("ListYuqingMessages", "2021-01-26", "HTTPS", "POST", "AK", "/openapi/aliyun/searchMessages.json", "json", req, runtime), new ListYuqingMessagesResponse());
     }
 
     public QueryProjectListResponse queryProjectList(QueryProjectListRequest request) throws Exception {
