@@ -1,0 +1,56 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.chatbot20171011.models;
+
+import com.aliyun.tea.*;
+
+public class QueryDialogsRequest extends TeaModel {
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("DialogName")
+    public String dialogName;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    public static QueryDialogsRequest build(java.util.Map<String, ?> map) throws Exception {
+        QueryDialogsRequest self = new QueryDialogsRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryDialogsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public QueryDialogsRequest setDialogName(String dialogName) {
+        this.dialogName = dialogName;
+        return this;
+    }
+    public String getDialogName() {
+        return this.dialogName;
+    }
+
+    public QueryDialogsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public QueryDialogsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+}
