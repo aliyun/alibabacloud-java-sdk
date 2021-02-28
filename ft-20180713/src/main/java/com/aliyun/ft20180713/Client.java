@@ -71,6 +71,30 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public FtDynamicAddressHttpVpcResponse ftDynamicAddressHttpVpcWithOptions(FtDynamicAddressHttpVpcRequest tmp, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        FtDynamicAddressHttpVpcShrinkRequest request = new FtDynamicAddressHttpVpcShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.stringValue)) {
+            request.stringValueShrink = com.aliyun.teautil.Common.toJSONString(tmp.stringValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.defaultValue)) {
+            request.defaultValueShrink = com.aliyun.teautil.Common.toJSONString(tmp.defaultValue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.otherParam)) {
+            request.otherParamShrink = com.aliyun.teautil.Common.toJSONString(tmp.otherParam);
+        }
+
+        return TeaModel.toModel(this.doRequest("FtDynamicAddressHttpVpc", "HTTPS", "POST", "2018-07-13", "AK", null, TeaModel.buildMap(request), runtime), new FtDynamicAddressHttpVpcResponse());
+    }
+
+    public FtDynamicAddressHttpVpcResponse ftDynamicAddressHttpVpc(FtDynamicAddressHttpVpcRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.ftDynamicAddressHttpVpcWithOptions(request, runtime);
+    }
+
     public TestFlowStrategy01Response testFlowStrategy01WithOptions(TestFlowStrategy01Request tmp, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmp);
         TestFlowStrategy01ShrinkRequest request = new TestFlowStrategy01ShrinkRequest();
