@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.chatbot20171011.models;
+
+import com.aliyun.tea.*;
+
+public class PublishDialogFlowResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public PublishDialogFlowResponseBody body;
+
+    public static PublishDialogFlowResponse build(java.util.Map<String, ?> map) throws Exception {
+        PublishDialogFlowResponse self = new PublishDialogFlowResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public PublishDialogFlowResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public PublishDialogFlowResponse setBody(PublishDialogFlowResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public PublishDialogFlowResponseBody getBody() {
+        return this.body;
+    }
+
+}

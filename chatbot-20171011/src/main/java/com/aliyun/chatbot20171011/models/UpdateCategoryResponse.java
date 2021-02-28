@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.chatbot20171011.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateCategoryResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateCategoryResponseBody body;
+
+    public static UpdateCategoryResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateCategoryResponse self = new UpdateCategoryResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateCategoryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateCategoryResponse setBody(UpdateCategoryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateCategoryResponseBody getBody() {
+        return this.body;
+    }
+
+}
