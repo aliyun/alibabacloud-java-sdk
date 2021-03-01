@@ -75,21 +75,92 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListInstancesResponseBodyInstanceListInstanceOwnerIdList extends TeaModel {
+        @NameInMap("OwnerIds")
+        public java.util.List<String> ownerIds;
+
+        public static ListInstancesResponseBodyInstanceListInstanceOwnerIdList build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstanceListInstanceOwnerIdList self = new ListInstancesResponseBodyInstanceListInstanceOwnerIdList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstanceListInstanceOwnerIdList setOwnerIds(java.util.List<String> ownerIds) {
+            this.ownerIds = ownerIds;
+            return this;
+        }
+        public java.util.List<String> getOwnerIds() {
+            return this.ownerIds;
+        }
+
+    }
+
+    public static class ListInstancesResponseBodyInstanceListInstanceOwnerNameList extends TeaModel {
+        @NameInMap("OwnerNames")
+        public java.util.List<String> ownerNames;
+
+        public static ListInstancesResponseBodyInstanceListInstanceOwnerNameList build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstanceListInstanceOwnerNameList self = new ListInstancesResponseBodyInstanceListInstanceOwnerNameList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstanceListInstanceOwnerNameList setOwnerNames(java.util.List<String> ownerNames) {
+            this.ownerNames = ownerNames;
+            return this;
+        }
+        public java.util.List<String> getOwnerNames() {
+            return this.ownerNames;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstanceListInstance extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
-        @NameInMap("Host")
-        public String host;
-
         @NameInMap("DatabaseUser")
         public String databaseUser;
 
-        @NameInMap("State")
-        public String state;
-
         @NameInMap("DbaId")
         public String dbaId;
+
+        @NameInMap("UseDsql")
+        public Integer useDsql;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("EcsInstanceId")
+        public String ecsInstanceId;
+
+        @NameInMap("EnvType")
+        public String envType;
+
+        @NameInMap("Sid")
+        public String sid;
+
+        @NameInMap("OwnerIdList")
+        public ListInstancesResponseBodyInstanceListInstanceOwnerIdList ownerIdList;
+
+        @NameInMap("SafeRuleId")
+        public String safeRuleId;
+
+        @NameInMap("OwnerNameList")
+        public ListInstancesResponseBodyInstanceListInstanceOwnerNameList ownerNameList;
+
+        @NameInMap("DbaNickName")
+        public String dbaNickName;
+
+        @NameInMap("QueryTimeout")
+        public Integer queryTimeout;
+
+        @NameInMap("InstanceSource")
+        public String instanceSource;
+
+        @NameInMap("Host")
+        public String host;
+
+        @NameInMap("State")
+        public String state;
 
         @NameInMap("DataLinkName")
         public String dataLinkName;
@@ -100,26 +171,11 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
-        @NameInMap("UseDsql")
-        public Integer useDsql;
-
         @NameInMap("InstanceType")
         public String instanceType;
 
-        @NameInMap("Port")
-        public Integer port;
-
-        @NameInMap("EcsInstanceId")
-        public String ecsInstanceId;
-
         @NameInMap("DatabasePassword")
         public String databasePassword;
-
-        @NameInMap("EnvType")
-        public String envType;
-
-        @NameInMap("Sid")
-        public String sid;
 
         @NameInMap("InstanceAlias")
         public String instanceAlias;
@@ -127,20 +183,8 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("DdlOnline")
         public Integer ddlOnline;
 
-        @NameInMap("SafeRuleId")
-        public String safeRuleId;
-
         @NameInMap("EcsRegion")
         public String ecsRegion;
-
-        @NameInMap("DbaNickName")
-        public String dbaNickName;
-
-        @NameInMap("QueryTimeout")
-        public Integer queryTimeout;
-
-        @NameInMap("InstanceSource")
-        public String instanceSource;
 
         public static ListInstancesResponseBodyInstanceListInstance build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseBodyInstanceListInstance self = new ListInstancesResponseBodyInstanceListInstance();
@@ -155,14 +199,6 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public ListInstancesResponseBodyInstanceListInstance setHost(String host) {
-            this.host = host;
-            return this;
-        }
-        public String getHost() {
-            return this.host;
-        }
-
         public ListInstancesResponseBodyInstanceListInstance setDatabaseUser(String databaseUser) {
             this.databaseUser = databaseUser;
             return this;
@@ -171,20 +207,116 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.databaseUser;
         }
 
-        public ListInstancesResponseBodyInstanceListInstance setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
         public ListInstancesResponseBodyInstanceListInstance setDbaId(String dbaId) {
             this.dbaId = dbaId;
             return this;
         }
         public String getDbaId() {
             return this.dbaId;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setUseDsql(Integer useDsql) {
+            this.useDsql = useDsql;
+            return this;
+        }
+        public Integer getUseDsql() {
+            return this.useDsql;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setEcsInstanceId(String ecsInstanceId) {
+            this.ecsInstanceId = ecsInstanceId;
+            return this;
+        }
+        public String getEcsInstanceId() {
+            return this.ecsInstanceId;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setEnvType(String envType) {
+            this.envType = envType;
+            return this;
+        }
+        public String getEnvType() {
+            return this.envType;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setSid(String sid) {
+            this.sid = sid;
+            return this;
+        }
+        public String getSid() {
+            return this.sid;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setOwnerIdList(ListInstancesResponseBodyInstanceListInstanceOwnerIdList ownerIdList) {
+            this.ownerIdList = ownerIdList;
+            return this;
+        }
+        public ListInstancesResponseBodyInstanceListInstanceOwnerIdList getOwnerIdList() {
+            return this.ownerIdList;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setSafeRuleId(String safeRuleId) {
+            this.safeRuleId = safeRuleId;
+            return this;
+        }
+        public String getSafeRuleId() {
+            return this.safeRuleId;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setOwnerNameList(ListInstancesResponseBodyInstanceListInstanceOwnerNameList ownerNameList) {
+            this.ownerNameList = ownerNameList;
+            return this;
+        }
+        public ListInstancesResponseBodyInstanceListInstanceOwnerNameList getOwnerNameList() {
+            return this.ownerNameList;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setDbaNickName(String dbaNickName) {
+            this.dbaNickName = dbaNickName;
+            return this;
+        }
+        public String getDbaNickName() {
+            return this.dbaNickName;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setQueryTimeout(Integer queryTimeout) {
+            this.queryTimeout = queryTimeout;
+            return this;
+        }
+        public Integer getQueryTimeout() {
+            return this.queryTimeout;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setInstanceSource(String instanceSource) {
+            this.instanceSource = instanceSource;
+            return this;
+        }
+        public String getInstanceSource() {
+            return this.instanceSource;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
         public ListInstancesResponseBodyInstanceListInstance setDataLinkName(String dataLinkName) {
@@ -211,14 +343,6 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public ListInstancesResponseBodyInstanceListInstance setUseDsql(Integer useDsql) {
-            this.useDsql = useDsql;
-            return this;
-        }
-        public Integer getUseDsql() {
-            return this.useDsql;
-        }
-
         public ListInstancesResponseBodyInstanceListInstance setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
@@ -227,44 +351,12 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public ListInstancesResponseBodyInstanceListInstance setPort(Integer port) {
-            this.port = port;
-            return this;
-        }
-        public Integer getPort() {
-            return this.port;
-        }
-
-        public ListInstancesResponseBodyInstanceListInstance setEcsInstanceId(String ecsInstanceId) {
-            this.ecsInstanceId = ecsInstanceId;
-            return this;
-        }
-        public String getEcsInstanceId() {
-            return this.ecsInstanceId;
-        }
-
         public ListInstancesResponseBodyInstanceListInstance setDatabasePassword(String databasePassword) {
             this.databasePassword = databasePassword;
             return this;
         }
         public String getDatabasePassword() {
             return this.databasePassword;
-        }
-
-        public ListInstancesResponseBodyInstanceListInstance setEnvType(String envType) {
-            this.envType = envType;
-            return this;
-        }
-        public String getEnvType() {
-            return this.envType;
-        }
-
-        public ListInstancesResponseBodyInstanceListInstance setSid(String sid) {
-            this.sid = sid;
-            return this;
-        }
-        public String getSid() {
-            return this.sid;
         }
 
         public ListInstancesResponseBodyInstanceListInstance setInstanceAlias(String instanceAlias) {
@@ -283,44 +375,12 @@ public class ListInstancesResponseBody extends TeaModel {
             return this.ddlOnline;
         }
 
-        public ListInstancesResponseBodyInstanceListInstance setSafeRuleId(String safeRuleId) {
-            this.safeRuleId = safeRuleId;
-            return this;
-        }
-        public String getSafeRuleId() {
-            return this.safeRuleId;
-        }
-
         public ListInstancesResponseBodyInstanceListInstance setEcsRegion(String ecsRegion) {
             this.ecsRegion = ecsRegion;
             return this;
         }
         public String getEcsRegion() {
             return this.ecsRegion;
-        }
-
-        public ListInstancesResponseBodyInstanceListInstance setDbaNickName(String dbaNickName) {
-            this.dbaNickName = dbaNickName;
-            return this;
-        }
-        public String getDbaNickName() {
-            return this.dbaNickName;
-        }
-
-        public ListInstancesResponseBodyInstanceListInstance setQueryTimeout(Integer queryTimeout) {
-            this.queryTimeout = queryTimeout;
-            return this;
-        }
-        public Integer getQueryTimeout() {
-            return this.queryTimeout;
-        }
-
-        public ListInstancesResponseBodyInstanceListInstance setInstanceSource(String instanceSource) {
-            this.instanceSource = instanceSource;
-            return this;
-        }
-        public String getInstanceSource() {
-            return this.instanceSource;
         }
 
     }

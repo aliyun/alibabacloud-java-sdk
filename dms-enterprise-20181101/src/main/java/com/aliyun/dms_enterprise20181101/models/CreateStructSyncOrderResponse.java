@@ -3,21 +3,21 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class CheckFinishMissionResponse extends TeaModel {
+public class CreateStructSyncOrderResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public CheckFinishMissionResponseBody body;
+    public CreateStructSyncOrderResponseBody body;
 
-    public static CheckFinishMissionResponse build(java.util.Map<String, ?> map) throws Exception {
-        CheckFinishMissionResponse self = new CheckFinishMissionResponse();
+    public static CreateStructSyncOrderResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateStructSyncOrderResponse self = new CreateStructSyncOrderResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckFinishMissionResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateStructSyncOrderResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class CheckFinishMissionResponse extends TeaModel {
         return this.headers;
     }
 
-    public CheckFinishMissionResponse setBody(CheckFinishMissionResponseBody body) {
+    public CreateStructSyncOrderResponse setBody(CreateStructSyncOrderResponseBody body) {
         this.body = body;
         return this;
     }
-    public CheckFinishMissionResponseBody getBody() {
+    public CreateStructSyncOrderResponseBody getBody() {
         return this.body;
     }
 
