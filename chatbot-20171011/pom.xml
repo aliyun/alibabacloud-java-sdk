@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>chatbot20171011</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
   <name>chatbot20171011</name>
   <description>Alibaba Cloud Chatbot (20171011) SDK for Java
