@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.edas20170801.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateJvmConfigurationResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateJvmConfigurationResponseBody body;
+
+    public static UpdateJvmConfigurationResponse build(java.util.Map<String, ?> map) throws Exception {
+        UpdateJvmConfigurationResponse self = new UpdateJvmConfigurationResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateJvmConfigurationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateJvmConfigurationResponse setBody(UpdateJvmConfigurationResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateJvmConfigurationResponseBody getBody() {
+        return this.body;
+    }
+
+}
