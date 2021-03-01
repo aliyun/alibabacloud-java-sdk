@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.edas20170801.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteUserDefineRegionResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteUserDefineRegionResponseBody body;
+
+    public static DeleteUserDefineRegionResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteUserDefineRegionResponse self = new DeleteUserDefineRegionResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteUserDefineRegionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteUserDefineRegionResponse setBody(DeleteUserDefineRegionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteUserDefineRegionResponseBody getBody() {
+        return this.body;
+    }
+
+}

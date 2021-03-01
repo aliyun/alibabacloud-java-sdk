@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.edas20170801.models;
+
+import com.aliyun.tea.*;
+
+public class ListAliyunRegionResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ListAliyunRegionResponseBody body;
+
+    public static ListAliyunRegionResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAliyunRegionResponse self = new ListAliyunRegionResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ListAliyunRegionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListAliyunRegionResponse setBody(ListAliyunRegionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListAliyunRegionResponseBody getBody() {
+        return this.body;
+    }
+
+}
