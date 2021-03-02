@@ -4,9 +4,6 @@ package com.aliyun.ivision20190308.models;
 import com.aliyun.tea.*;
 
 public class PredictPictureResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
 
@@ -16,17 +13,12 @@ public class PredictPictureResponseBody extends TeaModel {
     @NameInMap("Data")
     public PredictPictureResponseBodyData data;
 
+    @NameInMap("Code")
+    public String code;
+
     public static PredictPictureResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PredictPictureResponseBody self = new PredictPictureResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public PredictPictureResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public PredictPictureResponseBody setMessage(String message) {
@@ -51,6 +43,14 @@ public class PredictPictureResponseBody extends TeaModel {
     }
     public PredictPictureResponseBodyData getData() {
         return this.data;
+    }
+
+    public PredictPictureResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public static class PredictPictureResponseBodyData extends TeaModel {

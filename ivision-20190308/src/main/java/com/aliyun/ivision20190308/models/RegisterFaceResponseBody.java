@@ -7,11 +7,11 @@ public class RegisterFaceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("GroupId")
-    public String groupId;
-
     @NameInMap("Faces")
     public java.util.List<RegisterFaceResponseBodyFaces> faces;
+
+    @NameInMap("GroupId")
+    public String groupId;
 
     public static RegisterFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RegisterFaceResponseBody self = new RegisterFaceResponseBody();
@@ -26,14 +26,6 @@ public class RegisterFaceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public RegisterFaceResponseBody setGroupId(String groupId) {
-        this.groupId = groupId;
-        return this;
-    }
-    public String getGroupId() {
-        return this.groupId;
-    }
-
     public RegisterFaceResponseBody setFaces(java.util.List<RegisterFaceResponseBodyFaces> faces) {
         this.faces = faces;
         return this;
@@ -42,10 +34,15 @@ public class RegisterFaceResponseBody extends TeaModel {
         return this.faces;
     }
 
-    public static class RegisterFaceResponseBodyFacesRect extends TeaModel {
-        @NameInMap("Left")
-        public Integer left;
+    public RegisterFaceResponseBody setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
 
+    public static class RegisterFaceResponseBodyFacesRect extends TeaModel {
         @NameInMap("Top")
         public Integer top;
 
@@ -55,17 +52,12 @@ public class RegisterFaceResponseBody extends TeaModel {
         @NameInMap("Height")
         public Integer height;
 
+        @NameInMap("Left")
+        public Integer left;
+
         public static RegisterFaceResponseBodyFacesRect build(java.util.Map<String, ?> map) throws Exception {
             RegisterFaceResponseBodyFacesRect self = new RegisterFaceResponseBodyFacesRect();
             return TeaModel.build(map, self);
-        }
-
-        public RegisterFaceResponseBodyFacesRect setLeft(Integer left) {
-            this.left = left;
-            return this;
-        }
-        public Integer getLeft() {
-            return this.left;
         }
 
         public RegisterFaceResponseBodyFacesRect setTop(Integer top) {
@@ -90,6 +82,14 @@ public class RegisterFaceResponseBody extends TeaModel {
         }
         public Integer getHeight() {
             return this.height;
+        }
+
+        public RegisterFaceResponseBodyFacesRect setLeft(Integer left) {
+            this.left = left;
+            return this;
+        }
+        public Integer getLeft() {
+            return this.left;
         }
 
     }
