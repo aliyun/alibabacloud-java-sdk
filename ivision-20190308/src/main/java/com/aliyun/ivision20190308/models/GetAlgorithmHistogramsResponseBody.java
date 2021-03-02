@@ -4,12 +4,6 @@ package com.aliyun.ivision20190308.models;
 import com.aliyun.tea.*;
 
 public class GetAlgorithmHistogramsResponseBody extends TeaModel {
-    @NameInMap("Success")
-    public Boolean success;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Message")
     public String message;
 
@@ -19,25 +13,15 @@ public class GetAlgorithmHistogramsResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAlgorithmHistogramsResponseBodyData data;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static GetAlgorithmHistogramsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAlgorithmHistogramsResponseBody self = new GetAlgorithmHistogramsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetAlgorithmHistogramsResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetAlgorithmHistogramsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public GetAlgorithmHistogramsResponseBody setMessage(String message) {
@@ -64,15 +48,31 @@ public class GetAlgorithmHistogramsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetAlgorithmHistogramsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetAlgorithmHistogramsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class GetAlgorithmHistogramsResponseBodyDataHistograms extends TeaModel {
         @NameInMap("Time")
         public String time;
 
-        @NameInMap("SuccessCount")
-        public Integer successCount;
-
         @NameInMap("FailureCount")
         public Integer failureCount;
+
+        @NameInMap("SuccessCount")
+        public Integer successCount;
 
         public static GetAlgorithmHistogramsResponseBodyDataHistograms build(java.util.Map<String, ?> map) throws Exception {
             GetAlgorithmHistogramsResponseBodyDataHistograms self = new GetAlgorithmHistogramsResponseBodyDataHistograms();
@@ -87,14 +87,6 @@ public class GetAlgorithmHistogramsResponseBody extends TeaModel {
             return this.time;
         }
 
-        public GetAlgorithmHistogramsResponseBodyDataHistograms setSuccessCount(Integer successCount) {
-            this.successCount = successCount;
-            return this;
-        }
-        public Integer getSuccessCount() {
-            return this.successCount;
-        }
-
         public GetAlgorithmHistogramsResponseBodyDataHistograms setFailureCount(Integer failureCount) {
             this.failureCount = failureCount;
             return this;
@@ -103,14 +95,22 @@ public class GetAlgorithmHistogramsResponseBody extends TeaModel {
             return this.failureCount;
         }
 
+        public GetAlgorithmHistogramsResponseBodyDataHistograms setSuccessCount(Integer successCount) {
+            this.successCount = successCount;
+            return this;
+        }
+        public Integer getSuccessCount() {
+            return this.successCount;
+        }
+
     }
 
     public static class GetAlgorithmHistogramsResponseBodyData extends TeaModel {
-        @NameInMap("SuccessCount")
-        public Integer successCount;
-
         @NameInMap("FailureCount")
         public Integer failureCount;
+
+        @NameInMap("SuccessCount")
+        public Integer successCount;
 
         @NameInMap("Histograms")
         public java.util.List<GetAlgorithmHistogramsResponseBodyDataHistograms> histograms;
@@ -120,20 +120,20 @@ public class GetAlgorithmHistogramsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetAlgorithmHistogramsResponseBodyData setSuccessCount(Integer successCount) {
-            this.successCount = successCount;
-            return this;
-        }
-        public Integer getSuccessCount() {
-            return this.successCount;
-        }
-
         public GetAlgorithmHistogramsResponseBodyData setFailureCount(Integer failureCount) {
             this.failureCount = failureCount;
             return this;
         }
         public Integer getFailureCount() {
             return this.failureCount;
+        }
+
+        public GetAlgorithmHistogramsResponseBodyData setSuccessCount(Integer successCount) {
+            this.successCount = successCount;
+            return this;
+        }
+        public Integer getSuccessCount() {
+            return this.successCount;
         }
 
         public GetAlgorithmHistogramsResponseBodyData setHistograms(java.util.List<GetAlgorithmHistogramsResponseBodyDataHistograms> histograms) {

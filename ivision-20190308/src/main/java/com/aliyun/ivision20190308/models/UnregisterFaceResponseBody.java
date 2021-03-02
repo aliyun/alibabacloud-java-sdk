@@ -4,18 +4,26 @@ package com.aliyun.ivision20190308.models;
 import com.aliyun.tea.*;
 
 public class UnregisterFaceResponseBody extends TeaModel {
+    @NameInMap("FaceToken")
+    public String faceToken;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("GroupId")
     public String groupId;
 
-    @NameInMap("FaceToken")
-    public String faceToken;
-
     public static UnregisterFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UnregisterFaceResponseBody self = new UnregisterFaceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public UnregisterFaceResponseBody setFaceToken(String faceToken) {
+        this.faceToken = faceToken;
+        return this;
+    }
+    public String getFaceToken() {
+        return this.faceToken;
     }
 
     public UnregisterFaceResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class UnregisterFaceResponseBody extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
-    }
-
-    public UnregisterFaceResponseBody setFaceToken(String faceToken) {
-        this.faceToken = faceToken;
-        return this;
-    }
-    public String getFaceToken() {
-        return this.faceToken;
     }
 
 }

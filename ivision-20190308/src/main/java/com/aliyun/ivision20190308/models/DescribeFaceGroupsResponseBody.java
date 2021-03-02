@@ -4,20 +4,20 @@ package com.aliyun.ivision20190308.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaceGroupsResponseBody extends TeaModel {
+    @NameInMap("TotalNum")
+    public Long totalNum;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("CurrentPage")
     public Long currentPage;
 
-    @NameInMap("PageSize")
-    public Long pageSize;
-
     @NameInMap("NextPageToken")
     public String nextPageToken;
-
-    @NameInMap("TotalNum")
-    public Long totalNum;
 
     @NameInMap("Groups")
     public java.util.List<DescribeFaceGroupsResponseBodyGroups> groups;
@@ -25,6 +25,22 @@ public class DescribeFaceGroupsResponseBody extends TeaModel {
     public static DescribeFaceGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFaceGroupsResponseBody self = new DescribeFaceGroupsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeFaceGroupsResponseBody setTotalNum(Long totalNum) {
+        this.totalNum = totalNum;
+        return this;
+    }
+    public Long getTotalNum() {
+        return this.totalNum;
+    }
+
+    public DescribeFaceGroupsResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeFaceGroupsResponseBody setRequestId(String requestId) {
@@ -43,28 +59,12 @@ public class DescribeFaceGroupsResponseBody extends TeaModel {
         return this.currentPage;
     }
 
-    public DescribeFaceGroupsResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
     public DescribeFaceGroupsResponseBody setNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     public String getNextPageToken() {
         return this.nextPageToken;
-    }
-
-    public DescribeFaceGroupsResponseBody setTotalNum(Long totalNum) {
-        this.totalNum = totalNum;
-        return this;
-    }
-    public Long getTotalNum() {
-        return this.totalNum;
     }
 
     public DescribeFaceGroupsResponseBody setGroups(java.util.List<DescribeFaceGroupsResponseBodyGroups> groups) {
@@ -76,18 +76,26 @@ public class DescribeFaceGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeFaceGroupsResponseBodyGroups extends TeaModel {
+        @NameInMap("CreationTime")
+        public String creationTime;
+
         @NameInMap("GroupId")
         public String groupId;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
-
         public static DescribeFaceGroupsResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeFaceGroupsResponseBodyGroups self = new DescribeFaceGroupsResponseBodyGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeFaceGroupsResponseBodyGroups setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public DescribeFaceGroupsResponseBodyGroups setGroupId(String groupId) {
@@ -104,14 +112,6 @@ public class DescribeFaceGroupsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public DescribeFaceGroupsResponseBodyGroups setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
         }
 
     }
