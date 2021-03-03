@@ -10,6 +10,9 @@ public class CompareFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public CompareFaceResponseBodyData data;
 
+    @NameInMap("Code")
+    public String code;
+
     public static CompareFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CompareFaceResponseBody self = new CompareFaceResponseBody();
         return TeaModel.build(map, self);
@@ -31,6 +34,14 @@ public class CompareFaceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public CompareFaceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public static class CompareFaceResponseBodyData extends TeaModel {
         @NameInMap("Thresholds")
         public java.util.List<Float> thresholds;
@@ -43,6 +54,18 @@ public class CompareFaceResponseBody extends TeaModel {
 
         @NameInMap("RectAList")
         public java.util.List<Integer> rectAList;
+
+        // 输入图像A的质量分
+        @NameInMap("QualityScoreA")
+        public Float qualityScoreA;
+
+        // 输入图像A的质量分
+        @NameInMap("QualityScoreB")
+        public Float qualityScoreB;
+
+        // 信息提示信息，纯文字描述，目前支持质量分的提示信息
+        @NameInMap("MessageTips")
+        public String messageTips;
 
         public static CompareFaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CompareFaceResponseBodyData self = new CompareFaceResponseBodyData();
@@ -79,6 +102,30 @@ public class CompareFaceResponseBody extends TeaModel {
         }
         public java.util.List<Integer> getRectAList() {
             return this.rectAList;
+        }
+
+        public CompareFaceResponseBodyData setQualityScoreA(Float qualityScoreA) {
+            this.qualityScoreA = qualityScoreA;
+            return this;
+        }
+        public Float getQualityScoreA() {
+            return this.qualityScoreA;
+        }
+
+        public CompareFaceResponseBodyData setQualityScoreB(Float qualityScoreB) {
+            this.qualityScoreB = qualityScoreB;
+            return this;
+        }
+        public Float getQualityScoreB() {
+            return this.qualityScoreB;
+        }
+
+        public CompareFaceResponseBodyData setMessageTips(String messageTips) {
+            this.messageTips = messageTips;
+            return this;
+        }
+        public String getMessageTips() {
+            return this.messageTips;
         }
 
     }
