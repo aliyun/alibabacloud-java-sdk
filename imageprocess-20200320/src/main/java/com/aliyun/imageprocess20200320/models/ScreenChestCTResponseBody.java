@@ -32,17 +32,11 @@ public class ScreenChestCTResponseBody extends TeaModel {
     }
 
     public static class ScreenChestCTResponseBodyDataLungNoduleSeriesElements extends TeaModel {
-        @NameInMap("Z")
-        public Float z;
-
         @NameInMap("Lobe")
         public String lobe;
 
         @NameInMap("MeanValue")
         public Float meanValue;
-
-        @NameInMap("ImageZ")
-        public Float imageZ;
 
         @NameInMap("Lung")
         public String lung;
@@ -53,20 +47,11 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("SOPInstanceUID")
         public String SOPInstanceUID;
 
-        @NameInMap("ImageX")
-        public Float imageX;
-
-        @NameInMap("Y")
-        public Float y;
-
         @NameInMap("Category")
         public String category;
 
         @NameInMap("Volume")
         public Float volume;
-
-        @NameInMap("ImageY")
-        public Float imageY;
 
         @NameInMap("Diameter")
         public Float diameter;
@@ -74,17 +59,24 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("X")
         public Float x;
 
+        @NameInMap("Y")
+        public Float y;
+
+        @NameInMap("Z")
+        public Float z;
+
+        @NameInMap("ImageX")
+        public Float imageX;
+
+        @NameInMap("ImageY")
+        public Float imageY;
+
+        @NameInMap("ImageZ")
+        public Float imageZ;
+
         public static ScreenChestCTResponseBodyDataLungNoduleSeriesElements build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyDataLungNoduleSeriesElements self = new ScreenChestCTResponseBodyDataLungNoduleSeriesElements();
             return TeaModel.build(map, self);
-        }
-
-        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setZ(Float z) {
-            this.z = z;
-            return this;
-        }
-        public Float getZ() {
-            return this.z;
         }
 
         public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setLobe(String lobe) {
@@ -101,14 +93,6 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public Float getMeanValue() {
             return this.meanValue;
-        }
-
-        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setImageZ(Float imageZ) {
-            this.imageZ = imageZ;
-            return this;
-        }
-        public Float getImageZ() {
-            return this.imageZ;
         }
 
         public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setLung(String lung) {
@@ -135,22 +119,6 @@ public class ScreenChestCTResponseBody extends TeaModel {
             return this.SOPInstanceUID;
         }
 
-        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setImageX(Float imageX) {
-            this.imageX = imageX;
-            return this;
-        }
-        public Float getImageX() {
-            return this.imageX;
-        }
-
-        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setY(Float y) {
-            this.y = y;
-            return this;
-        }
-        public Float getY() {
-            return this.y;
-        }
-
         public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setCategory(String category) {
             this.category = category;
             return this;
@@ -167,14 +135,6 @@ public class ScreenChestCTResponseBody extends TeaModel {
             return this.volume;
         }
 
-        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setImageY(Float imageY) {
-            this.imageY = imageY;
-            return this;
-        }
-        public Float getImageY() {
-            return this.imageY;
-        }
-
         public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setDiameter(Float diameter) {
             this.diameter = diameter;
             return this;
@@ -189,6 +149,46 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public Float getX() {
             return this.x;
+        }
+
+        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setY(Float y) {
+            this.y = y;
+            return this;
+        }
+        public Float getY() {
+            return this.y;
+        }
+
+        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setZ(Float z) {
+            this.z = z;
+            return this;
+        }
+        public Float getZ() {
+            return this.z;
+        }
+
+        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setImageX(Float imageX) {
+            this.imageX = imageX;
+            return this;
+        }
+        public Float getImageX() {
+            return this.imageX;
+        }
+
+        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setImageY(Float imageY) {
+            this.imageY = imageY;
+            return this;
+        }
+        public Float getImageY() {
+            return this.imageY;
+        }
+
+        public ScreenChestCTResponseBodyDataLungNoduleSeriesElements setImageZ(Float imageZ) {
+            this.imageZ = imageZ;
+            return this;
+        }
+        public Float getImageZ() {
+            return this.imageZ;
         }
 
     }
@@ -368,6 +368,121 @@ public class ScreenChestCTResponseBody extends TeaModel {
 
     }
 
+    public static class ScreenChestCTResponseBodyDataDetectRibFractureDetections extends TeaModel {
+        @NameInMap("FractureId")
+        public Long fractureId;
+
+        @NameInMap("FractureConfidence")
+        public Float fractureConfidence;
+
+        @NameInMap("FractureCategory")
+        public Long fractureCategory;
+
+        @NameInMap("Coordinates")
+        public java.util.List<Long> coordinates;
+
+        @NameInMap("CoordinateImage")
+        public java.util.List<Long> coordinateImage;
+
+        public static ScreenChestCTResponseBodyDataDetectRibFractureDetections build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataDetectRibFractureDetections self = new ScreenChestCTResponseBodyDataDetectRibFractureDetections();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFractureDetections setFractureId(Long fractureId) {
+            this.fractureId = fractureId;
+            return this;
+        }
+        public Long getFractureId() {
+            return this.fractureId;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFractureDetections setFractureConfidence(Float fractureConfidence) {
+            this.fractureConfidence = fractureConfidence;
+            return this;
+        }
+        public Float getFractureConfidence() {
+            return this.fractureConfidence;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFractureDetections setFractureCategory(Long fractureCategory) {
+            this.fractureCategory = fractureCategory;
+            return this;
+        }
+        public Long getFractureCategory() {
+            return this.fractureCategory;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFractureDetections setCoordinates(java.util.List<Long> coordinates) {
+            this.coordinates = coordinates;
+            return this;
+        }
+        public java.util.List<Long> getCoordinates() {
+            return this.coordinates;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFractureDetections setCoordinateImage(java.util.List<Long> coordinateImage) {
+            this.coordinateImage = coordinateImage;
+            return this;
+        }
+        public java.util.List<Long> getCoordinateImage() {
+            return this.coordinateImage;
+        }
+
+    }
+
+    public static class ScreenChestCTResponseBodyDataDetectRibFracture extends TeaModel {
+        @NameInMap("ResultURL")
+        public String resultURL;
+
+        @NameInMap("Spacing")
+        public java.util.List<Float> spacing;
+
+        @NameInMap("Origin")
+        public java.util.List<Float> origin;
+
+        @NameInMap("Detections")
+        public java.util.List<ScreenChestCTResponseBodyDataDetectRibFractureDetections> detections;
+
+        public static ScreenChestCTResponseBodyDataDetectRibFracture build(java.util.Map<String, ?> map) throws Exception {
+            ScreenChestCTResponseBodyDataDetectRibFracture self = new ScreenChestCTResponseBodyDataDetectRibFracture();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFracture setResultURL(String resultURL) {
+            this.resultURL = resultURL;
+            return this;
+        }
+        public String getResultURL() {
+            return this.resultURL;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFracture setSpacing(java.util.List<Float> spacing) {
+            this.spacing = spacing;
+            return this;
+        }
+        public java.util.List<Float> getSpacing() {
+            return this.spacing;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFracture setOrigin(java.util.List<Float> origin) {
+            this.origin = origin;
+            return this;
+        }
+        public java.util.List<Float> getOrigin() {
+            return this.origin;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFracture setDetections(java.util.List<ScreenChestCTResponseBodyDataDetectRibFractureDetections> detections) {
+            this.detections = detections;
+            return this;
+        }
+        public java.util.List<ScreenChestCTResponseBodyDataDetectRibFractureDetections> getDetections() {
+            return this.detections;
+        }
+
+    }
+
     public static class ScreenChestCTResponseBodyData extends TeaModel {
         @NameInMap("LungNodule")
         public ScreenChestCTResponseBodyDataLungNodule lungNodule;
@@ -377,6 +492,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
 
         @NameInMap("Covid")
         public ScreenChestCTResponseBodyDataCovid covid;
+
+        @NameInMap("DetectRibFracture")
+        public ScreenChestCTResponseBodyDataDetectRibFracture detectRibFracture;
 
         public static ScreenChestCTResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyData self = new ScreenChestCTResponseBodyData();
@@ -405,6 +523,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public ScreenChestCTResponseBodyDataCovid getCovid() {
             return this.covid;
+        }
+
+        public ScreenChestCTResponseBodyData setDetectRibFracture(ScreenChestCTResponseBodyDataDetectRibFracture detectRibFracture) {
+            this.detectRibFracture = detectRibFracture;
+            return this;
+        }
+        public ScreenChestCTResponseBodyDataDetectRibFracture getDetectRibFracture() {
+            return this.detectRibFracture;
         }
 
     }
