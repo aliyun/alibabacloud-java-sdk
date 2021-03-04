@@ -1,3 +1,6 @@
+2021-03-04 Version: 1.0.2
+- Supported api for forwardingrule.
+
 2021-01-27 Version: 1.0.1
 - AMP Version Change.
 
