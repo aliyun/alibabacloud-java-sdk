@@ -4,49 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListResourceTagsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Tags")
+    @NameInMap("body")
     @Validation(required = true)
-    public ListResourceTagsResponseTags tags;
+    public ListResourceTagsResponseBody body;
 
     public static ListResourceTagsResponse build(java.util.Map<String, ?> map) throws Exception {
         ListResourceTagsResponse self = new ListResourceTagsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListResourceTagsResponseTagsTag extends TeaModel {
-        @NameInMap("KeyId")
-        @Validation(required = true)
-        public String keyId;
-
-        @NameInMap("TagKey")
-        @Validation(required = true)
-        public String tagKey;
-
-        @NameInMap("TagValue")
-        @Validation(required = true)
-        public String tagValue;
-
-        public static ListResourceTagsResponseTagsTag build(java.util.Map<String, ?> map) throws Exception {
-            ListResourceTagsResponseTagsTag self = new ListResourceTagsResponseTagsTag();
-            return TeaModel.build(map, self);
-        }
-
+    public ListResourceTagsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class ListResourceTagsResponseTags extends TeaModel {
-        @NameInMap("Tag")
-        @Validation(required = true)
-        public java.util.List<ListResourceTagsResponseTagsTag> tag;
-
-        public static ListResourceTagsResponseTags build(java.util.Map<String, ?> map) throws Exception {
-            ListResourceTagsResponseTags self = new ListResourceTagsResponseTags();
-            return TeaModel.build(map, self);
-        }
-
+    public ListResourceTagsResponse setBody(ListResourceTagsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListResourceTagsResponseBody getBody() {
+        return this.body;
     }
 
 }

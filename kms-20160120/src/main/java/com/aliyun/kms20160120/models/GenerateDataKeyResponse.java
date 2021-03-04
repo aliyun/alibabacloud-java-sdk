@@ -4,29 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GenerateDataKeyResponse extends TeaModel {
-    @NameInMap("CiphertextBlob")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String ciphertextBlob;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("KeyId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String keyId;
-
-    @NameInMap("Plaintext")
-    @Validation(required = true)
-    public String plaintext;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("KeyVersionId")
-    @Validation(required = true)
-    public String keyVersionId;
+    public GenerateDataKeyResponseBody body;
 
     public static GenerateDataKeyResponse build(java.util.Map<String, ?> map) throws Exception {
         GenerateDataKeyResponse self = new GenerateDataKeyResponse();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateDataKeyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GenerateDataKeyResponse setBody(GenerateDataKeyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GenerateDataKeyResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,41 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DescribeRegionsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Regions")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeRegionsResponseRegions regions;
+    public DescribeRegionsResponseBody body;
 
     public static DescribeRegionsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeRegionsResponse self = new DescribeRegionsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeRegionsResponseRegionsRegion extends TeaModel {
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
-        public static DescribeRegionsResponseRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRegionsResponseRegionsRegion self = new DescribeRegionsResponseRegionsRegion();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeRegionsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeRegionsResponseRegions extends TeaModel {
-        @NameInMap("Region")
-        @Validation(required = true)
-        public java.util.List<DescribeRegionsResponseRegionsRegion> region;
-
-        public static DescribeRegionsResponseRegions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRegionsResponseRegions self = new DescribeRegionsResponseRegions();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeRegionsResponse setBody(DescribeRegionsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeRegionsResponseBody getBody() {
+        return this.body;
     }
 
 }

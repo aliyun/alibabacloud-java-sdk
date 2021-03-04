@@ -5,24 +5,52 @@ import com.aliyun.tea.*;
 
 public class AsymmetricSignRequest extends TeaModel {
     @NameInMap("KeyId")
-    @Validation(required = true)
     public String keyId;
 
     @NameInMap("KeyVersionId")
-    @Validation(required = true)
     public String keyVersionId;
 
     @NameInMap("Algorithm")
-    @Validation(required = true)
     public String algorithm;
 
     @NameInMap("Digest")
-    @Validation(required = true)
     public String digest;
 
     public static AsymmetricSignRequest build(java.util.Map<String, ?> map) throws Exception {
         AsymmetricSignRequest self = new AsymmetricSignRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AsymmetricSignRequest setKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    public String getKeyId() {
+        return this.keyId;
+    }
+
+    public AsymmetricSignRequest setKeyVersionId(String keyVersionId) {
+        this.keyVersionId = keyVersionId;
+        return this;
+    }
+    public String getKeyVersionId() {
+        return this.keyVersionId;
+    }
+
+    public AsymmetricSignRequest setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    public String getAlgorithm() {
+        return this.algorithm;
+    }
+
+    public AsymmetricSignRequest setDigest(String digest) {
+        this.digest = digest;
+        return this;
+    }
+    public String getDigest() {
+        return this.digest;
     }
 
 }

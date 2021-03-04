@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeSecretRequest extends TeaModel {
     @NameInMap("SecretName")
-    @Validation(required = true)
     public String secretName;
 
     @NameInMap("FetchTags")
@@ -14,6 +13,22 @@ public class DescribeSecretRequest extends TeaModel {
     public static DescribeSecretRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecretRequest self = new DescribeSecretRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSecretRequest setSecretName(String secretName) {
+        this.secretName = secretName;
+        return this;
+    }
+    public String getSecretName() {
+        return this.secretName;
+    }
+
+    public DescribeSecretRequest setFetchTags(String fetchTags) {
+        this.fetchTags = fetchTags;
+        return this;
+    }
+    public String getFetchTags() {
+        return this.fetchTags;
     }
 
 }

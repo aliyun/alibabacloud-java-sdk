@@ -4,57 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ListKeysResponse extends TeaModel {
-    @NameInMap("TotalCount")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Integer totalCount;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PageNumber")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    public Integer pageSize;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Keys")
-    @Validation(required = true)
-    public ListKeysResponseKeys keys;
+    public ListKeysResponseBody body;
 
     public static ListKeysResponse build(java.util.Map<String, ?> map) throws Exception {
         ListKeysResponse self = new ListKeysResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListKeysResponseKeysKey extends TeaModel {
-        @NameInMap("KeyId")
-        @Validation(required = true)
-        public String keyId;
-
-        @NameInMap("KeyArn")
-        @Validation(required = true)
-        public String keyArn;
-
-        public static ListKeysResponseKeysKey build(java.util.Map<String, ?> map) throws Exception {
-            ListKeysResponseKeysKey self = new ListKeysResponseKeysKey();
-            return TeaModel.build(map, self);
-        }
-
+    public ListKeysResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class ListKeysResponseKeys extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
-        public java.util.List<ListKeysResponseKeysKey> key;
-
-        public static ListKeysResponseKeys build(java.util.Map<String, ?> map) throws Exception {
-            ListKeysResponseKeys self = new ListKeysResponseKeys();
-            return TeaModel.build(map, self);
-        }
-
+    public ListKeysResponse setBody(ListKeysResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListKeysResponseBody getBody() {
+        return this.body;
     }
 
 }

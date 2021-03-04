@@ -4,29 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetParametersForImportResponse extends TeaModel {
-    @NameInMap("KeyId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String keyId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("ImportToken")
-    @Validation(required = true)
-    public String importToken;
-
-    @NameInMap("PublicKey")
-    @Validation(required = true)
-    public String publicKey;
-
-    @NameInMap("TokenExpireTime")
-    @Validation(required = true)
-    public String tokenExpireTime;
+    public GetParametersForImportResponseBody body;
 
     public static GetParametersForImportResponse build(java.util.Map<String, ?> map) throws Exception {
         GetParametersForImportResponse self = new GetParametersForImportResponse();
         return TeaModel.build(map, self);
+    }
+
+    public GetParametersForImportResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetParametersForImportResponse setBody(GetParametersForImportResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetParametersForImportResponseBody getBody() {
+        return this.body;
     }
 
 }

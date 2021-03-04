@@ -5,15 +5,30 @@ import com.aliyun.tea.*;
 
 public class DecryptRequest extends TeaModel {
     @NameInMap("CiphertextBlob")
-    @Validation(required = true)
     public String ciphertextBlob;
 
     @NameInMap("EncryptionContext")
-    public java.util.Map<String, Object> encryptionContext;
+    public java.util.Map<String, ?> encryptionContext;
 
     public static DecryptRequest build(java.util.Map<String, ?> map) throws Exception {
         DecryptRequest self = new DecryptRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DecryptRequest setCiphertextBlob(String ciphertextBlob) {
+        this.ciphertextBlob = ciphertextBlob;
+        return this;
+    }
+    public String getCiphertextBlob() {
+        return this.ciphertextBlob;
+    }
+
+    public DecryptRequest setEncryptionContext(java.util.Map<String, ?> encryptionContext) {
+        this.encryptionContext = encryptionContext;
+        return this;
+    }
+    public java.util.Map<String, ?> getEncryptionContext() {
+        return this.encryptionContext;
     }
 
 }

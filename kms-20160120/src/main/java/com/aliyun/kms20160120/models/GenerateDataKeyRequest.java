@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GenerateDataKeyRequest extends TeaModel {
     @NameInMap("KeyId")
-    @Validation(required = true)
     public String keyId;
 
     @NameInMap("KeySpec")
@@ -15,11 +14,43 @@ public class GenerateDataKeyRequest extends TeaModel {
     public Integer numberOfBytes;
 
     @NameInMap("EncryptionContext")
-    public java.util.Map<String, Object> encryptionContext;
+    public java.util.Map<String, ?> encryptionContext;
 
     public static GenerateDataKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateDataKeyRequest self = new GenerateDataKeyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateDataKeyRequest setKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    public String getKeyId() {
+        return this.keyId;
+    }
+
+    public GenerateDataKeyRequest setKeySpec(String keySpec) {
+        this.keySpec = keySpec;
+        return this;
+    }
+    public String getKeySpec() {
+        return this.keySpec;
+    }
+
+    public GenerateDataKeyRequest setNumberOfBytes(Integer numberOfBytes) {
+        this.numberOfBytes = numberOfBytes;
+        return this;
+    }
+    public Integer getNumberOfBytes() {
+        return this.numberOfBytes;
+    }
+
+    public GenerateDataKeyRequest setEncryptionContext(java.util.Map<String, ?> encryptionContext) {
+        this.encryptionContext = encryptionContext;
+        return this;
+    }
+    public java.util.Map<String, ?> getEncryptionContext() {
+        return this.encryptionContext;
     }
 
 }

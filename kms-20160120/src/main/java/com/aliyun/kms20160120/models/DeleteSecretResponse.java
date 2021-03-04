@@ -4,21 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class DeleteSecretResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SecretName")
+    @NameInMap("body")
     @Validation(required = true)
-    public String secretName;
-
-    @NameInMap("PlannedDeleteTime")
-    @Validation(required = true)
-    public String plannedDeleteTime;
+    public DeleteSecretResponseBody body;
 
     public static DeleteSecretResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteSecretResponse self = new DeleteSecretResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteSecretResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteSecretResponse setBody(DeleteSecretResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteSecretResponseBody getBody() {
+        return this.body;
     }
 
 }

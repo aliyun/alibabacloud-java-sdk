@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class DescribeKeyVersionRequest extends TeaModel {
     @NameInMap("KeyId")
-    @Validation(required = true)
     public String keyId;
 
     @NameInMap("KeyVersionId")
-    @Validation(required = true)
     public String keyVersionId;
 
     public static DescribeKeyVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeKeyVersionRequest self = new DescribeKeyVersionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeKeyVersionRequest setKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    public String getKeyId() {
+        return this.keyId;
+    }
+
+    public DescribeKeyVersionRequest setKeyVersionId(String keyVersionId) {
+        this.keyVersionId = keyVersionId;
+        return this;
+    }
+    public String getKeyVersionId() {
+        return this.keyVersionId;
     }
 
 }

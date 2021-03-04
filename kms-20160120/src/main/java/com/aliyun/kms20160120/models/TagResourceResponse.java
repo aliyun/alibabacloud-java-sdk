@@ -4,13 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class TagResourceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public TagResourceResponseBody body;
 
     public static TagResourceResponse build(java.util.Map<String, ?> map) throws Exception {
         TagResourceResponse self = new TagResourceResponse();
         return TeaModel.build(map, self);
+    }
+
+    public TagResourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public TagResourceResponse setBody(TagResourceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public TagResourceResponseBody getBody() {
+        return this.body;
     }
 
 }

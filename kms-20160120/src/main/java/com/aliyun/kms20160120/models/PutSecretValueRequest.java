@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class PutSecretValueRequest extends TeaModel {
     @NameInMap("VersionId")
-    @Validation(required = true)
     public String versionId;
 
     @NameInMap("SecretName")
-    @Validation(required = true)
     public String secretName;
 
     @NameInMap("SecretData")
-    @Validation(required = true)
     public String secretData;
 
     @NameInMap("SecretDataType")
@@ -25,6 +22,46 @@ public class PutSecretValueRequest extends TeaModel {
     public static PutSecretValueRequest build(java.util.Map<String, ?> map) throws Exception {
         PutSecretValueRequest self = new PutSecretValueRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutSecretValueRequest setVersionId(String versionId) {
+        this.versionId = versionId;
+        return this;
+    }
+    public String getVersionId() {
+        return this.versionId;
+    }
+
+    public PutSecretValueRequest setSecretName(String secretName) {
+        this.secretName = secretName;
+        return this;
+    }
+    public String getSecretName() {
+        return this.secretName;
+    }
+
+    public PutSecretValueRequest setSecretData(String secretData) {
+        this.secretData = secretData;
+        return this;
+    }
+    public String getSecretData() {
+        return this.secretData;
+    }
+
+    public PutSecretValueRequest setSecretDataType(String secretDataType) {
+        this.secretDataType = secretDataType;
+        return this;
+    }
+    public String getSecretDataType() {
+        return this.secretDataType;
+    }
+
+    public PutSecretValueRequest setVersionStages(String versionStages) {
+        this.versionStages = versionStages;
+        return this;
+    }
+    public String getVersionStages() {
+        return this.versionStages;
     }
 
 }

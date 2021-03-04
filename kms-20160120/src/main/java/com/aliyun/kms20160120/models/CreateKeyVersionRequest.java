@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateKeyVersionRequest extends TeaModel {
     @NameInMap("KeyId")
-    @Validation(required = true)
     public String keyId;
 
     public static CreateKeyVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateKeyVersionRequest self = new CreateKeyVersionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateKeyVersionRequest setKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    public String getKeyId() {
+        return this.keyId;
     }
 
 }

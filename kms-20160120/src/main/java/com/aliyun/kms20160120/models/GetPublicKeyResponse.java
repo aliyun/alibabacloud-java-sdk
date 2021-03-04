@@ -4,25 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetPublicKeyResponse extends TeaModel {
-    @NameInMap("PublicKey")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String publicKey;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("KeyId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String keyId;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("KeyVersionId")
-    @Validation(required = true)
-    public String keyVersionId;
+    public GetPublicKeyResponseBody body;
 
     public static GetPublicKeyResponse build(java.util.Map<String, ?> map) throws Exception {
         GetPublicKeyResponse self = new GetPublicKeyResponse();
         return TeaModel.build(map, self);
+    }
+
+    public GetPublicKeyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetPublicKeyResponse setBody(GetPublicKeyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetPublicKeyResponseBody getBody() {
+        return this.body;
     }
 
 }

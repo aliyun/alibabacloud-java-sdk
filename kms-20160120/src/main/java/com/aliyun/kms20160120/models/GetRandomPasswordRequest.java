@@ -30,4 +30,60 @@ public class GetRandomPasswordRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetRandomPasswordRequest setPasswordLength(String passwordLength) {
+        this.passwordLength = passwordLength;
+        return this;
+    }
+    public String getPasswordLength() {
+        return this.passwordLength;
+    }
+
+    public GetRandomPasswordRequest setExcludeCharacters(String excludeCharacters) {
+        this.excludeCharacters = excludeCharacters;
+        return this;
+    }
+    public String getExcludeCharacters() {
+        return this.excludeCharacters;
+    }
+
+    public GetRandomPasswordRequest setExcludeLowercase(String excludeLowercase) {
+        this.excludeLowercase = excludeLowercase;
+        return this;
+    }
+    public String getExcludeLowercase() {
+        return this.excludeLowercase;
+    }
+
+    public GetRandomPasswordRequest setExcludeUppercase(String excludeUppercase) {
+        this.excludeUppercase = excludeUppercase;
+        return this;
+    }
+    public String getExcludeUppercase() {
+        return this.excludeUppercase;
+    }
+
+    public GetRandomPasswordRequest setExcludeNumbers(String excludeNumbers) {
+        this.excludeNumbers = excludeNumbers;
+        return this;
+    }
+    public String getExcludeNumbers() {
+        return this.excludeNumbers;
+    }
+
+    public GetRandomPasswordRequest setExcludePunctuation(String excludePunctuation) {
+        this.excludePunctuation = excludePunctuation;
+        return this;
+    }
+    public String getExcludePunctuation() {
+        return this.excludePunctuation;
+    }
+
+    public GetRandomPasswordRequest setRequireEachIncludedType(String requireEachIncludedType) {
+        this.requireEachIncludedType = requireEachIncludedType;
+        return this;
+    }
+    public String getRequireEachIncludedType() {
+        return this.requireEachIncludedType;
+    }
+
 }
