@@ -4,17 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class RestoreSecretResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SecretName")
+    @NameInMap("body")
     @Validation(required = true)
-    public String secretName;
+    public RestoreSecretResponseBody body;
 
     public static RestoreSecretResponse build(java.util.Map<String, ?> map) throws Exception {
         RestoreSecretResponse self = new RestoreSecretResponse();
         return TeaModel.build(map, self);
+    }
+
+    public RestoreSecretResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RestoreSecretResponse setBody(RestoreSecretResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RestoreSecretResponseBody getBody() {
+        return this.body;
     }
 
 }

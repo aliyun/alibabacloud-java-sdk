@@ -4,13 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class UpdateAliasResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public UpdateAliasResponseBody body;
 
     public static UpdateAliasResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateAliasResponse self = new UpdateAliasResponse();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAliasResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateAliasResponse setBody(UpdateAliasResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateAliasResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,24 +5,52 @@ import com.aliyun.tea.*;
 
 public class AsymmetricEncryptRequest extends TeaModel {
     @NameInMap("Plaintext")
-    @Validation(required = true)
     public String plaintext;
 
     @NameInMap("KeyId")
-    @Validation(required = true)
     public String keyId;
 
     @NameInMap("KeyVersionId")
-    @Validation(required = true)
     public String keyVersionId;
 
     @NameInMap("Algorithm")
-    @Validation(required = true)
     public String algorithm;
 
     public static AsymmetricEncryptRequest build(java.util.Map<String, ?> map) throws Exception {
         AsymmetricEncryptRequest self = new AsymmetricEncryptRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AsymmetricEncryptRequest setPlaintext(String plaintext) {
+        this.plaintext = plaintext;
+        return this;
+    }
+    public String getPlaintext() {
+        return this.plaintext;
+    }
+
+    public AsymmetricEncryptRequest setKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    public String getKeyId() {
+        return this.keyId;
+    }
+
+    public AsymmetricEncryptRequest setKeyVersionId(String keyVersionId) {
+        this.keyVersionId = keyVersionId;
+        return this;
+    }
+    public String getKeyVersionId() {
+        return this.keyVersionId;
+    }
+
+    public AsymmetricEncryptRequest setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
 }

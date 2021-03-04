@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateRotationPolicyRequest extends TeaModel {
     @NameInMap("KeyId")
-    @Validation(required = true)
     public String keyId;
 
     @NameInMap("EnableAutomaticRotation")
-    @Validation(required = true)
     public Boolean enableAutomaticRotation;
 
     @NameInMap("RotationInterval")
@@ -18,6 +16,30 @@ public class UpdateRotationPolicyRequest extends TeaModel {
     public static UpdateRotationPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRotationPolicyRequest self = new UpdateRotationPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateRotationPolicyRequest setKeyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
+    public String getKeyId() {
+        return this.keyId;
+    }
+
+    public UpdateRotationPolicyRequest setEnableAutomaticRotation(Boolean enableAutomaticRotation) {
+        this.enableAutomaticRotation = enableAutomaticRotation;
+        return this;
+    }
+    public Boolean getEnableAutomaticRotation() {
+        return this.enableAutomaticRotation;
+    }
+
+    public UpdateRotationPolicyRequest setRotationInterval(String rotationInterval) {
+        this.rotationInterval = rotationInterval;
+        return this;
+    }
+    public String getRotationInterval() {
+        return this.rotationInterval;
     }
 
 }

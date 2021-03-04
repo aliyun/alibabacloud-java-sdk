@@ -4,13 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class ScheduleKeyDeletionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ScheduleKeyDeletionResponseBody body;
 
     public static ScheduleKeyDeletionResponse build(java.util.Map<String, ?> map) throws Exception {
         ScheduleKeyDeletionResponse self = new ScheduleKeyDeletionResponse();
         return TeaModel.build(map, self);
+    }
+
+    public ScheduleKeyDeletionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ScheduleKeyDeletionResponse setBody(ScheduleKeyDeletionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ScheduleKeyDeletionResponseBody getBody() {
+        return this.body;
     }
 
 }

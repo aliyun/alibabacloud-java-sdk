@@ -4,49 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class GetSecretValueResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SecretName")
+    @NameInMap("body")
     @Validation(required = true)
-    public String secretName;
-
-    @NameInMap("VersionId")
-    @Validation(required = true)
-    public String versionId;
-
-    @NameInMap("CreateTime")
-    @Validation(required = true)
-    public String createTime;
-
-    @NameInMap("SecretData")
-    @Validation(required = true)
-    public String secretData;
-
-    @NameInMap("SecretDataType")
-    @Validation(required = true)
-    public String secretDataType;
-
-    @NameInMap("VersionStages")
-    @Validation(required = true)
-    public GetSecretValueResponseVersionStages versionStages;
+    public GetSecretValueResponseBody body;
 
     public static GetSecretValueResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSecretValueResponse self = new GetSecretValueResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GetSecretValueResponseVersionStages extends TeaModel {
-        @NameInMap("VersionStage")
-        @Validation(required = true)
-        public java.util.List<String> versionStage;
+    public GetSecretValueResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static GetSecretValueResponseVersionStages build(java.util.Map<String, ?> map) throws Exception {
-            GetSecretValueResponseVersionStages self = new GetSecretValueResponseVersionStages();
-            return TeaModel.build(map, self);
-        }
-
+    public GetSecretValueResponse setBody(GetSecretValueResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetSecretValueResponseBody getBody() {
+        return this.body;
     }
 
 }

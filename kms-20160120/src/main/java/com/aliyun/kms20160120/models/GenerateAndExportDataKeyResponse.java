@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.kms20160120.models;
+
+import com.aliyun.tea.*;
+
+public class GenerateAndExportDataKeyResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GenerateAndExportDataKeyResponseBody body;
+
+    public static GenerateAndExportDataKeyResponse build(java.util.Map<String, ?> map) throws Exception {
+        GenerateAndExportDataKeyResponse self = new GenerateAndExportDataKeyResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GenerateAndExportDataKeyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GenerateAndExportDataKeyResponse setBody(GenerateAndExportDataKeyResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GenerateAndExportDataKeyResponseBody getBody() {
+        return this.body;
+    }
+
+}

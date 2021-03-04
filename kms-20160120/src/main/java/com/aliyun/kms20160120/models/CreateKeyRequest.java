@@ -30,4 +30,60 @@ public class CreateKeyRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateKeyRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public CreateKeyRequest setKeyUsage(String keyUsage) {
+        this.keyUsage = keyUsage;
+        return this;
+    }
+    public String getKeyUsage() {
+        return this.keyUsage;
+    }
+
+    public CreateKeyRequest setOrigin(String origin) {
+        this.origin = origin;
+        return this;
+    }
+    public String getOrigin() {
+        return this.origin;
+    }
+
+    public CreateKeyRequest setProtectionLevel(String protectionLevel) {
+        this.protectionLevel = protectionLevel;
+        return this;
+    }
+    public String getProtectionLevel() {
+        return this.protectionLevel;
+    }
+
+    public CreateKeyRequest setEnableAutomaticRotation(Boolean enableAutomaticRotation) {
+        this.enableAutomaticRotation = enableAutomaticRotation;
+        return this;
+    }
+    public Boolean getEnableAutomaticRotation() {
+        return this.enableAutomaticRotation;
+    }
+
+    public CreateKeyRequest setRotationInterval(String rotationInterval) {
+        this.rotationInterval = rotationInterval;
+        return this;
+    }
+    public String getRotationInterval() {
+        return this.rotationInterval;
+    }
+
+    public CreateKeyRequest setKeySpec(String keySpec) {
+        this.keySpec = keySpec;
+        return this;
+    }
+    public String getKeySpec() {
+        return this.keySpec;
+    }
+
 }

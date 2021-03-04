@@ -4,25 +4,33 @@ package com.aliyun.kms20160120.models;
 import com.aliyun.tea.*;
 
 public class CreateSecretResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Arn")
+    @NameInMap("body")
     @Validation(required = true)
-    public String arn;
-
-    @NameInMap("VersionId")
-    @Validation(required = true)
-    public String versionId;
-
-    @NameInMap("SecretName")
-    @Validation(required = true)
-    public String secretName;
+    public CreateSecretResponseBody body;
 
     public static CreateSecretResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateSecretResponse self = new CreateSecretResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateSecretResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateSecretResponse setBody(CreateSecretResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateSecretResponseBody getBody() {
+        return this.body;
     }
 
 }

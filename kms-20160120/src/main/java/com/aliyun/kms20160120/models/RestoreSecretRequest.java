@@ -5,12 +5,19 @@ import com.aliyun.tea.*;
 
 public class RestoreSecretRequest extends TeaModel {
     @NameInMap("SecretName")
-    @Validation(required = true)
     public String secretName;
 
     public static RestoreSecretRequest build(java.util.Map<String, ?> map) throws Exception {
         RestoreSecretRequest self = new RestoreSecretRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RestoreSecretRequest setSecretName(String secretName) {
+        this.secretName = secretName;
+        return this;
+    }
+    public String getSecretName() {
+        return this.secretName;
     }
 
 }
