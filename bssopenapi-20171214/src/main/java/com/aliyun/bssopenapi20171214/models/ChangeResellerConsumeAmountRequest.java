@@ -5,31 +5,24 @@ import com.aliyun.tea.*;
 
 public class ChangeResellerConsumeAmountRequest extends TeaModel {
     @NameInMap("OwnerId")
-    @Validation(required = true)
     public Long ownerId;
 
     @NameInMap("AdjustType")
-    @Validation(required = true)
     public String adjustType;
 
     @NameInMap("Amount")
-    @Validation(required = true)
     public String amount;
 
     @NameInMap("Currency")
-    @Validation(required = true)
     public String currency;
 
     @NameInMap("BusinessType")
-    @Validation(required = true)
     public String businessType;
 
     @NameInMap("Source")
-    @Validation(required = true)
     public String source;
 
     @NameInMap("OutBizId")
-    @Validation(required = true)
     public String outBizId;
 
     @NameInMap("ExtendMap")

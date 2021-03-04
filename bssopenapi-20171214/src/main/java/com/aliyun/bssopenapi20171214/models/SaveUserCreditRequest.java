@@ -5,35 +5,27 @@ import com.aliyun.tea.*;
 
 public class SaveUserCreditRequest extends TeaModel {
     @NameInMap("AvoidExpiration")
-    @Validation(required = true)
     public Boolean avoidExpiration;
 
     @NameInMap("AvoidPrepaidNotification")
-    @Validation(required = true)
     public Boolean avoidPrepaidNotification;
 
     @NameInMap("Description")
-    @Validation(required = true)
     public String description;
 
     @NameInMap("AvoidNotification")
-    @Validation(required = true)
     public Boolean avoidNotification;
 
     @NameInMap("CreditValue")
-    @Validation(required = true)
     public String creditValue;
 
     @NameInMap("AvoidPrepaidExpiration")
-    @Validation(required = true)
     public Boolean avoidPrepaidExpiration;
 
     @NameInMap("Operator")
-    @Validation(required = true)
     public String operator;
 
     @NameInMap("CreditType")
-    @Validation(required = true)
     public String creditType;
 
     public static SaveUserCreditRequest build(java.util.Map<String, ?> map) throws Exception {

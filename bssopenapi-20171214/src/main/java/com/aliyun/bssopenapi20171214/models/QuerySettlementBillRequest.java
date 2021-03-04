@@ -14,7 +14,6 @@ public class QuerySettlementBillRequest extends TeaModel {
     public Integer pageNum;
 
     @NameInMap("BillingCycle")
-    @Validation(required = true)
     public String billingCycle;
 
     @NameInMap("StartTime")

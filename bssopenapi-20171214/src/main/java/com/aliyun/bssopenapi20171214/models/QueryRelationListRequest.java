@@ -5,17 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryRelationListRequest extends TeaModel {
     @NameInMap("UserId")
-    @Validation(required = true)
     public Long userId;
-
-    @NameInMap("StatusList")
-    public java.util.List<String> statusList;
 
     @NameInMap("PageNum")
     public Integer pageNum;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("StatusList")
+    public java.util.List<String> statusList;
 
     public static QueryRelationListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryRelationListRequest self = new QueryRelationListRequest();
@@ -28,14 +27,6 @@ public class QueryRelationListRequest extends TeaModel {
     }
     public Long getUserId() {
         return this.userId;
-    }
-
-    public QueryRelationListRequest setStatusList(java.util.List<String> statusList) {
-        this.statusList = statusList;
-        return this;
-    }
-    public java.util.List<String> getStatusList() {
-        return this.statusList;
     }
 
     public QueryRelationListRequest setPageNum(Integer pageNum) {
@@ -52,6 +43,14 @@ public class QueryRelationListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public QueryRelationListRequest setStatusList(java.util.List<String> statusList) {
+        this.statusList = statusList;
+        return this;
+    }
+    public java.util.List<String> getStatusList() {
+        return this.statusList;
     }
 
 }

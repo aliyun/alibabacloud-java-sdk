@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class SetResellerUserStatusRequest extends TeaModel {
     @NameInMap("OwnerId")
-    @Validation(required = true)
     public String ownerId;
 
     @NameInMap("Status")
-    @Validation(required = true)
     public String status;
 
     @NameInMap("BusinessType")
-    @Validation(required = true)
     public String businessType;
 
     public static SetResellerUserStatusRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -11,18 +11,15 @@ public class ConvertChargeTypeRequest extends TeaModel {
     public String productType;
 
     @NameInMap("SubscriptionType")
-    @Validation(required = true)
     public String subscriptionType;
 
     @NameInMap("Period")
     public Integer period;
 
     @NameInMap("ProductCode")
-    @Validation(required = true)
     public String productCode;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     public static ConvertChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {

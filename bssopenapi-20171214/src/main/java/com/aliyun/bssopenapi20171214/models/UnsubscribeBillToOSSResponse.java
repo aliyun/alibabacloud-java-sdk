@@ -4,57 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class UnsubscribeBillToOSSResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public UnsubscribeBillToOSSResponseBody body;
 
     public static UnsubscribeBillToOSSResponse build(java.util.Map<String, ?> map) throws Exception {
         UnsubscribeBillToOSSResponse self = new UnsubscribeBillToOSSResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnsubscribeBillToOSSResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UnsubscribeBillToOSSResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UnsubscribeBillToOSSResponse setSuccess(Boolean success) {
-        this.success = success;
+    public UnsubscribeBillToOSSResponse setBody(UnsubscribeBillToOSSResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public UnsubscribeBillToOSSResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public UnsubscribeBillToOSSResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public UnsubscribeBillToOSSResponseBody getBody() {
+        return this.body;
     }
 
 }
