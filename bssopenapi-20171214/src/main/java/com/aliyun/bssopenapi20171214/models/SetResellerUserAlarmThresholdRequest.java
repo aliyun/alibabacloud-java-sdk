@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetResellerUserAlarmThresholdRequest extends TeaModel {
     @NameInMap("OwnerId")
-    @Validation(required = true)
     public Long ownerId;
 
     @NameInMap("AlarmType")
-    @Validation(required = true)
     public String alarmType;
 
     @NameInMap("AlarmThresholds")

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryFinancialAccountInfoRequest extends TeaModel {
     @NameInMap("UserId")
-    @Validation(required = true)
     public Long userId;
 
     public static QueryFinancialAccountInfoRequest build(java.util.Map<String, ?> map) throws Exception {

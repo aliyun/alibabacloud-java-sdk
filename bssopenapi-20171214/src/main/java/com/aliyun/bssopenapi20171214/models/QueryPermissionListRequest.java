@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryPermissionListRequest extends TeaModel {
     @NameInMap("RelationId")
-    @Validation(required = true)
     public Long relationId;
 
     public static QueryPermissionListRequest build(java.util.Map<String, ?> map) throws Exception {

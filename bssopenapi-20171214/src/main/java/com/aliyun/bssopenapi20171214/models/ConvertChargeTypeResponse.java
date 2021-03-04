@@ -4,89 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ConvertChargeTypeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public ConvertChargeTypeResponseData data;
+    public ConvertChargeTypeResponseBody body;
 
     public static ConvertChargeTypeResponse build(java.util.Map<String, ?> map) throws Exception {
         ConvertChargeTypeResponse self = new ConvertChargeTypeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ConvertChargeTypeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ConvertChargeTypeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ConvertChargeTypeResponse setSuccess(Boolean success) {
-        this.success = success;
+    public ConvertChargeTypeResponse setBody(ConvertChargeTypeResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public ConvertChargeTypeResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ConvertChargeTypeResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ConvertChargeTypeResponse setData(ConvertChargeTypeResponseData data) {
-        this.data = data;
-        return this;
-    }
-    public ConvertChargeTypeResponseData getData() {
-        return this.data;
-    }
-
-    public static class ConvertChargeTypeResponseData extends TeaModel {
-        @NameInMap("OrderId")
-        @Validation(required = true)
-        public String orderId;
-
-        public static ConvertChargeTypeResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ConvertChargeTypeResponseData self = new ConvertChargeTypeResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ConvertChargeTypeResponseData setOrderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-        public String getOrderId() {
-            return this.orderId;
-        }
-
+    public ConvertChargeTypeResponseBody getBody() {
+        return this.body;
     }
 
 }

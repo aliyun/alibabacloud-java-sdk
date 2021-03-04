@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CancelOrderRequest extends TeaModel {
     @NameInMap("OrderId")
-    @Validation(required = true)
     public String orderId;
 
     @NameInMap("OwnerId")

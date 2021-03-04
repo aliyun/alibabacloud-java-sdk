@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     @NameInMap("ProductCode")
-    @Validation(required = true)
     public String productCode;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RenewPeriod")
-    @Validation(required = true)
     public Integer renewPeriod;
 
     @NameInMap("ClientToken")

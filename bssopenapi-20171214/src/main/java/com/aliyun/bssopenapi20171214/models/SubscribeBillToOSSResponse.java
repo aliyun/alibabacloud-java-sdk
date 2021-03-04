@@ -4,57 +4,33 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SubscribeBillToOSSResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public SubscribeBillToOSSResponseBody body;
 
     public static SubscribeBillToOSSResponse build(java.util.Map<String, ?> map) throws Exception {
         SubscribeBillToOSSResponse self = new SubscribeBillToOSSResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubscribeBillToOSSResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubscribeBillToOSSResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SubscribeBillToOSSResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SubscribeBillToOSSResponse setBody(SubscribeBillToOSSResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public SubscribeBillToOSSResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public SubscribeBillToOSSResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public SubscribeBillToOSSResponseBody getBody() {
+        return this.body;
     }
 
 }

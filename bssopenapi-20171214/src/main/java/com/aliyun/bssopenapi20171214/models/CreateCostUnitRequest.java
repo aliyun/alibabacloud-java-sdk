@@ -22,15 +22,12 @@ public class CreateCostUnitRequest extends TeaModel {
 
     public static class CreateCostUnitRequestUnitEntityList extends TeaModel {
         @NameInMap("OwnerUid")
-        @Validation(required = true)
         public Long ownerUid;
 
         @NameInMap("ParentUnitId")
-        @Validation(required = true)
         public Long parentUnitId;
 
         @NameInMap("UnitName")
-        @Validation(required = true)
         public String unitName;
 
         public static CreateCostUnitRequestUnitEntityList build(java.util.Map<String, ?> map) throws Exception {

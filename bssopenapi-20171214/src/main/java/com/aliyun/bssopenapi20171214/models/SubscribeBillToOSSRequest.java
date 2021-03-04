@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class SubscribeBillToOSSRequest extends TeaModel {
     @NameInMap("SubscribeBucket")
-    @Validation(required = true)
     public String subscribeBucket;
 
     @NameInMap("SubscribeType")
