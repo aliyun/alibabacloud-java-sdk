@@ -42,19 +42,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public DeleteImageResponse deleteImageWithOptions(DeleteImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteImage", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteImageResponse());
-    }
-
-    public DeleteImageResponse deleteImage(DeleteImageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteImageWithOptions(request, runtime);
-    }
-
     public AddImageResponse addImageWithOptions(AddImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -127,6 +114,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return addImageResp;
     }
 
+    public DeleteImageResponse deleteImageWithOptions(DeleteImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteImage", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteImageResponse());
+    }
+
+    public DeleteImageResponse deleteImage(DeleteImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteImageWithOptions(request, runtime);
+    }
+
+    public SearchImageByNameResponse searchImageByNameWithOptions(SearchImageByNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SearchImageByName", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new SearchImageByNameResponse());
+    }
+
+    public SearchImageByNameResponse searchImageByName(SearchImageByNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchImageByNameWithOptions(request, runtime);
+    }
+
     public SearchImageByPicResponse searchImageByPicWithOptions(SearchImageByPicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -197,18 +210,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
         searchImageByPicReq.picContent = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
         SearchImageByPicResponse searchImageByPicResp = this.searchImageByPicWithOptions(searchImageByPicReq, runtime);
         return searchImageByPicResp;
-    }
-
-    public SearchImageByNameResponse searchImageByNameWithOptions(SearchImageByNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("SearchImageByName", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new SearchImageByNameResponse());
-    }
-
-    public SearchImageByNameResponse searchImageByName(SearchImageByNameRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.searchImageByNameWithOptions(request, runtime);
     }
 }

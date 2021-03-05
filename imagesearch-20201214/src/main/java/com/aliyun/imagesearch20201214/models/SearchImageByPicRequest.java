@@ -4,14 +4,14 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class SearchImageByPicRequest extends TeaModel {
-    @NameInMap("CategoryId")
-    public Integer categoryId;
-
     @NameInMap("InstanceName")
     public String instanceName;
 
     @NameInMap("PicContent")
     public String picContent;
+
+    @NameInMap("CategoryId")
+    public Integer categoryId;
 
     @NameInMap("Crop")
     public Boolean crop;
@@ -36,14 +36,6 @@ public class SearchImageByPicRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SearchImageByPicRequest setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-        return this;
-    }
-    public Integer getCategoryId() {
-        return this.categoryId;
-    }
-
     public SearchImageByPicRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -58,6 +50,14 @@ public class SearchImageByPicRequest extends TeaModel {
     }
     public String getPicContent() {
         return this.picContent;
+    }
+
+    public SearchImageByPicRequest setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Integer getCategoryId() {
+        return this.categoryId;
     }
 
     public SearchImageByPicRequest setCrop(Boolean crop) {

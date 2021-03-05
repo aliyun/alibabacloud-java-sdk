@@ -8,11 +8,11 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream picContentObject;
 
-    @NameInMap("CategoryId")
-    public Integer categoryId;
-
     @NameInMap("InstanceName")
     public String instanceName;
+
+    @NameInMap("CategoryId")
+    public Integer categoryId;
 
     @NameInMap("Crop")
     public Boolean crop;
@@ -45,20 +45,20 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
         return this.picContentObject;
     }
 
-    public SearchImageByPicAdvanceRequest setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-        return this;
-    }
-    public Integer getCategoryId() {
-        return this.categoryId;
-    }
-
     public SearchImageByPicAdvanceRequest setInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public SearchImageByPicAdvanceRequest setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Integer getCategoryId() {
+        return this.categoryId;
     }
 
     public SearchImageByPicAdvanceRequest setCrop(Boolean crop) {

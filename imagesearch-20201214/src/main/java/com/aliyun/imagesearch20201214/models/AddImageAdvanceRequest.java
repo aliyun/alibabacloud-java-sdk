@@ -11,14 +11,14 @@ public class AddImageAdvanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    @NameInMap("CategoryId")
-    public Integer categoryId;
-
     @NameInMap("ProductId")
     public String productId;
 
     @NameInMap("PicName")
     public String picName;
+
+    @NameInMap("CategoryId")
+    public Integer categoryId;
 
     @NameInMap("Crop")
     public Boolean crop;
@@ -56,14 +56,6 @@ public class AddImageAdvanceRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public AddImageAdvanceRequest setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-        return this;
-    }
-    public Integer getCategoryId() {
-        return this.categoryId;
-    }
-
     public AddImageAdvanceRequest setProductId(String productId) {
         this.productId = productId;
         return this;
@@ -78,6 +70,14 @@ public class AddImageAdvanceRequest extends TeaModel {
     }
     public String getPicName() {
         return this.picName;
+    }
+
+    public AddImageAdvanceRequest setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Integer getCategoryId() {
+        return this.categoryId;
     }
 
     public AddImageAdvanceRequest setCrop(Boolean crop) {
