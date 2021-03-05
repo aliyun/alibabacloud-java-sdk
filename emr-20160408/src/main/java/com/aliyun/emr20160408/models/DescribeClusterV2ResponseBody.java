@@ -35,6 +35,9 @@ public class DescribeClusterV2ResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("ClusterType")
+        public String clusterType;
+
         @NameInMap("ClusterName")
         public String clusterName;
 
@@ -52,6 +55,14 @@ public class DescribeClusterV2ResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeClusterV2ResponseBodyClusterInfoRelateClusterInfo setClusterType(String clusterType) {
+            this.clusterType = clusterType;
+            return this;
+        }
+        public String getClusterType() {
+            return this.clusterType;
         }
 
         public DescribeClusterV2ResponseBodyClusterInfoRelateClusterInfo setClusterName(String clusterName) {

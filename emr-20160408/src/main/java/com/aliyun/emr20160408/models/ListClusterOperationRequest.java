@@ -13,6 +13,9 @@ public class ListClusterOperationRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("OperationId")
+    public String operationId;
+
     @NameInMap("ServiceName")
     public String serviceName;
 
@@ -52,6 +55,14 @@ public class ListClusterOperationRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public ListClusterOperationRequest setOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    public String getOperationId() {
+        return this.operationId;
     }
 
     public ListClusterOperationRequest setServiceName(String serviceName) {
