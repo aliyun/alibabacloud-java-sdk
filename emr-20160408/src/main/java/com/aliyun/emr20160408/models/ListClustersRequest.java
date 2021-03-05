@@ -34,6 +34,9 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -132,6 +135,14 @@ public class ListClustersRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public ListClustersRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public ListClustersRequest setResourceGroupId(String resourceGroupId) {
