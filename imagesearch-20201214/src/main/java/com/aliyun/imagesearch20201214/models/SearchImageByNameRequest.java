@@ -4,9 +4,6 @@ package com.aliyun.imagesearch20201214.models;
 import com.aliyun.tea.*;
 
 public class SearchImageByNameRequest extends TeaModel {
-    @NameInMap("CategoryId")
-    public Integer categoryId;
-
     @NameInMap("InstanceName")
     public String instanceName;
 
@@ -15,6 +12,9 @@ public class SearchImageByNameRequest extends TeaModel {
 
     @NameInMap("PicName")
     public String picName;
+
+    @NameInMap("CategoryId")
+    public Integer categoryId;
 
     @NameInMap("Num")
     public Integer num;
@@ -31,14 +31,6 @@ public class SearchImageByNameRequest extends TeaModel {
     public static SearchImageByNameRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchImageByNameRequest self = new SearchImageByNameRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SearchImageByNameRequest setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
-        return this;
-    }
-    public Integer getCategoryId() {
-        return this.categoryId;
     }
 
     public SearchImageByNameRequest setInstanceName(String instanceName) {
@@ -63,6 +55,14 @@ public class SearchImageByNameRequest extends TeaModel {
     }
     public String getPicName() {
         return this.picName;
+    }
+
+    public SearchImageByNameRequest setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+    public Integer getCategoryId() {
+        return this.categoryId;
     }
 
     public SearchImageByNameRequest setNum(Integer num) {
