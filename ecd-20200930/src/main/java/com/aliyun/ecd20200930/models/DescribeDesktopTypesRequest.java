@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DesktopTypeId")

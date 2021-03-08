@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PolicyGroupId")
@@ -25,6 +24,15 @@ public class ModifyPolicyGroupRequest extends TeaModel {
 
     @NameInMap("Watermark")
     public String watermark;
+
+    @NameInMap("WatermarkType")
+    public String watermarkType;
+
+    @NameInMap("WatermarkCustomText")
+    public String watermarkCustomText;
+
+    @NameInMap("WatermarkTransparency")
+    public String watermarkTransparency;
 
     public static ModifyPolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyPolicyGroupRequest self = new ModifyPolicyGroupRequest();
@@ -85,6 +93,30 @@ public class ModifyPolicyGroupRequest extends TeaModel {
     }
     public String getWatermark() {
         return this.watermark;
+    }
+
+    public ModifyPolicyGroupRequest setWatermarkType(String watermarkType) {
+        this.watermarkType = watermarkType;
+        return this;
+    }
+    public String getWatermarkType() {
+        return this.watermarkType;
+    }
+
+    public ModifyPolicyGroupRequest setWatermarkCustomText(String watermarkCustomText) {
+        this.watermarkCustomText = watermarkCustomText;
+        return this;
+    }
+    public String getWatermarkCustomText() {
+        return this.watermarkCustomText;
+    }
+
+    public ModifyPolicyGroupRequest setWatermarkTransparency(String watermarkTransparency) {
+        this.watermarkTransparency = watermarkTransparency;
+        return this;
+    }
+    public String getWatermarkTransparency() {
+        return this.watermarkTransparency;
     }
 
 }

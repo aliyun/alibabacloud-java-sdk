@@ -4,45 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateDesktopsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OrderId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String orderId;
-
-    @NameInMap("DesktopId")
-    @Validation(required = true)
-    public java.util.List<String> desktopId;
+    public CreateDesktopsResponseBody body;
 
     public static CreateDesktopsResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDesktopsResponse self = new CreateDesktopsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDesktopsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateDesktopsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateDesktopsResponse setOrderId(String orderId) {
-        this.orderId = orderId;
+    public CreateDesktopsResponse setBody(CreateDesktopsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
-    }
-
-    public CreateDesktopsResponse setDesktopId(java.util.List<String> desktopId) {
-        this.desktopId = desktopId;
-        return this;
-    }
-    public java.util.List<String> getDesktopId() {
-        return this.desktopId;
+    public CreateDesktopsResponseBody getBody() {
+        return this.body;
     }
 
 }

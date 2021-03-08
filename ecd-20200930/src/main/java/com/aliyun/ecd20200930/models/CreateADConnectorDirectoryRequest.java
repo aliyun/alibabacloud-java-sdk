@@ -5,20 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateADConnectorDirectoryRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("DomainUserName")
-    @Validation(required = true)
     public String domainUserName;
 
     @NameInMap("DomainPassword")
-    @Validation(required = true)
     public String domainPassword;
+
+    @NameInMap("DirectoryName")
+    public String directoryName;
+
+    @NameInMap("EnableAdminAccess")
+    public Boolean enableAdminAccess;
+
+    @NameInMap("DesktopAccessType")
+    public String desktopAccessType;
+
+    @NameInMap("SubDomainName")
+    public String subDomainName;
 
     @NameInMap("DnsAddress")
     public java.util.List<String> dnsAddress;
@@ -26,8 +34,8 @@ public class CreateADConnectorDirectoryRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
 
-    @NameInMap("DirectoryName")
-    public String directoryName;
+    @NameInMap("SubDomainDnsAddress")
+    public java.util.List<String> subDomainDnsAddress;
 
     public static CreateADConnectorDirectoryRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateADConnectorDirectoryRequest self = new CreateADConnectorDirectoryRequest();
@@ -66,6 +74,38 @@ public class CreateADConnectorDirectoryRequest extends TeaModel {
         return this.domainPassword;
     }
 
+    public CreateADConnectorDirectoryRequest setDirectoryName(String directoryName) {
+        this.directoryName = directoryName;
+        return this;
+    }
+    public String getDirectoryName() {
+        return this.directoryName;
+    }
+
+    public CreateADConnectorDirectoryRequest setEnableAdminAccess(Boolean enableAdminAccess) {
+        this.enableAdminAccess = enableAdminAccess;
+        return this;
+    }
+    public Boolean getEnableAdminAccess() {
+        return this.enableAdminAccess;
+    }
+
+    public CreateADConnectorDirectoryRequest setDesktopAccessType(String desktopAccessType) {
+        this.desktopAccessType = desktopAccessType;
+        return this;
+    }
+    public String getDesktopAccessType() {
+        return this.desktopAccessType;
+    }
+
+    public CreateADConnectorDirectoryRequest setSubDomainName(String subDomainName) {
+        this.subDomainName = subDomainName;
+        return this;
+    }
+    public String getSubDomainName() {
+        return this.subDomainName;
+    }
+
     public CreateADConnectorDirectoryRequest setDnsAddress(java.util.List<String> dnsAddress) {
         this.dnsAddress = dnsAddress;
         return this;
@@ -82,12 +122,12 @@ public class CreateADConnectorDirectoryRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateADConnectorDirectoryRequest setDirectoryName(String directoryName) {
-        this.directoryName = directoryName;
+    public CreateADConnectorDirectoryRequest setSubDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
+        this.subDomainDnsAddress = subDomainDnsAddress;
         return this;
     }
-    public String getDirectoryName() {
-        return this.directoryName;
+    public java.util.List<String> getSubDomainDnsAddress() {
+        return this.subDomainDnsAddress;
     }
 
 }

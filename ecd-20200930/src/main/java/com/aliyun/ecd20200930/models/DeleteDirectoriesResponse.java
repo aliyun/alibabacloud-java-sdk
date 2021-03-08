@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DeleteDirectoriesResponse extends TeaModel {
-    @NameInMap("NextToken")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String nextToken;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
+    public DeleteDirectoriesResponseBody body;
 
     public static DeleteDirectoriesResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDirectoriesResponse self = new DeleteDirectoriesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDirectoriesResponse setNextToken(String nextToken) {
-        this.nextToken = nextToken;
+    public DeleteDirectoriesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getNextToken() {
-        return this.nextToken;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteDirectoriesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteDirectoriesResponse setBody(DeleteDirectoriesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public DeleteDirectoriesResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeletePolicyGroupsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PolicyGroupId")
-    @Validation(required = true)
     public java.util.List<String> policyGroupId;
 
     public static DeletePolicyGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
