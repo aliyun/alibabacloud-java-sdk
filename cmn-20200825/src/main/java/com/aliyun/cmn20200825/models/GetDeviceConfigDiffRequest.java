@@ -16,6 +16,10 @@ public class GetDeviceConfigDiffRequest extends TeaModel {
     @NameInMap("EndDate")
     public String endDate;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static GetDeviceConfigDiffRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceConfigDiffRequest self = new GetDeviceConfigDiffRequest();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class GetDeviceConfigDiffRequest extends TeaModel {
     }
     public String getEndDate() {
         return this.endDate;
+    }
+
+    public GetDeviceConfigDiffRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

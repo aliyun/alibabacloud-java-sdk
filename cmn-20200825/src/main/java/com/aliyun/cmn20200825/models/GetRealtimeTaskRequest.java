@@ -8,6 +8,10 @@ public class GetRealtimeTaskRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static GetRealtimeTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRealtimeTaskRequest self = new GetRealtimeTaskRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class GetRealtimeTaskRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public GetRealtimeTaskRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

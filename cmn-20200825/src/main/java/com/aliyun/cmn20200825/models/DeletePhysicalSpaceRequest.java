@@ -8,6 +8,10 @@ public class DeletePhysicalSpaceRequest extends TeaModel {
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static DeletePhysicalSpaceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeletePhysicalSpaceRequest self = new DeletePhysicalSpaceRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class DeletePhysicalSpaceRequest extends TeaModel {
     }
     public String getPhysicalSpaceId() {
         return this.physicalSpaceId;
+    }
+
+    public DeletePhysicalSpaceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

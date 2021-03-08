@@ -52,9 +52,17 @@ public class ListDevicesRequest extends TeaModel {
     @NameInMap("ServiceStatus")
     public java.util.List<String> serviceStatus;
 
+    // 安全域
+    @NameInMap("SecurityDomain")
+    public java.util.List<String> securityDomain;
+
     // 设备额外属性
     @NameInMap("ExtAttributes")
     public String extAttributes;
+
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     public static ListDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDevicesRequest self = new ListDevicesRequest();
@@ -157,12 +165,28 @@ public class ListDevicesRequest extends TeaModel {
         return this.serviceStatus;
     }
 
+    public ListDevicesRequest setSecurityDomain(java.util.List<String> securityDomain) {
+        this.securityDomain = securityDomain;
+        return this;
+    }
+    public java.util.List<String> getSecurityDomain() {
+        return this.securityDomain;
+    }
+
     public ListDevicesRequest setExtAttributes(String extAttributes) {
         this.extAttributes = extAttributes;
         return this;
     }
     public String getExtAttributes() {
         return this.extAttributes;
+    }
+
+    public ListDevicesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

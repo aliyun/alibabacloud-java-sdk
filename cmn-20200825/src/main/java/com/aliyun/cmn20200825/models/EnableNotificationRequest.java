@@ -8,6 +8,10 @@ public class EnableNotificationRequest extends TeaModel {
     @NameInMap("List")
     public java.util.List<EnableNotificationRequestList> list;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static EnableNotificationRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableNotificationRequest self = new EnableNotificationRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class EnableNotificationRequest extends TeaModel {
     }
     public java.util.List<EnableNotificationRequestList> getList() {
         return this.list;
+    }
+
+    public EnableNotificationRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public static class EnableNotificationRequestList extends TeaModel {

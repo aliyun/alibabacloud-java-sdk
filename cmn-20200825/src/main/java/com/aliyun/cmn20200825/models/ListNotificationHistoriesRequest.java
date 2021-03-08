@@ -32,6 +32,10 @@ public class ListNotificationHistoriesRequest extends TeaModel {
     @NameInMap("AggregateDataId")
     public String aggregateDataId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ListNotificationHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNotificationHistoriesRequest self = new ListNotificationHistoriesRequest();
         return TeaModel.build(map, self);
@@ -91,6 +95,14 @@ public class ListNotificationHistoriesRequest extends TeaModel {
     }
     public String getAggregateDataId() {
         return this.aggregateDataId;
+    }
+
+    public ListNotificationHistoriesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

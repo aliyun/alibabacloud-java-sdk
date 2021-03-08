@@ -40,6 +40,10 @@ public class CreateDedicatedLineRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static CreateDedicatedLineRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDedicatedLineRequest self = new CreateDedicatedLineRequest();
         return TeaModel.build(map, self);
@@ -115,6 +119,14 @@ public class CreateDedicatedLineRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDedicatedLineRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

@@ -8,6 +8,10 @@ public class GetInspectionTaskRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static GetInspectionTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInspectionTaskRequest self = new GetInspectionTaskRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class GetInspectionTaskRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public GetInspectionTaskRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

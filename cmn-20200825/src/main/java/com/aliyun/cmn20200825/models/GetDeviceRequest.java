@@ -8,6 +8,10 @@ public class GetDeviceRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static GetDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceRequest self = new GetDeviceRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class GetDeviceRequest extends TeaModel {
     }
     public String getDeviceId() {
         return this.deviceId;
+    }
+
+    public GetDeviceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

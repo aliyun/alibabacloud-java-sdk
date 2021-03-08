@@ -12,6 +12,10 @@ public class ListDeviceFormsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ListDeviceFormsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceFormsRequest self = new ListDeviceFormsRequest();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class ListDeviceFormsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListDeviceFormsRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

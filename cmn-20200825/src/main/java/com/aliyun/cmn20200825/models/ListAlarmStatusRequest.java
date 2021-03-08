@@ -36,6 +36,10 @@ public class ListAlarmStatusRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ListAlarmStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAlarmStatusRequest self = new ListAlarmStatusRequest();
         return TeaModel.build(map, self);
@@ -103,6 +107,14 @@ public class ListAlarmStatusRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public ListAlarmStatusRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

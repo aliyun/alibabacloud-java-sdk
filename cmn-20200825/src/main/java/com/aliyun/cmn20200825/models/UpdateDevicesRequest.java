@@ -56,6 +56,10 @@ public class UpdateDevicesRequest extends TeaModel {
     @NameInMap("SnmpPrivacyProtocol")
     public String snmpPrivacyProtocol;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static UpdateDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDevicesRequest self = new UpdateDevicesRequest();
         return TeaModel.build(map, self);
@@ -163,6 +167,14 @@ public class UpdateDevicesRequest extends TeaModel {
     }
     public String getSnmpPrivacyProtocol() {
         return this.snmpPrivacyProtocol;
+    }
+
+    public UpdateDevicesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

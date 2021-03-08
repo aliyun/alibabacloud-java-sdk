@@ -44,6 +44,10 @@ public class ListMonitorDataRequest extends TeaModel {
     @NameInMap("DedicatedLineId")
     public String dedicatedLineId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ListMonitorDataRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMonitorDataRequest self = new ListMonitorDataRequest();
         return TeaModel.build(map, self);
@@ -127,6 +131,14 @@ public class ListMonitorDataRequest extends TeaModel {
     }
     public String getDedicatedLineId() {
         return this.dedicatedLineId;
+    }
+
+    public ListMonitorDataRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

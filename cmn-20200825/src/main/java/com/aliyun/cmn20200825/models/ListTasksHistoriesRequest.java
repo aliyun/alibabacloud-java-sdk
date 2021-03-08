@@ -20,6 +20,10 @@ public class ListTasksHistoriesRequest extends TeaModel {
     @NameInMap("DeviceId")
     public String deviceId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ListTasksHistoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTasksHistoriesRequest self = new ListTasksHistoriesRequest();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class ListTasksHistoriesRequest extends TeaModel {
     }
     public String getDeviceId() {
         return this.deviceId;
+    }
+
+    public ListTasksHistoriesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

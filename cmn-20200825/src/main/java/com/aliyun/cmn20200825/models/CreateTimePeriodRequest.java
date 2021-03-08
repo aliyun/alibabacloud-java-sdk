@@ -20,6 +20,10 @@ public class CreateTimePeriodRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static CreateTimePeriodRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTimePeriodRequest self = new CreateTimePeriodRequest();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class CreateTimePeriodRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateTimePeriodRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

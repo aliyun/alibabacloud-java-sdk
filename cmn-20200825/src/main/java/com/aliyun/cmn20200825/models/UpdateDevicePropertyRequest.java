@@ -20,6 +20,10 @@ public class UpdateDevicePropertyRequest extends TeaModel {
     @NameInMap("PropertyName")
     public String propertyName;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static UpdateDevicePropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDevicePropertyRequest self = new UpdateDevicePropertyRequest();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class UpdateDevicePropertyRequest extends TeaModel {
     }
     public String getPropertyName() {
         return this.propertyName;
+    }
+
+    public UpdateDevicePropertyRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

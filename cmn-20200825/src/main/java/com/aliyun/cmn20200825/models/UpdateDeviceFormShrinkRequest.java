@@ -24,6 +24,10 @@ public class UpdateDeviceFormShrinkRequest extends TeaModel {
     @NameInMap("DetailDisplay")
     public Boolean detailDisplay;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static UpdateDeviceFormShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDeviceFormShrinkRequest self = new UpdateDeviceFormShrinkRequest();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class UpdateDeviceFormShrinkRequest extends TeaModel {
     }
     public Boolean getDetailDisplay() {
         return this.detailDisplay;
+    }
+
+    public UpdateDeviceFormShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }
