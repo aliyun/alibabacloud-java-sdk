@@ -28,6 +28,10 @@ public class CreateDevicePropertyRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static CreateDevicePropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDevicePropertyRequest self = new CreateDevicePropertyRequest();
         return TeaModel.build(map, self);
@@ -79,6 +83,14 @@ public class CreateDevicePropertyRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDevicePropertyRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

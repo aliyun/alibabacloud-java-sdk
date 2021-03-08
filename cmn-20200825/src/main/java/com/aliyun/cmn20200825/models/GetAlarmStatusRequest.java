@@ -24,6 +24,10 @@ public class GetAlarmStatusRequest extends TeaModel {
     @NameInMap("DedicatedLineId")
     public String dedicatedLineId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static GetAlarmStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAlarmStatusRequest self = new GetAlarmStatusRequest();
         return TeaModel.build(map, self);
@@ -67,6 +71,14 @@ public class GetAlarmStatusRequest extends TeaModel {
     }
     public String getDedicatedLineId() {
         return this.dedicatedLineId;
+    }
+
+    public GetAlarmStatusRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

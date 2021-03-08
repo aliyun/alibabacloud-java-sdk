@@ -24,6 +24,10 @@ public class UpdateDeviceFormRequest extends TeaModel {
     @NameInMap("DetailDisplay")
     public Boolean detailDisplay;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static UpdateDeviceFormRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDeviceFormRequest self = new UpdateDeviceFormRequest();
         return TeaModel.build(map, self);
@@ -69,6 +73,14 @@ public class UpdateDeviceFormRequest extends TeaModel {
         return this.detailDisplay;
     }
 
+    public UpdateDeviceFormRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
     public static class UpdateDeviceFormRequestAttributeList extends TeaModel {
         // 设备形态属性主键
         @NameInMap("AttributeKey")
@@ -108,11 +120,11 @@ public class UpdateDeviceFormRequest extends TeaModel {
 
         // 前端展示搜索控件
         @NameInMap("AttributeQuery")
-        public String attributeQuery;
+        public Boolean attributeQuery;
 
         // 查询支持模糊搜索
         @NameInMap("AttributeFuzzyQuery")
-        public String attributeFuzzyQuery;
+        public Boolean attributeFuzzyQuery;
 
         public static UpdateDeviceFormRequestAttributeList build(java.util.Map<String, ?> map) throws Exception {
             UpdateDeviceFormRequestAttributeList self = new UpdateDeviceFormRequestAttributeList();
@@ -191,19 +203,19 @@ public class UpdateDeviceFormRequest extends TeaModel {
             return this.attributePlaceholder;
         }
 
-        public UpdateDeviceFormRequestAttributeList setAttributeQuery(String attributeQuery) {
+        public UpdateDeviceFormRequestAttributeList setAttributeQuery(Boolean attributeQuery) {
             this.attributeQuery = attributeQuery;
             return this;
         }
-        public String getAttributeQuery() {
+        public Boolean getAttributeQuery() {
             return this.attributeQuery;
         }
 
-        public UpdateDeviceFormRequestAttributeList setAttributeFuzzyQuery(String attributeFuzzyQuery) {
+        public UpdateDeviceFormRequestAttributeList setAttributeFuzzyQuery(Boolean attributeFuzzyQuery) {
             this.attributeFuzzyQuery = attributeFuzzyQuery;
             return this;
         }
-        public String getAttributeFuzzyQuery() {
+        public Boolean getAttributeFuzzyQuery() {
             return this.attributeFuzzyQuery;
         }
 

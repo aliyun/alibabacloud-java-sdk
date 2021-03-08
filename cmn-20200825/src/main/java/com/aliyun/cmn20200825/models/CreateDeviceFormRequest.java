@@ -28,6 +28,10 @@ public class CreateDeviceFormRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static CreateDeviceFormRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDeviceFormRequest self = new CreateDeviceFormRequest();
         return TeaModel.build(map, self);
@@ -79,6 +83,14 @@ public class CreateDeviceFormRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateDeviceFormRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

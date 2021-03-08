@@ -56,6 +56,10 @@ public class CreateMonitorItemRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static CreateMonitorItemRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorItemRequest self = new CreateMonitorItemRequest();
         return TeaModel.build(map, self);
@@ -163,6 +167,14 @@ public class CreateMonitorItemRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateMonitorItemRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     public static class CreateMonitorItemRequestAlarmRuleList extends TeaModel {

@@ -28,6 +28,10 @@ public class CreatePhysicalSpaceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static CreatePhysicalSpaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePhysicalSpaceRequest self = new CreatePhysicalSpaceRequest();
         return TeaModel.build(map, self);
@@ -79,6 +83,14 @@ public class CreatePhysicalSpaceRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreatePhysicalSpaceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

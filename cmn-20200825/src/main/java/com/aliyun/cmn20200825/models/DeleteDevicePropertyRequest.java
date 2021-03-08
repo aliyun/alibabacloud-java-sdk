@@ -8,6 +8,10 @@ public class DeleteDevicePropertyRequest extends TeaModel {
     @NameInMap("DevicePropertyId")
     public String devicePropertyId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static DeleteDevicePropertyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDevicePropertyRequest self = new DeleteDevicePropertyRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class DeleteDevicePropertyRequest extends TeaModel {
     }
     public String getDevicePropertyId() {
         return this.devicePropertyId;
+    }
+
+    public DeleteDevicePropertyRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

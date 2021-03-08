@@ -16,6 +16,10 @@ public class ListDevicePropertiesRequest extends TeaModel {
     @NameInMap("DeviceFormId")
     public String deviceFormId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ListDevicePropertiesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDevicePropertiesRequest self = new ListDevicePropertiesRequest();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class ListDevicePropertiesRequest extends TeaModel {
     }
     public String getDeviceFormId() {
         return this.deviceFormId;
+    }
+
+    public ListDevicePropertiesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

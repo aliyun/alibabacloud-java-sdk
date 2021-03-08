@@ -28,6 +28,10 @@ public class UpdatePhysicalSpaceRequest extends TeaModel {
     @NameInMap("Address")
     public String address;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static UpdatePhysicalSpaceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePhysicalSpaceRequest self = new UpdatePhysicalSpaceRequest();
         return TeaModel.build(map, self);
@@ -79,6 +83,14 @@ public class UpdatePhysicalSpaceRequest extends TeaModel {
     }
     public String getAddress() {
         return this.address;
+    }
+
+    public UpdatePhysicalSpaceRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

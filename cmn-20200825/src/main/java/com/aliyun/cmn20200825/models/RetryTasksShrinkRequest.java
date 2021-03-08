@@ -8,6 +8,10 @@ public class RetryTasksShrinkRequest extends TeaModel {
     @NameInMap("RetryTasks")
     public String retryTasksShrink;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static RetryTasksShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RetryTasksShrinkRequest self = new RetryTasksShrinkRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class RetryTasksShrinkRequest extends TeaModel {
     }
     public String getRetryTasksShrink() {
         return this.retryTasksShrink;
+    }
+
+    public RetryTasksShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

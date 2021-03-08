@@ -12,6 +12,10 @@ public class GetDeviceConfigRequest extends TeaModel {
     @NameInMap("Date")
     public String date;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static GetDeviceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceConfigRequest self = new GetDeviceConfigRequest();
         return TeaModel.build(map, self);
@@ -31,6 +35,14 @@ public class GetDeviceConfigRequest extends TeaModel {
     }
     public String getDate() {
         return this.date;
+    }
+
+    public GetDeviceConfigRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

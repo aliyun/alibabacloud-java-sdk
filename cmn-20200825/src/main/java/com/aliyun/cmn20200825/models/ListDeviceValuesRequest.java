@@ -20,6 +20,10 @@ public class ListDeviceValuesRequest extends TeaModel {
     @NameInMap("AttributeGroup")
     public String attributeGroup;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ListDeviceValuesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceValuesRequest self = new ListDeviceValuesRequest();
         return TeaModel.build(map, self);
@@ -55,6 +59,14 @@ public class ListDeviceValuesRequest extends TeaModel {
     }
     public String getAttributeGroup() {
         return this.attributeGroup;
+    }
+
+    public ListDeviceValuesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

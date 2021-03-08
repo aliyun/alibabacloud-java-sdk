@@ -8,6 +8,10 @@ public class ListDedicatedLinesRequest extends TeaModel {
     @NameInMap("PhysicalSpaceId")
     public String physicalSpaceId;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ListDedicatedLinesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDedicatedLinesRequest self = new ListDedicatedLinesRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class ListDedicatedLinesRequest extends TeaModel {
     }
     public String getPhysicalSpaceId() {
         return this.physicalSpaceId;
+    }
+
+    public ListDedicatedLinesRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

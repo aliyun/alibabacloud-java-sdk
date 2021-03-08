@@ -36,6 +36,10 @@ public class UpdateDedicatedLineRequest extends TeaModel {
     @NameInMap("DevicePort")
     public String devicePort;
 
+    // 实例ID
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static UpdateDedicatedLineRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDedicatedLineRequest self = new UpdateDedicatedLineRequest();
         return TeaModel.build(map, self);
@@ -103,6 +107,14 @@ public class UpdateDedicatedLineRequest extends TeaModel {
     }
     public String getDevicePort() {
         return this.devicePort;
+    }
+
+    public UpdateDedicatedLineRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

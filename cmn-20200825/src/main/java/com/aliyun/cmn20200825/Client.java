@@ -345,6 +345,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateDedicatedLineWithOptions(request, runtime);
     }
 
+    public ListInstancesResponse listInstancesWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("ListInstances", "2020-08-25", "HTTPS", "GET", "AK", "json", req, runtime), new ListInstancesResponse());
+    }
+
+    public ListInstancesResponse listInstances() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listInstancesWithOptions(runtime);
+    }
+
     public DeleteInspectionTaskResponse deleteInspectionTaskWithOptions(DeleteInspectionTaskRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -555,6 +565,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateDevicesResponse updateDevices(UpdateDevicesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateDevicesWithOptions(request, runtime);
+    }
+
+    public ListRegionsResponse listRegionsWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("ListRegions", "2020-08-25", "HTTPS", "GET", "AK", "json", req, runtime), new ListRegionsResponse());
+    }
+
+    public ListRegionsResponse listRegions() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listRegionsWithOptions(runtime);
     }
 
     public DisableNotificationResponse disableNotificationWithOptions(DisableNotificationRequest request, RuntimeOptions runtime) throws Exception {
