@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMigrationJobStatusResponseBody extends TeaModel {
+    @NameInMap("TaskId")
+    public String taskId;
+
     @NameInMap("DataInitializationStatus")
     public DescribeMigrationJobStatusResponseBodyDataInitializationStatus dataInitializationStatus;
 
@@ -58,6 +61,14 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
     public static DescribeMigrationJobStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMigrationJobStatusResponseBody self = new DescribeMigrationJobStatusResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeMigrationJobStatusResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
     public DescribeMigrationJobStatusResponseBody setDataInitializationStatus(DescribeMigrationJobStatusResponseBodyDataInitializationStatus dataInitializationStatus) {

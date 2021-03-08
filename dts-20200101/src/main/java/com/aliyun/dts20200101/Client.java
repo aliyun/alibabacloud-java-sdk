@@ -88,6 +88,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public ConfigureDtsJobResponse configureDtsJobWithOptions(ConfigureDtsJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ConfigureDtsJob", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new ConfigureDtsJobResponse());
+    }
+
+    public ConfigureDtsJobResponse configureDtsJob(ConfigureDtsJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.configureDtsJobWithOptions(request, runtime);
+    }
+
     public ConfigureMigrationJobResponse configureMigrationJobWithOptions(ConfigureMigrationJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -190,6 +203,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateConsumerGroupResponse createConsumerGroup(CreateConsumerGroupRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createConsumerGroupWithOptions(request, runtime);
+    }
+
+    public CreateDtsInstanceResponse createDtsInstanceWithOptions(CreateDtsInstanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateDtsInstance", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new CreateDtsInstanceResponse());
+    }
+
+    public CreateDtsInstanceResponse createDtsInstance(CreateDtsInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createDtsInstanceWithOptions(request, runtime);
     }
 
     public CreateMigrationJobResponse createMigrationJobWithOptions(CreateMigrationJobRequest request, RuntimeOptions runtime) throws Exception {
@@ -606,6 +632,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ShieldPrecheckResponse shieldPrecheck(ShieldPrecheckRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.shieldPrecheckWithOptions(request, runtime);
+    }
+
+    public StartDtsJobResponse startDtsJobWithOptions(StartDtsJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StartDtsJob", "2020-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new StartDtsJobResponse());
+    }
+
+    public StartDtsJobResponse startDtsJob(StartDtsJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startDtsJobWithOptions(request, runtime);
     }
 
     public StartMigrationJobResponse startMigrationJobWithOptions(StartMigrationJobRequest request, RuntimeOptions runtime) throws Exception {

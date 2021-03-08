@@ -19,6 +19,9 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     @NameInMap("AccountId")
     public String accountId;
 
+    @NameInMap("InstFilterRegion")
+    public String instFilterRegion;
+
     @NameInMap("Tag")
     public java.util.List<DescribeMigrationJobsRequestTag> tag;
 
@@ -65,6 +68,14 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public DescribeMigrationJobsRequest setInstFilterRegion(String instFilterRegion) {
+        this.instFilterRegion = instFilterRegion;
+        return this;
+    }
+    public String getInstFilterRegion() {
+        return this.instFilterRegion;
     }
 
     public DescribeMigrationJobsRequest setTag(java.util.List<DescribeMigrationJobsRequestTag> tag) {
