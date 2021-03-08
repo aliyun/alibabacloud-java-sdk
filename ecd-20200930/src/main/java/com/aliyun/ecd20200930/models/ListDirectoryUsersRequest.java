@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListDirectoryUsersRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
+    @NameInMap("Filter")
+    public String filter;
+
     @NameInMap("DirectoryId")
-    @Validation(required = true)
     public String directoryId;
 
     @NameInMap("NextToken")
@@ -29,6 +30,14 @@ public class ListDirectoryUsersRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListDirectoryUsersRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
     }
 
     public ListDirectoryUsersRequest setDirectoryId(String directoryId) {

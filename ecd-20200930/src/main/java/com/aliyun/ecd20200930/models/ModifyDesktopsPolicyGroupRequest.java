@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopsPolicyGroupRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
     @NameInMap("DesktopId")
-    @Validation(required = true)
     public java.util.List<String> desktopId;
 
     public static ModifyDesktopsPolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {

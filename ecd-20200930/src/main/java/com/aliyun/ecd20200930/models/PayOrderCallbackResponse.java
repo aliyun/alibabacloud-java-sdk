@@ -4,21 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class PayOrderCallbackResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public PayOrderCallbackResponseBody body;
 
     public static PayOrderCallbackResponse build(java.util.Map<String, ?> map) throws Exception {
         PayOrderCallbackResponse self = new PayOrderCallbackResponse();
         return TeaModel.build(map, self);
     }
 
-    public PayOrderCallbackResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PayOrderCallbackResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public PayOrderCallbackResponse setBody(PayOrderCallbackResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public PayOrderCallbackResponseBody getBody() {
+        return this.body;
     }
 
 }

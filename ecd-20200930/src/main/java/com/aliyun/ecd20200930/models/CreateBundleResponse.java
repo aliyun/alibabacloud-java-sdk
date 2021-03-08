@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateBundleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("BundleId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String bundleId;
+    public CreateBundleResponseBody body;
 
     public static CreateBundleResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateBundleResponse self = new CreateBundleResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateBundleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateBundleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateBundleResponse setBundleId(String bundleId) {
-        this.bundleId = bundleId;
+    public CreateBundleResponse setBody(CreateBundleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getBundleId() {
-        return this.bundleId;
+    public CreateBundleResponseBody getBody() {
+        return this.body;
     }
 
 }

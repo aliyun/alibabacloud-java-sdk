@@ -4,57 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class GetConnectionTicketResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Ticket")
+    @NameInMap("body")
     @Validation(required = true)
-    public String ticket;
-
-    @NameInMap("TaskId")
-    @Validation(required = true)
-    public String taskId;
-
-    @NameInMap("TaskStatus")
-    @Validation(required = true)
-    public String taskStatus;
+    public GetConnectionTicketResponseBody body;
 
     public static GetConnectionTicketResponse build(java.util.Map<String, ?> map) throws Exception {
         GetConnectionTicketResponse self = new GetConnectionTicketResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetConnectionTicketResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetConnectionTicketResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetConnectionTicketResponse setTicket(String ticket) {
-        this.ticket = ticket;
+    public GetConnectionTicketResponse setBody(GetConnectionTicketResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getTicket() {
-        return this.ticket;
-    }
-
-    public GetConnectionTicketResponse setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public GetConnectionTicketResponse setTaskStatus(String taskStatus) {
-        this.taskStatus = taskStatus;
-        return this;
-    }
-    public String getTaskStatus() {
-        return this.taskStatus;
+    public GetConnectionTicketResponseBody getBody() {
+        return this.body;
     }
 
 }

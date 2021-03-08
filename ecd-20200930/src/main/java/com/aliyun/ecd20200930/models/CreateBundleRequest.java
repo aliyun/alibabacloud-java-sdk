@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateBundleRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageId")
-    @Validation(required = true)
     public String imageId;
 
     @NameInMap("DesktopType")
-    @Validation(required = true)
     public String desktopType;
 
     @NameInMap("RootDiskSizeGib")
-    @Validation(required = true)
     public Integer rootDiskSizeGib;
 
     @NameInMap("BundleName")
@@ -27,7 +23,6 @@ public class CreateBundleRequest extends TeaModel {
     public String description;
 
     @NameInMap("UserDiskSizeGib")
-    @Validation(required = true)
     public java.util.List<Integer> userDiskSizeGib;
 
     public static CreateBundleRequest build(java.util.Map<String, ?> map) throws Exception {

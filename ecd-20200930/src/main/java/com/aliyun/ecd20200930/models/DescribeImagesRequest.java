@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeImagesRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("MaxResults")
@@ -19,6 +18,9 @@ public class DescribeImagesRequest extends TeaModel {
 
     @NameInMap("ImageStatus")
     public String imageStatus;
+
+    @NameInMap("GpuCategory")
+    public Boolean gpuCategory;
 
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
@@ -66,6 +68,14 @@ public class DescribeImagesRequest extends TeaModel {
     }
     public String getImageStatus() {
         return this.imageStatus;
+    }
+
+    public DescribeImagesRequest setGpuCategory(Boolean gpuCategory) {
+        this.gpuCategory = gpuCategory;
+        return this;
+    }
+    public Boolean getGpuCategory() {
+        return this.gpuCategory;
     }
 
     public DescribeImagesRequest setImageId(java.util.List<String> imageId) {

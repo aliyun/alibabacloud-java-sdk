@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateRAMDirectoryRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DirectoryName")
@@ -13,6 +12,12 @@ public class CreateRAMDirectoryRequest extends TeaModel {
 
     @NameInMap("EnableInternetAccess")
     public Boolean enableInternetAccess;
+
+    @NameInMap("EnableAdminAccess")
+    public Boolean enableAdminAccess;
+
+    @NameInMap("DesktopAccessType")
+    public String desktopAccessType;
 
     @NameInMap("VSwitchId")
     public java.util.List<String> vSwitchId;
@@ -44,6 +49,22 @@ public class CreateRAMDirectoryRequest extends TeaModel {
     }
     public Boolean getEnableInternetAccess() {
         return this.enableInternetAccess;
+    }
+
+    public CreateRAMDirectoryRequest setEnableAdminAccess(Boolean enableAdminAccess) {
+        this.enableAdminAccess = enableAdminAccess;
+        return this;
+    }
+    public Boolean getEnableAdminAccess() {
+        return this.enableAdminAccess;
+    }
+
+    public CreateRAMDirectoryRequest setDesktopAccessType(String desktopAccessType) {
+        this.desktopAccessType = desktopAccessType;
+        return this;
+    }
+    public String getDesktopAccessType() {
+        return this.desktopAccessType;
     }
 
     public CreateRAMDirectoryRequest setVSwitchId(java.util.List<String> vSwitchId) {

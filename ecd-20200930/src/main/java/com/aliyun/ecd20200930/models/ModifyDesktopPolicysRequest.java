@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDesktopPolicysRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("DesktopId")
-    @Validation(required = true)
-    public java.util.List<String> desktopId;
 
     @NameInMap("Clipboard")
     public String clipboard;
@@ -24,6 +19,9 @@ public class ModifyDesktopPolicysRequest extends TeaModel {
     @NameInMap("Watermark")
     public String watermark;
 
+    @NameInMap("DesktopId")
+    public java.util.List<String> desktopId;
+
     public static ModifyDesktopPolicysRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDesktopPolicysRequest self = new ModifyDesktopPolicysRequest();
         return TeaModel.build(map, self);
@@ -35,14 +33,6 @@ public class ModifyDesktopPolicysRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ModifyDesktopPolicysRequest setDesktopId(java.util.List<String> desktopId) {
-        this.desktopId = desktopId;
-        return this;
-    }
-    public java.util.List<String> getDesktopId() {
-        return this.desktopId;
     }
 
     public ModifyDesktopPolicysRequest setClipboard(String clipboard) {
@@ -75,6 +65,14 @@ public class ModifyDesktopPolicysRequest extends TeaModel {
     }
     public String getWatermark() {
         return this.watermark;
+    }
+
+    public ModifyDesktopPolicysRequest setDesktopId(java.util.List<String> desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public java.util.List<String> getDesktopId() {
+        return this.desktopId;
     }
 
 }

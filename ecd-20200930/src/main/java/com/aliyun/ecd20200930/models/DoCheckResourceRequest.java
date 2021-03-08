@@ -29,7 +29,6 @@ public class DoCheckResourceRequest extends TeaModel {
     public String gmtWakeup;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static DoCheckResourceRequest build(java.util.Map<String, ?> map) throws Exception {

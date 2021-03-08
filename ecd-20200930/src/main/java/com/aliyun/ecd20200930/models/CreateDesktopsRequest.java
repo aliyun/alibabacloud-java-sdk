@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("BundleId")
-    @Validation(required = true)
     public String bundleId;
 
     @NameInMap("SystemDiskSize")
@@ -36,12 +34,7 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
-    @NameInMap("EndUserId")
-    @Validation(required = true)
-    public java.util.List<String> endUserId;
-
     @NameInMap("PolicyGroupId")
-    @Validation(required = true)
     public String policyGroupId;
 
     @NameInMap("ChargeType")
@@ -55,6 +48,12 @@ public class CreateDesktopsRequest extends TeaModel {
 
     @NameInMap("AutoPay")
     public Boolean autoPay;
+
+    @NameInMap("EndUserId")
+    public java.util.List<String> endUserId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateDesktopsRequestTag> tag;
 
     public static CreateDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDesktopsRequest self = new CreateDesktopsRequest();
@@ -141,14 +140,6 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.directoryId;
     }
 
-    public CreateDesktopsRequest setEndUserId(java.util.List<String> endUserId) {
-        this.endUserId = endUserId;
-        return this;
-    }
-    public java.util.List<String> getEndUserId() {
-        return this.endUserId;
-    }
-
     public CreateDesktopsRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
@@ -187,6 +178,52 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public CreateDesktopsRequest setEndUserId(java.util.List<String> endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public java.util.List<String> getEndUserId() {
+        return this.endUserId;
+    }
+
+    public CreateDesktopsRequest setTag(java.util.List<CreateDesktopsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDesktopsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class CreateDesktopsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateDesktopsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateDesktopsRequestTag self = new CreateDesktopsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDesktopsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateDesktopsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

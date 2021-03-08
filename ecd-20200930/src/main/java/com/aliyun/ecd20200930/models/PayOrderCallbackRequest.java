@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class PayOrderCallbackRequest extends TeaModel {
     @NameInMap("data")
-    @Validation(required = true)
     public String data;
 
     public static PayOrderCallbackRequest build(java.util.Map<String, ?> map) throws Exception {
