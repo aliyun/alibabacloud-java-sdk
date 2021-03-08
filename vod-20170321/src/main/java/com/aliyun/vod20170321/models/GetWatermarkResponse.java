@@ -4,57 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetWatermarkResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("WatermarkInfo")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetWatermarkResponseWatermarkInfo watermarkInfo;
+    public GetWatermarkResponseBody body;
 
     public static GetWatermarkResponse build(java.util.Map<String, ?> map) throws Exception {
         GetWatermarkResponse self = new GetWatermarkResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GetWatermarkResponseWatermarkInfo extends TeaModel {
-        @NameInMap("CreationTime")
-        @Validation(required = true)
-        public String creationTime;
+    public GetWatermarkResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        @NameInMap("IsDefault")
-        @Validation(required = true)
-        public String isDefault;
-
-        @NameInMap("WatermarkId")
-        @Validation(required = true)
-        public String watermarkId;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("FileUrl")
-        @Validation(required = true)
-        public String fileUrl;
-
-        @NameInMap("WatermarkConfig")
-        @Validation(required = true)
-        public String watermarkConfig;
-
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public String appId;
-
-        public static GetWatermarkResponseWatermarkInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetWatermarkResponseWatermarkInfo self = new GetWatermarkResponseWatermarkInfo();
-            return TeaModel.build(map, self);
-        }
-
+    public GetWatermarkResponse setBody(GetWatermarkResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetWatermarkResponseBody getBody() {
+        return this.body;
     }
 
 }

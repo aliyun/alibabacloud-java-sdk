@@ -4,57 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListTranscodeTemplateGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TranscodeTemplateGroupList")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<ListTranscodeTemplateGroupResponseTranscodeTemplateGroupList> transcodeTemplateGroupList;
+    public ListTranscodeTemplateGroupResponseBody body;
 
     public static ListTranscodeTemplateGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         ListTranscodeTemplateGroupResponse self = new ListTranscodeTemplateGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListTranscodeTemplateGroupResponseTranscodeTemplateGroupList extends TeaModel {
-        @NameInMap("CreationTime")
-        @Validation(required = true)
-        public String creationTime;
+    public ListTranscodeTemplateGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("ModifyTime")
-        @Validation(required = true)
-        public String modifyTime;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("IsDefault")
-        @Validation(required = true)
-        public String isDefault;
-
-        @NameInMap("Locked")
-        @Validation(required = true)
-        public String locked;
-
-        @NameInMap("TranscodeTemplateGroupId")
-        @Validation(required = true)
-        public String transcodeTemplateGroupId;
-
-        @NameInMap("TranscodeMode")
-        @Validation(required = true)
-        public String transcodeMode;
-
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public String appId;
-
-        public static ListTranscodeTemplateGroupResponseTranscodeTemplateGroupList build(java.util.Map<String, ?> map) throws Exception {
-            ListTranscodeTemplateGroupResponseTranscodeTemplateGroupList self = new ListTranscodeTemplateGroupResponseTranscodeTemplateGroupList();
-            return TeaModel.build(map, self);
-        }
-
+    public ListTranscodeTemplateGroupResponse setBody(ListTranscodeTemplateGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListTranscodeTemplateGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

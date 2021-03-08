@@ -8,20 +8,49 @@ public class DescribePlayVideoStatisRequest extends TeaModel {
     public Long ownerId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("VideoId")
-    @Validation(required = true)
     public String videoId;
 
     public static DescribePlayVideoStatisRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePlayVideoStatisRequest self = new DescribePlayVideoStatisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribePlayVideoStatisRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribePlayVideoStatisRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribePlayVideoStatisRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribePlayVideoStatisRequest setVideoId(String videoId) {
+        this.videoId = videoId;
+        return this;
+    }
+    public String getVideoId() {
+        return this.videoId;
     }
 
 }

@@ -4,17 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CreateAppInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AppId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String appId;
+    public CreateAppInfoResponseBody body;
 
     public static CreateAppInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAppInfoResponse self = new CreateAppInfoResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAppInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateAppInfoResponse setBody(CreateAppInfoResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateAppInfoResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,17 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddCategoryRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public String ownerId;
-
-    @NameInMap("ResourceOwnerId")
-    public String resourceOwnerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("CateName")
-    @Validation(required = true)
     public String cateName;
 
     @NameInMap("ParentId")
@@ -26,6 +16,30 @@ public class AddCategoryRequest extends TeaModel {
     public static AddCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
         AddCategoryRequest self = new AddCategoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddCategoryRequest setCateName(String cateName) {
+        this.cateName = cateName;
+        return this;
+    }
+    public String getCateName() {
+        return this.cateName;
+    }
+
+    public AddCategoryRequest setParentId(Long parentId) {
+        this.parentId = parentId;
+        return this;
+    }
+    public Long getParentId() {
+        return this.parentId;
+    }
+
+    public AddCategoryRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetEditingProjectRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("OwnerId")
     public String ownerId;
 
@@ -20,12 +17,62 @@ public class GetEditingProjectRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public String projectId;
+
+    @NameInMap("FEExtendFlag")
+    public Integer FEExtendFlag;
 
     public static GetEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         GetEditingProjectRequest self = new GetEditingProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetEditingProjectRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GetEditingProjectRequest setResourceOwnerId(String resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public String getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public GetEditingProjectRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GetEditingProjectRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public GetEditingProjectRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public GetEditingProjectRequest setFEExtendFlag(Integer FEExtendFlag) {
+        this.FEExtendFlag = FEExtendFlag;
+        return this;
+    }
+    public Integer getFEExtendFlag() {
+        return this.FEExtendFlag;
     }
 
 }

@@ -4,17 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteAITemplateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TemplateId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String templateId;
+    public DeleteAITemplateResponseBody body;
 
     public static DeleteAITemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteAITemplateResponse self = new DeleteAITemplateResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteAITemplateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteAITemplateResponse setBody(DeleteAITemplateResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteAITemplateResponseBody getBody() {
+        return this.body;
     }
 
 }

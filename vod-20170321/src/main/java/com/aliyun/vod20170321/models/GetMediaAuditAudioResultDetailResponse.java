@@ -4,61 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetMediaAuditAudioResultDetailResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("MediaAuditAudioResultDetail")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetail mediaAuditAudioResultDetail;
+    public GetMediaAuditAudioResultDetailResponseBody body;
 
     public static GetMediaAuditAudioResultDetailResponse build(java.util.Map<String, ?> map) throws Exception {
         GetMediaAuditAudioResultDetailResponse self = new GetMediaAuditAudioResultDetailResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetailList extends TeaModel {
-        @NameInMap("StartTime")
-        @Validation(required = true)
-        public Long startTime;
-
-        @NameInMap("EndTime")
-        @Validation(required = true)
-        public Long endTime;
-
-        @NameInMap("Text")
-        @Validation(required = true)
-        public String text;
-
-        @NameInMap("Label")
-        @Validation(required = true)
-        public String label;
-
-        public static GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetailList build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetailList self = new GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetailList();
-            return TeaModel.build(map, self);
-        }
-
+    public GetMediaAuditAudioResultDetailResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetail extends TeaModel {
-        @NameInMap("Total")
-        @Validation(required = true)
-        public Integer total;
-
-        @NameInMap("PageTotal")
-        @Validation(required = true)
-        public Integer pageTotal;
-
-        @NameInMap("List")
-        @Validation(required = true)
-        public java.util.List<GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetailList> list;
-
-        public static GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetail build(java.util.Map<String, ?> map) throws Exception {
-            GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetail self = new GetMediaAuditAudioResultDetailResponseMediaAuditAudioResultDetail();
-            return TeaModel.build(map, self);
-        }
-
+    public GetMediaAuditAudioResultDetailResponse setBody(GetMediaAuditAudioResultDetailResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetMediaAuditAudioResultDetailResponseBody getBody() {
+        return this.body;
     }
 
 }

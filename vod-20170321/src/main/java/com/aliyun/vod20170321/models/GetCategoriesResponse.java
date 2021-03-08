@@ -4,97 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetCategoriesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SubTotal")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long subTotal;
-
-    @NameInMap("SubCategories")
-    @Validation(required = true)
-    public GetCategoriesResponseSubCategories subCategories;
-
-    @NameInMap("Category")
-    @Validation(required = true)
-    public GetCategoriesResponseCategory category;
+    public GetCategoriesResponseBody body;
 
     public static GetCategoriesResponse build(java.util.Map<String, ?> map) throws Exception {
         GetCategoriesResponse self = new GetCategoriesResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GetCategoriesResponseSubCategoriesCategory extends TeaModel {
-        @NameInMap("CateId")
-        @Validation(required = true)
-        public Long cateId;
-
-        @NameInMap("CateName")
-        @Validation(required = true)
-        public String cateName;
-
-        @NameInMap("Level")
-        @Validation(required = true)
-        public Long level;
-
-        @NameInMap("ParentId")
-        @Validation(required = true)
-        public Long parentId;
-
-        @NameInMap("SubTotal")
-        @Validation(required = true)
-        public Long subTotal;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        public static GetCategoriesResponseSubCategoriesCategory build(java.util.Map<String, ?> map) throws Exception {
-            GetCategoriesResponseSubCategoriesCategory self = new GetCategoriesResponseSubCategoriesCategory();
-            return TeaModel.build(map, self);
-        }
-
+    public GetCategoriesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class GetCategoriesResponseSubCategories extends TeaModel {
-        @NameInMap("Category")
-        @Validation(required = true)
-        public java.util.List<GetCategoriesResponseSubCategoriesCategory> category;
-
-        public static GetCategoriesResponseSubCategories build(java.util.Map<String, ?> map) throws Exception {
-            GetCategoriesResponseSubCategories self = new GetCategoriesResponseSubCategories();
-            return TeaModel.build(map, self);
-        }
-
+    public GetCategoriesResponse setBody(GetCategoriesResponseBody body) {
+        this.body = body;
+        return this;
     }
-
-    public static class GetCategoriesResponseCategory extends TeaModel {
-        @NameInMap("CateId")
-        @Validation(required = true)
-        public Long cateId;
-
-        @NameInMap("CateName")
-        @Validation(required = true)
-        public String cateName;
-
-        @NameInMap("Level")
-        @Validation(required = true)
-        public Long level;
-
-        @NameInMap("ParentId")
-        @Validation(required = true)
-        public Long parentId;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        public static GetCategoriesResponseCategory build(java.util.Map<String, ?> map) throws Exception {
-            GetCategoriesResponseCategory self = new GetCategoriesResponseCategory();
-            return TeaModel.build(map, self);
-        }
-
+    public GetCategoriesResponseBody getBody() {
+        return this.body;
     }
 
 }

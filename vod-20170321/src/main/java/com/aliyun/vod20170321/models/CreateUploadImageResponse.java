@@ -4,33 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class CreateUploadImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ImageId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String imageId;
-
-    @NameInMap("ImageURL")
-    @Validation(required = true)
-    public String imageURL;
-
-    @NameInMap("UploadAddress")
-    @Validation(required = true)
-    public String uploadAddress;
-
-    @NameInMap("UploadAuth")
-    @Validation(required = true)
-    public String uploadAuth;
-
-    @NameInMap("FileURL")
-    @Validation(required = true)
-    public String fileURL;
+    public CreateUploadImageResponseBody body;
 
     public static CreateUploadImageResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateUploadImageResponse self = new CreateUploadImageResponse();
         return TeaModel.build(map, self);
+    }
+
+    public CreateUploadImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateUploadImageResponse setBody(CreateUploadImageResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateUploadImageResponseBody getBody() {
+        return this.body;
     }
 
 }

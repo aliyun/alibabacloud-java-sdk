@@ -12,4 +12,12 @@ public class ListAuditSecurityIpRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListAuditSecurityIpRequest setSecurityGroupName(String securityGroupName) {
+        this.securityGroupName = securityGroupName;
+        return this;
+    }
+    public String getSecurityGroupName() {
+        return this.securityGroupName;
+    }
+
 }

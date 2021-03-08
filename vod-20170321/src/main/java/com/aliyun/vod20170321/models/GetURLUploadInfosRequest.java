@@ -4,15 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetURLUploadInfosRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("JobIds")
     public String jobIds;
 
@@ -22,6 +13,22 @@ public class GetURLUploadInfosRequest extends TeaModel {
     public static GetURLUploadInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         GetURLUploadInfosRequest self = new GetURLUploadInfosRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetURLUploadInfosRequest setJobIds(String jobIds) {
+        this.jobIds = jobIds;
+        return this;
+    }
+    public String getJobIds() {
+        return this.jobIds;
+    }
+
+    public GetURLUploadInfosRequest setUploadURLs(String uploadURLs) {
+        this.uploadURLs = uploadURLs;
+        return this;
+    }
+    public String getUploadURLs() {
+        return this.uploadURLs;
     }
 
 }

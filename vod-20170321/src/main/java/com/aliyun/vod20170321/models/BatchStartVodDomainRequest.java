@@ -11,12 +11,35 @@ public class BatchStartVodDomainRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("DomainNames")
-    @Validation(required = true)
     public String domainNames;
 
     public static BatchStartVodDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchStartVodDomainRequest self = new BatchStartVodDomainRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchStartVodDomainRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public BatchStartVodDomainRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public BatchStartVodDomainRequest setDomainNames(String domainNames) {
+        this.domainNames = domainNames;
+        return this;
+    }
+    public String getDomainNames() {
+        return this.domainNames;
     }
 
 }

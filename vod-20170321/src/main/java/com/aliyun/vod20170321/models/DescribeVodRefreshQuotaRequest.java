@@ -15,4 +15,20 @@ public class DescribeVodRefreshQuotaRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeVodRefreshQuotaRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVodRefreshQuotaRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
 }

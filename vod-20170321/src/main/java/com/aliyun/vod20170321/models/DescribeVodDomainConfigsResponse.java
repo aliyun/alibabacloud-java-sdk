@@ -4,81 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodDomainConfigsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DomainConfigs")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeVodDomainConfigsResponseDomainConfigs domainConfigs;
+    public DescribeVodDomainConfigsResponseBody body;
 
     public static DescribeVodDomainConfigsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainConfigsResponse self = new DescribeVodDomainConfigsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgsFunctionArg extends TeaModel {
-        @NameInMap("ArgName")
-        @Validation(required = true)
-        public String argName;
-
-        @NameInMap("ArgValue")
-        @Validation(required = true)
-        public String argValue;
-
-        public static DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgsFunctionArg build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgsFunctionArg self = new DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgsFunctionArg();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeVodDomainConfigsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgs extends TeaModel {
-        @NameInMap("FunctionArg")
-        @Validation(required = true)
-        public java.util.List<DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgsFunctionArg> functionArg;
-
-        public static DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgs build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgs self = new DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgs();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeVodDomainConfigsResponse setBody(DescribeVodDomainConfigsResponseBody body) {
+        this.body = body;
+        return this;
     }
-
-    public static class DescribeVodDomainConfigsResponseDomainConfigsDomainConfig extends TeaModel {
-        @NameInMap("FunctionName")
-        @Validation(required = true)
-        public String functionName;
-
-        @NameInMap("ConfigId")
-        @Validation(required = true)
-        public String configId;
-
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("FunctionArgs")
-        @Validation(required = true)
-        public DescribeVodDomainConfigsResponseDomainConfigsDomainConfigFunctionArgs functionArgs;
-
-        public static DescribeVodDomainConfigsResponseDomainConfigsDomainConfig build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVodDomainConfigsResponseDomainConfigsDomainConfig self = new DescribeVodDomainConfigsResponseDomainConfigsDomainConfig();
-            return TeaModel.build(map, self);
-        }
-
-    }
-
-    public static class DescribeVodDomainConfigsResponseDomainConfigs extends TeaModel {
-        @NameInMap("DomainConfig")
-        @Validation(required = true)
-        public java.util.List<DescribeVodDomainConfigsResponseDomainConfigsDomainConfig> domainConfig;
-
-        public static DescribeVodDomainConfigsResponseDomainConfigs build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVodDomainConfigsResponseDomainConfigs self = new DescribeVodDomainConfigsResponseDomainConfigs();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeVodDomainConfigsResponseBody getBody() {
+        return this.body;
     }
 
 }

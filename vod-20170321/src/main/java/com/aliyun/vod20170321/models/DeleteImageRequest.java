@@ -4,20 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DeleteImageRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("DeleteImageType")
-    @Validation(required = true)
     public String deleteImageType;
 
     @NameInMap("ImageURLs")
@@ -35,6 +22,46 @@ public class DeleteImageRequest extends TeaModel {
     public static DeleteImageRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteImageRequest self = new DeleteImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteImageRequest setDeleteImageType(String deleteImageType) {
+        this.deleteImageType = deleteImageType;
+        return this;
+    }
+    public String getDeleteImageType() {
+        return this.deleteImageType;
+    }
+
+    public DeleteImageRequest setImageURLs(String imageURLs) {
+        this.imageURLs = imageURLs;
+        return this;
+    }
+    public String getImageURLs() {
+        return this.imageURLs;
+    }
+
+    public DeleteImageRequest setImageIds(String imageIds) {
+        this.imageIds = imageIds;
+        return this;
+    }
+    public String getImageIds() {
+        return this.imageIds;
+    }
+
+    public DeleteImageRequest setVideoId(String videoId) {
+        this.videoId = videoId;
+        return this;
+    }
+    public String getVideoId() {
+        return this.videoId;
+    }
+
+    public DeleteImageRequest setImageType(String imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public String getImageType() {
+        return this.imageType;
     }
 
 }

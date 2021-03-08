@@ -4,53 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodStorageDataResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DataInterval")
+    @NameInMap("body")
     @Validation(required = true)
-    public String dataInterval;
-
-    @NameInMap("StorageData")
-    @Validation(required = true)
-    public DescribeVodStorageDataResponseStorageData storageData;
+    public DescribeVodStorageDataResponseBody body;
 
     public static DescribeVodStorageDataResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodStorageDataResponse self = new DescribeVodStorageDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribeVodStorageDataResponseStorageDataStorageDataItem extends TeaModel {
-        @NameInMap("TimeStamp")
-        @Validation(required = true)
-        public String timeStamp;
-
-        @NameInMap("StorageUtilization")
-        @Validation(required = true)
-        public String storageUtilization;
-
-        @NameInMap("NetworkOut")
-        @Validation(required = true)
-        public String networkOut;
-
-        public static DescribeVodStorageDataResponseStorageDataStorageDataItem build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVodStorageDataResponseStorageDataStorageDataItem self = new DescribeVodStorageDataResponseStorageDataStorageDataItem();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeVodStorageDataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribeVodStorageDataResponseStorageData extends TeaModel {
-        @NameInMap("StorageDataItem")
-        @Validation(required = true)
-        public java.util.List<DescribeVodStorageDataResponseStorageDataStorageDataItem> storageDataItem;
-
-        public static DescribeVodStorageDataResponseStorageData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVodStorageDataResponseStorageData self = new DescribeVodStorageDataResponseStorageData();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribeVodStorageDataResponse setBody(DescribeVodStorageDataResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeVodStorageDataResponseBody getBody() {
+        return this.body;
     }
 
 }

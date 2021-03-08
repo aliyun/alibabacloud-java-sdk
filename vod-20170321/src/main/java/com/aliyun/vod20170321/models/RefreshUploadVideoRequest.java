@@ -14,12 +14,43 @@ public class RefreshUploadVideoRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("VideoId")
-    @Validation(required = true)
     public String videoId;
 
     public static RefreshUploadVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         RefreshUploadVideoRequest self = new RefreshUploadVideoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RefreshUploadVideoRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public RefreshUploadVideoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public RefreshUploadVideoRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public RefreshUploadVideoRequest setVideoId(String videoId) {
+        this.videoId = videoId;
+        return this;
+    }
+    public String getVideoId() {
+        return this.videoId;
     }
 
 }

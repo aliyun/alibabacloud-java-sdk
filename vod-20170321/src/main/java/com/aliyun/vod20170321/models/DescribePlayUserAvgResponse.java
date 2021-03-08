@@ -4,49 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribePlayUserAvgResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("UserPlayStatisAvgs")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribePlayUserAvgResponseUserPlayStatisAvgs userPlayStatisAvgs;
+    public DescribePlayUserAvgResponseBody body;
 
     public static DescribePlayUserAvgResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribePlayUserAvgResponse self = new DescribePlayUserAvgResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class DescribePlayUserAvgResponseUserPlayStatisAvgsUserPlayStatisAvg extends TeaModel {
-        @NameInMap("Date")
-        @Validation(required = true)
-        public String date;
-
-        @NameInMap("AvgPlayDuration")
-        @Validation(required = true)
-        public String avgPlayDuration;
-
-        @NameInMap("AvgPlayCount")
-        @Validation(required = true)
-        public String avgPlayCount;
-
-        public static DescribePlayUserAvgResponseUserPlayStatisAvgsUserPlayStatisAvg build(java.util.Map<String, ?> map) throws Exception {
-            DescribePlayUserAvgResponseUserPlayStatisAvgsUserPlayStatisAvg self = new DescribePlayUserAvgResponseUserPlayStatisAvgsUserPlayStatisAvg();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribePlayUserAvgResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class DescribePlayUserAvgResponseUserPlayStatisAvgs extends TeaModel {
-        @NameInMap("UserPlayStatisAvg")
-        @Validation(required = true)
-        public java.util.List<DescribePlayUserAvgResponseUserPlayStatisAvgsUserPlayStatisAvg> userPlayStatisAvg;
-
-        public static DescribePlayUserAvgResponseUserPlayStatisAvgs build(java.util.Map<String, ?> map) throws Exception {
-            DescribePlayUserAvgResponseUserPlayStatisAvgs self = new DescribePlayUserAvgResponseUserPlayStatisAvgs();
-            return TeaModel.build(map, self);
-        }
-
+    public DescribePlayUserAvgResponse setBody(DescribePlayUserAvgResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribePlayUserAvgResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,53 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateWatermarkResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("WatermarkInfo")
+    @NameInMap("body")
     @Validation(required = true)
-    public UpdateWatermarkResponseWatermarkInfo watermarkInfo;
+    public UpdateWatermarkResponseBody body;
 
     public static UpdateWatermarkResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateWatermarkResponse self = new UpdateWatermarkResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class UpdateWatermarkResponseWatermarkInfo extends TeaModel {
-        @NameInMap("CreationTime")
-        @Validation(required = true)
-        public String creationTime;
+    public UpdateWatermarkResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        @NameInMap("IsDefault")
-        @Validation(required = true)
-        public String isDefault;
-
-        @NameInMap("WatermarkId")
-        @Validation(required = true)
-        public String watermarkId;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("FileUrl")
-        @Validation(required = true)
-        public String fileUrl;
-
-        @NameInMap("WatermarkConfig")
-        @Validation(required = true)
-        public String watermarkConfig;
-
-        public static UpdateWatermarkResponseWatermarkInfo build(java.util.Map<String, ?> map) throws Exception {
-            UpdateWatermarkResponseWatermarkInfo self = new UpdateWatermarkResponseWatermarkInfo();
-            return TeaModel.build(map, self);
-        }
-
+    public UpdateWatermarkResponse setBody(UpdateWatermarkResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateWatermarkResponseBody getBody() {
+        return this.body;
     }
 
 }

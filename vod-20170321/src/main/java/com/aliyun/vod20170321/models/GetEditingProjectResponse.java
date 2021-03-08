@@ -4,65 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetEditingProjectResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Project")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetEditingProjectResponseProject project;
+    public GetEditingProjectResponseBody body;
 
     public static GetEditingProjectResponse build(java.util.Map<String, ?> map) throws Exception {
         GetEditingProjectResponse self = new GetEditingProjectResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GetEditingProjectResponseProject extends TeaModel {
-        @NameInMap("ProjectId")
-        @Validation(required = true)
-        public String projectId;
+    public GetEditingProjectResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("CreationTime")
-        @Validation(required = true)
-        public String creationTime;
-
-        @NameInMap("ModifiedTime")
-        @Validation(required = true)
-        public String modifiedTime;
-
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("Title")
-        @Validation(required = true)
-        public String title;
-
-        @NameInMap("Timeline")
-        @Validation(required = true)
-        public String timeline;
-
-        @NameInMap("CoverURL")
-        @Validation(required = true)
-        public String coverURL;
-
-        @NameInMap("StorageLocation")
-        @Validation(required = true)
-        public String storageLocation;
-
-        @NameInMap("RegionId")
-        @Validation(required = true)
-        public String regionId;
-
-        public static GetEditingProjectResponseProject build(java.util.Map<String, ?> map) throws Exception {
-            GetEditingProjectResponseProject self = new GetEditingProjectResponseProject();
-            return TeaModel.build(map, self);
-        }
-
+    public GetEditingProjectResponse setBody(GetEditingProjectResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetEditingProjectResponseBody getBody() {
+        return this.body;
     }
 
 }

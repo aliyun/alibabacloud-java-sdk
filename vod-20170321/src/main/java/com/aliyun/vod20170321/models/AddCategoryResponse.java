@@ -4,45 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddCategoryResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Category")
+    @NameInMap("body")
     @Validation(required = true)
-    public AddCategoryResponseCategory category;
+    public AddCategoryResponseBody body;
 
     public static AddCategoryResponse build(java.util.Map<String, ?> map) throws Exception {
         AddCategoryResponse self = new AddCategoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class AddCategoryResponseCategory extends TeaModel {
-        @NameInMap("CateId")
-        @Validation(required = true)
-        public Long cateId;
+    public AddCategoryResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("CateName")
-        @Validation(required = true)
-        public String cateName;
-
-        @NameInMap("ParentId")
-        @Validation(required = true)
-        public Long parentId;
-
-        @NameInMap("Level")
-        @Validation(required = true)
-        public Long level;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        public static AddCategoryResponseCategory build(java.util.Map<String, ?> map) throws Exception {
-            AddCategoryResponseCategory self = new AddCategoryResponseCategory();
-            return TeaModel.build(map, self);
-        }
-
+    public AddCategoryResponse setBody(AddCategoryResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddCategoryResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -8,12 +8,27 @@ public class DescribeVodDomainCertificateInfoRequest extends TeaModel {
     public Long ownerId;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     public static DescribeVodDomainCertificateInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainCertificateInfoRequest self = new DescribeVodDomainCertificateInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodDomainCertificateInfoRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVodDomainCertificateInfoRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
 }
