@@ -22,6 +22,9 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     @NameInMap("AccountId")
     public String accountId;
 
+    @NameInMap("InstFilterRegion")
+    public String instFilterRegion;
+
     @NameInMap("Tag")
     public java.util.List<DescribeSynchronizationJobsRequestTag> tag;
 
@@ -76,6 +79,14 @@ public class DescribeSynchronizationJobsRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public DescribeSynchronizationJobsRequest setInstFilterRegion(String instFilterRegion) {
+        this.instFilterRegion = instFilterRegion;
+        return this;
+    }
+    public String getInstFilterRegion() {
+        return this.instFilterRegion;
     }
 
     public DescribeSynchronizationJobsRequest setTag(java.util.List<DescribeSynchronizationJobsRequestTag> tag) {

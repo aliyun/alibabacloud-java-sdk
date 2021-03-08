@@ -22,6 +22,9 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     @NameInMap("AccountId")
     public String accountId;
 
+    @NameInMap("InstFilterRegion")
+    public String instFilterRegion;
+
     @NameInMap("Tag")
     public java.util.List<DescribeSubscriptionInstancesRequestTag> tag;
 
@@ -76,6 +79,14 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public DescribeSubscriptionInstancesRequest setInstFilterRegion(String instFilterRegion) {
+        this.instFilterRegion = instFilterRegion;
+        return this;
+    }
+    public String getInstFilterRegion() {
+        return this.instFilterRegion;
     }
 
     public DescribeSubscriptionInstancesRequest setTag(java.util.List<DescribeSubscriptionInstancesRequestTag> tag) {
