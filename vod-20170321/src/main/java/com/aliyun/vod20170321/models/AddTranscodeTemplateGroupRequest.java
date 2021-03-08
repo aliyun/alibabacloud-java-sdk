@@ -4,18 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddTranscodeTemplateGroupRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("Name")
     public String name;
 
@@ -31,6 +19,38 @@ public class AddTranscodeTemplateGroupRequest extends TeaModel {
     public static AddTranscodeTemplateGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTranscodeTemplateGroupRequest self = new AddTranscodeTemplateGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AddTranscodeTemplateGroupRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public AddTranscodeTemplateGroupRequest setTranscodeTemplateList(String transcodeTemplateList) {
+        this.transcodeTemplateList = transcodeTemplateList;
+        return this;
+    }
+    public String getTranscodeTemplateList() {
+        return this.transcodeTemplateList;
+    }
+
+    public AddTranscodeTemplateGroupRequest setTranscodeTemplateGroupId(String transcodeTemplateGroupId) {
+        this.transcodeTemplateGroupId = transcodeTemplateGroupId;
+        return this;
+    }
+    public String getTranscodeTemplateGroupId() {
+        return this.transcodeTemplateGroupId;
+    }
+
+    public AddTranscodeTemplateGroupRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
 }

@@ -11,12 +11,35 @@ public class DescribeVodDomainDetailRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     public static DescribeVodDomainDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainDetailRequest self = new DescribeVodDomainDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodDomainDetailRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVodDomainDetailRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeVodDomainDetailRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
     }
 
 }

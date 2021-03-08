@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ProduceEditingProjectVideoRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -43,6 +40,94 @@ public class ProduceEditingProjectVideoRequest extends TeaModel {
     public static ProduceEditingProjectVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         ProduceEditingProjectVideoRequest self = new ProduceEditingProjectVideoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ProduceEditingProjectVideoRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ProduceEditingProjectVideoRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ProduceEditingProjectVideoRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ProduceEditingProjectVideoRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public ProduceEditingProjectVideoRequest setTimeline(String timeline) {
+        this.timeline = timeline;
+        return this;
+    }
+    public String getTimeline() {
+        return this.timeline;
+    }
+
+    public ProduceEditingProjectVideoRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
+    }
+
+    public ProduceEditingProjectVideoRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public ProduceEditingProjectVideoRequest setCoverURL(String coverURL) {
+        this.coverURL = coverURL;
+        return this;
+    }
+    public String getCoverURL() {
+        return this.coverURL;
+    }
+
+    public ProduceEditingProjectVideoRequest setMediaMetadata(String mediaMetadata) {
+        this.mediaMetadata = mediaMetadata;
+        return this;
+    }
+    public String getMediaMetadata() {
+        return this.mediaMetadata;
+    }
+
+    public ProduceEditingProjectVideoRequest setProduceConfig(String produceConfig) {
+        this.produceConfig = produceConfig;
+        return this;
+    }
+    public String getProduceConfig() {
+        return this.produceConfig;
+    }
+
+    public ProduceEditingProjectVideoRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
 }

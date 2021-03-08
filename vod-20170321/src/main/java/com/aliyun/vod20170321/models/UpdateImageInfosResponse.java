@@ -4,29 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateImageInfosResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("NonExistImageIds")
+    @NameInMap("body")
     @Validation(required = true)
-    public UpdateImageInfosResponseNonExistImageIds nonExistImageIds;
+    public UpdateImageInfosResponseBody body;
 
     public static UpdateImageInfosResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateImageInfosResponse self = new UpdateImageInfosResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class UpdateImageInfosResponseNonExistImageIds extends TeaModel {
-        @NameInMap("ImageId")
-        @Validation(required = true)
-        public java.util.List<String> imageId;
+    public UpdateImageInfosResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static UpdateImageInfosResponseNonExistImageIds build(java.util.Map<String, ?> map) throws Exception {
-            UpdateImageInfosResponseNonExistImageIds self = new UpdateImageInfosResponseNonExistImageIds();
-            return TeaModel.build(map, self);
-        }
-
+    public UpdateImageInfosResponse setBody(UpdateImageInfosResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateImageInfosResponseBody getBody() {
+        return this.body;
     }
 
 }

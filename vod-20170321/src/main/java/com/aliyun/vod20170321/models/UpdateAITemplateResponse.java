@@ -4,17 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateAITemplateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TemplateId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String templateId;
+    public UpdateAITemplateResponseBody body;
 
     public static UpdateAITemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateAITemplateResponse self = new UpdateAITemplateResponse();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAITemplateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateAITemplateResponse setBody(UpdateAITemplateResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateAITemplateResponseBody getBody() {
+        return this.body;
     }
 
 }

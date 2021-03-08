@@ -4,15 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class GetCategoriesRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public String ownerId;
-
-    @NameInMap("ResourceOwnerId")
-    public String resourceOwnerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
     @NameInMap("CateId")
     public Long cateId;
 
@@ -31,6 +22,46 @@ public class GetCategoriesRequest extends TeaModel {
     public static GetCategoriesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetCategoriesRequest self = new GetCategoriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetCategoriesRequest setCateId(Long cateId) {
+        this.cateId = cateId;
+        return this;
+    }
+    public Long getCateId() {
+        return this.cateId;
+    }
+
+    public GetCategoriesRequest setPageNo(Long pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+    public Long getPageNo() {
+        return this.pageNo;
+    }
+
+    public GetCategoriesRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    public GetCategoriesRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    public GetCategoriesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

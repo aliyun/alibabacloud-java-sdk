@@ -4,17 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitWorkflowJobRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("WorkflowId")
-    @Validation(required = true)
     public String workflowId;
 
     @NameInMap("MediaId")
@@ -26,6 +16,30 @@ public class SubmitWorkflowJobRequest extends TeaModel {
     public static SubmitWorkflowJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitWorkflowJobRequest self = new SubmitWorkflowJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitWorkflowJobRequest setWorkflowId(String workflowId) {
+        this.workflowId = workflowId;
+        return this;
+    }
+    public String getWorkflowId() {
+        return this.workflowId;
+    }
+
+    public SubmitWorkflowJobRequest setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+        return this;
+    }
+    public String getMediaId() {
+        return this.mediaId;
+    }
+
+    public SubmitWorkflowJobRequest setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
+        return this;
+    }
+    public String getFileUrl() {
+        return this.fileUrl;
     }
 
 }

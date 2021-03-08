@@ -4,17 +4,8 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppInfoRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
+    @NameInMap("ResourceRealOwnerId")
+    public Long resourceRealOwnerId;
 
     @NameInMap("AppId")
     public String appId;
@@ -31,6 +22,46 @@ public class UpdateAppInfoRequest extends TeaModel {
     public static UpdateAppInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppInfoRequest self = new UpdateAppInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAppInfoRequest setResourceRealOwnerId(Long resourceRealOwnerId) {
+        this.resourceRealOwnerId = resourceRealOwnerId;
+        return this;
+    }
+    public Long getResourceRealOwnerId() {
+        return this.resourceRealOwnerId;
+    }
+
+    public UpdateAppInfoRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public UpdateAppInfoRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public UpdateAppInfoRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public UpdateAppInfoRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

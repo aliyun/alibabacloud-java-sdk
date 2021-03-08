@@ -4,9 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateEditingProjectRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
     @NameInMap("OwnerId")
     public String ownerId;
 
@@ -20,7 +17,6 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public String projectId;
 
     @NameInMap("Title")
@@ -35,9 +31,103 @@ public class UpdateEditingProjectRequest extends TeaModel {
     @NameInMap("CoverURL")
     public String coverURL;
 
+    @NameInMap("FEExtend")
+    public String FEExtend;
+
+    @NameInMap("Duration")
+    public Float duration;
+
     public static UpdateEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEditingProjectRequest self = new UpdateEditingProjectRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateEditingProjectRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
+    public UpdateEditingProjectRequest setResourceOwnerId(String resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public String getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public UpdateEditingProjectRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public UpdateEditingProjectRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public UpdateEditingProjectRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    public UpdateEditingProjectRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
+    }
+
+    public UpdateEditingProjectRequest setTimeline(String timeline) {
+        this.timeline = timeline;
+        return this;
+    }
+    public String getTimeline() {
+        return this.timeline;
+    }
+
+    public UpdateEditingProjectRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public UpdateEditingProjectRequest setCoverURL(String coverURL) {
+        this.coverURL = coverURL;
+        return this;
+    }
+    public String getCoverURL() {
+        return this.coverURL;
+    }
+
+    public UpdateEditingProjectRequest setFEExtend(String FEExtend) {
+        this.FEExtend = FEExtend;
+        return this;
+    }
+    public String getFEExtend() {
+        return this.FEExtend;
+    }
+
+    public UpdateEditingProjectRequest setDuration(Float duration) {
+        this.duration = duration;
+        return this;
+    }
+    public Float getDuration() {
+        return this.duration;
     }
 
 }

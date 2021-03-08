@@ -4,33 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UploadMediaByURLResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("UploadJobs")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<UploadMediaByURLResponseUploadJobs> uploadJobs;
+    public UploadMediaByURLResponseBody body;
 
     public static UploadMediaByURLResponse build(java.util.Map<String, ?> map) throws Exception {
         UploadMediaByURLResponse self = new UploadMediaByURLResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class UploadMediaByURLResponseUploadJobs extends TeaModel {
-        @NameInMap("JobId")
-        @Validation(required = true)
-        public String jobId;
+    public UploadMediaByURLResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("SourceURL")
-        @Validation(required = true)
-        public String sourceURL;
-
-        public static UploadMediaByURLResponseUploadJobs build(java.util.Map<String, ?> map) throws Exception {
-            UploadMediaByURLResponseUploadJobs self = new UploadMediaByURLResponseUploadJobs();
-            return TeaModel.build(map, self);
-        }
-
+    public UploadMediaByURLResponse setBody(UploadMediaByURLResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UploadMediaByURLResponseBody getBody() {
+        return this.body;
     }
 
 }

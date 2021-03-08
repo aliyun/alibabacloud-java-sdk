@@ -4,45 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TranscodeTaskId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String transcodeTaskId;
-
-    @NameInMap("TranscodeJobs")
-    @Validation(required = true)
-    public SubmitTranscodeJobsResponseTranscodeJobs transcodeJobs;
+    public SubmitTranscodeJobsResponseBody body;
 
     public static SubmitTranscodeJobsResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitTranscodeJobsResponse self = new SubmitTranscodeJobsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class SubmitTranscodeJobsResponseTranscodeJobsTranscodeJob extends TeaModel {
-        @NameInMap("JobId")
-        @Validation(required = true)
-        public String jobId;
-
-        public static SubmitTranscodeJobsResponseTranscodeJobsTranscodeJob build(java.util.Map<String, ?> map) throws Exception {
-            SubmitTranscodeJobsResponseTranscodeJobsTranscodeJob self = new SubmitTranscodeJobsResponseTranscodeJobsTranscodeJob();
-            return TeaModel.build(map, self);
-        }
-
+    public SubmitTranscodeJobsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class SubmitTranscodeJobsResponseTranscodeJobs extends TeaModel {
-        @NameInMap("TranscodeJob")
-        @Validation(required = true)
-        public java.util.List<SubmitTranscodeJobsResponseTranscodeJobsTranscodeJob> transcodeJob;
-
-        public static SubmitTranscodeJobsResponseTranscodeJobs build(java.util.Map<String, ?> map) throws Exception {
-            SubmitTranscodeJobsResponseTranscodeJobs self = new SubmitTranscodeJobsResponseTranscodeJobs();
-            return TeaModel.build(map, self);
-        }
-
+    public SubmitTranscodeJobsResponse setBody(SubmitTranscodeJobsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SubmitTranscodeJobsResponseBody getBody() {
+        return this.body;
     }
 
 }

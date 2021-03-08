@@ -11,16 +11,46 @@ public class DescribeVodDomainConfigsRequest extends TeaModel {
     public String securityToken;
 
     @NameInMap("DomainName")
-    @Validation(required = true)
     public String domainName;
 
     @NameInMap("FunctionNames")
-    @Validation(required = true)
     public String functionNames;
 
     public static DescribeVodDomainConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodDomainConfigsRequest self = new DescribeVodDomainConfigsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodDomainConfigsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeVodDomainConfigsRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+    public DescribeVodDomainConfigsRequest setDomainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    public DescribeVodDomainConfigsRequest setFunctionNames(String functionNames) {
+        this.functionNames = functionNames;
+        return this;
+    }
+    public String getFunctionNames() {
+        return this.functionNames;
     }
 
 }

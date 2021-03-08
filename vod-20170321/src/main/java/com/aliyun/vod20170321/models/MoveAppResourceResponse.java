@@ -4,21 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class MoveAppResourceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("NonExistResourceIds")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<String> nonExistResourceIds;
-
-    @NameInMap("FailedResourceIds")
-    @Validation(required = true)
-    public java.util.List<String> failedResourceIds;
+    public MoveAppResourceResponseBody body;
 
     public static MoveAppResourceResponse build(java.util.Map<String, ?> map) throws Exception {
         MoveAppResourceResponse self = new MoveAppResourceResponse();
         return TeaModel.build(map, self);
+    }
+
+    public MoveAppResourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public MoveAppResourceResponse setBody(MoveAppResourceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public MoveAppResourceResponseBody getBody() {
+        return this.body;
     }
 
 }

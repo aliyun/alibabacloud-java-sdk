@@ -4,18 +4,6 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UpdateTranscodeTemplateGroupRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("Name")
     public String name;
 
@@ -26,12 +14,43 @@ public class UpdateTranscodeTemplateGroupRequest extends TeaModel {
     public String locked;
 
     @NameInMap("TranscodeTemplateGroupId")
-    @Validation(required = true)
     public String transcodeTemplateGroupId;
 
     public static UpdateTranscodeTemplateGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTranscodeTemplateGroupRequest self = new UpdateTranscodeTemplateGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateTranscodeTemplateGroupRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public UpdateTranscodeTemplateGroupRequest setTranscodeTemplateList(String transcodeTemplateList) {
+        this.transcodeTemplateList = transcodeTemplateList;
+        return this;
+    }
+    public String getTranscodeTemplateList() {
+        return this.transcodeTemplateList;
+    }
+
+    public UpdateTranscodeTemplateGroupRequest setLocked(String locked) {
+        this.locked = locked;
+        return this;
+    }
+    public String getLocked() {
+        return this.locked;
+    }
+
+    public UpdateTranscodeTemplateGroupRequest setTranscodeTemplateGroupId(String transcodeTemplateGroupId) {
+        this.transcodeTemplateGroupId = transcodeTemplateGroupId;
+        return this;
+    }
+    public String getTranscodeTemplateGroupId() {
+        return this.transcodeTemplateGroupId;
     }
 
 }

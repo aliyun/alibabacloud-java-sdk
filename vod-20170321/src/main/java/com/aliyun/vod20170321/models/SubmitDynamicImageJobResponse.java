@@ -4,29 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitDynamicImageJobResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DynamicImageJob")
+    @NameInMap("body")
     @Validation(required = true)
-    public SubmitDynamicImageJobResponseDynamicImageJob dynamicImageJob;
+    public SubmitDynamicImageJobResponseBody body;
 
     public static SubmitDynamicImageJobResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitDynamicImageJobResponse self = new SubmitDynamicImageJobResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class SubmitDynamicImageJobResponseDynamicImageJob extends TeaModel {
-        @NameInMap("JobId")
-        @Validation(required = true)
-        public String jobId;
+    public SubmitDynamicImageJobResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static SubmitDynamicImageJobResponseDynamicImageJob build(java.util.Map<String, ?> map) throws Exception {
-            SubmitDynamicImageJobResponseDynamicImageJob self = new SubmitDynamicImageJobResponseDynamicImageJob();
-            return TeaModel.build(map, self);
-        }
-
+    public SubmitDynamicImageJobResponse setBody(SubmitDynamicImageJobResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SubmitDynamicImageJobResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,57 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAITemplateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TemplateInfoList")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<ListAITemplateResponseTemplateInfoList> templateInfoList;
+    public ListAITemplateResponseBody body;
 
     public static ListAITemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         ListAITemplateResponse self = new ListAITemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListAITemplateResponseTemplateInfoList extends TeaModel {
-        @NameInMap("TemplateId")
-        @Validation(required = true)
-        public String templateId;
+    public ListAITemplateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("TemplateType")
-        @Validation(required = true)
-        public String templateType;
-
-        @NameInMap("TemplateName")
-        @Validation(required = true)
-        public String templateName;
-
-        @NameInMap("TemplateConfig")
-        @Validation(required = true)
-        public String templateConfig;
-
-        @NameInMap("Source")
-        @Validation(required = true)
-        public String source;
-
-        @NameInMap("IsDefault")
-        @Validation(required = true)
-        public String isDefault;
-
-        @NameInMap("CreationTime")
-        @Validation(required = true)
-        public String creationTime;
-
-        @NameInMap("ModifyTime")
-        @Validation(required = true)
-        public String modifyTime;
-
-        public static ListAITemplateResponseTemplateInfoList build(java.util.Map<String, ?> map) throws Exception {
-            ListAITemplateResponseTemplateInfoList self = new ListAITemplateResponseTemplateInfoList();
-            return TeaModel.build(map, self);
-        }
-
+    public ListAITemplateResponse setBody(ListAITemplateResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListAITemplateResponseBody getBody() {
+        return this.body;
     }
 
 }

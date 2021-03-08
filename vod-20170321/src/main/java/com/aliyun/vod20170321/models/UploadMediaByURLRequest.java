@@ -4,17 +4,7 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class UploadMediaByURLRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("UploadURLs")
-    @Validation(required = true)
     public String uploadURLs;
 
     @NameInMap("TemplateGroupId")
@@ -44,6 +34,78 @@ public class UploadMediaByURLRequest extends TeaModel {
     public static UploadMediaByURLRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadMediaByURLRequest self = new UploadMediaByURLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UploadMediaByURLRequest setUploadURLs(String uploadURLs) {
+        this.uploadURLs = uploadURLs;
+        return this;
+    }
+    public String getUploadURLs() {
+        return this.uploadURLs;
+    }
+
+    public UploadMediaByURLRequest setTemplateGroupId(String templateGroupId) {
+        this.templateGroupId = templateGroupId;
+        return this;
+    }
+    public String getTemplateGroupId() {
+        return this.templateGroupId;
+    }
+
+    public UploadMediaByURLRequest setStorageLocation(String storageLocation) {
+        this.storageLocation = storageLocation;
+        return this;
+    }
+    public String getStorageLocation() {
+        return this.storageLocation;
+    }
+
+    public UploadMediaByURLRequest setUploadMetadatas(String uploadMetadatas) {
+        this.uploadMetadatas = uploadMetadatas;
+        return this;
+    }
+    public String getUploadMetadatas() {
+        return this.uploadMetadatas;
+    }
+
+    public UploadMediaByURLRequest setPriority(String priority) {
+        this.priority = priority;
+        return this;
+    }
+    public String getPriority() {
+        return this.priority;
+    }
+
+    public UploadMediaByURLRequest setMessageCallback(String messageCallback) {
+        this.messageCallback = messageCallback;
+        return this;
+    }
+    public String getMessageCallback() {
+        return this.messageCallback;
+    }
+
+    public UploadMediaByURLRequest setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
+    }
+
+    public UploadMediaByURLRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public UploadMediaByURLRequest setWorkflowId(String workflowId) {
+        this.workflowId = workflowId;
+        return this;
+    }
+    public String getWorkflowId() {
+        return this.workflowId;
     }
 
 }

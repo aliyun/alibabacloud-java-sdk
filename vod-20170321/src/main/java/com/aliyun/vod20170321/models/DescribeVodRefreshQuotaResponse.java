@@ -4,45 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class DescribeVodRefreshQuotaResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("UrlQuota")
+    @NameInMap("body")
     @Validation(required = true)
-    public String urlQuota;
-
-    @NameInMap("DirQuota")
-    @Validation(required = true)
-    public String dirQuota;
-
-    @NameInMap("UrlRemain")
-    @Validation(required = true)
-    public String urlRemain;
-
-    @NameInMap("DirRemain")
-    @Validation(required = true)
-    public String dirRemain;
-
-    @NameInMap("PreloadQuota")
-    @Validation(required = true)
-    public String preloadQuota;
-
-    @NameInMap("BlockQuota")
-    @Validation(required = true)
-    public String blockQuota;
-
-    @NameInMap("PreloadRemain")
-    @Validation(required = true)
-    public String preloadRemain;
-
-    @NameInMap("blockRemain")
-    @Validation(required = true)
-    public String blockRemain;
+    public DescribeVodRefreshQuotaResponseBody body;
 
     public static DescribeVodRefreshQuotaResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeVodRefreshQuotaResponse self = new DescribeVodRefreshQuotaResponse();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeVodRefreshQuotaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeVodRefreshQuotaResponse setBody(DescribeVodRefreshQuotaResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeVodRefreshQuotaResponseBody getBody() {
+        return this.body;
     }
 
 }

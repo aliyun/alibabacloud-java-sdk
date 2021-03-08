@@ -4,41 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitPreprocessJobsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PreprocessJobs")
+    @NameInMap("body")
     @Validation(required = true)
-    public SubmitPreprocessJobsResponsePreprocessJobs preprocessJobs;
+    public SubmitPreprocessJobsResponseBody body;
 
     public static SubmitPreprocessJobsResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitPreprocessJobsResponse self = new SubmitPreprocessJobsResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class SubmitPreprocessJobsResponsePreprocessJobsPreprocessJob extends TeaModel {
-        @NameInMap("JobId")
-        @Validation(required = true)
-        public String jobId;
-
-        public static SubmitPreprocessJobsResponsePreprocessJobsPreprocessJob build(java.util.Map<String, ?> map) throws Exception {
-            SubmitPreprocessJobsResponsePreprocessJobsPreprocessJob self = new SubmitPreprocessJobsResponsePreprocessJobsPreprocessJob();
-            return TeaModel.build(map, self);
-        }
-
+    public SubmitPreprocessJobsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public static class SubmitPreprocessJobsResponsePreprocessJobs extends TeaModel {
-        @NameInMap("PreprocessJob")
-        @Validation(required = true)
-        public java.util.List<SubmitPreprocessJobsResponsePreprocessJobsPreprocessJob> preprocessJob;
-
-        public static SubmitPreprocessJobsResponsePreprocessJobs build(java.util.Map<String, ?> map) throws Exception {
-            SubmitPreprocessJobsResponsePreprocessJobs self = new SubmitPreprocessJobsResponsePreprocessJobs();
-            return TeaModel.build(map, self);
-        }
-
+    public SubmitPreprocessJobsResponse setBody(SubmitPreprocessJobsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SubmitPreprocessJobsResponseBody getBody() {
+        return this.body;
     }
 
 }

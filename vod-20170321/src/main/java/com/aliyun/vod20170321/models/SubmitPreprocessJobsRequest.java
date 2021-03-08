@@ -4,29 +4,31 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class SubmitPreprocessJobsRequest extends TeaModel {
-    @NameInMap("AccessKeyId")
-    public String accessKeyId;
-
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
-    @NameInMap("ResourceOwnerAccount")
-    public String resourceOwnerAccount;
-
-    @NameInMap("ResourceOwnerId")
-    public Long resourceOwnerId;
-
     @NameInMap("VideoId")
-    @Validation(required = true)
     public String videoId;
 
     @NameInMap("PreprocessType")
-    @Validation(required = true)
     public String preprocessType;
 
     public static SubmitPreprocessJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitPreprocessJobsRequest self = new SubmitPreprocessJobsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitPreprocessJobsRequest setVideoId(String videoId) {
+        this.videoId = videoId;
+        return this;
+    }
+    public String getVideoId() {
+        return this.videoId;
+    }
+
+    public SubmitPreprocessJobsRequest setPreprocessType(String preprocessType) {
+        this.preprocessType = preprocessType;
+        return this;
+    }
+    public String getPreprocessType() {
+        return this.preprocessType;
     }
 
 }

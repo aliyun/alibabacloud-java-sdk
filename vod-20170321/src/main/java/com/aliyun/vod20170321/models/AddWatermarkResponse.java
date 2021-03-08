@@ -4,53 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class AddWatermarkResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("WatermarkInfo")
+    @NameInMap("body")
     @Validation(required = true)
-    public AddWatermarkResponseWatermarkInfo watermarkInfo;
+    public AddWatermarkResponseBody body;
 
     public static AddWatermarkResponse build(java.util.Map<String, ?> map) throws Exception {
         AddWatermarkResponse self = new AddWatermarkResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class AddWatermarkResponseWatermarkInfo extends TeaModel {
-        @NameInMap("CreationTime")
-        @Validation(required = true)
-        public String creationTime;
+    public AddWatermarkResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
-
-        @NameInMap("IsDefault")
-        @Validation(required = true)
-        public String isDefault;
-
-        @NameInMap("WatermarkId")
-        @Validation(required = true)
-        public String watermarkId;
-
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
-
-        @NameInMap("FileUrl")
-        @Validation(required = true)
-        public String fileUrl;
-
-        @NameInMap("WatermarkConfig")
-        @Validation(required = true)
-        public String watermarkConfig;
-
-        public static AddWatermarkResponseWatermarkInfo build(java.util.Map<String, ?> map) throws Exception {
-            AddWatermarkResponseWatermarkInfo self = new AddWatermarkResponseWatermarkInfo();
-            return TeaModel.build(map, self);
-        }
-
+    public AddWatermarkResponse setBody(AddWatermarkResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AddWatermarkResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,41 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class RegisterMediaResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RegisteredMediaList")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<RegisterMediaResponseRegisteredMediaList> registeredMediaList;
-
-    @NameInMap("FailedFileURLs")
-    @Validation(required = true)
-    public java.util.List<String> failedFileURLs;
+    public RegisterMediaResponseBody body;
 
     public static RegisterMediaResponse build(java.util.Map<String, ?> map) throws Exception {
         RegisterMediaResponse self = new RegisterMediaResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class RegisterMediaResponseRegisteredMediaList extends TeaModel {
-        @NameInMap("MediaId")
-        @Validation(required = true)
-        public String mediaId;
+    public RegisterMediaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("FileURL")
-        @Validation(required = true)
-        public String fileURL;
-
-        @NameInMap("NewRegister")
-        @Validation(required = true)
-        public Boolean newRegister;
-
-        public static RegisterMediaResponseRegisteredMediaList build(java.util.Map<String, ?> map) throws Exception {
-            RegisterMediaResponseRegisteredMediaList self = new RegisterMediaResponseRegisteredMediaList();
-            return TeaModel.build(map, self);
-        }
-
+    public RegisterMediaResponse setBody(RegisterMediaResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RegisterMediaResponseBody getBody() {
+        return this.body;
     }
 
 }

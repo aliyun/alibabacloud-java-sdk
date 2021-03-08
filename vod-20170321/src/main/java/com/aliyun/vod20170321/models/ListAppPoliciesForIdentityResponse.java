@@ -4,53 +4,33 @@ package com.aliyun.vod20170321.models;
 import com.aliyun.tea.*;
 
 public class ListAppPoliciesForIdentityResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AppPolicyList")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<ListAppPoliciesForIdentityResponseAppPolicyList> appPolicyList;
+    public ListAppPoliciesForIdentityResponseBody body;
 
     public static ListAppPoliciesForIdentityResponse build(java.util.Map<String, ?> map) throws Exception {
         ListAppPoliciesForIdentityResponse self = new ListAppPoliciesForIdentityResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class ListAppPoliciesForIdentityResponseAppPolicyList extends TeaModel {
-        @NameInMap("AppId")
-        @Validation(required = true)
-        public String appId;
+    public ListAppPoliciesForIdentityResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("CreationTime")
-        @Validation(required = true)
-        public String creationTime;
-
-        @NameInMap("PolicyName")
-        @Validation(required = true)
-        public String policyName;
-
-        @NameInMap("PolicyType")
-        @Validation(required = true)
-        public String policyType;
-
-        @NameInMap("PolicyValue")
-        @Validation(required = true)
-        public String policyValue;
-
-        @NameInMap("Description")
-        @Validation(required = true)
-        public String description;
-
-        @NameInMap("ModificationTime")
-        @Validation(required = true)
-        public String modificationTime;
-
-        public static ListAppPoliciesForIdentityResponseAppPolicyList build(java.util.Map<String, ?> map) throws Exception {
-            ListAppPoliciesForIdentityResponseAppPolicyList self = new ListAppPoliciesForIdentityResponseAppPolicyList();
-            return TeaModel.build(map, self);
-        }
-
+    public ListAppPoliciesForIdentityResponse setBody(ListAppPoliciesForIdentityResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListAppPoliciesForIdentityResponseBody getBody() {
+        return this.body;
     }
 
 }
