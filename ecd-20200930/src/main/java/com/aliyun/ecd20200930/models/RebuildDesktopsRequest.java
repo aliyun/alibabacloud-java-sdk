@@ -3,7 +3,7 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class RebootDesktopsRequest extends TeaModel {
+public class RebuildDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
     @Validation(required = true)
     public String regionId;
@@ -12,12 +12,12 @@ public class RebootDesktopsRequest extends TeaModel {
     @Validation(required = true)
     public java.util.List<String> desktopId;
 
-    public static RebootDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
-        RebootDesktopsRequest self = new RebootDesktopsRequest();
+    public static RebuildDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
+        RebuildDesktopsRequest self = new RebuildDesktopsRequest();
         return TeaModel.build(map, self);
     }
 
-    public RebootDesktopsRequest setRegionId(String regionId) {
+    public RebuildDesktopsRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -25,7 +25,7 @@ public class RebootDesktopsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public RebootDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
+    public RebuildDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
         this.desktopId = desktopId;
         return this;
     }

@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("GroupId")
     public String groupId;
 
     @NameInMap("BundleId")
+    @Validation(required = true)
     public String bundleId;
-
-    @NameInMap("SystemDiskSize")
-    public Integer systemDiskSize;
-
-    @NameInMap("DataDiskSize")
-    public Integer dataDiskSize;
 
     @NameInMap("DesktopName")
     public String desktopName;
@@ -34,7 +30,12 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    @NameInMap("EndUserId")
+    @Validation(required = true)
+    public java.util.List<String> endUserId;
+
     @NameInMap("PolicyGroupId")
+    @Validation(required = true)
     public String policyGroupId;
 
     @NameInMap("ChargeType")
@@ -49,11 +50,11 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    @NameInMap("EndUserId")
-    public java.util.List<String> endUserId;
-
     @NameInMap("Tag")
     public java.util.List<CreateDesktopsRequestTag> tag;
+
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
 
     public static CreateDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDesktopsRequest self = new CreateDesktopsRequest();
@@ -82,22 +83,6 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public String getBundleId() {
         return this.bundleId;
-    }
-
-    public CreateDesktopsRequest setSystemDiskSize(Integer systemDiskSize) {
-        this.systemDiskSize = systemDiskSize;
-        return this;
-    }
-    public Integer getSystemDiskSize() {
-        return this.systemDiskSize;
-    }
-
-    public CreateDesktopsRequest setDataDiskSize(Integer dataDiskSize) {
-        this.dataDiskSize = dataDiskSize;
-        return this;
-    }
-    public Integer getDataDiskSize() {
-        return this.dataDiskSize;
     }
 
     public CreateDesktopsRequest setDesktopName(String desktopName) {
@@ -140,6 +125,14 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.directoryId;
     }
 
+    public CreateDesktopsRequest setEndUserId(java.util.List<String> endUserId) {
+        this.endUserId = endUserId;
+        return this;
+    }
+    public java.util.List<String> getEndUserId() {
+        return this.endUserId;
+    }
+
     public CreateDesktopsRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
@@ -180,20 +173,20 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.autoPay;
     }
 
-    public CreateDesktopsRequest setEndUserId(java.util.List<String> endUserId) {
-        this.endUserId = endUserId;
-        return this;
-    }
-    public java.util.List<String> getEndUserId() {
-        return this.endUserId;
-    }
-
     public CreateDesktopsRequest setTag(java.util.List<CreateDesktopsRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<CreateDesktopsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateDesktopsRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public static class CreateDesktopsRequestTag extends TeaModel {

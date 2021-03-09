@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyImageAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageId")
+    @Validation(required = true)
     public String imageId;
 
     @NameInMap("Name")

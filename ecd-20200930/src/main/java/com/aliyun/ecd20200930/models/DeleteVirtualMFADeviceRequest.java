@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteVirtualMFADeviceRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SerialNumber")
+    @Validation(required = true)
     public String serialNumber;
 
     public static DeleteVirtualMFADeviceRequest build(java.util.Map<String, ?> map) throws Exception {
