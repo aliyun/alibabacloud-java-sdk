@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class RenewDesktopsRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("DesktopId")
+    @Validation(required = true)
+    public java.util.List<String> desktopId;
 
     @NameInMap("Period")
     public Integer period;
@@ -15,9 +20,6 @@ public class RenewDesktopsRequest extends TeaModel {
 
     @NameInMap("AutoPay")
     public Boolean autoPay;
-
-    @NameInMap("DesktopId")
-    public java.util.List<String> desktopId;
 
     public static RenewDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewDesktopsRequest self = new RenewDesktopsRequest();
@@ -30,6 +32,14 @@ public class RenewDesktopsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RenewDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
+        this.desktopId = desktopId;
+        return this;
+    }
+    public java.util.List<String> getDesktopId() {
+        return this.desktopId;
     }
 
     public RenewDesktopsRequest setPeriod(Integer period) {
@@ -54,14 +64,6 @@ public class RenewDesktopsRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
-    }
-
-    public RenewDesktopsRequest setDesktopId(java.util.List<String> desktopId) {
-        this.desktopId = desktopId;
-        return this;
-    }
-    public java.util.List<String> getDesktopId() {
-        return this.desktopId;
     }
 
 }

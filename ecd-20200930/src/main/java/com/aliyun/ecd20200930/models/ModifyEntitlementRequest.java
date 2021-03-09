@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyEntitlementRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DesktopId")
+    @Validation(required = true)
     public String desktopId;
 
     @NameInMap("EndUserId")
+    @Validation(required = true)
     public java.util.List<String> endUserId;
 
     public static ModifyEntitlementRequest build(java.util.Map<String, ?> map) throws Exception {

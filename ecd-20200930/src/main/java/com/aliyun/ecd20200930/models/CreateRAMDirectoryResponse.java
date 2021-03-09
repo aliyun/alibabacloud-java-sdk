@@ -4,33 +4,33 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateRAMDirectoryResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("DirectoryId")
     @Validation(required = true)
-    public CreateRAMDirectoryResponseBody body;
+    public String directoryId;
 
     public static CreateRAMDirectoryResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateRAMDirectoryResponse self = new CreateRAMDirectoryResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateRAMDirectoryResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateRAMDirectoryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateRAMDirectoryResponse setBody(CreateRAMDirectoryResponseBody body) {
-        this.body = body;
+    public CreateRAMDirectoryResponse setDirectoryId(String directoryId) {
+        this.directoryId = directoryId;
         return this;
     }
-    public CreateRAMDirectoryResponseBody getBody() {
-        return this.body;
+    public String getDirectoryId() {
+        return this.directoryId;
     }
 
 }

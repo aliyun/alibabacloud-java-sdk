@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("MaxResults")
@@ -13,17 +14,11 @@ public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("UserName")
-    public String userName;
-
-    @NameInMap("Category")
-    public String category;
+    @NameInMap("BundleId")
+    public java.util.List<String> bundleId;
 
     @NameInMap("BundleType")
     public String bundleType;
-
-    @NameInMap("BundleId")
-    public java.util.List<String> bundleId;
 
     public static DescribeBundlesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBundlesRequest self = new DescribeBundlesRequest();
@@ -54,20 +49,12 @@ public class DescribeBundlesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeBundlesRequest setUserName(String userName) {
-        this.userName = userName;
+    public DescribeBundlesRequest setBundleId(java.util.List<String> bundleId) {
+        this.bundleId = bundleId;
         return this;
     }
-    public String getUserName() {
-        return this.userName;
-    }
-
-    public DescribeBundlesRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
+    public java.util.List<String> getBundleId() {
+        return this.bundleId;
     }
 
     public DescribeBundlesRequest setBundleType(String bundleType) {
@@ -76,14 +63,6 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public String getBundleType() {
         return this.bundleType;
-    }
-
-    public DescribeBundlesRequest setBundleId(java.util.List<String> bundleId) {
-        this.bundleId = bundleId;
-        return this;
-    }
-    public java.util.List<String> getBundleId() {
-        return this.bundleId;
     }
 
 }

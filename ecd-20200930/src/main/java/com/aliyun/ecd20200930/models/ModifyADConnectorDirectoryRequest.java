@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyADConnectorDirectoryRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DirectoryId")
+    @Validation(required = true)
     public String directoryId;
 
     @NameInMap("DomainName")
@@ -19,20 +21,20 @@ public class ModifyADConnectorDirectoryRequest extends TeaModel {
     @NameInMap("DomainPassword")
     public String domainPassword;
 
+    @NameInMap("DnsAddress")
+    public java.util.List<String> dnsAddress;
+
     @NameInMap("DirectoryName")
     public String directoryName;
+
+    @NameInMap("SubDomainDnsAddress")
+    public java.util.List<String> subDomainDnsAddress;
 
     @NameInMap("SubDomainName")
     public String subDomainName;
 
     @NameInMap("MfaEnabled")
     public Boolean mfaEnabled;
-
-    @NameInMap("DnsAddress")
-    public java.util.List<String> dnsAddress;
-
-    @NameInMap("SubDomainDnsAddress")
-    public java.util.List<String> subDomainDnsAddress;
 
     public static ModifyADConnectorDirectoryRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyADConnectorDirectoryRequest self = new ModifyADConnectorDirectoryRequest();
@@ -79,12 +81,28 @@ public class ModifyADConnectorDirectoryRequest extends TeaModel {
         return this.domainPassword;
     }
 
+    public ModifyADConnectorDirectoryRequest setDnsAddress(java.util.List<String> dnsAddress) {
+        this.dnsAddress = dnsAddress;
+        return this;
+    }
+    public java.util.List<String> getDnsAddress() {
+        return this.dnsAddress;
+    }
+
     public ModifyADConnectorDirectoryRequest setDirectoryName(String directoryName) {
         this.directoryName = directoryName;
         return this;
     }
     public String getDirectoryName() {
         return this.directoryName;
+    }
+
+    public ModifyADConnectorDirectoryRequest setSubDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
+        this.subDomainDnsAddress = subDomainDnsAddress;
+        return this;
+    }
+    public java.util.List<String> getSubDomainDnsAddress() {
+        return this.subDomainDnsAddress;
     }
 
     public ModifyADConnectorDirectoryRequest setSubDomainName(String subDomainName) {
@@ -101,22 +119,6 @@ public class ModifyADConnectorDirectoryRequest extends TeaModel {
     }
     public Boolean getMfaEnabled() {
         return this.mfaEnabled;
-    }
-
-    public ModifyADConnectorDirectoryRequest setDnsAddress(java.util.List<String> dnsAddress) {
-        this.dnsAddress = dnsAddress;
-        return this;
-    }
-    public java.util.List<String> getDnsAddress() {
-        return this.dnsAddress;
-    }
-
-    public ModifyADConnectorDirectoryRequest setSubDomainDnsAddress(java.util.List<String> subDomainDnsAddress) {
-        this.subDomainDnsAddress = subDomainDnsAddress;
-        return this;
-    }
-    public java.util.List<String> getSubDomainDnsAddress() {
-        return this.subDomainDnsAddress;
     }
 
 }

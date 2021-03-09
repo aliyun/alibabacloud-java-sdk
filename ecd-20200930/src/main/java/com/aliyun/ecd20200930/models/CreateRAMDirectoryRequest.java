@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRAMDirectoryRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DirectoryName")
@@ -20,6 +21,7 @@ public class CreateRAMDirectoryRequest extends TeaModel {
     public String desktopAccessType;
 
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     public java.util.List<String> vSwitchId;
 
     public static CreateRAMDirectoryRequest build(java.util.Map<String, ?> map) throws Exception {

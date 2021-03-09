@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteImagesRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageId")
+    @Validation(required = true)
     public java.util.List<String> imageId;
 
     public static DeleteImagesRequest build(java.util.Map<String, ?> map) throws Exception {

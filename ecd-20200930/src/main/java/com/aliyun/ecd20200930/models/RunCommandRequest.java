@@ -5,22 +5,26 @@ import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     @NameInMap("CommandContent")
+    @Validation(required = true)
     public String commandContent;
 
     @NameInMap("Timeout")
     public Long timeout;
 
+    @NameInMap("DesktopId")
+    @Validation(required = true)
+    public java.util.List<String> desktopId;
+
     @NameInMap("ContentEncoding")
     public String contentEncoding;
-
-    @NameInMap("DesktopId")
-    public java.util.List<String> desktopId;
 
     public static RunCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCommandRequest self = new RunCommandRequest();
@@ -59,20 +63,20 @@ public class RunCommandRequest extends TeaModel {
         return this.timeout;
     }
 
-    public RunCommandRequest setContentEncoding(String contentEncoding) {
-        this.contentEncoding = contentEncoding;
-        return this;
-    }
-    public String getContentEncoding() {
-        return this.contentEncoding;
-    }
-
     public RunCommandRequest setDesktopId(java.util.List<String> desktopId) {
         this.desktopId = desktopId;
         return this;
     }
     public java.util.List<String> getDesktopId() {
         return this.desktopId;
+    }
+
+    public RunCommandRequest setContentEncoding(String contentEncoding) {
+        this.contentEncoding = contentEncoding;
+        return this;
+    }
+    public String getContentEncoding() {
+        return this.contentEncoding;
     }
 
 }

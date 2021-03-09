@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVirtualMFADevicesRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("MaxResults")
@@ -14,6 +15,7 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     public String nextToken;
 
     @NameInMap("DirectoryId")
+    @Validation(required = true)
     public String directoryId;
 
     @NameInMap("EndUserId")

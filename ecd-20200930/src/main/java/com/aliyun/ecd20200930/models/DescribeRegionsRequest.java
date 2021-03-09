@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     public static DescribeRegionsRequest build(java.util.Map<String, ?> map) throws Exception {

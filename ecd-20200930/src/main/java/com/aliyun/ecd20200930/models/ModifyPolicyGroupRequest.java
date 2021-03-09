@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyGroupRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PolicyGroupId")
+    @Validation(required = true)
     public String policyGroupId;
 
     @NameInMap("Name")

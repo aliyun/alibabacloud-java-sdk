@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class StopInvocationRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InvokeId")
+    @Validation(required = true)
     public String invokeId;
 
     @NameInMap("DesktopId")

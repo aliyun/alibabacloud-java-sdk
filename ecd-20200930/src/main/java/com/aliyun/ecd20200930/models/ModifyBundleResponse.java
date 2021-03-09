@@ -3,16 +3,17 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class PayOrderCallbackResponseBody extends TeaModel {
+public class ModifyBundleResponse extends TeaModel {
     @NameInMap("RequestId")
+    @Validation(required = true)
     public String requestId;
 
-    public static PayOrderCallbackResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        PayOrderCallbackResponseBody self = new PayOrderCallbackResponseBody();
+    public static ModifyBundleResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyBundleResponse self = new ModifyBundleResponse();
         return TeaModel.build(map, self);
     }
 
-    public PayOrderCallbackResponseBody setRequestId(String requestId) {
+    public ModifyBundleResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
