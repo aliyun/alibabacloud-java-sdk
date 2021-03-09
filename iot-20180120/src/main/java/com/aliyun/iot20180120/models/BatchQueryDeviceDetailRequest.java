@@ -10,6 +10,9 @@ public class BatchQueryDeviceDetailRequest extends TeaModel {
     @NameInMap("ApiRevision")
     public String apiRevision;
 
+    @NameInMap("DeviceName")
+    public java.util.List<String> deviceName;
+
     @NameInMap("ProductKey")
     public String productKey;
 
@@ -21,9 +24,6 @@ public class BatchQueryDeviceDetailRequest extends TeaModel {
 
     @NameInMap("RealTripartiteKey")
     public String realTripartiteKey;
-
-    @NameInMap("DeviceName")
-    public java.util.List<String> deviceName;
 
     public static BatchQueryDeviceDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchQueryDeviceDetailRequest self = new BatchQueryDeviceDetailRequest();
@@ -44,6 +44,14 @@ public class BatchQueryDeviceDetailRequest extends TeaModel {
     }
     public String getApiRevision() {
         return this.apiRevision;
+    }
+
+    public BatchQueryDeviceDetailRequest setDeviceName(java.util.List<String> deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public java.util.List<String> getDeviceName() {
+        return this.deviceName;
     }
 
     public BatchQueryDeviceDetailRequest setProductKey(String productKey) {
@@ -76,14 +84,6 @@ public class BatchQueryDeviceDetailRequest extends TeaModel {
     }
     public String getRealTripartiteKey() {
         return this.realTripartiteKey;
-    }
-
-    public BatchQueryDeviceDetailRequest setDeviceName(java.util.List<String> deviceName) {
-        this.deviceName = deviceName;
-        return this;
-    }
-    public java.util.List<String> getDeviceName() {
-        return this.deviceName;
     }
 
 }

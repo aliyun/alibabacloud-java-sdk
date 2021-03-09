@@ -7,14 +7,14 @@ public class CreateJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("JobId")
     public String jobId;
@@ -32,12 +32,12 @@ public class CreateJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateJobResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public CreateJobResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateJobResponseBody setCode(String code) {
@@ -48,12 +48,12 @@ public class CreateJobResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateJobResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public CreateJobResponseBody setJobId(String jobId) {

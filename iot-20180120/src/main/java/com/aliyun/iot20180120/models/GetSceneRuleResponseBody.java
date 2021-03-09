@@ -7,8 +7,8 @@ public class GetSceneRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetSceneRuleResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -16,8 +16,8 @@ public class GetSceneRuleResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public GetSceneRuleResponseBodyData data;
 
     public static GetSceneRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSceneRuleResponseBody self = new GetSceneRuleResponseBody();
@@ -32,12 +32,12 @@ public class GetSceneRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetSceneRuleResponseBody setData(GetSceneRuleResponseBodyData data) {
-        this.data = data;
+    public GetSceneRuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public GetSceneRuleResponseBodyData getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GetSceneRuleResponseBody setErrorMessage(String errorMessage) {
@@ -56,52 +56,36 @@ public class GetSceneRuleResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetSceneRuleResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GetSceneRuleResponseBody setData(GetSceneRuleResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public GetSceneRuleResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetSceneRuleResponseBodyData extends TeaModel {
-        @NameInMap("RuleStatus")
-        public Integer ruleStatus;
-
-        @NameInMap("RuleContent")
-        public String ruleContent;
-
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("RuleName")
+        public String ruleName;
+
+        @NameInMap("RuleContent")
+        public String ruleContent;
+
         @NameInMap("RuleDescription")
         public String ruleDescription;
 
-        @NameInMap("RuleName")
-        public String ruleName;
+        @NameInMap("RuleStatus")
+        public Integer ruleStatus;
 
         public static GetSceneRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetSceneRuleResponseBodyData self = new GetSceneRuleResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetSceneRuleResponseBodyData setRuleStatus(Integer ruleStatus) {
-            this.ruleStatus = ruleStatus;
-            return this;
-        }
-        public Integer getRuleStatus() {
-            return this.ruleStatus;
-        }
-
-        public GetSceneRuleResponseBodyData setRuleContent(String ruleContent) {
-            this.ruleContent = ruleContent;
-            return this;
-        }
-        public String getRuleContent() {
-            return this.ruleContent;
         }
 
         public GetSceneRuleResponseBodyData setGmtCreate(Long gmtCreate) {
@@ -120,6 +104,22 @@ public class GetSceneRuleResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public GetSceneRuleResponseBodyData setRuleName(String ruleName) {
+            this.ruleName = ruleName;
+            return this;
+        }
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public GetSceneRuleResponseBodyData setRuleContent(String ruleContent) {
+            this.ruleContent = ruleContent;
+            return this;
+        }
+        public String getRuleContent() {
+            return this.ruleContent;
+        }
+
         public GetSceneRuleResponseBodyData setRuleDescription(String ruleDescription) {
             this.ruleDescription = ruleDescription;
             return this;
@@ -128,12 +128,12 @@ public class GetSceneRuleResponseBody extends TeaModel {
             return this.ruleDescription;
         }
 
-        public GetSceneRuleResponseBodyData setRuleName(String ruleName) {
-            this.ruleName = ruleName;
+        public GetSceneRuleResponseBodyData setRuleStatus(Integer ruleStatus) {
+            this.ruleStatus = ruleStatus;
             return this;
         }
-        public String getRuleName() {
-            return this.ruleName;
+        public Integer getRuleStatus() {
+            return this.ruleStatus;
         }
 
     }

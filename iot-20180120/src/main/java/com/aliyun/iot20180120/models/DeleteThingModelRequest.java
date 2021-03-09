@@ -19,6 +19,15 @@ public class DeleteThingModelRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("PropertyIdentifier")
+    public java.util.List<String> propertyIdentifier;
+
+    @NameInMap("ServiceIdentifier")
+    public java.util.List<String> serviceIdentifier;
+
+    @NameInMap("EventIdentifier")
+    public java.util.List<String> eventIdentifier;
+
     @NameInMap("FunctionBlockId")
     public String functionBlockId;
 
@@ -30,15 +39,6 @@ public class DeleteThingModelRequest extends TeaModel {
 
     @NameInMap("RealTripartiteKey")
     public String realTripartiteKey;
-
-    @NameInMap("PropertyIdentifier")
-    public java.util.List<String> propertyIdentifier;
-
-    @NameInMap("ServiceIdentifier")
-    public java.util.List<String> serviceIdentifier;
-
-    @NameInMap("EventIdentifier")
-    public java.util.List<String> eventIdentifier;
 
     public static DeleteThingModelRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteThingModelRequest self = new DeleteThingModelRequest();
@@ -85,6 +85,30 @@ public class DeleteThingModelRequest extends TeaModel {
         return this.productKey;
     }
 
+    public DeleteThingModelRequest setPropertyIdentifier(java.util.List<String> propertyIdentifier) {
+        this.propertyIdentifier = propertyIdentifier;
+        return this;
+    }
+    public java.util.List<String> getPropertyIdentifier() {
+        return this.propertyIdentifier;
+    }
+
+    public DeleteThingModelRequest setServiceIdentifier(java.util.List<String> serviceIdentifier) {
+        this.serviceIdentifier = serviceIdentifier;
+        return this;
+    }
+    public java.util.List<String> getServiceIdentifier() {
+        return this.serviceIdentifier;
+    }
+
+    public DeleteThingModelRequest setEventIdentifier(java.util.List<String> eventIdentifier) {
+        this.eventIdentifier = eventIdentifier;
+        return this;
+    }
+    public java.util.List<String> getEventIdentifier() {
+        return this.eventIdentifier;
+    }
+
     public DeleteThingModelRequest setFunctionBlockId(String functionBlockId) {
         this.functionBlockId = functionBlockId;
         return this;
@@ -115,30 +139,6 @@ public class DeleteThingModelRequest extends TeaModel {
     }
     public String getRealTripartiteKey() {
         return this.realTripartiteKey;
-    }
-
-    public DeleteThingModelRequest setPropertyIdentifier(java.util.List<String> propertyIdentifier) {
-        this.propertyIdentifier = propertyIdentifier;
-        return this;
-    }
-    public java.util.List<String> getPropertyIdentifier() {
-        return this.propertyIdentifier;
-    }
-
-    public DeleteThingModelRequest setServiceIdentifier(java.util.List<String> serviceIdentifier) {
-        this.serviceIdentifier = serviceIdentifier;
-        return this;
-    }
-    public java.util.List<String> getServiceIdentifier() {
-        return this.serviceIdentifier;
-    }
-
-    public DeleteThingModelRequest setEventIdentifier(java.util.List<String> eventIdentifier) {
-        this.eventIdentifier = eventIdentifier;
-        return this;
-    }
-    public java.util.List<String> getEventIdentifier() {
-        return this.eventIdentifier;
     }
 
 }

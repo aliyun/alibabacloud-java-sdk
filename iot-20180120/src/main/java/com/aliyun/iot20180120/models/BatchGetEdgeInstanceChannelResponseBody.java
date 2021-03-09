@@ -7,17 +7,17 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public BatchGetEdgeInstanceChannelResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public BatchGetEdgeInstanceChannelResponseBodyData data;
 
     public static BatchGetEdgeInstanceChannelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchGetEdgeInstanceChannelResponseBody self = new BatchGetEdgeInstanceChannelResponseBody();
@@ -32,20 +32,12 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchGetEdgeInstanceChannelResponseBody setData(BatchGetEdgeInstanceChannelResponseBodyData data) {
-        this.data = data;
+    public BatchGetEdgeInstanceChannelResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public BatchGetEdgeInstanceChannelResponseBodyData getData() {
-        return this.data;
-    }
-
-    public BatchGetEdgeInstanceChannelResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchGetEdgeInstanceChannelResponseBody setCode(String code) {
@@ -56,18 +48,23 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchGetEdgeInstanceChannelResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public BatchGetEdgeInstanceChannelResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public BatchGetEdgeInstanceChannelResponseBody setData(BatchGetEdgeInstanceChannelResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public BatchGetEdgeInstanceChannelResponseBodyData getData() {
+        return this.data;
     }
 
     public static class BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigListConfig extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
         @NameInMap("ConfigId")
         public String configId;
 
@@ -77,17 +74,12 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("Key")
+        public String key;
+
         public static BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigListConfig build(java.util.Map<String, ?> map) throws Exception {
             BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigListConfig self = new BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigListConfig();
             return TeaModel.build(map, self);
-        }
-
-        public BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigListConfig setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
         public BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigListConfig setConfigId(String configId) {
@@ -114,6 +106,14 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
             return this.content;
         }
 
+        public BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigListConfig setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
     }
 
     public static class BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigList extends TeaModel {
@@ -136,11 +136,11 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
     }
 
     public static class BatchGetEdgeInstanceChannelResponseBodyDataChannel extends TeaModel {
-        @NameInMap("ChannelName")
-        public String channelName;
-
         @NameInMap("ChannelId")
         public String channelId;
+
+        @NameInMap("ChannelName")
+        public String channelName;
 
         @NameInMap("ConfigList")
         public BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigList configList;
@@ -150,20 +150,20 @@ public class BatchGetEdgeInstanceChannelResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public BatchGetEdgeInstanceChannelResponseBodyDataChannel setChannelName(String channelName) {
-            this.channelName = channelName;
-            return this;
-        }
-        public String getChannelName() {
-            return this.channelName;
-        }
-
         public BatchGetEdgeInstanceChannelResponseBodyDataChannel setChannelId(String channelId) {
             this.channelId = channelId;
             return this;
         }
         public String getChannelId() {
             return this.channelId;
+        }
+
+        public BatchGetEdgeInstanceChannelResponseBodyDataChannel setChannelName(String channelName) {
+            this.channelName = channelName;
+            return this;
+        }
+        public String getChannelName() {
+            return this.channelName;
         }
 
         public BatchGetEdgeInstanceChannelResponseBodyDataChannel setConfigList(BatchGetEdgeInstanceChannelResponseBodyDataChannelConfigList configList) {

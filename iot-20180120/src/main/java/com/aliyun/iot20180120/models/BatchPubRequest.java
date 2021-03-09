@@ -13,6 +13,9 @@ public class BatchPubRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("DeviceName")
+    public java.util.List<String> deviceName;
+
     @NameInMap("ProductKey")
     public String productKey;
 
@@ -24,9 +27,6 @@ public class BatchPubRequest extends TeaModel {
 
     @NameInMap("MessageContent")
     public String messageContent;
-
-    @NameInMap("DeviceName")
-    public java.util.List<String> deviceName;
 
     public static BatchPubRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchPubRequest self = new BatchPubRequest();
@@ -55,6 +55,14 @@ public class BatchPubRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public BatchPubRequest setDeviceName(java.util.List<String> deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public java.util.List<String> getDeviceName() {
+        return this.deviceName;
     }
 
     public BatchPubRequest setProductKey(String productKey) {
@@ -87,14 +95,6 @@ public class BatchPubRequest extends TeaModel {
     }
     public String getMessageContent() {
         return this.messageContent;
-    }
-
-    public BatchPubRequest setDeviceName(java.util.List<String> deviceName) {
-        this.deviceName = deviceName;
-        return this;
-    }
-    public java.util.List<String> getDeviceName() {
-        return this.deviceName;
     }
 
 }

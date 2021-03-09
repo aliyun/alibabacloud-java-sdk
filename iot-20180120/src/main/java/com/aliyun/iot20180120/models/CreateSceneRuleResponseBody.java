@@ -7,17 +7,17 @@ public class CreateSceneRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RuleId")
-    public String ruleId;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("RuleId")
+    public String ruleId;
 
     public static CreateSceneRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateSceneRuleResponseBody self = new CreateSceneRuleResponseBody();
@@ -32,20 +32,12 @@ public class CreateSceneRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateSceneRuleResponseBody setRuleId(String ruleId) {
-        this.ruleId = ruleId;
+    public CreateSceneRuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getRuleId() {
-        return this.ruleId;
-    }
-
-    public CreateSceneRuleResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateSceneRuleResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class CreateSceneRuleResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateSceneRuleResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateSceneRuleResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateSceneRuleResponseBody setRuleId(String ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public String getRuleId() {
+        return this.ruleId;
     }
 
 }

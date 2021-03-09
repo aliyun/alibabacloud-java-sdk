@@ -7,14 +7,14 @@ public class DeleteRuleActionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static DeleteRuleActionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteRuleActionResponseBody self = new DeleteRuleActionResponseBody();
@@ -29,12 +29,12 @@ public class DeleteRuleActionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteRuleActionResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public DeleteRuleActionResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DeleteRuleActionResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class DeleteRuleActionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteRuleActionResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteRuleActionResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

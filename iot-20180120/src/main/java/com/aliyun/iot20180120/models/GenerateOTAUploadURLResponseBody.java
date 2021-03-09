@@ -7,17 +7,17 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GenerateOTAUploadURLResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public GenerateOTAUploadURLResponseBodyData data;
 
     public static GenerateOTAUploadURLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateOTAUploadURLResponseBody self = new GenerateOTAUploadURLResponseBody();
@@ -32,20 +32,12 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GenerateOTAUploadURLResponseBody setData(GenerateOTAUploadURLResponseBodyData data) {
-        this.data = data;
+    public GenerateOTAUploadURLResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public GenerateOTAUploadURLResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GenerateOTAUploadURLResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GenerateOTAUploadURLResponseBody setCode(String code) {
@@ -56,23 +48,25 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GenerateOTAUploadURLResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GenerateOTAUploadURLResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GenerateOTAUploadURLResponseBody setData(GenerateOTAUploadURLResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GenerateOTAUploadURLResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GenerateOTAUploadURLResponseBodyData extends TeaModel {
         @NameInMap("Key")
         public String key;
-
-        @NameInMap("OSSAccessKeyId")
-        public String OSSAccessKeyId;
-
-        @NameInMap("Signature")
-        public String signature;
 
         @NameInMap("Host")
         public String host;
@@ -80,14 +74,20 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         @NameInMap("Policy")
         public String policy;
 
-        @NameInMap("ObjectStorage")
-        public String objectStorage;
+        @NameInMap("OSSAccessKeyId")
+        public String OSSAccessKeyId;
+
+        @NameInMap("Signature")
+        public String signature;
 
         @NameInMap("FirmwareUrl")
         public String firmwareUrl;
 
         @NameInMap("UtcCreate")
         public String utcCreate;
+
+        @NameInMap("ObjectStorage")
+        public String objectStorage;
 
         public static GenerateOTAUploadURLResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GenerateOTAUploadURLResponseBodyData self = new GenerateOTAUploadURLResponseBodyData();
@@ -100,22 +100,6 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         }
         public String getKey() {
             return this.key;
-        }
-
-        public GenerateOTAUploadURLResponseBodyData setOSSAccessKeyId(String OSSAccessKeyId) {
-            this.OSSAccessKeyId = OSSAccessKeyId;
-            return this;
-        }
-        public String getOSSAccessKeyId() {
-            return this.OSSAccessKeyId;
-        }
-
-        public GenerateOTAUploadURLResponseBodyData setSignature(String signature) {
-            this.signature = signature;
-            return this;
-        }
-        public String getSignature() {
-            return this.signature;
         }
 
         public GenerateOTAUploadURLResponseBodyData setHost(String host) {
@@ -134,12 +118,20 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
             return this.policy;
         }
 
-        public GenerateOTAUploadURLResponseBodyData setObjectStorage(String objectStorage) {
-            this.objectStorage = objectStorage;
+        public GenerateOTAUploadURLResponseBodyData setOSSAccessKeyId(String OSSAccessKeyId) {
+            this.OSSAccessKeyId = OSSAccessKeyId;
             return this;
         }
-        public String getObjectStorage() {
-            return this.objectStorage;
+        public String getOSSAccessKeyId() {
+            return this.OSSAccessKeyId;
+        }
+
+        public GenerateOTAUploadURLResponseBodyData setSignature(String signature) {
+            this.signature = signature;
+            return this;
+        }
+        public String getSignature() {
+            return this.signature;
         }
 
         public GenerateOTAUploadURLResponseBodyData setFirmwareUrl(String firmwareUrl) {
@@ -156,6 +148,14 @@ public class GenerateOTAUploadURLResponseBody extends TeaModel {
         }
         public String getUtcCreate() {
             return this.utcCreate;
+        }
+
+        public GenerateOTAUploadURLResponseBodyData setObjectStorage(String objectStorage) {
+            this.objectStorage = objectStorage;
+            return this;
+        }
+        public String getObjectStorage() {
+            return this.objectStorage;
         }
 
     }

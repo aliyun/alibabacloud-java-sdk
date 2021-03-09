@@ -7,8 +7,8 @@ public class CreateEdgeInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -16,8 +16,8 @@ public class CreateEdgeInstanceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     public static CreateEdgeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeInstanceResponseBody self = new CreateEdgeInstanceResponseBody();
@@ -32,12 +32,12 @@ public class CreateEdgeInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateEdgeInstanceResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public CreateEdgeInstanceResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getInstanceId() {
-        return this.instanceId;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateEdgeInstanceResponseBody setErrorMessage(String errorMessage) {
@@ -56,12 +56,12 @@ public class CreateEdgeInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateEdgeInstanceResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateEdgeInstanceResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

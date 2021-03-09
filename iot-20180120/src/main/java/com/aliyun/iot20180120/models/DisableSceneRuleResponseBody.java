@@ -7,14 +7,14 @@ public class DisableSceneRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static DisableSceneRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DisableSceneRuleResponseBody self = new DisableSceneRuleResponseBody();
@@ -27,6 +27,14 @@ public class DisableSceneRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DisableSceneRuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DisableSceneRuleResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class DisableSceneRuleResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public DisableSceneRuleResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
 }

@@ -65,11 +65,8 @@ public class QueryDeviceDetailResponseBody extends TeaModel {
     }
 
     public static class BatchQueryDeviceDetailResponseBodyDataData extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("UtcActive")
-        public String utcActive;
+        @NameInMap("ProductKey")
+        public String productKey;
 
         @NameInMap("ProductName")
         public String productName;
@@ -77,14 +74,32 @@ public class QueryDeviceDetailResponseBody extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
 
-        @NameInMap("FirmwareVersion")
-        public String firmwareVersion;
+        @NameInMap("Nickname")
+        public String nickname;
+
+        @NameInMap("DeviceSecret")
+        public String deviceSecret;
+
+        @NameInMap("IotId")
+        public String iotId;
 
         @NameInMap("UtcCreate")
         public String utcCreate;
 
-        @NameInMap("ProductKey")
-        public String productKey;
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("UtcActive")
+        public String utcActive;
+
+        @NameInMap("GmtActive")
+        public String gmtActive;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("FirmwareVersion")
+        public String firmwareVersion;
 
         @NameInMap("NodeType")
         public Integer nodeType;
@@ -92,40 +107,17 @@ public class QueryDeviceDetailResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
-        @NameInMap("DeviceSecret")
-        public String deviceSecret;
-
-        @NameInMap("GmtActive")
-        public String gmtActive;
-
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("Nickname")
-        public String nickname;
-
-        @NameInMap("IotId")
-        public String iotId;
-
         public static BatchQueryDeviceDetailResponseBodyDataData build(java.util.Map<String, ?> map) throws Exception {
             BatchQueryDeviceDetailResponseBodyDataData self = new BatchQueryDeviceDetailResponseBodyDataData();
             return TeaModel.build(map, self);
         }
 
-        public BatchQueryDeviceDetailResponseBodyDataData setStatus(String status) {
-            this.status = status;
+        public BatchQueryDeviceDetailResponseBodyDataData setProductKey(String productKey) {
+            this.productKey = productKey;
             return this;
         }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public BatchQueryDeviceDetailResponseBodyDataData setUtcActive(String utcActive) {
-            this.utcActive = utcActive;
-            return this;
-        }
-        public String getUtcActive() {
-            return this.utcActive;
+        public String getProductKey() {
+            return this.productKey;
         }
 
         public BatchQueryDeviceDetailResponseBodyDataData setProductName(String productName) {
@@ -144,12 +136,28 @@ public class QueryDeviceDetailResponseBody extends TeaModel {
             return this.deviceName;
         }
 
-        public BatchQueryDeviceDetailResponseBodyDataData setFirmwareVersion(String firmwareVersion) {
-            this.firmwareVersion = firmwareVersion;
+        public BatchQueryDeviceDetailResponseBodyDataData setNickname(String nickname) {
+            this.nickname = nickname;
             return this;
         }
-        public String getFirmwareVersion() {
-            return this.firmwareVersion;
+        public String getNickname() {
+            return this.nickname;
+        }
+
+        public BatchQueryDeviceDetailResponseBodyDataData setDeviceSecret(String deviceSecret) {
+            this.deviceSecret = deviceSecret;
+            return this;
+        }
+        public String getDeviceSecret() {
+            return this.deviceSecret;
+        }
+
+        public BatchQueryDeviceDetailResponseBodyDataData setIotId(String iotId) {
+            this.iotId = iotId;
+            return this;
+        }
+        public String getIotId() {
+            return this.iotId;
         }
 
         public BatchQueryDeviceDetailResponseBodyDataData setUtcCreate(String utcCreate) {
@@ -160,12 +168,44 @@ public class QueryDeviceDetailResponseBody extends TeaModel {
             return this.utcCreate;
         }
 
-        public BatchQueryDeviceDetailResponseBodyDataData setProductKey(String productKey) {
-            this.productKey = productKey;
+        public BatchQueryDeviceDetailResponseBodyDataData setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
             return this;
         }
-        public String getProductKey() {
-            return this.productKey;
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public BatchQueryDeviceDetailResponseBodyDataData setUtcActive(String utcActive) {
+            this.utcActive = utcActive;
+            return this;
+        }
+        public String getUtcActive() {
+            return this.utcActive;
+        }
+
+        public BatchQueryDeviceDetailResponseBodyDataData setGmtActive(String gmtActive) {
+            this.gmtActive = gmtActive;
+            return this;
+        }
+        public String getGmtActive() {
+            return this.gmtActive;
+        }
+
+        public BatchQueryDeviceDetailResponseBodyDataData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public BatchQueryDeviceDetailResponseBodyDataData setFirmwareVersion(String firmwareVersion) {
+            this.firmwareVersion = firmwareVersion;
+            return this;
+        }
+        public String getFirmwareVersion() {
+            return this.firmwareVersion;
         }
 
         public BatchQueryDeviceDetailResponseBodyDataData setNodeType(Integer nodeType) {
@@ -182,46 +222,6 @@ public class QueryDeviceDetailResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
-        }
-
-        public BatchQueryDeviceDetailResponseBodyDataData setDeviceSecret(String deviceSecret) {
-            this.deviceSecret = deviceSecret;
-            return this;
-        }
-        public String getDeviceSecret() {
-            return this.deviceSecret;
-        }
-
-        public BatchQueryDeviceDetailResponseBodyDataData setGmtActive(String gmtActive) {
-            this.gmtActive = gmtActive;
-            return this;
-        }
-        public String getGmtActive() {
-            return this.gmtActive;
-        }
-
-        public BatchQueryDeviceDetailResponseBodyDataData setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public BatchQueryDeviceDetailResponseBodyDataData setNickname(String nickname) {
-            this.nickname = nickname;
-            return this;
-        }
-        public String getNickname() {
-            return this.nickname;
-        }
-
-        public BatchQueryDeviceDetailResponseBodyDataData setIotId(String iotId) {
-            this.iotId = iotId;
-            return this;
-        }
-        public String getIotId() {
-            return this.iotId;
         }
 
     }

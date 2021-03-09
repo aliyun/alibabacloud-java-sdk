@@ -28,6 +28,12 @@ public class InvokeThingServiceRequest extends TeaModel {
     @NameInMap("IotId")
     public String iotId;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static InvokeThingServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeThingServiceRequest self = new InvokeThingServiceRequest();
         return TeaModel.build(map, self);
@@ -95,6 +101,22 @@ public class InvokeThingServiceRequest extends TeaModel {
     }
     public String getIotId() {
         return this.iotId;
+    }
+
+    public InvokeThingServiceRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public InvokeThingServiceRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

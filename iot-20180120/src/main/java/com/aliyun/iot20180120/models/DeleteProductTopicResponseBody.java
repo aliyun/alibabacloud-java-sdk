@@ -7,14 +7,14 @@ public class DeleteProductTopicResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static DeleteProductTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteProductTopicResponseBody self = new DeleteProductTopicResponseBody();
@@ -29,12 +29,12 @@ public class DeleteProductTopicResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteProductTopicResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public DeleteProductTopicResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DeleteProductTopicResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class DeleteProductTopicResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteProductTopicResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteProductTopicResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

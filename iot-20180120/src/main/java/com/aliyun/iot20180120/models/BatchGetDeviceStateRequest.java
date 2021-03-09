@@ -10,14 +10,14 @@ public class BatchGetDeviceStateRequest extends TeaModel {
     @NameInMap("ApiRevision")
     public String apiRevision;
 
+    @NameInMap("DeviceName")
+    public java.util.List<String> deviceName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
     public String productKey;
-
-    @NameInMap("DeviceName")
-    public java.util.List<String> deviceName;
 
     @NameInMap("IotId")
     public java.util.List<String> iotId;
@@ -43,6 +43,14 @@ public class BatchGetDeviceStateRequest extends TeaModel {
         return this.apiRevision;
     }
 
+    public BatchGetDeviceStateRequest setDeviceName(java.util.List<String> deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public java.util.List<String> getDeviceName() {
+        return this.deviceName;
+    }
+
     public BatchGetDeviceStateRequest setIotInstanceId(String iotInstanceId) {
         this.iotInstanceId = iotInstanceId;
         return this;
@@ -57,14 +65,6 @@ public class BatchGetDeviceStateRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
-    }
-
-    public BatchGetDeviceStateRequest setDeviceName(java.util.List<String> deviceName) {
-        this.deviceName = deviceName;
-        return this;
-    }
-    public java.util.List<String> getDeviceName() {
-        return this.deviceName;
     }
 
     public BatchGetDeviceStateRequest setIotId(java.util.List<String> iotId) {

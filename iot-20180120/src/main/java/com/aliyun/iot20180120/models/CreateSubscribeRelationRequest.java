@@ -37,6 +37,9 @@ public class CreateSubscribeRelationRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    @NameInMap("ConsumerGroupIds")
+    public java.util.List<String> consumerGroupIds;
+
     @NameInMap("OtaEventFlag")
     public Boolean otaEventFlag;
 
@@ -51,9 +54,6 @@ public class CreateSubscribeRelationRequest extends TeaModel {
 
     @NameInMap("OtaJobFlag")
     public Boolean otaJobFlag;
-
-    @NameInMap("ConsumerGroupIds")
-    public java.util.List<String> consumerGroupIds;
 
     public static CreateSubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSubscribeRelationRequest self = new CreateSubscribeRelationRequest();
@@ -148,6 +148,14 @@ public class CreateSubscribeRelationRequest extends TeaModel {
         return this.type;
     }
 
+    public CreateSubscribeRelationRequest setConsumerGroupIds(java.util.List<String> consumerGroupIds) {
+        this.consumerGroupIds = consumerGroupIds;
+        return this;
+    }
+    public java.util.List<String> getConsumerGroupIds() {
+        return this.consumerGroupIds;
+    }
+
     public CreateSubscribeRelationRequest setOtaEventFlag(Boolean otaEventFlag) {
         this.otaEventFlag = otaEventFlag;
         return this;
@@ -186,14 +194,6 @@ public class CreateSubscribeRelationRequest extends TeaModel {
     }
     public Boolean getOtaJobFlag() {
         return this.otaJobFlag;
-    }
-
-    public CreateSubscribeRelationRequest setConsumerGroupIds(java.util.List<String> consumerGroupIds) {
-        this.consumerGroupIds = consumerGroupIds;
-        return this;
-    }
-    public java.util.List<String> getConsumerGroupIds() {
-        return this.consumerGroupIds;
     }
 
 }

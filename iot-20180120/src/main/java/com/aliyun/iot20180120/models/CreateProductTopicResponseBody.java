@@ -7,17 +7,17 @@ public class CreateProductTopicResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("TopicId")
-    public Long topicId;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("TopicId")
+    public Long topicId;
 
     public static CreateProductTopicResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateProductTopicResponseBody self = new CreateProductTopicResponseBody();
@@ -32,20 +32,12 @@ public class CreateProductTopicResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateProductTopicResponseBody setTopicId(Long topicId) {
-        this.topicId = topicId;
+    public CreateProductTopicResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public Long getTopicId() {
-        return this.topicId;
-    }
-
-    public CreateProductTopicResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateProductTopicResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class CreateProductTopicResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateProductTopicResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateProductTopicResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateProductTopicResponseBody setTopicId(Long topicId) {
+        this.topicId = topicId;
+        return this;
+    }
+    public Long getTopicId() {
+        return this.topicId;
     }
 
 }

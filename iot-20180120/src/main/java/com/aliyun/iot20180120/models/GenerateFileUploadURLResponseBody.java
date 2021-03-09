@@ -7,17 +7,17 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GenerateFileUploadURLResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public GenerateFileUploadURLResponseBodyData data;
 
     public static GenerateFileUploadURLResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateFileUploadURLResponseBody self = new GenerateFileUploadURLResponseBody();
@@ -32,20 +32,12 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GenerateFileUploadURLResponseBody setData(GenerateFileUploadURLResponseBodyData data) {
-        this.data = data;
+    public GenerateFileUploadURLResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public GenerateFileUploadURLResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GenerateFileUploadURLResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GenerateFileUploadURLResponseBody setCode(String code) {
@@ -56,29 +48,37 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GenerateFileUploadURLResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GenerateFileUploadURLResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GenerateFileUploadURLResponseBody setData(GenerateFileUploadURLResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GenerateFileUploadURLResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GenerateFileUploadURLResponseBodyData extends TeaModel {
         @NameInMap("Key")
         public String key;
 
-        @NameInMap("OssAccessKeyId")
-        public String ossAccessKeyId;
-
-        @NameInMap("Signature")
-        public String signature;
-
         @NameInMap("Host")
         public String host;
 
         @NameInMap("Policy")
         public String policy;
+
+        @NameInMap("OssAccessKeyId")
+        public String ossAccessKeyId;
+
+        @NameInMap("Signature")
+        public String signature;
 
         @NameInMap("ObjectStorage")
         public String objectStorage;
@@ -96,22 +96,6 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
             return this.key;
         }
 
-        public GenerateFileUploadURLResponseBodyData setOssAccessKeyId(String ossAccessKeyId) {
-            this.ossAccessKeyId = ossAccessKeyId;
-            return this;
-        }
-        public String getOssAccessKeyId() {
-            return this.ossAccessKeyId;
-        }
-
-        public GenerateFileUploadURLResponseBodyData setSignature(String signature) {
-            this.signature = signature;
-            return this;
-        }
-        public String getSignature() {
-            return this.signature;
-        }
-
         public GenerateFileUploadURLResponseBodyData setHost(String host) {
             this.host = host;
             return this;
@@ -126,6 +110,22 @@ public class GenerateFileUploadURLResponseBody extends TeaModel {
         }
         public String getPolicy() {
             return this.policy;
+        }
+
+        public GenerateFileUploadURLResponseBodyData setOssAccessKeyId(String ossAccessKeyId) {
+            this.ossAccessKeyId = ossAccessKeyId;
+            return this;
+        }
+        public String getOssAccessKeyId() {
+            return this.ossAccessKeyId;
+        }
+
+        public GenerateFileUploadURLResponseBodyData setSignature(String signature) {
+            this.signature = signature;
+            return this;
+        }
+        public String getSignature() {
+            return this.signature;
         }
 
         public GenerateFileUploadURLResponseBodyData setObjectStorage(String objectStorage) {

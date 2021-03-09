@@ -87,26 +87,26 @@ public class CreateEdgeInstanceChannelRequest extends TeaModel {
     }
 
     public static class CreateEdgeInstanceChannelRequestConfigs extends TeaModel {
-        @NameInMap("Key")
-        public String key;
+        @NameInMap("Format")
+        public String format;
 
         @NameInMap("Content")
         public String content;
 
-        @NameInMap("Format")
-        public String format;
+        @NameInMap("Key")
+        public String key;
 
         public static CreateEdgeInstanceChannelRequestConfigs build(java.util.Map<String, ?> map) throws Exception {
             CreateEdgeInstanceChannelRequestConfigs self = new CreateEdgeInstanceChannelRequestConfigs();
             return TeaModel.build(map, self);
         }
 
-        public CreateEdgeInstanceChannelRequestConfigs setKey(String key) {
-            this.key = key;
+        public CreateEdgeInstanceChannelRequestConfigs setFormat(String format) {
+            this.format = format;
             return this;
         }
-        public String getKey() {
-            return this.key;
+        public String getFormat() {
+            return this.format;
         }
 
         public CreateEdgeInstanceChannelRequestConfigs setContent(String content) {
@@ -117,12 +117,12 @@ public class CreateEdgeInstanceChannelRequest extends TeaModel {
             return this.content;
         }
 
-        public CreateEdgeInstanceChannelRequestConfigs setFormat(String format) {
-            this.format = format;
+        public CreateEdgeInstanceChannelRequestConfigs setKey(String key) {
+            this.key = key;
             return this;
         }
-        public String getFormat() {
-            return this.format;
+        public String getKey() {
+            return this.key;
         }
 
     }

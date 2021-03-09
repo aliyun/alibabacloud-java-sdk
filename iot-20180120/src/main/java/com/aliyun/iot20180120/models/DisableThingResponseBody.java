@@ -7,14 +7,14 @@ public class DisableThingResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static DisableThingResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DisableThingResponseBody self = new DisableThingResponseBody();
@@ -29,12 +29,12 @@ public class DisableThingResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DisableThingResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public DisableThingResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DisableThingResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class DisableThingResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DisableThingResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DisableThingResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

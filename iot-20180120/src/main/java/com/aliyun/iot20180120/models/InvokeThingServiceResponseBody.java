@@ -7,8 +7,8 @@ public class InvokeThingServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public InvokeThingServiceResponseBodyData data;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -16,8 +16,8 @@ public class InvokeThingServiceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public InvokeThingServiceResponseBodyData data;
 
     public static InvokeThingServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InvokeThingServiceResponseBody self = new InvokeThingServiceResponseBody();
@@ -32,12 +32,12 @@ public class InvokeThingServiceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InvokeThingServiceResponseBody setData(InvokeThingServiceResponseBodyData data) {
-        this.data = data;
+    public InvokeThingServiceResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public InvokeThingServiceResponseBodyData getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public InvokeThingServiceResponseBody setErrorMessage(String errorMessage) {
@@ -56,32 +56,24 @@ public class InvokeThingServiceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public InvokeThingServiceResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public InvokeThingServiceResponseBody setData(InvokeThingServiceResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public InvokeThingServiceResponseBodyData getData() {
+        return this.data;
     }
 
     public static class InvokeThingServiceResponseBodyData extends TeaModel {
-        @NameInMap("MessageId")
-        public String messageId;
-
         @NameInMap("Result")
         public String result;
+
+        @NameInMap("MessageId")
+        public String messageId;
 
         public static InvokeThingServiceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             InvokeThingServiceResponseBodyData self = new InvokeThingServiceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public InvokeThingServiceResponseBodyData setMessageId(String messageId) {
-            this.messageId = messageId;
-            return this;
-        }
-        public String getMessageId() {
-            return this.messageId;
         }
 
         public InvokeThingServiceResponseBodyData setResult(String result) {
@@ -90,6 +82,14 @@ public class InvokeThingServiceResponseBody extends TeaModel {
         }
         public String getResult() {
             return this.result;
+        }
+
+        public InvokeThingServiceResponseBodyData setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
         }
 
     }

@@ -7,17 +7,17 @@ public class CreateEdgeInstanceChannelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public String data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public String data;
 
     public static CreateEdgeInstanceChannelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeInstanceChannelResponseBody self = new CreateEdgeInstanceChannelResponseBody();
@@ -32,20 +32,12 @@ public class CreateEdgeInstanceChannelResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateEdgeInstanceChannelResponseBody setData(String data) {
-        this.data = data;
+    public CreateEdgeInstanceChannelResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getData() {
-        return this.data;
-    }
-
-    public CreateEdgeInstanceChannelResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateEdgeInstanceChannelResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class CreateEdgeInstanceChannelResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateEdgeInstanceChannelResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateEdgeInstanceChannelResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateEdgeInstanceChannelResponseBody setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }

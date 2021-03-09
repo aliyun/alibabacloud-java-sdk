@@ -22,6 +22,12 @@ public class DisableThingRequest extends TeaModel {
     @NameInMap("IotId")
     public String iotId;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static DisableThingRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableThingRequest self = new DisableThingRequest();
         return TeaModel.build(map, self);
@@ -73,6 +79,22 @@ public class DisableThingRequest extends TeaModel {
     }
     public String getIotId() {
         return this.iotId;
+    }
+
+    public DisableThingRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public DisableThingRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

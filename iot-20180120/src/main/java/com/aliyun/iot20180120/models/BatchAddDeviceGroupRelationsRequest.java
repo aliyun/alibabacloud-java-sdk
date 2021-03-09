@@ -16,14 +16,14 @@ public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("Device")
+    public java.util.List<BatchAddDeviceGroupRelationsRequestDevice> device;
+
     @NameInMap("RealTenantId")
     public String realTenantId;
 
     @NameInMap("RealTripartiteKey")
     public String realTripartiteKey;
-
-    @NameInMap("Device")
-    public java.util.List<BatchAddDeviceGroupRelationsRequestDevice> device;
 
     public static BatchAddDeviceGroupRelationsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchAddDeviceGroupRelationsRequest self = new BatchAddDeviceGroupRelationsRequest();
@@ -62,6 +62,14 @@ public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
         return this.groupId;
     }
 
+    public BatchAddDeviceGroupRelationsRequest setDevice(java.util.List<BatchAddDeviceGroupRelationsRequestDevice> device) {
+        this.device = device;
+        return this;
+    }
+    public java.util.List<BatchAddDeviceGroupRelationsRequestDevice> getDevice() {
+        return this.device;
+    }
+
     public BatchAddDeviceGroupRelationsRequest setRealTenantId(String realTenantId) {
         this.realTenantId = realTenantId;
         return this;
@@ -76,14 +84,6 @@ public class BatchAddDeviceGroupRelationsRequest extends TeaModel {
     }
     public String getRealTripartiteKey() {
         return this.realTripartiteKey;
-    }
-
-    public BatchAddDeviceGroupRelationsRequest setDevice(java.util.List<BatchAddDeviceGroupRelationsRequestDevice> device) {
-        this.device = device;
-        return this;
-    }
-    public java.util.List<BatchAddDeviceGroupRelationsRequestDevice> getDevice() {
-        return this.device;
     }
 
     public static class BatchAddDeviceGroupRelationsRequestDevice extends TeaModel {

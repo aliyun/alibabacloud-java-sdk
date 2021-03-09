@@ -7,17 +7,17 @@ public class GetDeviceShadowResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("ShadowMessage")
     public String shadowMessage;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static GetDeviceShadowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetDeviceShadowResponseBody self = new GetDeviceShadowResponseBody();
@@ -32,12 +32,12 @@ public class GetDeviceShadowResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetDeviceShadowResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public GetDeviceShadowResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GetDeviceShadowResponseBody setCode(String code) {
@@ -48,20 +48,20 @@ public class GetDeviceShadowResponseBody extends TeaModel {
         return this.code;
     }
 
+    public GetDeviceShadowResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
     public GetDeviceShadowResponseBody setShadowMessage(String shadowMessage) {
         this.shadowMessage = shadowMessage;
         return this;
     }
     public String getShadowMessage() {
         return this.shadowMessage;
-    }
-
-    public GetDeviceShadowResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
 }

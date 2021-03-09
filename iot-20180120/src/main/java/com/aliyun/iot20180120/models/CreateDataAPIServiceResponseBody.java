@@ -7,17 +7,17 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateDataAPIServiceResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public CreateDataAPIServiceResponseBodyData data;
 
     public static CreateDataAPIServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDataAPIServiceResponseBody self = new CreateDataAPIServiceResponseBody();
@@ -32,20 +32,12 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateDataAPIServiceResponseBody setData(CreateDataAPIServiceResponseBodyData data) {
-        this.data = data;
+    public CreateDataAPIServiceResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateDataAPIServiceResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateDataAPIServiceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateDataAPIServiceResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class CreateDataAPIServiceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateDataAPIServiceResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateDataAPIServiceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateDataAPIServiceResponseBody setData(CreateDataAPIServiceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateDataAPIServiceResponseBodyData getData() {
+        return this.data;
     }
 
     public static class CreateDataAPIServiceResponseBodyData extends TeaModel {

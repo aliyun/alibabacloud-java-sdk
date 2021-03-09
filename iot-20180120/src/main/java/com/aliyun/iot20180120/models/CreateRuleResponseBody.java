@@ -7,17 +7,17 @@ public class CreateRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RuleId")
-    public Long ruleId;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("RuleId")
+    public Long ruleId;
 
     public static CreateRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRuleResponseBody self = new CreateRuleResponseBody();
@@ -32,20 +32,12 @@ public class CreateRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateRuleResponseBody setRuleId(Long ruleId) {
-        this.ruleId = ruleId;
+    public CreateRuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public Long getRuleId() {
-        return this.ruleId;
-    }
-
-    public CreateRuleResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateRuleResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class CreateRuleResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateRuleResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateRuleResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateRuleResponseBody setRuleId(Long ruleId) {
+        this.ruleId = ruleId;
+        return this;
+    }
+    public Long getRuleId() {
+        return this.ruleId;
     }
 
 }

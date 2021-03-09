@@ -3,21 +3,21 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class QueryClientIdsResponse extends TeaModel {
+public class ListDeviceDistributeJobResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public QueryClientIdsResponseBody body;
+    public ListDeviceDistributeJobResponseBody body;
 
-    public static QueryClientIdsResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryClientIdsResponse self = new QueryClientIdsResponse();
+    public static ListDeviceDistributeJobResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListDeviceDistributeJobResponse self = new ListDeviceDistributeJobResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryClientIdsResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListDeviceDistributeJobResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class QueryClientIdsResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryClientIdsResponse setBody(QueryClientIdsResponseBody body) {
+    public ListDeviceDistributeJobResponse setBody(ListDeviceDistributeJobResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryClientIdsResponseBody getBody() {
+    public ListDeviceDistributeJobResponseBody getBody() {
         return this.body;
     }
 

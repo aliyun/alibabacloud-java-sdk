@@ -7,17 +7,17 @@ public class GetThingModelTslResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetThingModelTslResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public GetThingModelTslResponseBodyData data;
 
     public static GetThingModelTslResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetThingModelTslResponseBody self = new GetThingModelTslResponseBody();
@@ -32,20 +32,12 @@ public class GetThingModelTslResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetThingModelTslResponseBody setData(GetThingModelTslResponseBodyData data) {
-        this.data = data;
+    public GetThingModelTslResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public GetThingModelTslResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetThingModelTslResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GetThingModelTslResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class GetThingModelTslResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetThingModelTslResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GetThingModelTslResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetThingModelTslResponseBody setData(GetThingModelTslResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetThingModelTslResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetThingModelTslResponseBodyData extends TeaModel {

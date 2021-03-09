@@ -22,6 +22,9 @@ public class SpeechByCombinationRequest extends TeaModel {
     @NameInMap("DeviceName")
     public String deviceName;
 
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
+
     public static SpeechByCombinationRequest build(java.util.Map<String, ?> map) throws Exception {
         SpeechByCombinationRequest self = new SpeechByCombinationRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class SpeechByCombinationRequest extends TeaModel {
     }
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    public SpeechByCombinationRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
     }
 
 }

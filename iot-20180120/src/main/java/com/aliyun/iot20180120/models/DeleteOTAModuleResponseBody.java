@@ -7,14 +7,14 @@ public class DeleteOTAModuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static DeleteOTAModuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteOTAModuleResponseBody self = new DeleteOTAModuleResponseBody();
@@ -29,12 +29,12 @@ public class DeleteOTAModuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteOTAModuleResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public DeleteOTAModuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DeleteOTAModuleResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class DeleteOTAModuleResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteOTAModuleResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteOTAModuleResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

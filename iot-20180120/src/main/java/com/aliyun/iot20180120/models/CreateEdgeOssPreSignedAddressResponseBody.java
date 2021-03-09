@@ -7,17 +7,17 @@ public class CreateEdgeOssPreSignedAddressResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateEdgeOssPreSignedAddressResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public CreateEdgeOssPreSignedAddressResponseBodyData data;
 
     public static CreateEdgeOssPreSignedAddressResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeOssPreSignedAddressResponseBody self = new CreateEdgeOssPreSignedAddressResponseBody();
@@ -32,20 +32,12 @@ public class CreateEdgeOssPreSignedAddressResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateEdgeOssPreSignedAddressResponseBody setData(CreateEdgeOssPreSignedAddressResponseBodyData data) {
-        this.data = data;
+    public CreateEdgeOssPreSignedAddressResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateEdgeOssPreSignedAddressResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateEdgeOssPreSignedAddressResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateEdgeOssPreSignedAddressResponseBody setCode(String code) {
@@ -56,32 +48,32 @@ public class CreateEdgeOssPreSignedAddressResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateEdgeOssPreSignedAddressResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateEdgeOssPreSignedAddressResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateEdgeOssPreSignedAddressResponseBody setData(CreateEdgeOssPreSignedAddressResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateEdgeOssPreSignedAddressResponseBodyData getData() {
+        return this.data;
     }
 
     public static class CreateEdgeOssPreSignedAddressResponseBodyData extends TeaModel {
-        @NameInMap("OssAddress")
-        public String ossAddress;
-
         @NameInMap("OssPreSignedAddress")
         public String ossPreSignedAddress;
+
+        @NameInMap("OssAddress")
+        public String ossAddress;
 
         public static CreateEdgeOssPreSignedAddressResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateEdgeOssPreSignedAddressResponseBodyData self = new CreateEdgeOssPreSignedAddressResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public CreateEdgeOssPreSignedAddressResponseBodyData setOssAddress(String ossAddress) {
-            this.ossAddress = ossAddress;
-            return this;
-        }
-        public String getOssAddress() {
-            return this.ossAddress;
         }
 
         public CreateEdgeOssPreSignedAddressResponseBodyData setOssPreSignedAddress(String ossPreSignedAddress) {
@@ -90,6 +82,14 @@ public class CreateEdgeOssPreSignedAddressResponseBody extends TeaModel {
         }
         public String getOssPreSignedAddress() {
             return this.ossPreSignedAddress;
+        }
+
+        public CreateEdgeOssPreSignedAddressResponseBodyData setOssAddress(String ossAddress) {
+            this.ossAddress = ossAddress;
+            return this;
+        }
+        public String getOssAddress() {
+            return this.ossAddress;
         }
 
     }

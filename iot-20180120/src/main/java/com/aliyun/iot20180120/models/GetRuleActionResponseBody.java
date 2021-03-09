@@ -7,17 +7,17 @@ public class GetRuleActionResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RuleActionInfo")
-    public GetRuleActionResponseBodyRuleActionInfo ruleActionInfo;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("RuleActionInfo")
+    public GetRuleActionResponseBodyRuleActionInfo ruleActionInfo;
 
     public static GetRuleActionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRuleActionResponseBody self = new GetRuleActionResponseBody();
@@ -32,20 +32,12 @@ public class GetRuleActionResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetRuleActionResponseBody setRuleActionInfo(GetRuleActionResponseBodyRuleActionInfo ruleActionInfo) {
-        this.ruleActionInfo = ruleActionInfo;
+    public GetRuleActionResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public GetRuleActionResponseBodyRuleActionInfo getRuleActionInfo() {
-        return this.ruleActionInfo;
-    }
-
-    public GetRuleActionResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GetRuleActionResponseBody setCode(String code) {
@@ -56,15 +48,29 @@ public class GetRuleActionResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetRuleActionResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GetRuleActionResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetRuleActionResponseBody setRuleActionInfo(GetRuleActionResponseBodyRuleActionInfo ruleActionInfo) {
+        this.ruleActionInfo = ruleActionInfo;
+        return this;
+    }
+    public GetRuleActionResponseBodyRuleActionInfo getRuleActionInfo() {
+        return this.ruleActionInfo;
     }
 
     public static class GetRuleActionResponseBodyRuleActionInfo extends TeaModel {
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("RuleId")
+        public Long ruleId;
+
         @NameInMap("Type")
         public String type;
 
@@ -74,15 +80,25 @@ public class GetRuleActionResponseBody extends TeaModel {
         @NameInMap("ErrorActionFlag")
         public Boolean errorActionFlag;
 
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("RuleId")
-        public Long ruleId;
-
         public static GetRuleActionResponseBodyRuleActionInfo build(java.util.Map<String, ?> map) throws Exception {
             GetRuleActionResponseBodyRuleActionInfo self = new GetRuleActionResponseBodyRuleActionInfo();
             return TeaModel.build(map, self);
+        }
+
+        public GetRuleActionResponseBodyRuleActionInfo setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetRuleActionResponseBodyRuleActionInfo setRuleId(Long ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public Long getRuleId() {
+            return this.ruleId;
         }
 
         public GetRuleActionResponseBodyRuleActionInfo setType(String type) {
@@ -107,22 +123,6 @@ public class GetRuleActionResponseBody extends TeaModel {
         }
         public Boolean getErrorActionFlag() {
             return this.errorActionFlag;
-        }
-
-        public GetRuleActionResponseBodyRuleActionInfo setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public GetRuleActionResponseBodyRuleActionInfo setRuleId(Long ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public Long getRuleId() {
-            return this.ruleId;
         }
 
     }

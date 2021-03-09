@@ -10,6 +10,9 @@ public class InvokeThingsServiceRequest extends TeaModel {
     @NameInMap("ApiRevision")
     public String apiRevision;
 
+    @NameInMap("DeviceName")
+    public java.util.List<String> deviceName;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -21,9 +24,6 @@ public class InvokeThingsServiceRequest extends TeaModel {
 
     @NameInMap("Args")
     public String args;
-
-    @NameInMap("DeviceName")
-    public java.util.List<String> deviceName;
 
     public static InvokeThingsServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeThingsServiceRequest self = new InvokeThingsServiceRequest();
@@ -44,6 +44,14 @@ public class InvokeThingsServiceRequest extends TeaModel {
     }
     public String getApiRevision() {
         return this.apiRevision;
+    }
+
+    public InvokeThingsServiceRequest setDeviceName(java.util.List<String> deviceName) {
+        this.deviceName = deviceName;
+        return this;
+    }
+    public java.util.List<String> getDeviceName() {
+        return this.deviceName;
     }
 
     public InvokeThingsServiceRequest setIotInstanceId(String iotInstanceId) {
@@ -76,14 +84,6 @@ public class InvokeThingsServiceRequest extends TeaModel {
     }
     public String getArgs() {
         return this.args;
-    }
-
-    public InvokeThingsServiceRequest setDeviceName(java.util.List<String> deviceName) {
-        this.deviceName = deviceName;
-        return this;
-    }
-    public java.util.List<String> getDeviceName() {
-        return this.deviceName;
     }
 
 }

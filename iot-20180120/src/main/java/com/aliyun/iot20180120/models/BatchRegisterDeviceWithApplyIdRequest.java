@@ -19,6 +19,12 @@ public class BatchRegisterDeviceWithApplyIdRequest extends TeaModel {
     @NameInMap("ApplyId")
     public Long applyId;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static BatchRegisterDeviceWithApplyIdRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchRegisterDeviceWithApplyIdRequest self = new BatchRegisterDeviceWithApplyIdRequest();
         return TeaModel.build(map, self);
@@ -62,6 +68,22 @@ public class BatchRegisterDeviceWithApplyIdRequest extends TeaModel {
     }
     public Long getApplyId() {
         return this.applyId;
+    }
+
+    public BatchRegisterDeviceWithApplyIdRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public BatchRegisterDeviceWithApplyIdRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

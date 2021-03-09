@@ -22,6 +22,9 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
     @NameInMap("TargetSelection")
     public String targetSelection;
 
+    @NameInMap("SrcVersion")
+    public java.util.List<String> srcVersion;
+
     @NameInMap("ScheduleTime")
     public Long scheduleTime;
 
@@ -40,23 +43,20 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
     @NameInMap("GrayPercent")
     public String grayPercent;
 
+    @NameInMap("TargetDeviceName")
+    public java.util.List<String> targetDeviceName;
+
     @NameInMap("ScheduleFinishTime")
     public Long scheduleFinishTime;
 
     @NameInMap("OverwriteMode")
     public Integer overwriteMode;
 
-    @NameInMap("DnListFileUrl")
-    public String dnListFileUrl;
-
-    @NameInMap("SrcVersion")
-    public java.util.List<String> srcVersion;
-
-    @NameInMap("TargetDeviceName")
-    public java.util.List<String> targetDeviceName;
-
     @NameInMap("Tag")
     public java.util.List<CreateOTAStaticUpgradeJobRequestTag> tag;
+
+    @NameInMap("DnListFileUrl")
+    public String dnListFileUrl;
 
     public static CreateOTAStaticUpgradeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOTAStaticUpgradeJobRequest self = new CreateOTAStaticUpgradeJobRequest();
@@ -111,6 +111,14 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
         return this.targetSelection;
     }
 
+    public CreateOTAStaticUpgradeJobRequest setSrcVersion(java.util.List<String> srcVersion) {
+        this.srcVersion = srcVersion;
+        return this;
+    }
+    public java.util.List<String> getSrcVersion() {
+        return this.srcVersion;
+    }
+
     public CreateOTAStaticUpgradeJobRequest setScheduleTime(Long scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
@@ -159,6 +167,14 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
         return this.grayPercent;
     }
 
+    public CreateOTAStaticUpgradeJobRequest setTargetDeviceName(java.util.List<String> targetDeviceName) {
+        this.targetDeviceName = targetDeviceName;
+        return this;
+    }
+    public java.util.List<String> getTargetDeviceName() {
+        return this.targetDeviceName;
+    }
+
     public CreateOTAStaticUpgradeJobRequest setScheduleFinishTime(Long scheduleFinishTime) {
         this.scheduleFinishTime = scheduleFinishTime;
         return this;
@@ -175,36 +191,20 @@ public class CreateOTAStaticUpgradeJobRequest extends TeaModel {
         return this.overwriteMode;
     }
 
-    public CreateOTAStaticUpgradeJobRequest setDnListFileUrl(String dnListFileUrl) {
-        this.dnListFileUrl = dnListFileUrl;
-        return this;
-    }
-    public String getDnListFileUrl() {
-        return this.dnListFileUrl;
-    }
-
-    public CreateOTAStaticUpgradeJobRequest setSrcVersion(java.util.List<String> srcVersion) {
-        this.srcVersion = srcVersion;
-        return this;
-    }
-    public java.util.List<String> getSrcVersion() {
-        return this.srcVersion;
-    }
-
-    public CreateOTAStaticUpgradeJobRequest setTargetDeviceName(java.util.List<String> targetDeviceName) {
-        this.targetDeviceName = targetDeviceName;
-        return this;
-    }
-    public java.util.List<String> getTargetDeviceName() {
-        return this.targetDeviceName;
-    }
-
     public CreateOTAStaticUpgradeJobRequest setTag(java.util.List<CreateOTAStaticUpgradeJobRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<CreateOTAStaticUpgradeJobRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateOTAStaticUpgradeJobRequest setDnListFileUrl(String dnListFileUrl) {
+        this.dnListFileUrl = dnListFileUrl;
+        return this;
+    }
+    public String getDnListFileUrl() {
+        return this.dnListFileUrl;
     }
 
     public static class CreateOTAStaticUpgradeJobRequestTag extends TeaModel {

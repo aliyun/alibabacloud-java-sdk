@@ -7,17 +7,17 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("Code")
+    public String code;
 
     public static CreateConsumerGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupResponseBody self = new CreateConsumerGroupResponseBody();
@@ -32,22 +32,6 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateConsumerGroupResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateConsumerGroupResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
     public CreateConsumerGroupResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -56,12 +40,28 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         return this.success;
     }
 
+    public CreateConsumerGroupResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
     public CreateConsumerGroupResponseBody setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public CreateConsumerGroupResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

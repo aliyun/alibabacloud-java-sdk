@@ -7,14 +7,14 @@ public class CreateThingModelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static CreateThingModelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateThingModelResponseBody self = new CreateThingModelResponseBody();
@@ -29,12 +29,12 @@ public class CreateThingModelResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateThingModelResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public CreateThingModelResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateThingModelResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class CreateThingModelResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateThingModelResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateThingModelResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

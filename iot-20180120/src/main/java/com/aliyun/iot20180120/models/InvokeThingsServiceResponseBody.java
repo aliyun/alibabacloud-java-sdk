@@ -7,14 +7,14 @@ public class InvokeThingsServiceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static InvokeThingsServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InvokeThingsServiceResponseBody self = new InvokeThingsServiceResponseBody();
@@ -27,6 +27,14 @@ public class InvokeThingsServiceResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public InvokeThingsServiceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public InvokeThingsServiceResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class InvokeThingsServiceResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public InvokeThingsServiceResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
 }

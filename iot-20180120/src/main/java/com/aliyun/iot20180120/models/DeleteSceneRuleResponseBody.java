@@ -7,14 +7,14 @@ public class DeleteSceneRuleResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static DeleteSceneRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteSceneRuleResponseBody self = new DeleteSceneRuleResponseBody();
@@ -27,6 +27,14 @@ public class DeleteSceneRuleResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DeleteSceneRuleResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DeleteSceneRuleResponseBody setErrorMessage(String errorMessage) {
@@ -43,14 +51,6 @@ public class DeleteSceneRuleResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
-    }
-
-    public DeleteSceneRuleResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
 }

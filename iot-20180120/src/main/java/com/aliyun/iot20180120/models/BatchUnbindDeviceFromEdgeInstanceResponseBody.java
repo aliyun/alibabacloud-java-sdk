@@ -7,14 +7,14 @@ public class BatchUnbindDeviceFromEdgeInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static BatchUnbindDeviceFromEdgeInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchUnbindDeviceFromEdgeInstanceResponseBody self = new BatchUnbindDeviceFromEdgeInstanceResponseBody();
@@ -29,12 +29,12 @@ public class BatchUnbindDeviceFromEdgeInstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchUnbindDeviceFromEdgeInstanceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public BatchUnbindDeviceFromEdgeInstanceResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchUnbindDeviceFromEdgeInstanceResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class BatchUnbindDeviceFromEdgeInstanceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchUnbindDeviceFromEdgeInstanceResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public BatchUnbindDeviceFromEdgeInstanceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

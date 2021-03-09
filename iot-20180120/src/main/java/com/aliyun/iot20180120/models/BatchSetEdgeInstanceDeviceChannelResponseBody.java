@@ -7,14 +7,14 @@ public class BatchSetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static BatchSetEdgeInstanceDeviceChannelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchSetEdgeInstanceDeviceChannelResponseBody self = new BatchSetEdgeInstanceDeviceChannelResponseBody();
@@ -29,12 +29,12 @@ public class BatchSetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchSetEdgeInstanceDeviceChannelResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public BatchSetEdgeInstanceDeviceChannelResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchSetEdgeInstanceDeviceChannelResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class BatchSetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchSetEdgeInstanceDeviceChannelResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public BatchSetEdgeInstanceDeviceChannelResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

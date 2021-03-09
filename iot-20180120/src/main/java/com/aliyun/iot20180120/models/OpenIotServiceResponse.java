@@ -3,21 +3,21 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class TransformClientIdResponse extends TeaModel {
+public class OpenIotServiceResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public TransformClientIdResponseBody body;
+    public OpenIotServiceResponseBody body;
 
-    public static TransformClientIdResponse build(java.util.Map<String, ?> map) throws Exception {
-        TransformClientIdResponse self = new TransformClientIdResponse();
+    public static OpenIotServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        OpenIotServiceResponse self = new OpenIotServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public TransformClientIdResponse setHeaders(java.util.Map<String, String> headers) {
+    public OpenIotServiceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class TransformClientIdResponse extends TeaModel {
         return this.headers;
     }
 
-    public TransformClientIdResponse setBody(TransformClientIdResponseBody body) {
+    public OpenIotServiceResponse setBody(OpenIotServiceResponseBody body) {
         this.body = body;
         return this;
     }
-    public TransformClientIdResponseBody getBody() {
+    public OpenIotServiceResponseBody getBody() {
         return this.body;
     }
 

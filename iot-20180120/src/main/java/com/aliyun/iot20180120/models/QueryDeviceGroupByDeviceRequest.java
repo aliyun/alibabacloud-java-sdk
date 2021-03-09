@@ -19,6 +19,12 @@ public class QueryDeviceGroupByDeviceRequest extends TeaModel {
     @NameInMap("DeviceName")
     public String deviceName;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static QueryDeviceGroupByDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceGroupByDeviceRequest self = new QueryDeviceGroupByDeviceRequest();
         return TeaModel.build(map, self);
@@ -62,6 +68,22 @@ public class QueryDeviceGroupByDeviceRequest extends TeaModel {
     }
     public String getDeviceName() {
         return this.deviceName;
+    }
+
+    public QueryDeviceGroupByDeviceRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public QueryDeviceGroupByDeviceRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }
