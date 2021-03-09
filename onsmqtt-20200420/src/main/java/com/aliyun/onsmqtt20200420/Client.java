@@ -83,6 +83,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteGroupIdWithOptions(request, runtime);
     }
 
+    public GetDeviceCredentialResponse getDeviceCredentialWithOptions(GetDeviceCredentialRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDeviceCredential", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime), new GetDeviceCredentialResponse());
+    }
+
+    public GetDeviceCredentialResponse getDeviceCredential(GetDeviceCredentialRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDeviceCredentialWithOptions(request, runtime);
+    }
+
     public ListGroupIdResponse listGroupIdWithOptions(ListGroupIdRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -122,6 +135,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryTokenWithOptions(request, runtime);
     }
 
+    public RefreshDeviceCredentialResponse refreshDeviceCredentialWithOptions(RefreshDeviceCredentialRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RefreshDeviceCredential", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime), new RefreshDeviceCredentialResponse());
+    }
+
+    public RefreshDeviceCredentialResponse refreshDeviceCredential(RefreshDeviceCredentialRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.refreshDeviceCredentialWithOptions(request, runtime);
+    }
+
+    public RegisterDeviceCredentialResponse registerDeviceCredentialWithOptions(RegisterDeviceCredentialRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RegisterDeviceCredential", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime), new RegisterDeviceCredentialResponse());
+    }
+
+    public RegisterDeviceCredentialResponse registerDeviceCredential(RegisterDeviceCredentialRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.registerDeviceCredentialWithOptions(request, runtime);
+    }
+
     public RevokeTokenResponse revokeTokenWithOptions(RevokeTokenRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -146,5 +185,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendMessageResponse sendMessage(SendMessageRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.sendMessageWithOptions(request, runtime);
+    }
+
+    public UnRegisterDeviceCredentialResponse unRegisterDeviceCredentialWithOptions(UnRegisterDeviceCredentialRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UnRegisterDeviceCredential", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime), new UnRegisterDeviceCredentialResponse());
+    }
+
+    public UnRegisterDeviceCredentialResponse unRegisterDeviceCredential(UnRegisterDeviceCredentialRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.unRegisterDeviceCredentialWithOptions(request, runtime);
     }
 }
