@@ -7,14 +7,14 @@ public class BatchBindDeviceToEdgeInstanceWithDriverResponseBody extends TeaMode
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static BatchBindDeviceToEdgeInstanceWithDriverResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchBindDeviceToEdgeInstanceWithDriverResponseBody self = new BatchBindDeviceToEdgeInstanceWithDriverResponseBody();
@@ -29,12 +29,12 @@ public class BatchBindDeviceToEdgeInstanceWithDriverResponseBody extends TeaMode
         return this.requestId;
     }
 
-    public BatchBindDeviceToEdgeInstanceWithDriverResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public BatchBindDeviceToEdgeInstanceWithDriverResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchBindDeviceToEdgeInstanceWithDriverResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class BatchBindDeviceToEdgeInstanceWithDriverResponseBody extends TeaMode
         return this.code;
     }
 
-    public BatchBindDeviceToEdgeInstanceWithDriverResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public BatchBindDeviceToEdgeInstanceWithDriverResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

@@ -7,17 +7,17 @@ public class GetThingModelTslPublishedResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public GetThingModelTslPublishedResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public GetThingModelTslPublishedResponseBodyData data;
 
     public static GetThingModelTslPublishedResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetThingModelTslPublishedResponseBody self = new GetThingModelTslPublishedResponseBody();
@@ -32,20 +32,12 @@ public class GetThingModelTslPublishedResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetThingModelTslPublishedResponseBody setData(GetThingModelTslPublishedResponseBodyData data) {
-        this.data = data;
+    public GetThingModelTslPublishedResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public GetThingModelTslPublishedResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetThingModelTslPublishedResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GetThingModelTslPublishedResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class GetThingModelTslPublishedResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetThingModelTslPublishedResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GetThingModelTslPublishedResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetThingModelTslPublishedResponseBody setData(GetThingModelTslPublishedResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetThingModelTslPublishedResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetThingModelTslPublishedResponseBodyData extends TeaModel {

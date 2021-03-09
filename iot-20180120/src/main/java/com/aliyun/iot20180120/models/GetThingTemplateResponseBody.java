@@ -7,17 +7,17 @@ public class GetThingTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ThingModelJSON")
-    public String thingModelJSON;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("ThingModelJSON")
+    public String thingModelJSON;
 
     public static GetThingTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetThingTemplateResponseBody self = new GetThingTemplateResponseBody();
@@ -32,20 +32,12 @@ public class GetThingTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetThingTemplateResponseBody setThingModelJSON(String thingModelJSON) {
-        this.thingModelJSON = thingModelJSON;
+    public GetThingTemplateResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getThingModelJSON() {
-        return this.thingModelJSON;
-    }
-
-    public GetThingTemplateResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public GetThingTemplateResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class GetThingTemplateResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetThingTemplateResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public GetThingTemplateResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public GetThingTemplateResponseBody setThingModelJSON(String thingModelJSON) {
+        this.thingModelJSON = thingModelJSON;
+        return this;
+    }
+    public String getThingModelJSON() {
+        return this.thingModelJSON;
     }
 
 }

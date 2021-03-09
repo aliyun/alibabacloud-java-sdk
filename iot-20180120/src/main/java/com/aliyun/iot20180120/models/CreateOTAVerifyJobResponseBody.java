@@ -7,17 +7,17 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateOTAVerifyJobResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public CreateOTAVerifyJobResponseBodyData data;
 
     public static CreateOTAVerifyJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateOTAVerifyJobResponseBody self = new CreateOTAVerifyJobResponseBody();
@@ -32,20 +32,12 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateOTAVerifyJobResponseBody setData(CreateOTAVerifyJobResponseBodyData data) {
-        this.data = data;
+    public CreateOTAVerifyJobResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateOTAVerifyJobResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateOTAVerifyJobResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateOTAVerifyJobResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class CreateOTAVerifyJobResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateOTAVerifyJobResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateOTAVerifyJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateOTAVerifyJobResponseBody setData(CreateOTAVerifyJobResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateOTAVerifyJobResponseBodyData getData() {
+        return this.data;
     }
 
     public static class CreateOTAVerifyJobResponseBodyData extends TeaModel {

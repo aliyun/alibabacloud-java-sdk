@@ -19,11 +19,11 @@ public class CancelOTATaskByDeviceRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("JobId")
-    public String jobId;
-
     @NameInMap("DeviceName")
     public java.util.List<String> deviceName;
+
+    @NameInMap("JobId")
+    public String jobId;
 
     public static CancelOTATaskByDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelOTATaskByDeviceRequest self = new CancelOTATaskByDeviceRequest();
@@ -70,20 +70,20 @@ public class CancelOTATaskByDeviceRequest extends TeaModel {
         return this.productKey;
     }
 
-    public CancelOTATaskByDeviceRequest setJobId(String jobId) {
-        this.jobId = jobId;
-        return this;
-    }
-    public String getJobId() {
-        return this.jobId;
-    }
-
     public CancelOTATaskByDeviceRequest setDeviceName(java.util.List<String> deviceName) {
         this.deviceName = deviceName;
         return this;
     }
     public java.util.List<String> getDeviceName() {
         return this.deviceName;
+    }
+
+    public CancelOTATaskByDeviceRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }

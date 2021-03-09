@@ -16,8 +16,14 @@ public class CreateDataAPIServiceRequest extends TeaModel {
     @NameInMap("OriginSql")
     public String originSql;
 
+    @NameInMap("RequestParam")
+    public java.util.List<CreateDataAPIServiceRequestRequestParam> requestParam;
+
     @NameInMap("Desc")
     public String desc;
+
+    @NameInMap("ResponseParam")
+    public java.util.List<CreateDataAPIServiceRequestResponseParam> responseParam;
 
     @NameInMap("TemplateSql")
     public String templateSql;
@@ -27,12 +33,6 @@ public class CreateDataAPIServiceRequest extends TeaModel {
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
-
-    @NameInMap("RequestParam")
-    public java.util.List<CreateDataAPIServiceRequestRequestParam> requestParam;
-
-    @NameInMap("ResponseParam")
-    public java.util.List<CreateDataAPIServiceRequestResponseParam> responseParam;
 
     public static CreateDataAPIServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataAPIServiceRequest self = new CreateDataAPIServiceRequest();
@@ -71,12 +71,28 @@ public class CreateDataAPIServiceRequest extends TeaModel {
         return this.originSql;
     }
 
+    public CreateDataAPIServiceRequest setRequestParam(java.util.List<CreateDataAPIServiceRequestRequestParam> requestParam) {
+        this.requestParam = requestParam;
+        return this;
+    }
+    public java.util.List<CreateDataAPIServiceRequestRequestParam> getRequestParam() {
+        return this.requestParam;
+    }
+
     public CreateDataAPIServiceRequest setDesc(String desc) {
         this.desc = desc;
         return this;
     }
     public String getDesc() {
         return this.desc;
+    }
+
+    public CreateDataAPIServiceRequest setResponseParam(java.util.List<CreateDataAPIServiceRequestResponseParam> responseParam) {
+        this.responseParam = responseParam;
+        return this;
+    }
+    public java.util.List<CreateDataAPIServiceRequestResponseParam> getResponseParam() {
+        return this.responseParam;
     }
 
     public CreateDataAPIServiceRequest setTemplateSql(String templateSql) {
@@ -103,65 +119,25 @@ public class CreateDataAPIServiceRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
-    public CreateDataAPIServiceRequest setRequestParam(java.util.List<CreateDataAPIServiceRequestRequestParam> requestParam) {
-        this.requestParam = requestParam;
-        return this;
-    }
-    public java.util.List<CreateDataAPIServiceRequestRequestParam> getRequestParam() {
-        return this.requestParam;
-    }
-
-    public CreateDataAPIServiceRequest setResponseParam(java.util.List<CreateDataAPIServiceRequestResponseParam> responseParam) {
-        this.responseParam = responseParam;
-        return this;
-    }
-    public java.util.List<CreateDataAPIServiceRequestResponseParam> getResponseParam() {
-        return this.responseParam;
-    }
-
     public static class CreateDataAPIServiceRequestRequestParam extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Required")
-        public Boolean required;
-
-        @NameInMap("Example")
-        public String example;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("Desc")
         public String desc;
 
+        @NameInMap("Example")
+        public String example;
+
+        @NameInMap("Required")
+        public Boolean required;
+
         public static CreateDataAPIServiceRequestRequestParam build(java.util.Map<String, ?> map) throws Exception {
             CreateDataAPIServiceRequestRequestParam self = new CreateDataAPIServiceRequestRequestParam();
             return TeaModel.build(map, self);
-        }
-
-        public CreateDataAPIServiceRequestRequestParam setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public CreateDataAPIServiceRequestRequestParam setRequired(Boolean required) {
-            this.required = required;
-            return this;
-        }
-        public Boolean getRequired() {
-            return this.required;
-        }
-
-        public CreateDataAPIServiceRequestRequestParam setExample(String example) {
-            this.example = example;
-            return this;
-        }
-        public String getExample() {
-            return this.example;
         }
 
         public CreateDataAPIServiceRequestRequestParam setName(String name) {
@@ -172,6 +148,14 @@ public class CreateDataAPIServiceRequest extends TeaModel {
             return this.name;
         }
 
+        public CreateDataAPIServiceRequestRequestParam setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public CreateDataAPIServiceRequestRequestParam setDesc(String desc) {
             this.desc = desc;
             return this;
@@ -180,38 +164,15 @@ public class CreateDataAPIServiceRequest extends TeaModel {
             return this.desc;
         }
 
-    }
-
-    public static class CreateDataAPIServiceRequestResponseParam extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("Required")
-        public Boolean required;
-
-        @NameInMap("Example")
-        public String example;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Desc")
-        public String desc;
-
-        public static CreateDataAPIServiceRequestResponseParam build(java.util.Map<String, ?> map) throws Exception {
-            CreateDataAPIServiceRequestResponseParam self = new CreateDataAPIServiceRequestResponseParam();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateDataAPIServiceRequestResponseParam setType(String type) {
-            this.type = type;
+        public CreateDataAPIServiceRequestRequestParam setExample(String example) {
+            this.example = example;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getExample() {
+            return this.example;
         }
 
-        public CreateDataAPIServiceRequestResponseParam setRequired(Boolean required) {
+        public CreateDataAPIServiceRequestRequestParam setRequired(Boolean required) {
             this.required = required;
             return this;
         }
@@ -219,12 +180,27 @@ public class CreateDataAPIServiceRequest extends TeaModel {
             return this.required;
         }
 
-        public CreateDataAPIServiceRequestResponseParam setExample(String example) {
-            this.example = example;
-            return this;
-        }
-        public String getExample() {
-            return this.example;
+    }
+
+    public static class CreateDataAPIServiceRequestResponseParam extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Desc")
+        public String desc;
+
+        @NameInMap("Example")
+        public String example;
+
+        @NameInMap("Required")
+        public Boolean required;
+
+        public static CreateDataAPIServiceRequestResponseParam build(java.util.Map<String, ?> map) throws Exception {
+            CreateDataAPIServiceRequestResponseParam self = new CreateDataAPIServiceRequestResponseParam();
+            return TeaModel.build(map, self);
         }
 
         public CreateDataAPIServiceRequestResponseParam setName(String name) {
@@ -235,12 +211,36 @@ public class CreateDataAPIServiceRequest extends TeaModel {
             return this.name;
         }
 
+        public CreateDataAPIServiceRequestResponseParam setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public CreateDataAPIServiceRequestResponseParam setDesc(String desc) {
             this.desc = desc;
             return this;
         }
         public String getDesc() {
             return this.desc;
+        }
+
+        public CreateDataAPIServiceRequestResponseParam setExample(String example) {
+            this.example = example;
+            return this;
+        }
+        public String getExample() {
+            return this.example;
+        }
+
+        public CreateDataAPIServiceRequestResponseParam setRequired(Boolean required) {
+            this.required = required;
+            return this;
+        }
+        public Boolean getRequired() {
+            return this.required;
         }
 
     }

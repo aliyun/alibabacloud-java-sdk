@@ -16,14 +16,14 @@ public class CreateProductTagsRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("ProductTag")
+    public java.util.List<CreateProductTagsRequestProductTag> productTag;
+
     @NameInMap("RealTenantId")
     public String realTenantId;
 
     @NameInMap("RealTripartiteKey")
     public String realTripartiteKey;
-
-    @NameInMap("ProductTag")
-    public java.util.List<CreateProductTagsRequestProductTag> productTag;
 
     public static CreateProductTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductTagsRequest self = new CreateProductTagsRequest();
@@ -62,6 +62,14 @@ public class CreateProductTagsRequest extends TeaModel {
         return this.productKey;
     }
 
+    public CreateProductTagsRequest setProductTag(java.util.List<CreateProductTagsRequestProductTag> productTag) {
+        this.productTag = productTag;
+        return this;
+    }
+    public java.util.List<CreateProductTagsRequestProductTag> getProductTag() {
+        return this.productTag;
+    }
+
     public CreateProductTagsRequest setRealTenantId(String realTenantId) {
         this.realTenantId = realTenantId;
         return this;
@@ -78,32 +86,16 @@ public class CreateProductTagsRequest extends TeaModel {
         return this.realTripartiteKey;
     }
 
-    public CreateProductTagsRequest setProductTag(java.util.List<CreateProductTagsRequestProductTag> productTag) {
-        this.productTag = productTag;
-        return this;
-    }
-    public java.util.List<CreateProductTagsRequestProductTag> getProductTag() {
-        return this.productTag;
-    }
-
     public static class CreateProductTagsRequestProductTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static CreateProductTagsRequestProductTag build(java.util.Map<String, ?> map) throws Exception {
             CreateProductTagsRequestProductTag self = new CreateProductTagsRequestProductTag();
             return TeaModel.build(map, self);
-        }
-
-        public CreateProductTagsRequestProductTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public CreateProductTagsRequestProductTag setTagKey(String tagKey) {
@@ -112,6 +104,14 @@ public class CreateProductTagsRequest extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public CreateProductTagsRequestProductTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

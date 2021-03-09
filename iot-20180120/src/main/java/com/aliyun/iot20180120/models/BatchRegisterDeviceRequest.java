@@ -19,6 +19,12 @@ public class BatchRegisterDeviceRequest extends TeaModel {
     @NameInMap("Count")
     public Integer count;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static BatchRegisterDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchRegisterDeviceRequest self = new BatchRegisterDeviceRequest();
         return TeaModel.build(map, self);
@@ -62,6 +68,22 @@ public class BatchRegisterDeviceRequest extends TeaModel {
     }
     public Integer getCount() {
         return this.count;
+    }
+
+    public BatchRegisterDeviceRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public BatchRegisterDeviceRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

@@ -13,17 +13,17 @@ public class BatchAddThingTopoRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("TopoAddItem")
+    public java.util.List<BatchAddThingTopoRequestTopoAddItem> topoAddItem;
+
     @NameInMap("GwProductKey")
     public String gwProductKey;
 
     @NameInMap("Ext")
-    public java.util.Map<String, ?> ext;
+    public String ext;
 
     @NameInMap("GwDeviceName")
     public String gwDeviceName;
-
-    @NameInMap("TopoAddItem")
-    public java.util.List<BatchAddThingTopoRequestTopoAddItem> topoAddItem;
 
     public static BatchAddThingTopoRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchAddThingTopoRequest self = new BatchAddThingTopoRequest();
@@ -54,6 +54,14 @@ public class BatchAddThingTopoRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
+    public BatchAddThingTopoRequest setTopoAddItem(java.util.List<BatchAddThingTopoRequestTopoAddItem> topoAddItem) {
+        this.topoAddItem = topoAddItem;
+        return this;
+    }
+    public java.util.List<BatchAddThingTopoRequestTopoAddItem> getTopoAddItem() {
+        return this.topoAddItem;
+    }
+
     public BatchAddThingTopoRequest setGwProductKey(String gwProductKey) {
         this.gwProductKey = gwProductKey;
         return this;
@@ -62,11 +70,11 @@ public class BatchAddThingTopoRequest extends TeaModel {
         return this.gwProductKey;
     }
 
-    public BatchAddThingTopoRequest setExt(java.util.Map<String, ?> ext) {
+    public BatchAddThingTopoRequest setExt(String ext) {
         this.ext = ext;
         return this;
     }
-    public java.util.Map<String, ?> getExt() {
+    public String getExt() {
         return this.ext;
     }
 
@@ -76,14 +84,6 @@ public class BatchAddThingTopoRequest extends TeaModel {
     }
     public String getGwDeviceName() {
         return this.gwDeviceName;
-    }
-
-    public BatchAddThingTopoRequest setTopoAddItem(java.util.List<BatchAddThingTopoRequestTopoAddItem> topoAddItem) {
-        this.topoAddItem = topoAddItem;
-        return this;
-    }
-    public java.util.List<BatchAddThingTopoRequestTopoAddItem> getTopoAddItem() {
-        return this.topoAddItem;
     }
 
     public static class BatchAddThingTopoRequestTopoAddItem extends TeaModel {
@@ -96,11 +96,11 @@ public class BatchAddThingTopoRequest extends TeaModel {
         @NameInMap("Sign")
         public String sign;
 
-        @NameInMap("Timestamp")
-        public String timestamp;
-
         @NameInMap("SignMethod")
         public String signMethod;
+
+        @NameInMap("Timestamp")
+        public String timestamp;
 
         @NameInMap("ClientId")
         public String clientId;
@@ -134,20 +134,20 @@ public class BatchAddThingTopoRequest extends TeaModel {
             return this.sign;
         }
 
-        public BatchAddThingTopoRequestTopoAddItem setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
-        }
-
         public BatchAddThingTopoRequestTopoAddItem setSignMethod(String signMethod) {
             this.signMethod = signMethod;
             return this;
         }
         public String getSignMethod() {
             return this.signMethod;
+        }
+
+        public BatchAddThingTopoRequestTopoAddItem setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
         }
 
         public BatchAddThingTopoRequestTopoAddItem setClientId(String clientId) {

@@ -7,14 +7,14 @@ public class CancelOTAStrategyByJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static CancelOTAStrategyByJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CancelOTAStrategyByJobResponseBody self = new CancelOTAStrategyByJobResponseBody();
@@ -29,12 +29,12 @@ public class CancelOTAStrategyByJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CancelOTAStrategyByJobResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public CancelOTAStrategyByJobResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CancelOTAStrategyByJobResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class CancelOTAStrategyByJobResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CancelOTAStrategyByJobResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CancelOTAStrategyByJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

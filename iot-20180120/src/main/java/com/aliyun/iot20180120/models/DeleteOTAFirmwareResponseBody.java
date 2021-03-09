@@ -7,14 +7,14 @@ public class DeleteOTAFirmwareResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static DeleteOTAFirmwareResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteOTAFirmwareResponseBody self = new DeleteOTAFirmwareResponseBody();
@@ -29,12 +29,12 @@ public class DeleteOTAFirmwareResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteOTAFirmwareResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public DeleteOTAFirmwareResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DeleteOTAFirmwareResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class DeleteOTAFirmwareResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeleteOTAFirmwareResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteOTAFirmwareResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

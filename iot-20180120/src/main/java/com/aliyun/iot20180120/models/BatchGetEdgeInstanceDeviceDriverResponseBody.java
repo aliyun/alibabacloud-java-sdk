@@ -7,17 +7,17 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Success")
+    public Boolean success;
+
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
     @NameInMap("DeviceDriverList")
     public java.util.List<BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList> deviceDriverList;
-
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     public static BatchGetEdgeInstanceDeviceDriverResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchGetEdgeInstanceDeviceDriverResponseBody self = new BatchGetEdgeInstanceDeviceDriverResponseBody();
@@ -30,6 +30,22 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public BatchGetEdgeInstanceDeviceDriverResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public BatchGetEdgeInstanceDeviceDriverResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public BatchGetEdgeInstanceDeviceDriverResponseBody setErrorMessage(String errorMessage) {
@@ -46,22 +62,6 @@ public class BatchGetEdgeInstanceDeviceDriverResponseBody extends TeaModel {
     }
     public java.util.List<BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList> getDeviceDriverList() {
         return this.deviceDriverList;
-    }
-
-    public BatchGetEdgeInstanceDeviceDriverResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public BatchGetEdgeInstanceDeviceDriverResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
     }
 
     public static class BatchGetEdgeInstanceDeviceDriverResponseBodyDeviceDriverList extends TeaModel {

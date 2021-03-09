@@ -7,20 +7,20 @@ public class CreateProductResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateProductResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     @NameInMap("ProductKey")
     public String productKey;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("Data")
+    public CreateProductResponseBodyData data;
 
     public static CreateProductResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateProductResponseBody self = new CreateProductResponseBody();
@@ -35,20 +35,12 @@ public class CreateProductResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateProductResponseBody setData(CreateProductResponseBodyData data) {
-        this.data = data;
+    public CreateProductResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateProductResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateProductResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateProductResponseBody setCode(String code) {
@@ -59,6 +51,14 @@ public class CreateProductResponseBody extends TeaModel {
         return this.code;
     }
 
+    public CreateProductResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
     public CreateProductResponseBody setProductKey(String productKey) {
         this.productKey = productKey;
         return this;
@@ -67,17 +67,23 @@ public class CreateProductResponseBody extends TeaModel {
         return this.productKey;
     }
 
-    public CreateProductResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateProductResponseBody setData(CreateProductResponseBodyData data) {
+        this.data = data;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public CreateProductResponseBodyData getData() {
+        return this.data;
     }
 
     public static class CreateProductResponseBodyData extends TeaModel {
-        @NameInMap("AuthType")
-        public String authType;
+        @NameInMap("DataFormat")
+        public Integer dataFormat;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("NodeType")
+        public Integer nodeType;
 
         @NameInMap("ProductKey")
         public String productKey;
@@ -85,38 +91,48 @@ public class CreateProductResponseBody extends TeaModel {
         @NameInMap("ProductName")
         public String productName;
 
-        @NameInMap("NodeType")
-        public Integer nodeType;
-
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("AliyunCommodityCode")
+        public String aliyunCommodityCode;
 
         @NameInMap("Id2")
         public Boolean id2;
 
-        @NameInMap("ProductSecret")
-        public String productSecret;
-
         @NameInMap("ProtocolType")
         public String protocolType;
 
-        @NameInMap("DataFormat")
-        public Integer dataFormat;
+        @NameInMap("AuthType")
+        public String authType;
 
-        @NameInMap("AliyunCommodityCode")
-        public String aliyunCommodityCode;
+        @NameInMap("ProductSecret")
+        public String productSecret;
 
         public static CreateProductResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateProductResponseBodyData self = new CreateProductResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public CreateProductResponseBodyData setAuthType(String authType) {
-            this.authType = authType;
+        public CreateProductResponseBodyData setDataFormat(Integer dataFormat) {
+            this.dataFormat = dataFormat;
             return this;
         }
-        public String getAuthType() {
-            return this.authType;
+        public Integer getDataFormat() {
+            return this.dataFormat;
+        }
+
+        public CreateProductResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateProductResponseBodyData setNodeType(Integer nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public Integer getNodeType() {
+            return this.nodeType;
         }
 
         public CreateProductResponseBodyData setProductKey(String productKey) {
@@ -135,20 +151,12 @@ public class CreateProductResponseBody extends TeaModel {
             return this.productName;
         }
 
-        public CreateProductResponseBodyData setNodeType(Integer nodeType) {
-            this.nodeType = nodeType;
+        public CreateProductResponseBodyData setAliyunCommodityCode(String aliyunCommodityCode) {
+            this.aliyunCommodityCode = aliyunCommodityCode;
             return this;
         }
-        public Integer getNodeType() {
-            return this.nodeType;
-        }
-
-        public CreateProductResponseBodyData setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
+        public String getAliyunCommodityCode() {
+            return this.aliyunCommodityCode;
         }
 
         public CreateProductResponseBodyData setId2(Boolean id2) {
@@ -159,14 +167,6 @@ public class CreateProductResponseBody extends TeaModel {
             return this.id2;
         }
 
-        public CreateProductResponseBodyData setProductSecret(String productSecret) {
-            this.productSecret = productSecret;
-            return this;
-        }
-        public String getProductSecret() {
-            return this.productSecret;
-        }
-
         public CreateProductResponseBodyData setProtocolType(String protocolType) {
             this.protocolType = protocolType;
             return this;
@@ -175,20 +175,20 @@ public class CreateProductResponseBody extends TeaModel {
             return this.protocolType;
         }
 
-        public CreateProductResponseBodyData setDataFormat(Integer dataFormat) {
-            this.dataFormat = dataFormat;
+        public CreateProductResponseBodyData setAuthType(String authType) {
+            this.authType = authType;
             return this;
         }
-        public Integer getDataFormat() {
-            return this.dataFormat;
+        public String getAuthType() {
+            return this.authType;
         }
 
-        public CreateProductResponseBodyData setAliyunCommodityCode(String aliyunCommodityCode) {
-            this.aliyunCommodityCode = aliyunCommodityCode;
+        public CreateProductResponseBodyData setProductSecret(String productSecret) {
+            this.productSecret = productSecret;
             return this;
         }
-        public String getAliyunCommodityCode() {
-            return this.aliyunCommodityCode;
+        public String getProductSecret() {
+            return this.productSecret;
         }
 
     }

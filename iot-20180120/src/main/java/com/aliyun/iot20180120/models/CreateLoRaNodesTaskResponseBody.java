@@ -4,32 +4,24 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateLoRaNodesTaskResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static CreateLoRaNodesTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLoRaNodesTaskResponseBody self = new CreateLoRaNodesTaskResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateLoRaNodesTaskResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
     }
 
     public CreateLoRaNodesTaskResponseBody setRequestId(String requestId) {
@@ -40,12 +32,12 @@ public class CreateLoRaNodesTaskResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateLoRaNodesTaskResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public CreateLoRaNodesTaskResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateLoRaNodesTaskResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class CreateLoRaNodesTaskResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateLoRaNodesTaskResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateLoRaNodesTaskResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateLoRaNodesTaskResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

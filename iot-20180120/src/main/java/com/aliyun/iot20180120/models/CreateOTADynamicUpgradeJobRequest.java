@@ -19,6 +19,9 @@ public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("SrcVersion")
+    public java.util.List<String> srcVersion;
+
     @NameInMap("RetryInterval")
     public Integer retryInterval;
 
@@ -36,9 +39,6 @@ public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
 
     @NameInMap("DynamicMode")
     public Integer dynamicMode;
-
-    @NameInMap("SrcVersion")
-    public java.util.List<String> srcVersion;
 
     @NameInMap("Tag")
     public java.util.List<CreateOTADynamicUpgradeJobRequestTag> tag;
@@ -88,6 +88,14 @@ public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
         return this.productKey;
     }
 
+    public CreateOTADynamicUpgradeJobRequest setSrcVersion(java.util.List<String> srcVersion) {
+        this.srcVersion = srcVersion;
+        return this;
+    }
+    public java.util.List<String> getSrcVersion() {
+        return this.srcVersion;
+    }
+
     public CreateOTADynamicUpgradeJobRequest setRetryInterval(Integer retryInterval) {
         this.retryInterval = retryInterval;
         return this;
@@ -134,14 +142,6 @@ public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
     }
     public Integer getDynamicMode() {
         return this.dynamicMode;
-    }
-
-    public CreateOTADynamicUpgradeJobRequest setSrcVersion(java.util.List<String> srcVersion) {
-        this.srcVersion = srcVersion;
-        return this;
-    }
-    public java.util.List<String> getSrcVersion() {
-        return this.srcVersion;
     }
 
     public CreateOTADynamicUpgradeJobRequest setTag(java.util.List<CreateOTADynamicUpgradeJobRequestTag> tag) {

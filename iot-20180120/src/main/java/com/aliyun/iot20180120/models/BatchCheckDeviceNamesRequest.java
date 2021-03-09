@@ -22,6 +22,12 @@ public class BatchCheckDeviceNamesRequest extends TeaModel {
     @NameInMap("DeviceNameList")
     public java.util.List<BatchCheckDeviceNamesRequestDeviceNameList> deviceNameList;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static BatchCheckDeviceNamesRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchCheckDeviceNamesRequest self = new BatchCheckDeviceNamesRequest();
         return TeaModel.build(map, self);
@@ -75,24 +81,32 @@ public class BatchCheckDeviceNamesRequest extends TeaModel {
         return this.deviceNameList;
     }
 
-    public static class BatchCheckDeviceNamesRequestDeviceNameList extends TeaModel {
-        @NameInMap("DeviceNickname")
-        public String deviceNickname;
+    public BatchCheckDeviceNamesRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
 
+    public BatchCheckDeviceNamesRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
+    }
+
+    public static class BatchCheckDeviceNamesRequestDeviceNameList extends TeaModel {
         @NameInMap("DeviceName")
         public String deviceName;
+
+        @NameInMap("DeviceNickname")
+        public String deviceNickname;
 
         public static BatchCheckDeviceNamesRequestDeviceNameList build(java.util.Map<String, ?> map) throws Exception {
             BatchCheckDeviceNamesRequestDeviceNameList self = new BatchCheckDeviceNamesRequestDeviceNameList();
             return TeaModel.build(map, self);
-        }
-
-        public BatchCheckDeviceNamesRequestDeviceNameList setDeviceNickname(String deviceNickname) {
-            this.deviceNickname = deviceNickname;
-            return this;
-        }
-        public String getDeviceNickname() {
-            return this.deviceNickname;
         }
 
         public BatchCheckDeviceNamesRequestDeviceNameList setDeviceName(String deviceName) {
@@ -101,6 +115,14 @@ public class BatchCheckDeviceNamesRequest extends TeaModel {
         }
         public String getDeviceName() {
             return this.deviceName;
+        }
+
+        public BatchCheckDeviceNamesRequestDeviceNameList setDeviceNickname(String deviceNickname) {
+            this.deviceNickname = deviceNickname;
+            return this;
+        }
+        public String getDeviceNickname() {
+            return this.deviceNickname;
         }
 
     }

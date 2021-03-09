@@ -7,17 +7,17 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public CreateOTADynamicUpgradeJobResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public CreateOTADynamicUpgradeJobResponseBodyData data;
 
     public static CreateOTADynamicUpgradeJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateOTADynamicUpgradeJobResponseBody self = new CreateOTADynamicUpgradeJobResponseBody();
@@ -32,20 +32,12 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateOTADynamicUpgradeJobResponseBody setData(CreateOTADynamicUpgradeJobResponseBodyData data) {
-        this.data = data;
+    public CreateOTADynamicUpgradeJobResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateOTADynamicUpgradeJobResponseBodyData getData() {
-        return this.data;
-    }
-
-    public CreateOTADynamicUpgradeJobResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateOTADynamicUpgradeJobResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class CreateOTADynamicUpgradeJobResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateOTADynamicUpgradeJobResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateOTADynamicUpgradeJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateOTADynamicUpgradeJobResponseBody setData(CreateOTADynamicUpgradeJobResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CreateOTADynamicUpgradeJobResponseBodyData getData() {
+        return this.data;
     }
 
     public static class CreateOTADynamicUpgradeJobResponseBodyData extends TeaModel {

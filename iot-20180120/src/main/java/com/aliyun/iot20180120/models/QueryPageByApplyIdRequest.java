@@ -22,6 +22,12 @@ public class QueryPageByApplyIdRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static QueryPageByApplyIdRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPageByApplyIdRequest self = new QueryPageByApplyIdRequest();
         return TeaModel.build(map, self);
@@ -73,6 +79,22 @@ public class QueryPageByApplyIdRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryPageByApplyIdRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public QueryPageByApplyIdRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

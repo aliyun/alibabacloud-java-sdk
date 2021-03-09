@@ -7,8 +7,8 @@ public class CreateProductTagsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InvalidProductTags")
-    public CreateProductTagsResponseBodyInvalidProductTags invalidProductTags;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("ErrorMessage")
     public String errorMessage;
@@ -16,8 +16,8 @@ public class CreateProductTagsResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("InvalidProductTags")
+    public CreateProductTagsResponseBodyInvalidProductTags invalidProductTags;
 
     public static CreateProductTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateProductTagsResponseBody self = new CreateProductTagsResponseBody();
@@ -32,12 +32,12 @@ public class CreateProductTagsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateProductTagsResponseBody setInvalidProductTags(CreateProductTagsResponseBodyInvalidProductTags invalidProductTags) {
-        this.invalidProductTags = invalidProductTags;
+    public CreateProductTagsResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateProductTagsResponseBodyInvalidProductTags getInvalidProductTags() {
-        return this.invalidProductTags;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateProductTagsResponseBody setErrorMessage(String errorMessage) {
@@ -56,32 +56,24 @@ public class CreateProductTagsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateProductTagsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateProductTagsResponseBody setInvalidProductTags(CreateProductTagsResponseBodyInvalidProductTags invalidProductTags) {
+        this.invalidProductTags = invalidProductTags;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public CreateProductTagsResponseBodyInvalidProductTags getInvalidProductTags() {
+        return this.invalidProductTags;
     }
 
     public static class CreateProductTagsResponseBodyInvalidProductTagsProductTag extends TeaModel {
-        @NameInMap("TagValue")
-        public String tagValue;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
 
         public static CreateProductTagsResponseBodyInvalidProductTagsProductTag build(java.util.Map<String, ?> map) throws Exception {
             CreateProductTagsResponseBodyInvalidProductTagsProductTag self = new CreateProductTagsResponseBodyInvalidProductTagsProductTag();
             return TeaModel.build(map, self);
-        }
-
-        public CreateProductTagsResponseBodyInvalidProductTagsProductTag setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
         }
 
         public CreateProductTagsResponseBodyInvalidProductTagsProductTag setTagKey(String tagKey) {
@@ -90,6 +82,14 @@ public class CreateProductTagsResponseBody extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public CreateProductTagsResponseBodyInvalidProductTagsProductTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

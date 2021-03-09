@@ -64,7 +64,7 @@ public class QueryTaskResponseBody extends TeaModel {
         return this.data;
     }
 
-    public static class QueryTaskResponseBodyDataData extends TeaModel {
+    public static class QueryTaskResponseBodyData extends TeaModel {
         @NameInMap("JobId")
         public String jobId;
 
@@ -101,12 +101,12 @@ public class QueryTaskResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
-        public static QueryTaskResponseBodyDataData build(java.util.Map<String, ?> map) throws Exception {
-            QueryTaskResponseBodyDataData self = new QueryTaskResponseBodyDataData();
+        public static QueryTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            QueryTaskResponseBodyData self = new QueryTaskResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public QueryTaskResponseBodyDataData setJobId(String jobId) {
+        public QueryTaskResponseBodyData setJobId(String jobId) {
             this.jobId = jobId;
             return this;
         }
@@ -114,7 +114,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public QueryTaskResponseBodyDataData setJobName(String jobName) {
+        public QueryTaskResponseBodyData setJobName(String jobName) {
             this.jobName = jobName;
             return this;
         }
@@ -122,7 +122,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.jobName;
         }
 
-        public QueryTaskResponseBodyDataData setTaskId(String taskId) {
+        public QueryTaskResponseBodyData setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
@@ -130,7 +130,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public QueryTaskResponseBodyDataData setProductKey(String productKey) {
+        public QueryTaskResponseBodyData setProductKey(String productKey) {
             this.productKey = productKey;
             return this;
         }
@@ -138,7 +138,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.productKey;
         }
 
-        public QueryTaskResponseBodyDataData setDeviceName(String deviceName) {
+        public QueryTaskResponseBodyData setDeviceName(String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
@@ -146,7 +146,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.deviceName;
         }
 
-        public QueryTaskResponseBodyDataData setIotId(String iotId) {
+        public QueryTaskResponseBodyData setIotId(String iotId) {
             this.iotId = iotId;
             return this;
         }
@@ -154,7 +154,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.iotId;
         }
 
-        public QueryTaskResponseBodyDataData setProgress(String progress) {
+        public QueryTaskResponseBodyData setProgress(String progress) {
             this.progress = progress;
             return this;
         }
@@ -162,7 +162,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public QueryTaskResponseBodyDataData setUtcQueueTime(String utcQueueTime) {
+        public QueryTaskResponseBodyData setUtcQueueTime(String utcQueueTime) {
             this.utcQueueTime = utcQueueTime;
             return this;
         }
@@ -170,7 +170,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.utcQueueTime;
         }
 
-        public QueryTaskResponseBodyDataData setUtcModified(String utcModified) {
+        public QueryTaskResponseBodyData setUtcModified(String utcModified) {
             this.utcModified = utcModified;
             return this;
         }
@@ -178,7 +178,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.utcModified;
         }
 
-        public QueryTaskResponseBodyDataData setStatusDetail(String statusDetail) {
+        public QueryTaskResponseBodyData setStatusDetail(String statusDetail) {
             this.statusDetail = statusDetail;
             return this;
         }
@@ -186,7 +186,7 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.statusDetail;
         }
 
-        public QueryTaskResponseBodyDataData setStatus(String status) {
+        public QueryTaskResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -194,31 +194,12 @@ public class QueryTaskResponseBody extends TeaModel {
             return this.status;
         }
 
-        public QueryTaskResponseBodyDataData setMessage(String message) {
+        public QueryTaskResponseBodyData setMessage(String message) {
             this.message = message;
             return this;
         }
         public String getMessage() {
             return this.message;
-        }
-
-    }
-
-    public static class QueryTaskResponseBodyData extends TeaModel {
-        @NameInMap("data")
-        public java.util.List<QueryTaskResponseBodyDataData> data;
-
-        public static QueryTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            QueryTaskResponseBodyData self = new QueryTaskResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public QueryTaskResponseBodyData setData(java.util.List<QueryTaskResponseBodyDataData> data) {
-            this.data = data;
-            return this;
-        }
-        public java.util.List<QueryTaskResponseBodyDataData> getData() {
-            return this.data;
         }
 
     }

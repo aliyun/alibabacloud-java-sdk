@@ -7,17 +7,17 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public BatchRegisterDeviceResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public BatchRegisterDeviceResponseBodyData data;
 
     public static BatchRegisterDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchRegisterDeviceResponseBody self = new BatchRegisterDeviceResponseBody();
@@ -32,20 +32,12 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchRegisterDeviceResponseBody setData(BatchRegisterDeviceResponseBodyData data) {
-        this.data = data;
+    public BatchRegisterDeviceResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public BatchRegisterDeviceResponseBodyData getData() {
-        return this.data;
-    }
-
-    public BatchRegisterDeviceResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchRegisterDeviceResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class BatchRegisterDeviceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchRegisterDeviceResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public BatchRegisterDeviceResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public BatchRegisterDeviceResponseBody setData(BatchRegisterDeviceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public BatchRegisterDeviceResponseBodyData getData() {
+        return this.data;
     }
 
     public static class BatchRegisterDeviceResponseBodyData extends TeaModel {

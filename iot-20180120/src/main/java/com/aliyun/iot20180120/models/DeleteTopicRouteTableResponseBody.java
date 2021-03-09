@@ -7,11 +7,8 @@ public class DeleteTopicRouteTableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("FailureTopics")
-    public DeleteTopicRouteTableResponseBodyFailureTopics failureTopics;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
@@ -19,8 +16,11 @@ public class DeleteTopicRouteTableResponseBody extends TeaModel {
     @NameInMap("IsAllSucceed")
     public Boolean isAllSucceed;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("FailureTopics")
+    public DeleteTopicRouteTableResponseBodyFailureTopics failureTopics;
 
     public static DeleteTopicRouteTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteTopicRouteTableResponseBody self = new DeleteTopicRouteTableResponseBody();
@@ -35,20 +35,12 @@ public class DeleteTopicRouteTableResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteTopicRouteTableResponseBody setFailureTopics(DeleteTopicRouteTableResponseBodyFailureTopics failureTopics) {
-        this.failureTopics = failureTopics;
+    public DeleteTopicRouteTableResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DeleteTopicRouteTableResponseBodyFailureTopics getFailureTopics() {
-        return this.failureTopics;
-    }
-
-    public DeleteTopicRouteTableResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public DeleteTopicRouteTableResponseBody setCode(String code) {
@@ -67,28 +59,36 @@ public class DeleteTopicRouteTableResponseBody extends TeaModel {
         return this.isAllSucceed;
     }
 
-    public DeleteTopicRouteTableResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteTopicRouteTableResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public DeleteTopicRouteTableResponseBody setFailureTopics(DeleteTopicRouteTableResponseBodyFailureTopics failureTopics) {
+        this.failureTopics = failureTopics;
+        return this;
+    }
+    public DeleteTopicRouteTableResponseBodyFailureTopics getFailureTopics() {
+        return this.failureTopics;
     }
 
     public static class DeleteTopicRouteTableResponseBodyFailureTopics extends TeaModel {
         @NameInMap("Topic")
-        public java.util.List<java.util.Map<String, ?>> topic;
+        public java.util.List<java.util.Map<String, String>> topic;
 
         public static DeleteTopicRouteTableResponseBodyFailureTopics build(java.util.Map<String, ?> map) throws Exception {
             DeleteTopicRouteTableResponseBodyFailureTopics self = new DeleteTopicRouteTableResponseBodyFailureTopics();
             return TeaModel.build(map, self);
         }
 
-        public DeleteTopicRouteTableResponseBodyFailureTopics setTopic(java.util.List<java.util.Map<String, ?>> topic) {
+        public DeleteTopicRouteTableResponseBodyFailureTopics setTopic(java.util.List<java.util.Map<String, String>> topic) {
             this.topic = topic;
             return this;
         }
-        public java.util.List<java.util.Map<String, ?>> getTopic() {
+        public java.util.List<java.util.Map<String, String>> getTopic() {
             return this.topic;
         }
 

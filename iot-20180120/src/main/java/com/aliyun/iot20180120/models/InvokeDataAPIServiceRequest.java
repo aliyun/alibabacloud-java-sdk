@@ -13,11 +13,11 @@ public class InvokeDataAPIServiceRequest extends TeaModel {
     @NameInMap("ApiSrn")
     public String apiSrn;
 
-    @NameInMap("IotInstanceId")
-    public String iotInstanceId;
-
     @NameInMap("Param")
     public java.util.List<InvokeDataAPIServiceRequestParam> param;
+
+    @NameInMap("IotInstanceId")
+    public String iotInstanceId;
 
     public static InvokeDataAPIServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeDataAPIServiceRequest self = new InvokeDataAPIServiceRequest();
@@ -48,14 +48,6 @@ public class InvokeDataAPIServiceRequest extends TeaModel {
         return this.apiSrn;
     }
 
-    public InvokeDataAPIServiceRequest setIotInstanceId(String iotInstanceId) {
-        this.iotInstanceId = iotInstanceId;
-        return this;
-    }
-    public String getIotInstanceId() {
-        return this.iotInstanceId;
-    }
-
     public InvokeDataAPIServiceRequest setParam(java.util.List<InvokeDataAPIServiceRequestParam> param) {
         this.param = param;
         return this;
@@ -64,33 +56,33 @@ public class InvokeDataAPIServiceRequest extends TeaModel {
         return this.param;
     }
 
-    public static class InvokeDataAPIServiceRequestParam extends TeaModel {
-        @NameInMap("ParamName")
-        public String paramName;
+    public InvokeDataAPIServiceRequest setIotInstanceId(String iotInstanceId) {
+        this.iotInstanceId = iotInstanceId;
+        return this;
+    }
+    public String getIotInstanceId() {
+        return this.iotInstanceId;
+    }
 
+    public static class InvokeDataAPIServiceRequestParam extends TeaModel {
         @NameInMap("ParamType")
         public String paramType;
-
-        @NameInMap("ParamValue")
-        public String paramValue;
-
-        @NameInMap("ListParamType")
-        public String listParamType;
 
         @NameInMap("ListParamValue")
         public java.util.List<String> listParamValue;
 
+        @NameInMap("ListParamType")
+        public String listParamType;
+
+        @NameInMap("ParamName")
+        public String paramName;
+
+        @NameInMap("ParamValue")
+        public String paramValue;
+
         public static InvokeDataAPIServiceRequestParam build(java.util.Map<String, ?> map) throws Exception {
             InvokeDataAPIServiceRequestParam self = new InvokeDataAPIServiceRequestParam();
             return TeaModel.build(map, self);
-        }
-
-        public InvokeDataAPIServiceRequestParam setParamName(String paramName) {
-            this.paramName = paramName;
-            return this;
-        }
-        public String getParamName() {
-            return this.paramName;
         }
 
         public InvokeDataAPIServiceRequestParam setParamType(String paramType) {
@@ -101,12 +93,12 @@ public class InvokeDataAPIServiceRequest extends TeaModel {
             return this.paramType;
         }
 
-        public InvokeDataAPIServiceRequestParam setParamValue(String paramValue) {
-            this.paramValue = paramValue;
+        public InvokeDataAPIServiceRequestParam setListParamValue(java.util.List<String> listParamValue) {
+            this.listParamValue = listParamValue;
             return this;
         }
-        public String getParamValue() {
-            return this.paramValue;
+        public java.util.List<String> getListParamValue() {
+            return this.listParamValue;
         }
 
         public InvokeDataAPIServiceRequestParam setListParamType(String listParamType) {
@@ -117,12 +109,20 @@ public class InvokeDataAPIServiceRequest extends TeaModel {
             return this.listParamType;
         }
 
-        public InvokeDataAPIServiceRequestParam setListParamValue(java.util.List<String> listParamValue) {
-            this.listParamValue = listParamValue;
+        public InvokeDataAPIServiceRequestParam setParamName(String paramName) {
+            this.paramName = paramName;
             return this;
         }
-        public java.util.List<String> getListParamValue() {
-            return this.listParamValue;
+        public String getParamName() {
+            return this.paramName;
+        }
+
+        public InvokeDataAPIServiceRequestParam setParamValue(String paramValue) {
+            this.paramValue = paramValue;
+            return this;
+        }
+        public String getParamValue() {
+            return this.paramValue;
         }
 
     }

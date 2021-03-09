@@ -4,32 +4,24 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeDriverResponseBody extends TeaModel {
-    @NameInMap("DriverId")
-    public String driverId;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("DriverId")
+    public String driverId;
+
     public static CreateEdgeDriverResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeDriverResponseBody self = new CreateEdgeDriverResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateEdgeDriverResponseBody setDriverId(String driverId) {
-        this.driverId = driverId;
-        return this;
-    }
-    public String getDriverId() {
-        return this.driverId;
     }
 
     public CreateEdgeDriverResponseBody setRequestId(String requestId) {
@@ -40,12 +32,12 @@ public class CreateEdgeDriverResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateEdgeDriverResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public CreateEdgeDriverResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateEdgeDriverResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class CreateEdgeDriverResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateEdgeDriverResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateEdgeDriverResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateEdgeDriverResponseBody setDriverId(String driverId) {
+        this.driverId = driverId;
+        return this;
+    }
+    public String getDriverId() {
+        return this.driverId;
     }
 
 }

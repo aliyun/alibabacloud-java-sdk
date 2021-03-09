@@ -7,11 +7,8 @@ public class CreateTopicRouteTableResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("FailureTopics")
-    public CreateTopicRouteTableResponseBodyFailureTopics failureTopics;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
@@ -19,8 +16,11 @@ public class CreateTopicRouteTableResponseBody extends TeaModel {
     @NameInMap("IsAllSucceed")
     public Boolean isAllSucceed;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("FailureTopics")
+    public CreateTopicRouteTableResponseBodyFailureTopics failureTopics;
 
     public static CreateTopicRouteTableResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTopicRouteTableResponseBody self = new CreateTopicRouteTableResponseBody();
@@ -35,20 +35,12 @@ public class CreateTopicRouteTableResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateTopicRouteTableResponseBody setFailureTopics(CreateTopicRouteTableResponseBodyFailureTopics failureTopics) {
-        this.failureTopics = failureTopics;
+    public CreateTopicRouteTableResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateTopicRouteTableResponseBodyFailureTopics getFailureTopics() {
-        return this.failureTopics;
-    }
-
-    public CreateTopicRouteTableResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public CreateTopicRouteTableResponseBody setCode(String code) {
@@ -67,28 +59,36 @@ public class CreateTopicRouteTableResponseBody extends TeaModel {
         return this.isAllSucceed;
     }
 
-    public CreateTopicRouteTableResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateTopicRouteTableResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateTopicRouteTableResponseBody setFailureTopics(CreateTopicRouteTableResponseBodyFailureTopics failureTopics) {
+        this.failureTopics = failureTopics;
+        return this;
+    }
+    public CreateTopicRouteTableResponseBodyFailureTopics getFailureTopics() {
+        return this.failureTopics;
     }
 
     public static class CreateTopicRouteTableResponseBodyFailureTopics extends TeaModel {
         @NameInMap("Topic")
-        public java.util.List<java.util.Map<String, ?>> topic;
+        public java.util.List<java.util.Map<String, String>> topic;
 
         public static CreateTopicRouteTableResponseBodyFailureTopics build(java.util.Map<String, ?> map) throws Exception {
             CreateTopicRouteTableResponseBodyFailureTopics self = new CreateTopicRouteTableResponseBodyFailureTopics();
             return TeaModel.build(map, self);
         }
 
-        public CreateTopicRouteTableResponseBodyFailureTopics setTopic(java.util.List<java.util.Map<String, ?>> topic) {
+        public CreateTopicRouteTableResponseBodyFailureTopics setTopic(java.util.List<java.util.Map<String, String>> topic) {
             this.topic = topic;
             return this;
         }
-        public java.util.List<java.util.Map<String, ?>> getTopic() {
+        public java.util.List<java.util.Map<String, String>> getTopic() {
             return this.topic;
         }
 

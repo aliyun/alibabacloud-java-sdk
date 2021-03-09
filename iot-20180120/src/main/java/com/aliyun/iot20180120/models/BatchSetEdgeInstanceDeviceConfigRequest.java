@@ -65,23 +65,15 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends TeaModel {
     }
 
     public static class BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs extends TeaModel {
-        @NameInMap("Content")
-        public String content;
-
         @NameInMap("IotId")
         public String iotId;
+
+        @NameInMap("Content")
+        public String content;
 
         public static BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs build(java.util.Map<String, ?> map) throws Exception {
             BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs self = new BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs();
             return TeaModel.build(map, self);
-        }
-
-        public BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
         }
 
         public BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs setIotId(String iotId) {
@@ -90,6 +82,14 @@ public class BatchSetEdgeInstanceDeviceConfigRequest extends TeaModel {
         }
         public String getIotId() {
             return this.iotId;
+        }
+
+        public BatchSetEdgeInstanceDeviceConfigRequestDeviceConfigs setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
         }
 
     }

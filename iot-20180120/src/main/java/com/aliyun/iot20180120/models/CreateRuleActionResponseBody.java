@@ -4,14 +4,8 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleActionResponseBody extends TeaModel {
-    @NameInMap("ActionId")
-    public Long actionId;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
 
     @NameInMap("Code")
     public String code;
@@ -19,17 +13,15 @@ public class CreateRuleActionResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("ActionId")
+    public Long actionId;
+
     public static CreateRuleActionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRuleActionResponseBody self = new CreateRuleActionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateRuleActionResponseBody setActionId(Long actionId) {
-        this.actionId = actionId;
-        return this;
-    }
-    public Long getActionId() {
-        return this.actionId;
     }
 
     public CreateRuleActionResponseBody setRequestId(String requestId) {
@@ -38,14 +30,6 @@ public class CreateRuleActionResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public CreateRuleActionResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
     }
 
     public CreateRuleActionResponseBody setCode(String code) {
@@ -62,6 +46,22 @@ public class CreateRuleActionResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public CreateRuleActionResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateRuleActionResponseBody setActionId(Long actionId) {
+        this.actionId = actionId;
+        return this;
+    }
+    public Long getActionId() {
+        return this.actionId;
     }
 
 }

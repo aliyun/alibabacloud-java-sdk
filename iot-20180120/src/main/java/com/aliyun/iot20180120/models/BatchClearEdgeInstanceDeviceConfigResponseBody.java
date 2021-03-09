@@ -7,14 +7,14 @@ public class BatchClearEdgeInstanceDeviceConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     public static BatchClearEdgeInstanceDeviceConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchClearEdgeInstanceDeviceConfigResponseBody self = new BatchClearEdgeInstanceDeviceConfigResponseBody();
@@ -29,12 +29,12 @@ public class BatchClearEdgeInstanceDeviceConfigResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchClearEdgeInstanceDeviceConfigResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public BatchClearEdgeInstanceDeviceConfigResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchClearEdgeInstanceDeviceConfigResponseBody setCode(String code) {
@@ -45,12 +45,12 @@ public class BatchClearEdgeInstanceDeviceConfigResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchClearEdgeInstanceDeviceConfigResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public BatchClearEdgeInstanceDeviceConfigResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

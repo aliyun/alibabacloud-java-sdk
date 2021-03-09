@@ -7,17 +7,17 @@ public class BatchCheckDeviceNamesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public BatchCheckDeviceNamesResponseBodyData data;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("Data")
+    public BatchCheckDeviceNamesResponseBodyData data;
 
     public static BatchCheckDeviceNamesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchCheckDeviceNamesResponseBody self = new BatchCheckDeviceNamesResponseBody();
@@ -32,20 +32,12 @@ public class BatchCheckDeviceNamesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchCheckDeviceNamesResponseBody setData(BatchCheckDeviceNamesResponseBodyData data) {
-        this.data = data;
+    public BatchCheckDeviceNamesResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public BatchCheckDeviceNamesResponseBodyData getData() {
-        return this.data;
-    }
-
-    public BatchCheckDeviceNamesResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchCheckDeviceNamesResponseBody setCode(String code) {
@@ -56,12 +48,20 @@ public class BatchCheckDeviceNamesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchCheckDeviceNamesResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public BatchCheckDeviceNamesResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public BatchCheckDeviceNamesResponseBody setData(BatchCheckDeviceNamesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public BatchCheckDeviceNamesResponseBodyData getData() {
+        return this.data;
     }
 
     public static class BatchCheckDeviceNamesResponseBodyDataInvalidDeviceNameList extends TeaModel {

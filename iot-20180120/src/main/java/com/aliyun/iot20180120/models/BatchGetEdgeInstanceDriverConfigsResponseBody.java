@@ -7,17 +7,17 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("DriverConfigList")
-    public java.util.List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigList> driverConfigList;
-
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
+    @NameInMap("DriverConfigList")
+    public java.util.List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigList> driverConfigList;
 
     public static BatchGetEdgeInstanceDriverConfigsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         BatchGetEdgeInstanceDriverConfigsResponseBody self = new BatchGetEdgeInstanceDriverConfigsResponseBody();
@@ -32,20 +32,12 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchGetEdgeInstanceDriverConfigsResponseBody setDriverConfigList(java.util.List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigList> driverConfigList) {
-        this.driverConfigList = driverConfigList;
+    public BatchGetEdgeInstanceDriverConfigsResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public java.util.List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigList> getDriverConfigList() {
-        return this.driverConfigList;
-    }
-
-    public BatchGetEdgeInstanceDriverConfigsResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchGetEdgeInstanceDriverConfigsResponseBody setCode(String code) {
@@ -56,18 +48,23 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchGetEdgeInstanceDriverConfigsResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public BatchGetEdgeInstanceDriverConfigsResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public BatchGetEdgeInstanceDriverConfigsResponseBody setDriverConfigList(java.util.List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigList> driverConfigList) {
+        this.driverConfigList = driverConfigList;
+        return this;
+    }
+    public java.util.List<BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigList> getDriverConfigList() {
+        return this.driverConfigList;
     }
 
     public static class BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
         @NameInMap("ConfigId")
         public String configId;
 
@@ -77,17 +74,12 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("Key")
+        public String key;
+
         public static BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList build(java.util.Map<String, ?> map) throws Exception {
             BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList self = new BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList();
             return TeaModel.build(map, self);
-        }
-
-        public BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
         public BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList setConfigId(String configId) {
@@ -112,6 +104,14 @@ public class BatchGetEdgeInstanceDriverConfigsResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public BatchGetEdgeInstanceDriverConfigsResponseBodyDriverConfigListConfigList setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }

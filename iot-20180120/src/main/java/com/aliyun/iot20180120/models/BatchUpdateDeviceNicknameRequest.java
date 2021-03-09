@@ -13,14 +13,14 @@ public class BatchUpdateDeviceNicknameRequest extends TeaModel {
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("DeviceNicknameInfo")
+    public java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> deviceNicknameInfo;
+
     @NameInMap("RealTenantId")
     public String realTenantId;
 
     @NameInMap("RealTripartiteKey")
     public String realTripartiteKey;
-
-    @NameInMap("DeviceNicknameInfo")
-    public java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> deviceNicknameInfo;
 
     public static BatchUpdateDeviceNicknameRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchUpdateDeviceNicknameRequest self = new BatchUpdateDeviceNicknameRequest();
@@ -51,6 +51,14 @@ public class BatchUpdateDeviceNicknameRequest extends TeaModel {
         return this.iotInstanceId;
     }
 
+    public BatchUpdateDeviceNicknameRequest setDeviceNicknameInfo(java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> deviceNicknameInfo) {
+        this.deviceNicknameInfo = deviceNicknameInfo;
+        return this;
+    }
+    public java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> getDeviceNicknameInfo() {
+        return this.deviceNicknameInfo;
+    }
+
     public BatchUpdateDeviceNicknameRequest setRealTenantId(String realTenantId) {
         this.realTenantId = realTenantId;
         return this;
@@ -65,14 +73,6 @@ public class BatchUpdateDeviceNicknameRequest extends TeaModel {
     }
     public String getRealTripartiteKey() {
         return this.realTripartiteKey;
-    }
-
-    public BatchUpdateDeviceNicknameRequest setDeviceNicknameInfo(java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> deviceNicknameInfo) {
-        this.deviceNicknameInfo = deviceNicknameInfo;
-        return this;
-    }
-    public java.util.List<BatchUpdateDeviceNicknameRequestDeviceNicknameInfo> getDeviceNicknameInfo() {
-        return this.deviceNicknameInfo;
     }
 
     public static class BatchUpdateDeviceNicknameRequestDeviceNicknameInfo extends TeaModel {

@@ -7,14 +7,14 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ErrorMessage")
-    public String errorMessage;
+    @NameInMap("Success")
+    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Success")
-    public Boolean success;
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
 
     @NameInMap("DeviceChannelList")
     public java.util.List<BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList> deviceChannelList;
@@ -32,12 +32,12 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchGetEdgeInstanceDeviceChannelResponseBody setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public BatchGetEdgeInstanceDeviceChannelResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public BatchGetEdgeInstanceDeviceChannelResponseBody setCode(String code) {
@@ -48,12 +48,12 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchGetEdgeInstanceDeviceChannelResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public BatchGetEdgeInstanceDeviceChannelResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public BatchGetEdgeInstanceDeviceChannelResponseBody setDeviceChannelList(java.util.List<BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList> deviceChannelList) {
@@ -65,11 +65,11 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
     }
 
     public static class BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList extends TeaModel {
-        @NameInMap("ChannelName")
-        public String channelName;
-
         @NameInMap("ChannelId")
         public String channelId;
+
+        @NameInMap("ChannelName")
+        public String channelName;
 
         @NameInMap("IotId")
         public String iotId;
@@ -79,20 +79,20 @@ public class BatchGetEdgeInstanceDeviceChannelResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList setChannelName(String channelName) {
-            this.channelName = channelName;
-            return this;
-        }
-        public String getChannelName() {
-            return this.channelName;
-        }
-
         public BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList setChannelId(String channelId) {
             this.channelId = channelId;
             return this;
         }
         public String getChannelId() {
             return this.channelId;
+        }
+
+        public BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList setChannelName(String channelName) {
+            this.channelName = channelName;
+            return this;
+        }
+        public String getChannelName() {
+            return this.channelName;
         }
 
         public BatchGetEdgeInstanceDeviceChannelResponseBodyDeviceChannelList setIotId(String iotId) {
