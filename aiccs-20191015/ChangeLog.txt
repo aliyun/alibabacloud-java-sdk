@@ -1,0 +1,5 @@
+2021-03-09 Version: 1.1.6
+- Support change agent status.
+- Support start chat work.
+- Support create sso-enabled agent.
+
