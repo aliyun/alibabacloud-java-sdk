@@ -4,22 +4,19 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateDeviceShadowRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public String deviceName;
 
     @NameInMap("ShadowMessage")
+    @Validation(required = true)
     public String shadowMessage;
 
     @NameInMap("DeltaUpdate")
@@ -28,22 +25,6 @@ public class UpdateDeviceShadowRequest extends TeaModel {
     public static UpdateDeviceShadowRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDeviceShadowRequest self = new UpdateDeviceShadowRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateDeviceShadowRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public UpdateDeviceShadowRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public UpdateDeviceShadowRequest setIotInstanceId(String iotInstanceId) {

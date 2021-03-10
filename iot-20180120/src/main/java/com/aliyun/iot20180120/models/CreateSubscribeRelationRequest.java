@@ -4,16 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateSubscribeRelationRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceDataFlag")
@@ -58,22 +53,6 @@ public class CreateSubscribeRelationRequest extends TeaModel {
     public static CreateSubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSubscribeRelationRequest self = new CreateSubscribeRelationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateSubscribeRelationRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateSubscribeRelationRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateSubscribeRelationRequest setIotInstanceId(String iotInstanceId) {

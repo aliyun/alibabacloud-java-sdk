@@ -4,46 +4,19 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteDeviceGroupRelationsRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("GroupId")
+    @Validation(required = true)
     public String groupId;
 
     @NameInMap("Device")
     public java.util.List<BatchDeleteDeviceGroupRelationsRequestDevice> device;
 
-    @NameInMap("RealTenantId")
-    public String realTenantId;
-
-    @NameInMap("RealTripartiteKey")
-    public String realTripartiteKey;
-
     public static BatchDeleteDeviceGroupRelationsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchDeleteDeviceGroupRelationsRequest self = new BatchDeleteDeviceGroupRelationsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchDeleteDeviceGroupRelationsRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public BatchDeleteDeviceGroupRelationsRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public BatchDeleteDeviceGroupRelationsRequest setIotInstanceId(String iotInstanceId) {
@@ -70,27 +43,13 @@ public class BatchDeleteDeviceGroupRelationsRequest extends TeaModel {
         return this.device;
     }
 
-    public BatchDeleteDeviceGroupRelationsRequest setRealTenantId(String realTenantId) {
-        this.realTenantId = realTenantId;
-        return this;
-    }
-    public String getRealTenantId() {
-        return this.realTenantId;
-    }
-
-    public BatchDeleteDeviceGroupRelationsRequest setRealTripartiteKey(String realTripartiteKey) {
-        this.realTripartiteKey = realTripartiteKey;
-        return this;
-    }
-    public String getRealTripartiteKey() {
-        return this.realTripartiteKey;
-    }
-
     public static class BatchDeleteDeviceGroupRelationsRequestDevice extends TeaModel {
         @NameInMap("ProductKey")
+        @Validation(required = true)
         public String productKey;
 
         @NameInMap("DeviceName")
+        @Validation(required = true)
         public String deviceName;
 
         public static BatchDeleteDeviceGroupRelationsRequestDevice build(java.util.Map<String, ?> map) throws Exception {

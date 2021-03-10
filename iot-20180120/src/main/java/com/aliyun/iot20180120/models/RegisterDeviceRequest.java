@@ -4,16 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RegisterDeviceRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
@@ -37,31 +32,9 @@ public class RegisterDeviceRequest extends TeaModel {
     @NameInMap("LoraNodeType")
     public String loraNodeType;
 
-    @NameInMap("RealTenantId")
-    public String realTenantId;
-
-    @NameInMap("RealTripartiteKey")
-    public String realTripartiteKey;
-
     public static RegisterDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterDeviceRequest self = new RegisterDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RegisterDeviceRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public RegisterDeviceRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public RegisterDeviceRequest setIotInstanceId(String iotInstanceId) {
@@ -134,22 +107,6 @@ public class RegisterDeviceRequest extends TeaModel {
     }
     public String getLoraNodeType() {
         return this.loraNodeType;
-    }
-
-    public RegisterDeviceRequest setRealTenantId(String realTenantId) {
-        this.realTenantId = realTenantId;
-        return this;
-    }
-    public String getRealTenantId() {
-        return this.realTenantId;
-    }
-
-    public RegisterDeviceRequest setRealTripartiteKey(String realTripartiteKey) {
-        this.realTripartiteKey = realTripartiteKey;
-        return this;
-    }
-    public String getRealTripartiteKey() {
-        return this.realTripartiteKey;
     }
 
 }

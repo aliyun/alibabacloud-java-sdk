@@ -4,40 +4,20 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateTopicRouteTableRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("DstTopic")
+    @Validation(required = true)
     public java.util.List<String> dstTopic;
 
     @NameInMap("SrcTopic")
+    @Validation(required = true)
     public String srcTopic;
 
     public static CreateTopicRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTopicRouteTableRequest self = new CreateTopicRouteTableRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTopicRouteTableRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateTopicRouteTableRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateTopicRouteTableRequest setIotInstanceId(String iotInstanceId) {

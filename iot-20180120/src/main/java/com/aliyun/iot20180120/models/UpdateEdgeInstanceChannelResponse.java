@@ -4,33 +4,57 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEdgeInstanceChannelResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public UpdateEdgeInstanceChannelResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
 
     public static UpdateEdgeInstanceChannelResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateEdgeInstanceChannelResponse self = new UpdateEdgeInstanceChannelResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateEdgeInstanceChannelResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateEdgeInstanceChannelResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateEdgeInstanceChannelResponse setBody(UpdateEdgeInstanceChannelResponseBody body) {
-        this.body = body;
+    public UpdateEdgeInstanceChannelResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public UpdateEdgeInstanceChannelResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UpdateEdgeInstanceChannelResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public UpdateEdgeInstanceChannelResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

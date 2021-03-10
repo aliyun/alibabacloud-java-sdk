@@ -4,26 +4,22 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListTaskByPageRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public String pageSize;
 
     @NameInMap("PageNo")
+    @Validation(required = true)
     public String pageNo;
 
     @NameInMap("JobId")
     public String jobId;
 
     @NameInMap("Device")
-    public String device;
+    public java.util.Map<String, ?> device;
 
     @NameInMap("Status")
     public String status;
@@ -37,22 +33,6 @@ public class ListTaskByPageRequest extends TeaModel {
     public static ListTaskByPageRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTaskByPageRequest self = new ListTaskByPageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTaskByPageRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public ListTaskByPageRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public ListTaskByPageRequest setIotInstanceId(String iotInstanceId) {
@@ -87,11 +67,11 @@ public class ListTaskByPageRequest extends TeaModel {
         return this.jobId;
     }
 
-    public ListTaskByPageRequest setDevice(String device) {
+    public ListTaskByPageRequest setDevice(java.util.Map<String, ?> device) {
         this.device = device;
         return this;
     }
-    public String getDevice() {
+    public java.util.Map<String, ?> getDevice() {
         return this.device;
     }
 

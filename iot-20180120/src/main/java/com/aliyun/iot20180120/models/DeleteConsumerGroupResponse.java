@@ -4,33 +4,57 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public DeleteConsumerGroupResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static DeleteConsumerGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteConsumerGroupResponse self = new DeleteConsumerGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteConsumerGroupResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteConsumerGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DeleteConsumerGroupResponse setBody(DeleteConsumerGroupResponseBody body) {
-        this.body = body;
+    public DeleteConsumerGroupResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DeleteConsumerGroupResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DeleteConsumerGroupResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public DeleteConsumerGroupResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

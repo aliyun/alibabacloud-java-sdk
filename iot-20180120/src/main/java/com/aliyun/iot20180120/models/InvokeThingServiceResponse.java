@@ -4,33 +4,101 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class InvokeThingServiceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public InvokeThingServiceResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public InvokeThingServiceResponseData data;
 
     public static InvokeThingServiceResponse build(java.util.Map<String, ?> map) throws Exception {
         InvokeThingServiceResponse self = new InvokeThingServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public InvokeThingServiceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public InvokeThingServiceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public InvokeThingServiceResponse setBody(InvokeThingServiceResponseBody body) {
-        this.body = body;
+    public InvokeThingServiceResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public InvokeThingServiceResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public InvokeThingServiceResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public InvokeThingServiceResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public InvokeThingServiceResponse setData(InvokeThingServiceResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public InvokeThingServiceResponseData getData() {
+        return this.data;
+    }
+
+    public static class InvokeThingServiceResponseData extends TeaModel {
+        @NameInMap("Result")
+        @Validation(required = true)
+        public String result;
+
+        @NameInMap("MessageId")
+        @Validation(required = true)
+        public String messageId;
+
+        public static InvokeThingServiceResponseData build(java.util.Map<String, ?> map) throws Exception {
+            InvokeThingServiceResponseData self = new InvokeThingServiceResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeThingServiceResponseData setResult(String result) {
+            this.result = result;
+            return this;
+        }
+        public String getResult() {
+            return this.result;
+        }
+
+        public InvokeThingServiceResponseData setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
+        }
+
     }
 
 }

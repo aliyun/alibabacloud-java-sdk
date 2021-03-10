@@ -4,43 +4,24 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceDeviceRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     public static QueryEdgeInstanceDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceDeviceRequest self = new QueryEdgeInstanceDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryEdgeInstanceDeviceRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryEdgeInstanceDeviceRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryEdgeInstanceDeviceRequest setIotInstanceId(String iotInstanceId) {

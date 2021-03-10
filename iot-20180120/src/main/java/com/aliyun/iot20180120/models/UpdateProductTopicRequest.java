@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateProductTopicRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -17,33 +11,20 @@ public class UpdateProductTopicRequest extends TeaModel {
     public String desc;
 
     @NameInMap("Operation")
+    @Validation(required = true)
     public String operation;
 
     @NameInMap("TopicShortName")
+    @Validation(required = true)
     public String topicShortName;
 
     @NameInMap("TopicId")
+    @Validation(required = true)
     public String topicId;
 
     public static UpdateProductTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateProductTopicRequest self = new UpdateProductTopicRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateProductTopicRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public UpdateProductTopicRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public UpdateProductTopicRequest setIotInstanceId(String iotInstanceId) {

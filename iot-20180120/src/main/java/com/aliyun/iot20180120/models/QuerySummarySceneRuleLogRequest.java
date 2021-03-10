@@ -4,52 +4,36 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QuerySummarySceneRuleLogRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Integer startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Integer endTime;
 
     @NameInMap("Status")
+    @Validation(required = true)
     public String status;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     public static QuerySummarySceneRuleLogRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySummarySceneRuleLogRequest self = new QuerySummarySceneRuleLogRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QuerySummarySceneRuleLogRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QuerySummarySceneRuleLogRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QuerySummarySceneRuleLogRequest setIotInstanceId(String iotInstanceId) {
