@@ -42,6 +42,9 @@ public class DetectIPCObjectResponseBody extends TeaModel {
         @NameInMap("Box")
         public java.util.List<Long> box;
 
+        @NameInMap("TargetRate")
+        public Float targetRate;
+
         public static DetectIPCObjectResponseBodyDataElements build(java.util.Map<String, ?> map) throws Exception {
             DetectIPCObjectResponseBodyDataElements self = new DetectIPCObjectResponseBodyDataElements();
             return TeaModel.build(map, self);
@@ -69,6 +72,14 @@ public class DetectIPCObjectResponseBody extends TeaModel {
         }
         public java.util.List<Long> getBox() {
             return this.box;
+        }
+
+        public DetectIPCObjectResponseBodyDataElements setTargetRate(Float targetRate) {
+            this.targetRate = targetRate;
+            return this;
+        }
+        public Float getTargetRate() {
+            return this.targetRate;
         }
 
     }
