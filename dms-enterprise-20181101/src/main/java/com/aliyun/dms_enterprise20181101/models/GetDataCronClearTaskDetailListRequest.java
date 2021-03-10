@@ -3,12 +3,9 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class GetStructSyncJobAnalyzeResultRequest extends TeaModel {
+public class GetDataCronClearTaskDetailListRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
-
-    @NameInMap("CompareType")
-    public String compareType;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
@@ -19,12 +16,12 @@ public class GetStructSyncJobAnalyzeResultRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
-    public static GetStructSyncJobAnalyzeResultRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetStructSyncJobAnalyzeResultRequest self = new GetStructSyncJobAnalyzeResultRequest();
+    public static GetDataCronClearTaskDetailListRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetDataCronClearTaskDetailListRequest self = new GetDataCronClearTaskDetailListRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetStructSyncJobAnalyzeResultRequest setOrderId(Long orderId) {
+    public GetDataCronClearTaskDetailListRequest setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -32,15 +29,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends TeaModel {
         return this.orderId;
     }
 
-    public GetStructSyncJobAnalyzeResultRequest setCompareType(String compareType) {
-        this.compareType = compareType;
-        return this;
-    }
-    public String getCompareType() {
-        return this.compareType;
-    }
-
-    public GetStructSyncJobAnalyzeResultRequest setPageNumber(Long pageNumber) {
+    public GetDataCronClearTaskDetailListRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -48,7 +37,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public GetStructSyncJobAnalyzeResultRequest setPageSize(Long pageSize) {
+    public GetDataCronClearTaskDetailListRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -56,7 +45,7 @@ public class GetStructSyncJobAnalyzeResultRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public GetStructSyncJobAnalyzeResultRequest setTid(Long tid) {
+    public GetDataCronClearTaskDetailListRequest setTid(Long tid) {
         this.tid = tid;
         return this;
     }

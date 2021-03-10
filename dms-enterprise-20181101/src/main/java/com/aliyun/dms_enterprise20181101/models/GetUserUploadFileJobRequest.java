@@ -7,6 +7,9 @@ public class GetUserUploadFileJobRequest extends TeaModel {
     @NameInMap("JobKey")
     public String jobKey;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static GetUserUploadFileJobRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserUploadFileJobRequest self = new GetUserUploadFileJobRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetUserUploadFileJobRequest extends TeaModel {
     }
     public String getJobKey() {
         return this.jobKey;
+    }
+
+    public GetUserUploadFileJobRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

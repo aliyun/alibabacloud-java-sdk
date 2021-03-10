@@ -13,6 +13,9 @@ public class GetStructSyncExecSqlDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static GetStructSyncExecSqlDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStructSyncExecSqlDetailRequest self = new GetStructSyncExecSqlDetailRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class GetStructSyncExecSqlDetailRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public GetStructSyncExecSqlDetailRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

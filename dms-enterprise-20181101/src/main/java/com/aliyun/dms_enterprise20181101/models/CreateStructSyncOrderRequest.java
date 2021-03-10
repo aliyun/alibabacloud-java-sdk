@@ -13,6 +13,12 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     @NameInMap("Param")
     public CreateStructSyncOrderRequestParam param;
 
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
+
+    @NameInMap("Tid")
+    public Long tid;
+
     public static CreateStructSyncOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateStructSyncOrderRequest self = new CreateStructSyncOrderRequest();
         return TeaModel.build(map, self);
@@ -40,6 +46,22 @@ public class CreateStructSyncOrderRequest extends TeaModel {
     }
     public CreateStructSyncOrderRequestParam getParam() {
         return this.param;
+    }
+
+    public CreateStructSyncOrderRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
+        return this;
+    }
+    public String getAttachmentKey() {
+        return this.attachmentKey;
+    }
+
+    public CreateStructSyncOrderRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
     public static class CreateStructSyncOrderRequestParamSource extends TeaModel {

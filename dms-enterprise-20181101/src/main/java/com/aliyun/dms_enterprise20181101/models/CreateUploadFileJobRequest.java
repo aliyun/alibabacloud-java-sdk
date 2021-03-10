@@ -16,6 +16,9 @@ public class CreateUploadFileJobRequest extends TeaModel {
     @NameInMap("UploadURL")
     public String uploadURL;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static CreateUploadFileJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUploadFileJobRequest self = new CreateUploadFileJobRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateUploadFileJobRequest extends TeaModel {
     }
     public String getUploadURL() {
         return this.uploadURL;
+    }
+
+    public CreateUploadFileJobRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

@@ -3,19 +3,19 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitStructSyncOrderApprovalRequest extends TeaModel {
+public class GetDataCorrectTaskDetailRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
     @NameInMap("Tid")
     public Long tid;
 
-    public static SubmitStructSyncOrderApprovalRequest build(java.util.Map<String, ?> map) throws Exception {
-        SubmitStructSyncOrderApprovalRequest self = new SubmitStructSyncOrderApprovalRequest();
+    public static GetDataCorrectTaskDetailRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetDataCorrectTaskDetailRequest self = new GetDataCorrectTaskDetailRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitStructSyncOrderApprovalRequest setOrderId(Long orderId) {
+    public GetDataCorrectTaskDetailRequest setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -23,7 +23,7 @@ public class SubmitStructSyncOrderApprovalRequest extends TeaModel {
         return this.orderId;
     }
 
-    public SubmitStructSyncOrderApprovalRequest setTid(Long tid) {
+    public GetDataCorrectTaskDetailRequest setTid(Long tid) {
         this.tid = tid;
         return this;
     }

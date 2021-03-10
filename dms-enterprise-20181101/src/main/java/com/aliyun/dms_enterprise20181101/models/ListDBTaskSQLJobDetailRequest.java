@@ -13,6 +13,9 @@ public class ListDBTaskSQLJobDetailRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static ListDBTaskSQLJobDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDBTaskSQLJobDetailRequest self = new ListDBTaskSQLJobDetailRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class ListDBTaskSQLJobDetailRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListDBTaskSQLJobDetailRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

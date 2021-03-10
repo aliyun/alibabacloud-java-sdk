@@ -7,6 +7,9 @@ public class GetStructSyncOrderDetailRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static GetStructSyncOrderDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStructSyncOrderDetailRequest self = new GetStructSyncOrderDetailRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetStructSyncOrderDetailRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public GetStructSyncOrderDetailRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

@@ -7,6 +7,9 @@ public class GetStructSyncJobDetailRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static GetStructSyncJobDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStructSyncJobDetailRequest self = new GetStructSyncJobDetailRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetStructSyncJobDetailRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public GetStructSyncJobDetailRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }
