@@ -4,33 +4,69 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeInstanceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public CreateEdgeInstanceResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    public String instanceId;
 
     public static CreateEdgeInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeInstanceResponse self = new CreateEdgeInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateEdgeInstanceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateEdgeInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateEdgeInstanceResponse setBody(CreateEdgeInstanceResponseBody body) {
-        this.body = body;
+    public CreateEdgeInstanceResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateEdgeInstanceResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateEdgeInstanceResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateEdgeInstanceResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CreateEdgeInstanceResponse setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }

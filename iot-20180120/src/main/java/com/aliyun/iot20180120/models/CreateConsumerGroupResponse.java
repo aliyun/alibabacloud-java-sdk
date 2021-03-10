@@ -4,33 +4,69 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerGroupResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public CreateConsumerGroupResponseBody body;
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("GroupId")
+    @Validation(required = true)
+    public String groupId;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
 
     public static CreateConsumerGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupResponse self = new CreateConsumerGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateConsumerGroupResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateConsumerGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateConsumerGroupResponse setBody(CreateConsumerGroupResponseBody body) {
-        this.body = body;
+    public CreateConsumerGroupResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CreateConsumerGroupResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateConsumerGroupResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public CreateConsumerGroupResponse setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public CreateConsumerGroupResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
 }

@@ -4,40 +4,21 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateRulengDistributeJobRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("SourceInstanceId")
+    @Validation(required = true)
     public String sourceInstanceId;
 
     @NameInMap("TargetInstanceId")
+    @Validation(required = true)
     public String targetInstanceId;
 
     public static CreateRulengDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRulengDistributeJobRequest self = new CreateRulengDistributeJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateRulengDistributeJobRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateRulengDistributeJobRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateRulengDistributeJobRequest setProductKey(String productKey) {

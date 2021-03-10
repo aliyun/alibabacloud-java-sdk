@@ -4,49 +4,32 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateEdgeInstanceChannelRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DriverId")
+    @Validation(required = true)
     public String driverId;
 
     @NameInMap("ChannelId")
+    @Validation(required = true)
     public String channelId;
 
     @NameInMap("ChannelName")
+    @Validation(required = true)
     public String channelName;
 
     @NameInMap("Configs")
+    @Validation(required = true)
     public java.util.List<UpdateEdgeInstanceChannelRequestConfigs> configs;
 
     public static UpdateEdgeInstanceChannelRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEdgeInstanceChannelRequest self = new UpdateEdgeInstanceChannelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateEdgeInstanceChannelRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public UpdateEdgeInstanceChannelRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public UpdateEdgeInstanceChannelRequest setIotInstanceId(String iotInstanceId) {
@@ -99,9 +82,11 @@ public class UpdateEdgeInstanceChannelRequest extends TeaModel {
 
     public static class UpdateEdgeInstanceChannelRequestConfigs extends TeaModel {
         @NameInMap("Format")
+        @Validation(required = true)
         public String format;
 
         @NameInMap("Content")
+        @Validation(required = true)
         public String content;
 
         @NameInMap("Key")

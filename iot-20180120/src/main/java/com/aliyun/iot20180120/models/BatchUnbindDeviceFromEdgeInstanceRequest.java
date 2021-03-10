@@ -4,40 +4,20 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchUnbindDeviceFromEdgeInstanceRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("IotIds")
+    @Validation(required = true)
     public java.util.List<String> iotIds;
 
     public static BatchUnbindDeviceFromEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchUnbindDeviceFromEdgeInstanceRequest self = new BatchUnbindDeviceFromEdgeInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchUnbindDeviceFromEdgeInstanceRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public BatchUnbindDeviceFromEdgeInstanceRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public BatchUnbindDeviceFromEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {

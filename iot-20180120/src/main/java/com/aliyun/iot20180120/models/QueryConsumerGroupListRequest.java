@@ -4,19 +4,15 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryConsumerGroupListRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("Fuzzy")
@@ -28,22 +24,6 @@ public class QueryConsumerGroupListRequest extends TeaModel {
     public static QueryConsumerGroupListRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryConsumerGroupListRequest self = new QueryConsumerGroupListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryConsumerGroupListRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryConsumerGroupListRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryConsumerGroupListRequest setIotInstanceId(String iotInstanceId) {

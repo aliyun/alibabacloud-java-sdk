@@ -4,16 +4,11 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class TriggerSceneRuleRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("RuleId")
+    @Validation(required = true)
     public String ruleId;
 
     @NameInMap("InstanceId")
@@ -22,22 +17,6 @@ public class TriggerSceneRuleRequest extends TeaModel {
     public static TriggerSceneRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         TriggerSceneRuleRequest self = new TriggerSceneRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TriggerSceneRuleRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public TriggerSceneRuleRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public TriggerSceneRuleRequest setIotInstanceId(String iotInstanceId) {

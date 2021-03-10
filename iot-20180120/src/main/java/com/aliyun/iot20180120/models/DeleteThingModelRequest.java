@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteThingModelRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -17,6 +11,7 @@ public class DeleteThingModelRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("PropertyIdentifier")
@@ -31,34 +26,9 @@ public class DeleteThingModelRequest extends TeaModel {
     @NameInMap("FunctionBlockId")
     public String functionBlockId;
 
-    @NameInMap("IsClearAllFunction")
-    public Boolean isClearAllFunction;
-
-    @NameInMap("RealTenantId")
-    public String realTenantId;
-
-    @NameInMap("RealTripartiteKey")
-    public String realTripartiteKey;
-
     public static DeleteThingModelRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteThingModelRequest self = new DeleteThingModelRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteThingModelRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public DeleteThingModelRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public DeleteThingModelRequest setIotInstanceId(String iotInstanceId) {
@@ -115,30 +85,6 @@ public class DeleteThingModelRequest extends TeaModel {
     }
     public String getFunctionBlockId() {
         return this.functionBlockId;
-    }
-
-    public DeleteThingModelRequest setIsClearAllFunction(Boolean isClearAllFunction) {
-        this.isClearAllFunction = isClearAllFunction;
-        return this;
-    }
-    public Boolean getIsClearAllFunction() {
-        return this.isClearAllFunction;
-    }
-
-    public DeleteThingModelRequest setRealTenantId(String realTenantId) {
-        this.realTenantId = realTenantId;
-        return this;
-    }
-    public String getRealTenantId() {
-        return this.realTenantId;
-    }
-
-    public DeleteThingModelRequest setRealTripartiteKey(String realTripartiteKey) {
-        this.realTripartiteKey = realTripartiteKey;
-        return this;
-    }
-    public String getRealTripartiteKey() {
-        return this.realTripartiteKey;
     }
 
 }

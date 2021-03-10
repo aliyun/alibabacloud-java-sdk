@@ -4,49 +4,31 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateEdgeOssPreSignedAddressRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("ResourceId")
+    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("FileName")
+    @Validation(required = true)
     public String fileName;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
     @NameInMap("ResourceVersion")
+    @Validation(required = true)
     public String resourceVersion;
 
     public static CreateEdgeOssPreSignedAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEdgeOssPreSignedAddressRequest self = new CreateEdgeOssPreSignedAddressRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateEdgeOssPreSignedAddressRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateEdgeOssPreSignedAddressRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateEdgeOssPreSignedAddressRequest setResourceId(String resourceId) {

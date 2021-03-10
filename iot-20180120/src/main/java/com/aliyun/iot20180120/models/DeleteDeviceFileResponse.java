@@ -4,33 +4,57 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteDeviceFileResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public DeleteDeviceFileResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
 
     public static DeleteDeviceFileResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteDeviceFileResponse self = new DeleteDeviceFileResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteDeviceFileResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteDeviceFileResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DeleteDeviceFileResponse setBody(DeleteDeviceFileResponseBody body) {
-        this.body = body;
+    public DeleteDeviceFileResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DeleteDeviceFileResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DeleteDeviceFileResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DeleteDeviceFileResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
 }

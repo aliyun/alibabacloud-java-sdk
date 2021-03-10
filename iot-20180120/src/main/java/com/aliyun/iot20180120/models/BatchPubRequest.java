@@ -4,49 +4,31 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchPubRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("DeviceName")
+    @Validation(required = true)
     public java.util.List<String> deviceName;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Qos")
     public Integer qos;
 
     @NameInMap("TopicShortName")
+    @Validation(required = true)
     public String topicShortName;
 
     @NameInMap("MessageContent")
+    @Validation(required = true)
     public String messageContent;
 
     public static BatchPubRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchPubRequest self = new BatchPubRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchPubRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public BatchPubRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public BatchPubRequest setIotInstanceId(String iotInstanceId) {

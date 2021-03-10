@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListProductByTagsRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -20,27 +14,12 @@ public class ListProductByTagsRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ProductTag")
+    @Validation(required = true)
     public java.util.List<ListProductByTagsRequestProductTag> productTag;
 
     public static ListProductByTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListProductByTagsRequest self = new ListProductByTagsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListProductByTagsRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public ListProductByTagsRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public ListProductByTagsRequest setIotInstanceId(String iotInstanceId) {
@@ -77,6 +56,7 @@ public class ListProductByTagsRequest extends TeaModel {
 
     public static class ListProductByTagsRequestProductTag extends TeaModel {
         @NameInMap("TagKey")
+        @Validation(required = true)
         public String tagKey;
 
         @NameInMap("TagValue")

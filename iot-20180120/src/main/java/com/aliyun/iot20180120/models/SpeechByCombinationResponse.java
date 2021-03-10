@@ -4,33 +4,89 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SpeechByCombinationResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public SpeechByCombinationResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
 
     public static SpeechByCombinationResponse build(java.util.Map<String, ?> map) throws Exception {
         SpeechByCombinationResponse self = new SpeechByCombinationResponse();
         return TeaModel.build(map, self);
     }
 
-    public SpeechByCombinationResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SpeechByCombinationResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SpeechByCombinationResponse setBody(SpeechByCombinationResponseBody body) {
-        this.body = body;
+    public SpeechByCombinationResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SpeechByCombinationResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SpeechByCombinationResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public SpeechByCombinationResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public static class SyncSpeechByCombinationResponseData extends TeaModel {
+        @NameInMap("Id")
+        @Validation(required = true)
+        public String id;
+
+        @NameInMap("RetryCount")
+        @Validation(required = true)
+        public Integer retryCount;
+
+        public static SyncSpeechByCombinationResponseData build(java.util.Map<String, ?> map) throws Exception {
+            SyncSpeechByCombinationResponseData self = new SyncSpeechByCombinationResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public SyncSpeechByCombinationResponseData setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public SyncSpeechByCombinationResponseData setRetryCount(Integer retryCount) {
+            this.retryCount = retryCount;
+            return this;
+        }
+        public Integer getRetryCount() {
+            return this.retryCount;
+        }
+
     }
 
 }

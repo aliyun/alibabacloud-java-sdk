@@ -4,40 +4,20 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UnbindApplicationFromEdgeInstanceRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ApplicationId")
+    @Validation(required = true)
     public String applicationId;
 
     public static UnbindApplicationFromEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindApplicationFromEdgeInstanceRequest self = new UnbindApplicationFromEdgeInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UnbindApplicationFromEdgeInstanceRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public UnbindApplicationFromEdgeInstanceRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public UnbindApplicationFromEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {

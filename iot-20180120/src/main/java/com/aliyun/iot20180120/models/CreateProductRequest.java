@@ -4,19 +4,15 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateProductRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductName")
+    @Validation(required = true)
     public String productName;
 
     @NameInMap("NodeType")
+    @Validation(required = true)
     public Integer nodeType;
 
     @NameInMap("DataFormat")
@@ -58,31 +54,9 @@ public class CreateProductRequest extends TeaModel {
     @NameInMap("ValidateType")
     public Integer validateType;
 
-    @NameInMap("RealTenantId")
-    public String realTenantId;
-
-    @NameInMap("RealTripartiteKey")
-    public String realTripartiteKey;
-
     public static CreateProductRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateProductRequest self = new CreateProductRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateProductRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateProductRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateProductRequest setIotInstanceId(String iotInstanceId) {
@@ -211,22 +185,6 @@ public class CreateProductRequest extends TeaModel {
     }
     public Integer getValidateType() {
         return this.validateType;
-    }
-
-    public CreateProductRequest setRealTenantId(String realTenantId) {
-        this.realTenantId = realTenantId;
-        return this;
-    }
-    public String getRealTenantId() {
-        return this.realTenantId;
-    }
-
-    public CreateProductRequest setRealTripartiteKey(String realTripartiteKey) {
-        this.realTripartiteKey = realTripartiteKey;
-        return this;
-    }
-    public String getRealTripartiteKey() {
-        return this.realTripartiteKey;
     }
 
 }

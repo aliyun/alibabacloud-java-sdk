@@ -4,33 +4,89 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryThingModelExtendConfigPublishedResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public QueryThingModelExtendConfigPublishedResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public QueryThingModelExtendConfigPublishedResponseData data;
 
     public static QueryThingModelExtendConfigPublishedResponse build(java.util.Map<String, ?> map) throws Exception {
         QueryThingModelExtendConfigPublishedResponse self = new QueryThingModelExtendConfigPublishedResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryThingModelExtendConfigPublishedResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public QueryThingModelExtendConfigPublishedResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public QueryThingModelExtendConfigPublishedResponse setBody(QueryThingModelExtendConfigPublishedResponseBody body) {
-        this.body = body;
+    public QueryThingModelExtendConfigPublishedResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public QueryThingModelExtendConfigPublishedResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public QueryThingModelExtendConfigPublishedResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryThingModelExtendConfigPublishedResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public QueryThingModelExtendConfigPublishedResponse setData(QueryThingModelExtendConfigPublishedResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryThingModelExtendConfigPublishedResponseData getData() {
+        return this.data;
+    }
+
+    public static class QueryThingModelExtendConfigPublishedResponseData extends TeaModel {
+        @NameInMap("Configuration")
+        @Validation(required = true)
+        public String configuration;
+
+        public static QueryThingModelExtendConfigPublishedResponseData build(java.util.Map<String, ?> map) throws Exception {
+            QueryThingModelExtendConfigPublishedResponseData self = new QueryThingModelExtendConfigPublishedResponseData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryThingModelExtendConfigPublishedResponseData setConfiguration(String configuration) {
+            this.configuration = configuration;
+            return this;
+        }
+        public String getConfiguration() {
+            return this.configuration;
+        }
+
     }
 
 }

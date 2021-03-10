@@ -4,19 +4,15 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("FirmwareId")
+    @Validation(required = true)
     public String firmwareId;
 
     @NameInMap("ProductKey")
+    @Validation(required = true)
     public String productKey;
 
     @NameInMap("SrcVersion")
@@ -46,22 +42,6 @@ public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
     public static CreateOTADynamicUpgradeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOTADynamicUpgradeJobRequest self = new CreateOTADynamicUpgradeJobRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateOTADynamicUpgradeJobRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateOTADynamicUpgradeJobRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateOTADynamicUpgradeJobRequest setIotInstanceId(String iotInstanceId) {
@@ -154,9 +134,11 @@ public class CreateOTADynamicUpgradeJobRequest extends TeaModel {
 
     public static class CreateOTADynamicUpgradeJobRequestTag extends TeaModel {
         @NameInMap("Key")
+        @Validation(required = true)
         public String key;
 
         @NameInMap("Value")
+        @Validation(required = true)
         public String value;
 
         public static CreateOTADynamicUpgradeJobRequestTag build(java.util.Map<String, ?> map) throws Exception {

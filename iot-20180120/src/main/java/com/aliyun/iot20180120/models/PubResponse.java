@@ -4,33 +4,69 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class PubResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public PubResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("MessageId")
+    @Validation(required = true)
+    public String messageId;
 
     public static PubResponse build(java.util.Map<String, ?> map) throws Exception {
         PubResponse self = new PubResponse();
         return TeaModel.build(map, self);
     }
 
-    public PubResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public PubResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public PubResponse setBody(PubResponseBody body) {
-        this.body = body;
+    public PubResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public PubResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public PubResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public PubResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public PubResponse setMessageId(String messageId) {
+        this.messageId = messageId;
+        return this;
+    }
+    public String getMessageId() {
+        return this.messageId;
     }
 
 }
