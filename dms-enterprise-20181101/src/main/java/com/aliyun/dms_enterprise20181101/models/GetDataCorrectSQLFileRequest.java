@@ -10,6 +10,9 @@ public class GetDataCorrectSQLFileRequest extends TeaModel {
     @NameInMap("OrderActionName")
     public String orderActionName;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static GetDataCorrectSQLFileRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDataCorrectSQLFileRequest self = new GetDataCorrectSQLFileRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class GetDataCorrectSQLFileRequest extends TeaModel {
     }
     public String getOrderActionName() {
         return this.orderActionName;
+    }
+
+    public GetDataCorrectSQLFileRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

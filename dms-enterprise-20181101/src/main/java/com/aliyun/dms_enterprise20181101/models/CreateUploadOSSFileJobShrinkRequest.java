@@ -16,6 +16,9 @@ public class CreateUploadOSSFileJobShrinkRequest extends TeaModel {
     @NameInMap("UploadTarget")
     public String uploadTargetShrink;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static CreateUploadOSSFileJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUploadOSSFileJobShrinkRequest self = new CreateUploadOSSFileJobShrinkRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CreateUploadOSSFileJobShrinkRequest extends TeaModel {
     }
     public String getUploadTargetShrink() {
         return this.uploadTargetShrink;
+    }
+
+    public CreateUploadOSSFileJobShrinkRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

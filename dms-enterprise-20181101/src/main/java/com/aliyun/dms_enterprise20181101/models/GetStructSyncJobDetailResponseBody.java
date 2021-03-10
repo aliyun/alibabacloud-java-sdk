@@ -87,6 +87,9 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         @NameInMap("SecurityRule")
         public String securityRule;
 
+        @NameInMap("DBTaskGroupId")
+        public Long DBTaskGroupId;
+
         public static GetStructSyncJobDetailResponseBodyStructSyncJobDetail build(java.util.Map<String, ?> map) throws Exception {
             GetStructSyncJobDetailResponseBodyStructSyncJobDetail self = new GetStructSyncJobDetailResponseBodyStructSyncJobDetail();
             return TeaModel.build(map, self);
@@ -146,6 +149,14 @@ public class GetStructSyncJobDetailResponseBody extends TeaModel {
         }
         public String getSecurityRule() {
             return this.securityRule;
+        }
+
+        public GetStructSyncJobDetailResponseBodyStructSyncJobDetail setDBTaskGroupId(Long DBTaskGroupId) {
+            this.DBTaskGroupId = DBTaskGroupId;
+            return this;
+        }
+        public Long getDBTaskGroupId() {
+            return this.DBTaskGroupId;
         }
 
     }

@@ -3,7 +3,7 @@ package com.aliyun.dms_enterprise20181101.models;
 
 import com.aliyun.tea.*;
 
-public class CreateStructSyncOrderShrinkRequest extends TeaModel {
+public class CreateDataImportOrderShrinkRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
@@ -19,12 +19,12 @@ public class CreateStructSyncOrderShrinkRequest extends TeaModel {
     @NameInMap("Tid")
     public Long tid;
 
-    public static CreateStructSyncOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateStructSyncOrderShrinkRequest self = new CreateStructSyncOrderShrinkRequest();
+    public static CreateDataImportOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDataImportOrderShrinkRequest self = new CreateDataImportOrderShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateStructSyncOrderShrinkRequest setComment(String comment) {
+    public CreateDataImportOrderShrinkRequest setComment(String comment) {
         this.comment = comment;
         return this;
     }
@@ -32,7 +32,7 @@ public class CreateStructSyncOrderShrinkRequest extends TeaModel {
         return this.comment;
     }
 
-    public CreateStructSyncOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {
+    public CreateDataImportOrderShrinkRequest setRelatedUserListShrink(String relatedUserListShrink) {
         this.relatedUserListShrink = relatedUserListShrink;
         return this;
     }
@@ -40,7 +40,7 @@ public class CreateStructSyncOrderShrinkRequest extends TeaModel {
         return this.relatedUserListShrink;
     }
 
-    public CreateStructSyncOrderShrinkRequest setParamShrink(String paramShrink) {
+    public CreateDataImportOrderShrinkRequest setParamShrink(String paramShrink) {
         this.paramShrink = paramShrink;
         return this;
     }
@@ -48,7 +48,7 @@ public class CreateStructSyncOrderShrinkRequest extends TeaModel {
         return this.paramShrink;
     }
 
-    public CreateStructSyncOrderShrinkRequest setAttachmentKey(String attachmentKey) {
+    public CreateDataImportOrderShrinkRequest setAttachmentKey(String attachmentKey) {
         this.attachmentKey = attachmentKey;
         return this;
     }
@@ -56,7 +56,7 @@ public class CreateStructSyncOrderShrinkRequest extends TeaModel {
         return this.attachmentKey;
     }
 
-    public CreateStructSyncOrderShrinkRequest setTid(Long tid) {
+    public CreateDataImportOrderShrinkRequest setTid(Long tid) {
         this.tid = tid;
         return this;
     }

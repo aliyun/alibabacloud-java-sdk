@@ -7,6 +7,9 @@ public class GetPermApplyOrderDetailRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
+    @NameInMap("Tid")
+    public Long tid;
+
     public static GetPermApplyOrderDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPermApplyOrderDetailRequest self = new GetPermApplyOrderDetailRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class GetPermApplyOrderDetailRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public GetPermApplyOrderDetailRequest setTid(Long tid) {
+        this.tid = tid;
+        return this;
+    }
+    public Long getTid() {
+        return this.tid;
     }
 
 }

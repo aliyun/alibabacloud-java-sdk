@@ -345,6 +345,9 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         @NameInMap("DatabaseList")
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseList databaseList;
 
+        @NameInMap("Status")
+        public String status;
+
         public static GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail build(java.util.Map<String, ?> map) throws Exception {
             GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail self = new GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail();
             return TeaModel.build(map, self);
@@ -372,6 +375,14 @@ public class GetDataCorrectOrderDetailResponseBody extends TeaModel {
         }
         public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetailDatabaseList getDatabaseList() {
             return this.databaseList;
+        }
+
+        public GetDataCorrectOrderDetailResponseBodyDataCorrectOrderDetail setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

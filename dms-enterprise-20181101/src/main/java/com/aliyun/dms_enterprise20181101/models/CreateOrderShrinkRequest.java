@@ -19,6 +19,9 @@ public class CreateOrderShrinkRequest extends TeaModel {
     @NameInMap("PluginType")
     public String pluginType;
 
+    @NameInMap("AttachmentKey")
+    public String attachmentKey;
+
     public static CreateOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderShrinkRequest self = new CreateOrderShrinkRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class CreateOrderShrinkRequest extends TeaModel {
     }
     public String getPluginType() {
         return this.pluginType;
+    }
+
+    public CreateOrderShrinkRequest setAttachmentKey(String attachmentKey) {
+        this.attachmentKey = attachmentKey;
+        return this;
+    }
+    public String getAttachmentKey() {
+        return this.attachmentKey;
     }
 
 }

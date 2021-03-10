@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dms_enterprise20181101</artifactId>
-  <version>1.13.0</version>
+  <version>1.14.0</version>
   <packaging>jar</packaging>
   <name>dms_enterprise20181101</name>
   <description>Alibaba Cloud dms-enterprise (20181101) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.11</version>
+      <version>0.0.12</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
