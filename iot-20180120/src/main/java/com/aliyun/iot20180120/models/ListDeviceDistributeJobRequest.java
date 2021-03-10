@@ -4,15 +4,19 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceDistributeJobRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("TargetUid")
     public String targetUid;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Status")
@@ -21,6 +25,22 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     public static ListDeviceDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceDistributeJobRequest self = new ListDeviceDistributeJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListDeviceDistributeJobRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public ListDeviceDistributeJobRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public ListDeviceDistributeJobRequest setTargetUid(String targetUid) {

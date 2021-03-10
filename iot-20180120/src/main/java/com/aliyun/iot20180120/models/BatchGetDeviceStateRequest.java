@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetDeviceStateRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("DeviceName")
     public java.util.List<String> deviceName;
 
@@ -19,6 +25,22 @@ public class BatchGetDeviceStateRequest extends TeaModel {
     public static BatchGetDeviceStateRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetDeviceStateRequest self = new BatchGetDeviceStateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchGetDeviceStateRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public BatchGetDeviceStateRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public BatchGetDeviceStateRequest setDeviceName(java.util.List<String> deviceName) {

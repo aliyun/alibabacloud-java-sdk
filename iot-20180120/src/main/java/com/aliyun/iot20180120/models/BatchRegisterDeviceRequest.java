@@ -4,20 +4,46 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchRegisterDeviceRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("Count")
-    @Validation(required = true)
     public Integer count;
+
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
 
     public static BatchRegisterDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchRegisterDeviceRequest self = new BatchRegisterDeviceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchRegisterDeviceRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public BatchRegisterDeviceRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public BatchRegisterDeviceRequest setIotInstanceId(String iotInstanceId) {
@@ -42,6 +68,22 @@ public class BatchRegisterDeviceRequest extends TeaModel {
     }
     public Integer getCount() {
         return this.count;
+    }
+
+    public BatchRegisterDeviceRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public BatchRegisterDeviceRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

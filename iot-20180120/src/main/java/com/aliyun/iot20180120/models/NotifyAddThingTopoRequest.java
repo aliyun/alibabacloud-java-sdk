@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class NotifyAddThingTopoRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -22,6 +28,22 @@ public class NotifyAddThingTopoRequest extends TeaModel {
     public static NotifyAddThingTopoRequest build(java.util.Map<String, ?> map) throws Exception {
         NotifyAddThingTopoRequest self = new NotifyAddThingTopoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public NotifyAddThingTopoRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public NotifyAddThingTopoRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public NotifyAddThingTopoRequest setIotInstanceId(String iotInstanceId) {

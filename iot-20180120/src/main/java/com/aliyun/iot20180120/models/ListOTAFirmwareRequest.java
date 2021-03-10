@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListOTAFirmwareRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -11,11 +17,9 @@ public class ListOTAFirmwareRequest extends TeaModel {
     public String productKey;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("DestVersion")
@@ -24,6 +28,22 @@ public class ListOTAFirmwareRequest extends TeaModel {
     public static ListOTAFirmwareRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOTAFirmwareRequest self = new ListOTAFirmwareRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListOTAFirmwareRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public ListOTAFirmwareRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public ListOTAFirmwareRequest setIotInstanceId(String iotInstanceId) {

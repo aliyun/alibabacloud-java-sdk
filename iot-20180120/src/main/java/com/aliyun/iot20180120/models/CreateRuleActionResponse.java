@@ -4,69 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleActionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("ActionId")
-    @Validation(required = true)
-    public Long actionId;
+    public CreateRuleActionResponseBody body;
 
     public static CreateRuleActionResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateRuleActionResponse self = new CreateRuleActionResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateRuleActionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateRuleActionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateRuleActionResponse setCode(String code) {
-        this.code = code;
+    public CreateRuleActionResponse setBody(CreateRuleActionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CreateRuleActionResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateRuleActionResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public CreateRuleActionResponse setActionId(Long actionId) {
-        this.actionId = actionId;
-        return this;
-    }
-    public Long getActionId() {
-        return this.actionId;
+    public CreateRuleActionResponseBody getBody() {
+        return this.body;
     }
 
 }

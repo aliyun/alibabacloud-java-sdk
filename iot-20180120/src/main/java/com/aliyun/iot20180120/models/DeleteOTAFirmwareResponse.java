@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteOTAFirmwareResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public DeleteOTAFirmwareResponseBody body;
 
     public static DeleteOTAFirmwareResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteOTAFirmwareResponse self = new DeleteOTAFirmwareResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteOTAFirmwareResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteOTAFirmwareResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteOTAFirmwareResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteOTAFirmwareResponse setBody(DeleteOTAFirmwareResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteOTAFirmwareResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DeleteOTAFirmwareResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public DeleteOTAFirmwareResponseBody getBody() {
+        return this.body;
     }
 
 }

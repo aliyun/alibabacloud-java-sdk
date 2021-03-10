@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryTopicReverseRouteTableRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -11,12 +17,27 @@ public class QueryTopicReverseRouteTableRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("Topic")
-    @Validation(required = true)
     public String topic;
 
     public static QueryTopicReverseRouteTableRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryTopicReverseRouteTableRequest self = new QueryTopicReverseRouteTableRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryTopicReverseRouteTableRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryTopicReverseRouteTableRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryTopicReverseRouteTableRequest setIotInstanceId(String iotInstanceId) {

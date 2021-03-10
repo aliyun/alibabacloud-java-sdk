@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SetProductCertInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public SetProductCertInfoResponseBody body;
 
     public static SetProductCertInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         SetProductCertInfoResponse self = new SetProductCertInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetProductCertInfoResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SetProductCertInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SetProductCertInfoResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SetProductCertInfoResponse setBody(SetProductCertInfoResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public SetProductCertInfoResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public SetProductCertInfoResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public SetProductCertInfoResponseBody getBody() {
+        return this.body;
     }
 
 }

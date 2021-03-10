@@ -4,20 +4,46 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchQueryDeviceDetailRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("DeviceName")
-    @Validation(required = true)
     public java.util.List<String> deviceName;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static BatchQueryDeviceDetailRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchQueryDeviceDetailRequest self = new BatchQueryDeviceDetailRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchQueryDeviceDetailRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public BatchQueryDeviceDetailRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public BatchQueryDeviceDetailRequest setDeviceName(java.util.List<String> deviceName) {
@@ -42,6 +68,22 @@ public class BatchQueryDeviceDetailRequest extends TeaModel {
     }
     public String getIotInstanceId() {
         return this.iotInstanceId;
+    }
+
+    public BatchQueryDeviceDetailRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public BatchQueryDeviceDetailRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

@@ -4,11 +4,16 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CancelOTATaskByJobRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("JobId")
-    @Validation(required = true)
     public String jobId;
 
     @NameInMap("CancelScheduledTask")
@@ -26,6 +31,22 @@ public class CancelOTATaskByJobRequest extends TeaModel {
     public static CancelOTATaskByJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelOTATaskByJobRequest self = new CancelOTATaskByJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CancelOTATaskByJobRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public CancelOTATaskByJobRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public CancelOTATaskByJobRequest setIotInstanceId(String iotInstanceId) {

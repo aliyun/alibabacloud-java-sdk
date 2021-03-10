@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteOTAModuleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public DeleteOTAModuleResponseBody body;
 
     public static DeleteOTAModuleResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteOTAModuleResponse self = new DeleteOTAModuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteOTAModuleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteOTAModuleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteOTAModuleResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DeleteOTAModuleResponse setBody(DeleteOTAModuleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DeleteOTAModuleResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public DeleteOTAModuleResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public DeleteOTAModuleResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BindGatewayToEdgeInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public BindGatewayToEdgeInstanceResponseBody body;
 
     public static BindGatewayToEdgeInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         BindGatewayToEdgeInstanceResponse self = new BindGatewayToEdgeInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public BindGatewayToEdgeInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public BindGatewayToEdgeInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public BindGatewayToEdgeInstanceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public BindGatewayToEdgeInstanceResponse setBody(BindGatewayToEdgeInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public BindGatewayToEdgeInstanceResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public BindGatewayToEdgeInstanceResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public BindGatewayToEdgeInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }
