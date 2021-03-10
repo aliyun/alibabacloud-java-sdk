@@ -4,69 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetThingTemplateResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("ThingModelJSON")
-    @Validation(required = true)
-    public String thingModelJSON;
+    public GetThingTemplateResponseBody body;
 
     public static GetThingTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
         GetThingTemplateResponse self = new GetThingTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetThingTemplateResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetThingTemplateResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetThingTemplateResponse setSuccess(Boolean success) {
-        this.success = success;
+    public GetThingTemplateResponse setBody(GetThingTemplateResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetThingTemplateResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetThingTemplateResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public GetThingTemplateResponse setThingModelJSON(String thingModelJSON) {
-        this.thingModelJSON = thingModelJSON;
-        return this;
-    }
-    public String getThingModelJSON() {
-        return this.thingModelJSON;
+    public GetThingTemplateResponseBody getBody() {
+        return this.body;
     }
 
 }

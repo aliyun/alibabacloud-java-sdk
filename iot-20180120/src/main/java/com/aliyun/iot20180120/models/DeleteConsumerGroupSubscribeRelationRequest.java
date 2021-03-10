@@ -4,20 +4,40 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class DeleteConsumerGroupSubscribeRelationRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("ConsumerGroupId")
-    @Validation(required = true)
     public String consumerGroupId;
 
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     public static DeleteConsumerGroupSubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteConsumerGroupSubscribeRelationRequest self = new DeleteConsumerGroupSubscribeRelationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteConsumerGroupSubscribeRelationRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public DeleteConsumerGroupSubscribeRelationRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public DeleteConsumerGroupSubscribeRelationRequest setConsumerGroupId(String consumerGroupId) {

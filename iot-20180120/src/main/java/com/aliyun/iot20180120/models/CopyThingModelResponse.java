@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CopyThingModelResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public CopyThingModelResponseBody body;
 
     public static CopyThingModelResponse build(java.util.Map<String, ?> map) throws Exception {
         CopyThingModelResponse self = new CopyThingModelResponse();
         return TeaModel.build(map, self);
     }
 
-    public CopyThingModelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CopyThingModelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CopyThingModelResponse setSuccess(Boolean success) {
-        this.success = success;
+    public CopyThingModelResponse setBody(CopyThingModelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CopyThingModelResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CopyThingModelResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public CopyThingModelResponseBody getBody() {
+        return this.body;
     }
 
 }

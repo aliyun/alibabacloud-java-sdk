@@ -4,16 +4,19 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDeviceDistributeJobRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("DeviceName")
-    @Validation(required = true)
     public java.util.List<String> deviceName;
 
     @NameInMap("SourceInstanceId")
-    @Validation(required = true)
     public String sourceInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("TargetUid")
@@ -22,17 +25,34 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
     @NameInMap("TargetAliyunId")
     public String targetAliyunId;
 
+    @NameInMap("Captcha")
+    public String captcha;
+
     @NameInMap("TargetInstanceConfig")
-    @Validation(required = true)
     public java.util.List<CreateDeviceDistributeJobRequestTargetInstanceConfig> targetInstanceConfig;
 
     @NameInMap("Strategy")
-    @Validation(required = true)
     public Integer strategy;
 
     public static CreateDeviceDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDeviceDistributeJobRequest self = new CreateDeviceDistributeJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDeviceDistributeJobRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public CreateDeviceDistributeJobRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public CreateDeviceDistributeJobRequest setDeviceName(java.util.List<String> deviceName) {
@@ -75,6 +95,14 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
         return this.targetAliyunId;
     }
 
+    public CreateDeviceDistributeJobRequest setCaptcha(String captcha) {
+        this.captcha = captcha;
+        return this;
+    }
+    public String getCaptcha() {
+        return this.captcha;
+    }
+
     public CreateDeviceDistributeJobRequest setTargetInstanceConfig(java.util.List<CreateDeviceDistributeJobRequestTargetInstanceConfig> targetInstanceConfig) {
         this.targetInstanceConfig = targetInstanceConfig;
         return this;
@@ -93,7 +121,6 @@ public class CreateDeviceDistributeJobRequest extends TeaModel {
 
     public static class CreateDeviceDistributeJobRequestTargetInstanceConfig extends TeaModel {
         @NameInMap("TargetInstanceId")
-        @Validation(required = true)
         public String targetInstanceId;
 
         public static CreateDeviceDistributeJobRequestTargetInstanceConfig build(java.util.Map<String, ?> map) throws Exception {

@@ -4,20 +4,40 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GenerateFileUploadURLRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("FileSuffix")
-    @Validation(required = true)
     public String fileSuffix;
 
     @NameInMap("BizCode")
-    @Validation(required = true)
     public String bizCode;
 
     public static GenerateFileUploadURLRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateFileUploadURLRequest self = new GenerateFileUploadURLRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GenerateFileUploadURLRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public GenerateFileUploadURLRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public GenerateFileUploadURLRequest setIotInstanceId(String iotInstanceId) {

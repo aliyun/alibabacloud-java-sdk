@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class SaveDevicePropRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -14,7 +20,6 @@ public class SaveDevicePropRequest extends TeaModel {
     public String deviceName;
 
     @NameInMap("Props")
-    @Validation(required = true)
     public String props;
 
     @NameInMap("IotId")
@@ -23,6 +28,22 @@ public class SaveDevicePropRequest extends TeaModel {
     public static SaveDevicePropRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveDevicePropRequest self = new SaveDevicePropRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SaveDevicePropRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public SaveDevicePropRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public SaveDevicePropRequest setIotInstanceId(String iotInstanceId) {

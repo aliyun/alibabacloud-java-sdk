@@ -4,19 +4,22 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateRuleActionRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("RuleId")
-    @Validation(required = true)
     public Long ruleId;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("Configuration")
-    @Validation(required = true)
     public String configuration;
 
     @NameInMap("ErrorActionFlag")
@@ -25,6 +28,22 @@ public class CreateRuleActionRequest extends TeaModel {
     public static CreateRuleActionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRuleActionRequest self = new CreateRuleActionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRuleActionRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public CreateRuleActionRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public CreateRuleActionRequest setIotInstanceId(String iotInstanceId) {

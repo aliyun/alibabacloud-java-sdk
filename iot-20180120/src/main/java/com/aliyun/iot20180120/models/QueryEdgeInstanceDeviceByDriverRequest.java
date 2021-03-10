@@ -4,31 +4,49 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryEdgeInstanceDeviceByDriverRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ChannelId")
     public String channelId;
 
     @NameInMap("DriverId")
-    @Validation(required = true)
     public String driverId;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     public static QueryEdgeInstanceDeviceByDriverRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryEdgeInstanceDeviceByDriverRequest self = new QueryEdgeInstanceDeviceByDriverRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryEdgeInstanceDeviceByDriverRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryEdgeInstanceDeviceByDriverRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryEdgeInstanceDeviceByDriverRequest setIotInstanceId(String iotInstanceId) {

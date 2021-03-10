@@ -4,6 +4,12 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -11,15 +17,36 @@ public class QueryDeviceRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static QueryDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceRequest self = new QueryDeviceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryDeviceRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryDeviceRequest setIotInstanceId(String iotInstanceId) {
@@ -52,6 +79,22 @@ public class QueryDeviceRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public QueryDeviceRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public QueryDeviceRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

@@ -4,24 +4,43 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchGetEdgeInstanceChannelRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DriverId")
-    @Validation(required = true)
     public String driverId;
 
     @NameInMap("ChannelIds")
-    @Validation(required = true)
     public java.util.List<String> channelIds;
 
     public static BatchGetEdgeInstanceChannelRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchGetEdgeInstanceChannelRequest self = new BatchGetEdgeInstanceChannelRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchGetEdgeInstanceChannelRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public BatchGetEdgeInstanceChannelRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public BatchGetEdgeInstanceChannelRequest setIotInstanceId(String iotInstanceId) {

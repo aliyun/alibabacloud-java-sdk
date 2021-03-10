@@ -4,23 +4,25 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class RRpcRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("ProductKey")
-    @Validation(required = true)
     public String productKey;
 
     @NameInMap("DeviceName")
-    @Validation(required = true)
     public String deviceName;
 
     @NameInMap("Timeout")
-    @Validation(required = true)
     public Integer timeout;
 
     @NameInMap("RequestBase64Byte")
-    @Validation(required = true)
     public String requestBase64Byte;
 
     @NameInMap("Topic")
@@ -29,6 +31,22 @@ public class RRpcRequest extends TeaModel {
     public static RRpcRequest build(java.util.Map<String, ?> map) throws Exception {
         RRpcRequest self = new RRpcRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RRpcRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public RRpcRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public RRpcRequest setIotInstanceId(String iotInstanceId) {

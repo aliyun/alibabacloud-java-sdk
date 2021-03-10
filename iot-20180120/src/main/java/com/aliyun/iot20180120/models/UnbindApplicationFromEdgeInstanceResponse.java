@@ -4,57 +4,33 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UnbindApplicationFromEdgeInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public UnbindApplicationFromEdgeInstanceResponseBody body;
 
     public static UnbindApplicationFromEdgeInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         UnbindApplicationFromEdgeInstanceResponse self = new UnbindApplicationFromEdgeInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public UnbindApplicationFromEdgeInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UnbindApplicationFromEdgeInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UnbindApplicationFromEdgeInstanceResponse setSuccess(Boolean success) {
-        this.success = success;
+    public UnbindApplicationFromEdgeInstanceResponse setBody(UnbindApplicationFromEdgeInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public UnbindApplicationFromEdgeInstanceResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public UnbindApplicationFromEdgeInstanceResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
+    public UnbindApplicationFromEdgeInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

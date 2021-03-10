@@ -4,11 +4,16 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceOriginalEventDataRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ProductKey")
@@ -21,27 +26,39 @@ public class QueryDeviceOriginalEventDataRequest extends TeaModel {
     public String nextPageToken;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("Identifier")
-    @Validation(required = true)
     public String identifier;
 
     @NameInMap("Asc")
-    @Validation(required = true)
     public Integer asc;
 
     @NameInMap("IotId")
     public String iotId;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public Long endTime;
 
     public static QueryDeviceOriginalEventDataRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceOriginalEventDataRequest self = new QueryDeviceOriginalEventDataRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryDeviceOriginalEventDataRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public QueryDeviceOriginalEventDataRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public QueryDeviceOriginalEventDataRequest setIotInstanceId(String iotInstanceId) {

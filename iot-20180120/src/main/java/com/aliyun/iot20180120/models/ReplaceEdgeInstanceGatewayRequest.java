@@ -4,24 +4,43 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ReplaceEdgeInstanceGatewayRequest extends TeaModel {
+    @NameInMap("ApiProduct")
+    public String apiProduct;
+
+    @NameInMap("ApiRevision")
+    public String apiRevision;
+
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("CurrentGatewayId")
-    @Validation(required = true)
     public String currentGatewayId;
 
     @NameInMap("NewGatewayId")
-    @Validation(required = true)
     public String newGatewayId;
 
     public static ReplaceEdgeInstanceGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         ReplaceEdgeInstanceGatewayRequest self = new ReplaceEdgeInstanceGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReplaceEdgeInstanceGatewayRequest setApiProduct(String apiProduct) {
+        this.apiProduct = apiProduct;
+        return this;
+    }
+    public String getApiProduct() {
+        return this.apiProduct;
+    }
+
+    public ReplaceEdgeInstanceGatewayRequest setApiRevision(String apiRevision) {
+        this.apiRevision = apiRevision;
+        return this;
+    }
+    public String getApiRevision() {
+        return this.apiRevision;
     }
 
     public ReplaceEdgeInstanceGatewayRequest setIotInstanceId(String iotInstanceId) {
