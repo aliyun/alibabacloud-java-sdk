@@ -1,0 +1,56 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vs20181212.models;
+
+import com.aliyun.tea.*;
+
+public class BatchDeleteVsDomainConfigsRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ShowLog")
+    public String showLog;
+
+    @NameInMap("DomainNames")
+    public String domainNames;
+
+    @NameInMap("FunctionNames")
+    public String functionNames;
+
+    public static BatchDeleteVsDomainConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
+        BatchDeleteVsDomainConfigsRequest self = new BatchDeleteVsDomainConfigsRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public BatchDeleteVsDomainConfigsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public BatchDeleteVsDomainConfigsRequest setShowLog(String showLog) {
+        this.showLog = showLog;
+        return this;
+    }
+    public String getShowLog() {
+        return this.showLog;
+    }
+
+    public BatchDeleteVsDomainConfigsRequest setDomainNames(String domainNames) {
+        this.domainNames = domainNames;
+        return this;
+    }
+    public String getDomainNames() {
+        return this.domainNames;
+    }
+
+    public BatchDeleteVsDomainConfigsRequest setFunctionNames(String functionNames) {
+        this.functionNames = functionNames;
+        return this;
+    }
+    public String getFunctionNames() {
+        return this.functionNames;
+    }
+
+}
