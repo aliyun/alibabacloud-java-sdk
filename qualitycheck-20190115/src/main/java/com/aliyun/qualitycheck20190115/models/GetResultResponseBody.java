@@ -895,17 +895,23 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("AssignmentTime")
+        public String assignmentTime;
+
+        @NameInMap("LastDataId")
+        public String lastDataId;
+
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
-        @NameInMap("Reviewer")
-        public String reviewer;
+        @NameInMap("ReviewStatus")
+        public Integer reviewStatus;
 
         @NameInMap("CreateTime")
         public String createTime;
 
-        @NameInMap("ReviewStatus")
-        public Integer reviewStatus;
+        @NameInMap("Reviewer")
+        public String reviewer;
 
         @NameInMap("TaskName")
         public String taskName;
@@ -913,11 +919,11 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("ReviewTimeLong")
         public String reviewTimeLong;
 
-        @NameInMap("ReviewResult")
-        public Integer reviewResult;
-
         @NameInMap("Score")
         public Integer score;
+
+        @NameInMap("ReviewResult")
+        public Integer reviewResult;
 
         @NameInMap("Agent")
         public GetResultResponseBodyDataResultInfoAgent agent;
@@ -946,6 +952,9 @@ public class GetResultResponseBody extends TeaModel {
         @NameInMap("TaskId")
         public String taskId;
 
+        @NameInMap("ReviewType")
+        public Integer reviewType;
+
         @NameInMap("Resolver")
         public String resolver;
 
@@ -962,6 +971,22 @@ public class GetResultResponseBody extends TeaModel {
             return this.status;
         }
 
+        public GetResultResponseBodyDataResultInfo setAssignmentTime(String assignmentTime) {
+            this.assignmentTime = assignmentTime;
+            return this;
+        }
+        public String getAssignmentTime() {
+            return this.assignmentTime;
+        }
+
+        public GetResultResponseBodyDataResultInfo setLastDataId(String lastDataId) {
+            this.lastDataId = lastDataId;
+            return this;
+        }
+        public String getLastDataId() {
+            return this.lastDataId;
+        }
+
         public GetResultResponseBodyDataResultInfo setErrorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
@@ -970,12 +995,12 @@ public class GetResultResponseBody extends TeaModel {
             return this.errorMessage;
         }
 
-        public GetResultResponseBodyDataResultInfo setReviewer(String reviewer) {
-            this.reviewer = reviewer;
+        public GetResultResponseBodyDataResultInfo setReviewStatus(Integer reviewStatus) {
+            this.reviewStatus = reviewStatus;
             return this;
         }
-        public String getReviewer() {
-            return this.reviewer;
+        public Integer getReviewStatus() {
+            return this.reviewStatus;
         }
 
         public GetResultResponseBodyDataResultInfo setCreateTime(String createTime) {
@@ -986,12 +1011,12 @@ public class GetResultResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetResultResponseBodyDataResultInfo setReviewStatus(Integer reviewStatus) {
-            this.reviewStatus = reviewStatus;
+        public GetResultResponseBodyDataResultInfo setReviewer(String reviewer) {
+            this.reviewer = reviewer;
             return this;
         }
-        public Integer getReviewStatus() {
-            return this.reviewStatus;
+        public String getReviewer() {
+            return this.reviewer;
         }
 
         public GetResultResponseBodyDataResultInfo setTaskName(String taskName) {
@@ -1010,20 +1035,20 @@ public class GetResultResponseBody extends TeaModel {
             return this.reviewTimeLong;
         }
 
-        public GetResultResponseBodyDataResultInfo setReviewResult(Integer reviewResult) {
-            this.reviewResult = reviewResult;
-            return this;
-        }
-        public Integer getReviewResult() {
-            return this.reviewResult;
-        }
-
         public GetResultResponseBodyDataResultInfo setScore(Integer score) {
             this.score = score;
             return this;
         }
         public Integer getScore() {
             return this.score;
+        }
+
+        public GetResultResponseBodyDataResultInfo setReviewResult(Integer reviewResult) {
+            this.reviewResult = reviewResult;
+            return this;
+        }
+        public Integer getReviewResult() {
+            return this.reviewResult;
         }
 
         public GetResultResponseBodyDataResultInfo setAgent(GetResultResponseBodyDataResultInfoAgent agent) {
@@ -1096,6 +1121,14 @@ public class GetResultResponseBody extends TeaModel {
         }
         public String getTaskId() {
             return this.taskId;
+        }
+
+        public GetResultResponseBodyDataResultInfo setReviewType(Integer reviewType) {
+            this.reviewType = reviewType;
+            return this;
+        }
+        public Integer getReviewType() {
+            return this.reviewType;
         }
 
         public GetResultResponseBodyDataResultInfo setResolver(String resolver) {

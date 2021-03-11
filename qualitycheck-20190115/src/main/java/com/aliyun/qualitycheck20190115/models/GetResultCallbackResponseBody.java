@@ -4,21 +4,29 @@ package com.aliyun.qualitycheck20190115.models;
 import com.aliyun.tea.*;
 
 public class GetResultCallbackResponseBody extends TeaModel {
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("Code")
     public String code;
 
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetResultCallbackResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResultCallbackResponseBody self = new GetResultCallbackResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetResultCallbackResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetResultCallbackResponseBody setRequestId(String requestId) {
@@ -29,14 +37,6 @@ public class GetResultCallbackResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetResultCallbackResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public GetResultCallbackResponseBody setCode(String code) {
         this.code = code;
         return this;
@@ -45,12 +45,12 @@ public class GetResultCallbackResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetResultCallbackResponseBody setMessage(String message) {
-        this.message = message;
+    public GetResultCallbackResponseBody setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }
