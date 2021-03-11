@@ -7,6 +7,9 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     @NameInMap("IntranetBandwidth")
     public Integer intranetBandwidth;
 
+    @NameInMap("BandwidthExpireTime")
+    public String bandwidthExpireTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -24,6 +27,14 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     }
     public Integer getIntranetBandwidth() {
         return this.intranetBandwidth;
+    }
+
+    public DescribeIntranetAttributeResponseBody setBandwidthExpireTime(String bandwidthExpireTime) {
+        this.bandwidthExpireTime = bandwidthExpireTime;
+        return this;
+    }
+    public String getBandwidthExpireTime() {
+        return this.bandwidthExpireTime;
     }
 
     public DescribeIntranetAttributeResponseBody setRequestId(String requestId) {

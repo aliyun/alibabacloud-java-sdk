@@ -182,6 +182,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createInstanceWithOptions(request, runtime);
     }
 
+    public CreateTairInstanceResponse createTairInstanceWithOptions(CreateTairInstanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateTairInstance", "2015-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new CreateTairInstanceResponse());
+    }
+
+    public CreateTairInstanceResponse createTairInstance(CreateTairInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createTairInstanceWithOptions(request, runtime);
+    }
+
     public CreateUserClusterHostResponse createUserClusterHostWithOptions(CreateUserClusterHostRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -702,6 +715,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeZonesWithOptions(request, runtime);
     }
 
+    public EnableAdditionalBandwidthResponse enableAdditionalBandwidthWithOptions(EnableAdditionalBandwidthRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("EnableAdditionalBandwidth", "2015-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new EnableAdditionalBandwidthResponse());
+    }
+
+    public EnableAdditionalBandwidthResponse enableAdditionalBandwidth(EnableAdditionalBandwidthRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.enableAdditionalBandwidthWithOptions(request, runtime);
+    }
+
     public FlushExpireKeysResponse flushExpireKeysWithOptions(FlushExpireKeysRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -817,6 +843,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyActiveOperationTaskResponse modifyActiveOperationTask(ModifyActiveOperationTaskRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyActiveOperationTaskWithOptions(request, runtime);
+    }
+
+    public ModifyAuditLogConfigResponse modifyAuditLogConfigWithOptions(ModifyAuditLogConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ModifyAuditLogConfig", "2015-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyAuditLogConfigResponse());
+    }
+
+    public ModifyAuditLogConfigResponse modifyAuditLogConfig(ModifyAuditLogConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyAuditLogConfigWithOptions(request, runtime);
     }
 
     public ModifyBackupPolicyResponse modifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, RuntimeOptions runtime) throws Exception {

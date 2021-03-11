@@ -19,6 +19,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Token")
     public String token;
 
@@ -106,6 +109,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("GlobalInstance")
     public Boolean globalInstance;
 
+    @NameInMap("SecondaryZoneId")
+    public String secondaryZoneId;
+
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
         return TeaModel.build(map, self);
@@ -149,6 +155,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public CreateInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateInstanceRequest setToken(String token) {
@@ -381,6 +395,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Boolean getGlobalInstance() {
         return this.globalInstance;
+    }
+
+    public CreateInstanceRequest setSecondaryZoneId(String secondaryZoneId) {
+        this.secondaryZoneId = secondaryZoneId;
+        return this;
+    }
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
     }
 
 }

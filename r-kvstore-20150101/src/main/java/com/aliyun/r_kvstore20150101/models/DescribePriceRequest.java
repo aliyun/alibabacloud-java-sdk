@@ -19,6 +19,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("Capacity")
     public Long capacity;
 
@@ -104,6 +107,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribePriceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribePriceRequest setCapacity(Long capacity) {
