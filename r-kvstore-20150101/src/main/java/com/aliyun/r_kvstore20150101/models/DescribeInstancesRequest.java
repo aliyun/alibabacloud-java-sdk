@@ -19,6 +19,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("InstanceIds")
     public String instanceIds;
 
@@ -122,6 +125,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public DescribeInstancesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeInstancesRequest setInstanceIds(String instanceIds) {

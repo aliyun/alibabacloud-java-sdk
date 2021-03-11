@@ -37,6 +37,9 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Role")
+    public String role;
+
     public static DescribeRoleZoneInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRoleZoneInfoRequest self = new DescribeRoleZoneInfoRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeRoleZoneInfoRequest setRole(String role) {
+        this.role = role;
+        return this;
+    }
+    public String getRole() {
+        return this.role;
     }
 
 }

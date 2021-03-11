@@ -44,6 +44,9 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         @NameInMap("BandWidth")
         public Long bandWidth;
 
+        @NameInMap("CurrentBandWidth")
+        public Long currentBandWidth;
+
         @NameInMap("ClassCode")
         public String classCode;
 
@@ -109,6 +112,14 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         }
         public Long getBandWidth() {
             return this.bandWidth;
+        }
+
+        public DescribeClusterMemberInfoResponseBodyClusterChildren setCurrentBandWidth(Long currentBandWidth) {
+            this.currentBandWidth = currentBandWidth;
+            return this;
+        }
+        public Long getCurrentBandWidth() {
+            return this.currentBandWidth;
         }
 
         public DescribeClusterMemberInfoResponseBodyClusterChildren setClassCode(String classCode) {

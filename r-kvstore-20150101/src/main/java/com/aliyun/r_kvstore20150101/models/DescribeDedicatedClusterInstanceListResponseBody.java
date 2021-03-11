@@ -194,6 +194,12 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("BandWidth")
+        public Long bandWidth;
+
+        @NameInMap("CurrentBandWidth")
+        public Long currentBandWidth;
+
         @NameInMap("EngineVersion")
         public String engineVersion;
 
@@ -315,6 +321,22 @@ public class DescribeDedicatedClusterInstanceListResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setBandWidth(Long bandWidth) {
+            this.bandWidth = bandWidth;
+            return this;
+        }
+        public Long getBandWidth() {
+            return this.bandWidth;
+        }
+
+        public DescribeDedicatedClusterInstanceListResponseBodyInstances setCurrentBandWidth(Long currentBandWidth) {
+            this.currentBandWidth = currentBandWidth;
+            return this;
+        }
+        public Long getCurrentBandWidth() {
+            return this.currentBandWidth;
         }
 
         public DescribeDedicatedClusterInstanceListResponseBodyInstances setEngineVersion(String engineVersion) {

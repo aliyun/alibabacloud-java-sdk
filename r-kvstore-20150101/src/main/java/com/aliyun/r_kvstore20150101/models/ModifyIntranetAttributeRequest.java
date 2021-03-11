@@ -22,6 +22,12 @@ public class ModifyIntranetAttributeRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("BandWidth")
+    public Long bandWidth;
+
+    @NameInMap("NodeId")
+    public String nodeId;
+
     public static ModifyIntranetAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyIntranetAttributeRequest self = new ModifyIntranetAttributeRequest();
         return TeaModel.build(map, self);
@@ -73,6 +79,22 @@ public class ModifyIntranetAttributeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyIntranetAttributeRequest setBandWidth(Long bandWidth) {
+        this.bandWidth = bandWidth;
+        return this;
+    }
+    public Long getBandWidth() {
+        return this.bandWidth;
+    }
+
+    public ModifyIntranetAttributeRequest setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+    public String getNodeId() {
+        return this.nodeId;
     }
 
 }

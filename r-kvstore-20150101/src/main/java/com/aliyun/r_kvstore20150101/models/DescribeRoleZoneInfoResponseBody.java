@@ -65,8 +65,14 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeRoleZoneInfoResponseBodyNodeNodeInfo extends TeaModel {
+        @NameInMap("DefaultBandWidth")
+        public Long defaultBandWidth;
+
         @NameInMap("CurrentMinorVersion")
         public String currentMinorVersion;
+
+        @NameInMap("CurrentBandWidth")
+        public Long currentBandWidth;
 
         @NameInMap("InsType")
         public Integer insType;
@@ -74,20 +80,23 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         @NameInMap("IsLatestVersion")
         public Integer isLatestVersion;
 
-        @NameInMap("InsName")
-        public String insName;
-
         @NameInMap("NodeType")
         public String nodeType;
+
+        @NameInMap("InsName")
+        public String insName;
 
         @NameInMap("ZoneId")
         public String zoneId;
 
-        @NameInMap("Role")
-        public String role;
+        @NameInMap("IsOpenBandWidthService")
+        public Boolean isOpenBandWidthService;
 
         @NameInMap("CustinsId")
         public String custinsId;
+
+        @NameInMap("Role")
+        public String role;
 
         @NameInMap("NodeId")
         public String nodeId;
@@ -97,12 +106,28 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setDefaultBandWidth(Long defaultBandWidth) {
+            this.defaultBandWidth = defaultBandWidth;
+            return this;
+        }
+        public Long getDefaultBandWidth() {
+            return this.defaultBandWidth;
+        }
+
         public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setCurrentMinorVersion(String currentMinorVersion) {
             this.currentMinorVersion = currentMinorVersion;
             return this;
         }
         public String getCurrentMinorVersion() {
             return this.currentMinorVersion;
+        }
+
+        public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setCurrentBandWidth(Long currentBandWidth) {
+            this.currentBandWidth = currentBandWidth;
+            return this;
+        }
+        public Long getCurrentBandWidth() {
+            return this.currentBandWidth;
         }
 
         public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setInsType(Integer insType) {
@@ -121,20 +146,20 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             return this.isLatestVersion;
         }
 
-        public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setInsName(String insName) {
-            this.insName = insName;
-            return this;
-        }
-        public String getInsName() {
-            return this.insName;
-        }
-
         public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setNodeType(String nodeType) {
             this.nodeType = nodeType;
             return this;
         }
         public String getNodeType() {
             return this.nodeType;
+        }
+
+        public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setInsName(String insName) {
+            this.insName = insName;
+            return this;
+        }
+        public String getInsName() {
+            return this.insName;
         }
 
         public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setZoneId(String zoneId) {
@@ -145,12 +170,12 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setRole(String role) {
-            this.role = role;
+        public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setIsOpenBandWidthService(Boolean isOpenBandWidthService) {
+            this.isOpenBandWidthService = isOpenBandWidthService;
             return this;
         }
-        public String getRole() {
-            return this.role;
+        public Boolean getIsOpenBandWidthService() {
+            return this.isOpenBandWidthService;
         }
 
         public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setCustinsId(String custinsId) {
@@ -159,6 +184,14 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
         public String getCustinsId() {
             return this.custinsId;
+        }
+
+        public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
         }
 
         public DescribeRoleZoneInfoResponseBodyNodeNodeInfo setNodeId(String nodeId) {
