@@ -1,3 +1,6 @@
+2021-03-11 Version: 1.4.4
+- Add Out Account Query Support.
+
 2021-01-05 Version: 1.4.3
 - CreateOrder API Upgrade.
 
