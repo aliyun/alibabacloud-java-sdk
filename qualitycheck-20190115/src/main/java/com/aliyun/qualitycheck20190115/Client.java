@@ -13,62 +13,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(Config config) throws Exception {
         super(config);
-        this._endpointRule = "regional";
-        this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-northeast-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "qualitycheck.aliyuncs.com"),
-            new TeaPair("ap-south-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "qualitycheck.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "qualitycheck.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-beijing", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-pop", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-beijing-gov-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-edge-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-fujian", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-bj-b01", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-prod-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-hongkong-finance-pop", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-qingdao-nebula", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et2-b01", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shanghai-inner", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shanghai-internal-test-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-inner", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-su18-b01", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-wuhan", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-yushanfang", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou-na62-a01", "qualitycheck.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("eu-central-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("eu-west-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "qualitycheck.aliyuncs.com"),
-            new TeaPair("me-east-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "qualitycheck.aliyuncs.com"),
-            new TeaPair("us-east-1", "qualitycheck.aliyuncs.com"),
-            new TeaPair("us-west-1", "qualitycheck.aliyuncs.com")
-        );
+        this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("qualitycheck", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -1046,19 +991,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateRuleResponse updateRule(UpdateRuleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateRuleWithOptions(request, runtime);
-    }
-
-    public UpdateRuleForAntResponse updateRuleForAntWithOptions(UpdateRuleForAntRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateRuleForAnt", "2019-01-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateRuleForAntResponse());
-    }
-
-    public UpdateRuleForAntResponse updateRuleForAnt(UpdateRuleForAntRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.updateRuleForAntWithOptions(request, runtime);
     }
 
     public UpdateScoreForApiResponse updateScoreForApiWithOptions(UpdateScoreForApiRequest request, RuntimeOptions runtime) throws Exception {

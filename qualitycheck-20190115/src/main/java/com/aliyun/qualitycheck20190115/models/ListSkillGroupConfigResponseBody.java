@@ -162,6 +162,77 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
 
     }
 
+    public static class ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen extends TeaModel {
+        @NameInMap("Value")
+        public String value;
+
+        @NameInMap("DataType")
+        public Integer dataType;
+
+        @NameInMap("Symbol")
+        public Integer symbol;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen build(java.util.Map<String, ?> map) throws Exception {
+            ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen self = new ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+        public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen setDataType(Integer dataType) {
+            this.dataType = dataType;
+            return this;
+        }
+        public Integer getDataType() {
+            return this.dataType;
+        }
+
+        public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen setSymbol(Integer symbol) {
+            this.symbol = symbol;
+            return this;
+        }
+        public Integer getSymbol() {
+            return this.symbol;
+        }
+
+        public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens extends TeaModel {
+        @NameInMap("SkillGroupScreen")
+        public java.util.List<ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen> skillGroupScreen;
+
+        public static ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens build(java.util.Map<String, ?> map) throws Exception {
+            ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens self = new ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens();
+            return TeaModel.build(map, self);
+        }
+
+        public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens setSkillGroupScreen(java.util.List<ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen> skillGroupScreen) {
+            this.skillGroupScreen = skillGroupScreen;
+            return this;
+        }
+        public java.util.List<ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreensSkillGroupScreen> getSkillGroupScreen() {
+            return this.skillGroupScreen;
+        }
+
+    }
+
     public static class ListSkillGroupConfigResponseBodyDataSkillGroupConfig extends TeaModel {
         @NameInMap("Status")
         public Integer status;
@@ -183,6 +254,9 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
 
         @NameInMap("SkillGroupId")
         public String skillGroupId;
+
+        @NameInMap("ScreenSwitch")
+        public Boolean screenSwitch;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -216,6 +290,9 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
 
         @NameInMap("Id")
         public Long id;
+
+        @NameInMap("SkillGroupScreens")
+        public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens skillGroupScreens;
 
         @NameInMap("QualityCheckType")
         public Integer qualityCheckType;
@@ -282,6 +359,14 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         }
         public String getSkillGroupId() {
             return this.skillGroupId;
+        }
+
+        public ListSkillGroupConfigResponseBodyDataSkillGroupConfig setScreenSwitch(Boolean screenSwitch) {
+            this.screenSwitch = screenSwitch;
+            return this;
+        }
+        public Boolean getScreenSwitch() {
+            return this.screenSwitch;
         }
 
         public ListSkillGroupConfigResponseBodyDataSkillGroupConfig setInstanceId(String instanceId) {
@@ -370,6 +455,14 @@ public class ListSkillGroupConfigResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListSkillGroupConfigResponseBodyDataSkillGroupConfig setSkillGroupScreens(ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens skillGroupScreens) {
+            this.skillGroupScreens = skillGroupScreens;
+            return this;
+        }
+        public ListSkillGroupConfigResponseBodyDataSkillGroupConfigSkillGroupScreens getSkillGroupScreens() {
+            return this.skillGroupScreens;
         }
 
         public ListSkillGroupConfigResponseBodyDataSkillGroupConfig setQualityCheckType(Integer qualityCheckType) {
