@@ -8,14 +8,20 @@ public class CompareFaceRequest extends TeaModel {
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
 
+    @NameInMap("ImageType")
+    public Integer imageType;
+
     @NameInMap("ImageURLA")
     public String imageURLA;
 
     @NameInMap("ImageURLB")
     public String imageURLB;
 
-    @NameInMap("ImageType")
-    public Integer imageType;
+    @NameInMap("ImageDataA")
+    public byte[] imageDataA;
+
+    @NameInMap("ImageDataB")
+    public byte[] imageDataB;
 
     public static CompareFaceRequest build(java.util.Map<String, ?> map) throws Exception {
         CompareFaceRequest self = new CompareFaceRequest();
@@ -28,6 +34,14 @@ public class CompareFaceRequest extends TeaModel {
     }
     public Float getQualityScoreThreshold() {
         return this.qualityScoreThreshold;
+    }
+
+    public CompareFaceRequest setImageType(Integer imageType) {
+        this.imageType = imageType;
+        return this;
+    }
+    public Integer getImageType() {
+        return this.imageType;
     }
 
     public CompareFaceRequest setImageURLA(String imageURLA) {
@@ -46,12 +60,20 @@ public class CompareFaceRequest extends TeaModel {
         return this.imageURLB;
     }
 
-    public CompareFaceRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
+    public CompareFaceRequest setImageDataA(byte[] imageDataA) {
+        this.imageDataA = imageDataA;
         return this;
     }
-    public Integer getImageType() {
-        return this.imageType;
+    public byte[] getImageDataA() {
+        return this.imageDataA;
+    }
+
+    public CompareFaceRequest setImageDataB(byte[] imageDataB) {
+        this.imageDataB = imageDataB;
+        return this;
+    }
+    public byte[] getImageDataB() {
+        return this.imageDataB;
     }
 
 }

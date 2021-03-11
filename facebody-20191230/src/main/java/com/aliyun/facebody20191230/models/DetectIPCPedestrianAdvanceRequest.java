@@ -3,7 +3,11 @@ package com.aliyun.facebody20191230.models;
 
 import com.aliyun.tea.*;
 
-public class DetectIPCPedestrianRequest extends TeaModel {
+public class DetectIPCPedestrianAdvanceRequest extends TeaModel {
+    @NameInMap("ImageURLObject")
+    @Validation(required = true)
+    public java.io.InputStream imageURLObject;
+
     @NameInMap("ContinueOnError")
     public Boolean continueOnError;
 
@@ -16,18 +20,23 @@ public class DetectIPCPedestrianRequest extends TeaModel {
     @NameInMap("Height")
     public Integer height;
 
-    @NameInMap("ImageURL")
-    public String imageURL;
-
     @NameInMap("DataId")
     public String dataId;
 
-    public static DetectIPCPedestrianRequest build(java.util.Map<String, ?> map) throws Exception {
-        DetectIPCPedestrianRequest self = new DetectIPCPedestrianRequest();
+    public static DetectIPCPedestrianAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        DetectIPCPedestrianAdvanceRequest self = new DetectIPCPedestrianAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public DetectIPCPedestrianRequest setContinueOnError(Boolean continueOnError) {
+    public DetectIPCPedestrianAdvanceRequest setImageURLObject(java.io.InputStream imageURLObject) {
+        this.imageURLObject = imageURLObject;
+        return this;
+    }
+    public java.io.InputStream getImageURLObject() {
+        return this.imageURLObject;
+    }
+
+    public DetectIPCPedestrianAdvanceRequest setContinueOnError(Boolean continueOnError) {
         this.continueOnError = continueOnError;
         return this;
     }
@@ -35,7 +44,7 @@ public class DetectIPCPedestrianRequest extends TeaModel {
         return this.continueOnError;
     }
 
-    public DetectIPCPedestrianRequest setImageData(String imageData) {
+    public DetectIPCPedestrianAdvanceRequest setImageData(String imageData) {
         this.imageData = imageData;
         return this;
     }
@@ -43,7 +52,7 @@ public class DetectIPCPedestrianRequest extends TeaModel {
         return this.imageData;
     }
 
-    public DetectIPCPedestrianRequest setWidth(Integer width) {
+    public DetectIPCPedestrianAdvanceRequest setWidth(Integer width) {
         this.width = width;
         return this;
     }
@@ -51,7 +60,7 @@ public class DetectIPCPedestrianRequest extends TeaModel {
         return this.width;
     }
 
-    public DetectIPCPedestrianRequest setHeight(Integer height) {
+    public DetectIPCPedestrianAdvanceRequest setHeight(Integer height) {
         this.height = height;
         return this;
     }
@@ -59,15 +68,7 @@ public class DetectIPCPedestrianRequest extends TeaModel {
         return this.height;
     }
 
-    public DetectIPCPedestrianRequest setImageURL(String imageURL) {
-        this.imageURL = imageURL;
-        return this;
-    }
-    public String getImageURL() {
-        return this.imageURL;
-    }
-
-    public DetectIPCPedestrianRequest setDataId(String dataId) {
+    public DetectIPCPedestrianAdvanceRequest setDataId(String dataId) {
         this.dataId = dataId;
         return this;
     }

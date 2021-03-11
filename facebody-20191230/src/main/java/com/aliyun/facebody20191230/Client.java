@@ -343,7 +343,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.verifyFaceMaskWithOptions(request, runtime);
     }
 
-    public VerifyFaceMaskResponse verifyFaceMaskAdvance(VerifyFaceMaskAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DetectIPCPedestrianResponse detectIPCPedestrianWithOptions(DetectIPCPedestrianRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DetectIPCPedestrian", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime), new DetectIPCPedestrianResponse());
+    }
+
+    public DetectIPCPedestrianResponse detectIPCPedestrian(DetectIPCPedestrianRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detectIPCPedestrianWithOptions(request, runtime);
+    }
+
+    public DetectIPCPedestrianResponse detectIPCPedestrianAdvance(DetectIPCPedestrianAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
@@ -373,8 +386,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
         PostObjectRequest uploadRequest = new PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        VerifyFaceMaskRequest verifyFaceMaskReq = new VerifyFaceMaskRequest();
-        com.aliyun.openapiutil.Client.convert(request, verifyFaceMaskReq);
+        DetectIPCPedestrianRequest detectIPCPedestrianReq = new DetectIPCPedestrianRequest();
+        com.aliyun.openapiutil.Client.convert(request, detectIPCPedestrianReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
         ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
@@ -397,22 +410,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("header", ossHeader)
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
-        verifyFaceMaskReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        VerifyFaceMaskResponse verifyFaceMaskResp = this.verifyFaceMaskWithOptions(verifyFaceMaskReq, runtime);
-        return verifyFaceMaskResp;
-    }
-
-    public DetectIPCPedestrianResponse detectIPCPedestrianWithOptions(DetectIPCPedestrianRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DetectIPCPedestrian", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime), new DetectIPCPedestrianResponse());
-    }
-
-    public DetectIPCPedestrianResponse detectIPCPedestrian(DetectIPCPedestrianRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectIPCPedestrianWithOptions(request, runtime);
+        detectIPCPedestrianReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        DetectIPCPedestrianResponse detectIPCPedestrianResp = this.detectIPCPedestrianWithOptions(detectIPCPedestrianReq, runtime);
+        return detectIPCPedestrianResp;
     }
 
     public GetFaceEntityResponse getFaceEntityWithOptions(GetFaceEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -1359,65 +1359,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SwapFacialFeaturesResponse swapFacialFeatures(SwapFacialFeaturesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.swapFacialFeaturesWithOptions(request, runtime);
-    }
-
-    public SwapFacialFeaturesResponse swapFacialFeaturesAdvance(SwapFacialFeaturesAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        // Step 0: init client
-        String accessKeyId = _credential.getAccessKeyId();
-        String accessKeySecret = _credential.getAccessKeySecret();
-        com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", accessKeyId),
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        AuthorizeFileUploadRequest authRequest = AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
-            new TeaPair("product", "facebody"),
-            new TeaPair("regionId", _regionId)
-        ));
-        AuthorizeFileUploadResponse authResponse = new AuthorizeFileUploadResponse();
-        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.oss.Client ossClient = null;
-        FileField fileObj = new FileField();
-        PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
-        PostObjectRequest uploadRequest = new PostObjectRequest();
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        SwapFacialFeaturesRequest swapFacialFeaturesReq = new SwapFacialFeaturesRequest();
-        com.aliyun.openapiutil.Client.convert(request, swapFacialFeaturesReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.sourceImageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        swapFacialFeaturesReq.sourceImageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        SwapFacialFeaturesResponse swapFacialFeaturesResp = this.swapFacialFeaturesWithOptions(swapFacialFeaturesReq, runtime);
-        return swapFacialFeaturesResp;
     }
 
     public SearchFaceResponse searchFaceWithOptions(SearchFaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
