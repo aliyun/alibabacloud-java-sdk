@@ -4,45 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class RemoveClusterFromServiceMeshResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Code")
+    @NameInMap("body")
     @Validation(required = true)
-    public String code;
-
-    @NameInMap("Message")
-    @Validation(required = true)
-    public String message;
+    public RemoveClusterFromServiceMeshResponseBody body;
 
     public static RemoveClusterFromServiceMeshResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveClusterFromServiceMeshResponse self = new RemoveClusterFromServiceMeshResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveClusterFromServiceMeshResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RemoveClusterFromServiceMeshResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RemoveClusterFromServiceMeshResponse setCode(String code) {
-        this.code = code;
+    public RemoveClusterFromServiceMeshResponse setBody(RemoveClusterFromServiceMeshResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getCode() {
-        return this.code;
-    }
-
-    public RemoveClusterFromServiceMeshResponse setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
+    public RemoveClusterFromServiceMeshResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,57 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetDiagnosisResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Result")
+    @NameInMap("body")
     @Validation(required = true)
-    public String result;
-
-    @NameInMap("RunAt")
-    @Validation(required = true)
-    public String runAt;
-
-    @NameInMap("Status")
-    @Validation(required = true)
-    public String status;
+    public GetDiagnosisResponseBody body;
 
     public static GetDiagnosisResponse build(java.util.Map<String, ?> map) throws Exception {
         GetDiagnosisResponse self = new GetDiagnosisResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDiagnosisResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetDiagnosisResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetDiagnosisResponse setResult(String result) {
-        this.result = result;
+    public GetDiagnosisResponse setBody(GetDiagnosisResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getResult() {
-        return this.result;
-    }
-
-    public GetDiagnosisResponse setRunAt(String runAt) {
-        this.runAt = runAt;
-        return this;
-    }
-    public String getRunAt() {
-        return this.runAt;
-    }
-
-    public GetDiagnosisResponse setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
+    public GetDiagnosisResponseBody getBody() {
+        return this.body;
     }
 
 }

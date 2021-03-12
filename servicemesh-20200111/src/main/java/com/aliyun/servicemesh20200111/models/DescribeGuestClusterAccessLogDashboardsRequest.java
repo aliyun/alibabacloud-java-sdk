@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeGuestClusterAccessLogDashboardsRequest extends TeaModel {
     @NameInMap("K8sClusterId")
-    @Validation(required = true)
     public String k8sClusterId;
 
     public static DescribeGuestClusterAccessLogDashboardsRequest build(java.util.Map<String, ?> map) throws Exception {

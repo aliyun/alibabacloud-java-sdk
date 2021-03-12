@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterGrafanaRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
-    @Validation(required = true)
     public String serviceMeshId;
 
     @NameInMap("K8sClusterId")
-    @Validation(required = true)
     public String k8sClusterId;
 
     public static DescribeClusterGrafanaRequest build(java.util.Map<String, ?> map) throws Exception {

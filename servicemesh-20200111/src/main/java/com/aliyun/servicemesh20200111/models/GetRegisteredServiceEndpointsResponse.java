@@ -4,65 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetRegisteredServiceEndpointsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ServiceEndpoints")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<GetRegisteredServiceEndpointsResponseServiceEndpoints> serviceEndpoints;
+    public GetRegisteredServiceEndpointsResponseBody body;
 
     public static GetRegisteredServiceEndpointsResponse build(java.util.Map<String, ?> map) throws Exception {
         GetRegisteredServiceEndpointsResponse self = new GetRegisteredServiceEndpointsResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetRegisteredServiceEndpointsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetRegisteredServiceEndpointsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetRegisteredServiceEndpointsResponse setServiceEndpoints(java.util.List<GetRegisteredServiceEndpointsResponseServiceEndpoints> serviceEndpoints) {
-        this.serviceEndpoints = serviceEndpoints;
+    public GetRegisteredServiceEndpointsResponse setBody(GetRegisteredServiceEndpointsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<GetRegisteredServiceEndpointsResponseServiceEndpoints> getServiceEndpoints() {
-        return this.serviceEndpoints;
-    }
-
-    public static class GetRegisteredServiceEndpointsResponseServiceEndpoints extends TeaModel {
-        @NameInMap("Address")
-        @Validation(required = true)
-        public String address;
-
-        @NameInMap("ClusterId")
-        @Validation(required = true)
-        public String clusterId;
-
-        public static GetRegisteredServiceEndpointsResponseServiceEndpoints build(java.util.Map<String, ?> map) throws Exception {
-            GetRegisteredServiceEndpointsResponseServiceEndpoints self = new GetRegisteredServiceEndpointsResponseServiceEndpoints();
-            return TeaModel.build(map, self);
-        }
-
-        public GetRegisteredServiceEndpointsResponseServiceEndpoints setAddress(String address) {
-            this.address = address;
-            return this;
-        }
-        public String getAddress() {
-            return this.address;
-        }
-
-        public GetRegisteredServiceEndpointsResponseServiceEndpoints setClusterId(String clusterId) {
-            this.clusterId = clusterId;
-            return this;
-        }
-        public String getClusterId() {
-            return this.clusterId;
-        }
-
+    public GetRegisteredServiceEndpointsResponseBody getBody() {
+        return this.body;
     }
 
 }
