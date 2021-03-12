@@ -16,6 +16,12 @@ public class QueryProductTopicRequest extends TeaModel {
     @NameInMap("ProductKey")
     public String productKey;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static QueryProductTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryProductTopicRequest self = new QueryProductTopicRequest();
         return TeaModel.build(map, self);
@@ -51,6 +57,22 @@ public class QueryProductTopicRequest extends TeaModel {
     }
     public String getProductKey() {
         return this.productKey;
+    }
+
+    public QueryProductTopicRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public QueryProductTopicRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

@@ -19,6 +19,12 @@ public class QuerySubscribeRelationRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static QuerySubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySubscribeRelationRequest self = new QuerySubscribeRelationRequest();
         return TeaModel.build(map, self);
@@ -62,6 +68,22 @@ public class QuerySubscribeRelationRequest extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public QuerySubscribeRelationRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public QuerySubscribeRelationRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }
