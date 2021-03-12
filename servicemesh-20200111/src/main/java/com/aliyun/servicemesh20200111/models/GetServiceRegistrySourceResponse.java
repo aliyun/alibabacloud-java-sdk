@@ -4,45 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetServiceRegistrySourceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Result")
+    @NameInMap("body")
     @Validation(required = true)
-    public String result;
-
-    @NameInMap("Status")
-    @Validation(required = true)
-    public String status;
+    public GetServiceRegistrySourceResponseBody body;
 
     public static GetServiceRegistrySourceResponse build(java.util.Map<String, ?> map) throws Exception {
         GetServiceRegistrySourceResponse self = new GetServiceRegistrySourceResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetServiceRegistrySourceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetServiceRegistrySourceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetServiceRegistrySourceResponse setResult(String result) {
-        this.result = result;
+    public GetServiceRegistrySourceResponse setBody(GetServiceRegistrySourceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getResult() {
-        return this.result;
-    }
-
-    public GetServiceRegistrySourceResponse setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
+    public GetServiceRegistrySourceResponseBody getBody() {
+        return this.body;
     }
 
 }

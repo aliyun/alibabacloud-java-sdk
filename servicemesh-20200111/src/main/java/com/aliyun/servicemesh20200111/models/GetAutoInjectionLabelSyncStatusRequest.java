@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class GetAutoInjectionLabelSyncStatusRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
-    @Validation(required = true)
     public String serviceMeshId;
 
     public static GetAutoInjectionLabelSyncStatusRequest build(java.util.Map<String, ?> map) throws Exception {

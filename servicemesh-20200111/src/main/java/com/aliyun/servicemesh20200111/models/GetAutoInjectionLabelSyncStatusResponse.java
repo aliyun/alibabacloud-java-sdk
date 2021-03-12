@@ -4,33 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class GetAutoInjectionLabelSyncStatusResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Status")
+    @NameInMap("body")
     @Validation(required = true)
-    public String status;
+    public GetAutoInjectionLabelSyncStatusResponseBody body;
 
     public static GetAutoInjectionLabelSyncStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAutoInjectionLabelSyncStatusResponse self = new GetAutoInjectionLabelSyncStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAutoInjectionLabelSyncStatusResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetAutoInjectionLabelSyncStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetAutoInjectionLabelSyncStatusResponse setStatus(String status) {
-        this.status = status;
+    public GetAutoInjectionLabelSyncStatusResponse setBody(GetAutoInjectionLabelSyncStatusResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public GetAutoInjectionLabelSyncStatusResponseBody getBody() {
+        return this.body;
     }
 
 }

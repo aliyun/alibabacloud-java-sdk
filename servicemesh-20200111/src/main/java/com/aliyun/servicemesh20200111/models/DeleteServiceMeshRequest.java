@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteServiceMeshRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
-    @Validation(required = true)
     public String serviceMeshId;
 
     @NameInMap("Force")

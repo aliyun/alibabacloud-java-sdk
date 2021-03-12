@@ -4,33 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class RunDiagnosisResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Result")
+    @NameInMap("body")
     @Validation(required = true)
-    public String result;
+    public RunDiagnosisResponseBody body;
 
     public static RunDiagnosisResponse build(java.util.Map<String, ?> map) throws Exception {
         RunDiagnosisResponse self = new RunDiagnosisResponse();
         return TeaModel.build(map, self);
     }
 
-    public RunDiagnosisResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RunDiagnosisResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RunDiagnosisResponse setResult(String result) {
-        this.result = result;
+    public RunDiagnosisResponse setBody(RunDiagnosisResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getResult() {
-        return this.result;
+    public RunDiagnosisResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetServiceRegistrySourceRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
-    @Validation(required = true)
     public String serviceMeshId;
 
     @NameInMap("Config")
-    @Validation(required = true)
     public java.util.Map<String, ?> config;
 
     public static SetServiceRegistrySourceRequest build(java.util.Map<String, ?> map) throws Exception {

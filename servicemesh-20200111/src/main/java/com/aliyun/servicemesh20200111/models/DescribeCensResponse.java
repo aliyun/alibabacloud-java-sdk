@@ -4,33 +4,33 @@ package com.aliyun.servicemesh20200111.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Clusters")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<String> clusters;
+    public DescribeCensResponseBody body;
 
     public static DescribeCensResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeCensResponse self = new DescribeCensResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeCensResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeCensResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeCensResponse setClusters(java.util.List<String> clusters) {
-        this.clusters = clusters;
+    public DescribeCensResponse setBody(DescribeCensResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<String> getClusters() {
-        return this.clusters;
+    public DescribeCensResponseBody getBody() {
+        return this.body;
     }
 
 }

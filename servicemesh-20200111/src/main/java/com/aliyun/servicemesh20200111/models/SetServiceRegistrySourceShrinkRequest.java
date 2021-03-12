@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class SetServiceRegistrySourceShrinkRequest extends TeaModel {
     @NameInMap("ServiceMeshId")
-    @Validation(required = true)
     public String serviceMeshId;
 
     @NameInMap("Config")
-    @Validation(required = true)
     public String configShrink;
 
     public static SetServiceRegistrySourceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
