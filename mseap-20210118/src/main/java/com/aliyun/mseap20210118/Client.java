@@ -43,4 +43,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.activateLicenseWithOptions(request, runtime);
     }
+
+    public BusinessLicenseOcrResponse businessLicenseOcrWithOptions(BusinessLicenseOcrRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BusinessLicenseOcr", "2021-01-18", "HTTPS", "POST", "AK", "json", req, runtime), new BusinessLicenseOcrResponse());
+    }
+
+    public BusinessLicenseOcrResponse businessLicenseOcr(BusinessLicenseOcrRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.businessLicenseOcrWithOptions(request, runtime);
+    }
+
+    public CertificateQualityResponse certificateQualityWithOptions(CertificateQualityRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CertificateQuality", "2021-01-18", "HTTPS", "POST", "AK", "json", req, runtime), new CertificateQualityResponse());
+    }
+
+    public CertificateQualityResponse certificateQuality(CertificateQualityRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.certificateQualityWithOptions(request, runtime);
+    }
+
+    public DescribeAgreementStatusResponse describeAgreementStatusWithOptions(DescribeAgreementStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeAgreementStatus", "2021-01-18", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeAgreementStatusResponse());
+    }
+
+    public DescribeAgreementStatusResponse describeAgreementStatus(DescribeAgreementStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAgreementStatusWithOptions(request, runtime);
+    }
+
+    public IdentityCardOcrResponse identityCardOcrWithOptions(IdentityCardOcrRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("IdentityCardOcr", "2021-01-18", "HTTPS", "POST", "AK", "json", req, runtime), new IdentityCardOcrResponse());
+    }
+
+    public IdentityCardOcrResponse identityCardOcr(IdentityCardOcrRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.identityCardOcrWithOptions(request, runtime);
+    }
+
+    public UpdateAgreementStatusResponse updateAgreementStatusWithOptions(UpdateAgreementStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateAgreementStatus", "2021-01-18", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateAgreementStatusResponse());
+    }
+
+    public UpdateAgreementStatusResponse updateAgreementStatus(UpdateAgreementStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateAgreementStatusWithOptions(request, runtime);
+    }
 }
