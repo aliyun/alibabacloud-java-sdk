@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.retailbot20210224.models;
+
+import com.aliyun.tea.*;
+
+public class GetKnowledgeResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetKnowledgeResponseBody body;
+
+    public static GetKnowledgeResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetKnowledgeResponse self = new GetKnowledgeResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetKnowledgeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetKnowledgeResponse setBody(GetKnowledgeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetKnowledgeResponseBody getBody() {
+        return this.body;
+    }
+
+}
