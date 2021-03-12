@@ -3,10 +3,10 @@ package com.aliyun.cs20151215.models;
 
 import com.aliyun.tea.*;
 
-public class ListTagResourcesRequest extends TeaModel {
+public class ListTagResourcesShrinkRequest extends TeaModel {
     // 集群ID列表。
     @NameInMap("resource_ids")
-    public java.util.List<String> resourceIds;
+    public String resourceIdsShrink;
 
     // 资源类型，只支持Cluster
     @NameInMap("resource_type")
@@ -18,26 +18,26 @@ public class ListTagResourcesRequest extends TeaModel {
 
     // 按标签查找。
     @NameInMap("tags")
-    public java.util.List<Tag> tags;
+    public String tagsShrink;
 
     // 下一次查询Token。
     @NameInMap("next_token")
     public String nextToken;
 
-    public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListTagResourcesRequest self = new ListTagResourcesRequest();
+    public static ListTagResourcesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListTagResourcesShrinkRequest self = new ListTagResourcesShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListTagResourcesRequest setResourceIds(java.util.List<String> resourceIds) {
-        this.resourceIds = resourceIds;
+    public ListTagResourcesShrinkRequest setResourceIdsShrink(String resourceIdsShrink) {
+        this.resourceIdsShrink = resourceIdsShrink;
         return this;
     }
-    public java.util.List<String> getResourceIds() {
-        return this.resourceIds;
+    public String getResourceIdsShrink() {
+        return this.resourceIdsShrink;
     }
 
-    public ListTagResourcesRequest setResourceType(String resourceType) {
+    public ListTagResourcesShrinkRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
@@ -45,7 +45,7 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public ListTagResourcesRequest setRegionId(String regionId) {
+    public ListTagResourcesShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -53,15 +53,15 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListTagResourcesRequest setTags(java.util.List<Tag> tags) {
-        this.tags = tags;
+    public ListTagResourcesShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
         return this;
     }
-    public java.util.List<Tag> getTags() {
-        return this.tags;
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
-    public ListTagResourcesRequest setNextToken(String nextToken) {
+    public ListTagResourcesShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
