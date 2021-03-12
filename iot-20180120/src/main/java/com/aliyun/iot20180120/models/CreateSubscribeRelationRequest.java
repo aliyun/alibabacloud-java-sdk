@@ -55,6 +55,12 @@ public class CreateSubscribeRelationRequest extends TeaModel {
     @NameInMap("OtaJobFlag")
     public Boolean otaJobFlag;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static CreateSubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSubscribeRelationRequest self = new CreateSubscribeRelationRequest();
         return TeaModel.build(map, self);
@@ -194,6 +200,22 @@ public class CreateSubscribeRelationRequest extends TeaModel {
     }
     public Boolean getOtaJobFlag() {
         return this.otaJobFlag;
+    }
+
+    public CreateSubscribeRelationRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public CreateSubscribeRelationRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

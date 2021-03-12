@@ -16,6 +16,12 @@ public class QueryConsumerGroupStatusRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("RealTenantId")
+    public String realTenantId;
+
+    @NameInMap("RealTripartiteKey")
+    public String realTripartiteKey;
+
     public static QueryConsumerGroupStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryConsumerGroupStatusRequest self = new QueryConsumerGroupStatusRequest();
         return TeaModel.build(map, self);
@@ -51,6 +57,22 @@ public class QueryConsumerGroupStatusRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public QueryConsumerGroupStatusRequest setRealTenantId(String realTenantId) {
+        this.realTenantId = realTenantId;
+        return this;
+    }
+    public String getRealTenantId() {
+        return this.realTenantId;
+    }
+
+    public QueryConsumerGroupStatusRequest setRealTripartiteKey(String realTripartiteKey) {
+        this.realTripartiteKey = realTripartiteKey;
+        return this;
+    }
+    public String getRealTripartiteKey() {
+        return this.realTripartiteKey;
     }
 
 }

@@ -3,7 +3,7 @@ package com.aliyun.iot20180120.models;
 
 import com.aliyun.tea.*;
 
-public class SpeechByCombinationResponseBody extends TeaModel {
+public class SyncSpeechByCombinationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,12 +16,15 @@ public class SpeechByCombinationResponseBody extends TeaModel {
     @NameInMap("ErrorMessage")
     public String errorMessage;
 
-    public static SpeechByCombinationResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        SpeechByCombinationResponseBody self = new SpeechByCombinationResponseBody();
+    @NameInMap("Data")
+    public SyncSpeechByCombinationResponseBodyData data;
+
+    public static SyncSpeechByCombinationResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SyncSpeechByCombinationResponseBody self = new SyncSpeechByCombinationResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public SpeechByCombinationResponseBody setRequestId(String requestId) {
+    public SyncSpeechByCombinationResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -29,7 +32,7 @@ public class SpeechByCombinationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public SpeechByCombinationResponseBody setSuccess(Boolean success) {
+    public SyncSpeechByCombinationResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -37,7 +40,7 @@ public class SpeechByCombinationResponseBody extends TeaModel {
         return this.success;
     }
 
-    public SpeechByCombinationResponseBody setCode(String code) {
+    public SyncSpeechByCombinationResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -45,12 +48,20 @@ public class SpeechByCombinationResponseBody extends TeaModel {
         return this.code;
     }
 
-    public SpeechByCombinationResponseBody setErrorMessage(String errorMessage) {
+    public SyncSpeechByCombinationResponseBody setErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     public String getErrorMessage() {
         return this.errorMessage;
+    }
+
+    public SyncSpeechByCombinationResponseBody setData(SyncSpeechByCombinationResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public SyncSpeechByCombinationResponseBodyData getData() {
+        return this.data;
     }
 
     public static class SyncSpeechByCombinationResponseBodyData extends TeaModel {

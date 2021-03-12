@@ -107,6 +107,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.batchAddThingTopoWithOptions(request, runtime);
     }
 
+    public BatchBindDevicesIntoProjectResponse batchBindDevicesIntoProjectWithOptions(BatchBindDevicesIntoProjectRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BatchBindDevicesIntoProject", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new BatchBindDevicesIntoProjectResponse());
+    }
+
+    public BatchBindDevicesIntoProjectResponse batchBindDevicesIntoProject(BatchBindDevicesIntoProjectRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchBindDevicesIntoProjectWithOptions(request, runtime);
+    }
+
     public BatchBindDeviceToEdgeInstanceWithDriverResponse batchBindDeviceToEdgeInstanceWithDriverWithOptions(BatchBindDeviceToEdgeInstanceWithDriverRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -118,6 +131,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchBindDeviceToEdgeInstanceWithDriverResponse batchBindDeviceToEdgeInstanceWithDriver(BatchBindDeviceToEdgeInstanceWithDriverRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.batchBindDeviceToEdgeInstanceWithDriverWithOptions(request, runtime);
+    }
+
+    public BatchBindProductsIntoProjectResponse batchBindProductsIntoProjectWithOptions(BatchBindProductsIntoProjectRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BatchBindProductsIntoProject", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new BatchBindProductsIntoProjectResponse());
+    }
+
+    public BatchBindProductsIntoProjectResponse batchBindProductsIntoProject(BatchBindProductsIntoProjectRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchBindProductsIntoProjectWithOptions(request, runtime);
     }
 
     public BatchCheckDeviceNamesResponse batchCheckDeviceNamesWithOptions(BatchCheckDeviceNamesRequest request, RuntimeOptions runtime) throws Exception {
@@ -365,6 +391,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public BatchUnbindDeviceFromEdgeInstanceResponse batchUnbindDeviceFromEdgeInstance(BatchUnbindDeviceFromEdgeInstanceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.batchUnbindDeviceFromEdgeInstanceWithOptions(request, runtime);
+    }
+
+    public BatchUnbindProjectDevicesResponse batchUnbindProjectDevicesWithOptions(BatchUnbindProjectDevicesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BatchUnbindProjectDevices", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new BatchUnbindProjectDevicesResponse());
+    }
+
+    public BatchUnbindProjectDevicesResponse batchUnbindProjectDevices(BatchUnbindProjectDevicesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchUnbindProjectDevicesWithOptions(request, runtime);
+    }
+
+    public BatchUnbindProjectProductsResponse batchUnbindProjectProductsWithOptions(BatchUnbindProjectProductsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("BatchUnbindProjectProducts", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new BatchUnbindProjectProductsResponse());
+    }
+
+    public BatchUnbindProjectProductsResponse batchUnbindProjectProducts(BatchUnbindProjectProductsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.batchUnbindProjectProductsWithOptions(request, runtime);
     }
 
     public BatchUpdateDeviceNicknameResponse batchUpdateDeviceNicknameWithOptions(BatchUpdateDeviceNicknameRequest request, RuntimeOptions runtime) throws Exception {
@@ -1574,6 +1626,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InvokeThingsServiceResponse invokeThingsService(InvokeThingsServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.invokeThingsServiceWithOptions(request, runtime);
+    }
+
+    public ListAnalyticsDataResponse listAnalyticsDataWithOptions(ListAnalyticsDataRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListAnalyticsData", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new ListAnalyticsDataResponse());
+    }
+
+    public ListAnalyticsDataResponse listAnalyticsData(ListAnalyticsDataRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listAnalyticsDataWithOptions(request, runtime);
     }
 
     public ListDeviceDistributeJobResponse listDeviceDistributeJobWithOptions(ListDeviceDistributeJobRequest request, RuntimeOptions runtime) throws Exception {
@@ -2967,6 +3032,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopRuleResponse stopRule(StopRuleRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.stopRuleWithOptions(request, runtime);
+    }
+
+    public SyncSpeechByCombinationResponse syncSpeechByCombinationWithOptions(SyncSpeechByCombinationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SyncSpeechByCombination", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new SyncSpeechByCombinationResponse());
+    }
+
+    public SyncSpeechByCombinationResponse syncSpeechByCombination(SyncSpeechByCombinationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.syncSpeechByCombinationWithOptions(request, runtime);
     }
 
     public TriggerSceneRuleResponse triggerSceneRuleWithOptions(TriggerSceneRuleRequest request, RuntimeOptions runtime) throws Exception {
