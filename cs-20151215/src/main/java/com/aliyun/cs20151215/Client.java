@@ -1573,7 +1573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers)
         ));
-        return TeaModel.toModel(this.doROARequest("DescribeClusterNamespaces", "2015-12-15", "HTTPS", "GET", "AK", "/k8s/" + ClusterId + "/namespaces", "none", req, runtime), new DescribeClusterNamespacesResponse());
+        return TeaModel.toModel(this.doROARequest("DescribeClusterNamespaces", "2015-12-15", "HTTPS", "GET", "AK", "/k8s/" + ClusterId + "/namespaces", "array", req, runtime), new DescribeClusterNamespacesResponse());
     }
 
     public DeleteKubernetesTriggerResponse deleteKubernetesTrigger(String Id) throws Exception {
