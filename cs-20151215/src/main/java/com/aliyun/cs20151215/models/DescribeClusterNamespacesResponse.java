@@ -8,6 +8,10 @@ public class DescribeClusterNamespacesResponse extends TeaModel {
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
+    @NameInMap("body")
+    @Validation(required = true)
+    public java.util.List<String> body;
+
     public static DescribeClusterNamespacesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterNamespacesResponse self = new DescribeClusterNamespacesResponse();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class DescribeClusterNamespacesResponse extends TeaModel {
     }
     public java.util.Map<String, String> getHeaders() {
         return this.headers;
+    }
+
+    public DescribeClusterNamespacesResponse setBody(java.util.List<String> body) {
+        this.body = body;
+        return this;
+    }
+    public java.util.List<String> getBody() {
+        return this.body;
     }
 
 }
