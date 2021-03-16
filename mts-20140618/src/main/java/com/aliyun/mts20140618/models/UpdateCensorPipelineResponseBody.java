@@ -62,40 +62,24 @@ public class UpdateCensorPipelineResponseBody extends TeaModel {
     }
 
     public static class UpdateCensorPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("State")
         public String state;
-
-        @NameInMap("Priority")
-        public Integer priority;
 
         @NameInMap("NotifyConfig")
         public UpdateCensorPipelineResponseBodyPipelineNotifyConfig notifyConfig;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
+
         public static UpdateCensorPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             UpdateCensorPipelineResponseBodyPipeline self = new UpdateCensorPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateCensorPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public UpdateCensorPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public UpdateCensorPipelineResponseBodyPipeline setState(String state) {
@@ -106,6 +90,14 @@ public class UpdateCensorPipelineResponseBody extends TeaModel {
             return this.state;
         }
 
+        public UpdateCensorPipelineResponseBodyPipeline setNotifyConfig(UpdateCensorPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
+            this.notifyConfig = notifyConfig;
+            return this;
+        }
+        public UpdateCensorPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
+            return this.notifyConfig;
+        }
+
         public UpdateCensorPipelineResponseBodyPipeline setPriority(Integer priority) {
             this.priority = priority;
             return this;
@@ -114,12 +106,20 @@ public class UpdateCensorPipelineResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public UpdateCensorPipelineResponseBodyPipeline setNotifyConfig(UpdateCensorPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
-            this.notifyConfig = notifyConfig;
+        public UpdateCensorPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
             return this;
         }
-        public UpdateCensorPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
-            return this.notifyConfig;
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateCensorPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

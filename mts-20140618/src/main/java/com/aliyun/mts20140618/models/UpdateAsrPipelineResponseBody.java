@@ -32,23 +32,15 @@ public class UpdateAsrPipelineResponseBody extends TeaModel {
     }
 
     public static class UpdateAsrPipelineResponseBodyPipelineNotifyConfig extends TeaModel {
-        @NameInMap("Topic")
-        public String topic;
-
         @NameInMap("QueueName")
         public String queueName;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static UpdateAsrPipelineResponseBodyPipelineNotifyConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateAsrPipelineResponseBodyPipelineNotifyConfig self = new UpdateAsrPipelineResponseBodyPipelineNotifyConfig();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateAsrPipelineResponseBodyPipelineNotifyConfig setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public UpdateAsrPipelineResponseBodyPipelineNotifyConfig setQueueName(String queueName) {
@@ -59,43 +51,35 @@ public class UpdateAsrPipelineResponseBody extends TeaModel {
             return this.queueName;
         }
 
+        public UpdateAsrPipelineResponseBodyPipelineNotifyConfig setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
     }
 
     public static class UpdateAsrPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("State")
         public String state;
-
-        @NameInMap("Priority")
-        public Integer priority;
 
         @NameInMap("NotifyConfig")
         public UpdateAsrPipelineResponseBodyPipelineNotifyConfig notifyConfig;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
+
         public static UpdateAsrPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             UpdateAsrPipelineResponseBodyPipeline self = new UpdateAsrPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateAsrPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public UpdateAsrPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public UpdateAsrPipelineResponseBodyPipeline setState(String state) {
@@ -106,6 +90,14 @@ public class UpdateAsrPipelineResponseBody extends TeaModel {
             return this.state;
         }
 
+        public UpdateAsrPipelineResponseBodyPipeline setNotifyConfig(UpdateAsrPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
+            this.notifyConfig = notifyConfig;
+            return this;
+        }
+        public UpdateAsrPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
+            return this.notifyConfig;
+        }
+
         public UpdateAsrPipelineResponseBodyPipeline setPriority(Integer priority) {
             this.priority = priority;
             return this;
@@ -114,12 +106,20 @@ public class UpdateAsrPipelineResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public UpdateAsrPipelineResponseBodyPipeline setNotifyConfig(UpdateAsrPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
-            this.notifyConfig = notifyConfig;
+        public UpdateAsrPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
             return this;
         }
-        public UpdateAsrPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
-            return this.notifyConfig;
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateAsrPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

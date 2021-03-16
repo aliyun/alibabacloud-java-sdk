@@ -62,48 +62,24 @@ public class AddPornPipelineResponseBody extends TeaModel {
     }
 
     public static class AddPornPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
         @NameInMap("State")
         public String state;
 
         @NameInMap("NotifyConfig")
         public AddPornPipelineResponseBodyPipelineNotifyConfig notifyConfig;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
+
         public static AddPornPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             AddPornPipelineResponseBodyPipeline self = new AddPornPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
-        }
-
-        public AddPornPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public AddPornPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public AddPornPipelineResponseBodyPipeline setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
         }
 
         public AddPornPipelineResponseBodyPipeline setState(String state) {
@@ -120,6 +96,30 @@ public class AddPornPipelineResponseBody extends TeaModel {
         }
         public AddPornPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
             return this.notifyConfig;
+        }
+
+        public AddPornPipelineResponseBodyPipeline setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public AddPornPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public AddPornPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

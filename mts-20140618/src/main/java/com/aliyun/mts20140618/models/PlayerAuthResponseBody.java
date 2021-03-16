@@ -43,29 +43,21 @@ public class PlayerAuthResponseBody extends TeaModel {
     }
 
     public static class PlayerAuthResponseBodySwitchListSwitch extends TeaModel {
-        @NameInMap("State")
-        public String state;
-
         @NameInMap("FunctionId")
         public String functionId;
-
-        @NameInMap("SwitchId")
-        public String switchId;
 
         @NameInMap("FunctionName")
         public String functionName;
 
+        @NameInMap("State")
+        public String state;
+
+        @NameInMap("SwitchId")
+        public String switchId;
+
         public static PlayerAuthResponseBodySwitchListSwitch build(java.util.Map<String, ?> map) throws Exception {
             PlayerAuthResponseBodySwitchListSwitch self = new PlayerAuthResponseBodySwitchListSwitch();
             return TeaModel.build(map, self);
-        }
-
-        public PlayerAuthResponseBodySwitchListSwitch setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
         }
 
         public PlayerAuthResponseBodySwitchListSwitch setFunctionId(String functionId) {
@@ -76,20 +68,28 @@ public class PlayerAuthResponseBody extends TeaModel {
             return this.functionId;
         }
 
-        public PlayerAuthResponseBodySwitchListSwitch setSwitchId(String switchId) {
-            this.switchId = switchId;
-            return this;
-        }
-        public String getSwitchId() {
-            return this.switchId;
-        }
-
         public PlayerAuthResponseBodySwitchListSwitch setFunctionName(String functionName) {
             this.functionName = functionName;
             return this;
         }
         public String getFunctionName() {
             return this.functionName;
+        }
+
+        public PlayerAuthResponseBodySwitchListSwitch setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
+        }
+
+        public PlayerAuthResponseBodySwitchListSwitch setSwitchId(String switchId) {
+            this.switchId = switchId;
+            return this;
+        }
+        public String getSwitchId() {
+            return this.switchId;
         }
 
     }

@@ -62,48 +62,24 @@ public class AddCensorPipelineResponseBody extends TeaModel {
     }
 
     public static class AddCensorPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
         @NameInMap("State")
         public String state;
 
         @NameInMap("NotifyConfig")
         public AddCensorPipelineResponseBodyPipelineNotifyConfig notifyConfig;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
+
         public static AddCensorPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             AddCensorPipelineResponseBodyPipeline self = new AddCensorPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
-        }
-
-        public AddCensorPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public AddCensorPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public AddCensorPipelineResponseBodyPipeline setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
         }
 
         public AddCensorPipelineResponseBodyPipeline setState(String state) {
@@ -120,6 +96,30 @@ public class AddCensorPipelineResponseBody extends TeaModel {
         }
         public AddCensorPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
             return this.notifyConfig;
+        }
+
+        public AddCensorPipelineResponseBodyPipeline setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public AddCensorPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public AddCensorPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

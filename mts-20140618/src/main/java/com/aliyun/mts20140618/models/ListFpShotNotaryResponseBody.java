@@ -7,11 +7,11 @@ public class ListFpShotNotaryResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("NextPageToken")
-    public String nextPageToken;
-
     @NameInMap("FpShotNotaryList")
     public ListFpShotNotaryResponseBodyFpShotNotaryList fpShotNotaryList;
+
+    @NameInMap("NextPageToken")
+    public String nextPageToken;
 
     public static ListFpShotNotaryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListFpShotNotaryResponseBody self = new ListFpShotNotaryResponseBody();
@@ -26,14 +26,6 @@ public class ListFpShotNotaryResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListFpShotNotaryResponseBody setNextPageToken(String nextPageToken) {
-        this.nextPageToken = nextPageToken;
-        return this;
-    }
-    public String getNextPageToken() {
-        return this.nextPageToken;
-    }
-
     public ListFpShotNotaryResponseBody setFpShotNotaryList(ListFpShotNotaryResponseBodyFpShotNotaryList fpShotNotaryList) {
         this.fpShotNotaryList = fpShotNotaryList;
         return this;
@@ -42,71 +34,39 @@ public class ListFpShotNotaryResponseBody extends TeaModel {
         return this.fpShotNotaryList;
     }
 
+    public ListFpShotNotaryResponseBody setNextPageToken(String nextPageToken) {
+        this.nextPageToken = nextPageToken;
+        return this;
+    }
+    public String getNextPageToken() {
+        return this.nextPageToken;
+    }
+
     public static class ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary extends TeaModel {
-        @NameInMap("TransactionId")
-        public String transactionId;
-
-        @NameInMap("TxHash")
-        public String txHash;
-
-        @NameInMap("FpDBId")
-        public String fpDBId;
-
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("Detail")
-        public String detail;
-
         @NameInMap("CreationTime")
         public String creationTime;
 
         @NameInMap("FinishTime")
         public String finishTime;
 
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("TxHash")
+        public String txHash;
+
+        @NameInMap("TransactionId")
+        public String transactionId;
+
+        @NameInMap("FpDBId")
+        public String fpDBId;
+
+        @NameInMap("Detail")
+        public String detail;
+
         public static ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary build(java.util.Map<String, ?> map) throws Exception {
             ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary self = new ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary();
             return TeaModel.build(map, self);
-        }
-
-        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setTransactionId(String transactionId) {
-            this.transactionId = transactionId;
-            return this;
-        }
-        public String getTransactionId() {
-            return this.transactionId;
-        }
-
-        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setTxHash(String txHash) {
-            this.txHash = txHash;
-            return this;
-        }
-        public String getTxHash() {
-            return this.txHash;
-        }
-
-        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setFpDBId(String fpDBId) {
-            this.fpDBId = fpDBId;
-            return this;
-        }
-        public String getFpDBId() {
-            return this.fpDBId;
-        }
-
-        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setDetail(String detail) {
-            this.detail = detail;
-            return this;
-        }
-        public String getDetail() {
-            return this.detail;
         }
 
         public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setCreationTime(String creationTime) {
@@ -123,6 +83,46 @@ public class ListFpShotNotaryResponseBody extends TeaModel {
         }
         public String getFinishTime() {
             return this.finishTime;
+        }
+
+        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setTxHash(String txHash) {
+            this.txHash = txHash;
+            return this;
+        }
+        public String getTxHash() {
+            return this.txHash;
+        }
+
+        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setTransactionId(String transactionId) {
+            this.transactionId = transactionId;
+            return this;
+        }
+        public String getTransactionId() {
+            return this.transactionId;
+        }
+
+        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setFpDBId(String fpDBId) {
+            this.fpDBId = fpDBId;
+            return this;
+        }
+        public String getFpDBId() {
+            return this.fpDBId;
+        }
+
+        public ListFpShotNotaryResponseBodyFpShotNotaryListFpShotNotary setDetail(String detail) {
+            this.detail = detail;
+            return this;
+        }
+        public String getDetail() {
+            return this.detail;
         }
 
     }

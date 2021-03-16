@@ -62,48 +62,24 @@ public class AddTerrorismPipelineResponseBody extends TeaModel {
     }
 
     public static class AddTerrorismPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
         @NameInMap("State")
         public String state;
 
         @NameInMap("NotifyConfig")
         public AddTerrorismPipelineResponseBodyPipelineNotifyConfig notifyConfig;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
+
         public static AddTerrorismPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             AddTerrorismPipelineResponseBodyPipeline self = new AddTerrorismPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
-        }
-
-        public AddTerrorismPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public AddTerrorismPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public AddTerrorismPipelineResponseBodyPipeline setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
         }
 
         public AddTerrorismPipelineResponseBodyPipeline setState(String state) {
@@ -120,6 +96,30 @@ public class AddTerrorismPipelineResponseBody extends TeaModel {
         }
         public AddTerrorismPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
             return this.notifyConfig;
+        }
+
+        public AddTerrorismPipelineResponseBodyPipeline setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public AddTerrorismPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public AddTerrorismPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

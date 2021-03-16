@@ -671,6 +671,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listFpShotDBWithOptions(request, runtime);
     }
 
+    public ListFpShotFilesResponse listFpShotFilesWithOptions(ListFpShotFilesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListFpShotFiles", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListFpShotFilesResponse());
+    }
+
+    public ListFpShotFilesResponse listFpShotFiles(ListFpShotFilesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listFpShotFilesWithOptions(request, runtime);
+    }
+
     public ListFpShotNotaryResponse listFpShotNotaryWithOptions(ListFpShotNotaryRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -970,6 +983,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryFpCompareJobListWithOptions(request, runtime);
     }
 
+    public QueryFpDBDeleteJobListResponse queryFpDBDeleteJobListWithOptions(QueryFpDBDeleteJobListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryFpDBDeleteJobList", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new QueryFpDBDeleteJobListResponse());
+    }
+
+    public QueryFpDBDeleteJobListResponse queryFpDBDeleteJobList(QueryFpDBDeleteJobListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryFpDBDeleteJobListWithOptions(request, runtime);
+    }
+
+    public QueryFpFileDeleteJobListResponse queryFpFileDeleteJobListWithOptions(QueryFpFileDeleteJobListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryFpFileDeleteJobList", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new QueryFpFileDeleteJobListResponse());
+    }
+
+    public QueryFpFileDeleteJobListResponse queryFpFileDeleteJobList(QueryFpFileDeleteJobListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryFpFileDeleteJobListWithOptions(request, runtime);
+    }
+
     public QueryFpImportResultResponse queryFpImportResultWithOptions(QueryFpImportResultRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1007,6 +1046,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryImageSearchJobListResponse queryImageSearchJobList(QueryImageSearchJobListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryImageSearchJobListWithOptions(request, runtime);
+    }
+
+    public QueryInnerJobResponse queryInnerJobWithOptions(QueryInnerJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryInnerJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new QueryInnerJobResponse());
+    }
+
+    public QueryInnerJobResponse queryInnerJob(QueryInnerJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryInnerJobWithOptions(request, runtime);
     }
 
     public QueryIProductionJobResponse queryIProductionJobWithOptions(QueryIProductionJobRequest request, RuntimeOptions runtime) throws Exception {
@@ -1384,6 +1436,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryVideoPoseJobListResponse queryVideoPoseJobList(QueryVideoPoseJobListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryVideoPoseJobListWithOptions(request, runtime);
+    }
+
+    public QueryVideoQualityJobResponse queryVideoQualityJobWithOptions(QueryVideoQualityJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryVideoQualityJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new QueryVideoQualityJobResponse());
+    }
+
+    public QueryVideoQualityJobResponse queryVideoQualityJob(QueryVideoQualityJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryVideoQualityJobWithOptions(request, runtime);
     }
 
     public QueryVideoSplitJobListResponse queryVideoSplitJobListWithOptions(QueryVideoSplitJobListRequest request, RuntimeOptions runtime) throws Exception {
@@ -1815,6 +1880,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.submitFpCompareJobWithOptions(request, runtime);
     }
 
+    public SubmitFpDBDeleteJobResponse submitFpDBDeleteJobWithOptions(SubmitFpDBDeleteJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitFpDBDeleteJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitFpDBDeleteJobResponse());
+    }
+
+    public SubmitFpDBDeleteJobResponse submitFpDBDeleteJob(SubmitFpDBDeleteJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitFpDBDeleteJobWithOptions(request, runtime);
+    }
+
+    public SubmitFpFileDeleteJobResponse submitFpFileDeleteJobWithOptions(SubmitFpFileDeleteJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitFpFileDeleteJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitFpFileDeleteJobResponse());
+    }
+
+    public SubmitFpFileDeleteJobResponse submitFpFileDeleteJob(SubmitFpFileDeleteJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitFpFileDeleteJobWithOptions(request, runtime);
+    }
+
     public SubmitFpShotJobResponse submitFpShotJobWithOptions(SubmitFpShotJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1852,6 +1943,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitImageSearchJobResponse submitImageSearchJob(SubmitImageSearchJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitImageSearchJobWithOptions(request, runtime);
+    }
+
+    public SubmitInnerJobResponse submitInnerJobWithOptions(SubmitInnerJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitInnerJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitInnerJobResponse());
+    }
+
+    public SubmitInnerJobResponse submitInnerJob(SubmitInnerJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitInnerJobWithOptions(request, runtime);
     }
 
     public SubmitIProductionJobResponse submitIProductionJobWithOptions(SubmitIProductionJobRequest request, RuntimeOptions runtime) throws Exception {
@@ -2060,6 +2164,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitVideoPoseJobResponse submitVideoPoseJob(SubmitVideoPoseJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitVideoPoseJobWithOptions(request, runtime);
+    }
+
+    public SubmitVideoQualityJobResponse submitVideoQualityJobWithOptions(SubmitVideoQualityJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitVideoQualityJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitVideoQualityJobResponse());
+    }
+
+    public SubmitVideoQualityJobResponse submitVideoQualityJob(SubmitVideoQualityJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitVideoQualityJobWithOptions(request, runtime);
     }
 
     public SubmitVideoSplitJobResponse submitVideoSplitJobWithOptions(SubmitVideoSplitJobRequest request, RuntimeOptions runtime) throws Exception {

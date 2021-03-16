@@ -32,23 +32,15 @@ public class QueryMcuTemplateResponseBody extends TeaModel {
     }
 
     public static class QueryMcuTemplateResponseBodyTemplatesJob extends TeaModel {
-        @NameInMap("TemplateId")
-        public String templateId;
-
         @NameInMap("Template")
         public String template;
+
+        @NameInMap("TemplateId")
+        public String templateId;
 
         public static QueryMcuTemplateResponseBodyTemplatesJob build(java.util.Map<String, ?> map) throws Exception {
             QueryMcuTemplateResponseBodyTemplatesJob self = new QueryMcuTemplateResponseBodyTemplatesJob();
             return TeaModel.build(map, self);
-        }
-
-        public QueryMcuTemplateResponseBodyTemplatesJob setTemplateId(String templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public String getTemplateId() {
-            return this.templateId;
         }
 
         public QueryMcuTemplateResponseBodyTemplatesJob setTemplate(String template) {
@@ -57,6 +49,14 @@ public class QueryMcuTemplateResponseBody extends TeaModel {
         }
         public String getTemplate() {
             return this.template;
+        }
+
+        public QueryMcuTemplateResponseBodyTemplatesJob setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
         }
 
     }

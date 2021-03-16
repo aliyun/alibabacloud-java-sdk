@@ -62,48 +62,24 @@ public class AddAsrPipelineResponseBody extends TeaModel {
     }
 
     public static class AddAsrPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Priority")
-        public Integer priority;
-
         @NameInMap("State")
         public String state;
 
         @NameInMap("NotifyConfig")
         public AddAsrPipelineResponseBodyPipelineNotifyConfig notifyConfig;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
+
         public static AddAsrPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             AddAsrPipelineResponseBodyPipeline self = new AddAsrPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
-        }
-
-        public AddAsrPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public AddAsrPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public AddAsrPipelineResponseBodyPipeline setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
         }
 
         public AddAsrPipelineResponseBodyPipeline setState(String state) {
@@ -120,6 +96,30 @@ public class AddAsrPipelineResponseBody extends TeaModel {
         }
         public AddAsrPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
             return this.notifyConfig;
+        }
+
+        public AddAsrPipelineResponseBodyPipeline setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public AddAsrPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public AddAsrPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

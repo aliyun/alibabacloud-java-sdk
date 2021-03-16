@@ -4,23 +4,17 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class LogicalDeleteResourceResponseBody extends TeaModel {
-    @NameInMap("Interrupt")
-    public Boolean interrupt;
-
-    @NameInMap("Invoker")
-    public String invoker;
-
-    @NameInMap("Pk")
-    public String pk;
-
-    @NameInMap("Bid")
-    public String bid;
+    @NameInMap("GmtWakeup")
+    public String gmtWakeup;
 
     @NameInMap("Hid")
     public Long hid;
 
-    @NameInMap("Country")
-    public String country;
+    @NameInMap("Invoker")
+    public String invoker;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("TaskIdentifier")
     public String taskIdentifier;
@@ -28,50 +22,32 @@ public class LogicalDeleteResourceResponseBody extends TeaModel {
     @NameInMap("TaskExtraData")
     public String taskExtraData;
 
-    @NameInMap("GmtWakeup")
-    public String gmtWakeup;
+    @NameInMap("Country")
+    public String country;
+
+    @NameInMap("Pk")
+    public String pk;
+
+    @NameInMap("Bid")
+    public String bid;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Interrupt")
+    public Boolean interrupt;
 
     public static LogicalDeleteResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         LogicalDeleteResourceResponseBody self = new LogicalDeleteResourceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public LogicalDeleteResourceResponseBody setInterrupt(Boolean interrupt) {
-        this.interrupt = interrupt;
+    public LogicalDeleteResourceResponseBody setGmtWakeup(String gmtWakeup) {
+        this.gmtWakeup = gmtWakeup;
         return this;
     }
-    public Boolean getInterrupt() {
-        return this.interrupt;
-    }
-
-    public LogicalDeleteResourceResponseBody setInvoker(String invoker) {
-        this.invoker = invoker;
-        return this;
-    }
-    public String getInvoker() {
-        return this.invoker;
-    }
-
-    public LogicalDeleteResourceResponseBody setPk(String pk) {
-        this.pk = pk;
-        return this;
-    }
-    public String getPk() {
-        return this.pk;
-    }
-
-    public LogicalDeleteResourceResponseBody setBid(String bid) {
-        this.bid = bid;
-        return this;
-    }
-    public String getBid() {
-        return this.bid;
+    public String getGmtWakeup() {
+        return this.gmtWakeup;
     }
 
     public LogicalDeleteResourceResponseBody setHid(Long hid) {
@@ -82,12 +58,20 @@ public class LogicalDeleteResourceResponseBody extends TeaModel {
         return this.hid;
     }
 
-    public LogicalDeleteResourceResponseBody setCountry(String country) {
-        this.country = country;
+    public LogicalDeleteResourceResponseBody setInvoker(String invoker) {
+        this.invoker = invoker;
         return this;
     }
-    public String getCountry() {
-        return this.country;
+    public String getInvoker() {
+        return this.invoker;
+    }
+
+    public LogicalDeleteResourceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public LogicalDeleteResourceResponseBody setTaskIdentifier(String taskIdentifier) {
@@ -106,12 +90,28 @@ public class LogicalDeleteResourceResponseBody extends TeaModel {
         return this.taskExtraData;
     }
 
-    public LogicalDeleteResourceResponseBody setGmtWakeup(String gmtWakeup) {
-        this.gmtWakeup = gmtWakeup;
+    public LogicalDeleteResourceResponseBody setCountry(String country) {
+        this.country = country;
         return this;
     }
-    public String getGmtWakeup() {
-        return this.gmtWakeup;
+    public String getCountry() {
+        return this.country;
+    }
+
+    public LogicalDeleteResourceResponseBody setPk(String pk) {
+        this.pk = pk;
+        return this;
+    }
+    public String getPk() {
+        return this.pk;
+    }
+
+    public LogicalDeleteResourceResponseBody setBid(String bid) {
+        this.bid = bid;
+        return this;
+    }
+    public String getBid() {
+        return this.bid;
     }
 
     public LogicalDeleteResourceResponseBody setSuccess(Boolean success) {
@@ -122,12 +122,12 @@ public class LogicalDeleteResourceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public LogicalDeleteResourceResponseBody setMessage(String message) {
-        this.message = message;
+    public LogicalDeleteResourceResponseBody setInterrupt(Boolean interrupt) {
+        this.interrupt = interrupt;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public Boolean getInterrupt() {
+        return this.interrupt;
     }
 
 }
