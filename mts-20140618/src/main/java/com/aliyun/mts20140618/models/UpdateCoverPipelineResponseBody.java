@@ -62,14 +62,11 @@ public class UpdateCoverPipelineResponseBody extends TeaModel {
     }
 
     public static class UpdateCoverPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("State")
         public String state;
+
+        @NameInMap("NotifyConfig")
+        public UpdateCoverPipelineResponseBodyPipelineNotifyConfig notifyConfig;
 
         @NameInMap("Priority")
         public Integer priority;
@@ -77,28 +74,15 @@ public class UpdateCoverPipelineResponseBody extends TeaModel {
         @NameInMap("Role")
         public String role;
 
-        @NameInMap("NotifyConfig")
-        public UpdateCoverPipelineResponseBodyPipelineNotifyConfig notifyConfig;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
 
         public static UpdateCoverPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             UpdateCoverPipelineResponseBodyPipeline self = new UpdateCoverPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateCoverPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public UpdateCoverPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public UpdateCoverPipelineResponseBodyPipeline setState(String state) {
@@ -107,6 +91,14 @@ public class UpdateCoverPipelineResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public UpdateCoverPipelineResponseBodyPipeline setNotifyConfig(UpdateCoverPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
+            this.notifyConfig = notifyConfig;
+            return this;
+        }
+        public UpdateCoverPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
+            return this.notifyConfig;
         }
 
         public UpdateCoverPipelineResponseBodyPipeline setPriority(Integer priority) {
@@ -125,12 +117,20 @@ public class UpdateCoverPipelineResponseBody extends TeaModel {
             return this.role;
         }
 
-        public UpdateCoverPipelineResponseBodyPipeline setNotifyConfig(UpdateCoverPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
-            this.notifyConfig = notifyConfig;
+        public UpdateCoverPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
             return this;
         }
-        public UpdateCoverPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
-            return this.notifyConfig;
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdateCoverPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

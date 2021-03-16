@@ -43,34 +43,18 @@ public class RegisterMediaDetailPersonResponseBody extends TeaModel {
     }
 
     public static class RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile extends TeaModel {
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("Object")
+        public String object;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Object")
-        public String object;
+        @NameInMap("Bucket")
+        public String bucket;
 
         public static RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile build(java.util.Map<String, ?> map) throws Exception {
             RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile self = new RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile();
             return TeaModel.build(map, self);
-        }
-
-        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
         }
 
         public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile setObject(String object) {
@@ -81,11 +65,36 @@ public class RegisterMediaDetailPersonResponseBody extends TeaModel {
             return this.object;
         }
 
+        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
     }
 
     public static class RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage extends TeaModel {
+        @NameInMap("Quality")
+        public String quality;
+
+        @NameInMap("ImageFile")
+        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile imageFile;
+
         @NameInMap("PersonName")
         public String personName;
+
+        @NameInMap("Gender")
+        public String gender;
 
         @NameInMap("FaceId")
         public String faceId;
@@ -93,21 +102,28 @@ public class RegisterMediaDetailPersonResponseBody extends TeaModel {
         @NameInMap("Target")
         public String target;
 
-        @NameInMap("Quality")
-        public String quality;
-
-        @NameInMap("Gender")
-        public String gender;
-
         @NameInMap("ImageId")
         public String imageId;
-
-        @NameInMap("ImageFile")
-        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile imageFile;
 
         public static RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage build(java.util.Map<String, ?> map) throws Exception {
             RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage self = new RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage();
             return TeaModel.build(map, self);
+        }
+
+        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage setQuality(String quality) {
+            this.quality = quality;
+            return this;
+        }
+        public String getQuality() {
+            return this.quality;
+        }
+
+        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage setImageFile(RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile imageFile) {
+            this.imageFile = imageFile;
+            return this;
+        }
+        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile getImageFile() {
+            return this.imageFile;
         }
 
         public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage setPersonName(String personName) {
@@ -116,6 +132,14 @@ public class RegisterMediaDetailPersonResponseBody extends TeaModel {
         }
         public String getPersonName() {
             return this.personName;
+        }
+
+        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage setGender(String gender) {
+            this.gender = gender;
+            return this;
+        }
+        public String getGender() {
+            return this.gender;
         }
 
         public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage setFaceId(String faceId) {
@@ -134,36 +158,12 @@ public class RegisterMediaDetailPersonResponseBody extends TeaModel {
             return this.target;
         }
 
-        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage setQuality(String quality) {
-            this.quality = quality;
-            return this;
-        }
-        public String getQuality() {
-            return this.quality;
-        }
-
-        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage setGender(String gender) {
-            this.gender = gender;
-            return this;
-        }
-        public String getGender() {
-            return this.gender;
-        }
-
         public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage setImageId(String imageId) {
             this.imageId = imageId;
             return this;
         }
         public String getImageId() {
             return this.imageId;
-        }
-
-        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonage setImageFile(RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile imageFile) {
-            this.imageFile = imageFile;
-            return this;
-        }
-        public RegisterMediaDetailPersonResponseBodyRegisteredPersonagesRegisteredPersonageImageFile getImageFile() {
-            return this.imageFile;
         }
 
     }
@@ -188,34 +188,18 @@ public class RegisterMediaDetailPersonResponseBody extends TeaModel {
     }
 
     public static class RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile extends TeaModel {
-        @NameInMap("Bucket")
-        public String bucket;
+        @NameInMap("Object")
+        public String object;
 
         @NameInMap("Location")
         public String location;
 
-        @NameInMap("Object")
-        public String object;
+        @NameInMap("Bucket")
+        public String bucket;
 
         public static RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile build(java.util.Map<String, ?> map) throws Exception {
             RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile self = new RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile();
             return TeaModel.build(map, self);
-        }
-
-        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
         }
 
         public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile setObject(String object) {
@@ -226,29 +210,45 @@ public class RegisterMediaDetailPersonResponseBody extends TeaModel {
             return this.object;
         }
 
+        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
     }
 
     public static class RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage extends TeaModel {
-        @NameInMap("Code")
-        public String code;
+        @NameInMap("ImageFile")
+        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile imageFile;
 
         @NameInMap("Success")
         public String success;
 
-        @NameInMap("ImageFile")
-        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile imageFile;
+        @NameInMap("Code")
+        public String code;
 
         public static RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage build(java.util.Map<String, ?> map) throws Exception {
             RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage self = new RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage();
             return TeaModel.build(map, self);
         }
 
-        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage setCode(String code) {
-            this.code = code;
+        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage setImageFile(RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile imageFile) {
+            this.imageFile = imageFile;
             return this;
         }
-        public String getCode() {
-            return this.code;
+        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile getImageFile() {
+            return this.imageFile;
         }
 
         public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage setSuccess(String success) {
@@ -259,12 +259,12 @@ public class RegisterMediaDetailPersonResponseBody extends TeaModel {
             return this.success;
         }
 
-        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage setImageFile(RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile imageFile) {
-            this.imageFile = imageFile;
+        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImage setCode(String code) {
+            this.code = code;
             return this;
         }
-        public RegisterMediaDetailPersonResponseBodyFailedImagesFailedImageImageFile getImageFile() {
-            return this.imageFile;
+        public String getCode() {
+            return this.code;
         }
 
     }

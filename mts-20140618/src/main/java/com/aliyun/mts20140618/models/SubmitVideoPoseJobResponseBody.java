@@ -31,150 +31,22 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
         return this.videoPoseJob;
     }
 
-    public static class SubmitVideoPoseJobResponseBodyVideoPoseJobInput extends TeaModel {
-        @NameInMap("Bucket")
-        public String bucket;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("RoleArn")
-        public String roleArn;
-
-        public static SubmitVideoPoseJobResponseBodyVideoPoseJobInput build(java.util.Map<String, ?> map) throws Exception {
-            SubmitVideoPoseJobResponseBodyVideoPoseJobInput self = new SubmitVideoPoseJobResponseBodyVideoPoseJobInput();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput setRoleArn(String roleArn) {
-            this.roleArn = roleArn;
-            return this;
-        }
-        public String getRoleArn() {
-            return this.roleArn;
-        }
-
-    }
-
-    public static class SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile extends TeaModel {
-        @NameInMap("Bucket")
-        public String bucket;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("RoleArn")
-        public String roleArn;
-
-        public static SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile build(java.util.Map<String, ?> map) throws Exception {
-            SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile self = new SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile setRoleArn(String roleArn) {
-            this.roleArn = roleArn;
-            return this;
-        }
-        public String getRoleArn() {
-            return this.roleArn;
-        }
-
-    }
-
     public static class SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile extends TeaModel {
-        @NameInMap("Bucket")
-        public String bucket;
-
-        @NameInMap("Location")
-        public String location;
+        @NameInMap("RoleArn")
+        public String roleArn;
 
         @NameInMap("Object")
         public String object;
 
-        @NameInMap("RoleArn")
-        public String roleArn;
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Bucket")
+        public String bucket;
 
         public static SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile self = new SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile setRoleArn(String roleArn) {
@@ -185,26 +57,94 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.roleArn;
         }
 
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+    }
+
+    public static class SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile extends TeaModel {
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        @NameInMap("Object")
+        public String object;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Bucket")
+        public String bucket;
+
+        public static SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile self = new SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
     }
 
     public static class SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig extends TeaModel {
-        @NameInMap("VideoFile")
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile videoFile;
-
         @NameInMap("DataFile")
         public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile dataFile;
+
+        @NameInMap("VideoFile")
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile videoFile;
 
         public static SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig self = new SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig setVideoFile(SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile videoFile) {
-            this.videoFile = videoFile;
-            return this;
-        }
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile getVideoFile() {
-            return this.videoFile;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig setDataFile(SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigDataFile dataFile) {
@@ -215,17 +155,118 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.dataFile;
         }
 
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig setVideoFile(SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile videoFile) {
+            this.videoFile = videoFile;
+            return this;
+        }
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfigVideoFile getVideoFile() {
+            return this.videoFile;
+        }
+
+    }
+
+    public static class SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult extends TeaModel {
+        @NameInMap("MessageId")
+        public String messageId;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        public static SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult self = new SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+    }
+
+    public static class SubmitVideoPoseJobResponseBodyVideoPoseJobInput extends TeaModel {
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        @NameInMap("Object")
+        public String object;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Bucket")
+        public String bucket;
+
+        public static SubmitVideoPoseJobResponseBodyVideoPoseJobInput build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoPoseJobResponseBodyVideoPoseJobInput self = new SubmitVideoPoseJobResponseBodyVideoPoseJobInput();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
     }
 
     public static class SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost extends TeaModel {
         @NameInMap("PreloadTime")
         public String preloadTime;
 
-        @NameInMap("CostBandwidth")
-        public String costBandwidth;
-
         @NameInMap("AvgBitrate")
         public String avgBitrate;
+
+        @NameInMap("CostBandwidth")
+        public String costBandwidth;
 
         public static SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost self = new SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost();
@@ -240,14 +281,6 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.preloadTime;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost setCostBandwidth(String costBandwidth) {
-            this.costBandwidth = costBandwidth;
-            return this;
-        }
-        public String getCostBandwidth() {
-            return this.costBandwidth;
-        }
-
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost setAvgBitrate(String avgBitrate) {
             this.avgBitrate = avgBitrate;
             return this;
@@ -256,164 +289,92 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.avgBitrate;
         }
 
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost setCostBandwidth(String costBandwidth) {
+            this.costBandwidth = costBandwidth;
+            return this;
+        }
+        public String getCostBandwidth() {
+            return this.costBandwidth;
+        }
+
     }
 
     public static class SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream extends TeaModel {
-        @NameInMap("Index")
-        public String index;
-
-        @NameInMap("CodecName")
-        public String codecName;
-
-        @NameInMap("CodecLongName")
-        public String codecLongName;
-
-        @NameInMap("Profile")
-        public String profile;
-
-        @NameInMap("CodecTimeBase")
-        public String codecTimeBase;
-
-        @NameInMap("CodecTagString")
-        public String codecTagString;
-
-        @NameInMap("CodecTag")
-        public String codecTag;
-
-        @NameInMap("Width")
-        public String width;
+        @NameInMap("Sar")
+        public String sar;
 
         @NameInMap("Height")
         public String height;
 
-        @NameInMap("HasBFrames")
-        public String hasBFrames;
-
-        @NameInMap("Sar")
-        public String sar;
-
-        @NameInMap("Dar")
-        public String dar;
-
-        @NameInMap("PixFmt")
-        public String pixFmt;
-
-        @NameInMap("Level")
-        public String level;
-
-        @NameInMap("Fps")
-        public String fps;
-
-        @NameInMap("AvgFPS")
-        public String avgFPS;
-
-        @NameInMap("Timebase")
-        public String timebase;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Duration")
-        public String duration;
-
-        @NameInMap("Bitrate")
-        public String bitrate;
-
-        @NameInMap("NumFrames")
-        public String numFrames;
-
-        @NameInMap("Lang")
-        public String lang;
-
-        @NameInMap("Rotate")
-        public String rotate;
+        @NameInMap("CodecTagString")
+        public String codecTagString;
 
         @NameInMap("NetworkCost")
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost networkCost;
 
+        @NameInMap("Width")
+        public String width;
+
+        @NameInMap("Index")
+        public String index;
+
+        @NameInMap("Timebase")
+        public String timebase;
+
+        @NameInMap("AvgFPS")
+        public String avgFPS;
+
+        @NameInMap("PixFmt")
+        public String pixFmt;
+
+        @NameInMap("Lang")
+        public String lang;
+
+        @NameInMap("CodecLongName")
+        public String codecLongName;
+
+        @NameInMap("NumFrames")
+        public String numFrames;
+
+        @NameInMap("Rotate")
+        public String rotate;
+
+        @NameInMap("Bitrate")
+        public String bitrate;
+
+        @NameInMap("HasBFrames")
+        public String hasBFrames;
+
+        @NameInMap("Profile")
+        public String profile;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Dar")
+        public String dar;
+
+        @NameInMap("CodecName")
+        public String codecName;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("Fps")
+        public String fps;
+
+        @NameInMap("CodecTag")
+        public String codecTag;
+
+        @NameInMap("CodecTimeBase")
+        public String codecTimeBase;
+
+        @NameInMap("Level")
+        public String level;
+
         public static SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream self = new SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setIndex(String index) {
-            this.index = index;
-            return this;
-        }
-        public String getIndex() {
-            return this.index;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecName(String codecName) {
-            this.codecName = codecName;
-            return this;
-        }
-        public String getCodecName() {
-            return this.codecName;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecLongName(String codecLongName) {
-            this.codecLongName = codecLongName;
-            return this;
-        }
-        public String getCodecLongName() {
-            return this.codecLongName;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setProfile(String profile) {
-            this.profile = profile;
-            return this;
-        }
-        public String getProfile() {
-            return this.profile;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecTimeBase(String codecTimeBase) {
-            this.codecTimeBase = codecTimeBase;
-            return this;
-        }
-        public String getCodecTimeBase() {
-            return this.codecTimeBase;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecTagString(String codecTagString) {
-            this.codecTagString = codecTagString;
-            return this;
-        }
-        public String getCodecTagString() {
-            return this.codecTagString;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecTag(String codecTag) {
-            this.codecTag = codecTag;
-            return this;
-        }
-        public String getCodecTag() {
-            return this.codecTag;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setWidth(String width) {
-            this.width = width;
-            return this;
-        }
-        public String getWidth() {
-            return this.width;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setHeight(String height) {
-            this.height = height;
-            return this;
-        }
-        public String getHeight() {
-            return this.height;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setHasBFrames(String hasBFrames) {
-            this.hasBFrames = hasBFrames;
-            return this;
-        }
-        public String getHasBFrames() {
-            return this.hasBFrames;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setSar(String sar) {
@@ -424,44 +385,44 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.sar;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setDar(String dar) {
-            this.dar = dar;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setHeight(String height) {
+            this.height = height;
             return this;
         }
-        public String getDar() {
-            return this.dar;
+        public String getHeight() {
+            return this.height;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setPixFmt(String pixFmt) {
-            this.pixFmt = pixFmt;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecTagString(String codecTagString) {
+            this.codecTagString = codecTagString;
             return this;
         }
-        public String getPixFmt() {
-            return this.pixFmt;
+        public String getCodecTagString() {
+            return this.codecTagString;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setLevel(String level) {
-            this.level = level;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setNetworkCost(SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost networkCost) {
+            this.networkCost = networkCost;
             return this;
         }
-        public String getLevel() {
-            return this.level;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost getNetworkCost() {
+            return this.networkCost;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setFps(String fps) {
-            this.fps = fps;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setWidth(String width) {
+            this.width = width;
             return this;
         }
-        public String getFps() {
-            return this.fps;
+        public String getWidth() {
+            return this.width;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setAvgFPS(String avgFPS) {
-            this.avgFPS = avgFPS;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setIndex(String index) {
+            this.index = index;
             return this;
         }
-        public String getAvgFPS() {
-            return this.avgFPS;
+        public String getIndex() {
+            return this.index;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setTimebase(String timebase) {
@@ -472,36 +433,20 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.timebase;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setStartTime(String startTime) {
-            this.startTime = startTime;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setAvgFPS(String avgFPS) {
+            this.avgFPS = avgFPS;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getAvgFPS() {
+            return this.avgFPS;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setDuration(String duration) {
-            this.duration = duration;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setPixFmt(String pixFmt) {
+            this.pixFmt = pixFmt;
             return this;
         }
-        public String getDuration() {
-            return this.duration;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setBitrate(String bitrate) {
-            this.bitrate = bitrate;
-            return this;
-        }
-        public String getBitrate() {
-            return this.bitrate;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setNumFrames(String numFrames) {
-            this.numFrames = numFrames;
-            return this;
-        }
-        public String getNumFrames() {
-            return this.numFrames;
+        public String getPixFmt() {
+            return this.pixFmt;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setLang(String lang) {
@@ -512,6 +457,22 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.lang;
         }
 
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecLongName(String codecLongName) {
+            this.codecLongName = codecLongName;
+            return this;
+        }
+        public String getCodecLongName() {
+            return this.codecLongName;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setNumFrames(String numFrames) {
+            this.numFrames = numFrames;
+            return this;
+        }
+        public String getNumFrames() {
+            return this.numFrames;
+        }
+
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setRotate(String rotate) {
             this.rotate = rotate;
             return this;
@@ -520,12 +481,92 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.rotate;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setNetworkCost(SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost networkCost) {
-            this.networkCost = networkCost;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setBitrate(String bitrate) {
+            this.bitrate = bitrate;
             return this;
         }
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStreamNetworkCost getNetworkCost() {
-            return this.networkCost;
+        public String getBitrate() {
+            return this.bitrate;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setHasBFrames(String hasBFrames) {
+            this.hasBFrames = hasBFrames;
+            return this;
+        }
+        public String getHasBFrames() {
+            return this.hasBFrames;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setProfile(String profile) {
+            this.profile = profile;
+            return this;
+        }
+        public String getProfile() {
+            return this.profile;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setDar(String dar) {
+            this.dar = dar;
+            return this;
+        }
+        public String getDar() {
+            return this.dar;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecName(String codecName) {
+            this.codecName = codecName;
+            return this;
+        }
+        public String getCodecName() {
+            return this.codecName;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setFps(String fps) {
+            this.fps = fps;
+            return this;
+        }
+        public String getFps() {
+            return this.fps;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecTag(String codecTag) {
+            this.codecTag = codecTag;
+            return this;
+        }
+        public String getCodecTag() {
+            return this.codecTag;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setCodecTimeBase(String codecTimeBase) {
+            this.codecTimeBase = codecTimeBase;
+            return this;
+        }
+        public String getCodecTimeBase() {
+            return this.codecTimeBase;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsVideoStreamListVideoStream setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
         }
 
     }
@@ -550,137 +591,57 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
     }
 
     public static class SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream extends TeaModel {
+        @NameInMap("Timebase")
+        public String timebase;
+
         @NameInMap("Index")
         public String index;
-
-        @NameInMap("CodecName")
-        public String codecName;
-
-        @NameInMap("CodecTimeBase")
-        public String codecTimeBase;
-
-        @NameInMap("CodecLongName")
-        public String codecLongName;
-
-        @NameInMap("CodecTagString")
-        public String codecTagString;
-
-        @NameInMap("CodecTag")
-        public String codecTag;
 
         @NameInMap("SampleFmt")
         public String sampleFmt;
 
-        @NameInMap("Samplerate")
-        public String samplerate;
-
-        @NameInMap("Channels")
-        public String channels;
-
         @NameInMap("ChannelLayout")
         public String channelLayout;
-
-        @NameInMap("Timebase")
-        public String timebase;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Duration")
-        public String duration;
-
-        @NameInMap("Bitrate")
-        public String bitrate;
-
-        @NameInMap("NumFrames")
-        public String numFrames;
 
         @NameInMap("Lang")
         public String lang;
 
+        @NameInMap("Samplerate")
+        public String samplerate;
+
+        @NameInMap("CodecLongName")
+        public String codecLongName;
+
+        @NameInMap("Channels")
+        public String channels;
+
+        @NameInMap("NumFrames")
+        public String numFrames;
+
+        @NameInMap("Bitrate")
+        public String bitrate;
+
+        @NameInMap("CodecTagString")
+        public String codecTagString;
+
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("CodecName")
+        public String codecName;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("CodecTag")
+        public String codecTag;
+
+        @NameInMap("CodecTimeBase")
+        public String codecTimeBase;
+
         public static SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream self = new SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setIndex(String index) {
-            this.index = index;
-            return this;
-        }
-        public String getIndex() {
-            return this.index;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecName(String codecName) {
-            this.codecName = codecName;
-            return this;
-        }
-        public String getCodecName() {
-            return this.codecName;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecTimeBase(String codecTimeBase) {
-            this.codecTimeBase = codecTimeBase;
-            return this;
-        }
-        public String getCodecTimeBase() {
-            return this.codecTimeBase;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecLongName(String codecLongName) {
-            this.codecLongName = codecLongName;
-            return this;
-        }
-        public String getCodecLongName() {
-            return this.codecLongName;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecTagString(String codecTagString) {
-            this.codecTagString = codecTagString;
-            return this;
-        }
-        public String getCodecTagString() {
-            return this.codecTagString;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecTag(String codecTag) {
-            this.codecTag = codecTag;
-            return this;
-        }
-        public String getCodecTag() {
-            return this.codecTag;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setSampleFmt(String sampleFmt) {
-            this.sampleFmt = sampleFmt;
-            return this;
-        }
-        public String getSampleFmt() {
-            return this.sampleFmt;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setSamplerate(String samplerate) {
-            this.samplerate = samplerate;
-            return this;
-        }
-        public String getSamplerate() {
-            return this.samplerate;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setChannels(String channels) {
-            this.channels = channels;
-            return this;
-        }
-        public String getChannels() {
-            return this.channels;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setChannelLayout(String channelLayout) {
-            this.channelLayout = channelLayout;
-            return this;
-        }
-        public String getChannelLayout() {
-            return this.channelLayout;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setTimebase(String timebase) {
@@ -691,28 +652,60 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.timebase;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setStartTime(String startTime) {
-            this.startTime = startTime;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setIndex(String index) {
+            this.index = index;
             return this;
         }
-        public String getStartTime() {
-            return this.startTime;
+        public String getIndex() {
+            return this.index;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setDuration(String duration) {
-            this.duration = duration;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setSampleFmt(String sampleFmt) {
+            this.sampleFmt = sampleFmt;
             return this;
         }
-        public String getDuration() {
-            return this.duration;
+        public String getSampleFmt() {
+            return this.sampleFmt;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setBitrate(String bitrate) {
-            this.bitrate = bitrate;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setChannelLayout(String channelLayout) {
+            this.channelLayout = channelLayout;
             return this;
         }
-        public String getBitrate() {
-            return this.bitrate;
+        public String getChannelLayout() {
+            return this.channelLayout;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setLang(String lang) {
+            this.lang = lang;
+            return this;
+        }
+        public String getLang() {
+            return this.lang;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setSamplerate(String samplerate) {
+            this.samplerate = samplerate;
+            return this;
+        }
+        public String getSamplerate() {
+            return this.samplerate;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecLongName(String codecLongName) {
+            this.codecLongName = codecLongName;
+            return this;
+        }
+        public String getCodecLongName() {
+            return this.codecLongName;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setChannels(String channels) {
+            this.channels = channels;
+            return this;
+        }
+        public String getChannels() {
+            return this.channels;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setNumFrames(String numFrames) {
@@ -723,12 +716,60 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.numFrames;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setLang(String lang) {
-            this.lang = lang;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setBitrate(String bitrate) {
+            this.bitrate = bitrate;
             return this;
         }
-        public String getLang() {
-            return this.lang;
+        public String getBitrate() {
+            return this.bitrate;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecTagString(String codecTagString) {
+            this.codecTagString = codecTagString;
+            return this;
+        }
+        public String getCodecTagString() {
+            return this.codecTagString;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecName(String codecName) {
+            this.codecName = codecName;
+            return this;
+        }
+        public String getCodecName() {
+            return this.codecName;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecTag(String codecTag) {
+            this.codecTag = codecTag;
+            return this;
+        }
+        public String getCodecTag() {
+            return this.codecTag;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsAudioStreamListAudioStream setCodecTimeBase(String codecTimeBase) {
+            this.codecTimeBase = codecTimeBase;
+            return this;
+        }
+        public String getCodecTimeBase() {
+            return this.codecTimeBase;
         }
 
     }
@@ -753,87 +794,39 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
     }
 
     public static class SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream extends TeaModel {
-        @NameInMap("Index")
-        public String index;
-
-        @NameInMap("CodecName")
-        public String codecName;
-
-        @NameInMap("CodecTimeBase")
-        public String codecTimeBase;
-
-        @NameInMap("CodecLongName")
-        public String codecLongName;
-
-        @NameInMap("CodecTagString")
-        public String codecTagString;
-
-        @NameInMap("CodecTag")
-        public String codecTag;
-
         @NameInMap("Timebase")
         public String timebase;
+
+        @NameInMap("Index")
+        public String index;
 
         @NameInMap("StartTime")
         public String startTime;
 
-        @NameInMap("Duration")
-        public String duration;
+        @NameInMap("CodecName")
+        public String codecName;
 
         @NameInMap("Lang")
         public String lang;
 
+        @NameInMap("CodecLongName")
+        public String codecLongName;
+
+        @NameInMap("Duration")
+        public String duration;
+
+        @NameInMap("CodecTag")
+        public String codecTag;
+
+        @NameInMap("CodecTimeBase")
+        public String codecTimeBase;
+
+        @NameInMap("CodecTagString")
+        public String codecTagString;
+
         public static SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream self = new SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setIndex(String index) {
-            this.index = index;
-            return this;
-        }
-        public String getIndex() {
-            return this.index;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecName(String codecName) {
-            this.codecName = codecName;
-            return this;
-        }
-        public String getCodecName() {
-            return this.codecName;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTimeBase(String codecTimeBase) {
-            this.codecTimeBase = codecTimeBase;
-            return this;
-        }
-        public String getCodecTimeBase() {
-            return this.codecTimeBase;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecLongName(String codecLongName) {
-            this.codecLongName = codecLongName;
-            return this;
-        }
-        public String getCodecLongName() {
-            return this.codecLongName;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTagString(String codecTagString) {
-            this.codecTagString = codecTagString;
-            return this;
-        }
-        public String getCodecTagString() {
-            return this.codecTagString;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTag(String codecTag) {
-            this.codecTag = codecTag;
-            return this;
-        }
-        public String getCodecTag() {
-            return this.codecTag;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setTimebase(String timebase) {
@@ -844,12 +837,44 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.timebase;
         }
 
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecName(String codecName) {
+            this.codecName = codecName;
+            return this;
+        }
+        public String getCodecName() {
+            return this.codecName;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setLang(String lang) {
+            this.lang = lang;
+            return this;
+        }
+        public String getLang() {
+            return this.lang;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecLongName(String codecLongName) {
+            this.codecLongName = codecLongName;
+            return this;
+        }
+        public String getCodecLongName() {
+            return this.codecLongName;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setDuration(String duration) {
@@ -860,12 +885,28 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.duration;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setLang(String lang) {
-            this.lang = lang;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTag(String codecTag) {
+            this.codecTag = codecTag;
             return this;
         }
-        public String getLang() {
-            return this.lang;
+        public String getCodecTag() {
+            return this.codecTag;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTimeBase(String codecTimeBase) {
+            this.codecTimeBase = codecTimeBase;
+            return this;
+        }
+        public String getCodecTimeBase() {
+            return this.codecTimeBase;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesStreamsSubtitleStreamListSubtitleStream setCodecTagString(String codecTagString) {
+            this.codecTagString = codecTagString;
+            return this;
+        }
+        public String getCodecTagString() {
+            return this.codecTagString;
         }
 
     }
@@ -931,65 +972,33 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
     }
 
     public static class SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat extends TeaModel {
-        @NameInMap("NumStreams")
-        public String numStreams;
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("NumPrograms")
         public String numPrograms;
 
-        @NameInMap("FormatName")
-        public String formatName;
+        @NameInMap("Size")
+        public String size;
+
+        @NameInMap("NumStreams")
+        public String numStreams;
 
         @NameInMap("FormatLongName")
         public String formatLongName;
 
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("Duration")
         public String duration;
-
-        @NameInMap("Size")
-        public String size;
 
         @NameInMap("Bitrate")
         public String bitrate;
 
+        @NameInMap("FormatName")
+        public String formatName;
+
         public static SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat self = new SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setNumStreams(String numStreams) {
-            this.numStreams = numStreams;
-            return this;
-        }
-        public String getNumStreams() {
-            return this.numStreams;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setNumPrograms(String numPrograms) {
-            this.numPrograms = numPrograms;
-            return this;
-        }
-        public String getNumPrograms() {
-            return this.numPrograms;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setFormatName(String formatName) {
-            this.formatName = formatName;
-            return this;
-        }
-        public String getFormatName() {
-            return this.formatName;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setFormatLongName(String formatLongName) {
-            this.formatLongName = formatLongName;
-            return this;
-        }
-        public String getFormatLongName() {
-            return this.formatLongName;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setStartTime(String startTime) {
@@ -1000,12 +1009,12 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setDuration(String duration) {
-            this.duration = duration;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setNumPrograms(String numPrograms) {
+            this.numPrograms = numPrograms;
             return this;
         }
-        public String getDuration() {
-            return this.duration;
+        public String getNumPrograms() {
+            return this.numPrograms;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setSize(String size) {
@@ -1016,12 +1025,44 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.size;
         }
 
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setNumStreams(String numStreams) {
+            this.numStreams = numStreams;
+            return this;
+        }
+        public String getNumStreams() {
+            return this.numStreams;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setFormatLongName(String formatLongName) {
+            this.formatLongName = formatLongName;
+            return this;
+        }
+        public String getFormatLongName() {
+            return this.formatLongName;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setDuration(String duration) {
+            this.duration = duration;
+            return this;
+        }
+        public String getDuration() {
+            return this.duration;
+        }
+
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setBitrate(String bitrate) {
             this.bitrate = bitrate;
             return this;
         }
         public String getBitrate() {
             return this.bitrate;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat setFormatName(String formatName) {
+            this.formatName = formatName;
+            return this;
+        }
+        public String getFormatName() {
+            return this.formatName;
         }
 
     }
@@ -1033,17 +1074,14 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
         @NameInMap("Height")
         public String height;
 
-        @NameInMap("Bitrate")
-        public String bitrate;
-
         @NameInMap("Duration")
         public String duration;
 
         @NameInMap("Fps")
         public String fps;
 
-        @NameInMap("FileSize")
-        public String fileSize;
+        @NameInMap("Bitrate")
+        public String bitrate;
 
         @NameInMap("FileFormat")
         public String fileFormat;
@@ -1053,6 +1091,9 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
 
         @NameInMap("Format")
         public SubmitVideoPoseJobResponseBodyVideoPoseJobPropertiesFormat format;
+
+        @NameInMap("FileSize")
+        public String fileSize;
 
         public static SubmitVideoPoseJobResponseBodyVideoPoseJobProperties build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoPoseJobResponseBodyVideoPoseJobProperties self = new SubmitVideoPoseJobResponseBodyVideoPoseJobProperties();
@@ -1075,14 +1116,6 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.height;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties setBitrate(String bitrate) {
-            this.bitrate = bitrate;
-            return this;
-        }
-        public String getBitrate() {
-            return this.bitrate;
-        }
-
         public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties setDuration(String duration) {
             this.duration = duration;
             return this;
@@ -1099,12 +1132,12 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.fps;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties setFileSize(String fileSize) {
-            this.fileSize = fileSize;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties setBitrate(String bitrate) {
+            this.bitrate = bitrate;
             return this;
         }
-        public String getFileSize() {
-            return this.fileSize;
+        public String getBitrate() {
+            return this.bitrate;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties setFileFormat(String fileFormat) {
@@ -1131,117 +1164,44 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.format;
         }
 
-    }
-
-    public static class SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult extends TeaModel {
-        @NameInMap("MessageId")
-        public String messageId;
-
-        @NameInMap("ErrorMessage")
-        public String errorMessage;
-
-        @NameInMap("ErrorCode")
-        public String errorCode;
-
-        public static SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult build(java.util.Map<String, ?> map) throws Exception {
-            SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult self = new SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult setMessageId(String messageId) {
-            this.messageId = messageId;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties setFileSize(String fileSize) {
+            this.fileSize = fileSize;
             return this;
         }
-        public String getMessageId() {
-            return this.messageId;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
+        public String getFileSize() {
+            return this.fileSize;
         }
 
     }
 
     public static class SubmitVideoPoseJobResponseBodyVideoPoseJob extends TeaModel {
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("PipelineId")
-        public String pipelineId;
-
-        @NameInMap("UserData")
-        public String userData;
+        @NameInMap("OutputConfig")
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig outputConfig;
 
         @NameInMap("State")
         public String state;
 
-        @NameInMap("Input")
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput input;
+        @NameInMap("JobId")
+        public String jobId;
 
-        @NameInMap("OutputConfig")
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig outputConfig;
+        @NameInMap("UserData")
+        public String userData;
 
-        @NameInMap("Properties")
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties properties;
+        @NameInMap("PipelineId")
+        public String pipelineId;
 
         @NameInMap("MNSMessageResult")
         public SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult MNSMessageResult;
 
+        @NameInMap("Input")
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput input;
+
+        @NameInMap("Properties")
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties properties;
+
         public static SubmitVideoPoseJobResponseBodyVideoPoseJob build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoPoseJobResponseBodyVideoPoseJob self = new SubmitVideoPoseJobResponseBodyVideoPoseJob();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJob setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJob setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-        public String getPipelineId() {
-            return this.pipelineId;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJob setUserData(String userData) {
-            this.userData = userData;
-            return this;
-        }
-        public String getUserData() {
-            return this.userData;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJob setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public SubmitVideoPoseJobResponseBodyVideoPoseJob setInput(SubmitVideoPoseJobResponseBodyVideoPoseJobInput input) {
-            this.input = input;
-            return this;
-        }
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput getInput() {
-            return this.input;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJob setOutputConfig(SubmitVideoPoseJobResponseBodyVideoPoseJobOutputConfig outputConfig) {
@@ -1252,12 +1212,36 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
             return this.outputConfig;
         }
 
-        public SubmitVideoPoseJobResponseBodyVideoPoseJob setProperties(SubmitVideoPoseJobResponseBodyVideoPoseJobProperties properties) {
-            this.properties = properties;
+        public SubmitVideoPoseJobResponseBodyVideoPoseJob setState(String state) {
+            this.state = state;
             return this;
         }
-        public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties getProperties() {
-            return this.properties;
+        public String getState() {
+            return this.state;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJob setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJob setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJob setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
+            return this;
+        }
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
         public SubmitVideoPoseJobResponseBodyVideoPoseJob setMNSMessageResult(SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult MNSMessageResult) {
@@ -1266,6 +1250,22 @@ public class SubmitVideoPoseJobResponseBody extends TeaModel {
         }
         public SubmitVideoPoseJobResponseBodyVideoPoseJobMNSMessageResult getMNSMessageResult() {
             return this.MNSMessageResult;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJob setInput(SubmitVideoPoseJobResponseBodyVideoPoseJobInput input) {
+            this.input = input;
+            return this;
+        }
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobInput getInput() {
+            return this.input;
+        }
+
+        public SubmitVideoPoseJobResponseBodyVideoPoseJob setProperties(SubmitVideoPoseJobResponseBodyVideoPoseJobProperties properties) {
+            this.properties = properties;
+            return this;
+        }
+        public SubmitVideoPoseJobResponseBodyVideoPoseJobProperties getProperties() {
+            return this.properties;
         }
 
     }

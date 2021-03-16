@@ -4,18 +4,26 @@ package com.aliyun.mts20140618.models;
 import com.aliyun.tea.*;
 
 public class DecryptKeyResponseBody extends TeaModel {
+    @NameInMap("Rand")
+    public String rand;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Plaintext")
     public String plaintext;
 
-    @NameInMap("Rand")
-    public String rand;
-
     public static DecryptKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DecryptKeyResponseBody self = new DecryptKeyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DecryptKeyResponseBody setRand(String rand) {
+        this.rand = rand;
+        return this;
+    }
+    public String getRand() {
+        return this.rand;
     }
 
     public DecryptKeyResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class DecryptKeyResponseBody extends TeaModel {
     }
     public String getPlaintext() {
         return this.plaintext;
-    }
-
-    public DecryptKeyResponseBody setRand(String rand) {
-        this.rand = rand;
-        return this;
-    }
-    public String getRand() {
-        return this.rand;
     }
 
 }

@@ -31,58 +31,6 @@ public class SubmitImageQualityJobResponseBody extends TeaModel {
         return this.imageQualityJob;
     }
 
-    public static class SubmitImageQualityJobResponseBodyImageQualityJobInput extends TeaModel {
-        @NameInMap("Bucket")
-        public String bucket;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("Url")
-        public String url;
-
-        public static SubmitImageQualityJobResponseBodyImageQualityJobInput build(java.util.Map<String, ?> map) throws Exception {
-            SubmitImageQualityJobResponseBodyImageQualityJobInput self = new SubmitImageQualityJobResponseBodyImageQualityJobInput();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitImageQualityJobResponseBodyImageQualityJobInput setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        public SubmitImageQualityJobResponseBodyImageQualityJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public SubmitImageQualityJobResponseBodyImageQualityJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public SubmitImageQualityJobResponseBodyImageQualityJobInput setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
-    }
-
     public static class SubmitImageQualityJobResponseBodyImageQualityJobResult extends TeaModel {
         @NameInMap("Code")
         public String code;
@@ -124,7 +72,68 @@ public class SubmitImageQualityJobResponseBody extends TeaModel {
 
     }
 
+    public static class SubmitImageQualityJobResponseBodyImageQualityJobInput extends TeaModel {
+        @NameInMap("Url")
+        public String url;
+
+        @NameInMap("Object")
+        public String object;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Bucket")
+        public String bucket;
+
+        public static SubmitImageQualityJobResponseBodyImageQualityJobInput build(java.util.Map<String, ?> map) throws Exception {
+            SubmitImageQualityJobResponseBodyImageQualityJobInput self = new SubmitImageQualityJobResponseBodyImageQualityJobInput();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitImageQualityJobResponseBodyImageQualityJobInput setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+        public SubmitImageQualityJobResponseBodyImageQualityJobInput setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+        public SubmitImageQualityJobResponseBodyImageQualityJobInput setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public SubmitImageQualityJobResponseBodyImageQualityJobInput setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
+        }
+
+    }
+
     public static class SubmitImageQualityJobResponseBodyImageQualityJob extends TeaModel {
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("Result")
+        public SubmitImageQualityJobResponseBodyImageQualityJobResult result;
+
+        @NameInMap("State")
+        public String state;
+
         @NameInMap("JobId")
         public String jobId;
 
@@ -134,21 +143,36 @@ public class SubmitImageQualityJobResponseBody extends TeaModel {
         @NameInMap("PipelineId")
         public String pipelineId;
 
-        @NameInMap("State")
-        public String state;
-
-        @NameInMap("CreationTime")
-        public String creationTime;
-
         @NameInMap("Input")
         public SubmitImageQualityJobResponseBodyImageQualityJobInput input;
-
-        @NameInMap("Result")
-        public SubmitImageQualityJobResponseBodyImageQualityJobResult result;
 
         public static SubmitImageQualityJobResponseBodyImageQualityJob build(java.util.Map<String, ?> map) throws Exception {
             SubmitImageQualityJobResponseBodyImageQualityJob self = new SubmitImageQualityJobResponseBodyImageQualityJob();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitImageQualityJobResponseBodyImageQualityJob setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public SubmitImageQualityJobResponseBodyImageQualityJob setResult(SubmitImageQualityJobResponseBodyImageQualityJobResult result) {
+            this.result = result;
+            return this;
+        }
+        public SubmitImageQualityJobResponseBodyImageQualityJobResult getResult() {
+            return this.result;
+        }
+
+        public SubmitImageQualityJobResponseBodyImageQualityJob setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
         public SubmitImageQualityJobResponseBodyImageQualityJob setJobId(String jobId) {
@@ -175,36 +199,12 @@ public class SubmitImageQualityJobResponseBody extends TeaModel {
             return this.pipelineId;
         }
 
-        public SubmitImageQualityJobResponseBodyImageQualityJob setState(String state) {
-            this.state = state;
-            return this;
-        }
-        public String getState() {
-            return this.state;
-        }
-
-        public SubmitImageQualityJobResponseBodyImageQualityJob setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
-            return this;
-        }
-        public String getCreationTime() {
-            return this.creationTime;
-        }
-
         public SubmitImageQualityJobResponseBodyImageQualityJob setInput(SubmitImageQualityJobResponseBodyImageQualityJobInput input) {
             this.input = input;
             return this;
         }
         public SubmitImageQualityJobResponseBodyImageQualityJobInput getInput() {
             return this.input;
-        }
-
-        public SubmitImageQualityJobResponseBodyImageQualityJob setResult(SubmitImageQualityJobResponseBodyImageQualityJobResult result) {
-            this.result = result;
-            return this;
-        }
-        public SubmitImageQualityJobResponseBodyImageQualityJobResult getResult() {
-            return this.result;
         }
 
     }

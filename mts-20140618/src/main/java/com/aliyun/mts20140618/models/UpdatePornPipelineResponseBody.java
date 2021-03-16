@@ -62,40 +62,24 @@ public class UpdatePornPipelineResponseBody extends TeaModel {
     }
 
     public static class UpdatePornPipelineResponseBodyPipeline extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("State")
         public String state;
-
-        @NameInMap("Priority")
-        public Integer priority;
 
         @NameInMap("NotifyConfig")
         public UpdatePornPipelineResponseBodyPipelineNotifyConfig notifyConfig;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
+
         public static UpdatePornPipelineResponseBodyPipeline build(java.util.Map<String, ?> map) throws Exception {
             UpdatePornPipelineResponseBodyPipeline self = new UpdatePornPipelineResponseBodyPipeline();
             return TeaModel.build(map, self);
-        }
-
-        public UpdatePornPipelineResponseBodyPipeline setId(String id) {
-            this.id = id;
-            return this;
-        }
-        public String getId() {
-            return this.id;
-        }
-
-        public UpdatePornPipelineResponseBodyPipeline setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public UpdatePornPipelineResponseBodyPipeline setState(String state) {
@@ -106,6 +90,14 @@ public class UpdatePornPipelineResponseBody extends TeaModel {
             return this.state;
         }
 
+        public UpdatePornPipelineResponseBodyPipeline setNotifyConfig(UpdatePornPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
+            this.notifyConfig = notifyConfig;
+            return this;
+        }
+        public UpdatePornPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
+            return this.notifyConfig;
+        }
+
         public UpdatePornPipelineResponseBodyPipeline setPriority(Integer priority) {
             this.priority = priority;
             return this;
@@ -114,12 +106,20 @@ public class UpdatePornPipelineResponseBody extends TeaModel {
             return this.priority;
         }
 
-        public UpdatePornPipelineResponseBodyPipeline setNotifyConfig(UpdatePornPipelineResponseBodyPipelineNotifyConfig notifyConfig) {
-            this.notifyConfig = notifyConfig;
+        public UpdatePornPipelineResponseBodyPipeline setName(String name) {
+            this.name = name;
             return this;
         }
-        public UpdatePornPipelineResponseBodyPipelineNotifyConfig getNotifyConfig() {
-            return this.notifyConfig;
+        public String getName() {
+            return this.name;
+        }
+
+        public UpdatePornPipelineResponseBodyPipeline setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

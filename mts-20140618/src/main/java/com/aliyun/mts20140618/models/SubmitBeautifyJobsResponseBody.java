@@ -31,90 +31,30 @@ public class SubmitBeautifyJobsResponseBody extends TeaModel {
         return this.jobList;
     }
 
-    public static class SubmitBeautifyJobsResponseBodyJobListJobInput extends TeaModel {
-        @NameInMap("Bucket")
-        public String bucket;
-
-        @NameInMap("Location")
-        public String location;
-
-        @NameInMap("Object")
-        public String object;
-
-        @NameInMap("RoleArn")
-        public String roleArn;
-
-        public static SubmitBeautifyJobsResponseBodyJobListJobInput build(java.util.Map<String, ?> map) throws Exception {
-            SubmitBeautifyJobsResponseBodyJobListJobInput self = new SubmitBeautifyJobsResponseBodyJobListJobInput();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitBeautifyJobsResponseBodyJobListJobInput setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        public SubmitBeautifyJobsResponseBodyJobListJobInput setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
-        }
-
-        public SubmitBeautifyJobsResponseBodyJobListJobInput setObject(String object) {
-            this.object = object;
-            return this;
-        }
-        public String getObject() {
-            return this.object;
-        }
-
-        public SubmitBeautifyJobsResponseBodyJobListJobInput setRoleArn(String roleArn) {
-            this.roleArn = roleArn;
-            return this;
-        }
-        public String getRoleArn() {
-            return this.roleArn;
-        }
-
-    }
-
     public static class SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile extends TeaModel {
-        @NameInMap("Bucket")
-        public String bucket;
-
-        @NameInMap("Location")
-        public String location;
+        @NameInMap("RoleArn")
+        public String roleArn;
 
         @NameInMap("Object")
         public String object;
 
-        @NameInMap("RoleArn")
-        public String roleArn;
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Bucket")
+        public String bucket;
 
         public static SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile build(java.util.Map<String, ?> map) throws Exception {
             SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile self = new SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile();
             return TeaModel.build(map, self);
         }
 
-        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile setBucket(String bucket) {
-            this.bucket = bucket;
+        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
             return this;
         }
-        public String getBucket() {
-            return this.bucket;
-        }
-
-        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile setLocation(String location) {
-            this.location = location;
-            return this;
-        }
-        public String getLocation() {
-            return this.location;
+        public String getRoleArn() {
+            return this.roleArn;
         }
 
         public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile setObject(String object) {
@@ -125,12 +65,20 @@ public class SubmitBeautifyJobsResponseBody extends TeaModel {
             return this.object;
         }
 
-        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile setRoleArn(String roleArn) {
-            this.roleArn = roleArn;
+        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile setLocation(String location) {
+            this.location = location;
             return this;
         }
-        public String getRoleArn() {
-            return this.roleArn;
+        public String getLocation() {
+            return this.location;
+        }
+
+        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
         }
 
     }
@@ -150,6 +98,58 @@ public class SubmitBeautifyJobsResponseBody extends TeaModel {
         }
         public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfigOutputFile getOutputFile() {
             return this.outputFile;
+        }
+
+    }
+
+    public static class SubmitBeautifyJobsResponseBodyJobListJobInput extends TeaModel {
+        @NameInMap("RoleArn")
+        public String roleArn;
+
+        @NameInMap("Object")
+        public String object;
+
+        @NameInMap("Location")
+        public String location;
+
+        @NameInMap("Bucket")
+        public String bucket;
+
+        public static SubmitBeautifyJobsResponseBodyJobListJobInput build(java.util.Map<String, ?> map) throws Exception {
+            SubmitBeautifyJobsResponseBodyJobListJobInput self = new SubmitBeautifyJobsResponseBodyJobListJobInput();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitBeautifyJobsResponseBodyJobListJobInput setRoleArn(String roleArn) {
+            this.roleArn = roleArn;
+            return this;
+        }
+        public String getRoleArn() {
+            return this.roleArn;
+        }
+
+        public SubmitBeautifyJobsResponseBodyJobListJobInput setObject(String object) {
+            this.object = object;
+            return this;
+        }
+        public String getObject() {
+            return this.object;
+        }
+
+        public SubmitBeautifyJobsResponseBodyJobListJobInput setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public SubmitBeautifyJobsResponseBodyJobListJobInput setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
         }
 
     }
@@ -196,17 +196,17 @@ public class SubmitBeautifyJobsResponseBody extends TeaModel {
     }
 
     public static class SubmitBeautifyJobsResponseBodyJobListJob extends TeaModel {
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("CreationTime")
+        public String creationTime;
 
-        @NameInMap("UserData")
-        public String userData;
-
-        @NameInMap("PipelineId")
-        public String pipelineId;
+        @NameInMap("BeautifyConfig")
+        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfig beautifyConfig;
 
         @NameInMap("State")
         public String state;
+
+        @NameInMap("UserData")
+        public String userData;
 
         @NameInMap("Code")
         public String code;
@@ -214,45 +214,37 @@ public class SubmitBeautifyJobsResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
-        @NameInMap("CreationTime")
-        public String creationTime;
+        @NameInMap("PipelineId")
+        public String pipelineId;
 
         @NameInMap("Input")
         public SubmitBeautifyJobsResponseBodyJobListJobInput input;
 
-        @NameInMap("BeautifyConfig")
-        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfig beautifyConfig;
-
         @NameInMap("MNSMessageResult")
         public SubmitBeautifyJobsResponseBodyJobListJobMNSMessageResult MNSMessageResult;
+
+        @NameInMap("Id")
+        public String id;
 
         public static SubmitBeautifyJobsResponseBodyJobListJob build(java.util.Map<String, ?> map) throws Exception {
             SubmitBeautifyJobsResponseBodyJobListJob self = new SubmitBeautifyJobsResponseBodyJobListJob();
             return TeaModel.build(map, self);
         }
 
-        public SubmitBeautifyJobsResponseBodyJobListJob setId(String id) {
-            this.id = id;
+        public SubmitBeautifyJobsResponseBodyJobListJob setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
-        public SubmitBeautifyJobsResponseBodyJobListJob setUserData(String userData) {
-            this.userData = userData;
+        public SubmitBeautifyJobsResponseBodyJobListJob setBeautifyConfig(SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfig beautifyConfig) {
+            this.beautifyConfig = beautifyConfig;
             return this;
         }
-        public String getUserData() {
-            return this.userData;
-        }
-
-        public SubmitBeautifyJobsResponseBodyJobListJob setPipelineId(String pipelineId) {
-            this.pipelineId = pipelineId;
-            return this;
-        }
-        public String getPipelineId() {
-            return this.pipelineId;
+        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfig getBeautifyConfig() {
+            return this.beautifyConfig;
         }
 
         public SubmitBeautifyJobsResponseBodyJobListJob setState(String state) {
@@ -261,6 +253,14 @@ public class SubmitBeautifyJobsResponseBody extends TeaModel {
         }
         public String getState() {
             return this.state;
+        }
+
+        public SubmitBeautifyJobsResponseBodyJobListJob setUserData(String userData) {
+            this.userData = userData;
+            return this;
+        }
+        public String getUserData() {
+            return this.userData;
         }
 
         public SubmitBeautifyJobsResponseBodyJobListJob setCode(String code) {
@@ -279,12 +279,12 @@ public class SubmitBeautifyJobsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public SubmitBeautifyJobsResponseBodyJobListJob setCreationTime(String creationTime) {
-            this.creationTime = creationTime;
+        public SubmitBeautifyJobsResponseBodyJobListJob setPipelineId(String pipelineId) {
+            this.pipelineId = pipelineId;
             return this;
         }
-        public String getCreationTime() {
-            return this.creationTime;
+        public String getPipelineId() {
+            return this.pipelineId;
         }
 
         public SubmitBeautifyJobsResponseBodyJobListJob setInput(SubmitBeautifyJobsResponseBodyJobListJobInput input) {
@@ -295,20 +295,20 @@ public class SubmitBeautifyJobsResponseBody extends TeaModel {
             return this.input;
         }
 
-        public SubmitBeautifyJobsResponseBodyJobListJob setBeautifyConfig(SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfig beautifyConfig) {
-            this.beautifyConfig = beautifyConfig;
-            return this;
-        }
-        public SubmitBeautifyJobsResponseBodyJobListJobBeautifyConfig getBeautifyConfig() {
-            return this.beautifyConfig;
-        }
-
         public SubmitBeautifyJobsResponseBodyJobListJob setMNSMessageResult(SubmitBeautifyJobsResponseBodyJobListJobMNSMessageResult MNSMessageResult) {
             this.MNSMessageResult = MNSMessageResult;
             return this;
         }
         public SubmitBeautifyJobsResponseBodyJobListJobMNSMessageResult getMNSMessageResult() {
             return this.MNSMessageResult;
+        }
+
+        public SubmitBeautifyJobsResponseBodyJobListJob setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }
