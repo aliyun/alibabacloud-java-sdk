@@ -4,7 +4,6 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentRequest extends TeaModel {
-    // js sdk中自动生成的鉴权token
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -18,10 +17,10 @@ public class CreateAgentRequest extends TeaModel {
     public String displayName;
 
     @NameInMap("SkillGroupId")
-    public java.util.List<Long> skillGroupId;
+    public java.util.List<Integer> skillGroupId;
 
     @NameInMap("SkillGroupIdList")
-    public java.util.List<Long> skillGroupIdList;
+    public java.util.List<Integer> skillGroupIdList;
 
     public static CreateAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAgentRequest self = new CreateAgentRequest();
@@ -60,19 +59,19 @@ public class CreateAgentRequest extends TeaModel {
         return this.displayName;
     }
 
-    public CreateAgentRequest setSkillGroupId(java.util.List<Long> skillGroupId) {
+    public CreateAgentRequest setSkillGroupId(java.util.List<Integer> skillGroupId) {
         this.skillGroupId = skillGroupId;
         return this;
     }
-    public java.util.List<Long> getSkillGroupId() {
+    public java.util.List<Integer> getSkillGroupId() {
         return this.skillGroupId;
     }
 
-    public CreateAgentRequest setSkillGroupIdList(java.util.List<Long> skillGroupIdList) {
+    public CreateAgentRequest setSkillGroupIdList(java.util.List<Integer> skillGroupIdList) {
         this.skillGroupIdList = skillGroupIdList;
         return this;
     }
-    public java.util.List<Long> getSkillGroupIdList() {
+    public java.util.List<Integer> getSkillGroupIdList() {
         return this.skillGroupIdList;
     }
 
