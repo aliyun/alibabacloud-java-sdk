@@ -4,53 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ImitatePhotoStyleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ImitatePhotoStyleResponseData data;
+    public ImitatePhotoStyleResponseBody body;
 
     public static ImitatePhotoStyleResponse build(java.util.Map<String, ?> map) throws Exception {
         ImitatePhotoStyleResponse self = new ImitatePhotoStyleResponse();
         return TeaModel.build(map, self);
     }
 
-    public ImitatePhotoStyleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ImitatePhotoStyleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ImitatePhotoStyleResponse setData(ImitatePhotoStyleResponseData data) {
-        this.data = data;
+    public ImitatePhotoStyleResponse setBody(ImitatePhotoStyleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ImitatePhotoStyleResponseData getData() {
-        return this.data;
-    }
-
-    public static class ImitatePhotoStyleResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static ImitatePhotoStyleResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ImitatePhotoStyleResponseData self = new ImitatePhotoStyleResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ImitatePhotoStyleResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public ImitatePhotoStyleResponseBody getBody() {
+        return this.body;
     }
 
 }

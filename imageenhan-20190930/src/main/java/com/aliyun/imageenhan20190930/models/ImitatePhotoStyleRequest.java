@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ImitatePhotoStyleRequest extends TeaModel {
     @NameInMap("StyleUrl")
-    @Validation(required = true)
     public String styleUrl;
 
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static ImitatePhotoStyleRequest build(java.util.Map<String, ?> map) throws Exception {

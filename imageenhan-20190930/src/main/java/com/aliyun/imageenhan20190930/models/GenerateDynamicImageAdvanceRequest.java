@@ -9,7 +9,6 @@ public class GenerateDynamicImageAdvanceRequest extends TeaModel {
     public java.io.InputStream urlObject;
 
     @NameInMap("Operation")
-    @Validation(required = true)
     public String operation;
 
     public static GenerateDynamicImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

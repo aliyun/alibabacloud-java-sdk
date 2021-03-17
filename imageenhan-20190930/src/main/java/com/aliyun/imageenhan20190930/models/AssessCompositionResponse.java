@@ -4,53 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class AssessCompositionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public AssessCompositionResponseData data;
+    public AssessCompositionResponseBody body;
 
     public static AssessCompositionResponse build(java.util.Map<String, ?> map) throws Exception {
         AssessCompositionResponse self = new AssessCompositionResponse();
         return TeaModel.build(map, self);
     }
 
-    public AssessCompositionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AssessCompositionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AssessCompositionResponse setData(AssessCompositionResponseData data) {
-        this.data = data;
+    public AssessCompositionResponse setBody(AssessCompositionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public AssessCompositionResponseData getData() {
-        return this.data;
-    }
-
-    public static class AssessCompositionResponseData extends TeaModel {
-        @NameInMap("Score")
-        @Validation(required = true)
-        public Float score;
-
-        public static AssessCompositionResponseData build(java.util.Map<String, ?> map) throws Exception {
-            AssessCompositionResponseData self = new AssessCompositionResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public AssessCompositionResponseData setScore(Float score) {
-            this.score = score;
-            return this;
-        }
-        public Float getScore() {
-            return this.score;
-        }
-
+    public AssessCompositionResponseBody getBody() {
+        return this.body;
     }
 
 }

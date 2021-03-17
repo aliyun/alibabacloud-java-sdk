@@ -4,53 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ColorizeImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ColorizeImageResponseData data;
+    public ColorizeImageResponseBody body;
 
     public static ColorizeImageResponse build(java.util.Map<String, ?> map) throws Exception {
         ColorizeImageResponse self = new ColorizeImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public ColorizeImageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ColorizeImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ColorizeImageResponse setData(ColorizeImageResponseData data) {
-        this.data = data;
+    public ColorizeImageResponse setBody(ColorizeImageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ColorizeImageResponseData getData() {
-        return this.data;
-    }
-
-    public static class ColorizeImageResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static ColorizeImageResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ColorizeImageResponseData self = new ColorizeImageResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ColorizeImageResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public ColorizeImageResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -9,7 +9,6 @@ public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
     public java.io.InputStream originImageURLObject;
 
     @NameInMap("FunctionType")
-    @Validation(required = true)
     public String functionType;
 
     @NameInMap("LogoURL")
@@ -22,7 +21,6 @@ public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
     public String outputFileType;
 
     @NameInMap("QualityFactor")
-    @Validation(required = true)
     public Integer qualityFactor;
 
     public static ImageBlindPicWatermarkAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

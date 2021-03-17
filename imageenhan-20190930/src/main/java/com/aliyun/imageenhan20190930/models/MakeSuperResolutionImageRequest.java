@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class MakeSuperResolutionImageRequest extends TeaModel {
     @NameInMap("Url")
-    @Validation(required = true)
     public String url;
+
+    @NameInMap("Mode")
+    public String mode;
+
+    @NameInMap("UpscaleFactor")
+    public Long upscaleFactor;
 
     public static MakeSuperResolutionImageRequest build(java.util.Map<String, ?> map) throws Exception {
         MakeSuperResolutionImageRequest self = new MakeSuperResolutionImageRequest();
@@ -19,6 +24,22 @@ public class MakeSuperResolutionImageRequest extends TeaModel {
     }
     public String getUrl() {
         return this.url;
+    }
+
+    public MakeSuperResolutionImageRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
+    public MakeSuperResolutionImageRequest setUpscaleFactor(Long upscaleFactor) {
+        this.upscaleFactor = upscaleFactor;
+        return this;
+    }
+    public Long getUpscaleFactor() {
+        return this.upscaleFactor;
     }
 
 }

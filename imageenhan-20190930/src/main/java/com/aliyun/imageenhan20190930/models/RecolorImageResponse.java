@@ -4,53 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RecolorImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public RecolorImageResponseData data;
+    public RecolorImageResponseBody body;
 
     public static RecolorImageResponse build(java.util.Map<String, ?> map) throws Exception {
         RecolorImageResponse self = new RecolorImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public RecolorImageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RecolorImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RecolorImageResponse setData(RecolorImageResponseData data) {
-        this.data = data;
+    public RecolorImageResponse setBody(RecolorImageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public RecolorImageResponseData getData() {
-        return this.data;
-    }
-
-    public static class RecolorImageResponseData extends TeaModel {
-        @NameInMap("ImageList")
-        @Validation(required = true)
-        public java.util.List<String> imageList;
-
-        public static RecolorImageResponseData build(java.util.Map<String, ?> map) throws Exception {
-            RecolorImageResponseData self = new RecolorImageResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public RecolorImageResponseData setImageList(java.util.List<String> imageList) {
-            this.imageList = imageList;
-            return this;
-        }
-        public java.util.List<String> getImageList() {
-            return this.imageList;
-        }
-
+    public RecolorImageResponseBody getBody() {
+        return this.body;
     }
 
 }

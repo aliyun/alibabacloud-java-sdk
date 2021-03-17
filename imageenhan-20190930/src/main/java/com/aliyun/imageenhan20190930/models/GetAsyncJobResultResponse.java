@@ -4,101 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class GetAsyncJobResultResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public GetAsyncJobResultResponseData data;
+    public GetAsyncJobResultResponseBody body;
 
     public static GetAsyncJobResultResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAsyncJobResultResponse self = new GetAsyncJobResultResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAsyncJobResultResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetAsyncJobResultResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetAsyncJobResultResponse setData(GetAsyncJobResultResponseData data) {
-        this.data = data;
+    public GetAsyncJobResultResponse setBody(GetAsyncJobResultResponseBody body) {
+        this.body = body;
         return this;
     }
-    public GetAsyncJobResultResponseData getData() {
-        return this.data;
-    }
-
-    public static class GetAsyncJobResultResponseData extends TeaModel {
-        @NameInMap("JobId")
-        @Validation(required = true)
-        public String jobId;
-
-        @NameInMap("Status")
-        @Validation(required = true)
-        public String status;
-
-        @NameInMap("Result")
-        @Validation(required = true)
-        public String result;
-
-        @NameInMap("ErrorCode")
-        @Validation(required = true)
-        public String errorCode;
-
-        @NameInMap("ErrorMessage")
-        @Validation(required = true)
-        public String errorMessage;
-
-        public static GetAsyncJobResultResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GetAsyncJobResultResponseData self = new GetAsyncJobResultResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAsyncJobResultResponseData setJobId(String jobId) {
-            this.jobId = jobId;
-            return this;
-        }
-        public String getJobId() {
-            return this.jobId;
-        }
-
-        public GetAsyncJobResultResponseData setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public GetAsyncJobResultResponseData setResult(String result) {
-            this.result = result;
-            return this;
-        }
-        public String getResult() {
-            return this.result;
-        }
-
-        public GetAsyncJobResultResponseData setErrorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-        public String getErrorCode() {
-            return this.errorCode;
-        }
-
-        public GetAsyncJobResultResponseData setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
+    public GetAsyncJobResultResponseBody getBody() {
+        return this.body;
     }
 
 }

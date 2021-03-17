@@ -4,53 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class EnhanceImageColorResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public EnhanceImageColorResponseData data;
+    public EnhanceImageColorResponseBody body;
 
     public static EnhanceImageColorResponse build(java.util.Map<String, ?> map) throws Exception {
         EnhanceImageColorResponse self = new EnhanceImageColorResponse();
         return TeaModel.build(map, self);
     }
 
-    public EnhanceImageColorResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public EnhanceImageColorResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public EnhanceImageColorResponse setData(EnhanceImageColorResponseData data) {
-        this.data = data;
+    public EnhanceImageColorResponse setBody(EnhanceImageColorResponseBody body) {
+        this.body = body;
         return this;
     }
-    public EnhanceImageColorResponseData getData() {
-        return this.data;
-    }
-
-    public static class EnhanceImageColorResponseData extends TeaModel {
-        @NameInMap("ImageURL")
-        @Validation(required = true)
-        public String imageURL;
-
-        public static EnhanceImageColorResponseData build(java.util.Map<String, ?> map) throws Exception {
-            EnhanceImageColorResponseData self = new EnhanceImageColorResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public EnhanceImageColorResponseData setImageURL(String imageURL) {
-            this.imageURL = imageURL;
-            return this;
-        }
-        public String getImageURL() {
-            return this.imageURL;
-        }
-
+    public EnhanceImageColorResponseBody getBody() {
+        return this.body;
     }
 
 }

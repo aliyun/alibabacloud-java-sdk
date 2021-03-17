@@ -4,53 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RecolorHDImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public RecolorHDImageResponseData data;
+    public RecolorHDImageResponseBody body;
 
     public static RecolorHDImageResponse build(java.util.Map<String, ?> map) throws Exception {
         RecolorHDImageResponse self = new RecolorHDImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public RecolorHDImageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RecolorHDImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RecolorHDImageResponse setData(RecolorHDImageResponseData data) {
-        this.data = data;
+    public RecolorHDImageResponse setBody(RecolorHDImageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public RecolorHDImageResponseData getData() {
-        return this.data;
-    }
-
-    public static class RecolorHDImageResponseData extends TeaModel {
-        @NameInMap("ImageList")
-        @Validation(required = true)
-        public java.util.List<String> imageList;
-
-        public static RecolorHDImageResponseData build(java.util.Map<String, ?> map) throws Exception {
-            RecolorHDImageResponseData self = new RecolorHDImageResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public RecolorHDImageResponseData setImageList(java.util.List<String> imageList) {
-            this.imageList = imageList;
-            return this;
-        }
-        public java.util.List<String> getImageList() {
-            return this.imageList;
-        }
-
+    public RecolorHDImageResponseBody getBody() {
+        return this.body;
     }
 
 }

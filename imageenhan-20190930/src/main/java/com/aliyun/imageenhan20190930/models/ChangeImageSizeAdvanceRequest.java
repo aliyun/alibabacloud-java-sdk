@@ -9,11 +9,9 @@ public class ChangeImageSizeAdvanceRequest extends TeaModel {
     public java.io.InputStream urlObject;
 
     @NameInMap("Width")
-    @Validation(required = true)
     public Integer width;
 
     @NameInMap("Height")
-    @Validation(required = true)
     public Integer height;
 
     public static ChangeImageSizeAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

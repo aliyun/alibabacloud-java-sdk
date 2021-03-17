@@ -9,7 +9,6 @@ public class ErasePersonAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("UserMask")
-    @Validation(required = true)
     public String userMask;
 
     public static ErasePersonAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {

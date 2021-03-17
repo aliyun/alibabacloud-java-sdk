@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class RecolorHDImageRequest extends TeaModel {
     @NameInMap("Url")
-    @Validation(required = true)
     public String url;
 
     @NameInMap("Mode")
@@ -17,12 +16,14 @@ public class RecolorHDImageRequest extends TeaModel {
     @NameInMap("ColorCount")
     public Integer colorCount;
 
+    @NameInMap("Degree")
+    public String degree;
+
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("ColorTemplate")
     public java.util.List<RecolorHDImageRequestColorTemplate> colorTemplate;
-
-    @NameInMap("Degree")
-    @Validation(required = true)
-    public String degree;
 
     public static RecolorHDImageRequest build(java.util.Map<String, ?> map) throws Exception {
         RecolorHDImageRequest self = new RecolorHDImageRequest();
@@ -61,20 +62,28 @@ public class RecolorHDImageRequest extends TeaModel {
         return this.colorCount;
     }
 
-    public RecolorHDImageRequest setColorTemplate(java.util.List<RecolorHDImageRequestColorTemplate> colorTemplate) {
-        this.colorTemplate = colorTemplate;
-        return this;
-    }
-    public java.util.List<RecolorHDImageRequestColorTemplate> getColorTemplate() {
-        return this.colorTemplate;
-    }
-
     public RecolorHDImageRequest setDegree(String degree) {
         this.degree = degree;
         return this;
     }
     public String getDegree() {
         return this.degree;
+    }
+
+    public RecolorHDImageRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
+    }
+
+    public RecolorHDImageRequest setColorTemplate(java.util.List<RecolorHDImageRequestColorTemplate> colorTemplate) {
+        this.colorTemplate = colorTemplate;
+        return this;
+    }
+    public java.util.List<RecolorHDImageRequestColorTemplate> getColorTemplate() {
+        return this.colorTemplate;
     }
 
     public static class RecolorHDImageRequestColorTemplate extends TeaModel {
