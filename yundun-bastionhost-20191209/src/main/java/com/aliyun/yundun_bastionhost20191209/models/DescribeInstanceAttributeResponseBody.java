@@ -116,11 +116,17 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("PublicWhiteList")
         public java.util.List<String> publicWhiteList;
 
+        @NameInMap("WebTerminalModule")
+        public String webTerminalModule;
+
         @NameInMap("InstanceStatus")
         public String instanceStatus;
 
         @NameInMap("LicenseCode")
         public String licenseCode;
+
+        @NameInMap("PublicIps")
+        public java.util.List<String> publicIps;
 
         @NameInMap("PublicNetworkAccess")
         public Boolean publicNetworkAccess;
@@ -277,6 +283,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             return this.publicWhiteList;
         }
 
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setWebTerminalModule(String webTerminalModule) {
+            this.webTerminalModule = webTerminalModule;
+            return this;
+        }
+        public String getWebTerminalModule() {
+            return this.webTerminalModule;
+        }
+
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setInstanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
             return this;
@@ -291,6 +305,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public String getLicenseCode() {
             return this.licenseCode;
+        }
+
+        public DescribeInstanceAttributeResponseBodyInstanceAttribute setPublicIps(java.util.List<String> publicIps) {
+            this.publicIps = publicIps;
+            return this;
+        }
+        public java.util.List<String> getPublicIps() {
+            return this.publicIps;
         }
 
         public DescribeInstanceAttributeResponseBodyInstanceAttribute setPublicNetworkAccess(Boolean publicNetworkAccess) {
