@@ -8,6 +8,12 @@ public class MakeSuperResolutionImageAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream urlObject;
 
+    @NameInMap("Mode")
+    public String mode;
+
+    @NameInMap("UpscaleFactor")
+    public Long upscaleFactor;
+
     public static MakeSuperResolutionImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         MakeSuperResolutionImageAdvanceRequest self = new MakeSuperResolutionImageAdvanceRequest();
         return TeaModel.build(map, self);
@@ -19,6 +25,22 @@ public class MakeSuperResolutionImageAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getUrlObject() {
         return this.urlObject;
+    }
+
+    public MakeSuperResolutionImageAdvanceRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
+    }
+
+    public MakeSuperResolutionImageAdvanceRequest setUpscaleFactor(Long upscaleFactor) {
+        this.upscaleFactor = upscaleFactor;
+        return this;
+    }
+    public Long getUpscaleFactor() {
+        return this.upscaleFactor;
     }
 
 }

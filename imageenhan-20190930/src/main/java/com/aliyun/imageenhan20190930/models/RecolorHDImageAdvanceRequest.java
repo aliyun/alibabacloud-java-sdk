@@ -17,12 +17,14 @@ public class RecolorHDImageAdvanceRequest extends TeaModel {
     @NameInMap("ColorCount")
     public Integer colorCount;
 
+    @NameInMap("Degree")
+    public String degree;
+
+    @NameInMap("Async")
+    public Boolean async;
+
     @NameInMap("ColorTemplate")
     public java.util.List<RecolorHDImageAdvanceRequestColorTemplate> colorTemplate;
-
-    @NameInMap("Degree")
-    @Validation(required = true)
-    public String degree;
 
     public static RecolorHDImageAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecolorHDImageAdvanceRequest self = new RecolorHDImageAdvanceRequest();
@@ -61,20 +63,28 @@ public class RecolorHDImageAdvanceRequest extends TeaModel {
         return this.colorCount;
     }
 
-    public RecolorHDImageAdvanceRequest setColorTemplate(java.util.List<RecolorHDImageAdvanceRequestColorTemplate> colorTemplate) {
-        this.colorTemplate = colorTemplate;
-        return this;
-    }
-    public java.util.List<RecolorHDImageAdvanceRequestColorTemplate> getColorTemplate() {
-        return this.colorTemplate;
-    }
-
     public RecolorHDImageAdvanceRequest setDegree(String degree) {
         this.degree = degree;
         return this;
     }
     public String getDegree() {
         return this.degree;
+    }
+
+    public RecolorHDImageAdvanceRequest setAsync(Boolean async) {
+        this.async = async;
+        return this;
+    }
+    public Boolean getAsync() {
+        return this.async;
+    }
+
+    public RecolorHDImageAdvanceRequest setColorTemplate(java.util.List<RecolorHDImageAdvanceRequestColorTemplate> colorTemplate) {
+        this.colorTemplate = colorTemplate;
+        return this;
+    }
+    public java.util.List<RecolorHDImageAdvanceRequestColorTemplate> getColorTemplate() {
+        return this.colorTemplate;
     }
 
     public static class RecolorHDImageAdvanceRequestColorTemplate extends TeaModel {

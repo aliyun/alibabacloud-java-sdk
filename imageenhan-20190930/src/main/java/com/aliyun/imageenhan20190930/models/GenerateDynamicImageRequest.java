@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GenerateDynamicImageRequest extends TeaModel {
     @NameInMap("Url")
-    @Validation(required = true)
     public String url;
 
     @NameInMap("Operation")
-    @Validation(required = true)
     public String operation;
 
     public static GenerateDynamicImageRequest build(java.util.Map<String, ?> map) throws Exception {

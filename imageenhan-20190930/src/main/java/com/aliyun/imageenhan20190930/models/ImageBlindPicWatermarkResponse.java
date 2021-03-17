@@ -4,65 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ImageBlindPicWatermarkResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ImageBlindPicWatermarkResponseData data;
+    public ImageBlindPicWatermarkResponseBody body;
 
     public static ImageBlindPicWatermarkResponse build(java.util.Map<String, ?> map) throws Exception {
         ImageBlindPicWatermarkResponse self = new ImageBlindPicWatermarkResponse();
         return TeaModel.build(map, self);
     }
 
-    public ImageBlindPicWatermarkResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ImageBlindPicWatermarkResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ImageBlindPicWatermarkResponse setData(ImageBlindPicWatermarkResponseData data) {
-        this.data = data;
+    public ImageBlindPicWatermarkResponse setBody(ImageBlindPicWatermarkResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ImageBlindPicWatermarkResponseData getData() {
-        return this.data;
-    }
-
-    public static class ImageBlindPicWatermarkResponseData extends TeaModel {
-        @NameInMap("WatermarkImageURL")
-        @Validation(required = true)
-        public String watermarkImageURL;
-
-        @NameInMap("LogoURL")
-        @Validation(required = true)
-        public String logoURL;
-
-        public static ImageBlindPicWatermarkResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ImageBlindPicWatermarkResponseData self = new ImageBlindPicWatermarkResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ImageBlindPicWatermarkResponseData setWatermarkImageURL(String watermarkImageURL) {
-            this.watermarkImageURL = watermarkImageURL;
-            return this;
-        }
-        public String getWatermarkImageURL() {
-            return this.watermarkImageURL;
-        }
-
-        public ImageBlindPicWatermarkResponseData setLogoURL(String logoURL) {
-            this.logoURL = logoURL;
-            return this;
-        }
-        public String getLogoURL() {
-            return this.logoURL;
-        }
-
+    public ImageBlindPicWatermarkResponseBody getBody() {
+        return this.body;
     }
 
 }

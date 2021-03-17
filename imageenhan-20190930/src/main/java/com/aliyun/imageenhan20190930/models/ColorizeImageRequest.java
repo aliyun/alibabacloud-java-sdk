@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ColorizeImageRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static ColorizeImageRequest build(java.util.Map<String, ?> map) throws Exception {

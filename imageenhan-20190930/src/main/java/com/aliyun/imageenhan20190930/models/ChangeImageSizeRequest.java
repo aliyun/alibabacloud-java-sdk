@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ChangeImageSizeRequest extends TeaModel {
     @NameInMap("Width")
-    @Validation(required = true)
     public Integer width;
 
     @NameInMap("Height")
-    @Validation(required = true)
     public Integer height;
 
     @NameInMap("Url")
-    @Validation(required = true)
     public String url;
 
     public static ChangeImageSizeRequest build(java.util.Map<String, ?> map) throws Exception {

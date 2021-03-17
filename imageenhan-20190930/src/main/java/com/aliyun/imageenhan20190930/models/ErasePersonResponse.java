@@ -4,53 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ErasePersonResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public ErasePersonResponseData data;
+    public ErasePersonResponseBody body;
 
     public static ErasePersonResponse build(java.util.Map<String, ?> map) throws Exception {
         ErasePersonResponse self = new ErasePersonResponse();
         return TeaModel.build(map, self);
     }
 
-    public ErasePersonResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ErasePersonResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ErasePersonResponse setData(ErasePersonResponseData data) {
-        this.data = data;
+    public ErasePersonResponse setBody(ErasePersonResponseBody body) {
+        this.body = body;
         return this;
     }
-    public ErasePersonResponseData getData() {
-        return this.data;
-    }
-
-    public static class ErasePersonResponseData extends TeaModel {
-        @NameInMap("ImageUrl")
-        @Validation(required = true)
-        public String imageUrl;
-
-        public static ErasePersonResponseData build(java.util.Map<String, ?> map) throws Exception {
-            ErasePersonResponseData self = new ErasePersonResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public ErasePersonResponseData setImageUrl(String imageUrl) {
-            this.imageUrl = imageUrl;
-            return this;
-        }
-        public String getImageUrl() {
-            return this.imageUrl;
-        }
-
+    public ErasePersonResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ErasePersonRequest extends TeaModel {
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     @NameInMap("UserMask")
-    @Validation(required = true)
     public String userMask;
 
     public static ErasePersonRequest build(java.util.Map<String, ?> map) throws Exception {

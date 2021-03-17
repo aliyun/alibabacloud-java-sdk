@@ -4,53 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class GenerateDynamicImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public GenerateDynamicImageResponseData data;
+    public GenerateDynamicImageResponseBody body;
 
     public static GenerateDynamicImageResponse build(java.util.Map<String, ?> map) throws Exception {
         GenerateDynamicImageResponse self = new GenerateDynamicImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public GenerateDynamicImageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GenerateDynamicImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GenerateDynamicImageResponse setData(GenerateDynamicImageResponseData data) {
-        this.data = data;
+    public GenerateDynamicImageResponse setBody(GenerateDynamicImageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public GenerateDynamicImageResponseData getData() {
-        return this.data;
-    }
-
-    public static class GenerateDynamicImageResponseData extends TeaModel {
-        @NameInMap("Url")
-        @Validation(required = true)
-        public String url;
-
-        public static GenerateDynamicImageResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GenerateDynamicImageResponseData self = new GenerateDynamicImageResponseData();
-            return TeaModel.build(map, self);
-        }
-
-        public GenerateDynamicImageResponseData setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
+    public GenerateDynamicImageResponseBody getBody() {
+        return this.body;
     }
 
 }

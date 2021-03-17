@@ -8,7 +8,6 @@ public class IntelligentCompositionRequest extends TeaModel {
     public Integer numBoxes;
 
     @NameInMap("ImageURL")
-    @Validation(required = true)
     public String imageURL;
 
     public static IntelligentCompositionRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -9,7 +9,6 @@ public class ImitatePhotoStyleAdvanceRequest extends TeaModel {
     public java.io.InputStream imageURLObject;
 
     @NameInMap("StyleUrl")
-    @Validation(required = true)
     public String styleUrl;
 
     public static ImitatePhotoStyleAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
