@@ -1,3 +1,6 @@
+2021-03-17 Version: 1.1.8
+- Support double call.
+
 2021-03-09 Version: 1.1.6
 - Support change agent status.
 - Support start chat work.
