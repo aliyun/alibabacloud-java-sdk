@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessPointsRequest extends TeaModel {
-    @NameInMap("Filter")
-    public java.util.List<DescribeAccessPointsRequestFilter> filter;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,7 +14,6 @@ public class DescribeAccessPointsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Type")
@@ -29,17 +25,12 @@ public class DescribeAccessPointsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Filter")
+    public java.util.List<DescribeAccessPointsRequestFilter> filter;
+
     public static DescribeAccessPointsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessPointsRequest self = new DescribeAccessPointsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccessPointsRequest setFilter(java.util.List<DescribeAccessPointsRequestFilter> filter) {
-        this.filter = filter;
-        return this;
-    }
-    public java.util.List<DescribeAccessPointsRequestFilter> getFilter() {
-        return this.filter;
     }
 
     public DescribeAccessPointsRequest setOwnerId(Long ownerId) {
@@ -96,6 +87,14 @@ public class DescribeAccessPointsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeAccessPointsRequest setFilter(java.util.List<DescribeAccessPointsRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeAccessPointsRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public static class DescribeAccessPointsRequestFilter extends TeaModel {

@@ -17,11 +17,9 @@ public class UnassociateEipAddressRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("AllocationId")
-    @Validation(required = true)
     public String allocationId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("OwnerAccount")

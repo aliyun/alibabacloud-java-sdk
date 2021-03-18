@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateLaunchTemplateRequest extends TeaModel {
+    @NameInMap("SystemDisk")
+    public CreateLaunchTemplateRequestSystemDisk systemDisk;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,14 +20,12 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("TemplateTag")
     public java.util.List<CreateLaunchTemplateRequestTemplateTag> templateTag;
 
     @NameInMap("LaunchTemplateName")
-    @Validation(required = true)
     public String launchTemplateName;
 
     @NameInMap("VersionDescription")
@@ -69,17 +70,8 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    @NameInMap("SystemDisk")
-    public CreateLaunchTemplateRequestSystemDisk systemDisk;
-
-    @NameInMap("DataDisk")
-    public java.util.List<CreateLaunchTemplateRequestDataDisk> dataDisk;
-
     @NameInMap("IoOptimized")
     public String ioOptimized;
-
-    @NameInMap("NetworkInterface")
-    public java.util.List<CreateLaunchTemplateRequestNetworkInterface> networkInterface;
 
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
@@ -126,21 +118,35 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     @NameInMap("SecurityEnhancementStrategy")
     public String securityEnhancementStrategy;
 
-    @NameInMap("Tag")
-    public java.util.List<CreateLaunchTemplateRequestTag> tag;
-
-    @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
-
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
+    @NameInMap("DataDisk")
+    public java.util.List<CreateLaunchTemplateRequestDataDisk> dataDisk;
+
+    @NameInMap("NetworkInterface")
+    public java.util.List<CreateLaunchTemplateRequestNetworkInterface> networkInterface;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateLaunchTemplateRequestTag> tag;
+
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
+
     public static CreateLaunchTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLaunchTemplateRequest self = new CreateLaunchTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLaunchTemplateRequest setSystemDisk(CreateLaunchTemplateRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public CreateLaunchTemplateRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
     public CreateLaunchTemplateRequest setOwnerId(Long ownerId) {
@@ -311,36 +317,12 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public CreateLaunchTemplateRequest setSystemDisk(CreateLaunchTemplateRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public CreateLaunchTemplateRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
-    }
-
-    public CreateLaunchTemplateRequest setDataDisk(java.util.List<CreateLaunchTemplateRequestDataDisk> dataDisk) {
-        this.dataDisk = dataDisk;
-        return this;
-    }
-    public java.util.List<CreateLaunchTemplateRequestDataDisk> getDataDisk() {
-        return this.dataDisk;
-    }
-
     public CreateLaunchTemplateRequest setIoOptimized(String ioOptimized) {
         this.ioOptimized = ioOptimized;
         return this;
     }
     public String getIoOptimized() {
         return this.ioOptimized;
-    }
-
-    public CreateLaunchTemplateRequest setNetworkInterface(java.util.List<CreateLaunchTemplateRequestNetworkInterface> networkInterface) {
-        this.networkInterface = networkInterface;
-        return this;
-    }
-    public java.util.List<CreateLaunchTemplateRequestNetworkInterface> getNetworkInterface() {
-        return this.networkInterface;
     }
 
     public CreateLaunchTemplateRequest setInstanceChargeType(String instanceChargeType) {
@@ -463,22 +445,6 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         return this.securityEnhancementStrategy;
     }
 
-    public CreateLaunchTemplateRequest setTag(java.util.List<CreateLaunchTemplateRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateLaunchTemplateRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public CreateLaunchTemplateRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-        this.securityGroupIds = securityGroupIds;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupIds() {
-        return this.securityGroupIds;
-    }
-
     public CreateLaunchTemplateRequest setPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -495,34 +461,36 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         return this.deploymentSetId;
     }
 
-    public static class CreateLaunchTemplateRequestTemplateTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
+    public CreateLaunchTemplateRequest setDataDisk(java.util.List<CreateLaunchTemplateRequestDataDisk> dataDisk) {
+        this.dataDisk = dataDisk;
+        return this;
+    }
+    public java.util.List<CreateLaunchTemplateRequestDataDisk> getDataDisk() {
+        return this.dataDisk;
+    }
 
-        @NameInMap("Value")
-        public String value;
+    public CreateLaunchTemplateRequest setNetworkInterface(java.util.List<CreateLaunchTemplateRequestNetworkInterface> networkInterface) {
+        this.networkInterface = networkInterface;
+        return this;
+    }
+    public java.util.List<CreateLaunchTemplateRequestNetworkInterface> getNetworkInterface() {
+        return this.networkInterface;
+    }
 
-        public static CreateLaunchTemplateRequestTemplateTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateLaunchTemplateRequestTemplateTag self = new CreateLaunchTemplateRequestTemplateTag();
-            return TeaModel.build(map, self);
-        }
+    public CreateLaunchTemplateRequest setTag(java.util.List<CreateLaunchTemplateRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateLaunchTemplateRequestTag> getTag() {
+        return this.tag;
+    }
 
-        public CreateLaunchTemplateRequestTemplateTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateLaunchTemplateRequestTemplateTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public CreateLaunchTemplateRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
     public static class CreateLaunchTemplateRequestSystemDisk extends TeaModel {
@@ -610,101 +578,67 @@ public class CreateLaunchTemplateRequest extends TeaModel {
 
     }
 
+    public static class CreateLaunchTemplateRequestTemplateTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateLaunchTemplateRequestTemplateTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateLaunchTemplateRequestTemplateTag self = new CreateLaunchTemplateRequestTemplateTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLaunchTemplateRequestTemplateTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateLaunchTemplateRequestTemplateTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateLaunchTemplateRequestDataDisk extends TeaModel {
-        @NameInMap("Size")
-        public Integer size;
-
-        @NameInMap("SnapshotId")
-        public String snapshotId;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("Encrypted")
-        public String encrypted;
-
-        @NameInMap("DiskName")
-        public String diskName;
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
 
         @NameInMap("Description")
         public String description;
 
-        @NameInMap("DeleteWithInstance")
-        public Boolean deleteWithInstance;
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
+        @NameInMap("Size")
+        public Integer size;
 
         @NameInMap("Device")
         public String device;
 
-        @NameInMap("PerformanceLevel")
-        public String performanceLevel;
+        @NameInMap("DiskName")
+        public String diskName;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DeleteWithInstance")
+        public Boolean deleteWithInstance;
+
+        @NameInMap("Encrypted")
+        public String encrypted;
 
         public static CreateLaunchTemplateRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             CreateLaunchTemplateRequestDataDisk self = new CreateLaunchTemplateRequestDataDisk();
             return TeaModel.build(map, self);
-        }
-
-        public CreateLaunchTemplateRequestDataDisk setSize(Integer size) {
-            this.size = size;
-            return this;
-        }
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public CreateLaunchTemplateRequestDataDisk setSnapshotId(String snapshotId) {
-            this.snapshotId = snapshotId;
-            return this;
-        }
-        public String getSnapshotId() {
-            return this.snapshotId;
-        }
-
-        public CreateLaunchTemplateRequestDataDisk setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public CreateLaunchTemplateRequestDataDisk setEncrypted(String encrypted) {
-            this.encrypted = encrypted;
-            return this;
-        }
-        public String getEncrypted() {
-            return this.encrypted;
-        }
-
-        public CreateLaunchTemplateRequestDataDisk setDiskName(String diskName) {
-            this.diskName = diskName;
-            return this;
-        }
-        public String getDiskName() {
-            return this.diskName;
-        }
-
-        public CreateLaunchTemplateRequestDataDisk setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public CreateLaunchTemplateRequestDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
-            this.deleteWithInstance = deleteWithInstance;
-            return this;
-        }
-        public Boolean getDeleteWithInstance() {
-            return this.deleteWithInstance;
-        }
-
-        public CreateLaunchTemplateRequestDataDisk setDevice(String device) {
-            this.device = device;
-            return this;
-        }
-        public String getDevice() {
-            return this.device;
         }
 
         public CreateLaunchTemplateRequestDataDisk setPerformanceLevel(String performanceLevel) {
@@ -715,23 +649,87 @@ public class CreateLaunchTemplateRequest extends TeaModel {
             return this.performanceLevel;
         }
 
+        public CreateLaunchTemplateRequestDataDisk setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public CreateLaunchTemplateRequestDataDisk setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        public CreateLaunchTemplateRequestDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public CreateLaunchTemplateRequestDataDisk setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
+        public CreateLaunchTemplateRequestDataDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        public CreateLaunchTemplateRequestDataDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public CreateLaunchTemplateRequestDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        public CreateLaunchTemplateRequestDataDisk setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
     }
 
     public static class CreateLaunchTemplateRequestNetworkInterface extends TeaModel {
-        @NameInMap("PrimaryIpAddress")
-        public String primaryIpAddress;
+        @NameInMap("NetworkInterfaceName")
+        public String networkInterfaceName;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        @NameInMap("Description")
+        public String description;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
-        @NameInMap("NetworkInterfaceName")
-        public String networkInterfaceName;
-
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("PrimaryIpAddress")
+        public String primaryIpAddress;
 
         @NameInMap("SecurityGroupIds")
         public java.util.List<String> securityGroupIds;
@@ -739,30 +737,6 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         public static CreateLaunchTemplateRequestNetworkInterface build(java.util.Map<String, ?> map) throws Exception {
             CreateLaunchTemplateRequestNetworkInterface self = new CreateLaunchTemplateRequestNetworkInterface();
             return TeaModel.build(map, self);
-        }
-
-        public CreateLaunchTemplateRequestNetworkInterface setPrimaryIpAddress(String primaryIpAddress) {
-            this.primaryIpAddress = primaryIpAddress;
-            return this;
-        }
-        public String getPrimaryIpAddress() {
-            return this.primaryIpAddress;
-        }
-
-        public CreateLaunchTemplateRequestNetworkInterface setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public CreateLaunchTemplateRequestNetworkInterface setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
         }
 
         public CreateLaunchTemplateRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
@@ -773,12 +747,36 @@ public class CreateLaunchTemplateRequest extends TeaModel {
             return this.networkInterfaceName;
         }
 
+        public CreateLaunchTemplateRequestNetworkInterface setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
         public CreateLaunchTemplateRequestNetworkInterface setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public CreateLaunchTemplateRequestNetworkInterface setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public CreateLaunchTemplateRequestNetworkInterface setPrimaryIpAddress(String primaryIpAddress) {
+            this.primaryIpAddress = primaryIpAddress;
+            return this;
+        }
+        public String getPrimaryIpAddress() {
+            return this.primaryIpAddress;
         }
 
         public CreateLaunchTemplateRequestNetworkInterface setSecurityGroupIds(java.util.List<String> securityGroupIds) {

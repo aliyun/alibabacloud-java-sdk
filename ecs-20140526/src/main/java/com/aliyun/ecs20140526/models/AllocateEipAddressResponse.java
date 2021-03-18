@@ -4,45 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocateEipAddressResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("AllocationId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String allocationId;
-
-    @NameInMap("EipAddress")
-    @Validation(required = true)
-    public String eipAddress;
+    public AllocateEipAddressResponseBody body;
 
     public static AllocateEipAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         AllocateEipAddressResponse self = new AllocateEipAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public AllocateEipAddressResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AllocateEipAddressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AllocateEipAddressResponse setAllocationId(String allocationId) {
-        this.allocationId = allocationId;
+    public AllocateEipAddressResponse setBody(AllocateEipAddressResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getAllocationId() {
-        return this.allocationId;
-    }
-
-    public AllocateEipAddressResponse setEipAddress(String eipAddress) {
-        this.eipAddress = eipAddress;
-        return this;
-    }
-    public String getEipAddress() {
-        return this.eipAddress;
+    public AllocateEipAddressResponseBody getBody() {
+        return this.body;
     }
 
 }

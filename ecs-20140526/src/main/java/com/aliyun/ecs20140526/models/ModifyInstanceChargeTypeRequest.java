@@ -14,11 +14,9 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceIds")
-    @Validation(required = true)
     public String instanceIds;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Period")

@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RedeployInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TaskId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String taskId;
+    public RedeployInstanceResponseBody body;
 
     public static RedeployInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         RedeployInstanceResponse self = new RedeployInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public RedeployInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RedeployInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RedeployInstanceResponse setTaskId(String taskId) {
-        this.taskId = taskId;
+    public RedeployInstanceResponse setBody(RedeployInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
+    public RedeployInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,53 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSimulatedSystemEventsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("EventIdSet")
+    @NameInMap("body")
     @Validation(required = true)
-    public CreateSimulatedSystemEventsResponseEventIdSet eventIdSet;
+    public CreateSimulatedSystemEventsResponseBody body;
 
     public static CreateSimulatedSystemEventsResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateSimulatedSystemEventsResponse self = new CreateSimulatedSystemEventsResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateSimulatedSystemEventsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateSimulatedSystemEventsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateSimulatedSystemEventsResponse setEventIdSet(CreateSimulatedSystemEventsResponseEventIdSet eventIdSet) {
-        this.eventIdSet = eventIdSet;
+    public CreateSimulatedSystemEventsResponse setBody(CreateSimulatedSystemEventsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public CreateSimulatedSystemEventsResponseEventIdSet getEventIdSet() {
-        return this.eventIdSet;
-    }
-
-    public static class CreateSimulatedSystemEventsResponseEventIdSet extends TeaModel {
-        @NameInMap("EventId")
-        @Validation(required = true)
-        public java.util.List<String> eventId;
-
-        public static CreateSimulatedSystemEventsResponseEventIdSet build(java.util.Map<String, ?> map) throws Exception {
-            CreateSimulatedSystemEventsResponseEventIdSet self = new CreateSimulatedSystemEventsResponseEventIdSet();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateSimulatedSystemEventsResponseEventIdSet setEventId(java.util.List<String> eventId) {
-            this.eventId = eventId;
-            return this;
-        }
-        public java.util.List<String> getEventId() {
-            return this.eventId;
-        }
-
+    public CreateSimulatedSystemEventsResponseBody getBody() {
+        return this.body;
     }
 
 }

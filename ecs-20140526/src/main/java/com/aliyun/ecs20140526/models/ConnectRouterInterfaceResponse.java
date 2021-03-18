@@ -4,21 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ConnectRouterInterfaceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ConnectRouterInterfaceResponseBody body;
 
     public static ConnectRouterInterfaceResponse build(java.util.Map<String, ?> map) throws Exception {
         ConnectRouterInterfaceResponse self = new ConnectRouterInterfaceResponse();
         return TeaModel.build(map, self);
     }
 
-    public ConnectRouterInterfaceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ConnectRouterInterfaceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ConnectRouterInterfaceResponse setBody(ConnectRouterInterfaceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ConnectRouterInterfaceResponseBody getBody() {
+        return this.body;
     }
 
 }

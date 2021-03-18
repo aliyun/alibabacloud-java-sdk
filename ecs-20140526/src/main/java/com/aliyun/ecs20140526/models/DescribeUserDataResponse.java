@@ -4,57 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserDataResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RegionId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String regionId;
-
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public String instanceId;
-
-    @NameInMap("UserData")
-    @Validation(required = true)
-    public String userData;
+    public DescribeUserDataResponseBody body;
 
     public static DescribeUserDataResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserDataResponse self = new DescribeUserDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeUserDataResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeUserDataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeUserDataResponse setRegionId(String regionId) {
-        this.regionId = regionId;
+    public DescribeUserDataResponse setBody(DescribeUserDataResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    public DescribeUserDataResponse setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeUserDataResponse setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
+    public DescribeUserDataResponseBody getBody() {
+        return this.body;
     }
 
 }

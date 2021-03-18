@@ -17,7 +17,6 @@ public class DescribeSnapshotsUsageRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static DescribeSnapshotsUsageRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -14,11 +14,9 @@ public class ModifyDedicatedHostsChargeTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("DedicatedHostIds")
-    @Validation(required = true)
     public String dedicatedHostIds;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Period")

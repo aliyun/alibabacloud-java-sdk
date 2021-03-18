@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateAutoProvisioningGroupRequest extends TeaModel {
+    @NameInMap("LaunchConfiguration")
+    public CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,7 +20,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceGroupId")
@@ -60,7 +62,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public Float maxSpotPrice;
 
     @NameInMap("TotalTargetCapacity")
-    @Validation(required = true)
     public String totalTargetCapacity;
 
     @NameInMap("PayAsYouGoTargetCapacity")
@@ -78,17 +79,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     @NameInMap("LaunchTemplateVersion")
     public String launchTemplateVersion;
 
-    @NameInMap("LaunchTemplateConfig")
-    public java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
-
     @NameInMap("Description")
     public String description;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("LaunchConfiguration")
-    public CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration;
+    @NameInMap("LaunchTemplateConfig")
+    public java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
 
     @NameInMap("SystemDiskConfig")
     public java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> systemDiskConfig;
@@ -99,6 +97,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public static CreateAutoProvisioningGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoProvisioningGroupRequest self = new CreateAutoProvisioningGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAutoProvisioningGroupRequest setLaunchConfiguration(CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration) {
+        this.launchConfiguration = launchConfiguration;
+        return this;
+    }
+    public CreateAutoProvisioningGroupRequestLaunchConfiguration getLaunchConfiguration() {
+        return this.launchConfiguration;
     }
 
     public CreateAutoProvisioningGroupRequest setOwnerId(Long ownerId) {
@@ -293,14 +299,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.launchTemplateVersion;
     }
 
-    public CreateAutoProvisioningGroupRequest setLaunchTemplateConfig(java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig) {
-        this.launchTemplateConfig = launchTemplateConfig;
-        return this;
-    }
-    public java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> getLaunchTemplateConfig() {
-        return this.launchTemplateConfig;
-    }
-
     public CreateAutoProvisioningGroupRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -317,12 +315,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateAutoProvisioningGroupRequest setLaunchConfiguration(CreateAutoProvisioningGroupRequestLaunchConfiguration launchConfiguration) {
-        this.launchConfiguration = launchConfiguration;
+    public CreateAutoProvisioningGroupRequest setLaunchTemplateConfig(java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig) {
+        this.launchTemplateConfig = launchTemplateConfig;
         return this;
     }
-    public CreateAutoProvisioningGroupRequestLaunchConfiguration getLaunchConfiguration() {
-        return this.launchConfiguration;
+    public java.util.List<CreateAutoProvisioningGroupRequestLaunchTemplateConfig> getLaunchTemplateConfig() {
+        return this.launchTemplateConfig;
     }
 
     public CreateAutoProvisioningGroupRequest setSystemDiskConfig(java.util.List<CreateAutoProvisioningGroupRequestSystemDiskConfig> systemDiskConfig) {
@@ -341,65 +339,150 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         return this.dataDiskConfig;
     }
 
-    public static class CreateAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
-        @NameInMap("InstanceType")
-        public String instanceType;
+    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk extends TeaModel {
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
 
-        @NameInMap("MaxPrice")
-        public Double maxPrice;
+        @NameInMap("Description")
+        public String description;
 
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
+        @NameInMap("KmsKeyId")
+        public String kmsKeyId;
 
-        @NameInMap("WeightedCapacity")
-        public Double weightedCapacity;
+        @NameInMap("SnapshotId")
+        public String snapshotId;
 
-        @NameInMap("Priority")
-        public Integer priority;
+        @NameInMap("Size")
+        public Integer size;
 
-        public static CreateAutoProvisioningGroupRequestLaunchTemplateConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateAutoProvisioningGroupRequestLaunchTemplateConfig self = new CreateAutoProvisioningGroupRequestLaunchTemplateConfig();
+        @NameInMap("Device")
+        public String device;
+
+        @NameInMap("DiskName")
+        public String diskName;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DeleteWithInstance")
+        public Boolean deleteWithInstance;
+
+        @NameInMap("Encrypted")
+        public Boolean encrypted;
+
+        public static CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk self = new CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk();
             return TeaModel.build(map, self);
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
             return this;
         }
-        public String getInstanceType() {
-            return this.instanceType;
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setMaxPrice(Double maxPrice) {
-            this.maxPrice = maxPrice;
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public Double getMaxPrice() {
-            return this.maxPrice;
+        public String getDescription() {
+            return this.description;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setKmsKeyId(String kmsKeyId) {
+            this.kmsKeyId = kmsKeyId;
             return this;
         }
-        public String getVSwitchId() {
-            return this.vSwitchId;
+        public String getKmsKeyId() {
+            return this.kmsKeyId;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
             return this;
         }
-        public Double getWeightedCapacity() {
-            return this.weightedCapacity;
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setPriority(Integer priority) {
-            this.priority = priority;
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setSize(Integer size) {
+            this.size = size;
             return this;
         }
-        public Integer getPriority() {
-            return this.priority;
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk setEncrypted(Boolean encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public Boolean getEncrypted() {
+            return this.encrypted;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAutoProvisioningGroupRequestLaunchConfigurationTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchConfigurationTag self = new CreateAutoProvisioningGroupRequestLaunchConfigurationTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
@@ -413,9 +496,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
         @NameInMap("IoOptimized")
         public String ioOptimized;
-
-        @NameInMap("DataDisk")
-        public java.util.List<String> dataDisk;
 
         @NameInMap("InternetChargeType")
         public String internetChargeType;
@@ -444,9 +524,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("SecurityEnhancementStrategy")
         public String securityEnhancementStrategy;
 
-        @NameInMap("Tag")
-        public java.util.List<String> tag;
-
         @NameInMap("UserData")
         public String userData;
 
@@ -473,6 +550,18 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
         @NameInMap("CreditSpecification")
         public String creditSpecification;
+
+        @NameInMap("Password")
+        public String password;
+
+        @NameInMap("DeploymentSetId")
+        public String deploymentSetId;
+
+        @NameInMap("DataDisk")
+        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> dataDisk;
+
+        @NameInMap("Tag")
+        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> tag;
 
         public static CreateAutoProvisioningGroupRequestLaunchConfiguration build(java.util.Map<String, ?> map) throws Exception {
             CreateAutoProvisioningGroupRequestLaunchConfiguration self = new CreateAutoProvisioningGroupRequestLaunchConfiguration();
@@ -501,14 +590,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public String getIoOptimized() {
             return this.ioOptimized;
-        }
-
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setDataDisk(java.util.List<String> dataDisk) {
-            this.dataDisk = dataDisk;
-            return this;
-        }
-        public java.util.List<String> getDataDisk() {
-            return this.dataDisk;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setInternetChargeType(String internetChargeType) {
@@ -583,14 +664,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
             return this.securityEnhancementStrategy;
         }
 
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setTag(java.util.List<String> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<String> getTag() {
-            return this.tag;
-        }
-
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setUserData(String userData) {
             this.userData = userData;
             return this;
@@ -661,6 +734,101 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public String getCreditSpecification() {
             return this.creditSpecification;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setDeploymentSetId(String deploymentSetId) {
+            this.deploymentSetId = deploymentSetId;
+            return this;
+        }
+        public String getDeploymentSetId() {
+            return this.deploymentSetId;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setDataDisk(java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> dataDisk) {
+            this.dataDisk = dataDisk;
+            return this;
+        }
+        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationDataDisk> getDataDisk() {
+            return this.dataDisk;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setTag(java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<CreateAutoProvisioningGroupRequestLaunchConfigurationTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class CreateAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("MaxPrice")
+        public Double maxPrice;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
+        @NameInMap("WeightedCapacity")
+        public Double weightedCapacity;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        public static CreateAutoProvisioningGroupRequestLaunchTemplateConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchTemplateConfig self = new CreateAutoProvisioningGroupRequestLaunchTemplateConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setMaxPrice(Double maxPrice) {
+            this.maxPrice = maxPrice;
+            return this;
+        }
+        public Double getMaxPrice() {
+            return this.maxPrice;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
+            this.weightedCapacity = weightedCapacity;
+            return this;
+        }
+        public Double getWeightedCapacity() {
+            return this.weightedCapacity;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
     }

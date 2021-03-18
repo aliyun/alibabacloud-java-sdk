@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends TeaModel {
-    @NameInMap("Filter")
-    public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,11 +14,9 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
     public String physicalConnectionId;
 
     @NameInMap("PageNumber")
@@ -30,17 +25,12 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Filter")
+    public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter;
+
     public static DescribeVirtualBorderRoutersForPhysicalConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualBorderRoutersForPhysicalConnectionRequest self = new DescribeVirtualBorderRoutersForPhysicalConnectionRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVirtualBorderRoutersForPhysicalConnectionRequest setFilter(java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter) {
-        this.filter = filter;
-        return this;
-    }
-    public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> getFilter() {
-        return this.filter;
     }
 
     public DescribeVirtualBorderRoutersForPhysicalConnectionRequest setOwnerId(Long ownerId) {
@@ -97,6 +87,14 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeVirtualBorderRoutersForPhysicalConnectionRequest setFilter(java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter extends TeaModel {

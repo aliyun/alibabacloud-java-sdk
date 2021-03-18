@@ -22,14 +22,13 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeDedicatedHostClustersRequestTag> tag;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeDedicatedHostClustersRequestTag> tag;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
@@ -100,20 +99,20 @@ public class DescribeDedicatedHostClustersRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeDedicatedHostClustersRequest setTag(java.util.List<DescribeDedicatedHostClustersRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeDedicatedHostClustersRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeDedicatedHostClustersRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeDedicatedHostClustersRequest setTag(java.util.List<DescribeDedicatedHostClustersRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDedicatedHostClustersRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeDedicatedHostClustersRequest setRegionId(String regionId) {

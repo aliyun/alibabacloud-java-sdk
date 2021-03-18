@@ -17,20 +17,16 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public java.util.List<String> instanceId;
-
     @NameInMap("EventType")
-    @Validation(required = true)
     public String eventType;
 
     @NameInMap("NotBefore")
-    @Validation(required = true)
     public String notBefore;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
 
     public static CreateSimulatedSystemEventsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSimulatedSystemEventsRequest self = new CreateSimulatedSystemEventsRequest();
@@ -77,14 +73,6 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateSimulatedSystemEventsRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
     public CreateSimulatedSystemEventsRequest setEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -99,6 +87,14 @@ public class CreateSimulatedSystemEventsRequest extends TeaModel {
     }
     public String getNotBefore() {
         return this.notBefore;
+    }
+
+    public CreateSimulatedSystemEventsRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
 }

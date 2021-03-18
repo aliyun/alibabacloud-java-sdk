@@ -17,14 +17,13 @@ public class CreateImageComponentRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<CreateImageComponentRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateImageComponentRequestTag> tag;
 
     @NameInMap("Name")
     public String name;
@@ -89,20 +88,20 @@ public class CreateImageComponentRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateImageComponentRequest setTag(java.util.List<CreateImageComponentRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateImageComponentRequestTag> getTag() {
-        return this.tag;
-    }
-
     public CreateImageComponentRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateImageComponentRequest setTag(java.util.List<CreateImageComponentRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateImageComponentRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateImageComponentRequest setName(String name) {

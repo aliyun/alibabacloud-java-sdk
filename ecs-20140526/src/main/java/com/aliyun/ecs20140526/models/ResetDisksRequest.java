@@ -17,11 +17,9 @@ public class ResetDisksRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Disk")
-    @Validation(required = true)
     public java.util.List<ResetDisksRequestDisk> disk;
 
     public static ResetDisksRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -78,23 +76,15 @@ public class ResetDisksRequest extends TeaModel {
     }
 
     public static class ResetDisksRequestDisk extends TeaModel {
-        @NameInMap("DiskId")
-        public String diskId;
-
         @NameInMap("SnapshotId")
         public String snapshotId;
+
+        @NameInMap("DiskId")
+        public String diskId;
 
         public static ResetDisksRequestDisk build(java.util.Map<String, ?> map) throws Exception {
             ResetDisksRequestDisk self = new ResetDisksRequestDisk();
             return TeaModel.build(map, self);
-        }
-
-        public ResetDisksRequestDisk setDiskId(String diskId) {
-            this.diskId = diskId;
-            return this;
-        }
-        public String getDiskId() {
-            return this.diskId;
         }
 
         public ResetDisksRequestDisk setSnapshotId(String snapshotId) {
@@ -103,6 +93,14 @@ public class ResetDisksRequest extends TeaModel {
         }
         public String getSnapshotId() {
             return this.snapshotId;
+        }
+
+        public ResetDisksRequestDisk setDiskId(String diskId) {
+            this.diskId = diskId;
+            return this;
+        }
+        public String getDiskId() {
+            return this.diskId;
         }
 
     }

@@ -17,7 +17,6 @@ public class RedeployInstanceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ForceStop")

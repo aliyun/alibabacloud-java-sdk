@@ -14,7 +14,6 @@ public class DeleteVpcRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("VpcId")
-    @Validation(required = true)
     public String vpcId;
 
     @NameInMap("RegionId")

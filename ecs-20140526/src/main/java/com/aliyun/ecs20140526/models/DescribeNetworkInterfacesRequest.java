@@ -17,14 +17,13 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeNetworkInterfacesRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeNetworkInterfacesRequestTag> tag;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -34,9 +33,6 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     @NameInMap("PrimaryIpAddress")
     public String primaryIpAddress;
-
-    @NameInMap("PrivateIpAddress")
-    public java.util.List<String> privateIpAddress;
 
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -49,9 +45,6 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("NetworkInterfaceId")
-    public java.util.List<String> networkInterfaceId;
 
     @NameInMap("ServiceManaged")
     public Boolean serviceManaged;
@@ -70,6 +63,12 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
 
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("PrivateIpAddress")
+    public java.util.List<String> privateIpAddress;
+
+    @NameInMap("NetworkInterfaceId")
+    public java.util.List<String> networkInterfaceId;
 
     public static DescribeNetworkInterfacesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfacesRequest self = new DescribeNetworkInterfacesRequest();
@@ -116,20 +115,20 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeNetworkInterfacesRequest setTag(java.util.List<DescribeNetworkInterfacesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeNetworkInterfacesRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeNetworkInterfacesRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeNetworkInterfacesRequest setTag(java.util.List<DescribeNetworkInterfacesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeNetworkInterfacesRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeNetworkInterfacesRequest setVSwitchId(String vSwitchId) {
@@ -154,14 +153,6 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     }
     public String getPrimaryIpAddress() {
         return this.primaryIpAddress;
-    }
-
-    public DescribeNetworkInterfacesRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public java.util.List<String> getPrivateIpAddress() {
-        return this.privateIpAddress;
     }
 
     public DescribeNetworkInterfacesRequest setSecurityGroupId(String securityGroupId) {
@@ -194,14 +185,6 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public DescribeNetworkInterfacesRequest setNetworkInterfaceId(java.util.List<String> networkInterfaceId) {
-        this.networkInterfaceId = networkInterfaceId;
-        return this;
-    }
-    public java.util.List<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId;
     }
 
     public DescribeNetworkInterfacesRequest setServiceManaged(Boolean serviceManaged) {
@@ -250,6 +233,22 @@ public class DescribeNetworkInterfacesRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeNetworkInterfacesRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public java.util.List<String> getPrivateIpAddress() {
+        return this.privateIpAddress;
+    }
+
+    public DescribeNetworkInterfacesRequest setNetworkInterfaceId(java.util.List<String> networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+        return this;
+    }
+    public java.util.List<String> getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     public static class DescribeNetworkInterfacesRequestTag extends TeaModel {

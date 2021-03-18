@@ -5,18 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualBorderRouterRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
     public String physicalConnectionId;
 
     @NameInMap("VbrOwnerId")
     public Long vbrOwnerId;
 
     @NameInMap("VlanId")
-    @Validation(required = true)
     public Integer vlanId;
 
     @NameInMap("CircuitCode")

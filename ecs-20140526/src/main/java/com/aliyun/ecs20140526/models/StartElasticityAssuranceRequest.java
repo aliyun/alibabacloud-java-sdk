@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartElasticityAssuranceRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public StartElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,15 +20,19 @@ public class StartElasticityAssuranceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("PrivatePoolOptions")
-    public StartElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
     public static StartElasticityAssuranceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartElasticityAssuranceRequest self = new StartElasticityAssuranceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartElasticityAssuranceRequest setPrivatePoolOptions(StartElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public StartElasticityAssuranceRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public StartElasticityAssuranceRequest setOwnerId(Long ownerId) {
@@ -68,17 +75,8 @@ public class StartElasticityAssuranceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public StartElasticityAssuranceRequest setPrivatePoolOptions(StartElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public StartElasticityAssuranceRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
-    }
-
     public static class StartElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("Id")
-        @Validation(required = true)
         public String id;
 
         public static StartElasticityAssuranceRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {

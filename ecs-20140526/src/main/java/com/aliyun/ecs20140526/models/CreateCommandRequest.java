@@ -17,22 +17,18 @@ public class CreateCommandRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Description")
     public String description;
 
     @NameInMap("Type")
-    @Validation(required = true)
     public String type;
 
     @NameInMap("CommandContent")
-    @Validation(required = true)
     public String commandContent;
 
     @NameInMap("WorkingDir")

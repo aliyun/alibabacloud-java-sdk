@@ -14,7 +14,6 @@ public class DeleteHpcClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ClientToken")
@@ -24,7 +23,6 @@ public class DeleteHpcClusterRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("HpcClusterId")
-    @Validation(required = true)
     public String hpcClusterId;
 
     public static DeleteHpcClusterRequest build(java.util.Map<String, ?> map) throws Exception {

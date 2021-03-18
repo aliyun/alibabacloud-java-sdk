@@ -17,7 +17,6 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("VRouterId")
-    @Validation(required = true)
     public String VRouterId;
 
     @NameInMap("VRouterName")

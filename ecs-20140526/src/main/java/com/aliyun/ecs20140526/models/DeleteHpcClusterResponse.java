@@ -4,21 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteHpcClusterResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteHpcClusterResponseBody body;
 
     public static DeleteHpcClusterResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteHpcClusterResponse self = new DeleteHpcClusterResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteHpcClusterResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteHpcClusterResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteHpcClusterResponse setBody(DeleteHpcClusterResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteHpcClusterResponseBody getBody() {
+        return this.body;
     }
 
 }

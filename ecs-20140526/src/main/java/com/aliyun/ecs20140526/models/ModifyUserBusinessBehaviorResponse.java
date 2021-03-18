@@ -4,21 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyUserBusinessBehaviorResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifyUserBusinessBehaviorResponseBody body;
 
     public static ModifyUserBusinessBehaviorResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyUserBusinessBehaviorResponse self = new ModifyUserBusinessBehaviorResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyUserBusinessBehaviorResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyUserBusinessBehaviorResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyUserBusinessBehaviorResponse setBody(ModifyUserBusinessBehaviorResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyUserBusinessBehaviorResponseBody getBody() {
+        return this.body;
     }
 
 }

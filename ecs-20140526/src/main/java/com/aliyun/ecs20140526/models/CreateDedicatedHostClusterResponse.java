@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateDedicatedHostClusterResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DedicatedHostClusterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String dedicatedHostClusterId;
+    public CreateDedicatedHostClusterResponseBody body;
 
     public static CreateDedicatedHostClusterResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDedicatedHostClusterResponse self = new CreateDedicatedHostClusterResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDedicatedHostClusterResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateDedicatedHostClusterResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateDedicatedHostClusterResponse setDedicatedHostClusterId(String dedicatedHostClusterId) {
-        this.dedicatedHostClusterId = dedicatedHostClusterId;
+    public CreateDedicatedHostClusterResponse setBody(CreateDedicatedHostClusterResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getDedicatedHostClusterId() {
-        return this.dedicatedHostClusterId;
+    public CreateDedicatedHostClusterResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -14,7 +14,6 @@ public class DeleteSnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("SnapshotId")
-    @Validation(required = true)
     public String snapshotId;
 
     @NameInMap("Force")

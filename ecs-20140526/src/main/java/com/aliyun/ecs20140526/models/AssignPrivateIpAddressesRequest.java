@@ -17,21 +17,19 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
     public String networkInterfaceId;
-
-    @NameInMap("PrivateIpAddress")
-    public java.util.List<String> privateIpAddress;
 
     @NameInMap("SecondaryPrivateIpAddressCount")
     public Integer secondaryPrivateIpAddressCount;
 
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("PrivateIpAddress")
+    public java.util.List<String> privateIpAddress;
 
     public static AssignPrivateIpAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         AssignPrivateIpAddressesRequest self = new AssignPrivateIpAddressesRequest();
@@ -86,14 +84,6 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
         return this.networkInterfaceId;
     }
 
-    public AssignPrivateIpAddressesRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
-        this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-    public java.util.List<String> getPrivateIpAddress() {
-        return this.privateIpAddress;
-    }
-
     public AssignPrivateIpAddressesRequest setSecondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -108,6 +98,14 @@ public class AssignPrivateIpAddressesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AssignPrivateIpAddressesRequest setPrivateIpAddress(java.util.List<String> privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public java.util.List<String> getPrivateIpAddress() {
+        return this.privateIpAddress;
     }
 
 }

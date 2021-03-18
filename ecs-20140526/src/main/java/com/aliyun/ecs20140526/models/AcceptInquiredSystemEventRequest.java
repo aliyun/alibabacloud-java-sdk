@@ -17,11 +17,9 @@ public class AcceptInquiredSystemEventRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("EventId")
-    @Validation(required = true)
     public String eventId;
 
     public static AcceptInquiredSystemEventRequest build(java.util.Map<String, ?> map) throws Exception {

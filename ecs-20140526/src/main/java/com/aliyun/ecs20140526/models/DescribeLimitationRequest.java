@@ -17,7 +17,6 @@ public class DescribeLimitationRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("Limitation")
-    @Validation(required = true)
     public String limitation;
 
     public static DescribeLimitationRequest build(java.util.Map<String, ?> map) throws Exception {

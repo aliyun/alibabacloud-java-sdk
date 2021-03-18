@@ -20,11 +20,9 @@ public class ModifyUserBusinessBehaviorRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("statusKey")
-    @Validation(required = true)
     public String statusKey;
 
     @NameInMap("statusValue")
-    @Validation(required = true)
     public String statusValue;
 
     public static ModifyUserBusinessBehaviorRequest build(java.util.Map<String, ?> map) throws Exception {

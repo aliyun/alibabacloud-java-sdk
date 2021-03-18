@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeploymentSetSupportedInstanceTypeFamilyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("InstanceTypeFamilies")
+    @NameInMap("body")
     @Validation(required = true)
-    public String instanceTypeFamilies;
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody body;
 
     public static DescribeDeploymentSetSupportedInstanceTypeFamilyResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeploymentSetSupportedInstanceTypeFamilyResponse self = new DescribeDeploymentSetSupportedInstanceTypeFamilyResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponse setInstanceTypeFamilies(String instanceTypeFamilies) {
-        this.instanceTypeFamilies = instanceTypeFamilies;
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponse setBody(DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getInstanceTypeFamilies() {
-        return this.instanceTypeFamilies;
+    public DescribeDeploymentSetSupportedInstanceTypeFamilyResponseBody getBody() {
+        return this.body;
     }
 
 }

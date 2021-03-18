@@ -17,21 +17,18 @@ public class CreateImagePipelineRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<CreateImagePipelineRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateImagePipelineRequestTag> tag;
+
     @NameInMap("BaseImageType")
-    @Validation(required = true)
     public String baseImageType;
 
     @NameInMap("BaseImage")
-    @Validation(required = true)
     public String baseImage;
 
     @NameInMap("Name")
@@ -61,14 +58,14 @@ public class CreateImagePipelineRequest extends TeaModel {
     @NameInMap("BuildContent")
     public String buildContent;
 
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     @NameInMap("AddAccount")
-    public java.util.List<Long> addAccount;
+    public java.util.List<Integer> addAccount;
 
     @NameInMap("ToRegionId")
     public java.util.List<String> toRegionId;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
 
     public static CreateImagePipelineRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImagePipelineRequest self = new CreateImagePipelineRequest();
@@ -115,20 +112,20 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateImagePipelineRequest setTag(java.util.List<CreateImagePipelineRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateImagePipelineRequestTag> getTag() {
-        return this.tag;
-    }
-
     public CreateImagePipelineRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateImagePipelineRequest setTag(java.util.List<CreateImagePipelineRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateImagePipelineRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateImagePipelineRequest setBaseImageType(String baseImageType) {
@@ -219,11 +216,19 @@ public class CreateImagePipelineRequest extends TeaModel {
         return this.buildContent;
     }
 
-    public CreateImagePipelineRequest setAddAccount(java.util.List<Long> addAccount) {
+    public CreateImagePipelineRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateImagePipelineRequest setAddAccount(java.util.List<Integer> addAccount) {
         this.addAccount = addAccount;
         return this;
     }
-    public java.util.List<Long> getAddAccount() {
+    public java.util.List<Integer> getAddAccount() {
         return this.addAccount;
     }
 
@@ -233,14 +238,6 @@ public class CreateImagePipelineRequest extends TeaModel {
     }
     public java.util.List<String> getToRegionId() {
         return this.toRegionId;
-    }
-
-    public CreateImagePipelineRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     public static class CreateImagePipelineRequestTag extends TeaModel {

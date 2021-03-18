@@ -17,11 +17,9 @@ public class DeregisterManagedInstanceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     public static DeregisterManagedInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

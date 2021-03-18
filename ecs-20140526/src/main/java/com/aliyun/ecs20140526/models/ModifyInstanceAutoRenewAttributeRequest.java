@@ -17,11 +17,9 @@ public class ModifyInstanceAutoRenewAttributeRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Duration")

@@ -17,7 +17,6 @@ public class ReleaseEipAddressRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("AllocationId")
-    @Validation(required = true)
     public String allocationId;
 
     @NameInMap("OwnerAccount")

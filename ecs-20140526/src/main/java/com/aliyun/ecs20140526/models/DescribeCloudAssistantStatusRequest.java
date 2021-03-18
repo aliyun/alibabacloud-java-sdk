@@ -17,11 +17,18 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
+    @NameInMap("OSType")
+    public String OSType;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public java.util.List<String> instanceId;
 
     public static DescribeCloudAssistantStatusRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -67,6 +74,30 @@ public class DescribeCloudAssistantStatusRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeCloudAssistantStatusRequest setOSType(String OSType) {
+        this.OSType = OSType;
+        return this;
+    }
+    public String getOSType() {
+        return this.OSType;
+    }
+
+    public DescribeCloudAssistantStatusRequest setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeCloudAssistantStatusRequest setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeCloudAssistantStatusRequest setInstanceId(java.util.List<String> instanceId) {

@@ -17,14 +17,12 @@ public class CancelImagePipelineExecutionRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("TemplateTag")
     public java.util.List<CancelImagePipelineExecutionRequestTemplateTag> templateTag;
 
     @NameInMap("ExecutionId")
-    @Validation(required = true)
     public String executionId;
 
     public static CancelImagePipelineExecutionRequest build(java.util.Map<String, ?> map) throws Exception {

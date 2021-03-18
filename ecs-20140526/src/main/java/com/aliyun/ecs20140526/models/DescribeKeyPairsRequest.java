@@ -14,7 +14,6 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("KeyPairName")
@@ -29,11 +28,11 @@ public class DescribeKeyPairsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeKeyPairsRequestTag> tag;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeKeyPairsRequestTag> tag;
 
     public static DescribeKeyPairsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeKeyPairsRequest self = new DescribeKeyPairsRequest();
@@ -104,20 +103,20 @@ public class DescribeKeyPairsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeKeyPairsRequest setTag(java.util.List<DescribeKeyPairsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeKeyPairsRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeKeyPairsRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeKeyPairsRequest setTag(java.util.List<DescribeKeyPairsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeKeyPairsRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class DescribeKeyPairsRequestTag extends TeaModel {

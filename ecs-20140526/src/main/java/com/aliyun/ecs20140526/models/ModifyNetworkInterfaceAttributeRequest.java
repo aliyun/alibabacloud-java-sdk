@@ -17,17 +17,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("SecurityGroupId")
-    public java.util.List<String> securityGroupId;
 
     @NameInMap("NetworkInterfaceName")
     public String networkInterfaceName;
 
     @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
     public String networkInterfaceId;
 
     @NameInMap("QueueNumber")
@@ -35,6 +30,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("SecurityGroupId")
+    public java.util.List<String> securityGroupId;
 
     public static ModifyNetworkInterfaceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNetworkInterfaceAttributeRequest self = new ModifyNetworkInterfaceAttributeRequest();
@@ -81,14 +79,6 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyNetworkInterfaceAttributeRequest setSecurityGroupId(java.util.List<String> securityGroupId) {
-        this.securityGroupId = securityGroupId;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupId() {
-        return this.securityGroupId;
-    }
-
     public ModifyNetworkInterfaceAttributeRequest setNetworkInterfaceName(String networkInterfaceName) {
         this.networkInterfaceName = networkInterfaceName;
         return this;
@@ -119,6 +109,14 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyNetworkInterfaceAttributeRequest setSecurityGroupId(java.util.List<String> securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupId() {
+        return this.securityGroupId;
     }
 
 }

@@ -14,15 +14,12 @@ public class ExportSnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("SnapshotId")
-    @Validation(required = true)
     public String snapshotId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OssBucket")
-    @Validation(required = true)
     public String ossBucket;
 
     @NameInMap("RoleName")

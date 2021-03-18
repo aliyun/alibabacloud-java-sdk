@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ReplaceSystemDiskRequest extends TeaModel {
+    @NameInMap("SystemDisk")
+    public ReplaceSystemDiskRequestSystemDisk systemDisk;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -14,14 +17,10 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ImageId")
     public String imageId;
-
-    @NameInMap("SystemDisk")
-    public ReplaceSystemDiskRequestSystemDisk systemDisk;
 
     @NameInMap("ClientToken")
     public String clientToken;
@@ -56,6 +55,14 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     public static ReplaceSystemDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         ReplaceSystemDiskRequest self = new ReplaceSystemDiskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ReplaceSystemDiskRequest setSystemDisk(ReplaceSystemDiskRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public ReplaceSystemDiskRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
     public ReplaceSystemDiskRequest setOwnerId(Long ownerId) {
@@ -96,14 +103,6 @@ public class ReplaceSystemDiskRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
-    }
-
-    public ReplaceSystemDiskRequest setSystemDisk(ReplaceSystemDiskRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public ReplaceSystemDiskRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
     }
 
     public ReplaceSystemDiskRequest setClientToken(String clientToken) {

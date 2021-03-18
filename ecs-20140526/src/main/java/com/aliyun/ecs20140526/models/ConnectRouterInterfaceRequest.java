@@ -14,11 +14,9 @@ public class ConnectRouterInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RouterInterfaceId")
-    @Validation(required = true)
     public String routerInterfaceId;
 
     public static ConnectRouterInterfaceRequest build(java.util.Map<String, ?> map) throws Exception {

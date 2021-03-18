@@ -14,7 +14,6 @@ public class StopInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ConfirmStop")
@@ -31,6 +30,9 @@ public class StopInstanceRequest extends TeaModel {
 
     @NameInMap("DryRun")
     public Boolean dryRun;
+
+    @NameInMap("Hibernate")
+    public Boolean hibernate;
 
     public static StopInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StopInstanceRequest self = new StopInstanceRequest();
@@ -107,6 +109,14 @@ public class StopInstanceRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public StopInstanceRequest setHibernate(Boolean hibernate) {
+        this.hibernate = hibernate;
+        return this;
+    }
+    public Boolean getHibernate() {
+        return this.hibernate;
     }
 
 }

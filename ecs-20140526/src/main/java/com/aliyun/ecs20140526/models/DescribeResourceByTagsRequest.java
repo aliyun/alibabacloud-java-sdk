@@ -23,7 +23,6 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     public String resourceType;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Tag")
@@ -99,23 +98,15 @@ public class DescribeResourceByTagsRequest extends TeaModel {
     }
 
     public static class DescribeResourceByTagsRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
-
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeResourceByTagsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceByTagsRequestTag self = new DescribeResourceByTagsRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeResourceByTagsRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeResourceByTagsRequestTag setKey(String key) {
@@ -124,6 +115,14 @@ public class DescribeResourceByTagsRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public DescribeResourceByTagsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

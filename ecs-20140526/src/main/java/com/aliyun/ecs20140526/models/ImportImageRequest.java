@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ImportImageRequest extends TeaModel {
-    @NameInMap("DiskDeviceMapping")
-    public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,7 +14,6 @@ public class ImportImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageName")
@@ -44,23 +40,18 @@ public class ImportImageRequest extends TeaModel {
     @NameInMap("LicenseType")
     public String licenseType;
 
-    @NameInMap("Tag")
-    public java.util.List<ImportImageRequestTag> tag;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("DiskDeviceMapping")
+    public java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping;
+
+    @NameInMap("Tag")
+    public java.util.List<ImportImageRequestTag> tag;
 
     public static ImportImageRequest build(java.util.Map<String, ?> map) throws Exception {
         ImportImageRequest self = new ImportImageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ImportImageRequest setDiskDeviceMapping(java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping) {
-        this.diskDeviceMapping = diskDeviceMapping;
-        return this;
-    }
-    public java.util.List<ImportImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
-        return this.diskDeviceMapping;
     }
 
     public ImportImageRequest setOwnerId(Long ownerId) {
@@ -159,14 +150,6 @@ public class ImportImageRequest extends TeaModel {
         return this.licenseType;
     }
 
-    public ImportImageRequest setTag(java.util.List<ImportImageRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<ImportImageRequestTag> getTag() {
-        return this.tag;
-    }
-
     public ImportImageRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -175,52 +158,44 @@ public class ImportImageRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public ImportImageRequest setDiskDeviceMapping(java.util.List<ImportImageRequestDiskDeviceMapping> diskDeviceMapping) {
+        this.diskDeviceMapping = diskDeviceMapping;
+        return this;
+    }
+    public java.util.List<ImportImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
+        return this.diskDeviceMapping;
+    }
+
+    public ImportImageRequest setTag(java.util.List<ImportImageRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ImportImageRequestTag> getTag() {
+        return this.tag;
+    }
+
     public static class ImportImageRequestDiskDeviceMapping extends TeaModel {
-        @NameInMap("Format")
-        public String format;
-
-        @NameInMap("OSSBucket")
-        public String OSSBucket;
-
-        @NameInMap("OSSObject")
-        public String OSSObject;
-
         @NameInMap("DiskImSize")
         public Integer diskImSize;
-
-        @NameInMap("DiskImageSize")
-        public Integer diskImageSize;
 
         @NameInMap("Device")
         public String device;
 
+        @NameInMap("OSSBucket")
+        public String OSSBucket;
+
+        @NameInMap("Format")
+        public String format;
+
+        @NameInMap("OSSObject")
+        public String OSSObject;
+
+        @NameInMap("DiskImageSize")
+        public Integer diskImageSize;
+
         public static ImportImageRequestDiskDeviceMapping build(java.util.Map<String, ?> map) throws Exception {
             ImportImageRequestDiskDeviceMapping self = new ImportImageRequestDiskDeviceMapping();
             return TeaModel.build(map, self);
-        }
-
-        public ImportImageRequestDiskDeviceMapping setFormat(String format) {
-            this.format = format;
-            return this;
-        }
-        public String getFormat() {
-            return this.format;
-        }
-
-        public ImportImageRequestDiskDeviceMapping setOSSBucket(String OSSBucket) {
-            this.OSSBucket = OSSBucket;
-            return this;
-        }
-        public String getOSSBucket() {
-            return this.OSSBucket;
-        }
-
-        public ImportImageRequestDiskDeviceMapping setOSSObject(String OSSObject) {
-            this.OSSObject = OSSObject;
-            return this;
-        }
-        public String getOSSObject() {
-            return this.OSSObject;
         }
 
         public ImportImageRequestDiskDeviceMapping setDiskImSize(Integer diskImSize) {
@@ -231,20 +206,44 @@ public class ImportImageRequest extends TeaModel {
             return this.diskImSize;
         }
 
-        public ImportImageRequestDiskDeviceMapping setDiskImageSize(Integer diskImageSize) {
-            this.diskImageSize = diskImageSize;
-            return this;
-        }
-        public Integer getDiskImageSize() {
-            return this.diskImageSize;
-        }
-
         public ImportImageRequestDiskDeviceMapping setDevice(String device) {
             this.device = device;
             return this;
         }
         public String getDevice() {
             return this.device;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setOSSBucket(String OSSBucket) {
+            this.OSSBucket = OSSBucket;
+            return this;
+        }
+        public String getOSSBucket() {
+            return this.OSSBucket;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setOSSObject(String OSSObject) {
+            this.OSSObject = OSSObject;
+            return this;
+        }
+        public String getOSSObject() {
+            return this.OSSObject;
+        }
+
+        public ImportImageRequestDiskDeviceMapping setDiskImageSize(Integer diskImageSize) {
+            this.diskImageSize = diskImageSize;
+            return this;
+        }
+        public Integer getDiskImageSize() {
+            return this.diskImageSize;
         }
 
     }

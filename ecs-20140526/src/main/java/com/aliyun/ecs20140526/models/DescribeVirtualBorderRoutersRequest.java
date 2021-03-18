@@ -14,7 +14,6 @@ public class DescribeVirtualBorderRoutersRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
