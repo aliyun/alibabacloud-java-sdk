@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationInstancesRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public DescribeCapacityReservationInstancesRequestPrivatePoolOptions privatePoolOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,7 +20,6 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("MaxResults")
@@ -26,12 +28,20 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("PrivatePoolOptions")
-    public DescribeCapacityReservationInstancesRequestPrivatePoolOptions privatePoolOptions;
+    @NameInMap("PackageType")
+    public String packageType;
 
     public static DescribeCapacityReservationInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCapacityReservationInstancesRequest self = new DescribeCapacityReservationInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCapacityReservationInstancesRequest setPrivatePoolOptions(DescribeCapacityReservationInstancesRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public DescribeCapacityReservationInstancesRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public DescribeCapacityReservationInstancesRequest setOwnerId(Long ownerId) {
@@ -90,17 +100,16 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeCapacityReservationInstancesRequest setPrivatePoolOptions(DescribeCapacityReservationInstancesRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
+    public DescribeCapacityReservationInstancesRequest setPackageType(String packageType) {
+        this.packageType = packageType;
         return this;
     }
-    public DescribeCapacityReservationInstancesRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
+    public String getPackageType() {
+        return this.packageType;
     }
 
     public static class DescribeCapacityReservationInstancesRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("Id")
-        @Validation(required = true)
         public String id;
 
         public static DescribeCapacityReservationInstancesRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {

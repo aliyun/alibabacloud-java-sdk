@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyElasticityAssuranceRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,18 +20,25 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("PrivatePoolOptions")
-    public ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
 
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("PackageType")
+    public String packageType;
+
     public static ModifyElasticityAssuranceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyElasticityAssuranceRequest self = new ModifyElasticityAssuranceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyElasticityAssuranceRequest setPrivatePoolOptions(ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public ModifyElasticityAssuranceRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public ModifyElasticityAssuranceRequest setOwnerId(Long ownerId) {
@@ -71,14 +81,6 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyElasticityAssuranceRequest setPrivatePoolOptions(ModifyElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public ModifyElasticityAssuranceRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
-    }
-
     public ModifyElasticityAssuranceRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -87,9 +89,16 @@ public class ModifyElasticityAssuranceRequest extends TeaModel {
         return this.description;
     }
 
+    public ModifyElasticityAssuranceRequest setPackageType(String packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+    public String getPackageType() {
+        return this.packageType;
+    }
+
     public static class ModifyElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("Id")
-        @Validation(required = true)
         public String id;
 
         @NameInMap("Name")

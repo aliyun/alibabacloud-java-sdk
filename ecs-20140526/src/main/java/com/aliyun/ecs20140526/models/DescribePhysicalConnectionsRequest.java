@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribePhysicalConnectionsRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
@@ -13,9 +12,6 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("Filter")
-    public java.util.List<DescribePhysicalConnectionsRequestFilter> filter;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -34,6 +30,9 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
 
     @NameInMap("UserCidr")
     public String userCidr;
+
+    @NameInMap("Filter")
+    public java.util.List<DescribePhysicalConnectionsRequestFilter> filter;
 
     public static DescribePhysicalConnectionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePhysicalConnectionsRequest self = new DescribePhysicalConnectionsRequest();
@@ -62,14 +61,6 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribePhysicalConnectionsRequest setFilter(java.util.List<DescribePhysicalConnectionsRequestFilter> filter) {
-        this.filter = filter;
-        return this;
-    }
-    public java.util.List<DescribePhysicalConnectionsRequestFilter> getFilter() {
-        return this.filter;
     }
 
     public DescribePhysicalConnectionsRequest setOwnerId(Long ownerId) {
@@ -118,6 +109,14 @@ public class DescribePhysicalConnectionsRequest extends TeaModel {
     }
     public String getUserCidr() {
         return this.userCidr;
+    }
+
+    public DescribePhysicalConnectionsRequest setFilter(java.util.List<DescribePhysicalConnectionsRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribePhysicalConnectionsRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public static class DescribePhysicalConnectionsRequestFilter extends TeaModel {

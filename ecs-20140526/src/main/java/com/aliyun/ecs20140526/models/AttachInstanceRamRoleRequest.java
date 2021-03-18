@@ -14,15 +14,12 @@ public class AttachInstanceRamRoleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RamRoleName")
-    @Validation(required = true)
     public String ramRoleName;
 
     @NameInMap("InstanceIds")
-    @Validation(required = true)
     public String instanceIds;
 
     @NameInMap("Policy")

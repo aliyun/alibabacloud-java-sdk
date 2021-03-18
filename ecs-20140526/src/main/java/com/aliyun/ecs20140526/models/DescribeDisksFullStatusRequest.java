@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDisksFullStatusRequest extends TeaModel {
+    @NameInMap("EventTime")
+    public DescribeDisksFullStatusRequestEventTime eventTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,14 +20,7 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("DiskId")
-    public java.util.List<String> diskId;
-
-    @NameInMap("EventId")
-    public java.util.List<String> eventId;
 
     @NameInMap("Status")
     public String status;
@@ -35,18 +31,29 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     @NameInMap("EventType")
     public String eventType;
 
-    @NameInMap("EventTime")
-    public DescribeDisksFullStatusRequestEventTime eventTime;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("DiskId")
+    public java.util.List<String> diskId;
+
+    @NameInMap("EventId")
+    public java.util.List<String> eventId;
+
     public static DescribeDisksFullStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDisksFullStatusRequest self = new DescribeDisksFullStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDisksFullStatusRequest setEventTime(DescribeDisksFullStatusRequestEventTime eventTime) {
+        this.eventTime = eventTime;
+        return this;
+    }
+    public DescribeDisksFullStatusRequestEventTime getEventTime() {
+        return this.eventTime;
     }
 
     public DescribeDisksFullStatusRequest setOwnerId(Long ownerId) {
@@ -89,22 +96,6 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeDisksFullStatusRequest setDiskId(java.util.List<String> diskId) {
-        this.diskId = diskId;
-        return this;
-    }
-    public java.util.List<String> getDiskId() {
-        return this.diskId;
-    }
-
-    public DescribeDisksFullStatusRequest setEventId(java.util.List<String> eventId) {
-        this.eventId = eventId;
-        return this;
-    }
-    public java.util.List<String> getEventId() {
-        return this.eventId;
-    }
-
     public DescribeDisksFullStatusRequest setStatus(String status) {
         this.status = status;
         return this;
@@ -129,14 +120,6 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
         return this.eventType;
     }
 
-    public DescribeDisksFullStatusRequest setEventTime(DescribeDisksFullStatusRequestEventTime eventTime) {
-        this.eventTime = eventTime;
-        return this;
-    }
-    public DescribeDisksFullStatusRequestEventTime getEventTime() {
-        return this.eventTime;
-    }
-
     public DescribeDisksFullStatusRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -151,6 +134,22 @@ public class DescribeDisksFullStatusRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDisksFullStatusRequest setDiskId(java.util.List<String> diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public java.util.List<String> getDiskId() {
+        return this.diskId;
+    }
+
+    public DescribeDisksFullStatusRequest setEventId(java.util.List<String> eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public java.util.List<String> getEventId() {
+        return this.eventId;
     }
 
     public static class DescribeDisksFullStatusRequestEventTime extends TeaModel {

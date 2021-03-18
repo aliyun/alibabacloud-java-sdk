@@ -4,21 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AttachDiskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public AttachDiskResponseBody body;
 
     public static AttachDiskResponse build(java.util.Map<String, ?> map) throws Exception {
         AttachDiskResponse self = new AttachDiskResponse();
         return TeaModel.build(map, self);
     }
 
-    public AttachDiskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AttachDiskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public AttachDiskResponse setBody(AttachDiskResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public AttachDiskResponseBody getBody() {
+        return this.body;
     }
 
 }

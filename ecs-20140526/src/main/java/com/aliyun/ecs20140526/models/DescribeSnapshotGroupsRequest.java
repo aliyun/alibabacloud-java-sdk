@@ -17,17 +17,10 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("SnapshotGroupId")
-    public java.util.List<String> snapshotGroupId;
-
-    @NameInMap("Status")
-    public java.util.List<String> status;
 
     @NameInMap("Name")
     public String name;
@@ -37,6 +30,12 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
 
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("SnapshotGroupId")
+    public java.util.List<String> snapshotGroupId;
+
+    @NameInMap("Status")
+    public java.util.List<String> status;
 
     public static DescribeSnapshotGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotGroupsRequest self = new DescribeSnapshotGroupsRequest();
@@ -91,22 +90,6 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeSnapshotGroupsRequest setSnapshotGroupId(java.util.List<String> snapshotGroupId) {
-        this.snapshotGroupId = snapshotGroupId;
-        return this;
-    }
-    public java.util.List<String> getSnapshotGroupId() {
-        return this.snapshotGroupId;
-    }
-
-    public DescribeSnapshotGroupsRequest setStatus(java.util.List<String> status) {
-        this.status = status;
-        return this;
-    }
-    public java.util.List<String> getStatus() {
-        return this.status;
-    }
-
     public DescribeSnapshotGroupsRequest setName(String name) {
         this.name = name;
         return this;
@@ -129,6 +112,22 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeSnapshotGroupsRequest setSnapshotGroupId(java.util.List<String> snapshotGroupId) {
+        this.snapshotGroupId = snapshotGroupId;
+        return this;
+    }
+    public java.util.List<String> getSnapshotGroupId() {
+        return this.snapshotGroupId;
+    }
+
+    public DescribeSnapshotGroupsRequest setStatus(java.util.List<String> status) {
+        this.status = status;
+        return this;
+    }
+    public java.util.List<String> getStatus() {
+        return this.status;
     }
 
 }

@@ -17,7 +17,6 @@ public class ModifyInstanceAutoReleaseTimeRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("AutoReleaseTime")

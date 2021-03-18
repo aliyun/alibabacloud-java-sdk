@@ -17,15 +17,12 @@ public class UnassignPrivateIpAddressesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
     public String networkInterfaceId;
 
     @NameInMap("PrivateIpAddress")
-    @Validation(required = true)
     public java.util.List<String> privateIpAddress;
 
     public static UnassignPrivateIpAddressesRequest build(java.util.Map<String, ?> map) throws Exception {

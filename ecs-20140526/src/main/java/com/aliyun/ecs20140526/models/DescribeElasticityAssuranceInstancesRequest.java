@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,7 +20,6 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("MaxResults")
@@ -26,12 +28,20 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("PrivatePoolOptions")
-    public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions;
+    @NameInMap("PackageType")
+    public String packageType;
 
     public static DescribeElasticityAssuranceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticityAssuranceInstancesRequest self = new DescribeElasticityAssuranceInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeElasticityAssuranceInstancesRequest setPrivatePoolOptions(DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public DescribeElasticityAssuranceInstancesRequest setOwnerId(Long ownerId) {
@@ -90,17 +100,16 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeElasticityAssuranceInstancesRequest setPrivatePoolOptions(DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
+    public DescribeElasticityAssuranceInstancesRequest setPackageType(String packageType) {
+        this.packageType = packageType;
         return this;
     }
-    public DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
+    public String getPackageType() {
+        return this.packageType;
     }
 
     public static class DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("Id")
-        @Validation(required = true)
         public String id;
 
         public static DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {

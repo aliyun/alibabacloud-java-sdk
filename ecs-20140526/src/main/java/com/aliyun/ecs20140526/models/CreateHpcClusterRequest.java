@@ -14,7 +14,6 @@ public class CreateHpcClusterRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ClientToken")
@@ -27,7 +26,6 @@ public class CreateHpcClusterRequest extends TeaModel {
     public String description;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     public static CreateHpcClusterRequest build(java.util.Map<String, ?> map) throws Exception {

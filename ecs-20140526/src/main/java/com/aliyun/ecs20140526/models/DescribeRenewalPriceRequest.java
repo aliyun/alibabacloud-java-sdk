@@ -17,14 +17,12 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
     public String resourceType;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("Period")
@@ -32,6 +30,9 @@ public class DescribeRenewalPriceRequest extends TeaModel {
 
     @NameInMap("PriceUnit")
     public String priceUnit;
+
+    @NameInMap("ExpectedRenewDay")
+    public Integer expectedRenewDay;
 
     public static DescribeRenewalPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRenewalPriceRequest self = new DescribeRenewalPriceRequest();
@@ -108,6 +109,14 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     }
     public String getPriceUnit() {
         return this.priceUnit;
+    }
+
+    public DescribeRenewalPriceRequest setExpectedRenewDay(Integer expectedRenewDay) {
+        this.expectedRenewDay = expectedRenewDay;
+        return this;
+    }
+    public Integer getExpectedRenewDay() {
+        return this.expectedRenewDay;
     }
 
 }

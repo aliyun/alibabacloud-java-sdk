@@ -17,11 +17,9 @@ public class ModifyCommandRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("CommandId")
-    @Validation(required = true)
     public String commandId;
 
     @NameInMap("Name")

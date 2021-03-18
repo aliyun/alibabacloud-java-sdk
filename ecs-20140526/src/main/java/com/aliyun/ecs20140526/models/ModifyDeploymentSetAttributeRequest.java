@@ -14,7 +14,6 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("DeploymentSetId")
-    @Validation(required = true)
     public String deploymentSetId;
 
     @NameInMap("Description")
@@ -24,7 +23,6 @@ public class ModifyDeploymentSetAttributeRequest extends TeaModel {
     public String deploymentSetName;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OwnerAccount")

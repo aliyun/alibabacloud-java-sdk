@@ -4,45 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateActivationResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ActivationId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String activationId;
-
-    @NameInMap("ActivationCode")
-    @Validation(required = true)
-    public String activationCode;
+    public CreateActivationResponseBody body;
 
     public static CreateActivationResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateActivationResponse self = new CreateActivationResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateActivationResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateActivationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateActivationResponse setActivationId(String activationId) {
-        this.activationId = activationId;
+    public CreateActivationResponse setBody(CreateActivationResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getActivationId() {
-        return this.activationId;
-    }
-
-    public CreateActivationResponse setActivationCode(String activationCode) {
-        this.activationCode = activationCode;
-        return this;
-    }
-    public String getActivationCode() {
-        return this.activationCode;
+    public CreateActivationResponseBody getBody() {
+        return this.body;
     }
 
 }

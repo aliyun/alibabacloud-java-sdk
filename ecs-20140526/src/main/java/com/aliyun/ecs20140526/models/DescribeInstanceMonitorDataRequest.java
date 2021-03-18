@@ -17,15 +17,12 @@ public class DescribeInstanceMonitorDataRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("Period")

@@ -14,19 +14,15 @@ public class AddTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("Tag")
-    @Validation(required = true)
     public java.util.List<AddTagsRequestTag> tag;
 
     public static AddTagsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -91,23 +87,15 @@ public class AddTagsRequest extends TeaModel {
     }
 
     public static class AddTagsRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
-
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static AddTagsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             AddTagsRequestTag self = new AddTagsRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public AddTagsRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public AddTagsRequestTag setKey(String key) {
@@ -116,6 +104,14 @@ public class AddTagsRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public AddTagsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

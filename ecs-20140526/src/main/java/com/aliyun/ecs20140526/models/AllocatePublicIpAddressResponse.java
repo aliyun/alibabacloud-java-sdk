@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocatePublicIpAddressResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IpAddress")
+    @NameInMap("body")
     @Validation(required = true)
-    public String ipAddress;
+    public AllocatePublicIpAddressResponseBody body;
 
     public static AllocatePublicIpAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         AllocatePublicIpAddressResponse self = new AllocatePublicIpAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public AllocatePublicIpAddressResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AllocatePublicIpAddressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AllocatePublicIpAddressResponse setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
+    public AllocatePublicIpAddressResponse setBody(AllocatePublicIpAddressResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getIpAddress() {
-        return this.ipAddress;
+    public AllocatePublicIpAddressResponseBody getBody() {
+        return this.body;
     }
 
 }

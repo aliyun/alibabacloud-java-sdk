@@ -17,15 +17,12 @@ public class AddBandwidthPackageIpsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
     public String bandwidthPackageId;
 
     @NameInMap("IpCount")
-    @Validation(required = true)
     public String ipCount;
 
     @NameInMap("ClientToken")

@@ -17,15 +17,12 @@ public class AttachNetworkInterfaceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
     public String networkInterfaceId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("TrunkNetworkInstanceId")

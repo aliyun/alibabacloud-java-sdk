@@ -17,11 +17,9 @@ public class DeleteNatGatewayRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NatGatewayId")
-    @Validation(required = true)
     public String natGatewayId;
 
     public static DeleteNatGatewayRequest build(java.util.Map<String, ?> map) throws Exception {

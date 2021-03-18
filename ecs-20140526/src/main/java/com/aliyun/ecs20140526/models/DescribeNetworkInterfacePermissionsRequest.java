@@ -17,20 +17,19 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("NetworkInterfaceId")
     public String networkInterfaceId;
-
-    @NameInMap("NetworkInterfacePermissionId")
-    public java.util.List<String> networkInterfacePermissionId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("NetworkInterfacePermissionId")
+    public java.util.List<String> networkInterfacePermissionId;
 
     public static DescribeNetworkInterfacePermissionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeNetworkInterfacePermissionsRequest self = new DescribeNetworkInterfacePermissionsRequest();
@@ -85,14 +84,6 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
         return this.networkInterfaceId;
     }
 
-    public DescribeNetworkInterfacePermissionsRequest setNetworkInterfacePermissionId(java.util.List<String> networkInterfacePermissionId) {
-        this.networkInterfacePermissionId = networkInterfacePermissionId;
-        return this;
-    }
-    public java.util.List<String> getNetworkInterfacePermissionId() {
-        return this.networkInterfacePermissionId;
-    }
-
     public DescribeNetworkInterfacePermissionsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -107,6 +98,14 @@ public class DescribeNetworkInterfacePermissionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeNetworkInterfacePermissionsRequest setNetworkInterfacePermissionId(java.util.List<String> networkInterfacePermissionId) {
+        this.networkInterfacePermissionId = networkInterfacePermissionId;
+        return this;
+    }
+    public java.util.List<String> getNetworkInterfacePermissionId() {
+        return this.networkInterfacePermissionId;
     }
 
 }

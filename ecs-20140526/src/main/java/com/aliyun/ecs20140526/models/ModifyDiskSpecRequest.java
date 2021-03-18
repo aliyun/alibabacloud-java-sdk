@@ -17,7 +17,6 @@ public class ModifyDiskSpecRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("DiskId")
-    @Validation(required = true)
     public String diskId;
 
     @NameInMap("PerformanceLevel")

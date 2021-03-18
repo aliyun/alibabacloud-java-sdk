@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssurancesRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,7 +20,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("MaxResults")
@@ -25,9 +27,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
 
     @NameInMap("NextToken")
     public String nextToken;
-
-    @NameInMap("PrivatePoolOptions")
-    public DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions;
 
     @NameInMap("Platform")
     public String platform;
@@ -44,9 +43,20 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("PackageType")
+    public String packageType;
+
     public static DescribeElasticityAssurancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticityAssurancesRequest self = new DescribeElasticityAssurancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeElasticityAssurancesRequest setPrivatePoolOptions(DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public DescribeElasticityAssurancesRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public DescribeElasticityAssurancesRequest setOwnerId(Long ownerId) {
@@ -105,14 +115,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeElasticityAssurancesRequest setPrivatePoolOptions(DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public DescribeElasticityAssurancesRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
-    }
-
     public DescribeElasticityAssurancesRequest setPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -151,6 +153,14 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeElasticityAssurancesRequest setPackageType(String packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+    public String getPackageType() {
+        return this.packageType;
     }
 
     public static class DescribeElasticityAssurancesRequestPrivatePoolOptions extends TeaModel {

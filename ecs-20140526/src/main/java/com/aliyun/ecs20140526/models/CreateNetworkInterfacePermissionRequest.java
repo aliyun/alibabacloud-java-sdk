@@ -17,19 +17,15 @@ public class CreateNetworkInterfacePermissionRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("AccountId")
-    @Validation(required = true)
     public Long accountId;
 
     @NameInMap("NetworkInterfaceId")
-    @Validation(required = true)
     public String networkInterfaceId;
 
     @NameInMap("Permission")
-    @Validation(required = true)
     public String permission;
 
     public static CreateNetworkInterfacePermissionRequest build(java.util.Map<String, ?> map) throws Exception {

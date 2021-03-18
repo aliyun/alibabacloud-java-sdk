@@ -4,65 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class PurchaseStorageCapacityUnitResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OrderId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String orderId;
-
-    @NameInMap("StorageCapacityUnitIds")
-    @Validation(required = true)
-    public PurchaseStorageCapacityUnitResponseStorageCapacityUnitIds storageCapacityUnitIds;
+    public PurchaseStorageCapacityUnitResponseBody body;
 
     public static PurchaseStorageCapacityUnitResponse build(java.util.Map<String, ?> map) throws Exception {
         PurchaseStorageCapacityUnitResponse self = new PurchaseStorageCapacityUnitResponse();
         return TeaModel.build(map, self);
     }
 
-    public PurchaseStorageCapacityUnitResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public PurchaseStorageCapacityUnitResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public PurchaseStorageCapacityUnitResponse setOrderId(String orderId) {
-        this.orderId = orderId;
+    public PurchaseStorageCapacityUnitResponse setBody(PurchaseStorageCapacityUnitResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
-    }
-
-    public PurchaseStorageCapacityUnitResponse setStorageCapacityUnitIds(PurchaseStorageCapacityUnitResponseStorageCapacityUnitIds storageCapacityUnitIds) {
-        this.storageCapacityUnitIds = storageCapacityUnitIds;
-        return this;
-    }
-    public PurchaseStorageCapacityUnitResponseStorageCapacityUnitIds getStorageCapacityUnitIds() {
-        return this.storageCapacityUnitIds;
-    }
-
-    public static class PurchaseStorageCapacityUnitResponseStorageCapacityUnitIds extends TeaModel {
-        @NameInMap("StorageCapacityUnitId")
-        @Validation(required = true)
-        public java.util.List<String> storageCapacityUnitId;
-
-        public static PurchaseStorageCapacityUnitResponseStorageCapacityUnitIds build(java.util.Map<String, ?> map) throws Exception {
-            PurchaseStorageCapacityUnitResponseStorageCapacityUnitIds self = new PurchaseStorageCapacityUnitResponseStorageCapacityUnitIds();
-            return TeaModel.build(map, self);
-        }
-
-        public PurchaseStorageCapacityUnitResponseStorageCapacityUnitIds setStorageCapacityUnitId(java.util.List<String> storageCapacityUnitId) {
-            this.storageCapacityUnitId = storageCapacityUnitId;
-            return this;
-        }
-        public java.util.List<String> getStorageCapacityUnitId() {
-            return this.storageCapacityUnitId;
-        }
-
+    public PurchaseStorageCapacityUnitResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -14,7 +14,6 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Password")
@@ -44,11 +43,11 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
-    @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
-
     @NameInMap("NetworkInterfaceQueueNumber")
     public Integer networkInterfaceQueueNumber;
+
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
 
     public static ModifyInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAttributeRequest self = new ModifyInstanceAttributeRequest();
@@ -159,20 +158,20 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
         return this.deletionProtection;
     }
 
-    public ModifyInstanceAttributeRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-        this.securityGroupIds = securityGroupIds;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupIds() {
-        return this.securityGroupIds;
-    }
-
     public ModifyInstanceAttributeRequest setNetworkInterfaceQueueNumber(Integer networkInterfaceQueueNumber) {
         this.networkInterfaceQueueNumber = networkInterfaceQueueNumber;
         return this;
     }
     public Integer getNetworkInterfaceQueueNumber() {
         return this.networkInterfaceQueueNumber;
+    }
+
+    public ModifyInstanceAttributeRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
 }

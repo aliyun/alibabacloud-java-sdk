@@ -14,7 +14,6 @@ public class CreateSnapshotRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("DiskId")
-    @Validation(required = true)
     public String diskId;
 
     @NameInMap("SnapshotName")
@@ -35,9 +34,6 @@ public class CreateSnapshotRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("Tag")
-    public java.util.List<CreateSnapshotRequestTag> tag;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -46,6 +42,9 @@ public class CreateSnapshotRequest extends TeaModel {
 
     @NameInMap("InstantAccessRetentionDays")
     public Integer instantAccessRetentionDays;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateSnapshotRequestTag> tag;
 
     public static CreateSnapshotRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnapshotRequest self = new CreateSnapshotRequest();
@@ -132,14 +131,6 @@ public class CreateSnapshotRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateSnapshotRequest setTag(java.util.List<CreateSnapshotRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateSnapshotRequestTag> getTag() {
-        return this.tag;
-    }
-
     public CreateSnapshotRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -164,24 +155,24 @@ public class CreateSnapshotRequest extends TeaModel {
         return this.instantAccessRetentionDays;
     }
 
-    public static class CreateSnapshotRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
+    public CreateSnapshotRequest setTag(java.util.List<CreateSnapshotRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateSnapshotRequestTag> getTag() {
+        return this.tag;
+    }
 
+    public static class CreateSnapshotRequestTag extends TeaModel {
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static CreateSnapshotRequestTag build(java.util.Map<String, ?> map) throws Exception {
             CreateSnapshotRequestTag self = new CreateSnapshotRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public CreateSnapshotRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public CreateSnapshotRequestTag setKey(String key) {
@@ -190,6 +181,14 @@ public class CreateSnapshotRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public CreateSnapshotRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

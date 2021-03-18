@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNetworkSpecResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OrderId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String orderId;
+    public ModifyInstanceNetworkSpecResponseBody body;
 
     public static ModifyInstanceNetworkSpecResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceNetworkSpecResponse self = new ModifyInstanceNetworkSpecResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyInstanceNetworkSpecResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyInstanceNetworkSpecResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ModifyInstanceNetworkSpecResponse setOrderId(String orderId) {
-        this.orderId = orderId;
+    public ModifyInstanceNetworkSpecResponse setBody(ModifyInstanceNetworkSpecResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public ModifyInstanceNetworkSpecResponseBody getBody() {
+        return this.body;
     }
 
 }

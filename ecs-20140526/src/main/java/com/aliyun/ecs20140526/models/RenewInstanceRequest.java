@@ -20,15 +20,16 @@ public class RenewInstanceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Period")
-    @Validation(required = true)
     public Integer period;
 
     @NameInMap("PeriodUnit")
     public String periodUnit;
+
+    @NameInMap("ExpectedRenewDay")
+    public Integer expectedRenewDay;
 
     public static RenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceRequest self = new RenewInstanceRequest();
@@ -97,6 +98,14 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public RenewInstanceRequest setExpectedRenewDay(Integer expectedRenewDay) {
+        this.expectedRenewDay = expectedRenewDay;
+        return this;
+    }
+    public Integer getExpectedRenewDay() {
+        return this.expectedRenewDay;
     }
 
 }

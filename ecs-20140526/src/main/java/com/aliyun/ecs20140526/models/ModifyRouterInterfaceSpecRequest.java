@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class ModifyRouterInterfaceSpecRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RouterInterfaceId")
-    @Validation(required = true)
     public String routerInterfaceId;
 
     @NameInMap("Spec")
-    @Validation(required = true)
     public String spec;
 
     @NameInMap("OwnerId")

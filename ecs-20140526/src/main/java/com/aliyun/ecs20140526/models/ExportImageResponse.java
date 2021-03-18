@@ -4,45 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ExportImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("TaskId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String taskId;
-
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    public String regionId;
+    public ExportImageResponseBody body;
 
     public static ExportImageResponse build(java.util.Map<String, ?> map) throws Exception {
         ExportImageResponse self = new ExportImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public ExportImageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ExportImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ExportImageResponse setTaskId(String taskId) {
-        this.taskId = taskId;
+    public ExportImageResponse setBody(ExportImageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getTaskId() {
-        return this.taskId;
-    }
-
-    public ExportImageResponse setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
+    public ExportImageResponseBody getBody() {
+        return this.body;
     }
 
 }

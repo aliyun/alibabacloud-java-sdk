@@ -17,7 +17,6 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Cores")
@@ -35,9 +34,6 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    @NameInMap("InstanceTypes")
-    public java.util.List<String> instanceTypes;
-
     @NameInMap("InstanceTypeFamily")
     public String instanceTypeFamily;
 
@@ -49,6 +45,15 @@ public class DescribeSpotAdviceRequest extends TeaModel {
 
     @NameInMap("GpuAmount")
     public Integer gpuAmount;
+
+    @NameInMap("NetworkType")
+    public String networkType;
+
+    @NameInMap("IoOptimized")
+    public String ioOptimized;
+
+    @NameInMap("InstanceTypes")
+    public java.util.List<String> instanceTypes;
 
     public static DescribeSpotAdviceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSpotAdviceRequest self = new DescribeSpotAdviceRequest();
@@ -135,14 +140,6 @@ public class DescribeSpotAdviceRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public DescribeSpotAdviceRequest setInstanceTypes(java.util.List<String> instanceTypes) {
-        this.instanceTypes = instanceTypes;
-        return this;
-    }
-    public java.util.List<String> getInstanceTypes() {
-        return this.instanceTypes;
-    }
-
     public DescribeSpotAdviceRequest setInstanceTypeFamily(String instanceTypeFamily) {
         this.instanceTypeFamily = instanceTypeFamily;
         return this;
@@ -173,6 +170,30 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     }
     public Integer getGpuAmount() {
         return this.gpuAmount;
+    }
+
+    public DescribeSpotAdviceRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    public DescribeSpotAdviceRequest setIoOptimized(String ioOptimized) {
+        this.ioOptimized = ioOptimized;
+        return this;
+    }
+    public String getIoOptimized() {
+        return this.ioOptimized;
+    }
+
+    public DescribeSpotAdviceRequest setInstanceTypes(java.util.List<String> instanceTypes) {
+        this.instanceTypes = instanceTypes;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypes() {
+        return this.instanceTypes;
     }
 
 }

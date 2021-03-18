@@ -20,14 +20,12 @@ public class ModifyDemandRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
     public String zoneId;
 
     @NameInMap("DemandId")
-    @Validation(required = true)
     public String demandId;
 
     @NameInMap("DemandName")

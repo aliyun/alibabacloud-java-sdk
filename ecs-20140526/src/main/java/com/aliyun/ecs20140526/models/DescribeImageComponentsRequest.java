@@ -17,26 +17,25 @@ public class DescribeImageComponentsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeImageComponentsRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeImageComponentsRequestTag> tag;
+
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("ImageComponentId")
-    public java.util.List<String> imageComponentId;
 
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("ImageComponentId")
+    public java.util.List<String> imageComponentId;
 
     public static DescribeImageComponentsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageComponentsRequest self = new DescribeImageComponentsRequest();
@@ -83,14 +82,6 @@ public class DescribeImageComponentsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeImageComponentsRequest setTag(java.util.List<DescribeImageComponentsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeImageComponentsRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeImageComponentsRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -99,20 +90,20 @@ public class DescribeImageComponentsRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public DescribeImageComponentsRequest setTag(java.util.List<DescribeImageComponentsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeImageComponentsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeImageComponentsRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
-    }
-
-    public DescribeImageComponentsRequest setImageComponentId(java.util.List<String> imageComponentId) {
-        this.imageComponentId = imageComponentId;
-        return this;
-    }
-    public java.util.List<String> getImageComponentId() {
-        return this.imageComponentId;
     }
 
     public DescribeImageComponentsRequest setNextToken(String nextToken) {
@@ -129,6 +120,14 @@ public class DescribeImageComponentsRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeImageComponentsRequest setImageComponentId(java.util.List<String> imageComponentId) {
+        this.imageComponentId = imageComponentId;
+        return this;
+    }
+    public java.util.List<String> getImageComponentId() {
+        return this.imageComponentId;
     }
 
     public static class DescribeImageComponentsRequestTag extends TeaModel {

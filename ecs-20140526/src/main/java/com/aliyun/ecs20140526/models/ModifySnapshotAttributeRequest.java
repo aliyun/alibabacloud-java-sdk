@@ -17,7 +17,6 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("SnapshotId")
-    @Validation(required = true)
     public String snapshotId;
 
     @NameInMap("SnapshotName")

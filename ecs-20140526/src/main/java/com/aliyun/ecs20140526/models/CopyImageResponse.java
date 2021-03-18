@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CopyImageResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ImageId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String imageId;
+    public CopyImageResponseBody body;
 
     public static CopyImageResponse build(java.util.Map<String, ?> map) throws Exception {
         CopyImageResponse self = new CopyImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public CopyImageResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CopyImageResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CopyImageResponse setImageId(String imageId) {
-        this.imageId = imageId;
+    public CopyImageResponse setBody(CopyImageResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getImageId() {
-        return this.imageId;
+    public CopyImageResponseBody getBody() {
+        return this.body;
     }
 
 }
