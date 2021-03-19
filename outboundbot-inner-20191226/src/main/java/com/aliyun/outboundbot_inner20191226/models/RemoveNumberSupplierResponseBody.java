@@ -1,0 +1,67 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.outboundbot_inner20191226.models;
+
+import com.aliyun.tea.*;
+
+public class RemoveNumberSupplierResponseBody extends TeaModel {
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static RemoveNumberSupplierResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        RemoveNumberSupplierResponseBody self = new RemoveNumberSupplierResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public RemoveNumberSupplierResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public RemoveNumberSupplierResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public RemoveNumberSupplierResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public RemoveNumberSupplierResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public RemoveNumberSupplierResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+}
