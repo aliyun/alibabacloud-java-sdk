@@ -38,6 +38,9 @@ public class GetAudioExtractResponseBody extends TeaModel {
         @NameInMap("SourceUrl")
         public String sourceUrl;
 
+        @NameInMap("WaterMarkId")
+        public String waterMarkId;
+
         @NameInMap("ResultUrl")
         public String resultUrl;
 
@@ -90,6 +93,14 @@ public class GetAudioExtractResponseBody extends TeaModel {
         }
         public String getSourceUrl() {
             return this.sourceUrl;
+        }
+
+        public GetAudioExtractResponseBodyData setWaterMarkId(String waterMarkId) {
+            this.waterMarkId = waterMarkId;
+            return this;
+        }
+        public String getWaterMarkId() {
+            return this.waterMarkId;
         }
 
         public GetAudioExtractResponseBodyData setResultUrl(String resultUrl) {

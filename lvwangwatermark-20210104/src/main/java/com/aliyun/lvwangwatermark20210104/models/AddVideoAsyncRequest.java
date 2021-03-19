@@ -10,6 +10,9 @@ public class AddVideoAsyncRequest extends TeaModel {
     @NameInMap("WatermarkId")
     public String watermarkId;
 
+    @NameInMap("VmType")
+    public String vmType;
+
     @NameInMap("urlList")
     public String urlList;
 
@@ -32,6 +35,14 @@ public class AddVideoAsyncRequest extends TeaModel {
     }
     public String getWatermarkId() {
         return this.watermarkId;
+    }
+
+    public AddVideoAsyncRequest setVmType(String vmType) {
+        this.vmType = vmType;
+        return this;
+    }
+    public String getVmType() {
+        return this.vmType;
     }
 
     public AddVideoAsyncRequest setUrlList(String urlList) {
