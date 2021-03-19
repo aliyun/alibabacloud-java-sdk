@@ -16,6 +16,9 @@ public class GetVideoAsyncRequest extends TeaModel {
     @NameInMap("WaterMarkType")
     public String waterMarkType;
 
+    @NameInMap("VmType")
+    public String vmType;
+
     public static GetVideoAsyncRequest build(java.util.Map<String, ?> map) throws Exception {
         GetVideoAsyncRequest self = new GetVideoAsyncRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class GetVideoAsyncRequest extends TeaModel {
     }
     public String getWaterMarkType() {
         return this.waterMarkType;
+    }
+
+    public GetVideoAsyncRequest setVmType(String vmType) {
+        this.vmType = vmType;
+        return this;
+    }
+    public String getVmType() {
+        return this.vmType;
     }
 
 }
