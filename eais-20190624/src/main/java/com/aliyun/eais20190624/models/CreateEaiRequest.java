@@ -16,6 +16,12 @@ public class CreateEaiRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     public static CreateEaiRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEaiRequest self = new CreateEaiRequest();
         return TeaModel.build(map, self);
@@ -51,6 +57,22 @@ public class CreateEaiRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public CreateEaiRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public CreateEaiRequest setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
     }
 
 }
