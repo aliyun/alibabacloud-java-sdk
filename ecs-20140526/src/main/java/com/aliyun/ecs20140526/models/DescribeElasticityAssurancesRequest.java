@@ -43,9 +43,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("PackageType")
-    public String packageType;
-
     public static DescribeElasticityAssurancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticityAssurancesRequest self = new DescribeElasticityAssurancesRequest();
         return TeaModel.build(map, self);
@@ -153,14 +150,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DescribeElasticityAssurancesRequest setPackageType(String packageType) {
-        this.packageType = packageType;
-        return this;
-    }
-    public String getPackageType() {
-        return this.packageType;
     }
 
     public static class DescribeElasticityAssurancesRequestPrivatePoolOptions extends TeaModel {

@@ -551,9 +551,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("CreditSpecification")
         public String creditSpecification;
 
-        @NameInMap("Password")
-        public String password;
-
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 
@@ -734,14 +731,6 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public String getCreditSpecification() {
             return this.creditSpecification;
-        }
-
-        public CreateAutoProvisioningGroupRequestLaunchConfiguration setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setDeploymentSetId(String deploymentSetId) {

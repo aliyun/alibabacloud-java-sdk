@@ -46,9 +46,6 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("NeedHostDetail")
-    public String needHostDetail;
-
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;
 
@@ -167,14 +164,6 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeDedicatedHostsRequest setNeedHostDetail(String needHostDetail) {
-        this.needHostDetail = needHostDetail;
-        return this;
-    }
-    public String getNeedHostDetail() {
-        return this.needHostDetail;
     }
 
     public DescribeDedicatedHostsRequest setTag(java.util.List<DescribeDedicatedHostsRequestTag> tag) {

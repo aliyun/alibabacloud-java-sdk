@@ -46,12 +46,6 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     @NameInMap("GpuAmount")
     public Integer gpuAmount;
 
-    @NameInMap("NetworkType")
-    public String networkType;
-
-    @NameInMap("IoOptimized")
-    public String ioOptimized;
-
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
 
@@ -170,22 +164,6 @@ public class DescribeSpotAdviceRequest extends TeaModel {
     }
     public Integer getGpuAmount() {
         return this.gpuAmount;
-    }
-
-    public DescribeSpotAdviceRequest setNetworkType(String networkType) {
-        this.networkType = networkType;
-        return this;
-    }
-    public String getNetworkType() {
-        return this.networkType;
-    }
-
-    public DescribeSpotAdviceRequest setIoOptimized(String ioOptimized) {
-        this.ioOptimized = ioOptimized;
-        return this;
-    }
-    public String getIoOptimized() {
-        return this.ioOptimized;
     }
 
     public DescribeSpotAdviceRequest setInstanceTypes(java.util.List<String> instanceTypes) {

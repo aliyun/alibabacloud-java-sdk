@@ -28,9 +28,6 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("PackageType")
-    public String packageType;
-
     public static DescribeElasticityAssuranceInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticityAssuranceInstancesRequest self = new DescribeElasticityAssuranceInstancesRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class DescribeElasticityAssuranceInstancesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public DescribeElasticityAssuranceInstancesRequest setPackageType(String packageType) {
-        this.packageType = packageType;
-        return this;
-    }
-    public String getPackageType() {
-        return this.packageType;
     }
 
     public static class DescribeElasticityAssuranceInstancesRequestPrivatePoolOptions extends TeaModel {
