@@ -272,6 +272,18 @@ public class YuqingMessage extends TeaModel {
     @NameInMap("financeEvents")
     public java.util.List<FinanceEvent> financeEvents;
 
+    // appstore应用评分
+    @NameInMap("appStoreAppScore")
+    public String appStoreAppScore;
+
+    // 应用名称
+    @NameInMap("appStoreAppName")
+    public String appStoreAppName;
+
+    // 应用市场名称
+    @NameInMap("appStoreName")
+    public String appStoreName;
+
     public static YuqingMessage build(java.util.Map<String, ?> map) throws Exception {
         YuqingMessage self = new YuqingMessage();
         return TeaModel.build(map, self);
@@ -811,6 +823,30 @@ public class YuqingMessage extends TeaModel {
     }
     public java.util.List<FinanceEvent> getFinanceEvents() {
         return this.financeEvents;
+    }
+
+    public YuqingMessage setAppStoreAppScore(String appStoreAppScore) {
+        this.appStoreAppScore = appStoreAppScore;
+        return this;
+    }
+    public String getAppStoreAppScore() {
+        return this.appStoreAppScore;
+    }
+
+    public YuqingMessage setAppStoreAppName(String appStoreAppName) {
+        this.appStoreAppName = appStoreAppName;
+        return this;
+    }
+    public String getAppStoreAppName() {
+        return this.appStoreAppName;
+    }
+
+    public YuqingMessage setAppStoreName(String appStoreName) {
+        this.appStoreName = appStoreName;
+        return this;
+    }
+    public String getAppStoreName() {
+        return this.appStoreName;
     }
 
 }
