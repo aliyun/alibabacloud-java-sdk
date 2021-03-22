@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSaslUsersResponseBody extends TeaModel {
     @NameInMap("SaslUserList")
-    public java.util.List<DescribeSaslUsersResponseBodySaslUserList> saslUserList;
+    public DescribeSaslUsersResponseBodySaslUserList saslUserList;
 
     @NameInMap("Message")
     public String message;
@@ -24,11 +24,11 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeSaslUsersResponseBody setSaslUserList(java.util.List<DescribeSaslUsersResponseBodySaslUserList> saslUserList) {
+    public DescribeSaslUsersResponseBody setSaslUserList(DescribeSaslUsersResponseBodySaslUserList saslUserList) {
         this.saslUserList = saslUserList;
         return this;
     }
-    public java.util.List<DescribeSaslUsersResponseBodySaslUserList> getSaslUserList() {
+    public DescribeSaslUsersResponseBodySaslUserList getSaslUserList() {
         return this.saslUserList;
     }
 
@@ -64,7 +64,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class DescribeSaslUsersResponseBodySaslUserList extends TeaModel {
+    public static class DescribeSaslUsersResponseBodySaslUserListSaslUserVO extends TeaModel {
         @NameInMap("Type")
         public String type;
 
@@ -74,12 +74,12 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
         @NameInMap("Username")
         public String username;
 
-        public static DescribeSaslUsersResponseBodySaslUserList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSaslUsersResponseBodySaslUserList self = new DescribeSaslUsersResponseBodySaslUserList();
+        public static DescribeSaslUsersResponseBodySaslUserListSaslUserVO build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSaslUsersResponseBodySaslUserListSaslUserVO self = new DescribeSaslUsersResponseBodySaslUserListSaslUserVO();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSaslUsersResponseBodySaslUserList setType(String type) {
+        public DescribeSaslUsersResponseBodySaslUserListSaslUserVO setType(String type) {
             this.type = type;
             return this;
         }
@@ -87,7 +87,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeSaslUsersResponseBodySaslUserList setPassword(String password) {
+        public DescribeSaslUsersResponseBodySaslUserListSaslUserVO setPassword(String password) {
             this.password = password;
             return this;
         }
@@ -95,12 +95,31 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
             return this.password;
         }
 
-        public DescribeSaslUsersResponseBodySaslUserList setUsername(String username) {
+        public DescribeSaslUsersResponseBodySaslUserListSaslUserVO setUsername(String username) {
             this.username = username;
             return this;
         }
         public String getUsername() {
             return this.username;
+        }
+
+    }
+
+    public static class DescribeSaslUsersResponseBodySaslUserList extends TeaModel {
+        @NameInMap("SaslUserVO")
+        public java.util.List<DescribeSaslUsersResponseBodySaslUserListSaslUserVO> saslUserVO;
+
+        public static DescribeSaslUsersResponseBodySaslUserList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSaslUsersResponseBodySaslUserList self = new DescribeSaslUsersResponseBodySaslUserList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSaslUsersResponseBodySaslUserList setSaslUserVO(java.util.List<DescribeSaslUsersResponseBodySaslUserListSaslUserVO> saslUserVO) {
+            this.saslUserVO = saslUserVO;
+            return this;
+        }
+        public java.util.List<DescribeSaslUsersResponseBodySaslUserListSaslUserVO> getSaslUserVO() {
+            return this.saslUserVO;
         }
 
     }

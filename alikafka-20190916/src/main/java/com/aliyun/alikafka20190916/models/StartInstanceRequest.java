@@ -37,11 +37,17 @@ public class StartInstanceRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
-    @NameInMap("CrossZone")
-    public Boolean crossZone;
-
     @NameInMap("SecurityGroup")
     public String securityGroup;
+
+    @NameInMap("ServiceVersion")
+    public String serviceVersion;
+
+    @NameInMap("Config")
+    public String config;
+
+    @NameInMap("KMSKeyId")
+    public String KMSKeyId;
 
     public static StartInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         StartInstanceRequest self = new StartInstanceRequest();
@@ -136,20 +142,36 @@ public class StartInstanceRequest extends TeaModel {
         return this.name;
     }
 
-    public StartInstanceRequest setCrossZone(Boolean crossZone) {
-        this.crossZone = crossZone;
-        return this;
-    }
-    public Boolean getCrossZone() {
-        return this.crossZone;
-    }
-
     public StartInstanceRequest setSecurityGroup(String securityGroup) {
         this.securityGroup = securityGroup;
         return this;
     }
     public String getSecurityGroup() {
         return this.securityGroup;
+    }
+
+    public StartInstanceRequest setServiceVersion(String serviceVersion) {
+        this.serviceVersion = serviceVersion;
+        return this;
+    }
+    public String getServiceVersion() {
+        return this.serviceVersion;
+    }
+
+    public StartInstanceRequest setConfig(String config) {
+        this.config = config;
+        return this;
+    }
+    public String getConfig() {
+        return this.config;
+    }
+
+    public StartInstanceRequest setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
+        return this;
+    }
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
     }
 
 }

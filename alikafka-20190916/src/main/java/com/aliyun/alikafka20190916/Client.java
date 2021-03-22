@@ -471,6 +471,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.updateAllowedIpWithOptions(request, runtime);
     }
 
+    public UpdateInstanceConfigResponse updateInstanceConfigWithOptions(UpdateInstanceConfigRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateInstanceConfig", "2019-09-16", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateInstanceConfigResponse());
+    }
+
+    public UpdateInstanceConfigResponse updateInstanceConfig(UpdateInstanceConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateInstanceConfigWithOptions(request, runtime);
+    }
+
+    public UpgradeInstanceVersionResponse upgradeInstanceVersionWithOptions(UpgradeInstanceVersionRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpgradeInstanceVersion", "2019-09-16", "HTTPS", "POST", "AK", "json", req, runtime), new UpgradeInstanceVersionResponse());
+    }
+
+    public UpgradeInstanceVersionResponse upgradeInstanceVersion(UpgradeInstanceVersionRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.upgradeInstanceVersionWithOptions(request, runtime);
+    }
+
     public UpgradePostPayOrderResponse upgradePostPayOrderWithOptions(UpgradePostPayOrderRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

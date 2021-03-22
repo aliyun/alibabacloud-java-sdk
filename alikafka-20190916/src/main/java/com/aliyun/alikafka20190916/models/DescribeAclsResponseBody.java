@@ -17,7 +17,7 @@ public class DescribeAclsResponseBody extends TeaModel {
     public Boolean success;
 
     @NameInMap("KafkaAclList")
-    public java.util.List<DescribeAclsResponseBodyKafkaAclList> kafkaAclList;
+    public DescribeAclsResponseBodyKafkaAclList kafkaAclList;
 
     public static DescribeAclsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAclsResponseBody self = new DescribeAclsResponseBody();
@@ -56,15 +56,15 @@ public class DescribeAclsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public DescribeAclsResponseBody setKafkaAclList(java.util.List<DescribeAclsResponseBodyKafkaAclList> kafkaAclList) {
+    public DescribeAclsResponseBody setKafkaAclList(DescribeAclsResponseBodyKafkaAclList kafkaAclList) {
         this.kafkaAclList = kafkaAclList;
         return this;
     }
-    public java.util.List<DescribeAclsResponseBodyKafkaAclList> getKafkaAclList() {
+    public DescribeAclsResponseBodyKafkaAclList getKafkaAclList() {
         return this.kafkaAclList;
     }
 
-    public static class DescribeAclsResponseBodyKafkaAclList extends TeaModel {
+    public static class DescribeAclsResponseBodyKafkaAclListKafkaAclVO extends TeaModel {
         @NameInMap("AclResourceType")
         public String aclResourceType;
 
@@ -83,12 +83,12 @@ public class DescribeAclsResponseBody extends TeaModel {
         @NameInMap("Username")
         public String username;
 
-        public static DescribeAclsResponseBodyKafkaAclList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAclsResponseBodyKafkaAclList self = new DescribeAclsResponseBodyKafkaAclList();
+        public static DescribeAclsResponseBodyKafkaAclListKafkaAclVO build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAclsResponseBodyKafkaAclListKafkaAclVO self = new DescribeAclsResponseBodyKafkaAclListKafkaAclVO();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAclsResponseBodyKafkaAclList setAclResourceType(String aclResourceType) {
+        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setAclResourceType(String aclResourceType) {
             this.aclResourceType = aclResourceType;
             return this;
         }
@@ -96,7 +96,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             return this.aclResourceType;
         }
 
-        public DescribeAclsResponseBodyKafkaAclList setHost(String host) {
+        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setHost(String host) {
             this.host = host;
             return this;
         }
@@ -104,7 +104,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             return this.host;
         }
 
-        public DescribeAclsResponseBodyKafkaAclList setAclOperationType(String aclOperationType) {
+        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setAclOperationType(String aclOperationType) {
             this.aclOperationType = aclOperationType;
             return this;
         }
@@ -112,7 +112,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             return this.aclOperationType;
         }
 
-        public DescribeAclsResponseBodyKafkaAclList setAclResourceName(String aclResourceName) {
+        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setAclResourceName(String aclResourceName) {
             this.aclResourceName = aclResourceName;
             return this;
         }
@@ -120,7 +120,7 @@ public class DescribeAclsResponseBody extends TeaModel {
             return this.aclResourceName;
         }
 
-        public DescribeAclsResponseBodyKafkaAclList setAclResourcePatternType(String aclResourcePatternType) {
+        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setAclResourcePatternType(String aclResourcePatternType) {
             this.aclResourcePatternType = aclResourcePatternType;
             return this;
         }
@@ -128,12 +128,31 @@ public class DescribeAclsResponseBody extends TeaModel {
             return this.aclResourcePatternType;
         }
 
-        public DescribeAclsResponseBodyKafkaAclList setUsername(String username) {
+        public DescribeAclsResponseBodyKafkaAclListKafkaAclVO setUsername(String username) {
             this.username = username;
             return this;
         }
         public String getUsername() {
             return this.username;
+        }
+
+    }
+
+    public static class DescribeAclsResponseBodyKafkaAclList extends TeaModel {
+        @NameInMap("KafkaAclVO")
+        public java.util.List<DescribeAclsResponseBodyKafkaAclListKafkaAclVO> kafkaAclVO;
+
+        public static DescribeAclsResponseBodyKafkaAclList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAclsResponseBodyKafkaAclList self = new DescribeAclsResponseBodyKafkaAclList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAclsResponseBodyKafkaAclList setKafkaAclVO(java.util.List<DescribeAclsResponseBodyKafkaAclListKafkaAclVO> kafkaAclVO) {
+            this.kafkaAclVO = kafkaAclVO;
+            return this;
+        }
+        public java.util.List<DescribeAclsResponseBodyKafkaAclListKafkaAclVO> getKafkaAclVO() {
+            return this.kafkaAclVO;
         }
 
     }

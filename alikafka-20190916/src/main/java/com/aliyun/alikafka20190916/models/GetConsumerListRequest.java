@@ -10,12 +10,6 @@ public class GetConsumerListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("CurrentPage")
-    public Integer currentPage;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     public static GetConsumerListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetConsumerListRequest self = new GetConsumerListRequest();
         return TeaModel.build(map, self);
@@ -35,22 +29,6 @@ public class GetConsumerListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public GetConsumerListRequest setCurrentPage(Integer currentPage) {
-        this.currentPage = currentPage;
-        return this;
-    }
-    public Integer getCurrentPage() {
-        return this.currentPage;
-    }
-
-    public GetConsumerListRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
 }

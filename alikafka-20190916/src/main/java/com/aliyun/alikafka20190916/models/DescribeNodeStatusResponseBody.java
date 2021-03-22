@@ -11,7 +11,7 @@ public class DescribeNodeStatusResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("StatusList")
-    public java.util.List<String> statusList;
+    public DescribeNodeStatusResponseBodyStatusList statusList;
 
     @NameInMap("Code")
     public Integer code;
@@ -40,11 +40,11 @@ public class DescribeNodeStatusResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeNodeStatusResponseBody setStatusList(java.util.List<String> statusList) {
+    public DescribeNodeStatusResponseBody setStatusList(DescribeNodeStatusResponseBodyStatusList statusList) {
         this.statusList = statusList;
         return this;
     }
-    public java.util.List<String> getStatusList() {
+    public DescribeNodeStatusResponseBodyStatusList getStatusList() {
         return this.statusList;
     }
 
@@ -62,6 +62,25 @@ public class DescribeNodeStatusResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class DescribeNodeStatusResponseBodyStatusList extends TeaModel {
+        @NameInMap("Status")
+        public java.util.List<String> status;
+
+        public static DescribeNodeStatusResponseBodyStatusList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNodeStatusResponseBodyStatusList self = new DescribeNodeStatusResponseBodyStatusList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNodeStatusResponseBodyStatusList setStatus(java.util.List<String> status) {
+            this.status = status;
+            return this;
+        }
+        public java.util.List<String> getStatus() {
+            return this.status;
+        }
+
     }
 
 }

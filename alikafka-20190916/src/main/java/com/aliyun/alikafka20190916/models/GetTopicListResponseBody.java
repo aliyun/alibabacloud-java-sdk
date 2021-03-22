@@ -20,7 +20,7 @@ public class GetTopicListResponseBody extends TeaModel {
     public Integer total;
 
     @NameInMap("TopicList")
-    public java.util.List<GetTopicListResponseBodyTopicList> topicList;
+    public GetTopicListResponseBodyTopicList topicList;
 
     @NameInMap("Code")
     public Integer code;
@@ -73,11 +73,11 @@ public class GetTopicListResponseBody extends TeaModel {
         return this.total;
     }
 
-    public GetTopicListResponseBody setTopicList(java.util.List<GetTopicListResponseBodyTopicList> topicList) {
+    public GetTopicListResponseBody setTopicList(GetTopicListResponseBodyTopicList topicList) {
         this.topicList = topicList;
         return this;
     }
-    public java.util.List<GetTopicListResponseBodyTopicList> getTopicList() {
+    public GetTopicListResponseBodyTopicList getTopicList() {
         return this.topicList;
     }
 
@@ -97,19 +97,19 @@ public class GetTopicListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetTopicListResponseBodyTopicListTags extends TeaModel {
+    public static class GetTopicListResponseBodyTopicListTopicVOTagsTagVO extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static GetTopicListResponseBodyTopicListTags build(java.util.Map<String, ?> map) throws Exception {
-            GetTopicListResponseBodyTopicListTags self = new GetTopicListResponseBodyTopicListTags();
+        public static GetTopicListResponseBodyTopicListTopicVOTagsTagVO build(java.util.Map<String, ?> map) throws Exception {
+            GetTopicListResponseBodyTopicListTopicVOTagsTagVO self = new GetTopicListResponseBodyTopicListTopicVOTagsTagVO();
             return TeaModel.build(map, self);
         }
 
-        public GetTopicListResponseBodyTopicListTags setKey(String key) {
+        public GetTopicListResponseBodyTopicListTopicVOTagsTagVO setKey(String key) {
             this.key = key;
             return this;
         }
@@ -117,7 +117,7 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.key;
         }
 
-        public GetTopicListResponseBodyTopicListTags setValue(String value) {
+        public GetTopicListResponseBodyTopicListTopicVOTagsTagVO setValue(String value) {
             this.value = value;
             return this;
         }
@@ -127,7 +127,26 @@ public class GetTopicListResponseBody extends TeaModel {
 
     }
 
-    public static class GetTopicListResponseBodyTopicList extends TeaModel {
+    public static class GetTopicListResponseBodyTopicListTopicVOTags extends TeaModel {
+        @NameInMap("TagVO")
+        public java.util.List<GetTopicListResponseBodyTopicListTopicVOTagsTagVO> tagVO;
+
+        public static GetTopicListResponseBodyTopicListTopicVOTags build(java.util.Map<String, ?> map) throws Exception {
+            GetTopicListResponseBodyTopicListTopicVOTags self = new GetTopicListResponseBodyTopicListTopicVOTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTopicListResponseBodyTopicListTopicVOTags setTagVO(java.util.List<GetTopicListResponseBodyTopicListTopicVOTagsTagVO> tagVO) {
+            this.tagVO = tagVO;
+            return this;
+        }
+        public java.util.List<GetTopicListResponseBodyTopicListTopicVOTagsTagVO> getTagVO() {
+            return this.tagVO;
+        }
+
+    }
+
+    public static class GetTopicListResponseBodyTopicListTopicVO extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
@@ -144,7 +163,7 @@ public class GetTopicListResponseBody extends TeaModel {
         public String statusName;
 
         @NameInMap("Tags")
-        public java.util.List<GetTopicListResponseBodyTopicListTags> tags;
+        public GetTopicListResponseBodyTopicListTopicVOTags tags;
 
         @NameInMap("InstanceId")
         public String instanceId;
@@ -152,12 +171,12 @@ public class GetTopicListResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static GetTopicListResponseBodyTopicList build(java.util.Map<String, ?> map) throws Exception {
-            GetTopicListResponseBodyTopicList self = new GetTopicListResponseBodyTopicList();
+        public static GetTopicListResponseBodyTopicListTopicVO build(java.util.Map<String, ?> map) throws Exception {
+            GetTopicListResponseBodyTopicListTopicVO self = new GetTopicListResponseBodyTopicListTopicVO();
             return TeaModel.build(map, self);
         }
 
-        public GetTopicListResponseBodyTopicList setStatus(Integer status) {
+        public GetTopicListResponseBodyTopicListTopicVO setStatus(Integer status) {
             this.status = status;
             return this;
         }
@@ -165,7 +184,7 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetTopicListResponseBodyTopicList setRemark(String remark) {
+        public GetTopicListResponseBodyTopicListTopicVO setRemark(String remark) {
             this.remark = remark;
             return this;
         }
@@ -173,7 +192,7 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.remark;
         }
 
-        public GetTopicListResponseBodyTopicList setCreateTime(Long createTime) {
+        public GetTopicListResponseBodyTopicListTopicVO setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -181,7 +200,7 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetTopicListResponseBodyTopicList setTopic(String topic) {
+        public GetTopicListResponseBodyTopicListTopicVO setTopic(String topic) {
             this.topic = topic;
             return this;
         }
@@ -189,7 +208,7 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public GetTopicListResponseBodyTopicList setStatusName(String statusName) {
+        public GetTopicListResponseBodyTopicListTopicVO setStatusName(String statusName) {
             this.statusName = statusName;
             return this;
         }
@@ -197,15 +216,15 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.statusName;
         }
 
-        public GetTopicListResponseBodyTopicList setTags(java.util.List<GetTopicListResponseBodyTopicListTags> tags) {
+        public GetTopicListResponseBodyTopicListTopicVO setTags(GetTopicListResponseBodyTopicListTopicVOTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<GetTopicListResponseBodyTopicListTags> getTags() {
+        public GetTopicListResponseBodyTopicListTopicVOTags getTags() {
             return this.tags;
         }
 
-        public GetTopicListResponseBodyTopicList setInstanceId(String instanceId) {
+        public GetTopicListResponseBodyTopicListTopicVO setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -213,12 +232,31 @@ public class GetTopicListResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetTopicListResponseBodyTopicList setRegionId(String regionId) {
+        public GetTopicListResponseBodyTopicListTopicVO setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class GetTopicListResponseBodyTopicList extends TeaModel {
+        @NameInMap("TopicVO")
+        public java.util.List<GetTopicListResponseBodyTopicListTopicVO> topicVO;
+
+        public static GetTopicListResponseBodyTopicList build(java.util.Map<String, ?> map) throws Exception {
+            GetTopicListResponseBodyTopicList self = new GetTopicListResponseBodyTopicList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTopicListResponseBodyTopicList setTopicVO(java.util.List<GetTopicListResponseBodyTopicListTopicVO> topicVO) {
+            this.topicVO = topicVO;
+            return this;
+        }
+        public java.util.List<GetTopicListResponseBodyTopicListTopicVO> getTopicVO() {
+            return this.topicVO;
         }
 
     }
