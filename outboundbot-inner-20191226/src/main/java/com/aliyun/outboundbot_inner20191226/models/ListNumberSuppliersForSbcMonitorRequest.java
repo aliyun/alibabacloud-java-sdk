@@ -10,6 +10,9 @@ public class ListNumberSuppliersForSbcMonitorRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("InstanceId")
+    public String instanceId;
+
     public static ListNumberSuppliersForSbcMonitorRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNumberSuppliersForSbcMonitorRequest self = new ListNumberSuppliersForSbcMonitorRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class ListNumberSuppliersForSbcMonitorRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListNumberSuppliersForSbcMonitorRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
 }
