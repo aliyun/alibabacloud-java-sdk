@@ -1,3 +1,6 @@
+2021-03-22 Version: 1.0.2
+- Supported NumberSupplier for Monitor.
+
 2021-03-22 Version: 1.0.1
 - Supported NumberSupplier for Monitor.
 

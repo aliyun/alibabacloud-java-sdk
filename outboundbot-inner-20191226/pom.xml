@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>outboundbot_inner20191226</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <packaging>jar</packaging>
   <name>outboundbot_inner20191226</name>
   <description>Alibaba Cloud OutboundBot-inner (20191226) SDK for Java
