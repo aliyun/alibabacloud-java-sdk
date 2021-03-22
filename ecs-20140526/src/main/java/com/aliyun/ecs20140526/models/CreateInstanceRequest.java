@@ -154,12 +154,6 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
 
-    @NameInMap("CapacityReservationId")
-    public String capacityReservationId;
-
-    @NameInMap("CapacityReservationPreference")
-    public String capacityReservationPreference;
-
     @NameInMap("Affinity")
     public String affinity;
 
@@ -593,22 +587,6 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
-    }
-
-    public CreateInstanceRequest setCapacityReservationId(String capacityReservationId) {
-        this.capacityReservationId = capacityReservationId;
-        return this;
-    }
-    public String getCapacityReservationId() {
-        return this.capacityReservationId;
-    }
-
-    public CreateInstanceRequest setCapacityReservationPreference(String capacityReservationPreference) {
-        this.capacityReservationPreference = capacityReservationPreference;
-        return this;
-    }
-    public String getCapacityReservationPreference() {
-        return this.capacityReservationPreference;
     }
 
     public CreateInstanceRequest setAffinity(String affinity) {

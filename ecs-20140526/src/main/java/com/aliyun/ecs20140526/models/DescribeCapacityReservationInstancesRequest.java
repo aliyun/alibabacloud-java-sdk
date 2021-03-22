@@ -28,9 +28,6 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
-    @NameInMap("PackageType")
-    public String packageType;
-
     public static DescribeCapacityReservationInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCapacityReservationInstancesRequest self = new DescribeCapacityReservationInstancesRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class DescribeCapacityReservationInstancesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public DescribeCapacityReservationInstancesRequest setPackageType(String packageType) {
-        this.packageType = packageType;
-        return this;
-    }
-    public String getPackageType() {
-        return this.packageType;
     }
 
     public static class DescribeCapacityReservationInstancesRequestPrivatePoolOptions extends TeaModel {

@@ -4118,6 +4118,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.runCommandWithOptions(request, runtime);
     }
 
+    public RunInstancesResponse runInstancesWithOptions(RunInstancesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RunInstances", "2014-05-26", "HTTPS", "POST", "AK", "json", req, runtime), new RunInstancesResponse());
+    }
+
+    public RunInstancesResponse runInstances(RunInstancesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.runInstancesWithOptions(request, runtime);
+    }
+
     public SendFileResponse sendFileWithOptions(SendFileRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

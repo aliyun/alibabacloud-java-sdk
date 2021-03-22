@@ -22,9 +22,6 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ChargeType")
-    public String chargeType;
-
     @NameInMap("Period")
     public Integer period;
 
@@ -48,18 +45,6 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("InstanceChargeType")
-    public String instanceChargeType;
-
-    @NameInMap("Platform")
-    public String platform;
-
-    @NameInMap("PackageType")
-    public String packageType;
-
-    @NameInMap("ResourceType")
-    public String resourceType;
 
     @NameInMap("ZoneId")
     public java.util.List<String> zoneId;
@@ -118,14 +103,6 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public CreateElasticityAssuranceRequest setChargeType(String chargeType) {
-        this.chargeType = chargeType;
-        return this;
-    }
-    public String getChargeType() {
-        return this.chargeType;
     }
 
     public CreateElasticityAssuranceRequest setPeriod(Integer period) {
@@ -190,38 +167,6 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
-    }
-
-    public CreateElasticityAssuranceRequest setInstanceChargeType(String instanceChargeType) {
-        this.instanceChargeType = instanceChargeType;
-        return this;
-    }
-    public String getInstanceChargeType() {
-        return this.instanceChargeType;
-    }
-
-    public CreateElasticityAssuranceRequest setPlatform(String platform) {
-        this.platform = platform;
-        return this;
-    }
-    public String getPlatform() {
-        return this.platform;
-    }
-
-    public CreateElasticityAssuranceRequest setPackageType(String packageType) {
-        this.packageType = packageType;
-        return this;
-    }
-    public String getPackageType() {
-        return this.packageType;
-    }
-
-    public CreateElasticityAssuranceRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     public CreateElasticityAssuranceRequest setZoneId(java.util.List<String> zoneId) {

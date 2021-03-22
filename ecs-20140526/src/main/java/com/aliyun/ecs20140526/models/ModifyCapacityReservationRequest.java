@@ -40,9 +40,6 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
 
-    @NameInMap("PackageType")
-    public String packageType;
-
     public static ModifyCapacityReservationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCapacityReservationRequest self = new ModifyCapacityReservationRequest();
         return TeaModel.build(map, self);
@@ -142,14 +139,6 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     }
     public Integer getInstanceAmount() {
         return this.instanceAmount;
-    }
-
-    public ModifyCapacityReservationRequest setPackageType(String packageType) {
-        this.packageType = packageType;
-        return this;
-    }
-    public String getPackageType() {
-        return this.packageType;
     }
 
     public static class ModifyCapacityReservationRequestPrivatePoolOptions extends TeaModel {
