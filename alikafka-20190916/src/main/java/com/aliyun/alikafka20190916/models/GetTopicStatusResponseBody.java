@@ -64,7 +64,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetTopicStatusResponseBodyTopicStatusOffsetTable extends TeaModel {
+    public static class GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable extends TeaModel {
         @NameInMap("MinOffset")
         public Long minOffset;
 
@@ -80,12 +80,12 @@ public class GetTopicStatusResponseBody extends TeaModel {
         @NameInMap("MaxOffset")
         public Long maxOffset;
 
-        public static GetTopicStatusResponseBodyTopicStatusOffsetTable build(java.util.Map<String, ?> map) throws Exception {
-            GetTopicStatusResponseBodyTopicStatusOffsetTable self = new GetTopicStatusResponseBodyTopicStatusOffsetTable();
+        public static GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable build(java.util.Map<String, ?> map) throws Exception {
+            GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable self = new GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable();
             return TeaModel.build(map, self);
         }
 
-        public GetTopicStatusResponseBodyTopicStatusOffsetTable setMinOffset(Long minOffset) {
+        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setMinOffset(Long minOffset) {
             this.minOffset = minOffset;
             return this;
         }
@@ -93,7 +93,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             return this.minOffset;
         }
 
-        public GetTopicStatusResponseBodyTopicStatusOffsetTable setTopic(String topic) {
+        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setTopic(String topic) {
             this.topic = topic;
             return this;
         }
@@ -101,7 +101,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             return this.topic;
         }
 
-        public GetTopicStatusResponseBodyTopicStatusOffsetTable setPartition(Integer partition) {
+        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setPartition(Integer partition) {
             this.partition = partition;
             return this;
         }
@@ -109,7 +109,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
             return this.partition;
         }
 
-        public GetTopicStatusResponseBodyTopicStatusOffsetTable setLastUpdateTimestamp(Long lastUpdateTimestamp) {
+        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setLastUpdateTimestamp(Long lastUpdateTimestamp) {
             this.lastUpdateTimestamp = lastUpdateTimestamp;
             return this;
         }
@@ -117,12 +117,31 @@ public class GetTopicStatusResponseBody extends TeaModel {
             return this.lastUpdateTimestamp;
         }
 
-        public GetTopicStatusResponseBodyTopicStatusOffsetTable setMaxOffset(Long maxOffset) {
+        public GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable setMaxOffset(Long maxOffset) {
             this.maxOffset = maxOffset;
             return this;
         }
         public Long getMaxOffset() {
             return this.maxOffset;
+        }
+
+    }
+
+    public static class GetTopicStatusResponseBodyTopicStatusOffsetTable extends TeaModel {
+        @NameInMap("OffsetTable")
+        public java.util.List<GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable> offsetTable;
+
+        public static GetTopicStatusResponseBodyTopicStatusOffsetTable build(java.util.Map<String, ?> map) throws Exception {
+            GetTopicStatusResponseBodyTopicStatusOffsetTable self = new GetTopicStatusResponseBodyTopicStatusOffsetTable();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTopicStatusResponseBodyTopicStatusOffsetTable setOffsetTable(java.util.List<GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable> offsetTable) {
+            this.offsetTable = offsetTable;
+            return this;
+        }
+        public java.util.List<GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable> getOffsetTable() {
+            return this.offsetTable;
         }
 
     }
@@ -135,7 +154,7 @@ public class GetTopicStatusResponseBody extends TeaModel {
         public Long totalCount;
 
         @NameInMap("OffsetTable")
-        public java.util.List<GetTopicStatusResponseBodyTopicStatusOffsetTable> offsetTable;
+        public GetTopicStatusResponseBodyTopicStatusOffsetTable offsetTable;
 
         public static GetTopicStatusResponseBodyTopicStatus build(java.util.Map<String, ?> map) throws Exception {
             GetTopicStatusResponseBodyTopicStatus self = new GetTopicStatusResponseBodyTopicStatus();
@@ -158,11 +177,11 @@ public class GetTopicStatusResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public GetTopicStatusResponseBodyTopicStatus setOffsetTable(java.util.List<GetTopicStatusResponseBodyTopicStatusOffsetTable> offsetTable) {
+        public GetTopicStatusResponseBodyTopicStatus setOffsetTable(GetTopicStatusResponseBodyTopicStatusOffsetTable offsetTable) {
             this.offsetTable = offsetTable;
             return this;
         }
-        public java.util.List<GetTopicStatusResponseBodyTopicStatusOffsetTable> getOffsetTable() {
+        public GetTopicStatusResponseBodyTopicStatusOffsetTable getOffsetTable() {
             return this.offsetTable;
         }
 

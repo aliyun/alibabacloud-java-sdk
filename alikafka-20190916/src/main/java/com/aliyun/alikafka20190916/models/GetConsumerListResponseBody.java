@@ -14,7 +14,7 @@ public class GetConsumerListResponseBody extends TeaModel {
     public Integer code;
 
     @NameInMap("ConsumerList")
-    public java.util.List<GetConsumerListResponseBodyConsumerList> consumerList;
+    public GetConsumerListResponseBodyConsumerList consumerList;
 
     @NameInMap("Success")
     public Boolean success;
@@ -48,11 +48,11 @@ public class GetConsumerListResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetConsumerListResponseBody setConsumerList(java.util.List<GetConsumerListResponseBodyConsumerList> consumerList) {
+    public GetConsumerListResponseBody setConsumerList(GetConsumerListResponseBodyConsumerList consumerList) {
         this.consumerList = consumerList;
         return this;
     }
-    public java.util.List<GetConsumerListResponseBodyConsumerList> getConsumerList() {
+    public GetConsumerListResponseBodyConsumerList getConsumerList() {
         return this.consumerList;
     }
 
@@ -64,19 +64,19 @@ public class GetConsumerListResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetConsumerListResponseBodyConsumerListTags extends TeaModel {
+    public static class GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static GetConsumerListResponseBodyConsumerListTags build(java.util.Map<String, ?> map) throws Exception {
-            GetConsumerListResponseBodyConsumerListTags self = new GetConsumerListResponseBodyConsumerListTags();
+        public static GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO build(java.util.Map<String, ?> map) throws Exception {
+            GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO self = new GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO();
             return TeaModel.build(map, self);
         }
 
-        public GetConsumerListResponseBodyConsumerListTags setKey(String key) {
+        public GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO setKey(String key) {
             this.key = key;
             return this;
         }
@@ -84,7 +84,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             return this.key;
         }
 
-        public GetConsumerListResponseBodyConsumerListTags setValue(String value) {
+        public GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO setValue(String value) {
             this.value = value;
             return this;
         }
@@ -94,12 +94,31 @@ public class GetConsumerListResponseBody extends TeaModel {
 
     }
 
-    public static class GetConsumerListResponseBodyConsumerList extends TeaModel {
+    public static class GetConsumerListResponseBodyConsumerListConsumerVOTags extends TeaModel {
+        @NameInMap("TagVO")
+        public java.util.List<GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO> tagVO;
+
+        public static GetConsumerListResponseBodyConsumerListConsumerVOTags build(java.util.Map<String, ?> map) throws Exception {
+            GetConsumerListResponseBodyConsumerListConsumerVOTags self = new GetConsumerListResponseBodyConsumerListConsumerVOTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConsumerListResponseBodyConsumerListConsumerVOTags setTagVO(java.util.List<GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO> tagVO) {
+            this.tagVO = tagVO;
+            return this;
+        }
+        public java.util.List<GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO> getTagVO() {
+            return this.tagVO;
+        }
+
+    }
+
+    public static class GetConsumerListResponseBodyConsumerListConsumerVO extends TeaModel {
         @NameInMap("Remark")
         public String remark;
 
         @NameInMap("Tags")
-        public java.util.List<GetConsumerListResponseBodyConsumerListTags> tags;
+        public GetConsumerListResponseBodyConsumerListConsumerVOTags tags;
 
         @NameInMap("ConsumerId")
         public String consumerId;
@@ -110,12 +129,12 @@ public class GetConsumerListResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static GetConsumerListResponseBodyConsumerList build(java.util.Map<String, ?> map) throws Exception {
-            GetConsumerListResponseBodyConsumerList self = new GetConsumerListResponseBodyConsumerList();
+        public static GetConsumerListResponseBodyConsumerListConsumerVO build(java.util.Map<String, ?> map) throws Exception {
+            GetConsumerListResponseBodyConsumerListConsumerVO self = new GetConsumerListResponseBodyConsumerListConsumerVO();
             return TeaModel.build(map, self);
         }
 
-        public GetConsumerListResponseBodyConsumerList setRemark(String remark) {
+        public GetConsumerListResponseBodyConsumerListConsumerVO setRemark(String remark) {
             this.remark = remark;
             return this;
         }
@@ -123,15 +142,15 @@ public class GetConsumerListResponseBody extends TeaModel {
             return this.remark;
         }
 
-        public GetConsumerListResponseBodyConsumerList setTags(java.util.List<GetConsumerListResponseBodyConsumerListTags> tags) {
+        public GetConsumerListResponseBodyConsumerListConsumerVO setTags(GetConsumerListResponseBodyConsumerListConsumerVOTags tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<GetConsumerListResponseBodyConsumerListTags> getTags() {
+        public GetConsumerListResponseBodyConsumerListConsumerVOTags getTags() {
             return this.tags;
         }
 
-        public GetConsumerListResponseBodyConsumerList setConsumerId(String consumerId) {
+        public GetConsumerListResponseBodyConsumerListConsumerVO setConsumerId(String consumerId) {
             this.consumerId = consumerId;
             return this;
         }
@@ -139,7 +158,7 @@ public class GetConsumerListResponseBody extends TeaModel {
             return this.consumerId;
         }
 
-        public GetConsumerListResponseBodyConsumerList setInstanceId(String instanceId) {
+        public GetConsumerListResponseBodyConsumerListConsumerVO setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -147,12 +166,31 @@ public class GetConsumerListResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public GetConsumerListResponseBodyConsumerList setRegionId(String regionId) {
+        public GetConsumerListResponseBodyConsumerListConsumerVO setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class GetConsumerListResponseBodyConsumerList extends TeaModel {
+        @NameInMap("ConsumerVO")
+        public java.util.List<GetConsumerListResponseBodyConsumerListConsumerVO> consumerVO;
+
+        public static GetConsumerListResponseBodyConsumerList build(java.util.Map<String, ?> map) throws Exception {
+            GetConsumerListResponseBodyConsumerList self = new GetConsumerListResponseBodyConsumerList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetConsumerListResponseBodyConsumerList setConsumerVO(java.util.List<GetConsumerListResponseBodyConsumerListConsumerVO> consumerVO) {
+            this.consumerVO = consumerVO;
+            return this;
+        }
+        public java.util.List<GetConsumerListResponseBodyConsumerListConsumerVO> getConsumerVO() {
+            return this.consumerVO;
         }
 
     }

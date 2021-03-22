@@ -25,9 +25,6 @@ public class CreatePostPayOrderRequest extends TeaModel {
     @NameInMap("EipMax")
     public Integer eipMax;
 
-    @NameInMap("PaidType")
-    public Integer paidType;
-
     @NameInMap("SpecType")
     public String specType;
 
@@ -93,14 +90,6 @@ public class CreatePostPayOrderRequest extends TeaModel {
     }
     public Integer getEipMax() {
         return this.eipMax;
-    }
-
-    public CreatePostPayOrderRequest setPaidType(Integer paidType) {
-        this.paidType = paidType;
-        return this;
-    }
-    public Integer getPaidType() {
-        return this.paidType;
     }
 
     public CreatePostPayOrderRequest setSpecType(String specType) {

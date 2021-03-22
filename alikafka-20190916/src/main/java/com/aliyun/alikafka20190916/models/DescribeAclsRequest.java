@@ -19,6 +19,9 @@ public class DescribeAclsRequest extends TeaModel {
     @NameInMap("AclResourceName")
     public String aclResourceName;
 
+    @NameInMap("AclResourcePatternType")
+    public String aclResourcePatternType;
+
     public static DescribeAclsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAclsRequest self = new DescribeAclsRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class DescribeAclsRequest extends TeaModel {
     }
     public String getAclResourceName() {
         return this.aclResourceName;
+    }
+
+    public DescribeAclsRequest setAclResourcePatternType(String aclResourcePatternType) {
+        this.aclResourcePatternType = aclResourcePatternType;
+        return this;
+    }
+    public String getAclResourcePatternType() {
+        return this.aclResourcePatternType;
     }
 
 }

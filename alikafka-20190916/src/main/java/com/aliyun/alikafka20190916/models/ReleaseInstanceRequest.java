@@ -10,9 +10,6 @@ public class ReleaseInstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ReleaseIgnoreTime")
-    public Boolean releaseIgnoreTime;
-
     @NameInMap("ForceDeleteInstance")
     public Boolean forceDeleteInstance;
 
@@ -35,14 +32,6 @@ public class ReleaseInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ReleaseInstanceRequest setReleaseIgnoreTime(Boolean releaseIgnoreTime) {
-        this.releaseIgnoreTime = releaseIgnoreTime;
-        return this;
-    }
-    public Boolean getReleaseIgnoreTime() {
-        return this.releaseIgnoreTime;
     }
 
     public ReleaseInstanceRequest setForceDeleteInstance(Boolean forceDeleteInstance) {
