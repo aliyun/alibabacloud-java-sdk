@@ -91,6 +91,12 @@ public class ListNumberSuppliersForSbcMonitorResponseBody extends TeaModel {
         @NameInMap("Numbers")
         public String numbers;
 
+        @NameInMap("ThrottlingPolicy")
+        public String throttlingPolicy;
+
+        @NameInMap("Concurrency")
+        public Long concurrency;
+
         public static ListNumberSuppliersForSbcMonitorResponseBodyNumberSupplierForSbcMonitorsListNumberSupplierForSbcMonitor build(java.util.Map<String, ?> map) throws Exception {
             ListNumberSuppliersForSbcMonitorResponseBodyNumberSupplierForSbcMonitorsListNumberSupplierForSbcMonitor self = new ListNumberSuppliersForSbcMonitorResponseBodyNumberSupplierForSbcMonitorsListNumberSupplierForSbcMonitor();
             return TeaModel.build(map, self);
@@ -134,6 +140,22 @@ public class ListNumberSuppliersForSbcMonitorResponseBody extends TeaModel {
         }
         public String getNumbers() {
             return this.numbers;
+        }
+
+        public ListNumberSuppliersForSbcMonitorResponseBodyNumberSupplierForSbcMonitorsListNumberSupplierForSbcMonitor setThrottlingPolicy(String throttlingPolicy) {
+            this.throttlingPolicy = throttlingPolicy;
+            return this;
+        }
+        public String getThrottlingPolicy() {
+            return this.throttlingPolicy;
+        }
+
+        public ListNumberSuppliersForSbcMonitorResponseBodyNumberSupplierForSbcMonitorsListNumberSupplierForSbcMonitor setConcurrency(Long concurrency) {
+            this.concurrency = concurrency;
+            return this;
+        }
+        public Long getConcurrency() {
+            return this.concurrency;
         }
 
     }
