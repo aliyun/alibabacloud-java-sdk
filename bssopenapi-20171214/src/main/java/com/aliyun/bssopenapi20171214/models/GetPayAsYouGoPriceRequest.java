@@ -76,11 +76,11 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceRequestModuleList extends TeaModel {
-        @NameInMap("Config")
-        public String config;
-
         @NameInMap("ModuleCode")
         public String moduleCode;
+
+        @NameInMap("Config")
+        public String config;
 
         @NameInMap("PriceType")
         public String priceType;
@@ -90,20 +90,20 @@ public class GetPayAsYouGoPriceRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetPayAsYouGoPriceRequestModuleList setConfig(String config) {
-            this.config = config;
-            return this;
-        }
-        public String getConfig() {
-            return this.config;
-        }
-
         public GetPayAsYouGoPriceRequestModuleList setModuleCode(String moduleCode) {
             this.moduleCode = moduleCode;
             return this;
         }
         public String getModuleCode() {
             return this.moduleCode;
+        }
+
+        public GetPayAsYouGoPriceRequestModuleList setConfig(String config) {
+            this.config = config;
+            return this;
+        }
+        public String getConfig() {
+            return this.config;
         }
 
         public GetPayAsYouGoPriceRequestModuleList setPriceType(String priceType) {

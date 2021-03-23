@@ -25,11 +25,11 @@ public class ApplyInvoiceRequest extends TeaModel {
     @NameInMap("ApplyUserNick")
     public String applyUserNick;
 
+    @NameInMap("SelectedIds")
+    public java.util.List<Long> selectedIds;
+
     @NameInMap("InvoiceByAmount")
     public Boolean invoiceByAmount;
-
-    @NameInMap("SelectedIds")
-    public java.util.List<Integer> selectedIds;
 
     public static ApplyInvoiceRequest build(java.util.Map<String, ?> map) throws Exception {
         ApplyInvoiceRequest self = new ApplyInvoiceRequest();
@@ -92,20 +92,20 @@ public class ApplyInvoiceRequest extends TeaModel {
         return this.applyUserNick;
     }
 
+    public ApplyInvoiceRequest setSelectedIds(java.util.List<Long> selectedIds) {
+        this.selectedIds = selectedIds;
+        return this;
+    }
+    public java.util.List<Long> getSelectedIds() {
+        return this.selectedIds;
+    }
+
     public ApplyInvoiceRequest setInvoiceByAmount(Boolean invoiceByAmount) {
         this.invoiceByAmount = invoiceByAmount;
         return this;
     }
     public Boolean getInvoiceByAmount() {
         return this.invoiceByAmount;
-    }
-
-    public ApplyInvoiceRequest setSelectedIds(java.util.List<Integer> selectedIds) {
-        this.selectedIds = selectedIds;
-        return this;
-    }
-    public java.util.List<Integer> getSelectedIds() {
-        return this.selectedIds;
     }
 
 }

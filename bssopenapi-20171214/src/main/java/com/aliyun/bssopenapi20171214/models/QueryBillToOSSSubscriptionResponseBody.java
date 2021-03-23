@@ -4,48 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Data")
-    public QueryBillToOSSSubscriptionResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public QueryBillToOSSSubscriptionResponseBodyData data;
+
     public static QueryBillToOSSSubscriptionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryBillToOSSSubscriptionResponseBody self = new QueryBillToOSSSubscriptionResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryBillToOSSSubscriptionResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryBillToOSSSubscriptionResponseBody setData(QueryBillToOSSSubscriptionResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryBillToOSSSubscriptionResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QueryBillToOSSSubscriptionResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public QueryBillToOSSSubscriptionResponseBody setRequestId(String requestId) {
@@ -64,33 +40,57 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         return this.success;
     }
 
+    public QueryBillToOSSSubscriptionResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryBillToOSSSubscriptionResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryBillToOSSSubscriptionResponseBody setData(QueryBillToOSSSubscriptionResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryBillToOSSSubscriptionResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class QueryBillToOSSSubscriptionResponseBodyDataItemsItem extends TeaModel {
-        @NameInMap("BucketOwnerId")
-        public Long bucketOwnerId;
+        @NameInMap("SubscribeType")
+        public String subscribeType;
 
         @NameInMap("SubscribeBucket")
         public String subscribeBucket;
 
-        @NameInMap("SubscribeLanguage")
-        public String subscribeLanguage;
+        @NameInMap("BucketOwnerId")
+        public Long bucketOwnerId;
 
         @NameInMap("SubscribeTime")
         public String subscribeTime;
 
-        @NameInMap("SubscribeType")
-        public String subscribeType;
+        @NameInMap("SubscribeLanguage")
+        public String subscribeLanguage;
 
         public static QueryBillToOSSSubscriptionResponseBodyDataItemsItem build(java.util.Map<String, ?> map) throws Exception {
             QueryBillToOSSSubscriptionResponseBodyDataItemsItem self = new QueryBillToOSSSubscriptionResponseBodyDataItemsItem();
             return TeaModel.build(map, self);
         }
 
-        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setBucketOwnerId(Long bucketOwnerId) {
-            this.bucketOwnerId = bucketOwnerId;
+        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeType(String subscribeType) {
+            this.subscribeType = subscribeType;
             return this;
         }
-        public Long getBucketOwnerId() {
-            return this.bucketOwnerId;
+        public String getSubscribeType() {
+            return this.subscribeType;
         }
 
         public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeBucket(String subscribeBucket) {
@@ -101,12 +101,12 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             return this.subscribeBucket;
         }
 
-        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeLanguage(String subscribeLanguage) {
-            this.subscribeLanguage = subscribeLanguage;
+        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setBucketOwnerId(Long bucketOwnerId) {
+            this.bucketOwnerId = bucketOwnerId;
             return this;
         }
-        public String getSubscribeLanguage() {
-            return this.subscribeLanguage;
+        public Long getBucketOwnerId() {
+            return this.bucketOwnerId;
         }
 
         public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeTime(String subscribeTime) {
@@ -117,12 +117,12 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             return this.subscribeTime;
         }
 
-        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeType(String subscribeType) {
-            this.subscribeType = subscribeType;
+        public QueryBillToOSSSubscriptionResponseBodyDataItemsItem setSubscribeLanguage(String subscribeLanguage) {
+            this.subscribeLanguage = subscribeLanguage;
             return this;
         }
-        public String getSubscribeType() {
-            return this.subscribeType;
+        public String getSubscribeLanguage() {
+            return this.subscribeLanguage;
         }
 
     }

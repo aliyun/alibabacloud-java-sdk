@@ -4,59 +4,27 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class UpgradeResourcePackageResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Data")
-    public UpgradeResourcePackageResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public UpgradeResourcePackageResponseBodyData data;
 
     public static UpgradeResourcePackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpgradeResourcePackageResponseBody self = new UpgradeResourcePackageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UpgradeResourcePackageResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public UpgradeResourcePackageResponseBody setData(UpgradeResourcePackageResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public UpgradeResourcePackageResponseBodyData getData() {
-        return this.data;
-    }
-
-    public UpgradeResourcePackageResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public UpgradeResourcePackageResponseBody setOrderId(Long orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public Long getOrderId() {
-        return this.orderId;
     }
 
     public UpgradeResourcePackageResponseBody setRequestId(String requestId) {
@@ -67,6 +35,14 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public UpgradeResourcePackageResponseBody setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
     public UpgradeResourcePackageResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -75,24 +51,40 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class UpgradeResourcePackageResponseBodyData extends TeaModel {
-        @NameInMap("InstanceId")
-        public String instanceId;
+    public UpgradeResourcePackageResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
 
+    public UpgradeResourcePackageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public UpgradeResourcePackageResponseBody setData(UpgradeResourcePackageResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public UpgradeResourcePackageResponseBodyData getData() {
+        return this.data;
+    }
+
+    public static class UpgradeResourcePackageResponseBodyData extends TeaModel {
         @NameInMap("OrderId")
         public Long orderId;
+
+        @NameInMap("InstanceId")
+        public String instanceId;
 
         public static UpgradeResourcePackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             UpgradeResourcePackageResponseBodyData self = new UpgradeResourcePackageResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public UpgradeResourcePackageResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
         public UpgradeResourcePackageResponseBodyData setOrderId(Long orderId) {
@@ -101,6 +93,14 @@ public class UpgradeResourcePackageResponseBody extends TeaModel {
         }
         public Long getOrderId() {
             return this.orderId;
+        }
+
+        public UpgradeResourcePackageResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
     }

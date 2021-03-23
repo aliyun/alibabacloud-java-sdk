@@ -4,48 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryEvaluateListResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Data")
-    public QueryEvaluateListResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public QueryEvaluateListResponseBodyData data;
+
     public static QueryEvaluateListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryEvaluateListResponseBody self = new QueryEvaluateListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryEvaluateListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryEvaluateListResponseBody setData(QueryEvaluateListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryEvaluateListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QueryEvaluateListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public QueryEvaluateListResponseBody setRequestId(String requestId) {
@@ -64,21 +40,33 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         return this.success;
     }
 
+    public QueryEvaluateListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryEvaluateListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryEvaluateListResponseBody setData(QueryEvaluateListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryEvaluateListResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class QueryEvaluateListResponseBodyDataEvaluateListEvaluate extends TeaModel {
-        @NameInMap("BillCycle")
-        public String billCycle;
-
-        @NameInMap("BillId")
-        public Long billId;
-
-        @NameInMap("BizTime")
-        public String bizTime;
-
-        @NameInMap("BizType")
-        public String bizType;
-
-        @NameInMap("CanInvoiceAmount")
-        public Long canInvoiceAmount;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
@@ -86,91 +74,71 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public String gmtModified;
 
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("InvoicedAmount")
-        public Long invoicedAmount;
-
-        @NameInMap("ItemId")
-        public Long itemId;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("OffsetAcceptAmount")
-        public Long offsetAcceptAmount;
-
-        @NameInMap("OffsetCostAmount")
-        public Long offsetCostAmount;
-
-        @NameInMap("OpId")
-        public String opId;
-
-        @NameInMap("OriginalAmount")
-        public Long originalAmount;
-
-        @NameInMap("OutBizId")
-        public String outBizId;
-
-        @NameInMap("PresentAmount")
-        public Long presentAmount;
-
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("Type")
-        public Integer type;
-
         @NameInMap("UserId")
         public Long userId;
 
         @NameInMap("UserNick")
         public String userNick;
 
+        @NameInMap("OutBizId")
+        public String outBizId;
+
+        @NameInMap("BillId")
+        public Long billId;
+
+        @NameInMap("ItemId")
+        public Long itemId;
+
+        @NameInMap("BillCycle")
+        public String billCycle;
+
+        @NameInMap("BizType")
+        public String bizType;
+
+        @NameInMap("OriginalAmount")
+        public Long originalAmount;
+
+        @NameInMap("PresentAmount")
+        public Long presentAmount;
+
+        @NameInMap("CanInvoiceAmount")
+        public Long canInvoiceAmount;
+
+        @NameInMap("InvoicedAmount")
+        public Long invoicedAmount;
+
+        @NameInMap("OffsetCostAmount")
+        public Long offsetCostAmount;
+
+        @NameInMap("OffsetAcceptAmount")
+        public Long offsetAcceptAmount;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("OpId")
+        public String opId;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("BizTime")
+        public String bizTime;
+
+        @NameInMap("Type")
+        public Integer type;
+
         public static QueryEvaluateListResponseBodyDataEvaluateListEvaluate build(java.util.Map<String, ?> map) throws Exception {
             QueryEvaluateListResponseBodyDataEvaluateListEvaluate self = new QueryEvaluateListResponseBodyDataEvaluateListEvaluate();
             return TeaModel.build(map, self);
         }
 
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setBillCycle(String billCycle) {
-            this.billCycle = billCycle;
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getBillCycle() {
-            return this.billCycle;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setBillId(Long billId) {
-            this.billId = billId;
-            return this;
-        }
-        public Long getBillId() {
-            return this.billId;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setBizTime(String bizTime) {
-            this.bizTime = bizTime;
-            return this;
-        }
-        public String getBizTime() {
-            return this.bizTime;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setBizType(String bizType) {
-            this.bizType = bizType;
-            return this;
-        }
-        public String getBizType() {
-            return this.bizType;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setCanInvoiceAmount(Long canInvoiceAmount) {
-            this.canInvoiceAmount = canInvoiceAmount;
-            return this;
-        }
-        public Long getCanInvoiceAmount() {
-            return this.canInvoiceAmount;
+        public Long getId() {
+            return this.id;
         }
 
         public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setGmtCreate(String gmtCreate) {
@@ -189,102 +157,6 @@ public class QueryEvaluateListResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setInvoicedAmount(Long invoicedAmount) {
-            this.invoicedAmount = invoicedAmount;
-            return this;
-        }
-        public Long getInvoicedAmount() {
-            return this.invoicedAmount;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setItemId(Long itemId) {
-            this.itemId = itemId;
-            return this;
-        }
-        public Long getItemId() {
-            return this.itemId;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOffsetAcceptAmount(Long offsetAcceptAmount) {
-            this.offsetAcceptAmount = offsetAcceptAmount;
-            return this;
-        }
-        public Long getOffsetAcceptAmount() {
-            return this.offsetAcceptAmount;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOffsetCostAmount(Long offsetCostAmount) {
-            this.offsetCostAmount = offsetCostAmount;
-            return this;
-        }
-        public Long getOffsetCostAmount() {
-            return this.offsetCostAmount;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOpId(String opId) {
-            this.opId = opId;
-            return this;
-        }
-        public String getOpId() {
-            return this.opId;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOriginalAmount(Long originalAmount) {
-            this.originalAmount = originalAmount;
-            return this;
-        }
-        public Long getOriginalAmount() {
-            return this.originalAmount;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOutBizId(String outBizId) {
-            this.outBizId = outBizId;
-            return this;
-        }
-        public String getOutBizId() {
-            return this.outBizId;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setPresentAmount(Long presentAmount) {
-            this.presentAmount = presentAmount;
-            return this;
-        }
-        public Long getPresentAmount() {
-            return this.presentAmount;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
         public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setUserId(Long userId) {
             this.userId = userId;
             return this;
@@ -299,6 +171,134 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         }
         public String getUserNick() {
             return this.userNick;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOutBizId(String outBizId) {
+            this.outBizId = outBizId;
+            return this;
+        }
+        public String getOutBizId() {
+            return this.outBizId;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setBillId(Long billId) {
+            this.billId = billId;
+            return this;
+        }
+        public Long getBillId() {
+            return this.billId;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setItemId(Long itemId) {
+            this.itemId = itemId;
+            return this;
+        }
+        public Long getItemId() {
+            return this.itemId;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setBillCycle(String billCycle) {
+            this.billCycle = billCycle;
+            return this;
+        }
+        public String getBillCycle() {
+            return this.billCycle;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setBizType(String bizType) {
+            this.bizType = bizType;
+            return this;
+        }
+        public String getBizType() {
+            return this.bizType;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOriginalAmount(Long originalAmount) {
+            this.originalAmount = originalAmount;
+            return this;
+        }
+        public Long getOriginalAmount() {
+            return this.originalAmount;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setPresentAmount(Long presentAmount) {
+            this.presentAmount = presentAmount;
+            return this;
+        }
+        public Long getPresentAmount() {
+            return this.presentAmount;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setCanInvoiceAmount(Long canInvoiceAmount) {
+            this.canInvoiceAmount = canInvoiceAmount;
+            return this;
+        }
+        public Long getCanInvoiceAmount() {
+            return this.canInvoiceAmount;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setInvoicedAmount(Long invoicedAmount) {
+            this.invoicedAmount = invoicedAmount;
+            return this;
+        }
+        public Long getInvoicedAmount() {
+            return this.invoicedAmount;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOffsetCostAmount(Long offsetCostAmount) {
+            this.offsetCostAmount = offsetCostAmount;
+            return this;
+        }
+        public Long getOffsetCostAmount() {
+            return this.offsetCostAmount;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOffsetAcceptAmount(Long offsetAcceptAmount) {
+            this.offsetAcceptAmount = offsetAcceptAmount;
+            return this;
+        }
+        public Long getOffsetAcceptAmount() {
+            return this.offsetAcceptAmount;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setOpId(String opId) {
+            this.opId = opId;
+            return this;
+        }
+        public String getOpId() {
+            return this.opId;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setBizTime(String bizTime) {
+            this.bizTime = bizTime;
+            return this;
+        }
+        public String getBizTime() {
+            return this.bizTime;
+        }
+
+        public QueryEvaluateListResponseBodyDataEvaluateListEvaluate setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
         }
 
     }
@@ -323,9 +323,6 @@ public class QueryEvaluateListResponseBody extends TeaModel {
     }
 
     public static class QueryEvaluateListResponseBodyData extends TeaModel {
-        @NameInMap("EvaluateList")
-        public QueryEvaluateListResponseBodyDataEvaluateList evaluateList;
-
         @NameInMap("HostId")
         public String hostId;
 
@@ -344,17 +341,12 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         @NameInMap("TotalUnAppliedInvoiceAmount")
         public Long totalUnAppliedInvoiceAmount;
 
+        @NameInMap("EvaluateList")
+        public QueryEvaluateListResponseBodyDataEvaluateList evaluateList;
+
         public static QueryEvaluateListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryEvaluateListResponseBodyData self = new QueryEvaluateListResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryEvaluateListResponseBodyData setEvaluateList(QueryEvaluateListResponseBodyDataEvaluateList evaluateList) {
-            this.evaluateList = evaluateList;
-            return this;
-        }
-        public QueryEvaluateListResponseBodyDataEvaluateList getEvaluateList() {
-            return this.evaluateList;
         }
 
         public QueryEvaluateListResponseBodyData setHostId(String hostId) {
@@ -403,6 +395,14 @@ public class QueryEvaluateListResponseBody extends TeaModel {
         }
         public Long getTotalUnAppliedInvoiceAmount() {
             return this.totalUnAppliedInvoiceAmount;
+        }
+
+        public QueryEvaluateListResponseBodyData setEvaluateList(QueryEvaluateListResponseBodyDataEvaluateList evaluateList) {
+            this.evaluateList = evaluateList;
+            return this;
+        }
+        public QueryEvaluateListResponseBodyDataEvaluateList getEvaluateList() {
+            return this.evaluateList;
         }
 
     }
