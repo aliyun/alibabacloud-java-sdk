@@ -4,48 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetPayAsYouGoPriceResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Data")
-    public GetPayAsYouGoPriceResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public GetPayAsYouGoPriceResponseBodyData data;
+
     public static GetPayAsYouGoPriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPayAsYouGoPriceResponseBody self = new GetPayAsYouGoPriceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetPayAsYouGoPriceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetPayAsYouGoPriceResponseBody setData(GetPayAsYouGoPriceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetPayAsYouGoPriceResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetPayAsYouGoPriceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public GetPayAsYouGoPriceResponseBody setRequestId(String requestId) {
@@ -64,18 +40,42 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public GetPayAsYouGoPriceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetPayAsYouGoPriceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetPayAsYouGoPriceResponseBody setData(GetPayAsYouGoPriceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetPayAsYouGoPriceResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail extends TeaModel {
-        @NameInMap("CostAfterDiscount")
-        public Float costAfterDiscount;
-
-        @NameInMap("InvoiceDiscount")
-        public Float invoiceDiscount;
-
         @NameInMap("ModuleCode")
         public String moduleCode;
 
         @NameInMap("OriginalCost")
         public Float originalCost;
+
+        @NameInMap("InvoiceDiscount")
+        public Float invoiceDiscount;
+
+        @NameInMap("CostAfterDiscount")
+        public Float costAfterDiscount;
 
         @NameInMap("UnitPrice")
         public Float unitPrice;
@@ -83,22 +83,6 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         public static GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail build(java.util.Map<String, ?> map) throws Exception {
             GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail self = new GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail();
             return TeaModel.build(map, self);
-        }
-
-        public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setCostAfterDiscount(Float costAfterDiscount) {
-            this.costAfterDiscount = costAfterDiscount;
-            return this;
-        }
-        public Float getCostAfterDiscount() {
-            return this.costAfterDiscount;
-        }
-
-        public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setInvoiceDiscount(Float invoiceDiscount) {
-            this.invoiceDiscount = invoiceDiscount;
-            return this;
-        }
-        public Float getInvoiceDiscount() {
-            return this.invoiceDiscount;
         }
 
         public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setModuleCode(String moduleCode) {
@@ -115,6 +99,22 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         }
         public Float getOriginalCost() {
             return this.originalCost;
+        }
+
+        public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setInvoiceDiscount(Float invoiceDiscount) {
+            this.invoiceDiscount = invoiceDiscount;
+            return this;
+        }
+        public Float getInvoiceDiscount() {
+            return this.invoiceDiscount;
+        }
+
+        public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setCostAfterDiscount(Float costAfterDiscount) {
+            this.costAfterDiscount = costAfterDiscount;
+            return this;
+        }
+        public Float getCostAfterDiscount() {
+            return this.costAfterDiscount;
         }
 
         public GetPayAsYouGoPriceResponseBodyDataModuleDetailsModuleDetail setUnitPrice(Float unitPrice) {
@@ -147,18 +147,26 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
     }
 
     public static class GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail extends TeaModel {
+        @NameInMap("PromotionName")
+        public String promotionName;
+
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         @NameInMap("PromotionId")
         public Long promotionId;
 
-        @NameInMap("PromotionName")
-        public String promotionName;
-
         public static GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail build(java.util.Map<String, ?> map) throws Exception {
             GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail self = new GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail();
             return TeaModel.build(map, self);
+        }
+
+        public GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail setPromotionName(String promotionName) {
+            this.promotionName = promotionName;
+            return this;
+        }
+        public String getPromotionName() {
+            return this.promotionName;
         }
 
         public GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail setPromotionDesc(String promotionDesc) {
@@ -175,14 +183,6 @@ public class GetPayAsYouGoPriceResponseBody extends TeaModel {
         }
         public Long getPromotionId() {
             return this.promotionId;
-        }
-
-        public GetPayAsYouGoPriceResponseBodyDataPromotionDetailsPromotionDetail setPromotionName(String promotionName) {
-            this.promotionName = promotionName;
-            return this;
-        }
-        public String getPromotionName() {
-            return this.promotionName;
         }
 
     }

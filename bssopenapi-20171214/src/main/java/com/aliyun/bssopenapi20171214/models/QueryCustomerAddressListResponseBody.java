@@ -4,48 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCustomerAddressListResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Data")
-    public QueryCustomerAddressListResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public QueryCustomerAddressListResponseBodyData data;
+
     public static QueryCustomerAddressListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCustomerAddressListResponseBody self = new QueryCustomerAddressListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryCustomerAddressListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryCustomerAddressListResponseBody setData(QueryCustomerAddressListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryCustomerAddressListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QueryCustomerAddressListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public QueryCustomerAddressListResponseBody setRequestId(String requestId) {
@@ -64,36 +40,33 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         return this.success;
     }
 
+    public QueryCustomerAddressListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryCustomerAddressListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryCustomerAddressListResponseBody setData(QueryCustomerAddressListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryCustomerAddressListResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress extends TeaModel {
-        @NameInMap("Addressee")
-        public String addressee;
-
-        @NameInMap("BizType")
-        public String bizType;
-
-        @NameInMap("City")
-        public String city;
-
-        @NameInMap("County")
-        public String county;
-
-        @NameInMap("DeliveryAddress")
-        public String deliveryAddress;
-
         @NameInMap("Id")
         public Long id;
-
-        @NameInMap("Phone")
-        public String phone;
-
-        @NameInMap("PostalCode")
-        public String postalCode;
-
-        @NameInMap("Province")
-        public String province;
-
-        @NameInMap("Street")
-        public String street;
 
         @NameInMap("UserId")
         public Long userId;
@@ -101,9 +74,60 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
         @NameInMap("UserNick")
         public String userNick;
 
+        @NameInMap("Addressee")
+        public String addressee;
+
+        @NameInMap("Province")
+        public String province;
+
+        @NameInMap("City")
+        public String city;
+
+        @NameInMap("County")
+        public String county;
+
+        @NameInMap("Street")
+        public String street;
+
+        @NameInMap("PostalCode")
+        public String postalCode;
+
+        @NameInMap("Phone")
+        public String phone;
+
+        @NameInMap("BizType")
+        public String bizType;
+
+        @NameInMap("DeliveryAddress")
+        public String deliveryAddress;
+
         public static QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress build(java.util.Map<String, ?> map) throws Exception {
             QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress self = new QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress();
             return TeaModel.build(map, self);
+        }
+
+        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
+        }
+
+        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setUserNick(String userNick) {
+            this.userNick = userNick;
+            return this;
+        }
+        public String getUserNick() {
+            return this.userNick;
         }
 
         public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setAddressee(String addressee) {
@@ -114,12 +138,12 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             return this.addressee;
         }
 
-        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setBizType(String bizType) {
-            this.bizType = bizType;
+        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setProvince(String province) {
+            this.province = province;
             return this;
         }
-        public String getBizType() {
-            return this.bizType;
+        public String getProvince() {
+            return this.province;
         }
 
         public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setCity(String city) {
@@ -138,28 +162,12 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             return this.county;
         }
 
-        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setDeliveryAddress(String deliveryAddress) {
-            this.deliveryAddress = deliveryAddress;
+        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setStreet(String street) {
+            this.street = street;
             return this;
         }
-        public String getDeliveryAddress() {
-            return this.deliveryAddress;
-        }
-
-        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setPhone(String phone) {
-            this.phone = phone;
-            return this;
-        }
-        public String getPhone() {
-            return this.phone;
+        public String getStreet() {
+            return this.street;
         }
 
         public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setPostalCode(String postalCode) {
@@ -170,36 +178,28 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
             return this.postalCode;
         }
 
-        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setProvince(String province) {
-            this.province = province;
+        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setPhone(String phone) {
+            this.phone = phone;
             return this;
         }
-        public String getProvince() {
-            return this.province;
+        public String getPhone() {
+            return this.phone;
         }
 
-        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setStreet(String street) {
-            this.street = street;
+        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setBizType(String bizType) {
+            this.bizType = bizType;
             return this;
         }
-        public String getStreet() {
-            return this.street;
+        public String getBizType() {
+            return this.bizType;
         }
 
-        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setUserId(Long userId) {
-            this.userId = userId;
+        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setDeliveryAddress(String deliveryAddress) {
+            this.deliveryAddress = deliveryAddress;
             return this;
         }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public QueryCustomerAddressListResponseBodyDataCustomerInvoiceAddressListCustomerInvoiceAddress setUserNick(String userNick) {
-            this.userNick = userNick;
-            return this;
-        }
-        public String getUserNick() {
-            return this.userNick;
+        public String getDeliveryAddress() {
+            return this.deliveryAddress;
         }
 
     }

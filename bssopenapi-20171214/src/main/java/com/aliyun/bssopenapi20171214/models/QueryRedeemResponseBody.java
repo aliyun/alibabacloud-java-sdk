@@ -4,48 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryRedeemResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Data")
-    public QueryRedeemResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public QueryRedeemResponseBodyData data;
+
     public static QueryRedeemResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryRedeemResponseBody self = new QueryRedeemResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryRedeemResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryRedeemResponseBody setData(QueryRedeemResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryRedeemResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QueryRedeemResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public QueryRedeemResponseBody setRequestId(String requestId) {
@@ -64,12 +40,42 @@ public class QueryRedeemResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class QueryRedeemResponseBodyDataRedeemRedeem extends TeaModel {
-        @NameInMap("ApplicableProducts")
-        public String applicableProducts;
+    public QueryRedeemResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
 
-        @NameInMap("Balance")
-        public String balance;
+    public QueryRedeemResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryRedeemResponseBody setData(QueryRedeemResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryRedeemResponseBodyData getData() {
+        return this.data;
+    }
+
+    public static class QueryRedeemResponseBodyDataRedeemRedeem extends TeaModel {
+        @NameInMap("RedeemId")
+        public String redeemId;
+
+        @NameInMap("RedeemNo")
+        public String redeemNo;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("GrantedTime")
+        public String grantedTime;
 
         @NameInMap("EffectiveTime")
         public String effectiveTime;
@@ -77,75 +83,21 @@ public class QueryRedeemResponseBody extends TeaModel {
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
-        @NameInMap("GrantedTime")
-        public String grantedTime;
-
         @NameInMap("NominalValue")
         public String nominalValue;
 
-        @NameInMap("RedeemId")
-        public String redeemId;
+        @NameInMap("Balance")
+        public String balance;
 
-        @NameInMap("RedeemNo")
-        public String redeemNo;
+        @NameInMap("ApplicableProducts")
+        public String applicableProducts;
 
         @NameInMap("Specification")
         public String specification;
 
-        @NameInMap("Status")
-        public String status;
-
         public static QueryRedeemResponseBodyDataRedeemRedeem build(java.util.Map<String, ?> map) throws Exception {
             QueryRedeemResponseBodyDataRedeemRedeem self = new QueryRedeemResponseBodyDataRedeemRedeem();
             return TeaModel.build(map, self);
-        }
-
-        public QueryRedeemResponseBodyDataRedeemRedeem setApplicableProducts(String applicableProducts) {
-            this.applicableProducts = applicableProducts;
-            return this;
-        }
-        public String getApplicableProducts() {
-            return this.applicableProducts;
-        }
-
-        public QueryRedeemResponseBodyDataRedeemRedeem setBalance(String balance) {
-            this.balance = balance;
-            return this;
-        }
-        public String getBalance() {
-            return this.balance;
-        }
-
-        public QueryRedeemResponseBodyDataRedeemRedeem setEffectiveTime(String effectiveTime) {
-            this.effectiveTime = effectiveTime;
-            return this;
-        }
-        public String getEffectiveTime() {
-            return this.effectiveTime;
-        }
-
-        public QueryRedeemResponseBodyDataRedeemRedeem setExpiryTime(String expiryTime) {
-            this.expiryTime = expiryTime;
-            return this;
-        }
-        public String getExpiryTime() {
-            return this.expiryTime;
-        }
-
-        public QueryRedeemResponseBodyDataRedeemRedeem setGrantedTime(String grantedTime) {
-            this.grantedTime = grantedTime;
-            return this;
-        }
-        public String getGrantedTime() {
-            return this.grantedTime;
-        }
-
-        public QueryRedeemResponseBodyDataRedeemRedeem setNominalValue(String nominalValue) {
-            this.nominalValue = nominalValue;
-            return this;
-        }
-        public String getNominalValue() {
-            return this.nominalValue;
         }
 
         public QueryRedeemResponseBodyDataRedeemRedeem setRedeemId(String redeemId) {
@@ -164,20 +116,68 @@ public class QueryRedeemResponseBody extends TeaModel {
             return this.redeemNo;
         }
 
-        public QueryRedeemResponseBodyDataRedeemRedeem setSpecification(String specification) {
-            this.specification = specification;
-            return this;
-        }
-        public String getSpecification() {
-            return this.specification;
-        }
-
         public QueryRedeemResponseBodyDataRedeemRedeem setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public QueryRedeemResponseBodyDataRedeemRedeem setGrantedTime(String grantedTime) {
+            this.grantedTime = grantedTime;
+            return this;
+        }
+        public String getGrantedTime() {
+            return this.grantedTime;
+        }
+
+        public QueryRedeemResponseBodyDataRedeemRedeem setEffectiveTime(String effectiveTime) {
+            this.effectiveTime = effectiveTime;
+            return this;
+        }
+        public String getEffectiveTime() {
+            return this.effectiveTime;
+        }
+
+        public QueryRedeemResponseBodyDataRedeemRedeem setExpiryTime(String expiryTime) {
+            this.expiryTime = expiryTime;
+            return this;
+        }
+        public String getExpiryTime() {
+            return this.expiryTime;
+        }
+
+        public QueryRedeemResponseBodyDataRedeemRedeem setNominalValue(String nominalValue) {
+            this.nominalValue = nominalValue;
+            return this;
+        }
+        public String getNominalValue() {
+            return this.nominalValue;
+        }
+
+        public QueryRedeemResponseBodyDataRedeemRedeem setBalance(String balance) {
+            this.balance = balance;
+            return this;
+        }
+        public String getBalance() {
+            return this.balance;
+        }
+
+        public QueryRedeemResponseBodyDataRedeemRedeem setApplicableProducts(String applicableProducts) {
+            this.applicableProducts = applicableProducts;
+            return this;
+        }
+        public String getApplicableProducts() {
+            return this.applicableProducts;
+        }
+
+        public QueryRedeemResponseBodyDataRedeemRedeem setSpecification(String specification) {
+            this.specification = specification;
+            return this;
+        }
+        public String getSpecification() {
+            return this.specification;
         }
 
     }
@@ -208,11 +208,11 @@ public class QueryRedeemResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Long pageSize;
 
-        @NameInMap("Redeem")
-        public QueryRedeemResponseBodyDataRedeem redeem;
-
         @NameInMap("TotalCount")
         public Long totalCount;
+
+        @NameInMap("Redeem")
+        public QueryRedeemResponseBodyDataRedeem redeem;
 
         public static QueryRedeemResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryRedeemResponseBodyData self = new QueryRedeemResponseBodyData();
@@ -235,20 +235,20 @@ public class QueryRedeemResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public QueryRedeemResponseBodyData setRedeem(QueryRedeemResponseBodyDataRedeem redeem) {
-            this.redeem = redeem;
-            return this;
-        }
-        public QueryRedeemResponseBodyDataRedeem getRedeem() {
-            return this.redeem;
-        }
-
         public QueryRedeemResponseBodyData setTotalCount(Long totalCount) {
             this.totalCount = totalCount;
             return this;
         }
         public Long getTotalCount() {
             return this.totalCount;
+        }
+
+        public QueryRedeemResponseBodyData setRedeem(QueryRedeemResponseBodyDataRedeem redeem) {
+            this.redeem = redeem;
+            return this;
+        }
+        public QueryRedeemResponseBodyDataRedeem getRedeem() {
+            return this.redeem;
         }
 
     }

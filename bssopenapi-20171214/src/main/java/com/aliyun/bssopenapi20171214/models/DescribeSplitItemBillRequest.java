@@ -28,14 +28,14 @@ public class DescribeSplitItemBillRequest extends TeaModel {
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
+    @NameInMap("TagFilter")
+    public java.util.List<DescribeSplitItemBillRequestTagFilter> tagFilter;
+
     @NameInMap("InstanceID")
     public String instanceID;
 
     @NameInMap("SplitItemID")
     public String splitItemID;
-
-    @NameInMap("TagFilter")
-    public java.util.List<DescribeSplitItemBillRequestTagFilter> tagFilter;
 
     public static DescribeSplitItemBillRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSplitItemBillRequest self = new DescribeSplitItemBillRequest();
@@ -106,6 +106,14 @@ public class DescribeSplitItemBillRequest extends TeaModel {
         return this.billOwnerId;
     }
 
+    public DescribeSplitItemBillRequest setTagFilter(java.util.List<DescribeSplitItemBillRequestTagFilter> tagFilter) {
+        this.tagFilter = tagFilter;
+        return this;
+    }
+    public java.util.List<DescribeSplitItemBillRequestTagFilter> getTagFilter() {
+        return this.tagFilter;
+    }
+
     public DescribeSplitItemBillRequest setInstanceID(String instanceID) {
         this.instanceID = instanceID;
         return this;
@@ -122,32 +130,16 @@ public class DescribeSplitItemBillRequest extends TeaModel {
         return this.splitItemID;
     }
 
-    public DescribeSplitItemBillRequest setTagFilter(java.util.List<DescribeSplitItemBillRequestTagFilter> tagFilter) {
-        this.tagFilter = tagFilter;
-        return this;
-    }
-    public java.util.List<DescribeSplitItemBillRequestTagFilter> getTagFilter() {
-        return this.tagFilter;
-    }
-
     public static class DescribeSplitItemBillRequestTagFilter extends TeaModel {
-        @NameInMap("TagValues")
-        public java.util.List<String> tagValues;
-
         @NameInMap("TagKey")
         public String tagKey;
+
+        @NameInMap("TagValues")
+        public java.util.List<String> tagValues;
 
         public static DescribeSplitItemBillRequestTagFilter build(java.util.Map<String, ?> map) throws Exception {
             DescribeSplitItemBillRequestTagFilter self = new DescribeSplitItemBillRequestTagFilter();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSplitItemBillRequestTagFilter setTagValues(java.util.List<String> tagValues) {
-            this.tagValues = tagValues;
-            return this;
-        }
-        public java.util.List<String> getTagValues() {
-            return this.tagValues;
         }
 
         public DescribeSplitItemBillRequestTagFilter setTagKey(String tagKey) {
@@ -156,6 +148,14 @@ public class DescribeSplitItemBillRequest extends TeaModel {
         }
         public String getTagKey() {
             return this.tagKey;
+        }
+
+        public DescribeSplitItemBillRequestTagFilter setTagValues(java.util.List<String> tagValues) {
+            this.tagValues = tagValues;
+            return this;
+        }
+        public java.util.List<String> getTagValues() {
+            return this.tagValues;
         }
 
     }

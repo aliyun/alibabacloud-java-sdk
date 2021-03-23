@@ -4,48 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInvoicingCustomerListResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Data")
-    public QueryInvoicingCustomerListResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public QueryInvoicingCustomerListResponseBodyData data;
+
     public static QueryInvoicingCustomerListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryInvoicingCustomerListResponseBody self = new QueryInvoicingCustomerListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QueryInvoicingCustomerListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryInvoicingCustomerListResponseBody setData(QueryInvoicingCustomerListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryInvoicingCustomerListResponseBodyData getData() {
-        return this.data;
-    }
-
-    public QueryInvoicingCustomerListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public QueryInvoicingCustomerListResponseBody setRequestId(String requestId) {
@@ -64,36 +40,54 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         return this.success;
     }
 
+    public QueryInvoicingCustomerListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryInvoicingCustomerListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QueryInvoicingCustomerListResponseBody setData(QueryInvoicingCustomerListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryInvoicingCustomerListResponseBodyData getData() {
+        return this.data;
+    }
+
     public static class QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice extends TeaModel {
-        @NameInMap("AdjustType")
-        public Long adjustType;
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("UserId")
+        public Long userId;
+
+        @NameInMap("UserNick")
+        public String userNick;
+
+        @NameInMap("InvoiceTitle")
+        public String invoiceTitle;
+
+        @NameInMap("CustomerType")
+        public Long customerType;
+
+        @NameInMap("TaxpayerType")
+        public Long taxpayerType;
 
         @NameInMap("Bank")
         public String bank;
 
         @NameInMap("BankNo")
         public String bankNo;
-
-        @NameInMap("CustomerType")
-        public Long customerType;
-
-        @NameInMap("DefaultRemark")
-        public String defaultRemark;
-
-        @NameInMap("EndCycle")
-        public Long endCycle;
-
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
-
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("InvoiceTitle")
-        public String invoiceTitle;
-
-        @NameInMap("IssueType")
-        public Long issueType;
 
         @NameInMap("OperatingLicenseAddress")
         public String operatingLicenseAddress;
@@ -110,35 +104,81 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         @NameInMap("Status")
         public Long status;
 
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
         @NameInMap("TaxationLicense")
         public String taxationLicense;
 
-        @NameInMap("TaxpayerType")
-        public Long taxpayerType;
+        @NameInMap("AdjustType")
+        public Long adjustType;
+
+        @NameInMap("EndCycle")
+        public Long endCycle;
 
         @NameInMap("TitleChangeInstructions")
         public String titleChangeInstructions;
 
+        @NameInMap("IssueType")
+        public Long issueType;
+
         @NameInMap("Type")
         public Long type;
 
-        @NameInMap("UserId")
-        public Long userId;
-
-        @NameInMap("UserNick")
-        public String userNick;
+        @NameInMap("DefaultRemark")
+        public String defaultRemark;
 
         public static QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice build(java.util.Map<String, ?> map) throws Exception {
             QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice self = new QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice();
             return TeaModel.build(map, self);
         }
 
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setAdjustType(Long adjustType) {
-            this.adjustType = adjustType;
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setId(Long id) {
+            this.id = id;
             return this;
         }
-        public Long getAdjustType() {
-            return this.adjustType;
+        public Long getId() {
+            return this.id;
+        }
+
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setUserId(Long userId) {
+            this.userId = userId;
+            return this;
+        }
+        public Long getUserId() {
+            return this.userId;
+        }
+
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setUserNick(String userNick) {
+            this.userNick = userNick;
+            return this;
+        }
+        public String getUserNick() {
+            return this.userNick;
+        }
+
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setInvoiceTitle(String invoiceTitle) {
+            this.invoiceTitle = invoiceTitle;
+            return this;
+        }
+        public String getInvoiceTitle() {
+            return this.invoiceTitle;
+        }
+
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setCustomerType(Long customerType) {
+            this.customerType = customerType;
+            return this;
+        }
+        public Long getCustomerType() {
+            return this.customerType;
+        }
+
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setTaxpayerType(Long taxpayerType) {
+            this.taxpayerType = taxpayerType;
+            return this;
+        }
+        public Long getTaxpayerType() {
+            return this.taxpayerType;
         }
 
         public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setBank(String bank) {
@@ -155,62 +195,6 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
         public String getBankNo() {
             return this.bankNo;
-        }
-
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setCustomerType(Long customerType) {
-            this.customerType = customerType;
-            return this;
-        }
-        public Long getCustomerType() {
-            return this.customerType;
-        }
-
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setDefaultRemark(String defaultRemark) {
-            this.defaultRemark = defaultRemark;
-            return this;
-        }
-        public String getDefaultRemark() {
-            return this.defaultRemark;
-        }
-
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setEndCycle(Long endCycle) {
-            this.endCycle = endCycle;
-            return this;
-        }
-        public Long getEndCycle() {
-            return this.endCycle;
-        }
-
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setInvoiceTitle(String invoiceTitle) {
-            this.invoiceTitle = invoiceTitle;
-            return this;
-        }
-        public String getInvoiceTitle() {
-            return this.invoiceTitle;
-        }
-
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setIssueType(Long issueType) {
-            this.issueType = issueType;
-            return this;
-        }
-        public Long getIssueType() {
-            return this.issueType;
         }
 
         public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setOperatingLicenseAddress(String operatingLicenseAddress) {
@@ -253,6 +237,14 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             return this.status;
         }
 
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
         public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setTaxationLicense(String taxationLicense) {
             this.taxationLicense = taxationLicense;
             return this;
@@ -261,12 +253,20 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             return this.taxationLicense;
         }
 
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setTaxpayerType(Long taxpayerType) {
-            this.taxpayerType = taxpayerType;
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setAdjustType(Long adjustType) {
+            this.adjustType = adjustType;
             return this;
         }
-        public Long getTaxpayerType() {
-            return this.taxpayerType;
+        public Long getAdjustType() {
+            return this.adjustType;
+        }
+
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setEndCycle(Long endCycle) {
+            this.endCycle = endCycle;
+            return this;
+        }
+        public Long getEndCycle() {
+            return this.endCycle;
         }
 
         public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setTitleChangeInstructions(String titleChangeInstructions) {
@@ -277,6 +277,14 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             return this.titleChangeInstructions;
         }
 
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setIssueType(Long issueType) {
+            this.issueType = issueType;
+            return this;
+        }
+        public Long getIssueType() {
+            return this.issueType;
+        }
+
         public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setType(Long type) {
             this.type = type;
             return this;
@@ -285,20 +293,12 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             return this.type;
         }
 
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setUserId(Long userId) {
-            this.userId = userId;
+        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setDefaultRemark(String defaultRemark) {
+            this.defaultRemark = defaultRemark;
             return this;
         }
-        public Long getUserId() {
-            return this.userId;
-        }
-
-        public QueryInvoicingCustomerListResponseBodyDataCustomerInvoiceListCustomerInvoice setUserNick(String userNick) {
-            this.userNick = userNick;
-            return this;
-        }
-        public String getUserNick() {
-            return this.userNick;
+        public String getDefaultRemark() {
+            return this.defaultRemark;
         }
 
     }

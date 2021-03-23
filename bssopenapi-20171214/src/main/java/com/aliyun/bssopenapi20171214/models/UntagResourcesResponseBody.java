@@ -4,48 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponseBody extends TeaModel {
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Data")
-    public Boolean data;
-
-    @NameInMap("Code")
-    public String code;
-
     @NameInMap("Success")
     public Boolean success;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public Boolean data;
 
     public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesResponseBody self = new UntagResourcesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public UntagResourcesResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public UntagResourcesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public UntagResourcesResponseBody setData(Boolean data) {
-        this.data = data;
-        return this;
-    }
-    public Boolean getData() {
-        return this.data;
     }
 
     public UntagResourcesResponseBody setCode(String code) {
@@ -56,12 +32,36 @@ public class UntagResourcesResponseBody extends TeaModel {
         return this.code;
     }
 
+    public UntagResourcesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public UntagResourcesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UntagResourcesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public UntagResourcesResponseBody setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
 }

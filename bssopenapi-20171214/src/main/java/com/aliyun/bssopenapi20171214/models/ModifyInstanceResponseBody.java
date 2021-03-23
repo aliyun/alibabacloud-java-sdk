@@ -4,48 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Data")
-    public ModifyInstanceResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public ModifyInstanceResponseBodyData data;
+
     public static ModifyInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceResponseBody self = new ModifyInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyInstanceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ModifyInstanceResponseBody setData(ModifyInstanceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public ModifyInstanceResponseBodyData getData() {
-        return this.data;
-    }
-
-    public ModifyInstanceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public ModifyInstanceResponseBody setRequestId(String requestId) {
@@ -62,6 +38,30 @@ public class ModifyInstanceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ModifyInstanceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ModifyInstanceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ModifyInstanceResponseBody setData(ModifyInstanceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public ModifyInstanceResponseBodyData getData() {
+        return this.data;
     }
 
     public static class ModifyInstanceResponseBodyData extends TeaModel {

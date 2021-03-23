@@ -4,48 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetResourcePackagePriceResponseBody extends TeaModel {
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Data")
-    public GetResourcePackagePriceResponseBodyData data;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("Data")
+    public GetResourcePackagePriceResponseBodyData data;
+
     public static GetResourcePackagePriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResourcePackagePriceResponseBody self = new GetResourcePackagePriceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public GetResourcePackagePriceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetResourcePackagePriceResponseBody setData(GetResourcePackagePriceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetResourcePackagePriceResponseBodyData getData() {
-        return this.data;
-    }
-
-    public GetResourcePackagePriceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public GetResourcePackagePriceResponseBody setRequestId(String requestId) {
@@ -62,6 +38,30 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetResourcePackagePriceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetResourcePackagePriceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public GetResourcePackagePriceResponseBody setData(GetResourcePackagePriceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetResourcePackagePriceResponseBodyData getData() {
+        return this.data;
     }
 
     public static class GetResourcePackagePriceResponseBodyDataPromotionsPromotion extends TeaModel {
@@ -117,17 +117,17 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
-        @NameInMap("DiscountPrice")
-        public Float discountPrice;
-
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
-        @NameInMap("Promotions")
-        public GetResourcePackagePriceResponseBodyDataPromotions promotions;
-
         @NameInMap("TradePrice")
         public Float tradePrice;
+
+        @NameInMap("DiscountPrice")
+        public Float discountPrice;
+
+        @NameInMap("Promotions")
+        public GetResourcePackagePriceResponseBodyDataPromotions promotions;
 
         public static GetResourcePackagePriceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetResourcePackagePriceResponseBodyData self = new GetResourcePackagePriceResponseBodyData();
@@ -142,14 +142,6 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public GetResourcePackagePriceResponseBodyData setDiscountPrice(Float discountPrice) {
-            this.discountPrice = discountPrice;
-            return this;
-        }
-        public Float getDiscountPrice() {
-            return this.discountPrice;
-        }
-
         public GetResourcePackagePriceResponseBodyData setOriginalPrice(Float originalPrice) {
             this.originalPrice = originalPrice;
             return this;
@@ -158,20 +150,28 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             return this.originalPrice;
         }
 
-        public GetResourcePackagePriceResponseBodyData setPromotions(GetResourcePackagePriceResponseBodyDataPromotions promotions) {
-            this.promotions = promotions;
-            return this;
-        }
-        public GetResourcePackagePriceResponseBodyDataPromotions getPromotions() {
-            return this.promotions;
-        }
-
         public GetResourcePackagePriceResponseBodyData setTradePrice(Float tradePrice) {
             this.tradePrice = tradePrice;
             return this;
         }
         public Float getTradePrice() {
             return this.tradePrice;
+        }
+
+        public GetResourcePackagePriceResponseBodyData setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
+            return this;
+        }
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        public GetResourcePackagePriceResponseBodyData setPromotions(GetResourcePackagePriceResponseBodyDataPromotions promotions) {
+            this.promotions = promotions;
+            return this;
+        }
+        public GetResourcePackagePriceResponseBodyDataPromotions getPromotions() {
+            return this.promotions;
         }
 
     }
