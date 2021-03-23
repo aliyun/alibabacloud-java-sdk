@@ -7,17 +7,17 @@ public class DescribeAssistReportResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AssistResult")
-    public String assistResult;
-
-    @NameInMap("AssistReason")
-    public String assistReason;
-
     @NameInMap("AssistId")
     public String assistId;
 
     @NameInMap("AssistDescription")
     public String assistDescription;
+
+    @NameInMap("AssistResult")
+    public String assistResult;
+
+    @NameInMap("AssistReason")
+    public String assistReason;
 
     @NameInMap("AssistTag")
     public String assistTag;
@@ -35,22 +35,6 @@ public class DescribeAssistReportResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAssistReportResponseBody setAssistResult(String assistResult) {
-        this.assistResult = assistResult;
-        return this;
-    }
-    public String getAssistResult() {
-        return this.assistResult;
-    }
-
-    public DescribeAssistReportResponseBody setAssistReason(String assistReason) {
-        this.assistReason = assistReason;
-        return this;
-    }
-    public String getAssistReason() {
-        return this.assistReason;
-    }
-
     public DescribeAssistReportResponseBody setAssistId(String assistId) {
         this.assistId = assistId;
         return this;
@@ -65,6 +49,22 @@ public class DescribeAssistReportResponseBody extends TeaModel {
     }
     public String getAssistDescription() {
         return this.assistDescription;
+    }
+
+    public DescribeAssistReportResponseBody setAssistResult(String assistResult) {
+        this.assistResult = assistResult;
+        return this;
+    }
+    public String getAssistResult() {
+        return this.assistResult;
+    }
+
+    public DescribeAssistReportResponseBody setAssistReason(String assistReason) {
+        this.assistReason = assistReason;
+        return this;
+    }
+    public String getAssistReason() {
+        return this.assistReason;
     }
 
     public DescribeAssistReportResponseBody setAssistTag(String assistTag) {

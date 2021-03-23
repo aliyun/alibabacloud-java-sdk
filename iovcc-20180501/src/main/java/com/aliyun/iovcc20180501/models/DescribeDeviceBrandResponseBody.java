@@ -35,8 +35,8 @@ public class DescribeDeviceBrandResponseBody extends TeaModel {
         @NameInMap("DeviceBrandId")
         public Long deviceBrandId;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("DeviceBrand")
+        public String deviceBrand;
 
         @NameInMap("ProjectId")
         public String projectId;
@@ -44,8 +44,8 @@ public class DescribeDeviceBrandResponseBody extends TeaModel {
         @NameInMap("Manufacture")
         public String manufacture;
 
-        @NameInMap("DeviceBrand")
-        public String deviceBrand;
+        @NameInMap("Description")
+        public String description;
 
         public static DescribeDeviceBrandResponseBodyDeviceBrand build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeviceBrandResponseBodyDeviceBrand self = new DescribeDeviceBrandResponseBodyDeviceBrand();
@@ -60,12 +60,12 @@ public class DescribeDeviceBrandResponseBody extends TeaModel {
             return this.deviceBrandId;
         }
 
-        public DescribeDeviceBrandResponseBodyDeviceBrand setDescription(String description) {
-            this.description = description;
+        public DescribeDeviceBrandResponseBodyDeviceBrand setDeviceBrand(String deviceBrand) {
+            this.deviceBrand = deviceBrand;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getDeviceBrand() {
+            return this.deviceBrand;
         }
 
         public DescribeDeviceBrandResponseBodyDeviceBrand setProjectId(String projectId) {
@@ -84,12 +84,12 @@ public class DescribeDeviceBrandResponseBody extends TeaModel {
             return this.manufacture;
         }
 
-        public DescribeDeviceBrandResponseBodyDeviceBrand setDeviceBrand(String deviceBrand) {
-            this.deviceBrand = deviceBrand;
+        public DescribeDeviceBrandResponseBodyDeviceBrand setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getDeviceBrand() {
-            return this.deviceBrand;
+        public String getDescription() {
+            return this.description;
         }
 
     }

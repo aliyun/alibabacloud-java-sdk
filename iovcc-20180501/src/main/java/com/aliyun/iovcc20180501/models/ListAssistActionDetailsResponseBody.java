@@ -32,17 +32,23 @@ public class ListAssistActionDetailsResponseBody extends TeaModel {
     }
 
     public static class ListAssistActionDetailsResponseBodyResults extends TeaModel {
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("DeviceId")
+        public String deviceId;
 
         @NameInMap("Action")
         public String action;
 
+        @NameInMap("Timestamp")
+        public String timestamp;
+
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("Data")
         public String data;
 
-        @NameInMap("DeviceId")
-        public String deviceId;
+        @NameInMap("ID")
+        public String ID;
 
         @NameInMap("CreatedAt")
         public Long createdAt;
@@ -50,23 +56,17 @@ public class ListAssistActionDetailsResponseBody extends TeaModel {
         @NameInMap("UpdatedAt")
         public Long updatedAt;
 
-        @NameInMap("Timestamp")
-        public String timestamp;
-
-        @NameInMap("ID")
-        public String ID;
-
         public static ListAssistActionDetailsResponseBodyResults build(java.util.Map<String, ?> map) throws Exception {
             ListAssistActionDetailsResponseBodyResults self = new ListAssistActionDetailsResponseBodyResults();
             return TeaModel.build(map, self);
         }
 
-        public ListAssistActionDetailsResponseBodyResults setType(String type) {
-            this.type = type;
+        public ListAssistActionDetailsResponseBodyResults setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getDeviceId() {
+            return this.deviceId;
         }
 
         public ListAssistActionDetailsResponseBodyResults setAction(String action) {
@@ -77,6 +77,22 @@ public class ListAssistActionDetailsResponseBody extends TeaModel {
             return this.action;
         }
 
+        public ListAssistActionDetailsResponseBodyResults setTimestamp(String timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        public ListAssistActionDetailsResponseBodyResults setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public ListAssistActionDetailsResponseBodyResults setData(String data) {
             this.data = data;
             return this;
@@ -85,12 +101,12 @@ public class ListAssistActionDetailsResponseBody extends TeaModel {
             return this.data;
         }
 
-        public ListAssistActionDetailsResponseBodyResults setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
+        public ListAssistActionDetailsResponseBodyResults setID(String ID) {
+            this.ID = ID;
             return this;
         }
-        public String getDeviceId() {
-            return this.deviceId;
+        public String getID() {
+            return this.ID;
         }
 
         public ListAssistActionDetailsResponseBodyResults setCreatedAt(Long createdAt) {
@@ -107,22 +123,6 @@ public class ListAssistActionDetailsResponseBody extends TeaModel {
         }
         public Long getUpdatedAt() {
             return this.updatedAt;
-        }
-
-        public ListAssistActionDetailsResponseBodyResults setTimestamp(String timestamp) {
-            this.timestamp = timestamp;
-            return this;
-        }
-        public String getTimestamp() {
-            return this.timestamp;
-        }
-
-        public ListAssistActionDetailsResponseBodyResults setID(String ID) {
-            this.ID = ID;
-            return this;
-        }
-        public String getID() {
-            return this.ID;
         }
 
     }

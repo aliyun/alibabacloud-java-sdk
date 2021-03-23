@@ -32,24 +32,40 @@ public class GenerateOssPostPolicyResponseBody extends TeaModel {
     }
 
     public static class GenerateOssPostPolicyResponseBodyOssPostPolicy extends TeaModel {
+        @NameInMap("AccessId")
+        public String accessId;
+
+        @NameInMap("Policy")
+        public String policy;
+
         @NameInMap("Signature")
         public String signature;
 
         @NameInMap("Host")
         public String host;
 
-        @NameInMap("Policy")
-        public String policy;
-
         @NameInMap("Expire")
         public String expire;
-
-        @NameInMap("AccessId")
-        public String accessId;
 
         public static GenerateOssPostPolicyResponseBodyOssPostPolicy build(java.util.Map<String, ?> map) throws Exception {
             GenerateOssPostPolicyResponseBodyOssPostPolicy self = new GenerateOssPostPolicyResponseBodyOssPostPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public GenerateOssPostPolicyResponseBodyOssPostPolicy setAccessId(String accessId) {
+            this.accessId = accessId;
+            return this;
+        }
+        public String getAccessId() {
+            return this.accessId;
+        }
+
+        public GenerateOssPostPolicyResponseBodyOssPostPolicy setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
         }
 
         public GenerateOssPostPolicyResponseBodyOssPostPolicy setSignature(String signature) {
@@ -68,28 +84,12 @@ public class GenerateOssPostPolicyResponseBody extends TeaModel {
             return this.host;
         }
 
-        public GenerateOssPostPolicyResponseBodyOssPostPolicy setPolicy(String policy) {
-            this.policy = policy;
-            return this;
-        }
-        public String getPolicy() {
-            return this.policy;
-        }
-
         public GenerateOssPostPolicyResponseBodyOssPostPolicy setExpire(String expire) {
             this.expire = expire;
             return this;
         }
         public String getExpire() {
             return this.expire;
-        }
-
-        public GenerateOssPostPolicyResponseBodyOssPostPolicy setAccessId(String accessId) {
-            this.accessId = accessId;
-            return this;
-        }
-        public String getAccessId() {
-            return this.accessId;
         }
 
     }

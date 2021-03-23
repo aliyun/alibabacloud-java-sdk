@@ -32,38 +32,38 @@ public class DescribeDeviceValiditySchemaResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceValiditySchemaResponseBodyItemList extends TeaModel {
-        @NameInMap("Minimum")
-        public Float minimum;
+        @NameInMap("Path")
+        public String path;
 
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("Maximum")
-        public Float maximum;
-
         @NameInMap("ItemType")
         public String itemType;
-
-        @NameInMap("EnumListStr")
-        public String enumListStr;
-
-        @NameInMap("ExclusiveMinimum")
-        public Boolean exclusiveMinimum;
-
-        @NameInMap("MaxLength")
-        public Integer maxLength;
-
-        @NameInMap("Required")
-        public String required;
 
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("Required")
+        public String required;
+
+        @NameInMap("Maximum")
+        public Float maximum;
+
+        @NameInMap("Minimum")
+        public Float minimum;
+
         @NameInMap("ExclusiveMaximum")
         public Boolean exclusiveMaximum;
 
-        @NameInMap("Path")
-        public String path;
+        @NameInMap("ExclusiveMinimum")
+        public Boolean exclusiveMinimum;
+
+        @NameInMap("EnumListStr")
+        public String enumListStr;
+
+        @NameInMap("MaxLength")
+        public Integer maxLength;
 
         @NameInMap("MinLength")
         public Integer minLength;
@@ -73,12 +73,12 @@ public class DescribeDeviceValiditySchemaResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDeviceValiditySchemaResponseBodyItemList setMinimum(Float minimum) {
-            this.minimum = minimum;
+        public DescribeDeviceValiditySchemaResponseBodyItemList setPath(String path) {
+            this.path = path;
             return this;
         }
-        public Float getMinimum() {
-            return this.minimum;
+        public String getPath() {
+            return this.path;
         }
 
         public DescribeDeviceValiditySchemaResponseBodyItemList setType(String type) {
@@ -89,52 +89,12 @@ public class DescribeDeviceValiditySchemaResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeDeviceValiditySchemaResponseBodyItemList setMaximum(Float maximum) {
-            this.maximum = maximum;
-            return this;
-        }
-        public Float getMaximum() {
-            return this.maximum;
-        }
-
         public DescribeDeviceValiditySchemaResponseBodyItemList setItemType(String itemType) {
             this.itemType = itemType;
             return this;
         }
         public String getItemType() {
             return this.itemType;
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setEnumListStr(String enumListStr) {
-            this.enumListStr = enumListStr;
-            return this;
-        }
-        public String getEnumListStr() {
-            return this.enumListStr;
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setExclusiveMinimum(Boolean exclusiveMinimum) {
-            this.exclusiveMinimum = exclusiveMinimum;
-            return this;
-        }
-        public Boolean getExclusiveMinimum() {
-            return this.exclusiveMinimum;
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setMaxLength(Integer maxLength) {
-            this.maxLength = maxLength;
-            return this;
-        }
-        public Integer getMaxLength() {
-            return this.maxLength;
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setRequired(String required) {
-            this.required = required;
-            return this;
-        }
-        public String getRequired() {
-            return this.required;
         }
 
         public DescribeDeviceValiditySchemaResponseBodyItemList setDescription(String description) {
@@ -145,6 +105,30 @@ public class DescribeDeviceValiditySchemaResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeDeviceValiditySchemaResponseBodyItemList setRequired(String required) {
+            this.required = required;
+            return this;
+        }
+        public String getRequired() {
+            return this.required;
+        }
+
+        public DescribeDeviceValiditySchemaResponseBodyItemList setMaximum(Float maximum) {
+            this.maximum = maximum;
+            return this;
+        }
+        public Float getMaximum() {
+            return this.maximum;
+        }
+
+        public DescribeDeviceValiditySchemaResponseBodyItemList setMinimum(Float minimum) {
+            this.minimum = minimum;
+            return this;
+        }
+        public Float getMinimum() {
+            return this.minimum;
+        }
+
         public DescribeDeviceValiditySchemaResponseBodyItemList setExclusiveMaximum(Boolean exclusiveMaximum) {
             this.exclusiveMaximum = exclusiveMaximum;
             return this;
@@ -153,12 +137,28 @@ public class DescribeDeviceValiditySchemaResponseBody extends TeaModel {
             return this.exclusiveMaximum;
         }
 
-        public DescribeDeviceValiditySchemaResponseBodyItemList setPath(String path) {
-            this.path = path;
+        public DescribeDeviceValiditySchemaResponseBodyItemList setExclusiveMinimum(Boolean exclusiveMinimum) {
+            this.exclusiveMinimum = exclusiveMinimum;
             return this;
         }
-        public String getPath() {
-            return this.path;
+        public Boolean getExclusiveMinimum() {
+            return this.exclusiveMinimum;
+        }
+
+        public DescribeDeviceValiditySchemaResponseBodyItemList setEnumListStr(String enumListStr) {
+            this.enumListStr = enumListStr;
+            return this;
+        }
+        public String getEnumListStr() {
+            return this.enumListStr;
+        }
+
+        public DescribeDeviceValiditySchemaResponseBodyItemList setMaxLength(Integer maxLength) {
+            this.maxLength = maxLength;
+            return this;
+        }
+        public Integer getMaxLength() {
+            return this.maxLength;
         }
 
         public DescribeDeviceValiditySchemaResponseBodyItemList setMinLength(Integer minLength) {

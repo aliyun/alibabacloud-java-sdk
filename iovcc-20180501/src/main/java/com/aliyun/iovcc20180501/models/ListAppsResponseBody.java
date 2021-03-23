@@ -32,29 +32,21 @@ public class ListAppsResponseBody extends TeaModel {
     }
 
     public static class ListAppsResponseBodyApps extends TeaModel {
-        @NameInMap("AppName")
-        public String appName;
-
         @NameInMap("AppKey")
         public String appKey;
 
-        @NameInMap("OsType")
-        public Integer osType;
+        @NameInMap("AppName")
+        public String appName;
 
         @NameInMap("AppPackage")
         public String appPackage;
 
+        @NameInMap("OsType")
+        public Integer osType;
+
         public static ListAppsResponseBodyApps build(java.util.Map<String, ?> map) throws Exception {
             ListAppsResponseBodyApps self = new ListAppsResponseBodyApps();
             return TeaModel.build(map, self);
-        }
-
-        public ListAppsResponseBodyApps setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
         }
 
         public ListAppsResponseBodyApps setAppKey(String appKey) {
@@ -65,12 +57,12 @@ public class ListAppsResponseBody extends TeaModel {
             return this.appKey;
         }
 
-        public ListAppsResponseBodyApps setOsType(Integer osType) {
-            this.osType = osType;
+        public ListAppsResponseBodyApps setAppName(String appName) {
+            this.appName = appName;
             return this;
         }
-        public Integer getOsType() {
-            return this.osType;
+        public String getAppName() {
+            return this.appName;
         }
 
         public ListAppsResponseBodyApps setAppPackage(String appPackage) {
@@ -79,6 +71,14 @@ public class ListAppsResponseBody extends TeaModel {
         }
         public String getAppPackage() {
             return this.appPackage;
+        }
+
+        public ListAppsResponseBodyApps setOsType(Integer osType) {
+            this.osType = osType;
+            return this;
+        }
+        public Integer getOsType() {
+            return this.osType;
         }
 
     }

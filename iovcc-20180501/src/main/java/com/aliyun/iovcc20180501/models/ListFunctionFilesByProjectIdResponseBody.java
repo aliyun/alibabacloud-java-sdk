@@ -32,8 +32,17 @@ public class ListFunctionFilesByProjectIdResponseBody extends TeaModel {
     }
 
     public static class ListFunctionFilesByProjectIdResponseBodyFiles extends TeaModel {
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
+
         @NameInMap("Type")
         public Integer type;
+
+        @NameInMap("ContentId")
+        public Long contentId;
 
         @NameInMap("Status")
         public Integer status;
@@ -44,18 +53,25 @@ public class ListFunctionFilesByProjectIdResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("ContentId")
-        public Long contentId;
-
         public static ListFunctionFilesByProjectIdResponseBodyFiles build(java.util.Map<String, ?> map) throws Exception {
             ListFunctionFilesByProjectIdResponseBodyFiles self = new ListFunctionFilesByProjectIdResponseBodyFiles();
             return TeaModel.build(map, self);
+        }
+
+        public ListFunctionFilesByProjectIdResponseBodyFiles setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public ListFunctionFilesByProjectIdResponseBodyFiles setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public ListFunctionFilesByProjectIdResponseBodyFiles setType(Integer type) {
@@ -64,6 +80,14 @@ public class ListFunctionFilesByProjectIdResponseBody extends TeaModel {
         }
         public Integer getType() {
             return this.type;
+        }
+
+        public ListFunctionFilesByProjectIdResponseBodyFiles setContentId(Long contentId) {
+            this.contentId = contentId;
+            return this;
+        }
+        public Long getContentId() {
+            return this.contentId;
         }
 
         public ListFunctionFilesByProjectIdResponseBodyFiles setStatus(Integer status) {
@@ -88,30 +112,6 @@ public class ListFunctionFilesByProjectIdResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
-        }
-
-        public ListFunctionFilesByProjectIdResponseBodyFiles setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListFunctionFilesByProjectIdResponseBodyFiles setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public ListFunctionFilesByProjectIdResponseBodyFiles setContentId(Long contentId) {
-            this.contentId = contentId;
-            return this;
-        }
-        public Long getContentId() {
-            return this.contentId;
         }
 
     }

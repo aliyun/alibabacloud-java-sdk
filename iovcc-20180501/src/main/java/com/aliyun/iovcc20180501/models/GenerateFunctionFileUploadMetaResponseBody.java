@@ -32,24 +32,48 @@ public class GenerateFunctionFileUploadMetaResponseBody extends TeaModel {
     }
 
     public static class GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy extends TeaModel {
+        @NameInMap("AccessId")
+        public String accessId;
+
+        @NameInMap("Expire")
+        public String expire;
+
+        @NameInMap("Policy")
+        public String policy;
+
         @NameInMap("Signature")
         public String signature;
 
         @NameInMap("Host")
         public String host;
 
-        @NameInMap("Policy")
-        public String policy;
-
-        @NameInMap("Expire")
-        public String expire;
-
-        @NameInMap("AccessId")
-        public String accessId;
-
         public static GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy build(java.util.Map<String, ?> map) throws Exception {
             GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy self = new GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy setAccessId(String accessId) {
+            this.accessId = accessId;
+            return this;
+        }
+        public String getAccessId() {
+            return this.accessId;
+        }
+
+        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy setExpire(String expire) {
+            this.expire = expire;
+            return this;
+        }
+        public String getExpire() {
+            return this.expire;
+        }
+
+        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
         }
 
         public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy setSignature(String signature) {
@@ -68,53 +92,21 @@ public class GenerateFunctionFileUploadMetaResponseBody extends TeaModel {
             return this.host;
         }
 
-        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy setPolicy(String policy) {
-            this.policy = policy;
-            return this;
-        }
-        public String getPolicy() {
-            return this.policy;
-        }
-
-        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy setExpire(String expire) {
-            this.expire = expire;
-            return this;
-        }
-        public String getExpire() {
-            return this.expire;
-        }
-
-        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy setAccessId(String accessId) {
-            this.accessId = accessId;
-            return this;
-        }
-        public String getAccessId() {
-            return this.accessId;
-        }
-
     }
 
     public static class GenerateFunctionFileUploadMetaResponseBodyUploadMeta extends TeaModel {
-        @NameInMap("PostObjectPolicy")
-        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy postObjectPolicy;
-
         @NameInMap("SecurityToken")
         public String securityToken;
 
         @NameInMap("ObjectKey")
         public String objectKey;
 
+        @NameInMap("PostObjectPolicy")
+        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy postObjectPolicy;
+
         public static GenerateFunctionFileUploadMetaResponseBodyUploadMeta build(java.util.Map<String, ?> map) throws Exception {
             GenerateFunctionFileUploadMetaResponseBodyUploadMeta self = new GenerateFunctionFileUploadMetaResponseBodyUploadMeta();
             return TeaModel.build(map, self);
-        }
-
-        public GenerateFunctionFileUploadMetaResponseBodyUploadMeta setPostObjectPolicy(GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy postObjectPolicy) {
-            this.postObjectPolicy = postObjectPolicy;
-            return this;
-        }
-        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy getPostObjectPolicy() {
-            return this.postObjectPolicy;
         }
 
         public GenerateFunctionFileUploadMetaResponseBodyUploadMeta setSecurityToken(String securityToken) {
@@ -131,6 +123,14 @@ public class GenerateFunctionFileUploadMetaResponseBody extends TeaModel {
         }
         public String getObjectKey() {
             return this.objectKey;
+        }
+
+        public GenerateFunctionFileUploadMetaResponseBodyUploadMeta setPostObjectPolicy(GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy postObjectPolicy) {
+            this.postObjectPolicy = postObjectPolicy;
+            return this;
+        }
+        public GenerateFunctionFileUploadMetaResponseBodyUploadMetaPostObjectPolicy getPostObjectPolicy() {
+            return this.postObjectPolicy;
         }
 
     }

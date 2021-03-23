@@ -32,23 +32,15 @@ public class ListClientPluginsResponseBody extends TeaModel {
     }
 
     public static class ListClientPluginsResponseBodyClientPlugins extends TeaModel {
-        @NameInMap("PkgName")
-        public String pkgName;
-
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("PkgName")
+        public String pkgName;
 
         public static ListClientPluginsResponseBodyClientPlugins build(java.util.Map<String, ?> map) throws Exception {
             ListClientPluginsResponseBodyClientPlugins self = new ListClientPluginsResponseBodyClientPlugins();
             return TeaModel.build(map, self);
-        }
-
-        public ListClientPluginsResponseBodyClientPlugins setPkgName(String pkgName) {
-            this.pkgName = pkgName;
-            return this;
-        }
-        public String getPkgName() {
-            return this.pkgName;
         }
 
         public ListClientPluginsResponseBodyClientPlugins setName(String name) {
@@ -57,6 +49,14 @@ public class ListClientPluginsResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListClientPluginsResponseBodyClientPlugins setPkgName(String pkgName) {
+            this.pkgName = pkgName;
+            return this;
+        }
+        public String getPkgName() {
+            return this.pkgName;
         }
 
     }

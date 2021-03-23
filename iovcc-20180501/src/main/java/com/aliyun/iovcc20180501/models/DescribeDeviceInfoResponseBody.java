@@ -32,92 +32,60 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceInfoResponseBodyDeviceInfo extends TeaModel {
-        @NameInMap("SerialNumber")
-        public String serialNumber;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("DeviceModelId")
-        public Long deviceModelId;
-
-        @NameInMap("MacAddress")
-        public String macAddress;
-
         @NameInMap("DeviceId")
         public String deviceId;
 
         @NameInMap("DeviceType")
         public String deviceType;
 
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("DeviceModel")
-        public String deviceModel;
-
         @NameInMap("UsageType")
         public Integer usageType;
-
-        @NameInMap("Vin")
-        public String vin;
 
         @NameInMap("UsageTypeDesc")
         public String usageTypeDesc;
 
-        @NameInMap("Uuid")
-        public String uuid;
+        @NameInMap("DeviceModel")
+        public String deviceModel;
 
-        @NameInMap("HardwareId")
-        public String hardwareId;
-
-        @NameInMap("Region")
-        public String region;
-
-        @NameInMap("SoftwareId")
-        public String softwareId;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("DeviceModelId")
+        public Long deviceModelId;
 
         @NameInMap("DeviceBrand")
         public String deviceBrand;
 
+        @NameInMap("Uuid")
+        public String uuid;
+
+        @NameInMap("Vin")
+        public String vin;
+
+        @NameInMap("SerialNumber")
+        public String serialNumber;
+
+        @NameInMap("MacAddress")
+        public String macAddress;
+
+        @NameInMap("HardwareId")
+        public String hardwareId;
+
+        @NameInMap("SoftwareId")
+        public String softwareId;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeDeviceInfoResponseBodyDeviceInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeviceInfoResponseBodyDeviceInfo self = new DescribeDeviceInfoResponseBodyDeviceInfo();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDeviceInfoResponseBodyDeviceInfo setSerialNumber(String serialNumber) {
-            this.serialNumber = serialNumber;
-            return this;
-        }
-        public String getSerialNumber() {
-            return this.serialNumber;
-        }
-
-        public DescribeDeviceInfoResponseBodyDeviceInfo setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeDeviceInfoResponseBodyDeviceInfo setDeviceModelId(Long deviceModelId) {
-            this.deviceModelId = deviceModelId;
-            return this;
-        }
-        public Long getDeviceModelId() {
-            return this.deviceModelId;
-        }
-
-        public DescribeDeviceInfoResponseBodyDeviceInfo setMacAddress(String macAddress) {
-            this.macAddress = macAddress;
-            return this;
-        }
-        public String getMacAddress() {
-            return this.macAddress;
         }
 
         public DescribeDeviceInfoResponseBodyDeviceInfo setDeviceId(String deviceId) {
@@ -136,36 +104,12 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             return this.deviceType;
         }
 
-        public DescribeDeviceInfoResponseBodyDeviceInfo setProjectId(String projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public DescribeDeviceInfoResponseBodyDeviceInfo setDeviceModel(String deviceModel) {
-            this.deviceModel = deviceModel;
-            return this;
-        }
-        public String getDeviceModel() {
-            return this.deviceModel;
-        }
-
         public DescribeDeviceInfoResponseBodyDeviceInfo setUsageType(Integer usageType) {
             this.usageType = usageType;
             return this;
         }
         public Integer getUsageType() {
             return this.usageType;
-        }
-
-        public DescribeDeviceInfoResponseBodyDeviceInfo setVin(String vin) {
-            this.vin = vin;
-            return this;
-        }
-        public String getVin() {
-            return this.vin;
         }
 
         public DescribeDeviceInfoResponseBodyDeviceInfo setUsageTypeDesc(String usageTypeDesc) {
@@ -176,12 +120,60 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             return this.usageTypeDesc;
         }
 
+        public DescribeDeviceInfoResponseBodyDeviceInfo setDeviceModel(String deviceModel) {
+            this.deviceModel = deviceModel;
+            return this;
+        }
+        public String getDeviceModel() {
+            return this.deviceModel;
+        }
+
+        public DescribeDeviceInfoResponseBodyDeviceInfo setDeviceModelId(Long deviceModelId) {
+            this.deviceModelId = deviceModelId;
+            return this;
+        }
+        public Long getDeviceModelId() {
+            return this.deviceModelId;
+        }
+
+        public DescribeDeviceInfoResponseBodyDeviceInfo setDeviceBrand(String deviceBrand) {
+            this.deviceBrand = deviceBrand;
+            return this;
+        }
+        public String getDeviceBrand() {
+            return this.deviceBrand;
+        }
+
         public DescribeDeviceInfoResponseBodyDeviceInfo setUuid(String uuid) {
             this.uuid = uuid;
             return this;
         }
         public String getUuid() {
             return this.uuid;
+        }
+
+        public DescribeDeviceInfoResponseBodyDeviceInfo setVin(String vin) {
+            this.vin = vin;
+            return this;
+        }
+        public String getVin() {
+            return this.vin;
+        }
+
+        public DescribeDeviceInfoResponseBodyDeviceInfo setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        public DescribeDeviceInfoResponseBodyDeviceInfo setMacAddress(String macAddress) {
+            this.macAddress = macAddress;
+            return this;
+        }
+        public String getMacAddress() {
+            return this.macAddress;
         }
 
         public DescribeDeviceInfoResponseBodyDeviceInfo setHardwareId(String hardwareId) {
@@ -192,20 +184,20 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             return this.hardwareId;
         }
 
-        public DescribeDeviceInfoResponseBodyDeviceInfo setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
         public DescribeDeviceInfoResponseBodyDeviceInfo setSoftwareId(String softwareId) {
             this.softwareId = softwareId;
             return this;
         }
         public String getSoftwareId() {
             return this.softwareId;
+        }
+
+        public DescribeDeviceInfoResponseBodyDeviceInfo setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public DescribeDeviceInfoResponseBodyDeviceInfo setName(String name) {
@@ -216,12 +208,20 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeDeviceInfoResponseBodyDeviceInfo setDeviceBrand(String deviceBrand) {
-            this.deviceBrand = deviceBrand;
+        public DescribeDeviceInfoResponseBodyDeviceInfo setProjectId(String projectId) {
+            this.projectId = projectId;
             return this;
         }
-        public String getDeviceBrand() {
-            return this.deviceBrand;
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public DescribeDeviceInfoResponseBodyDeviceInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

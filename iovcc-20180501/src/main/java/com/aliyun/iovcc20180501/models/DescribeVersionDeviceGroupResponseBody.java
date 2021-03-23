@@ -32,8 +32,11 @@ public class DescribeVersionDeviceGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeVersionDeviceGroupResponseBodyDeviceGroup extends TeaModel {
-        @NameInMap("GmtModify")
-        public String gmtModify;
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Description")
         public String description;
@@ -41,11 +44,8 @@ public class DescribeVersionDeviceGroupResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("GmtModify")
+        public String gmtModify;
 
         @NameInMap("MaxCount")
         public String maxCount;
@@ -55,12 +55,20 @@ public class DescribeVersionDeviceGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeVersionDeviceGroupResponseBodyDeviceGroup setGmtModify(String gmtModify) {
-            this.gmtModify = gmtModify;
+        public DescribeVersionDeviceGroupResponseBodyDeviceGroup setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getGmtModify() {
-            return this.gmtModify;
+        public Long getId() {
+            return this.id;
+        }
+
+        public DescribeVersionDeviceGroupResponseBodyDeviceGroup setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeVersionDeviceGroupResponseBodyDeviceGroup setDescription(String description) {
@@ -79,20 +87,12 @@ public class DescribeVersionDeviceGroupResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public DescribeVersionDeviceGroupResponseBodyDeviceGroup setName(String name) {
-            this.name = name;
+        public DescribeVersionDeviceGroupResponseBodyDeviceGroup setGmtModify(String gmtModify) {
+            this.gmtModify = gmtModify;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public DescribeVersionDeviceGroupResponseBodyDeviceGroup setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
+        public String getGmtModify() {
+            return this.gmtModify;
         }
 
         public DescribeVersionDeviceGroupResponseBodyDeviceGroup setMaxCount(String maxCount) {

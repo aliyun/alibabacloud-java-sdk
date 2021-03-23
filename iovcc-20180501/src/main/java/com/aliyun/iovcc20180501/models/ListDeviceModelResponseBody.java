@@ -4,23 +4,15 @@ package com.aliyun.iovcc20180501.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceModelResponseBody extends TeaModel {
-    @NameInMap("ModelList")
-    public java.util.List<ListDeviceModelResponseBodyModelList> modelList;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ModelList")
+    public java.util.List<ListDeviceModelResponseBodyModelList> modelList;
 
     public static ListDeviceModelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceModelResponseBody self = new ListDeviceModelResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDeviceModelResponseBody setModelList(java.util.List<ListDeviceModelResponseBodyModelList> modelList) {
-        this.modelList = modelList;
-        return this;
-    }
-    public java.util.List<ListDeviceModelResponseBodyModelList> getModelList() {
-        return this.modelList;
     }
 
     public ListDeviceModelResponseBody setRequestId(String requestId) {
@@ -31,42 +23,50 @@ public class ListDeviceModelResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListDeviceModelResponseBody setModelList(java.util.List<ListDeviceModelResponseBodyModelList> modelList) {
+        this.modelList = modelList;
+        return this;
+    }
+    public java.util.List<ListDeviceModelResponseBodyModelList> getModelList() {
+        return this.modelList;
+    }
+
     public static class ListDeviceModelResponseBodyModelList extends TeaModel {
         @NameInMap("DeviceModelId")
         public Long deviceModelId;
 
-        @NameInMap("HardwareType")
-        public String hardwareType;
-
         @NameInMap("DeviceType")
         public String deviceType;
 
-        @NameInMap("CanCreateDeviceId")
-        public Integer canCreateDeviceId;
-
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("OsPlatform")
-        public String osPlatform;
+        @NameInMap("HardwareType")
+        public String hardwareType;
 
         @NameInMap("DeviceModel")
         public String deviceModel;
 
-        @NameInMap("SecurityChip")
-        public String securityChip;
+        @NameInMap("DeviceBrand")
+        public String deviceBrand;
 
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("InitUsageTypeDesc")
-        public String initUsageTypeDesc;
+        @NameInMap("CanCreateDeviceId")
+        public Integer canCreateDeviceId;
 
         @NameInMap("InitUsageType")
         public Integer initUsageType;
 
-        @NameInMap("DeviceBrand")
-        public String deviceBrand;
+        @NameInMap("InitUsageTypeDesc")
+        public String initUsageTypeDesc;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        @NameInMap("SecurityChip")
+        public String securityChip;
+
+        @NameInMap("OsPlatform")
+        public String osPlatform;
 
         public static ListDeviceModelResponseBodyModelList build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceModelResponseBodyModelList self = new ListDeviceModelResponseBodyModelList();
@@ -81,14 +81,6 @@ public class ListDeviceModelResponseBody extends TeaModel {
             return this.deviceModelId;
         }
 
-        public ListDeviceModelResponseBodyModelList setHardwareType(String hardwareType) {
-            this.hardwareType = hardwareType;
-            return this;
-        }
-        public String getHardwareType() {
-            return this.hardwareType;
-        }
-
         public ListDeviceModelResponseBodyModelList setDeviceType(String deviceType) {
             this.deviceType = deviceType;
             return this;
@@ -97,28 +89,12 @@ public class ListDeviceModelResponseBody extends TeaModel {
             return this.deviceType;
         }
 
-        public ListDeviceModelResponseBodyModelList setCanCreateDeviceId(Integer canCreateDeviceId) {
-            this.canCreateDeviceId = canCreateDeviceId;
+        public ListDeviceModelResponseBodyModelList setHardwareType(String hardwareType) {
+            this.hardwareType = hardwareType;
             return this;
         }
-        public Integer getCanCreateDeviceId() {
-            return this.canCreateDeviceId;
-        }
-
-        public ListDeviceModelResponseBodyModelList setProjectId(String projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public ListDeviceModelResponseBodyModelList setOsPlatform(String osPlatform) {
-            this.osPlatform = osPlatform;
-            return this;
-        }
-        public String getOsPlatform() {
-            return this.osPlatform;
+        public String getHardwareType() {
+            return this.hardwareType;
         }
 
         public ListDeviceModelResponseBodyModelList setDeviceModel(String deviceModel) {
@@ -129,28 +105,20 @@ public class ListDeviceModelResponseBody extends TeaModel {
             return this.deviceModel;
         }
 
-        public ListDeviceModelResponseBodyModelList setSecurityChip(String securityChip) {
-            this.securityChip = securityChip;
+        public ListDeviceModelResponseBodyModelList setDeviceBrand(String deviceBrand) {
+            this.deviceBrand = deviceBrand;
             return this;
         }
-        public String getSecurityChip() {
-            return this.securityChip;
+        public String getDeviceBrand() {
+            return this.deviceBrand;
         }
 
-        public ListDeviceModelResponseBodyModelList setDescription(String description) {
-            this.description = description;
+        public ListDeviceModelResponseBodyModelList setCanCreateDeviceId(Integer canCreateDeviceId) {
+            this.canCreateDeviceId = canCreateDeviceId;
             return this;
         }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListDeviceModelResponseBodyModelList setInitUsageTypeDesc(String initUsageTypeDesc) {
-            this.initUsageTypeDesc = initUsageTypeDesc;
-            return this;
-        }
-        public String getInitUsageTypeDesc() {
-            return this.initUsageTypeDesc;
+        public Integer getCanCreateDeviceId() {
+            return this.canCreateDeviceId;
         }
 
         public ListDeviceModelResponseBodyModelList setInitUsageType(Integer initUsageType) {
@@ -161,12 +129,44 @@ public class ListDeviceModelResponseBody extends TeaModel {
             return this.initUsageType;
         }
 
-        public ListDeviceModelResponseBodyModelList setDeviceBrand(String deviceBrand) {
-            this.deviceBrand = deviceBrand;
+        public ListDeviceModelResponseBodyModelList setInitUsageTypeDesc(String initUsageTypeDesc) {
+            this.initUsageTypeDesc = initUsageTypeDesc;
             return this;
         }
-        public String getDeviceBrand() {
-            return this.deviceBrand;
+        public String getInitUsageTypeDesc() {
+            return this.initUsageTypeDesc;
+        }
+
+        public ListDeviceModelResponseBodyModelList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListDeviceModelResponseBodyModelList setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public ListDeviceModelResponseBodyModelList setSecurityChip(String securityChip) {
+            this.securityChip = securityChip;
+            return this;
+        }
+        public String getSecurityChip() {
+            return this.securityChip;
+        }
+
+        public ListDeviceModelResponseBodyModelList setOsPlatform(String osPlatform) {
+            this.osPlatform = osPlatform;
+            return this;
+        }
+        public String getOsPlatform() {
+            return this.osPlatform;
         }
 
     }

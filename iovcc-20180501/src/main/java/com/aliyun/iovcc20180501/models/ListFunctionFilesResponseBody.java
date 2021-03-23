@@ -31,82 +31,9 @@ public class ListFunctionFilesResponseBody extends TeaModel {
         return this.fileList;
     }
 
-    public static class ListFunctionFilesResponseBodyFileListPagination extends TeaModel {
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
-        @NameInMap("TotalPageCount")
-        public Integer totalPageCount;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        public static ListFunctionFilesResponseBodyFileListPagination build(java.util.Map<String, ?> map) throws Exception {
-            ListFunctionFilesResponseBodyFileListPagination self = new ListFunctionFilesResponseBodyFileListPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public ListFunctionFilesResponseBodyFileListPagination setPageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-        public Integer getPageIndex() {
-            return this.pageIndex;
-        }
-
-        public ListFunctionFilesResponseBodyFileListPagination setTotalPageCount(Integer totalPageCount) {
-            this.totalPageCount = totalPageCount;
-            return this;
-        }
-        public Integer getTotalPageCount() {
-            return this.totalPageCount;
-        }
-
-        public ListFunctionFilesResponseBodyFileListPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        public ListFunctionFilesResponseBodyFileListPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-    }
-
     public static class ListFunctionFilesResponseBodyFileListFiles extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("ProductionDeployTime")
-        public Long productionDeployTime;
-
-        @NameInMap("ProductionDeployStatus")
-        public Integer productionDeployStatus;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("SandboxDeployTime")
-        public Long sandboxDeployTime;
-
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
-
-        @NameInMap("SandboxDeployStatus")
-        public Integer sandboxDeployStatus;
-
-        @NameInMap("GmtModified")
-        public Long gmtModified;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("Name")
         public String name;
@@ -114,76 +41,41 @@ public class ListFunctionFilesResponseBody extends TeaModel {
         @NameInMap("ContentId")
         public Long contentId;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        @NameInMap("GmtModified")
+        public Long gmtModified;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("SandboxDeployTime")
+        public Long sandboxDeployTime;
+
+        @NameInMap("ProductionDeployTime")
+        public Long productionDeployTime;
+
+        @NameInMap("SandboxDeployStatus")
+        public Integer sandboxDeployStatus;
+
+        @NameInMap("ProductionDeployStatus")
+        public Integer productionDeployStatus;
 
         public static ListFunctionFilesResponseBodyFileListFiles build(java.util.Map<String, ?> map) throws Exception {
             ListFunctionFilesResponseBodyFileListFiles self = new ListFunctionFilesResponseBodyFileListFiles();
             return TeaModel.build(map, self);
         }
 
-        public ListFunctionFilesResponseBodyFileListFiles setStatus(Integer status) {
-            this.status = status;
+        public ListFunctionFilesResponseBodyFileListFiles setId(Long id) {
+            this.id = id;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListFunctionFilesResponseBodyFileListFiles setProductionDeployTime(Long productionDeployTime) {
-            this.productionDeployTime = productionDeployTime;
-            return this;
-        }
-        public Long getProductionDeployTime() {
-            return this.productionDeployTime;
-        }
-
-        public ListFunctionFilesResponseBodyFileListFiles setProductionDeployStatus(Integer productionDeployStatus) {
-            this.productionDeployStatus = productionDeployStatus;
-            return this;
-        }
-        public Integer getProductionDeployStatus() {
-            return this.productionDeployStatus;
-        }
-
-        public ListFunctionFilesResponseBodyFileListFiles setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public ListFunctionFilesResponseBodyFileListFiles setSandboxDeployTime(Long sandboxDeployTime) {
-            this.sandboxDeployTime = sandboxDeployTime;
-            return this;
-        }
-        public Long getSandboxDeployTime() {
-            return this.sandboxDeployTime;
-        }
-
-        public ListFunctionFilesResponseBodyFileListFiles setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public ListFunctionFilesResponseBodyFileListFiles setSandboxDeployStatus(Integer sandboxDeployStatus) {
-            this.sandboxDeployStatus = sandboxDeployStatus;
-            return this;
-        }
-        public Integer getSandboxDeployStatus() {
-            return this.sandboxDeployStatus;
-        }
-
-        public ListFunctionFilesResponseBodyFileListFiles setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
+        public Long getId() {
+            return this.id;
         }
 
         public ListFunctionFilesResponseBodyFileListFiles setName(String name) {
@@ -202,34 +94,134 @@ public class ListFunctionFilesResponseBody extends TeaModel {
             return this.contentId;
         }
 
-        public ListFunctionFilesResponseBodyFileListFiles setId(Long id) {
-            this.id = id;
+        public ListFunctionFilesResponseBodyFileListFiles setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListFunctionFilesResponseBodyFileListFiles setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public ListFunctionFilesResponseBodyFileListFiles setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public Long getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public ListFunctionFilesResponseBodyFileListFiles setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListFunctionFilesResponseBodyFileListFiles setSandboxDeployTime(Long sandboxDeployTime) {
+            this.sandboxDeployTime = sandboxDeployTime;
+            return this;
+        }
+        public Long getSandboxDeployTime() {
+            return this.sandboxDeployTime;
+        }
+
+        public ListFunctionFilesResponseBodyFileListFiles setProductionDeployTime(Long productionDeployTime) {
+            this.productionDeployTime = productionDeployTime;
+            return this;
+        }
+        public Long getProductionDeployTime() {
+            return this.productionDeployTime;
+        }
+
+        public ListFunctionFilesResponseBodyFileListFiles setSandboxDeployStatus(Integer sandboxDeployStatus) {
+            this.sandboxDeployStatus = sandboxDeployStatus;
+            return this;
+        }
+        public Integer getSandboxDeployStatus() {
+            return this.sandboxDeployStatus;
+        }
+
+        public ListFunctionFilesResponseBodyFileListFiles setProductionDeployStatus(Integer productionDeployStatus) {
+            this.productionDeployStatus = productionDeployStatus;
+            return this;
+        }
+        public Integer getProductionDeployStatus() {
+            return this.productionDeployStatus;
+        }
+
+    }
+
+    public static class ListFunctionFilesResponseBodyFileListPagination extends TeaModel {
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        @NameInMap("TotalPageCount")
+        public Integer totalPageCount;
+
+        public static ListFunctionFilesResponseBodyFileListPagination build(java.util.Map<String, ?> map) throws Exception {
+            ListFunctionFilesResponseBodyFileListPagination self = new ListFunctionFilesResponseBodyFileListPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public ListFunctionFilesResponseBodyFileListPagination setPageIndex(Integer pageIndex) {
+            this.pageIndex = pageIndex;
+            return this;
+        }
+        public Integer getPageIndex() {
+            return this.pageIndex;
+        }
+
+        public ListFunctionFilesResponseBodyFileListPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListFunctionFilesResponseBodyFileListPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public ListFunctionFilesResponseBodyFileListPagination setTotalPageCount(Integer totalPageCount) {
+            this.totalPageCount = totalPageCount;
+            return this;
+        }
+        public Integer getTotalPageCount() {
+            return this.totalPageCount;
         }
 
     }
 
     public static class ListFunctionFilesResponseBodyFileList extends TeaModel {
-        @NameInMap("Pagination")
-        public ListFunctionFilesResponseBodyFileListPagination pagination;
-
         @NameInMap("Files")
         public java.util.List<ListFunctionFilesResponseBodyFileListFiles> files;
+
+        @NameInMap("Pagination")
+        public ListFunctionFilesResponseBodyFileListPagination pagination;
 
         public static ListFunctionFilesResponseBodyFileList build(java.util.Map<String, ?> map) throws Exception {
             ListFunctionFilesResponseBodyFileList self = new ListFunctionFilesResponseBodyFileList();
             return TeaModel.build(map, self);
-        }
-
-        public ListFunctionFilesResponseBodyFileList setPagination(ListFunctionFilesResponseBodyFileListPagination pagination) {
-            this.pagination = pagination;
-            return this;
-        }
-        public ListFunctionFilesResponseBodyFileListPagination getPagination() {
-            return this.pagination;
         }
 
         public ListFunctionFilesResponseBodyFileList setFiles(java.util.List<ListFunctionFilesResponseBodyFileListFiles> files) {
@@ -238,6 +230,14 @@ public class ListFunctionFilesResponseBody extends TeaModel {
         }
         public java.util.List<ListFunctionFilesResponseBodyFileListFiles> getFiles() {
             return this.files;
+        }
+
+        public ListFunctionFilesResponseBodyFileList setPagination(ListFunctionFilesResponseBodyFileListPagination pagination) {
+            this.pagination = pagination;
+            return this;
+        }
+        public ListFunctionFilesResponseBodyFileListPagination getPagination() {
+            return this.pagination;
         }
 
     }
