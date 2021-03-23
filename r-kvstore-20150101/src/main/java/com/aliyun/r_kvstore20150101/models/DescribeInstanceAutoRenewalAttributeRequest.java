@@ -16,9 +16,6 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("proxyId")
-    public String proxyId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -33,9 +30,6 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
-
-    @NameInMap("Category")
-    public String category;
 
     public static DescribeInstanceAutoRenewalAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceAutoRenewalAttributeRequest self = new DescribeInstanceAutoRenewalAttributeRequest();
@@ -72,14 +66,6 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public DescribeInstanceAutoRenewalAttributeRequest setProxyId(String proxyId) {
-        this.proxyId = proxyId;
-        return this;
-    }
-    public String getProxyId() {
-        return this.proxyId;
     }
 
     public DescribeInstanceAutoRenewalAttributeRequest setRegionId(String regionId) {
@@ -120,14 +106,6 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeInstanceAutoRenewalAttributeRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
 }

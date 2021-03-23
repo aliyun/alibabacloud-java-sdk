@@ -51,48 +51,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static class DescribeRegionsResponseBodyRegionIdsKVStoreRegion extends TeaModel {
-        @NameInMap("LocalName")
-        public String localName;
-
-        @NameInMap("ZoneIdList")
-        public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList zoneIdList;
-
-        @NameInMap("RegionEndpoint")
-        public String regionEndpoint;
-
         @NameInMap("RegionId")
         public String regionId;
 
         @NameInMap("ZoneIds")
         public String zoneIds;
 
+        @NameInMap("LocalName")
+        public String localName;
+
+        @NameInMap("RegionEndpoint")
+        public String regionEndpoint;
+
+        @NameInMap("ZoneIdList")
+        public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList zoneIdList;
+
         public static DescribeRegionsResponseBodyRegionIdsKVStoreRegion build(java.util.Map<String, ?> map) throws Exception {
             DescribeRegionsResponseBodyRegionIdsKVStoreRegion self = new DescribeRegionsResponseBodyRegionIdsKVStoreRegion();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
-        }
-
-        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setZoneIdList(DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList zoneIdList) {
-            this.zoneIdList = zoneIdList;
-            return this;
-        }
-        public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList getZoneIdList() {
-            return this.zoneIdList;
-        }
-
-        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setRegionEndpoint(String regionEndpoint) {
-            this.regionEndpoint = regionEndpoint;
-            return this;
-        }
-        public String getRegionEndpoint() {
-            return this.regionEndpoint;
         }
 
         public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setRegionId(String regionId) {
@@ -109,6 +85,30 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
         public String getZoneIds() {
             return this.zoneIds;
+        }
+
+        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
+        }
+
+        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setRegionEndpoint(String regionEndpoint) {
+            this.regionEndpoint = regionEndpoint;
+            return this;
+        }
+        public String getRegionEndpoint() {
+            return this.regionEndpoint;
+        }
+
+        public DescribeRegionsResponseBodyRegionIdsKVStoreRegion setZoneIdList(DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList zoneIdList) {
+            this.zoneIdList = zoneIdList;
+            return this;
+        }
+        public DescribeRegionsResponseBodyRegionIdsKVStoreRegionZoneIdList getZoneIdList() {
+            return this.zoneIdList;
         }
 
     }

@@ -299,6 +299,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAuditRecordsWithOptions(request, runtime);
     }
 
+    public DescribeAvailableResourceResponse describeAvailableResourceWithOptions(DescribeAvailableResourceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeAvailableResource", "2015-01-01", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeAvailableResourceResponse());
+    }
+
+    public DescribeAvailableResourceResponse describeAvailableResource(DescribeAvailableResourceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAvailableResourceWithOptions(request, runtime);
+    }
+
     public DescribeBackupPolicyResponse describeBackupPolicyWithOptions(DescribeBackupPolicyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

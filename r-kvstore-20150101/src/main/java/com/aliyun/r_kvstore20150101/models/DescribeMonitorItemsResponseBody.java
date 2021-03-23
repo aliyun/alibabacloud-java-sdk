@@ -4,23 +4,15 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMonitorItemsResponseBody extends TeaModel {
-    @NameInMap("MonitorItems")
-    public DescribeMonitorItemsResponseBodyMonitorItems monitorItems;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("MonitorItems")
+    public DescribeMonitorItemsResponseBodyMonitorItems monitorItems;
 
     public static DescribeMonitorItemsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeMonitorItemsResponseBody self = new DescribeMonitorItemsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeMonitorItemsResponseBody setMonitorItems(DescribeMonitorItemsResponseBodyMonitorItems monitorItems) {
-        this.monitorItems = monitorItems;
-        return this;
-    }
-    public DescribeMonitorItemsResponseBodyMonitorItems getMonitorItems() {
-        return this.monitorItems;
     }
 
     public DescribeMonitorItemsResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeMonitorItemsResponseBody setMonitorItems(DescribeMonitorItemsResponseBodyMonitorItems monitorItems) {
+        this.monitorItems = monitorItems;
+        return this;
+    }
+    public DescribeMonitorItemsResponseBodyMonitorItems getMonitorItems() {
+        return this.monitorItems;
     }
 
     public static class DescribeMonitorItemsResponseBodyMonitorItemsKVStoreMonitorItem extends TeaModel {

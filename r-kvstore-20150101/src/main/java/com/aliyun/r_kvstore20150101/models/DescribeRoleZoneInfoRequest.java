@@ -22,12 +22,6 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Product")
-    public String product;
-
-    @NameInMap("Category")
-    public String category;
-
     @NameInMap("QueryType")
     public Integer queryType;
 
@@ -36,9 +30,6 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("Role")
-    public String role;
 
     public static DescribeRoleZoneInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRoleZoneInfoRequest self = new DescribeRoleZoneInfoRequest();
@@ -93,22 +84,6 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeRoleZoneInfoRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
-    }
-
-    public DescribeRoleZoneInfoRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
-    }
-
     public DescribeRoleZoneInfoRequest setQueryType(Integer queryType) {
         this.queryType = queryType;
         return this;
@@ -131,14 +106,6 @@ public class DescribeRoleZoneInfoRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeRoleZoneInfoRequest setRole(String role) {
-        this.role = role;
-        return this;
-    }
-    public String getRole() {
-        return this.role;
     }
 
 }

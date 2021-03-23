@@ -37,9 +37,6 @@ public class CreateAccountRequest extends TeaModel {
     @NameInMap("AccountType")
     public String accountType;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static CreateAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountRequest self = new CreateAccountRequest();
         return TeaModel.build(map, self);
@@ -131,14 +128,6 @@ public class CreateAccountRequest extends TeaModel {
     }
     public String getAccountType() {
         return this.accountType;
-    }
-
-    public CreateAccountRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

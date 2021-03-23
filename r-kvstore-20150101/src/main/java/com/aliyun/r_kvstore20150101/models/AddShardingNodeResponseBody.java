@@ -7,11 +7,11 @@ public class AddShardingNodeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("NodeIds")
-    public java.util.List<String> nodeIds;
-
     @NameInMap("OrderId")
     public Long orderId;
+
+    @NameInMap("NodeIds")
+    public java.util.List<String> nodeIds;
 
     public static AddShardingNodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddShardingNodeResponseBody self = new AddShardingNodeResponseBody();
@@ -26,20 +26,20 @@ public class AddShardingNodeResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddShardingNodeResponseBody setNodeIds(java.util.List<String> nodeIds) {
-        this.nodeIds = nodeIds;
-        return this;
-    }
-    public java.util.List<String> getNodeIds() {
-        return this.nodeIds;
-    }
-
     public AddShardingNodeResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
     public Long getOrderId() {
         return this.orderId;
+    }
+
+    public AddShardingNodeResponseBody setNodeIds(java.util.List<String> nodeIds) {
+        this.nodeIds = nodeIds;
+        return this;
+    }
+    public java.util.List<String> getNodeIds() {
+        return this.nodeIds;
     }
 
 }

@@ -28,12 +28,6 @@ public class AllocateDirectConnectionRequest extends TeaModel {
     @NameInMap("Port")
     public String port;
 
-    @NameInMap("OnlyAllocateIp")
-    public Boolean onlyAllocateIp;
-
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static AllocateDirectConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateDirectConnectionRequest self = new AllocateDirectConnectionRequest();
         return TeaModel.build(map, self);
@@ -101,22 +95,6 @@ public class AllocateDirectConnectionRequest extends TeaModel {
     }
     public String getPort() {
         return this.port;
-    }
-
-    public AllocateDirectConnectionRequest setOnlyAllocateIp(Boolean onlyAllocateIp) {
-        this.onlyAllocateIp = onlyAllocateIp;
-        return this;
-    }
-    public Boolean getOnlyAllocateIp() {
-        return this.onlyAllocateIp;
-    }
-
-    public AllocateDirectConnectionRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

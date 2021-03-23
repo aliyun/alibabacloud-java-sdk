@@ -22,9 +22,6 @@ public class InitializeKvstorePermissionRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("ServiceName")
-    public String serviceName;
-
     public static InitializeKvstorePermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         InitializeKvstorePermissionRequest self = new InitializeKvstorePermissionRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class InitializeKvstorePermissionRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public InitializeKvstorePermissionRequest setServiceName(String serviceName) {
-        this.serviceName = serviceName;
-        return this;
-    }
-    public String getServiceName() {
-        return this.serviceName;
     }
 
 }

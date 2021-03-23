@@ -100,17 +100,11 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("DedicatedHostGroupId")
     public String dedicatedHostGroupId;
 
-    @NameInMap("ShardCount")
-    public Integer shardCount;
-
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
 
     @NameInMap("GlobalInstance")
     public Boolean globalInstance;
-
-    @NameInMap("SecondaryZoneId")
-    public String secondaryZoneId;
 
     public static CreateInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceRequest self = new CreateInstanceRequest();
@@ -373,14 +367,6 @@ public class CreateInstanceRequest extends TeaModel {
         return this.dedicatedHostGroupId;
     }
 
-    public CreateInstanceRequest setShardCount(Integer shardCount) {
-        this.shardCount = shardCount;
-        return this;
-    }
-    public Integer getShardCount() {
-        return this.shardCount;
-    }
-
     public CreateInstanceRequest setGlobalInstanceId(String globalInstanceId) {
         this.globalInstanceId = globalInstanceId;
         return this;
@@ -395,14 +381,6 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public Boolean getGlobalInstance() {
         return this.globalInstance;
-    }
-
-    public CreateInstanceRequest setSecondaryZoneId(String secondaryZoneId) {
-        this.secondaryZoneId = secondaryZoneId;
-        return this;
-    }
-    public String getSecondaryZoneId() {
-        return this.secondaryZoneId;
     }
 
 }

@@ -37,6 +37,9 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     @NameInMap("OrderTimeLength")
     public String orderTimeLength;
 
+    @NameInMap("SourceBiz")
+    public String sourceBiz;
+
     public static EnableAdditionalBandwidthRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableAdditionalBandwidthRequest self = new EnableAdditionalBandwidthRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class EnableAdditionalBandwidthRequest extends TeaModel {
     }
     public String getOrderTimeLength() {
         return this.orderTimeLength;
+    }
+
+    public EnableAdditionalBandwidthRequest setSourceBiz(String sourceBiz) {
+        this.sourceBiz = sourceBiz;
+        return this;
+    }
+    public String getSourceBiz() {
+        return this.sourceBiz;
     }
 
 }

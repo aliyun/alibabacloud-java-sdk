@@ -43,9 +43,6 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("CouponNo")
     public String couponNo;
 
-    @NameInMap("ForceUpgrade")
-    public Boolean forceUpgrade;
-
     public static RenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceRequest self = new RenewInstanceRequest();
         return TeaModel.build(map, self);
@@ -153,14 +150,6 @@ public class RenewInstanceRequest extends TeaModel {
     }
     public String getCouponNo() {
         return this.couponNo;
-    }
-
-    public RenewInstanceRequest setForceUpgrade(Boolean forceUpgrade) {
-        this.forceUpgrade = forceUpgrade;
-        return this;
-    }
-    public Boolean getForceUpgrade() {
-        return this.forceUpgrade;
     }
 
 }

@@ -25,9 +25,6 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     @NameInMap("InstanceClass")
     public String instanceClass;
 
-    @NameInMap("FromApp")
-    public String fromApp;
-
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
@@ -114,14 +111,6 @@ public class ModifyInstanceSpecRequest extends TeaModel {
     }
     public String getInstanceClass() {
         return this.instanceClass;
-    }
-
-    public ModifyInstanceSpecRequest setFromApp(String fromApp) {
-        this.fromApp = fromApp;
-        return this;
-    }
-    public String getFromApp() {
-        return this.fromApp;
     }
 
     public ModifyInstanceSpecRequest setBusinessInfo(String businessInfo) {

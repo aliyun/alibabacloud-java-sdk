@@ -22,18 +22,6 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("FilterService")
-    public String filterService;
-
-    @NameInMap("NeedReplica")
-    public String needReplica;
-
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     public static DescribeClusterMemberInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeClusterMemberInfoRequest self = new DescribeClusterMemberInfoRequest();
         return TeaModel.build(map, self);
@@ -85,38 +73,6 @@ public class DescribeClusterMemberInfoRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public DescribeClusterMemberInfoRequest setFilterService(String filterService) {
-        this.filterService = filterService;
-        return this;
-    }
-    public String getFilterService() {
-        return this.filterService;
-    }
-
-    public DescribeClusterMemberInfoRequest setNeedReplica(String needReplica) {
-        this.needReplica = needReplica;
-        return this;
-    }
-    public String getNeedReplica() {
-        return this.needReplica;
-    }
-
-    public DescribeClusterMemberInfoRequest setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeClusterMemberInfoRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
 }

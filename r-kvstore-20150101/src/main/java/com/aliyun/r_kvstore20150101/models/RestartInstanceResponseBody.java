@@ -4,26 +4,18 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class RestartInstanceResponseBody extends TeaModel {
-    @NameInMap("TaskId")
-    public String taskId;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("TaskId")
+    public String taskId;
+
     public static RestartInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RestartInstanceResponseBody self = new RestartInstanceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public RestartInstanceResponseBody setTaskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public String getTaskId() {
-        return this.taskId;
     }
 
     public RestartInstanceResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class RestartInstanceResponseBody extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public RestartInstanceResponseBody setTaskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

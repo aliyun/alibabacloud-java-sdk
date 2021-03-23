@@ -34,9 +34,6 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
-    @NameInMap("ProductId")
-    public String productId;
-
     public static DescribeActiveOperationTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeActiveOperationTaskRequest self = new DescribeActiveOperationTaskRequest();
         return TeaModel.build(map, self);
@@ -120,14 +117,6 @@ public class DescribeActiveOperationTaskRequest extends TeaModel {
     }
     public Integer getPageNumber() {
         return this.pageNumber;
-    }
-
-    public DescribeActiveOperationTaskRequest setProductId(String productId) {
-        this.productId = productId;
-        return this;
-    }
-    public String getProductId() {
-        return this.productId;
     }
 
 }

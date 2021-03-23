@@ -25,9 +25,6 @@ public class ModifyInstanceMajorVersionRequest extends TeaModel {
     @NameInMap("MajorVersion")
     public String majorVersion;
 
-    @NameInMap("EffectTime")
-    public String effectTime;
-
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
@@ -90,14 +87,6 @@ public class ModifyInstanceMajorVersionRequest extends TeaModel {
     }
     public String getMajorVersion() {
         return this.majorVersion;
-    }
-
-    public ModifyInstanceMajorVersionRequest setEffectTime(String effectTime) {
-        this.effectTime = effectTime;
-        return this;
-    }
-    public String getEffectTime() {
-        return this.effectTime;
     }
 
     public ModifyInstanceMajorVersionRequest setEffectiveTime(String effectiveTime) {

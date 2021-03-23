@@ -25,12 +25,6 @@ public class RestoreInstanceRequest extends TeaModel {
     @NameInMap("BackupId")
     public String backupId;
 
-    @NameInMap("RestoreType")
-    public String restoreType;
-
-    @NameInMap("RestoreTime")
-    public String restoreTime;
-
     public static RestoreInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RestoreInstanceRequest self = new RestoreInstanceRequest();
         return TeaModel.build(map, self);
@@ -90,22 +84,6 @@ public class RestoreInstanceRequest extends TeaModel {
     }
     public String getBackupId() {
         return this.backupId;
-    }
-
-    public RestoreInstanceRequest setRestoreType(String restoreType) {
-        this.restoreType = restoreType;
-        return this;
-    }
-    public String getRestoreType() {
-        return this.restoreType;
-    }
-
-    public RestoreInstanceRequest setRestoreTime(String restoreTime) {
-        this.restoreTime = restoreTime;
-        return this;
-    }
-    public String getRestoreTime() {
-        return this.restoreTime;
     }
 
 }

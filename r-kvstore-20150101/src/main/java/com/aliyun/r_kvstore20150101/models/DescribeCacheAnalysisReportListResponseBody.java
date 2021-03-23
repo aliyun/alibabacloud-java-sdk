@@ -4,26 +4,18 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
-    @NameInMap("DailyTasks")
-    public DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("DailyTasks")
+    public DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks;
+
     public static DescribeCacheAnalysisReportListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCacheAnalysisReportListResponseBody self = new DescribeCacheAnalysisReportListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCacheAnalysisReportListResponseBody setDailyTasks(DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks) {
-        this.dailyTasks = dailyTasks;
-        return this;
-    }
-    public DescribeCacheAnalysisReportListResponseBodyDailyTasks getDailyTasks() {
-        return this.dailyTasks;
     }
 
     public DescribeCacheAnalysisReportListResponseBody setRequestId(String requestId) {
@@ -42,38 +34,30 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         return this.instanceId;
     }
 
+    public DescribeCacheAnalysisReportListResponseBody setDailyTasks(DescribeCacheAnalysisReportListResponseBodyDailyTasks dailyTasks) {
+        this.dailyTasks = dailyTasks;
+        return this;
+    }
+    public DescribeCacheAnalysisReportListResponseBodyDailyTasks getDailyTasks() {
+        return this.dailyTasks;
+    }
+
     public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask extends TeaModel {
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("StartTime")
-        public String startTime;
-
         @NameInMap("TaskId")
         public String taskId;
 
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("StartTime")
+        public String startTime;
+
+        @NameInMap("Status")
+        public String status;
+
         public static DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask build(java.util.Map<String, ?> map) throws Exception {
             DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask self = new DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask setTaskId(String taskId) {
@@ -90,6 +74,22 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         }
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasksTask setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
@@ -114,23 +114,15 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
     }
 
     public static class DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask extends TeaModel {
-        @NameInMap("Tasks")
-        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks tasks;
-
         @NameInMap("Date")
         public String date;
+
+        @NameInMap("Tasks")
+        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks tasks;
 
         public static DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask build(java.util.Map<String, ?> map) throws Exception {
             DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask self = new DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask setTasks(DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks tasks) {
-            this.tasks = tasks;
-            return this;
-        }
-        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks getTasks() {
-            return this.tasks;
         }
 
         public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask setDate(String date) {
@@ -139,6 +131,14 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         }
         public String getDate() {
             return this.date;
+        }
+
+        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTask setTasks(DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks tasks) {
+            this.tasks = tasks;
+            return this;
+        }
+        public DescribeCacheAnalysisReportListResponseBodyDailyTasksDailyTaskTasks getTasks() {
+            return this.tasks;
         }
 
     }

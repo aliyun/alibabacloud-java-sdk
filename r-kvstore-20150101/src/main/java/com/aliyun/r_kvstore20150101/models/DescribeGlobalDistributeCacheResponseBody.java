@@ -4,48 +4,24 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
-    @NameInMap("GlobalDistributeCaches")
-    public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> globalDistributeCaches;
-
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("GlobalDistributeCaches")
+    public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> globalDistributeCaches;
+
     public static DescribeGlobalDistributeCacheResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGlobalDistributeCacheResponseBody self = new DescribeGlobalDistributeCacheResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGlobalDistributeCacheResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
-    }
-
-    public DescribeGlobalDistributeCacheResponseBody setGlobalDistributeCaches(java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> globalDistributeCaches) {
-        this.globalDistributeCaches = globalDistributeCaches;
-        return this;
-    }
-    public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> getGlobalDistributeCaches() {
-        return this.globalDistributeCaches;
-    }
-
-    public DescribeGlobalDistributeCacheResponseBody setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public DescribeGlobalDistributeCacheResponseBody setRequestId(String requestId) {
@@ -56,6 +32,14 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeGlobalDistributeCacheResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
+        return this;
+    }
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
+    }
+
     public DescribeGlobalDistributeCacheResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -64,49 +48,41 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances extends TeaModel {
-        @NameInMap("InstanceClass")
-        public String instanceClass;
+    public DescribeGlobalDistributeCacheResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
 
-        @NameInMap("InstanceStatus")
-        public String instanceStatus;
+    public DescribeGlobalDistributeCacheResponseBody setGlobalDistributeCaches(java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> globalDistributeCaches) {
+        this.globalDistributeCaches = globalDistributeCaches;
+        return this;
+    }
+    public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches> getGlobalDistributeCaches() {
+        return this.globalDistributeCaches;
+    }
+
+    public static class DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances extends TeaModel {
+        @NameInMap("GlobalInstanceId")
+        public String globalInstanceId;
 
         @NameInMap("InstanceID")
         public String instanceID;
 
-        @NameInMap("GlobalInstanceId")
-        public String globalInstanceId;
-
         @NameInMap("RegionId")
         public String regionId;
+
+        @NameInMap("InstanceStatus")
+        public String instanceStatus;
+
+        @NameInMap("InstanceClass")
+        public String instanceClass;
 
         public static DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances self = new DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceClass(String instanceClass) {
-            this.instanceClass = instanceClass;
-            return this;
-        }
-        public String getInstanceClass() {
-            return this.instanceClass;
-        }
-
-        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceStatus(String instanceStatus) {
-            this.instanceStatus = instanceStatus;
-            return this;
-        }
-        public String getInstanceStatus() {
-            return this.instanceStatus;
-        }
-
-        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceID(String instanceID) {
-            this.instanceID = instanceID;
-            return this;
-        }
-        public String getInstanceID() {
-            return this.instanceID;
         }
 
         public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setGlobalInstanceId(String globalInstanceId) {
@@ -117,6 +93,14 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             return this.globalInstanceId;
         }
 
+        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceID(String instanceID) {
+            this.instanceID = instanceID;
+            return this;
+        }
+        public String getInstanceID() {
+            return this.instanceID;
+        }
+
         public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -125,21 +109,45 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceStatus(String instanceStatus) {
+            this.instanceStatus = instanceStatus;
+            return this;
+        }
+        public String getInstanceStatus() {
+            return this.instanceStatus;
+        }
+
+        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances setInstanceClass(String instanceClass) {
+            this.instanceClass = instanceClass;
+            return this;
+        }
+        public String getInstanceClass() {
+            return this.instanceClass;
+        }
+
     }
 
     public static class DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches extends TeaModel {
+        @NameInMap("GlobalInstanceId")
+        public String globalInstanceId;
+
         @NameInMap("Status")
         public String status;
 
         @NameInMap("SubInstances")
         public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances> subInstances;
 
-        @NameInMap("GlobalInstanceId")
-        public String globalInstanceId;
-
         public static DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches build(java.util.Map<String, ?> map) throws Exception {
             DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches self = new DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches setGlobalInstanceId(String globalInstanceId) {
+            this.globalInstanceId = globalInstanceId;
+            return this;
+        }
+        public String getGlobalInstanceId() {
+            return this.globalInstanceId;
         }
 
         public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches setStatus(String status) {
@@ -156,14 +164,6 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
         public java.util.List<DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCachesSubInstances> getSubInstances() {
             return this.subInstances;
-        }
-
-        public DescribeGlobalDistributeCacheResponseBodyGlobalDistributeCaches setGlobalInstanceId(String globalInstanceId) {
-            this.globalInstanceId = globalInstanceId;
-            return this;
-        }
-        public String getGlobalInstanceId() {
-            return this.globalInstanceId;
         }
 
     }

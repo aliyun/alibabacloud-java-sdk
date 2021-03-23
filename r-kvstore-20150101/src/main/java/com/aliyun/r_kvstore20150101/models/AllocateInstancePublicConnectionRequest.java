@@ -28,9 +28,6 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     @NameInMap("Port")
     public String port;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static AllocateInstancePublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateInstancePublicConnectionRequest self = new AllocateInstancePublicConnectionRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     }
     public String getPort() {
         return this.port;
-    }
-
-    public AllocateInstancePublicConnectionRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

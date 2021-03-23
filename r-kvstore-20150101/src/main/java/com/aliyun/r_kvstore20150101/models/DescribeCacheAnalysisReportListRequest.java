@@ -34,9 +34,6 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
-    @NameInMap("Date")
-    public String date;
-
     public static DescribeCacheAnalysisReportListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCacheAnalysisReportListRequest self = new DescribeCacheAnalysisReportListRequest();
         return TeaModel.build(map, self);
@@ -120,14 +117,6 @@ public class DescribeCacheAnalysisReportListRequest extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
-    }
-
-    public DescribeCacheAnalysisReportListRequest setDate(String date) {
-        this.date = date;
-        return this;
-    }
-    public String getDate() {
-        return this.date;
     }
 
 }
