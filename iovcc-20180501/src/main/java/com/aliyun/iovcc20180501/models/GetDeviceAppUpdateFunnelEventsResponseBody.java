@@ -32,8 +32,8 @@ public class GetDeviceAppUpdateFunnelEventsResponseBody extends TeaModel {
     }
 
     public static class GetDeviceAppUpdateFunnelEventsResponseBodyEventList extends TeaModel {
-        @NameInMap("PackageName")
-        public String packageName;
+        @NameInMap("TenantId")
+        public String tenantId;
 
         @NameInMap("DeviceId")
         public String deviceId;
@@ -44,26 +44,26 @@ public class GetDeviceAppUpdateFunnelEventsResponseBody extends TeaModel {
         @NameInMap("Event")
         public String event;
 
-        @NameInMap("ReportTimestamp")
-        public Long reportTimestamp;
-
         @NameInMap("ReportTime")
         public String reportTime;
 
-        @NameInMap("TenantId")
-        public String tenantId;
+        @NameInMap("PackageName")
+        public String packageName;
+
+        @NameInMap("ReportTimestamp")
+        public Long reportTimestamp;
 
         public static GetDeviceAppUpdateFunnelEventsResponseBodyEventList build(java.util.Map<String, ?> map) throws Exception {
             GetDeviceAppUpdateFunnelEventsResponseBodyEventList self = new GetDeviceAppUpdateFunnelEventsResponseBodyEventList();
             return TeaModel.build(map, self);
         }
 
-        public GetDeviceAppUpdateFunnelEventsResponseBodyEventList setPackageName(String packageName) {
-            this.packageName = packageName;
+        public GetDeviceAppUpdateFunnelEventsResponseBodyEventList setTenantId(String tenantId) {
+            this.tenantId = tenantId;
             return this;
         }
-        public String getPackageName() {
-            return this.packageName;
+        public String getTenantId() {
+            return this.tenantId;
         }
 
         public GetDeviceAppUpdateFunnelEventsResponseBodyEventList setDeviceId(String deviceId) {
@@ -90,14 +90,6 @@ public class GetDeviceAppUpdateFunnelEventsResponseBody extends TeaModel {
             return this.event;
         }
 
-        public GetDeviceAppUpdateFunnelEventsResponseBodyEventList setReportTimestamp(Long reportTimestamp) {
-            this.reportTimestamp = reportTimestamp;
-            return this;
-        }
-        public Long getReportTimestamp() {
-            return this.reportTimestamp;
-        }
-
         public GetDeviceAppUpdateFunnelEventsResponseBodyEventList setReportTime(String reportTime) {
             this.reportTime = reportTime;
             return this;
@@ -106,12 +98,20 @@ public class GetDeviceAppUpdateFunnelEventsResponseBody extends TeaModel {
             return this.reportTime;
         }
 
-        public GetDeviceAppUpdateFunnelEventsResponseBodyEventList setTenantId(String tenantId) {
-            this.tenantId = tenantId;
+        public GetDeviceAppUpdateFunnelEventsResponseBodyEventList setPackageName(String packageName) {
+            this.packageName = packageName;
             return this;
         }
-        public String getTenantId() {
-            return this.tenantId;
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+        public GetDeviceAppUpdateFunnelEventsResponseBodyEventList setReportTimestamp(Long reportTimestamp) {
+            this.reportTimestamp = reportTimestamp;
+            return this;
+        }
+        public Long getReportTimestamp() {
+            return this.reportTimestamp;
         }
 
     }

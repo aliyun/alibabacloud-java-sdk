@@ -4,23 +4,15 @@ package com.aliyun.iovcc20180501.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceBrandsResponseBody extends TeaModel {
-    @NameInMap("DeviceBrands")
-    public java.util.List<ListDeviceBrandsResponseBodyDeviceBrands> deviceBrands;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("DeviceBrands")
+    public java.util.List<ListDeviceBrandsResponseBodyDeviceBrands> deviceBrands;
 
     public static ListDeviceBrandsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceBrandsResponseBody self = new ListDeviceBrandsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDeviceBrandsResponseBody setDeviceBrands(java.util.List<ListDeviceBrandsResponseBodyDeviceBrands> deviceBrands) {
-        this.deviceBrands = deviceBrands;
-        return this;
-    }
-    public java.util.List<ListDeviceBrandsResponseBodyDeviceBrands> getDeviceBrands() {
-        return this.deviceBrands;
     }
 
     public ListDeviceBrandsResponseBody setRequestId(String requestId) {
@@ -31,12 +23,20 @@ public class ListDeviceBrandsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListDeviceBrandsResponseBody setDeviceBrands(java.util.List<ListDeviceBrandsResponseBodyDeviceBrands> deviceBrands) {
+        this.deviceBrands = deviceBrands;
+        return this;
+    }
+    public java.util.List<ListDeviceBrandsResponseBodyDeviceBrands> getDeviceBrands() {
+        return this.deviceBrands;
+    }
+
     public static class ListDeviceBrandsResponseBodyDeviceBrands extends TeaModel {
         @NameInMap("DeviceBrandId")
         public Long deviceBrandId;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("DeviceBrand")
+        public String deviceBrand;
 
         @NameInMap("ProjectId")
         public String projectId;
@@ -44,8 +44,8 @@ public class ListDeviceBrandsResponseBody extends TeaModel {
         @NameInMap("Manufacture")
         public String manufacture;
 
-        @NameInMap("DeviceBrand")
-        public String deviceBrand;
+        @NameInMap("Description")
+        public String description;
 
         public static ListDeviceBrandsResponseBodyDeviceBrands build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceBrandsResponseBodyDeviceBrands self = new ListDeviceBrandsResponseBodyDeviceBrands();
@@ -60,12 +60,12 @@ public class ListDeviceBrandsResponseBody extends TeaModel {
             return this.deviceBrandId;
         }
 
-        public ListDeviceBrandsResponseBodyDeviceBrands setDescription(String description) {
-            this.description = description;
+        public ListDeviceBrandsResponseBodyDeviceBrands setDeviceBrand(String deviceBrand) {
+            this.deviceBrand = deviceBrand;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getDeviceBrand() {
+            return this.deviceBrand;
         }
 
         public ListDeviceBrandsResponseBodyDeviceBrands setProjectId(String projectId) {
@@ -84,12 +84,12 @@ public class ListDeviceBrandsResponseBody extends TeaModel {
             return this.manufacture;
         }
 
-        public ListDeviceBrandsResponseBodyDeviceBrands setDeviceBrand(String deviceBrand) {
-            this.deviceBrand = deviceBrand;
+        public ListDeviceBrandsResponseBodyDeviceBrands setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getDeviceBrand() {
-            return this.deviceBrand;
+        public String getDescription() {
+            return this.description;
         }
 
     }

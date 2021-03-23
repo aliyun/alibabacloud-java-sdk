@@ -31,67 +31,15 @@ public class ListUpstreamAppKeyRelationsResponseBody extends TeaModel {
         return this.relationList;
     }
 
-    public static class ListUpstreamAppKeyRelationsResponseBodyRelationListPagination extends TeaModel {
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
-        @NameInMap("TotalPageCount")
-        public Integer totalPageCount;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        public static ListUpstreamAppKeyRelationsResponseBodyRelationListPagination build(java.util.Map<String, ?> map) throws Exception {
-            ListUpstreamAppKeyRelationsResponseBodyRelationListPagination self = new ListUpstreamAppKeyRelationsResponseBodyRelationListPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination setPageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-        public Integer getPageIndex() {
-            return this.pageIndex;
-        }
-
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination setTotalPageCount(Integer totalPageCount) {
-            this.totalPageCount = totalPageCount;
-            return this;
-        }
-        public Integer getTotalPageCount() {
-            return this.totalPageCount;
-        }
-
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-    }
-
     public static class ListUpstreamAppKeyRelationsResponseBodyRelationListList extends TeaModel {
-        @NameInMap("AppName")
-        public String appName;
+        @NameInMap("Id")
+        public Long id;
 
         @NameInMap("AppKey")
         public String appKey;
 
-        @NameInMap("AppPackage")
-        public String appPackage;
+        @NameInMap("PAppKey")
+        public String PAppKey;
 
         @NameInMap("ProjectId")
         public String projectId;
@@ -99,23 +47,23 @@ public class ListUpstreamAppKeyRelationsResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        @NameInMap("PAppKey")
-        public String PAppKey;
+        @NameInMap("AppName")
+        public String appName;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("AppPackage")
+        public String appPackage;
 
         public static ListUpstreamAppKeyRelationsResponseBodyRelationListList build(java.util.Map<String, ?> map) throws Exception {
             ListUpstreamAppKeyRelationsResponseBodyRelationListList self = new ListUpstreamAppKeyRelationsResponseBodyRelationListList();
             return TeaModel.build(map, self);
         }
 
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListList setAppName(String appName) {
-            this.appName = appName;
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListList setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getAppName() {
-            return this.appName;
+        public Long getId() {
+            return this.id;
         }
 
         public ListUpstreamAppKeyRelationsResponseBodyRelationListList setAppKey(String appKey) {
@@ -126,12 +74,12 @@ public class ListUpstreamAppKeyRelationsResponseBody extends TeaModel {
             return this.appKey;
         }
 
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListList setAppPackage(String appPackage) {
-            this.appPackage = appPackage;
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListList setPAppKey(String PAppKey) {
+            this.PAppKey = PAppKey;
             return this;
         }
-        public String getAppPackage() {
-            return this.appPackage;
+        public String getPAppKey() {
+            return this.PAppKey;
         }
 
         public ListUpstreamAppKeyRelationsResponseBodyRelationListList setProjectId(String projectId) {
@@ -150,42 +98,86 @@ public class ListUpstreamAppKeyRelationsResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListList setPAppKey(String PAppKey) {
-            this.PAppKey = PAppKey;
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListList setAppName(String appName) {
+            this.appName = appName;
             return this;
         }
-        public String getPAppKey() {
-            return this.PAppKey;
+        public String getAppName() {
+            return this.appName;
         }
 
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListList setId(Long id) {
-            this.id = id;
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListList setAppPackage(String appPackage) {
+            this.appPackage = appPackage;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getAppPackage() {
+            return this.appPackage;
+        }
+
+    }
+
+    public static class ListUpstreamAppKeyRelationsResponseBodyRelationListPagination extends TeaModel {
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        @NameInMap("TotalPageCount")
+        public Integer totalPageCount;
+
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        public static ListUpstreamAppKeyRelationsResponseBodyRelationListPagination build(java.util.Map<String, ?> map) throws Exception {
+            ListUpstreamAppKeyRelationsResponseBodyRelationListPagination self = new ListUpstreamAppKeyRelationsResponseBodyRelationListPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination setTotalPageCount(Integer totalPageCount) {
+            this.totalPageCount = totalPageCount;
+            return this;
+        }
+        public Integer getTotalPageCount() {
+            return this.totalPageCount;
+        }
+
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination setPageIndex(Integer pageIndex) {
+            this.pageIndex = pageIndex;
+            return this;
+        }
+        public Integer getPageIndex() {
+            return this.pageIndex;
+        }
+
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
     }
 
     public static class ListUpstreamAppKeyRelationsResponseBodyRelationList extends TeaModel {
-        @NameInMap("Pagination")
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination pagination;
-
         @NameInMap("List")
         public java.util.List<ListUpstreamAppKeyRelationsResponseBodyRelationListList> list;
+
+        @NameInMap("Pagination")
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination pagination;
 
         public static ListUpstreamAppKeyRelationsResponseBodyRelationList build(java.util.Map<String, ?> map) throws Exception {
             ListUpstreamAppKeyRelationsResponseBodyRelationList self = new ListUpstreamAppKeyRelationsResponseBodyRelationList();
             return TeaModel.build(map, self);
-        }
-
-        public ListUpstreamAppKeyRelationsResponseBodyRelationList setPagination(ListUpstreamAppKeyRelationsResponseBodyRelationListPagination pagination) {
-            this.pagination = pagination;
-            return this;
-        }
-        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination getPagination() {
-            return this.pagination;
         }
 
         public ListUpstreamAppKeyRelationsResponseBodyRelationList setList(java.util.List<ListUpstreamAppKeyRelationsResponseBodyRelationListList> list) {
@@ -194,6 +186,14 @@ public class ListUpstreamAppKeyRelationsResponseBody extends TeaModel {
         }
         public java.util.List<ListUpstreamAppKeyRelationsResponseBodyRelationListList> getList() {
             return this.list;
+        }
+
+        public ListUpstreamAppKeyRelationsResponseBodyRelationList setPagination(ListUpstreamAppKeyRelationsResponseBodyRelationListPagination pagination) {
+            this.pagination = pagination;
+            return this;
+        }
+        public ListUpstreamAppKeyRelationsResponseBodyRelationListPagination getPagination() {
+            return this.pagination;
         }
 
     }

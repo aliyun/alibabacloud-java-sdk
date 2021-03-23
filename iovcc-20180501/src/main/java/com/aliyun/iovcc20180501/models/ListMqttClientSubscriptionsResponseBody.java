@@ -31,58 +31,6 @@ public class ListMqttClientSubscriptionsResponseBody extends TeaModel {
         return this.clientSubscriptions;
     }
 
-    public static class ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination extends TeaModel {
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
-        @NameInMap("TotalPageCount")
-        public Integer totalPageCount;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        public static ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination build(java.util.Map<String, ?> map) throws Exception {
-            ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination self = new ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination setPageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-        public Integer getPageIndex() {
-            return this.pageIndex;
-        }
-
-        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination setTotalPageCount(Integer totalPageCount) {
-            this.totalPageCount = totalPageCount;
-            return this;
-        }
-        public Integer getTotalPageCount() {
-            return this.totalPageCount;
-        }
-
-        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-    }
-
     public static class ListMqttClientSubscriptionsResponseBodyClientSubscriptionsList extends TeaModel {
         @NameInMap("Topic")
         public String topic;
@@ -113,24 +61,68 @@ public class ListMqttClientSubscriptionsResponseBody extends TeaModel {
 
     }
 
-    public static class ListMqttClientSubscriptionsResponseBodyClientSubscriptions extends TeaModel {
-        @NameInMap("Pagination")
-        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination pagination;
+    public static class ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination extends TeaModel {
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
+        @NameInMap("TotalPageCount")
+        public Integer totalPageCount;
+
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        public static ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination build(java.util.Map<String, ?> map) throws Exception {
+            ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination self = new ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination setTotalPageCount(Integer totalPageCount) {
+            this.totalPageCount = totalPageCount;
+            return this;
+        }
+        public Integer getTotalPageCount() {
+            return this.totalPageCount;
+        }
+
+        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination setPageIndex(Integer pageIndex) {
+            this.pageIndex = pageIndex;
+            return this;
+        }
+        public Integer getPageIndex() {
+            return this.pageIndex;
+        }
+
+        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+    }
+
+    public static class ListMqttClientSubscriptionsResponseBodyClientSubscriptions extends TeaModel {
         @NameInMap("List")
         public java.util.List<ListMqttClientSubscriptionsResponseBodyClientSubscriptionsList> list;
+
+        @NameInMap("Pagination")
+        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination pagination;
 
         public static ListMqttClientSubscriptionsResponseBodyClientSubscriptions build(java.util.Map<String, ?> map) throws Exception {
             ListMqttClientSubscriptionsResponseBodyClientSubscriptions self = new ListMqttClientSubscriptionsResponseBodyClientSubscriptions();
             return TeaModel.build(map, self);
-        }
-
-        public ListMqttClientSubscriptionsResponseBodyClientSubscriptions setPagination(ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination pagination) {
-            this.pagination = pagination;
-            return this;
-        }
-        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination getPagination() {
-            return this.pagination;
         }
 
         public ListMqttClientSubscriptionsResponseBodyClientSubscriptions setList(java.util.List<ListMqttClientSubscriptionsResponseBodyClientSubscriptionsList> list) {
@@ -139,6 +131,14 @@ public class ListMqttClientSubscriptionsResponseBody extends TeaModel {
         }
         public java.util.List<ListMqttClientSubscriptionsResponseBodyClientSubscriptionsList> getList() {
             return this.list;
+        }
+
+        public ListMqttClientSubscriptionsResponseBodyClientSubscriptions setPagination(ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination pagination) {
+            this.pagination = pagination;
+            return this;
+        }
+        public ListMqttClientSubscriptionsResponseBodyClientSubscriptionsPagination getPagination() {
+            return this.pagination;
         }
 
     }

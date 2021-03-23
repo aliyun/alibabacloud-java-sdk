@@ -31,71 +31,27 @@ public class ListMessageAcksResponseBody extends TeaModel {
         return this.messageAcks;
     }
 
-    public static class ListMessageAcksResponseBodyMessageAcksPagination extends TeaModel {
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
-        @NameInMap("TotalPageCount")
-        public Integer totalPageCount;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        public static ListMessageAcksResponseBodyMessageAcksPagination build(java.util.Map<String, ?> map) throws Exception {
-            ListMessageAcksResponseBodyMessageAcksPagination self = new ListMessageAcksResponseBodyMessageAcksPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public ListMessageAcksResponseBodyMessageAcksPagination setPageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-        public Integer getPageIndex() {
-            return this.pageIndex;
-        }
-
-        public ListMessageAcksResponseBodyMessageAcksPagination setTotalPageCount(Integer totalPageCount) {
-            this.totalPageCount = totalPageCount;
-            return this;
-        }
-        public Integer getTotalPageCount() {
-            return this.totalPageCount;
-        }
-
-        public ListMessageAcksResponseBodyMessageAcksPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        public ListMessageAcksResponseBodyMessageAcksPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-    }
-
     public static class ListMessageAcksResponseBodyMessageAcksList extends TeaModel {
+        @NameInMap("Mid")
+        public Long mid;
+
         @NameInMap("DeviceId")
         public String deviceId;
 
         @NameInMap("AckTime")
         public Long ackTime;
 
-        @NameInMap("Mid")
-        public Long mid;
-
         public static ListMessageAcksResponseBodyMessageAcksList build(java.util.Map<String, ?> map) throws Exception {
             ListMessageAcksResponseBodyMessageAcksList self = new ListMessageAcksResponseBodyMessageAcksList();
             return TeaModel.build(map, self);
+        }
+
+        public ListMessageAcksResponseBodyMessageAcksList setMid(Long mid) {
+            this.mid = mid;
+            return this;
+        }
+        public Long getMid() {
+            return this.mid;
         }
 
         public ListMessageAcksResponseBodyMessageAcksList setDeviceId(String deviceId) {
@@ -114,34 +70,70 @@ public class ListMessageAcksResponseBody extends TeaModel {
             return this.ackTime;
         }
 
-        public ListMessageAcksResponseBodyMessageAcksList setMid(Long mid) {
-            this.mid = mid;
+    }
+
+    public static class ListMessageAcksResponseBodyMessageAcksPagination extends TeaModel {
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        @NameInMap("TotalPageCount")
+        public Integer totalPageCount;
+
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        public static ListMessageAcksResponseBodyMessageAcksPagination build(java.util.Map<String, ?> map) throws Exception {
+            ListMessageAcksResponseBodyMessageAcksPagination self = new ListMessageAcksResponseBodyMessageAcksPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMessageAcksResponseBodyMessageAcksPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public Long getMid() {
-            return this.mid;
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+        public ListMessageAcksResponseBodyMessageAcksPagination setTotalPageCount(Integer totalPageCount) {
+            this.totalPageCount = totalPageCount;
+            return this;
+        }
+        public Integer getTotalPageCount() {
+            return this.totalPageCount;
+        }
+
+        public ListMessageAcksResponseBodyMessageAcksPagination setPageIndex(Integer pageIndex) {
+            this.pageIndex = pageIndex;
+            return this;
+        }
+        public Integer getPageIndex() {
+            return this.pageIndex;
+        }
+
+        public ListMessageAcksResponseBodyMessageAcksPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
     }
 
     public static class ListMessageAcksResponseBodyMessageAcks extends TeaModel {
-        @NameInMap("Pagination")
-        public ListMessageAcksResponseBodyMessageAcksPagination pagination;
-
         @NameInMap("List")
         public java.util.List<ListMessageAcksResponseBodyMessageAcksList> list;
+
+        @NameInMap("Pagination")
+        public ListMessageAcksResponseBodyMessageAcksPagination pagination;
 
         public static ListMessageAcksResponseBodyMessageAcks build(java.util.Map<String, ?> map) throws Exception {
             ListMessageAcksResponseBodyMessageAcks self = new ListMessageAcksResponseBodyMessageAcks();
             return TeaModel.build(map, self);
-        }
-
-        public ListMessageAcksResponseBodyMessageAcks setPagination(ListMessageAcksResponseBodyMessageAcksPagination pagination) {
-            this.pagination = pagination;
-            return this;
-        }
-        public ListMessageAcksResponseBodyMessageAcksPagination getPagination() {
-            return this.pagination;
         }
 
         public ListMessageAcksResponseBodyMessageAcks setList(java.util.List<ListMessageAcksResponseBodyMessageAcksList> list) {
@@ -150,6 +142,14 @@ public class ListMessageAcksResponseBody extends TeaModel {
         }
         public java.util.List<ListMessageAcksResponseBodyMessageAcksList> getList() {
             return this.list;
+        }
+
+        public ListMessageAcksResponseBodyMessageAcks setPagination(ListMessageAcksResponseBodyMessageAcksPagination pagination) {
+            this.pagination = pagination;
+            return this;
+        }
+        public ListMessageAcksResponseBodyMessageAcksPagination getPagination() {
+            return this.pagination;
         }
 
     }

@@ -32,14 +32,32 @@ public class ListProjectAppsResponseBody extends TeaModel {
     }
 
     public static class ListProjectAppsResponseBodyResultProjectApps extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("AppId")
+        public String appId;
+
+        @NameInMap("UserId")
+        public String userId;
 
         @NameInMap("ProjectId")
         public String projectId;
 
-        @NameInMap("UserId")
-        public String userId;
+        @NameInMap("AppName")
+        public String appName;
+
+        @NameInMap("AppKey")
+        public String appKey;
+
+        @NameInMap("AppSecret")
+        public String appSecret;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
 
         @NameInMap("GmtModified")
         public Long gmtModified;
@@ -47,38 +65,36 @@ public class ListProjectAppsResponseBody extends TeaModel {
         @NameInMap("AppPkgName")
         public String appPkgName;
 
-        @NameInMap("AppName")
-        public String appName;
-
-        @NameInMap("AppSecret")
-        public String appSecret;
-
-        @NameInMap("AppKey")
-        public String appKey;
-
-        @NameInMap("AppId")
-        public String appId;
-
         @NameInMap("OsType")
         public Integer osType;
-
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
-
-        @NameInMap("Id")
-        public Long id;
 
         public static ListProjectAppsResponseBodyResultProjectApps build(java.util.Map<String, ?> map) throws Exception {
             ListProjectAppsResponseBodyResultProjectApps self = new ListProjectAppsResponseBodyResultProjectApps();
             return TeaModel.build(map, self);
         }
 
-        public ListProjectAppsResponseBodyResultProjectApps setStatus(Integer status) {
-            this.status = status;
+        public ListProjectAppsResponseBodyResultProjectApps setId(Long id) {
+            this.id = id;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
+        public Long getId() {
+            return this.id;
+        }
+
+        public ListProjectAppsResponseBodyResultProjectApps setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public ListProjectAppsResponseBodyResultProjectApps setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
         }
 
         public ListProjectAppsResponseBodyResultProjectApps setProjectId(String projectId) {
@@ -89,12 +105,44 @@ public class ListProjectAppsResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        public ListProjectAppsResponseBodyResultProjectApps setUserId(String userId) {
-            this.userId = userId;
+        public ListProjectAppsResponseBodyResultProjectApps setAppName(String appName) {
+            this.appName = appName;
             return this;
         }
-        public String getUserId() {
-            return this.userId;
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public ListProjectAppsResponseBodyResultProjectApps setAppKey(String appKey) {
+            this.appKey = appKey;
+            return this;
+        }
+        public String getAppKey() {
+            return this.appKey;
+        }
+
+        public ListProjectAppsResponseBodyResultProjectApps setAppSecret(String appSecret) {
+            this.appSecret = appSecret;
+            return this;
+        }
+        public String getAppSecret() {
+            return this.appSecret;
+        }
+
+        public ListProjectAppsResponseBodyResultProjectApps setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListProjectAppsResponseBodyResultProjectApps setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
         }
 
         public ListProjectAppsResponseBodyResultProjectApps setGmtModified(Long gmtModified) {
@@ -113,38 +161,6 @@ public class ListProjectAppsResponseBody extends TeaModel {
             return this.appPkgName;
         }
 
-        public ListProjectAppsResponseBodyResultProjectApps setAppName(String appName) {
-            this.appName = appName;
-            return this;
-        }
-        public String getAppName() {
-            return this.appName;
-        }
-
-        public ListProjectAppsResponseBodyResultProjectApps setAppSecret(String appSecret) {
-            this.appSecret = appSecret;
-            return this;
-        }
-        public String getAppSecret() {
-            return this.appSecret;
-        }
-
-        public ListProjectAppsResponseBodyResultProjectApps setAppKey(String appKey) {
-            this.appKey = appKey;
-            return this;
-        }
-        public String getAppKey() {
-            return this.appKey;
-        }
-
-        public ListProjectAppsResponseBodyResultProjectApps setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
         public ListProjectAppsResponseBodyResultProjectApps setOsType(Integer osType) {
             this.osType = osType;
             return this;
@@ -153,45 +169,29 @@ public class ListProjectAppsResponseBody extends TeaModel {
             return this.osType;
         }
 
-        public ListProjectAppsResponseBodyResultProjectApps setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public ListProjectAppsResponseBodyResultProjectApps setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
     }
 
     public static class ListProjectAppsResponseBodyResult extends TeaModel {
-        @NameInMap("ProjectApps")
-        public java.util.List<ListProjectAppsResponseBodyResultProjectApps> projectApps;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         @NameInMap("TotalPage")
         public Integer totalPage;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("ProjectApps")
+        public java.util.List<ListProjectAppsResponseBodyResultProjectApps> projectApps;
 
         public static ListProjectAppsResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             ListProjectAppsResponseBodyResult self = new ListProjectAppsResponseBodyResult();
             return TeaModel.build(map, self);
         }
 
-        public ListProjectAppsResponseBodyResult setProjectApps(java.util.List<ListProjectAppsResponseBodyResultProjectApps> projectApps) {
-            this.projectApps = projectApps;
+        public ListProjectAppsResponseBodyResult setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public java.util.List<ListProjectAppsResponseBodyResultProjectApps> getProjectApps() {
-            return this.projectApps;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
         public ListProjectAppsResponseBodyResult setTotalPage(Integer totalPage) {
@@ -202,12 +202,12 @@ public class ListProjectAppsResponseBody extends TeaModel {
             return this.totalPage;
         }
 
-        public ListProjectAppsResponseBodyResult setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public ListProjectAppsResponseBodyResult setProjectApps(java.util.List<ListProjectAppsResponseBodyResultProjectApps> projectApps) {
+            this.projectApps = projectApps;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public java.util.List<ListProjectAppsResponseBodyResultProjectApps> getProjectApps() {
+            return this.projectApps;
         }
 
     }

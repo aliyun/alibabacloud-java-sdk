@@ -4,23 +4,15 @@ package com.aliyun.iovcc20180501.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceModelResponseBody extends TeaModel {
-    @NameInMap("DeviceModel")
-    public DescribeDeviceModelResponseBodyDeviceModel deviceModel;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("DeviceModel")
+    public DescribeDeviceModelResponseBodyDeviceModel deviceModel;
 
     public static DescribeDeviceModelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeviceModelResponseBody self = new DescribeDeviceModelResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeviceModelResponseBody setDeviceModel(DescribeDeviceModelResponseBodyDeviceModel deviceModel) {
-        this.deviceModel = deviceModel;
-        return this;
-    }
-    public DescribeDeviceModelResponseBodyDeviceModel getDeviceModel() {
-        return this.deviceModel;
     }
 
     public DescribeDeviceModelResponseBody setRequestId(String requestId) {
@@ -31,51 +23,59 @@ public class DescribeDeviceModelResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeDeviceModelResponseBody setDeviceModel(DescribeDeviceModelResponseBodyDeviceModel deviceModel) {
+        this.deviceModel = deviceModel;
+        return this;
+    }
+    public DescribeDeviceModelResponseBodyDeviceModel getDeviceModel() {
+        return this.deviceModel;
+    }
+
     public static class DescribeDeviceModelResponseBodyDeviceModel extends TeaModel {
         @NameInMap("DeviceModelId")
         public Long deviceModelId;
 
-        @NameInMap("HardwareType")
-        public String hardwareType;
-
-        @NameInMap("DeviceName")
-        public String deviceName;
-
         @NameInMap("DeviceType")
         public String deviceType;
 
-        @NameInMap("CanCreateDeviceId")
-        public Integer canCreateDeviceId;
-
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("OsPlatform")
-        public String osPlatform;
+        @NameInMap("HardwareType")
+        public String hardwareType;
 
         @NameInMap("DeviceModel")
         public String deviceModel;
 
-        @NameInMap("SecurityChip")
-        public String securityChip;
+        @NameInMap("DeviceBrand")
+        public String deviceBrand;
 
-        @NameInMap("DeviceLogoUrl")
-        public String deviceLogoUrl;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("ObjectKey")
-        public String objectKey;
-
-        @NameInMap("InitUsageTypeDesc")
-        public String initUsageTypeDesc;
+        @NameInMap("CanCreateDeviceId")
+        public Integer canCreateDeviceId;
 
         @NameInMap("InitUsageType")
         public Integer initUsageType;
 
-        @NameInMap("DeviceBrand")
-        public String deviceBrand;
+        @NameInMap("InitUsageTypeDesc")
+        public String initUsageTypeDesc;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        @NameInMap("SecurityChip")
+        public String securityChip;
+
+        @NameInMap("OsPlatform")
+        public String osPlatform;
+
+        @NameInMap("ObjectKey")
+        public String objectKey;
+
+        @NameInMap("DeviceLogoUrl")
+        public String deviceLogoUrl;
+
+        @NameInMap("DeviceName")
+        public String deviceName;
 
         public static DescribeDeviceModelResponseBodyDeviceModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeviceModelResponseBodyDeviceModel self = new DescribeDeviceModelResponseBodyDeviceModel();
@@ -90,22 +90,6 @@ public class DescribeDeviceModelResponseBody extends TeaModel {
             return this.deviceModelId;
         }
 
-        public DescribeDeviceModelResponseBodyDeviceModel setHardwareType(String hardwareType) {
-            this.hardwareType = hardwareType;
-            return this;
-        }
-        public String getHardwareType() {
-            return this.hardwareType;
-        }
-
-        public DescribeDeviceModelResponseBodyDeviceModel setDeviceName(String deviceName) {
-            this.deviceName = deviceName;
-            return this;
-        }
-        public String getDeviceName() {
-            return this.deviceName;
-        }
-
         public DescribeDeviceModelResponseBodyDeviceModel setDeviceType(String deviceType) {
             this.deviceType = deviceType;
             return this;
@@ -114,28 +98,12 @@ public class DescribeDeviceModelResponseBody extends TeaModel {
             return this.deviceType;
         }
 
-        public DescribeDeviceModelResponseBodyDeviceModel setCanCreateDeviceId(Integer canCreateDeviceId) {
-            this.canCreateDeviceId = canCreateDeviceId;
+        public DescribeDeviceModelResponseBodyDeviceModel setHardwareType(String hardwareType) {
+            this.hardwareType = hardwareType;
             return this;
         }
-        public Integer getCanCreateDeviceId() {
-            return this.canCreateDeviceId;
-        }
-
-        public DescribeDeviceModelResponseBodyDeviceModel setProjectId(String projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public DescribeDeviceModelResponseBodyDeviceModel setOsPlatform(String osPlatform) {
-            this.osPlatform = osPlatform;
-            return this;
-        }
-        public String getOsPlatform() {
-            return this.osPlatform;
+        public String getHardwareType() {
+            return this.hardwareType;
         }
 
         public DescribeDeviceModelResponseBodyDeviceModel setDeviceModel(String deviceModel) {
@@ -146,44 +114,20 @@ public class DescribeDeviceModelResponseBody extends TeaModel {
             return this.deviceModel;
         }
 
-        public DescribeDeviceModelResponseBodyDeviceModel setSecurityChip(String securityChip) {
-            this.securityChip = securityChip;
+        public DescribeDeviceModelResponseBodyDeviceModel setDeviceBrand(String deviceBrand) {
+            this.deviceBrand = deviceBrand;
             return this;
         }
-        public String getSecurityChip() {
-            return this.securityChip;
+        public String getDeviceBrand() {
+            return this.deviceBrand;
         }
 
-        public DescribeDeviceModelResponseBodyDeviceModel setDeviceLogoUrl(String deviceLogoUrl) {
-            this.deviceLogoUrl = deviceLogoUrl;
+        public DescribeDeviceModelResponseBodyDeviceModel setCanCreateDeviceId(Integer canCreateDeviceId) {
+            this.canCreateDeviceId = canCreateDeviceId;
             return this;
         }
-        public String getDeviceLogoUrl() {
-            return this.deviceLogoUrl;
-        }
-
-        public DescribeDeviceModelResponseBodyDeviceModel setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeDeviceModelResponseBodyDeviceModel setObjectKey(String objectKey) {
-            this.objectKey = objectKey;
-            return this;
-        }
-        public String getObjectKey() {
-            return this.objectKey;
-        }
-
-        public DescribeDeviceModelResponseBodyDeviceModel setInitUsageTypeDesc(String initUsageTypeDesc) {
-            this.initUsageTypeDesc = initUsageTypeDesc;
-            return this;
-        }
-        public String getInitUsageTypeDesc() {
-            return this.initUsageTypeDesc;
+        public Integer getCanCreateDeviceId() {
+            return this.canCreateDeviceId;
         }
 
         public DescribeDeviceModelResponseBodyDeviceModel setInitUsageType(Integer initUsageType) {
@@ -194,12 +138,68 @@ public class DescribeDeviceModelResponseBody extends TeaModel {
             return this.initUsageType;
         }
 
-        public DescribeDeviceModelResponseBodyDeviceModel setDeviceBrand(String deviceBrand) {
-            this.deviceBrand = deviceBrand;
+        public DescribeDeviceModelResponseBodyDeviceModel setInitUsageTypeDesc(String initUsageTypeDesc) {
+            this.initUsageTypeDesc = initUsageTypeDesc;
             return this;
         }
-        public String getDeviceBrand() {
-            return this.deviceBrand;
+        public String getInitUsageTypeDesc() {
+            return this.initUsageTypeDesc;
+        }
+
+        public DescribeDeviceModelResponseBodyDeviceModel setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeDeviceModelResponseBodyDeviceModel setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public DescribeDeviceModelResponseBodyDeviceModel setSecurityChip(String securityChip) {
+            this.securityChip = securityChip;
+            return this;
+        }
+        public String getSecurityChip() {
+            return this.securityChip;
+        }
+
+        public DescribeDeviceModelResponseBodyDeviceModel setOsPlatform(String osPlatform) {
+            this.osPlatform = osPlatform;
+            return this;
+        }
+        public String getOsPlatform() {
+            return this.osPlatform;
+        }
+
+        public DescribeDeviceModelResponseBodyDeviceModel setObjectKey(String objectKey) {
+            this.objectKey = objectKey;
+            return this;
+        }
+        public String getObjectKey() {
+            return this.objectKey;
+        }
+
+        public DescribeDeviceModelResponseBodyDeviceModel setDeviceLogoUrl(String deviceLogoUrl) {
+            this.deviceLogoUrl = deviceLogoUrl;
+            return this;
+        }
+        public String getDeviceLogoUrl() {
+            return this.deviceLogoUrl;
+        }
+
+        public DescribeDeviceModelResponseBodyDeviceModel setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.iovcc20180501.models;
 import com.aliyun.tea.*;
 
 public class ListApiGatewayAppsResponseBody extends TeaModel {
-    @NameInMap("ApiGatewayApps")
-    public java.util.List<ListApiGatewayAppsResponseBodyApiGatewayApps> apiGatewayApps;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("ApiGatewayApps")
+    public java.util.List<ListApiGatewayAppsResponseBodyApiGatewayApps> apiGatewayApps;
 
     public static ListApiGatewayAppsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListApiGatewayAppsResponseBody self = new ListApiGatewayAppsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListApiGatewayAppsResponseBody setApiGatewayApps(java.util.List<ListApiGatewayAppsResponseBodyApiGatewayApps> apiGatewayApps) {
-        this.apiGatewayApps = apiGatewayApps;
-        return this;
-    }
-    public java.util.List<ListApiGatewayAppsResponseBodyApiGatewayApps> getApiGatewayApps() {
-        return this.apiGatewayApps;
     }
 
     public ListApiGatewayAppsResponseBody setRequestId(String requestId) {
@@ -31,24 +23,26 @@ public class ListApiGatewayAppsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public ListApiGatewayAppsResponseBody setApiGatewayApps(java.util.List<ListApiGatewayAppsResponseBodyApiGatewayApps> apiGatewayApps) {
+        this.apiGatewayApps = apiGatewayApps;
+        return this;
+    }
+    public java.util.List<ListApiGatewayAppsResponseBodyApiGatewayApps> getApiGatewayApps() {
+        return this.apiGatewayApps;
+    }
+
     public static class ListApiGatewayAppsResponseBodyApiGatewayApps extends TeaModel {
-        @NameInMap("GatewayAppKey")
-        public String gatewayAppKey;
+        @NameInMap("Id")
+        public Long id;
 
-        @NameInMap("Status")
-        public Integer status;
-
-        @NameInMap("GatewayAppSecret")
-        public String gatewayAppSecret;
-
-        @NameInMap("GatewayAppId")
-        public String gatewayAppId;
+        @NameInMap("ProjectId")
+        public String projectId;
 
         @NameInMap("UserId")
         public String userId;
 
-        @NameInMap("ProjectId")
-        public String projectId;
+        @NameInMap("Status")
+        public Integer status;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -56,44 +50,34 @@ public class ListApiGatewayAppsResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("GatewayAppKey")
+        public String gatewayAppKey;
+
+        @NameInMap("GatewayAppSecret")
+        public String gatewayAppSecret;
+
+        @NameInMap("GatewayAppId")
+        public String gatewayAppId;
 
         public static ListApiGatewayAppsResponseBodyApiGatewayApps build(java.util.Map<String, ?> map) throws Exception {
             ListApiGatewayAppsResponseBodyApiGatewayApps self = new ListApiGatewayAppsResponseBodyApiGatewayApps();
             return TeaModel.build(map, self);
         }
 
-        public ListApiGatewayAppsResponseBodyApiGatewayApps setGatewayAppKey(String gatewayAppKey) {
-            this.gatewayAppKey = gatewayAppKey;
+        public ListApiGatewayAppsResponseBodyApiGatewayApps setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getGatewayAppKey() {
-            return this.gatewayAppKey;
+        public Long getId() {
+            return this.id;
         }
 
-        public ListApiGatewayAppsResponseBodyApiGatewayApps setStatus(Integer status) {
-            this.status = status;
+        public ListApiGatewayAppsResponseBodyApiGatewayApps setProjectId(String projectId) {
+            this.projectId = projectId;
             return this;
         }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListApiGatewayAppsResponseBodyApiGatewayApps setGatewayAppSecret(String gatewayAppSecret) {
-            this.gatewayAppSecret = gatewayAppSecret;
-            return this;
-        }
-        public String getGatewayAppSecret() {
-            return this.gatewayAppSecret;
-        }
-
-        public ListApiGatewayAppsResponseBodyApiGatewayApps setGatewayAppId(String gatewayAppId) {
-            this.gatewayAppId = gatewayAppId;
-            return this;
-        }
-        public String getGatewayAppId() {
-            return this.gatewayAppId;
+        public String getProjectId() {
+            return this.projectId;
         }
 
         public ListApiGatewayAppsResponseBodyApiGatewayApps setUserId(String userId) {
@@ -104,12 +88,12 @@ public class ListApiGatewayAppsResponseBody extends TeaModel {
             return this.userId;
         }
 
-        public ListApiGatewayAppsResponseBodyApiGatewayApps setProjectId(String projectId) {
-            this.projectId = projectId;
+        public ListApiGatewayAppsResponseBodyApiGatewayApps setStatus(Integer status) {
+            this.status = status;
             return this;
         }
-        public String getProjectId() {
-            return this.projectId;
+        public Integer getStatus() {
+            return this.status;
         }
 
         public ListApiGatewayAppsResponseBodyApiGatewayApps setGmtCreate(Long gmtCreate) {
@@ -128,12 +112,28 @@ public class ListApiGatewayAppsResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListApiGatewayAppsResponseBodyApiGatewayApps setId(Long id) {
-            this.id = id;
+        public ListApiGatewayAppsResponseBodyApiGatewayApps setGatewayAppKey(String gatewayAppKey) {
+            this.gatewayAppKey = gatewayAppKey;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public String getGatewayAppKey() {
+            return this.gatewayAppKey;
+        }
+
+        public ListApiGatewayAppsResponseBodyApiGatewayApps setGatewayAppSecret(String gatewayAppSecret) {
+            this.gatewayAppSecret = gatewayAppSecret;
+            return this;
+        }
+        public String getGatewayAppSecret() {
+            return this.gatewayAppSecret;
+        }
+
+        public ListApiGatewayAppsResponseBodyApiGatewayApps setGatewayAppId(String gatewayAppId) {
+            this.gatewayAppId = gatewayAppId;
+            return this;
+        }
+        public String getGatewayAppId() {
+            return this.gatewayAppId;
         }
 
     }

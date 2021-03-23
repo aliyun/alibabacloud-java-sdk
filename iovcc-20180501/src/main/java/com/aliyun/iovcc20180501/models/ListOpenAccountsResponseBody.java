@@ -32,29 +32,14 @@ public class ListOpenAccountsResponseBody extends TeaModel {
     }
 
     public static class ListOpenAccountsResponseBodyOpenAccounts extends TeaModel {
-        @NameInMap("Status")
-        public Integer status;
+        @NameInMap("IdentityId")
+        public String identityId;
 
-        @NameInMap("Type")
-        public Integer type;
+        @NameInMap("AliyunId")
+        public String aliyunId;
 
         @NameInMap("DisplayName")
         public String displayName;
-
-        @NameInMap("CreateAccessKey")
-        public String createAccessKey;
-
-        @NameInMap("OpenId")
-        public String openId;
-
-        @NameInMap("Mobile")
-        public String mobile;
-
-        @NameInMap("Region")
-        public String region;
-
-        @NameInMap("IdentityId")
-        public String identityId;
 
         @NameInMap("LoginId")
         public String loginId;
@@ -62,68 +47,27 @@ public class ListOpenAccountsResponseBody extends TeaModel {
         @NameInMap("Idp")
         public String idp;
 
-        @NameInMap("AliyunId")
-        public String aliyunId;
+        @NameInMap("OpenId")
+        public String openId;
+
+        @NameInMap("Mobile")
+        public String mobile;
+
+        @NameInMap("Type")
+        public Integer type;
+
+        @NameInMap("Status")
+        public Integer status;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("CreateAccessKey")
+        public String createAccessKey;
 
         public static ListOpenAccountsResponseBodyOpenAccounts build(java.util.Map<String, ?> map) throws Exception {
             ListOpenAccountsResponseBodyOpenAccounts self = new ListOpenAccountsResponseBodyOpenAccounts();
             return TeaModel.build(map, self);
-        }
-
-        public ListOpenAccountsResponseBodyOpenAccounts setStatus(Integer status) {
-            this.status = status;
-            return this;
-        }
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        public ListOpenAccountsResponseBodyOpenAccounts setType(Integer type) {
-            this.type = type;
-            return this;
-        }
-        public Integer getType() {
-            return this.type;
-        }
-
-        public ListOpenAccountsResponseBodyOpenAccounts setDisplayName(String displayName) {
-            this.displayName = displayName;
-            return this;
-        }
-        public String getDisplayName() {
-            return this.displayName;
-        }
-
-        public ListOpenAccountsResponseBodyOpenAccounts setCreateAccessKey(String createAccessKey) {
-            this.createAccessKey = createAccessKey;
-            return this;
-        }
-        public String getCreateAccessKey() {
-            return this.createAccessKey;
-        }
-
-        public ListOpenAccountsResponseBodyOpenAccounts setOpenId(String openId) {
-            this.openId = openId;
-            return this;
-        }
-        public String getOpenId() {
-            return this.openId;
-        }
-
-        public ListOpenAccountsResponseBodyOpenAccounts setMobile(String mobile) {
-            this.mobile = mobile;
-            return this;
-        }
-        public String getMobile() {
-            return this.mobile;
-        }
-
-        public ListOpenAccountsResponseBodyOpenAccounts setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
         }
 
         public ListOpenAccountsResponseBodyOpenAccounts setIdentityId(String identityId) {
@@ -132,6 +76,22 @@ public class ListOpenAccountsResponseBody extends TeaModel {
         }
         public String getIdentityId() {
             return this.identityId;
+        }
+
+        public ListOpenAccountsResponseBodyOpenAccounts setAliyunId(String aliyunId) {
+            this.aliyunId = aliyunId;
+            return this;
+        }
+        public String getAliyunId() {
+            return this.aliyunId;
+        }
+
+        public ListOpenAccountsResponseBodyOpenAccounts setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         public ListOpenAccountsResponseBodyOpenAccounts setLoginId(String loginId) {
@@ -150,12 +110,52 @@ public class ListOpenAccountsResponseBody extends TeaModel {
             return this.idp;
         }
 
-        public ListOpenAccountsResponseBodyOpenAccounts setAliyunId(String aliyunId) {
-            this.aliyunId = aliyunId;
+        public ListOpenAccountsResponseBodyOpenAccounts setOpenId(String openId) {
+            this.openId = openId;
             return this;
         }
-        public String getAliyunId() {
-            return this.aliyunId;
+        public String getOpenId() {
+            return this.openId;
+        }
+
+        public ListOpenAccountsResponseBodyOpenAccounts setMobile(String mobile) {
+            this.mobile = mobile;
+            return this;
+        }
+        public String getMobile() {
+            return this.mobile;
+        }
+
+        public ListOpenAccountsResponseBodyOpenAccounts setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+        public ListOpenAccountsResponseBodyOpenAccounts setStatus(Integer status) {
+            this.status = status;
+            return this;
+        }
+        public Integer getStatus() {
+            return this.status;
+        }
+
+        public ListOpenAccountsResponseBodyOpenAccounts setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public ListOpenAccountsResponseBodyOpenAccounts setCreateAccessKey(String createAccessKey) {
+            this.createAccessKey = createAccessKey;
+            return this;
+        }
+        public String getCreateAccessKey() {
+            return this.createAccessKey;
         }
 
     }

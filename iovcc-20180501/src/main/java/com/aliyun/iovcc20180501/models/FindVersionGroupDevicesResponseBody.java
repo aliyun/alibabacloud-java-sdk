@@ -32,11 +32,8 @@ public class FindVersionGroupDevicesResponseBody extends TeaModel {
     }
 
     public static class FindVersionGroupDevicesResponseBodyGroupDeviceListItems extends TeaModel {
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
-
-        @NameInMap("OriginalId")
-        public String originalId;
+        @NameInMap("Id")
+        public String id;
 
         @NameInMap("DeviceId")
         public String deviceId;
@@ -44,31 +41,26 @@ public class FindVersionGroupDevicesResponseBody extends TeaModel {
         @NameInMap("IdType")
         public String idType;
 
+        @NameInMap("OriginalId")
+        public String originalId;
+
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
 
         public static FindVersionGroupDevicesResponseBodyGroupDeviceListItems build(java.util.Map<String, ?> map) throws Exception {
             FindVersionGroupDevicesResponseBodyGroupDeviceListItems self = new FindVersionGroupDevicesResponseBodyGroupDeviceListItems();
             return TeaModel.build(map, self);
         }
 
-        public FindVersionGroupDevicesResponseBodyGroupDeviceListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-            this.gmtCreateTimestamp = gmtCreateTimestamp;
+        public FindVersionGroupDevicesResponseBodyGroupDeviceListItems setId(String id) {
+            this.id = id;
             return this;
         }
-        public Long getGmtCreateTimestamp() {
-            return this.gmtCreateTimestamp;
-        }
-
-        public FindVersionGroupDevicesResponseBodyGroupDeviceListItems setOriginalId(String originalId) {
-            this.originalId = originalId;
-            return this;
-        }
-        public String getOriginalId() {
-            return this.originalId;
+        public String getId() {
+            return this.id;
         }
 
         public FindVersionGroupDevicesResponseBodyGroupDeviceListItems setDeviceId(String deviceId) {
@@ -87,6 +79,14 @@ public class FindVersionGroupDevicesResponseBody extends TeaModel {
             return this.idType;
         }
 
+        public FindVersionGroupDevicesResponseBodyGroupDeviceListItems setOriginalId(String originalId) {
+            this.originalId = originalId;
+            return this;
+        }
+        public String getOriginalId() {
+            return this.originalId;
+        }
+
         public FindVersionGroupDevicesResponseBodyGroupDeviceListItems setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -95,34 +95,26 @@ public class FindVersionGroupDevicesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public FindVersionGroupDevicesResponseBodyGroupDeviceListItems setId(String id) {
-            this.id = id;
+        public FindVersionGroupDevicesResponseBodyGroupDeviceListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+            this.gmtCreateTimestamp = gmtCreateTimestamp;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public Long getGmtCreateTimestamp() {
+            return this.gmtCreateTimestamp;
         }
 
     }
 
     public static class FindVersionGroupDevicesResponseBodyGroupDeviceList extends TeaModel {
-        @NameInMap("Items")
-        public java.util.List<FindVersionGroupDevicesResponseBodyGroupDeviceListItems> items;
-
         @NameInMap("TotalCount")
         public Integer totalCount;
+
+        @NameInMap("Items")
+        public java.util.List<FindVersionGroupDevicesResponseBodyGroupDeviceListItems> items;
 
         public static FindVersionGroupDevicesResponseBodyGroupDeviceList build(java.util.Map<String, ?> map) throws Exception {
             FindVersionGroupDevicesResponseBodyGroupDeviceList self = new FindVersionGroupDevicesResponseBodyGroupDeviceList();
             return TeaModel.build(map, self);
-        }
-
-        public FindVersionGroupDevicesResponseBodyGroupDeviceList setItems(java.util.List<FindVersionGroupDevicesResponseBodyGroupDeviceListItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<FindVersionGroupDevicesResponseBodyGroupDeviceListItems> getItems() {
-            return this.items;
         }
 
         public FindVersionGroupDevicesResponseBodyGroupDeviceList setTotalCount(Integer totalCount) {
@@ -131,6 +123,14 @@ public class FindVersionGroupDevicesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public FindVersionGroupDevicesResponseBodyGroupDeviceList setItems(java.util.List<FindVersionGroupDevicesResponseBodyGroupDeviceListItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<FindVersionGroupDevicesResponseBodyGroupDeviceListItems> getItems() {
+            return this.items;
         }
 
     }

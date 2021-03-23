@@ -32,8 +32,11 @@ public class FindCustomizedPropertiesResponseBody extends TeaModel {
     }
 
     public static class FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems extends TeaModel {
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Name")
+        public String name;
 
         @NameInMap("Value")
         public String value;
@@ -41,23 +44,28 @@ public class FindCustomizedPropertiesResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
 
         public static FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems build(java.util.Map<String, ?> map) throws Exception {
             FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems self = new FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems();
             return TeaModel.build(map, self);
         }
 
-        public FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-            this.gmtCreateTimestamp = gmtCreateTimestamp;
+        public FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems setId(Long id) {
+            this.id = id;
             return this;
         }
-        public Long getGmtCreateTimestamp() {
-            return this.gmtCreateTimestamp;
+        public Long getId() {
+            return this.id;
+        }
+
+        public FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems setValue(String value) {
@@ -76,42 +84,26 @@ public class FindCustomizedPropertiesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems setName(String name) {
-            this.name = name;
+        public FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+            this.gmtCreateTimestamp = gmtCreateTimestamp;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
+        public Long getGmtCreateTimestamp() {
+            return this.gmtCreateTimestamp;
         }
 
     }
 
     public static class FindCustomizedPropertiesResponseBodyCustomizedPropertyList extends TeaModel {
-        @NameInMap("Items")
-        public java.util.List<FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems> items;
-
         @NameInMap("TotalCount")
         public Integer totalCount;
+
+        @NameInMap("Items")
+        public java.util.List<FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems> items;
 
         public static FindCustomizedPropertiesResponseBodyCustomizedPropertyList build(java.util.Map<String, ?> map) throws Exception {
             FindCustomizedPropertiesResponseBodyCustomizedPropertyList self = new FindCustomizedPropertiesResponseBodyCustomizedPropertyList();
             return TeaModel.build(map, self);
-        }
-
-        public FindCustomizedPropertiesResponseBodyCustomizedPropertyList setItems(java.util.List<FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems> getItems() {
-            return this.items;
         }
 
         public FindCustomizedPropertiesResponseBodyCustomizedPropertyList setTotalCount(Integer totalCount) {
@@ -120,6 +112,14 @@ public class FindCustomizedPropertiesResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
+        }
+
+        public FindCustomizedPropertiesResponseBodyCustomizedPropertyList setItems(java.util.List<FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems> items) {
+            this.items = items;
+            return this;
+        }
+        public java.util.List<FindCustomizedPropertiesResponseBodyCustomizedPropertyListItems> getItems() {
+            return this.items;
         }
 
     }
