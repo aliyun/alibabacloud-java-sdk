@@ -28,12 +28,6 @@ public class SwitchInstanceHARequest extends TeaModel {
     @NameInMap("SwitchMode")
     public Integer switchMode;
 
-    @NameInMap("Product")
-    public String product;
-
-    @NameInMap("Category")
-    public String category;
-
     @NameInMap("SwitchType")
     public String switchType;
 
@@ -104,22 +98,6 @@ public class SwitchInstanceHARequest extends TeaModel {
     }
     public Integer getSwitchMode() {
         return this.switchMode;
-    }
-
-    public SwitchInstanceHARequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
-    }
-
-    public SwitchInstanceHARequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
     public SwitchInstanceHARequest setSwitchType(String switchType) {

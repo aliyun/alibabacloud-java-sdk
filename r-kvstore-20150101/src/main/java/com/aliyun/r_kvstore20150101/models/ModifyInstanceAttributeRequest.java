@@ -31,12 +31,6 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     @NameInMap("InstanceReleaseProtection")
     public Boolean instanceReleaseProtection;
 
-    @NameInMap("Product")
-    public String product;
-
-    @NameInMap("Category")
-    public String category;
-
     public static ModifyInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAttributeRequest self = new ModifyInstanceAttributeRequest();
         return TeaModel.build(map, self);
@@ -112,22 +106,6 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     }
     public Boolean getInstanceReleaseProtection() {
         return this.instanceReleaseProtection;
-    }
-
-    public ModifyInstanceAttributeRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
-    }
-
-    public ModifyInstanceAttributeRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
 }

@@ -25,9 +25,6 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
-    @NameInMap("SQLId")
-    public Long SQLId;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -114,14 +111,6 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
-    }
-
-    public DescribeSlowLogRecordsRequest setSQLId(Long SQLId) {
-        this.SQLId = SQLId;
-        return this;
-    }
-    public Long getSQLId() {
-        return this.SQLId;
     }
 
     public DescribeSlowLogRecordsRequest setStartTime(String startTime) {

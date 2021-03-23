@@ -4,26 +4,18 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
-    @NameInMap("NetInfoItems")
-    public ModifyInstanceNetExpireTimeResponseBodyNetInfoItems netInfoItems;
-
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NetInfoItems")
+    public ModifyInstanceNetExpireTimeResponseBodyNetInfoItems netInfoItems;
+
     public static ModifyInstanceNetExpireTimeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceNetExpireTimeResponseBody self = new ModifyInstanceNetExpireTimeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyInstanceNetExpireTimeResponseBody setNetInfoItems(ModifyInstanceNetExpireTimeResponseBodyNetInfoItems netInfoItems) {
-        this.netInfoItems = netInfoItems;
-        return this;
-    }
-    public ModifyInstanceNetExpireTimeResponseBodyNetInfoItems getNetInfoItems() {
-        return this.netInfoItems;
     }
 
     public ModifyInstanceNetExpireTimeResponseBody setRequestId(String requestId) {
@@ -42,18 +34,26 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         return this.instanceId;
     }
 
+    public ModifyInstanceNetExpireTimeResponseBody setNetInfoItems(ModifyInstanceNetExpireTimeResponseBodyNetInfoItems netInfoItems) {
+        this.netInfoItems = netInfoItems;
+        return this;
+    }
+    public ModifyInstanceNetExpireTimeResponseBodyNetInfoItems getNetInfoItems() {
+        return this.netInfoItems;
+    }
+
     public static class ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem extends TeaModel {
         @NameInMap("DBInstanceNetType")
         public String DBInstanceNetType;
 
-        @NameInMap("ConnectionString")
-        public String connectionString;
+        @NameInMap("Port")
+        public String port;
 
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
-        @NameInMap("Port")
-        public String port;
+        @NameInMap("ConnectionString")
+        public String connectionString;
 
         @NameInMap("IPAddress")
         public String IPAddress;
@@ -71,12 +71,12 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             return this.DBInstanceNetType;
         }
 
-        public ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem setConnectionString(String connectionString) {
-            this.connectionString = connectionString;
+        public ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem setPort(String port) {
+            this.port = port;
             return this;
         }
-        public String getConnectionString() {
-            return this.connectionString;
+        public String getPort() {
+            return this.port;
         }
 
         public ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem setExpiredTime(String expiredTime) {
@@ -87,12 +87,12 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem setPort(String port) {
-            this.port = port;
+        public ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem setConnectionString(String connectionString) {
+            this.connectionString = connectionString;
             return this;
         }
-        public String getPort() {
-            return this.port;
+        public String getConnectionString() {
+            return this.connectionString;
         }
 
         public ModifyInstanceNetExpireTimeResponseBodyNetInfoItemsNetInfoItem setIPAddress(String IPAddress) {

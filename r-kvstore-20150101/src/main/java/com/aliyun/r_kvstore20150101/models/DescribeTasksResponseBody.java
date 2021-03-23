@@ -4,17 +4,17 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeTasksResponseBody extends TeaModel {
-    @NameInMap("TotalRecordCount")
-    public Integer totalRecordCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalRecordCount")
+    public Integer totalRecordCount;
 
     @NameInMap("Items")
     public java.util.List<DescribeTasksResponseBodyItems> items;
@@ -22,14 +22,6 @@ public class DescribeTasksResponseBody extends TeaModel {
     public static DescribeTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTasksResponseBody self = new DescribeTasksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTasksResponseBody setTotalRecordCount(Integer totalRecordCount) {
-        this.totalRecordCount = totalRecordCount;
-        return this;
-    }
-    public Integer getTotalRecordCount() {
-        return this.totalRecordCount;
     }
 
     public DescribeTasksResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeTasksResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeTasksResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeTasksResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeTasksResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeTasksResponseBody setTotalRecordCount(Integer totalRecordCount) {
+        this.totalRecordCount = totalRecordCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalRecordCount() {
+        return this.totalRecordCount;
     }
 
     public DescribeTasksResponseBody setItems(java.util.List<DescribeTasksResponseBodyItems> items) {
@@ -65,14 +65,14 @@ public class DescribeTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeTasksResponseBodyItems extends TeaModel {
+        @NameInMap("TaskId")
+        public String taskId;
+
+        @NameInMap("TaskAction")
+        public String taskAction;
+
         @NameInMap("Status")
         public String status;
-
-        @NameInMap("FinishTime")
-        public String finishTime;
-
-        @NameInMap("StepsInfo")
-        public String stepsInfo;
 
         @NameInMap("Progress")
         public Float progress;
@@ -80,24 +80,40 @@ public class DescribeTasksResponseBody extends TeaModel {
         @NameInMap("BeginTime")
         public String beginTime;
 
+        @NameInMap("FinishTime")
+        public String finishTime;
+
+        @NameInMap("StepsInfo")
+        public String stepsInfo;
+
         @NameInMap("Remain")
         public Integer remain;
-
-        @NameInMap("CurrentStepName")
-        public String currentStepName;
 
         @NameInMap("StepProgressInfo")
         public String stepProgressInfo;
 
-        @NameInMap("TaskId")
-        public String taskId;
-
-        @NameInMap("TaskAction")
-        public String taskAction;
+        @NameInMap("CurrentStepName")
+        public String currentStepName;
 
         public static DescribeTasksResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             DescribeTasksResponseBodyItems self = new DescribeTasksResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTasksResponseBodyItems setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public DescribeTasksResponseBodyItems setTaskAction(String taskAction) {
+            this.taskAction = taskAction;
+            return this;
+        }
+        public String getTaskAction() {
+            return this.taskAction;
         }
 
         public DescribeTasksResponseBodyItems setStatus(String status) {
@@ -106,22 +122,6 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
-        }
-
-        public DescribeTasksResponseBodyItems setFinishTime(String finishTime) {
-            this.finishTime = finishTime;
-            return this;
-        }
-        public String getFinishTime() {
-            return this.finishTime;
-        }
-
-        public DescribeTasksResponseBodyItems setStepsInfo(String stepsInfo) {
-            this.stepsInfo = stepsInfo;
-            return this;
-        }
-        public String getStepsInfo() {
-            return this.stepsInfo;
         }
 
         public DescribeTasksResponseBodyItems setProgress(Float progress) {
@@ -140,20 +140,28 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.beginTime;
         }
 
+        public DescribeTasksResponseBodyItems setFinishTime(String finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public String getFinishTime() {
+            return this.finishTime;
+        }
+
+        public DescribeTasksResponseBodyItems setStepsInfo(String stepsInfo) {
+            this.stepsInfo = stepsInfo;
+            return this;
+        }
+        public String getStepsInfo() {
+            return this.stepsInfo;
+        }
+
         public DescribeTasksResponseBodyItems setRemain(Integer remain) {
             this.remain = remain;
             return this;
         }
         public Integer getRemain() {
             return this.remain;
-        }
-
-        public DescribeTasksResponseBodyItems setCurrentStepName(String currentStepName) {
-            this.currentStepName = currentStepName;
-            return this;
-        }
-        public String getCurrentStepName() {
-            return this.currentStepName;
         }
 
         public DescribeTasksResponseBodyItems setStepProgressInfo(String stepProgressInfo) {
@@ -164,20 +172,12 @@ public class DescribeTasksResponseBody extends TeaModel {
             return this.stepProgressInfo;
         }
 
-        public DescribeTasksResponseBodyItems setTaskId(String taskId) {
-            this.taskId = taskId;
+        public DescribeTasksResponseBodyItems setCurrentStepName(String currentStepName) {
+            this.currentStepName = currentStepName;
             return this;
         }
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        public DescribeTasksResponseBodyItems setTaskAction(String taskAction) {
-            this.taskAction = taskAction;
-            return this;
-        }
-        public String getTaskAction() {
-            return this.taskAction;
+        public String getCurrentStepName() {
+            return this.currentStepName;
         }
 
     }

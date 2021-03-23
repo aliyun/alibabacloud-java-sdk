@@ -32,18 +32,26 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     }
 
     public static class DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation extends TeaModel {
+        @NameInMap("RegionId")
+        public String regionId;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         @NameInMap("NetType")
         public String netType;
 
-        @NameInMap("RegionId")
-        public String regionId;
-
         public static DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation self = new DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation setSecurityGroupId(String securityGroupId) {
@@ -60,14 +68,6 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
         public String getNetType() {
             return this.netType;
-        }
-
-        public DescribeSecurityGroupConfigurationResponseBodyItemsEcsSecurityGroupRelation setRegionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-        public String getRegionId() {
-            return this.regionId;
         }
 
     }

@@ -70,51 +70,27 @@ public class DescribeAccountsResponseBody extends TeaModel {
     }
 
     public static class DescribeAccountsResponseBodyAccountsAccount extends TeaModel {
-        @NameInMap("AccountStatus")
-        public String accountStatus;
-
-        @NameInMap("DatabasePrivileges")
-        public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges databasePrivileges;
-
-        @NameInMap("AccountDescription")
-        public String accountDescription;
-
         @NameInMap("InstanceId")
         public String instanceId;
-
-        @NameInMap("AccountType")
-        public String accountType;
 
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("AccountStatus")
+        public String accountStatus;
+
+        @NameInMap("AccountType")
+        public String accountType;
+
+        @NameInMap("AccountDescription")
+        public String accountDescription;
+
+        @NameInMap("DatabasePrivileges")
+        public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges databasePrivileges;
+
         public static DescribeAccountsResponseBodyAccountsAccount build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccountsResponseBodyAccountsAccount self = new DescribeAccountsResponseBodyAccountsAccount();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAccountsResponseBodyAccountsAccount setAccountStatus(String accountStatus) {
-            this.accountStatus = accountStatus;
-            return this;
-        }
-        public String getAccountStatus() {
-            return this.accountStatus;
-        }
-
-        public DescribeAccountsResponseBodyAccountsAccount setDatabasePrivileges(DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges databasePrivileges) {
-            this.databasePrivileges = databasePrivileges;
-            return this;
-        }
-        public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges getDatabasePrivileges() {
-            return this.databasePrivileges;
-        }
-
-        public DescribeAccountsResponseBodyAccountsAccount setAccountDescription(String accountDescription) {
-            this.accountDescription = accountDescription;
-            return this;
-        }
-        public String getAccountDescription() {
-            return this.accountDescription;
         }
 
         public DescribeAccountsResponseBodyAccountsAccount setInstanceId(String instanceId) {
@@ -125,6 +101,22 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.instanceId;
         }
 
+        public DescribeAccountsResponseBodyAccountsAccount setAccountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
+        public String getAccountName() {
+            return this.accountName;
+        }
+
+        public DescribeAccountsResponseBodyAccountsAccount setAccountStatus(String accountStatus) {
+            this.accountStatus = accountStatus;
+            return this;
+        }
+        public String getAccountStatus() {
+            return this.accountStatus;
+        }
+
         public DescribeAccountsResponseBodyAccountsAccount setAccountType(String accountType) {
             this.accountType = accountType;
             return this;
@@ -133,12 +125,20 @@ public class DescribeAccountsResponseBody extends TeaModel {
             return this.accountType;
         }
 
-        public DescribeAccountsResponseBodyAccountsAccount setAccountName(String accountName) {
-            this.accountName = accountName;
+        public DescribeAccountsResponseBodyAccountsAccount setAccountDescription(String accountDescription) {
+            this.accountDescription = accountDescription;
             return this;
         }
-        public String getAccountName() {
-            return this.accountName;
+        public String getAccountDescription() {
+            return this.accountDescription;
+        }
+
+        public DescribeAccountsResponseBodyAccountsAccount setDatabasePrivileges(DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges databasePrivileges) {
+            this.databasePrivileges = databasePrivileges;
+            return this;
+        }
+        public DescribeAccountsResponseBodyAccountsAccountDatabasePrivileges getDatabasePrivileges() {
+            return this.databasePrivileges;
         }
 
     }

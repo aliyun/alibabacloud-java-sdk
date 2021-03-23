@@ -22,9 +22,6 @@ public class DescribeEngineVersionRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Parameters")
-    public String parameters;
-
     public static DescribeEngineVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEngineVersionRequest self = new DescribeEngineVersionRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class DescribeEngineVersionRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    public DescribeEngineVersionRequest setParameters(String parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public String getParameters() {
-        return this.parameters;
     }
 
 }

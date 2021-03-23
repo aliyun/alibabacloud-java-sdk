@@ -28,9 +28,6 @@ public class TransformToPrePaidRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    @NameInMap("FromApp")
-    public String fromApp;
-
     public static TransformToPrePaidRequest build(java.util.Map<String, ?> map) throws Exception {
         TransformToPrePaidRequest self = new TransformToPrePaidRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class TransformToPrePaidRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
-    }
-
-    public TransformToPrePaidRequest setFromApp(String fromApp) {
-        this.fromApp = fromApp;
-        return this;
-    }
-    public String getFromApp() {
-        return this.fromApp;
     }
 
 }

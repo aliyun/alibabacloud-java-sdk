@@ -37,9 +37,6 @@ public class AddShardingNodeRequest extends TeaModel {
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static AddShardingNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         AddShardingNodeRequest self = new AddShardingNodeRequest();
         return TeaModel.build(map, self);
@@ -131,14 +128,6 @@ public class AddShardingNodeRequest extends TeaModel {
     }
     public String getBusinessInfo() {
         return this.businessInfo;
-    }
-
-    public AddShardingNodeRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

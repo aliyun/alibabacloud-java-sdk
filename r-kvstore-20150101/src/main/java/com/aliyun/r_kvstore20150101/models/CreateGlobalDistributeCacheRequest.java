@@ -22,9 +22,6 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     @NameInMap("SeedSubInstanceId")
     public String seedSubInstanceId;
 
-    @NameInMap("ClientToken")
-    public String clientToken;
-
     public static CreateGlobalDistributeCacheRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGlobalDistributeCacheRequest self = new CreateGlobalDistributeCacheRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class CreateGlobalDistributeCacheRequest extends TeaModel {
     }
     public String getSeedSubInstanceId() {
         return this.seedSubInstanceId;
-    }
-
-    public CreateGlobalDistributeCacheRequest setClientToken(String clientToken) {
-        this.clientToken = clientToken;
-        return this;
-    }
-    public String getClientToken() {
-        return this.clientToken;
     }
 
 }

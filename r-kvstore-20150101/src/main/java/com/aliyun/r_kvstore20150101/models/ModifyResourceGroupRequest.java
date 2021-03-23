@@ -28,12 +28,6 @@ public class ModifyResourceGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Product")
-    public String product;
-
-    @NameInMap("Category")
-    public String category;
-
     public static ModifyResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyResourceGroupRequest self = new ModifyResourceGroupRequest();
         return TeaModel.build(map, self);
@@ -101,22 +95,6 @@ public class ModifyResourceGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ModifyResourceGroupRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
-    }
-
-    public ModifyResourceGroupRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
     }
 
 }

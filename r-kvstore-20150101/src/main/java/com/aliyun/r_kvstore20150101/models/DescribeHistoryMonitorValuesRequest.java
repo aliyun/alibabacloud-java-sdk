@@ -37,18 +37,6 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
-    @NameInMap("AccessType")
-    public String accessType;
-
-    @NameInMap("Product")
-    public String product;
-
-    @NameInMap("Category")
-    public String category;
-
-    @NameInMap("ReplicatorJobId")
-    public String replicatorJobId;
-
     public static DescribeHistoryMonitorValuesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeHistoryMonitorValuesRequest self = new DescribeHistoryMonitorValuesRequest();
         return TeaModel.build(map, self);
@@ -140,38 +128,6 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
-    }
-
-    public DescribeHistoryMonitorValuesRequest setAccessType(String accessType) {
-        this.accessType = accessType;
-        return this;
-    }
-    public String getAccessType() {
-        return this.accessType;
-    }
-
-    public DescribeHistoryMonitorValuesRequest setProduct(String product) {
-        this.product = product;
-        return this;
-    }
-    public String getProduct() {
-        return this.product;
-    }
-
-    public DescribeHistoryMonitorValuesRequest setCategory(String category) {
-        this.category = category;
-        return this;
-    }
-    public String getCategory() {
-        return this.category;
-    }
-
-    public DescribeHistoryMonitorValuesRequest setReplicatorJobId(String replicatorJobId) {
-        this.replicatorJobId = replicatorJobId;
-        return this;
-    }
-    public String getReplicatorJobId() {
-        return this.replicatorJobId;
     }
 
 }

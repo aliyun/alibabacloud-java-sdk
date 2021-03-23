@@ -67,8 +67,8 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    @NameInMap("VpcCloudInsInfo")
-    public Integer vpcCloudInsInfo;
+    @NameInMap("Tag")
+    public java.util.List<DescribeInstancesRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -78,9 +78,6 @@ public class DescribeInstancesRequest extends TeaModel {
 
     @NameInMap("EditionType")
     public String editionType;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeInstancesRequestTag> tag;
 
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
@@ -255,12 +252,12 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public DescribeInstancesRequest setVpcCloudInsInfo(Integer vpcCloudInsInfo) {
-        this.vpcCloudInsInfo = vpcCloudInsInfo;
+    public DescribeInstancesRequest setTag(java.util.List<DescribeInstancesRequestTag> tag) {
+        this.tag = tag;
         return this;
     }
-    public Integer getVpcCloudInsInfo() {
-        return this.vpcCloudInsInfo;
+    public java.util.List<DescribeInstancesRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeInstancesRequest setResourceGroupId(String resourceGroupId) {
@@ -285,14 +282,6 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getEditionType() {
         return this.editionType;
-    }
-
-    public DescribeInstancesRequest setTag(java.util.List<DescribeInstancesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeInstancesRequestTag> getTag() {
-        return this.tag;
     }
 
     public static class DescribeInstancesRequestTag extends TeaModel {

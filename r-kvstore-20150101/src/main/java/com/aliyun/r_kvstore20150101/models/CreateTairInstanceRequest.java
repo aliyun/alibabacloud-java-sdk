@@ -70,9 +70,6 @@ public class CreateTairInstanceRequest extends TeaModel {
     @NameInMap("AutoRenewPeriod")
     public String autoRenewPeriod;
 
-    @NameInMap("ResourceGroupId")
-    public Integer resourceGroupId;
-
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
@@ -276,14 +273,6 @@ public class CreateTairInstanceRequest extends TeaModel {
     }
     public String getAutoRenewPeriod() {
         return this.autoRenewPeriod;
-    }
-
-    public CreateTairInstanceRequest setResourceGroupId(Integer resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public Integer getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public CreateTairInstanceRequest setAutoPay(Boolean autoPay) {

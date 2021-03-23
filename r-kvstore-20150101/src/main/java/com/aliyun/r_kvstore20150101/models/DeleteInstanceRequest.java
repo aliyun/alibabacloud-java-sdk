@@ -25,9 +25,6 @@ public class DeleteInstanceRequest extends TeaModel {
     @NameInMap("GlobalInstanceId")
     public String globalInstanceId;
 
-    @NameInMap("ReleaseSubInstance")
-    public Boolean releaseSubInstance;
-
     public static DeleteInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstanceRequest self = new DeleteInstanceRequest();
         return TeaModel.build(map, self);
@@ -87,14 +84,6 @@ public class DeleteInstanceRequest extends TeaModel {
     }
     public String getGlobalInstanceId() {
         return this.globalInstanceId;
-    }
-
-    public DeleteInstanceRequest setReleaseSubInstance(Boolean releaseSubInstance) {
-        this.releaseSubInstance = releaseSubInstance;
-        return this;
-    }
-    public Boolean getReleaseSubInstance() {
-        return this.releaseSubInstance;
     }
 
 }

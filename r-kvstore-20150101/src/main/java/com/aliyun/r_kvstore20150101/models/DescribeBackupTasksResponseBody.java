@@ -43,20 +43,20 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     }
 
     public static class DescribeBackupTasksResponseBodyBackupJobs extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
-
-        @NameInMap("Process")
-        public String process;
-
-        @NameInMap("JobMode")
-        public String jobMode;
-
         @NameInMap("BackupJobID")
         public Integer backupJobID;
 
         @NameInMap("BackupProgressStatus")
         public String backupProgressStatus;
+
+        @NameInMap("JobMode")
+        public String jobMode;
+
+        @NameInMap("Process")
+        public String process;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         @NameInMap("TaskAction")
         public String taskAction;
@@ -64,30 +64,6 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         public static DescribeBackupTasksResponseBodyBackupJobs build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupTasksResponseBodyBackupJobs self = new DescribeBackupTasksResponseBodyBackupJobs();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupTasksResponseBodyBackupJobs setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeBackupTasksResponseBodyBackupJobs setProcess(String process) {
-            this.process = process;
-            return this;
-        }
-        public String getProcess() {
-            return this.process;
-        }
-
-        public DescribeBackupTasksResponseBodyBackupJobs setJobMode(String jobMode) {
-            this.jobMode = jobMode;
-            return this;
-        }
-        public String getJobMode() {
-            return this.jobMode;
         }
 
         public DescribeBackupTasksResponseBodyBackupJobs setBackupJobID(Integer backupJobID) {
@@ -104,6 +80,30 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
         public String getBackupProgressStatus() {
             return this.backupProgressStatus;
+        }
+
+        public DescribeBackupTasksResponseBodyBackupJobs setJobMode(String jobMode) {
+            this.jobMode = jobMode;
+            return this;
+        }
+        public String getJobMode() {
+            return this.jobMode;
+        }
+
+        public DescribeBackupTasksResponseBodyBackupJobs setProcess(String process) {
+            this.process = process;
+            return this;
+        }
+        public String getProcess() {
+            return this.process;
+        }
+
+        public DescribeBackupTasksResponseBodyBackupJobs setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public DescribeBackupTasksResponseBodyBackupJobs setTaskAction(String taskAction) {

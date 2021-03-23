@@ -4,14 +4,14 @@ package com.aliyun.r_kvstore20150101.models;
 import com.aliyun.tea.*;
 
 public class DescribeEngineVersionResponseBody extends TeaModel {
-    @NameInMap("MajorVersion")
-    public String majorVersion;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Engine")
+    public String engine;
 
     @NameInMap("IsLatestVersion")
     public Boolean isLatestVersion;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("MinorVersion")
     public String minorVersion;
@@ -19,8 +19,8 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     @NameInMap("EnableUpgradeMinorVersion")
     public Boolean enableUpgradeMinorVersion;
 
-    @NameInMap("Engine")
-    public String engine;
+    @NameInMap("MajorVersion")
+    public String majorVersion;
 
     @NameInMap("EnableUpgradeMajorVersion")
     public Boolean enableUpgradeMajorVersion;
@@ -30,12 +30,20 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeEngineVersionResponseBody setMajorVersion(String majorVersion) {
-        this.majorVersion = majorVersion;
+    public DescribeEngineVersionResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getMajorVersion() {
-        return this.majorVersion;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeEngineVersionResponseBody setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
     }
 
     public DescribeEngineVersionResponseBody setIsLatestVersion(Boolean isLatestVersion) {
@@ -44,14 +52,6 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
     }
     public Boolean getIsLatestVersion() {
         return this.isLatestVersion;
-    }
-
-    public DescribeEngineVersionResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeEngineVersionResponseBody setMinorVersion(String minorVersion) {
@@ -70,12 +70,12 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         return this.enableUpgradeMinorVersion;
     }
 
-    public DescribeEngineVersionResponseBody setEngine(String engine) {
-        this.engine = engine;
+    public DescribeEngineVersionResponseBody setMajorVersion(String majorVersion) {
+        this.majorVersion = majorVersion;
         return this;
     }
-    public String getEngine() {
-        return this.engine;
+    public String getMajorVersion() {
+        return this.majorVersion;
     }
 
     public DescribeEngineVersionResponseBody setEnableUpgradeMajorVersion(Boolean enableUpgradeMajorVersion) {

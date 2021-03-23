@@ -25,9 +25,6 @@ public class ModifyInstanceMinorVersionRequest extends TeaModel {
     @NameInMap("Minorversion")
     public String minorversion;
 
-    @NameInMap("EffectTime")
-    public String effectTime;
-
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
@@ -90,14 +87,6 @@ public class ModifyInstanceMinorVersionRequest extends TeaModel {
     }
     public String getMinorversion() {
         return this.minorversion;
-    }
-
-    public ModifyInstanceMinorVersionRequest setEffectTime(String effectTime) {
-        this.effectTime = effectTime;
-        return this;
-    }
-    public String getEffectTime() {
-        return this.effectTime;
     }
 
     public ModifyInstanceMinorVersionRequest setEffectiveTime(String effectiveTime) {

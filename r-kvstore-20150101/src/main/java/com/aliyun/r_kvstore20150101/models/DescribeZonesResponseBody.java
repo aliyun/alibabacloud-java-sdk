@@ -32,35 +32,35 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesKVStoreZone extends TeaModel {
-        @NameInMap("IsRds")
-        public Boolean isRds;
+        @NameInMap("RegionId")
+        public String regionId;
 
         @NameInMap("ZoneId")
         public String zoneId;
 
-        @NameInMap("Disabled")
-        public Boolean disabled;
+        @NameInMap("ZoneName")
+        public String zoneName;
 
         @NameInMap("SwitchNetwork")
         public Boolean switchNetwork;
 
-        @NameInMap("ZoneName")
-        public String zoneName;
+        @NameInMap("IsRds")
+        public Boolean isRds;
 
-        @NameInMap("RegionId")
-        public String regionId;
+        @NameInMap("Disabled")
+        public Boolean disabled;
 
         public static DescribeZonesResponseBodyZonesKVStoreZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseBodyZonesKVStoreZone self = new DescribeZonesResponseBodyZonesKVStoreZone();
             return TeaModel.build(map, self);
         }
 
-        public DescribeZonesResponseBodyZonesKVStoreZone setIsRds(Boolean isRds) {
-            this.isRds = isRds;
+        public DescribeZonesResponseBodyZonesKVStoreZone setRegionId(String regionId) {
+            this.regionId = regionId;
             return this;
         }
-        public Boolean getIsRds() {
-            return this.isRds;
+        public String getRegionId() {
+            return this.regionId;
         }
 
         public DescribeZonesResponseBodyZonesKVStoreZone setZoneId(String zoneId) {
@@ -71,12 +71,12 @@ public class DescribeZonesResponseBody extends TeaModel {
             return this.zoneId;
         }
 
-        public DescribeZonesResponseBodyZonesKVStoreZone setDisabled(Boolean disabled) {
-            this.disabled = disabled;
+        public DescribeZonesResponseBodyZonesKVStoreZone setZoneName(String zoneName) {
+            this.zoneName = zoneName;
             return this;
         }
-        public Boolean getDisabled() {
-            return this.disabled;
+        public String getZoneName() {
+            return this.zoneName;
         }
 
         public DescribeZonesResponseBodyZonesKVStoreZone setSwitchNetwork(Boolean switchNetwork) {
@@ -87,20 +87,20 @@ public class DescribeZonesResponseBody extends TeaModel {
             return this.switchNetwork;
         }
 
-        public DescribeZonesResponseBodyZonesKVStoreZone setZoneName(String zoneName) {
-            this.zoneName = zoneName;
+        public DescribeZonesResponseBodyZonesKVStoreZone setIsRds(Boolean isRds) {
+            this.isRds = isRds;
             return this;
         }
-        public String getZoneName() {
-            return this.zoneName;
+        public Boolean getIsRds() {
+            return this.isRds;
         }
 
-        public DescribeZonesResponseBodyZonesKVStoreZone setRegionId(String regionId) {
-            this.regionId = regionId;
+        public DescribeZonesResponseBodyZonesKVStoreZone setDisabled(Boolean disabled) {
+            this.disabled = disabled;
             return this;
         }
-        public String getRegionId() {
-            return this.regionId;
+        public Boolean getDisabled() {
+            return this.disabled;
         }
 
     }

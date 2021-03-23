@@ -19,9 +19,6 @@ public class ModifySecurityIpsRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -80,14 +77,6 @@ public class ModifySecurityIpsRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public ModifySecurityIpsRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public ModifySecurityIpsRequest setInstanceId(String instanceId) {
