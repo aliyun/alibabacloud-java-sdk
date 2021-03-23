@@ -37,23 +37,11 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("OPALimitMemory")
     public String OPALimitMemory;
 
-    @NameInMap("PilotPublicEip")
-    public Boolean pilotPublicEip;
-
     @NameInMap("EnableAudit")
     public Boolean enableAudit;
 
     @NameInMap("AuditProject")
     public String auditProject;
-
-    @NameInMap("CADisableSecretAutoGeneration")
-    public Boolean CADisableSecretAutoGeneration;
-
-    @NameInMap("CAListenedNamespaces")
-    public String CAListenedNamespaces;
-
-    @NameInMap("AppNamespaces")
-    public String appNamespaces;
 
     @NameInMap("ClusterDomain")
     public String clusterDomain;
@@ -235,14 +223,6 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.OPALimitMemory;
     }
 
-    public UpdateMeshFeatureRequest setPilotPublicEip(Boolean pilotPublicEip) {
-        this.pilotPublicEip = pilotPublicEip;
-        return this;
-    }
-    public Boolean getPilotPublicEip() {
-        return this.pilotPublicEip;
-    }
-
     public UpdateMeshFeatureRequest setEnableAudit(Boolean enableAudit) {
         this.enableAudit = enableAudit;
         return this;
@@ -257,30 +237,6 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public String getAuditProject() {
         return this.auditProject;
-    }
-
-    public UpdateMeshFeatureRequest setCADisableSecretAutoGeneration(Boolean CADisableSecretAutoGeneration) {
-        this.CADisableSecretAutoGeneration = CADisableSecretAutoGeneration;
-        return this;
-    }
-    public Boolean getCADisableSecretAutoGeneration() {
-        return this.CADisableSecretAutoGeneration;
-    }
-
-    public UpdateMeshFeatureRequest setCAListenedNamespaces(String CAListenedNamespaces) {
-        this.CAListenedNamespaces = CAListenedNamespaces;
-        return this;
-    }
-    public String getCAListenedNamespaces() {
-        return this.CAListenedNamespaces;
-    }
-
-    public UpdateMeshFeatureRequest setAppNamespaces(String appNamespaces) {
-        this.appNamespaces = appNamespaces;
-        return this;
-    }
-    public String getAppNamespaces() {
-        return this.appNamespaces;
     }
 
     public UpdateMeshFeatureRequest setClusterDomain(String clusterDomain) {

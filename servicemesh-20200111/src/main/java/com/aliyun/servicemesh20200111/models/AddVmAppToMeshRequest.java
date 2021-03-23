@@ -28,9 +28,6 @@ public class AddVmAppToMeshRequest extends TeaModel {
     @NameInMap("ServiceAccount")
     public String serviceAccount;
 
-    @NameInMap("UseWorkload")
-    public Boolean useWorkload;
-
     @NameInMap("Force")
     public Boolean force;
 
@@ -101,14 +98,6 @@ public class AddVmAppToMeshRequest extends TeaModel {
     }
     public String getServiceAccount() {
         return this.serviceAccount;
-    }
-
-    public AddVmAppToMeshRequest setUseWorkload(Boolean useWorkload) {
-        this.useWorkload = useWorkload;
-        return this;
-    }
-    public Boolean getUseWorkload() {
-        return this.useWorkload;
     }
 
     public AddVmAppToMeshRequest setForce(Boolean force) {
