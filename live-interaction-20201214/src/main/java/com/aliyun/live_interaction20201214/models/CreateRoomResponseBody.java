@@ -4,13 +4,14 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class CreateRoomResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("success")
-    public Boolean success;
+    @NameInMap("ResponseSuccess")
+    public Boolean responseSuccess;
 
+    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
+    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
@@ -25,12 +26,12 @@ public class CreateRoomResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateRoomResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public CreateRoomResponseBody setResponseSuccess(Boolean responseSuccess) {
+        this.responseSuccess = responseSuccess;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Boolean getResponseSuccess() {
+        return this.responseSuccess;
     }
 
     public CreateRoomResponseBody setErrorCode(String errorCode) {
@@ -66,6 +67,7 @@ public class CreateRoomResponseBody extends TeaModel {
     }
 
     public static class CreateRoomResponseBodyResult extends TeaModel {
+        // 房间id
         @NameInMap("roomId")
         public String roomId;
 

@@ -5,15 +5,18 @@ import com.aliyun.tea.*;
 
 public class UpdateTenantStatusResponseBody extends TeaModel {
     // Id of the request
-    @NameInMap("success")
-    public Boolean success;
+    @NameInMap("ResponseSuccess")
+    public Boolean responseSuccess;
 
+    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
+    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    // 是否更新成功
     @NameInMap("result")
     public Boolean result;
 
@@ -25,12 +28,12 @@ public class UpdateTenantStatusResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateTenantStatusResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public UpdateTenantStatusResponseBody setResponseSuccess(Boolean responseSuccess) {
+        this.responseSuccess = responseSuccess;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Boolean getResponseSuccess() {
+        return this.responseSuccess;
     }
 
     public UpdateTenantStatusResponseBody setErrorCode(String errorCode) {

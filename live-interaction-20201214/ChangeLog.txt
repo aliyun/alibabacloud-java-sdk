@@ -1,3 +1,6 @@
+2021-03-24 Version: 2.0.1-SNAPSHOT
+- Support Auth module.
+
 2021-01-04 Version: 1.0.0
 - Support lingxi.
 

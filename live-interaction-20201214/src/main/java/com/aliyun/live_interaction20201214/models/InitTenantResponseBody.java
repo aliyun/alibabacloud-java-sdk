@@ -4,16 +4,18 @@ package com.aliyun.live_interaction20201214.models;
 import com.aliyun.tea.*;
 
 public class InitTenantResponseBody extends TeaModel {
-    // Id of the request
-    @NameInMap("success")
-    public Boolean success;
+    @NameInMap("ResponseSuccess")
+    public Boolean responseSuccess;
 
+    // 错误码
     @NameInMap("errorCode")
     public String errorCode;
 
+    // 错误信息
     @NameInMap("errorMsg")
     public String errorMsg;
 
+    // 是否初始化成功
     @NameInMap("result")
     public Boolean result;
 
@@ -25,12 +27,12 @@ public class InitTenantResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public InitTenantResponseBody setSuccess(Boolean success) {
-        this.success = success;
+    public InitTenantResponseBody setResponseSuccess(Boolean responseSuccess) {
+        this.responseSuccess = responseSuccess;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public Boolean getResponseSuccess() {
+        return this.responseSuccess;
     }
 
     public InitTenantResponseBody setErrorCode(String errorCode) {

@@ -21,12 +21,15 @@ public class DestroyRoomRequest extends TeaModel {
     }
 
     public static class DestroyRoomRequestRequest extends TeaModel {
+        // 应用appKey
         @NameInMap("domain")
         public String domain;
 
+        // 房间id
         @NameInMap("roomId")
         public String roomId;
 
+        // 操作人id
         @NameInMap("openId")
         public String openId;
 
