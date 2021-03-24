@@ -187,6 +187,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.confirmTransferInEmailWithOptions(request, runtime);
     }
 
+    public DeleteContactTemplatesResponse deleteContactTemplatesWithOptions(DeleteContactTemplatesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteContactTemplates", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteContactTemplatesResponse());
+    }
+
+    public DeleteContactTemplatesResponse deleteContactTemplates(DeleteContactTemplatesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteContactTemplatesWithOptions(request, runtime);
+    }
+
     public DeleteDomainGroupResponse deleteDomainGroupWithOptions(DeleteDomainGroupRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -876,6 +889,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.saveBatchTaskForModifyingDomainDnsWithOptions(request, runtime);
     }
 
+    public SaveBatchTaskForReserveDropListDomainResponse saveBatchTaskForReserveDropListDomainWithOptions(SaveBatchTaskForReserveDropListDomainRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SaveBatchTaskForReserveDropListDomain", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime), new SaveBatchTaskForReserveDropListDomainResponse());
+    }
+
+    public SaveBatchTaskForReserveDropListDomainResponse saveBatchTaskForReserveDropListDomain(SaveBatchTaskForReserveDropListDomainRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.saveBatchTaskForReserveDropListDomainWithOptions(request, runtime);
+    }
+
     public SaveBatchTaskForTransferProhibitionLockResponse saveBatchTaskForTransferProhibitionLockWithOptions(SaveBatchTaskForTransferProhibitionLockRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -952,6 +978,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SaveRegistrantProfileResponse saveRegistrantProfile(SaveRegistrantProfileRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.saveRegistrantProfileWithOptions(request, runtime);
+    }
+
+    public SaveRegistrantProfileRealNameVerificationResponse saveRegistrantProfileRealNameVerificationWithOptions(SaveRegistrantProfileRealNameVerificationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SaveRegistrantProfileRealNameVerification", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime), new SaveRegistrantProfileRealNameVerificationResponse());
+    }
+
+    public SaveRegistrantProfileRealNameVerificationResponse saveRegistrantProfileRealNameVerification(SaveRegistrantProfileRealNameVerificationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.saveRegistrantProfileRealNameVerificationWithOptions(request, runtime);
     }
 
     public SaveSingleTaskForAddingDSRecordResponse saveSingleTaskForAddingDSRecordWithOptions(SaveSingleTaskForAddingDSRecordRequest request, RuntimeOptions runtime) throws Exception {
@@ -1329,6 +1368,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ScrollDomainListResponse scrollDomainList(ScrollDomainListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.scrollDomainListWithOptions(request, runtime);
+    }
+
+    public SetDefaultRegistrantProfileResponse setDefaultRegistrantProfileWithOptions(SetDefaultRegistrantProfileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SetDefaultRegistrantProfile", "2018-01-29", "HTTPS", "POST", "AK", "json", req, runtime), new SetDefaultRegistrantProfileResponse());
+    }
+
+    public SetDefaultRegistrantProfileResponse setDefaultRegistrantProfile(SetDefaultRegistrantProfileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setDefaultRegistrantProfileWithOptions(request, runtime);
     }
 
     public SubmitEmailVerificationResponse submitEmailVerificationWithOptions(SubmitEmailVerificationRequest request, RuntimeOptions runtime) throws Exception {
