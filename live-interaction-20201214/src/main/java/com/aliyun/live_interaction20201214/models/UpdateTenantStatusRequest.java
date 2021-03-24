@@ -21,9 +21,11 @@ public class UpdateTenantStatusRequest extends TeaModel {
     }
 
     public static class UpdateTenantStatusRequestRequest extends TeaModel {
+        // 应用appKey
         @NameInMap("domain")
         public String domain;
 
+        // 应用状态
         @NameInMap("status")
         public Long status;
 

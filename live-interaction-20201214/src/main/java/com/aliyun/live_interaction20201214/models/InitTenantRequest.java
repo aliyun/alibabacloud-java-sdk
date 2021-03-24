@@ -21,6 +21,7 @@ public class InitTenantRequest extends TeaModel {
     }
 
     public static class InitTenantRequestRequest extends TeaModel {
+        // 应用appKey
         @NameInMap("domain")
         public String domain;
 
