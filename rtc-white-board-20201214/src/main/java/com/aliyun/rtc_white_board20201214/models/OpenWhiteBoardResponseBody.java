@@ -4,19 +4,23 @@ package com.aliyun.rtc_white_board20201214.models;
 import com.aliyun.tea.*;
 
 public class OpenWhiteBoardResponseBody extends TeaModel {
-    // Id of the request
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
+    // 请求结果
     @NameInMap("ResponseSuccess")
     public Boolean responseSuccess;
 
+    // 错误码
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // 错误信息
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    // 返回结果体
     @NameInMap("Result")
     public OpenWhiteBoardResponseBodyResult result;
 
@@ -66,15 +70,19 @@ public class OpenWhiteBoardResponseBody extends TeaModel {
     }
 
     public static class OpenWhiteBoardResponseBodyResultDocumentAccessInfoUserInfo extends TeaModel {
+        // 用户头像的URL
         @NameInMap("AvatarUrl")
         public String avatarUrl;
 
+        // 用户昵称
         @NameInMap("Nick")
         public String nick;
 
+        // 用户的拼音昵称
         @NameInMap("NickPinyin")
         public String nickPinyin;
 
+        // 打开白板的用户ID
         @NameInMap("UserId")
         public String userId;
 
@@ -118,17 +126,25 @@ public class OpenWhiteBoardResponseBody extends TeaModel {
     }
 
     public static class OpenWhiteBoardResponseBodyResultDocumentAccessInfo extends TeaModel {
+        // 连接签名
         @NameInMap("AccessToken")
         public String accessToken;
 
+        // 白板长连接地址
         @NameInMap("CollabHost")
         public String collabHost;
 
+        // 权限码，取值：0:无权限，1:只读，2:读写
         @NameInMap("Permission")
         public Long permission;
 
+        // 用户信息
         @NameInMap("UserInfo")
         public OpenWhiteBoardResponseBodyResultDocumentAccessInfoUserInfo userInfo;
+
+        // 新协议长连接服务域名
+        @NameInMap("WsDomain")
+        public String wsDomain;
 
         public static OpenWhiteBoardResponseBodyResultDocumentAccessInfo build(java.util.Map<String, ?> map) throws Exception {
             OpenWhiteBoardResponseBodyResultDocumentAccessInfo self = new OpenWhiteBoardResponseBodyResultDocumentAccessInfo();
@@ -167,9 +183,18 @@ public class OpenWhiteBoardResponseBody extends TeaModel {
             return this.userInfo;
         }
 
+        public OpenWhiteBoardResponseBodyResultDocumentAccessInfo setWsDomain(String wsDomain) {
+            this.wsDomain = wsDomain;
+            return this;
+        }
+        public String getWsDomain() {
+            return this.wsDomain;
+        }
+
     }
 
     public static class OpenWhiteBoardResponseBodyResult extends TeaModel {
+        // 白板连接信息
         @NameInMap("DocumentAccessInfo")
         public OpenWhiteBoardResponseBodyResultDocumentAccessInfo documentAccessInfo;
 

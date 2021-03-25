@@ -4,12 +4,15 @@ package com.aliyun.rtc_white_board20201214.models;
 import com.aliyun.tea.*;
 
 public class OpenWhiteBoardRequest extends TeaModel {
+    // 白板应用唯一标识符
     @NameInMap("AppID")
     public String appID;
 
+    // 打开白板的用户ID（客户业务用户），由纯数字组成
     @NameInMap("UserId")
     public String userId;
 
+    // 白板文档唯一标识符
     @NameInMap("DocKey")
     public String docKey;
 

@@ -4,9 +4,11 @@ package com.aliyun.rtc_white_board20201214.models;
 import com.aliyun.tea.*;
 
 public class SetAppDomainNamesRequest extends TeaModel {
+    // 白板应用唯一标识符
     @NameInMap("AppID")
     public String appID;
 
+    // 所有会使用到白板应用的客户网站域名，多个使用英文逗号(,)分隔，最多传10个
     @NameInMap("AppDomainNames")
     public String appDomainNames;
 

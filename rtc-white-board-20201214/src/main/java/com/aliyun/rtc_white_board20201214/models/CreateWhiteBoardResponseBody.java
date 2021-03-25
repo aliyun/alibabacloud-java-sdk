@@ -4,19 +4,23 @@ package com.aliyun.rtc_white_board20201214.models;
 import com.aliyun.tea.*;
 
 public class CreateWhiteBoardResponseBody extends TeaModel {
-    // Id of the request
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
+    // 请求结果
     @NameInMap("ResponseSuccess")
     public Boolean responseSuccess;
 
+    // 错误码
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // 错误信息
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    // 返回结果体
     @NameInMap("Result")
     public CreateWhiteBoardResponseBodyResult result;
 
@@ -66,6 +70,7 @@ public class CreateWhiteBoardResponseBody extends TeaModel {
     }
 
     public static class CreateWhiteBoardResponseBodyResult extends TeaModel {
+        // 文档唯一标识符，由大小写字母和数字组成
         @NameInMap("DocKey")
         public String docKey;
 

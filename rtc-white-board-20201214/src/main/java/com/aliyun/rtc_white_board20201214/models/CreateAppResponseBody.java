@@ -4,19 +4,23 @@ package com.aliyun.rtc_white_board20201214.models;
 import com.aliyun.tea.*;
 
 public class CreateAppResponseBody extends TeaModel {
-    // Id of the request
+    // 请求ID
     @NameInMap("RequestId")
     public String requestId;
 
+    // 请求结果
     @NameInMap("ResponseSuccess")
     public Boolean responseSuccess;
 
+    // 错误码
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    // 错误信息
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    // 返回结果体
     @NameInMap("Result")
     public CreateAppResponseBodyResult result;
 
@@ -66,6 +70,7 @@ public class CreateAppResponseBody extends TeaModel {
     }
 
     public static class CreateAppResponseBodyResult extends TeaModel {
+        // 白板应用唯一标识符
         @NameInMap("AppID")
         public String appID;
 
