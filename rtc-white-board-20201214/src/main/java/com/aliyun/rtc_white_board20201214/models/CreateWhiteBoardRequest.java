@@ -4,9 +4,11 @@ package com.aliyun.rtc_white_board20201214.models;
 import com.aliyun.tea.*;
 
 public class CreateWhiteBoardRequest extends TeaModel {
+    // 创建白板的用户ID（客户业务用户），由纯数字组成。
     @NameInMap("UserId")
     public String userId;
 
+    // 白板应用唯一标识符
     @NameInMap("AppID")
     public String appID;
 

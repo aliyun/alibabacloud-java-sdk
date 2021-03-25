@@ -44,32 +44,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.setAppNameWithOptions(request, runtime);
     }
 
-    public CheckWhiteBoardHostResponse checkWhiteBoardHostWithOptions(CheckWhiteBoardHostRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CheckWhiteBoardHost", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new CheckWhiteBoardHostResponse());
-    }
-
-    public CheckWhiteBoardHostResponse checkWhiteBoardHost(CheckWhiteBoardHostRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.checkWhiteBoardHostWithOptions(request, runtime);
-    }
-
-    public GetWhiteBoardProfileCallbackResponse getWhiteBoardProfileCallbackWithOptions(GetWhiteBoardProfileCallbackRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetWhiteBoardProfileCallback", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new GetWhiteBoardProfileCallbackResponse());
-    }
-
-    public GetWhiteBoardProfileCallbackResponse getWhiteBoardProfileCallback(GetWhiteBoardProfileCallbackRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getWhiteBoardProfileCallbackWithOptions(request, runtime);
-    }
-
     public SetAppDomainNamesResponse setAppDomainNamesWithOptions(SetAppDomainNamesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -81,19 +55,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetAppDomainNamesResponse setAppDomainNames(SetAppDomainNamesRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.setAppDomainNamesWithOptions(request, runtime);
-    }
-
-    public GetUserPermissionCallbackResponse getUserPermissionCallbackWithOptions(GetUserPermissionCallbackRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetUserPermissionCallback", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new GetUserPermissionCallbackResponse());
-    }
-
-    public GetUserPermissionCallbackResponse getUserPermissionCallback(GetUserPermissionCallbackRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getUserPermissionCallbackWithOptions(request, runtime);
     }
 
     public OpenWhiteBoardResponse openWhiteBoardWithOptions(OpenWhiteBoardRequest request, RuntimeOptions runtime) throws Exception {
@@ -120,19 +81,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RefreshUsersPermissionsResponse refreshUsersPermissions(RefreshUsersPermissionsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.refreshUsersPermissionsWithOptions(request, runtime);
-    }
-
-    public GetUserProfileCallbackResponse getUserProfileCallbackWithOptions(GetUserProfileCallbackRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetUserProfileCallback", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new GetUserProfileCallbackResponse());
-    }
-
-    public GetUserProfileCallbackResponse getUserProfileCallback(GetUserProfileCallbackRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getUserProfileCallbackWithOptions(request, runtime);
     }
 
     public CreateAppResponse createAppWithOptions(CreateAppRequest request, RuntimeOptions runtime) throws Exception {

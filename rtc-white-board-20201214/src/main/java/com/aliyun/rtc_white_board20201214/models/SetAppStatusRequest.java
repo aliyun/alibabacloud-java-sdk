@@ -4,9 +4,11 @@ package com.aliyun.rtc_white_board20201214.models;
 import com.aliyun.tea.*;
 
 public class SetAppStatusRequest extends TeaModel {
+    // 白板应用唯一标识符
     @NameInMap("AppID")
     public String appID;
 
+    // 白板应用状态（取值：1:启用，2:停用）
     @NameInMap("AppStatus")
     public Long appStatus;
 

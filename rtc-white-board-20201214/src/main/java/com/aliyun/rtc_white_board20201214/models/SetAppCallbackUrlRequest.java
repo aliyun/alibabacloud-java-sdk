@@ -4,12 +4,15 @@ package com.aliyun.rtc_white_board20201214.models;
 import com.aliyun.tea.*;
 
 public class SetAppCallbackUrlRequest extends TeaModel {
+    // 白板应用唯一标识符
     @NameInMap("AppID")
     public String appID;
 
+    // 白板应用回调地址URL
     @NameInMap("AppCallbackUrl")
     public String appCallbackUrl;
 
+    // 白板应用回调鉴权码，由8~20位大小写字母、数字或下划线组成
     @NameInMap("AppCallbackAuthKey")
     public String appCallbackAuthKey;
 
