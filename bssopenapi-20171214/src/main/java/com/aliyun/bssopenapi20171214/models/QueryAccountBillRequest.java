@@ -25,12 +25,6 @@ public class QueryAccountBillRequest extends TeaModel {
     @NameInMap("BillOwnerId")
     public Long billOwnerId;
 
-    @NameInMap("Granularity")
-    public String granularity;
-
-    @NameInMap("BillingDate")
-    public String billingDate;
-
     public static QueryAccountBillRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAccountBillRequest self = new QueryAccountBillRequest();
         return TeaModel.build(map, self);
@@ -90,22 +84,6 @@ public class QueryAccountBillRequest extends TeaModel {
     }
     public Long getBillOwnerId() {
         return this.billOwnerId;
-    }
-
-    public QueryAccountBillRequest setGranularity(String granularity) {
-        this.granularity = granularity;
-        return this;
-    }
-    public String getGranularity() {
-        return this.granularity;
-    }
-
-    public QueryAccountBillRequest setBillingDate(String billingDate) {
-        this.billingDate = billingDate;
-        return this;
-    }
-    public String getBillingDate() {
-        return this.billingDate;
     }
 
 }

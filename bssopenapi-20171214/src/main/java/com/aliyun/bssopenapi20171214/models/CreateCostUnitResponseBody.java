@@ -4,40 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CreateCostUnitResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("Data")
     public CreateCostUnitResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static CreateCostUnitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCostUnitResponseBody self = new CreateCostUnitResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateCostUnitResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public CreateCostUnitResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public CreateCostUnitResponseBody setCode(String code) {
@@ -48,14 +32,6 @@ public class CreateCostUnitResponseBody extends TeaModel {
         return this.code;
     }
 
-    public CreateCostUnitResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public CreateCostUnitResponseBody setData(CreateCostUnitResponseBodyData data) {
         this.data = data;
         return this;
@@ -64,15 +40,39 @@ public class CreateCostUnitResponseBody extends TeaModel {
         return this.data;
     }
 
+    public CreateCostUnitResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public CreateCostUnitResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public CreateCostUnitResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class CreateCostUnitResponseBodyDataCostUnitDtoList extends TeaModel {
-        @NameInMap("UnitId")
-        public Long unitId;
+        @NameInMap("OwnerUid")
+        public Long ownerUid;
 
         @NameInMap("ParentUnitId")
         public Long parentUnitId;
 
-        @NameInMap("OwnerUid")
-        public Long ownerUid;
+        @NameInMap("UnitId")
+        public Long unitId;
 
         @NameInMap("UnitName")
         public String unitName;
@@ -82,12 +82,12 @@ public class CreateCostUnitResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateCostUnitResponseBodyDataCostUnitDtoList setUnitId(Long unitId) {
-            this.unitId = unitId;
+        public CreateCostUnitResponseBodyDataCostUnitDtoList setOwnerUid(Long ownerUid) {
+            this.ownerUid = ownerUid;
             return this;
         }
-        public Long getUnitId() {
-            return this.unitId;
+        public Long getOwnerUid() {
+            return this.ownerUid;
         }
 
         public CreateCostUnitResponseBodyDataCostUnitDtoList setParentUnitId(Long parentUnitId) {
@@ -98,12 +98,12 @@ public class CreateCostUnitResponseBody extends TeaModel {
             return this.parentUnitId;
         }
 
-        public CreateCostUnitResponseBodyDataCostUnitDtoList setOwnerUid(Long ownerUid) {
-            this.ownerUid = ownerUid;
+        public CreateCostUnitResponseBodyDataCostUnitDtoList setUnitId(Long unitId) {
+            this.unitId = unitId;
             return this;
         }
-        public Long getOwnerUid() {
-            return this.ownerUid;
+        public Long getUnitId() {
+            return this.unitId;
         }
 
         public CreateCostUnitResponseBodyDataCostUnitDtoList setUnitName(String unitName) {

@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetCustomerListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetCustomerListResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public GetCustomerListResponseBodyData data;
-
     public static GetCustomerListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetCustomerListResponseBody self = new GetCustomerListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetCustomerListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetCustomerListResponseBody setData(GetCustomerListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetCustomerListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetCustomerListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetCustomerListResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class GetCustomerListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GetCustomerListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetCustomerListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetCustomerListResponseBody setData(GetCustomerListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetCustomerListResponseBodyData getData() {
-        return this.data;
     }
 
     public static class GetCustomerListResponseBodyData extends TeaModel {

@@ -3,21 +3,21 @@ package com.aliyun.bssopenapi20171214.models;
 
 import com.aliyun.tea.*;
 
-public class DescribePricingModuleResponse extends TeaModel {
+public class DescribeInstanceBillResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public DescribePricingModuleResponseBody body;
+    public DescribeInstanceBillResponseBody body;
 
-    public static DescribePricingModuleResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribePricingModuleResponse self = new DescribePricingModuleResponse();
+    public static DescribeInstanceBillResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInstanceBillResponse self = new DescribeInstanceBillResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribePricingModuleResponse setHeaders(java.util.Map<String, String> headers) {
+    public DescribeInstanceBillResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class DescribePricingModuleResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribePricingModuleResponse setBody(DescribePricingModuleResponseBody body) {
+    public DescribeInstanceBillResponse setBody(DescribeInstanceBillResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribePricingModuleResponseBody getBody() {
+    public DescribeInstanceBillResponseBody getBody() {
         return this.body;
     }
 

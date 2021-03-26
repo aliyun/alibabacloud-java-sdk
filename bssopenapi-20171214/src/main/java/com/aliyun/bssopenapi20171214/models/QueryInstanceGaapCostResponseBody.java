@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryInstanceGaapCostResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryInstanceGaapCostResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public QueryInstanceGaapCostResponseBodyData data;
-
     public static QueryInstanceGaapCostResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryInstanceGaapCostResponseBody self = new QueryInstanceGaapCostResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryInstanceGaapCostResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryInstanceGaapCostResponseBody setData(QueryInstanceGaapCostResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryInstanceGaapCostResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryInstanceGaapCostResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryInstanceGaapCostResponseBody setRequestId(String requestId) {
@@ -40,117 +64,33 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryInstanceGaapCostResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryInstanceGaapCostResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryInstanceGaapCostResponseBody setData(QueryInstanceGaapCostResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryInstanceGaapCostResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryInstanceGaapCostResponseBodyDataModulesModule extends TeaModel {
-        @NameInMap("BillingCycle")
-        public String billingCycle;
-
-        @NameInMap("InstanceID")
-        public String instanceID;
-
-        @NameInMap("ProductCode")
-        public String productCode;
-
-        @NameInMap("ProductType")
-        public String productType;
-
-        @NameInMap("SubscriptionType")
-        public String subscriptionType;
-
-        @NameInMap("Tag")
-        public String tag;
-
-        @NameInMap("ResourceGroup")
-        public String resourceGroup;
-
         @NameInMap("AccountingUnit")
         public String accountingUnit;
 
-        @NameInMap("PayerAccount")
-        public String payerAccount;
+        @NameInMap("BillType")
+        public String billType;
 
-        @NameInMap("OwnerID")
-        public String ownerID;
-
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("BillingCycle")
+        public String billingCycle;
 
         @NameInMap("Currency")
         public String currency;
 
-        @NameInMap("PaymentCurrency")
-        public String paymentCurrency;
-
-        @NameInMap("OrderType")
-        public String orderType;
-
-        @NameInMap("PayTime")
-        public String payTime;
-
-        @NameInMap("PretaxGrossAmount")
-        public String pretaxGrossAmount;
-
-        @NameInMap("PricingDiscount")
-        public String pricingDiscount;
+        @NameInMap("DeductedByCashCoupons")
+        public String deductedByCashCoupons;
 
         @NameInMap("DeductedByCoupons")
         public String deductedByCoupons;
 
-        @NameInMap("PretaxAmount")
-        public String pretaxAmount;
-
-        @NameInMap("PretaxAmountLocal")
-        public String pretaxAmountLocal;
-
-        @NameInMap("DeductedByCashCoupons")
-        public String deductedByCashCoupons;
-
         @NameInMap("DeductedByPrepaidCard")
         public String deductedByPrepaidCard;
 
-        @NameInMap("PaymentAmount")
-        public String paymentAmount;
-
-        @NameInMap("GaapPretaxGrossAmount")
-        public String gaapPretaxGrossAmount;
-
-        @NameInMap("GaapPricingDiscount")
-        public String gaapPricingDiscount;
+        @NameInMap("GaapDeductedByCashCoupons")
+        public String gaapDeductedByCashCoupons;
 
         @NameInMap("GaapDeductedByCoupons")
         public String gaapDeductedByCoupons;
-
-        @NameInMap("GaapPretaxAmount")
-        public String gaapPretaxAmount;
-
-        @NameInMap("GaapPretaxAmountLocal")
-        public String gaapPretaxAmountLocal;
-
-        @NameInMap("GaapDeductedByCashCoupons")
-        public String gaapDeductedByCashCoupons;
 
         @NameInMap("GaapDeductedByPrepaidCard")
         public String gaapDeductedByPrepaidCard;
@@ -158,23 +98,26 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         @NameInMap("GaapPaymentAmount")
         public String gaapPaymentAmount;
 
-        @NameInMap("MonthGaapPretaxGrossAmount")
-        public String monthGaapPretaxGrossAmount;
+        @NameInMap("GaapPretaxAmount")
+        public String gaapPretaxAmount;
 
-        @NameInMap("MonthGaapPricingDiscount")
-        public String monthGaapPricingDiscount;
+        @NameInMap("GaapPretaxAmountLocal")
+        public String gaapPretaxAmountLocal;
 
-        @NameInMap("MonthGaapDeductedByCoupons")
-        public String monthGaapDeductedByCoupons;
+        @NameInMap("GaapPretaxGrossAmount")
+        public String gaapPretaxGrossAmount;
 
-        @NameInMap("MonthGaapPretaxAmount")
-        public String monthGaapPretaxAmount;
+        @NameInMap("GaapPricingDiscount")
+        public String gaapPricingDiscount;
 
-        @NameInMap("MonthGaapPretaxAmountLocal")
-        public String monthGaapPretaxAmountLocal;
+        @NameInMap("InstanceID")
+        public String instanceID;
 
         @NameInMap("MonthGaapDeductedByCashCoupons")
         public String monthGaapDeductedByCashCoupons;
+
+        @NameInMap("MonthGaapDeductedByCoupons")
+        public String monthGaapDeductedByCoupons;
 
         @NameInMap("MonthGaapDeductedByPrepaidCard")
         public String monthGaapDeductedByPrepaidCard;
@@ -182,32 +125,83 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         @NameInMap("MonthGaapPaymentAmount")
         public String monthGaapPaymentAmount;
 
-        @NameInMap("UnallocatedPaymentAmount")
-        public String unallocatedPaymentAmount;
+        @NameInMap("MonthGaapPretaxAmount")
+        public String monthGaapPretaxAmount;
 
-        @NameInMap("UsageStartDate")
-        public String usageStartDate;
+        @NameInMap("MonthGaapPretaxAmountLocal")
+        public String monthGaapPretaxAmountLocal;
 
-        @NameInMap("UsageEndDate")
-        public String usageEndDate;
+        @NameInMap("MonthGaapPretaxGrossAmount")
+        public String monthGaapPretaxGrossAmount;
 
-        @NameInMap("BillType")
-        public String billType;
+        @NameInMap("MonthGaapPricingDiscount")
+        public String monthGaapPricingDiscount;
 
         @NameInMap("OrderId")
         public String orderId;
 
+        @NameInMap("OrderType")
+        public String orderType;
+
+        @NameInMap("OwnerID")
+        public String ownerID;
+
+        @NameInMap("PayTime")
+        public String payTime;
+
+        @NameInMap("PayerAccount")
+        public String payerAccount;
+
+        @NameInMap("PaymentAmount")
+        public String paymentAmount;
+
+        @NameInMap("PaymentCurrency")
+        public String paymentCurrency;
+
+        @NameInMap("PretaxAmount")
+        public String pretaxAmount;
+
+        @NameInMap("PretaxAmountLocal")
+        public String pretaxAmountLocal;
+
+        @NameInMap("PretaxGrossAmount")
+        public String pretaxGrossAmount;
+
+        @NameInMap("PricingDiscount")
+        public String pricingDiscount;
+
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("ProductType")
+        public String productType;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("ResourceGroup")
+        public String resourceGroup;
+
         @NameInMap("SubOrderId")
         public String subOrderId;
 
-        @NameInMap("UnallocatedPretaxGrossAmount")
-        public String unallocatedPretaxGrossAmount;
+        @NameInMap("SubscriptionType")
+        public String subscriptionType;
 
-        @NameInMap("UnallocatedPricingDiscount")
-        public String unallocatedPricingDiscount;
+        @NameInMap("Tag")
+        public String tag;
+
+        @NameInMap("UnallocatedDeductedByCashCoupons")
+        public String unallocatedDeductedByCashCoupons;
 
         @NameInMap("UnallocatedDeductedByCoupons")
         public String unallocatedDeductedByCoupons;
+
+        @NameInMap("UnallocatedDeductedByPrepaidCard")
+        public String unallocatedDeductedByPrepaidCard;
+
+        @NameInMap("UnallocatedPaymentAmount")
+        public String unallocatedPaymentAmount;
 
         @NameInMap("UnallocatedPretaxAmount")
         public String unallocatedPretaxAmount;
@@ -215,71 +209,21 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         @NameInMap("UnallocatedPretaxAmountLocal")
         public String unallocatedPretaxAmountLocal;
 
-        @NameInMap("UnallocatedDeductedByCashCoupons")
-        public String unallocatedDeductedByCashCoupons;
+        @NameInMap("UnallocatedPretaxGrossAmount")
+        public String unallocatedPretaxGrossAmount;
 
-        @NameInMap("UnallocatedDeductedByPrepaidCard")
-        public String unallocatedDeductedByPrepaidCard;
+        @NameInMap("UnallocatedPricingDiscount")
+        public String unallocatedPricingDiscount;
+
+        @NameInMap("UsageEndDate")
+        public String usageEndDate;
+
+        @NameInMap("UsageStartDate")
+        public String usageStartDate;
 
         public static QueryInstanceGaapCostResponseBodyDataModulesModule build(java.util.Map<String, ?> map) throws Exception {
             QueryInstanceGaapCostResponseBodyDataModulesModule self = new QueryInstanceGaapCostResponseBodyDataModulesModule();
             return TeaModel.build(map, self);
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setBillingCycle(String billingCycle) {
-            this.billingCycle = billingCycle;
-            return this;
-        }
-        public String getBillingCycle() {
-            return this.billingCycle;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setInstanceID(String instanceID) {
-            this.instanceID = instanceID;
-            return this;
-        }
-        public String getInstanceID() {
-            return this.instanceID;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setProductCode(String productCode) {
-            this.productCode = productCode;
-            return this;
-        }
-        public String getProductCode() {
-            return this.productCode;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setProductType(String productType) {
-            this.productType = productType;
-            return this;
-        }
-        public String getProductType() {
-            return this.productType;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setSubscriptionType(String subscriptionType) {
-            this.subscriptionType = subscriptionType;
-            return this;
-        }
-        public String getSubscriptionType() {
-            return this.subscriptionType;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setTag(String tag) {
-            this.tag = tag;
-            return this;
-        }
-        public String getTag() {
-            return this.tag;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setResourceGroup(String resourceGroup) {
-            this.resourceGroup = resourceGroup;
-            return this;
-        }
-        public String getResourceGroup() {
-            return this.resourceGroup;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setAccountingUnit(String accountingUnit) {
@@ -290,28 +234,20 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             return this.accountingUnit;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setPayerAccount(String payerAccount) {
-            this.payerAccount = payerAccount;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setBillType(String billType) {
+            this.billType = billType;
             return this;
         }
-        public String getPayerAccount() {
-            return this.payerAccount;
+        public String getBillType() {
+            return this.billType;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setOwnerID(String ownerID) {
-            this.ownerID = ownerID;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setBillingCycle(String billingCycle) {
+            this.billingCycle = billingCycle;
             return this;
         }
-        public String getOwnerID() {
-            return this.ownerID;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
+        public String getBillingCycle() {
+            return this.billingCycle;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setCurrency(String currency) {
@@ -322,44 +258,12 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setPaymentCurrency(String paymentCurrency) {
-            this.paymentCurrency = paymentCurrency;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setDeductedByCashCoupons(String deductedByCashCoupons) {
+            this.deductedByCashCoupons = deductedByCashCoupons;
             return this;
         }
-        public String getPaymentCurrency() {
-            return this.paymentCurrency;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setOrderType(String orderType) {
-            this.orderType = orderType;
-            return this;
-        }
-        public String getOrderType() {
-            return this.orderType;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setPayTime(String payTime) {
-            this.payTime = payTime;
-            return this;
-        }
-        public String getPayTime() {
-            return this.payTime;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setPretaxGrossAmount(String pretaxGrossAmount) {
-            this.pretaxGrossAmount = pretaxGrossAmount;
-            return this;
-        }
-        public String getPretaxGrossAmount() {
-            return this.pretaxGrossAmount;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setPricingDiscount(String pricingDiscount) {
-            this.pricingDiscount = pricingDiscount;
-            return this;
-        }
-        public String getPricingDiscount() {
-            return this.pricingDiscount;
+        public String getDeductedByCashCoupons() {
+            return this.deductedByCashCoupons;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setDeductedByCoupons(String deductedByCoupons) {
@@ -370,30 +274,6 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             return this.deductedByCoupons;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setPretaxAmount(String pretaxAmount) {
-            this.pretaxAmount = pretaxAmount;
-            return this;
-        }
-        public String getPretaxAmount() {
-            return this.pretaxAmount;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setPretaxAmountLocal(String pretaxAmountLocal) {
-            this.pretaxAmountLocal = pretaxAmountLocal;
-            return this;
-        }
-        public String getPretaxAmountLocal() {
-            return this.pretaxAmountLocal;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setDeductedByCashCoupons(String deductedByCashCoupons) {
-            this.deductedByCashCoupons = deductedByCashCoupons;
-            return this;
-        }
-        public String getDeductedByCashCoupons() {
-            return this.deductedByCashCoupons;
-        }
-
         public QueryInstanceGaapCostResponseBodyDataModulesModule setDeductedByPrepaidCard(String deductedByPrepaidCard) {
             this.deductedByPrepaidCard = deductedByPrepaidCard;
             return this;
@@ -402,28 +282,12 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             return this.deductedByPrepaidCard;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setPaymentAmount(String paymentAmount) {
-            this.paymentAmount = paymentAmount;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapDeductedByCashCoupons(String gaapDeductedByCashCoupons) {
+            this.gaapDeductedByCashCoupons = gaapDeductedByCashCoupons;
             return this;
         }
-        public String getPaymentAmount() {
-            return this.paymentAmount;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapPretaxGrossAmount(String gaapPretaxGrossAmount) {
-            this.gaapPretaxGrossAmount = gaapPretaxGrossAmount;
-            return this;
-        }
-        public String getGaapPretaxGrossAmount() {
-            return this.gaapPretaxGrossAmount;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapPricingDiscount(String gaapPricingDiscount) {
-            this.gaapPricingDiscount = gaapPricingDiscount;
-            return this;
-        }
-        public String getGaapPricingDiscount() {
-            return this.gaapPricingDiscount;
+        public String getGaapDeductedByCashCoupons() {
+            return this.gaapDeductedByCashCoupons;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapDeductedByCoupons(String gaapDeductedByCoupons) {
@@ -432,30 +296,6 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         }
         public String getGaapDeductedByCoupons() {
             return this.gaapDeductedByCoupons;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapPretaxAmount(String gaapPretaxAmount) {
-            this.gaapPretaxAmount = gaapPretaxAmount;
-            return this;
-        }
-        public String getGaapPretaxAmount() {
-            return this.gaapPretaxAmount;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapPretaxAmountLocal(String gaapPretaxAmountLocal) {
-            this.gaapPretaxAmountLocal = gaapPretaxAmountLocal;
-            return this;
-        }
-        public String getGaapPretaxAmountLocal() {
-            return this.gaapPretaxAmountLocal;
-        }
-
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapDeductedByCashCoupons(String gaapDeductedByCashCoupons) {
-            this.gaapDeductedByCashCoupons = gaapDeductedByCashCoupons;
-            return this;
-        }
-        public String getGaapDeductedByCashCoupons() {
-            return this.gaapDeductedByCashCoupons;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapDeductedByPrepaidCard(String gaapDeductedByPrepaidCard) {
@@ -474,44 +314,44 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             return this.gaapPaymentAmount;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapPretaxGrossAmount(String monthGaapPretaxGrossAmount) {
-            this.monthGaapPretaxGrossAmount = monthGaapPretaxGrossAmount;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapPretaxAmount(String gaapPretaxAmount) {
+            this.gaapPretaxAmount = gaapPretaxAmount;
             return this;
         }
-        public String getMonthGaapPretaxGrossAmount() {
-            return this.monthGaapPretaxGrossAmount;
+        public String getGaapPretaxAmount() {
+            return this.gaapPretaxAmount;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapPricingDiscount(String monthGaapPricingDiscount) {
-            this.monthGaapPricingDiscount = monthGaapPricingDiscount;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapPretaxAmountLocal(String gaapPretaxAmountLocal) {
+            this.gaapPretaxAmountLocal = gaapPretaxAmountLocal;
             return this;
         }
-        public String getMonthGaapPricingDiscount() {
-            return this.monthGaapPricingDiscount;
+        public String getGaapPretaxAmountLocal() {
+            return this.gaapPretaxAmountLocal;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapDeductedByCoupons(String monthGaapDeductedByCoupons) {
-            this.monthGaapDeductedByCoupons = monthGaapDeductedByCoupons;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapPretaxGrossAmount(String gaapPretaxGrossAmount) {
+            this.gaapPretaxGrossAmount = gaapPretaxGrossAmount;
             return this;
         }
-        public String getMonthGaapDeductedByCoupons() {
-            return this.monthGaapDeductedByCoupons;
+        public String getGaapPretaxGrossAmount() {
+            return this.gaapPretaxGrossAmount;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapPretaxAmount(String monthGaapPretaxAmount) {
-            this.monthGaapPretaxAmount = monthGaapPretaxAmount;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setGaapPricingDiscount(String gaapPricingDiscount) {
+            this.gaapPricingDiscount = gaapPricingDiscount;
             return this;
         }
-        public String getMonthGaapPretaxAmount() {
-            return this.monthGaapPretaxAmount;
+        public String getGaapPricingDiscount() {
+            return this.gaapPricingDiscount;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapPretaxAmountLocal(String monthGaapPretaxAmountLocal) {
-            this.monthGaapPretaxAmountLocal = monthGaapPretaxAmountLocal;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setInstanceID(String instanceID) {
+            this.instanceID = instanceID;
             return this;
         }
-        public String getMonthGaapPretaxAmountLocal() {
-            return this.monthGaapPretaxAmountLocal;
+        public String getInstanceID() {
+            return this.instanceID;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapDeductedByCashCoupons(String monthGaapDeductedByCashCoupons) {
@@ -520,6 +360,14 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         }
         public String getMonthGaapDeductedByCashCoupons() {
             return this.monthGaapDeductedByCashCoupons;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapDeductedByCoupons(String monthGaapDeductedByCoupons) {
+            this.monthGaapDeductedByCoupons = monthGaapDeductedByCoupons;
+            return this;
+        }
+        public String getMonthGaapDeductedByCoupons() {
+            return this.monthGaapDeductedByCoupons;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapDeductedByPrepaidCard(String monthGaapDeductedByPrepaidCard) {
@@ -538,36 +386,36 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             return this.monthGaapPaymentAmount;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedPaymentAmount(String unallocatedPaymentAmount) {
-            this.unallocatedPaymentAmount = unallocatedPaymentAmount;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapPretaxAmount(String monthGaapPretaxAmount) {
+            this.monthGaapPretaxAmount = monthGaapPretaxAmount;
             return this;
         }
-        public String getUnallocatedPaymentAmount() {
-            return this.unallocatedPaymentAmount;
+        public String getMonthGaapPretaxAmount() {
+            return this.monthGaapPretaxAmount;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setUsageStartDate(String usageStartDate) {
-            this.usageStartDate = usageStartDate;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapPretaxAmountLocal(String monthGaapPretaxAmountLocal) {
+            this.monthGaapPretaxAmountLocal = monthGaapPretaxAmountLocal;
             return this;
         }
-        public String getUsageStartDate() {
-            return this.usageStartDate;
+        public String getMonthGaapPretaxAmountLocal() {
+            return this.monthGaapPretaxAmountLocal;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setUsageEndDate(String usageEndDate) {
-            this.usageEndDate = usageEndDate;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapPretaxGrossAmount(String monthGaapPretaxGrossAmount) {
+            this.monthGaapPretaxGrossAmount = monthGaapPretaxGrossAmount;
             return this;
         }
-        public String getUsageEndDate() {
-            return this.usageEndDate;
+        public String getMonthGaapPretaxGrossAmount() {
+            return this.monthGaapPretaxGrossAmount;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setBillType(String billType) {
-            this.billType = billType;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setMonthGaapPricingDiscount(String monthGaapPricingDiscount) {
+            this.monthGaapPricingDiscount = monthGaapPricingDiscount;
             return this;
         }
-        public String getBillType() {
-            return this.billType;
+        public String getMonthGaapPricingDiscount() {
+            return this.monthGaapPricingDiscount;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setOrderId(String orderId) {
@@ -578,6 +426,118 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             return this.orderId;
         }
 
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setOrderType(String orderType) {
+            this.orderType = orderType;
+            return this;
+        }
+        public String getOrderType() {
+            return this.orderType;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setOwnerID(String ownerID) {
+            this.ownerID = ownerID;
+            return this;
+        }
+        public String getOwnerID() {
+            return this.ownerID;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setPayTime(String payTime) {
+            this.payTime = payTime;
+            return this;
+        }
+        public String getPayTime() {
+            return this.payTime;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setPayerAccount(String payerAccount) {
+            this.payerAccount = payerAccount;
+            return this;
+        }
+        public String getPayerAccount() {
+            return this.payerAccount;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setPaymentAmount(String paymentAmount) {
+            this.paymentAmount = paymentAmount;
+            return this;
+        }
+        public String getPaymentAmount() {
+            return this.paymentAmount;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setPaymentCurrency(String paymentCurrency) {
+            this.paymentCurrency = paymentCurrency;
+            return this;
+        }
+        public String getPaymentCurrency() {
+            return this.paymentCurrency;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setPretaxAmount(String pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
+            return this;
+        }
+        public String getPretaxAmount() {
+            return this.pretaxAmount;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setPretaxAmountLocal(String pretaxAmountLocal) {
+            this.pretaxAmountLocal = pretaxAmountLocal;
+            return this;
+        }
+        public String getPretaxAmountLocal() {
+            return this.pretaxAmountLocal;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setPretaxGrossAmount(String pretaxGrossAmount) {
+            this.pretaxGrossAmount = pretaxGrossAmount;
+            return this;
+        }
+        public String getPretaxGrossAmount() {
+            return this.pretaxGrossAmount;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setPricingDiscount(String pricingDiscount) {
+            this.pricingDiscount = pricingDiscount;
+            return this;
+        }
+        public String getPricingDiscount() {
+            return this.pricingDiscount;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setProductType(String productType) {
+            this.productType = productType;
+            return this;
+        }
+        public String getProductType() {
+            return this.productType;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setResourceGroup(String resourceGroup) {
+            this.resourceGroup = resourceGroup;
+            return this;
+        }
+        public String getResourceGroup() {
+            return this.resourceGroup;
+        }
+
         public QueryInstanceGaapCostResponseBodyDataModulesModule setSubOrderId(String subOrderId) {
             this.subOrderId = subOrderId;
             return this;
@@ -586,20 +546,28 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             return this.subOrderId;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedPretaxGrossAmount(String unallocatedPretaxGrossAmount) {
-            this.unallocatedPretaxGrossAmount = unallocatedPretaxGrossAmount;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setSubscriptionType(String subscriptionType) {
+            this.subscriptionType = subscriptionType;
             return this;
         }
-        public String getUnallocatedPretaxGrossAmount() {
-            return this.unallocatedPretaxGrossAmount;
+        public String getSubscriptionType() {
+            return this.subscriptionType;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedPricingDiscount(String unallocatedPricingDiscount) {
-            this.unallocatedPricingDiscount = unallocatedPricingDiscount;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setTag(String tag) {
+            this.tag = tag;
             return this;
         }
-        public String getUnallocatedPricingDiscount() {
-            return this.unallocatedPricingDiscount;
+        public String getTag() {
+            return this.tag;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedDeductedByCashCoupons(String unallocatedDeductedByCashCoupons) {
+            this.unallocatedDeductedByCashCoupons = unallocatedDeductedByCashCoupons;
+            return this;
+        }
+        public String getUnallocatedDeductedByCashCoupons() {
+            return this.unallocatedDeductedByCashCoupons;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedDeductedByCoupons(String unallocatedDeductedByCoupons) {
@@ -608,6 +576,22 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         }
         public String getUnallocatedDeductedByCoupons() {
             return this.unallocatedDeductedByCoupons;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedDeductedByPrepaidCard(String unallocatedDeductedByPrepaidCard) {
+            this.unallocatedDeductedByPrepaidCard = unallocatedDeductedByPrepaidCard;
+            return this;
+        }
+        public String getUnallocatedDeductedByPrepaidCard() {
+            return this.unallocatedDeductedByPrepaidCard;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedPaymentAmount(String unallocatedPaymentAmount) {
+            this.unallocatedPaymentAmount = unallocatedPaymentAmount;
+            return this;
+        }
+        public String getUnallocatedPaymentAmount() {
+            return this.unallocatedPaymentAmount;
         }
 
         public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedPretaxAmount(String unallocatedPretaxAmount) {
@@ -626,20 +610,36 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
             return this.unallocatedPretaxAmountLocal;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedDeductedByCashCoupons(String unallocatedDeductedByCashCoupons) {
-            this.unallocatedDeductedByCashCoupons = unallocatedDeductedByCashCoupons;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedPretaxGrossAmount(String unallocatedPretaxGrossAmount) {
+            this.unallocatedPretaxGrossAmount = unallocatedPretaxGrossAmount;
             return this;
         }
-        public String getUnallocatedDeductedByCashCoupons() {
-            return this.unallocatedDeductedByCashCoupons;
+        public String getUnallocatedPretaxGrossAmount() {
+            return this.unallocatedPretaxGrossAmount;
         }
 
-        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedDeductedByPrepaidCard(String unallocatedDeductedByPrepaidCard) {
-            this.unallocatedDeductedByPrepaidCard = unallocatedDeductedByPrepaidCard;
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setUnallocatedPricingDiscount(String unallocatedPricingDiscount) {
+            this.unallocatedPricingDiscount = unallocatedPricingDiscount;
             return this;
         }
-        public String getUnallocatedDeductedByPrepaidCard() {
-            return this.unallocatedDeductedByPrepaidCard;
+        public String getUnallocatedPricingDiscount() {
+            return this.unallocatedPricingDiscount;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setUsageEndDate(String usageEndDate) {
+            this.usageEndDate = usageEndDate;
+            return this;
+        }
+        public String getUsageEndDate() {
+            return this.usageEndDate;
+        }
+
+        public QueryInstanceGaapCostResponseBodyDataModulesModule setUsageStartDate(String usageStartDate) {
+            this.usageStartDate = usageStartDate;
+            return this;
+        }
+        public String getUsageStartDate() {
+            return this.usageStartDate;
         }
 
     }
@@ -667,6 +667,9 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         @NameInMap("HostId")
         public String hostId;
 
+        @NameInMap("Modules")
+        public QueryInstanceGaapCostResponseBodyDataModules modules;
+
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -675,9 +678,6 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
 
         @NameInMap("TotalCount")
         public Integer totalCount;
-
-        @NameInMap("Modules")
-        public QueryInstanceGaapCostResponseBodyDataModules modules;
 
         public static QueryInstanceGaapCostResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryInstanceGaapCostResponseBodyData self = new QueryInstanceGaapCostResponseBodyData();
@@ -690,6 +690,14 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         }
         public String getHostId() {
             return this.hostId;
+        }
+
+        public QueryInstanceGaapCostResponseBodyData setModules(QueryInstanceGaapCostResponseBodyDataModules modules) {
+            this.modules = modules;
+            return this;
+        }
+        public QueryInstanceGaapCostResponseBodyDataModules getModules() {
+            return this.modules;
         }
 
         public QueryInstanceGaapCostResponseBodyData setPageNum(Integer pageNum) {
@@ -714,14 +722,6 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
         }
         public Integer getTotalCount() {
             return this.totalCount;
-        }
-
-        public QueryInstanceGaapCostResponseBodyData setModules(QueryInstanceGaapCostResponseBodyDataModules modules) {
-            this.modules = modules;
-            return this;
-        }
-        public QueryInstanceGaapCostResponseBodyDataModules getModules() {
-            return this.modules;
         }
 
     }

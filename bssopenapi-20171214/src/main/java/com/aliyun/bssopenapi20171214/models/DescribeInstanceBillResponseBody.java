@@ -3,7 +3,7 @@ package com.aliyun.bssopenapi20171214.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeSplitItemBillResponseBody extends TeaModel {
+public class DescribeInstanceBillResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
@@ -11,7 +11,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public DescribeSplitItemBillResponseBodyData data;
+    public DescribeInstanceBillResponseBodyData data;
 
     @NameInMap("Code")
     public String code;
@@ -19,12 +19,12 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static DescribeSplitItemBillResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DescribeSplitItemBillResponseBody self = new DescribeSplitItemBillResponseBody();
+    public static DescribeInstanceBillResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeInstanceBillResponseBody self = new DescribeInstanceBillResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSplitItemBillResponseBody setMessage(String message) {
+    public DescribeInstanceBillResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -32,7 +32,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DescribeSplitItemBillResponseBody setRequestId(String requestId) {
+    public DescribeInstanceBillResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -40,15 +40,15 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeSplitItemBillResponseBody setData(DescribeSplitItemBillResponseBodyData data) {
+    public DescribeInstanceBillResponseBody setData(DescribeInstanceBillResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public DescribeSplitItemBillResponseBodyData getData() {
+    public DescribeInstanceBillResponseBodyData getData() {
         return this.data;
     }
 
-    public DescribeSplitItemBillResponseBody setCode(String code) {
+    public DescribeInstanceBillResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -56,7 +56,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DescribeSplitItemBillResponseBody setSuccess(Boolean success) {
+    public DescribeInstanceBillResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -64,7 +64,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class DescribeSplitItemBillResponseBodyDataItems extends TeaModel {
+    public static class DescribeInstanceBillResponseBodyDataItems extends TeaModel {
         @NameInMap("BillingDate")
         public String billingDate;
 
@@ -74,14 +74,8 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("InternetIP")
         public String internetIP;
 
-        @NameInMap("SplitItemID")
-        public String splitItemID;
-
         @NameInMap("Item")
         public String item;
-
-        @NameInMap("SplitAccountID")
-        public String splitAccountID;
 
         @NameInMap("Tag")
         public String tag;
@@ -101,11 +95,11 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("InstanceSpec")
         public String instanceSpec;
 
-        @NameInMap("BillingItem")
-        public String billingItem;
-
         @NameInMap("DeductedByCoupons")
         public Float deductedByCoupons;
+
+        @NameInMap("BillingItem")
+        public String billingItem;
 
         @NameInMap("Region")
         public String region;
@@ -137,9 +131,6 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("CommodityCode")
         public String commodityCode;
 
-        @NameInMap("SplitProductDetail")
-        public String splitProductDetail;
-
         @NameInMap("NickName")
         public String nickName;
 
@@ -154,9 +145,6 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
 
         @NameInMap("OwnerID")
         public String ownerID;
-
-        @NameInMap("SplitCommodityCode")
-        public String splitCommodityCode;
 
         @NameInMap("DeductedByPrepaidCard")
         public Float deductedByPrepaidCard;
@@ -176,14 +164,8 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("ProductType")
         public String productType;
 
-        @NameInMap("SplitBillingCycle")
-        public String splitBillingCycle;
-
         @NameInMap("ServicePeriod")
         public String servicePeriod;
-
-        @NameInMap("SplitItemName")
-        public String splitItemName;
 
         @NameInMap("Zone")
         public String zone;
@@ -194,21 +176,18 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("PretaxGrossAmount")
         public Float pretaxGrossAmount;
 
-        @NameInMap("SplitAccountName")
-        public String splitAccountName;
-
         @NameInMap("ProductCode")
         public String productCode;
 
         @NameInMap("BillingType")
         public String billingType;
 
-        public static DescribeSplitItemBillResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSplitItemBillResponseBodyDataItems self = new DescribeSplitItemBillResponseBodyDataItems();
+        public static DescribeInstanceBillResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceBillResponseBodyDataItems self = new DescribeInstanceBillResponseBodyDataItems();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setBillingDate(String billingDate) {
+        public DescribeInstanceBillResponseBodyDataItems setBillingDate(String billingDate) {
             this.billingDate = billingDate;
             return this;
         }
@@ -216,7 +195,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.billingDate;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setInstanceConfig(String instanceConfig) {
+        public DescribeInstanceBillResponseBodyDataItems setInstanceConfig(String instanceConfig) {
             this.instanceConfig = instanceConfig;
             return this;
         }
@@ -224,7 +203,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.instanceConfig;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setInternetIP(String internetIP) {
+        public DescribeInstanceBillResponseBodyDataItems setInternetIP(String internetIP) {
             this.internetIP = internetIP;
             return this;
         }
@@ -232,15 +211,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.internetIP;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setSplitItemID(String splitItemID) {
-            this.splitItemID = splitItemID;
-            return this;
-        }
-        public String getSplitItemID() {
-            return this.splitItemID;
-        }
-
-        public DescribeSplitItemBillResponseBodyDataItems setItem(String item) {
+        public DescribeInstanceBillResponseBodyDataItems setItem(String item) {
             this.item = item;
             return this;
         }
@@ -248,15 +219,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.item;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setSplitAccountID(String splitAccountID) {
-            this.splitAccountID = splitAccountID;
-            return this;
-        }
-        public String getSplitAccountID() {
-            return this.splitAccountID;
-        }
-
-        public DescribeSplitItemBillResponseBodyDataItems setTag(String tag) {
+        public DescribeInstanceBillResponseBodyDataItems setTag(String tag) {
             this.tag = tag;
             return this;
         }
@@ -264,7 +227,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.tag;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setInstanceID(String instanceID) {
+        public DescribeInstanceBillResponseBodyDataItems setInstanceID(String instanceID) {
             this.instanceID = instanceID;
             return this;
         }
@@ -272,7 +235,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.instanceID;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setCurrency(String currency) {
+        public DescribeInstanceBillResponseBodyDataItems setCurrency(String currency) {
             this.currency = currency;
             return this;
         }
@@ -280,7 +243,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setDeductedByCashCoupons(Float deductedByCashCoupons) {
+        public DescribeInstanceBillResponseBodyDataItems setDeductedByCashCoupons(Float deductedByCashCoupons) {
             this.deductedByCashCoupons = deductedByCashCoupons;
             return this;
         }
@@ -288,7 +251,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.deductedByCashCoupons;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setSubscriptionType(String subscriptionType) {
+        public DescribeInstanceBillResponseBodyDataItems setSubscriptionType(String subscriptionType) {
             this.subscriptionType = subscriptionType;
             return this;
         }
@@ -296,7 +259,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.subscriptionType;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setInstanceSpec(String instanceSpec) {
+        public DescribeInstanceBillResponseBodyDataItems setInstanceSpec(String instanceSpec) {
             this.instanceSpec = instanceSpec;
             return this;
         }
@@ -304,15 +267,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.instanceSpec;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setBillingItem(String billingItem) {
-            this.billingItem = billingItem;
-            return this;
-        }
-        public String getBillingItem() {
-            return this.billingItem;
-        }
-
-        public DescribeSplitItemBillResponseBodyDataItems setDeductedByCoupons(Float deductedByCoupons) {
+        public DescribeInstanceBillResponseBodyDataItems setDeductedByCoupons(Float deductedByCoupons) {
             this.deductedByCoupons = deductedByCoupons;
             return this;
         }
@@ -320,7 +275,15 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.deductedByCoupons;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setRegion(String region) {
+        public DescribeInstanceBillResponseBodyDataItems setBillingItem(String billingItem) {
+            this.billingItem = billingItem;
+            return this;
+        }
+        public String getBillingItem() {
+            return this.billingItem;
+        }
+
+        public DescribeInstanceBillResponseBodyDataItems setRegion(String region) {
             this.region = region;
             return this;
         }
@@ -328,7 +291,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.region;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setOutstandingAmount(Float outstandingAmount) {
+        public DescribeInstanceBillResponseBodyDataItems setOutstandingAmount(Float outstandingAmount) {
             this.outstandingAmount = outstandingAmount;
             return this;
         }
@@ -336,7 +299,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.outstandingAmount;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setCostUnit(String costUnit) {
+        public DescribeInstanceBillResponseBodyDataItems setCostUnit(String costUnit) {
             this.costUnit = costUnit;
             return this;
         }
@@ -344,7 +307,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.costUnit;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setListPriceUnit(String listPriceUnit) {
+        public DescribeInstanceBillResponseBodyDataItems setListPriceUnit(String listPriceUnit) {
             this.listPriceUnit = listPriceUnit;
             return this;
         }
@@ -352,7 +315,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.listPriceUnit;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setResourceGroup(String resourceGroup) {
+        public DescribeInstanceBillResponseBodyDataItems setResourceGroup(String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
@@ -360,7 +323,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.resourceGroup;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setPipCode(String pipCode) {
+        public DescribeInstanceBillResponseBodyDataItems setPipCode(String pipCode) {
             this.pipCode = pipCode;
             return this;
         }
@@ -368,7 +331,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.pipCode;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setPretaxAmount(Float pretaxAmount) {
+        public DescribeInstanceBillResponseBodyDataItems setPretaxAmount(Float pretaxAmount) {
             this.pretaxAmount = pretaxAmount;
             return this;
         }
@@ -376,7 +339,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.pretaxAmount;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setServicePeriodUnit(String servicePeriodUnit) {
+        public DescribeInstanceBillResponseBodyDataItems setServicePeriodUnit(String servicePeriodUnit) {
             this.servicePeriodUnit = servicePeriodUnit;
             return this;
         }
@@ -384,7 +347,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.servicePeriodUnit;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setProductName(String productName) {
+        public DescribeInstanceBillResponseBodyDataItems setProductName(String productName) {
             this.productName = productName;
             return this;
         }
@@ -392,7 +355,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.productName;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setCommodityCode(String commodityCode) {
+        public DescribeInstanceBillResponseBodyDataItems setCommodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
             return this;
         }
@@ -400,15 +363,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.commodityCode;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setSplitProductDetail(String splitProductDetail) {
-            this.splitProductDetail = splitProductDetail;
-            return this;
-        }
-        public String getSplitProductDetail() {
-            return this.splitProductDetail;
-        }
-
-        public DescribeSplitItemBillResponseBodyDataItems setNickName(String nickName) {
+        public DescribeInstanceBillResponseBodyDataItems setNickName(String nickName) {
             this.nickName = nickName;
             return this;
         }
@@ -416,7 +371,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.nickName;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setProductDetail(String productDetail) {
+        public DescribeInstanceBillResponseBodyDataItems setProductDetail(String productDetail) {
             this.productDetail = productDetail;
             return this;
         }
@@ -424,7 +379,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.productDetail;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setUsage(String usage) {
+        public DescribeInstanceBillResponseBodyDataItems setUsage(String usage) {
             this.usage = usage;
             return this;
         }
@@ -432,7 +387,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.usage;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setIntranetIP(String intranetIP) {
+        public DescribeInstanceBillResponseBodyDataItems setIntranetIP(String intranetIP) {
             this.intranetIP = intranetIP;
             return this;
         }
@@ -440,7 +395,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.intranetIP;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setOwnerID(String ownerID) {
+        public DescribeInstanceBillResponseBodyDataItems setOwnerID(String ownerID) {
             this.ownerID = ownerID;
             return this;
         }
@@ -448,15 +403,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.ownerID;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setSplitCommodityCode(String splitCommodityCode) {
-            this.splitCommodityCode = splitCommodityCode;
-            return this;
-        }
-        public String getSplitCommodityCode() {
-            return this.splitCommodityCode;
-        }
-
-        public DescribeSplitItemBillResponseBodyDataItems setDeductedByPrepaidCard(Float deductedByPrepaidCard) {
+        public DescribeInstanceBillResponseBodyDataItems setDeductedByPrepaidCard(Float deductedByPrepaidCard) {
             this.deductedByPrepaidCard = deductedByPrepaidCard;
             return this;
         }
@@ -464,7 +411,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.deductedByPrepaidCard;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setUsageUnit(String usageUnit) {
+        public DescribeInstanceBillResponseBodyDataItems setUsageUnit(String usageUnit) {
             this.usageUnit = usageUnit;
             return this;
         }
@@ -472,7 +419,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.usageUnit;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setPaymentAmount(Float paymentAmount) {
+        public DescribeInstanceBillResponseBodyDataItems setPaymentAmount(Float paymentAmount) {
             this.paymentAmount = paymentAmount;
             return this;
         }
@@ -480,7 +427,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.paymentAmount;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setInvoiceDiscount(Float invoiceDiscount) {
+        public DescribeInstanceBillResponseBodyDataItems setInvoiceDiscount(Float invoiceDiscount) {
             this.invoiceDiscount = invoiceDiscount;
             return this;
         }
@@ -488,7 +435,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.invoiceDiscount;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setDeductedByResourcePackage(String deductedByResourcePackage) {
+        public DescribeInstanceBillResponseBodyDataItems setDeductedByResourcePackage(String deductedByResourcePackage) {
             this.deductedByResourcePackage = deductedByResourcePackage;
             return this;
         }
@@ -496,7 +443,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.deductedByResourcePackage;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setProductType(String productType) {
+        public DescribeInstanceBillResponseBodyDataItems setProductType(String productType) {
             this.productType = productType;
             return this;
         }
@@ -504,15 +451,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.productType;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setSplitBillingCycle(String splitBillingCycle) {
-            this.splitBillingCycle = splitBillingCycle;
-            return this;
-        }
-        public String getSplitBillingCycle() {
-            return this.splitBillingCycle;
-        }
-
-        public DescribeSplitItemBillResponseBodyDataItems setServicePeriod(String servicePeriod) {
+        public DescribeInstanceBillResponseBodyDataItems setServicePeriod(String servicePeriod) {
             this.servicePeriod = servicePeriod;
             return this;
         }
@@ -520,15 +459,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.servicePeriod;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setSplitItemName(String splitItemName) {
-            this.splitItemName = splitItemName;
-            return this;
-        }
-        public String getSplitItemName() {
-            return this.splitItemName;
-        }
-
-        public DescribeSplitItemBillResponseBodyDataItems setZone(String zone) {
+        public DescribeInstanceBillResponseBodyDataItems setZone(String zone) {
             this.zone = zone;
             return this;
         }
@@ -536,7 +467,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.zone;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setListPrice(String listPrice) {
+        public DescribeInstanceBillResponseBodyDataItems setListPrice(String listPrice) {
             this.listPrice = listPrice;
             return this;
         }
@@ -544,7 +475,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.listPrice;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setPretaxGrossAmount(Float pretaxGrossAmount) {
+        public DescribeInstanceBillResponseBodyDataItems setPretaxGrossAmount(Float pretaxGrossAmount) {
             this.pretaxGrossAmount = pretaxGrossAmount;
             return this;
         }
@@ -552,15 +483,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.pretaxGrossAmount;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setSplitAccountName(String splitAccountName) {
-            this.splitAccountName = splitAccountName;
-            return this;
-        }
-        public String getSplitAccountName() {
-            return this.splitAccountName;
-        }
-
-        public DescribeSplitItemBillResponseBodyDataItems setProductCode(String productCode) {
+        public DescribeInstanceBillResponseBodyDataItems setProductCode(String productCode) {
             this.productCode = productCode;
             return this;
         }
@@ -568,7 +491,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.productCode;
         }
 
-        public DescribeSplitItemBillResponseBodyDataItems setBillingType(String billingType) {
+        public DescribeInstanceBillResponseBodyDataItems setBillingType(String billingType) {
             this.billingType = billingType;
             return this;
         }
@@ -578,9 +501,9 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeSplitItemBillResponseBodyData extends TeaModel {
+    public static class DescribeInstanceBillResponseBodyData extends TeaModel {
         @NameInMap("Items")
-        public java.util.List<DescribeSplitItemBillResponseBodyDataItems> items;
+        public java.util.List<DescribeInstanceBillResponseBodyDataItems> items;
 
         @NameInMap("NextToken")
         public String nextToken;
@@ -600,20 +523,20 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
-        public static DescribeSplitItemBillResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeSplitItemBillResponseBodyData self = new DescribeSplitItemBillResponseBodyData();
+        public static DescribeInstanceBillResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceBillResponseBodyData self = new DescribeInstanceBillResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeSplitItemBillResponseBodyData setItems(java.util.List<DescribeSplitItemBillResponseBodyDataItems> items) {
+        public DescribeInstanceBillResponseBodyData setItems(java.util.List<DescribeInstanceBillResponseBodyDataItems> items) {
             this.items = items;
             return this;
         }
-        public java.util.List<DescribeSplitItemBillResponseBodyDataItems> getItems() {
+        public java.util.List<DescribeInstanceBillResponseBodyDataItems> getItems() {
             return this.items;
         }
 
-        public DescribeSplitItemBillResponseBodyData setNextToken(String nextToken) {
+        public DescribeInstanceBillResponseBodyData setNextToken(String nextToken) {
             this.nextToken = nextToken;
             return this;
         }
@@ -621,7 +544,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.nextToken;
         }
 
-        public DescribeSplitItemBillResponseBodyData setBillingCycle(String billingCycle) {
+        public DescribeInstanceBillResponseBodyData setBillingCycle(String billingCycle) {
             this.billingCycle = billingCycle;
             return this;
         }
@@ -629,7 +552,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.billingCycle;
         }
 
-        public DescribeSplitItemBillResponseBodyData setMaxResults(Integer maxResults) {
+        public DescribeInstanceBillResponseBodyData setMaxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
@@ -637,7 +560,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.maxResults;
         }
 
-        public DescribeSplitItemBillResponseBodyData setAccountID(String accountID) {
+        public DescribeInstanceBillResponseBodyData setAccountID(String accountID) {
             this.accountID = accountID;
             return this;
         }
@@ -645,7 +568,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.accountID;
         }
 
-        public DescribeSplitItemBillResponseBodyData setTotalCount(Integer totalCount) {
+        public DescribeInstanceBillResponseBodyData setTotalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
@@ -653,7 +576,7 @@ public class DescribeSplitItemBillResponseBody extends TeaModel {
             return this.totalCount;
         }
 
-        public DescribeSplitItemBillResponseBodyData setAccountName(String accountName) {
+        public DescribeInstanceBillResponseBodyData setAccountName(String accountName) {
             this.accountName = accountName;
             return this;
         }

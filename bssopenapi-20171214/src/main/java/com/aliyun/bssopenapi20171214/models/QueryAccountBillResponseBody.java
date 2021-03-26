@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryAccountBillResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryAccountBillResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public QueryAccountBillResponseBodyData data;
-
     public static QueryAccountBillResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryAccountBillResponseBody self = new QueryAccountBillResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAccountBillResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryAccountBillResponseBody setData(QueryAccountBillResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryAccountBillResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryAccountBillResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryAccountBillResponseBody setRequestId(String requestId) {
@@ -40,66 +64,45 @@ public class QueryAccountBillResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryAccountBillResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryAccountBillResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryAccountBillResponseBody setData(QueryAccountBillResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryAccountBillResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryAccountBillResponseBodyDataItemsItem extends TeaModel {
         @NameInMap("CostUnit")
         public String costUnit;
 
-        @NameInMap("OwnerID")
-        public String ownerID;
-
-        @NameInMap("PretaxGrossAmount")
-        public Float pretaxGrossAmount;
-
-        @NameInMap("InvoiceDiscount")
-        public Float invoiceDiscount;
-
-        @NameInMap("DeductedByCoupons")
-        public Float deductedByCoupons;
-
-        @NameInMap("PretaxAmount")
-        public Float pretaxAmount;
+        @NameInMap("Currency")
+        public String currency;
 
         @NameInMap("DeductedByCashCoupons")
         public Float deductedByCashCoupons;
 
+        @NameInMap("DeductedByCoupons")
+        public Float deductedByCoupons;
+
         @NameInMap("DeductedByPrepaidCard")
         public Float deductedByPrepaidCard;
 
-        @NameInMap("PaymentAmount")
-        public Float paymentAmount;
+        @NameInMap("InvoiceDiscount")
+        public Float invoiceDiscount;
 
         @NameInMap("OutstandingAmount")
         public Float outstandingAmount;
 
-        @NameInMap("Currency")
-        public String currency;
+        @NameInMap("OwnerID")
+        public String ownerID;
 
         @NameInMap("OwnerName")
         public String ownerName;
+
+        @NameInMap("PaymentAmount")
+        public Float paymentAmount;
+
+        @NameInMap("PipCode")
+        public String pipCode;
+
+        @NameInMap("PretaxAmount")
+        public Float pretaxAmount;
+
+        @NameInMap("PretaxGrossAmount")
+        public Float pretaxGrossAmount;
 
         @NameInMap("ProductCode")
         public String productCode;
@@ -109,12 +112,6 @@ public class QueryAccountBillResponseBody extends TeaModel {
 
         @NameInMap("SubscriptionType")
         public String subscriptionType;
-
-        @NameInMap("PipCode")
-        public String pipCode;
-
-        @NameInMap("BillingDate")
-        public String billingDate;
 
         public static QueryAccountBillResponseBodyDataItemsItem build(java.util.Map<String, ?> map) throws Exception {
             QueryAccountBillResponseBodyDataItemsItem self = new QueryAccountBillResponseBodyDataItemsItem();
@@ -129,44 +126,12 @@ public class QueryAccountBillResponseBody extends TeaModel {
             return this.costUnit;
         }
 
-        public QueryAccountBillResponseBodyDataItemsItem setOwnerID(String ownerID) {
-            this.ownerID = ownerID;
+        public QueryAccountBillResponseBodyDataItemsItem setCurrency(String currency) {
+            this.currency = currency;
             return this;
         }
-        public String getOwnerID() {
-            return this.ownerID;
-        }
-
-        public QueryAccountBillResponseBodyDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
-            this.pretaxGrossAmount = pretaxGrossAmount;
-            return this;
-        }
-        public Float getPretaxGrossAmount() {
-            return this.pretaxGrossAmount;
-        }
-
-        public QueryAccountBillResponseBodyDataItemsItem setInvoiceDiscount(Float invoiceDiscount) {
-            this.invoiceDiscount = invoiceDiscount;
-            return this;
-        }
-        public Float getInvoiceDiscount() {
-            return this.invoiceDiscount;
-        }
-
-        public QueryAccountBillResponseBodyDataItemsItem setDeductedByCoupons(Float deductedByCoupons) {
-            this.deductedByCoupons = deductedByCoupons;
-            return this;
-        }
-        public Float getDeductedByCoupons() {
-            return this.deductedByCoupons;
-        }
-
-        public QueryAccountBillResponseBodyDataItemsItem setPretaxAmount(Float pretaxAmount) {
-            this.pretaxAmount = pretaxAmount;
-            return this;
-        }
-        public Float getPretaxAmount() {
-            return this.pretaxAmount;
+        public String getCurrency() {
+            return this.currency;
         }
 
         public QueryAccountBillResponseBodyDataItemsItem setDeductedByCashCoupons(Float deductedByCashCoupons) {
@@ -177,6 +142,14 @@ public class QueryAccountBillResponseBody extends TeaModel {
             return this.deductedByCashCoupons;
         }
 
+        public QueryAccountBillResponseBodyDataItemsItem setDeductedByCoupons(Float deductedByCoupons) {
+            this.deductedByCoupons = deductedByCoupons;
+            return this;
+        }
+        public Float getDeductedByCoupons() {
+            return this.deductedByCoupons;
+        }
+
         public QueryAccountBillResponseBodyDataItemsItem setDeductedByPrepaidCard(Float deductedByPrepaidCard) {
             this.deductedByPrepaidCard = deductedByPrepaidCard;
             return this;
@@ -185,12 +158,12 @@ public class QueryAccountBillResponseBody extends TeaModel {
             return this.deductedByPrepaidCard;
         }
 
-        public QueryAccountBillResponseBodyDataItemsItem setPaymentAmount(Float paymentAmount) {
-            this.paymentAmount = paymentAmount;
+        public QueryAccountBillResponseBodyDataItemsItem setInvoiceDiscount(Float invoiceDiscount) {
+            this.invoiceDiscount = invoiceDiscount;
             return this;
         }
-        public Float getPaymentAmount() {
-            return this.paymentAmount;
+        public Float getInvoiceDiscount() {
+            return this.invoiceDiscount;
         }
 
         public QueryAccountBillResponseBodyDataItemsItem setOutstandingAmount(Float outstandingAmount) {
@@ -201,12 +174,12 @@ public class QueryAccountBillResponseBody extends TeaModel {
             return this.outstandingAmount;
         }
 
-        public QueryAccountBillResponseBodyDataItemsItem setCurrency(String currency) {
-            this.currency = currency;
+        public QueryAccountBillResponseBodyDataItemsItem setOwnerID(String ownerID) {
+            this.ownerID = ownerID;
             return this;
         }
-        public String getCurrency() {
-            return this.currency;
+        public String getOwnerID() {
+            return this.ownerID;
         }
 
         public QueryAccountBillResponseBodyDataItemsItem setOwnerName(String ownerName) {
@@ -215,6 +188,38 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
         public String getOwnerName() {
             return this.ownerName;
+        }
+
+        public QueryAccountBillResponseBodyDataItemsItem setPaymentAmount(Float paymentAmount) {
+            this.paymentAmount = paymentAmount;
+            return this;
+        }
+        public Float getPaymentAmount() {
+            return this.paymentAmount;
+        }
+
+        public QueryAccountBillResponseBodyDataItemsItem setPipCode(String pipCode) {
+            this.pipCode = pipCode;
+            return this;
+        }
+        public String getPipCode() {
+            return this.pipCode;
+        }
+
+        public QueryAccountBillResponseBodyDataItemsItem setPretaxAmount(Float pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
+            return this;
+        }
+        public Float getPretaxAmount() {
+            return this.pretaxAmount;
+        }
+
+        public QueryAccountBillResponseBodyDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
+            this.pretaxGrossAmount = pretaxGrossAmount;
+            return this;
+        }
+        public Float getPretaxGrossAmount() {
+            return this.pretaxGrossAmount;
         }
 
         public QueryAccountBillResponseBodyDataItemsItem setProductCode(String productCode) {
@@ -241,22 +246,6 @@ public class QueryAccountBillResponseBody extends TeaModel {
             return this.subscriptionType;
         }
 
-        public QueryAccountBillResponseBodyDataItemsItem setPipCode(String pipCode) {
-            this.pipCode = pipCode;
-            return this;
-        }
-        public String getPipCode() {
-            return this.pipCode;
-        }
-
-        public QueryAccountBillResponseBodyDataItemsItem setBillingDate(String billingDate) {
-            this.billingDate = billingDate;
-            return this;
-        }
-        public String getBillingDate() {
-            return this.billingDate;
-        }
-
     }
 
     public static class QueryAccountBillResponseBodyDataItems extends TeaModel {
@@ -279,17 +268,17 @@ public class QueryAccountBillResponseBody extends TeaModel {
     }
 
     public static class QueryAccountBillResponseBodyData extends TeaModel {
-        @NameInMap("BillingCycle")
-        public String billingCycle;
-
         @NameInMap("AccountID")
         public String accountID;
 
         @NameInMap("AccountName")
         public String accountName;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("BillingCycle")
+        public String billingCycle;
+
+        @NameInMap("Items")
+        public QueryAccountBillResponseBodyDataItems items;
 
         @NameInMap("PageNum")
         public Integer pageNum;
@@ -297,20 +286,12 @@ public class QueryAccountBillResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("Items")
-        public QueryAccountBillResponseBodyDataItems items;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static QueryAccountBillResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAccountBillResponseBodyData self = new QueryAccountBillResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryAccountBillResponseBodyData setBillingCycle(String billingCycle) {
-            this.billingCycle = billingCycle;
-            return this;
-        }
-        public String getBillingCycle() {
-            return this.billingCycle;
         }
 
         public QueryAccountBillResponseBodyData setAccountID(String accountID) {
@@ -329,12 +310,20 @@ public class QueryAccountBillResponseBody extends TeaModel {
             return this.accountName;
         }
 
-        public QueryAccountBillResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public QueryAccountBillResponseBodyData setBillingCycle(String billingCycle) {
+            this.billingCycle = billingCycle;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public String getBillingCycle() {
+            return this.billingCycle;
+        }
+
+        public QueryAccountBillResponseBodyData setItems(QueryAccountBillResponseBodyDataItems items) {
+            this.items = items;
+            return this;
+        }
+        public QueryAccountBillResponseBodyDataItems getItems() {
+            return this.items;
         }
 
         public QueryAccountBillResponseBodyData setPageNum(Integer pageNum) {
@@ -353,12 +342,12 @@ public class QueryAccountBillResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public QueryAccountBillResponseBodyData setItems(QueryAccountBillResponseBodyDataItems items) {
-            this.items = items;
+        public QueryAccountBillResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public QueryAccountBillResponseBodyDataItems getItems() {
-            return this.items;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

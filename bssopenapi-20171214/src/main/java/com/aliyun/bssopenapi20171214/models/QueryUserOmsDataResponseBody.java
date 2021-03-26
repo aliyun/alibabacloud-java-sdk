@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryUserOmsDataResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryUserOmsDataResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public QueryUserOmsDataResponseBodyData data;
-
     public static QueryUserOmsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryUserOmsDataResponseBody self = new QueryUserOmsDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryUserOmsDataResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryUserOmsDataResponseBody setData(QueryUserOmsDataResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryUserOmsDataResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryUserOmsDataResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryUserOmsDataResponseBody setRequestId(String requestId) {
@@ -40,51 +64,19 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryUserOmsDataResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryUserOmsDataResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryUserOmsDataResponseBody setData(QueryUserOmsDataResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryUserOmsDataResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryUserOmsDataResponseBodyData extends TeaModel {
-        @NameInMap("Marker")
-        public String marker;
-
         @NameInMap("HostId")
         public String hostId;
 
+        @NameInMap("Marker")
+        public String marker;
+
         @NameInMap("OmsData")
-        public java.util.List<java.util.Map<String, String>> omsData;
+        public java.util.List<java.util.Map<String, ?>> omsData;
 
         public static QueryUserOmsDataResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryUserOmsDataResponseBodyData self = new QueryUserOmsDataResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryUserOmsDataResponseBodyData setMarker(String marker) {
-            this.marker = marker;
-            return this;
-        }
-        public String getMarker() {
-            return this.marker;
         }
 
         public QueryUserOmsDataResponseBodyData setHostId(String hostId) {
@@ -95,11 +87,19 @@ public class QueryUserOmsDataResponseBody extends TeaModel {
             return this.hostId;
         }
 
-        public QueryUserOmsDataResponseBodyData setOmsData(java.util.List<java.util.Map<String, String>> omsData) {
+        public QueryUserOmsDataResponseBodyData setMarker(String marker) {
+            this.marker = marker;
+            return this;
+        }
+        public String getMarker() {
+            return this.marker;
+        }
+
+        public QueryUserOmsDataResponseBodyData setOmsData(java.util.List<java.util.Map<String, ?>> omsData) {
             this.omsData = omsData;
             return this;
         }
-        public java.util.List<java.util.Map<String, String>> getOmsData() {
+        public java.util.List<java.util.Map<String, ?>> getOmsData() {
             return this.omsData;
         }
 

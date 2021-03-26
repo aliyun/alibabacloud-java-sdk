@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryProductListResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryProductListResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public QueryProductListResponseBodyData data;
-
     public static QueryProductListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryProductListResponseBody self = new QueryProductListResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryProductListResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryProductListResponseBody setData(QueryProductListResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryProductListResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryProductListResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryProductListResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class QueryProductListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public QueryProductListResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryProductListResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryProductListResponseBody setData(QueryProductListResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryProductListResponseBodyData getData() {
-        return this.data;
     }
 
     public static class QueryProductListResponseBodyDataProductListProduct extends TeaModel {
@@ -136,9 +136,6 @@ public class QueryProductListResponseBody extends TeaModel {
     }
 
     public static class QueryProductListResponseBodyData extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("PageNum")
         public Integer pageNum;
 
@@ -148,17 +145,12 @@ public class QueryProductListResponseBody extends TeaModel {
         @NameInMap("ProductList")
         public QueryProductListResponseBodyDataProductList productList;
 
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
         public static QueryProductListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryProductListResponseBodyData self = new QueryProductListResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QueryProductListResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
         }
 
         public QueryProductListResponseBodyData setPageNum(Integer pageNum) {
@@ -183,6 +175,14 @@ public class QueryProductListResponseBody extends TeaModel {
         }
         public QueryProductListResponseBodyDataProductList getProductList() {
             return this.productList;
+        }
+
+        public QueryProductListResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

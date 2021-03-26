@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryCashCouponsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryCashCouponsResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public QueryCashCouponsResponseBodyData data;
-
     public static QueryCashCouponsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryCashCouponsResponseBody self = new QueryCashCouponsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryCashCouponsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryCashCouponsResponseBody setData(QueryCashCouponsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryCashCouponsResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryCashCouponsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryCashCouponsResponseBody setRequestId(String requestId) {
@@ -40,39 +64,21 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryCashCouponsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryCashCouponsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryCashCouponsResponseBody setData(QueryCashCouponsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryCashCouponsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryCashCouponsResponseBodyDataCashCoupon extends TeaModel {
+        @NameInMap("ApplicableProducts")
+        public String applicableProducts;
+
+        @NameInMap("ApplicableScenarios")
+        public String applicableScenarios;
+
+        @NameInMap("Balance")
+        public String balance;
+
         @NameInMap("CashCouponId")
         public Long cashCouponId;
 
         @NameInMap("CashCouponNo")
         public String cashCouponNo;
-
-        @NameInMap("GrantedTime")
-        public String grantedTime;
 
         @NameInMap("EffectiveTime")
         public String effectiveTime;
@@ -80,17 +86,11 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
-        @NameInMap("ApplicableProducts")
-        public String applicableProducts;
-
-        @NameInMap("ApplicableScenarios")
-        public String applicableScenarios;
+        @NameInMap("GrantedTime")
+        public String grantedTime;
 
         @NameInMap("NominalValue")
         public String nominalValue;
-
-        @NameInMap("Balance")
-        public String balance;
 
         @NameInMap("Status")
         public String status;
@@ -98,46 +98,6 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         public static QueryCashCouponsResponseBodyDataCashCoupon build(java.util.Map<String, ?> map) throws Exception {
             QueryCashCouponsResponseBodyDataCashCoupon self = new QueryCashCouponsResponseBodyDataCashCoupon();
             return TeaModel.build(map, self);
-        }
-
-        public QueryCashCouponsResponseBodyDataCashCoupon setCashCouponId(Long cashCouponId) {
-            this.cashCouponId = cashCouponId;
-            return this;
-        }
-        public Long getCashCouponId() {
-            return this.cashCouponId;
-        }
-
-        public QueryCashCouponsResponseBodyDataCashCoupon setCashCouponNo(String cashCouponNo) {
-            this.cashCouponNo = cashCouponNo;
-            return this;
-        }
-        public String getCashCouponNo() {
-            return this.cashCouponNo;
-        }
-
-        public QueryCashCouponsResponseBodyDataCashCoupon setGrantedTime(String grantedTime) {
-            this.grantedTime = grantedTime;
-            return this;
-        }
-        public String getGrantedTime() {
-            return this.grantedTime;
-        }
-
-        public QueryCashCouponsResponseBodyDataCashCoupon setEffectiveTime(String effectiveTime) {
-            this.effectiveTime = effectiveTime;
-            return this;
-        }
-        public String getEffectiveTime() {
-            return this.effectiveTime;
-        }
-
-        public QueryCashCouponsResponseBodyDataCashCoupon setExpiryTime(String expiryTime) {
-            this.expiryTime = expiryTime;
-            return this;
-        }
-        public String getExpiryTime() {
-            return this.expiryTime;
         }
 
         public QueryCashCouponsResponseBodyDataCashCoupon setApplicableProducts(String applicableProducts) {
@@ -156,20 +116,60 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             return this.applicableScenarios;
         }
 
-        public QueryCashCouponsResponseBodyDataCashCoupon setNominalValue(String nominalValue) {
-            this.nominalValue = nominalValue;
-            return this;
-        }
-        public String getNominalValue() {
-            return this.nominalValue;
-        }
-
         public QueryCashCouponsResponseBodyDataCashCoupon setBalance(String balance) {
             this.balance = balance;
             return this;
         }
         public String getBalance() {
             return this.balance;
+        }
+
+        public QueryCashCouponsResponseBodyDataCashCoupon setCashCouponId(Long cashCouponId) {
+            this.cashCouponId = cashCouponId;
+            return this;
+        }
+        public Long getCashCouponId() {
+            return this.cashCouponId;
+        }
+
+        public QueryCashCouponsResponseBodyDataCashCoupon setCashCouponNo(String cashCouponNo) {
+            this.cashCouponNo = cashCouponNo;
+            return this;
+        }
+        public String getCashCouponNo() {
+            return this.cashCouponNo;
+        }
+
+        public QueryCashCouponsResponseBodyDataCashCoupon setEffectiveTime(String effectiveTime) {
+            this.effectiveTime = effectiveTime;
+            return this;
+        }
+        public String getEffectiveTime() {
+            return this.effectiveTime;
+        }
+
+        public QueryCashCouponsResponseBodyDataCashCoupon setExpiryTime(String expiryTime) {
+            this.expiryTime = expiryTime;
+            return this;
+        }
+        public String getExpiryTime() {
+            return this.expiryTime;
+        }
+
+        public QueryCashCouponsResponseBodyDataCashCoupon setGrantedTime(String grantedTime) {
+            this.grantedTime = grantedTime;
+            return this;
+        }
+        public String getGrantedTime() {
+            return this.grantedTime;
+        }
+
+        public QueryCashCouponsResponseBodyDataCashCoupon setNominalValue(String nominalValue) {
+            this.nominalValue = nominalValue;
+            return this;
+        }
+        public String getNominalValue() {
+            return this.nominalValue;
         }
 
         public QueryCashCouponsResponseBodyDataCashCoupon setStatus(String status) {

@@ -4,40 +4,24 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class AllocateCostUnitResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("Code")
     public String code;
-
-    @NameInMap("Success")
-    public Boolean success;
 
     @NameInMap("Data")
     public AllocateCostUnitResourceResponseBodyData data;
 
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
     public static AllocateCostUnitResourceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AllocateCostUnitResourceResponseBody self = new AllocateCostUnitResourceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public AllocateCostUnitResourceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public AllocateCostUnitResourceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public AllocateCostUnitResourceResponseBody setCode(String code) {
@@ -48,14 +32,6 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         return this.code;
     }
 
-    public AllocateCostUnitResourceResponseBody setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
     public AllocateCostUnitResourceResponseBody setData(AllocateCostUnitResourceResponseBodyData data) {
         this.data = data;
         return this;
@@ -64,15 +40,39 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public AllocateCostUnitResourceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public AllocateCostUnitResourceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public AllocateCostUnitResourceResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static class AllocateCostUnitResourceResponseBodyData extends TeaModel {
         @NameInMap("IsSuccess")
         public Boolean isSuccess;
 
-        @NameInMap("ToUnitUserId")
-        public Long toUnitUserId;
-
         @NameInMap("ToUnitId")
         public Long toUnitId;
+
+        @NameInMap("ToUnitUserId")
+        public Long toUnitUserId;
 
         public static AllocateCostUnitResourceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             AllocateCostUnitResourceResponseBodyData self = new AllocateCostUnitResourceResponseBodyData();
@@ -87,20 +87,20 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             return this.isSuccess;
         }
 
-        public AllocateCostUnitResourceResponseBodyData setToUnitUserId(Long toUnitUserId) {
-            this.toUnitUserId = toUnitUserId;
-            return this;
-        }
-        public Long getToUnitUserId() {
-            return this.toUnitUserId;
-        }
-
         public AllocateCostUnitResourceResponseBodyData setToUnitId(Long toUnitId) {
             this.toUnitId = toUnitId;
             return this;
         }
         public Long getToUnitId() {
             return this.toUnitId;
+        }
+
+        public AllocateCostUnitResourceResponseBodyData setToUnitUserId(Long toUnitUserId) {
+            this.toUnitUserId = toUnitUserId;
+            return this;
+        }
+        public Long getToUnitUserId() {
+            return this.toUnitUserId;
         }
 
     }

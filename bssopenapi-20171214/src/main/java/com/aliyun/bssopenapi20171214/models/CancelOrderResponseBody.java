@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class CancelOrderResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public CancelOrderResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public CancelOrderResponseBodyData data;
-
     public static CancelOrderResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CancelOrderResponseBody self = new CancelOrderResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CancelOrderResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public CancelOrderResponseBody setData(CancelOrderResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public CancelOrderResponseBodyData getData() {
+        return this.data;
+    }
+
+    public CancelOrderResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public CancelOrderResponseBody setRequestId(String requestId) {
@@ -38,30 +62,6 @@ public class CancelOrderResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public CancelOrderResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public CancelOrderResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public CancelOrderResponseBody setData(CancelOrderResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public CancelOrderResponseBodyData getData() {
-        return this.data;
     }
 
     public static class CancelOrderResponseBodyData extends TeaModel {
