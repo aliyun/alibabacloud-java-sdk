@@ -36,10 +36,6 @@ public class UpdateMediaInfoRequest extends TeaModel {
     @NameInMap("CoverURL")
     public String coverURL;
 
-    // 截图
-    @NameInMap("Snapshots")
-    public String snapshots;
-
     // 用户自定义元数据
     @NameInMap("DynamicMetaDataList")
     public String dynamicMetaDataList;
@@ -51,10 +47,6 @@ public class UpdateMediaInfoRequest extends TeaModel {
     // 是否以append的形式更新Tags字段
     @NameInMap("AppendTags")
     public Boolean appendTags;
-
-    // 是否以append的形式更新Snapshots字段
-    @NameInMap("AppendSnapshots")
-    public Boolean appendSnapshots;
 
     // 是否以append的形式更新DynamicMetaDataList字段
     @NameInMap("AppendDynamicMeta")
@@ -129,14 +121,6 @@ public class UpdateMediaInfoRequest extends TeaModel {
         return this.coverURL;
     }
 
-    public UpdateMediaInfoRequest setSnapshots(String snapshots) {
-        this.snapshots = snapshots;
-        return this;
-    }
-    public String getSnapshots() {
-        return this.snapshots;
-    }
-
     public UpdateMediaInfoRequest setDynamicMetaDataList(String dynamicMetaDataList) {
         this.dynamicMetaDataList = dynamicMetaDataList;
         return this;
@@ -159,14 +143,6 @@ public class UpdateMediaInfoRequest extends TeaModel {
     }
     public Boolean getAppendTags() {
         return this.appendTags;
-    }
-
-    public UpdateMediaInfoRequest setAppendSnapshots(Boolean appendSnapshots) {
-        this.appendSnapshots = appendSnapshots;
-        return this;
-    }
-    public Boolean getAppendSnapshots() {
-        return this.appendSnapshots;
     }
 
     public UpdateMediaInfoRequest setAppendDynamicMeta(Boolean appendDynamicMeta) {

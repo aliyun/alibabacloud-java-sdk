@@ -16,14 +16,6 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    // 页数
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    // 分页大小
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     // 返回值中是否包含文件基础信息
     @NameInMap("IncludeFileBasicInfo")
     public Boolean includeFileBasicInfo;
@@ -55,22 +47,6 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
-    }
-
-    public ListPublicMediaBasicInfosRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Integer getPageNo() {
-        return this.pageNo;
-    }
-
-    public ListPublicMediaBasicInfosRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
     }
 
     public ListPublicMediaBasicInfosRequest setIncludeFileBasicInfo(Boolean includeFileBasicInfo) {

@@ -28,14 +28,6 @@ public class SearchEditingProjectRequest extends TeaModel {
     @NameInMap("MaxResults")
     public Long maxResults;
 
-    // 分页参数
-    @NameInMap("PageNo")
-    public Long pageNo;
-
-    // 分页参数
-    @NameInMap("PageSize")
-    public Long pageSize;
-
     public static SearchEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchEditingProjectRequest self = new SearchEditingProjectRequest();
         return TeaModel.build(map, self);
@@ -87,22 +79,6 @@ public class SearchEditingProjectRequest extends TeaModel {
     }
     public Long getMaxResults() {
         return this.maxResults;
-    }
-
-    public SearchEditingProjectRequest setPageNo(Long pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Long getPageNo() {
-        return this.pageNo;
-    }
-
-    public SearchEditingProjectRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
 }
