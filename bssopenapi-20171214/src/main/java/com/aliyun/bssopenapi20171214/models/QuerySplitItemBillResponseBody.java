@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QuerySplitItemBillResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QuerySplitItemBillResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public QuerySplitItemBillResponseBodyData data;
-
     public static QuerySplitItemBillResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySplitItemBillResponseBody self = new QuerySplitItemBillResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QuerySplitItemBillResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QuerySplitItemBillResponseBody setData(QuerySplitItemBillResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QuerySplitItemBillResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QuerySplitItemBillResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QuerySplitItemBillResponseBody setRequestId(String requestId) {
@@ -40,114 +64,42 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QuerySplitItemBillResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QuerySplitItemBillResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QuerySplitItemBillResponseBody setData(QuerySplitItemBillResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QuerySplitItemBillResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QuerySplitItemBillResponseBodyDataItemsItem extends TeaModel {
-        @NameInMap("InstanceID")
-        public String instanceID;
-
-        @NameInMap("BillingType")
-        public String billingType;
-
-        @NameInMap("CostUnit")
-        public String costUnit;
-
-        @NameInMap("ProductCode")
-        public String productCode;
-
-        @NameInMap("ProductType")
-        public String productType;
-
-        @NameInMap("SubscriptionType")
-        public String subscriptionType;
-
-        @NameInMap("ProductName")
-        public String productName;
-
-        @NameInMap("ProductDetail")
-        public String productDetail;
-
-        @NameInMap("OwnerID")
-        public String ownerID;
+        @NameInMap("BillingDate")
+        public String billingDate;
 
         @NameInMap("BillingItem")
         public String billingItem;
 
-        @NameInMap("ListPrice")
-        public String listPrice;
+        @NameInMap("BillingType")
+        public String billingType;
 
-        @NameInMap("ListPriceUnit")
-        public String listPriceUnit;
+        @NameInMap("CommodityCode")
+        public String commodityCode;
 
-        @NameInMap("Usage")
-        public String usage;
-
-        @NameInMap("UsageUnit")
-        public String usageUnit;
-
-        @NameInMap("DeductedByResourcePackage")
-        public String deductedByResourcePackage;
-
-        @NameInMap("PretaxGrossAmount")
-        public Float pretaxGrossAmount;
-
-        @NameInMap("InvoiceDiscount")
-        public Float invoiceDiscount;
-
-        @NameInMap("DeductedByCoupons")
-        public Float deductedByCoupons;
-
-        @NameInMap("PretaxAmount")
-        public Float pretaxAmount;
-
-        @NameInMap("DeductedByCashCoupons")
-        public Float deductedByCashCoupons;
-
-        @NameInMap("DeductedByPrepaidCard")
-        public Float deductedByPrepaidCard;
-
-        @NameInMap("PaymentAmount")
-        public Float paymentAmount;
-
-        @NameInMap("OutstandingAmount")
-        public Float outstandingAmount;
+        @NameInMap("CostUnit")
+        public String costUnit;
 
         @NameInMap("Currency")
         public String currency;
 
-        @NameInMap("NickName")
-        public String nickName;
+        @NameInMap("DeductedByCashCoupons")
+        public Float deductedByCashCoupons;
 
-        @NameInMap("ResourceGroup")
-        public String resourceGroup;
+        @NameInMap("DeductedByCoupons")
+        public Float deductedByCoupons;
 
-        @NameInMap("Tag")
-        public String tag;
+        @NameInMap("DeductedByPrepaidCard")
+        public Float deductedByPrepaidCard;
+
+        @NameInMap("DeductedByResourcePackage")
+        public String deductedByResourcePackage;
 
         @NameInMap("InstanceConfig")
         public String instanceConfig;
+
+        @NameInMap("InstanceID")
+        public String instanceID;
 
         @NameInMap("InstanceSpec")
         public String instanceSpec;
@@ -158,20 +110,59 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         @NameInMap("IntranetIP")
         public String intranetIP;
 
-        @NameInMap("Region")
-        public String region;
-
-        @NameInMap("Zone")
-        public String zone;
+        @NameInMap("InvoiceDiscount")
+        public Float invoiceDiscount;
 
         @NameInMap("Item")
         public String item;
 
+        @NameInMap("ListPrice")
+        public String listPrice;
+
+        @NameInMap("ListPriceUnit")
+        public String listPriceUnit;
+
+        @NameInMap("NickName")
+        public String nickName;
+
+        @NameInMap("OutstandingAmount")
+        public Float outstandingAmount;
+
+        @NameInMap("OwnerID")
+        public String ownerID;
+
+        @NameInMap("PaymentAmount")
+        public Float paymentAmount;
+
+        @NameInMap("PipCode")
+        public String pipCode;
+
+        @NameInMap("PretaxAmount")
+        public Float pretaxAmount;
+
+        @NameInMap("PretaxGrossAmount")
+        public Float pretaxGrossAmount;
+
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("ProductDetail")
+        public String productDetail;
+
+        @NameInMap("ProductName")
+        public String productName;
+
+        @NameInMap("ProductType")
+        public String productType;
+
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("ResourceGroup")
+        public String resourceGroup;
+
         @NameInMap("ServicePeriod")
         public String servicePeriod;
-
-        @NameInMap("BillingDate")
-        public String billingDate;
 
         @NameInMap("SplitItemID")
         public String splitItemID;
@@ -179,105 +170,32 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         @NameInMap("SplitItemName")
         public String splitItemName;
 
-        @NameInMap("PipCode")
-        public String pipCode;
+        @NameInMap("SubscriptionType")
+        public String subscriptionType;
 
-        @NameInMap("CommodityCode")
-        public String commodityCode;
+        @NameInMap("Tag")
+        public String tag;
 
-        @NameInMap("ServicePeriodUnit")
-        public String servicePeriodUnit;
+        @NameInMap("Usage")
+        public String usage;
 
-        @NameInMap("SplitCommodityCode")
-        public String splitCommodityCode;
+        @NameInMap("UsageUnit")
+        public String usageUnit;
 
-        @NameInMap("SplitProductDetail")
-        public String splitProductDetail;
-
-        @NameInMap("SplitAccountID")
-        public String splitAccountID;
-
-        @NameInMap("SplitAccountName")
-        public String splitAccountName;
-
-        @NameInMap("SplitBillingCycle")
-        public String splitBillingCycle;
+        @NameInMap("Zone")
+        public String zone;
 
         public static QuerySplitItemBillResponseBodyDataItemsItem build(java.util.Map<String, ?> map) throws Exception {
             QuerySplitItemBillResponseBodyDataItemsItem self = new QuerySplitItemBillResponseBodyDataItemsItem();
             return TeaModel.build(map, self);
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setInstanceID(String instanceID) {
-            this.instanceID = instanceID;
+        public QuerySplitItemBillResponseBodyDataItemsItem setBillingDate(String billingDate) {
+            this.billingDate = billingDate;
             return this;
         }
-        public String getInstanceID() {
-            return this.instanceID;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setBillingType(String billingType) {
-            this.billingType = billingType;
-            return this;
-        }
-        public String getBillingType() {
-            return this.billingType;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setCostUnit(String costUnit) {
-            this.costUnit = costUnit;
-            return this;
-        }
-        public String getCostUnit() {
-            return this.costUnit;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setProductCode(String productCode) {
-            this.productCode = productCode;
-            return this;
-        }
-        public String getProductCode() {
-            return this.productCode;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setProductType(String productType) {
-            this.productType = productType;
-            return this;
-        }
-        public String getProductType() {
-            return this.productType;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setSubscriptionType(String subscriptionType) {
-            this.subscriptionType = subscriptionType;
-            return this;
-        }
-        public String getSubscriptionType() {
-            return this.subscriptionType;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setProductName(String productName) {
-            this.productName = productName;
-            return this;
-        }
-        public String getProductName() {
-            return this.productName;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setProductDetail(String productDetail) {
-            this.productDetail = productDetail;
-            return this;
-        }
-        public String getProductDetail() {
-            return this.productDetail;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setOwnerID(String ownerID) {
-            this.ownerID = ownerID;
-            return this;
-        }
-        public String getOwnerID() {
-            return this.ownerID;
+        public String getBillingDate() {
+            return this.billingDate;
         }
 
         public QuerySplitItemBillResponseBodyDataItemsItem setBillingItem(String billingItem) {
@@ -288,108 +206,28 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             return this.billingItem;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setListPrice(String listPrice) {
-            this.listPrice = listPrice;
+        public QuerySplitItemBillResponseBodyDataItemsItem setBillingType(String billingType) {
+            this.billingType = billingType;
             return this;
         }
-        public String getListPrice() {
-            return this.listPrice;
+        public String getBillingType() {
+            return this.billingType;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setListPriceUnit(String listPriceUnit) {
-            this.listPriceUnit = listPriceUnit;
+        public QuerySplitItemBillResponseBodyDataItemsItem setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
             return this;
         }
-        public String getListPriceUnit() {
-            return this.listPriceUnit;
+        public String getCommodityCode() {
+            return this.commodityCode;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setUsage(String usage) {
-            this.usage = usage;
+        public QuerySplitItemBillResponseBodyDataItemsItem setCostUnit(String costUnit) {
+            this.costUnit = costUnit;
             return this;
         }
-        public String getUsage() {
-            return this.usage;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setUsageUnit(String usageUnit) {
-            this.usageUnit = usageUnit;
-            return this;
-        }
-        public String getUsageUnit() {
-            return this.usageUnit;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setDeductedByResourcePackage(String deductedByResourcePackage) {
-            this.deductedByResourcePackage = deductedByResourcePackage;
-            return this;
-        }
-        public String getDeductedByResourcePackage() {
-            return this.deductedByResourcePackage;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
-            this.pretaxGrossAmount = pretaxGrossAmount;
-            return this;
-        }
-        public Float getPretaxGrossAmount() {
-            return this.pretaxGrossAmount;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setInvoiceDiscount(Float invoiceDiscount) {
-            this.invoiceDiscount = invoiceDiscount;
-            return this;
-        }
-        public Float getInvoiceDiscount() {
-            return this.invoiceDiscount;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setDeductedByCoupons(Float deductedByCoupons) {
-            this.deductedByCoupons = deductedByCoupons;
-            return this;
-        }
-        public Float getDeductedByCoupons() {
-            return this.deductedByCoupons;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setPretaxAmount(Float pretaxAmount) {
-            this.pretaxAmount = pretaxAmount;
-            return this;
-        }
-        public Float getPretaxAmount() {
-            return this.pretaxAmount;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setDeductedByCashCoupons(Float deductedByCashCoupons) {
-            this.deductedByCashCoupons = deductedByCashCoupons;
-            return this;
-        }
-        public Float getDeductedByCashCoupons() {
-            return this.deductedByCashCoupons;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setDeductedByPrepaidCard(Float deductedByPrepaidCard) {
-            this.deductedByPrepaidCard = deductedByPrepaidCard;
-            return this;
-        }
-        public Float getDeductedByPrepaidCard() {
-            return this.deductedByPrepaidCard;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setPaymentAmount(Float paymentAmount) {
-            this.paymentAmount = paymentAmount;
-            return this;
-        }
-        public Float getPaymentAmount() {
-            return this.paymentAmount;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setOutstandingAmount(Float outstandingAmount) {
-            this.outstandingAmount = outstandingAmount;
-            return this;
-        }
-        public Float getOutstandingAmount() {
-            return this.outstandingAmount;
+        public String getCostUnit() {
+            return this.costUnit;
         }
 
         public QuerySplitItemBillResponseBodyDataItemsItem setCurrency(String currency) {
@@ -400,28 +238,36 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setNickName(String nickName) {
-            this.nickName = nickName;
+        public QuerySplitItemBillResponseBodyDataItemsItem setDeductedByCashCoupons(Float deductedByCashCoupons) {
+            this.deductedByCashCoupons = deductedByCashCoupons;
             return this;
         }
-        public String getNickName() {
-            return this.nickName;
+        public Float getDeductedByCashCoupons() {
+            return this.deductedByCashCoupons;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setResourceGroup(String resourceGroup) {
-            this.resourceGroup = resourceGroup;
+        public QuerySplitItemBillResponseBodyDataItemsItem setDeductedByCoupons(Float deductedByCoupons) {
+            this.deductedByCoupons = deductedByCoupons;
             return this;
         }
-        public String getResourceGroup() {
-            return this.resourceGroup;
+        public Float getDeductedByCoupons() {
+            return this.deductedByCoupons;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setTag(String tag) {
-            this.tag = tag;
+        public QuerySplitItemBillResponseBodyDataItemsItem setDeductedByPrepaidCard(Float deductedByPrepaidCard) {
+            this.deductedByPrepaidCard = deductedByPrepaidCard;
             return this;
         }
-        public String getTag() {
-            return this.tag;
+        public Float getDeductedByPrepaidCard() {
+            return this.deductedByPrepaidCard;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setDeductedByResourcePackage(String deductedByResourcePackage) {
+            this.deductedByResourcePackage = deductedByResourcePackage;
+            return this;
+        }
+        public String getDeductedByResourcePackage() {
+            return this.deductedByResourcePackage;
         }
 
         public QuerySplitItemBillResponseBodyDataItemsItem setInstanceConfig(String instanceConfig) {
@@ -430,6 +276,14 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         }
         public String getInstanceConfig() {
             return this.instanceConfig;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setInstanceID(String instanceID) {
+            this.instanceID = instanceID;
+            return this;
+        }
+        public String getInstanceID() {
+            return this.instanceID;
         }
 
         public QuerySplitItemBillResponseBodyDataItemsItem setInstanceSpec(String instanceSpec) {
@@ -456,20 +310,12 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             return this.intranetIP;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setRegion(String region) {
-            this.region = region;
+        public QuerySplitItemBillResponseBodyDataItemsItem setInvoiceDiscount(Float invoiceDiscount) {
+            this.invoiceDiscount = invoiceDiscount;
             return this;
         }
-        public String getRegion() {
-            return this.region;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setZone(String zone) {
-            this.zone = zone;
-            return this;
-        }
-        public String getZone() {
-            return this.zone;
+        public Float getInvoiceDiscount() {
+            return this.invoiceDiscount;
         }
 
         public QuerySplitItemBillResponseBodyDataItemsItem setItem(String item) {
@@ -480,20 +326,132 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             return this.item;
         }
 
+        public QuerySplitItemBillResponseBodyDataItemsItem setListPrice(String listPrice) {
+            this.listPrice = listPrice;
+            return this;
+        }
+        public String getListPrice() {
+            return this.listPrice;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setListPriceUnit(String listPriceUnit) {
+            this.listPriceUnit = listPriceUnit;
+            return this;
+        }
+        public String getListPriceUnit() {
+            return this.listPriceUnit;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setNickName(String nickName) {
+            this.nickName = nickName;
+            return this;
+        }
+        public String getNickName() {
+            return this.nickName;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setOutstandingAmount(Float outstandingAmount) {
+            this.outstandingAmount = outstandingAmount;
+            return this;
+        }
+        public Float getOutstandingAmount() {
+            return this.outstandingAmount;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setOwnerID(String ownerID) {
+            this.ownerID = ownerID;
+            return this;
+        }
+        public String getOwnerID() {
+            return this.ownerID;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setPaymentAmount(Float paymentAmount) {
+            this.paymentAmount = paymentAmount;
+            return this;
+        }
+        public Float getPaymentAmount() {
+            return this.paymentAmount;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setPipCode(String pipCode) {
+            this.pipCode = pipCode;
+            return this;
+        }
+        public String getPipCode() {
+            return this.pipCode;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setPretaxAmount(Float pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
+            return this;
+        }
+        public Float getPretaxAmount() {
+            return this.pretaxAmount;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setPretaxGrossAmount(Float pretaxGrossAmount) {
+            this.pretaxGrossAmount = pretaxGrossAmount;
+            return this;
+        }
+        public Float getPretaxGrossAmount() {
+            return this.pretaxGrossAmount;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setProductDetail(String productDetail) {
+            this.productDetail = productDetail;
+            return this;
+        }
+        public String getProductDetail() {
+            return this.productDetail;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setProductType(String productType) {
+            this.productType = productType;
+            return this;
+        }
+        public String getProductType() {
+            return this.productType;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public QuerySplitItemBillResponseBodyDataItemsItem setResourceGroup(String resourceGroup) {
+            this.resourceGroup = resourceGroup;
+            return this;
+        }
+        public String getResourceGroup() {
+            return this.resourceGroup;
+        }
+
         public QuerySplitItemBillResponseBodyDataItemsItem setServicePeriod(String servicePeriod) {
             this.servicePeriod = servicePeriod;
             return this;
         }
         public String getServicePeriod() {
             return this.servicePeriod;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setBillingDate(String billingDate) {
-            this.billingDate = billingDate;
-            return this;
-        }
-        public String getBillingDate() {
-            return this.billingDate;
         }
 
         public QuerySplitItemBillResponseBodyDataItemsItem setSplitItemID(String splitItemID) {
@@ -512,68 +470,44 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             return this.splitItemName;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setPipCode(String pipCode) {
-            this.pipCode = pipCode;
+        public QuerySplitItemBillResponseBodyDataItemsItem setSubscriptionType(String subscriptionType) {
+            this.subscriptionType = subscriptionType;
             return this;
         }
-        public String getPipCode() {
-            return this.pipCode;
+        public String getSubscriptionType() {
+            return this.subscriptionType;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setCommodityCode(String commodityCode) {
-            this.commodityCode = commodityCode;
+        public QuerySplitItemBillResponseBodyDataItemsItem setTag(String tag) {
+            this.tag = tag;
             return this;
         }
-        public String getCommodityCode() {
-            return this.commodityCode;
+        public String getTag() {
+            return this.tag;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setServicePeriodUnit(String servicePeriodUnit) {
-            this.servicePeriodUnit = servicePeriodUnit;
+        public QuerySplitItemBillResponseBodyDataItemsItem setUsage(String usage) {
+            this.usage = usage;
             return this;
         }
-        public String getServicePeriodUnit() {
-            return this.servicePeriodUnit;
+        public String getUsage() {
+            return this.usage;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setSplitCommodityCode(String splitCommodityCode) {
-            this.splitCommodityCode = splitCommodityCode;
+        public QuerySplitItemBillResponseBodyDataItemsItem setUsageUnit(String usageUnit) {
+            this.usageUnit = usageUnit;
             return this;
         }
-        public String getSplitCommodityCode() {
-            return this.splitCommodityCode;
+        public String getUsageUnit() {
+            return this.usageUnit;
         }
 
-        public QuerySplitItemBillResponseBodyDataItemsItem setSplitProductDetail(String splitProductDetail) {
-            this.splitProductDetail = splitProductDetail;
+        public QuerySplitItemBillResponseBodyDataItemsItem setZone(String zone) {
+            this.zone = zone;
             return this;
         }
-        public String getSplitProductDetail() {
-            return this.splitProductDetail;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setSplitAccountID(String splitAccountID) {
-            this.splitAccountID = splitAccountID;
-            return this;
-        }
-        public String getSplitAccountID() {
-            return this.splitAccountID;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setSplitAccountName(String splitAccountName) {
-            this.splitAccountName = splitAccountName;
-            return this;
-        }
-        public String getSplitAccountName() {
-            return this.splitAccountName;
-        }
-
-        public QuerySplitItemBillResponseBodyDataItemsItem setSplitBillingCycle(String splitBillingCycle) {
-            this.splitBillingCycle = splitBillingCycle;
-            return this;
-        }
-        public String getSplitBillingCycle() {
-            return this.splitBillingCycle;
+        public String getZone() {
+            return this.zone;
         }
 
     }
@@ -598,17 +532,17 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
     }
 
     public static class QuerySplitItemBillResponseBodyData extends TeaModel {
-        @NameInMap("BillingCycle")
-        public String billingCycle;
-
         @NameInMap("AccountID")
         public String accountID;
 
         @NameInMap("AccountName")
         public String accountName;
 
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("BillingCycle")
+        public String billingCycle;
+
+        @NameInMap("Items")
+        public QuerySplitItemBillResponseBodyDataItems items;
 
         @NameInMap("PageNum")
         public Integer pageNum;
@@ -616,20 +550,12 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         @NameInMap("PageSize")
         public Integer pageSize;
 
-        @NameInMap("Items")
-        public QuerySplitItemBillResponseBodyDataItems items;
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static QuerySplitItemBillResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QuerySplitItemBillResponseBodyData self = new QuerySplitItemBillResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public QuerySplitItemBillResponseBodyData setBillingCycle(String billingCycle) {
-            this.billingCycle = billingCycle;
-            return this;
-        }
-        public String getBillingCycle() {
-            return this.billingCycle;
         }
 
         public QuerySplitItemBillResponseBodyData setAccountID(String accountID) {
@@ -648,12 +574,20 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             return this.accountName;
         }
 
-        public QuerySplitItemBillResponseBodyData setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
+        public QuerySplitItemBillResponseBodyData setBillingCycle(String billingCycle) {
+            this.billingCycle = billingCycle;
             return this;
         }
-        public Integer getTotalCount() {
-            return this.totalCount;
+        public String getBillingCycle() {
+            return this.billingCycle;
+        }
+
+        public QuerySplitItemBillResponseBodyData setItems(QuerySplitItemBillResponseBodyDataItems items) {
+            this.items = items;
+            return this;
+        }
+        public QuerySplitItemBillResponseBodyDataItems getItems() {
+            return this.items;
         }
 
         public QuerySplitItemBillResponseBodyData setPageNum(Integer pageNum) {
@@ -672,12 +606,12 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             return this.pageSize;
         }
 
-        public QuerySplitItemBillResponseBodyData setItems(QuerySplitItemBillResponseBodyDataItems items) {
-            this.items = items;
+        public QuerySplitItemBillResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
-        public QuerySplitItemBillResponseBodyDataItems getItems() {
-            return this.items;
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

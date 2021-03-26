@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class GetSubscriptionPriceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public GetSubscriptionPriceResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public GetSubscriptionPriceResponseBodyData data;
-
     public static GetSubscriptionPriceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSubscriptionPriceResponseBody self = new GetSubscriptionPriceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetSubscriptionPriceResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetSubscriptionPriceResponseBody setData(GetSubscriptionPriceResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetSubscriptionPriceResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetSubscriptionPriceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public GetSubscriptionPriceResponseBody setRequestId(String requestId) {
@@ -40,42 +64,18 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         return this.success;
     }
 
-    public GetSubscriptionPriceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public GetSubscriptionPriceResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public GetSubscriptionPriceResponseBody setData(GetSubscriptionPriceResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public GetSubscriptionPriceResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail extends TeaModel {
+        @NameInMap("CostAfterDiscount")
+        public Float costAfterDiscount;
+
+        @NameInMap("InvoiceDiscount")
+        public Float invoiceDiscount;
+
         @NameInMap("ModuleCode")
         public String moduleCode;
 
         @NameInMap("OriginalCost")
         public Float originalCost;
-
-        @NameInMap("InvoiceDiscount")
-        public Float invoiceDiscount;
-
-        @NameInMap("CostAfterDiscount")
-        public Float costAfterDiscount;
 
         @NameInMap("UnitPrice")
         public Float unitPrice;
@@ -83,6 +83,22 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         public static GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail build(java.util.Map<String, ?> map) throws Exception {
             GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail self = new GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail();
             return TeaModel.build(map, self);
+        }
+
+        public GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail setCostAfterDiscount(Float costAfterDiscount) {
+            this.costAfterDiscount = costAfterDiscount;
+            return this;
+        }
+        public Float getCostAfterDiscount() {
+            return this.costAfterDiscount;
+        }
+
+        public GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail setInvoiceDiscount(Float invoiceDiscount) {
+            this.invoiceDiscount = invoiceDiscount;
+            return this;
+        }
+        public Float getInvoiceDiscount() {
+            return this.invoiceDiscount;
         }
 
         public GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail setModuleCode(String moduleCode) {
@@ -99,22 +115,6 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
         public Float getOriginalCost() {
             return this.originalCost;
-        }
-
-        public GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail setInvoiceDiscount(Float invoiceDiscount) {
-            this.invoiceDiscount = invoiceDiscount;
-            return this;
-        }
-        public Float getInvoiceDiscount() {
-            return this.invoiceDiscount;
-        }
-
-        public GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail setCostAfterDiscount(Float costAfterDiscount) {
-            this.costAfterDiscount = costAfterDiscount;
-            return this;
-        }
-        public Float getCostAfterDiscount() {
-            return this.costAfterDiscount;
         }
 
         public GetSubscriptionPriceResponseBodyDataModuleDetailsModuleDetail setUnitPrice(Float unitPrice) {
@@ -147,26 +147,18 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail extends TeaModel {
-        @NameInMap("PromotionName")
-        public String promotionName;
-
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         @NameInMap("PromotionId")
         public Long promotionId;
 
+        @NameInMap("PromotionName")
+        public String promotionName;
+
         public static GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail build(java.util.Map<String, ?> map) throws Exception {
             GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail self = new GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail();
             return TeaModel.build(map, self);
-        }
-
-        public GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail setPromotionName(String promotionName) {
-            this.promotionName = promotionName;
-            return this;
-        }
-        public String getPromotionName() {
-            return this.promotionName;
         }
 
         public GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail setPromotionDesc(String promotionDesc) {
@@ -183,6 +175,14 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
         public Long getPromotionId() {
             return this.promotionId;
+        }
+
+        public GetSubscriptionPriceResponseBodyDataPromotionDetailsPromotionDetail setPromotionName(String promotionName) {
+            this.promotionName = promotionName;
+            return this;
+        }
+        public String getPromotionName() {
+            return this.promotionName;
         }
 
     }
@@ -207,54 +207,30 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     }
 
     public static class GetSubscriptionPriceResponseBodyData extends TeaModel {
-        @NameInMap("OriginalPrice")
-        public Float originalPrice;
+        @NameInMap("Currency")
+        public String currency;
 
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
-        @NameInMap("TradePrice")
-        public Float tradePrice;
-
-        @NameInMap("Currency")
-        public String currency;
-
-        @NameInMap("Quantity")
-        public Integer quantity;
-
         @NameInMap("ModuleDetails")
         public GetSubscriptionPriceResponseBodyDataModuleDetails moduleDetails;
+
+        @NameInMap("OriginalPrice")
+        public Float originalPrice;
 
         @NameInMap("PromotionDetails")
         public GetSubscriptionPriceResponseBodyDataPromotionDetails promotionDetails;
 
+        @NameInMap("Quantity")
+        public Integer quantity;
+
+        @NameInMap("TradePrice")
+        public Float tradePrice;
+
         public static GetSubscriptionPriceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetSubscriptionPriceResponseBodyData self = new GetSubscriptionPriceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public GetSubscriptionPriceResponseBodyData setOriginalPrice(Float originalPrice) {
-            this.originalPrice = originalPrice;
-            return this;
-        }
-        public Float getOriginalPrice() {
-            return this.originalPrice;
-        }
-
-        public GetSubscriptionPriceResponseBodyData setDiscountPrice(Float discountPrice) {
-            this.discountPrice = discountPrice;
-            return this;
-        }
-        public Float getDiscountPrice() {
-            return this.discountPrice;
-        }
-
-        public GetSubscriptionPriceResponseBodyData setTradePrice(Float tradePrice) {
-            this.tradePrice = tradePrice;
-            return this;
-        }
-        public Float getTradePrice() {
-            return this.tradePrice;
         }
 
         public GetSubscriptionPriceResponseBodyData setCurrency(String currency) {
@@ -265,12 +241,12 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             return this.currency;
         }
 
-        public GetSubscriptionPriceResponseBodyData setQuantity(Integer quantity) {
-            this.quantity = quantity;
+        public GetSubscriptionPriceResponseBodyData setDiscountPrice(Float discountPrice) {
+            this.discountPrice = discountPrice;
             return this;
         }
-        public Integer getQuantity() {
-            return this.quantity;
+        public Float getDiscountPrice() {
+            return this.discountPrice;
         }
 
         public GetSubscriptionPriceResponseBodyData setModuleDetails(GetSubscriptionPriceResponseBodyDataModuleDetails moduleDetails) {
@@ -281,12 +257,36 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             return this.moduleDetails;
         }
 
+        public GetSubscriptionPriceResponseBodyData setOriginalPrice(Float originalPrice) {
+            this.originalPrice = originalPrice;
+            return this;
+        }
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
         public GetSubscriptionPriceResponseBodyData setPromotionDetails(GetSubscriptionPriceResponseBodyDataPromotionDetails promotionDetails) {
             this.promotionDetails = promotionDetails;
             return this;
         }
         public GetSubscriptionPriceResponseBodyDataPromotionDetails getPromotionDetails() {
             return this.promotionDetails;
+        }
+
+        public GetSubscriptionPriceResponseBodyData setQuantity(Integer quantity) {
+            this.quantity = quantity;
+            return this;
+        }
+        public Integer getQuantity() {
+            return this.quantity;
+        }
+
+        public GetSubscriptionPriceResponseBodyData setTradePrice(Float tradePrice) {
+            this.tradePrice = tradePrice;
+            return this;
+        }
+        public Float getTradePrice() {
+            return this.tradePrice;
         }
 
     }

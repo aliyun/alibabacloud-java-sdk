@@ -4,21 +4,37 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class SaveUserCreditResponseBody extends TeaModel {
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("Message")
-    public String message;
-
     public static SaveUserCreditResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SaveUserCreditResponseBody self = new SaveUserCreditResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SaveUserCreditResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public SaveUserCreditResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SaveUserCreditResponseBody setCode(String code) {
@@ -35,22 +51,6 @@ public class SaveUserCreditResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public SaveUserCreditResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public SaveUserCreditResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
 }

@@ -4,24 +4,48 @@ package com.aliyun.bssopenapi20171214.models;
 import com.aliyun.tea.*;
 
 public class QueryPrepaidCardsResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Data")
+    public QueryPrepaidCardsResponseBodyData data;
+
+    @NameInMap("Message")
+    public String message;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("Code")
-    public String code;
-
-    @NameInMap("Message")
-    public String message;
-
-    @NameInMap("Data")
-    public QueryPrepaidCardsResponseBodyData data;
-
     public static QueryPrepaidCardsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryPrepaidCardsResponseBody self = new QueryPrepaidCardsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public QueryPrepaidCardsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public QueryPrepaidCardsResponseBody setData(QueryPrepaidCardsResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public QueryPrepaidCardsResponseBodyData getData() {
+        return this.data;
+    }
+
+    public QueryPrepaidCardsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QueryPrepaidCardsResponseBody setRequestId(String requestId) {
@@ -40,39 +64,15 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public QueryPrepaidCardsResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public QueryPrepaidCardsResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public QueryPrepaidCardsResponseBody setData(QueryPrepaidCardsResponseBodyData data) {
-        this.data = data;
-        return this;
-    }
-    public QueryPrepaidCardsResponseBodyData getData() {
-        return this.data;
-    }
-
     public static class QueryPrepaidCardsResponseBodyDataPrepaidCard extends TeaModel {
-        @NameInMap("PrepaidCardId")
-        public Long prepaidCardId;
+        @NameInMap("ApplicableProducts")
+        public String applicableProducts;
 
-        @NameInMap("PrepaidCardNo")
-        public String prepaidCardNo;
+        @NameInMap("ApplicableScenarios")
+        public String applicableScenarios;
 
-        @NameInMap("GrantedTime")
-        public String grantedTime;
+        @NameInMap("Balance")
+        public String balance;
 
         @NameInMap("EffectiveTime")
         public String effectiveTime;
@@ -80,17 +80,17 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         @NameInMap("ExpiryTime")
         public String expiryTime;
 
-        @NameInMap("ApplicableProducts")
-        public String applicableProducts;
-
-        @NameInMap("ApplicableScenarios")
-        public String applicableScenarios;
+        @NameInMap("GrantedTime")
+        public String grantedTime;
 
         @NameInMap("NominalValue")
         public String nominalValue;
 
-        @NameInMap("Balance")
-        public String balance;
+        @NameInMap("PrepaidCardId")
+        public Long prepaidCardId;
+
+        @NameInMap("PrepaidCardNo")
+        public String prepaidCardNo;
 
         @NameInMap("Status")
         public String status;
@@ -98,46 +98,6 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         public static QueryPrepaidCardsResponseBodyDataPrepaidCard build(java.util.Map<String, ?> map) throws Exception {
             QueryPrepaidCardsResponseBodyDataPrepaidCard self = new QueryPrepaidCardsResponseBodyDataPrepaidCard();
             return TeaModel.build(map, self);
-        }
-
-        public QueryPrepaidCardsResponseBodyDataPrepaidCard setPrepaidCardId(Long prepaidCardId) {
-            this.prepaidCardId = prepaidCardId;
-            return this;
-        }
-        public Long getPrepaidCardId() {
-            return this.prepaidCardId;
-        }
-
-        public QueryPrepaidCardsResponseBodyDataPrepaidCard setPrepaidCardNo(String prepaidCardNo) {
-            this.prepaidCardNo = prepaidCardNo;
-            return this;
-        }
-        public String getPrepaidCardNo() {
-            return this.prepaidCardNo;
-        }
-
-        public QueryPrepaidCardsResponseBodyDataPrepaidCard setGrantedTime(String grantedTime) {
-            this.grantedTime = grantedTime;
-            return this;
-        }
-        public String getGrantedTime() {
-            return this.grantedTime;
-        }
-
-        public QueryPrepaidCardsResponseBodyDataPrepaidCard setEffectiveTime(String effectiveTime) {
-            this.effectiveTime = effectiveTime;
-            return this;
-        }
-        public String getEffectiveTime() {
-            return this.effectiveTime;
-        }
-
-        public QueryPrepaidCardsResponseBodyDataPrepaidCard setExpiryTime(String expiryTime) {
-            this.expiryTime = expiryTime;
-            return this;
-        }
-        public String getExpiryTime() {
-            return this.expiryTime;
         }
 
         public QueryPrepaidCardsResponseBodyDataPrepaidCard setApplicableProducts(String applicableProducts) {
@@ -156,6 +116,38 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             return this.applicableScenarios;
         }
 
+        public QueryPrepaidCardsResponseBodyDataPrepaidCard setBalance(String balance) {
+            this.balance = balance;
+            return this;
+        }
+        public String getBalance() {
+            return this.balance;
+        }
+
+        public QueryPrepaidCardsResponseBodyDataPrepaidCard setEffectiveTime(String effectiveTime) {
+            this.effectiveTime = effectiveTime;
+            return this;
+        }
+        public String getEffectiveTime() {
+            return this.effectiveTime;
+        }
+
+        public QueryPrepaidCardsResponseBodyDataPrepaidCard setExpiryTime(String expiryTime) {
+            this.expiryTime = expiryTime;
+            return this;
+        }
+        public String getExpiryTime() {
+            return this.expiryTime;
+        }
+
+        public QueryPrepaidCardsResponseBodyDataPrepaidCard setGrantedTime(String grantedTime) {
+            this.grantedTime = grantedTime;
+            return this;
+        }
+        public String getGrantedTime() {
+            return this.grantedTime;
+        }
+
         public QueryPrepaidCardsResponseBodyDataPrepaidCard setNominalValue(String nominalValue) {
             this.nominalValue = nominalValue;
             return this;
@@ -164,12 +156,20 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             return this.nominalValue;
         }
 
-        public QueryPrepaidCardsResponseBodyDataPrepaidCard setBalance(String balance) {
-            this.balance = balance;
+        public QueryPrepaidCardsResponseBodyDataPrepaidCard setPrepaidCardId(Long prepaidCardId) {
+            this.prepaidCardId = prepaidCardId;
             return this;
         }
-        public String getBalance() {
-            return this.balance;
+        public Long getPrepaidCardId() {
+            return this.prepaidCardId;
+        }
+
+        public QueryPrepaidCardsResponseBodyDataPrepaidCard setPrepaidCardNo(String prepaidCardNo) {
+            this.prepaidCardNo = prepaidCardNo;
+            return this;
+        }
+        public String getPrepaidCardNo() {
+            return this.prepaidCardNo;
         }
 
         public QueryPrepaidCardsResponseBodyDataPrepaidCard setStatus(String status) {

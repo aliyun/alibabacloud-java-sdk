@@ -22,11 +22,11 @@ public class ModifyInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Parameter")
-    public java.util.List<ModifyInstanceRequestParameter> parameter;
-
     @NameInMap("ClientToken")
     public String clientToken;
+
+    @NameInMap("Parameter")
+    public java.util.List<ModifyInstanceRequestParameter> parameter;
 
     public static ModifyInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceRequest self = new ModifyInstanceRequest();
@@ -81,20 +81,20 @@ public class ModifyInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ModifyInstanceRequest setParameter(java.util.List<ModifyInstanceRequestParameter> parameter) {
-        this.parameter = parameter;
-        return this;
-    }
-    public java.util.List<ModifyInstanceRequestParameter> getParameter() {
-        return this.parameter;
-    }
-
     public ModifyInstanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ModifyInstanceRequest setParameter(java.util.List<ModifyInstanceRequestParameter> parameter) {
+        this.parameter = parameter;
+        return this;
+    }
+    public java.util.List<ModifyInstanceRequestParameter> getParameter() {
+        return this.parameter;
     }
 
     public static class ModifyInstanceRequestParameter extends TeaModel {
