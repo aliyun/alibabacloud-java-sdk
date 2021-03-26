@@ -274,7 +274,7 @@ public class YuqingMessage extends TeaModel {
 
     // appstore应用评分
     @NameInMap("appStoreAppScore")
-    public String appStoreAppScore;
+    public Long appStoreAppScore;
 
     // 应用名称
     @NameInMap("appStoreAppName")
@@ -825,11 +825,11 @@ public class YuqingMessage extends TeaModel {
         return this.financeEvents;
     }
 
-    public YuqingMessage setAppStoreAppScore(String appStoreAppScore) {
+    public YuqingMessage setAppStoreAppScore(Long appStoreAppScore) {
         this.appStoreAppScore = appStoreAppScore;
         return this;
     }
-    public String getAppStoreAppScore() {
+    public Long getAppStoreAppScore() {
         return this.appStoreAppScore;
     }
 
