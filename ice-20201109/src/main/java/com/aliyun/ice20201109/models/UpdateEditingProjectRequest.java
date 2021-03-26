@@ -24,10 +24,6 @@ public class UpdateEditingProjectRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
-    // 前端编辑器工程数据结构
-    @NameInMap("FEExtend")
-    public String FEExtend;
-
     public static UpdateEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateEditingProjectRequest self = new UpdateEditingProjectRequest();
         return TeaModel.build(map, self);
@@ -71,14 +67,6 @@ public class UpdateEditingProjectRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
-    }
-
-    public UpdateEditingProjectRequest setFEExtend(String FEExtend) {
-        this.FEExtend = FEExtend;
-        return this;
-    }
-    public String getFEExtend() {
-        return this.FEExtend;
     }
 
 }

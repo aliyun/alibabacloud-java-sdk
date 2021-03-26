@@ -3,17 +3,17 @@ package com.aliyun.ice20201109.models;
 
 import com.aliyun.tea.*;
 
-public class GetEditingProjectRequest extends TeaModel {
+public class GetEditingProjectMaterialsRequest extends TeaModel {
     // 云剪辑工程ID
     @NameInMap("ProjectId")
     public String projectId;
 
-    public static GetEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetEditingProjectRequest self = new GetEditingProjectRequest();
+    public static GetEditingProjectMaterialsRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetEditingProjectMaterialsRequest self = new GetEditingProjectMaterialsRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetEditingProjectRequest setProjectId(String projectId) {
+    public GetEditingProjectMaterialsRequest setProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }

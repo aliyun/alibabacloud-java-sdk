@@ -20,10 +20,6 @@ public class CreateEditingProjectRequest extends TeaModel {
     @NameInMap("CoverURL")
     public String coverURL;
 
-    // 前端编辑器工程数据结构
-    @NameInMap("FEExtend")
-    public String FEExtend;
-
     public static CreateEditingProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEditingProjectRequest self = new CreateEditingProjectRequest();
         return TeaModel.build(map, self);
@@ -59,14 +55,6 @@ public class CreateEditingProjectRequest extends TeaModel {
     }
     public String getCoverURL() {
         return this.coverURL;
-    }
-
-    public CreateEditingProjectRequest setFEExtend(String FEExtend) {
-        this.FEExtend = FEExtend;
-        return this;
-    }
-    public String getFEExtend() {
-        return this.FEExtend;
     }
 
 }

@@ -91,8 +91,8 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
         @NameInMap("InputFile")
         public String inputFile;
 
-        @NameInMap("Keyword")
-        public String keyword;
+        @NameInMap("JobParameters")
+        public String jobParameters;
 
         public static GetSmartHandleJobResponseBodySmartJobInfoInputConfig build(java.util.Map<String, ?> map) throws Exception {
             GetSmartHandleJobResponseBodySmartJobInfoInputConfig self = new GetSmartHandleJobResponseBodySmartJobInfoInputConfig();
@@ -107,12 +107,12 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
             return this.inputFile;
         }
 
-        public GetSmartHandleJobResponseBodySmartJobInfoInputConfig setKeyword(String keyword) {
-            this.keyword = keyword;
+        public GetSmartHandleJobResponseBodySmartJobInfoInputConfig setJobParameters(String jobParameters) {
+            this.jobParameters = jobParameters;
             return this;
         }
-        public String getKeyword() {
-            return this.keyword;
+        public String getJobParameters() {
+            return this.jobParameters;
         }
 
     }

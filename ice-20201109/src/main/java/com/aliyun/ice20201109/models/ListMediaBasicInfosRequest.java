@@ -44,21 +44,9 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
-    // 页数
-    @NameInMap("PageNo")
-    public Integer pageNo;
-
-    // 分页大小
-    @NameInMap("PageSize")
-    public Integer pageSize;
-
     // 返回值中是否包含文件基础信息
     @NameInMap("IncludeFileBasicInfo")
     public Boolean includeFileBasicInfo;
-
-    // 针对媒资标题进行关键词搜索
-    @NameInMap("Keyword")
-    public String keyword;
 
     public static ListMediaBasicInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMediaBasicInfosRequest self = new ListMediaBasicInfosRequest();
@@ -145,36 +133,12 @@ public class ListMediaBasicInfosRequest extends TeaModel {
         return this.sortBy;
     }
 
-    public ListMediaBasicInfosRequest setPageNo(Integer pageNo) {
-        this.pageNo = pageNo;
-        return this;
-    }
-    public Integer getPageNo() {
-        return this.pageNo;
-    }
-
-    public ListMediaBasicInfosRequest setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public ListMediaBasicInfosRequest setIncludeFileBasicInfo(Boolean includeFileBasicInfo) {
         this.includeFileBasicInfo = includeFileBasicInfo;
         return this;
     }
     public Boolean getIncludeFileBasicInfo() {
         return this.includeFileBasicInfo;
-    }
-
-    public ListMediaBasicInfosRequest setKeyword(String keyword) {
-        this.keyword = keyword;
-        return this;
-    }
-    public String getKeyword() {
-        return this.keyword;
     }
 
 }

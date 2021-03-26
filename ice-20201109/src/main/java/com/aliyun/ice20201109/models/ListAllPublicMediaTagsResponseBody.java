@@ -38,6 +38,14 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         @NameInMap("MediaTagId")
         public String mediaTagId;
 
+        // 素材标签中文名
+        @NameInMap("MediaTagNameChinese")
+        public String mediaTagNameChinese;
+
+        // 素材标签英文名
+        @NameInMap("MediaTagNameEnglish")
+        public String mediaTagNameEnglish;
+
         public static ListAllPublicMediaTagsResponseBodyMediaTagList build(java.util.Map<String, ?> map) throws Exception {
             ListAllPublicMediaTagsResponseBodyMediaTagList self = new ListAllPublicMediaTagsResponseBodyMediaTagList();
             return TeaModel.build(map, self);
@@ -49,6 +57,22 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
         }
         public String getMediaTagId() {
             return this.mediaTagId;
+        }
+
+        public ListAllPublicMediaTagsResponseBodyMediaTagList setMediaTagNameChinese(String mediaTagNameChinese) {
+            this.mediaTagNameChinese = mediaTagNameChinese;
+            return this;
+        }
+        public String getMediaTagNameChinese() {
+            return this.mediaTagNameChinese;
+        }
+
+        public ListAllPublicMediaTagsResponseBodyMediaTagList setMediaTagNameEnglish(String mediaTagNameEnglish) {
+            this.mediaTagNameEnglish = mediaTagNameEnglish;
+            return this;
+        }
+        public String getMediaTagNameEnglish() {
+            return this.mediaTagNameEnglish;
         }
 
     }

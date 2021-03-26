@@ -63,6 +63,9 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         @NameInMap("CompleteTime")
         public String completeTime;
 
+        @NameInMap("ModifiedTime")
+        public String modifiedTime;
+
         @NameInMap("Status")
         public String status;
 
@@ -155,6 +158,14 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
         }
         public String getCompleteTime() {
             return this.completeTime;
+        }
+
+        public GetMediaProducingJobResponseBodyMediaProducingJob setModifiedTime(String modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public String getModifiedTime() {
+            return this.modifiedTime;
         }
 
         public GetMediaProducingJobResponseBodyMediaProducingJob setStatus(String status) {
