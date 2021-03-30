@@ -4,6 +4,7 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class DeleteAgentRequest extends TeaModel {
+    // js sdk中自动生成的鉴权token
     @NameInMap("ClientToken")
     public String clientToken;
 

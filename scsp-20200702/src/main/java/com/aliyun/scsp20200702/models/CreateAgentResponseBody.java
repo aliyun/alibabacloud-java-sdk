@@ -19,6 +19,9 @@ public class CreateAgentResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static CreateAgentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAgentResponseBody self = new CreateAgentResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class CreateAgentResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public CreateAgentResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }

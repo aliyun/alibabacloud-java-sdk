@@ -16,6 +16,9 @@ public class UpdateSkillGroupResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static UpdateSkillGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateSkillGroupResponseBody self = new UpdateSkillGroupResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class UpdateSkillGroupResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UpdateSkillGroupResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }

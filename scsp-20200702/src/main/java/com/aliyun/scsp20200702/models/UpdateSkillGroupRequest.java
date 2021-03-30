@@ -22,6 +22,10 @@ public class UpdateSkillGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 渠道类型
+    @NameInMap("ChannelType")
+    public Long channelType;
+
     public static UpdateSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSkillGroupRequest self = new UpdateSkillGroupRequest();
         return TeaModel.build(map, self);
@@ -73,6 +77,14 @@ public class UpdateSkillGroupRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateSkillGroupRequest setChannelType(Long channelType) {
+        this.channelType = channelType;
+        return this;
+    }
+    public Long getChannelType() {
+        return this.channelType;
     }
 
 }

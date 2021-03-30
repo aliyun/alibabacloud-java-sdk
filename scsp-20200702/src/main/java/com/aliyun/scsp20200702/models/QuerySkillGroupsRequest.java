@@ -19,6 +19,7 @@ public class QuerySkillGroupsRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    // 技能组渠道类型
     @NameInMap("GroupType")
     public Integer groupType;
 
