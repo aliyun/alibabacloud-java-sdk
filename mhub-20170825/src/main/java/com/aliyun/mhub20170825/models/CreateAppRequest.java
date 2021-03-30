@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateAppRequest extends TeaModel {
     @NameInMap("ProductId")
-    @Validation(required = true)
     public String productId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Type")

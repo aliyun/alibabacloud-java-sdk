@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryAppSecurityInfoRequest extends TeaModel {
     @NameInMap("AppKey")
-    @Validation(required = true)
     public String appKey;
 
     public static QueryAppSecurityInfoRequest build(java.util.Map<String, ?> map) throws Exception {

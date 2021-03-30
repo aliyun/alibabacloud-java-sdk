@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class QueryProductInfoRequest extends TeaModel {
     @NameInMap("ProductId")
-    @Validation(required = true)
     public String productId;
 
     public static QueryProductInfoRequest build(java.util.Map<String, ?> map) throws Exception {

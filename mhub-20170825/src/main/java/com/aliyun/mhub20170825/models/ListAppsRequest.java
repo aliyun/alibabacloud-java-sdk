@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListAppsRequest extends TeaModel {
     @NameInMap("ProductId")
-    @Validation(required = true)
     public String productId;
 
     @NameInMap("Page")

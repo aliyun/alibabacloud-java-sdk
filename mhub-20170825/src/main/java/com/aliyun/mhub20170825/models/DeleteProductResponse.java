@@ -4,33 +4,33 @@ package com.aliyun.mhub20170825.models;
 import com.aliyun.tea.*;
 
 public class DeleteProductResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
+    public DeleteProductResponseBody body;
 
     public static DeleteProductResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteProductResponse self = new DeleteProductResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteProductResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteProductResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteProductResponse setMessage(String message) {
-        this.message = message;
+    public DeleteProductResponse setBody(DeleteProductResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
+    public DeleteProductResponseBody getBody() {
+        return this.body;
     }
 
 }

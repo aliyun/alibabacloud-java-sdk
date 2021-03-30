@@ -1,3 +1,6 @@
+2021-03-30 Version: 1.0.6
+- Generated java 2017-08-25 for Mhub.
+
 2021-01-22 Version: 1.0.6
 - Optimize product api parameters.
 

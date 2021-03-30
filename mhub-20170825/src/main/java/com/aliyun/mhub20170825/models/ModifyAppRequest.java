@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ModifyAppRequest extends TeaModel {
     @NameInMap("AppKey")
-    @Validation(required = true)
     public String appKey;
 
     @NameInMap("Name")
