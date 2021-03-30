@@ -32,38 +32,38 @@ public class DescribeDeviceValiditySchemaResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceValiditySchemaResponseBodyItemList extends TeaModel {
-        @NameInMap("Path")
-        public String path;
+        @NameInMap("Minimum")
+        public Float minimum;
 
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("ItemType")
-        public String itemType;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Required")
-        public String required;
-
         @NameInMap("Maximum")
         public Float maximum;
 
-        @NameInMap("Minimum")
-        public Float minimum;
-
-        @NameInMap("ExclusiveMaximum")
-        public Boolean exclusiveMaximum;
-
-        @NameInMap("ExclusiveMinimum")
-        public Boolean exclusiveMinimum;
+        @NameInMap("ItemType")
+        public String itemType;
 
         @NameInMap("EnumListStr")
         public String enumListStr;
 
+        @NameInMap("ExclusiveMinimum")
+        public Boolean exclusiveMinimum;
+
         @NameInMap("MaxLength")
         public Integer maxLength;
+
+        @NameInMap("Required")
+        public String required;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("ExclusiveMaximum")
+        public Boolean exclusiveMaximum;
+
+        @NameInMap("Path")
+        public String path;
 
         @NameInMap("MinLength")
         public Integer minLength;
@@ -71,54 +71,6 @@ public class DescribeDeviceValiditySchemaResponseBody extends TeaModel {
         public static DescribeDeviceValiditySchemaResponseBodyItemList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeviceValiditySchemaResponseBodyItemList self = new DescribeDeviceValiditySchemaResponseBodyItemList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setPath(String path) {
-            this.path = path;
-            return this;
-        }
-        public String getPath() {
-            return this.path;
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setItemType(String itemType) {
-            this.itemType = itemType;
-            return this;
-        }
-        public String getItemType() {
-            return this.itemType;
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setRequired(String required) {
-            this.required = required;
-            return this;
-        }
-        public String getRequired() {
-            return this.required;
-        }
-
-        public DescribeDeviceValiditySchemaResponseBodyItemList setMaximum(Float maximum) {
-            this.maximum = maximum;
-            return this;
-        }
-        public Float getMaximum() {
-            return this.maximum;
         }
 
         public DescribeDeviceValiditySchemaResponseBodyItemList setMinimum(Float minimum) {
@@ -129,20 +81,28 @@ public class DescribeDeviceValiditySchemaResponseBody extends TeaModel {
             return this.minimum;
         }
 
-        public DescribeDeviceValiditySchemaResponseBodyItemList setExclusiveMaximum(Boolean exclusiveMaximum) {
-            this.exclusiveMaximum = exclusiveMaximum;
+        public DescribeDeviceValiditySchemaResponseBodyItemList setType(String type) {
+            this.type = type;
             return this;
         }
-        public Boolean getExclusiveMaximum() {
-            return this.exclusiveMaximum;
+        public String getType() {
+            return this.type;
         }
 
-        public DescribeDeviceValiditySchemaResponseBodyItemList setExclusiveMinimum(Boolean exclusiveMinimum) {
-            this.exclusiveMinimum = exclusiveMinimum;
+        public DescribeDeviceValiditySchemaResponseBodyItemList setMaximum(Float maximum) {
+            this.maximum = maximum;
             return this;
         }
-        public Boolean getExclusiveMinimum() {
-            return this.exclusiveMinimum;
+        public Float getMaximum() {
+            return this.maximum;
+        }
+
+        public DescribeDeviceValiditySchemaResponseBodyItemList setItemType(String itemType) {
+            this.itemType = itemType;
+            return this;
+        }
+        public String getItemType() {
+            return this.itemType;
         }
 
         public DescribeDeviceValiditySchemaResponseBodyItemList setEnumListStr(String enumListStr) {
@@ -153,12 +113,52 @@ public class DescribeDeviceValiditySchemaResponseBody extends TeaModel {
             return this.enumListStr;
         }
 
+        public DescribeDeviceValiditySchemaResponseBodyItemList setExclusiveMinimum(Boolean exclusiveMinimum) {
+            this.exclusiveMinimum = exclusiveMinimum;
+            return this;
+        }
+        public Boolean getExclusiveMinimum() {
+            return this.exclusiveMinimum;
+        }
+
         public DescribeDeviceValiditySchemaResponseBodyItemList setMaxLength(Integer maxLength) {
             this.maxLength = maxLength;
             return this;
         }
         public Integer getMaxLength() {
             return this.maxLength;
+        }
+
+        public DescribeDeviceValiditySchemaResponseBodyItemList setRequired(String required) {
+            this.required = required;
+            return this;
+        }
+        public String getRequired() {
+            return this.required;
+        }
+
+        public DescribeDeviceValiditySchemaResponseBodyItemList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public DescribeDeviceValiditySchemaResponseBodyItemList setExclusiveMaximum(Boolean exclusiveMaximum) {
+            this.exclusiveMaximum = exclusiveMaximum;
+            return this;
+        }
+        public Boolean getExclusiveMaximum() {
+            return this.exclusiveMaximum;
+        }
+
+        public DescribeDeviceValiditySchemaResponseBodyItemList setPath(String path) {
+            this.path = path;
+            return this;
+        }
+        public String getPath() {
+            return this.path;
         }
 
         public DescribeDeviceValiditySchemaResponseBodyItemList setMinLength(Integer minLength) {

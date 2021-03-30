@@ -7,17 +7,17 @@ public class DescribeAssistReportResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("AssistId")
-    public String assistId;
-
-    @NameInMap("AssistDescription")
-    public String assistDescription;
-
     @NameInMap("AssistResult")
     public String assistResult;
 
     @NameInMap("AssistReason")
     public String assistReason;
+
+    @NameInMap("AssistId")
+    public String assistId;
+
+    @NameInMap("AssistDescription")
+    public String assistDescription;
 
     @NameInMap("AssistTag")
     public String assistTag;
@@ -35,22 +35,6 @@ public class DescribeAssistReportResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAssistReportResponseBody setAssistId(String assistId) {
-        this.assistId = assistId;
-        return this;
-    }
-    public String getAssistId() {
-        return this.assistId;
-    }
-
-    public DescribeAssistReportResponseBody setAssistDescription(String assistDescription) {
-        this.assistDescription = assistDescription;
-        return this;
-    }
-    public String getAssistDescription() {
-        return this.assistDescription;
-    }
-
     public DescribeAssistReportResponseBody setAssistResult(String assistResult) {
         this.assistResult = assistResult;
         return this;
@@ -65,6 +49,22 @@ public class DescribeAssistReportResponseBody extends TeaModel {
     }
     public String getAssistReason() {
         return this.assistReason;
+    }
+
+    public DescribeAssistReportResponseBody setAssistId(String assistId) {
+        this.assistId = assistId;
+        return this;
+    }
+    public String getAssistId() {
+        return this.assistId;
+    }
+
+    public DescribeAssistReportResponseBody setAssistDescription(String assistDescription) {
+        this.assistDescription = assistDescription;
+        return this;
+    }
+    public String getAssistDescription() {
+        return this.assistDescription;
     }
 
     public DescribeAssistReportResponseBody setAssistTag(String assistTag) {

@@ -32,35 +32,27 @@ public class GetOssUploadMetaResponseBody extends TeaModel {
     }
 
     public static class GetOssUploadMetaResponseBodyOssUploadMeta extends TeaModel {
-        @NameInMap("ObjectKey")
-        public String objectKey;
-
         @NameInMap("AccessKey")
         public String accessKey;
-
-        @NameInMap("Policy")
-        public String policy;
 
         @NameInMap("Signature")
         public String signature;
 
+        @NameInMap("Host")
+        public String host;
+
+        @NameInMap("Policy")
+        public String policy;
+
         @NameInMap("SecurityToken")
         public String securityToken;
 
-        @NameInMap("Host")
-        public String host;
+        @NameInMap("ObjectKey")
+        public String objectKey;
 
         public static GetOssUploadMetaResponseBodyOssUploadMeta build(java.util.Map<String, ?> map) throws Exception {
             GetOssUploadMetaResponseBodyOssUploadMeta self = new GetOssUploadMetaResponseBodyOssUploadMeta();
             return TeaModel.build(map, self);
-        }
-
-        public GetOssUploadMetaResponseBodyOssUploadMeta setObjectKey(String objectKey) {
-            this.objectKey = objectKey;
-            return this;
-        }
-        public String getObjectKey() {
-            return this.objectKey;
         }
 
         public GetOssUploadMetaResponseBodyOssUploadMeta setAccessKey(String accessKey) {
@@ -71,20 +63,28 @@ public class GetOssUploadMetaResponseBody extends TeaModel {
             return this.accessKey;
         }
 
-        public GetOssUploadMetaResponseBodyOssUploadMeta setPolicy(String policy) {
-            this.policy = policy;
-            return this;
-        }
-        public String getPolicy() {
-            return this.policy;
-        }
-
         public GetOssUploadMetaResponseBodyOssUploadMeta setSignature(String signature) {
             this.signature = signature;
             return this;
         }
         public String getSignature() {
             return this.signature;
+        }
+
+        public GetOssUploadMetaResponseBodyOssUploadMeta setHost(String host) {
+            this.host = host;
+            return this;
+        }
+        public String getHost() {
+            return this.host;
+        }
+
+        public GetOssUploadMetaResponseBodyOssUploadMeta setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
         }
 
         public GetOssUploadMetaResponseBodyOssUploadMeta setSecurityToken(String securityToken) {
@@ -95,12 +95,12 @@ public class GetOssUploadMetaResponseBody extends TeaModel {
             return this.securityToken;
         }
 
-        public GetOssUploadMetaResponseBodyOssUploadMeta setHost(String host) {
-            this.host = host;
+        public GetOssUploadMetaResponseBodyOssUploadMeta setObjectKey(String objectKey) {
+            this.objectKey = objectKey;
             return this;
         }
-        public String getHost() {
-            return this.host;
+        public String getObjectKey() {
+            return this.objectKey;
         }
 
     }

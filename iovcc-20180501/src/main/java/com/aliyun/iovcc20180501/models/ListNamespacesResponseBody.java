@@ -4,23 +4,15 @@ package com.aliyun.iovcc20180501.models;
 import com.aliyun.tea.*;
 
 public class ListNamespacesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Namespaces")
     public java.util.List<ListNamespacesResponseBodyNamespaces> namespaces;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListNamespacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNamespacesResponseBody self = new ListNamespacesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListNamespacesResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListNamespacesResponseBody setNamespaces(java.util.List<ListNamespacesResponseBodyNamespaces> namespaces) {
@@ -31,12 +23,20 @@ public class ListNamespacesResponseBody extends TeaModel {
         return this.namespaces;
     }
 
-    public static class ListNamespacesResponseBodyNamespaces extends TeaModel {
-        @NameInMap("Namespace")
-        public String namespace;
+    public ListNamespacesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
 
-        @NameInMap("Name")
-        public String name;
+    public static class ListNamespacesResponseBodyNamespaces extends TeaModel {
+        @NameInMap("AuthType")
+        public Integer authType;
+
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("UserId")
         public String userId;
@@ -44,37 +44,37 @@ public class ListNamespacesResponseBody extends TeaModel {
         @NameInMap("ProjectId")
         public String projectId;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("GmtCreate")
         public Long gmtCreate;
+
+        @NameInMap("Namespace")
+        public String namespace;
 
         @NameInMap("GmtModified")
         public Long gmtModified;
 
-        @NameInMap("AuthType")
-        public Integer authType;
+        @NameInMap("Name")
+        public String name;
 
         public static ListNamespacesResponseBodyNamespaces build(java.util.Map<String, ?> map) throws Exception {
             ListNamespacesResponseBodyNamespaces self = new ListNamespacesResponseBodyNamespaces();
             return TeaModel.build(map, self);
         }
 
-        public ListNamespacesResponseBodyNamespaces setNamespace(String namespace) {
-            this.namespace = namespace;
+        public ListNamespacesResponseBodyNamespaces setAuthType(Integer authType) {
+            this.authType = authType;
             return this;
         }
-        public String getNamespace() {
-            return this.namespace;
+        public Integer getAuthType() {
+            return this.authType;
         }
 
-        public ListNamespacesResponseBodyNamespaces setName(String name) {
-            this.name = name;
+        public ListNamespacesResponseBodyNamespaces setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getDescription() {
+            return this.description;
         }
 
         public ListNamespacesResponseBodyNamespaces setUserId(String userId) {
@@ -93,20 +93,20 @@ public class ListNamespacesResponseBody extends TeaModel {
             return this.projectId;
         }
 
-        public ListNamespacesResponseBodyNamespaces setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
         public ListNamespacesResponseBodyNamespaces setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
         public Long getGmtCreate() {
             return this.gmtCreate;
+        }
+
+        public ListNamespacesResponseBodyNamespaces setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public ListNamespacesResponseBodyNamespaces setGmtModified(Long gmtModified) {
@@ -117,12 +117,12 @@ public class ListNamespacesResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public ListNamespacesResponseBodyNamespaces setAuthType(Integer authType) {
-            this.authType = authType;
+        public ListNamespacesResponseBodyNamespaces setName(String name) {
+            this.name = name;
             return this;
         }
-        public Integer getAuthType() {
-            return this.authType;
+        public String getName() {
+            return this.name;
         }
 
     }

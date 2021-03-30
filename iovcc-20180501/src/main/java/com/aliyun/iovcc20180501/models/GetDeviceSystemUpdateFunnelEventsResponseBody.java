@@ -32,9 +32,6 @@ public class GetDeviceSystemUpdateFunnelEventsResponseBody extends TeaModel {
     }
 
     public static class GetDeviceSystemUpdateFunnelEventsResponseBodyEventList extends TeaModel {
-        @NameInMap("TenantId")
-        public String tenantId;
-
         @NameInMap("DeviceId")
         public String deviceId;
 
@@ -44,23 +41,18 @@ public class GetDeviceSystemUpdateFunnelEventsResponseBody extends TeaModel {
         @NameInMap("Event")
         public String event;
 
+        @NameInMap("ReportTimestamp")
+        public Long reportTimestamp;
+
         @NameInMap("ReportTime")
         public String reportTime;
 
-        @NameInMap("ReportTimestamp")
-        public Long reportTimestamp;
+        @NameInMap("TenantId")
+        public String tenantId;
 
         public static GetDeviceSystemUpdateFunnelEventsResponseBodyEventList build(java.util.Map<String, ?> map) throws Exception {
             GetDeviceSystemUpdateFunnelEventsResponseBodyEventList self = new GetDeviceSystemUpdateFunnelEventsResponseBodyEventList();
             return TeaModel.build(map, self);
-        }
-
-        public GetDeviceSystemUpdateFunnelEventsResponseBodyEventList setTenantId(String tenantId) {
-            this.tenantId = tenantId;
-            return this;
-        }
-        public String getTenantId() {
-            return this.tenantId;
         }
 
         public GetDeviceSystemUpdateFunnelEventsResponseBodyEventList setDeviceId(String deviceId) {
@@ -87,6 +79,14 @@ public class GetDeviceSystemUpdateFunnelEventsResponseBody extends TeaModel {
             return this.event;
         }
 
+        public GetDeviceSystemUpdateFunnelEventsResponseBodyEventList setReportTimestamp(Long reportTimestamp) {
+            this.reportTimestamp = reportTimestamp;
+            return this;
+        }
+        public Long getReportTimestamp() {
+            return this.reportTimestamp;
+        }
+
         public GetDeviceSystemUpdateFunnelEventsResponseBodyEventList setReportTime(String reportTime) {
             this.reportTime = reportTime;
             return this;
@@ -95,12 +95,12 @@ public class GetDeviceSystemUpdateFunnelEventsResponseBody extends TeaModel {
             return this.reportTime;
         }
 
-        public GetDeviceSystemUpdateFunnelEventsResponseBodyEventList setReportTimestamp(Long reportTimestamp) {
-            this.reportTimestamp = reportTimestamp;
+        public GetDeviceSystemUpdateFunnelEventsResponseBodyEventList setTenantId(String tenantId) {
+            this.tenantId = tenantId;
             return this;
         }
-        public Long getReportTimestamp() {
-            return this.reportTimestamp;
+        public String getTenantId() {
+            return this.tenantId;
         }
 
     }

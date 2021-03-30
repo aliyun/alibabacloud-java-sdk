@@ -31,15 +31,73 @@ public class ListConnectLogsResponseBody extends TeaModel {
         return this.logs;
     }
 
+    public static class ListConnectLogsResponseBodyLogsPagination extends TeaModel {
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
+
+        @NameInMap("TotalPageCount")
+        public Integer totalPageCount;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        public static ListConnectLogsResponseBodyLogsPagination build(java.util.Map<String, ?> map) throws Exception {
+            ListConnectLogsResponseBodyLogsPagination self = new ListConnectLogsResponseBodyLogsPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public ListConnectLogsResponseBodyLogsPagination setPageIndex(Integer pageIndex) {
+            this.pageIndex = pageIndex;
+            return this;
+        }
+        public Integer getPageIndex() {
+            return this.pageIndex;
+        }
+
+        public ListConnectLogsResponseBodyLogsPagination setTotalPageCount(Integer totalPageCount) {
+            this.totalPageCount = totalPageCount;
+            return this;
+        }
+        public Integer getTotalPageCount() {
+            return this.totalPageCount;
+        }
+
+        public ListConnectLogsResponseBodyLogsPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListConnectLogsResponseBodyLogsPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
     public static class ListConnectLogsResponseBodyLogsList extends TeaModel {
+        @NameInMap("Sid")
+        public String sid;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("Time")
+        public Long time;
+
         @NameInMap("DeviceId")
         public String deviceId;
 
         @NameInMap("SystemVersion")
         public String systemVersion;
-
-        @NameInMap("Terminal")
-        public String terminal;
 
         @NameInMap("Ip")
         public String ip;
@@ -47,18 +105,36 @@ public class ListConnectLogsResponseBody extends TeaModel {
         @NameInMap("NetWorking")
         public String netWorking;
 
-        @NameInMap("Time")
-        public Long time;
-
-        @NameInMap("Status")
-        public String status;
-
-        @NameInMap("Sid")
-        public String sid;
+        @NameInMap("Terminal")
+        public String terminal;
 
         public static ListConnectLogsResponseBodyLogsList build(java.util.Map<String, ?> map) throws Exception {
             ListConnectLogsResponseBodyLogsList self = new ListConnectLogsResponseBodyLogsList();
             return TeaModel.build(map, self);
+        }
+
+        public ListConnectLogsResponseBodyLogsList setSid(String sid) {
+            this.sid = sid;
+            return this;
+        }
+        public String getSid() {
+            return this.sid;
+        }
+
+        public ListConnectLogsResponseBodyLogsList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListConnectLogsResponseBodyLogsList setTime(Long time) {
+            this.time = time;
+            return this;
+        }
+        public Long getTime() {
+            return this.time;
         }
 
         public ListConnectLogsResponseBodyLogsList setDeviceId(String deviceId) {
@@ -77,14 +153,6 @@ public class ListConnectLogsResponseBody extends TeaModel {
             return this.systemVersion;
         }
 
-        public ListConnectLogsResponseBodyLogsList setTerminal(String terminal) {
-            this.terminal = terminal;
-            return this;
-        }
-        public String getTerminal() {
-            return this.terminal;
-        }
-
         public ListConnectLogsResponseBodyLogsList setIp(String ip) {
             this.ip = ip;
             return this;
@@ -101,102 +169,26 @@ public class ListConnectLogsResponseBody extends TeaModel {
             return this.netWorking;
         }
 
-        public ListConnectLogsResponseBodyLogsList setTime(Long time) {
-            this.time = time;
+        public ListConnectLogsResponseBodyLogsList setTerminal(String terminal) {
+            this.terminal = terminal;
             return this;
         }
-        public Long getTime() {
-            return this.time;
-        }
-
-        public ListConnectLogsResponseBodyLogsList setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public ListConnectLogsResponseBodyLogsList setSid(String sid) {
-            this.sid = sid;
-            return this;
-        }
-        public String getSid() {
-            return this.sid;
-        }
-
-    }
-
-    public static class ListConnectLogsResponseBodyLogsPagination extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        @NameInMap("TotalPageCount")
-        public Integer totalPageCount;
-
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        public static ListConnectLogsResponseBodyLogsPagination build(java.util.Map<String, ?> map) throws Exception {
-            ListConnectLogsResponseBodyLogsPagination self = new ListConnectLogsResponseBodyLogsPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public ListConnectLogsResponseBodyLogsPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-        public ListConnectLogsResponseBodyLogsPagination setTotalPageCount(Integer totalPageCount) {
-            this.totalPageCount = totalPageCount;
-            return this;
-        }
-        public Integer getTotalPageCount() {
-            return this.totalPageCount;
-        }
-
-        public ListConnectLogsResponseBodyLogsPagination setPageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-        public Integer getPageIndex() {
-            return this.pageIndex;
-        }
-
-        public ListConnectLogsResponseBodyLogsPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
+        public String getTerminal() {
+            return this.terminal;
         }
 
     }
 
     public static class ListConnectLogsResponseBodyLogs extends TeaModel {
-        @NameInMap("List")
-        public java.util.List<ListConnectLogsResponseBodyLogsList> list;
-
         @NameInMap("Pagination")
         public ListConnectLogsResponseBodyLogsPagination pagination;
+
+        @NameInMap("List")
+        public java.util.List<ListConnectLogsResponseBodyLogsList> list;
 
         public static ListConnectLogsResponseBodyLogs build(java.util.Map<String, ?> map) throws Exception {
             ListConnectLogsResponseBodyLogs self = new ListConnectLogsResponseBodyLogs();
             return TeaModel.build(map, self);
-        }
-
-        public ListConnectLogsResponseBodyLogs setList(java.util.List<ListConnectLogsResponseBodyLogsList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListConnectLogsResponseBodyLogsList> getList() {
-            return this.list;
         }
 
         public ListConnectLogsResponseBodyLogs setPagination(ListConnectLogsResponseBodyLogsPagination pagination) {
@@ -205,6 +197,14 @@ public class ListConnectLogsResponseBody extends TeaModel {
         }
         public ListConnectLogsResponseBodyLogsPagination getPagination() {
             return this.pagination;
+        }
+
+        public ListConnectLogsResponseBodyLogs setList(java.util.List<ListConnectLogsResponseBodyLogsList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListConnectLogsResponseBodyLogsList> getList() {
+            return this.list;
         }
 
     }

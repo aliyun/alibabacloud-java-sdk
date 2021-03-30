@@ -4,23 +4,15 @@ package com.aliyun.iovcc20180501.models;
 import com.aliyun.tea.*;
 
 public class ListDeviceBrandsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DeviceBrands")
     public java.util.List<ListDeviceBrandsResponseBodyDeviceBrands> deviceBrands;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListDeviceBrandsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceBrandsResponseBody self = new ListDeviceBrandsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListDeviceBrandsResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListDeviceBrandsResponseBody setDeviceBrands(java.util.List<ListDeviceBrandsResponseBodyDeviceBrands> deviceBrands) {
@@ -31,12 +23,20 @@ public class ListDeviceBrandsResponseBody extends TeaModel {
         return this.deviceBrands;
     }
 
+    public ListDeviceBrandsResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListDeviceBrandsResponseBodyDeviceBrands extends TeaModel {
         @NameInMap("DeviceBrandId")
         public Long deviceBrandId;
 
-        @NameInMap("DeviceBrand")
-        public String deviceBrand;
+        @NameInMap("Description")
+        public String description;
 
         @NameInMap("ProjectId")
         public String projectId;
@@ -44,8 +44,8 @@ public class ListDeviceBrandsResponseBody extends TeaModel {
         @NameInMap("Manufacture")
         public String manufacture;
 
-        @NameInMap("Description")
-        public String description;
+        @NameInMap("DeviceBrand")
+        public String deviceBrand;
 
         public static ListDeviceBrandsResponseBodyDeviceBrands build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceBrandsResponseBodyDeviceBrands self = new ListDeviceBrandsResponseBodyDeviceBrands();
@@ -60,12 +60,12 @@ public class ListDeviceBrandsResponseBody extends TeaModel {
             return this.deviceBrandId;
         }
 
-        public ListDeviceBrandsResponseBodyDeviceBrands setDeviceBrand(String deviceBrand) {
-            this.deviceBrand = deviceBrand;
+        public ListDeviceBrandsResponseBodyDeviceBrands setDescription(String description) {
+            this.description = description;
             return this;
         }
-        public String getDeviceBrand() {
-            return this.deviceBrand;
+        public String getDescription() {
+            return this.description;
         }
 
         public ListDeviceBrandsResponseBodyDeviceBrands setProjectId(String projectId) {
@@ -84,12 +84,12 @@ public class ListDeviceBrandsResponseBody extends TeaModel {
             return this.manufacture;
         }
 
-        public ListDeviceBrandsResponseBodyDeviceBrands setDescription(String description) {
-            this.description = description;
+        public ListDeviceBrandsResponseBodyDeviceBrands setDeviceBrand(String deviceBrand) {
+            this.deviceBrand = deviceBrand;
             return this;
         }
-        public String getDescription() {
-            return this.description;
+        public String getDeviceBrand() {
+            return this.deviceBrand;
         }
 
     }

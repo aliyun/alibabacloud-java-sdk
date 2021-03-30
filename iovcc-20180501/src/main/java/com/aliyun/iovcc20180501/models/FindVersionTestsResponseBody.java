@@ -32,147 +32,51 @@ public class FindVersionTestsResponseBody extends TeaModel {
     }
 
     public static class FindVersionTestsResponseBodyVersionTestListItems extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("VersionId")
-        public String versionId;
-
-        @NameInMap("VersionType")
-        public String versionType;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
 
         @NameInMap("GmtModify")
         public String gmtModify;
 
-        @NameInMap("DeviceGroupId")
-        public String deviceGroupId;
-
-        @NameInMap("DeviceGroupName")
-        public String deviceGroupName;
-
-        @NameInMap("SucceededCount")
-        public String succeededCount;
-
-        @NameInMap("FailedCount")
-        public String failedCount;
-
-        @NameInMap("SkippedCount")
-        public String skippedCount;
-
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
+        @NameInMap("VersionId")
+        public String versionId;
 
         @NameInMap("GmtModifyTimestamp")
         public Long gmtModifyTimestamp;
 
+        @NameInMap("FailedCount")
+        public String failedCount;
+
+        @NameInMap("DeviceGroupId")
+        public String deviceGroupId;
+
+        @NameInMap("SkippedCount")
+        public String skippedCount;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("SucceededCount")
+        public String succeededCount;
+
+        @NameInMap("DeviceGroupName")
+        public String deviceGroupName;
+
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("VersionType")
+        public String versionType;
+
         public static FindVersionTestsResponseBodyVersionTestListItems build(java.util.Map<String, ?> map) throws Exception {
             FindVersionTestsResponseBodyVersionTestListItems self = new FindVersionTestsResponseBodyVersionTestListItems();
             return TeaModel.build(map, self);
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setVersionId(String versionId) {
-            this.versionId = versionId;
-            return this;
-        }
-        public String getVersionId() {
-            return this.versionId;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setVersionType(String versionType) {
-            this.versionType = versionType;
-            return this;
-        }
-        public String getVersionType() {
-            return this.versionType;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setGmtModify(String gmtModify) {
-            this.gmtModify = gmtModify;
-            return this;
-        }
-        public String getGmtModify() {
-            return this.gmtModify;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setDeviceGroupId(String deviceGroupId) {
-            this.deviceGroupId = deviceGroupId;
-            return this;
-        }
-        public String getDeviceGroupId() {
-            return this.deviceGroupId;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setDeviceGroupName(String deviceGroupName) {
-            this.deviceGroupName = deviceGroupName;
-            return this;
-        }
-        public String getDeviceGroupName() {
-            return this.deviceGroupName;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setSucceededCount(String succeededCount) {
-            this.succeededCount = succeededCount;
-            return this;
-        }
-        public String getSucceededCount() {
-            return this.succeededCount;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setFailedCount(String failedCount) {
-            this.failedCount = failedCount;
-            return this;
-        }
-        public String getFailedCount() {
-            return this.failedCount;
-        }
-
-        public FindVersionTestsResponseBodyVersionTestListItems setSkippedCount(String skippedCount) {
-            this.skippedCount = skippedCount;
-            return this;
-        }
-        public String getSkippedCount() {
-            return this.skippedCount;
         }
 
         public FindVersionTestsResponseBodyVersionTestListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
@@ -183,6 +87,22 @@ public class FindVersionTestsResponseBody extends TeaModel {
             return this.gmtCreateTimestamp;
         }
 
+        public FindVersionTestsResponseBodyVersionTestListItems setGmtModify(String gmtModify) {
+            this.gmtModify = gmtModify;
+            return this;
+        }
+        public String getGmtModify() {
+            return this.gmtModify;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setVersionId(String versionId) {
+            this.versionId = versionId;
+            return this;
+        }
+        public String getVersionId() {
+            return this.versionId;
+        }
+
         public FindVersionTestsResponseBodyVersionTestListItems setGmtModifyTimestamp(Long gmtModifyTimestamp) {
             this.gmtModifyTimestamp = gmtModifyTimestamp;
             return this;
@@ -191,26 +111,98 @@ public class FindVersionTestsResponseBody extends TeaModel {
             return this.gmtModifyTimestamp;
         }
 
+        public FindVersionTestsResponseBodyVersionTestListItems setFailedCount(String failedCount) {
+            this.failedCount = failedCount;
+            return this;
+        }
+        public String getFailedCount() {
+            return this.failedCount;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setDeviceGroupId(String deviceGroupId) {
+            this.deviceGroupId = deviceGroupId;
+            return this;
+        }
+        public String getDeviceGroupId() {
+            return this.deviceGroupId;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setSkippedCount(String skippedCount) {
+            this.skippedCount = skippedCount;
+            return this;
+        }
+        public String getSkippedCount() {
+            return this.skippedCount;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setSucceededCount(String succeededCount) {
+            this.succeededCount = succeededCount;
+            return this;
+        }
+        public String getSucceededCount() {
+            return this.succeededCount;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setDeviceGroupName(String deviceGroupName) {
+            this.deviceGroupName = deviceGroupName;
+            return this;
+        }
+        public String getDeviceGroupName() {
+            return this.deviceGroupName;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestListItems setVersionType(String versionType) {
+            this.versionType = versionType;
+            return this;
+        }
+        public String getVersionType() {
+            return this.versionType;
+        }
+
     }
 
     public static class FindVersionTestsResponseBodyVersionTestList extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("Items")
         public java.util.List<FindVersionTestsResponseBodyVersionTestListItems> items;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static FindVersionTestsResponseBodyVersionTestList build(java.util.Map<String, ?> map) throws Exception {
             FindVersionTestsResponseBodyVersionTestList self = new FindVersionTestsResponseBodyVersionTestList();
             return TeaModel.build(map, self);
-        }
-
-        public FindVersionTestsResponseBodyVersionTestList setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
         }
 
         public FindVersionTestsResponseBodyVersionTestList setItems(java.util.List<FindVersionTestsResponseBodyVersionTestListItems> items) {
@@ -219,6 +211,14 @@ public class FindVersionTestsResponseBody extends TeaModel {
         }
         public java.util.List<FindVersionTestsResponseBodyVersionTestListItems> getItems() {
             return this.items;
+        }
+
+        public FindVersionTestsResponseBodyVersionTestList setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

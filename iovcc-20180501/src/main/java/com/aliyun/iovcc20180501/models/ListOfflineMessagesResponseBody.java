@@ -31,19 +31,79 @@ public class ListOfflineMessagesResponseBody extends TeaModel {
         return this.offlineMessages;
     }
 
+    public static class ListOfflineMessagesResponseBodyOfflineMessagesPagination extends TeaModel {
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
+
+        @NameInMap("TotalPageCount")
+        public Integer totalPageCount;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        public static ListOfflineMessagesResponseBodyOfflineMessagesPagination build(java.util.Map<String, ?> map) throws Exception {
+            ListOfflineMessagesResponseBodyOfflineMessagesPagination self = new ListOfflineMessagesResponseBodyOfflineMessagesPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public ListOfflineMessagesResponseBodyOfflineMessagesPagination setPageIndex(Integer pageIndex) {
+            this.pageIndex = pageIndex;
+            return this;
+        }
+        public Integer getPageIndex() {
+            return this.pageIndex;
+        }
+
+        public ListOfflineMessagesResponseBodyOfflineMessagesPagination setTotalPageCount(Integer totalPageCount) {
+            this.totalPageCount = totalPageCount;
+            return this;
+        }
+        public Integer getTotalPageCount() {
+            return this.totalPageCount;
+        }
+
+        public ListOfflineMessagesResponseBodyOfflineMessagesPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListOfflineMessagesResponseBodyOfflineMessagesPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
     public static class ListOfflineMessagesResponseBodyOfflineMessagesList extends TeaModel {
+        @NameInMap("ExpiredTime")
+        public Long expiredTime;
+
         @NameInMap("Mid")
         public Long mid;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
 
-        @NameInMap("ExpiredTime")
-        public Long expiredTime;
-
         public static ListOfflineMessagesResponseBodyOfflineMessagesList build(java.util.Map<String, ?> map) throws Exception {
             ListOfflineMessagesResponseBodyOfflineMessagesList self = new ListOfflineMessagesResponseBodyOfflineMessagesList();
             return TeaModel.build(map, self);
+        }
+
+        public ListOfflineMessagesResponseBodyOfflineMessagesList setExpiredTime(Long expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public Long getExpiredTime() {
+            return this.expiredTime;
         }
 
         public ListOfflineMessagesResponseBodyOfflineMessagesList setMid(Long mid) {
@@ -62,86 +122,18 @@ public class ListOfflineMessagesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListOfflineMessagesResponseBodyOfflineMessagesList setExpiredTime(Long expiredTime) {
-            this.expiredTime = expiredTime;
-            return this;
-        }
-        public Long getExpiredTime() {
-            return this.expiredTime;
-        }
-
-    }
-
-    public static class ListOfflineMessagesResponseBodyOfflineMessagesPagination extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        @NameInMap("TotalPageCount")
-        public Integer totalPageCount;
-
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        public static ListOfflineMessagesResponseBodyOfflineMessagesPagination build(java.util.Map<String, ?> map) throws Exception {
-            ListOfflineMessagesResponseBodyOfflineMessagesPagination self = new ListOfflineMessagesResponseBodyOfflineMessagesPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public ListOfflineMessagesResponseBodyOfflineMessagesPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-        public ListOfflineMessagesResponseBodyOfflineMessagesPagination setTotalPageCount(Integer totalPageCount) {
-            this.totalPageCount = totalPageCount;
-            return this;
-        }
-        public Integer getTotalPageCount() {
-            return this.totalPageCount;
-        }
-
-        public ListOfflineMessagesResponseBodyOfflineMessagesPagination setPageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-        public Integer getPageIndex() {
-            return this.pageIndex;
-        }
-
-        public ListOfflineMessagesResponseBodyOfflineMessagesPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
     }
 
     public static class ListOfflineMessagesResponseBodyOfflineMessages extends TeaModel {
-        @NameInMap("List")
-        public java.util.List<ListOfflineMessagesResponseBodyOfflineMessagesList> list;
-
         @NameInMap("Pagination")
         public ListOfflineMessagesResponseBodyOfflineMessagesPagination pagination;
+
+        @NameInMap("List")
+        public java.util.List<ListOfflineMessagesResponseBodyOfflineMessagesList> list;
 
         public static ListOfflineMessagesResponseBodyOfflineMessages build(java.util.Map<String, ?> map) throws Exception {
             ListOfflineMessagesResponseBodyOfflineMessages self = new ListOfflineMessagesResponseBodyOfflineMessages();
             return TeaModel.build(map, self);
-        }
-
-        public ListOfflineMessagesResponseBodyOfflineMessages setList(java.util.List<ListOfflineMessagesResponseBodyOfflineMessagesList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListOfflineMessagesResponseBodyOfflineMessagesList> getList() {
-            return this.list;
         }
 
         public ListOfflineMessagesResponseBodyOfflineMessages setPagination(ListOfflineMessagesResponseBodyOfflineMessagesPagination pagination) {
@@ -150,6 +142,14 @@ public class ListOfflineMessagesResponseBody extends TeaModel {
         }
         public ListOfflineMessagesResponseBodyOfflineMessagesPagination getPagination() {
             return this.pagination;
+        }
+
+        public ListOfflineMessagesResponseBodyOfflineMessages setList(java.util.List<ListOfflineMessagesResponseBodyOfflineMessagesList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListOfflineMessagesResponseBodyOfflineMessagesList> getList() {
+            return this.list;
         }
 
     }

@@ -32,23 +32,20 @@ public class FindVersionMessagesResponseBody extends TeaModel {
     }
 
     public static class FindVersionMessagesResponseBodyMessageListItems extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("GmtModifyTimestamp")
+        public Long gmtModifyTimestamp;
 
-        @NameInMap("MessageId")
-        public String messageId;
-
-        @NameInMap("VersionId")
-        public String versionId;
-
-        @NameInMap("TestId")
-        public String testId;
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
 
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("StatusDesc")
-        public String statusDesc;
+        @NameInMap("GmtModify")
+        public String gmtModify;
+
+        @NameInMap("MessageId")
+        public String messageId;
 
         @NameInMap("DeviceId")
         public String deviceId;
@@ -56,50 +53,37 @@ public class FindVersionMessagesResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("GmtModify")
-        public String gmtModify;
+        @NameInMap("VersionId")
+        public String versionId;
 
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
+        @NameInMap("StatusDesc")
+        public String statusDesc;
 
-        @NameInMap("GmtModifyTimestamp")
-        public Long gmtModifyTimestamp;
+        @NameInMap("TestId")
+        public String testId;
+
+        @NameInMap("Id")
+        public Long id;
 
         public static FindVersionMessagesResponseBodyMessageListItems build(java.util.Map<String, ?> map) throws Exception {
             FindVersionMessagesResponseBodyMessageListItems self = new FindVersionMessagesResponseBodyMessageListItems();
             return TeaModel.build(map, self);
         }
 
-        public FindVersionMessagesResponseBodyMessageListItems setId(Long id) {
-            this.id = id;
+        public FindVersionMessagesResponseBodyMessageListItems setGmtModifyTimestamp(Long gmtModifyTimestamp) {
+            this.gmtModifyTimestamp = gmtModifyTimestamp;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Long getGmtModifyTimestamp() {
+            return this.gmtModifyTimestamp;
         }
 
-        public FindVersionMessagesResponseBodyMessageListItems setMessageId(String messageId) {
-            this.messageId = messageId;
+        public FindVersionMessagesResponseBodyMessageListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+            this.gmtCreateTimestamp = gmtCreateTimestamp;
             return this;
         }
-        public String getMessageId() {
-            return this.messageId;
-        }
-
-        public FindVersionMessagesResponseBodyMessageListItems setVersionId(String versionId) {
-            this.versionId = versionId;
-            return this;
-        }
-        public String getVersionId() {
-            return this.versionId;
-        }
-
-        public FindVersionMessagesResponseBodyMessageListItems setTestId(String testId) {
-            this.testId = testId;
-            return this;
-        }
-        public String getTestId() {
-            return this.testId;
+        public Long getGmtCreateTimestamp() {
+            return this.gmtCreateTimestamp;
         }
 
         public FindVersionMessagesResponseBodyMessageListItems setStatus(String status) {
@@ -110,12 +94,20 @@ public class FindVersionMessagesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public FindVersionMessagesResponseBodyMessageListItems setStatusDesc(String statusDesc) {
-            this.statusDesc = statusDesc;
+        public FindVersionMessagesResponseBodyMessageListItems setGmtModify(String gmtModify) {
+            this.gmtModify = gmtModify;
             return this;
         }
-        public String getStatusDesc() {
-            return this.statusDesc;
+        public String getGmtModify() {
+            return this.gmtModify;
+        }
+
+        public FindVersionMessagesResponseBodyMessageListItems setMessageId(String messageId) {
+            this.messageId = messageId;
+            return this;
+        }
+        public String getMessageId() {
+            return this.messageId;
         }
 
         public FindVersionMessagesResponseBodyMessageListItems setDeviceId(String deviceId) {
@@ -134,50 +126,50 @@ public class FindVersionMessagesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public FindVersionMessagesResponseBodyMessageListItems setGmtModify(String gmtModify) {
-            this.gmtModify = gmtModify;
+        public FindVersionMessagesResponseBodyMessageListItems setVersionId(String versionId) {
+            this.versionId = versionId;
             return this;
         }
-        public String getGmtModify() {
-            return this.gmtModify;
+        public String getVersionId() {
+            return this.versionId;
         }
 
-        public FindVersionMessagesResponseBodyMessageListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-            this.gmtCreateTimestamp = gmtCreateTimestamp;
+        public FindVersionMessagesResponseBodyMessageListItems setStatusDesc(String statusDesc) {
+            this.statusDesc = statusDesc;
             return this;
         }
-        public Long getGmtCreateTimestamp() {
-            return this.gmtCreateTimestamp;
+        public String getStatusDesc() {
+            return this.statusDesc;
         }
 
-        public FindVersionMessagesResponseBodyMessageListItems setGmtModifyTimestamp(Long gmtModifyTimestamp) {
-            this.gmtModifyTimestamp = gmtModifyTimestamp;
+        public FindVersionMessagesResponseBodyMessageListItems setTestId(String testId) {
+            this.testId = testId;
             return this;
         }
-        public Long getGmtModifyTimestamp() {
-            return this.gmtModifyTimestamp;
+        public String getTestId() {
+            return this.testId;
+        }
+
+        public FindVersionMessagesResponseBodyMessageListItems setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
     }
 
     public static class FindVersionMessagesResponseBodyMessageList extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("Items")
         public java.util.List<FindVersionMessagesResponseBodyMessageListItems> items;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static FindVersionMessagesResponseBodyMessageList build(java.util.Map<String, ?> map) throws Exception {
             FindVersionMessagesResponseBodyMessageList self = new FindVersionMessagesResponseBodyMessageList();
             return TeaModel.build(map, self);
-        }
-
-        public FindVersionMessagesResponseBodyMessageList setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
         }
 
         public FindVersionMessagesResponseBodyMessageList setItems(java.util.List<FindVersionMessagesResponseBodyMessageListItems> items) {
@@ -186,6 +178,14 @@ public class FindVersionMessagesResponseBody extends TeaModel {
         }
         public java.util.List<FindVersionMessagesResponseBodyMessageListItems> getItems() {
             return this.items;
+        }
+
+        public FindVersionMessagesResponseBodyMessageList setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

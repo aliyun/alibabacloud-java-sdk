@@ -4,17 +4,17 @@ package com.aliyun.iovcc20180501.models;
 import com.aliyun.tea.*;
 
 public class ListAssistDevicesResponseBody extends TeaModel {
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageIndex")
-    public Integer pageIndex;
 
     @NameInMap("PerPage")
     public Integer perPage;
 
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageIndex")
+    public Integer pageIndex;
 
     @NameInMap("Devices")
     public java.util.List<ListAssistDevicesResponseBodyDevices> devices;
@@ -22,6 +22,14 @@ public class ListAssistDevicesResponseBody extends TeaModel {
     public static ListAssistDevicesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListAssistDevicesResponseBody self = new ListAssistDevicesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListAssistDevicesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public ListAssistDevicesResponseBody setRequestId(String requestId) {
@@ -32,14 +40,6 @@ public class ListAssistDevicesResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAssistDevicesResponseBody setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
-        return this;
-    }
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
     public ListAssistDevicesResponseBody setPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -48,12 +48,12 @@ public class ListAssistDevicesResponseBody extends TeaModel {
         return this.perPage;
     }
 
-    public ListAssistDevicesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public ListAssistDevicesResponseBody setPageIndex(Integer pageIndex) {
+        this.pageIndex = pageIndex;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageIndex() {
+        return this.pageIndex;
     }
 
     public ListAssistDevicesResponseBody setDevices(java.util.List<ListAssistDevicesResponseBodyDevices> devices) {
@@ -65,17 +65,20 @@ public class ListAssistDevicesResponseBody extends TeaModel {
     }
 
     public static class ListAssistDevicesResponseBodyDevices extends TeaModel {
-        @NameInMap("DeviceId")
-        public String deviceId;
-
-        @NameInMap("DeviceName")
-        public String deviceName;
-
         @NameInMap("SerialNumber")
         public String serialNumber;
 
         @NameInMap("HardwareId")
         public String hardwareId;
+
+        @NameInMap("DeviceName")
+        public String deviceName;
+
+        @NameInMap("AccessTime")
+        public Long accessTime;
+
+        @NameInMap("DeviceId")
+        public String deviceId;
 
         @NameInMap("UUID")
         public String UUID;
@@ -83,28 +86,9 @@ public class ListAssistDevicesResponseBody extends TeaModel {
         @NameInMap("VIN")
         public String VIN;
 
-        @NameInMap("AccessTime")
-        public Long accessTime;
-
         public static ListAssistDevicesResponseBodyDevices build(java.util.Map<String, ?> map) throws Exception {
             ListAssistDevicesResponseBodyDevices self = new ListAssistDevicesResponseBodyDevices();
             return TeaModel.build(map, self);
-        }
-
-        public ListAssistDevicesResponseBodyDevices setDeviceId(String deviceId) {
-            this.deviceId = deviceId;
-            return this;
-        }
-        public String getDeviceId() {
-            return this.deviceId;
-        }
-
-        public ListAssistDevicesResponseBodyDevices setDeviceName(String deviceName) {
-            this.deviceName = deviceName;
-            return this;
-        }
-        public String getDeviceName() {
-            return this.deviceName;
         }
 
         public ListAssistDevicesResponseBodyDevices setSerialNumber(String serialNumber) {
@@ -123,6 +107,30 @@ public class ListAssistDevicesResponseBody extends TeaModel {
             return this.hardwareId;
         }
 
+        public ListAssistDevicesResponseBodyDevices setDeviceName(String deviceName) {
+            this.deviceName = deviceName;
+            return this;
+        }
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        public ListAssistDevicesResponseBodyDevices setAccessTime(Long accessTime) {
+            this.accessTime = accessTime;
+            return this;
+        }
+        public Long getAccessTime() {
+            return this.accessTime;
+        }
+
+        public ListAssistDevicesResponseBodyDevices setDeviceId(String deviceId) {
+            this.deviceId = deviceId;
+            return this;
+        }
+        public String getDeviceId() {
+            return this.deviceId;
+        }
+
         public ListAssistDevicesResponseBodyDevices setUUID(String UUID) {
             this.UUID = UUID;
             return this;
@@ -137,14 +145,6 @@ public class ListAssistDevicesResponseBody extends TeaModel {
         }
         public String getVIN() {
             return this.VIN;
-        }
-
-        public ListAssistDevicesResponseBodyDevices setAccessTime(Long accessTime) {
-            this.accessTime = accessTime;
-            return this;
-        }
-        public Long getAccessTime() {
-            return this.accessTime;
         }
 
     }

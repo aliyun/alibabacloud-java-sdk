@@ -32,14 +32,11 @@ public class FindVersionDeviceGroupsResponseBody extends TeaModel {
     }
 
     public static class FindVersionDeviceGroupsResponseBodyDeviceGroupListItems extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("GmtModifyTimestamp")
+        public Long gmtModifyTimestamp;
 
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("GmtCreate")
-        public String gmtCreate;
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
 
         @NameInMap("GmtModify")
         public String gmtModify;
@@ -47,42 +44,37 @@ public class FindVersionDeviceGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public Long id;
+
         @NameInMap("MaxCount")
         public String maxCount;
-
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
-
-        @NameInMap("GmtModifyTimestamp")
-        public Long gmtModifyTimestamp;
 
         public static FindVersionDeviceGroupsResponseBodyDeviceGroupListItems build(java.util.Map<String, ?> map) throws Exception {
             FindVersionDeviceGroupsResponseBodyDeviceGroupListItems self = new FindVersionDeviceGroupsResponseBodyDeviceGroupListItems();
             return TeaModel.build(map, self);
         }
 
-        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setId(Long id) {
-            this.id = id;
+        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setGmtModifyTimestamp(Long gmtModifyTimestamp) {
+            this.gmtModifyTimestamp = gmtModifyTimestamp;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Long getGmtModifyTimestamp() {
+            return this.gmtModifyTimestamp;
         }
 
-        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setName(String name) {
-            this.name = name;
+        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+            this.gmtCreateTimestamp = gmtCreateTimestamp;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setGmtCreate(String gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public String getGmtCreate() {
-            return this.gmtCreate;
+        public Long getGmtCreateTimestamp() {
+            return this.gmtCreateTimestamp;
         }
 
         public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setGmtModify(String gmtModify) {
@@ -101,6 +93,30 @@ public class FindVersionDeviceGroupsResponseBody extends TeaModel {
             return this.description;
         }
 
+        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
         public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setMaxCount(String maxCount) {
             this.maxCount = maxCount;
             return this;
@@ -109,42 +125,18 @@ public class FindVersionDeviceGroupsResponseBody extends TeaModel {
             return this.maxCount;
         }
 
-        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-            this.gmtCreateTimestamp = gmtCreateTimestamp;
-            return this;
-        }
-        public Long getGmtCreateTimestamp() {
-            return this.gmtCreateTimestamp;
-        }
-
-        public FindVersionDeviceGroupsResponseBodyDeviceGroupListItems setGmtModifyTimestamp(Long gmtModifyTimestamp) {
-            this.gmtModifyTimestamp = gmtModifyTimestamp;
-            return this;
-        }
-        public Long getGmtModifyTimestamp() {
-            return this.gmtModifyTimestamp;
-        }
-
     }
 
     public static class FindVersionDeviceGroupsResponseBodyDeviceGroupList extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("Items")
         public java.util.List<FindVersionDeviceGroupsResponseBodyDeviceGroupListItems> items;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static FindVersionDeviceGroupsResponseBodyDeviceGroupList build(java.util.Map<String, ?> map) throws Exception {
             FindVersionDeviceGroupsResponseBodyDeviceGroupList self = new FindVersionDeviceGroupsResponseBodyDeviceGroupList();
             return TeaModel.build(map, self);
-        }
-
-        public FindVersionDeviceGroupsResponseBodyDeviceGroupList setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
         }
 
         public FindVersionDeviceGroupsResponseBodyDeviceGroupList setItems(java.util.List<FindVersionDeviceGroupsResponseBodyDeviceGroupListItems> items) {
@@ -153,6 +145,14 @@ public class FindVersionDeviceGroupsResponseBody extends TeaModel {
         }
         public java.util.List<FindVersionDeviceGroupsResponseBodyDeviceGroupListItems> getItems() {
             return this.items;
+        }
+
+        public FindVersionDeviceGroupsResponseBodyDeviceGroupList setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

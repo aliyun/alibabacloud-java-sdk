@@ -4,23 +4,15 @@ package com.aliyun.iovcc20180501.models;
 import com.aliyun.tea.*;
 
 public class DescribeProjectResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("Project")
     public DescribeProjectResponseBodyProject project;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeProjectResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeProjectResponseBody self = new DescribeProjectResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeProjectResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeProjectResponseBody setProject(DescribeProjectResponseBodyProject project) {
@@ -31,24 +23,26 @@ public class DescribeProjectResponseBody extends TeaModel {
         return this.project;
     }
 
+    public DescribeProjectResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeProjectResponseBodyProject extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("ProjectId")
+        public String projectId;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -56,44 +50,18 @@ public class DescribeProjectResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public Long id;
+
         @NameInMap("Creator")
         public String creator;
 
         public static DescribeProjectResponseBodyProject build(java.util.Map<String, ?> map) throws Exception {
             DescribeProjectResponseBodyProject self = new DescribeProjectResponseBodyProject();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeProjectResponseBodyProject setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public DescribeProjectResponseBodyProject setProjectId(String projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public DescribeProjectResponseBodyProject setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public DescribeProjectResponseBodyProject setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public DescribeProjectResponseBodyProject setStatus(Integer status) {
@@ -112,6 +80,22 @@ public class DescribeProjectResponseBody extends TeaModel {
             return this.description;
         }
 
+        public DescribeProjectResponseBodyProject setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public DescribeProjectResponseBodyProject setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
         public DescribeProjectResponseBodyProject setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -126,6 +110,22 @@ public class DescribeProjectResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeProjectResponseBodyProject setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeProjectResponseBodyProject setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public DescribeProjectResponseBodyProject setCreator(String creator) {

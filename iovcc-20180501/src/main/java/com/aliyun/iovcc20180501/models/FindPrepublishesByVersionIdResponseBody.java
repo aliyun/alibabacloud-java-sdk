@@ -32,14 +32,17 @@ public class FindPrepublishesByVersionIdResponseBody extends TeaModel {
     }
 
     public static class FindPrepublishesByVersionIdResponseBodyPrepublishList extends TeaModel {
-        @NameInMap("Id")
-        public String id;
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
 
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("DeviceModelId")
+        public String deviceModelId;
 
-        @NameInMap("VersionType")
-        public String versionType;
+        @NameInMap("GmtModify")
+        public String gmtModify;
+
+        @NameInMap("IsActive")
+        public String isActive;
 
         @NameInMap("VersionId")
         public String versionId;
@@ -47,63 +50,68 @@ public class FindPrepublishesByVersionIdResponseBody extends TeaModel {
         @NameInMap("BarrierCount")
         public String barrierCount;
 
-        @NameInMap("DeviceModelId")
-        public String deviceModelId;
-
-        @NameInMap("ParentId")
-        public String parentId;
-
-        @NameInMap("IsActive")
-        public String isActive;
+        @NameInMap("DeviceModelName")
+        public String deviceModelName;
 
         @NameInMap("IsTotalPrepublish")
         public String isTotalPrepublish;
 
+        @NameInMap("GmtModifyTimestamp")
+        public Long gmtModifyTimestamp;
+
+        @NameInMap("ParentId")
+        public String parentId;
+
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("GmtModify")
-        public String gmtModify;
+        @NameInMap("Name")
+        public String name;
 
-        @NameInMap("DeviceModelName")
-        public String deviceModelName;
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("VersionType")
+        public String versionType;
 
         @NameInMap("PassedCount")
         public String passedCount;
-
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
-
-        @NameInMap("GmtModifyTimestamp")
-        public Long gmtModifyTimestamp;
 
         public static FindPrepublishesByVersionIdResponseBodyPrepublishList build(java.util.Map<String, ?> map) throws Exception {
             FindPrepublishesByVersionIdResponseBodyPrepublishList self = new FindPrepublishesByVersionIdResponseBodyPrepublishList();
             return TeaModel.build(map, self);
         }
 
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setId(String id) {
-            this.id = id;
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+            this.gmtCreateTimestamp = gmtCreateTimestamp;
             return this;
         }
-        public String getId() {
-            return this.id;
+        public Long getGmtCreateTimestamp() {
+            return this.gmtCreateTimestamp;
         }
 
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setName(String name) {
-            this.name = name;
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setDeviceModelId(String deviceModelId) {
+            this.deviceModelId = deviceModelId;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getDeviceModelId() {
+            return this.deviceModelId;
         }
 
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setVersionType(String versionType) {
-            this.versionType = versionType;
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setGmtModify(String gmtModify) {
+            this.gmtModify = gmtModify;
             return this;
         }
-        public String getVersionType() {
-            return this.versionType;
+        public String getGmtModify() {
+            return this.gmtModify;
+        }
+
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setIsActive(String isActive) {
+            this.isActive = isActive;
+            return this;
+        }
+        public String getIsActive() {
+            return this.isActive;
         }
 
         public FindPrepublishesByVersionIdResponseBodyPrepublishList setVersionId(String versionId) {
@@ -122,28 +130,12 @@ public class FindPrepublishesByVersionIdResponseBody extends TeaModel {
             return this.barrierCount;
         }
 
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setDeviceModelId(String deviceModelId) {
-            this.deviceModelId = deviceModelId;
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setDeviceModelName(String deviceModelName) {
+            this.deviceModelName = deviceModelName;
             return this;
         }
-        public String getDeviceModelId() {
-            return this.deviceModelId;
-        }
-
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setParentId(String parentId) {
-            this.parentId = parentId;
-            return this;
-        }
-        public String getParentId() {
-            return this.parentId;
-        }
-
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setIsActive(String isActive) {
-            this.isActive = isActive;
-            return this;
-        }
-        public String getIsActive() {
-            return this.isActive;
+        public String getDeviceModelName() {
+            return this.deviceModelName;
         }
 
         public FindPrepublishesByVersionIdResponseBodyPrepublishList setIsTotalPrepublish(String isTotalPrepublish) {
@@ -154,6 +146,22 @@ public class FindPrepublishesByVersionIdResponseBody extends TeaModel {
             return this.isTotalPrepublish;
         }
 
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setGmtModifyTimestamp(Long gmtModifyTimestamp) {
+            this.gmtModifyTimestamp = gmtModifyTimestamp;
+            return this;
+        }
+        public Long getGmtModifyTimestamp() {
+            return this.gmtModifyTimestamp;
+        }
+
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setParentId(String parentId) {
+            this.parentId = parentId;
+            return this;
+        }
+        public String getParentId() {
+            return this.parentId;
+        }
+
         public FindPrepublishesByVersionIdResponseBodyPrepublishList setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -162,20 +170,28 @@ public class FindPrepublishesByVersionIdResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setGmtModify(String gmtModify) {
-            this.gmtModify = gmtModify;
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getGmtModify() {
-            return this.gmtModify;
+        public String getName() {
+            return this.name;
         }
 
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setDeviceModelName(String deviceModelName) {
-            this.deviceModelName = deviceModelName;
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setId(String id) {
+            this.id = id;
             return this;
         }
-        public String getDeviceModelName() {
-            return this.deviceModelName;
+        public String getId() {
+            return this.id;
+        }
+
+        public FindPrepublishesByVersionIdResponseBodyPrepublishList setVersionType(String versionType) {
+            this.versionType = versionType;
+            return this;
+        }
+        public String getVersionType() {
+            return this.versionType;
         }
 
         public FindPrepublishesByVersionIdResponseBodyPrepublishList setPassedCount(String passedCount) {
@@ -184,22 +200,6 @@ public class FindPrepublishesByVersionIdResponseBody extends TeaModel {
         }
         public String getPassedCount() {
             return this.passedCount;
-        }
-
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-            this.gmtCreateTimestamp = gmtCreateTimestamp;
-            return this;
-        }
-        public Long getGmtCreateTimestamp() {
-            return this.gmtCreateTimestamp;
-        }
-
-        public FindPrepublishesByVersionIdResponseBodyPrepublishList setGmtModifyTimestamp(Long gmtModifyTimestamp) {
-            this.gmtModifyTimestamp = gmtModifyTimestamp;
-            return this;
-        }
-        public Long getGmtModifyTimestamp() {
-            return this.gmtModifyTimestamp;
         }
 
     }

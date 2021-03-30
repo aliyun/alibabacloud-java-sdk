@@ -35,11 +35,11 @@ public class CountYunIdInfoResponseBody extends TeaModel {
         @NameInMap("TotalBrandCount")
         public Long totalBrandCount;
 
-        @NameInMap("TotalDeviceModelCount")
-        public Long totalDeviceModelCount;
-
         @NameInMap("TotalDeviceCount")
         public Long totalDeviceCount;
+
+        @NameInMap("TotalDeviceModelCount")
+        public Long totalDeviceModelCount;
 
         public static CountYunIdInfoResponseBodyYunIdInfo build(java.util.Map<String, ?> map) throws Exception {
             CountYunIdInfoResponseBodyYunIdInfo self = new CountYunIdInfoResponseBodyYunIdInfo();
@@ -54,20 +54,20 @@ public class CountYunIdInfoResponseBody extends TeaModel {
             return this.totalBrandCount;
         }
 
-        public CountYunIdInfoResponseBodyYunIdInfo setTotalDeviceModelCount(Long totalDeviceModelCount) {
-            this.totalDeviceModelCount = totalDeviceModelCount;
-            return this;
-        }
-        public Long getTotalDeviceModelCount() {
-            return this.totalDeviceModelCount;
-        }
-
         public CountYunIdInfoResponseBodyYunIdInfo setTotalDeviceCount(Long totalDeviceCount) {
             this.totalDeviceCount = totalDeviceCount;
             return this;
         }
         public Long getTotalDeviceCount() {
             return this.totalDeviceCount;
+        }
+
+        public CountYunIdInfoResponseBodyYunIdInfo setTotalDeviceModelCount(Long totalDeviceModelCount) {
+            this.totalDeviceModelCount = totalDeviceModelCount;
+            return this;
+        }
+        public Long getTotalDeviceModelCount() {
+            return this.totalDeviceModelCount;
         }
 
     }

@@ -32,23 +32,15 @@ public class DescribeDeviceShadowResponseBody extends TeaModel {
     }
 
     public static class DescribeDeviceShadowResponseBodyDeviceShadow extends TeaModel {
-        @NameInMap("DeviceInfo")
-        public String deviceInfo;
-
         @NameInMap("DeviceShadow")
         public String deviceShadow;
+
+        @NameInMap("DeviceInfo")
+        public String deviceInfo;
 
         public static DescribeDeviceShadowResponseBodyDeviceShadow build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeviceShadowResponseBodyDeviceShadow self = new DescribeDeviceShadowResponseBodyDeviceShadow();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDeviceShadowResponseBodyDeviceShadow setDeviceInfo(String deviceInfo) {
-            this.deviceInfo = deviceInfo;
-            return this;
-        }
-        public String getDeviceInfo() {
-            return this.deviceInfo;
         }
 
         public DescribeDeviceShadowResponseBodyDeviceShadow setDeviceShadow(String deviceShadow) {
@@ -57,6 +49,14 @@ public class DescribeDeviceShadowResponseBody extends TeaModel {
         }
         public String getDeviceShadow() {
             return this.deviceShadow;
+        }
+
+        public DescribeDeviceShadowResponseBodyDeviceShadow setDeviceInfo(String deviceInfo) {
+            this.deviceInfo = deviceInfo;
+            return this;
+        }
+        public String getDeviceInfo() {
+            return this.deviceInfo;
         }
 
     }

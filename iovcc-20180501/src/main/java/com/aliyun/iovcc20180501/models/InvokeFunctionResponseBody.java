@@ -32,23 +32,15 @@ public class InvokeFunctionResponseBody extends TeaModel {
     }
 
     public static class InvokeFunctionResponseBodyResult extends TeaModel {
-        @NameInMap("BackEndRequestId")
-        public String backEndRequestId;
-
         @NameInMap("Output")
         public String output;
+
+        @NameInMap("BackEndRequestId")
+        public String backEndRequestId;
 
         public static InvokeFunctionResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             InvokeFunctionResponseBodyResult self = new InvokeFunctionResponseBodyResult();
             return TeaModel.build(map, self);
-        }
-
-        public InvokeFunctionResponseBodyResult setBackEndRequestId(String backEndRequestId) {
-            this.backEndRequestId = backEndRequestId;
-            return this;
-        }
-        public String getBackEndRequestId() {
-            return this.backEndRequestId;
         }
 
         public InvokeFunctionResponseBodyResult setOutput(String output) {
@@ -57,6 +49,14 @@ public class InvokeFunctionResponseBody extends TeaModel {
         }
         public String getOutput() {
             return this.output;
+        }
+
+        public InvokeFunctionResponseBodyResult setBackEndRequestId(String backEndRequestId) {
+            this.backEndRequestId = backEndRequestId;
+            return this;
+        }
+        public String getBackEndRequestId() {
+            return this.backEndRequestId;
         }
 
     }
