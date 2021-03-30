@@ -10,9 +10,6 @@ public class CreateUploadOSSFileJobShrinkRequest extends TeaModel {
     @NameInMap("FileName")
     public String fileName;
 
-    @NameInMap("UploadType")
-    public String uploadType;
-
     @NameInMap("UploadTarget")
     public String uploadTargetShrink;
 
@@ -38,14 +35,6 @@ public class CreateUploadOSSFileJobShrinkRequest extends TeaModel {
     }
     public String getFileName() {
         return this.fileName;
-    }
-
-    public CreateUploadOSSFileJobShrinkRequest setUploadType(String uploadType) {
-        this.uploadType = uploadType;
-        return this;
-    }
-    public String getUploadType() {
-        return this.uploadType;
     }
 
     public CreateUploadOSSFileJobShrinkRequest setUploadTargetShrink(String uploadTargetShrink) {

@@ -10,9 +10,6 @@ public class CreateUploadOSSFileJobRequest extends TeaModel {
     @NameInMap("FileName")
     public String fileName;
 
-    @NameInMap("UploadType")
-    public String uploadType;
-
     @NameInMap("UploadTarget")
     public CreateUploadOSSFileJobRequestUploadTarget uploadTarget;
 
@@ -38,14 +35,6 @@ public class CreateUploadOSSFileJobRequest extends TeaModel {
     }
     public String getFileName() {
         return this.fileName;
-    }
-
-    public CreateUploadOSSFileJobRequest setUploadType(String uploadType) {
-        this.uploadType = uploadType;
-        return this;
-    }
-    public String getUploadType() {
-        return this.uploadType;
     }
 
     public CreateUploadOSSFileJobRequest setUploadTarget(CreateUploadOSSFileJobRequestUploadTarget uploadTarget) {

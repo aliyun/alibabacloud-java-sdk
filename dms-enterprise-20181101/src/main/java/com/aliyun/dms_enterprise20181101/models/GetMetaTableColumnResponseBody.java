@@ -99,7 +99,7 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
         public Boolean nullable;
 
         @NameInMap("DataLength")
-        public Integer dataLength;
+        public Long dataLength;
 
         public static GetMetaTableColumnResponseBodyColumnList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableColumnResponseBodyColumnList self = new GetMetaTableColumnResponseBodyColumnList();
@@ -194,11 +194,11 @@ public class GetMetaTableColumnResponseBody extends TeaModel {
             return this.nullable;
         }
 
-        public GetMetaTableColumnResponseBodyColumnList setDataLength(Integer dataLength) {
+        public GetMetaTableColumnResponseBodyColumnList setDataLength(Long dataLength) {
             this.dataLength = dataLength;
             return this;
         }
-        public Integer getDataLength() {
+        public Long getDataLength() {
             return this.dataLength;
         }
 
