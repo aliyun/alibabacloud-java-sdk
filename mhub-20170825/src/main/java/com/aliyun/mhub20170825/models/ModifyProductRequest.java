@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyProductRequest extends TeaModel {
     @NameInMap("ProductId")
-    @Validation(required = true)
     public String productId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     public static ModifyProductRequest build(java.util.Map<String, ?> map) throws Exception {

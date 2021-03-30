@@ -4,33 +4,33 @@ package com.aliyun.mhub20170825.models;
 import com.aliyun.tea.*;
 
 public class OpenEmasServiceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OrderId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String orderId;
+    public OpenEmasServiceResponseBody body;
 
     public static OpenEmasServiceResponse build(java.util.Map<String, ?> map) throws Exception {
         OpenEmasServiceResponse self = new OpenEmasServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public OpenEmasServiceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public OpenEmasServiceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public OpenEmasServiceResponse setOrderId(String orderId) {
-        this.orderId = orderId;
+    public OpenEmasServiceResponse setBody(OpenEmasServiceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public OpenEmasServiceResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DeleteProductRequest extends TeaModel {
     @NameInMap("ProductId")
-    @Validation(required = true)
     public String productId;
 
     public static DeleteProductRequest build(java.util.Map<String, ?> map) throws Exception {
