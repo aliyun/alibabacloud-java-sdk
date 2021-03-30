@@ -17,7 +17,7 @@ public class GrantRolesRequest extends TeaModel {
     public String operator;
 
     @NameInMap("RoleId")
-    public java.util.List<Integer> roleId;
+    public java.util.List<Long> roleId;
 
     public static GrantRolesRequest build(java.util.Map<String, ?> map) throws Exception {
         GrantRolesRequest self = new GrantRolesRequest();
@@ -56,11 +56,11 @@ public class GrantRolesRequest extends TeaModel {
         return this.operator;
     }
 
-    public GrantRolesRequest setRoleId(java.util.List<Integer> roleId) {
+    public GrantRolesRequest setRoleId(java.util.List<Long> roleId) {
         this.roleId = roleId;
         return this;
     }
-    public java.util.List<Integer> getRoleId() {
+    public java.util.List<Long> getRoleId() {
         return this.roleId;
     }
 

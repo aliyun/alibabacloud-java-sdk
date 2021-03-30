@@ -20,7 +20,7 @@ public class UpdateRoleRequest extends TeaModel {
     public String operator;
 
     @NameInMap("PermissionId")
-    public java.util.List<Integer> permissionId;
+    public java.util.List<Long> permissionId;
 
     public static UpdateRoleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRoleRequest self = new UpdateRoleRequest();
@@ -67,11 +67,11 @@ public class UpdateRoleRequest extends TeaModel {
         return this.operator;
     }
 
-    public UpdateRoleRequest setPermissionId(java.util.List<Integer> permissionId) {
+    public UpdateRoleRequest setPermissionId(java.util.List<Long> permissionId) {
         this.permissionId = permissionId;
         return this;
     }
-    public java.util.List<Integer> getPermissionId() {
+    public java.util.List<Long> getPermissionId() {
         return this.permissionId;
     }
 

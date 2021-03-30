@@ -22,6 +22,9 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<QuerySkillGroupsResponseBodyData> data;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static QuerySkillGroupsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySkillGroupsResponseBody self = new QuerySkillGroupsResponseBody();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class QuerySkillGroupsResponseBody extends TeaModel {
     }
     public java.util.List<QuerySkillGroupsResponseBodyData> getData() {
         return this.data;
+    }
+
+    public QuerySkillGroupsResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public static class QuerySkillGroupsResponseBodyData extends TeaModel {

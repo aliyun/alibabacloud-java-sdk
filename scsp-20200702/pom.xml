@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>scsp20200702</artifactId>
-  <version>1.9.0</version>
+  <version>1.2.0</version>
   <packaging>jar</packaging>
   <name>scsp20200702</name>
   <description>Alibaba Cloud scsp (20200702) SDK for Java
@@ -41,17 +41,17 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.10</version>
+      <version>0.2.11</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.11</version>
+      <version>0.0.14</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.3</version>
+      <version>0.1.4</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

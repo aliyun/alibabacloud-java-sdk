@@ -17,10 +17,10 @@ public class UpdateAgentRequest extends TeaModel {
     public String displayName;
 
     @NameInMap("SkillGroupId")
-    public java.util.List<Integer> skillGroupId;
+    public java.util.List<Long> skillGroupId;
 
     @NameInMap("SkillGroupIdList")
-    public java.util.List<Integer> skillGroupIdList;
+    public java.util.List<Long> skillGroupIdList;
 
     public static UpdateAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAgentRequest self = new UpdateAgentRequest();
@@ -59,19 +59,19 @@ public class UpdateAgentRequest extends TeaModel {
         return this.displayName;
     }
 
-    public UpdateAgentRequest setSkillGroupId(java.util.List<Integer> skillGroupId) {
+    public UpdateAgentRequest setSkillGroupId(java.util.List<Long> skillGroupId) {
         this.skillGroupId = skillGroupId;
         return this;
     }
-    public java.util.List<Integer> getSkillGroupId() {
+    public java.util.List<Long> getSkillGroupId() {
         return this.skillGroupId;
     }
 
-    public UpdateAgentRequest setSkillGroupIdList(java.util.List<Integer> skillGroupIdList) {
+    public UpdateAgentRequest setSkillGroupIdList(java.util.List<Long> skillGroupIdList) {
         this.skillGroupIdList = skillGroupIdList;
         return this;
     }
-    public java.util.List<Integer> getSkillGroupIdList() {
+    public java.util.List<Long> getSkillGroupIdList() {
         return this.skillGroupIdList;
     }
 
