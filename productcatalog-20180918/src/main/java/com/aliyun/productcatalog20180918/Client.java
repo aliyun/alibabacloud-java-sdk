@@ -53,7 +53,49 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("GetApi", "2018-09-18", "HTTPS", "GET", "AK", "/products/v1/public/" + ProductId + "/versions/" + VersionId + "/apis/" + ApiId + "", "none", req, runtime), new GetApiResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetApi"),
+            new TeaPair("version", "2018-09-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/products/v1/public/" + ProductId + "/versions/{VersionId}/apis/{ApiId}"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetApiResponse());
+    }
+
+    public GetProductResponse getProduct(String ProductId, GetProductRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getProductWithOptions(ProductId, request, headers, runtime);
+    }
+
+    public GetProductResponse getProductWithOptions(String ProductId, GetProductRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetProduct"),
+            new TeaPair("version", "2018-09-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/products/v1/public/" + ProductId + "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetProductResponse());
     }
 
     public ListApisResponse listApis(String ProductId, String VersionId, ListApisRequest request) throws Exception {
@@ -81,7 +123,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListApis", "2018-09-18", "HTTPS", "GET", "AK", "/products/v1/public/" + ProductId + "/versions/" + VersionId + "/apis/", "none", req, runtime), new ListApisResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListApis"),
+            new TeaPair("version", "2018-09-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/products/v1/public/" + ProductId + "/versions/{VersionId}/apis/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApisResponse());
     }
 
     public ListProductsResponse listProducts(ListProductsRequest request) throws Exception {
@@ -109,26 +162,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        return TeaModel.toModel(this.doROARequest("ListProducts", "2018-09-18", "HTTPS", "GET", "AK", "/products/v1/public/", "none", req, runtime), new ListProductsResponse());
-    }
-
-    public GetProductResponse getProduct(String ProductId, GetProductRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getProductWithOptions(ProductId, request, headers, runtime);
-    }
-
-    public GetProductResponse getProductWithOptions(String ProductId, GetProductRequest request, java.util.Map<String, String> headers, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
-            query.put("Language", request.language);
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProducts"),
+            new TeaPair("version", "2018-09-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/products/v1/public/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
         ));
-        return TeaModel.toModel(this.doROARequest("GetProduct", "2018-09-18", "HTTPS", "GET", "AK", "/products/v1/public/" + ProductId + "/", "none", req, runtime), new GetProductResponse());
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProductsResponse());
     }
 }
