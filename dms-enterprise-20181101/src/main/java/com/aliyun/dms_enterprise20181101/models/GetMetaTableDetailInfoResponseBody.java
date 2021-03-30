@@ -156,7 +156,7 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
         public String columnId;
 
         @NameInMap("DataLength")
-        public Integer dataLength;
+        public Long dataLength;
 
         public static GetMetaTableDetailInfoResponseBodyDetailInfoColumnList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableDetailInfoResponseBodyDetailInfoColumnList self = new GetMetaTableDetailInfoResponseBodyDetailInfoColumnList();
@@ -235,11 +235,11 @@ public class GetMetaTableDetailInfoResponseBody extends TeaModel {
             return this.columnId;
         }
 
-        public GetMetaTableDetailInfoResponseBodyDetailInfoColumnList setDataLength(Integer dataLength) {
+        public GetMetaTableDetailInfoResponseBodyDetailInfoColumnList setDataLength(Long dataLength) {
             this.dataLength = dataLength;
             return this;
         }
-        public Integer getDataLength() {
+        public Long getDataLength() {
             return this.dataLength;
         }
 

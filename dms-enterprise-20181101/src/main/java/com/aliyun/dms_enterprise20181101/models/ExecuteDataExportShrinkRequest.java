@@ -10,9 +10,6 @@ public class ExecuteDataExportShrinkRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("ActionName")
-    public String actionName;
-
     @NameInMap("ActionDetail")
     public String actionDetailShrink;
 
@@ -35,14 +32,6 @@ public class ExecuteDataExportShrinkRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
-    }
-
-    public ExecuteDataExportShrinkRequest setActionName(String actionName) {
-        this.actionName = actionName;
-        return this;
-    }
-    public String getActionName() {
-        return this.actionName;
     }
 
     public ExecuteDataExportShrinkRequest setActionDetailShrink(String actionDetailShrink) {

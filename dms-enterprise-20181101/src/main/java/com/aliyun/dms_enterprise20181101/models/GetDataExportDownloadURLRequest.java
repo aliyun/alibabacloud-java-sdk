@@ -10,9 +10,6 @@ public class GetDataExportDownloadURLRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("ActionName")
-    public String actionName;
-
     public static GetDataExportDownloadURLRequest build(java.util.Map<String, ?> map) throws Exception {
         GetDataExportDownloadURLRequest self = new GetDataExportDownloadURLRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class GetDataExportDownloadURLRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
-    }
-
-    public GetDataExportDownloadURLRequest setActionName(String actionName) {
-        this.actionName = actionName;
-        return this;
-    }
-    public String getActionName() {
-        return this.actionName;
     }
 
 }

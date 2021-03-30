@@ -10,9 +10,6 @@ public class GetDataCorrectBackupFilesRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("ActionName")
-    public String actionName;
-
     @NameInMap("ActionDetail")
     public java.util.Map<String, ?> actionDetail;
 
@@ -35,14 +32,6 @@ public class GetDataCorrectBackupFilesRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
-    }
-
-    public GetDataCorrectBackupFilesRequest setActionName(String actionName) {
-        this.actionName = actionName;
-        return this;
-    }
-    public String getActionName() {
-        return this.actionName;
     }
 
     public GetDataCorrectBackupFilesRequest setActionDetail(java.util.Map<String, ?> actionDetail) {

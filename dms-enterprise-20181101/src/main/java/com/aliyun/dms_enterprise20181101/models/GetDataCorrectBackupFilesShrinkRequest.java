@@ -10,9 +10,6 @@ public class GetDataCorrectBackupFilesShrinkRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("ActionName")
-    public String actionName;
-
     @NameInMap("ActionDetail")
     public String actionDetailShrink;
 
@@ -35,14 +32,6 @@ public class GetDataCorrectBackupFilesShrinkRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
-    }
-
-    public GetDataCorrectBackupFilesShrinkRequest setActionName(String actionName) {
-        this.actionName = actionName;
-        return this;
-    }
-    public String getActionName() {
-        return this.actionName;
     }
 
     public GetDataCorrectBackupFilesShrinkRequest setActionDetailShrink(String actionDetailShrink) {

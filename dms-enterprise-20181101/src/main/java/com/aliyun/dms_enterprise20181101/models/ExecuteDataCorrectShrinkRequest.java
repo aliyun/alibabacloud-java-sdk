@@ -10,9 +10,6 @@ public class ExecuteDataCorrectShrinkRequest extends TeaModel {
     @NameInMap("OrderId")
     public Long orderId;
 
-    @NameInMap("ActionName")
-    public String actionName;
-
     @NameInMap("ActionDetail")
     public String actionDetailShrink;
 
@@ -35,14 +32,6 @@ public class ExecuteDataCorrectShrinkRequest extends TeaModel {
     }
     public Long getOrderId() {
         return this.orderId;
-    }
-
-    public ExecuteDataCorrectShrinkRequest setActionName(String actionName) {
-        this.actionName = actionName;
-        return this;
-    }
-    public String getActionName() {
-        return this.actionName;
     }
 
     public ExecuteDataCorrectShrinkRequest setActionDetailShrink(String actionDetailShrink) {
