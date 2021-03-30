@@ -4,45 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetNetDeviceInfoWithSizeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public Integer errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public GetNetDeviceInfoWithSizeResponseData data;
+    public GetNetDeviceInfoWithSizeResponseBody body;
 
     public static GetNetDeviceInfoWithSizeResponse build(java.util.Map<String, ?> map) throws Exception {
         GetNetDeviceInfoWithSizeResponse self = new GetNetDeviceInfoWithSizeResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class GetNetDeviceInfoWithSizeResponseData extends TeaModel {
-        @NameInMap("Count")
-        @Validation(required = true)
-        public Long count;
+    public GetNetDeviceInfoWithSizeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        @NameInMap("Data")
-        @Validation(required = true)
-        public java.util.List<java.util.Map<String, ?>> data;
-
-        public static GetNetDeviceInfoWithSizeResponseData build(java.util.Map<String, ?> map) throws Exception {
-            GetNetDeviceInfoWithSizeResponseData self = new GetNetDeviceInfoWithSizeResponseData();
-            return TeaModel.build(map, self);
-        }
-
+    public GetNetDeviceInfoWithSizeResponse setBody(GetNetDeviceInfoWithSizeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetNetDeviceInfoWithSizeResponseBody getBody() {
+        return this.body;
     }
 
 }

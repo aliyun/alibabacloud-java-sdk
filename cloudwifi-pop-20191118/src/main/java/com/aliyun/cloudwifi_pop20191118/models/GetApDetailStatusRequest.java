@@ -5,28 +5,63 @@ import com.aliyun.tea.*;
 
 public class GetApDetailStatusRequest extends TeaModel {
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("AppCode")
-    @Validation(required = true)
     public String appCode;
 
     @NameInMap("NeedRadioStatus")
-    @Validation(required = true)
     public Boolean needRadioStatus;
 
     @NameInMap("Mac")
-    @Validation(required = true)
     public String mac;
 
     @NameInMap("NeedApgroupInfo")
-    @Validation(required = true)
     public Boolean needApgroupInfo;
 
     public static GetApDetailStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetApDetailStatusRequest self = new GetApDetailStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetApDetailStatusRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public GetApDetailStatusRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public GetApDetailStatusRequest setNeedRadioStatus(Boolean needRadioStatus) {
+        this.needRadioStatus = needRadioStatus;
+        return this;
+    }
+    public Boolean getNeedRadioStatus() {
+        return this.needRadioStatus;
+    }
+
+    public GetApDetailStatusRequest setMac(String mac) {
+        this.mac = mac;
+        return this;
+    }
+    public String getMac() {
+        return this.mac;
+    }
+
+    public GetApDetailStatusRequest setNeedApgroupInfo(Boolean needApgroupInfo) {
+        this.needApgroupInfo = needApgroupInfo;
+        return this;
+    }
+    public Boolean getNeedApgroupInfo() {
+        return this.needApgroupInfo;
     }
 
 }

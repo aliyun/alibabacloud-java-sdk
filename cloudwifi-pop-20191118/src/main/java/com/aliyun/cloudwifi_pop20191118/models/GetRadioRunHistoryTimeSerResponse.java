@@ -4,29 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class GetRadioRunHistoryTimeSerResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public java.util.Map<String, ?> data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public Integer errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("RequestId")
-    @Validation(required = true)
-    public String requestId;
+    public GetRadioRunHistoryTimeSerResponseBody body;
 
     public static GetRadioRunHistoryTimeSerResponse build(java.util.Map<String, ?> map) throws Exception {
         GetRadioRunHistoryTimeSerResponse self = new GetRadioRunHistoryTimeSerResponse();
         return TeaModel.build(map, self);
+    }
+
+    public GetRadioRunHistoryTimeSerResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetRadioRunHistoryTimeSerResponse setBody(GetRadioRunHistoryTimeSerResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetRadioRunHistoryTimeSerResponseBody getBody() {
+        return this.body;
     }
 
 }

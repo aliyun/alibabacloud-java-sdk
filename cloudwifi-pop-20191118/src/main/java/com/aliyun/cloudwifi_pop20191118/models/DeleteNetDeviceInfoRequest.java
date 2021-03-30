@@ -11,16 +11,46 @@ public class DeleteNetDeviceInfoRequest extends TeaModel {
     public String appCode;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     @NameInMap("Ids")
-    @Validation(required = true)
     public String ids;
 
     public static DeleteNetDeviceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteNetDeviceInfoRequest self = new DeleteNetDeviceInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteNetDeviceInfoRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public DeleteNetDeviceInfoRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public DeleteNetDeviceInfoRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DeleteNetDeviceInfoRequest setIds(String ids) {
+        this.ids = ids;
+        return this;
+    }
+    public String getIds() {
+        return this.ids;
     }
 
 }

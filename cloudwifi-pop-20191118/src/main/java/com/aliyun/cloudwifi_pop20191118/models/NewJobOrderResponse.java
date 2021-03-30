@@ -4,41 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class NewJobOrderResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public Integer errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public NewJobOrderResponseData data;
+    public NewJobOrderResponseBody body;
 
     public static NewJobOrderResponse build(java.util.Map<String, ?> map) throws Exception {
         NewJobOrderResponse self = new NewJobOrderResponse();
         return TeaModel.build(map, self);
     }
 
-    public static class NewJobOrderResponseData extends TeaModel {
-        @NameInMap("OrderId")
-        @Validation(required = true)
-        public Long orderId;
+    public NewJobOrderResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
 
-        public static NewJobOrderResponseData build(java.util.Map<String, ?> map) throws Exception {
-            NewJobOrderResponseData self = new NewJobOrderResponseData();
-            return TeaModel.build(map, self);
-        }
-
+    public NewJobOrderResponse setBody(NewJobOrderResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public NewJobOrderResponseBody getBody() {
+        return this.body;
     }
 
 }

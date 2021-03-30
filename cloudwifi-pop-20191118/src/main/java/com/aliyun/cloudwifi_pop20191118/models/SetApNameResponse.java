@@ -4,25 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class SetApNameResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public Integer errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public SetApNameResponseBody body;
 
     public static SetApNameResponse build(java.util.Map<String, ?> map) throws Exception {
         SetApNameResponse self = new SetApNameResponse();
         return TeaModel.build(map, self);
+    }
+
+    public SetApNameResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SetApNameResponse setBody(SetApNameResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SetApNameResponseBody getBody() {
+        return this.body;
     }
 
 }

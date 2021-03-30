@@ -4,25 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class KickStaResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public Integer errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public KickStaResponseBody body;
 
     public static KickStaResponse build(java.util.Map<String, ?> map) throws Exception {
         KickStaResponse self = new KickStaResponse();
         return TeaModel.build(map, self);
+    }
+
+    public KickStaResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public KickStaResponse setBody(KickStaResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public KickStaResponseBody getBody() {
+        return this.body;
     }
 
 }
