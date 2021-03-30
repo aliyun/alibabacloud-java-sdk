@@ -32,35 +32,35 @@ public class DescribeMqttMessageResponseBody extends TeaModel {
     }
 
     public static class DescribeMqttMessageResponseBodyMessage extends TeaModel {
-        @NameInMap("Mid")
-        public String mid;
+        @NameInMap("Time")
+        public Long time;
 
         @NameInMap("AppKey")
         public String appKey;
 
+        @NameInMap("Mid")
+        public String mid;
+
         @NameInMap("Topic")
         public String topic;
-
-        @NameInMap("QoS")
-        public Integer qoS;
 
         @NameInMap("Payload")
         public String payload;
 
-        @NameInMap("Time")
-        public Long time;
+        @NameInMap("QoS")
+        public Integer qoS;
 
         public static DescribeMqttMessageResponseBodyMessage build(java.util.Map<String, ?> map) throws Exception {
             DescribeMqttMessageResponseBodyMessage self = new DescribeMqttMessageResponseBodyMessage();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMqttMessageResponseBodyMessage setMid(String mid) {
-            this.mid = mid;
+        public DescribeMqttMessageResponseBodyMessage setTime(Long time) {
+            this.time = time;
             return this;
         }
-        public String getMid() {
-            return this.mid;
+        public Long getTime() {
+            return this.time;
         }
 
         public DescribeMqttMessageResponseBodyMessage setAppKey(String appKey) {
@@ -71,20 +71,20 @@ public class DescribeMqttMessageResponseBody extends TeaModel {
             return this.appKey;
         }
 
+        public DescribeMqttMessageResponseBodyMessage setMid(String mid) {
+            this.mid = mid;
+            return this;
+        }
+        public String getMid() {
+            return this.mid;
+        }
+
         public DescribeMqttMessageResponseBodyMessage setTopic(String topic) {
             this.topic = topic;
             return this;
         }
         public String getTopic() {
             return this.topic;
-        }
-
-        public DescribeMqttMessageResponseBodyMessage setQoS(Integer qoS) {
-            this.qoS = qoS;
-            return this;
-        }
-        public Integer getQoS() {
-            return this.qoS;
         }
 
         public DescribeMqttMessageResponseBodyMessage setPayload(String payload) {
@@ -95,12 +95,12 @@ public class DescribeMqttMessageResponseBody extends TeaModel {
             return this.payload;
         }
 
-        public DescribeMqttMessageResponseBodyMessage setTime(Long time) {
-            this.time = time;
+        public DescribeMqttMessageResponseBodyMessage setQoS(Integer qoS) {
+            this.qoS = qoS;
             return this;
         }
-        public Long getTime() {
-            return this.time;
+        public Integer getQoS() {
+            return this.qoS;
         }
 
     }

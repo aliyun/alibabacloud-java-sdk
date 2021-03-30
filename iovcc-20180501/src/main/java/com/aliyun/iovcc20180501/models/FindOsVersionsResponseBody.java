@@ -32,29 +32,41 @@ public class FindOsVersionsResponseBody extends TeaModel {
     }
 
     public static class FindOsVersionsResponseBodyOsVersionListItems extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
 
         @NameInMap("DeviceModelId")
         public String deviceModelId;
 
-        @NameInMap("SystemVersion")
-        public String systemVersion;
-
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("GmtModify")
+        public String gmtModify;
 
         @NameInMap("IsMilestone")
         public String isMilestone;
 
-        @NameInMap("IsForceUpgrade")
-        public String isForceUpgrade;
+        @NameInMap("Remark")
+        public String remark;
+
+        @NameInMap("SystemVersion")
+        public String systemVersion;
+
+        @NameInMap("StatusName")
+        public String statusName;
+
+        @NameInMap("IsForceReboot")
+        public String isForceReboot;
+
+        @NameInMap("DeviceModelName")
+        public String deviceModelName;
 
         @NameInMap("IsSilentUpgrade")
         public String isSilentUpgrade;
 
-        @NameInMap("IsForceReboot")
-        public String isForceReboot;
+        @NameInMap("GmtModifyTimestamp")
+        public Long gmtModifyTimestamp;
 
         @NameInMap("IsForceNightUpgrade")
         public String isForceNightUpgrade;
@@ -62,51 +74,15 @@ public class FindOsVersionsResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("GmtModify")
-        public String gmtModify;
+        @NameInMap("IsForceUpgrade")
+        public String isForceUpgrade;
 
-        @NameInMap("Remark")
-        public String remark;
-
-        @NameInMap("StatusName")
-        public String statusName;
-
-        @NameInMap("DeviceModelName")
-        public String deviceModelName;
-
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
-
-        @NameInMap("GmtModifyTimestamp")
-        public Long gmtModifyTimestamp;
+        @NameInMap("Id")
+        public Long id;
 
         public static FindOsVersionsResponseBodyOsVersionListItems build(java.util.Map<String, ?> map) throws Exception {
             FindOsVersionsResponseBodyOsVersionListItems self = new FindOsVersionsResponseBodyOsVersionListItems();
             return TeaModel.build(map, self);
-        }
-
-        public FindOsVersionsResponseBodyOsVersionListItems setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public FindOsVersionsResponseBodyOsVersionListItems setDeviceModelId(String deviceModelId) {
-            this.deviceModelId = deviceModelId;
-            return this;
-        }
-        public String getDeviceModelId() {
-            return this.deviceModelId;
-        }
-
-        public FindOsVersionsResponseBodyOsVersionListItems setSystemVersion(String systemVersion) {
-            this.systemVersion = systemVersion;
-            return this;
-        }
-        public String getSystemVersion() {
-            return this.systemVersion;
         }
 
         public FindOsVersionsResponseBodyOsVersionListItems setStatus(String status) {
@@ -117,6 +93,30 @@ public class FindOsVersionsResponseBody extends TeaModel {
             return this.status;
         }
 
+        public FindOsVersionsResponseBodyOsVersionListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+            this.gmtCreateTimestamp = gmtCreateTimestamp;
+            return this;
+        }
+        public Long getGmtCreateTimestamp() {
+            return this.gmtCreateTimestamp;
+        }
+
+        public FindOsVersionsResponseBodyOsVersionListItems setDeviceModelId(String deviceModelId) {
+            this.deviceModelId = deviceModelId;
+            return this;
+        }
+        public String getDeviceModelId() {
+            return this.deviceModelId;
+        }
+
+        public FindOsVersionsResponseBodyOsVersionListItems setGmtModify(String gmtModify) {
+            this.gmtModify = gmtModify;
+            return this;
+        }
+        public String getGmtModify() {
+            return this.gmtModify;
+        }
+
         public FindOsVersionsResponseBodyOsVersionListItems setIsMilestone(String isMilestone) {
             this.isMilestone = isMilestone;
             return this;
@@ -125,12 +125,44 @@ public class FindOsVersionsResponseBody extends TeaModel {
             return this.isMilestone;
         }
 
-        public FindOsVersionsResponseBodyOsVersionListItems setIsForceUpgrade(String isForceUpgrade) {
-            this.isForceUpgrade = isForceUpgrade;
+        public FindOsVersionsResponseBodyOsVersionListItems setRemark(String remark) {
+            this.remark = remark;
             return this;
         }
-        public String getIsForceUpgrade() {
-            return this.isForceUpgrade;
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public FindOsVersionsResponseBodyOsVersionListItems setSystemVersion(String systemVersion) {
+            this.systemVersion = systemVersion;
+            return this;
+        }
+        public String getSystemVersion() {
+            return this.systemVersion;
+        }
+
+        public FindOsVersionsResponseBodyOsVersionListItems setStatusName(String statusName) {
+            this.statusName = statusName;
+            return this;
+        }
+        public String getStatusName() {
+            return this.statusName;
+        }
+
+        public FindOsVersionsResponseBodyOsVersionListItems setIsForceReboot(String isForceReboot) {
+            this.isForceReboot = isForceReboot;
+            return this;
+        }
+        public String getIsForceReboot() {
+            return this.isForceReboot;
+        }
+
+        public FindOsVersionsResponseBodyOsVersionListItems setDeviceModelName(String deviceModelName) {
+            this.deviceModelName = deviceModelName;
+            return this;
+        }
+        public String getDeviceModelName() {
+            return this.deviceModelName;
         }
 
         public FindOsVersionsResponseBodyOsVersionListItems setIsSilentUpgrade(String isSilentUpgrade) {
@@ -141,12 +173,12 @@ public class FindOsVersionsResponseBody extends TeaModel {
             return this.isSilentUpgrade;
         }
 
-        public FindOsVersionsResponseBodyOsVersionListItems setIsForceReboot(String isForceReboot) {
-            this.isForceReboot = isForceReboot;
+        public FindOsVersionsResponseBodyOsVersionListItems setGmtModifyTimestamp(Long gmtModifyTimestamp) {
+            this.gmtModifyTimestamp = gmtModifyTimestamp;
             return this;
         }
-        public String getIsForceReboot() {
-            return this.isForceReboot;
+        public Long getGmtModifyTimestamp() {
+            return this.gmtModifyTimestamp;
         }
 
         public FindOsVersionsResponseBodyOsVersionListItems setIsForceNightUpgrade(String isForceNightUpgrade) {
@@ -165,74 +197,34 @@ public class FindOsVersionsResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public FindOsVersionsResponseBodyOsVersionListItems setGmtModify(String gmtModify) {
-            this.gmtModify = gmtModify;
+        public FindOsVersionsResponseBodyOsVersionListItems setIsForceUpgrade(String isForceUpgrade) {
+            this.isForceUpgrade = isForceUpgrade;
             return this;
         }
-        public String getGmtModify() {
-            return this.gmtModify;
+        public String getIsForceUpgrade() {
+            return this.isForceUpgrade;
         }
 
-        public FindOsVersionsResponseBodyOsVersionListItems setRemark(String remark) {
-            this.remark = remark;
+        public FindOsVersionsResponseBodyOsVersionListItems setId(Long id) {
+            this.id = id;
             return this;
         }
-        public String getRemark() {
-            return this.remark;
-        }
-
-        public FindOsVersionsResponseBodyOsVersionListItems setStatusName(String statusName) {
-            this.statusName = statusName;
-            return this;
-        }
-        public String getStatusName() {
-            return this.statusName;
-        }
-
-        public FindOsVersionsResponseBodyOsVersionListItems setDeviceModelName(String deviceModelName) {
-            this.deviceModelName = deviceModelName;
-            return this;
-        }
-        public String getDeviceModelName() {
-            return this.deviceModelName;
-        }
-
-        public FindOsVersionsResponseBodyOsVersionListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-            this.gmtCreateTimestamp = gmtCreateTimestamp;
-            return this;
-        }
-        public Long getGmtCreateTimestamp() {
-            return this.gmtCreateTimestamp;
-        }
-
-        public FindOsVersionsResponseBodyOsVersionListItems setGmtModifyTimestamp(Long gmtModifyTimestamp) {
-            this.gmtModifyTimestamp = gmtModifyTimestamp;
-            return this;
-        }
-        public Long getGmtModifyTimestamp() {
-            return this.gmtModifyTimestamp;
+        public Long getId() {
+            return this.id;
         }
 
     }
 
     public static class FindOsVersionsResponseBodyOsVersionList extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("Items")
         public java.util.List<FindOsVersionsResponseBodyOsVersionListItems> items;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static FindOsVersionsResponseBodyOsVersionList build(java.util.Map<String, ?> map) throws Exception {
             FindOsVersionsResponseBodyOsVersionList self = new FindOsVersionsResponseBodyOsVersionList();
             return TeaModel.build(map, self);
-        }
-
-        public FindOsVersionsResponseBodyOsVersionList setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
         }
 
         public FindOsVersionsResponseBodyOsVersionList setItems(java.util.List<FindOsVersionsResponseBodyOsVersionListItems> items) {
@@ -241,6 +233,14 @@ public class FindOsVersionsResponseBody extends TeaModel {
         }
         public java.util.List<FindOsVersionsResponseBodyOsVersionListItems> getItems() {
             return this.items;
+        }
+
+        public FindOsVersionsResponseBodyOsVersionList setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

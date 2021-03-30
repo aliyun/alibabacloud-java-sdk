@@ -32,17 +32,14 @@ public class DescribeProjectAppSecurityResponseBody extends TeaModel {
     }
 
     public static class DescribeProjectAppSecurityResponseBodyProjectAppSecurity extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("AppId")
-        public String appId;
+        @NameInMap("AppSecret")
+        public String appSecret;
 
         @NameInMap("AppKey")
         public String appKey;
 
-        @NameInMap("AppSecret")
-        public String appSecret;
+        @NameInMap("AppId")
+        public String appId;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -50,25 +47,20 @@ public class DescribeProjectAppSecurityResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("Id")
+        public Long id;
+
         public static DescribeProjectAppSecurityResponseBodyProjectAppSecurity build(java.util.Map<String, ?> map) throws Exception {
             DescribeProjectAppSecurityResponseBodyProjectAppSecurity self = new DescribeProjectAppSecurityResponseBodyProjectAppSecurity();
             return TeaModel.build(map, self);
         }
 
-        public DescribeProjectAppSecurityResponseBodyProjectAppSecurity setId(Long id) {
-            this.id = id;
+        public DescribeProjectAppSecurityResponseBodyProjectAppSecurity setAppSecret(String appSecret) {
+            this.appSecret = appSecret;
             return this;
         }
-        public Long getId() {
-            return this.id;
-        }
-
-        public DescribeProjectAppSecurityResponseBodyProjectAppSecurity setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
+        public String getAppSecret() {
+            return this.appSecret;
         }
 
         public DescribeProjectAppSecurityResponseBodyProjectAppSecurity setAppKey(String appKey) {
@@ -79,12 +71,12 @@ public class DescribeProjectAppSecurityResponseBody extends TeaModel {
             return this.appKey;
         }
 
-        public DescribeProjectAppSecurityResponseBodyProjectAppSecurity setAppSecret(String appSecret) {
-            this.appSecret = appSecret;
+        public DescribeProjectAppSecurityResponseBodyProjectAppSecurity setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public String getAppSecret() {
-            return this.appSecret;
+        public String getAppId() {
+            return this.appId;
         }
 
         public DescribeProjectAppSecurityResponseBodyProjectAppSecurity setGmtCreate(Long gmtCreate) {
@@ -101,6 +93,14 @@ public class DescribeProjectAppSecurityResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeProjectAppSecurityResponseBodyProjectAppSecurity setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
     }

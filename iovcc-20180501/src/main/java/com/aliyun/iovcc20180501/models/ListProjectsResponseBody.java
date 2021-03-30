@@ -32,23 +32,17 @@ public class ListProjectsResponseBody extends TeaModel {
     }
 
     public static class ListProjectsResponseBodyProjects extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("UserId")
-        public String userId;
-
-        @NameInMap("Name")
-        public String name;
-
         @NameInMap("Status")
         public Integer status;
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("UserId")
+        public String userId;
+
+        @NameInMap("ProjectId")
+        public String projectId;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -56,44 +50,18 @@ public class ListProjectsResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public Long id;
+
         @NameInMap("Creator")
         public String creator;
 
         public static ListProjectsResponseBodyProjects build(java.util.Map<String, ?> map) throws Exception {
             ListProjectsResponseBodyProjects self = new ListProjectsResponseBodyProjects();
             return TeaModel.build(map, self);
-        }
-
-        public ListProjectsResponseBodyProjects setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public ListProjectsResponseBodyProjects setProjectId(String projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public ListProjectsResponseBodyProjects setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-        public ListProjectsResponseBodyProjects setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
         }
 
         public ListProjectsResponseBodyProjects setStatus(Integer status) {
@@ -112,6 +80,22 @@ public class ListProjectsResponseBody extends TeaModel {
             return this.description;
         }
 
+        public ListProjectsResponseBodyProjects setUserId(String userId) {
+            this.userId = userId;
+            return this;
+        }
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public ListProjectsResponseBodyProjects setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
         public ListProjectsResponseBodyProjects setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -126,6 +110,22 @@ public class ListProjectsResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public ListProjectsResponseBodyProjects setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListProjectsResponseBodyProjects setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
         }
 
         public ListProjectsResponseBodyProjects setCreator(String creator) {

@@ -32,11 +32,8 @@ public class ListVersionDeviceGroupsResponseBody extends TeaModel {
     }
 
     public static class ListVersionDeviceGroupsResponseBodyDeviceGroupList extends TeaModel {
-        @NameInMap("Id")
-        public String id;
-
-        @NameInMap("Name")
-        public String name;
+        @NameInMap("GmtModify")
+        public String gmtModify;
 
         @NameInMap("Description")
         public String description;
@@ -44,28 +41,23 @@ public class ListVersionDeviceGroupsResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("GmtModify")
-        public String gmtModify;
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
 
         public static ListVersionDeviceGroupsResponseBodyDeviceGroupList build(java.util.Map<String, ?> map) throws Exception {
             ListVersionDeviceGroupsResponseBodyDeviceGroupList self = new ListVersionDeviceGroupsResponseBodyDeviceGroupList();
             return TeaModel.build(map, self);
         }
 
-        public ListVersionDeviceGroupsResponseBodyDeviceGroupList setId(String id) {
-            this.id = id;
+        public ListVersionDeviceGroupsResponseBodyDeviceGroupList setGmtModify(String gmtModify) {
+            this.gmtModify = gmtModify;
             return this;
         }
-        public String getId() {
-            return this.id;
-        }
-
-        public ListVersionDeviceGroupsResponseBodyDeviceGroupList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getGmtModify() {
+            return this.gmtModify;
         }
 
         public ListVersionDeviceGroupsResponseBodyDeviceGroupList setDescription(String description) {
@@ -84,12 +76,20 @@ public class ListVersionDeviceGroupsResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public ListVersionDeviceGroupsResponseBodyDeviceGroupList setGmtModify(String gmtModify) {
-            this.gmtModify = gmtModify;
+        public ListVersionDeviceGroupsResponseBodyDeviceGroupList setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getGmtModify() {
-            return this.gmtModify;
+        public String getName() {
+            return this.name;
+        }
+
+        public ListVersionDeviceGroupsResponseBodyDeviceGroupList setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
     }

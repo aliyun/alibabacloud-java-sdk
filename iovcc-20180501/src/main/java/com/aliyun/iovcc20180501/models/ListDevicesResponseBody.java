@@ -32,60 +32,92 @@ public class ListDevicesResponseBody extends TeaModel {
     }
 
     public static class ListDevicesResponseBodyDevices extends TeaModel {
+        @NameInMap("SerialNumber")
+        public String serialNumber;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("DeviceModelId")
+        public Long deviceModelId;
+
+        @NameInMap("MacAddress")
+        public String macAddress;
+
         @NameInMap("DeviceId")
         public String deviceId;
 
         @NameInMap("DeviceType")
         public String deviceType;
 
-        @NameInMap("UsageType")
-        public Integer usageType;
-
-        @NameInMap("UsageTypeDesc")
-        public String usageTypeDesc;
+        @NameInMap("ProjectId")
+        public String projectId;
 
         @NameInMap("DeviceModel")
         public String deviceModel;
 
-        @NameInMap("DeviceModelId")
-        public Long deviceModelId;
-
-        @NameInMap("DeviceBrand")
-        public String deviceBrand;
-
-        @NameInMap("Uuid")
-        public String uuid;
+        @NameInMap("UsageType")
+        public Integer usageType;
 
         @NameInMap("Vin")
         public String vin;
 
-        @NameInMap("SerialNumber")
-        public String serialNumber;
+        @NameInMap("UsageTypeDesc")
+        public String usageTypeDesc;
 
-        @NameInMap("MacAddress")
-        public String macAddress;
+        @NameInMap("Uuid")
+        public String uuid;
 
         @NameInMap("HardwareId")
         public String hardwareId;
 
-        @NameInMap("SoftwareId")
-        public String softwareId;
-
         @NameInMap("Region")
         public String region;
+
+        @NameInMap("SoftwareId")
+        public String softwareId;
 
         @NameInMap("Name")
         public String name;
 
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("DeviceBrand")
+        public String deviceBrand;
 
         public static ListDevicesResponseBodyDevices build(java.util.Map<String, ?> map) throws Exception {
             ListDevicesResponseBodyDevices self = new ListDevicesResponseBodyDevices();
             return TeaModel.build(map, self);
+        }
+
+        public ListDevicesResponseBodyDevices setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        public ListDevicesResponseBodyDevices setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public ListDevicesResponseBodyDevices setDeviceModelId(Long deviceModelId) {
+            this.deviceModelId = deviceModelId;
+            return this;
+        }
+        public Long getDeviceModelId() {
+            return this.deviceModelId;
+        }
+
+        public ListDevicesResponseBodyDevices setMacAddress(String macAddress) {
+            this.macAddress = macAddress;
+            return this;
+        }
+        public String getMacAddress() {
+            return this.macAddress;
         }
 
         public ListDevicesResponseBodyDevices setDeviceId(String deviceId) {
@@ -104,20 +136,12 @@ public class ListDevicesResponseBody extends TeaModel {
             return this.deviceType;
         }
 
-        public ListDevicesResponseBodyDevices setUsageType(Integer usageType) {
-            this.usageType = usageType;
+        public ListDevicesResponseBodyDevices setProjectId(String projectId) {
+            this.projectId = projectId;
             return this;
         }
-        public Integer getUsageType() {
-            return this.usageType;
-        }
-
-        public ListDevicesResponseBodyDevices setUsageTypeDesc(String usageTypeDesc) {
-            this.usageTypeDesc = usageTypeDesc;
-            return this;
-        }
-        public String getUsageTypeDesc() {
-            return this.usageTypeDesc;
+        public String getProjectId() {
+            return this.projectId;
         }
 
         public ListDevicesResponseBodyDevices setDeviceModel(String deviceModel) {
@@ -128,28 +152,12 @@ public class ListDevicesResponseBody extends TeaModel {
             return this.deviceModel;
         }
 
-        public ListDevicesResponseBodyDevices setDeviceModelId(Long deviceModelId) {
-            this.deviceModelId = deviceModelId;
+        public ListDevicesResponseBodyDevices setUsageType(Integer usageType) {
+            this.usageType = usageType;
             return this;
         }
-        public Long getDeviceModelId() {
-            return this.deviceModelId;
-        }
-
-        public ListDevicesResponseBodyDevices setDeviceBrand(String deviceBrand) {
-            this.deviceBrand = deviceBrand;
-            return this;
-        }
-        public String getDeviceBrand() {
-            return this.deviceBrand;
-        }
-
-        public ListDevicesResponseBodyDevices setUuid(String uuid) {
-            this.uuid = uuid;
-            return this;
-        }
-        public String getUuid() {
-            return this.uuid;
+        public Integer getUsageType() {
+            return this.usageType;
         }
 
         public ListDevicesResponseBodyDevices setVin(String vin) {
@@ -160,20 +168,20 @@ public class ListDevicesResponseBody extends TeaModel {
             return this.vin;
         }
 
-        public ListDevicesResponseBodyDevices setSerialNumber(String serialNumber) {
-            this.serialNumber = serialNumber;
+        public ListDevicesResponseBodyDevices setUsageTypeDesc(String usageTypeDesc) {
+            this.usageTypeDesc = usageTypeDesc;
             return this;
         }
-        public String getSerialNumber() {
-            return this.serialNumber;
+        public String getUsageTypeDesc() {
+            return this.usageTypeDesc;
         }
 
-        public ListDevicesResponseBodyDevices setMacAddress(String macAddress) {
-            this.macAddress = macAddress;
+        public ListDevicesResponseBodyDevices setUuid(String uuid) {
+            this.uuid = uuid;
             return this;
         }
-        public String getMacAddress() {
-            return this.macAddress;
+        public String getUuid() {
+            return this.uuid;
         }
 
         public ListDevicesResponseBodyDevices setHardwareId(String hardwareId) {
@@ -184,20 +192,20 @@ public class ListDevicesResponseBody extends TeaModel {
             return this.hardwareId;
         }
 
-        public ListDevicesResponseBodyDevices setSoftwareId(String softwareId) {
-            this.softwareId = softwareId;
-            return this;
-        }
-        public String getSoftwareId() {
-            return this.softwareId;
-        }
-
         public ListDevicesResponseBodyDevices setRegion(String region) {
             this.region = region;
             return this;
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public ListDevicesResponseBodyDevices setSoftwareId(String softwareId) {
+            this.softwareId = softwareId;
+            return this;
+        }
+        public String getSoftwareId() {
+            return this.softwareId;
         }
 
         public ListDevicesResponseBodyDevices setName(String name) {
@@ -208,20 +216,12 @@ public class ListDevicesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public ListDevicesResponseBodyDevices setProjectId(String projectId) {
-            this.projectId = projectId;
+        public ListDevicesResponseBodyDevices setDeviceBrand(String deviceBrand) {
+            this.deviceBrand = deviceBrand;
             return this;
         }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public ListDevicesResponseBodyDevices setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
+        public String getDeviceBrand() {
+            return this.deviceBrand;
         }
 
     }

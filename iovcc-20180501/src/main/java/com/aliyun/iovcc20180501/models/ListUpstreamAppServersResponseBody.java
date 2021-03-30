@@ -31,134 +31,22 @@ public class ListUpstreamAppServersResponseBody extends TeaModel {
         return this.appServers;
     }
 
-    public static class ListUpstreamAppServersResponseBodyAppServersList extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
-
-        @NameInMap("PAppKey")
-        public String PAppKey;
-
-        @NameInMap("ProjectId")
-        public String projectId;
-
-        @NameInMap("Name")
-        public String name;
-
-        @NameInMap("Tags")
-        public String tags;
-
-        @NameInMap("GmtCreate")
-        public Long gmtCreate;
-
-        @NameInMap("GmtModified")
-        public Long gmtModified;
-
-        @NameInMap("QueueNameList")
-        public String queueNameList;
-
-        public static ListUpstreamAppServersResponseBodyAppServersList build(java.util.Map<String, ?> map) throws Exception {
-            ListUpstreamAppServersResponseBodyAppServersList self = new ListUpstreamAppServersResponseBodyAppServersList();
-            return TeaModel.build(map, self);
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersList setId(Long id) {
-            this.id = id;
-            return this;
-        }
-        public Long getId() {
-            return this.id;
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersList setPAppKey(String PAppKey) {
-            this.PAppKey = PAppKey;
-            return this;
-        }
-        public String getPAppKey() {
-            return this.PAppKey;
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersList setProjectId(String projectId) {
-            this.projectId = projectId;
-            return this;
-        }
-        public String getProjectId() {
-            return this.projectId;
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersList setTags(String tags) {
-            this.tags = tags;
-            return this;
-        }
-        public String getTags() {
-            return this.tags;
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersList setGmtCreate(Long gmtCreate) {
-            this.gmtCreate = gmtCreate;
-            return this;
-        }
-        public Long getGmtCreate() {
-            return this.gmtCreate;
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersList setGmtModified(Long gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public Long getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersList setQueueNameList(String queueNameList) {
-            this.queueNameList = queueNameList;
-            return this;
-        }
-        public String getQueueNameList() {
-            return this.queueNameList;
-        }
-
-    }
-
     public static class ListUpstreamAppServersResponseBodyAppServersPagination extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
 
         @NameInMap("TotalPageCount")
         public Integer totalPageCount;
 
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
         @NameInMap("PageSize")
         public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static ListUpstreamAppServersResponseBodyAppServersPagination build(java.util.Map<String, ?> map) throws Exception {
             ListUpstreamAppServersResponseBodyAppServersPagination self = new ListUpstreamAppServersResponseBodyAppServersPagination();
             return TeaModel.build(map, self);
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServersPagination setTotalPageCount(Integer totalPageCount) {
-            this.totalPageCount = totalPageCount;
-            return this;
-        }
-        public Integer getTotalPageCount() {
-            return this.totalPageCount;
         }
 
         public ListUpstreamAppServersResponseBodyAppServersPagination setPageIndex(Integer pageIndex) {
@@ -169,6 +57,14 @@ public class ListUpstreamAppServersResponseBody extends TeaModel {
             return this.pageIndex;
         }
 
+        public ListUpstreamAppServersResponseBodyAppServersPagination setTotalPageCount(Integer totalPageCount) {
+            this.totalPageCount = totalPageCount;
+            return this;
+        }
+        public Integer getTotalPageCount() {
+            return this.totalPageCount;
+        }
+
         public ListUpstreamAppServersResponseBodyAppServersPagination setPageSize(Integer pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -177,26 +73,122 @@ public class ListUpstreamAppServersResponseBody extends TeaModel {
             return this.pageSize;
         }
 
+        public ListUpstreamAppServersResponseBodyAppServersPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
+    public static class ListUpstreamAppServersResponseBodyAppServersList extends TeaModel {
+        @NameInMap("ProjectId")
+        public String projectId;
+
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        @NameInMap("Tags")
+        public String tags;
+
+        @NameInMap("QueueNameList")
+        public String queueNameList;
+
+        @NameInMap("PAppKey")
+        public String PAppKey;
+
+        @NameInMap("GmtModified")
+        public Long gmtModified;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public Long id;
+
+        public static ListUpstreamAppServersResponseBodyAppServersList build(java.util.Map<String, ?> map) throws Exception {
+            ListUpstreamAppServersResponseBodyAppServersList self = new ListUpstreamAppServersResponseBodyAppServersList();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUpstreamAppServersResponseBodyAppServersList setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public ListUpstreamAppServersResponseBodyAppServersList setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public ListUpstreamAppServersResponseBodyAppServersList setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
+        }
+
+        public ListUpstreamAppServersResponseBodyAppServersList setQueueNameList(String queueNameList) {
+            this.queueNameList = queueNameList;
+            return this;
+        }
+        public String getQueueNameList() {
+            return this.queueNameList;
+        }
+
+        public ListUpstreamAppServersResponseBodyAppServersList setPAppKey(String PAppKey) {
+            this.PAppKey = PAppKey;
+            return this;
+        }
+        public String getPAppKey() {
+            return this.PAppKey;
+        }
+
+        public ListUpstreamAppServersResponseBodyAppServersList setGmtModified(Long gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public Long getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public ListUpstreamAppServersResponseBodyAppServersList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListUpstreamAppServersResponseBodyAppServersList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
     }
 
     public static class ListUpstreamAppServersResponseBodyAppServers extends TeaModel {
-        @NameInMap("List")
-        public java.util.List<ListUpstreamAppServersResponseBodyAppServersList> list;
-
         @NameInMap("Pagination")
         public ListUpstreamAppServersResponseBodyAppServersPagination pagination;
+
+        @NameInMap("List")
+        public java.util.List<ListUpstreamAppServersResponseBodyAppServersList> list;
 
         public static ListUpstreamAppServersResponseBodyAppServers build(java.util.Map<String, ?> map) throws Exception {
             ListUpstreamAppServersResponseBodyAppServers self = new ListUpstreamAppServersResponseBodyAppServers();
             return TeaModel.build(map, self);
-        }
-
-        public ListUpstreamAppServersResponseBodyAppServers setList(java.util.List<ListUpstreamAppServersResponseBodyAppServersList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListUpstreamAppServersResponseBodyAppServersList> getList() {
-            return this.list;
         }
 
         public ListUpstreamAppServersResponseBodyAppServers setPagination(ListUpstreamAppServersResponseBodyAppServersPagination pagination) {
@@ -205,6 +197,14 @@ public class ListUpstreamAppServersResponseBody extends TeaModel {
         }
         public ListUpstreamAppServersResponseBodyAppServersPagination getPagination() {
             return this.pagination;
+        }
+
+        public ListUpstreamAppServersResponseBodyAppServers setList(java.util.List<ListUpstreamAppServersResponseBodyAppServersList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListUpstreamAppServersResponseBodyAppServersList> getList() {
+            return this.list;
         }
 
     }

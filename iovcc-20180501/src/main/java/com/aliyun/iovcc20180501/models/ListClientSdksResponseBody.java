@@ -4,23 +4,15 @@ package com.aliyun.iovcc20180501.models;
 import com.aliyun.tea.*;
 
 public class ListClientSdksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("ClientSdks")
     public java.util.List<ListClientSdksResponseBodyClientSdks> clientSdks;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static ListClientSdksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListClientSdksResponseBody self = new ListClientSdksResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public ListClientSdksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public ListClientSdksResponseBody setClientSdks(java.util.List<ListClientSdksResponseBodyClientSdks> clientSdks) {
@@ -31,9 +23,17 @@ public class ListClientSdksResponseBody extends TeaModel {
         return this.clientSdks;
     }
 
+    public ListClientSdksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class ListClientSdksResponseBodyClientSdks extends TeaModel {
-        @NameInMap("Id")
-        public Long id;
+        @NameInMap("OsType")
+        public Integer osType;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -50,20 +50,20 @@ public class ListClientSdksResponseBody extends TeaModel {
         @NameInMap("PkgType")
         public Integer pkgType;
 
-        @NameInMap("OsType")
-        public Integer osType;
+        @NameInMap("Id")
+        public Long id;
 
         public static ListClientSdksResponseBodyClientSdks build(java.util.Map<String, ?> map) throws Exception {
             ListClientSdksResponseBodyClientSdks self = new ListClientSdksResponseBodyClientSdks();
             return TeaModel.build(map, self);
         }
 
-        public ListClientSdksResponseBodyClientSdks setId(Long id) {
-            this.id = id;
+        public ListClientSdksResponseBodyClientSdks setOsType(Integer osType) {
+            this.osType = osType;
             return this;
         }
-        public Long getId() {
-            return this.id;
+        public Integer getOsType() {
+            return this.osType;
         }
 
         public ListClientSdksResponseBodyClientSdks setGmtCreate(Long gmtCreate) {
@@ -106,12 +106,12 @@ public class ListClientSdksResponseBody extends TeaModel {
             return this.pkgType;
         }
 
-        public ListClientSdksResponseBodyClientSdks setOsType(Integer osType) {
-            this.osType = osType;
+        public ListClientSdksResponseBodyClientSdks setId(Long id) {
+            this.id = id;
             return this;
         }
-        public Integer getOsType() {
-            return this.osType;
+        public Long getId() {
+            return this.id;
         }
 
     }

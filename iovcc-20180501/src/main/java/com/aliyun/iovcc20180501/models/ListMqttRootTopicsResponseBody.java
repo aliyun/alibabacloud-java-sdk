@@ -31,25 +31,101 @@ public class ListMqttRootTopicsResponseBody extends TeaModel {
         return this.rootTopics;
     }
 
+    public static class ListMqttRootTopicsResponseBodyRootTopicsPagination extends TeaModel {
+        @NameInMap("PageIndex")
+        public Integer pageIndex;
+
+        @NameInMap("TotalPageCount")
+        public Integer totalPageCount;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
+
+        public static ListMqttRootTopicsResponseBodyRootTopicsPagination build(java.util.Map<String, ?> map) throws Exception {
+            ListMqttRootTopicsResponseBodyRootTopicsPagination self = new ListMqttRootTopicsResponseBodyRootTopicsPagination();
+            return TeaModel.build(map, self);
+        }
+
+        public ListMqttRootTopicsResponseBodyRootTopicsPagination setPageIndex(Integer pageIndex) {
+            this.pageIndex = pageIndex;
+            return this;
+        }
+        public Integer getPageIndex() {
+            return this.pageIndex;
+        }
+
+        public ListMqttRootTopicsResponseBodyRootTopicsPagination setTotalPageCount(Integer totalPageCount) {
+            this.totalPageCount = totalPageCount;
+            return this;
+        }
+        public Integer getTotalPageCount() {
+            return this.totalPageCount;
+        }
+
+        public ListMqttRootTopicsResponseBodyRootTopicsPagination setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListMqttRootTopicsResponseBodyRootTopicsPagination setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
     public static class ListMqttRootTopicsResponseBodyRootTopicsList extends TeaModel {
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("AppKey")
+        public String appKey;
+
+        @NameInMap("QueueName")
+        public String queueName;
+
         @NameInMap("CreateTime")
         public Integer createTime;
 
         @NameInMap("RootTopic")
         public String rootTopic;
 
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("QueueName")
-        public String queueName;
-
-        @NameInMap("AppKey")
-        public String appKey;
-
         public static ListMqttRootTopicsResponseBodyRootTopicsList build(java.util.Map<String, ?> map) throws Exception {
             ListMqttRootTopicsResponseBodyRootTopicsList self = new ListMqttRootTopicsResponseBodyRootTopicsList();
             return TeaModel.build(map, self);
+        }
+
+        public ListMqttRootTopicsResponseBodyRootTopicsList setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public ListMqttRootTopicsResponseBodyRootTopicsList setAppKey(String appKey) {
+            this.appKey = appKey;
+            return this;
+        }
+        public String getAppKey() {
+            return this.appKey;
+        }
+
+        public ListMqttRootTopicsResponseBodyRootTopicsList setQueueName(String queueName) {
+            this.queueName = queueName;
+            return this;
+        }
+        public String getQueueName() {
+            return this.queueName;
         }
 
         public ListMqttRootTopicsResponseBodyRootTopicsList setCreateTime(Integer createTime) {
@@ -68,102 +144,18 @@ public class ListMqttRootTopicsResponseBody extends TeaModel {
             return this.rootTopic;
         }
 
-        public ListMqttRootTopicsResponseBodyRootTopicsList setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public ListMqttRootTopicsResponseBodyRootTopicsList setQueueName(String queueName) {
-            this.queueName = queueName;
-            return this;
-        }
-        public String getQueueName() {
-            return this.queueName;
-        }
-
-        public ListMqttRootTopicsResponseBodyRootTopicsList setAppKey(String appKey) {
-            this.appKey = appKey;
-            return this;
-        }
-        public String getAppKey() {
-            return this.appKey;
-        }
-
-    }
-
-    public static class ListMqttRootTopicsResponseBodyRootTopicsPagination extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
-        @NameInMap("TotalPageCount")
-        public Integer totalPageCount;
-
-        @NameInMap("PageIndex")
-        public Integer pageIndex;
-
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        public static ListMqttRootTopicsResponseBodyRootTopicsPagination build(java.util.Map<String, ?> map) throws Exception {
-            ListMqttRootTopicsResponseBodyRootTopicsPagination self = new ListMqttRootTopicsResponseBodyRootTopicsPagination();
-            return TeaModel.build(map, self);
-        }
-
-        public ListMqttRootTopicsResponseBodyRootTopicsPagination setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
-        }
-
-        public ListMqttRootTopicsResponseBodyRootTopicsPagination setTotalPageCount(Integer totalPageCount) {
-            this.totalPageCount = totalPageCount;
-            return this;
-        }
-        public Integer getTotalPageCount() {
-            return this.totalPageCount;
-        }
-
-        public ListMqttRootTopicsResponseBodyRootTopicsPagination setPageIndex(Integer pageIndex) {
-            this.pageIndex = pageIndex;
-            return this;
-        }
-        public Integer getPageIndex() {
-            return this.pageIndex;
-        }
-
-        public ListMqttRootTopicsResponseBodyRootTopicsPagination setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
     }
 
     public static class ListMqttRootTopicsResponseBodyRootTopics extends TeaModel {
-        @NameInMap("List")
-        public java.util.List<ListMqttRootTopicsResponseBodyRootTopicsList> list;
-
         @NameInMap("Pagination")
         public ListMqttRootTopicsResponseBodyRootTopicsPagination pagination;
+
+        @NameInMap("List")
+        public java.util.List<ListMqttRootTopicsResponseBodyRootTopicsList> list;
 
         public static ListMqttRootTopicsResponseBodyRootTopics build(java.util.Map<String, ?> map) throws Exception {
             ListMqttRootTopicsResponseBodyRootTopics self = new ListMqttRootTopicsResponseBodyRootTopics();
             return TeaModel.build(map, self);
-        }
-
-        public ListMqttRootTopicsResponseBodyRootTopics setList(java.util.List<ListMqttRootTopicsResponseBodyRootTopicsList> list) {
-            this.list = list;
-            return this;
-        }
-        public java.util.List<ListMqttRootTopicsResponseBodyRootTopicsList> getList() {
-            return this.list;
         }
 
         public ListMqttRootTopicsResponseBodyRootTopics setPagination(ListMqttRootTopicsResponseBodyRootTopicsPagination pagination) {
@@ -172,6 +164,14 @@ public class ListMqttRootTopicsResponseBody extends TeaModel {
         }
         public ListMqttRootTopicsResponseBodyRootTopicsPagination getPagination() {
             return this.pagination;
+        }
+
+        public ListMqttRootTopicsResponseBodyRootTopics setList(java.util.List<ListMqttRootTopicsResponseBodyRootTopicsList> list) {
+            this.list = list;
+            return this;
+        }
+        public java.util.List<ListMqttRootTopicsResponseBodyRootTopicsList> getList() {
+            return this.list;
         }
 
     }

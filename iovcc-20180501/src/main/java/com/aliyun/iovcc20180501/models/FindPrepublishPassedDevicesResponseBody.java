@@ -32,18 +32,26 @@ public class FindPrepublishPassedDevicesResponseBody extends TeaModel {
     }
 
     public static class FindPrepublishPassedDevicesResponseBodyDeviceListItems extends TeaModel {
+        @NameInMap("GmtCreateTimestamp")
+        public Long gmtCreateTimestamp;
+
         @NameInMap("DeviceId")
         public String deviceId;
 
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
-        @NameInMap("GmtCreateTimestamp")
-        public Long gmtCreateTimestamp;
-
         public static FindPrepublishPassedDevicesResponseBodyDeviceListItems build(java.util.Map<String, ?> map) throws Exception {
             FindPrepublishPassedDevicesResponseBodyDeviceListItems self = new FindPrepublishPassedDevicesResponseBodyDeviceListItems();
             return TeaModel.build(map, self);
+        }
+
+        public FindPrepublishPassedDevicesResponseBodyDeviceListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
+            this.gmtCreateTimestamp = gmtCreateTimestamp;
+            return this;
+        }
+        public Long getGmtCreateTimestamp() {
+            return this.gmtCreateTimestamp;
         }
 
         public FindPrepublishPassedDevicesResponseBodyDeviceListItems setDeviceId(String deviceId) {
@@ -62,34 +70,18 @@ public class FindPrepublishPassedDevicesResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public FindPrepublishPassedDevicesResponseBodyDeviceListItems setGmtCreateTimestamp(Long gmtCreateTimestamp) {
-            this.gmtCreateTimestamp = gmtCreateTimestamp;
-            return this;
-        }
-        public Long getGmtCreateTimestamp() {
-            return this.gmtCreateTimestamp;
-        }
-
     }
 
     public static class FindPrepublishPassedDevicesResponseBodyDeviceList extends TeaModel {
-        @NameInMap("TotalCount")
-        public Integer totalCount;
-
         @NameInMap("Items")
         public java.util.List<FindPrepublishPassedDevicesResponseBodyDeviceListItems> items;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static FindPrepublishPassedDevicesResponseBodyDeviceList build(java.util.Map<String, ?> map) throws Exception {
             FindPrepublishPassedDevicesResponseBodyDeviceList self = new FindPrepublishPassedDevicesResponseBodyDeviceList();
             return TeaModel.build(map, self);
-        }
-
-        public FindPrepublishPassedDevicesResponseBodyDeviceList setTotalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-        public Integer getTotalCount() {
-            return this.totalCount;
         }
 
         public FindPrepublishPassedDevicesResponseBodyDeviceList setItems(java.util.List<FindPrepublishPassedDevicesResponseBodyDeviceListItems> items) {
@@ -98,6 +90,14 @@ public class FindPrepublishPassedDevicesResponseBody extends TeaModel {
         }
         public java.util.List<FindPrepublishPassedDevicesResponseBodyDeviceListItems> getItems() {
             return this.items;
+        }
+
+        public FindPrepublishPassedDevicesResponseBodyDeviceList setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

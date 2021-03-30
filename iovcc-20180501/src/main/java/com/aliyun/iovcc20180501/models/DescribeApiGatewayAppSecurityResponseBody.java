@@ -32,14 +32,14 @@ public class DescribeApiGatewayAppSecurityResponseBody extends TeaModel {
     }
 
     public static class DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity extends TeaModel {
-        @NameInMap("GatewayAppId")
-        public String gatewayAppId;
-
         @NameInMap("GatewayAppKey")
         public String gatewayAppKey;
 
         @NameInMap("GatewayAppSecret")
         public String gatewayAppSecret;
+
+        @NameInMap("GatewayAppId")
+        public String gatewayAppId;
 
         @NameInMap("GmtCreate")
         public Long gmtCreate;
@@ -50,14 +50,6 @@ public class DescribeApiGatewayAppSecurityResponseBody extends TeaModel {
         public static DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity build(java.util.Map<String, ?> map) throws Exception {
             DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity self = new DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity setGatewayAppId(String gatewayAppId) {
-            this.gatewayAppId = gatewayAppId;
-            return this;
-        }
-        public String getGatewayAppId() {
-            return this.gatewayAppId;
         }
 
         public DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity setGatewayAppKey(String gatewayAppKey) {
@@ -74,6 +66,14 @@ public class DescribeApiGatewayAppSecurityResponseBody extends TeaModel {
         }
         public String getGatewayAppSecret() {
             return this.gatewayAppSecret;
+        }
+
+        public DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity setGatewayAppId(String gatewayAppId) {
+            this.gatewayAppId = gatewayAppId;
+            return this;
+        }
+        public String getGatewayAppId() {
+            return this.gatewayAppId;
         }
 
         public DescribeApiGatewayAppSecurityResponseBodyApiGatewayAppSecurity setGmtCreate(Long gmtCreate) {

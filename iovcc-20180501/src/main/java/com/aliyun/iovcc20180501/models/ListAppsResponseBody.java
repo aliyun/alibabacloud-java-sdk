@@ -32,29 +32,21 @@ public class ListAppsResponseBody extends TeaModel {
     }
 
     public static class ListAppsResponseBodyApps extends TeaModel {
-        @NameInMap("AppKey")
-        public String appKey;
-
         @NameInMap("AppName")
         public String appName;
 
-        @NameInMap("AppPackage")
-        public String appPackage;
+        @NameInMap("AppKey")
+        public String appKey;
 
         @NameInMap("OsType")
         public Integer osType;
 
+        @NameInMap("AppPackage")
+        public String appPackage;
+
         public static ListAppsResponseBodyApps build(java.util.Map<String, ?> map) throws Exception {
             ListAppsResponseBodyApps self = new ListAppsResponseBodyApps();
             return TeaModel.build(map, self);
-        }
-
-        public ListAppsResponseBodyApps setAppKey(String appKey) {
-            this.appKey = appKey;
-            return this;
-        }
-        public String getAppKey() {
-            return this.appKey;
         }
 
         public ListAppsResponseBodyApps setAppName(String appName) {
@@ -65,12 +57,12 @@ public class ListAppsResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public ListAppsResponseBodyApps setAppPackage(String appPackage) {
-            this.appPackage = appPackage;
+        public ListAppsResponseBodyApps setAppKey(String appKey) {
+            this.appKey = appKey;
             return this;
         }
-        public String getAppPackage() {
-            return this.appPackage;
+        public String getAppKey() {
+            return this.appKey;
         }
 
         public ListAppsResponseBodyApps setOsType(Integer osType) {
@@ -79,6 +71,14 @@ public class ListAppsResponseBody extends TeaModel {
         }
         public Integer getOsType() {
             return this.osType;
+        }
+
+        public ListAppsResponseBodyApps setAppPackage(String appPackage) {
+            this.appPackage = appPackage;
+            return this;
+        }
+        public String getAppPackage() {
+            return this.appPackage;
         }
 
     }

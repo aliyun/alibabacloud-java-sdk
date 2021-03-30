@@ -110,19 +110,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.connectAssistDeviceWithOptions(request, runtime);
     }
 
-    public CountActivatedOrNewRegistrationDeviceResponse countActivatedOrNewRegistrationDeviceWithOptions(CountActivatedOrNewRegistrationDeviceRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CountActivatedOrNewRegistrationDevice", "2018-05-01", "HTTPS", "POST", "AK", "json", req, runtime), new CountActivatedOrNewRegistrationDeviceResponse());
-    }
-
-    public CountActivatedOrNewRegistrationDeviceResponse countActivatedOrNewRegistrationDevice(CountActivatedOrNewRegistrationDeviceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.countActivatedOrNewRegistrationDeviceWithOptions(request, runtime);
-    }
-
     public CountDeviceBrandsResponse countDeviceBrandsWithOptions(CountDeviceBrandsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1466,19 +1453,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNamespaceDataResponse getNamespaceData(GetNamespaceDataRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getNamespaceDataWithOptions(request, runtime);
-    }
-
-    public GetNamespaceStatisticsDataResponse getNamespaceStatisticsDataWithOptions(GetNamespaceStatisticsDataRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetNamespaceStatisticsData", "2018-05-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetNamespaceStatisticsDataResponse());
-    }
-
-    public GetNamespaceStatisticsDataResponse getNamespaceStatisticsData(GetNamespaceStatisticsDataRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getNamespaceStatisticsDataWithOptions(request, runtime);
     }
 
     public GetOssUploadMetaResponse getOssUploadMetaWithOptions(GetOssUploadMetaRequest request, RuntimeOptions runtime) throws Exception {

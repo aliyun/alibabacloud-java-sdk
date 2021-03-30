@@ -32,40 +32,24 @@ public class GenerateOssUploadMetaResponseBody extends TeaModel {
     }
 
     public static class GenerateOssUploadMetaResponseBodyOssUploadMeta extends TeaModel {
-        @NameInMap("AccessKeyId")
-        public String accessKeyId;
-
-        @NameInMap("AccessKeySecret")
-        public String accessKeySecret;
-
         @NameInMap("SecurityToken")
         public String securityToken;
-
-        @NameInMap("Bucket")
-        public String bucket;
 
         @NameInMap("ObjectKey")
         public String objectKey;
 
+        @NameInMap("AccessKeySecret")
+        public String accessKeySecret;
+
+        @NameInMap("AccessKeyId")
+        public String accessKeyId;
+
+        @NameInMap("Bucket")
+        public String bucket;
+
         public static GenerateOssUploadMetaResponseBodyOssUploadMeta build(java.util.Map<String, ?> map) throws Exception {
             GenerateOssUploadMetaResponseBodyOssUploadMeta self = new GenerateOssUploadMetaResponseBodyOssUploadMeta();
             return TeaModel.build(map, self);
-        }
-
-        public GenerateOssUploadMetaResponseBodyOssUploadMeta setAccessKeyId(String accessKeyId) {
-            this.accessKeyId = accessKeyId;
-            return this;
-        }
-        public String getAccessKeyId() {
-            return this.accessKeyId;
-        }
-
-        public GenerateOssUploadMetaResponseBodyOssUploadMeta setAccessKeySecret(String accessKeySecret) {
-            this.accessKeySecret = accessKeySecret;
-            return this;
-        }
-        public String getAccessKeySecret() {
-            return this.accessKeySecret;
         }
 
         public GenerateOssUploadMetaResponseBodyOssUploadMeta setSecurityToken(String securityToken) {
@@ -76,20 +60,36 @@ public class GenerateOssUploadMetaResponseBody extends TeaModel {
             return this.securityToken;
         }
 
-        public GenerateOssUploadMetaResponseBodyOssUploadMeta setBucket(String bucket) {
-            this.bucket = bucket;
-            return this;
-        }
-        public String getBucket() {
-            return this.bucket;
-        }
-
         public GenerateOssUploadMetaResponseBodyOssUploadMeta setObjectKey(String objectKey) {
             this.objectKey = objectKey;
             return this;
         }
         public String getObjectKey() {
             return this.objectKey;
+        }
+
+        public GenerateOssUploadMetaResponseBodyOssUploadMeta setAccessKeySecret(String accessKeySecret) {
+            this.accessKeySecret = accessKeySecret;
+            return this;
+        }
+        public String getAccessKeySecret() {
+            return this.accessKeySecret;
+        }
+
+        public GenerateOssUploadMetaResponseBodyOssUploadMeta setAccessKeyId(String accessKeyId) {
+            this.accessKeyId = accessKeyId;
+            return this;
+        }
+        public String getAccessKeyId() {
+            return this.accessKeyId;
+        }
+
+        public GenerateOssUploadMetaResponseBodyOssUploadMeta setBucket(String bucket) {
+            this.bucket = bucket;
+            return this;
+        }
+        public String getBucket() {
+            return this.bucket;
         }
 
     }
