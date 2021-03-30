@@ -5,16 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetApDetailedConfigRequest extends TeaModel {
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("AppCode")
-    @Validation(required = true)
     public String appCode;
+
+    @NameInMap("ApMac")
+    public String apMac;
 
     public static GetApDetailedConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetApDetailedConfigRequest self = new GetApDetailedConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetApDetailedConfigRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public GetApDetailedConfigRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public GetApDetailedConfigRequest setApMac(String apMac) {
+        this.apMac = apMac;
+        return this;
+    }
+    public String getApMac() {
+        return this.apMac;
     }
 
 }

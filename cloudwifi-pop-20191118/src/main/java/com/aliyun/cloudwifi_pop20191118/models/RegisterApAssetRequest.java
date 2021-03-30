@@ -5,31 +5,74 @@ import com.aliyun.tea.*;
 
 public class RegisterApAssetRequest extends TeaModel {
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("AppCode")
-    @Validation(required = true)
     public String appCode;
 
     @NameInMap("Id")
     public Long id;
 
     @NameInMap("Mac")
-    @Validation(required = true)
     public String mac;
 
     @NameInMap("ApGroupUUId")
-    @Validation(required = true)
     public String apGroupUUId;
 
     @NameInMap("SerialNo")
-    @Validation(required = true)
     public String serialNo;
 
     public static RegisterApAssetRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterApAssetRequest self = new RegisterApAssetRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RegisterApAssetRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public RegisterApAssetRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public RegisterApAssetRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
+    }
+
+    public RegisterApAssetRequest setMac(String mac) {
+        this.mac = mac;
+        return this;
+    }
+    public String getMac() {
+        return this.mac;
+    }
+
+    public RegisterApAssetRequest setApGroupUUId(String apGroupUUId) {
+        this.apGroupUUId = apGroupUUId;
+        return this;
+    }
+    public String getApGroupUUId() {
+        return this.apGroupUUId;
+    }
+
+    public RegisterApAssetRequest setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
+        return this;
+    }
+    public String getSerialNo() {
+        return this.serialNo;
     }
 
 }

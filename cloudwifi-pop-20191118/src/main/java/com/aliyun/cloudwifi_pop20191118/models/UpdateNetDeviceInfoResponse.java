@@ -4,29 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class UpdateNetDeviceInfoResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public Integer errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<Long> data;
+    public UpdateNetDeviceInfoResponseBody body;
 
     public static UpdateNetDeviceInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateNetDeviceInfoResponse self = new UpdateNetDeviceInfoResponse();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateNetDeviceInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public UpdateNetDeviceInfoResponse setBody(UpdateNetDeviceInfoResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public UpdateNetDeviceInfoResponseBody getBody() {
+        return this.body;
     }
 
 }

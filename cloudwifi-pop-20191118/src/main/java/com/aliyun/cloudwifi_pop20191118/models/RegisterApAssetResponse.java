@@ -4,25 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class RegisterApAssetResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public Integer errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
+    public RegisterApAssetResponseBody body;
 
     public static RegisterApAssetResponse build(java.util.Map<String, ?> map) throws Exception {
         RegisterApAssetResponse self = new RegisterApAssetResponse();
         return TeaModel.build(map, self);
+    }
+
+    public RegisterApAssetResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RegisterApAssetResponse setBody(RegisterApAssetResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RegisterApAssetResponseBody getBody() {
+        return this.body;
     }
 
 }

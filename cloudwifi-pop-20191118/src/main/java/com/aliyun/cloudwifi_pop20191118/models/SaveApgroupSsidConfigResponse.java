@@ -4,25 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class SaveApgroupSsidConfigResponse extends TeaModel {
-    @NameInMap("IsSuccess")
+    @NameInMap("headers")
     @Validation(required = true)
-    public Boolean isSuccess;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ErrorCode")
+    @NameInMap("body")
     @Validation(required = true)
-    public Integer errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<Long> data;
+    public SaveApgroupSsidConfigResponseBody body;
 
     public static SaveApgroupSsidConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         SaveApgroupSsidConfigResponse self = new SaveApgroupSsidConfigResponse();
         return TeaModel.build(map, self);
+    }
+
+    public SaveApgroupSsidConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public SaveApgroupSsidConfigResponse setBody(SaveApgroupSsidConfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public SaveApgroupSsidConfigResponseBody getBody() {
+        return this.body;
     }
 
 }

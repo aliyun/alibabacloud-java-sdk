@@ -5,87 +5,228 @@ import com.aliyun.tea.*;
 
 public class SaveApRadioConfigRequest extends TeaModel {
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("AppCode")
-    @Validation(required = true)
     public String appCode;
 
     @NameInMap("Htmode")
-    @Validation(required = true)
     public String htmode;
 
     @NameInMap("Frag")
-    @Validation(required = true)
     public Integer frag;
 
     @NameInMap("Minrate")
-    @Validation(required = true)
     public Integer minrate;
 
     @NameInMap("Probereq")
-    @Validation(required = true)
     public String probereq;
 
     @NameInMap("Channel")
-    @Validation(required = true)
     public String channel;
 
     @NameInMap("Shortgi")
-    @Validation(required = true)
     public String shortgi;
 
     @NameInMap("Hwmode")
-    @Validation(required = true)
     public String hwmode;
 
     @NameInMap("MgmtRate")
-    @Validation(required = true)
     public Integer mgmtRate;
 
     @NameInMap("BcastRate")
-    @Validation(required = true)
     public Integer bcastRate;
 
     @NameInMap("Uapsd")
-    @Validation(required = true)
     public Integer uapsd;
 
     @NameInMap("BeaconInt")
-    @Validation(required = true)
     public Integer beaconInt;
 
     @NameInMap("Rts")
-    @Validation(required = true)
     public Integer rts;
 
     @NameInMap("RequireMode")
     public String requireMode;
 
     @NameInMap("McastRate")
-    @Validation(required = true)
     public Integer mcastRate;
 
     @NameInMap("Txpower")
-    @Validation(required = true)
     public String txpower;
 
     @NameInMap("Noscan")
-    @Validation(required = true)
     public String noscan;
 
     @NameInMap("Disabled")
-    @Validation(required = true)
     public String disabled;
 
     @NameInMap("Id")
-    @Validation(required = true)
     public Long id;
 
     public static SaveApRadioConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SaveApRadioConfigRequest self = new SaveApRadioConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SaveApRadioConfigRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public SaveApRadioConfigRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public SaveApRadioConfigRequest setHtmode(String htmode) {
+        this.htmode = htmode;
+        return this;
+    }
+    public String getHtmode() {
+        return this.htmode;
+    }
+
+    public SaveApRadioConfigRequest setFrag(Integer frag) {
+        this.frag = frag;
+        return this;
+    }
+    public Integer getFrag() {
+        return this.frag;
+    }
+
+    public SaveApRadioConfigRequest setMinrate(Integer minrate) {
+        this.minrate = minrate;
+        return this;
+    }
+    public Integer getMinrate() {
+        return this.minrate;
+    }
+
+    public SaveApRadioConfigRequest setProbereq(String probereq) {
+        this.probereq = probereq;
+        return this;
+    }
+    public String getProbereq() {
+        return this.probereq;
+    }
+
+    public SaveApRadioConfigRequest setChannel(String channel) {
+        this.channel = channel;
+        return this;
+    }
+    public String getChannel() {
+        return this.channel;
+    }
+
+    public SaveApRadioConfigRequest setShortgi(String shortgi) {
+        this.shortgi = shortgi;
+        return this;
+    }
+    public String getShortgi() {
+        return this.shortgi;
+    }
+
+    public SaveApRadioConfigRequest setHwmode(String hwmode) {
+        this.hwmode = hwmode;
+        return this;
+    }
+    public String getHwmode() {
+        return this.hwmode;
+    }
+
+    public SaveApRadioConfigRequest setMgmtRate(Integer mgmtRate) {
+        this.mgmtRate = mgmtRate;
+        return this;
+    }
+    public Integer getMgmtRate() {
+        return this.mgmtRate;
+    }
+
+    public SaveApRadioConfigRequest setBcastRate(Integer bcastRate) {
+        this.bcastRate = bcastRate;
+        return this;
+    }
+    public Integer getBcastRate() {
+        return this.bcastRate;
+    }
+
+    public SaveApRadioConfigRequest setUapsd(Integer uapsd) {
+        this.uapsd = uapsd;
+        return this;
+    }
+    public Integer getUapsd() {
+        return this.uapsd;
+    }
+
+    public SaveApRadioConfigRequest setBeaconInt(Integer beaconInt) {
+        this.beaconInt = beaconInt;
+        return this;
+    }
+    public Integer getBeaconInt() {
+        return this.beaconInt;
+    }
+
+    public SaveApRadioConfigRequest setRts(Integer rts) {
+        this.rts = rts;
+        return this;
+    }
+    public Integer getRts() {
+        return this.rts;
+    }
+
+    public SaveApRadioConfigRequest setRequireMode(String requireMode) {
+        this.requireMode = requireMode;
+        return this;
+    }
+    public String getRequireMode() {
+        return this.requireMode;
+    }
+
+    public SaveApRadioConfigRequest setMcastRate(Integer mcastRate) {
+        this.mcastRate = mcastRate;
+        return this;
+    }
+    public Integer getMcastRate() {
+        return this.mcastRate;
+    }
+
+    public SaveApRadioConfigRequest setTxpower(String txpower) {
+        this.txpower = txpower;
+        return this;
+    }
+    public String getTxpower() {
+        return this.txpower;
+    }
+
+    public SaveApRadioConfigRequest setNoscan(String noscan) {
+        this.noscan = noscan;
+        return this;
+    }
+    public String getNoscan() {
+        return this.noscan;
+    }
+
+    public SaveApRadioConfigRequest setDisabled(String disabled) {
+        this.disabled = disabled;
+        return this;
+    }
+    public String getDisabled() {
+        return this.disabled;
+    }
+
+    public SaveApRadioConfigRequest setId(Long id) {
+        this.id = id;
+        return this;
+    }
+    public Long getId() {
+        return this.id;
     }
 
 }

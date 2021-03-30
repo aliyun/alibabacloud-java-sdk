@@ -5,24 +5,52 @@ import com.aliyun.tea.*;
 
 public class GetApAddressByMacRequest extends TeaModel {
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("AppCode")
-    @Validation(required = true)
     public String appCode;
 
     @NameInMap("Language")
-    @Validation(required = true)
     public String language;
 
     @NameInMap("Mac")
-    @Validation(required = true)
     public String mac;
 
     public static GetApAddressByMacRequest build(java.util.Map<String, ?> map) throws Exception {
         GetApAddressByMacRequest self = new GetApAddressByMacRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetApAddressByMacRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public GetApAddressByMacRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public GetApAddressByMacRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
+    }
+
+    public GetApAddressByMacRequest setMac(String mac) {
+        this.mac = mac;
+        return this;
+    }
+    public String getMac() {
+        return this.mac;
     }
 
 }

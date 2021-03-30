@@ -5,28 +5,63 @@ import com.aliyun.tea.*;
 
 public class GetStaStatusListByApRequest extends TeaModel {
     @NameInMap("AppName")
-    @Validation(required = true)
     public String appName;
 
     @NameInMap("AppCode")
-    @Validation(required = true)
     public String appCode;
 
     @NameInMap("Cursor")
-    @Validation(required = true)
     public Long cursor;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("ApMac")
-    @Validation(required = true)
     public String apMac;
 
     public static GetStaStatusListByApRequest build(java.util.Map<String, ?> map) throws Exception {
         GetStaStatusListByApRequest self = new GetStaStatusListByApRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetStaStatusListByApRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public GetStaStatusListByApRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public GetStaStatusListByApRequest setCursor(Long cursor) {
+        this.cursor = cursor;
+        return this;
+    }
+    public Long getCursor() {
+        return this.cursor;
+    }
+
+    public GetStaStatusListByApRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public GetStaStatusListByApRequest setApMac(String apMac) {
+        this.apMac = apMac;
+        return this;
+    }
+    public String getApMac() {
+        return this.apMac;
     }
 
 }

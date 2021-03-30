@@ -4,29 +4,33 @@ package com.aliyun.cloudwifi_pop20191118.models;
 import com.aliyun.tea.*;
 
 public class ListJobOrdersResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("IsSuccess")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean isSuccess;
-
-    @NameInMap("ErrorCode")
-    @Validation(required = true)
-    public Integer errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public java.util.List<java.util.Map<String, ?>> data;
+    public ListJobOrdersResponseBody body;
 
     public static ListJobOrdersResponse build(java.util.Map<String, ?> map) throws Exception {
         ListJobOrdersResponse self = new ListJobOrdersResponse();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobOrdersResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListJobOrdersResponse setBody(ListJobOrdersResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListJobOrdersResponseBody getBody() {
+        return this.body;
     }
 
 }

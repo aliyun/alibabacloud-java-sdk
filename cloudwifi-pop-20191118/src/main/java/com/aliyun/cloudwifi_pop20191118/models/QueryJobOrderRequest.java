@@ -11,16 +11,46 @@ public class QueryJobOrderRequest extends TeaModel {
     public String appCode;
 
     @NameInMap("OrderId")
-    @Validation(required = true)
     public Long orderId;
 
     @NameInMap("RequestId")
-    @Validation(required = true)
     public String requestId;
 
     public static QueryJobOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryJobOrderRequest self = new QueryJobOrderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryJobOrderRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
+    }
+
+    public QueryJobOrderRequest setAppCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+    public String getAppCode() {
+        return this.appCode;
+    }
+
+    public QueryJobOrderRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
+    }
+
+    public QueryJobOrderRequest setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
