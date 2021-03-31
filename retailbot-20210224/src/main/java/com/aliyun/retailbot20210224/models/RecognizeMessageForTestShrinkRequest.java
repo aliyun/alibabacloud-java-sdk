@@ -3,7 +3,7 @@ package com.aliyun.retailbot20210224.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeMessageShrinkRequest extends TeaModel {
+public class RecognizeMessageForTestShrinkRequest extends TeaModel {
     // 机器人ID
     @NameInMap("RobotCode")
     public String robotCode;
@@ -76,20 +76,20 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
     @NameInMap("Items")
     public String itemsShrink;
 
-    // 指定行业包
-    @NameInMap("Packages")
-    public String packagesShrink;
-
     // 客户端信息
     @NameInMap("ClientInfo")
     public String clientInfoShrink;
 
-    public static RecognizeMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeMessageShrinkRequest self = new RecognizeMessageShrinkRequest();
+    // 是否忽略场景开关
+    @NameInMap("IgnoreSceneSwitch")
+    public Boolean ignoreSceneSwitch;
+
+    public static RecognizeMessageForTestShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeMessageForTestShrinkRequest self = new RecognizeMessageForTestShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeMessageShrinkRequest setRobotCode(String robotCode) {
+    public RecognizeMessageForTestShrinkRequest setRobotCode(String robotCode) {
         this.robotCode = robotCode;
         return this;
     }
@@ -97,7 +97,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.robotCode;
     }
 
-    public RecognizeMessageShrinkRequest setSessionId(String sessionId) {
+    public RecognizeMessageForTestShrinkRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
@@ -105,7 +105,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.sessionId;
     }
 
-    public RecognizeMessageShrinkRequest setChatId(String chatId) {
+    public RecognizeMessageForTestShrinkRequest setChatId(String chatId) {
         this.chatId = chatId;
         return this;
     }
@@ -113,7 +113,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.chatId;
     }
 
-    public RecognizeMessageShrinkRequest setRound(Integer round) {
+    public RecognizeMessageForTestShrinkRequest setRound(Integer round) {
         this.round = round;
         return this;
     }
@@ -121,7 +121,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.round;
     }
 
-    public RecognizeMessageShrinkRequest setContent(String content) {
+    public RecognizeMessageForTestShrinkRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -129,7 +129,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.content;
     }
 
-    public RecognizeMessageShrinkRequest setContentType(String contentType) {
+    public RecognizeMessageForTestShrinkRequest setContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -137,7 +137,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.contentType;
     }
 
-    public RecognizeMessageShrinkRequest setExtraContentShrink(String extraContentShrink) {
+    public RecognizeMessageForTestShrinkRequest setExtraContentShrink(String extraContentShrink) {
         this.extraContentShrink = extraContentShrink;
         return this;
     }
@@ -145,7 +145,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.extraContentShrink;
     }
 
-    public RecognizeMessageShrinkRequest setUserNick(String userNick) {
+    public RecognizeMessageForTestShrinkRequest setUserNick(String userNick) {
         this.userNick = userNick;
         return this;
     }
@@ -153,7 +153,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.userNick;
     }
 
-    public RecognizeMessageShrinkRequest setUserId(String userId) {
+    public RecognizeMessageForTestShrinkRequest setUserId(String userId) {
         this.userId = userId;
         return this;
     }
@@ -161,7 +161,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.userId;
     }
 
-    public RecognizeMessageShrinkRequest setStaffNick(String staffNick) {
+    public RecognizeMessageForTestShrinkRequest setStaffNick(String staffNick) {
         this.staffNick = staffNick;
         return this;
     }
@@ -169,7 +169,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.staffNick;
     }
 
-    public RecognizeMessageShrinkRequest setStaffId(String staffId) {
+    public RecognizeMessageForTestShrinkRequest setStaffId(String staffId) {
         this.staffId = staffId;
         return this;
     }
@@ -177,7 +177,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.staffId;
     }
 
-    public RecognizeMessageShrinkRequest setSellerNick(String sellerNick) {
+    public RecognizeMessageForTestShrinkRequest setSellerNick(String sellerNick) {
         this.sellerNick = sellerNick;
         return this;
     }
@@ -185,7 +185,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.sellerNick;
     }
 
-    public RecognizeMessageShrinkRequest setSellerId(String sellerId) {
+    public RecognizeMessageForTestShrinkRequest setSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
@@ -193,7 +193,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.sellerId;
     }
 
-    public RecognizeMessageShrinkRequest setServiceMode(String serviceMode) {
+    public RecognizeMessageForTestShrinkRequest setServiceMode(String serviceMode) {
         this.serviceMode = serviceMode;
         return this;
     }
@@ -201,7 +201,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.serviceMode;
     }
 
-    public RecognizeMessageShrinkRequest setFocusOrderId(String focusOrderId) {
+    public RecognizeMessageForTestShrinkRequest setFocusOrderId(String focusOrderId) {
         this.focusOrderId = focusOrderId;
         return this;
     }
@@ -209,7 +209,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.focusOrderId;
     }
 
-    public RecognizeMessageShrinkRequest setFocusItemId(String focusItemId) {
+    public RecognizeMessageForTestShrinkRequest setFocusItemId(String focusItemId) {
         this.focusItemId = focusItemId;
         return this;
     }
@@ -217,7 +217,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.focusItemId;
     }
 
-    public RecognizeMessageShrinkRequest setOrdersShrink(String ordersShrink) {
+    public RecognizeMessageForTestShrinkRequest setOrdersShrink(String ordersShrink) {
         this.ordersShrink = ordersShrink;
         return this;
     }
@@ -225,7 +225,7 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.ordersShrink;
     }
 
-    public RecognizeMessageShrinkRequest setItemsShrink(String itemsShrink) {
+    public RecognizeMessageForTestShrinkRequest setItemsShrink(String itemsShrink) {
         this.itemsShrink = itemsShrink;
         return this;
     }
@@ -233,20 +233,20 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
         return this.itemsShrink;
     }
 
-    public RecognizeMessageShrinkRequest setPackagesShrink(String packagesShrink) {
-        this.packagesShrink = packagesShrink;
-        return this;
-    }
-    public String getPackagesShrink() {
-        return this.packagesShrink;
-    }
-
-    public RecognizeMessageShrinkRequest setClientInfoShrink(String clientInfoShrink) {
+    public RecognizeMessageForTestShrinkRequest setClientInfoShrink(String clientInfoShrink) {
         this.clientInfoShrink = clientInfoShrink;
         return this;
     }
     public String getClientInfoShrink() {
         return this.clientInfoShrink;
+    }
+
+    public RecognizeMessageForTestShrinkRequest setIgnoreSceneSwitch(Boolean ignoreSceneSwitch) {
+        this.ignoreSceneSwitch = ignoreSceneSwitch;
+        return this;
+    }
+    public Boolean getIgnoreSceneSwitch() {
+        return this.ignoreSceneSwitch;
     }
 
 }

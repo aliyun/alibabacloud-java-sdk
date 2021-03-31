@@ -33,12 +33,15 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByPackageResponseBodyPageDataData extends TeaModel {
+        // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
 
+        // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
 
+        // 行业包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 
@@ -74,15 +77,19 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByPackageResponseBodyPageData extends TeaModel {
+        // 返回的最大记录数
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        // 下一页的token
         @NameInMap("NextToken")
         public String nextToken;
 
+        // 订阅的行业包
         @NameInMap("Data")
         public java.util.List<ListSubscriptionByPackageResponseBodyPageDataData> data;
 
+        // 总数据量
         @NameInMap("TotalCount")
         public Integer totalCount;
 

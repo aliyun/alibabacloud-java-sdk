@@ -8,8 +8,9 @@ public class UninstallPackageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 成功和失败的行业包code
     @NameInMap("Data")
-    public java.util.Map<String, ?> data;
+    public UninstallPackageResponseBodyData data;
 
     public static UninstallPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UninstallPackageResponseBody self = new UninstallPackageResponseBody();
@@ -24,12 +25,44 @@ public class UninstallPackageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UninstallPackageResponseBody setData(java.util.Map<String, ?> data) {
+    public UninstallPackageResponseBody setData(UninstallPackageResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.Map<String, ?> getData() {
+    public UninstallPackageResponseBodyData getData() {
         return this.data;
+    }
+
+    public static class UninstallPackageResponseBodyData extends TeaModel {
+        // 成功的行业包code
+        @NameInMap("SuccessPackageCodes")
+        public java.util.List<String> successPackageCodes;
+
+        // 失败的行业包code
+        @NameInMap("FailedPackageCodes")
+        public java.util.List<String> failedPackageCodes;
+
+        public static UninstallPackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            UninstallPackageResponseBodyData self = new UninstallPackageResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public UninstallPackageResponseBodyData setSuccessPackageCodes(java.util.List<String> successPackageCodes) {
+            this.successPackageCodes = successPackageCodes;
+            return this;
+        }
+        public java.util.List<String> getSuccessPackageCodes() {
+            return this.successPackageCodes;
+        }
+
+        public UninstallPackageResponseBodyData setFailedPackageCodes(java.util.List<String> failedPackageCodes) {
+            this.failedPackageCodes = failedPackageCodes;
+            return this;
+        }
+        public java.util.List<String> getFailedPackageCodes() {
+            return this.failedPackageCodes;
+        }
+
     }
 
 }

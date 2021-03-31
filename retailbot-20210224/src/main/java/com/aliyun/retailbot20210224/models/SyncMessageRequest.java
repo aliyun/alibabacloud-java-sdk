@@ -4,33 +4,43 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class SyncMessageRequest extends TeaModel {
+    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
+    // 买家nick
     @NameInMap("UserNick")
     public String userNick;
 
+    // 买家ID
     @NameInMap("UserId")
     public String userId;
 
+    // 卖家小二nick
     @NameInMap("StaffNick")
     public String staffNick;
 
+    // 卖家小二ID
     @NameInMap("StaffId")
     public String staffId;
 
+    // 卖家nick
     @NameInMap("SellerNick")
     public String sellerNick;
 
+    // 卖家ID
     @NameInMap("SellerId")
     public String sellerId;
 
+    // 消息发送方向
     @NameInMap("Direction")
     public String direction;
 
+    // 消息内容
     @NameInMap("Content")
     public String content;
 
+    // 消息ID
     @NameInMap("MessageId")
     public String messageId;
 

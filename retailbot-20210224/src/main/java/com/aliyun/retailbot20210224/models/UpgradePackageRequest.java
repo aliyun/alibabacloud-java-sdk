@@ -4,11 +4,17 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class UpgradePackageRequest extends TeaModel {
+    // 机器人code
     @NameInMap("RobotCodes")
     public java.util.List<String> robotCodes;
 
+    // 需要升级的行业包
     @NameInMap("PackageDTO")
     public UpgradePackageRequestPackageDTO packageDTO;
+
+    // 操作人信息
+    @NameInMap("Operator")
+    public UpgradePackageRequestOperator operator;
 
     public static UpgradePackageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradePackageRequest self = new UpgradePackageRequest();
@@ -31,10 +37,20 @@ public class UpgradePackageRequest extends TeaModel {
         return this.packageDTO;
     }
 
+    public UpgradePackageRequest setOperator(UpgradePackageRequestOperator operator) {
+        this.operator = operator;
+        return this;
+    }
+    public UpgradePackageRequestOperator getOperator() {
+        return this.operator;
+    }
+
     public static class UpgradePackageRequestPackageDTO extends TeaModel {
+        // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
 
+        // 行业包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 
@@ -57,6 +73,38 @@ public class UpgradePackageRequest extends TeaModel {
         }
         public String getPackageVersion() {
             return this.packageVersion;
+        }
+
+    }
+
+    public static class UpgradePackageRequestOperator extends TeaModel {
+        // 操作人id
+        @NameInMap("OperatorId")
+        public String operatorId;
+
+        // 操作人显示名称
+        @NameInMap("OperatorName")
+        public String operatorName;
+
+        public static UpgradePackageRequestOperator build(java.util.Map<String, ?> map) throws Exception {
+            UpgradePackageRequestOperator self = new UpgradePackageRequestOperator();
+            return TeaModel.build(map, self);
+        }
+
+        public UpgradePackageRequestOperator setOperatorId(String operatorId) {
+            this.operatorId = operatorId;
+            return this;
+        }
+        public String getOperatorId() {
+            return this.operatorId;
+        }
+
+        public UpgradePackageRequestOperator setOperatorName(String operatorName) {
+            this.operatorName = operatorName;
+            return this;
+        }
+        public String getOperatorName() {
+            return this.operatorName;
         }
 
     }

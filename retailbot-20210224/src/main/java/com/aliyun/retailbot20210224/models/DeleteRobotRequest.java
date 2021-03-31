@@ -4,11 +4,17 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class DeleteRobotRequest extends TeaModel {
+    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
+    // 备注信息
     @NameInMap("Memo")
     public String memo;
+
+    // 操作人信息
+    @NameInMap("Operator")
+    public DeleteRobotRequestOperator operator;
 
     public static DeleteRobotRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRobotRequest self = new DeleteRobotRequest();
@@ -29,6 +35,46 @@ public class DeleteRobotRequest extends TeaModel {
     }
     public String getMemo() {
         return this.memo;
+    }
+
+    public DeleteRobotRequest setOperator(DeleteRobotRequestOperator operator) {
+        this.operator = operator;
+        return this;
+    }
+    public DeleteRobotRequestOperator getOperator() {
+        return this.operator;
+    }
+
+    public static class DeleteRobotRequestOperator extends TeaModel {
+        // 操作人id
+        @NameInMap("OperatorId")
+        public String operatorId;
+
+        // 操作人显示名
+        @NameInMap("OperatorName")
+        public String operatorName;
+
+        public static DeleteRobotRequestOperator build(java.util.Map<String, ?> map) throws Exception {
+            DeleteRobotRequestOperator self = new DeleteRobotRequestOperator();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteRobotRequestOperator setOperatorId(String operatorId) {
+            this.operatorId = operatorId;
+            return this;
+        }
+        public String getOperatorId() {
+            return this.operatorId;
+        }
+
+        public DeleteRobotRequestOperator setOperatorName(String operatorName) {
+            this.operatorName = operatorName;
+            return this;
+        }
+        public String getOperatorName() {
+            return this.operatorName;
+        }
+
     }
 
 }

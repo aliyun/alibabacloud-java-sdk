@@ -3,7 +3,7 @@ package com.aliyun.retailbot20210224.models;
 
 import com.aliyun.tea.*;
 
-public class RecognizeMessageRequest extends TeaModel {
+public class RecognizeMessageForTestRequest extends TeaModel {
     // 机器人ID
     @NameInMap("RobotCode")
     public String robotCode;
@@ -70,26 +70,26 @@ public class RecognizeMessageRequest extends TeaModel {
 
     // 订单列表
     @NameInMap("Orders")
-    public java.util.List<RecognizeMessageRequestOrders> orders;
+    public java.util.List<RecognizeMessageForTestRequestOrders> orders;
 
     // 商品列表
     @NameInMap("Items")
-    public java.util.List<RecognizeMessageRequestItems> items;
-
-    // 指定行业包
-    @NameInMap("Packages")
-    public java.util.List<RecognizeMessageRequestPackages> packages;
+    public java.util.List<RecognizeMessageForTestRequestItems> items;
 
     // 客户端信息
     @NameInMap("ClientInfo")
-    public RecognizeMessageRequestClientInfo clientInfo;
+    public RecognizeMessageForTestRequestClientInfo clientInfo;
 
-    public static RecognizeMessageRequest build(java.util.Map<String, ?> map) throws Exception {
-        RecognizeMessageRequest self = new RecognizeMessageRequest();
+    // 是否忽略场景开关
+    @NameInMap("IgnoreSceneSwitch")
+    public Boolean ignoreSceneSwitch;
+
+    public static RecognizeMessageForTestRequest build(java.util.Map<String, ?> map) throws Exception {
+        RecognizeMessageForTestRequest self = new RecognizeMessageForTestRequest();
         return TeaModel.build(map, self);
     }
 
-    public RecognizeMessageRequest setRobotCode(String robotCode) {
+    public RecognizeMessageForTestRequest setRobotCode(String robotCode) {
         this.robotCode = robotCode;
         return this;
     }
@@ -97,7 +97,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.robotCode;
     }
 
-    public RecognizeMessageRequest setSessionId(String sessionId) {
+    public RecognizeMessageForTestRequest setSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
@@ -105,7 +105,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.sessionId;
     }
 
-    public RecognizeMessageRequest setChatId(String chatId) {
+    public RecognizeMessageForTestRequest setChatId(String chatId) {
         this.chatId = chatId;
         return this;
     }
@@ -113,7 +113,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.chatId;
     }
 
-    public RecognizeMessageRequest setRound(Integer round) {
+    public RecognizeMessageForTestRequest setRound(Integer round) {
         this.round = round;
         return this;
     }
@@ -121,7 +121,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.round;
     }
 
-    public RecognizeMessageRequest setContent(String content) {
+    public RecognizeMessageForTestRequest setContent(String content) {
         this.content = content;
         return this;
     }
@@ -129,7 +129,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.content;
     }
 
-    public RecognizeMessageRequest setContentType(String contentType) {
+    public RecognizeMessageForTestRequest setContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
@@ -137,7 +137,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.contentType;
     }
 
-    public RecognizeMessageRequest setExtraContent(java.util.Map<String, ?> extraContent) {
+    public RecognizeMessageForTestRequest setExtraContent(java.util.Map<String, ?> extraContent) {
         this.extraContent = extraContent;
         return this;
     }
@@ -145,7 +145,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.extraContent;
     }
 
-    public RecognizeMessageRequest setUserNick(String userNick) {
+    public RecognizeMessageForTestRequest setUserNick(String userNick) {
         this.userNick = userNick;
         return this;
     }
@@ -153,7 +153,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.userNick;
     }
 
-    public RecognizeMessageRequest setUserId(String userId) {
+    public RecognizeMessageForTestRequest setUserId(String userId) {
         this.userId = userId;
         return this;
     }
@@ -161,7 +161,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.userId;
     }
 
-    public RecognizeMessageRequest setStaffNick(String staffNick) {
+    public RecognizeMessageForTestRequest setStaffNick(String staffNick) {
         this.staffNick = staffNick;
         return this;
     }
@@ -169,7 +169,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.staffNick;
     }
 
-    public RecognizeMessageRequest setStaffId(String staffId) {
+    public RecognizeMessageForTestRequest setStaffId(String staffId) {
         this.staffId = staffId;
         return this;
     }
@@ -177,7 +177,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.staffId;
     }
 
-    public RecognizeMessageRequest setSellerNick(String sellerNick) {
+    public RecognizeMessageForTestRequest setSellerNick(String sellerNick) {
         this.sellerNick = sellerNick;
         return this;
     }
@@ -185,7 +185,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.sellerNick;
     }
 
-    public RecognizeMessageRequest setSellerId(String sellerId) {
+    public RecognizeMessageForTestRequest setSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
     }
@@ -193,7 +193,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.sellerId;
     }
 
-    public RecognizeMessageRequest setServiceMode(String serviceMode) {
+    public RecognizeMessageForTestRequest setServiceMode(String serviceMode) {
         this.serviceMode = serviceMode;
         return this;
     }
@@ -201,7 +201,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.serviceMode;
     }
 
-    public RecognizeMessageRequest setFocusOrderId(String focusOrderId) {
+    public RecognizeMessageForTestRequest setFocusOrderId(String focusOrderId) {
         this.focusOrderId = focusOrderId;
         return this;
     }
@@ -209,7 +209,7 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.focusOrderId;
     }
 
-    public RecognizeMessageRequest setFocusItemId(String focusItemId) {
+    public RecognizeMessageForTestRequest setFocusItemId(String focusItemId) {
         this.focusItemId = focusItemId;
         return this;
     }
@@ -217,39 +217,39 @@ public class RecognizeMessageRequest extends TeaModel {
         return this.focusItemId;
     }
 
-    public RecognizeMessageRequest setOrders(java.util.List<RecognizeMessageRequestOrders> orders) {
+    public RecognizeMessageForTestRequest setOrders(java.util.List<RecognizeMessageForTestRequestOrders> orders) {
         this.orders = orders;
         return this;
     }
-    public java.util.List<RecognizeMessageRequestOrders> getOrders() {
+    public java.util.List<RecognizeMessageForTestRequestOrders> getOrders() {
         return this.orders;
     }
 
-    public RecognizeMessageRequest setItems(java.util.List<RecognizeMessageRequestItems> items) {
+    public RecognizeMessageForTestRequest setItems(java.util.List<RecognizeMessageForTestRequestItems> items) {
         this.items = items;
         return this;
     }
-    public java.util.List<RecognizeMessageRequestItems> getItems() {
+    public java.util.List<RecognizeMessageForTestRequestItems> getItems() {
         return this.items;
     }
 
-    public RecognizeMessageRequest setPackages(java.util.List<RecognizeMessageRequestPackages> packages) {
-        this.packages = packages;
-        return this;
-    }
-    public java.util.List<RecognizeMessageRequestPackages> getPackages() {
-        return this.packages;
-    }
-
-    public RecognizeMessageRequest setClientInfo(RecognizeMessageRequestClientInfo clientInfo) {
+    public RecognizeMessageForTestRequest setClientInfo(RecognizeMessageForTestRequestClientInfo clientInfo) {
         this.clientInfo = clientInfo;
         return this;
     }
-    public RecognizeMessageRequestClientInfo getClientInfo() {
+    public RecognizeMessageForTestRequestClientInfo getClientInfo() {
         return this.clientInfo;
     }
 
-    public static class RecognizeMessageRequestOrders extends TeaModel {
+    public RecognizeMessageForTestRequest setIgnoreSceneSwitch(Boolean ignoreSceneSwitch) {
+        this.ignoreSceneSwitch = ignoreSceneSwitch;
+        return this;
+    }
+    public Boolean getIgnoreSceneSwitch() {
+        return this.ignoreSceneSwitch;
+    }
+
+    public static class RecognizeMessageForTestRequestOrders extends TeaModel {
         // 子订单id
         @NameInMap("OrderId")
         public String orderId;
@@ -314,12 +314,12 @@ public class RecognizeMessageRequest extends TeaModel {
         @NameInMap("SkuProperty")
         public String skuProperty;
 
-        public static RecognizeMessageRequestOrders build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeMessageRequestOrders self = new RecognizeMessageRequestOrders();
+        public static RecognizeMessageForTestRequestOrders build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestRequestOrders self = new RecognizeMessageForTestRequestOrders();
             return TeaModel.build(map, self);
         }
 
-        public RecognizeMessageRequestOrders setOrderId(String orderId) {
+        public RecognizeMessageForTestRequestOrders setOrderId(String orderId) {
             this.orderId = orderId;
             return this;
         }
@@ -327,7 +327,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.orderId;
         }
 
-        public RecognizeMessageRequestOrders setParentOrderId(String parentOrderId) {
+        public RecognizeMessageForTestRequestOrders setParentOrderId(String parentOrderId) {
             this.parentOrderId = parentOrderId;
             return this;
         }
@@ -335,7 +335,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.parentOrderId;
         }
 
-        public RecognizeMessageRequestOrders setCreateTime(Long createTime) {
+        public RecognizeMessageForTestRequestOrders setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -343,7 +343,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.createTime;
         }
 
-        public RecognizeMessageRequestOrders setPayTime(Long payTime) {
+        public RecognizeMessageForTestRequestOrders setPayTime(Long payTime) {
             this.payTime = payTime;
             return this;
         }
@@ -351,7 +351,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.payTime;
         }
 
-        public RecognizeMessageRequestOrders setBuyerId(String buyerId) {
+        public RecognizeMessageForTestRequestOrders setBuyerId(String buyerId) {
             this.buyerId = buyerId;
             return this;
         }
@@ -359,7 +359,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.buyerId;
         }
 
-        public RecognizeMessageRequestOrders setSellerId(String sellerId) {
+        public RecognizeMessageForTestRequestOrders setSellerId(String sellerId) {
             this.sellerId = sellerId;
             return this;
         }
@@ -367,7 +367,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.sellerId;
         }
 
-        public RecognizeMessageRequestOrders setPayStatus(String payStatus) {
+        public RecognizeMessageForTestRequestOrders setPayStatus(String payStatus) {
             this.payStatus = payStatus;
             return this;
         }
@@ -375,7 +375,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.payStatus;
         }
 
-        public RecognizeMessageRequestOrders setRefundStatus(String refundStatus) {
+        public RecognizeMessageForTestRequestOrders setRefundStatus(String refundStatus) {
             this.refundStatus = refundStatus;
             return this;
         }
@@ -383,7 +383,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.refundStatus;
         }
 
-        public RecognizeMessageRequestOrders setLogisticsStatus(String logisticsStatus) {
+        public RecognizeMessageForTestRequestOrders setLogisticsStatus(String logisticsStatus) {
             this.logisticsStatus = logisticsStatus;
             return this;
         }
@@ -391,7 +391,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.logisticsStatus;
         }
 
-        public RecognizeMessageRequestOrders setBuyerRateStatus(String buyerRateStatus) {
+        public RecognizeMessageForTestRequestOrders setBuyerRateStatus(String buyerRateStatus) {
             this.buyerRateStatus = buyerRateStatus;
             return this;
         }
@@ -399,7 +399,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.buyerRateStatus;
         }
 
-        public RecognizeMessageRequestOrders setItemId(String itemId) {
+        public RecognizeMessageForTestRequestOrders setItemId(String itemId) {
             this.itemId = itemId;
             return this;
         }
@@ -407,7 +407,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.itemId;
         }
 
-        public RecognizeMessageRequestOrders setItemTitle(String itemTitle) {
+        public RecognizeMessageForTestRequestOrders setItemTitle(String itemTitle) {
             this.itemTitle = itemTitle;
             return this;
         }
@@ -415,7 +415,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.itemTitle;
         }
 
-        public RecognizeMessageRequestOrders setItemPic(String itemPic) {
+        public RecognizeMessageForTestRequestOrders setItemPic(String itemPic) {
             this.itemPic = itemPic;
             return this;
         }
@@ -423,7 +423,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.itemPic;
         }
 
-        public RecognizeMessageRequestOrders setPrice(Float price) {
+        public RecognizeMessageForTestRequestOrders setPrice(Float price) {
             this.price = price;
             return this;
         }
@@ -431,7 +431,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.price;
         }
 
-        public RecognizeMessageRequestOrders setCount(Integer count) {
+        public RecognizeMessageForTestRequestOrders setCount(Integer count) {
             this.count = count;
             return this;
         }
@@ -439,7 +439,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.count;
         }
 
-        public RecognizeMessageRequestOrders setSkuProperty(String skuProperty) {
+        public RecognizeMessageForTestRequestOrders setSkuProperty(String skuProperty) {
             this.skuProperty = skuProperty;
             return this;
         }
@@ -449,7 +449,7 @@ public class RecognizeMessageRequest extends TeaModel {
 
     }
 
-    public static class RecognizeMessageRequestItems extends TeaModel {
+    public static class RecognizeMessageForTestRequestItems extends TeaModel {
         // 商品id
         @NameInMap("ItemId")
         public String itemId;
@@ -482,12 +482,12 @@ public class RecognizeMessageRequest extends TeaModel {
         @NameInMap("Property")
         public java.util.Map<String, String> property;
 
-        public static RecognizeMessageRequestItems build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeMessageRequestItems self = new RecognizeMessageRequestItems();
+        public static RecognizeMessageForTestRequestItems build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestRequestItems self = new RecognizeMessageForTestRequestItems();
             return TeaModel.build(map, self);
         }
 
-        public RecognizeMessageRequestItems setItemId(String itemId) {
+        public RecognizeMessageForTestRequestItems setItemId(String itemId) {
             this.itemId = itemId;
             return this;
         }
@@ -495,7 +495,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.itemId;
         }
 
-        public RecognizeMessageRequestItems setSellerId(String sellerId) {
+        public RecognizeMessageForTestRequestItems setSellerId(String sellerId) {
             this.sellerId = sellerId;
             return this;
         }
@@ -503,7 +503,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.sellerId;
         }
 
-        public RecognizeMessageRequestItems setTitle(String title) {
+        public RecognizeMessageForTestRequestItems setTitle(String title) {
             this.title = title;
             return this;
         }
@@ -511,7 +511,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.title;
         }
 
-        public RecognizeMessageRequestItems setCategoryId(String categoryId) {
+        public RecognizeMessageForTestRequestItems setCategoryId(String categoryId) {
             this.categoryId = categoryId;
             return this;
         }
@@ -519,7 +519,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.categoryId;
         }
 
-        public RecognizeMessageRequestItems setShopCategoryIds(java.util.List<String> shopCategoryIds) {
+        public RecognizeMessageForTestRequestItems setShopCategoryIds(java.util.List<String> shopCategoryIds) {
             this.shopCategoryIds = shopCategoryIds;
             return this;
         }
@@ -527,7 +527,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.shopCategoryIds;
         }
 
-        public RecognizeMessageRequestItems setPrice(Float price) {
+        public RecognizeMessageForTestRequestItems setPrice(Float price) {
             this.price = price;
             return this;
         }
@@ -535,7 +535,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.price;
         }
 
-        public RecognizeMessageRequestItems setPicUrl(String picUrl) {
+        public RecognizeMessageForTestRequestItems setPicUrl(String picUrl) {
             this.picUrl = picUrl;
             return this;
         }
@@ -543,7 +543,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.picUrl;
         }
 
-        public RecognizeMessageRequestItems setProperty(java.util.Map<String, String> property) {
+        public RecognizeMessageForTestRequestItems setProperty(java.util.Map<String, String> property) {
             this.property = property;
             return this;
         }
@@ -553,39 +553,7 @@ public class RecognizeMessageRequest extends TeaModel {
 
     }
 
-    public static class RecognizeMessageRequestPackages extends TeaModel {
-        // 行业包code
-        @NameInMap("PackageCode")
-        public String packageCode;
-
-        // 行业包版本
-        @NameInMap("PackageVersion")
-        public String packageVersion;
-
-        public static RecognizeMessageRequestPackages build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeMessageRequestPackages self = new RecognizeMessageRequestPackages();
-            return TeaModel.build(map, self);
-        }
-
-        public RecognizeMessageRequestPackages setPackageCode(String packageCode) {
-            this.packageCode = packageCode;
-            return this;
-        }
-        public String getPackageCode() {
-            return this.packageCode;
-        }
-
-        public RecognizeMessageRequestPackages setPackageVersion(String packageVersion) {
-            this.packageVersion = packageVersion;
-            return this;
-        }
-        public String getPackageVersion() {
-            return this.packageVersion;
-        }
-
-    }
-
-    public static class RecognizeMessageRequestClientInfo extends TeaModel {
+    public static class RecognizeMessageForTestRequestClientInfo extends TeaModel {
         // 客户端版本
         @NameInMap("ClientVersion")
         public String clientVersion;
@@ -598,12 +566,12 @@ public class RecognizeMessageRequest extends TeaModel {
         @NameInMap("ClientOs")
         public String clientOs;
 
-        public static RecognizeMessageRequestClientInfo build(java.util.Map<String, ?> map) throws Exception {
-            RecognizeMessageRequestClientInfo self = new RecognizeMessageRequestClientInfo();
+        public static RecognizeMessageForTestRequestClientInfo build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeMessageForTestRequestClientInfo self = new RecognizeMessageForTestRequestClientInfo();
             return TeaModel.build(map, self);
         }
 
-        public RecognizeMessageRequestClientInfo setClientVersion(String clientVersion) {
+        public RecognizeMessageForTestRequestClientInfo setClientVersion(String clientVersion) {
             this.clientVersion = clientVersion;
             return this;
         }
@@ -611,7 +579,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.clientVersion;
         }
 
-        public RecognizeMessageRequestClientInfo setClientApp(String clientApp) {
+        public RecognizeMessageForTestRequestClientInfo setClientApp(String clientApp) {
             this.clientApp = clientApp;
             return this;
         }
@@ -619,7 +587,7 @@ public class RecognizeMessageRequest extends TeaModel {
             return this.clientApp;
         }
 
-        public RecognizeMessageRequestClientInfo setClientOs(String clientOs) {
+        public RecognizeMessageForTestRequestClientInfo setClientOs(String clientOs) {
             this.clientOs = clientOs;
             return this;
         }
