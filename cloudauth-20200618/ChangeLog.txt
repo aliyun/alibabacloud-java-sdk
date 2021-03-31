@@ -1,3 +1,6 @@
+2021-03-31 Version: 1.0.3
+- ElementSmartVerify api add certNationalEmblemUrl parameter.
+
 2020-12-30 Version: 2.0.0
 - AMP Version Change.
 

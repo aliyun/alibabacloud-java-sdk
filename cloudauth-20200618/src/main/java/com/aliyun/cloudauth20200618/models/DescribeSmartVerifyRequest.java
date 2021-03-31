@@ -10,6 +10,9 @@ public class DescribeSmartVerifyRequest extends TeaModel {
     @NameInMap("CertifyId")
     public String certifyId;
 
+    @NameInMap("PictureReturnType")
+    public String pictureReturnType;
+
     public static DescribeSmartVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSmartVerifyRequest self = new DescribeSmartVerifyRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class DescribeSmartVerifyRequest extends TeaModel {
     }
     public String getCertifyId() {
         return this.certifyId;
+    }
+
+    public DescribeSmartVerifyRequest setPictureReturnType(String pictureReturnType) {
+        this.pictureReturnType = pictureReturnType;
+        return this;
+    }
+    public String getPictureReturnType() {
+        return this.pictureReturnType;
     }
 
 }

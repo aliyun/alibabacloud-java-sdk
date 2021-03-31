@@ -5,24 +5,22 @@ import com.aliyun.tea.*;
 import com.aliyun.cloudauth20200618.models.*;
 import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
-import com.aliyun.oss.*;
-import com.aliyun.oss.models.*;
+import com.aliyun.common.*;
 import com.aliyun.tearpc.*;
 import com.aliyun.tearpc.models.*;
+import com.aliyun.endpointutil.*;
+import com.aliyun.oss.*;
+import com.aliyun.oss.models.*;
 import com.aliyun.openplatform20191219.*;
 import com.aliyun.openplatform20191219.models.*;
 import com.aliyun.ossutil.*;
 import com.aliyun.ossutil.models.*;
 import com.aliyun.fileform.*;
 import com.aliyun.fileform.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
-public class Client extends com.aliyun.teaopenapi.Client {
+public class Client extends com.aliyun.tearpc.Client {
 
-    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
+    public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
         this.checkConfig(config);
@@ -30,29 +28,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
 
-    public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
-        if (!com.aliyun.teautil.Common.empty(endpoint)) {
-            return endpoint;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
-            return endpointMap.get(regionId);
-        }
-
-        return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
-    }
-
-    public ContrastSmartVerifyResponse contrastSmartVerifyWithOptions(ContrastSmartVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ContrastSmartVerifyResponse contrastSmartVerify(ContrastSmartVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ContrastSmartVerify", "2020-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new ContrastSmartVerifyResponse());
+        return TeaModel.toModel(this.doRequest("ContrastSmartVerify", "HTTPS", "POST", "2020-06-18", "AK", null, TeaModel.buildMap(request), runtime), new ContrastSmartVerifyResponse());
     }
 
-    public ContrastSmartVerifyResponse contrastSmartVerify(ContrastSmartVerifyRequest request) throws Exception {
+    public ContrastSmartVerifyResponse contrastSmartVerifySimply(ContrastSmartVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.contrastSmartVerifyWithOptions(request, runtime);
+        return this.contrastSmartVerify(request, runtime);
     }
 
     public ContrastSmartVerifyResponse contrastSmartVerifyAdvance(ContrastSmartVerifyAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -84,12 +67,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
         PostObjectRequest uploadRequest = new PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ContrastSmartVerifyRequest contrastSmartVerifyReq = new ContrastSmartVerifyRequest();
-        com.aliyun.openapiutil.Client.convert(request, contrastSmartVerifyReq);
+        com.aliyun.common.Common.convert(request, contrastSmartVerifyReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
         ossClient = new com.aliyun.oss.Client(ossConfig);
         fileObj = FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
@@ -110,34 +93,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
         contrastSmartVerifyReq.facePicFile = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        ContrastSmartVerifyResponse contrastSmartVerifyResp = this.contrastSmartVerifyWithOptions(contrastSmartVerifyReq, runtime);
+        ContrastSmartVerifyResponse contrastSmartVerifyResp = this.contrastSmartVerify(contrastSmartVerifyReq, runtime);
         return contrastSmartVerifyResp;
     }
 
-    public DescribeSmartVerifyResponse describeSmartVerifyWithOptions(DescribeSmartVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ElementSmartVerifyResponse elementSmartVerify(ElementSmartVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeSmartVerify", "2020-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSmartVerifyResponse());
+        return TeaModel.toModel(this.doRequest("ElementSmartVerify", "HTTPS", "POST", "2020-06-18", "AK", null, TeaModel.buildMap(request), runtime), new ElementSmartVerifyResponse());
     }
 
-    public DescribeSmartVerifyResponse describeSmartVerify(DescribeSmartVerifyRequest request) throws Exception {
+    public ElementSmartVerifyResponse elementSmartVerifySimply(ElementSmartVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeSmartVerifyWithOptions(request, runtime);
-    }
-
-    public ElementSmartVerifyResponse elementSmartVerifyWithOptions(ElementSmartVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ElementSmartVerify", "2020-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new ElementSmartVerifyResponse());
-    }
-
-    public ElementSmartVerifyResponse elementSmartVerify(ElementSmartVerifyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.elementSmartVerifyWithOptions(request, runtime);
+        return this.elementSmartVerify(request, runtime);
     }
 
     public ElementSmartVerifyResponse elementSmartVerifyAdvance(ElementSmartVerifyAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -169,12 +136,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
         PostObjectRequest uploadRequest = new PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ElementSmartVerifyRequest elementSmartVerifyReq = new ElementSmartVerifyRequest();
-        com.aliyun.openapiutil.Client.convert(request, elementSmartVerifyReq);
+        com.aliyun.common.Common.convert(request, elementSmartVerifyReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
         ossClient = new com.aliyun.oss.Client(ossConfig);
         fileObj = FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
@@ -195,20 +162,39 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
         elementSmartVerifyReq.certFile = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        ElementSmartVerifyResponse elementSmartVerifyResp = this.elementSmartVerifyWithOptions(elementSmartVerifyReq, runtime);
+        ElementSmartVerifyResponse elementSmartVerifyResp = this.elementSmartVerify(elementSmartVerifyReq, runtime);
         return elementSmartVerifyResp;
     }
 
-    public InitSmartVerifyResponse initSmartVerifyWithOptions(InitSmartVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public InitSmartVerifyResponse initSmartVerify(InitSmartVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("InitSmartVerify", "2020-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new InitSmartVerifyResponse());
+        return TeaModel.toModel(this.doRequest("InitSmartVerify", "HTTPS", "POST", "2020-06-18", "AK", null, TeaModel.buildMap(request), runtime), new InitSmartVerifyResponse());
     }
 
-    public InitSmartVerifyResponse initSmartVerify(InitSmartVerifyRequest request) throws Exception {
+    public InitSmartVerifyResponse initSmartVerifySimply(InitSmartVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.initSmartVerifyWithOptions(request, runtime);
+        return this.initSmartVerify(request, runtime);
+    }
+
+    public DescribeSmartVerifyResponse describeSmartVerify(DescribeSmartVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeSmartVerify", "HTTPS", "POST", "2020-06-18", "AK", null, TeaModel.buildMap(request), runtime), new DescribeSmartVerifyResponse());
+    }
+
+    public DescribeSmartVerifyResponse describeSmartVerifySimply(DescribeSmartVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSmartVerify(request, runtime);
+    }
+
+    public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
+        if (!com.aliyun.teautil.Common.empty(endpoint)) {
+            return endpoint;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
+        }
+
+        return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 }
