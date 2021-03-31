@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateImportMigrationRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("PackageType")
-    @Validation(required = true)
     public String packageType;
 
     @NameInMap("PackageFile")
-    @Validation(required = true)
     public String packageFile;
 
     @NameInMap("WorkspaceMap")

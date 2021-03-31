@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetaTableIntroWikiResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("UpdateResult")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean updateResult;
+    public UpdateMetaTableIntroWikiResponseBody body;
 
     public static UpdateMetaTableIntroWikiResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateMetaTableIntroWikiResponse self = new UpdateMetaTableIntroWikiResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateMetaTableIntroWikiResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateMetaTableIntroWikiResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateMetaTableIntroWikiResponse setUpdateResult(Boolean updateResult) {
-        this.updateResult = updateResult;
+    public UpdateMetaTableIntroWikiResponse setBody(UpdateMetaTableIntroWikiResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getUpdateResult() {
-        return this.updateResult;
+    public UpdateMetaTableIntroWikiResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateRemindRequest extends TeaModel {
     @NameInMap("RemindId")
-    @Validation(required = true)
     public Long remindId;
 
     @NameInMap("RemindName")

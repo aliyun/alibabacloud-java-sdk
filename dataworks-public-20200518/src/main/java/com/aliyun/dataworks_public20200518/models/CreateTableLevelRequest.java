@@ -8,11 +8,9 @@ public class CreateTableLevelRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("LevelType")
-    @Validation(required = true)
     public Integer levelType;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("Description")

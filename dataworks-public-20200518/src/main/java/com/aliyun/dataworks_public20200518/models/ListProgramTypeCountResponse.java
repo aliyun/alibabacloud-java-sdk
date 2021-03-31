@@ -4,65 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListProgramTypeCountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ProgramTypeAndCounts")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.List<ListProgramTypeCountResponseProgramTypeAndCounts> programTypeAndCounts;
+    public ListProgramTypeCountResponseBody body;
 
     public static ListProgramTypeCountResponse build(java.util.Map<String, ?> map) throws Exception {
         ListProgramTypeCountResponse self = new ListProgramTypeCountResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListProgramTypeCountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ListProgramTypeCountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ListProgramTypeCountResponse setProgramTypeAndCounts(java.util.List<ListProgramTypeCountResponseProgramTypeAndCounts> programTypeAndCounts) {
-        this.programTypeAndCounts = programTypeAndCounts;
+    public ListProgramTypeCountResponse setBody(ListProgramTypeCountResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.List<ListProgramTypeCountResponseProgramTypeAndCounts> getProgramTypeAndCounts() {
-        return this.programTypeAndCounts;
-    }
-
-    public static class ListProgramTypeCountResponseProgramTypeAndCounts extends TeaModel {
-        @NameInMap("ProgramType")
-        @Validation(required = true)
-        public String programType;
-
-        @NameInMap("Count")
-        @Validation(required = true)
-        public Integer count;
-
-        public static ListProgramTypeCountResponseProgramTypeAndCounts build(java.util.Map<String, ?> map) throws Exception {
-            ListProgramTypeCountResponseProgramTypeAndCounts self = new ListProgramTypeCountResponseProgramTypeAndCounts();
-            return TeaModel.build(map, self);
-        }
-
-        public ListProgramTypeCountResponseProgramTypeAndCounts setProgramType(String programType) {
-            this.programType = programType;
-            return this;
-        }
-        public String getProgramType() {
-            return this.programType;
-        }
-
-        public ListProgramTypeCountResponseProgramTypeAndCounts setCount(Integer count) {
-            this.count = count;
-            return this;
-        }
-        public Integer getCount() {
-            return this.count;
-        }
-
+    public ListProgramTypeCountResponseBody getBody() {
+        return this.body;
     }
 
 }

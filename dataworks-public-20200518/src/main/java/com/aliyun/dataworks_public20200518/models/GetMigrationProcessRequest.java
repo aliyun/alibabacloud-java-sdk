@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetMigrationProcessRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("MigrationId")
-    @Validation(required = true)
     public Long migrationId;
 
     public static GetMigrationProcessRequest build(java.util.Map<String, ?> map) throws Exception {

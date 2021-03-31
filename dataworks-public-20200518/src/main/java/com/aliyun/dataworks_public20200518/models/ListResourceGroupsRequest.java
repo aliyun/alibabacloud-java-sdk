@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsRequest extends TeaModel {
     @NameInMap("ResourceGroupType")
-    @Validation(required = true)
     public Integer resourceGroupType;
 
     @NameInMap("Keyword")

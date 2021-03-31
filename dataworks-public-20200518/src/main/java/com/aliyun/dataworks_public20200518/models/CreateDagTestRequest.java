@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateDagTestRequest extends TeaModel {
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("Bizdate")
-    @Validation(required = true)
     public String bizdate;
 
     @NameInMap("Name")
-    @Validation(required = true)
     public String name;
 
     @NameInMap("NodeId")
-    @Validation(required = true)
     public Long nodeId;
 
     @NameInMap("NodeParams")
