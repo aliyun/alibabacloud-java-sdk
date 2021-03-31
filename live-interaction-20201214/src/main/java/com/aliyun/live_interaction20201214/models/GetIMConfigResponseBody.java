@@ -81,29 +81,29 @@ public class GetIMConfigResponseBody extends TeaModel {
     }
 
     public static class GetIMConfigResponseBodyResultImConfigMsgConfig extends TeaModel {
-        // 消息撤回时间
-        @NameInMap("MsgRecallTimeInterval")
-        public Long msgRecallTimeInterval;
+        // 消息撤回时间，分钟
+        @NameInMap("ClientMsgRecallTimeIntervalMinute")
+        public Long clientMsgRecallTimeIntervalMinute;
 
         public static GetIMConfigResponseBodyResultImConfigMsgConfig build(java.util.Map<String, ?> map) throws Exception {
             GetIMConfigResponseBodyResultImConfigMsgConfig self = new GetIMConfigResponseBodyResultImConfigMsgConfig();
             return TeaModel.build(map, self);
         }
 
-        public GetIMConfigResponseBodyResultImConfigMsgConfig setMsgRecallTimeInterval(Long msgRecallTimeInterval) {
-            this.msgRecallTimeInterval = msgRecallTimeInterval;
+        public GetIMConfigResponseBodyResultImConfigMsgConfig setClientMsgRecallTimeIntervalMinute(Long clientMsgRecallTimeIntervalMinute) {
+            this.clientMsgRecallTimeIntervalMinute = clientMsgRecallTimeIntervalMinute;
             return this;
         }
-        public Long getMsgRecallTimeInterval() {
-            return this.msgRecallTimeInterval;
+        public Long getClientMsgRecallTimeIntervalMinute() {
+            return this.clientMsgRecallTimeIntervalMinute;
         }
 
     }
 
     public static class GetIMConfigResponseBodyResultImConfigCallbackConfig extends TeaModel {
         // 回调url，支持外部url
-        @NameInMap("BackendUrl")
-        public String backendUrl;
+        @NameInMap("CallbackUrl")
+        public String callbackUrl;
 
         // 加签密钥-key
         @NameInMap("SignatureKey")
@@ -114,20 +114,20 @@ public class GetIMConfigResponseBody extends TeaModel {
         public String signatureValue;
 
         // 已开通的回调方法Id列表
-        @NameInMap("ApiIds")
-        public java.util.List<String> apiIds;
+        @NameInMap("Apis")
+        public java.util.Map<String, Boolean> apis;
 
         public static GetIMConfigResponseBodyResultImConfigCallbackConfig build(java.util.Map<String, ?> map) throws Exception {
             GetIMConfigResponseBodyResultImConfigCallbackConfig self = new GetIMConfigResponseBodyResultImConfigCallbackConfig();
             return TeaModel.build(map, self);
         }
 
-        public GetIMConfigResponseBodyResultImConfigCallbackConfig setBackendUrl(String backendUrl) {
-            this.backendUrl = backendUrl;
+        public GetIMConfigResponseBodyResultImConfigCallbackConfig setCallbackUrl(String callbackUrl) {
+            this.callbackUrl = callbackUrl;
             return this;
         }
-        public String getBackendUrl() {
-            return this.backendUrl;
+        public String getCallbackUrl() {
+            return this.callbackUrl;
         }
 
         public GetIMConfigResponseBodyResultImConfigCallbackConfig setSignatureKey(String signatureKey) {
@@ -146,12 +146,12 @@ public class GetIMConfigResponseBody extends TeaModel {
             return this.signatureValue;
         }
 
-        public GetIMConfigResponseBodyResultImConfigCallbackConfig setApiIds(java.util.List<String> apiIds) {
-            this.apiIds = apiIds;
+        public GetIMConfigResponseBodyResultImConfigCallbackConfig setApis(java.util.Map<String, Boolean> apis) {
+            this.apis = apis;
             return this;
         }
-        public java.util.List<String> getApiIds() {
-            return this.apiIds;
+        public java.util.Map<String, Boolean> getApis() {
+            return this.apis;
         }
 
     }
