@@ -427,6 +427,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstanceHibernationOptions extends TeaModel {
+        @NameInMap("Configured")
+        public Boolean configured;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceHibernationOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceHibernationOptions self = new DescribeInstancesResponseBodyInstancesInstanceHibernationOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceHibernationOptions setConfigured(Boolean configured) {
+            this.configured = configured;
+            return this;
+        }
+        public Boolean getConfigured() {
+            return this.configured;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstanceVpcAttributesPrivateIpAddress extends TeaModel {
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
@@ -867,6 +886,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CpuOptions")
         public DescribeInstancesResponseBodyInstancesInstanceCpuOptions cpuOptions;
 
+        @NameInMap("HibernationOptions")
+        public DescribeInstancesResponseBodyInstancesInstanceHibernationOptions hibernationOptions;
+
         @NameInMap("LocalStorageCapacity")
         public Long localStorageCapacity;
 
@@ -1253,6 +1275,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceCpuOptions getCpuOptions() {
             return this.cpuOptions;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setHibernationOptions(DescribeInstancesResponseBodyInstancesInstanceHibernationOptions hibernationOptions) {
+            this.hibernationOptions = hibernationOptions;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceHibernationOptions getHibernationOptions() {
+            return this.hibernationOptions;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setLocalStorageCapacity(Long localStorageCapacity) {

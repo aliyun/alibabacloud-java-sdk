@@ -7,6 +7,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public CreateInstanceRequestSystemDisk systemDisk;
 
+    @NameInMap("HibernationOptions")
+    public CreateInstanceRequestHibernationOptions hibernationOptions;
+
     @NameInMap("PrivatePoolOptions")
     public CreateInstanceRequestPrivatePoolOptions privatePoolOptions;
 
@@ -195,6 +198,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public CreateInstanceRequestSystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    public CreateInstanceRequest setHibernationOptions(CreateInstanceRequestHibernationOptions hibernationOptions) {
+        this.hibernationOptions = hibernationOptions;
+        return this;
+    }
+    public CreateInstanceRequestHibernationOptions getHibernationOptions() {
+        return this.hibernationOptions;
     }
 
     public CreateInstanceRequest setPrivatePoolOptions(CreateInstanceRequestPrivatePoolOptions privatePoolOptions) {
@@ -728,6 +739,25 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getPerformanceLevel() {
             return this.performanceLevel;
+        }
+
+    }
+
+    public static class CreateInstanceRequestHibernationOptions extends TeaModel {
+        @NameInMap("Configured")
+        public Boolean configured;
+
+        public static CreateInstanceRequestHibernationOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestHibernationOptions self = new CreateInstanceRequestHibernationOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestHibernationOptions setConfigured(Boolean configured) {
+            this.configured = configured;
+            return this;
+        }
+        public Boolean getConfigured() {
+            return this.configured;
         }
 
     }

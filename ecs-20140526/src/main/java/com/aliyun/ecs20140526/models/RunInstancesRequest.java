@@ -7,6 +7,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("SystemDisk")
     public RunInstancesRequestSystemDisk systemDisk;
 
+    @NameInMap("HibernationOptions")
+    public RunInstancesRequestHibernationOptions hibernationOptions;
+
     @NameInMap("CpuOptions")
     public RunInstancesRequestCpuOptions cpuOptions;
 
@@ -231,6 +234,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public RunInstancesRequestSystemDisk getSystemDisk() {
         return this.systemDisk;
+    }
+
+    public RunInstancesRequest setHibernationOptions(RunInstancesRequestHibernationOptions hibernationOptions) {
+        this.hibernationOptions = hibernationOptions;
+        return this;
+    }
+    public RunInstancesRequestHibernationOptions getHibernationOptions() {
+        return this.hibernationOptions;
     }
 
     public RunInstancesRequest setCpuOptions(RunInstancesRequestCpuOptions cpuOptions) {
@@ -871,6 +882,25 @@ public class RunInstancesRequest extends TeaModel {
         }
         public String getAutoSnapshotPolicyId() {
             return this.autoSnapshotPolicyId;
+        }
+
+    }
+
+    public static class RunInstancesRequestHibernationOptions extends TeaModel {
+        @NameInMap("Configured")
+        public Boolean configured;
+
+        public static RunInstancesRequestHibernationOptions build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestHibernationOptions self = new RunInstancesRequestHibernationOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestHibernationOptions setConfigured(Boolean configured) {
+            this.configured = configured;
+            return this;
+        }
+        public Boolean getConfigured() {
+            return this.configured;
         }
 
     }
