@@ -8,8 +8,9 @@ public class UpgradePackageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 成功和失败的机器人code
     @NameInMap("Data")
-    public java.util.Map<String, ?> data;
+    public UpgradePackageResponseBodyData data;
 
     public static UpgradePackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpgradePackageResponseBody self = new UpgradePackageResponseBody();
@@ -24,12 +25,44 @@ public class UpgradePackageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpgradePackageResponseBody setData(java.util.Map<String, ?> data) {
+    public UpgradePackageResponseBody setData(UpgradePackageResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.Map<String, ?> getData() {
+    public UpgradePackageResponseBodyData getData() {
         return this.data;
+    }
+
+    public static class UpgradePackageResponseBodyData extends TeaModel {
+        // 成功的机器人code
+        @NameInMap("SuccessRobotCodes")
+        public java.util.List<String> successRobotCodes;
+
+        // 失败的机器人code
+        @NameInMap("FailedRobotCodes")
+        public java.util.List<String> failedRobotCodes;
+
+        public static UpgradePackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            UpgradePackageResponseBodyData self = new UpgradePackageResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public UpgradePackageResponseBodyData setSuccessRobotCodes(java.util.List<String> successRobotCodes) {
+            this.successRobotCodes = successRobotCodes;
+            return this;
+        }
+        public java.util.List<String> getSuccessRobotCodes() {
+            return this.successRobotCodes;
+        }
+
+        public UpgradePackageResponseBodyData setFailedRobotCodes(java.util.List<String> failedRobotCodes) {
+            this.failedRobotCodes = failedRobotCodes;
+            return this;
+        }
+        public java.util.List<String> getFailedRobotCodes() {
+            return this.failedRobotCodes;
+        }
+
     }
 
 }

@@ -8,6 +8,10 @@ public class CreateRobotShrinkRequest extends TeaModel {
     @NameInMap("RobotDTO")
     public String robotDTOShrink;
 
+    // 操作人信息
+    @NameInMap("Operator")
+    public String operatorShrink;
+
     public static CreateRobotShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRobotShrinkRequest self = new CreateRobotShrinkRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class CreateRobotShrinkRequest extends TeaModel {
     }
     public String getRobotDTOShrink() {
         return this.robotDTOShrink;
+    }
+
+    public CreateRobotShrinkRequest setOperatorShrink(String operatorShrink) {
+        this.operatorShrink = operatorShrink;
+        return this;
+    }
+    public String getOperatorShrink() {
+        return this.operatorShrink;
     }
 
 }

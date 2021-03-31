@@ -8,6 +8,10 @@ public class CreateRobotRequest extends TeaModel {
     @NameInMap("RobotDTO")
     public CreateRobotRequestRobotDTO robotDTO;
 
+    // 操作人信息
+    @NameInMap("Operator")
+    public CreateRobotRequestOperator operator;
+
     public static CreateRobotRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRobotRequest self = new CreateRobotRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class CreateRobotRequest extends TeaModel {
     }
     public CreateRobotRequestRobotDTO getRobotDTO() {
         return this.robotDTO;
+    }
+
+    public CreateRobotRequest setOperator(CreateRobotRequestOperator operator) {
+        this.operator = operator;
+        return this;
+    }
+    public CreateRobotRequestOperator getOperator() {
+        return this.operator;
     }
 
     public static class CreateRobotRequestRobotDTO extends TeaModel {
@@ -97,6 +109,38 @@ public class CreateRobotRequest extends TeaModel {
         }
         public Long getExpireDate() {
             return this.expireDate;
+        }
+
+    }
+
+    public static class CreateRobotRequestOperator extends TeaModel {
+        // 操作人id
+        @NameInMap("OperatorId")
+        public String operatorId;
+
+        // 操作人显示名
+        @NameInMap("OperatorName")
+        public String operatorName;
+
+        public static CreateRobotRequestOperator build(java.util.Map<String, ?> map) throws Exception {
+            CreateRobotRequestOperator self = new CreateRobotRequestOperator();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRobotRequestOperator setOperatorId(String operatorId) {
+            this.operatorId = operatorId;
+            return this;
+        }
+        public String getOperatorId() {
+            return this.operatorId;
+        }
+
+        public CreateRobotRequestOperator setOperatorName(String operatorName) {
+            this.operatorName = operatorName;
+            return this;
+        }
+        public String getOperatorName() {
+            return this.operatorName;
         }
 
     }

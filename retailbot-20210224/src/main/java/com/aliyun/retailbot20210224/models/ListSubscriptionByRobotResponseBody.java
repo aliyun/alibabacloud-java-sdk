@@ -7,6 +7,7 @@ public class ListSubscriptionByRobotResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 订阅的行业包
     @NameInMap("Data")
     public java.util.List<ListSubscriptionByRobotResponseBodyData> data;
 
@@ -32,12 +33,15 @@ public class ListSubscriptionByRobotResponseBody extends TeaModel {
     }
 
     public static class ListSubscriptionByRobotResponseBodyData extends TeaModel {
+        // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
 
+        // 行业包code
         @NameInMap("PackageCode")
         public String packageCode;
 
+        // 行业包版本
         @NameInMap("PackageVersion")
         public String packageVersion;
 

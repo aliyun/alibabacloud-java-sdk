@@ -5,23 +5,35 @@ import com.aliyun.tea.*;
 
 public class UpdateRobotRequest extends TeaModel {
     // 机器人信息
-    @NameInMap("Robot")
-    public UpdateRobotRequestRobot robot;
+    @NameInMap("RobotDTO")
+    public UpdateRobotRequestRobotDTO robotDTO;
+
+    // 操作人信息
+    @NameInMap("Operator")
+    public UpdateRobotRequestOperator operator;
 
     public static UpdateRobotRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRobotRequest self = new UpdateRobotRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateRobotRequest setRobot(UpdateRobotRequestRobot robot) {
-        this.robot = robot;
+    public UpdateRobotRequest setRobotDTO(UpdateRobotRequestRobotDTO robotDTO) {
+        this.robotDTO = robotDTO;
         return this;
     }
-    public UpdateRobotRequestRobot getRobot() {
-        return this.robot;
+    public UpdateRobotRequestRobotDTO getRobotDTO() {
+        return this.robotDTO;
     }
 
-    public static class UpdateRobotRequestRobot extends TeaModel {
+    public UpdateRobotRequest setOperator(UpdateRobotRequestOperator operator) {
+        this.operator = operator;
+        return this;
+    }
+    public UpdateRobotRequestOperator getOperator() {
+        return this.operator;
+    }
+
+    public static class UpdateRobotRequestRobotDTO extends TeaModel {
         // 机器人code
         @NameInMap("RobotCode")
         public String robotCode;
@@ -38,12 +50,12 @@ public class UpdateRobotRequest extends TeaModel {
         @NameInMap("ExpireDate")
         public Long expireDate;
 
-        public static UpdateRobotRequestRobot build(java.util.Map<String, ?> map) throws Exception {
-            UpdateRobotRequestRobot self = new UpdateRobotRequestRobot();
+        public static UpdateRobotRequestRobotDTO build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRobotRequestRobotDTO self = new UpdateRobotRequestRobotDTO();
             return TeaModel.build(map, self);
         }
 
-        public UpdateRobotRequestRobot setRobotCode(String robotCode) {
+        public UpdateRobotRequestRobotDTO setRobotCode(String robotCode) {
             this.robotCode = robotCode;
             return this;
         }
@@ -51,7 +63,7 @@ public class UpdateRobotRequest extends TeaModel {
             return this.robotCode;
         }
 
-        public UpdateRobotRequestRobot setSellerNick(String sellerNick) {
+        public UpdateRobotRequestRobotDTO setSellerNick(String sellerNick) {
             this.sellerNick = sellerNick;
             return this;
         }
@@ -59,7 +71,7 @@ public class UpdateRobotRequest extends TeaModel {
             return this.sellerNick;
         }
 
-        public UpdateRobotRequestRobot setSignDate(Long signDate) {
+        public UpdateRobotRequestRobotDTO setSignDate(Long signDate) {
             this.signDate = signDate;
             return this;
         }
@@ -67,12 +79,44 @@ public class UpdateRobotRequest extends TeaModel {
             return this.signDate;
         }
 
-        public UpdateRobotRequestRobot setExpireDate(Long expireDate) {
+        public UpdateRobotRequestRobotDTO setExpireDate(Long expireDate) {
             this.expireDate = expireDate;
             return this;
         }
         public Long getExpireDate() {
             return this.expireDate;
+        }
+
+    }
+
+    public static class UpdateRobotRequestOperator extends TeaModel {
+        // 操作人id
+        @NameInMap("OperatorId")
+        public String operatorId;
+
+        // 操作人显示名
+        @NameInMap("OperatorName")
+        public String operatorName;
+
+        public static UpdateRobotRequestOperator build(java.util.Map<String, ?> map) throws Exception {
+            UpdateRobotRequestOperator self = new UpdateRobotRequestOperator();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateRobotRequestOperator setOperatorId(String operatorId) {
+            this.operatorId = operatorId;
+            return this;
+        }
+        public String getOperatorId() {
+            return this.operatorId;
+        }
+
+        public UpdateRobotRequestOperator setOperatorName(String operatorName) {
+            this.operatorName = operatorName;
+            return this;
+        }
+        public String getOperatorName() {
+            return this.operatorName;
         }
 
     }

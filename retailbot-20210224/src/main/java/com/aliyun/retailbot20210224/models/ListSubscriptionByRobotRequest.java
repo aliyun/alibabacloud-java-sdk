@@ -4,6 +4,7 @@ package com.aliyun.retailbot20210224.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionByRobotRequest extends TeaModel {
+    // 机器人code
     @NameInMap("RobotCode")
     public String robotCode;
 
