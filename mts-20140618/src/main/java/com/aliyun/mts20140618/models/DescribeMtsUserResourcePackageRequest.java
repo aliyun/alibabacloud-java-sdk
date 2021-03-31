@@ -10,9 +10,6 @@ public class DescribeMtsUserResourcePackageRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ShowLog")
-    public String showLog;
-
     public static DescribeMtsUserResourcePackageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeMtsUserResourcePackageRequest self = new DescribeMtsUserResourcePackageRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DescribeMtsUserResourcePackageRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    public DescribeMtsUserResourcePackageRequest setShowLog(String showLog) {
-        this.showLog = showLog;
-        return this;
-    }
-    public String getShowLog() {
-        return this.showLog;
     }
 
 }
