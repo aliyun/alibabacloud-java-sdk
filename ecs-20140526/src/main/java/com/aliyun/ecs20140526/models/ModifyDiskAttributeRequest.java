@@ -16,9 +16,6 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     @NameInMap("DiskId")
     public String diskId;
 
-    @NameInMap("DiskIds")
-    public java.util.List<String> diskIds;
-
     @NameInMap("DiskName")
     public String diskName;
 
@@ -36,6 +33,9 @@ public class ModifyDiskAttributeRequest extends TeaModel {
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("DiskIds")
+    public java.util.List<String> diskIds;
 
     public static ModifyDiskAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskAttributeRequest self = new ModifyDiskAttributeRequest();
@@ -72,14 +72,6 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     }
     public String getDiskId() {
         return this.diskId;
-    }
-
-    public ModifyDiskAttributeRequest setDiskIds(java.util.List<String> diskIds) {
-        this.diskIds = diskIds;
-        return this;
-    }
-    public java.util.List<String> getDiskIds() {
-        return this.diskIds;
     }
 
     public ModifyDiskAttributeRequest setDiskName(String diskName) {
@@ -128,6 +120,14 @@ public class ModifyDiskAttributeRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public ModifyDiskAttributeRequest setDiskIds(java.util.List<String> diskIds) {
+        this.diskIds = diskIds;
+        return this;
+    }
+    public java.util.List<String> getDiskIds() {
+        return this.diskIds;
     }
 
 }

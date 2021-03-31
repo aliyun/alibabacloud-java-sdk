@@ -17,7 +17,6 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("AutoProvisioningGroupId")
@@ -176,40 +175,24 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     }
 
     public static class ModifyAutoProvisioningGroupRequestLaunchTemplateConfig extends TeaModel {
-        @NameInMap("InstanceType")
-        public String instanceType;
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
 
         @NameInMap("MaxPrice")
         public Double maxPrice;
 
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
+        @NameInMap("Priority")
+        public Integer priority;
 
         @NameInMap("WeightedCapacity")
         public Double weightedCapacity;
 
-        @NameInMap("Priority")
-        public Integer priority;
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         public static ModifyAutoProvisioningGroupRequestLaunchTemplateConfig build(java.util.Map<String, ?> map) throws Exception {
             ModifyAutoProvisioningGroupRequestLaunchTemplateConfig self = new ModifyAutoProvisioningGroupRequestLaunchTemplateConfig();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceType(String instanceType) {
-            this.instanceType = instanceType;
-            return this;
-        }
-        public String getInstanceType() {
-            return this.instanceType;
-        }
-
-        public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setMaxPrice(Double maxPrice) {
-            this.maxPrice = maxPrice;
-            return this;
-        }
-        public Double getMaxPrice() {
-            return this.maxPrice;
         }
 
         public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setVSwitchId(String vSwitchId) {
@@ -220,12 +203,12 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
             return this.vSwitchId;
         }
 
-        public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
-            this.weightedCapacity = weightedCapacity;
+        public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setMaxPrice(Double maxPrice) {
+            this.maxPrice = maxPrice;
             return this;
         }
-        public Double getWeightedCapacity() {
-            return this.weightedCapacity;
+        public Double getMaxPrice() {
+            return this.maxPrice;
         }
 
         public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setPriority(Integer priority) {
@@ -234,6 +217,22 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
         }
         public Integer getPriority() {
             return this.priority;
+        }
+
+        public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setWeightedCapacity(Double weightedCapacity) {
+            this.weightedCapacity = weightedCapacity;
+            return this;
+        }
+        public Double getWeightedCapacity() {
+            return this.weightedCapacity;
+        }
+
+        public ModifyAutoProvisioningGroupRequestLaunchTemplateConfig setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
     }

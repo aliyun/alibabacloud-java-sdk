@@ -14,7 +14,6 @@ public class StopInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ConfirmStop")

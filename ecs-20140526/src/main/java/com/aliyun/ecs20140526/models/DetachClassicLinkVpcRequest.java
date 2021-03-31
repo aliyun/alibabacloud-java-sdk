@@ -14,15 +14,12 @@ public class DetachClassicLinkVpcRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("VpcId")
-    @Validation(required = true)
     public String vpcId;
 
     public static DetachClassicLinkVpcRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -17,11 +17,9 @@ public class StopInvocationRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InvokeId")
-    @Validation(required = true)
     public String invokeId;
 
     @NameInMap("InstanceId")

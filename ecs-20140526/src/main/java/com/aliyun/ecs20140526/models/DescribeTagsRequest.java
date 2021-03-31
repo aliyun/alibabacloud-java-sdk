@@ -26,14 +26,13 @@ public class DescribeTagsRequest extends TeaModel {
     public String resourceId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeTagsRequestTag> tag;
 
     @NameInMap("Category")
     public String category;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeTagsRequestTag> tag;
 
     public static DescribeTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagsRequest self = new DescribeTagsRequest();
@@ -104,14 +103,6 @@ public class DescribeTagsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeTagsRequest setTag(java.util.List<DescribeTagsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeTagsRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeTagsRequest setCategory(String category) {
         this.category = category;
         return this;
@@ -120,24 +111,24 @@ public class DescribeTagsRequest extends TeaModel {
         return this.category;
     }
 
-    public static class DescribeTagsRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
+    public DescribeTagsRequest setTag(java.util.List<DescribeTagsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeTagsRequestTag> getTag() {
+        return this.tag;
+    }
 
+    public static class DescribeTagsRequestTag extends TeaModel {
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static DescribeTagsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeTagsRequestTag self = new DescribeTagsRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeTagsRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public DescribeTagsRequestTag setKey(String key) {
@@ -146,6 +137,14 @@ public class DescribeTagsRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public DescribeTagsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

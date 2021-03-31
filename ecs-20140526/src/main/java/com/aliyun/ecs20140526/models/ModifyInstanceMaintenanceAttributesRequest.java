@@ -17,20 +17,19 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
-
-    @NameInMap("MaintenanceWindow")
-    public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow;
 
     @NameInMap("ActionOnMaintenance")
     public String actionOnMaintenance;
 
     @NameInMap("NotifyOnMaintenance")
     public Boolean notifyOnMaintenance;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
+    @NameInMap("MaintenanceWindow")
+    public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow;
 
     public static ModifyInstanceMaintenanceAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceMaintenanceAttributesRequest self = new ModifyInstanceMaintenanceAttributesRequest();
@@ -77,22 +76,6 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ModifyInstanceMaintenanceAttributesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ModifyInstanceMaintenanceAttributesRequest setMaintenanceWindow(java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow) {
-        this.maintenanceWindow = maintenanceWindow;
-        return this;
-    }
-    public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> getMaintenanceWindow() {
-        return this.maintenanceWindow;
-    }
-
     public ModifyInstanceMaintenanceAttributesRequest setActionOnMaintenance(String actionOnMaintenance) {
         this.actionOnMaintenance = actionOnMaintenance;
         return this;
@@ -109,24 +92,32 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
         return this.notifyOnMaintenance;
     }
 
-    public static class ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow extends TeaModel {
-        @NameInMap("StartTime")
-        public String startTime;
+    public ModifyInstanceMaintenanceAttributesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
 
+    public ModifyInstanceMaintenanceAttributesRequest setMaintenanceWindow(java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+        return this;
+    }
+    public java.util.List<ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow> getMaintenanceWindow() {
+        return this.maintenanceWindow;
+    }
+
+    public static class ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
+
+        @NameInMap("StartTime")
+        public String startTime;
 
         public static ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow build(java.util.Map<String, ?> map) throws Exception {
             ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow self = new ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow();
             return TeaModel.build(map, self);
-        }
-
-        public ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
         }
 
         public ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow setEndTime(String endTime) {
@@ -135,6 +126,14 @@ public class ModifyInstanceMaintenanceAttributesRequest extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public ModifyInstanceMaintenanceAttributesRequestMaintenanceWindow setStartTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public String getStartTime() {
+            return this.startTime;
         }
 
     }

@@ -17,24 +17,12 @@ public class ReportInstancesStatusRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public java.util.List<String> instanceId;
-
-    @NameInMap("DiskId")
-    public java.util.List<String> diskId;
-
-    @NameInMap("Device")
-    public java.util.List<String> device;
 
     @NameInMap("Reason")
     public String reason;
 
     @NameInMap("Description")
-    @Validation(required = true)
     public String description;
 
     @NameInMap("StartTime")
@@ -45,6 +33,15 @@ public class ReportInstancesStatusRequest extends TeaModel {
 
     @NameInMap("IssueCategory")
     public String issueCategory;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
+    @NameInMap("DiskId")
+    public java.util.List<String> diskId;
+
+    @NameInMap("Device")
+    public java.util.List<String> device;
 
     public static ReportInstancesStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ReportInstancesStatusRequest self = new ReportInstancesStatusRequest();
@@ -91,30 +88,6 @@ public class ReportInstancesStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ReportInstancesStatusRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
-    public ReportInstancesStatusRequest setDiskId(java.util.List<String> diskId) {
-        this.diskId = diskId;
-        return this;
-    }
-    public java.util.List<String> getDiskId() {
-        return this.diskId;
-    }
-
-    public ReportInstancesStatusRequest setDevice(java.util.List<String> device) {
-        this.device = device;
-        return this;
-    }
-    public java.util.List<String> getDevice() {
-        return this.device;
-    }
-
     public ReportInstancesStatusRequest setReason(String reason) {
         this.reason = reason;
         return this;
@@ -153,6 +126,30 @@ public class ReportInstancesStatusRequest extends TeaModel {
     }
     public String getIssueCategory() {
         return this.issueCategory;
+    }
+
+    public ReportInstancesStatusRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ReportInstancesStatusRequest setDiskId(java.util.List<String> diskId) {
+        this.diskId = diskId;
+        return this;
+    }
+    public java.util.List<String> getDiskId() {
+        return this.diskId;
+    }
+
+    public ReportInstancesStatusRequest setDevice(java.util.List<String> device) {
+        this.device = device;
+        return this;
+    }
+    public java.util.List<String> getDevice() {
+        return this.device;
     }
 
 }

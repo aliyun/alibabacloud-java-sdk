@@ -17,7 +17,6 @@ public class DescribeVRoutersRequest extends TeaModel {
     public String VRouterId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")

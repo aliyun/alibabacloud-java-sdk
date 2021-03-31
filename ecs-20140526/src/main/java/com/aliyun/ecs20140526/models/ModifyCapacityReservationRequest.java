@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyCapacityReservationRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public ModifyCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,11 +20,7 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("PrivatePoolOptions")
-    public ModifyCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     @NameInMap("Description")
     public String description;
@@ -44,6 +43,14 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     public static ModifyCapacityReservationRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCapacityReservationRequest self = new ModifyCapacityReservationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyCapacityReservationRequest setPrivatePoolOptions(ModifyCapacityReservationRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public ModifyCapacityReservationRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public ModifyCapacityReservationRequest setOwnerId(Long ownerId) {
@@ -84,14 +91,6 @@ public class ModifyCapacityReservationRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ModifyCapacityReservationRequest setPrivatePoolOptions(ModifyCapacityReservationRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public ModifyCapacityReservationRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
     }
 
     public ModifyCapacityReservationRequest setDescription(String description) {
@@ -144,7 +143,6 @@ public class ModifyCapacityReservationRequest extends TeaModel {
 
     public static class ModifyCapacityReservationRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("Id")
-        @Validation(required = true)
         public String id;
 
         @NameInMap("Name")

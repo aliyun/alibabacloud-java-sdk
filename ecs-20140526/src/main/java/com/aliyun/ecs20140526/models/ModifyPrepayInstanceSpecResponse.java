@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyPrepayInstanceSpecResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("OrderId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String orderId;
+    public ModifyPrepayInstanceSpecResponseBody body;
 
     public static ModifyPrepayInstanceSpecResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyPrepayInstanceSpecResponse self = new ModifyPrepayInstanceSpecResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyPrepayInstanceSpecResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyPrepayInstanceSpecResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ModifyPrepayInstanceSpecResponse setOrderId(String orderId) {
-        this.orderId = orderId;
+    public ModifyPrepayInstanceSpecResponse setBody(ModifyPrepayInstanceSpecResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getOrderId() {
-        return this.orderId;
+    public ModifyPrepayInstanceSpecResponseBody getBody() {
+        return this.body;
     }
 
 }

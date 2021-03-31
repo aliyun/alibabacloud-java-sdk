@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesFullStatusRequest extends TeaModel {
+    @NameInMap("NotBefore")
+    public DescribeInstancesFullStatusRequestNotBefore notBefore;
+
+    @NameInMap("EventPublishTime")
+    public DescribeInstancesFullStatusRequestEventPublishTime eventPublishTime;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,14 +23,7 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
-
-    @NameInMap("EventId")
-    public java.util.List<String> eventId;
 
     @NameInMap("Status")
     public String status;
@@ -32,17 +31,8 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("HealthStatus")
     public String healthStatus;
 
-    @NameInMap("InstanceEventType")
-    public java.util.List<String> instanceEventType;
-
     @NameInMap("EventType")
     public String eventType;
-
-    @NameInMap("NotBefore")
-    public DescribeInstancesFullStatusRequestNotBefore notBefore;
-
-    @NameInMap("EventPublishTime")
-    public DescribeInstancesFullStatusRequestEventPublishTime eventPublishTime;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -50,9 +40,34 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
+
+    @NameInMap("EventId")
+    public java.util.List<String> eventId;
+
+    @NameInMap("InstanceEventType")
+    public java.util.List<String> instanceEventType;
+
     public static DescribeInstancesFullStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesFullStatusRequest self = new DescribeInstancesFullStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstancesFullStatusRequest setNotBefore(DescribeInstancesFullStatusRequestNotBefore notBefore) {
+        this.notBefore = notBefore;
+        return this;
+    }
+    public DescribeInstancesFullStatusRequestNotBefore getNotBefore() {
+        return this.notBefore;
+    }
+
+    public DescribeInstancesFullStatusRequest setEventPublishTime(DescribeInstancesFullStatusRequestEventPublishTime eventPublishTime) {
+        this.eventPublishTime = eventPublishTime;
+        return this;
+    }
+    public DescribeInstancesFullStatusRequestEventPublishTime getEventPublishTime() {
+        return this.eventPublishTime;
     }
 
     public DescribeInstancesFullStatusRequest setOwnerId(Long ownerId) {
@@ -95,22 +110,6 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeInstancesFullStatusRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeInstancesFullStatusRequest setEventId(java.util.List<String> eventId) {
-        this.eventId = eventId;
-        return this;
-    }
-    public java.util.List<String> getEventId() {
-        return this.eventId;
-    }
-
     public DescribeInstancesFullStatusRequest setStatus(String status) {
         this.status = status;
         return this;
@@ -127,36 +126,12 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
         return this.healthStatus;
     }
 
-    public DescribeInstancesFullStatusRequest setInstanceEventType(java.util.List<String> instanceEventType) {
-        this.instanceEventType = instanceEventType;
-        return this;
-    }
-    public java.util.List<String> getInstanceEventType() {
-        return this.instanceEventType;
-    }
-
     public DescribeInstancesFullStatusRequest setEventType(String eventType) {
         this.eventType = eventType;
         return this;
     }
     public String getEventType() {
         return this.eventType;
-    }
-
-    public DescribeInstancesFullStatusRequest setNotBefore(DescribeInstancesFullStatusRequestNotBefore notBefore) {
-        this.notBefore = notBefore;
-        return this;
-    }
-    public DescribeInstancesFullStatusRequestNotBefore getNotBefore() {
-        return this.notBefore;
-    }
-
-    public DescribeInstancesFullStatusRequest setEventPublishTime(DescribeInstancesFullStatusRequestEventPublishTime eventPublishTime) {
-        this.eventPublishTime = eventPublishTime;
-        return this;
-    }
-    public DescribeInstancesFullStatusRequestEventPublishTime getEventPublishTime() {
-        return this.eventPublishTime;
     }
 
     public DescribeInstancesFullStatusRequest setPageNumber(Integer pageNumber) {
@@ -173,6 +148,30 @@ public class DescribeInstancesFullStatusRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeInstancesFullStatusRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeInstancesFullStatusRequest setEventId(java.util.List<String> eventId) {
+        this.eventId = eventId;
+        return this;
+    }
+    public java.util.List<String> getEventId() {
+        return this.eventId;
+    }
+
+    public DescribeInstancesFullStatusRequest setInstanceEventType(java.util.List<String> instanceEventType) {
+        this.instanceEventType = instanceEventType;
+        return this;
+    }
+    public java.util.List<String> getInstanceEventType() {
+        return this.instanceEventType;
     }
 
     public static class DescribeInstancesFullStatusRequestNotBefore extends TeaModel {

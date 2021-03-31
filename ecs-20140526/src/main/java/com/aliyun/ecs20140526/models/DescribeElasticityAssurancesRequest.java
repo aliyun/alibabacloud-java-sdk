@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeElasticityAssurancesRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,23 +20,19 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeElasticityAssurancesRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeElasticityAssurancesRequestTag> tag;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
-
-    @NameInMap("PrivatePoolOptions")
-    public DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions;
 
     @NameInMap("Platform")
     public String platform;
@@ -53,6 +52,14 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     public static DescribeElasticityAssurancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeElasticityAssurancesRequest self = new DescribeElasticityAssurancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeElasticityAssurancesRequest setPrivatePoolOptions(DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public DescribeElasticityAssurancesRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public DescribeElasticityAssurancesRequest setOwnerId(Long ownerId) {
@@ -95,20 +102,20 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeElasticityAssurancesRequest setTag(java.util.List<DescribeElasticityAssurancesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeElasticityAssurancesRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeElasticityAssurancesRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeElasticityAssurancesRequest setTag(java.util.List<DescribeElasticityAssurancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeElasticityAssurancesRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeElasticityAssurancesRequest setMaxResults(Integer maxResults) {
@@ -125,14 +132,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public DescribeElasticityAssurancesRequest setPrivatePoolOptions(DescribeElasticityAssurancesRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public DescribeElasticityAssurancesRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
     }
 
     public DescribeElasticityAssurancesRequest setPlatform(String platform) {
@@ -175,6 +174,25 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
         return this.status;
     }
 
+    public static class DescribeElasticityAssurancesRequestPrivatePoolOptions extends TeaModel {
+        @NameInMap("Ids")
+        public String ids;
+
+        public static DescribeElasticityAssurancesRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeElasticityAssurancesRequestPrivatePoolOptions self = new DescribeElasticityAssurancesRequestPrivatePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeElasticityAssurancesRequestPrivatePoolOptions setIds(String ids) {
+            this.ids = ids;
+            return this;
+        }
+        public String getIds() {
+            return this.ids;
+        }
+
+    }
+
     public static class DescribeElasticityAssurancesRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -201,25 +219,6 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
-        }
-
-    }
-
-    public static class DescribeElasticityAssurancesRequestPrivatePoolOptions extends TeaModel {
-        @NameInMap("Ids")
-        public String ids;
-
-        public static DescribeElasticityAssurancesRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeElasticityAssurancesRequestPrivatePoolOptions self = new DescribeElasticityAssurancesRequestPrivatePoolOptions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeElasticityAssurancesRequestPrivatePoolOptions setIds(String ids) {
-            this.ids = ids;
-            return this;
-        }
-        public String getIds() {
-            return this.ids;
         }
 
     }

@@ -17,18 +17,15 @@ public class RemoveBandwidthPackageIpsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
     public String bandwidthPackageId;
 
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("RemovedIpAddresses")
-    @Validation(required = true)
     public java.util.List<String> removedIpAddresses;
 
     public static RemoveBandwidthPackageIpsRequest build(java.util.Map<String, ?> map) throws Exception {

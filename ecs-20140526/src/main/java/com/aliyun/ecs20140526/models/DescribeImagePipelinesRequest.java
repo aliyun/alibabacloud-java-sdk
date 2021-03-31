@@ -17,26 +17,25 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeImagePipelinesRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeImagePipelinesRequestTag> tag;
+
     @NameInMap("Name")
     public String name;
-
-    @NameInMap("ImagePipelineId")
-    public java.util.List<String> imagePipelineId;
 
     @NameInMap("NextToken")
     public String nextToken;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
+
+    @NameInMap("ImagePipelineId")
+    public java.util.List<String> imagePipelineId;
 
     public static DescribeImagePipelinesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImagePipelinesRequest self = new DescribeImagePipelinesRequest();
@@ -83,14 +82,6 @@ public class DescribeImagePipelinesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeImagePipelinesRequest setTag(java.util.List<DescribeImagePipelinesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeImagePipelinesRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeImagePipelinesRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -99,20 +90,20 @@ public class DescribeImagePipelinesRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public DescribeImagePipelinesRequest setTag(java.util.List<DescribeImagePipelinesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeImagePipelinesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeImagePipelinesRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
-    }
-
-    public DescribeImagePipelinesRequest setImagePipelineId(java.util.List<String> imagePipelineId) {
-        this.imagePipelineId = imagePipelineId;
-        return this;
-    }
-    public java.util.List<String> getImagePipelineId() {
-        return this.imagePipelineId;
     }
 
     public DescribeImagePipelinesRequest setNextToken(String nextToken) {
@@ -129,6 +120,14 @@ public class DescribeImagePipelinesRequest extends TeaModel {
     }
     public Integer getMaxResults() {
         return this.maxResults;
+    }
+
+    public DescribeImagePipelinesRequest setImagePipelineId(java.util.List<String> imagePipelineId) {
+        this.imagePipelineId = imagePipelineId;
+        return this;
+    }
+    public java.util.List<String> getImagePipelineId() {
+        return this.imagePipelineId;
     }
 
     public static class DescribeImagePipelinesRequestTag extends TeaModel {

@@ -14,11 +14,9 @@ public class ConvertNatPublicIpToEipRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static ConvertNatPublicIpToEipRequest build(java.util.Map<String, ?> map) throws Exception {

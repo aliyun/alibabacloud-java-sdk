@@ -17,7 +17,6 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
@@ -27,7 +26,6 @@ public class DescribeHaVipsRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("Filter")
-    @Validation(required = true)
     public java.util.List<DescribeHaVipsRequestFilter> filter;
 
     public static DescribeHaVipsRequest build(java.util.Map<String, ?> map) throws Exception {

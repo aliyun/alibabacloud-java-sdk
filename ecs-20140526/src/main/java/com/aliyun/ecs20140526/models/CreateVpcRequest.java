@@ -14,7 +14,6 @@ public class CreateVpcRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("CidrBlock")

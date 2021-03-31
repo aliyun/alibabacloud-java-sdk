@@ -17,11 +17,9 @@ public class DeleteActivationRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ActivationId")
-    @Validation(required = true)
     public String activationId;
 
     public static DeleteActivationRequest build(java.util.Map<String, ?> map) throws Exception {

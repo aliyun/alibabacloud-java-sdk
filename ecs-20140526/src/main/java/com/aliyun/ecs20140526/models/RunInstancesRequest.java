@@ -4,6 +4,24 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RunInstancesRequest extends TeaModel {
+    @NameInMap("SystemDisk")
+    public RunInstancesRequestSystemDisk systemDisk;
+
+    @NameInMap("HibernationOptions")
+    public RunInstancesRequestHibernationOptions hibernationOptions;
+
+    @NameInMap("CpuOptions")
+    public RunInstancesRequestCpuOptions cpuOptions;
+
+    @NameInMap("SecurityOptions")
+    public RunInstancesRequestSecurityOptions securityOptions;
+
+    @NameInMap("PrivatePoolOptions")
+    public RunInstancesRequestPrivatePoolOptions privatePoolOptions;
+
+    @NameInMap("SchedulerOptions")
+    public RunInstancesRequestSchedulerOptions schedulerOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,7 +35,6 @@ public class RunInstancesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageId")
@@ -31,9 +48,6 @@ public class RunInstancesRequest extends TeaModel {
 
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
-
-    @NameInMap("SecurityGroupIds")
-    public java.util.List<String> securityGroupIds;
 
     @NameInMap("VSwitchId")
     public String vSwitchId;
@@ -53,9 +67,6 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("HostName")
     public String hostName;
 
-    @NameInMap("HostNames")
-    public java.util.List<String> hostNames;
-
     @NameInMap("UniqueSuffix")
     public Boolean uniqueSuffix;
 
@@ -71,20 +82,8 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
-    @NameInMap("SystemDisk")
-    public RunInstancesRequestSystemDisk systemDisk;
-
-    @NameInMap("DataDisk")
-    public java.util.List<RunInstancesRequestDataDisk> dataDisk;
-
-    @NameInMap("Arn")
-    public java.util.List<RunInstancesRequestArn> arn;
-
     @NameInMap("IoOptimized")
     public String ioOptimized;
-
-    @NameInMap("NetworkInterface")
-    public java.util.List<RunInstancesRequestNetworkInterface> networkInterface;
 
     @NameInMap("UserData")
     public String userData;
@@ -121,9 +120,6 @@ public class RunInstancesRequest extends TeaModel {
 
     @NameInMap("ClientToken")
     public String clientToken;
-
-    @NameInMap("Tag")
-    public java.util.List<RunInstancesRequestTag> tag;
 
     @NameInMap("HpcClusterId")
     public String hpcClusterId;
@@ -173,9 +169,6 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("CreditSpecification")
     public String creditSpecification;
 
-    @NameInMap("Ipv6Address")
-    public java.util.List<String> ipv6Address;
-
     @NameInMap("Ipv6AddressCount")
     public Integer ipv6AddressCount;
 
@@ -184,9 +177,6 @@ public class RunInstancesRequest extends TeaModel {
 
     @NameInMap("DeletionProtection")
     public Boolean deletionProtection;
-
-    @NameInMap("HibernationOptions")
-    public RunInstancesRequestHibernationOptions hibernationOptions;
 
     @NameInMap("Affinity")
     public String affinity;
@@ -200,12 +190,6 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("StorageSetPartitionNumber")
     public Integer storageSetPartitionNumber;
 
-    @NameInMap("CpuOptions")
-    public RunInstancesRequestCpuOptions cpuOptions;
-
-    @NameInMap("SecurityOptions")
-    public RunInstancesRequestSecurityOptions securityOptions;
-
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
 
@@ -215,18 +199,81 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
 
-    @NameInMap("PrivatePoolOptions")
-    public RunInstancesRequestPrivatePoolOptions privatePoolOptions;
-
     @NameInMap("Isp")
     public String isp;
 
-    @NameInMap("SchedulerOptions")
-    public RunInstancesRequestSchedulerOptions schedulerOptions;
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
+
+    @NameInMap("HostNames")
+    public java.util.List<String> hostNames;
+
+    @NameInMap("DataDisk")
+    public java.util.List<RunInstancesRequestDataDisk> dataDisk;
+
+    @NameInMap("Arn")
+    public java.util.List<RunInstancesRequestArn> arn;
+
+    @NameInMap("NetworkInterface")
+    public java.util.List<RunInstancesRequestNetworkInterface> networkInterface;
+
+    @NameInMap("Tag")
+    public java.util.List<RunInstancesRequestTag> tag;
+
+    @NameInMap("Ipv6Address")
+    public java.util.List<String> ipv6Address;
 
     public static RunInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         RunInstancesRequest self = new RunInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunInstancesRequest setSystemDisk(RunInstancesRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public RunInstancesRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    public RunInstancesRequest setHibernationOptions(RunInstancesRequestHibernationOptions hibernationOptions) {
+        this.hibernationOptions = hibernationOptions;
+        return this;
+    }
+    public RunInstancesRequestHibernationOptions getHibernationOptions() {
+        return this.hibernationOptions;
+    }
+
+    public RunInstancesRequest setCpuOptions(RunInstancesRequestCpuOptions cpuOptions) {
+        this.cpuOptions = cpuOptions;
+        return this;
+    }
+    public RunInstancesRequestCpuOptions getCpuOptions() {
+        return this.cpuOptions;
+    }
+
+    public RunInstancesRequest setSecurityOptions(RunInstancesRequestSecurityOptions securityOptions) {
+        this.securityOptions = securityOptions;
+        return this;
+    }
+    public RunInstancesRequestSecurityOptions getSecurityOptions() {
+        return this.securityOptions;
+    }
+
+    public RunInstancesRequest setPrivatePoolOptions(RunInstancesRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public RunInstancesRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
+    }
+
+    public RunInstancesRequest setSchedulerOptions(RunInstancesRequestSchedulerOptions schedulerOptions) {
+        this.schedulerOptions = schedulerOptions;
+        return this;
+    }
+    public RunInstancesRequestSchedulerOptions getSchedulerOptions() {
+        return this.schedulerOptions;
     }
 
     public RunInstancesRequest setOwnerId(Long ownerId) {
@@ -301,14 +348,6 @@ public class RunInstancesRequest extends TeaModel {
         return this.securityGroupId;
     }
 
-    public RunInstancesRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-        this.securityGroupIds = securityGroupIds;
-        return this;
-    }
-    public java.util.List<String> getSecurityGroupIds() {
-        return this.securityGroupIds;
-    }
-
     public RunInstancesRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -357,14 +396,6 @@ public class RunInstancesRequest extends TeaModel {
         return this.hostName;
     }
 
-    public RunInstancesRequest setHostNames(java.util.List<String> hostNames) {
-        this.hostNames = hostNames;
-        return this;
-    }
-    public java.util.List<String> getHostNames() {
-        return this.hostNames;
-    }
-
     public RunInstancesRequest setUniqueSuffix(Boolean uniqueSuffix) {
         this.uniqueSuffix = uniqueSuffix;
         return this;
@@ -405,44 +436,12 @@ public class RunInstancesRequest extends TeaModel {
         return this.internetChargeType;
     }
 
-    public RunInstancesRequest setSystemDisk(RunInstancesRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public RunInstancesRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
-    }
-
-    public RunInstancesRequest setDataDisk(java.util.List<RunInstancesRequestDataDisk> dataDisk) {
-        this.dataDisk = dataDisk;
-        return this;
-    }
-    public java.util.List<RunInstancesRequestDataDisk> getDataDisk() {
-        return this.dataDisk;
-    }
-
-    public RunInstancesRequest setArn(java.util.List<RunInstancesRequestArn> arn) {
-        this.arn = arn;
-        return this;
-    }
-    public java.util.List<RunInstancesRequestArn> getArn() {
-        return this.arn;
-    }
-
     public RunInstancesRequest setIoOptimized(String ioOptimized) {
         this.ioOptimized = ioOptimized;
         return this;
     }
     public String getIoOptimized() {
         return this.ioOptimized;
-    }
-
-    public RunInstancesRequest setNetworkInterface(java.util.List<RunInstancesRequestNetworkInterface> networkInterface) {
-        this.networkInterface = networkInterface;
-        return this;
-    }
-    public java.util.List<RunInstancesRequestNetworkInterface> getNetworkInterface() {
-        return this.networkInterface;
     }
 
     public RunInstancesRequest setUserData(String userData) {
@@ -539,14 +538,6 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public RunInstancesRequest setTag(java.util.List<RunInstancesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<RunInstancesRequestTag> getTag() {
-        return this.tag;
     }
 
     public RunInstancesRequest setHpcClusterId(String hpcClusterId) {
@@ -677,14 +668,6 @@ public class RunInstancesRequest extends TeaModel {
         return this.creditSpecification;
     }
 
-    public RunInstancesRequest setIpv6Address(java.util.List<String> ipv6Address) {
-        this.ipv6Address = ipv6Address;
-        return this;
-    }
-    public java.util.List<String> getIpv6Address() {
-        return this.ipv6Address;
-    }
-
     public RunInstancesRequest setIpv6AddressCount(Integer ipv6AddressCount) {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
@@ -707,14 +690,6 @@ public class RunInstancesRequest extends TeaModel {
     }
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
-    }
-
-    public RunInstancesRequest setHibernationOptions(RunInstancesRequestHibernationOptions hibernationOptions) {
-        this.hibernationOptions = hibernationOptions;
-        return this;
-    }
-    public RunInstancesRequestHibernationOptions getHibernationOptions() {
-        return this.hibernationOptions;
     }
 
     public RunInstancesRequest setAffinity(String affinity) {
@@ -749,22 +724,6 @@ public class RunInstancesRequest extends TeaModel {
         return this.storageSetPartitionNumber;
     }
 
-    public RunInstancesRequest setCpuOptions(RunInstancesRequestCpuOptions cpuOptions) {
-        this.cpuOptions = cpuOptions;
-        return this;
-    }
-    public RunInstancesRequestCpuOptions getCpuOptions() {
-        return this.cpuOptions;
-    }
-
-    public RunInstancesRequest setSecurityOptions(RunInstancesRequestSecurityOptions securityOptions) {
-        this.securityOptions = securityOptions;
-        return this;
-    }
-    public RunInstancesRequestSecurityOptions getSecurityOptions() {
-        return this.securityOptions;
-    }
-
     public RunInstancesRequest setHttpEndpoint(String httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -789,14 +748,6 @@ public class RunInstancesRequest extends TeaModel {
         return this.httpPutResponseHopLimit;
     }
 
-    public RunInstancesRequest setPrivatePoolOptions(RunInstancesRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public RunInstancesRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
-    }
-
     public RunInstancesRequest setIsp(String isp) {
         this.isp = isp;
         return this;
@@ -805,12 +756,60 @@ public class RunInstancesRequest extends TeaModel {
         return this.isp;
     }
 
-    public RunInstancesRequest setSchedulerOptions(RunInstancesRequestSchedulerOptions schedulerOptions) {
-        this.schedulerOptions = schedulerOptions;
+    public RunInstancesRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
         return this;
     }
-    public RunInstancesRequestSchedulerOptions getSchedulerOptions() {
-        return this.schedulerOptions;
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
+    }
+
+    public RunInstancesRequest setHostNames(java.util.List<String> hostNames) {
+        this.hostNames = hostNames;
+        return this;
+    }
+    public java.util.List<String> getHostNames() {
+        return this.hostNames;
+    }
+
+    public RunInstancesRequest setDataDisk(java.util.List<RunInstancesRequestDataDisk> dataDisk) {
+        this.dataDisk = dataDisk;
+        return this;
+    }
+    public java.util.List<RunInstancesRequestDataDisk> getDataDisk() {
+        return this.dataDisk;
+    }
+
+    public RunInstancesRequest setArn(java.util.List<RunInstancesRequestArn> arn) {
+        this.arn = arn;
+        return this;
+    }
+    public java.util.List<RunInstancesRequestArn> getArn() {
+        return this.arn;
+    }
+
+    public RunInstancesRequest setNetworkInterface(java.util.List<RunInstancesRequestNetworkInterface> networkInterface) {
+        this.networkInterface = networkInterface;
+        return this;
+    }
+    public java.util.List<RunInstancesRequestNetworkInterface> getNetworkInterface() {
+        return this.networkInterface;
+    }
+
+    public RunInstancesRequest setTag(java.util.List<RunInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<RunInstancesRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public RunInstancesRequest setIpv6Address(java.util.List<String> ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+    public java.util.List<String> getIpv6Address() {
+        return this.ipv6Address;
     }
 
     public static class RunInstancesRequestSystemDisk extends TeaModel {
@@ -883,302 +882,6 @@ public class RunInstancesRequest extends TeaModel {
         }
         public String getAutoSnapshotPolicyId() {
             return this.autoSnapshotPolicyId;
-        }
-
-    }
-
-    public static class RunInstancesRequestDataDisk extends TeaModel {
-        @NameInMap("Size")
-        public Integer size;
-
-        @NameInMap("SnapshotId")
-        public String snapshotId;
-
-        @NameInMap("Category")
-        public String category;
-
-        @NameInMap("Encrypted")
-        public String encrypted;
-
-        @NameInMap("KMSKeyId")
-        public String KMSKeyId;
-
-        @NameInMap("DiskName")
-        public String diskName;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("Device")
-        public String device;
-
-        @NameInMap("DeleteWithInstance")
-        public Boolean deleteWithInstance;
-
-        @NameInMap("PerformanceLevel")
-        public String performanceLevel;
-
-        @NameInMap("AutoSnapshotPolicyId")
-        public String autoSnapshotPolicyId;
-
-        @NameInMap("EncryptAlgorithm")
-        public String encryptAlgorithm;
-
-        public static RunInstancesRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
-            RunInstancesRequestDataDisk self = new RunInstancesRequestDataDisk();
-            return TeaModel.build(map, self);
-        }
-
-        public RunInstancesRequestDataDisk setSize(Integer size) {
-            this.size = size;
-            return this;
-        }
-        public Integer getSize() {
-            return this.size;
-        }
-
-        public RunInstancesRequestDataDisk setSnapshotId(String snapshotId) {
-            this.snapshotId = snapshotId;
-            return this;
-        }
-        public String getSnapshotId() {
-            return this.snapshotId;
-        }
-
-        public RunInstancesRequestDataDisk setCategory(String category) {
-            this.category = category;
-            return this;
-        }
-        public String getCategory() {
-            return this.category;
-        }
-
-        public RunInstancesRequestDataDisk setEncrypted(String encrypted) {
-            this.encrypted = encrypted;
-            return this;
-        }
-        public String getEncrypted() {
-            return this.encrypted;
-        }
-
-        public RunInstancesRequestDataDisk setKMSKeyId(String KMSKeyId) {
-            this.KMSKeyId = KMSKeyId;
-            return this;
-        }
-        public String getKMSKeyId() {
-            return this.KMSKeyId;
-        }
-
-        public RunInstancesRequestDataDisk setDiskName(String diskName) {
-            this.diskName = diskName;
-            return this;
-        }
-        public String getDiskName() {
-            return this.diskName;
-        }
-
-        public RunInstancesRequestDataDisk setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public RunInstancesRequestDataDisk setDevice(String device) {
-            this.device = device;
-            return this;
-        }
-        public String getDevice() {
-            return this.device;
-        }
-
-        public RunInstancesRequestDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
-            this.deleteWithInstance = deleteWithInstance;
-            return this;
-        }
-        public Boolean getDeleteWithInstance() {
-            return this.deleteWithInstance;
-        }
-
-        public RunInstancesRequestDataDisk setPerformanceLevel(String performanceLevel) {
-            this.performanceLevel = performanceLevel;
-            return this;
-        }
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
-        }
-
-        public RunInstancesRequestDataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
-            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
-            return this;
-        }
-        public String getAutoSnapshotPolicyId() {
-            return this.autoSnapshotPolicyId;
-        }
-
-        public RunInstancesRequestDataDisk setEncryptAlgorithm(String encryptAlgorithm) {
-            this.encryptAlgorithm = encryptAlgorithm;
-            return this;
-        }
-        public String getEncryptAlgorithm() {
-            return this.encryptAlgorithm;
-        }
-
-    }
-
-    public static class RunInstancesRequestArn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
-        public Long assumeRoleFor;
-
-        @NameInMap("Rolearn")
-        public String rolearn;
-
-        @NameInMap("RoleType")
-        public String roleType;
-
-        public static RunInstancesRequestArn build(java.util.Map<String, ?> map) throws Exception {
-            RunInstancesRequestArn self = new RunInstancesRequestArn();
-            return TeaModel.build(map, self);
-        }
-
-        public RunInstancesRequestArn setAssumeRoleFor(Long assumeRoleFor) {
-            this.assumeRoleFor = assumeRoleFor;
-            return this;
-        }
-        public Long getAssumeRoleFor() {
-            return this.assumeRoleFor;
-        }
-
-        public RunInstancesRequestArn setRolearn(String rolearn) {
-            this.rolearn = rolearn;
-            return this;
-        }
-        public String getRolearn() {
-            return this.rolearn;
-        }
-
-        public RunInstancesRequestArn setRoleType(String roleType) {
-            this.roleType = roleType;
-            return this;
-        }
-        public String getRoleType() {
-            return this.roleType;
-        }
-
-    }
-
-    public static class RunInstancesRequestNetworkInterface extends TeaModel {
-        @NameInMap("PrimaryIpAddress")
-        public String primaryIpAddress;
-
-        @NameInMap("VSwitchId")
-        public String vSwitchId;
-
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
-
-        @NameInMap("SecurityGroupIds")
-        public java.util.List<String> securityGroupIds;
-
-        @NameInMap("NetworkInterfaceName")
-        public String networkInterfaceName;
-
-        @NameInMap("Description")
-        public String description;
-
-        @NameInMap("QueueNumber")
-        public Integer queueNumber;
-
-        public static RunInstancesRequestNetworkInterface build(java.util.Map<String, ?> map) throws Exception {
-            RunInstancesRequestNetworkInterface self = new RunInstancesRequestNetworkInterface();
-            return TeaModel.build(map, self);
-        }
-
-        public RunInstancesRequestNetworkInterface setPrimaryIpAddress(String primaryIpAddress) {
-            this.primaryIpAddress = primaryIpAddress;
-            return this;
-        }
-        public String getPrimaryIpAddress() {
-            return this.primaryIpAddress;
-        }
-
-        public RunInstancesRequestNetworkInterface setVSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-        public String getVSwitchId() {
-            return this.vSwitchId;
-        }
-
-        public RunInstancesRequestNetworkInterface setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
-        }
-
-        public RunInstancesRequestNetworkInterface setSecurityGroupIds(java.util.List<String> securityGroupIds) {
-            this.securityGroupIds = securityGroupIds;
-            return this;
-        }
-        public java.util.List<String> getSecurityGroupIds() {
-            return this.securityGroupIds;
-        }
-
-        public RunInstancesRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
-            this.networkInterfaceName = networkInterfaceName;
-            return this;
-        }
-        public String getNetworkInterfaceName() {
-            return this.networkInterfaceName;
-        }
-
-        public RunInstancesRequestNetworkInterface setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
-        }
-
-        public RunInstancesRequestNetworkInterface setQueueNumber(Integer queueNumber) {
-            this.queueNumber = queueNumber;
-            return this;
-        }
-        public Integer getQueueNumber() {
-            return this.queueNumber;
-        }
-
-    }
-
-    public static class RunInstancesRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static RunInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            RunInstancesRequestTag self = new RunInstancesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public RunInstancesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public RunInstancesRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
     }
@@ -1307,6 +1010,302 @@ public class RunInstancesRequest extends TeaModel {
         }
         public String getDedicatedHostClusterId() {
             return this.dedicatedHostClusterId;
+        }
+
+    }
+
+    public static class RunInstancesRequestDataDisk extends TeaModel {
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("AutoSnapshotPolicyId")
+        public String autoSnapshotPolicyId;
+
+        @NameInMap("Encrypted")
+        public String encrypted;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("SnapshotId")
+        public String snapshotId;
+
+        @NameInMap("Device")
+        public String device;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        @NameInMap("DiskName")
+        public String diskName;
+
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("EncryptAlgorithm")
+        public String encryptAlgorithm;
+
+        @NameInMap("DeleteWithInstance")
+        public Boolean deleteWithInstance;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
+        public static RunInstancesRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestDataDisk self = new RunInstancesRequestDataDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestDataDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public RunInstancesRequestDataDisk setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+            return this;
+        }
+        public String getAutoSnapshotPolicyId() {
+            return this.autoSnapshotPolicyId;
+        }
+
+        public RunInstancesRequestDataDisk setEncrypted(String encrypted) {
+            this.encrypted = encrypted;
+            return this;
+        }
+        public String getEncrypted() {
+            return this.encrypted;
+        }
+
+        public RunInstancesRequestDataDisk setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public RunInstancesRequestDataDisk setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
+        }
+
+        public RunInstancesRequestDataDisk setDevice(String device) {
+            this.device = device;
+            return this;
+        }
+        public String getDevice() {
+            return this.device;
+        }
+
+        public RunInstancesRequestDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+        public RunInstancesRequestDataDisk setDiskName(String diskName) {
+            this.diskName = diskName;
+            return this;
+        }
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        public RunInstancesRequestDataDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public RunInstancesRequestDataDisk setEncryptAlgorithm(String encryptAlgorithm) {
+            this.encryptAlgorithm = encryptAlgorithm;
+            return this;
+        }
+        public String getEncryptAlgorithm() {
+            return this.encryptAlgorithm;
+        }
+
+        public RunInstancesRequestDataDisk setDeleteWithInstance(Boolean deleteWithInstance) {
+            this.deleteWithInstance = deleteWithInstance;
+            return this;
+        }
+        public Boolean getDeleteWithInstance() {
+            return this.deleteWithInstance;
+        }
+
+        public RunInstancesRequestDataDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+    }
+
+    public static class RunInstancesRequestArn extends TeaModel {
+        @NameInMap("RoleType")
+        public String roleType;
+
+        @NameInMap("Rolearn")
+        public String rolearn;
+
+        @NameInMap("AssumeRoleFor")
+        public Long assumeRoleFor;
+
+        public static RunInstancesRequestArn build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestArn self = new RunInstancesRequestArn();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestArn setRoleType(String roleType) {
+            this.roleType = roleType;
+            return this;
+        }
+        public String getRoleType() {
+            return this.roleType;
+        }
+
+        public RunInstancesRequestArn setRolearn(String rolearn) {
+            this.rolearn = rolearn;
+            return this;
+        }
+        public String getRolearn() {
+            return this.rolearn;
+        }
+
+        public RunInstancesRequestArn setAssumeRoleFor(Long assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
+            return this;
+        }
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
+        }
+
+    }
+
+    public static class RunInstancesRequestNetworkInterface extends TeaModel {
+        @NameInMap("NetworkInterfaceName")
+        public String networkInterfaceName;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("PrimaryIpAddress")
+        public String primaryIpAddress;
+
+        @NameInMap("QueueNumber")
+        public Integer queueNumber;
+
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
+        public static RunInstancesRequestNetworkInterface build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestNetworkInterface self = new RunInstancesRequestNetworkInterface();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestNetworkInterface setNetworkInterfaceName(String networkInterfaceName) {
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
+        }
+
+        public RunInstancesRequestNetworkInterface setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public RunInstancesRequestNetworkInterface setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public RunInstancesRequestNetworkInterface setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public RunInstancesRequestNetworkInterface setPrimaryIpAddress(String primaryIpAddress) {
+            this.primaryIpAddress = primaryIpAddress;
+            return this;
+        }
+        public String getPrimaryIpAddress() {
+            return this.primaryIpAddress;
+        }
+
+        public RunInstancesRequestNetworkInterface setQueueNumber(Integer queueNumber) {
+            this.queueNumber = queueNumber;
+            return this;
+        }
+        public Integer getQueueNumber() {
+            return this.queueNumber;
+        }
+
+        public RunInstancesRequestNetworkInterface setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+    }
+
+    public static class RunInstancesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static RunInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestTag self = new RunInstancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public RunInstancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

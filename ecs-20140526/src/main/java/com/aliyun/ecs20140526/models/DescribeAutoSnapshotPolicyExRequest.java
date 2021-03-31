@@ -17,7 +17,6 @@ public class DescribeAutoSnapshotPolicyExRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("AutoSnapshotPolicyId")

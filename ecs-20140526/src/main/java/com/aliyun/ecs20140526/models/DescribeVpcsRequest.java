@@ -17,7 +17,6 @@ public class DescribeVpcsRequest extends TeaModel {
     public String vpcId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("IsDefault")

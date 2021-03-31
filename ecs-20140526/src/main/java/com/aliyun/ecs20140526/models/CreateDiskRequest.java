@@ -14,7 +14,6 @@ public class CreateDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
@@ -47,12 +46,6 @@ public class CreateDiskRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
-    @NameInMap("Tag")
-    public java.util.List<CreateDiskRequestTag> tag;
-
-    @NameInMap("Arn")
-    public java.util.List<CreateDiskRequestArn> arn;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -73,6 +66,12 @@ public class CreateDiskRequest extends TeaModel {
 
     @NameInMap("StorageSetPartitionNumber")
     public Integer storageSetPartitionNumber;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateDiskRequestTag> tag;
+
+    @NameInMap("Arn")
+    public java.util.List<CreateDiskRequestArn> arn;
 
     public static CreateDiskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDiskRequest self = new CreateDiskRequest();
@@ -191,22 +190,6 @@ public class CreateDiskRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateDiskRequest setTag(java.util.List<CreateDiskRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateDiskRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public CreateDiskRequest setArn(java.util.List<CreateDiskRequestArn> arn) {
-        this.arn = arn;
-        return this;
-    }
-    public java.util.List<CreateDiskRequestArn> getArn() {
-        return this.arn;
-    }
-
     public CreateDiskRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -263,24 +246,32 @@ public class CreateDiskRequest extends TeaModel {
         return this.storageSetPartitionNumber;
     }
 
-    public static class CreateDiskRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
+    public CreateDiskRequest setTag(java.util.List<CreateDiskRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateDiskRequestTag> getTag() {
+        return this.tag;
+    }
 
+    public CreateDiskRequest setArn(java.util.List<CreateDiskRequestArn> arn) {
+        this.arn = arn;
+        return this;
+    }
+    public java.util.List<CreateDiskRequestArn> getArn() {
+        return this.arn;
+    }
+
+    public static class CreateDiskRequestTag extends TeaModel {
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static CreateDiskRequestTag build(java.util.Map<String, ?> map) throws Exception {
             CreateDiskRequestTag self = new CreateDiskRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public CreateDiskRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public CreateDiskRequestTag setKey(String key) {
@@ -291,29 +282,37 @@ public class CreateDiskRequest extends TeaModel {
             return this.key;
         }
 
+        public CreateDiskRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class CreateDiskRequestArn extends TeaModel {
-        @NameInMap("AssumeRoleFor")
-        public Long assumeRoleFor;
+        @NameInMap("RoleType")
+        public String roleType;
 
         @NameInMap("Rolearn")
         public String rolearn;
 
-        @NameInMap("RoleType")
-        public String roleType;
+        @NameInMap("AssumeRoleFor")
+        public Long assumeRoleFor;
 
         public static CreateDiskRequestArn build(java.util.Map<String, ?> map) throws Exception {
             CreateDiskRequestArn self = new CreateDiskRequestArn();
             return TeaModel.build(map, self);
         }
 
-        public CreateDiskRequestArn setAssumeRoleFor(Long assumeRoleFor) {
-            this.assumeRoleFor = assumeRoleFor;
+        public CreateDiskRequestArn setRoleType(String roleType) {
+            this.roleType = roleType;
             return this;
         }
-        public Long getAssumeRoleFor() {
-            return this.assumeRoleFor;
+        public String getRoleType() {
+            return this.roleType;
         }
 
         public CreateDiskRequestArn setRolearn(String rolearn) {
@@ -324,12 +323,12 @@ public class CreateDiskRequest extends TeaModel {
             return this.rolearn;
         }
 
-        public CreateDiskRequestArn setRoleType(String roleType) {
-            this.roleType = roleType;
+        public CreateDiskRequestArn setAssumeRoleFor(Long assumeRoleFor) {
+            this.assumeRoleFor = assumeRoleFor;
             return this;
         }
-        public String getRoleType() {
-            return this.roleType;
+        public Long getAssumeRoleFor() {
+            return this.assumeRoleFor;
         }
 
     }

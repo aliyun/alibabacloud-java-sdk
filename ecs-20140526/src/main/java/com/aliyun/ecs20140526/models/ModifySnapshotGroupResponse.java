@@ -4,21 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifySnapshotGroupResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifySnapshotGroupResponseBody body;
 
     public static ModifySnapshotGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifySnapshotGroupResponse self = new ModifySnapshotGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifySnapshotGroupResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifySnapshotGroupResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifySnapshotGroupResponse setBody(ModifySnapshotGroupResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifySnapshotGroupResponseBody getBody() {
+        return this.body;
     }
 
 }

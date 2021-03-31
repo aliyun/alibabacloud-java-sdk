@@ -17,18 +17,15 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
     public String zoneId;
 
     @NameInMap("NetworkType")
-    @Validation(required = true)
     public String networkType;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("SpotDuration")
