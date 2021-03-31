@@ -22,6 +22,12 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateElasticityAssuranceRequestTag> tag;
+
     @NameInMap("Period")
     public Integer period;
 
@@ -103,6 +109,22 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateElasticityAssuranceRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateElasticityAssuranceRequest setTag(java.util.List<CreateElasticityAssuranceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateElasticityAssuranceRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateElasticityAssuranceRequest setPeriod(Integer period) {
@@ -211,6 +233,36 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         }
         public String getMatchCriteria() {
             return this.matchCriteria;
+        }
+
+    }
+
+    public static class CreateElasticityAssuranceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateElasticityAssuranceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateElasticityAssuranceRequestTag self = new CreateElasticityAssuranceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateElasticityAssuranceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateElasticityAssuranceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

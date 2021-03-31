@@ -10,6 +10,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("CpuOptions")
     public RunInstancesRequestCpuOptions cpuOptions;
 
+    @NameInMap("SecurityOptions")
+    public RunInstancesRequestSecurityOptions securityOptions;
+
     @NameInMap("PrivatePoolOptions")
     public RunInstancesRequestPrivatePoolOptions privatePoolOptions;
 
@@ -199,6 +202,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("SecurityGroupIds")
     public java.util.List<String> securityGroupIds;
 
+    @NameInMap("HostNames")
+    public java.util.List<String> hostNames;
+
     @NameInMap("DataDisk")
     public java.util.List<RunInstancesRequestDataDisk> dataDisk;
 
@@ -233,6 +239,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public RunInstancesRequestCpuOptions getCpuOptions() {
         return this.cpuOptions;
+    }
+
+    public RunInstancesRequest setSecurityOptions(RunInstancesRequestSecurityOptions securityOptions) {
+        this.securityOptions = securityOptions;
+        return this;
+    }
+    public RunInstancesRequestSecurityOptions getSecurityOptions() {
+        return this.securityOptions;
     }
 
     public RunInstancesRequest setPrivatePoolOptions(RunInstancesRequestPrivatePoolOptions privatePoolOptions) {
@@ -739,6 +753,14 @@ public class RunInstancesRequest extends TeaModel {
         return this.securityGroupIds;
     }
 
+    public RunInstancesRequest setHostNames(java.util.List<String> hostNames) {
+        this.hostNames = hostNames;
+        return this;
+    }
+    public java.util.List<String> getHostNames() {
+        return this.hostNames;
+    }
+
     public RunInstancesRequest setDataDisk(java.util.List<RunInstancesRequestDataDisk> dataDisk) {
         this.dataDisk = dataDisk;
         return this;
@@ -890,6 +912,25 @@ public class RunInstancesRequest extends TeaModel {
         }
         public String getNuma() {
             return this.numa;
+        }
+
+    }
+
+    public static class RunInstancesRequestSecurityOptions extends TeaModel {
+        @NameInMap("TrustedSystemMode")
+        public String trustedSystemMode;
+
+        public static RunInstancesRequestSecurityOptions build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestSecurityOptions self = new RunInstancesRequestSecurityOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestSecurityOptions setTrustedSystemMode(String trustedSystemMode) {
+            this.trustedSystemMode = trustedSystemMode;
+            return this;
+        }
+        public String getTrustedSystemMode() {
+            return this.trustedSystemMode;
         }
 
     }

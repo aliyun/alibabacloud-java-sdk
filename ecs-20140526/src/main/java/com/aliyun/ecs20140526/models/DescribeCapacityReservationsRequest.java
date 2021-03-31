@@ -22,6 +22,12 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeCapacityReservationsRequestTag> tag;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -96,6 +102,22 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeCapacityReservationsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeCapacityReservationsRequest setTag(java.util.List<DescribeCapacityReservationsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeCapacityReservationsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeCapacityReservationsRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -167,6 +189,36 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         }
         public String getIds() {
             return this.ids;
+        }
+
+    }
+
+    public static class DescribeCapacityReservationsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCapacityReservationsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCapacityReservationsRequestTag self = new DescribeCapacityReservationsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCapacityReservationsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCapacityReservationsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }
