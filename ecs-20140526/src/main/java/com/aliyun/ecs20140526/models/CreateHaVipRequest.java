@@ -20,9 +20,11 @@ public class CreateHaVipRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     public String vSwitchId;
 
     @NameInMap("IpAddress")

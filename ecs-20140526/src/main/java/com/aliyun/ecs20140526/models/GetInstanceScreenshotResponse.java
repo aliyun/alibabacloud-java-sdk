@@ -4,33 +4,45 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceScreenshotResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("InstanceId")
     @Validation(required = true)
-    public GetInstanceScreenshotResponseBody body;
+    public String instanceId;
+
+    @NameInMap("Screenshot")
+    @Validation(required = true)
+    public String screenshot;
 
     public static GetInstanceScreenshotResponse build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceScreenshotResponse self = new GetInstanceScreenshotResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceScreenshotResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetInstanceScreenshotResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetInstanceScreenshotResponse setBody(GetInstanceScreenshotResponseBody body) {
-        this.body = body;
+    public GetInstanceScreenshotResponse setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public GetInstanceScreenshotResponseBody getBody() {
-        return this.body;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetInstanceScreenshotResponse setScreenshot(String screenshot) {
+        this.screenshot = screenshot;
+        return this;
+    }
+    public String getScreenshot() {
+        return this.screenshot;
     }
 
 }

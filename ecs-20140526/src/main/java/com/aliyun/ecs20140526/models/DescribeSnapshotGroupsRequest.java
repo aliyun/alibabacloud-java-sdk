@@ -17,19 +17,11 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
     public String instanceId;
-
-    @NameInMap("Name")
-    public String name;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("MaxResults")
-    public Integer maxResults;
 
     @NameInMap("SnapshotGroupId")
     public java.util.List<String> snapshotGroupId;
@@ -37,8 +29,17 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     @NameInMap("Status")
     public java.util.List<String> status;
 
+    @NameInMap("Name")
+    public String name;
+
     @NameInMap("AdditionalAttributes")
     public java.util.List<String> additionalAttributes;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
 
     public static DescribeSnapshotGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotGroupsRequest self = new DescribeSnapshotGroupsRequest();
@@ -93,30 +94,6 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeSnapshotGroupsRequest setName(String name) {
-        this.name = name;
-        return this;
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public DescribeSnapshotGroupsRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    public DescribeSnapshotGroupsRequest setMaxResults(Integer maxResults) {
-        this.maxResults = maxResults;
-        return this;
-    }
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
     public DescribeSnapshotGroupsRequest setSnapshotGroupId(java.util.List<String> snapshotGroupId) {
         this.snapshotGroupId = snapshotGroupId;
         return this;
@@ -133,12 +110,36 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
         return this.status;
     }
 
+    public DescribeSnapshotGroupsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
+    }
+
     public DescribeSnapshotGroupsRequest setAdditionalAttributes(java.util.List<String> additionalAttributes) {
         this.additionalAttributes = additionalAttributes;
         return this;
     }
     public java.util.List<String> getAdditionalAttributes() {
         return this.additionalAttributes;
+    }
+
+    public DescribeSnapshotGroupsRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public DescribeSnapshotGroupsRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
     }
 
 }

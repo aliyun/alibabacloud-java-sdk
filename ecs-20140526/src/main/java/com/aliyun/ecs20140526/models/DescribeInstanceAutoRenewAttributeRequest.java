@@ -20,6 +20,7 @@ public class DescribeInstanceAutoRenewAttributeRequest extends TeaModel {
     public String instanceId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RenewalStatus")

@@ -17,12 +17,14 @@ public class DescribeNetworkInterfaceAttributeRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeNetworkInterfaceAttributeRequestTag> tag;
 
     @NameInMap("NetworkInterfaceId")
+    @Validation(required = true)
     public String networkInterfaceId;
 
     @NameInMap("Attribute")

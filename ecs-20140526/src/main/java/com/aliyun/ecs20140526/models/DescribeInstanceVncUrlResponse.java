@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceVncUrlResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("VncUrl")
     @Validation(required = true)
-    public DescribeInstanceVncUrlResponseBody body;
+    public String vncUrl;
 
     public static DescribeInstanceVncUrlResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceVncUrlResponse self = new DescribeInstanceVncUrlResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceVncUrlResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeInstanceVncUrlResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeInstanceVncUrlResponse setBody(DescribeInstanceVncUrlResponseBody body) {
-        this.body = body;
+    public DescribeInstanceVncUrlResponse setVncUrl(String vncUrl) {
+        this.vncUrl = vncUrl;
         return this;
     }
-    public DescribeInstanceVncUrlResponseBody getBody() {
-        return this.body;
+    public String getVncUrl() {
+        return this.vncUrl;
     }
 
 }

@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateHpcClusterResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("HpcClusterId")
     @Validation(required = true)
-    public CreateHpcClusterResponseBody body;
+    public String hpcClusterId;
 
     public static CreateHpcClusterResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateHpcClusterResponse self = new CreateHpcClusterResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateHpcClusterResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateHpcClusterResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateHpcClusterResponse setBody(CreateHpcClusterResponseBody body) {
-        this.body = body;
+    public CreateHpcClusterResponse setHpcClusterId(String hpcClusterId) {
+        this.hpcClusterId = hpcClusterId;
         return this;
     }
-    public CreateHpcClusterResponseBody getBody() {
-        return this.body;
+    public String getHpcClusterId() {
+        return this.hpcClusterId;
     }
 
 }

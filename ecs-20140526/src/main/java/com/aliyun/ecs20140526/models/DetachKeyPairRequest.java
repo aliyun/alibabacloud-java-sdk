@@ -14,12 +14,15 @@ public class DetachKeyPairRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("KeyPairName")
+    @Validation(required = true)
     public String keyPairName;
 
     @NameInMap("InstanceIds")
+    @Validation(required = true)
     public String instanceIds;
 
     public static DetachKeyPairRequest build(java.util.Map<String, ?> map) throws Exception {

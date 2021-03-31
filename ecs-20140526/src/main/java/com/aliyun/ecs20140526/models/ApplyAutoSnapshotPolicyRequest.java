@@ -14,12 +14,15 @@ public class ApplyAutoSnapshotPolicyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("regionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("autoSnapshotPolicyId")
+    @Validation(required = true)
     public String autoSnapshotPolicyId;
 
     @NameInMap("diskIds")
+    @Validation(required = true)
     public String diskIds;
 
     public static ApplyAutoSnapshotPolicyRequest build(java.util.Map<String, ?> map) throws Exception {

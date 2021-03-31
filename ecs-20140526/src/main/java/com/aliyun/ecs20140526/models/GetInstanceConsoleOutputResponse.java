@@ -4,33 +4,57 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceConsoleOutputResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("InstanceId")
     @Validation(required = true)
-    public GetInstanceConsoleOutputResponseBody body;
+    public String instanceId;
+
+    @NameInMap("ConsoleOutput")
+    @Validation(required = true)
+    public String consoleOutput;
+
+    @NameInMap("LastUpdateTime")
+    @Validation(required = true)
+    public String lastUpdateTime;
 
     public static GetInstanceConsoleOutputResponse build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceConsoleOutputResponse self = new GetInstanceConsoleOutputResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetInstanceConsoleOutputResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetInstanceConsoleOutputResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetInstanceConsoleOutputResponse setBody(GetInstanceConsoleOutputResponseBody body) {
-        this.body = body;
+    public GetInstanceConsoleOutputResponse setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
-    public GetInstanceConsoleOutputResponseBody getBody() {
-        return this.body;
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public GetInstanceConsoleOutputResponse setConsoleOutput(String consoleOutput) {
+        this.consoleOutput = consoleOutput;
+        return this;
+    }
+    public String getConsoleOutput() {
+        return this.consoleOutput;
+    }
+
+    public GetInstanceConsoleOutputResponse setLastUpdateTime(String lastUpdateTime) {
+        this.lastUpdateTime = lastUpdateTime;
+        return this;
+    }
+    public String getLastUpdateTime() {
+        return this.lastUpdateTime;
     }
 
 }

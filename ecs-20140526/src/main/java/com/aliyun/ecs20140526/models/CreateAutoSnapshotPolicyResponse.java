@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateAutoSnapshotPolicyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("AutoSnapshotPolicyId")
     @Validation(required = true)
-    public CreateAutoSnapshotPolicyResponseBody body;
+    public String autoSnapshotPolicyId;
 
     public static CreateAutoSnapshotPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAutoSnapshotPolicyResponse self = new CreateAutoSnapshotPolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateAutoSnapshotPolicyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateAutoSnapshotPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateAutoSnapshotPolicyResponse setBody(CreateAutoSnapshotPolicyResponseBody body) {
-        this.body = body;
+    public CreateAutoSnapshotPolicyResponse setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+        this.autoSnapshotPolicyId = autoSnapshotPolicyId;
         return this;
     }
-    public CreateAutoSnapshotPolicyResponseBody getBody() {
-        return this.body;
+    public String getAutoSnapshotPolicyId() {
+        return this.autoSnapshotPolicyId;
     }
 
 }

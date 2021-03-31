@@ -17,9 +17,11 @@ public class SendFileRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("Description")
@@ -29,12 +31,18 @@ public class SendFileRequest extends TeaModel {
     public Long timeout;
 
     @NameInMap("TargetDir")
+    @Validation(required = true)
     public String targetDir;
+
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    public java.util.List<String> instanceId;
 
     @NameInMap("ContentType")
     public String contentType;
 
     @NameInMap("Content")
+    @Validation(required = true)
     public String content;
 
     @NameInMap("FileOwner")
@@ -48,9 +56,6 @@ public class SendFileRequest extends TeaModel {
 
     @NameInMap("Overwrite")
     public Boolean overwrite;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static SendFileRequest build(java.util.Map<String, ?> map) throws Exception {
         SendFileRequest self = new SendFileRequest();
@@ -129,6 +134,14 @@ public class SendFileRequest extends TeaModel {
         return this.targetDir;
     }
 
+    public SendFileRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
     public SendFileRequest setContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -175,14 +188,6 @@ public class SendFileRequest extends TeaModel {
     }
     public Boolean getOverwrite() {
         return this.overwrite;
-    }
-
-    public SendFileRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

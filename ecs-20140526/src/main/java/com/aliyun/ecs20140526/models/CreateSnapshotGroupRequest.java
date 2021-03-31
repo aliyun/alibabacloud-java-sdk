@@ -17,10 +17,15 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
+
+    @NameInMap("ExcludeDiskId")
+    public java.util.List<String> excludeDiskId;
 
     @NameInMap("InstantAccess")
     public Boolean instantAccess;
@@ -33,9 +38,6 @@ public class CreateSnapshotGroupRequest extends TeaModel {
 
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("ExcludeDiskId")
-    public java.util.List<String> excludeDiskId;
 
     public static CreateSnapshotGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSnapshotGroupRequest self = new CreateSnapshotGroupRequest();
@@ -90,6 +92,14 @@ public class CreateSnapshotGroupRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public CreateSnapshotGroupRequest setExcludeDiskId(java.util.List<String> excludeDiskId) {
+        this.excludeDiskId = excludeDiskId;
+        return this;
+    }
+    public java.util.List<String> getExcludeDiskId() {
+        return this.excludeDiskId;
+    }
+
     public CreateSnapshotGroupRequest setInstantAccess(Boolean instantAccess) {
         this.instantAccess = instantAccess;
         return this;
@@ -120,14 +130,6 @@ public class CreateSnapshotGroupRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public CreateSnapshotGroupRequest setExcludeDiskId(java.util.List<String> excludeDiskId) {
-        this.excludeDiskId = excludeDiskId;
-        return this;
-    }
-    public java.util.List<String> getExcludeDiskId() {
-        return this.excludeDiskId;
     }
 
 }

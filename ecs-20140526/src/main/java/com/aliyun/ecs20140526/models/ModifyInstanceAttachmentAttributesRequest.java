@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
-    @NameInMap("PrivatePoolOptions")
-    public ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions privatePoolOptions;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -20,22 +17,19 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
+
+    @NameInMap("PrivatePoolOptions")
+    public ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions privatePoolOptions;
 
     public static ModifyInstanceAttachmentAttributesRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAttachmentAttributesRequest self = new ModifyInstanceAttachmentAttributesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyInstanceAttachmentAttributesRequest setPrivatePoolOptions(ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
     }
 
     public ModifyInstanceAttachmentAttributesRequest setOwnerId(Long ownerId) {
@@ -86,8 +80,17 @@ public class ModifyInstanceAttachmentAttributesRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ModifyInstanceAttachmentAttributesRequest setPrivatePoolOptions(ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
+    }
+
     public static class ModifyInstanceAttachmentAttributesRequestPrivatePoolOptions extends TeaModel {
         @NameInMap("MatchCriteria")
+        @Validation(required = true)
         public String matchCriteria;
 
         @NameInMap("Id")

@@ -14,6 +14,7 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("SecurityGroupId")
+    @Validation(required = true)
     public String securityGroupId;
 
     @NameInMap("InstanceId")

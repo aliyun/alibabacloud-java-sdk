@@ -14,6 +14,7 @@ public class DescribeImageSupportInstanceTypesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageId")

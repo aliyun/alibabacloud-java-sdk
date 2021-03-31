@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateCapacityReservationResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("PrivatePoolOptionsId")
     @Validation(required = true)
-    public CreateCapacityReservationResponseBody body;
+    public String privatePoolOptionsId;
 
     public static CreateCapacityReservationResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateCapacityReservationResponse self = new CreateCapacityReservationResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateCapacityReservationResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateCapacityReservationResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateCapacityReservationResponse setBody(CreateCapacityReservationResponseBody body) {
-        this.body = body;
+    public CreateCapacityReservationResponse setPrivatePoolOptionsId(String privatePoolOptionsId) {
+        this.privatePoolOptionsId = privatePoolOptionsId;
         return this;
     }
-    public CreateCapacityReservationResponseBody getBody() {
-        return this.body;
+    public String getPrivatePoolOptionsId() {
+        return this.privatePoolOptionsId;
     }
 
 }

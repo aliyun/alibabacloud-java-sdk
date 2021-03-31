@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public DeleteSnapshotResponseBody body;
+    public String requestId;
 
     public static DeleteSnapshotResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteSnapshotResponse self = new DeleteSnapshotResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteSnapshotResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteSnapshotResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DeleteSnapshotResponse setBody(DeleteSnapshotResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteSnapshotResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

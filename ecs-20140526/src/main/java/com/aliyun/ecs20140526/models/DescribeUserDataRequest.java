@@ -14,9 +14,11 @@ public class DescribeUserDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     public static DescribeUserDataRequest build(java.util.Map<String, ?> map) throws Exception {

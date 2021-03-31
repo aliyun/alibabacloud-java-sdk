@@ -17,9 +17,11 @@ public class CreateRouteEntryRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("RouteTableId")
+    @Validation(required = true)
     public String routeTableId;
 
     @NameInMap("DestinationCidrBlock")
+    @Validation(required = true)
     public String destinationCidrBlock;
 
     @NameInMap("NextHopId")
@@ -131,23 +133,15 @@ public class CreateRouteEntryRequest extends TeaModel {
     }
 
     public static class CreateRouteEntryRequestNextHopList extends TeaModel {
-        @NameInMap("NextHopId")
-        public String nextHopId;
-
         @NameInMap("NextHopType")
         public String nextHopType;
+
+        @NameInMap("NextHopId")
+        public String nextHopId;
 
         public static CreateRouteEntryRequestNextHopList build(java.util.Map<String, ?> map) throws Exception {
             CreateRouteEntryRequestNextHopList self = new CreateRouteEntryRequestNextHopList();
             return TeaModel.build(map, self);
-        }
-
-        public CreateRouteEntryRequestNextHopList setNextHopId(String nextHopId) {
-            this.nextHopId = nextHopId;
-            return this;
-        }
-        public String getNextHopId() {
-            return this.nextHopId;
         }
 
         public CreateRouteEntryRequestNextHopList setNextHopType(String nextHopType) {
@@ -156,6 +150,14 @@ public class CreateRouteEntryRequest extends TeaModel {
         }
         public String getNextHopType() {
             return this.nextHopType;
+        }
+
+        public CreateRouteEntryRequestNextHopList setNextHopId(String nextHopId) {
+            this.nextHopId = nextHopId;
+            return this;
+        }
+        public String getNextHopId() {
+            return this.nextHopId;
         }
 
     }

@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouterInterfaceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public DeleteRouterInterfaceResponseBody body;
+    public String requestId;
 
     public static DeleteRouterInterfaceResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteRouterInterfaceResponse self = new DeleteRouterInterfaceResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteRouterInterfaceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteRouterInterfaceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DeleteRouterInterfaceResponse setBody(DeleteRouterInterfaceResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteRouterInterfaceResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

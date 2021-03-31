@@ -17,6 +17,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
@@ -26,6 +27,7 @@ public class DescribeAutoProvisioningGroupHistoryRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("AutoProvisioningGroupId")
+    @Validation(required = true)
     public String autoProvisioningGroupId;
 
     @NameInMap("StartTime")

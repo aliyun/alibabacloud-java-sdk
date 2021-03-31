@@ -29,6 +29,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String instanceType;
 
     @NameInMap("NetworkType")
+    @Validation(required = true)
     public String networkType;
 
     @NameInMap("InstanceChargeType")
@@ -40,6 +41,9 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     @NameInMap("IoOptimized")
     public String ioOptimized;
 
+    @NameInMap("InstanceTypeFamily")
+    public java.util.List<String> instanceTypeFamily;
+
     @NameInMap("PriorityStrategy")
     public String priorityStrategy;
 
@@ -47,6 +51,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Float maxPrice;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
@@ -60,9 +65,6 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
 
     @NameInMap("Scene")
     public String scene;
-
-    @NameInMap("InstanceTypeFamily")
-    public java.util.List<String> instanceTypeFamily;
 
     public static DescribeRecommendInstanceTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRecommendInstanceTypeRequest self = new DescribeRecommendInstanceTypeRequest();
@@ -165,6 +167,14 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
         return this.ioOptimized;
     }
 
+    public DescribeRecommendInstanceTypeRequest setInstanceTypeFamily(java.util.List<String> instanceTypeFamily) {
+        this.instanceTypeFamily = instanceTypeFamily;
+        return this;
+    }
+    public java.util.List<String> getInstanceTypeFamily() {
+        return this.instanceTypeFamily;
+    }
+
     public DescribeRecommendInstanceTypeRequest setPriorityStrategy(String priorityStrategy) {
         this.priorityStrategy = priorityStrategy;
         return this;
@@ -219,14 +229,6 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     }
     public String getScene() {
         return this.scene;
-    }
-
-    public DescribeRecommendInstanceTypeRequest setInstanceTypeFamily(java.util.List<String> instanceTypeFamily) {
-        this.instanceTypeFamily = instanceTypeFamily;
-        return this;
-    }
-    public java.util.List<String> getInstanceTypeFamily() {
-        return this.instanceTypeFamily;
     }
 
 }

@@ -17,12 +17,15 @@ public class ModifyBandwidthPackageSpecRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BandwidthPackageId")
+    @Validation(required = true)
     public String bandwidthPackageId;
 
     @NameInMap("Bandwidth")
+    @Validation(required = true)
     public String bandwidth;
 
     public static ModifyBandwidthPackageSpecRequest build(java.util.Map<String, ?> map) throws Exception {

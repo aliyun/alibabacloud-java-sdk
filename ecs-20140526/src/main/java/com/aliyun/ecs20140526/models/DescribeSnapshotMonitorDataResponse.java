@@ -4,33 +4,85 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotMonitorDataResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("MonitorData")
     @Validation(required = true)
-    public DescribeSnapshotMonitorDataResponseBody body;
+    public DescribeSnapshotMonitorDataResponseMonitorData monitorData;
 
     public static DescribeSnapshotMonitorDataResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotMonitorDataResponse self = new DescribeSnapshotMonitorDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSnapshotMonitorDataResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeSnapshotMonitorDataResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeSnapshotMonitorDataResponse setBody(DescribeSnapshotMonitorDataResponseBody body) {
-        this.body = body;
+    public DescribeSnapshotMonitorDataResponse setMonitorData(DescribeSnapshotMonitorDataResponseMonitorData monitorData) {
+        this.monitorData = monitorData;
         return this;
     }
-    public DescribeSnapshotMonitorDataResponseBody getBody() {
-        return this.body;
+    public DescribeSnapshotMonitorDataResponseMonitorData getMonitorData() {
+        return this.monitorData;
+    }
+
+    public static class DescribeSnapshotMonitorDataResponseMonitorDataDataPoint extends TeaModel {
+        @NameInMap("TimeStamp")
+        @Validation(required = true)
+        public String timeStamp;
+
+        @NameInMap("Size")
+        @Validation(required = true)
+        public Long size;
+
+        public static DescribeSnapshotMonitorDataResponseMonitorDataDataPoint build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotMonitorDataResponseMonitorDataDataPoint self = new DescribeSnapshotMonitorDataResponseMonitorDataDataPoint();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotMonitorDataResponseMonitorDataDataPoint setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
+        }
+
+        public DescribeSnapshotMonitorDataResponseMonitorDataDataPoint setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+    }
+
+    public static class DescribeSnapshotMonitorDataResponseMonitorData extends TeaModel {
+        @NameInMap("DataPoint")
+        @Validation(required = true)
+        public java.util.List<DescribeSnapshotMonitorDataResponseMonitorDataDataPoint> dataPoint;
+
+        public static DescribeSnapshotMonitorDataResponseMonitorData build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSnapshotMonitorDataResponseMonitorData self = new DescribeSnapshotMonitorDataResponseMonitorData();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSnapshotMonitorDataResponseMonitorData setDataPoint(java.util.List<DescribeSnapshotMonitorDataResponseMonitorDataDataPoint> dataPoint) {
+            this.dataPoint = dataPoint;
+            return this;
+        }
+        public java.util.List<DescribeSnapshotMonitorDataResponseMonitorDataDataPoint> getDataPoint() {
+            return this.dataPoint;
+        }
+
     }
 
 }

@@ -17,9 +17,11 @@ public class DeleteSnapshotGroupRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SnapshotGroupId")
+    @Validation(required = true)
     public String snapshotGroupId;
 
     public static DeleteSnapshotGroupRequest build(java.util.Map<String, ?> map) throws Exception {

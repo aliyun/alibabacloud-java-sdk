@@ -17,6 +17,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceChargeType")
@@ -29,6 +30,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
     public Integer spotDuration;
 
     @NameInMap("DestinationResource")
+    @Validation(required = true)
     public String destinationResource;
 
     @NameInMap("ZoneId")

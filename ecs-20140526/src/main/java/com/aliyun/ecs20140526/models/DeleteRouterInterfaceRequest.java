@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteRouterInterfaceRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RouterInterfaceId")
+    @Validation(required = true)
     public String routerInterfaceId;
 
     @NameInMap("OwnerId")

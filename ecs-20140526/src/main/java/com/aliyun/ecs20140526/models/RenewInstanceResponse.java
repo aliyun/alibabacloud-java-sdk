@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class RenewInstanceResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("OrderId")
     @Validation(required = true)
-    public RenewInstanceResponseBody body;
+    public String orderId;
 
     public static RenewInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceResponse self = new RenewInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public RenewInstanceResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public RenewInstanceResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public RenewInstanceResponse setBody(RenewInstanceResponseBody body) {
-        this.body = body;
+    public RenewInstanceResponse setOrderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
-    public RenewInstanceResponseBody getBody() {
-        return this.body;
+    public String getOrderId() {
+        return this.orderId;
     }
 
 }

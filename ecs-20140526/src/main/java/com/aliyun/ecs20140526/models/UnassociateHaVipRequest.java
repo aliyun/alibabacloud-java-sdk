@@ -20,12 +20,15 @@ public class UnassociateHaVipRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("HaVipId")
+    @Validation(required = true)
     public String haVipId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Force")

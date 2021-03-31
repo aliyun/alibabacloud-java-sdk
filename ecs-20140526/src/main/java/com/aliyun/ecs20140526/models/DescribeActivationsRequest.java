@@ -17,6 +17,7 @@ public class DescribeActivationsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ActivationId")

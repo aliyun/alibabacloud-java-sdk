@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyImageSharePermissionResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public ModifyImageSharePermissionResponseBody body;
+    public String requestId;
 
     public static ModifyImageSharePermissionResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyImageSharePermissionResponse self = new ModifyImageSharePermissionResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyImageSharePermissionResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ModifyImageSharePermissionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public ModifyImageSharePermissionResponse setBody(ModifyImageSharePermissionResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public ModifyImageSharePermissionResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

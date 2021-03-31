@@ -14,9 +14,11 @@ public class DescribeTaskAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("TaskId")
+    @Validation(required = true)
     public String taskId;
 
     public static DescribeTaskAttributeRequest build(java.util.Map<String, ?> map) throws Exception {

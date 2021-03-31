@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImageResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("ImageId")
     @Validation(required = true)
-    public CreateImageResponseBody body;
+    public String imageId;
 
     public static CreateImageResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateImageResponse self = new CreateImageResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateImageResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateImageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateImageResponse setBody(CreateImageResponseBody body) {
-        this.body = body;
+    public CreateImageResponse setImageId(String imageId) {
+        this.imageId = imageId;
         return this;
     }
-    public CreateImageResponseBody getBody() {
-        return this.body;
+    public String getImageId() {
+        return this.imageId;
     }
 
 }

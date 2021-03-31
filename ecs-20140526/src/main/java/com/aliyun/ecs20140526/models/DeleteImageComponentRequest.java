@@ -17,12 +17,14 @@ public class DeleteImageComponentRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("TemplateTag")
     public java.util.List<DeleteImageComponentRequestTemplateTag> templateTag;
 
     @NameInMap("ImageComponentId")
+    @Validation(required = true)
     public String imageComponentId;
 
     public static DeleteImageComponentRequest build(java.util.Map<String, ?> map) throws Exception {

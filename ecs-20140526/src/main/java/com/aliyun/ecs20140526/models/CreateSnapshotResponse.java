@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateSnapshotResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("SnapshotId")
     @Validation(required = true)
-    public CreateSnapshotResponseBody body;
+    public String snapshotId;
 
     public static CreateSnapshotResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateSnapshotResponse self = new CreateSnapshotResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateSnapshotResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateSnapshotResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateSnapshotResponse setBody(CreateSnapshotResponseBody body) {
-        this.body = body;
+    public CreateSnapshotResponse setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
         return this;
     }
-    public CreateSnapshotResponseBody getBody() {
-        return this.body;
+    public String getSnapshotId() {
+        return this.snapshotId;
     }
 
 }

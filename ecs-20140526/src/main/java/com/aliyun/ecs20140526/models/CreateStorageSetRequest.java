@@ -20,9 +20,11 @@ public class CreateStorageSetRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
+    @Validation(required = true)
     public String zoneId;
 
     @NameInMap("StorageSetName")

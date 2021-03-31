@@ -20,6 +20,7 @@ public class DescribeUserBusinessBehaviorRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("statusKey")
+    @Validation(required = true)
     public String statusKey;
 
     public static DescribeUserBusinessBehaviorRequest build(java.util.Map<String, ?> map) throws Exception {

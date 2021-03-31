@@ -14,22 +14,24 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ImageId")
+    @Validation(required = true)
     public String imageId;
-
-    @NameInMap("OwnerAccount")
-    public String ownerAccount;
-
-    @NameInMap("LaunchPermission")
-    public String launchPermission;
 
     @NameInMap("AddAccount")
     public java.util.List<String> addAccount;
 
     @NameInMap("RemoveAccount")
     public java.util.List<String> removeAccount;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
+    @NameInMap("LaunchPermission")
+    public String launchPermission;
 
     public static ModifyImageSharePermissionRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyImageSharePermissionRequest self = new ModifyImageSharePermissionRequest();
@@ -76,22 +78,6 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
         return this.imageId;
     }
 
-    public ModifyImageSharePermissionRequest setOwnerAccount(String ownerAccount) {
-        this.ownerAccount = ownerAccount;
-        return this;
-    }
-    public String getOwnerAccount() {
-        return this.ownerAccount;
-    }
-
-    public ModifyImageSharePermissionRequest setLaunchPermission(String launchPermission) {
-        this.launchPermission = launchPermission;
-        return this;
-    }
-    public String getLaunchPermission() {
-        return this.launchPermission;
-    }
-
     public ModifyImageSharePermissionRequest setAddAccount(java.util.List<String> addAccount) {
         this.addAccount = addAccount;
         return this;
@@ -106,6 +92,22 @@ public class ModifyImageSharePermissionRequest extends TeaModel {
     }
     public java.util.List<String> getRemoveAccount() {
         return this.removeAccount;
+    }
+
+    public ModifyImageSharePermissionRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    public ModifyImageSharePermissionRequest setLaunchPermission(String launchPermission) {
+        this.launchPermission = launchPermission;
+        return this;
+    }
+    public String getLaunchPermission() {
+        return this.launchPermission;
     }
 
 }

@@ -14,12 +14,14 @@ public class DetachInstanceRamRoleRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RamRoleName")
     public String ramRoleName;
 
     @NameInMap("InstanceIds")
+    @Validation(required = true)
     public String instanceIds;
 
     public static DetachInstanceRamRoleRequest build(java.util.Map<String, ?> map) throws Exception {
