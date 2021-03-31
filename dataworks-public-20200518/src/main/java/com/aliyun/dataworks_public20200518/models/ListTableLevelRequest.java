@@ -12,6 +12,12 @@ public class ListTableLevelRequest extends TeaModel {
     @Validation(required = true)
     public Integer levelType;
 
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     public static ListTableLevelRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTableLevelRequest self = new ListTableLevelRequest();
         return TeaModel.build(map, self);
@@ -31,6 +37,22 @@ public class ListTableLevelRequest extends TeaModel {
     }
     public Integer getLevelType() {
         return this.levelType;
+    }
+
+    public ListTableLevelRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListTableLevelRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

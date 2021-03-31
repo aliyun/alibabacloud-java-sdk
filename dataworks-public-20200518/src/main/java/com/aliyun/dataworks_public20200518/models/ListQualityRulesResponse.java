@@ -178,6 +178,10 @@ public class ListQualityRulesResponse extends TeaModel {
         @Validation(required = true)
         public String expectValue;
 
+        @NameInMap("OnDutyAccountName")
+        @Validation(required = true)
+        public String onDutyAccountName;
+
         public static ListQualityRulesResponseDataRules build(java.util.Map<String, ?> map) throws Exception {
             ListQualityRulesResponseDataRules self = new ListQualityRulesResponseDataRules();
             return TeaModel.build(map, self);
@@ -373,6 +377,14 @@ public class ListQualityRulesResponse extends TeaModel {
         }
         public String getExpectValue() {
             return this.expectValue;
+        }
+
+        public ListQualityRulesResponseDataRules setOnDutyAccountName(String onDutyAccountName) {
+            this.onDutyAccountName = onDutyAccountName;
+            return this;
+        }
+        public String getOnDutyAccountName() {
+            return this.onDutyAccountName;
         }
 
     }

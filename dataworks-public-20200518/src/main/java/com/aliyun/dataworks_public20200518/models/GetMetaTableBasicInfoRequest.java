@@ -19,6 +19,9 @@ public class GetMetaTableBasicInfoRequest extends TeaModel {
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    @NameInMap("Extension")
+    public Boolean extension;
+
     public static GetMetaTableBasicInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableBasicInfoRequest self = new GetMetaTableBasicInfoRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class GetMetaTableBasicInfoRequest extends TeaModel {
     }
     public String getDataSourceType() {
         return this.dataSourceType;
+    }
+
+    public GetMetaTableBasicInfoRequest setExtension(Boolean extension) {
+        this.extension = extension;
+        return this;
+    }
+    public Boolean getExtension() {
+        return this.extension;
     }
 
 }

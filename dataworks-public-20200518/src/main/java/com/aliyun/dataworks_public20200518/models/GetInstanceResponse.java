@@ -170,13 +170,17 @@ public class GetInstanceResponse extends TeaModel {
         @Validation(required = true)
         public String dqcDescription;
 
-        @NameInMap("ErrorMessage")
-        @Validation(required = true)
-        public String errorMessage;
-
         @NameInMap("RelatedFlowId")
         @Validation(required = true)
         public Long relatedFlowId;
+
+        @NameInMap("TaskType")
+        @Validation(required = true)
+        public String taskType;
+
+        @NameInMap("TaskRerunTime")
+        @Validation(required = true)
+        public Integer taskRerunTime;
 
         public static GetInstanceResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceResponseData self = new GetInstanceResponseData();
@@ -359,20 +363,28 @@ public class GetInstanceResponse extends TeaModel {
             return this.dqcDescription;
         }
 
-        public GetInstanceResponseData setErrorMessage(String errorMessage) {
-            this.errorMessage = errorMessage;
-            return this;
-        }
-        public String getErrorMessage() {
-            return this.errorMessage;
-        }
-
         public GetInstanceResponseData setRelatedFlowId(Long relatedFlowId) {
             this.relatedFlowId = relatedFlowId;
             return this;
         }
         public Long getRelatedFlowId() {
             return this.relatedFlowId;
+        }
+
+        public GetInstanceResponseData setTaskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public String getTaskType() {
+            return this.taskType;
+        }
+
+        public GetInstanceResponseData setTaskRerunTime(Integer taskRerunTime) {
+            this.taskRerunTime = taskRerunTime;
+            return this;
+        }
+        public Integer getTaskRerunTime() {
+            return this.taskRerunTime;
         }
 
     }

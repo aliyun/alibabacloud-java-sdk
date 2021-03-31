@@ -84,7 +84,7 @@ public class ListInstancesResponse extends TeaModel {
     public static class ListInstancesResponseDataInstances extends TeaModel {
         @NameInMap("NodeId")
         @Validation(required = true)
-        public Integer nodeId;
+        public Long nodeId;
 
         @NameInMap("InstanceId")
         @Validation(required = true)
@@ -92,7 +92,7 @@ public class ListInstancesResponse extends TeaModel {
 
         @NameInMap("DagId")
         @Validation(required = true)
-        public Integer dagId;
+        public Long dagId;
 
         @NameInMap("DagType")
         @Validation(required = true)
@@ -178,16 +178,24 @@ public class ListInstancesResponse extends TeaModel {
         @Validation(required = true)
         public Long relatedFlowId;
 
+        @NameInMap("TaskType")
+        @Validation(required = true)
+        public String taskType;
+
+        @NameInMap("TaskRerunTime")
+        @Validation(required = true)
+        public Integer taskRerunTime;
+
         public static ListInstancesResponseDataInstances build(java.util.Map<String, ?> map) throws Exception {
             ListInstancesResponseDataInstances self = new ListInstancesResponseDataInstances();
             return TeaModel.build(map, self);
         }
 
-        public ListInstancesResponseDataInstances setNodeId(Integer nodeId) {
+        public ListInstancesResponseDataInstances setNodeId(Long nodeId) {
             this.nodeId = nodeId;
             return this;
         }
-        public Integer getNodeId() {
+        public Long getNodeId() {
             return this.nodeId;
         }
 
@@ -199,11 +207,11 @@ public class ListInstancesResponse extends TeaModel {
             return this.instanceId;
         }
 
-        public ListInstancesResponseDataInstances setDagId(Integer dagId) {
+        public ListInstancesResponseDataInstances setDagId(Long dagId) {
             this.dagId = dagId;
             return this;
         }
-        public Integer getDagId() {
+        public Long getDagId() {
             return this.dagId;
         }
 
@@ -373,6 +381,22 @@ public class ListInstancesResponse extends TeaModel {
         }
         public Long getRelatedFlowId() {
             return this.relatedFlowId;
+        }
+
+        public ListInstancesResponseDataInstances setTaskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public String getTaskType() {
+            return this.taskType;
+        }
+
+        public ListInstancesResponseDataInstances setTaskRerunTime(Integer taskRerunTime) {
+            this.taskRerunTime = taskRerunTime;
+            return this;
+        }
+        public Integer getTaskRerunTime() {
+            return this.taskRerunTime;
         }
 
     }

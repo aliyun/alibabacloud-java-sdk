@@ -4,11 +4,7 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableRequest extends TeaModel {
-    @NameInMap("HasPart")
-    public Integer hasPart;
-
     @NameInMap("Columns")
-    @Validation(required = true)
     public java.util.List<UpdateTableRequestColumns> columns;
 
     @NameInMap("IsView")
@@ -57,17 +53,18 @@ public class UpdateTableRequest extends TeaModel {
     @NameInMap("CreateIfNotExists")
     public Boolean createIfNotExists;
 
+    @NameInMap("OwnerId")
+    public String ownerId;
+
+    @NameInMap("HasPart")
+    public Integer hasPart;
+
+    @NameInMap("Comment")
+    public String comment;
+
     public static UpdateTableRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableRequest self = new UpdateTableRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTableRequest setHasPart(Integer hasPart) {
-        this.hasPart = hasPart;
-        return this;
-    }
-    public Integer getHasPart() {
-        return this.hasPart;
     }
 
     public UpdateTableRequest setColumns(java.util.List<UpdateTableRequestColumns> columns) {
@@ -198,6 +195,30 @@ public class UpdateTableRequest extends TeaModel {
         return this.createIfNotExists;
     }
 
+    public UpdateTableRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
+    public UpdateTableRequest setHasPart(Integer hasPart) {
+        this.hasPart = hasPart;
+        return this;
+    }
+    public Integer getHasPart() {
+        return this.hasPart;
+    }
+
+    public UpdateTableRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
+    }
+
     public static class UpdateTableRequestColumns extends TeaModel {
         @NameInMap("ColumnName")
         @Validation(required = true)
@@ -217,13 +238,7 @@ public class UpdateTableRequest extends TeaModel {
         public Integer length;
 
         @NameInMap("IsPartitionCol")
-        public Integer isPartitionCol;
-
-        @NameInMap("IsPrimaryKey")
-        public Integer isPrimaryKey;
-
-        @NameInMap("IsNullable")
-        public Integer isNullable;
+        public Boolean isPartitionCol;
 
         @NameInMap("Comment")
         public String comment;
@@ -273,28 +288,12 @@ public class UpdateTableRequest extends TeaModel {
             return this.length;
         }
 
-        public UpdateTableRequestColumns setIsPartitionCol(Integer isPartitionCol) {
+        public UpdateTableRequestColumns setIsPartitionCol(Boolean isPartitionCol) {
             this.isPartitionCol = isPartitionCol;
             return this;
         }
-        public Integer getIsPartitionCol() {
+        public Boolean getIsPartitionCol() {
             return this.isPartitionCol;
-        }
-
-        public UpdateTableRequestColumns setIsPrimaryKey(Integer isPrimaryKey) {
-            this.isPrimaryKey = isPrimaryKey;
-            return this;
-        }
-        public Integer getIsPrimaryKey() {
-            return this.isPrimaryKey;
-        }
-
-        public UpdateTableRequestColumns setIsNullable(Integer isNullable) {
-            this.isNullable = isNullable;
-            return this;
-        }
-        public Integer getIsNullable() {
-            return this.isNullable;
         }
 
         public UpdateTableRequestColumns setComment(String comment) {

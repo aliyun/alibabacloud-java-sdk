@@ -142,6 +142,10 @@ public class GetQualityEntityResponse extends TeaModel {
         @Validation(required = true)
         public String relativeNode;
 
+        @NameInMap("OnDutyAccountName")
+        @Validation(required = true)
+        public String onDutyAccountName;
+
         public static GetQualityEntityResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityEntityResponseData self = new GetQualityEntityResponseData();
             return TeaModel.build(map, self);
@@ -265,6 +269,14 @@ public class GetQualityEntityResponse extends TeaModel {
         }
         public String getRelativeNode() {
             return this.relativeNode;
+        }
+
+        public GetQualityEntityResponseData setOnDutyAccountName(String onDutyAccountName) {
+            this.onDutyAccountName = onDutyAccountName;
+            return this;
+        }
+        public String getOnDutyAccountName() {
+            return this.onDutyAccountName;
         }
 
     }

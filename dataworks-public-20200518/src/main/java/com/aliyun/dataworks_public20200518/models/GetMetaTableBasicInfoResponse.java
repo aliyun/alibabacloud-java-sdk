@@ -162,6 +162,22 @@ public class GetMetaTableBasicInfoResponse extends TeaModel {
         @Validation(required = true)
         public String caption;
 
+        @NameInMap("IsPartitionTable")
+        @Validation(required = true)
+        public Boolean isPartitionTable;
+
+        @NameInMap("ReadCount")
+        @Validation(required = true)
+        public Long readCount;
+
+        @NameInMap("ViewCount")
+        @Validation(required = true)
+        public Long viewCount;
+
+        @NameInMap("FavoriteCount")
+        @Validation(required = true)
+        public Long favoriteCount;
+
         public static GetMetaTableBasicInfoResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableBasicInfoResponseData self = new GetMetaTableBasicInfoResponseData();
             return TeaModel.build(map, self);
@@ -325,6 +341,38 @@ public class GetMetaTableBasicInfoResponse extends TeaModel {
         }
         public String getCaption() {
             return this.caption;
+        }
+
+        public GetMetaTableBasicInfoResponseData setIsPartitionTable(Boolean isPartitionTable) {
+            this.isPartitionTable = isPartitionTable;
+            return this;
+        }
+        public Boolean getIsPartitionTable() {
+            return this.isPartitionTable;
+        }
+
+        public GetMetaTableBasicInfoResponseData setReadCount(Long readCount) {
+            this.readCount = readCount;
+            return this;
+        }
+        public Long getReadCount() {
+            return this.readCount;
+        }
+
+        public GetMetaTableBasicInfoResponseData setViewCount(Long viewCount) {
+            this.viewCount = viewCount;
+            return this;
+        }
+        public Long getViewCount() {
+            return this.viewCount;
+        }
+
+        public GetMetaTableBasicInfoResponseData setFavoriteCount(Long favoriteCount) {
+            this.favoriteCount = favoriteCount;
+            return this;
+        }
+        public Long getFavoriteCount() {
+            return this.favoriteCount;
         }
 
     }
