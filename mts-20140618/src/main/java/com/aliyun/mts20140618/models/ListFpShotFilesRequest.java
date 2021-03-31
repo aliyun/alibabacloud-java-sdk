@@ -17,7 +17,7 @@ public class ListFpShotFilesRequest extends TeaModel {
     public String nextPageToken;
 
     @NameInMap("PageSize")
-    public Long pageSize;
+    public Integer pageSize;
 
     @NameInMap("FpDBId")
     public String fpDBId;
@@ -62,11 +62,11 @@ public class ListFpShotFilesRequest extends TeaModel {
         return this.nextPageToken;
     }
 
-    public ListFpShotFilesRequest setPageSize(Long pageSize) {
+    public ListFpShotFilesRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public Long getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

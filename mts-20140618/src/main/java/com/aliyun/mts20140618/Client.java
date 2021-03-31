@@ -697,6 +697,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listFpShotNotaryWithOptions(request, runtime);
     }
 
+    public ListInferenceJobResponse listInferenceJobWithOptions(ListInferenceJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ListInferenceJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new ListInferenceJobResponse());
+    }
+
+    public ListInferenceJobResponse listInferenceJob(ListInferenceJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listInferenceJobWithOptions(request, runtime);
+    }
+
     public ListJobResponse listJobWithOptions(ListJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1046,6 +1059,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryImageSearchJobListResponse queryImageSearchJobList(QueryImageSearchJobListRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryImageSearchJobListWithOptions(request, runtime);
+    }
+
+    public QueryInferenceJobResponse queryInferenceJobWithOptions(QueryInferenceJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryInferenceJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new QueryInferenceJobResponse());
+    }
+
+    public QueryInferenceJobResponse queryInferenceJob(QueryInferenceJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryInferenceJobWithOptions(request, runtime);
     }
 
     public QueryInnerJobResponse queryInnerJobWithOptions(QueryInnerJobRequest request, RuntimeOptions runtime) throws Exception {
@@ -1943,6 +1969,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitImageSearchJobResponse submitImageSearchJob(SubmitImageSearchJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitImageSearchJobWithOptions(request, runtime);
+    }
+
+    public SubmitInferenceJobResponse submitInferenceJobWithOptions(SubmitInferenceJobRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SubmitInferenceJob", "2014-06-18", "HTTPS", "POST", "AK", "json", req, runtime), new SubmitInferenceJobResponse());
+    }
+
+    public SubmitInferenceJobResponse submitInferenceJob(SubmitInferenceJobRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.submitInferenceJobWithOptions(request, runtime);
     }
 
     public SubmitInnerJobResponse submitInnerJobWithOptions(SubmitInnerJobRequest request, RuntimeOptions runtime) throws Exception {
