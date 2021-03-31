@@ -14,15 +14,12 @@ public class ModifyInstanceVncPasswdRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VncPassword")
-    @Validation(required = true)
     public String vncPassword;
 
     @NameInMap("OwnerAccount")

@@ -14,11 +14,9 @@ public class DeleteDeploymentSetRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DeploymentSetId")
-    @Validation(required = true)
     public String deploymentSetId;
 
     @NameInMap("OwnerAccount")

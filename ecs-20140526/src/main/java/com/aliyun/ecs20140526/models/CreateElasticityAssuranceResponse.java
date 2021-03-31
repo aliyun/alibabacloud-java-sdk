@@ -4,45 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateElasticityAssuranceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("PrivatePoolOptionsId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String privatePoolOptionsId;
-
-    @NameInMap("OrderId")
-    @Validation(required = true)
-    public String orderId;
+    public CreateElasticityAssuranceResponseBody body;
 
     public static CreateElasticityAssuranceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateElasticityAssuranceResponse self = new CreateElasticityAssuranceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateElasticityAssuranceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateElasticityAssuranceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateElasticityAssuranceResponse setPrivatePoolOptionsId(String privatePoolOptionsId) {
-        this.privatePoolOptionsId = privatePoolOptionsId;
+    public CreateElasticityAssuranceResponse setBody(CreateElasticityAssuranceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getPrivatePoolOptionsId() {
-        return this.privatePoolOptionsId;
-    }
-
-    public CreateElasticityAssuranceResponse setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
+    public CreateElasticityAssuranceResponseBody getBody() {
+        return this.body;
     }
 
 }

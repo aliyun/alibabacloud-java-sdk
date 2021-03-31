@@ -14,7 +14,6 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
@@ -44,11 +43,11 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeDedicatedHostsRequestTag> tag;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeDedicatedHostsRequestTag> tag;
 
     public static DescribeDedicatedHostsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDedicatedHostsRequest self = new DescribeDedicatedHostsRequest();
@@ -159,20 +158,20 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeDedicatedHostsRequest setTag(java.util.List<DescribeDedicatedHostsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeDedicatedHostsRequestTag> getTag() {
-        return this.tag;
-    }
-
     public DescribeDedicatedHostsRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeDedicatedHostsRequest setTag(java.util.List<DescribeDedicatedHostsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDedicatedHostsRequestTag> getTag() {
+        return this.tag;
     }
 
     public static class DescribeDedicatedHostsRequestTag extends TeaModel {

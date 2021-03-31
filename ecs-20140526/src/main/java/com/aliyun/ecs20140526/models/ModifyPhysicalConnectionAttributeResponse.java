@@ -4,21 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyPhysicalConnectionAttributeResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifyPhysicalConnectionAttributeResponseBody body;
 
     public static ModifyPhysicalConnectionAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyPhysicalConnectionAttributeResponse self = new ModifyPhysicalConnectionAttributeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyPhysicalConnectionAttributeResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyPhysicalConnectionAttributeResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyPhysicalConnectionAttributeResponse setBody(ModifyPhysicalConnectionAttributeResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyPhysicalConnectionAttributeResponseBody getBody() {
+        return this.body;
     }
 
 }

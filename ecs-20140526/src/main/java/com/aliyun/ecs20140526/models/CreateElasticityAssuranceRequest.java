@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateElasticityAssuranceRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public CreateElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,7 +20,6 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceGroupId")
@@ -35,22 +37,11 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("PrivatePoolOptions")
-    public CreateElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions;
-
     @NameInMap("Description")
     public String description;
 
     @NameInMap("AssuranceTimes")
     public String assuranceTimes;
-
-    @NameInMap("ZoneId")
-    @Validation(required = true)
-    public java.util.List<String> zoneId;
-
-    @NameInMap("InstanceType")
-    @Validation(required = true)
-    public java.util.List<String> instanceType;
 
     @NameInMap("InstanceAmount")
     public Integer instanceAmount;
@@ -61,9 +52,23 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("ZoneId")
+    public java.util.List<String> zoneId;
+
+    @NameInMap("InstanceType")
+    public java.util.List<String> instanceType;
+
     public static CreateElasticityAssuranceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateElasticityAssuranceRequest self = new CreateElasticityAssuranceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateElasticityAssuranceRequest setPrivatePoolOptions(CreateElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public CreateElasticityAssuranceRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public CreateElasticityAssuranceRequest setOwnerId(Long ownerId) {
@@ -146,14 +151,6 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateElasticityAssuranceRequest setPrivatePoolOptions(CreateElasticityAssuranceRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public CreateElasticityAssuranceRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
-    }
-
     public CreateElasticityAssuranceRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -168,22 +165,6 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
     }
     public String getAssuranceTimes() {
         return this.assuranceTimes;
-    }
-
-    public CreateElasticityAssuranceRequest setZoneId(java.util.List<String> zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public java.util.List<String> getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateElasticityAssuranceRequest setInstanceType(java.util.List<String> instanceType) {
-        this.instanceType = instanceType;
-        return this;
-    }
-    public java.util.List<String> getInstanceType() {
-        return this.instanceType;
     }
 
     public CreateElasticityAssuranceRequest setInstanceAmount(Integer instanceAmount) {
@@ -210,34 +191,20 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         return this.startTime;
     }
 
-    public static class CreateElasticityAssuranceRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
+    public CreateElasticityAssuranceRequest setZoneId(java.util.List<String> zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public java.util.List<String> getZoneId() {
+        return this.zoneId;
+    }
 
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateElasticityAssuranceRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateElasticityAssuranceRequestTag self = new CreateElasticityAssuranceRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateElasticityAssuranceRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateElasticityAssuranceRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public CreateElasticityAssuranceRequest setInstanceType(java.util.List<String> instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public java.util.List<String> getInstanceType() {
+        return this.instanceType;
     }
 
     public static class CreateElasticityAssuranceRequestPrivatePoolOptions extends TeaModel {
@@ -266,6 +233,36 @@ public class CreateElasticityAssuranceRequest extends TeaModel {
         }
         public String getMatchCriteria() {
             return this.matchCriteria;
+        }
+
+    }
+
+    public static class CreateElasticityAssuranceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateElasticityAssuranceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateElasticityAssuranceRequestTag self = new CreateElasticityAssuranceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateElasticityAssuranceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateElasticityAssuranceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

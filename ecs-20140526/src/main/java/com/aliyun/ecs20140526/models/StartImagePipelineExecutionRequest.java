@@ -17,14 +17,12 @@ public class StartImagePipelineExecutionRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("TemplateTag")
     public java.util.List<StartImagePipelineExecutionRequestTemplateTag> templateTag;
 
     @NameInMap("ImagePipelineId")
-    @Validation(required = true)
     public String imagePipelineId;
 
     @NameInMap("ClientToken")

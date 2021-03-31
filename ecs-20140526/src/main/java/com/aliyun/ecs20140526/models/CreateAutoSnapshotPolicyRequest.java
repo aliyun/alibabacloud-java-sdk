@@ -14,22 +14,18 @@ public class CreateAutoSnapshotPolicyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("regionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("autoSnapshotPolicyName")
     public String autoSnapshotPolicyName;
 
     @NameInMap("timePoints")
-    @Validation(required = true)
     public String timePoints;
 
     @NameInMap("repeatWeekdays")
-    @Validation(required = true)
     public String repeatWeekdays;
 
     @NameInMap("retentionDays")
-    @Validation(required = true)
     public Integer retentionDays;
 
     @NameInMap("EnableCrossRegionCopy")

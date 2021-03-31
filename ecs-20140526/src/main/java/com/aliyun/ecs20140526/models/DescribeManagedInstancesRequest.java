@@ -17,7 +17,6 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OsType")
@@ -32,14 +31,14 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
-
     @NameInMap("PageNumber")
     public Long pageNumber;
 
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
 
     public static DescribeManagedInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeManagedInstancesRequest self = new DescribeManagedInstancesRequest();
@@ -118,14 +117,6 @@ public class DescribeManagedInstancesRequest extends TeaModel {
         return this.instanceName;
     }
 
-    public DescribeManagedInstancesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
     public DescribeManagedInstancesRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -140,6 +131,14 @@ public class DescribeManagedInstancesRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeManagedInstancesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
 }

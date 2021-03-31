@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateLaunchTemplateVersionResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("LaunchTemplateVersionNumber")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long launchTemplateVersionNumber;
+    public CreateLaunchTemplateVersionResponseBody body;
 
     public static CreateLaunchTemplateVersionResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateLaunchTemplateVersionResponse self = new CreateLaunchTemplateVersionResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateLaunchTemplateVersionResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateLaunchTemplateVersionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateLaunchTemplateVersionResponse setLaunchTemplateVersionNumber(Long launchTemplateVersionNumber) {
-        this.launchTemplateVersionNumber = launchTemplateVersionNumber;
+    public CreateLaunchTemplateVersionResponse setBody(CreateLaunchTemplateVersionResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getLaunchTemplateVersionNumber() {
-        return this.launchTemplateVersionNumber;
+    public CreateLaunchTemplateVersionResponseBody getBody() {
+        return this.body;
     }
 
 }

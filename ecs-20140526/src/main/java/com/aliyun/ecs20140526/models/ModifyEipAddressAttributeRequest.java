@@ -17,11 +17,9 @@ public class ModifyEipAddressAttributeRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("AllocationId")
-    @Validation(required = true)
     public String allocationId;
 
     @NameInMap("Bandwidth")
-    @Validation(required = true)
     public String bandwidth;
 
     @NameInMap("OwnerAccount")

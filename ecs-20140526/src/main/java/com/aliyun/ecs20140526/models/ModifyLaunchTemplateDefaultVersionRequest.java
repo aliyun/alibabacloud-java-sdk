@@ -17,7 +17,6 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("LaunchTemplateId")
@@ -27,7 +26,6 @@ public class ModifyLaunchTemplateDefaultVersionRequest extends TeaModel {
     public String launchTemplateName;
 
     @NameInMap("DefaultVersionNumber")
-    @Validation(required = true)
     public Long defaultVersionNumber;
 
     public static ModifyLaunchTemplateDefaultVersionRequest build(java.util.Map<String, ?> map) throws Exception {

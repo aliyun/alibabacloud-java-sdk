@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateCapacityReservationRequest extends TeaModel {
+    @NameInMap("PrivatePoolOptions")
+    public CreateCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,34 +20,24 @@ public class CreateCapacityReservationRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("Tag")
-    public java.util.List<CreateCapacityReservationRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateCapacityReservationRequestTag> tag;
+
     @NameInMap("ClientToken")
     public String clientToken;
-
-    @NameInMap("ZoneId")
-    @Validation(required = true)
-    public java.util.List<String> zoneId;
-
-    @NameInMap("PrivatePoolOptions")
-    public CreateCapacityReservationRequestPrivatePoolOptions privatePoolOptions;
 
     @NameInMap("Description")
     public String description;
 
     @NameInMap("InstanceAmount")
-    @Validation(required = true)
     public Integer instanceAmount;
 
     @NameInMap("InstanceType")
-    @Validation(required = true)
     public String instanceType;
 
     @NameInMap("StartTime")
@@ -59,9 +52,20 @@ public class CreateCapacityReservationRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
+    @NameInMap("ZoneId")
+    public java.util.List<String> zoneId;
+
     public static CreateCapacityReservationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCapacityReservationRequest self = new CreateCapacityReservationRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateCapacityReservationRequest setPrivatePoolOptions(CreateCapacityReservationRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public CreateCapacityReservationRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public CreateCapacityReservationRequest setOwnerId(Long ownerId) {
@@ -104,14 +108,6 @@ public class CreateCapacityReservationRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateCapacityReservationRequest setTag(java.util.List<CreateCapacityReservationRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CreateCapacityReservationRequestTag> getTag() {
-        return this.tag;
-    }
-
     public CreateCapacityReservationRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -120,28 +116,20 @@ public class CreateCapacityReservationRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public CreateCapacityReservationRequest setTag(java.util.List<CreateCapacityReservationRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateCapacityReservationRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateCapacityReservationRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public CreateCapacityReservationRequest setZoneId(java.util.List<String> zoneId) {
-        this.zoneId = zoneId;
-        return this;
-    }
-    public java.util.List<String> getZoneId() {
-        return this.zoneId;
-    }
-
-    public CreateCapacityReservationRequest setPrivatePoolOptions(CreateCapacityReservationRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public CreateCapacityReservationRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
     }
 
     public CreateCapacityReservationRequest setDescription(String description) {
@@ -200,34 +188,12 @@ public class CreateCapacityReservationRequest extends TeaModel {
         return this.platform;
     }
 
-    public static class CreateCapacityReservationRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static CreateCapacityReservationRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateCapacityReservationRequestTag self = new CreateCapacityReservationRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateCapacityReservationRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateCapacityReservationRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
+    public CreateCapacityReservationRequest setZoneId(java.util.List<String> zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public java.util.List<String> getZoneId() {
+        return this.zoneId;
     }
 
     public static class CreateCapacityReservationRequestPrivatePoolOptions extends TeaModel {
@@ -256,6 +222,36 @@ public class CreateCapacityReservationRequest extends TeaModel {
         }
         public String getMatchCriteria() {
             return this.matchCriteria;
+        }
+
+    }
+
+    public static class CreateCapacityReservationRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCapacityReservationRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateCapacityReservationRequestTag self = new CreateCapacityReservationRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCapacityReservationRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCapacityReservationRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

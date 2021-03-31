@@ -17,11 +17,9 @@ public class DescribeInstanceAttachmentAttributesRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceIds")
-    @Validation(required = true)
     public String instanceIds;
 
     @NameInMap("PageNumber")

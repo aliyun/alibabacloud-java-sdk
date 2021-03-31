@@ -17,18 +17,15 @@ public class DescribeResourcesModificationRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("MigrateAcrossZone")
     public Boolean migrateAcrossZone;
 
     @NameInMap("DestinationResource")
-    @Validation(required = true)
     public String destinationResource;
 
     @NameInMap("OperationType")

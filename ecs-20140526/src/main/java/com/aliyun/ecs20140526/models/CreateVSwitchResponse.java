@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateVSwitchResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("VSwitchId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String vSwitchId;
+    public CreateVSwitchResponseBody body;
 
     public static CreateVSwitchResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateVSwitchResponse self = new CreateVSwitchResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateVSwitchResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateVSwitchResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateVSwitchResponse setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
+    public CreateVSwitchResponse setBody(CreateVSwitchResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getVSwitchId() {
-        return this.vSwitchId;
+    public CreateVSwitchResponseBody getBody() {
+        return this.body;
     }
 
 }

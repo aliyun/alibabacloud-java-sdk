@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceModificationPriceRequest extends TeaModel {
+    @NameInMap("SystemDisk")
+    public DescribeInstanceModificationPriceRequestSystemDisk systemDisk;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,18 +20,13 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("InstanceType")
     public String instanceType;
-
-    @NameInMap("SystemDisk")
-    public DescribeInstanceModificationPriceRequestSystemDisk systemDisk;
 
     @NameInMap("DataDisk")
     public java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk;
@@ -36,6 +34,14 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     public static DescribeInstanceModificationPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceModificationPriceRequest self = new DescribeInstanceModificationPriceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceModificationPriceRequest setSystemDisk(DescribeInstanceModificationPriceRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public DescribeInstanceModificationPriceRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
     public DescribeInstanceModificationPriceRequest setOwnerId(Long ownerId) {
@@ -94,14 +100,6 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         return this.instanceType;
     }
 
-    public DescribeInstanceModificationPriceRequest setSystemDisk(DescribeInstanceModificationPriceRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public DescribeInstanceModificationPriceRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
-    }
-
     public DescribeInstanceModificationPriceRequest setDataDisk(java.util.List<DescribeInstanceModificationPriceRequestDataDisk> dataDisk) {
         this.dataDisk = dataDisk;
         return this;
@@ -130,18 +128,26 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
     }
 
     public static class DescribeInstanceModificationPriceRequestDataDisk extends TeaModel {
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
         @NameInMap("Size")
         public Integer size;
 
         @NameInMap("Category")
         public String category;
 
-        @NameInMap("PerformanceLevel")
-        public String performanceLevel;
-
         public static DescribeInstanceModificationPriceRequestDataDisk build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceModificationPriceRequestDataDisk self = new DescribeInstanceModificationPriceRequestDataDisk();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceModificationPriceRequestDataDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
         public DescribeInstanceModificationPriceRequestDataDisk setSize(Integer size) {
@@ -158,14 +164,6 @@ public class DescribeInstanceModificationPriceRequest extends TeaModel {
         }
         public String getCategory() {
             return this.category;
-        }
-
-        public DescribeInstanceModificationPriceRequestDataDisk setPerformanceLevel(String performanceLevel) {
-            this.performanceLevel = performanceLevel;
-            return this;
-        }
-        public String getPerformanceLevel() {
-            return this.performanceLevel;
         }
 
     }

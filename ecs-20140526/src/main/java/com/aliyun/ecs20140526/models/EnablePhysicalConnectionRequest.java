@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class EnablePhysicalConnectionRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PhysicalConnectionId")
-    @Validation(required = true)
     public String physicalConnectionId;
 
     @NameInMap("OwnerId")
@@ -22,7 +20,6 @@ public class EnablePhysicalConnectionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("ClientToken")
-    @Validation(required = true)
     public String clientToken;
 
     @NameInMap("OwnerAccount")

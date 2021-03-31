@@ -17,11 +17,9 @@ public class InstallCloudAssistantRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public java.util.List<String> instanceId;
 
     public static InstallCloudAssistantRequest build(java.util.Map<String, ?> map) throws Exception {

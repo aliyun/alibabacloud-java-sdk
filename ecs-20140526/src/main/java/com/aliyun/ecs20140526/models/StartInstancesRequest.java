@@ -19,16 +19,14 @@ public class StartInstancesRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
-    @NameInMap("InstanceId")
-    @Validation(required = true)
-    public java.util.List<String> instanceId;
-
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("BatchOptimization")
     public String batchOptimization;
+
+    @NameInMap("InstanceId")
+    public java.util.List<String> instanceId;
 
     public static StartInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         StartInstancesRequest self = new StartInstancesRequest();
@@ -75,14 +73,6 @@ public class StartInstancesRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public StartInstancesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
-    }
-
     public StartInstancesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -97,6 +87,14 @@ public class StartInstancesRequest extends TeaModel {
     }
     public String getBatchOptimization() {
         return this.batchOptimization;
+    }
+
+    public StartInstancesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
 }

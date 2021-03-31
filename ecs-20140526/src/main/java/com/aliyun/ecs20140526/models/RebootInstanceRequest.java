@@ -14,7 +14,6 @@ public class RebootInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
-    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ForceStop")

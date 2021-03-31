@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeEipAddressesRequest extends TeaModel {
+    @NameInMap("Filter")
+    public java.util.List<DescribeEipAddressesRequestFilter> filter;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -14,7 +17,6 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Status")
@@ -38,9 +40,6 @@ public class DescribeEipAddressesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeEipAddressesRequestFilter> filter;
-
     @NameInMap("LockReason")
     public String lockReason;
 
@@ -56,6 +55,14 @@ public class DescribeEipAddressesRequest extends TeaModel {
     public static DescribeEipAddressesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEipAddressesRequest self = new DescribeEipAddressesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeEipAddressesRequest setFilter(java.util.List<DescribeEipAddressesRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeEipAddressesRequestFilter> getFilter() {
+        return this.filter;
     }
 
     public DescribeEipAddressesRequest setOwnerId(Long ownerId) {
@@ -144,14 +151,6 @@ public class DescribeEipAddressesRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeEipAddressesRequest setFilter(java.util.List<DescribeEipAddressesRequestFilter> filter) {
-        this.filter = filter;
-        return this;
-    }
-    public java.util.List<DescribeEipAddressesRequestFilter> getFilter() {
-        return this.filter;
     }
 
     public DescribeEipAddressesRequest setLockReason(String lockReason) {

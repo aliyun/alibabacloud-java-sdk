@@ -14,15 +14,12 @@ public class RemoveTagsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
-    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("ResourceId")
-    @Validation(required = true)
     public String resourceId;
 
     @NameInMap("Tag")
@@ -90,23 +87,15 @@ public class RemoveTagsRequest extends TeaModel {
     }
 
     public static class RemoveTagsRequestTag extends TeaModel {
-        @NameInMap("value")
-        public String value;
-
         @NameInMap("key")
         public String key;
+
+        @NameInMap("Value")
+        public String value;
 
         public static RemoveTagsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             RemoveTagsRequestTag self = new RemoveTagsRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public RemoveTagsRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
         }
 
         public RemoveTagsRequestTag setKey(String key) {
@@ -115,6 +104,14 @@ public class RemoveTagsRequest extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public RemoveTagsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

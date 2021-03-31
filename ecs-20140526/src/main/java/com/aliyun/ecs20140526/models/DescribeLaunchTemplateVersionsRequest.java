@@ -17,7 +17,6 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("LaunchTemplateId")
@@ -25,9 +24,6 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
 
     @NameInMap("LaunchTemplateName")
     public String launchTemplateName;
-
-    @NameInMap("LaunchTemplateVersion")
-    public java.util.List<Long> launchTemplateVersion;
 
     @NameInMap("MinVersion")
     public Long minVersion;
@@ -46,6 +42,9 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("LaunchTemplateVersion")
+    public java.util.List<Integer> launchTemplateVersion;
 
     public static DescribeLaunchTemplateVersionsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLaunchTemplateVersionsRequest self = new DescribeLaunchTemplateVersionsRequest();
@@ -108,14 +107,6 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
         return this.launchTemplateName;
     }
 
-    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateVersion(java.util.List<Long> launchTemplateVersion) {
-        this.launchTemplateVersion = launchTemplateVersion;
-        return this;
-    }
-    public java.util.List<Long> getLaunchTemplateVersion() {
-        return this.launchTemplateVersion;
-    }
-
     public DescribeLaunchTemplateVersionsRequest setMinVersion(Long minVersion) {
         this.minVersion = minVersion;
         return this;
@@ -162,6 +153,14 @@ public class DescribeLaunchTemplateVersionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeLaunchTemplateVersionsRequest setLaunchTemplateVersion(java.util.List<Integer> launchTemplateVersion) {
+        this.launchTemplateVersion = launchTemplateVersion;
+        return this;
+    }
+    public java.util.List<Integer> getLaunchTemplateVersion() {
+        return this.launchTemplateVersion;
     }
 
 }

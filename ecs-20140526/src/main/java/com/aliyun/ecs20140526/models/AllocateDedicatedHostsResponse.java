@@ -4,53 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class AllocateDedicatedHostsResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DedicatedHostIdSets")
+    @NameInMap("body")
     @Validation(required = true)
-    public AllocateDedicatedHostsResponseDedicatedHostIdSets dedicatedHostIdSets;
+    public AllocateDedicatedHostsResponseBody body;
 
     public static AllocateDedicatedHostsResponse build(java.util.Map<String, ?> map) throws Exception {
         AllocateDedicatedHostsResponse self = new AllocateDedicatedHostsResponse();
         return TeaModel.build(map, self);
     }
 
-    public AllocateDedicatedHostsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public AllocateDedicatedHostsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public AllocateDedicatedHostsResponse setDedicatedHostIdSets(AllocateDedicatedHostsResponseDedicatedHostIdSets dedicatedHostIdSets) {
-        this.dedicatedHostIdSets = dedicatedHostIdSets;
+    public AllocateDedicatedHostsResponse setBody(AllocateDedicatedHostsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public AllocateDedicatedHostsResponseDedicatedHostIdSets getDedicatedHostIdSets() {
-        return this.dedicatedHostIdSets;
-    }
-
-    public static class AllocateDedicatedHostsResponseDedicatedHostIdSets extends TeaModel {
-        @NameInMap("DedicatedHostId")
-        @Validation(required = true)
-        public java.util.List<String> dedicatedHostId;
-
-        public static AllocateDedicatedHostsResponseDedicatedHostIdSets build(java.util.Map<String, ?> map) throws Exception {
-            AllocateDedicatedHostsResponseDedicatedHostIdSets self = new AllocateDedicatedHostsResponseDedicatedHostIdSets();
-            return TeaModel.build(map, self);
-        }
-
-        public AllocateDedicatedHostsResponseDedicatedHostIdSets setDedicatedHostId(java.util.List<String> dedicatedHostId) {
-            this.dedicatedHostId = dedicatedHostId;
-            return this;
-        }
-        public java.util.List<String> getDedicatedHostId() {
-            return this.dedicatedHostId;
-        }
-
+    public AllocateDedicatedHostsResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -14,7 +14,6 @@ public class ReInitDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("DiskId")
-    @Validation(required = true)
     public String diskId;
 
     @NameInMap("OwnerAccount")
