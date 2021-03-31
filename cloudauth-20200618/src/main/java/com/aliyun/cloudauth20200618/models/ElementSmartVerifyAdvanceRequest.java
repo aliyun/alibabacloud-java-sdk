@@ -29,6 +29,9 @@ public class ElementSmartVerifyAdvanceRequest extends TeaModel {
     @NameInMap("CertUrl")
     public String certUrl;
 
+    @NameInMap("CertNationalEmblemUrl")
+    public String certNationalEmblemUrl;
+
     public static ElementSmartVerifyAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         ElementSmartVerifyAdvanceRequest self = new ElementSmartVerifyAdvanceRequest();
         return TeaModel.build(map, self);
@@ -96,6 +99,14 @@ public class ElementSmartVerifyAdvanceRequest extends TeaModel {
     }
     public String getCertUrl() {
         return this.certUrl;
+    }
+
+    public ElementSmartVerifyAdvanceRequest setCertNationalEmblemUrl(String certNationalEmblemUrl) {
+        this.certNationalEmblemUrl = certNationalEmblemUrl;
+        return this;
+    }
+    public String getCertNationalEmblemUrl() {
+        return this.certNationalEmblemUrl;
     }
 
 }
