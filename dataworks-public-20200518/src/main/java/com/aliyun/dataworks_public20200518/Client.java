@@ -3,6 +3,20 @@ package com.aliyun.dataworks_public20200518;
 
 import com.aliyun.tea.*;
 import com.aliyun.dataworks_public20200518.models.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.common.*;
+import com.aliyun.tearpc.*;
+import com.aliyun.tearpc.models.*;
+import com.aliyun.endpointutil.*;
+import com.aliyun.oss.*;
+import com.aliyun.oss.models.*;
+import com.aliyun.openplatform20191219.*;
+import com.aliyun.openplatform20191219.models.*;
+import com.aliyun.ossutil.*;
+import com.aliyun.ossutil.models.*;
+import com.aliyun.fileform.*;
+import com.aliyun.fileform.models.*;
 
 public class Client extends com.aliyun.tearpc.Client {
 
@@ -40,1504 +54,1693 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
-    public GetDagResponse getDagWithOptions(GetDagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateTableAddColumnResponse updateTableAddColumn(UpdateTableAddColumnRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("UpdateTableAddColumn", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateTableAddColumnResponse());
+    }
+
+    public UpdateTableAddColumnResponse updateTableAddColumnSimply(UpdateTableAddColumnRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateTableAddColumn(request, runtime);
+    }
+
+    public GetMigrationProcessResponse getMigrationProcess(GetMigrationProcessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetMigrationProcess", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetMigrationProcessResponse());
+    }
+
+    public GetMigrationProcessResponse getMigrationProcessSimply(GetMigrationProcessRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMigrationProcess(request, runtime);
+    }
+
+    public CreateImportMigrationResponse createImportMigration(CreateImportMigrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateImportMigration", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateImportMigrationResponse());
+    }
+
+    public CreateImportMigrationResponse createImportMigrationSimply(CreateImportMigrationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createImportMigration(request, runtime);
+    }
+
+    public CreateImportMigrationResponse createImportMigrationAdvance(CreateImportMigrationAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        String accessKeyId = _credential.getAccessKeyId();
+        String accessKeySecret = _credential.getAccessKeySecret();
+        com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
+        AuthorizeFileUploadRequest authRequest = AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+            new TeaPair("product", "dataworks-public"),
+            new TeaPair("regionId", _regionId)
+        ));
+        AuthorizeFileUploadResponse authResponse = new AuthorizeFileUploadResponse();
+        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.oss.Client ossClient = null;
+        FileField fileObj = new FileField();
+        PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
+        PostObjectRequest uploadRequest = new PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        CreateImportMigrationRequest createImportMigrationReq = new CreateImportMigrationRequest();
+        com.aliyun.common.Common.convert(request, createImportMigrationReq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = FileField.build(TeaConverter.buildMap(
+            new TeaPair("filename", authResponse.objectKey),
+            new TeaPair("content", request.packageFileObject),
+            new TeaPair("contentType", "")
+        ));
+        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", authResponse.accessKeyId),
+            new TeaPair("policy", authResponse.encodedPolicy),
+            new TeaPair("signature", authResponse.signature),
+            new TeaPair("key", authResponse.objectKey),
+            new TeaPair("file", fileObj),
+            new TeaPair("successActionStatus", "201")
+        ));
+        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+            new TeaPair("bucketName", authResponse.bucket),
+            new TeaPair("header", ossHeader)
+        ));
+        ossClient.postObject(uploadRequest, ossRuntime);
+        createImportMigrationReq.packageFile = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        CreateImportMigrationResponse createImportMigrationResp = this.createImportMigration(createImportMigrationReq, runtime);
+        return createImportMigrationResp;
+    }
+
+    public StartMigrationResponse startMigration(StartMigrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("StartMigration", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new StartMigrationResponse());
+    }
+
+    public StartMigrationResponse startMigrationSimply(StartMigrationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startMigration(request, runtime);
+    }
+
+    public GetNodeParentsResponse getNodeParents(GetNodeParentsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetNodeParents", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetNodeParentsResponse());
+    }
+
+    public GetNodeParentsResponse getNodeParentsSimply(GetNodeParentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNodeParents(request, runtime);
+    }
+
+    public GetNodeChildrenResponse getNodeChildren(GetNodeChildrenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetNodeChildren", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetNodeChildrenResponse());
+    }
+
+    public GetNodeChildrenResponse getNodeChildrenSimply(GetNodeChildrenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNodeChildren(request, runtime);
+    }
+
+    public GetSensitiveDataResponse getSensitiveData(GetSensitiveDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetSensitiveData", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetSensitiveDataResponse());
+    }
+
+    public GetSensitiveDataResponse getSensitiveDataSimply(GetSensitiveDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSensitiveData(request, runtime);
+    }
+
+    public DesensitizeDataResponse desensitizeData(DesensitizeDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DesensitizeData", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new DesensitizeDataResponse());
+    }
+
+    public DesensitizeDataResponse desensitizeDataSimply(DesensitizeDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.desensitizeData(request, runtime);
+    }
+
+    public GetOpRiskDataResponse getOpRiskData(GetOpRiskDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetOpRiskData", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetOpRiskDataResponse());
+    }
+
+    public GetOpRiskDataResponse getOpRiskDataSimply(GetOpRiskDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOpRiskData(request, runtime);
+    }
+
+    public ScanSensitiveDataResponse scanSensitiveData(ScanSensitiveDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ScanSensitiveData", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new ScanSensitiveDataResponse());
+    }
+
+    public ScanSensitiveDataResponse scanSensitiveDataSimply(ScanSensitiveDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.scanSensitiveData(request, runtime);
+    }
+
+    public GetOpSensitiveDataResponse getOpSensitiveData(GetOpSensitiveDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetOpSensitiveData", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetOpSensitiveDataResponse());
+    }
+
+    public GetOpSensitiveDataResponse getOpSensitiveDataSimply(GetOpSensitiveDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getOpSensitiveData(request, runtime);
+    }
+
+    public CreateBusinessResponse createBusiness(CreateBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateBusiness", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateBusinessResponse());
+    }
+
+    public CreateBusinessResponse createBusinessSimply(CreateBusinessRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBusiness(request, runtime);
+    }
+
+    public RunTriggerNodeResponse runTriggerNode(RunTriggerNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("RunTriggerNode", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new RunTriggerNodeResponse());
+    }
+
+    public RunTriggerNodeResponse runTriggerNodeSimply(RunTriggerNodeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runTriggerNode(request, runtime);
+    }
+
+    public GetDagResponse getDag(GetDagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetDag", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetDagResponse());
     }
 
-    public GetDagResponse getDag(GetDagRequest request) throws Exception {
+    public GetDagResponse getDagSimply(GetDagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDagWithOptions(request, runtime);
+        return this.getDag(request, runtime);
     }
 
-    public SearchNodesByOutputResponse searchNodesByOutputWithOptions(SearchNodesByOutputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public SearchNodesByOutputResponse searchNodesByOutput(SearchNodesByOutputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SearchNodesByOutput", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new SearchNodesByOutputResponse());
     }
 
-    public SearchNodesByOutputResponse searchNodesByOutput(SearchNodesByOutputRequest request) throws Exception {
+    public SearchNodesByOutputResponse searchNodesByOutputSimply(SearchNodesByOutputRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.searchNodesByOutputWithOptions(request, runtime);
+        return this.searchNodesByOutput(request, runtime);
     }
 
-    public GetManualDagInstancesResponse getManualDagInstancesWithOptions(GetManualDagInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetManualDagInstancesResponse getManualDagInstances(GetManualDagInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetManualDagInstances", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetManualDagInstancesResponse());
     }
 
-    public GetManualDagInstancesResponse getManualDagInstances(GetManualDagInstancesRequest request) throws Exception {
+    public GetManualDagInstancesResponse getManualDagInstancesSimply(GetManualDagInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getManualDagInstancesWithOptions(request, runtime);
+        return this.getManualDagInstances(request, runtime);
     }
 
-    public CreateManualDagResponse createManualDagWithOptions(CreateManualDagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateManualDagResponse createManualDag(CreateManualDagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateManualDag", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateManualDagResponse());
     }
 
-    public CreateManualDagResponse createManualDag(CreateManualDagRequest request) throws Exception {
+    public CreateManualDagResponse createManualDagSimply(CreateManualDagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createManualDagWithOptions(request, runtime);
+        return this.createManualDag(request, runtime);
     }
 
-    public ListQualityResultsByEntityResponse listQualityResultsByEntityWithOptions(ListQualityResultsByEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListQualityResultsByEntityResponse listQualityResultsByEntity(ListQualityResultsByEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListQualityResultsByEntity", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListQualityResultsByEntityResponse());
     }
 
-    public ListQualityResultsByEntityResponse listQualityResultsByEntity(ListQualityResultsByEntityRequest request) throws Exception {
+    public ListQualityResultsByEntityResponse listQualityResultsByEntitySimply(ListQualityResultsByEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listQualityResultsByEntityWithOptions(request, runtime);
+        return this.listQualityResultsByEntity(request, runtime);
     }
 
-    public GetNodeTypeListInfoResponse getNodeTypeListInfoWithOptions(GetNodeTypeListInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetNodeTypeListInfoResponse getNodeTypeListInfo(GetNodeTypeListInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetNodeTypeListInfo", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetNodeTypeListInfoResponse());
     }
 
-    public GetNodeTypeListInfoResponse getNodeTypeListInfo(GetNodeTypeListInfoRequest request) throws Exception {
+    public GetNodeTypeListInfoResponse getNodeTypeListInfoSimply(GetNodeTypeListInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getNodeTypeListInfoWithOptions(request, runtime);
+        return this.getNodeTypeListInfo(request, runtime);
     }
 
-    public GetInstanceStatusCountResponse getInstanceStatusCountWithOptions(GetInstanceStatusCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetInstanceStatusCountResponse getInstanceStatusCount(GetInstanceStatusCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetInstanceStatusCount", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetInstanceStatusCountResponse());
     }
 
-    public GetInstanceStatusCountResponse getInstanceStatusCount(GetInstanceStatusCountRequest request) throws Exception {
+    public GetInstanceStatusCountResponse getInstanceStatusCountSimply(GetInstanceStatusCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getInstanceStatusCountWithOptions(request, runtime);
+        return this.getInstanceStatusCount(request, runtime);
     }
 
-    public ListDataServiceFoldersResponse listDataServiceFoldersWithOptions(ListDataServiceFoldersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListDataServiceFoldersResponse listDataServiceFolders(ListDataServiceFoldersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListDataServiceFolders", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListDataServiceFoldersResponse());
     }
 
-    public ListDataServiceFoldersResponse listDataServiceFolders(ListDataServiceFoldersRequest request) throws Exception {
+    public ListDataServiceFoldersResponse listDataServiceFoldersSimply(ListDataServiceFoldersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDataServiceFoldersWithOptions(request, runtime);
+        return this.listDataServiceFolders(request, runtime);
     }
 
-    public ListQualityResultsByRuleResponse listQualityResultsByRuleWithOptions(ListQualityResultsByRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListQualityResultsByRuleResponse listQualityResultsByRule(ListQualityResultsByRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListQualityResultsByRule", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListQualityResultsByRuleResponse());
     }
 
-    public ListQualityResultsByRuleResponse listQualityResultsByRule(ListQualityResultsByRuleRequest request) throws Exception {
+    public ListQualityResultsByRuleResponse listQualityResultsByRuleSimply(ListQualityResultsByRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listQualityResultsByRuleWithOptions(request, runtime);
+        return this.listQualityResultsByRule(request, runtime);
     }
 
-    public ListMetaDBResponse listMetaDBWithOptions(ListMetaDBRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListMetaDBResponse listMetaDB(ListMetaDBRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListMetaDB", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new ListMetaDBResponse());
     }
 
-    public ListMetaDBResponse listMetaDB(ListMetaDBRequest request) throws Exception {
+    public ListMetaDBResponse listMetaDBSimply(ListMetaDBRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listMetaDBWithOptions(request, runtime);
+        return this.listMetaDB(request, runtime);
     }
 
-    public CreateTableResponse createTableWithOptions(CreateTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateTableResponse createTable(CreateTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateTable", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateTableResponse());
     }
 
-    public CreateTableResponse createTable(CreateTableRequest request) throws Exception {
+    public CreateTableResponse createTableSimply(CreateTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createTableWithOptions(request, runtime);
+        return this.createTable(request, runtime);
     }
 
-    public CreateTableThemeResponse createTableThemeWithOptions(CreateTableThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateTableThemeResponse createTableTheme(CreateTableThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateTableTheme", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateTableThemeResponse());
     }
 
-    public CreateTableThemeResponse createTableTheme(CreateTableThemeRequest request) throws Exception {
+    public CreateTableThemeResponse createTableThemeSimply(CreateTableThemeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createTableThemeWithOptions(request, runtime);
+        return this.createTableTheme(request, runtime);
     }
 
-    public GetInstanceErrorRankResponse getInstanceErrorRankWithOptions(GetInstanceErrorRankRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetInstanceErrorRankResponse getInstanceErrorRank(GetInstanceErrorRankRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetInstanceErrorRank", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetInstanceErrorRankResponse());
     }
 
-    public GetInstanceErrorRankResponse getInstanceErrorRank(GetInstanceErrorRankRequest request) throws Exception {
+    public GetInstanceErrorRankResponse getInstanceErrorRankSimply(GetInstanceErrorRankRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getInstanceErrorRankWithOptions(request, runtime);
+        return this.getInstanceErrorRank(request, runtime);
     }
 
-    public GetDDLJobStatusResponse getDDLJobStatusWithOptions(GetDDLJobStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetDDLJobStatusResponse getDDLJobStatus(GetDDLJobStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetDDLJobStatus", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetDDLJobStatusResponse());
     }
 
-    public GetDDLJobStatusResponse getDDLJobStatus(GetDDLJobStatusRequest request) throws Exception {
+    public GetDDLJobStatusResponse getDDLJobStatusSimply(GetDDLJobStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDDLJobStatusWithOptions(request, runtime);
+        return this.getDDLJobStatus(request, runtime);
     }
 
-    public GetInstanceConsumeTimeRankResponse getInstanceConsumeTimeRankWithOptions(GetInstanceConsumeTimeRankRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetInstanceConsumeTimeRankResponse getInstanceConsumeTimeRank(GetInstanceConsumeTimeRankRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetInstanceConsumeTimeRank", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetInstanceConsumeTimeRankResponse());
     }
 
-    public GetInstanceConsumeTimeRankResponse getInstanceConsumeTimeRank(GetInstanceConsumeTimeRankRequest request) throws Exception {
+    public GetInstanceConsumeTimeRankResponse getInstanceConsumeTimeRankSimply(GetInstanceConsumeTimeRankRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getInstanceConsumeTimeRankWithOptions(request, runtime);
+        return this.getInstanceConsumeTimeRank(request, runtime);
     }
 
-    public CreateDataServiceApiAuthorityResponse createDataServiceApiAuthorityWithOptions(CreateDataServiceApiAuthorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateDataServiceApiAuthorityResponse createDataServiceApiAuthority(CreateDataServiceApiAuthorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateDataServiceApiAuthority", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateDataServiceApiAuthorityResponse());
     }
 
-    public CreateDataServiceApiAuthorityResponse createDataServiceApiAuthority(CreateDataServiceApiAuthorityRequest request) throws Exception {
+    public CreateDataServiceApiAuthorityResponse createDataServiceApiAuthoritySimply(CreateDataServiceApiAuthorityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDataServiceApiAuthorityWithOptions(request, runtime);
+        return this.createDataServiceApiAuthority(request, runtime);
     }
 
-    public DeleteDataServiceApiAuthorityResponse deleteDataServiceApiAuthorityWithOptions(DeleteDataServiceApiAuthorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteDataServiceApiAuthorityResponse deleteDataServiceApiAuthority(DeleteDataServiceApiAuthorityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteDataServiceApiAuthority", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteDataServiceApiAuthorityResponse());
     }
 
-    public DeleteDataServiceApiAuthorityResponse deleteDataServiceApiAuthority(DeleteDataServiceApiAuthorityRequest request) throws Exception {
+    public DeleteDataServiceApiAuthorityResponse deleteDataServiceApiAuthoritySimply(DeleteDataServiceApiAuthorityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteDataServiceApiAuthorityWithOptions(request, runtime);
+        return this.deleteDataServiceApiAuthority(request, runtime);
     }
 
-    public CreateDataServiceGroupResponse createDataServiceGroupWithOptions(CreateDataServiceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateDataServiceGroupResponse createDataServiceGroup(CreateDataServiceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateDataServiceGroup", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateDataServiceGroupResponse());
     }
 
-    public CreateDataServiceGroupResponse createDataServiceGroup(CreateDataServiceGroupRequest request) throws Exception {
+    public CreateDataServiceGroupResponse createDataServiceGroupSimply(CreateDataServiceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDataServiceGroupWithOptions(request, runtime);
+        return this.createDataServiceGroup(request, runtime);
     }
 
-    public UpdateMetaTableResponse updateMetaTableWithOptions(UpdateMetaTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateMetaTableResponse updateMetaTable(UpdateMetaTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateMetaTable", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateMetaTableResponse());
     }
 
-    public UpdateMetaTableResponse updateMetaTable(UpdateMetaTableRequest request) throws Exception {
+    public UpdateMetaTableResponse updateMetaTableSimply(UpdateMetaTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateMetaTableWithOptions(request, runtime);
+        return this.updateMetaTable(request, runtime);
     }
 
-    public GetInstanceCountTrendResponse getInstanceCountTrendWithOptions(GetInstanceCountTrendRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetInstanceCountTrendResponse getInstanceCountTrend(GetInstanceCountTrendRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetInstanceCountTrend", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetInstanceCountTrendResponse());
     }
 
-    public GetInstanceCountTrendResponse getInstanceCountTrend(GetInstanceCountTrendRequest request) throws Exception {
+    public GetInstanceCountTrendResponse getInstanceCountTrendSimply(GetInstanceCountTrendRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getInstanceCountTrendWithOptions(request, runtime);
+        return this.getInstanceCountTrend(request, runtime);
     }
 
-    public DeleteTableResponse deleteTableWithOptions(DeleteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteTableResponse deleteTable(DeleteTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteTable", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteTableResponse());
     }
 
-    public DeleteTableResponse deleteTable(DeleteTableRequest request) throws Exception {
+    public DeleteTableResponse deleteTableSimply(DeleteTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteTableWithOptions(request, runtime);
+        return this.deleteTable(request, runtime);
     }
 
-    public ListTableThemeResponse listTableThemeWithOptions(ListTableThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListTableThemeResponse listTableTheme(ListTableThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListTableTheme", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new ListTableThemeResponse());
     }
 
-    public ListTableThemeResponse listTableTheme(ListTableThemeRequest request) throws Exception {
+    public ListTableThemeResponse listTableThemeSimply(ListTableThemeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listTableThemeWithOptions(request, runtime);
+        return this.listTableTheme(request, runtime);
     }
 
-    public GetSuccessInstanceTrendResponse getSuccessInstanceTrendWithOptions(GetSuccessInstanceTrendRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetSuccessInstanceTrendResponse getSuccessInstanceTrend(GetSuccessInstanceTrendRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetSuccessInstanceTrend", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetSuccessInstanceTrendResponse());
     }
 
-    public GetSuccessInstanceTrendResponse getSuccessInstanceTrend(GetSuccessInstanceTrendRequest request) throws Exception {
+    public GetSuccessInstanceTrendResponse getSuccessInstanceTrendSimply(GetSuccessInstanceTrendRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getSuccessInstanceTrendWithOptions(request, runtime);
+        return this.getSuccessInstanceTrend(request, runtime);
     }
 
-    public UpdateTableResponse updateTableWithOptions(UpdateTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateTableResponse updateTable(UpdateTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateTable", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateTableResponse());
     }
 
-    public UpdateTableResponse updateTable(UpdateTableRequest request) throws Exception {
+    public UpdateTableResponse updateTableSimply(UpdateTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateTableWithOptions(request, runtime);
+        return this.updateTable(request, runtime);
     }
 
-    public GetDataServiceFolderResponse getDataServiceFolderWithOptions(GetDataServiceFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetDataServiceFolderResponse getDataServiceFolder(GetDataServiceFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetDataServiceFolder", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetDataServiceFolderResponse());
     }
 
-    public GetDataServiceFolderResponse getDataServiceFolder(GetDataServiceFolderRequest request) throws Exception {
+    public GetDataServiceFolderResponse getDataServiceFolderSimply(GetDataServiceFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDataServiceFolderWithOptions(request, runtime);
+        return this.getDataServiceFolder(request, runtime);
     }
 
-    public ListTableLevelResponse listTableLevelWithOptions(ListTableLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListTableLevelResponse listTableLevel(ListTableLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListTableLevel", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new ListTableLevelResponse());
     }
 
-    public ListTableLevelResponse listTableLevel(ListTableLevelRequest request) throws Exception {
+    public ListTableLevelResponse listTableLevelSimply(ListTableLevelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listTableLevelWithOptions(request, runtime);
+        return this.listTableLevel(request, runtime);
     }
 
-    public ListDataServiceGroupsResponse listDataServiceGroupsWithOptions(ListDataServiceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListDataServiceGroupsResponse listDataServiceGroups(ListDataServiceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListDataServiceGroups", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListDataServiceGroupsResponse());
     }
 
-    public ListDataServiceGroupsResponse listDataServiceGroups(ListDataServiceGroupsRequest request) throws Exception {
+    public ListDataServiceGroupsResponse listDataServiceGroupsSimply(ListDataServiceGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDataServiceGroupsWithOptions(request, runtime);
+        return this.listDataServiceGroups(request, runtime);
     }
 
-    public UpdateTableThemeResponse updateTableThemeWithOptions(UpdateTableThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateTableThemeResponse updateTableTheme(UpdateTableThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateTableTheme", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateTableThemeResponse());
     }
 
-    public UpdateTableThemeResponse updateTableTheme(UpdateTableThemeRequest request) throws Exception {
+    public UpdateTableThemeResponse updateTableThemeSimply(UpdateTableThemeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateTableThemeWithOptions(request, runtime);
+        return this.updateTableTheme(request, runtime);
     }
 
-    public CreateDataServiceFolderResponse createDataServiceFolderWithOptions(CreateDataServiceFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateDataServiceFolderResponse createDataServiceFolder(CreateDataServiceFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateDataServiceFolder", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateDataServiceFolderResponse());
     }
 
-    public CreateDataServiceFolderResponse createDataServiceFolder(CreateDataServiceFolderRequest request) throws Exception {
+    public CreateDataServiceFolderResponse createDataServiceFolderSimply(CreateDataServiceFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDataServiceFolderWithOptions(request, runtime);
+        return this.createDataServiceFolder(request, runtime);
     }
 
-    public GetDataServiceGroupResponse getDataServiceGroupWithOptions(GetDataServiceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetDataServiceGroupResponse getDataServiceGroup(GetDataServiceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetDataServiceGroup", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetDataServiceGroupResponse());
     }
 
-    public GetDataServiceGroupResponse getDataServiceGroup(GetDataServiceGroupRequest request) throws Exception {
+    public GetDataServiceGroupResponse getDataServiceGroupSimply(GetDataServiceGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDataServiceGroupWithOptions(request, runtime);
+        return this.getDataServiceGroup(request, runtime);
     }
 
-    public CreateTableLevelResponse createTableLevelWithOptions(CreateTableLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateTableLevelResponse createTableLevel(CreateTableLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateTableLevel", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateTableLevelResponse());
     }
 
-    public CreateTableLevelResponse createTableLevel(CreateTableLevelRequest request) throws Exception {
+    public CreateTableLevelResponse createTableLevelSimply(CreateTableLevelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createTableLevelWithOptions(request, runtime);
+        return this.createTableLevel(request, runtime);
     }
 
-    public UpdateMetaTableIntroWikiResponse updateMetaTableIntroWikiWithOptions(UpdateMetaTableIntroWikiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateMetaTableIntroWikiResponse updateMetaTableIntroWiki(UpdateMetaTableIntroWikiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateMetaTableIntroWiki", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateMetaTableIntroWikiResponse());
     }
 
-    public UpdateMetaTableIntroWikiResponse updateMetaTableIntroWiki(UpdateMetaTableIntroWikiRequest request) throws Exception {
+    public UpdateMetaTableIntroWikiResponse updateMetaTableIntroWikiSimply(UpdateMetaTableIntroWikiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateMetaTableIntroWikiWithOptions(request, runtime);
+        return this.updateMetaTableIntroWiki(request, runtime);
     }
 
-    public DeleteTableLevelResponse deleteTableLevelWithOptions(DeleteTableLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteTableLevelResponse deleteTableLevel(DeleteTableLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteTableLevel", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteTableLevelResponse());
     }
 
-    public DeleteTableLevelResponse deleteTableLevel(DeleteTableLevelRequest request) throws Exception {
+    public DeleteTableLevelResponse deleteTableLevelSimply(DeleteTableLevelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteTableLevelWithOptions(request, runtime);
+        return this.deleteTableLevel(request, runtime);
     }
 
-    public UpdateTableLevelResponse updateTableLevelWithOptions(UpdateTableLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateTableLevelResponse updateTableLevel(UpdateTableLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateTableLevel", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateTableLevelResponse());
     }
 
-    public UpdateTableLevelResponse updateTableLevel(UpdateTableLevelRequest request) throws Exception {
+    public UpdateTableLevelResponse updateTableLevelSimply(UpdateTableLevelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateTableLevelWithOptions(request, runtime);
+        return this.updateTableLevel(request, runtime);
     }
 
-    public DeleteTableThemeResponse deleteTableThemeWithOptions(DeleteTableThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteTableThemeResponse deleteTableTheme(DeleteTableThemeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteTableTheme", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteTableThemeResponse());
     }
 
-    public DeleteTableThemeResponse deleteTableTheme(DeleteTableThemeRequest request) throws Exception {
+    public DeleteTableThemeResponse deleteTableThemeSimply(DeleteTableThemeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteTableThemeWithOptions(request, runtime);
+        return this.deleteTableTheme(request, runtime);
     }
 
-    public ListProgramTypeCountResponse listProgramTypeCountWithOptions(ListProgramTypeCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListProgramTypeCountResponse listProgramTypeCount(ListProgramTypeCountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListProgramTypeCount", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListProgramTypeCountResponse());
     }
 
-    public ListProgramTypeCountResponse listProgramTypeCount(ListProgramTypeCountRequest request) throws Exception {
+    public ListProgramTypeCountResponse listProgramTypeCountSimply(ListProgramTypeCountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listProgramTypeCountWithOptions(request, runtime);
+        return this.listProgramTypeCount(request, runtime);
     }
 
-    public UpdateTableModelInfoResponse updateTableModelInfoWithOptions(UpdateTableModelInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateTableModelInfoResponse updateTableModelInfo(UpdateTableModelInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateTableModelInfo", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateTableModelInfoResponse());
     }
 
-    public UpdateTableModelInfoResponse updateTableModelInfo(UpdateTableModelInfoRequest request) throws Exception {
+    public UpdateTableModelInfoResponse updateTableModelInfoSimply(UpdateTableModelInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateTableModelInfoWithOptions(request, runtime);
+        return this.updateTableModelInfo(request, runtime);
     }
 
-    public ListProjectsResponse listProjectsWithOptions(ListProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListProjectsResponse listProjects(ListProjectsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListProjects", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListProjectsResponse());
     }
 
-    public ListProjectsResponse listProjects(ListProjectsRequest request) throws Exception {
+    public ListProjectsResponse listProjectsSimply(ListProjectsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listProjectsWithOptions(request, runtime);
+        return this.listProjects(request, runtime);
     }
 
-    public ListProjectMembersResponse listProjectMembersWithOptions(ListProjectMembersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListProjectMembersResponse listProjectMembers(ListProjectMembersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListProjectMembers", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListProjectMembersResponse());
     }
 
-    public ListProjectMembersResponse listProjectMembers(ListProjectMembersRequest request) throws Exception {
+    public ListProjectMembersResponse listProjectMembersSimply(ListProjectMembersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listProjectMembersWithOptions(request, runtime);
+        return this.listProjectMembers(request, runtime);
     }
 
-    public CreateProjectMemberResponse createProjectMemberWithOptions(CreateProjectMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateProjectMemberResponse createProjectMember(CreateProjectMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateProjectMember", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateProjectMemberResponse());
     }
 
-    public CreateProjectMemberResponse createProjectMember(CreateProjectMemberRequest request) throws Exception {
+    public CreateProjectMemberResponse createProjectMemberSimply(CreateProjectMemberRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createProjectMemberWithOptions(request, runtime);
+        return this.createProjectMember(request, runtime);
     }
 
-    public ListProjectRolesResponse listProjectRolesWithOptions(ListProjectRolesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListProjectRolesResponse listProjectRoles(ListProjectRolesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListProjectRoles", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListProjectRolesResponse());
     }
 
-    public ListProjectRolesResponse listProjectRoles(ListProjectRolesRequest request) throws Exception {
+    public ListProjectRolesResponse listProjectRolesSimply(ListProjectRolesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listProjectRolesWithOptions(request, runtime);
+        return this.listProjectRoles(request, runtime);
     }
 
-    public AddProjectMemberToRoleResponse addProjectMemberToRoleWithOptions(AddProjectMemberToRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public AddProjectMemberToRoleResponse addProjectMemberToRole(AddProjectMemberToRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("AddProjectMemberToRole", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new AddProjectMemberToRoleResponse());
     }
 
-    public AddProjectMemberToRoleResponse addProjectMemberToRole(AddProjectMemberToRoleRequest request) throws Exception {
+    public AddProjectMemberToRoleResponse addProjectMemberToRoleSimply(AddProjectMemberToRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.addProjectMemberToRoleWithOptions(request, runtime);
+        return this.addProjectMemberToRole(request, runtime);
     }
 
-    public RemoveProjectMemberFromRoleResponse removeProjectMemberFromRoleWithOptions(RemoveProjectMemberFromRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public RemoveProjectMemberFromRoleResponse removeProjectMemberFromRole(RemoveProjectMemberFromRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("RemoveProjectMemberFromRole", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new RemoveProjectMemberFromRoleResponse());
     }
 
-    public RemoveProjectMemberFromRoleResponse removeProjectMemberFromRole(RemoveProjectMemberFromRoleRequest request) throws Exception {
+    public RemoveProjectMemberFromRoleResponse removeProjectMemberFromRoleSimply(RemoveProjectMemberFromRoleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.removeProjectMemberFromRoleWithOptions(request, runtime);
+        return this.removeProjectMemberFromRole(request, runtime);
     }
 
-    public DeleteProjectMemberResponse deleteProjectMemberWithOptions(DeleteProjectMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteProjectMemberResponse deleteProjectMember(DeleteProjectMemberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteProjectMember", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteProjectMemberResponse());
     }
 
-    public DeleteProjectMemberResponse deleteProjectMember(DeleteProjectMemberRequest request) throws Exception {
+    public DeleteProjectMemberResponse deleteProjectMemberSimply(DeleteProjectMemberRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteProjectMemberWithOptions(request, runtime);
+        return this.deleteProjectMember(request, runtime);
     }
 
-    public CreateDagComplementResponse createDagComplementWithOptions(CreateDagComplementRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateDagComplementResponse createDagComplement(CreateDagComplementRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateDagComplement", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateDagComplementResponse());
     }
 
-    public CreateDagComplementResponse createDagComplement(CreateDagComplementRequest request) throws Exception {
+    public CreateDagComplementResponse createDagComplementSimply(CreateDagComplementRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDagComplementWithOptions(request, runtime);
+        return this.createDagComplement(request, runtime);
     }
 
-    public CreateDagTestResponse createDagTestWithOptions(CreateDagTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateDagTestResponse createDagTest(CreateDagTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateDagTest", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateDagTestResponse());
     }
 
-    public CreateDagTestResponse createDagTest(CreateDagTestRequest request) throws Exception {
+    public CreateDagTestResponse createDagTestSimply(CreateDagTestRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDagTestWithOptions(request, runtime);
+        return this.createDagTest(request, runtime);
     }
 
-    public ListCalcEnginesResponse listCalcEnginesWithOptions(ListCalcEnginesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListCalcEnginesResponse listCalcEngines(ListCalcEnginesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListCalcEngines", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListCalcEnginesResponse());
     }
 
-    public ListCalcEnginesResponse listCalcEngines(ListCalcEnginesRequest request) throws Exception {
+    public ListCalcEnginesResponse listCalcEnginesSimply(ListCalcEnginesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listCalcEnginesWithOptions(request, runtime);
+        return this.listCalcEngines(request, runtime);
     }
 
-    public ListConnectionsResponse listConnectionsWithOptions(ListConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListConnectionsResponse listConnections(ListConnectionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListConnections", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new ListConnectionsResponse());
     }
 
-    public ListConnectionsResponse listConnections(ListConnectionsRequest request) throws Exception {
+    public ListConnectionsResponse listConnectionsSimply(ListConnectionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listConnectionsWithOptions(request, runtime);
+        return this.listConnections(request, runtime);
     }
 
-    public UpdateConnectionResponse updateConnectionWithOptions(UpdateConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateConnectionResponse updateConnection(UpdateConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateConnection", "HTTPS", "PUT", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateConnectionResponse());
     }
 
-    public UpdateConnectionResponse updateConnection(UpdateConnectionRequest request) throws Exception {
+    public UpdateConnectionResponse updateConnectionSimply(UpdateConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateConnectionWithOptions(request, runtime);
+        return this.updateConnection(request, runtime);
     }
 
-    public DeleteConnectionResponse deleteConnectionWithOptions(DeleteConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteConnectionResponse deleteConnection(DeleteConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteConnection", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteConnectionResponse());
     }
 
-    public DeleteConnectionResponse deleteConnection(DeleteConnectionRequest request) throws Exception {
+    public DeleteConnectionResponse deleteConnectionSimply(DeleteConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteConnectionWithOptions(request, runtime);
+        return this.deleteConnection(request, runtime);
     }
 
-    public GetProjectDetailResponse getProjectDetailWithOptions(GetProjectDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetProjectDetailResponse getProjectDetail(GetProjectDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetProjectDetail", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetProjectDetailResponse());
     }
 
-    public GetProjectDetailResponse getProjectDetail(GetProjectDetailRequest request) throws Exception {
+    public GetProjectDetailResponse getProjectDetailSimply(GetProjectDetailRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getProjectDetailWithOptions(request, runtime);
+        return this.getProjectDetail(request, runtime);
     }
 
-    public ListResourceGroupsResponse listResourceGroupsWithOptions(ListResourceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListResourceGroupsResponse listResourceGroups(ListResourceGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListResourceGroups", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListResourceGroupsResponse());
     }
 
-    public ListResourceGroupsResponse listResourceGroups(ListResourceGroupsRequest request) throws Exception {
+    public ListResourceGroupsResponse listResourceGroupsSimply(ListResourceGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listResourceGroupsWithOptions(request, runtime);
+        return this.listResourceGroups(request, runtime);
     }
 
-    public CreateConnectionResponse createConnectionWithOptions(CreateConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateConnectionResponse createConnection(CreateConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateConnection", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateConnectionResponse());
     }
 
-    public CreateConnectionResponse createConnection(CreateConnectionRequest request) throws Exception {
+    public CreateConnectionResponse createConnectionSimply(CreateConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createConnectionWithOptions(request, runtime);
+        return this.createConnection(request, runtime);
     }
 
-    public GetDataServiceApplicationResponse getDataServiceApplicationWithOptions(GetDataServiceApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetDataServiceApplicationResponse getDataServiceApplication(GetDataServiceApplicationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetDataServiceApplication", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetDataServiceApplicationResponse());
     }
 
-    public GetDataServiceApplicationResponse getDataServiceApplication(GetDataServiceApplicationRequest request) throws Exception {
+    public GetDataServiceApplicationResponse getDataServiceApplicationSimply(GetDataServiceApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDataServiceApplicationWithOptions(request, runtime);
+        return this.getDataServiceApplication(request, runtime);
     }
 
-    public ListDataServiceApplicationsResponse listDataServiceApplicationsWithOptions(ListDataServiceApplicationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListDataServiceApplicationsResponse listDataServiceApplications(ListDataServiceApplicationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListDataServiceApplications", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListDataServiceApplicationsResponse());
     }
 
-    public ListDataServiceApplicationsResponse listDataServiceApplications(ListDataServiceApplicationsRequest request) throws Exception {
+    public ListDataServiceApplicationsResponse listDataServiceApplicationsSimply(ListDataServiceApplicationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDataServiceApplicationsWithOptions(request, runtime);
+        return this.listDataServiceApplications(request, runtime);
     }
 
-    public GetNodeOnBaselineResponse getNodeOnBaselineWithOptions(GetNodeOnBaselineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetNodeOnBaselineResponse getNodeOnBaseline(GetNodeOnBaselineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetNodeOnBaseline", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetNodeOnBaselineResponse());
     }
 
-    public GetNodeOnBaselineResponse getNodeOnBaseline(GetNodeOnBaselineRequest request) throws Exception {
+    public GetNodeOnBaselineResponse getNodeOnBaselineSimply(GetNodeOnBaselineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getNodeOnBaselineWithOptions(request, runtime);
+        return this.getNodeOnBaseline(request, runtime);
     }
 
-    public ListBaselineConfigsResponse listBaselineConfigsWithOptions(ListBaselineConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListBaselineConfigsResponse listBaselineConfigs(ListBaselineConfigsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListBaselineConfigs", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListBaselineConfigsResponse());
     }
 
-    public ListBaselineConfigsResponse listBaselineConfigs(ListBaselineConfigsRequest request) throws Exception {
+    public ListBaselineConfigsResponse listBaselineConfigsSimply(ListBaselineConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listBaselineConfigsWithOptions(request, runtime);
+        return this.listBaselineConfigs(request, runtime);
     }
 
-    public GetMetaTableChangeLogResponse getMetaTableChangeLogWithOptions(GetMetaTableChangeLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaTableChangeLogResponse getMetaTableChangeLog(GetMetaTableChangeLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaTableChangeLog", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetMetaTableChangeLogResponse());
     }
 
-    public GetMetaTableChangeLogResponse getMetaTableChangeLog(GetMetaTableChangeLogRequest request) throws Exception {
+    public GetMetaTableChangeLogResponse getMetaTableChangeLogSimply(GetMetaTableChangeLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaTableChangeLogWithOptions(request, runtime);
+        return this.getMetaTableChangeLog(request, runtime);
     }
 
-    public GetMetaTableOutputResponse getMetaTableOutputWithOptions(GetMetaTableOutputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaTableOutputResponse getMetaTableOutput(GetMetaTableOutputRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaTableOutput", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetMetaTableOutputResponse());
     }
 
-    public GetMetaTableOutputResponse getMetaTableOutput(GetMetaTableOutputRequest request) throws Exception {
+    public GetMetaTableOutputResponse getMetaTableOutputSimply(GetMetaTableOutputRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaTableOutputWithOptions(request, runtime);
+        return this.getMetaTableOutput(request, runtime);
     }
 
-    public GetMetaTablePartitionResponse getMetaTablePartitionWithOptions(GetMetaTablePartitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaTablePartitionResponse getMetaTablePartition(GetMetaTablePartitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaTablePartition", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetMetaTablePartitionResponse());
     }
 
-    public GetMetaTablePartitionResponse getMetaTablePartition(GetMetaTablePartitionRequest request) throws Exception {
+    public GetMetaTablePartitionResponse getMetaTablePartitionSimply(GetMetaTablePartitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaTablePartitionWithOptions(request, runtime);
+        return this.getMetaTablePartition(request, runtime);
     }
 
-    public GetMetaTableFullInfoResponse getMetaTableFullInfoWithOptions(GetMetaTableFullInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaTableFullInfoResponse getMetaTableFullInfo(GetMetaTableFullInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaTableFullInfo", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetMetaTableFullInfoResponse());
     }
 
-    public GetMetaTableFullInfoResponse getMetaTableFullInfo(GetMetaTableFullInfoRequest request) throws Exception {
+    public GetMetaTableFullInfoResponse getMetaTableFullInfoSimply(GetMetaTableFullInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaTableFullInfoWithOptions(request, runtime);
+        return this.getMetaTableFullInfo(request, runtime);
     }
 
-    public GetFileVersionResponse getFileVersionWithOptions(GetFileVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetFileVersionResponse getFileVersion(GetFileVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetFileVersion", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetFileVersionResponse());
     }
 
-    public GetFileVersionResponse getFileVersion(GetFileVersionRequest request) throws Exception {
+    public GetFileVersionResponse getFileVersionSimply(GetFileVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getFileVersionWithOptions(request, runtime);
+        return this.getFileVersion(request, runtime);
     }
 
-    public GetMetaTableBasicInfoResponse getMetaTableBasicInfoWithOptions(GetMetaTableBasicInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaTableBasicInfoResponse getMetaTableBasicInfo(GetMetaTableBasicInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaTableBasicInfo", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetMetaTableBasicInfoResponse());
     }
 
-    public GetMetaTableBasicInfoResponse getMetaTableBasicInfo(GetMetaTableBasicInfoRequest request) throws Exception {
+    public GetMetaTableBasicInfoResponse getMetaTableBasicInfoSimply(GetMetaTableBasicInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaTableBasicInfoWithOptions(request, runtime);
+        return this.getMetaTableBasicInfo(request, runtime);
     }
 
-    public GetMetaTableColumnResponse getMetaTableColumnWithOptions(GetMetaTableColumnRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaTableColumnResponse getMetaTableColumn(GetMetaTableColumnRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaTableColumn", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetMetaTableColumnResponse());
     }
 
-    public GetMetaTableColumnResponse getMetaTableColumn(GetMetaTableColumnRequest request) throws Exception {
+    public GetMetaTableColumnResponse getMetaTableColumnSimply(GetMetaTableColumnRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaTableColumnWithOptions(request, runtime);
+        return this.getMetaTableColumn(request, runtime);
     }
 
-    public GetMetaDBInfoResponse getMetaDBInfoWithOptions(GetMetaDBInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaDBInfoResponse getMetaDBInfo(GetMetaDBInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaDBInfo", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetMetaDBInfoResponse());
     }
 
-    public GetMetaDBInfoResponse getMetaDBInfo(GetMetaDBInfoRequest request) throws Exception {
+    public GetMetaDBInfoResponse getMetaDBInfoSimply(GetMetaDBInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaDBInfoWithOptions(request, runtime);
+        return this.getMetaDBInfo(request, runtime);
     }
 
-    public GetMetaCategoryResponse getMetaCategoryWithOptions(GetMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaCategoryResponse getMetaCategory(GetMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaCategory", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetMetaCategoryResponse());
     }
 
-    public GetMetaCategoryResponse getMetaCategory(GetMetaCategoryRequest request) throws Exception {
+    public GetMetaCategoryResponse getMetaCategorySimply(GetMetaCategoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaCategoryWithOptions(request, runtime);
+        return this.getMetaCategory(request, runtime);
     }
 
-    public ListAlertMessagesResponse listAlertMessagesWithOptions(ListAlertMessagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListAlertMessagesResponse listAlertMessages(ListAlertMessagesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListAlertMessages", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListAlertMessagesResponse());
     }
 
-    public ListAlertMessagesResponse listAlertMessages(ListAlertMessagesRequest request) throws Exception {
+    public ListAlertMessagesResponse listAlertMessagesSimply(ListAlertMessagesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listAlertMessagesWithOptions(request, runtime);
+        return this.listAlertMessages(request, runtime);
     }
 
-    public GetBaselineConfigResponse getBaselineConfigWithOptions(GetBaselineConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetBaselineConfigResponse getBaselineConfig(GetBaselineConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetBaselineConfig", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetBaselineConfigResponse());
     }
 
-    public GetBaselineConfigResponse getBaselineConfig(GetBaselineConfigRequest request) throws Exception {
+    public GetBaselineConfigResponse getBaselineConfigSimply(GetBaselineConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getBaselineConfigWithOptions(request, runtime);
+        return this.getBaselineConfig(request, runtime);
     }
 
-    public SearchMetaTablesResponse searchMetaTablesWithOptions(SearchMetaTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public SearchMetaTablesResponse searchMetaTables(SearchMetaTablesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SearchMetaTables", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new SearchMetaTablesResponse());
     }
 
-    public SearchMetaTablesResponse searchMetaTables(SearchMetaTablesRequest request) throws Exception {
+    public SearchMetaTablesResponse searchMetaTablesSimply(SearchMetaTablesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.searchMetaTablesWithOptions(request, runtime);
+        return this.searchMetaTables(request, runtime);
     }
 
-    public GetMetaTableListByCategoryResponse getMetaTableListByCategoryWithOptions(GetMetaTableListByCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaTableListByCategoryResponse getMetaTableListByCategory(GetMetaTableListByCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaTableListByCategory", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetMetaTableListByCategoryResponse());
     }
 
-    public GetMetaTableListByCategoryResponse getMetaTableListByCategory(GetMetaTableListByCategoryRequest request) throws Exception {
+    public GetMetaTableListByCategoryResponse getMetaTableListByCategorySimply(GetMetaTableListByCategoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaTableListByCategoryWithOptions(request, runtime);
+        return this.getMetaTableListByCategory(request, runtime);
     }
 
-    public DeleteMetaCategoryResponse deleteMetaCategoryWithOptions(DeleteMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteMetaCategoryResponse deleteMetaCategory(DeleteMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteMetaCategory", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new DeleteMetaCategoryResponse());
     }
 
-    public DeleteMetaCategoryResponse deleteMetaCategory(DeleteMetaCategoryRequest request) throws Exception {
+    public DeleteMetaCategoryResponse deleteMetaCategorySimply(DeleteMetaCategoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteMetaCategoryWithOptions(request, runtime);
+        return this.deleteMetaCategory(request, runtime);
     }
 
-    public UpdateMetaCategoryResponse updateMetaCategoryWithOptions(UpdateMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateMetaCategoryResponse updateMetaCategory(UpdateMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateMetaCategory", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateMetaCategoryResponse());
     }
 
-    public UpdateMetaCategoryResponse updateMetaCategory(UpdateMetaCategoryRequest request) throws Exception {
+    public UpdateMetaCategoryResponse updateMetaCategorySimply(UpdateMetaCategoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateMetaCategoryWithOptions(request, runtime);
+        return this.updateMetaCategory(request, runtime);
     }
 
-    public ListTopicsResponse listTopicsWithOptions(ListTopicsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListTopicsResponse listTopics(ListTopicsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListTopics", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListTopicsResponse());
     }
 
-    public ListTopicsResponse listTopics(ListTopicsRequest request) throws Exception {
+    public ListTopicsResponse listTopicsSimply(ListTopicsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listTopicsWithOptions(request, runtime);
+        return this.listTopics(request, runtime);
     }
 
-    public ListFileVersionsResponse listFileVersionsWithOptions(ListFileVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListFileVersionsResponse listFileVersions(ListFileVersionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListFileVersions", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListFileVersionsResponse());
     }
 
-    public ListFileVersionsResponse listFileVersions(ListFileVersionsRequest request) throws Exception {
+    public ListFileVersionsResponse listFileVersionsSimply(ListFileVersionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listFileVersionsWithOptions(request, runtime);
+        return this.listFileVersions(request, runtime);
     }
 
-    public CreateMetaCategoryResponse createMetaCategoryWithOptions(CreateMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateMetaCategoryResponse createMetaCategory(CreateMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateMetaCategory", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateMetaCategoryResponse());
     }
 
-    public CreateMetaCategoryResponse createMetaCategory(CreateMetaCategoryRequest request) throws Exception {
+    public CreateMetaCategoryResponse createMetaCategorySimply(CreateMetaCategoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createMetaCategoryWithOptions(request, runtime);
+        return this.createMetaCategory(request, runtime);
     }
 
-    public ListNodeIOResponse listNodeIOWithOptions(ListNodeIORequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListNodeIOResponse listNodeIO(ListNodeIORequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListNodeIO", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListNodeIOResponse());
     }
 
-    public ListNodeIOResponse listNodeIO(ListNodeIORequest request) throws Exception {
+    public ListNodeIOResponse listNodeIOSimply(ListNodeIORequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listNodeIOWithOptions(request, runtime);
+        return this.listNodeIO(request, runtime);
     }
 
-    public GetTopicInfluenceResponse getTopicInfluenceWithOptions(GetTopicInfluenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetTopicInfluenceResponse getTopicInfluence(GetTopicInfluenceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetTopicInfluence", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetTopicInfluenceResponse());
     }
 
-    public GetTopicInfluenceResponse getTopicInfluence(GetTopicInfluenceRequest request) throws Exception {
+    public GetTopicInfluenceResponse getTopicInfluenceSimply(GetTopicInfluenceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getTopicInfluenceWithOptions(request, runtime);
+        return this.getTopicInfluence(request, runtime);
     }
 
-    public GetTopicResponse getTopicWithOptions(GetTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetTopicResponse getTopic(GetTopicRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetTopic", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetTopicResponse());
     }
 
-    public GetTopicResponse getTopic(GetTopicRequest request) throws Exception {
+    public GetTopicResponse getTopicSimply(GetTopicRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getTopicWithOptions(request, runtime);
+        return this.getTopic(request, runtime);
     }
 
-    public DeleteFromMetaCategoryResponse deleteFromMetaCategoryWithOptions(DeleteFromMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteFromMetaCategoryResponse deleteFromMetaCategory(DeleteFromMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteFromMetaCategory", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteFromMetaCategoryResponse());
     }
 
-    public DeleteFromMetaCategoryResponse deleteFromMetaCategory(DeleteFromMetaCategoryRequest request) throws Exception {
+    public DeleteFromMetaCategoryResponse deleteFromMetaCategorySimply(DeleteFromMetaCategoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteFromMetaCategoryWithOptions(request, runtime);
+        return this.deleteFromMetaCategory(request, runtime);
     }
 
-    public GetNodeResponse getNodeWithOptions(GetNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetNodeResponse getNode(GetNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetNode", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetNodeResponse());
     }
 
-    public GetNodeResponse getNode(GetNodeRequest request) throws Exception {
+    public GetNodeResponse getNodeSimply(GetNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getNodeWithOptions(request, runtime);
+        return this.getNode(request, runtime);
     }
 
-    public ListNodesResponse listNodesWithOptions(ListNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListNodesResponse listNodes(ListNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListNodes", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListNodesResponse());
     }
 
-    public ListNodesResponse listNodes(ListNodesRequest request) throws Exception {
+    public ListNodesResponse listNodesSimply(ListNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listNodesWithOptions(request, runtime);
+        return this.listNodes(request, runtime);
     }
 
-    public GetNodeCodeResponse getNodeCodeWithOptions(GetNodeCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetNodeCodeResponse getNodeCode(GetNodeCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetNodeCode", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetNodeCodeResponse());
     }
 
-    public GetNodeCodeResponse getNodeCode(GetNodeCodeRequest request) throws Exception {
+    public GetNodeCodeResponse getNodeCodeSimply(GetNodeCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getNodeCodeWithOptions(request, runtime);
+        return this.getNodeCode(request, runtime);
     }
 
-    public EstablishRelationTableToBusinessResponse establishRelationTableToBusinessWithOptions(EstablishRelationTableToBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public EstablishRelationTableToBusinessResponse establishRelationTableToBusiness(EstablishRelationTableToBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("EstablishRelationTableToBusiness", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new EstablishRelationTableToBusinessResponse());
     }
 
-    public EstablishRelationTableToBusinessResponse establishRelationTableToBusiness(EstablishRelationTableToBusinessRequest request) throws Exception {
+    public EstablishRelationTableToBusinessResponse establishRelationTableToBusinessSimply(EstablishRelationTableToBusinessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.establishRelationTableToBusinessWithOptions(request, runtime);
+        return this.establishRelationTableToBusiness(request, runtime);
     }
 
-    public UpdateDataServiceApiResponse updateDataServiceApiWithOptions(UpdateDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateDataServiceApiResponse updateDataServiceApi(UpdateDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateDataServiceApi", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateDataServiceApiResponse());
     }
 
-    public UpdateDataServiceApiResponse updateDataServiceApi(UpdateDataServiceApiRequest request) throws Exception {
+    public UpdateDataServiceApiResponse updateDataServiceApiSimply(UpdateDataServiceApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateDataServiceApiWithOptions(request, runtime);
+        return this.updateDataServiceApi(request, runtime);
     }
 
-    public UpdateUdfFileResponse updateUdfFileWithOptions(UpdateUdfFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateUdfFileResponse updateUdfFile(UpdateUdfFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateUdfFile", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateUdfFileResponse());
     }
 
-    public UpdateUdfFileResponse updateUdfFile(UpdateUdfFileRequest request) throws Exception {
+    public UpdateUdfFileResponse updateUdfFileSimply(UpdateUdfFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateUdfFileWithOptions(request, runtime);
+        return this.updateUdfFile(request, runtime);
     }
 
-    public CreateUdfFileResponse createUdfFileWithOptions(CreateUdfFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateUdfFileResponse createUdfFile(CreateUdfFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateUdfFile", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateUdfFileResponse());
     }
 
-    public CreateUdfFileResponse createUdfFile(CreateUdfFileRequest request) throws Exception {
+    public CreateUdfFileResponse createUdfFileSimply(CreateUdfFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createUdfFileWithOptions(request, runtime);
+        return this.createUdfFile(request, runtime);
     }
 
-    public ListFilesResponse listFilesWithOptions(ListFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListFilesResponse listFiles(ListFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListFiles", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListFilesResponse());
     }
 
-    public ListFilesResponse listFiles(ListFilesRequest request) throws Exception {
+    public ListFilesResponse listFilesSimply(ListFilesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listFilesWithOptions(request, runtime);
+        return this.listFiles(request, runtime);
     }
 
-    public ListDataServiceAuthorizedApisResponse listDataServiceAuthorizedApisWithOptions(ListDataServiceAuthorizedApisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListDataServiceAuthorizedApisResponse listDataServiceAuthorizedApis(ListDataServiceAuthorizedApisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListDataServiceAuthorizedApis", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListDataServiceAuthorizedApisResponse());
     }
 
-    public ListDataServiceAuthorizedApisResponse listDataServiceAuthorizedApis(ListDataServiceAuthorizedApisRequest request) throws Exception {
+    public ListDataServiceAuthorizedApisResponse listDataServiceAuthorizedApisSimply(ListDataServiceAuthorizedApisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDataServiceAuthorizedApisWithOptions(request, runtime);
+        return this.listDataServiceAuthorizedApis(request, runtime);
     }
 
-    public UpdateFileResponse updateFileWithOptions(UpdateFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateFileResponse updateFile(UpdateFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateFile", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateFileResponse());
     }
 
-    public UpdateFileResponse updateFile(UpdateFileRequest request) throws Exception {
+    public UpdateFileResponse updateFileSimply(UpdateFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateFileWithOptions(request, runtime);
+        return this.updateFile(request, runtime);
     }
 
-    public DeleteFolderResponse deleteFolderWithOptions(DeleteFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteFolderResponse deleteFolder(DeleteFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteFolder", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteFolderResponse());
     }
 
-    public DeleteFolderResponse deleteFolder(DeleteFolderRequest request) throws Exception {
+    public DeleteFolderResponse deleteFolderSimply(DeleteFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteFolderWithOptions(request, runtime);
+        return this.deleteFolder(request, runtime);
     }
 
-    public ListFoldersResponse listFoldersWithOptions(ListFoldersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListFoldersResponse listFolders(ListFoldersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListFolders", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListFoldersResponse());
     }
 
-    public ListFoldersResponse listFolders(ListFoldersRequest request) throws Exception {
+    public ListFoldersResponse listFoldersSimply(ListFoldersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listFoldersWithOptions(request, runtime);
+        return this.listFolders(request, runtime);
     }
 
-    public CheckMetaPartitionResponse checkMetaPartitionWithOptions(CheckMetaPartitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CheckMetaPartitionResponse checkMetaPartition(CheckMetaPartitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CheckMetaPartition", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CheckMetaPartitionResponse());
     }
 
-    public CheckMetaPartitionResponse checkMetaPartition(CheckMetaPartitionRequest request) throws Exception {
+    public CheckMetaPartitionResponse checkMetaPartitionSimply(CheckMetaPartitionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.checkMetaPartitionWithOptions(request, runtime);
+        return this.checkMetaPartition(request, runtime);
     }
 
-    public UpdateFolderResponse updateFolderWithOptions(UpdateFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateFolderResponse updateFolder(UpdateFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateFolder", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateFolderResponse());
     }
 
-    public UpdateFolderResponse updateFolder(UpdateFolderRequest request) throws Exception {
+    public UpdateFolderResponse updateFolderSimply(UpdateFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateFolderWithOptions(request, runtime);
+        return this.updateFolder(request, runtime);
     }
 
-    public DeleteRemindResponse deleteRemindWithOptions(DeleteRemindRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteRemindResponse deleteRemind(DeleteRemindRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteRemind", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteRemindResponse());
     }
 
-    public DeleteRemindResponse deleteRemind(DeleteRemindRequest request) throws Exception {
+    public DeleteRemindResponse deleteRemindSimply(DeleteRemindRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteRemindWithOptions(request, runtime);
+        return this.deleteRemind(request, runtime);
     }
 
-    public AddToMetaCategoryResponse addToMetaCategoryWithOptions(AddToMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public AddToMetaCategoryResponse addToMetaCategory(AddToMetaCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("AddToMetaCategory", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new AddToMetaCategoryResponse());
     }
 
-    public AddToMetaCategoryResponse addToMetaCategory(AddToMetaCategoryRequest request) throws Exception {
+    public AddToMetaCategoryResponse addToMetaCategorySimply(AddToMetaCategoryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.addToMetaCategoryWithOptions(request, runtime);
+        return this.addToMetaCategory(request, runtime);
     }
 
-    public ListInstancesResponse listInstancesWithOptions(ListInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListInstancesResponse listInstances(ListInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListInstances", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListInstancesResponse());
     }
 
-    public ListInstancesResponse listInstances(ListInstancesRequest request) throws Exception {
+    public ListInstancesResponse listInstancesSimply(ListInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listInstancesWithOptions(request, runtime);
+        return this.listInstances(request, runtime);
     }
 
-    public SetSuccessInstanceResponse setSuccessInstanceWithOptions(SetSuccessInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public SetSuccessInstanceResponse setSuccessInstance(SetSuccessInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SetSuccessInstance", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new SetSuccessInstanceResponse());
     }
 
-    public SetSuccessInstanceResponse setSuccessInstance(SetSuccessInstanceRequest request) throws Exception {
+    public SetSuccessInstanceResponse setSuccessInstanceSimply(SetSuccessInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.setSuccessInstanceWithOptions(request, runtime);
+        return this.setSuccessInstance(request, runtime);
     }
 
-    public CreateFileResponse createFileWithOptions(CreateFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateFileResponse createFile(CreateFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateFile", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateFileResponse());
     }
 
-    public CreateFileResponse createFile(CreateFileRequest request) throws Exception {
+    public CreateFileResponse createFileSimply(CreateFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createFileWithOptions(request, runtime);
+        return this.createFile(request, runtime);
     }
 
-    public StopInstanceResponse stopInstanceWithOptions(StopInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public StopInstanceResponse stopInstance(StopInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("StopInstance", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new StopInstanceResponse());
     }
 
-    public StopInstanceResponse stopInstance(StopInstanceRequest request) throws Exception {
+    public StopInstanceResponse stopInstanceSimply(StopInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.stopInstanceWithOptions(request, runtime);
+        return this.stopInstance(request, runtime);
     }
 
-    public ResumeInstanceResponse resumeInstanceWithOptions(ResumeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ResumeInstanceResponse resumeInstance(ResumeInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ResumeInstance", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ResumeInstanceResponse());
     }
 
-    public ResumeInstanceResponse resumeInstance(ResumeInstanceRequest request) throws Exception {
+    public ResumeInstanceResponse resumeInstanceSimply(ResumeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.resumeInstanceWithOptions(request, runtime);
+        return this.resumeInstance(request, runtime);
     }
 
-    public SuspendInstanceResponse suspendInstanceWithOptions(SuspendInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public SuspendInstanceResponse suspendInstance(SuspendInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SuspendInstance", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new SuspendInstanceResponse());
     }
 
-    public SuspendInstanceResponse suspendInstance(SuspendInstanceRequest request) throws Exception {
+    public SuspendInstanceResponse suspendInstanceSimply(SuspendInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.suspendInstanceWithOptions(request, runtime);
+        return this.suspendInstance(request, runtime);
     }
 
-    public RestartInstanceResponse restartInstanceWithOptions(RestartInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public RestartInstanceResponse restartInstance(RestartInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("RestartInstance", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new RestartInstanceResponse());
     }
 
-    public RestartInstanceResponse restartInstance(RestartInstanceRequest request) throws Exception {
+    public RestartInstanceResponse restartInstanceSimply(RestartInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.restartInstanceWithOptions(request, runtime);
+        return this.restartInstance(request, runtime);
     }
 
-    public ListDataServiceApiAuthoritiesResponse listDataServiceApiAuthoritiesWithOptions(ListDataServiceApiAuthoritiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListDataServiceApiAuthoritiesResponse listDataServiceApiAuthorities(ListDataServiceApiAuthoritiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListDataServiceApiAuthorities", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListDataServiceApiAuthoritiesResponse());
     }
 
-    public ListDataServiceApiAuthoritiesResponse listDataServiceApiAuthorities(ListDataServiceApiAuthoritiesRequest request) throws Exception {
+    public ListDataServiceApiAuthoritiesResponse listDataServiceApiAuthoritiesSimply(ListDataServiceApiAuthoritiesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDataServiceApiAuthoritiesWithOptions(request, runtime);
+        return this.listDataServiceApiAuthorities(request, runtime);
     }
 
-    public ListDataServicePublishedApisResponse listDataServicePublishedApisWithOptions(ListDataServicePublishedApisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListDataServicePublishedApisResponse listDataServicePublishedApis(ListDataServicePublishedApisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListDataServicePublishedApis", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListDataServicePublishedApisResponse());
     }
 
-    public ListDataServicePublishedApisResponse listDataServicePublishedApis(ListDataServicePublishedApisRequest request) throws Exception {
+    public ListDataServicePublishedApisResponse listDataServicePublishedApisSimply(ListDataServicePublishedApisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDataServicePublishedApisWithOptions(request, runtime);
+        return this.listDataServicePublishedApis(request, runtime);
     }
 
-    public GetInstanceLogResponse getInstanceLogWithOptions(GetInstanceLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetInstanceLogResponse getInstanceLog(GetInstanceLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetInstanceLog", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetInstanceLogResponse());
     }
 
-    public GetInstanceLogResponse getInstanceLog(GetInstanceLogRequest request) throws Exception {
+    public GetInstanceLogResponse getInstanceLogSimply(GetInstanceLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getInstanceLogWithOptions(request, runtime);
+        return this.getInstanceLog(request, runtime);
     }
 
-    public CreateFolderResponse createFolderWithOptions(CreateFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateFolderResponse createFolder(CreateFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateFolder", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateFolderResponse());
     }
 
-    public CreateFolderResponse createFolder(CreateFolderRequest request) throws Exception {
+    public CreateFolderResponse createFolderSimply(CreateFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createFolderWithOptions(request, runtime);
+        return this.createFolder(request, runtime);
     }
 
-    public GetBusinessResponse getBusinessWithOptions(GetBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetBusinessResponse getBusiness(GetBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetBusiness", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetBusinessResponse());
     }
 
-    public GetBusinessResponse getBusiness(GetBusinessRequest request) throws Exception {
+    public GetBusinessResponse getBusinessSimply(GetBusinessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getBusinessWithOptions(request, runtime);
+        return this.getBusiness(request, runtime);
     }
 
-    public GetInstanceResponse getInstanceWithOptions(GetInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetInstanceResponse getInstance(GetInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetInstance", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetInstanceResponse());
     }
 
-    public GetInstanceResponse getInstance(GetInstanceRequest request) throws Exception {
+    public GetInstanceResponse getInstanceSimply(GetInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getInstanceWithOptions(request, runtime);
+        return this.getInstance(request, runtime);
     }
 
-    public GetFileResponse getFileWithOptions(GetFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetFileResponse getFile(GetFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetFile", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetFileResponse());
     }
 
-    public GetFileResponse getFile(GetFileRequest request) throws Exception {
+    public GetFileResponse getFileSimply(GetFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getFileWithOptions(request, runtime);
+        return this.getFile(request, runtime);
     }
 
-    public ListBusinessResponse listBusinessWithOptions(ListBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListBusinessResponse listBusiness(ListBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListBusiness", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListBusinessResponse());
     }
 
-    public ListBusinessResponse listBusiness(ListBusinessRequest request) throws Exception {
+    public ListBusinessResponse listBusinessSimply(ListBusinessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listBusinessWithOptions(request, runtime);
+        return this.listBusiness(request, runtime);
     }
 
-    public GetMetaDBTableListResponse getMetaDBTableListWithOptions(GetMetaDBTableListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaDBTableListResponse getMetaDBTableList(GetMetaDBTableListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaDBTableList", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetMetaDBTableListResponse());
     }
 
-    public GetMetaDBTableListResponse getMetaDBTableList(GetMetaDBTableListRequest request) throws Exception {
+    public GetMetaDBTableListResponse getMetaDBTableListSimply(GetMetaDBTableListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaDBTableListWithOptions(request, runtime);
+        return this.getMetaDBTableList(request, runtime);
     }
 
-    public CheckMetaTableResponse checkMetaTableWithOptions(CheckMetaTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CheckMetaTableResponse checkMetaTable(CheckMetaTableRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CheckMetaTable", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CheckMetaTableResponse());
     }
 
-    public CheckMetaTableResponse checkMetaTable(CheckMetaTableRequest request) throws Exception {
+    public CheckMetaTableResponse checkMetaTableSimply(CheckMetaTableRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.checkMetaTableWithOptions(request, runtime);
+        return this.checkMetaTable(request, runtime);
     }
 
-    public GetFolderResponse getFolderWithOptions(GetFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetFolderResponse getFolder(GetFolderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetFolder", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetFolderResponse());
     }
 
-    public GetFolderResponse getFolder(GetFolderRequest request) throws Exception {
+    public GetFolderResponse getFolderSimply(GetFolderRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getFolderWithOptions(request, runtime);
+        return this.getFolder(request, runtime);
     }
 
-    public DeployFileResponse deployFileWithOptions(DeployFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeployFileResponse deployFile(DeployFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeployFile", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeployFileResponse());
     }
 
-    public DeployFileResponse deployFile(DeployFileRequest request) throws Exception {
+    public DeployFileResponse deployFileSimply(DeployFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deployFileWithOptions(request, runtime);
+        return this.deployFile(request, runtime);
     }
 
-    public DeleteBusinessResponse deleteBusinessWithOptions(DeleteBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteBusinessResponse deleteBusiness(DeleteBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteBusiness", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteBusinessResponse());
     }
 
-    public DeleteBusinessResponse deleteBusiness(DeleteBusinessRequest request) throws Exception {
+    public DeleteBusinessResponse deleteBusinessSimply(DeleteBusinessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteBusinessWithOptions(request, runtime);
+        return this.deleteBusiness(request, runtime);
     }
 
-    public DeleteFileResponse deleteFileWithOptions(DeleteFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteFileResponse deleteFile(DeleteFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteFile", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteFileResponse());
     }
 
-    public DeleteFileResponse deleteFile(DeleteFileRequest request) throws Exception {
+    public DeleteFileResponse deleteFileSimply(DeleteFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteFileWithOptions(request, runtime);
+        return this.deleteFile(request, runtime);
     }
 
-    public ListQualityRulesResponse listQualityRulesWithOptions(ListQualityRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListQualityRulesResponse listQualityRules(ListQualityRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListQualityRules", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListQualityRulesResponse());
     }
 
-    public ListQualityRulesResponse listQualityRules(ListQualityRulesRequest request) throws Exception {
+    public ListQualityRulesResponse listQualityRulesSimply(ListQualityRulesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listQualityRulesWithOptions(request, runtime);
+        return this.listQualityRules(request, runtime);
     }
 
-    public CreateRemindResponse createRemindWithOptions(CreateRemindRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateRemindResponse createRemind(CreateRemindRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateRemind", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateRemindResponse());
     }
 
-    public CreateRemindResponse createRemind(CreateRemindRequest request) throws Exception {
+    public CreateRemindResponse createRemindSimply(CreateRemindRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createRemindWithOptions(request, runtime);
+        return this.createRemind(request, runtime);
     }
 
-    public GetQualityRuleResponse getQualityRuleWithOptions(GetQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetQualityRuleResponse getQualityRule(GetQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetQualityRule", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetQualityRuleResponse());
     }
 
-    public GetQualityRuleResponse getQualityRule(GetQualityRuleRequest request) throws Exception {
+    public GetQualityRuleResponse getQualityRuleSimply(GetQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getQualityRuleWithOptions(request, runtime);
+        return this.getQualityRule(request, runtime);
     }
 
-    public GetDeploymentResponse getDeploymentWithOptions(GetDeploymentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetDeploymentResponse getDeployment(GetDeploymentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetDeployment", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetDeploymentResponse());
     }
 
-    public GetDeploymentResponse getDeployment(GetDeploymentRequest request) throws Exception {
+    public GetDeploymentResponse getDeploymentSimply(GetDeploymentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDeploymentWithOptions(request, runtime);
+        return this.getDeployment(request, runtime);
     }
 
-    public UpdateRemindResponse updateRemindWithOptions(UpdateRemindRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateRemindResponse updateRemind(UpdateRemindRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateRemind", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateRemindResponse());
     }
 
-    public UpdateRemindResponse updateRemind(UpdateRemindRequest request) throws Exception {
+    public UpdateRemindResponse updateRemindSimply(UpdateRemindRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateRemindWithOptions(request, runtime);
+        return this.updateRemind(request, runtime);
     }
 
-    public GetMetaColumnLineageResponse getMetaColumnLineageWithOptions(GetMetaColumnLineageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaColumnLineageResponse getMetaColumnLineage(GetMetaColumnLineageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaColumnLineage", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetMetaColumnLineageResponse());
     }
 
-    public GetMetaColumnLineageResponse getMetaColumnLineage(GetMetaColumnLineageRequest request) throws Exception {
+    public GetMetaColumnLineageResponse getMetaColumnLineageSimply(GetMetaColumnLineageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaColumnLineageWithOptions(request, runtime);
+        return this.getMetaColumnLineage(request, runtime);
     }
 
-    public UpdateBusinessResponse updateBusinessWithOptions(UpdateBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateBusinessResponse updateBusiness(UpdateBusinessRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateBusiness", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateBusinessResponse());
     }
 
-    public UpdateBusinessResponse updateBusiness(UpdateBusinessRequest request) throws Exception {
+    public UpdateBusinessResponse updateBusinessSimply(UpdateBusinessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateBusinessWithOptions(request, runtime);
+        return this.updateBusiness(request, runtime);
     }
 
-    public UpdateQualityRuleResponse updateQualityRuleWithOptions(UpdateQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateQualityRuleResponse updateQualityRule(UpdateQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateQualityRule", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateQualityRuleResponse());
     }
 
-    public UpdateQualityRuleResponse updateQualityRule(UpdateQualityRuleRequest request) throws Exception {
+    public UpdateQualityRuleResponse updateQualityRuleSimply(UpdateQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateQualityRuleWithOptions(request, runtime);
+        return this.updateQualityRule(request, runtime);
     }
 
-    public DeleteQualityRuleResponse deleteQualityRuleWithOptions(DeleteQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteQualityRuleResponse deleteQualityRule(DeleteQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteQualityRule", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteQualityRuleResponse());
     }
 
-    public DeleteQualityRuleResponse deleteQualityRule(DeleteQualityRuleRequest request) throws Exception {
+    public DeleteQualityRuleResponse deleteQualityRuleSimply(DeleteQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteQualityRuleWithOptions(request, runtime);
+        return this.deleteQualityRule(request, runtime);
     }
 
-    public SubmitFileResponse submitFileWithOptions(SubmitFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public SubmitFileResponse submitFile(SubmitFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("SubmitFile", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new SubmitFileResponse());
     }
 
-    public SubmitFileResponse submitFile(SubmitFileRequest request) throws Exception {
+    public SubmitFileResponse submitFileSimply(SubmitFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.submitFileWithOptions(request, runtime);
+        return this.submitFile(request, runtime);
     }
 
-    public GetDataServiceApiResponse getDataServiceApiWithOptions(GetDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetDataServiceApiResponse getDataServiceApi(GetDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetDataServiceApi", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetDataServiceApiResponse());
     }
 
-    public GetDataServiceApiResponse getDataServiceApi(GetDataServiceApiRequest request) throws Exception {
+    public GetDataServiceApiResponse getDataServiceApiSimply(GetDataServiceApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDataServiceApiWithOptions(request, runtime);
+        return this.getDataServiceApi(request, runtime);
     }
 
-    public ListDataServiceApisResponse listDataServiceApisWithOptions(ListDataServiceApisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListDataServiceApisResponse listDataServiceApis(ListDataServiceApisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListDataServiceApis", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListDataServiceApisResponse());
     }
 
-    public ListDataServiceApisResponse listDataServiceApis(ListDataServiceApisRequest request) throws Exception {
+    public ListDataServiceApisResponse listDataServiceApisSimply(ListDataServiceApisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listDataServiceApisWithOptions(request, runtime);
+        return this.listDataServiceApis(request, runtime);
     }
 
-    public GetDataServicePublishedApiResponse getDataServicePublishedApiWithOptions(GetDataServicePublishedApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetDataServicePublishedApiResponse getDataServicePublishedApi(GetDataServicePublishedApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetDataServicePublishedApi", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetDataServicePublishedApiResponse());
     }
 
-    public GetDataServicePublishedApiResponse getDataServicePublishedApi(GetDataServicePublishedApiRequest request) throws Exception {
+    public GetDataServicePublishedApiResponse getDataServicePublishedApiSimply(GetDataServicePublishedApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getDataServicePublishedApiWithOptions(request, runtime);
+        return this.getDataServicePublishedApi(request, runtime);
     }
 
-    public GetBaselineKeyPathResponse getBaselineKeyPathWithOptions(GetBaselineKeyPathRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetBaselineKeyPathResponse getBaselineKeyPath(GetBaselineKeyPathRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetBaselineKeyPath", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetBaselineKeyPathResponse());
     }
 
-    public GetBaselineKeyPathResponse getBaselineKeyPath(GetBaselineKeyPathRequest request) throws Exception {
+    public GetBaselineKeyPathResponse getBaselineKeyPathSimply(GetBaselineKeyPathRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getBaselineKeyPathWithOptions(request, runtime);
+        return this.getBaselineKeyPath(request, runtime);
     }
 
-    public GetRemindResponse getRemindWithOptions(GetRemindRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetRemindResponse getRemind(GetRemindRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetRemind", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetRemindResponse());
     }
 
-    public GetRemindResponse getRemind(GetRemindRequest request) throws Exception {
+    public GetRemindResponse getRemindSimply(GetRemindRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getRemindWithOptions(request, runtime);
+        return this.getRemind(request, runtime);
     }
 
-    public GetMetaTableIntroWikiResponse getMetaTableIntroWikiWithOptions(GetMetaTableIntroWikiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaTableIntroWikiResponse getMetaTableIntroWiki(GetMetaTableIntroWikiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaTableIntroWiki", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetMetaTableIntroWikiResponse());
     }
 
-    public GetMetaTableIntroWikiResponse getMetaTableIntroWiki(GetMetaTableIntroWikiRequest request) throws Exception {
+    public GetMetaTableIntroWikiResponse getMetaTableIntroWikiSimply(GetMetaTableIntroWikiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaTableIntroWikiWithOptions(request, runtime);
+        return this.getMetaTableIntroWiki(request, runtime);
     }
 
-    public GetBaselineStatusResponse getBaselineStatusWithOptions(GetBaselineStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetBaselineStatusResponse getBaselineStatus(GetBaselineStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetBaselineStatus", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetBaselineStatusResponse());
     }
 
-    public GetBaselineStatusResponse getBaselineStatus(GetBaselineStatusRequest request) throws Exception {
+    public GetBaselineStatusResponse getBaselineStatusSimply(GetBaselineStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getBaselineStatusWithOptions(request, runtime);
+        return this.getBaselineStatus(request, runtime);
     }
 
-    public DeleteDataServiceApiResponse deleteDataServiceApiWithOptions(DeleteDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteDataServiceApiResponse deleteDataServiceApi(DeleteDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteDataServiceApi", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteDataServiceApiResponse());
     }
 
-    public DeleteDataServiceApiResponse deleteDataServiceApi(DeleteDataServiceApiRequest request) throws Exception {
+    public DeleteDataServiceApiResponse deleteDataServiceApiSimply(DeleteDataServiceApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteDataServiceApiWithOptions(request, runtime);
+        return this.deleteDataServiceApi(request, runtime);
     }
 
-    public PublishDataServiceApiResponse publishDataServiceApiWithOptions(PublishDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public PublishDataServiceApiResponse publishDataServiceApi(PublishDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("PublishDataServiceApi", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new PublishDataServiceApiResponse());
     }
 
-    public PublishDataServiceApiResponse publishDataServiceApi(PublishDataServiceApiRequest request) throws Exception {
+    public PublishDataServiceApiResponse publishDataServiceApiSimply(PublishDataServiceApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.publishDataServiceApiWithOptions(request, runtime);
+        return this.publishDataServiceApi(request, runtime);
     }
 
-    public GetMetaTableLineageResponse getMetaTableLineageWithOptions(GetMetaTableLineageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetMetaTableLineageResponse getMetaTableLineage(GetMetaTableLineageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetMetaTableLineage", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetMetaTableLineageResponse());
     }
 
-    public GetMetaTableLineageResponse getMetaTableLineage(GetMetaTableLineageRequest request) throws Exception {
+    public GetMetaTableLineageResponse getMetaTableLineageSimply(GetMetaTableLineageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getMetaTableLineageWithOptions(request, runtime);
+        return this.getMetaTableLineage(request, runtime);
     }
 
-    public ListBaselineStatusesResponse listBaselineStatusesWithOptions(ListBaselineStatusesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListBaselineStatusesResponse listBaselineStatuses(ListBaselineStatusesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListBaselineStatuses", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListBaselineStatusesResponse());
     }
 
-    public ListBaselineStatusesResponse listBaselineStatuses(ListBaselineStatusesRequest request) throws Exception {
+    public ListBaselineStatusesResponse listBaselineStatusesSimply(ListBaselineStatusesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listBaselineStatusesWithOptions(request, runtime);
+        return this.listBaselineStatuses(request, runtime);
     }
 
-    public ListRemindsResponse listRemindsWithOptions(ListRemindsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ListRemindsResponse listReminds(ListRemindsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListReminds", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListRemindsResponse());
     }
 
-    public ListRemindsResponse listReminds(ListRemindsRequest request) throws Exception {
+    public ListRemindsResponse listRemindsSimply(ListRemindsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.listRemindsWithOptions(request, runtime);
+        return this.listReminds(request, runtime);
     }
 
-    public DeleteQualityEntityResponse deleteQualityEntityWithOptions(DeleteQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteQualityEntityResponse deleteQualityEntity(DeleteQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteQualityEntity", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteQualityEntityResponse());
     }
 
-    public DeleteQualityEntityResponse deleteQualityEntity(DeleteQualityEntityRequest request) throws Exception {
+    public DeleteQualityEntityResponse deleteQualityEntitySimply(DeleteQualityEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteQualityEntityWithOptions(request, runtime);
+        return this.deleteQualityEntity(request, runtime);
     }
 
-    public CreateQualityFollowerResponse createQualityFollowerWithOptions(CreateQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateQualityFollowerResponse createQualityFollower(CreateQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateQualityFollower", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateQualityFollowerResponse());
     }
 
-    public CreateQualityFollowerResponse createQualityFollower(CreateQualityFollowerRequest request) throws Exception {
+    public CreateQualityFollowerResponse createQualityFollowerSimply(CreateQualityFollowerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createQualityFollowerWithOptions(request, runtime);
+        return this.createQualityFollower(request, runtime);
     }
 
-    public CreateDataServiceApiResponse createDataServiceApiWithOptions(CreateDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateDataServiceApiResponse createDataServiceApi(CreateDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateDataServiceApi", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateDataServiceApiResponse());
     }
 
-    public CreateDataServiceApiResponse createDataServiceApi(CreateDataServiceApiRequest request) throws Exception {
+    public CreateDataServiceApiResponse createDataServiceApiSimply(CreateDataServiceApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createDataServiceApiWithOptions(request, runtime);
+        return this.createDataServiceApi(request, runtime);
     }
 
-    public AbolishDataServiceApiResponse abolishDataServiceApiWithOptions(AbolishDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public AbolishDataServiceApiResponse abolishDataServiceApi(AbolishDataServiceApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("AbolishDataServiceApi", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new AbolishDataServiceApiResponse());
     }
 
-    public AbolishDataServiceApiResponse abolishDataServiceApi(AbolishDataServiceApiRequest request) throws Exception {
+    public AbolishDataServiceApiResponse abolishDataServiceApiSimply(AbolishDataServiceApiRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.abolishDataServiceApiWithOptions(request, runtime);
+        return this.abolishDataServiceApi(request, runtime);
     }
 
-    public GetQualityEntityResponse getQualityEntityWithOptions(GetQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetQualityEntityResponse getQualityEntity(GetQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetQualityEntity", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetQualityEntityResponse());
     }
 
-    public GetQualityEntityResponse getQualityEntity(GetQualityEntityRequest request) throws Exception {
+    public GetQualityEntityResponse getQualityEntitySimply(GetQualityEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getQualityEntityWithOptions(request, runtime);
+        return this.getQualityEntity(request, runtime);
     }
 
-    public GetQualityFollowerResponse getQualityFollowerWithOptions(GetQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetQualityFollowerResponse getQualityFollower(GetQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetQualityFollower", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetQualityFollowerResponse());
     }
 
-    public GetQualityFollowerResponse getQualityFollower(GetQualityFollowerRequest request) throws Exception {
+    public GetQualityFollowerResponse getQualityFollowerSimply(GetQualityFollowerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.getQualityFollowerWithOptions(request, runtime);
+        return this.getQualityFollower(request, runtime);
     }
 
-    public DeleteQualityFollowerResponse deleteQualityFollowerWithOptions(DeleteQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteQualityFollowerResponse deleteQualityFollower(DeleteQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteQualityFollower", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteQualityFollowerResponse());
     }
 
-    public DeleteQualityFollowerResponse deleteQualityFollower(DeleteQualityFollowerRequest request) throws Exception {
+    public DeleteQualityFollowerResponse deleteQualityFollowerSimply(DeleteQualityFollowerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteQualityFollowerWithOptions(request, runtime);
+        return this.deleteQualityFollower(request, runtime);
     }
 
-    public CreateQualityEntityResponse createQualityEntityWithOptions(CreateQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateQualityEntityResponse createQualityEntity(CreateQualityEntityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateQualityEntity", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateQualityEntityResponse());
     }
 
-    public CreateQualityEntityResponse createQualityEntity(CreateQualityEntityRequest request) throws Exception {
+    public CreateQualityEntityResponse createQualityEntitySimply(CreateQualityEntityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createQualityEntityWithOptions(request, runtime);
+        return this.createQualityEntity(request, runtime);
     }
 
-    public CreateQualityRuleResponse createQualityRuleWithOptions(CreateQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateQualityRuleResponse createQualityRule(CreateQualityRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateQualityRule", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateQualityRuleResponse());
     }
 
-    public CreateQualityRuleResponse createQualityRule(CreateQualityRuleRequest request) throws Exception {
+    public CreateQualityRuleResponse createQualityRuleSimply(CreateQualityRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createQualityRuleWithOptions(request, runtime);
+        return this.createQualityRule(request, runtime);
     }
 
-    public UpdateQualityFollowerResponse updateQualityFollowerWithOptions(UpdateQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateQualityFollowerResponse updateQualityFollower(UpdateQualityFollowerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("UpdateQualityFollower", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new UpdateQualityFollowerResponse());
     }
 
-    public UpdateQualityFollowerResponse updateQualityFollower(UpdateQualityFollowerRequest request) throws Exception {
+    public UpdateQualityFollowerResponse updateQualityFollowerSimply(UpdateQualityFollowerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateQualityFollowerWithOptions(request, runtime);
+        return this.updateQualityFollower(request, runtime);
     }
 
-    public CreateQualityRelativeNodeResponse createQualityRelativeNodeWithOptions(CreateQualityRelativeNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateQualityRelativeNodeResponse createQualityRelativeNode(CreateQualityRelativeNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CreateQualityRelativeNode", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreateQualityRelativeNodeResponse());
     }
 
-    public CreateQualityRelativeNodeResponse createQualityRelativeNode(CreateQualityRelativeNodeRequest request) throws Exception {
+    public CreateQualityRelativeNodeResponse createQualityRelativeNodeSimply(CreateQualityRelativeNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createQualityRelativeNodeWithOptions(request, runtime);
+        return this.createQualityRelativeNode(request, runtime);
     }
 
-    public DeleteQualityRelativeNodeResponse deleteQualityRelativeNodeWithOptions(DeleteQualityRelativeNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteQualityRelativeNodeResponse deleteQualityRelativeNode(DeleteQualityRelativeNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteQualityRelativeNode", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new DeleteQualityRelativeNodeResponse());
     }
 
-    public DeleteQualityRelativeNodeResponse deleteQualityRelativeNode(DeleteQualityRelativeNodeRequest request) throws Exception {
+    public DeleteQualityRelativeNodeResponse deleteQualityRelativeNodeSimply(DeleteQualityRelativeNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteQualityRelativeNodeWithOptions(request, runtime);
+        return this.deleteQualityRelativeNode(request, runtime);
     }
 
     public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {

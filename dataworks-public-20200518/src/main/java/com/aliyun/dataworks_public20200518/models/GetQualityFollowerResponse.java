@@ -106,6 +106,10 @@ public class GetQualityFollowerResponse extends TeaModel {
         @Validation(required = true)
         public Integer alarmMode;
 
+        @NameInMap("FollowerAccountName")
+        @Validation(required = true)
+        public String followerAccountName;
+
         public static GetQualityFollowerResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityFollowerResponseData self = new GetQualityFollowerResponseData();
             return TeaModel.build(map, self);
@@ -157,6 +161,14 @@ public class GetQualityFollowerResponse extends TeaModel {
         }
         public Integer getAlarmMode() {
             return this.alarmMode;
+        }
+
+        public GetQualityFollowerResponseData setFollowerAccountName(String followerAccountName) {
+            this.followerAccountName = followerAccountName;
+            return this;
+        }
+        public String getFollowerAccountName() {
+            return this.followerAccountName;
         }
 
     }

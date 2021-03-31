@@ -12,6 +12,12 @@ public class ListMetaDBRequest extends TeaModel {
     @Validation(required = true)
     public String dataSourceType;
 
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     public static ListMetaDBRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMetaDBRequest self = new ListMetaDBRequest();
         return TeaModel.build(map, self);
@@ -31,6 +37,22 @@ public class ListMetaDBRequest extends TeaModel {
     }
     public String getDataSourceType() {
         return this.dataSourceType;
+    }
+
+    public ListMetaDBRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListMetaDBRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
 }

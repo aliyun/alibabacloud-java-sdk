@@ -170,6 +170,10 @@ public class GetQualityRuleResponse extends TeaModel {
         @Validation(required = true)
         public Boolean fixCheck;
 
+        @NameInMap("OnDutyAccountName")
+        @Validation(required = true)
+        public String onDutyAccountName;
+
         public static GetQualityRuleResponseData build(java.util.Map<String, ?> map) throws Exception {
             GetQualityRuleResponseData self = new GetQualityRuleResponseData();
             return TeaModel.build(map, self);
@@ -349,6 +353,14 @@ public class GetQualityRuleResponse extends TeaModel {
         }
         public Boolean getFixCheck() {
             return this.fixCheck;
+        }
+
+        public GetQualityRuleResponseData setOnDutyAccountName(String onDutyAccountName) {
+            this.onDutyAccountName = onDutyAccountName;
+            return this;
+        }
+        public String getOnDutyAccountName() {
+            return this.onDutyAccountName;
         }
 
     }

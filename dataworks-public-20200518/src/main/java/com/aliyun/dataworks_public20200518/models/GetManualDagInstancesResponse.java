@@ -94,6 +94,10 @@ public class GetManualDagInstancesResponse extends TeaModel {
         @Validation(required = true)
         public Long finishTime;
 
+        @NameInMap("TaskType")
+        @Validation(required = true)
+        public String taskType;
+
         public static GetManualDagInstancesResponseInstances build(java.util.Map<String, ?> map) throws Exception {
             GetManualDagInstancesResponseInstances self = new GetManualDagInstancesResponseInstances();
             return TeaModel.build(map, self);
@@ -217,6 +221,14 @@ public class GetManualDagInstancesResponse extends TeaModel {
         }
         public Long getFinishTime() {
             return this.finishTime;
+        }
+
+        public GetManualDagInstancesResponseInstances setTaskType(String taskType) {
+            this.taskType = taskType;
+            return this;
+        }
+        public String getTaskType() {
+            return this.taskType;
         }
 
     }

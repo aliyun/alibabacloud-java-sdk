@@ -4,9 +4,6 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateTableRequest extends TeaModel {
-    @NameInMap("HasPart")
-    public Integer hasPart;
-
     @NameInMap("Columns")
     @Validation(required = true)
     public java.util.List<CreateTableRequestColumns> columns;
@@ -57,17 +54,18 @@ public class CreateTableRequest extends TeaModel {
     @NameInMap("Comment")
     public String comment;
 
+    @NameInMap("OwnerId")
+    public String ownerId;
+
+    @NameInMap("HasPart")
+    public Integer hasPart;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     public static CreateTableRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTableRequest self = new CreateTableRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTableRequest setHasPart(Integer hasPart) {
-        this.hasPart = hasPart;
-        return this;
-    }
-    public Integer getHasPart() {
-        return this.hasPart;
     }
 
     public CreateTableRequest setColumns(java.util.List<CreateTableRequestColumns> columns) {
@@ -198,6 +196,30 @@ public class CreateTableRequest extends TeaModel {
         return this.comment;
     }
 
+    public CreateTableRequest setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public String getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateTableRequest setHasPart(Integer hasPart) {
+        this.hasPart = hasPart;
+        return this;
+    }
+    public Integer getHasPart() {
+        return this.hasPart;
+    }
+
+    public CreateTableRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public static class CreateTableRequestColumns extends TeaModel {
         @NameInMap("ColumnName")
         @Validation(required = true)
@@ -217,13 +239,7 @@ public class CreateTableRequest extends TeaModel {
         public Integer length;
 
         @NameInMap("IsPartitionCol")
-        public Integer isPartitionCol;
-
-        @NameInMap("IsPrimaryKey")
-        public Integer isPrimaryKey;
-
-        @NameInMap("IsNullable")
-        public Integer isNullable;
+        public Boolean isPartitionCol;
 
         @NameInMap("Comment")
         public String comment;
@@ -273,28 +289,12 @@ public class CreateTableRequest extends TeaModel {
             return this.length;
         }
 
-        public CreateTableRequestColumns setIsPartitionCol(Integer isPartitionCol) {
+        public CreateTableRequestColumns setIsPartitionCol(Boolean isPartitionCol) {
             this.isPartitionCol = isPartitionCol;
             return this;
         }
-        public Integer getIsPartitionCol() {
+        public Boolean getIsPartitionCol() {
             return this.isPartitionCol;
-        }
-
-        public CreateTableRequestColumns setIsPrimaryKey(Integer isPrimaryKey) {
-            this.isPrimaryKey = isPrimaryKey;
-            return this;
-        }
-        public Integer getIsPrimaryKey() {
-            return this.isPrimaryKey;
-        }
-
-        public CreateTableRequestColumns setIsNullable(Integer isNullable) {
-            this.isNullable = isNullable;
-            return this;
-        }
-        public Integer getIsNullable() {
-            return this.isNullable;
         }
 
         public CreateTableRequestColumns setComment(String comment) {

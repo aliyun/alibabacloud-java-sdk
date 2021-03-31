@@ -36,6 +36,15 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("DagId")
     public Long dagId;
 
+    @NameInMap("Bizdate")
+    public String bizdate;
+
+    @NameInMap("BeginBizdate")
+    public String beginBizdate;
+
+    @NameInMap("EndBizdate")
+    public String endBizdate;
+
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
@@ -119,6 +128,30 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Long getDagId() {
         return this.dagId;
+    }
+
+    public ListInstancesRequest setBizdate(String bizdate) {
+        this.bizdate = bizdate;
+        return this;
+    }
+    public String getBizdate() {
+        return this.bizdate;
+    }
+
+    public ListInstancesRequest setBeginBizdate(String beginBizdate) {
+        this.beginBizdate = beginBizdate;
+        return this;
+    }
+    public String getBeginBizdate() {
+        return this.beginBizdate;
+    }
+
+    public ListInstancesRequest setEndBizdate(String endBizdate) {
+        this.endBizdate = endBizdate;
+        return this;
+    }
+    public String getEndBizdate() {
+        return this.endBizdate;
     }
 
 }

@@ -8,9 +8,25 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
     @Validation(required = true)
     public String requestId;
 
-    @NameInMap("QualityResults")
+    @NameInMap("HttpStatusCode")
     @Validation(required = true)
-    public ListQualityResultsByEntityResponseQualityResults qualityResults;
+    public Integer httpStatusCode;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("ErrorCode")
+    @Validation(required = true)
+    public String errorCode;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public ListQualityResultsByEntityResponseData data;
 
     public static ListQualityResultsByEntityResponse build(java.util.Map<String, ?> map) throws Exception {
         ListQualityResultsByEntityResponse self = new ListQualityResultsByEntityResponse();
@@ -25,18 +41,50 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
         return this.requestId;
     }
 
-    public ListQualityResultsByEntityResponse setQualityResults(ListQualityResultsByEntityResponseQualityResults qualityResults) {
-        this.qualityResults = qualityResults;
+    public ListQualityResultsByEntityResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public ListQualityResultsByEntityResponseQualityResults getQualityResults() {
-        return this.qualityResults;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
-    public static class ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue extends TeaModel {
+    public ListQualityResultsByEntityResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public ListQualityResultsByEntityResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListQualityResultsByEntityResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListQualityResultsByEntityResponse setData(ListQualityResultsByEntityResponseData data) {
+        this.data = data;
+        return this;
+    }
+    public ListQualityResultsByEntityResponseData getData() {
+        return this.data;
+    }
+
+    public static class ListQualityResultsByEntityResponseDataRuleChecksReferenceValue extends TeaModel {
         @NameInMap("BizDate")
         @Validation(required = true)
-        public Long bizDate;
+        public String bizDate;
 
         @NameInMap("DiscreteProperty")
         @Validation(required = true)
@@ -54,20 +102,20 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
         @Validation(required = true)
         public Integer singleCheckResult;
 
-        public static ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue build(java.util.Map<String, ?> map) throws Exception {
-            ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue self = new ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue();
+        public static ListQualityResultsByEntityResponseDataRuleChecksReferenceValue build(java.util.Map<String, ?> map) throws Exception {
+            ListQualityResultsByEntityResponseDataRuleChecksReferenceValue self = new ListQualityResultsByEntityResponseDataRuleChecksReferenceValue();
             return TeaModel.build(map, self);
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue setBizDate(Long bizDate) {
+        public ListQualityResultsByEntityResponseDataRuleChecksReferenceValue setBizDate(String bizDate) {
             this.bizDate = bizDate;
             return this;
         }
-        public Long getBizDate() {
+        public String getBizDate() {
             return this.bizDate;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue setDiscreteProperty(String discreteProperty) {
+        public ListQualityResultsByEntityResponseDataRuleChecksReferenceValue setDiscreteProperty(String discreteProperty) {
             this.discreteProperty = discreteProperty;
             return this;
         }
@@ -75,7 +123,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.discreteProperty;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue setValue(Float value) {
+        public ListQualityResultsByEntityResponseDataRuleChecksReferenceValue setValue(Float value) {
             this.value = value;
             return this;
         }
@@ -83,7 +131,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.value;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue setThreshold(Float threshold) {
+        public ListQualityResultsByEntityResponseDataRuleChecksReferenceValue setThreshold(Float threshold) {
             this.threshold = threshold;
             return this;
         }
@@ -91,7 +139,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.threshold;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue setSingleCheckResult(Integer singleCheckResult) {
+        public ListQualityResultsByEntityResponseDataRuleChecksReferenceValue setSingleCheckResult(Integer singleCheckResult) {
             this.singleCheckResult = singleCheckResult;
             return this;
         }
@@ -101,10 +149,10 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
 
     }
 
-    public static class ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue extends TeaModel {
+    public static class ListQualityResultsByEntityResponseDataRuleChecksSampleValue extends TeaModel {
         @NameInMap("BizDate")
         @Validation(required = true)
-        public Long bizDate;
+        public String bizDate;
 
         @NameInMap("DiscreteProperty")
         @Validation(required = true)
@@ -114,20 +162,20 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
         @Validation(required = true)
         public Float value;
 
-        public static ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue build(java.util.Map<String, ?> map) throws Exception {
-            ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue self = new ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue();
+        public static ListQualityResultsByEntityResponseDataRuleChecksSampleValue build(java.util.Map<String, ?> map) throws Exception {
+            ListQualityResultsByEntityResponseDataRuleChecksSampleValue self = new ListQualityResultsByEntityResponseDataRuleChecksSampleValue();
             return TeaModel.build(map, self);
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue setBizDate(Long bizDate) {
+        public ListQualityResultsByEntityResponseDataRuleChecksSampleValue setBizDate(String bizDate) {
             this.bizDate = bizDate;
             return this;
         }
-        public Long getBizDate() {
+        public String getBizDate() {
             return this.bizDate;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue setDiscreteProperty(String discreteProperty) {
+        public ListQualityResultsByEntityResponseDataRuleChecksSampleValue setDiscreteProperty(String discreteProperty) {
             this.discreteProperty = discreteProperty;
             return this;
         }
@@ -135,7 +183,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.discreteProperty;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue setValue(Float value) {
+        public ListQualityResultsByEntityResponseDataRuleChecksSampleValue setValue(Float value) {
             this.value = value;
             return this;
         }
@@ -145,7 +193,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
 
     }
 
-    public static class ListQualityResultsByEntityResponseQualityResultsRuleChecks extends TeaModel {
+    public static class ListQualityResultsByEntityResponseDataRuleChecks extends TeaModel {
         @NameInMap("Id")
         @Validation(required = true)
         public Integer id;
@@ -304,18 +352,18 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
 
         @NameInMap("ReferenceValue")
         @Validation(required = true)
-        public java.util.List<ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue> referenceValue;
+        public java.util.List<ListQualityResultsByEntityResponseDataRuleChecksReferenceValue> referenceValue;
 
         @NameInMap("SampleValue")
         @Validation(required = true)
-        public java.util.List<ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue> sampleValue;
+        public java.util.List<ListQualityResultsByEntityResponseDataRuleChecksSampleValue> sampleValue;
 
-        public static ListQualityResultsByEntityResponseQualityResultsRuleChecks build(java.util.Map<String, ?> map) throws Exception {
-            ListQualityResultsByEntityResponseQualityResultsRuleChecks self = new ListQualityResultsByEntityResponseQualityResultsRuleChecks();
+        public static ListQualityResultsByEntityResponseDataRuleChecks build(java.util.Map<String, ?> map) throws Exception {
+            ListQualityResultsByEntityResponseDataRuleChecks self = new ListQualityResultsByEntityResponseDataRuleChecks();
             return TeaModel.build(map, self);
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setId(Integer id) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setId(Integer id) {
             this.id = id;
             return this;
         }
@@ -323,7 +371,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.id;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setTaskId(String taskId) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
@@ -331,7 +379,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.taskId;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setEntityId(Integer entityId) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setEntityId(Integer entityId) {
             this.entityId = entityId;
             return this;
         }
@@ -339,7 +387,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.entityId;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setRuleId(Integer ruleId) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setRuleId(Integer ruleId) {
             this.ruleId = ruleId;
             return this;
         }
@@ -347,7 +395,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.ruleId;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setProperty(String property) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setProperty(String property) {
             this.property = property;
             return this;
         }
@@ -355,7 +403,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.property;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setBizDate(Long bizDate) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setBizDate(Long bizDate) {
             this.bizDate = bizDate;
             return this;
         }
@@ -363,7 +411,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.bizDate;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setDateType(String dateType) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setDateType(String dateType) {
             this.dateType = dateType;
             return this;
         }
@@ -371,7 +419,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.dateType;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setActualExpression(String actualExpression) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setActualExpression(String actualExpression) {
             this.actualExpression = actualExpression;
             return this;
         }
@@ -379,7 +427,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.actualExpression;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setMatchExpression(String matchExpression) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setMatchExpression(String matchExpression) {
             this.matchExpression = matchExpression;
             return this;
         }
@@ -387,7 +435,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.matchExpression;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setBlockType(Integer blockType) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setBlockType(Integer blockType) {
             this.blockType = blockType;
             return this;
         }
@@ -395,7 +443,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.blockType;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setCheckResult(Integer checkResult) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setCheckResult(Integer checkResult) {
             this.checkResult = checkResult;
             return this;
         }
@@ -403,7 +451,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.checkResult;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setCheckResultStatus(Integer checkResultStatus) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setCheckResultStatus(Integer checkResultStatus) {
             this.checkResultStatus = checkResultStatus;
             return this;
         }
@@ -411,7 +459,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.checkResultStatus;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setMethodName(String methodName) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setMethodName(String methodName) {
             this.methodName = methodName;
             return this;
         }
@@ -419,7 +467,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.methodName;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setComment(String comment) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setComment(String comment) {
             this.comment = comment;
             return this;
         }
@@ -427,7 +475,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.comment;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setWhereCondition(String whereCondition) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setWhereCondition(String whereCondition) {
             this.whereCondition = whereCondition;
             return this;
         }
@@ -435,7 +483,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.whereCondition;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setBeginTime(Long beginTime) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setBeginTime(Long beginTime) {
             this.beginTime = beginTime;
             return this;
         }
@@ -443,7 +491,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.beginTime;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setEndTime(Long endTime) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setEndTime(Long endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -451,7 +499,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.endTime;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setTimeCost(String timeCost) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setTimeCost(String timeCost) {
             this.timeCost = timeCost;
             return this;
         }
@@ -459,7 +507,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.timeCost;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setExternalType(String externalType) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setExternalType(String externalType) {
             this.externalType = externalType;
             return this;
         }
@@ -467,7 +515,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.externalType;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setExternalId(String externalId) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setExternalId(String externalId) {
             this.externalId = externalId;
             return this;
         }
@@ -475,7 +523,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.externalId;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setDiscreteCheck(Boolean discreteCheck) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setDiscreteCheck(Boolean discreteCheck) {
             this.discreteCheck = discreteCheck;
             return this;
         }
@@ -483,7 +531,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.discreteCheck;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setFixedCheck(Boolean fixedCheck) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setFixedCheck(Boolean fixedCheck) {
             this.fixedCheck = fixedCheck;
             return this;
         }
@@ -491,7 +539,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.fixedCheck;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setTrend(String trend) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setTrend(String trend) {
             this.trend = trend;
             return this;
         }
@@ -499,7 +547,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.trend;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setWarningThreshold(Float warningThreshold) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setWarningThreshold(Float warningThreshold) {
             this.warningThreshold = warningThreshold;
             return this;
         }
@@ -507,7 +555,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.warningThreshold;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setCriticalThreshold(Float criticalThreshold) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setCriticalThreshold(Float criticalThreshold) {
             this.criticalThreshold = criticalThreshold;
             return this;
         }
@@ -515,7 +563,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.criticalThreshold;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setExpectValue(Float expectValue) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setExpectValue(Float expectValue) {
             this.expectValue = expectValue;
             return this;
         }
@@ -523,7 +571,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.expectValue;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setOp(String op) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setOp(String op) {
             this.op = op;
             return this;
         }
@@ -531,7 +579,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.op;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setProjectName(String projectName) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setProjectName(String projectName) {
             this.projectName = projectName;
             return this;
         }
@@ -539,7 +587,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.projectName;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setTableName(String tableName) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setTableName(String tableName) {
             this.tableName = tableName;
             return this;
         }
@@ -547,7 +595,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.tableName;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setTemplateId(Integer templateId) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setTemplateId(Integer templateId) {
             this.templateId = templateId;
             return this;
         }
@@ -555,7 +603,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.templateId;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setTemplateName(String templateName) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setTemplateName(String templateName) {
             this.templateName = templateName;
             return this;
         }
@@ -563,7 +611,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.templateName;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setResultString(String resultString) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setResultString(String resultString) {
             this.resultString = resultString;
             return this;
         }
@@ -571,7 +619,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.resultString;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setCheckerId(Integer checkerId) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setCheckerId(Integer checkerId) {
             this.checkerId = checkerId;
             return this;
         }
@@ -579,7 +627,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.checkerId;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setCheckerType(Integer checkerType) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setCheckerType(Integer checkerType) {
             this.checkerType = checkerType;
             return this;
         }
@@ -587,7 +635,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.checkerType;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setRuleName(String ruleName) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setRuleName(String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
@@ -595,7 +643,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.ruleName;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setIsPrediction(Boolean isPrediction) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setIsPrediction(Boolean isPrediction) {
             this.isPrediction = isPrediction;
             return this;
         }
@@ -603,7 +651,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.isPrediction;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setUpperValue(Float upperValue) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setUpperValue(Float upperValue) {
             this.upperValue = upperValue;
             return this;
         }
@@ -611,7 +659,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.upperValue;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setLowerValue(Float lowerValue) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setLowerValue(Float lowerValue) {
             this.lowerValue = lowerValue;
             return this;
         }
@@ -619,7 +667,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.lowerValue;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setCheckerName(String checkerName) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setCheckerName(String checkerName) {
             this.checkerName = checkerName;
             return this;
         }
@@ -627,25 +675,25 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.checkerName;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setReferenceValue(java.util.List<ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue> referenceValue) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setReferenceValue(java.util.List<ListQualityResultsByEntityResponseDataRuleChecksReferenceValue> referenceValue) {
             this.referenceValue = referenceValue;
             return this;
         }
-        public java.util.List<ListQualityResultsByEntityResponseQualityResultsRuleChecksReferenceValue> getReferenceValue() {
+        public java.util.List<ListQualityResultsByEntityResponseDataRuleChecksReferenceValue> getReferenceValue() {
             return this.referenceValue;
         }
 
-        public ListQualityResultsByEntityResponseQualityResultsRuleChecks setSampleValue(java.util.List<ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue> sampleValue) {
+        public ListQualityResultsByEntityResponseDataRuleChecks setSampleValue(java.util.List<ListQualityResultsByEntityResponseDataRuleChecksSampleValue> sampleValue) {
             this.sampleValue = sampleValue;
             return this;
         }
-        public java.util.List<ListQualityResultsByEntityResponseQualityResultsRuleChecksSampleValue> getSampleValue() {
+        public java.util.List<ListQualityResultsByEntityResponseDataRuleChecksSampleValue> getSampleValue() {
             return this.sampleValue;
         }
 
     }
 
-    public static class ListQualityResultsByEntityResponseQualityResults extends TeaModel {
+    public static class ListQualityResultsByEntityResponseData extends TeaModel {
         @NameInMap("TotalCount")
         @Validation(required = true)
         public Long totalCount;
@@ -660,14 +708,14 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
 
         @NameInMap("RuleChecks")
         @Validation(required = true)
-        public java.util.List<ListQualityResultsByEntityResponseQualityResultsRuleChecks> ruleChecks;
+        public java.util.List<ListQualityResultsByEntityResponseDataRuleChecks> ruleChecks;
 
-        public static ListQualityResultsByEntityResponseQualityResults build(java.util.Map<String, ?> map) throws Exception {
-            ListQualityResultsByEntityResponseQualityResults self = new ListQualityResultsByEntityResponseQualityResults();
+        public static ListQualityResultsByEntityResponseData build(java.util.Map<String, ?> map) throws Exception {
+            ListQualityResultsByEntityResponseData self = new ListQualityResultsByEntityResponseData();
             return TeaModel.build(map, self);
         }
 
-        public ListQualityResultsByEntityResponseQualityResults setTotalCount(Long totalCount) {
+        public ListQualityResultsByEntityResponseData setTotalCount(Long totalCount) {
             this.totalCount = totalCount;
             return this;
         }
@@ -675,7 +723,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.totalCount;
         }
 
-        public ListQualityResultsByEntityResponseQualityResults setPageNumber(Integer pageNumber) {
+        public ListQualityResultsByEntityResponseData setPageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
             return this;
         }
@@ -683,7 +731,7 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.pageNumber;
         }
 
-        public ListQualityResultsByEntityResponseQualityResults setPageSize(Integer pageSize) {
+        public ListQualityResultsByEntityResponseData setPageSize(Integer pageSize) {
             this.pageSize = pageSize;
             return this;
         }
@@ -691,11 +739,11 @@ public class ListQualityResultsByEntityResponse extends TeaModel {
             return this.pageSize;
         }
 
-        public ListQualityResultsByEntityResponseQualityResults setRuleChecks(java.util.List<ListQualityResultsByEntityResponseQualityResultsRuleChecks> ruleChecks) {
+        public ListQualityResultsByEntityResponseData setRuleChecks(java.util.List<ListQualityResultsByEntityResponseDataRuleChecks> ruleChecks) {
             this.ruleChecks = ruleChecks;
             return this;
         }
-        public java.util.List<ListQualityResultsByEntityResponseQualityResultsRuleChecks> getRuleChecks() {
+        public java.util.List<ListQualityResultsByEntityResponseDataRuleChecks> getRuleChecks() {
             return this.ruleChecks;
         }
 

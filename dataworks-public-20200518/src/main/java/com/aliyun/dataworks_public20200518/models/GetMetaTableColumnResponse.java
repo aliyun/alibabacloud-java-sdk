@@ -114,6 +114,10 @@ public class GetMetaTableColumnResponse extends TeaModel {
         @Validation(required = true)
         public String caption;
 
+        @NameInMap("Position")
+        @Validation(required = true)
+        public Integer position;
+
         public static GetMetaTableColumnResponseDataColumnList build(java.util.Map<String, ?> map) throws Exception {
             GetMetaTableColumnResponseDataColumnList self = new GetMetaTableColumnResponseDataColumnList();
             return TeaModel.build(map, self);
@@ -181,6 +185,14 @@ public class GetMetaTableColumnResponse extends TeaModel {
         }
         public String getCaption() {
             return this.caption;
+        }
+
+        public GetMetaTableColumnResponseDataColumnList setPosition(Integer position) {
+            this.position = position;
+            return this;
+        }
+        public Integer getPosition() {
+            return this.position;
         }
 
     }
