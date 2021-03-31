@@ -83,6 +83,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("InitialCredit")
         public Integer initialCredit;
 
+        @NameInMap("DiskQuantity")
+        public Integer diskQuantity;
+
         @NameInMap("LocalStorageAmount")
         public Integer localStorageAmount;
 
@@ -246,6 +249,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getInitialCredit() {
             return this.initialCredit;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setDiskQuantity(Integer diskQuantity) {
+            this.diskQuantity = diskQuantity;
+            return this;
+        }
+        public Integer getDiskQuantity() {
+            return this.diskQuantity;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setLocalStorageAmount(Integer localStorageAmount) {

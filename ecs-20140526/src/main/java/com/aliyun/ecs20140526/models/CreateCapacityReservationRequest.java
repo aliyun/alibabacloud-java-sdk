@@ -22,6 +22,12 @@ public class CreateCapacityReservationRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateCapacityReservationRequestTag> tag;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -100,6 +106,22 @@ public class CreateCapacityReservationRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateCapacityReservationRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public CreateCapacityReservationRequest setTag(java.util.List<CreateCapacityReservationRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateCapacityReservationRequestTag> getTag() {
+        return this.tag;
     }
 
     public CreateCapacityReservationRequest setClientToken(String clientToken) {
@@ -200,6 +222,36 @@ public class CreateCapacityReservationRequest extends TeaModel {
         }
         public String getMatchCriteria() {
             return this.matchCriteria;
+        }
+
+    }
+
+    public static class CreateCapacityReservationRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateCapacityReservationRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateCapacityReservationRequestTag self = new CreateCapacityReservationRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCapacityReservationRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateCapacityReservationRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

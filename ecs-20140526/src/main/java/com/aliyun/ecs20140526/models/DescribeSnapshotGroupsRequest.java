@@ -37,6 +37,9 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     @NameInMap("Status")
     public java.util.List<String> status;
 
+    @NameInMap("AdditionalAttributes")
+    public java.util.List<String> additionalAttributes;
+
     public static DescribeSnapshotGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotGroupsRequest self = new DescribeSnapshotGroupsRequest();
         return TeaModel.build(map, self);
@@ -128,6 +131,14 @@ public class DescribeSnapshotGroupsRequest extends TeaModel {
     }
     public java.util.List<String> getStatus() {
         return this.status;
+    }
+
+    public DescribeSnapshotGroupsRequest setAdditionalAttributes(java.util.List<String> additionalAttributes) {
+        this.additionalAttributes = additionalAttributes;
+        return this;
+    }
+    public java.util.List<String> getAdditionalAttributes() {
+        return this.additionalAttributes;
     }
 
 }

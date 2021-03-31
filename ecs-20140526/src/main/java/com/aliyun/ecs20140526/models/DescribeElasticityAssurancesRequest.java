@@ -22,6 +22,12 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeElasticityAssurancesRequestTag> tag;
+
     @NameInMap("MaxResults")
     public Integer maxResults;
 
@@ -96,6 +102,22 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeElasticityAssurancesRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeElasticityAssurancesRequest setTag(java.util.List<DescribeElasticityAssurancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeElasticityAssurancesRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeElasticityAssurancesRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -167,6 +189,36 @@ public class DescribeElasticityAssurancesRequest extends TeaModel {
         }
         public String getIds() {
             return this.ids;
+        }
+
+    }
+
+    public static class DescribeElasticityAssurancesRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeElasticityAssurancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeElasticityAssurancesRequestTag self = new DescribeElasticityAssurancesRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeElasticityAssurancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeElasticityAssurancesRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

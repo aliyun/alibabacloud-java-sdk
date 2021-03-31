@@ -145,6 +145,9 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("ProgressStatus")
+        public String progressStatus;
+
         @NameInMap("SnapshotGroupId")
         public String snapshotGroupId;
 
@@ -184,6 +187,14 @@ public class DescribeSnapshotGroupsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup setProgressStatus(String progressStatus) {
+            this.progressStatus = progressStatus;
+            return this;
+        }
+        public String getProgressStatus() {
+            return this.progressStatus;
         }
 
         public DescribeSnapshotGroupsResponseBodySnapshotGroupsSnapshotGroup setSnapshotGroupId(String snapshotGroupId) {
