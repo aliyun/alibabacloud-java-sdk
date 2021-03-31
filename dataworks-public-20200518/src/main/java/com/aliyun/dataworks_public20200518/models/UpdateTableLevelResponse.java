@@ -4,81 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableLevelResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("ErrorCode")
+    @NameInMap("body")
     @Validation(required = true)
-    public String errorCode;
-
-    @NameInMap("ErrorMessage")
-    @Validation(required = true)
-    public String errorMessage;
-
-    @NameInMap("HttpStatusCode")
-    @Validation(required = true)
-    public Integer httpStatusCode;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("UpdateResult")
-    @Validation(required = true)
-    public Boolean updateResult;
+    public UpdateTableLevelResponseBody body;
 
     public static UpdateTableLevelResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableLevelResponse self = new UpdateTableLevelResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateTableLevelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public UpdateTableLevelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public UpdateTableLevelResponse setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
+    public UpdateTableLevelResponse setBody(UpdateTableLevelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getErrorCode() {
-        return this.errorCode;
-    }
-
-    public UpdateTableLevelResponse setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
-        return this;
-    }
-    public String getErrorMessage() {
-        return this.errorMessage;
-    }
-
-    public UpdateTableLevelResponse setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
-    }
-
-    public UpdateTableLevelResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public UpdateTableLevelResponse setUpdateResult(Boolean updateResult) {
-        this.updateResult = updateResult;
-        return this;
-    }
-    public Boolean getUpdateResult() {
-        return this.updateResult;
+    public UpdateTableLevelResponseBody getBody() {
+        return this.body;
     }
 
 }

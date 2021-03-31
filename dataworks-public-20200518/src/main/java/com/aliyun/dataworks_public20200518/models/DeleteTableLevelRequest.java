@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteTableLevelRequest extends TeaModel {
     @NameInMap("LevelId")
-    @Validation(required = true)
     public Long levelId;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     public static DeleteTableLevelRequest build(java.util.Map<String, ?> map) throws Exception {

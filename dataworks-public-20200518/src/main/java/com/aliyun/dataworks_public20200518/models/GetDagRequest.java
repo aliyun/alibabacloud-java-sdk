@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDagRequest extends TeaModel {
     @NameInMap("DagId")
-    @Validation(required = true)
     public Long dagId;
 
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     public static GetDagRequest build(java.util.Map<String, ?> map) throws Exception {

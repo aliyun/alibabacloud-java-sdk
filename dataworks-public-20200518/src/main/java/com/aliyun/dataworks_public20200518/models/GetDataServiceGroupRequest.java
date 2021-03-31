@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceGroupRequest extends TeaModel {
     @NameInMap("TenantId")
-    @Validation(required = true)
     public Long tenantId;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("GroupId")
-    @Validation(required = true)
     public String groupId;
 
     public static GetDataServiceGroupRequest build(java.util.Map<String, ?> map) throws Exception {

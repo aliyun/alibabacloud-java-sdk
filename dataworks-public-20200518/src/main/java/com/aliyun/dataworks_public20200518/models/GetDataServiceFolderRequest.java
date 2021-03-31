@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceFolderRequest extends TeaModel {
     @NameInMap("TenantId")
-    @Validation(required = true)
     public Long tenantId;
 
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("FolderId")
-    @Validation(required = true)
     public Long folderId;
 
     public static GetDataServiceFolderRequest build(java.util.Map<String, ?> map) throws Exception {

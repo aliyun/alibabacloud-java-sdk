@@ -8,7 +8,6 @@ public class GetMetaTableLineageRequest extends TeaModel {
     public String tableGuid;
 
     @NameInMap("Direction")
-    @Validation(required = true)
     public String direction;
 
     @NameInMap("NextPrimaryKey")

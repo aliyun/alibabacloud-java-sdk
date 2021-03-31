@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class ListQualityRulesRequest extends TeaModel {
     @NameInMap("ProjectName")
-    @Validation(required = true)
     public String projectName;
 
     @NameInMap("EntityId")
-    @Validation(required = true)
     public Long entityId;
 
     @NameInMap("PageNumber")
-    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     public static ListQualityRulesRequest build(java.util.Map<String, ?> map) throws Exception {
