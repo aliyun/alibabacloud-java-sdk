@@ -692,6 +692,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.importSingleConversationWithOptions(request, runtime);
     }
 
+    public UpdateCallbackConfigResponse updateCallbackConfigWithOptions(UpdateCallbackConfigRequest tmpReq, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCallbackConfigShrinkRequest request = new UpdateCallbackConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(TeaModel.buildMap(tmpReq.requestParams))) {
+            request.requestParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(TeaModel.buildMap(tmpReq.requestParams), "RequestParams", "json");
+        }
+
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateCallbackConfig", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateCallbackConfigResponse());
+    }
+
+    public UpdateCallbackConfigResponse updateCallbackConfig(UpdateCallbackConfigRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateCallbackConfigWithOptions(request, runtime);
+    }
+
     public InitTenantResponse initTenantWithOptions(InitTenantRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

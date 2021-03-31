@@ -16,9 +16,6 @@ public class DestroyRoomResponseBody extends TeaModel {
     public String requestId;
 
     // 是否销毁成功
-    @NameInMap("result")
-    public Boolean result;
-
     @NameInMap("ResponseSuccess")
     public Boolean responseSuccess;
 
@@ -49,14 +46,6 @@ public class DestroyRoomResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DestroyRoomResponseBody setResult(Boolean result) {
-        this.result = result;
-        return this;
-    }
-    public Boolean getResult() {
-        return this.result;
     }
 
     public DestroyRoomResponseBody setResponseSuccess(Boolean responseSuccess) {

@@ -35,20 +35,20 @@ public class UpdateMsgRecallIntervalRequest extends TeaModel {
 
     public static class UpdateMsgRecallIntervalRequestRequestParams extends TeaModel {
         // 消息撤回时间间隔
-        @NameInMap("MsgRecallInterval")
-        public Long msgRecallInterval;
+        @NameInMap("ClientMsgRecallIntervalMinute")
+        public Long clientMsgRecallIntervalMinute;
 
         public static UpdateMsgRecallIntervalRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
             UpdateMsgRecallIntervalRequestRequestParams self = new UpdateMsgRecallIntervalRequestRequestParams();
             return TeaModel.build(map, self);
         }
 
-        public UpdateMsgRecallIntervalRequestRequestParams setMsgRecallInterval(Long msgRecallInterval) {
-            this.msgRecallInterval = msgRecallInterval;
+        public UpdateMsgRecallIntervalRequestRequestParams setClientMsgRecallIntervalMinute(Long clientMsgRecallIntervalMinute) {
+            this.clientMsgRecallIntervalMinute = clientMsgRecallIntervalMinute;
             return this;
         }
-        public Long getMsgRecallInterval() {
-            return this.msgRecallInterval;
+        public Long getClientMsgRecallIntervalMinute() {
+            return this.clientMsgRecallIntervalMinute;
         }
 
     }
