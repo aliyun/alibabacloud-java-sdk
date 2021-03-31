@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteImagePipelineResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public DeleteImagePipelineResponseBody body;
+    public String requestId;
 
     public static DeleteImagePipelineResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteImagePipelineResponse self = new DeleteImagePipelineResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteImagePipelineResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteImagePipelineResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DeleteImagePipelineResponse setBody(DeleteImagePipelineResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteImagePipelineResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

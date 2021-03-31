@@ -13,6 +13,10 @@ public class DeleteInstancesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    public java.util.List<String> instanceId;
+
     @NameInMap("DryRun")
     public Boolean dryRun;
 
@@ -29,10 +33,8 @@ public class DeleteInstancesRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static DeleteInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteInstancesRequest self = new DeleteInstancesRequest();
@@ -61,6 +63,14 @@ public class DeleteInstancesRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DeleteInstancesRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
     }
 
     public DeleteInstancesRequest setDryRun(Boolean dryRun) {
@@ -109,14 +119,6 @@ public class DeleteInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DeleteInstancesRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

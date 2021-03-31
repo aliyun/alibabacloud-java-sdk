@@ -4,12 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
-    @NameInMap("SystemDisk")
-    public DescribePriceRequestSystemDisk systemDisk;
-
-    @NameInMap("DataDisk")
-    public java.util.List<DescribePriceRequestDataDisk> dataDisk;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -23,6 +17,7 @@ public class DescribePriceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
@@ -48,6 +43,12 @@ public class DescribePriceRequest extends TeaModel {
 
     @NameInMap("InternetMaxBandwidthOut")
     public Integer internetMaxBandwidthOut;
+
+    @NameInMap("SystemDisk")
+    public DescribePriceRequestSystemDisk systemDisk;
+
+    @NameInMap("DataDisk")
+    public java.util.List<DescribePriceRequestDataDisk> dataDisk;
 
     @NameInMap("Period")
     public Integer period;
@@ -79,31 +80,15 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("InstanceCpuCoreCount")
     public Integer instanceCpuCoreCount;
 
-    @NameInMap("Isp")
-    public String isp;
-
     @NameInMap("InstanceTypeList")
     public java.util.List<String> instanceTypeList;
+
+    @NameInMap("Isp")
+    public String isp;
 
     public static DescribePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePriceRequest self = new DescribePriceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
-        this.systemDisk = systemDisk;
-        return this;
-    }
-    public DescribePriceRequestSystemDisk getSystemDisk() {
-        return this.systemDisk;
-    }
-
-    public DescribePriceRequest setDataDisk(java.util.List<DescribePriceRequestDataDisk> dataDisk) {
-        this.dataDisk = dataDisk;
-        return this;
-    }
-    public java.util.List<DescribePriceRequestDataDisk> getDataDisk() {
-        return this.dataDisk;
     }
 
     public DescribePriceRequest setOwnerId(Long ownerId) {
@@ -210,6 +195,22 @@ public class DescribePriceRequest extends TeaModel {
         return this.internetMaxBandwidthOut;
     }
 
+    public DescribePriceRequest setSystemDisk(DescribePriceRequestSystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public DescribePriceRequestSystemDisk getSystemDisk() {
+        return this.systemDisk;
+    }
+
+    public DescribePriceRequest setDataDisk(java.util.List<DescribePriceRequestDataDisk> dataDisk) {
+        this.dataDisk = dataDisk;
+        return this;
+    }
+    public java.util.List<DescribePriceRequestDataDisk> getDataDisk() {
+        return this.dataDisk;
+    }
+
     public DescribePriceRequest setPeriod(Integer period) {
         this.period = period;
         return this;
@@ -290,20 +291,20 @@ public class DescribePriceRequest extends TeaModel {
         return this.instanceCpuCoreCount;
     }
 
-    public DescribePriceRequest setIsp(String isp) {
-        this.isp = isp;
-        return this;
-    }
-    public String getIsp() {
-        return this.isp;
-    }
-
     public DescribePriceRequest setInstanceTypeList(java.util.List<String> instanceTypeList) {
         this.instanceTypeList = instanceTypeList;
         return this;
     }
     public java.util.List<String> getInstanceTypeList() {
         return this.instanceTypeList;
+    }
+
+    public DescribePriceRequest setIsp(String isp) {
+        this.isp = isp;
+        return this;
+    }
+    public String getIsp() {
+        return this.isp;
     }
 
     public static class DescribePriceRequestSystemDisk extends TeaModel {

@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class InvokeCommandResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("InvokeId")
     @Validation(required = true)
-    public InvokeCommandResponseBody body;
+    public String invokeId;
 
     public static InvokeCommandResponse build(java.util.Map<String, ?> map) throws Exception {
         InvokeCommandResponse self = new InvokeCommandResponse();
         return TeaModel.build(map, self);
     }
 
-    public InvokeCommandResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public InvokeCommandResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public InvokeCommandResponse setBody(InvokeCommandResponseBody body) {
-        this.body = body;
+    public InvokeCommandResponse setInvokeId(String invokeId) {
+        this.invokeId = invokeId;
         return this;
     }
-    public InvokeCommandResponseBody getBody() {
-        return this.body;
+    public String getInvokeId() {
+        return this.invokeId;
     }
 
 }

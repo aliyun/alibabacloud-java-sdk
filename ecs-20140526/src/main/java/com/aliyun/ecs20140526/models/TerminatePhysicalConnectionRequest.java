@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class TerminatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PhysicalConnectionId")
+    @Validation(required = true)
     public String physicalConnectionId;
 
     @NameInMap("OwnerId")

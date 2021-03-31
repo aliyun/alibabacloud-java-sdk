@@ -4,33 +4,73 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeClustersResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Clusters")
     @Validation(required = true)
-    public DescribeClustersResponseBody body;
+    public DescribeClustersResponseClusters clusters;
 
     public static DescribeClustersResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeClustersResponse self = new DescribeClustersResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeClustersResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeClustersResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeClustersResponse setBody(DescribeClustersResponseBody body) {
-        this.body = body;
+    public DescribeClustersResponse setClusters(DescribeClustersResponseClusters clusters) {
+        this.clusters = clusters;
         return this;
     }
-    public DescribeClustersResponseBody getBody() {
-        return this.body;
+    public DescribeClustersResponseClusters getClusters() {
+        return this.clusters;
+    }
+
+    public static class DescribeClustersResponseClustersCluster extends TeaModel {
+        @NameInMap("ClusterId")
+        @Validation(required = true)
+        public String clusterId;
+
+        public static DescribeClustersResponseClustersCluster build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersResponseClustersCluster self = new DescribeClustersResponseClustersCluster();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClustersResponseClustersCluster setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+    }
+
+    public static class DescribeClustersResponseClusters extends TeaModel {
+        @NameInMap("Cluster")
+        @Validation(required = true)
+        public java.util.List<DescribeClustersResponseClustersCluster> cluster;
+
+        public static DescribeClustersResponseClusters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClustersResponseClusters self = new DescribeClustersResponseClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClustersResponseClusters setCluster(java.util.List<DescribeClustersResponseClustersCluster> cluster) {
+            this.cluster = cluster;
+            return this;
+        }
+        public java.util.List<DescribeClustersResponseClustersCluster> getCluster() {
+            return this.cluster;
+        }
+
     }
 
 }

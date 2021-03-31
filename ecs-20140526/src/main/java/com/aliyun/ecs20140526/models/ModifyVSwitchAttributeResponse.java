@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class ModifyVSwitchAttributeResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public ModifyVSwitchAttributeResponseBody body;
+    public String requestId;
 
     public static ModifyVSwitchAttributeResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyVSwitchAttributeResponse self = new ModifyVSwitchAttributeResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyVSwitchAttributeResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ModifyVSwitchAttributeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public ModifyVSwitchAttributeResponse setBody(ModifyVSwitchAttributeResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public ModifyVSwitchAttributeResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

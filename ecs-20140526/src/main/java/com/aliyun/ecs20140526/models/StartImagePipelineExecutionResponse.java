@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class StartImagePipelineExecutionResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("ExecutionId")
     @Validation(required = true)
-    public StartImagePipelineExecutionResponseBody body;
+    public String executionId;
 
     public static StartImagePipelineExecutionResponse build(java.util.Map<String, ?> map) throws Exception {
         StartImagePipelineExecutionResponse self = new StartImagePipelineExecutionResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartImagePipelineExecutionResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public StartImagePipelineExecutionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public StartImagePipelineExecutionResponse setBody(StartImagePipelineExecutionResponseBody body) {
-        this.body = body;
+    public StartImagePipelineExecutionResponse setExecutionId(String executionId) {
+        this.executionId = executionId;
         return this;
     }
-    public StartImagePipelineExecutionResponseBody getBody() {
-        return this.body;
+    public String getExecutionId() {
+        return this.executionId;
     }
 
 }

@@ -4,33 +4,21 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteForwardEntryResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public DeleteForwardEntryResponseBody body;
+    public String requestId;
 
     public static DeleteForwardEntryResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteForwardEntryResponse self = new DeleteForwardEntryResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteForwardEntryResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteForwardEntryResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public DeleteForwardEntryResponse setBody(DeleteForwardEntryResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public DeleteForwardEntryResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

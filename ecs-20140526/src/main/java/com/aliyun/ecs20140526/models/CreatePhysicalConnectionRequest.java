@@ -5,21 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionRequest extends TeaModel {
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("AccessPointId")
+    @Validation(required = true)
     public String accessPointId;
 
     @NameInMap("Type")
     public String type;
 
     @NameInMap("LineOperator")
+    @Validation(required = true)
     public String lineOperator;
 
     @NameInMap("bandwidth")
     public Integer bandwidth;
 
     @NameInMap("PeerLocation")
+    @Validation(required = true)
     public String peerLocation;
 
     @NameInMap("PortType")

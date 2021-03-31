@@ -20,9 +20,11 @@ public class DeleteStorageSetRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("StorageSetId")
+    @Validation(required = true)
     public String storageSetId;
 
     public static DeleteStorageSetRequest build(java.util.Map<String, ?> map) throws Exception {

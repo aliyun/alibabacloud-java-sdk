@@ -17,6 +17,7 @@ public class ReleasePublicIpAddressRequest extends TeaModel {
     public String instanceId;
 
     @NameInMap("PublicIpAddress")
+    @Validation(required = true)
     public String publicIpAddress;
 
     @NameInMap("OwnerAccount")

@@ -17,7 +17,11 @@ public class DescribeDemandsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeDemandsRequestTag> tag;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -27,9 +31,6 @@ public class DescribeDemandsRequest extends TeaModel {
 
     @NameInMap("DryRun")
     public Boolean dryRun;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeDemandsRequestTag> tag;
 
     @NameInMap("ZoneId")
     public String zoneId;
@@ -97,6 +98,14 @@ public class DescribeDemandsRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DescribeDemandsRequest setTag(java.util.List<DescribeDemandsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeDemandsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeDemandsRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -119,14 +128,6 @@ public class DescribeDemandsRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
-    }
-
-    public DescribeDemandsRequest setTag(java.util.List<DescribeDemandsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeDemandsRequestTag> getTag() {
-        return this.tag;
     }
 
     public DescribeDemandsRequest setZoneId(String zoneId) {

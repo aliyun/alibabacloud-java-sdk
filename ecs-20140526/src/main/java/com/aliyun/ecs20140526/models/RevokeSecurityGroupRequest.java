@@ -17,9 +17,11 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SecurityGroupId")
+    @Validation(required = true)
     public String securityGroupId;
 
     @NameInMap("DestCidrIp")
@@ -29,9 +31,11 @@ public class RevokeSecurityGroupRequest extends TeaModel {
     public String ipv6DestCidrIp;
 
     @NameInMap("PortRange")
+    @Validation(required = true)
     public String portRange;
 
     @NameInMap("IpProtocol")
+    @Validation(required = true)
     public String ipProtocol;
 
     @NameInMap("SourceGroupId")

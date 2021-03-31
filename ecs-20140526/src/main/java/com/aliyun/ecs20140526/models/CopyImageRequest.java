@@ -20,9 +20,11 @@ public class CopyImageRequest extends TeaModel {
     public String destinationDescription;
 
     @NameInMap("ImageId")
+    @Validation(required = true)
     public String imageId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DestinationRegionId")
@@ -30,6 +32,9 @@ public class CopyImageRequest extends TeaModel {
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
+
+    @NameInMap("Tag")
+    public java.util.List<CopyImageRequestTag> tag;
 
     @NameInMap("Encrypted")
     public Boolean encrypted;
@@ -42,9 +47,6 @@ public class CopyImageRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<CopyImageRequestTag> tag;
 
     public static CopyImageRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyImageRequest self = new CopyImageRequest();
@@ -123,6 +125,14 @@ public class CopyImageRequest extends TeaModel {
         return this.ownerAccount;
     }
 
+    public CopyImageRequest setTag(java.util.List<CopyImageRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CopyImageRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CopyImageRequest setEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -153,14 +163,6 @@ public class CopyImageRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public CopyImageRequest setTag(java.util.List<CopyImageRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<CopyImageRequestTag> getTag() {
-        return this.tag;
     }
 
     public static class CopyImageRequestTag extends TeaModel {

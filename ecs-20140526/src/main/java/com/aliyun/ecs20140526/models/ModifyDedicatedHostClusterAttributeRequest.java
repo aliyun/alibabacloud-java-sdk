@@ -17,9 +17,11 @@ public class ModifyDedicatedHostClusterAttributeRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DedicatedHostClusterId")
+    @Validation(required = true)
     public String dedicatedHostClusterId;
 
     @NameInMap("DedicatedHostClusterName")

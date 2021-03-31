@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class CreateImageRequest extends TeaModel {
+    @NameInMap("DiskDeviceMapping")
+    public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -14,6 +17,7 @@ public class CreateImageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SnapshotId")
@@ -46,18 +50,23 @@ public class CreateImageRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
-    @NameInMap("DiskDeviceMapping")
-    public java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping;
-
     @NameInMap("Tag")
     public java.util.List<CreateImageRequestTag> tag;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static CreateImageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateImageRequest self = new CreateImageRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateImageRequest setDiskDeviceMapping(java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping) {
+        this.diskDeviceMapping = diskDeviceMapping;
+        return this;
+    }
+    public java.util.List<CreateImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
+        return this.diskDeviceMapping;
     }
 
     public CreateImageRequest setOwnerId(Long ownerId) {
@@ -172,22 +181,6 @@ public class CreateImageRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateImageRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
-    public CreateImageRequest setDiskDeviceMapping(java.util.List<CreateImageRequestDiskDeviceMapping> diskDeviceMapping) {
-        this.diskDeviceMapping = diskDeviceMapping;
-        return this;
-    }
-    public java.util.List<CreateImageRequestDiskDeviceMapping> getDiskDeviceMapping() {
-        return this.diskDeviceMapping;
-    }
-
     public CreateImageRequest setTag(java.util.List<CreateImageRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -196,12 +189,20 @@ public class CreateImageRequest extends TeaModel {
         return this.tag;
     }
 
-    public static class CreateImageRequestDiskDeviceMapping extends TeaModel {
-        @NameInMap("SnapshotId")
-        public String snapshotId;
+    public CreateImageRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
 
+    public static class CreateImageRequestDiskDeviceMapping extends TeaModel {
         @NameInMap("Size")
         public Integer size;
+
+        @NameInMap("SnapshotId")
+        public String snapshotId;
 
         @NameInMap("Device")
         public String device;
@@ -214,20 +215,20 @@ public class CreateImageRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public CreateImageRequestDiskDeviceMapping setSnapshotId(String snapshotId) {
-            this.snapshotId = snapshotId;
-            return this;
-        }
-        public String getSnapshotId() {
-            return this.snapshotId;
-        }
-
         public CreateImageRequestDiskDeviceMapping setSize(Integer size) {
             this.size = size;
             return this;
         }
         public Integer getSize() {
             return this.size;
+        }
+
+        public CreateImageRequestDiskDeviceMapping setSnapshotId(String snapshotId) {
+            this.snapshotId = snapshotId;
+            return this;
+        }
+        public String getSnapshotId() {
+            return this.snapshotId;
         }
 
         public CreateImageRequestDiskDeviceMapping setDevice(String device) {
@@ -249,23 +250,15 @@ public class CreateImageRequest extends TeaModel {
     }
 
     public static class CreateImageRequestTag extends TeaModel {
+        @NameInMap("value")
+        public String value;
+
         @NameInMap("key")
         public String key;
-
-        @NameInMap("Value")
-        public String value;
 
         public static CreateImageRequestTag build(java.util.Map<String, ?> map) throws Exception {
             CreateImageRequestTag self = new CreateImageRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public CreateImageRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
         public CreateImageRequestTag setValue(String value) {
@@ -274,6 +267,14 @@ public class CreateImageRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+        public CreateImageRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }

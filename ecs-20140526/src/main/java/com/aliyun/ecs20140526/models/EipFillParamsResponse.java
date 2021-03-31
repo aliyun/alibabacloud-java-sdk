@@ -4,33 +4,69 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class EipFillParamsResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("requestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("data")
     @Validation(required = true)
-    public EipFillParamsResponseBody body;
+    public String data;
+
+    @NameInMap("code")
+    @Validation(required = true)
+    public String code;
+
+    @NameInMap("success")
+    @Validation(required = true)
+    public Boolean success;
+
+    @NameInMap("message")
+    @Validation(required = true)
+    public String message;
 
     public static EipFillParamsResponse build(java.util.Map<String, ?> map) throws Exception {
         EipFillParamsResponse self = new EipFillParamsResponse();
         return TeaModel.build(map, self);
     }
 
-    public EipFillParamsResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public EipFillParamsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public EipFillParamsResponse setBody(EipFillParamsResponseBody body) {
-        this.body = body;
+    public EipFillParamsResponse setData(String data) {
+        this.data = data;
         return this;
     }
-    public EipFillParamsResponseBody getBody() {
-        return this.body;
+    public String getData() {
+        return this.data;
+    }
+
+    public EipFillParamsResponse setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public EipFillParamsResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public EipFillParamsResponse setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

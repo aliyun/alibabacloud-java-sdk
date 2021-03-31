@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeCapacityReservationsRequest extends TeaModel {
-    @NameInMap("PrivatePoolOptions")
-    public DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -20,19 +17,23 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
 
     @NameInMap("Tag")
     public java.util.List<DescribeCapacityReservationsRequestTag> tag;
+
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     @NameInMap("NextToken")
     public String nextToken;
+
+    @NameInMap("PrivatePoolOptions")
+    public DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions;
 
     @NameInMap("Platform")
     public String platform;
@@ -52,14 +53,6 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     public static DescribeCapacityReservationsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCapacityReservationsRequest self = new DescribeCapacityReservationsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCapacityReservationsRequest setPrivatePoolOptions(DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions) {
-        this.privatePoolOptions = privatePoolOptions;
-        return this;
-    }
-    public DescribeCapacityReservationsRequestPrivatePoolOptions getPrivatePoolOptions() {
-        return this.privatePoolOptions;
     }
 
     public DescribeCapacityReservationsRequest setOwnerId(Long ownerId) {
@@ -102,20 +95,20 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeCapacityReservationsRequest setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public DescribeCapacityReservationsRequest setTag(java.util.List<DescribeCapacityReservationsRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<DescribeCapacityReservationsRequestTag> getTag() {
         return this.tag;
+    }
+
+    public DescribeCapacityReservationsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeCapacityReservationsRequest setMaxResults(Integer maxResults) {
@@ -132,6 +125,14 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeCapacityReservationsRequest setPrivatePoolOptions(DescribeCapacityReservationsRequestPrivatePoolOptions privatePoolOptions) {
+        this.privatePoolOptions = privatePoolOptions;
+        return this;
+    }
+    public DescribeCapacityReservationsRequestPrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     public DescribeCapacityReservationsRequest setPlatform(String platform) {
@@ -174,25 +175,6 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         return this.status;
     }
 
-    public static class DescribeCapacityReservationsRequestPrivatePoolOptions extends TeaModel {
-        @NameInMap("Ids")
-        public String ids;
-
-        public static DescribeCapacityReservationsRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCapacityReservationsRequestPrivatePoolOptions self = new DescribeCapacityReservationsRequestPrivatePoolOptions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeCapacityReservationsRequestPrivatePoolOptions setIds(String ids) {
-            this.ids = ids;
-            return this;
-        }
-        public String getIds() {
-            return this.ids;
-        }
-
-    }
-
     public static class DescribeCapacityReservationsRequestTag extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -219,6 +201,25 @@ public class DescribeCapacityReservationsRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class DescribeCapacityReservationsRequestPrivatePoolOptions extends TeaModel {
+        @NameInMap("Ids")
+        public String ids;
+
+        public static DescribeCapacityReservationsRequestPrivatePoolOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCapacityReservationsRequestPrivatePoolOptions self = new DescribeCapacityReservationsRequestPrivatePoolOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCapacityReservationsRequestPrivatePoolOptions setIds(String ids) {
+            this.ids = ids;
+            return this;
+        }
+        public String getIds() {
+            return this.ids;
         }
 
     }

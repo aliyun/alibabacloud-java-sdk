@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouteEntryRequest extends TeaModel {
+    @NameInMap("NextHopList")
+    public java.util.List<DeleteRouteEntryRequestNextHopList> nextHopList;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,9 +20,11 @@ public class DeleteRouteEntryRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("RouteTableId")
+    @Validation(required = true)
     public String routeTableId;
 
     @NameInMap("DestinationCidrBlock")
+    @Validation(required = true)
     public String destinationCidrBlock;
 
     @NameInMap("NextHopId")
@@ -28,12 +33,17 @@ public class DeleteRouteEntryRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("NextHopList")
-    public java.util.List<DeleteRouteEntryRequestNextHopList> nextHopList;
-
     public static DeleteRouteEntryRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRouteEntryRequest self = new DeleteRouteEntryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRouteEntryRequest setNextHopList(java.util.List<DeleteRouteEntryRequestNextHopList> nextHopList) {
+        this.nextHopList = nextHopList;
+        return this;
+    }
+    public java.util.List<DeleteRouteEntryRequestNextHopList> getNextHopList() {
+        return this.nextHopList;
     }
 
     public DeleteRouteEntryRequest setOwnerId(Long ownerId) {
@@ -100,32 +110,16 @@ public class DeleteRouteEntryRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DeleteRouteEntryRequest setNextHopList(java.util.List<DeleteRouteEntryRequestNextHopList> nextHopList) {
-        this.nextHopList = nextHopList;
-        return this;
-    }
-    public java.util.List<DeleteRouteEntryRequestNextHopList> getNextHopList() {
-        return this.nextHopList;
-    }
-
     public static class DeleteRouteEntryRequestNextHopList extends TeaModel {
-        @NameInMap("NextHopId")
-        public String nextHopId;
-
         @NameInMap("NextHopType")
         public String nextHopType;
+
+        @NameInMap("NextHopId")
+        public String nextHopId;
 
         public static DeleteRouteEntryRequestNextHopList build(java.util.Map<String, ?> map) throws Exception {
             DeleteRouteEntryRequestNextHopList self = new DeleteRouteEntryRequestNextHopList();
             return TeaModel.build(map, self);
-        }
-
-        public DeleteRouteEntryRequestNextHopList setNextHopId(String nextHopId) {
-            this.nextHopId = nextHopId;
-            return this;
-        }
-        public String getNextHopId() {
-            return this.nextHopId;
         }
 
         public DeleteRouteEntryRequestNextHopList setNextHopType(String nextHopType) {
@@ -134,6 +128,14 @@ public class DeleteRouteEntryRequest extends TeaModel {
         }
         public String getNextHopType() {
             return this.nextHopType;
+        }
+
+        public DeleteRouteEntryRequestNextHopList setNextHopId(String nextHopId) {
+            this.nextHopId = nextHopId;
+            return this;
+        }
+        public String getNextHopId() {
+            return this.nextHopId;
         }
 
     }

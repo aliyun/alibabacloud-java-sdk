@@ -14,6 +14,7 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("SecurityGroupId")
+    @Validation(required = true)
     public String securityGroupId;
 
     @NameInMap("Description")
@@ -23,6 +24,7 @@ public class ModifySecurityGroupAttributeRequest extends TeaModel {
     public String securityGroupName;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OwnerAccount")

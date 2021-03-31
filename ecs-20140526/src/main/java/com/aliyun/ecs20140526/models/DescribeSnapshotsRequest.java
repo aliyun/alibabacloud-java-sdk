@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotsRequest extends TeaModel {
-    @NameInMap("Filter")
-    public java.util.List<DescribeSnapshotsRequestFilter> filter;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -26,6 +23,7 @@ public class DescribeSnapshotsRequest extends TeaModel {
     public String snapshotLinkId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("SnapshotIds")
@@ -55,11 +53,17 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("SnapshotType")
     public String snapshotType;
 
+    @NameInMap("Filter")
+    public java.util.List<DescribeSnapshotsRequestFilter> filter;
+
     @NameInMap("Usage")
     public String usage;
 
     @NameInMap("SourceDiskType")
     public String sourceDiskType;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeSnapshotsRequestTag> tag;
 
     @NameInMap("Encrypted")
     public Boolean encrypted;
@@ -76,20 +80,9 @@ public class DescribeSnapshotsRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeSnapshotsRequestTag> tag;
-
     public static DescribeSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotsRequest self = new DescribeSnapshotsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSnapshotsRequest setFilter(java.util.List<DescribeSnapshotsRequestFilter> filter) {
-        this.filter = filter;
-        return this;
-    }
-    public java.util.List<DescribeSnapshotsRequestFilter> getFilter() {
-        return this.filter;
     }
 
     public DescribeSnapshotsRequest setOwnerId(Long ownerId) {
@@ -220,6 +213,14 @@ public class DescribeSnapshotsRequest extends TeaModel {
         return this.snapshotType;
     }
 
+    public DescribeSnapshotsRequest setFilter(java.util.List<DescribeSnapshotsRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeSnapshotsRequestFilter> getFilter() {
+        return this.filter;
+    }
+
     public DescribeSnapshotsRequest setUsage(String usage) {
         this.usage = usage;
         return this;
@@ -234,6 +235,14 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
     public String getSourceDiskType() {
         return this.sourceDiskType;
+    }
+
+    public DescribeSnapshotsRequest setTag(java.util.List<DescribeSnapshotsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeSnapshotsRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeSnapshotsRequest setEncrypted(Boolean encrypted) {
@@ -276,14 +285,6 @@ public class DescribeSnapshotsRequest extends TeaModel {
         return this.category;
     }
 
-    public DescribeSnapshotsRequest setTag(java.util.List<DescribeSnapshotsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeSnapshotsRequestTag> getTag() {
-        return this.tag;
-    }
-
     public static class DescribeSnapshotsRequestFilter extends TeaModel {
         @NameInMap("Key")
         public String key;
@@ -315,23 +316,15 @@ public class DescribeSnapshotsRequest extends TeaModel {
     }
 
     public static class DescribeSnapshotsRequestTag extends TeaModel {
+        @NameInMap("value")
+        public String value;
+
         @NameInMap("key")
         public String key;
-
-        @NameInMap("Value")
-        public String value;
 
         public static DescribeSnapshotsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeSnapshotsRequestTag self = new DescribeSnapshotsRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSnapshotsRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
         public DescribeSnapshotsRequestTag setValue(String value) {
@@ -340,6 +333,14 @@ public class DescribeSnapshotsRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+        public DescribeSnapshotsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }

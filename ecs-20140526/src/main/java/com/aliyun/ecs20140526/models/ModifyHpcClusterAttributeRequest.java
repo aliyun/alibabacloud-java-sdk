@@ -14,6 +14,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ClientToken")
@@ -23,6 +24,7 @@ public class ModifyHpcClusterAttributeRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("HpcClusterId")
+    @Validation(required = true)
     public String hpcClusterId;
 
     @NameInMap("Description")

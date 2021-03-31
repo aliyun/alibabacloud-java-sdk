@@ -14,9 +14,11 @@ public class ModifyDedicatedHostAutoReleaseTimeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DedicatedHostId")
+    @Validation(required = true)
     public String dedicatedHostId;
 
     @NameInMap("AutoReleaseTime")

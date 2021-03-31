@@ -17,6 +17,7 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("PageNumber")
@@ -31,14 +32,14 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     @NameInMap("Capacity")
     public Integer capacity;
 
-    @NameInMap("AllocationType")
-    public String allocationType;
-
     @NameInMap("StorageCapacityUnitId")
     public java.util.List<String> storageCapacityUnitId;
 
     @NameInMap("Status")
     public java.util.List<String> status;
+
+    @NameInMap("AllocationType")
+    public String allocationType;
 
     public static DescribeStorageCapacityUnitsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeStorageCapacityUnitsRequest self = new DescribeStorageCapacityUnitsRequest();
@@ -117,14 +118,6 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
         return this.capacity;
     }
 
-    public DescribeStorageCapacityUnitsRequest setAllocationType(String allocationType) {
-        this.allocationType = allocationType;
-        return this;
-    }
-    public String getAllocationType() {
-        return this.allocationType;
-    }
-
     public DescribeStorageCapacityUnitsRequest setStorageCapacityUnitId(java.util.List<String> storageCapacityUnitId) {
         this.storageCapacityUnitId = storageCapacityUnitId;
         return this;
@@ -139,6 +132,14 @@ public class DescribeStorageCapacityUnitsRequest extends TeaModel {
     }
     public java.util.List<String> getStatus() {
         return this.status;
+    }
+
+    public DescribeStorageCapacityUnitsRequest setAllocationType(String allocationType) {
+        this.allocationType = allocationType;
+        return this;
+    }
+    public String getAllocationType() {
+        return this.allocationType;
     }
 
 }

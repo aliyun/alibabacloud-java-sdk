@@ -4,9 +4,6 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstancesRequest extends TeaModel {
-    @NameInMap("Filter")
-    public java.util.List<DescribeInstancesRequestFilter> filter;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -17,6 +14,7 @@ public class DescribeInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VpcId")
@@ -82,6 +80,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("LockReason")
     public String lockReason;
 
+    @NameInMap("Filter")
+    public java.util.List<DescribeInstancesRequestFilter> filter;
+
     @NameInMap("DeviceAvailable")
     public Boolean deviceAvailable;
 
@@ -90,6 +91,9 @@ public class DescribeInstancesRequest extends TeaModel {
 
     @NameInMap("NeedSaleCycle")
     public Boolean needSaleCycle;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeInstancesRequestTag> tag;
 
     @NameInMap("InstanceType")
     public String instanceType;
@@ -112,6 +116,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("AdditionalAttributes")
+    public java.util.List<String> additionalAttributes;
+
     @NameInMap("HttpEndpoint")
     public String httpEndpoint;
 
@@ -121,23 +128,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("HttpPutResponseHopLimit")
     public Integer httpPutResponseHopLimit;
 
-    @NameInMap("Tag")
-    public java.util.List<DescribeInstancesRequestTag> tag;
-
-    @NameInMap("AdditionalAttributes")
-    public java.util.List<String> additionalAttributes;
-
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstancesRequest setFilter(java.util.List<DescribeInstancesRequestFilter> filter) {
-        this.filter = filter;
-        return this;
-    }
-    public java.util.List<DescribeInstancesRequestFilter> getFilter() {
-        return this.filter;
     }
 
     public DescribeInstancesRequest setOwnerId(Long ownerId) {
@@ -340,6 +333,14 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.lockReason;
     }
 
+    public DescribeInstancesRequest setFilter(java.util.List<DescribeInstancesRequestFilter> filter) {
+        this.filter = filter;
+        return this;
+    }
+    public java.util.List<DescribeInstancesRequestFilter> getFilter() {
+        return this.filter;
+    }
+
     public DescribeInstancesRequest setDeviceAvailable(Boolean deviceAvailable) {
         this.deviceAvailable = deviceAvailable;
         return this;
@@ -362,6 +363,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public Boolean getNeedSaleCycle() {
         return this.needSaleCycle;
+    }
+
+    public DescribeInstancesRequest setTag(java.util.List<DescribeInstancesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeInstancesRequestTag> getTag() {
+        return this.tag;
     }
 
     public DescribeInstancesRequest setInstanceType(String instanceType) {
@@ -420,6 +429,14 @@ public class DescribeInstancesRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public DescribeInstancesRequest setAdditionalAttributes(java.util.List<String> additionalAttributes) {
+        this.additionalAttributes = additionalAttributes;
+        return this;
+    }
+    public java.util.List<String> getAdditionalAttributes() {
+        return this.additionalAttributes;
+    }
+
     public DescribeInstancesRequest setHttpEndpoint(String httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -442,22 +459,6 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public Integer getHttpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit;
-    }
-
-    public DescribeInstancesRequest setTag(java.util.List<DescribeInstancesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeInstancesRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public DescribeInstancesRequest setAdditionalAttributes(java.util.List<String> additionalAttributes) {
-        this.additionalAttributes = additionalAttributes;
-        return this;
-    }
-    public java.util.List<String> getAdditionalAttributes() {
-        return this.additionalAttributes;
     }
 
     public static class DescribeInstancesRequestFilter extends TeaModel {
@@ -491,23 +492,15 @@ public class DescribeInstancesRequest extends TeaModel {
     }
 
     public static class DescribeInstancesRequestTag extends TeaModel {
+        @NameInMap("value")
+        public String value;
+
         @NameInMap("key")
         public String key;
-
-        @NameInMap("Value")
-        public String value;
 
         public static DescribeInstancesRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstancesRequestTag self = new DescribeInstancesRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeInstancesRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
         public DescribeInstancesRequestTag setValue(String value) {
@@ -516,6 +509,14 @@ public class DescribeInstancesRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+        public DescribeInstancesRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }

@@ -14,9 +14,11 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("RouterInterfaceId")
+    @Validation(required = true)
     public String routerInterfaceId;
 
     public static DeactivateRouterInterfaceRequest build(java.util.Map<String, ?> map) throws Exception {

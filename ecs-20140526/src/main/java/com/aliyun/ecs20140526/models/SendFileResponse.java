@@ -4,33 +4,33 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class SendFileResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("InvokeId")
     @Validation(required = true)
-    public SendFileResponseBody body;
+    public String invokeId;
 
     public static SendFileResponse build(java.util.Map<String, ?> map) throws Exception {
         SendFileResponse self = new SendFileResponse();
         return TeaModel.build(map, self);
     }
 
-    public SendFileResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SendFileResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SendFileResponse setBody(SendFileResponseBody body) {
-        this.body = body;
+    public SendFileResponse setInvokeId(String invokeId) {
+        this.invokeId = invokeId;
         return this;
     }
-    public SendFileResponseBody getBody() {
-        return this.body;
+    public String getInvokeId() {
+        return this.invokeId;
     }
 
 }

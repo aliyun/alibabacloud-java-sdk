@@ -14,6 +14,7 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VpcId")
@@ -30,6 +31,9 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     @NameInMap("SecurityGroupIds")
     public String securityGroupIds;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeSecurityGroupsRequestTag> tag;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -54,9 +58,6 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
 
     @NameInMap("DryRun")
     public Boolean dryRun;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeSecurityGroupsRequestTag> tag;
 
     public static DescribeSecurityGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupsRequest self = new DescribeSecurityGroupsRequest();
@@ -135,6 +136,14 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
         return this.securityGroupIds;
     }
 
+    public DescribeSecurityGroupsRequest setTag(java.util.List<DescribeSecurityGroupsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeSecurityGroupsRequestTag> getTag() {
+        return this.tag;
+    }
+
     public DescribeSecurityGroupsRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -199,32 +208,16 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
         return this.dryRun;
     }
 
-    public DescribeSecurityGroupsRequest setTag(java.util.List<DescribeSecurityGroupsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeSecurityGroupsRequestTag> getTag() {
-        return this.tag;
-    }
-
     public static class DescribeSecurityGroupsRequestTag extends TeaModel {
+        @NameInMap("value")
+        public String value;
+
         @NameInMap("key")
         public String key;
-
-        @NameInMap("Value")
-        public String value;
 
         public static DescribeSecurityGroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
             DescribeSecurityGroupsRequestTag self = new DescribeSecurityGroupsRequestTag();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeSecurityGroupsRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
         }
 
         public DescribeSecurityGroupsRequestTag setValue(String value) {
@@ -233,6 +226,14 @@ public class DescribeSecurityGroupsRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+        public DescribeSecurityGroupsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
         }
 
     }

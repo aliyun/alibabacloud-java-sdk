@@ -17,6 +17,7 @@ public class RunCommandShrinkRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("Name")
@@ -26,9 +27,11 @@ public class RunCommandShrinkRequest extends TeaModel {
     public String description;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     @NameInMap("CommandContent")
+    @Validation(required = true)
     public String commandContent;
 
     @NameInMap("WorkingDir")
@@ -46,6 +49,10 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("Frequency")
     public String frequency;
 
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    public java.util.List<String> instanceId;
+
     @NameInMap("Parameters")
     public String parametersShrink;
 
@@ -60,9 +67,6 @@ public class RunCommandShrinkRequest extends TeaModel {
 
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
-
-    @NameInMap("InstanceId")
-    public java.util.List<String> instanceId;
 
     public static RunCommandShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCommandShrinkRequest self = new RunCommandShrinkRequest();
@@ -181,6 +185,14 @@ public class RunCommandShrinkRequest extends TeaModel {
         return this.frequency;
     }
 
+    public RunCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public java.util.List<String> getInstanceId() {
+        return this.instanceId;
+    }
+
     public RunCommandShrinkRequest setParametersShrink(String parametersShrink) {
         this.parametersShrink = parametersShrink;
         return this;
@@ -219,14 +231,6 @@ public class RunCommandShrinkRequest extends TeaModel {
     }
     public String getWindowsPasswordName() {
         return this.windowsPasswordName;
-    }
-
-    public RunCommandShrinkRequest setInstanceId(java.util.List<String> instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public java.util.List<String> getInstanceId() {
-        return this.instanceId;
     }
 
 }

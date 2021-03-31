@@ -17,9 +17,11 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String ownerAccount;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("VpcId")
+    @Validation(required = true)
     public String vpcId;
 
     @NameInMap("Name")
@@ -32,6 +34,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("BandwidthPackage")
+    @Validation(required = true)
     public java.util.List<CreateNatGatewayRequestBandwidthPackage> bandwidthPackage;
 
     public static CreateNatGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -120,18 +123,26 @@ public class CreateNatGatewayRequest extends TeaModel {
     }
 
     public static class CreateNatGatewayRequestBandwidthPackage extends TeaModel {
+        @NameInMap("IpCount")
+        public Integer ipCount;
+
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         @NameInMap("Zone")
         public String zone;
 
-        @NameInMap("IpCount")
-        public Integer ipCount;
-
         public static CreateNatGatewayRequestBandwidthPackage build(java.util.Map<String, ?> map) throws Exception {
             CreateNatGatewayRequestBandwidthPackage self = new CreateNatGatewayRequestBandwidthPackage();
             return TeaModel.build(map, self);
+        }
+
+        public CreateNatGatewayRequestBandwidthPackage setIpCount(Integer ipCount) {
+            this.ipCount = ipCount;
+            return this;
+        }
+        public Integer getIpCount() {
+            return this.ipCount;
         }
 
         public CreateNatGatewayRequestBandwidthPackage setBandwidth(Integer bandwidth) {
@@ -148,14 +159,6 @@ public class CreateNatGatewayRequest extends TeaModel {
         }
         public String getZone() {
             return this.zone;
-        }
-
-        public CreateNatGatewayRequestBandwidthPackage setIpCount(Integer ipCount) {
-            this.ipCount = ipCount;
-            return this;
-        }
-        public Integer getIpCount() {
-            return this.ipCount;
         }
 
     }

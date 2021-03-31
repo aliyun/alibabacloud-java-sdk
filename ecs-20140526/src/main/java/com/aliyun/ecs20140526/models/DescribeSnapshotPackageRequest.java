@@ -20,6 +20,7 @@ public class DescribeSnapshotPackageRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("OwnerAccount")

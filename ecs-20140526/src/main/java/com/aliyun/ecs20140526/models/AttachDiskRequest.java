@@ -14,9 +14,11 @@ public class AttachDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("DiskId")
+    @Validation(required = true)
     public String diskId;
 
     @NameInMap("Device")
