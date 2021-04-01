@@ -25,6 +25,12 @@ public class AddNumberSupplierRequest extends TeaModel {
     @NameInMap("UseCccNumberPicker")
     public Boolean useCccNumberPicker;
 
+    @NameInMap("Province")
+    public String province;
+
+    @NameInMap("City")
+    public String city;
+
     public static AddNumberSupplierRequest build(java.util.Map<String, ?> map) throws Exception {
         AddNumberSupplierRequest self = new AddNumberSupplierRequest();
         return TeaModel.build(map, self);
@@ -84,6 +90,22 @@ public class AddNumberSupplierRequest extends TeaModel {
     }
     public Boolean getUseCccNumberPicker() {
         return this.useCccNumberPicker;
+    }
+
+    public AddNumberSupplierRequest setProvince(String province) {
+        this.province = province;
+        return this;
+    }
+    public String getProvince() {
+        return this.province;
+    }
+
+    public AddNumberSupplierRequest setCity(String city) {
+        this.city = city;
+        return this;
+    }
+    public String getCity() {
+        return this.city;
     }
 
 }
