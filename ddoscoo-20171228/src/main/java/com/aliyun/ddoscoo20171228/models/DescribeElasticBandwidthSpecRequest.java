@@ -8,6 +8,7 @@ public class DescribeElasticBandwidthSpecRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     public static DescribeElasticBandwidthSpecRequest build(java.util.Map<String, ?> map) throws Exception {

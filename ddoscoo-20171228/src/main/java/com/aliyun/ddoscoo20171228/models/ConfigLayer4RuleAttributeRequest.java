@@ -4,32 +4,25 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigLayer4RuleAttributeRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ForwardProtocol")
+    @Validation(required = true)
     public String forwardProtocol;
 
     @NameInMap("FrontendPort")
+    @Validation(required = true)
     public Integer frontendPort;
 
     @NameInMap("Config")
+    @Validation(required = true)
     public String config;
 
     public static ConfigLayer4RuleAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigLayer4RuleAttributeRequest self = new ConfigLayer4RuleAttributeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigLayer4RuleAttributeRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ConfigLayer4RuleAttributeRequest setInstanceId(String instanceId) {

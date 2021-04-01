@@ -11,6 +11,7 @@ public class DescribleLayer7InstanceRelationsRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("DomainList")
+    @Validation(required = true)
     public java.util.List<String> domainList;
 
     public static DescribleLayer7InstanceRelationsRequest build(java.util.Map<String, ?> map) throws Exception {

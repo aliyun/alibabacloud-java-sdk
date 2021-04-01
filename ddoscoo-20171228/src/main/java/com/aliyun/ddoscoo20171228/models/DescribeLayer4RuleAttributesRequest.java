@@ -8,6 +8,7 @@ public class DescribeLayer4RuleAttributesRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("Listeners")
+    @Validation(required = true)
     public String listeners;
 
     public static DescribeLayer4RuleAttributesRequest build(java.util.Map<String, ?> map) throws Exception {

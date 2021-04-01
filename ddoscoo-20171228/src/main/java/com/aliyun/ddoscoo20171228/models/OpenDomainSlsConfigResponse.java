@@ -4,33 +4,21 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class OpenDomainSlsConfigResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public OpenDomainSlsConfigResponseBody body;
+    public String requestId;
 
     public static OpenDomainSlsConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         OpenDomainSlsConfigResponse self = new OpenDomainSlsConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public OpenDomainSlsConfigResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public OpenDomainSlsConfigResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public OpenDomainSlsConfigResponse setBody(OpenDomainSlsConfigResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public OpenDomainSlsConfigResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

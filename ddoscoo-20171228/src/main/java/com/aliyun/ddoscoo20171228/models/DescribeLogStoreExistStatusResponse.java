@@ -4,33 +4,33 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogStoreExistStatusResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("ExistStatus")
     @Validation(required = true)
-    public DescribeLogStoreExistStatusResponseBody body;
+    public Boolean existStatus;
 
     public static DescribeLogStoreExistStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogStoreExistStatusResponse self = new DescribeLogStoreExistStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLogStoreExistStatusResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeLogStoreExistStatusResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeLogStoreExistStatusResponse setBody(DescribeLogStoreExistStatusResponseBody body) {
-        this.body = body;
+    public DescribeLogStoreExistStatusResponse setExistStatus(Boolean existStatus) {
+        this.existStatus = existStatus;
         return this;
     }
-    public DescribeLogStoreExistStatusResponseBody getBody() {
-        return this.body;
+    public Boolean getExistStatus() {
+        return this.existStatus;
     }
 
 }

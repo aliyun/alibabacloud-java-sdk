@@ -4,37 +4,16 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DeleteAsyncTaskRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("TaskId")
+    @Validation(required = true)
     public Integer taskId;
 
     public static DeleteAsyncTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAsyncTaskRequest self = new DeleteAsyncTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteAsyncTaskRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DeleteAsyncTaskRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DeleteAsyncTaskRequest setResourceGroupId(String resourceGroupId) {

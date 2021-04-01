@@ -4,32 +4,25 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigHealthCheckRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ForwardProtocol")
+    @Validation(required = true)
     public String forwardProtocol;
 
     @NameInMap("FrontendPort")
+    @Validation(required = true)
     public Integer frontendPort;
 
     @NameInMap("HealthCheck")
+    @Validation(required = true)
     public String healthCheck;
 
     public static ConfigHealthCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigHealthCheckRequest self = new ConfigHealthCheckRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigHealthCheckRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ConfigHealthCheckRequest setInstanceId(String instanceId) {

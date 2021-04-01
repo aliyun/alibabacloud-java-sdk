@@ -4,23 +4,13 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DeleteLayer4RuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Listeners")
+    @Validation(required = true)
     public String listeners;
 
     public static DeleteLayer4RuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLayer4RuleRequest self = new DeleteLayer4RuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteLayer4RuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DeleteLayer4RuleRequest setListeners(String listeners) {

@@ -4,33 +4,33 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlsAuthStatusResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("SlsAuthStatus")
     @Validation(required = true)
-    public DescribeSlsAuthStatusResponseBody body;
+    public Boolean slsAuthStatus;
 
     public static DescribeSlsAuthStatusResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlsAuthStatusResponse self = new DescribeSlsAuthStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSlsAuthStatusResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeSlsAuthStatusResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeSlsAuthStatusResponse setBody(DescribeSlsAuthStatusResponseBody body) {
-        this.body = body;
+    public DescribeSlsAuthStatusResponse setSlsAuthStatus(Boolean slsAuthStatus) {
+        this.slsAuthStatus = slsAuthStatus;
         return this;
     }
-    public DescribeSlsAuthStatusResponseBody getBody() {
-        return this.body;
+    public Boolean getSlsAuthStatus() {
+        return this.slsAuthStatus;
     }
 
 }

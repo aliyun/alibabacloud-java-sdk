@@ -4,33 +4,33 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeSlsEmptyCountResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("AvailableCount")
     @Validation(required = true)
-    public DescribeSlsEmptyCountResponseBody body;
+    public Integer availableCount;
 
     public static DescribeSlsEmptyCountResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeSlsEmptyCountResponse self = new DescribeSlsEmptyCountResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeSlsEmptyCountResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeSlsEmptyCountResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeSlsEmptyCountResponse setBody(DescribeSlsEmptyCountResponseBody body) {
-        this.body = body;
+    public DescribeSlsEmptyCountResponse setAvailableCount(Integer availableCount) {
+        this.availableCount = availableCount;
         return this;
     }
-    public DescribeSlsEmptyCountResponseBody getBody() {
-        return this.body;
+    public Integer getAvailableCount() {
+        return this.availableCount;
     }
 
 }

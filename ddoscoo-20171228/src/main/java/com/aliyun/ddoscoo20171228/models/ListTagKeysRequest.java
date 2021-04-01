@@ -4,16 +4,15 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ListTagKeysRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("ResourceType")
+    @Validation(required = true)
     public String resourceType;
 
     @NameInMap("PageSize")
@@ -25,14 +24,6 @@ public class ListTagKeysRequest extends TeaModel {
     public static ListTagKeysRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagKeysRequest self = new ListTagKeysRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagKeysRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ListTagKeysRequest setRegionId(String regionId) {

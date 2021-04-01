@@ -11,12 +11,15 @@ public class DescribeDomainQpsRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Domain")
+    @Validation(required = true)
     public String domain;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     public static DescribeDomainQpsRequest build(java.util.Map<String, ?> map) throws Exception {

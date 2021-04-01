@@ -11,18 +11,23 @@ public class DescribeDDoSEventsRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("Eip")
+    @Validation(required = true)
     public String eip;
 
     @NameInMap("Offset")
+    @Validation(required = true)
     public Integer offset;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public String pageSize;
 
     public static DescribeDDoSEventsRequest build(java.util.Map<String, ?> map) throws Exception {
