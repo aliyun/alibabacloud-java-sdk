@@ -8,6 +8,7 @@ public class DescribeInstanceStatisticsRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("InstanceIds")
+    @Validation(required = true)
     public String instanceIds;
 
     public static DescribeInstanceStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {

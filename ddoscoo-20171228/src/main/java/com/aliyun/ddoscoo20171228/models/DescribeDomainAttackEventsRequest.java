@@ -11,18 +11,23 @@ public class DescribeDomainAttackEventsRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("Domain")
+    @Validation(required = true)
     public String domain;
 
     @NameInMap("Offset")
+    @Validation(required = true)
     public Integer offset;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public String pageSize;
 
     public static DescribeDomainAttackEventsRequest build(java.util.Map<String, ?> map) throws Exception {

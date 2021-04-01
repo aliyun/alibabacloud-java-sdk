@@ -14,9 +14,11 @@ public class DescribeInstancesRequest extends TeaModel {
     public String instanceIds;
 
     @NameInMap("PageNo")
+    @Validation(required = true)
     public String pageNo;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public String pageSize;
 
     @NameInMap("Ip")

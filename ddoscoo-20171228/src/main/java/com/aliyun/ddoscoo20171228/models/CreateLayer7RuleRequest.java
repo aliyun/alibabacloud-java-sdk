@@ -4,19 +4,19 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class CreateLayer7RuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Domain")
+    @Validation(required = true)
     public String domain;
 
     @NameInMap("RsType")
+    @Validation(required = true)
     public Integer rsType;
 
     @NameInMap("Rules")
+    @Validation(required = true)
     public String rules;
 
     @NameInMap("InstanceIds")
@@ -25,14 +25,6 @@ public class CreateLayer7RuleRequest extends TeaModel {
     public static CreateLayer7RuleRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLayer7RuleRequest self = new CreateLayer7RuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateLayer7RuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public CreateLayer7RuleRequest setResourceGroupId(String resourceGroupId) {

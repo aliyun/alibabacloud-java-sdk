@@ -4,29 +4,20 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DeleteLayer7CCRuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Domain")
+    @Validation(required = true)
     public String domain;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     public static DeleteLayer7CCRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLayer7CCRuleRequest self = new DeleteLayer7CCRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteLayer7CCRuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DeleteLayer7CCRuleRequest setResourceGroupId(String resourceGroupId) {

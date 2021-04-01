@@ -4,13 +4,11 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigLayer7CertRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Domain")
+    @Validation(required = true)
     public String domain;
 
     @NameInMap("CertId")
@@ -28,14 +26,6 @@ public class ConfigLayer7CertRequest extends TeaModel {
     public static ConfigLayer7CertRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigLayer7CertRequest self = new ConfigLayer7CertRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigLayer7CertRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ConfigLayer7CertRequest setResourceGroupId(String resourceGroupId) {

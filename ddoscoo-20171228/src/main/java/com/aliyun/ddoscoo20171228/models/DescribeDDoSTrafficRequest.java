@@ -11,15 +11,19 @@ public class DescribeDDoSTrafficRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("Interval")
+    @Validation(required = true)
     public Integer interval;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("Eip")
+    @Validation(required = true)
     public String eip;
 
     public static DescribeDDoSTrafficRequest build(java.util.Map<String, ?> map) throws Exception {

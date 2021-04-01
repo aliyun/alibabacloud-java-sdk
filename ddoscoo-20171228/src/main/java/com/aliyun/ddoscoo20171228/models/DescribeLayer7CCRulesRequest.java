@@ -11,12 +11,15 @@ public class DescribeLayer7CCRulesRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Domain")
+    @Validation(required = true)
     public String domain;
 
     @NameInMap("Offset")
+    @Validation(required = true)
     public Integer offset;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public String pageSize;
 
     public static DescribeLayer7CCRulesRequest build(java.util.Map<String, ?> map) throws Exception {

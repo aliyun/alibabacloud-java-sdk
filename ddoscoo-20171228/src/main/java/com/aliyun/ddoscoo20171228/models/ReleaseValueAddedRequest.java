@@ -8,6 +8,7 @@ public class ReleaseValueAddedRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     public static ReleaseValueAddedRequest build(java.util.Map<String, ?> map) throws Exception {

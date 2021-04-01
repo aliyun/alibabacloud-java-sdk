@@ -4,25 +4,25 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigLayer7RuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Domain")
+    @Validation(required = true)
     public String domain;
 
     @NameInMap("ProxyTypeList")
     public String proxyTypeList;
 
-    @NameInMap("RsType")
-    public Integer rsType;
-
     @NameInMap("ProxyTypes")
     public java.util.List<String> proxyTypes;
 
+    @NameInMap("RsType")
+    @Validation(required = true)
+    public Integer rsType;
+
     @NameInMap("RealServers")
+    @Validation(required = true)
     public java.util.List<String> realServers;
 
     @NameInMap("InstanceIds")
@@ -31,14 +31,6 @@ public class ConfigLayer7RuleRequest extends TeaModel {
     public static ConfigLayer7RuleRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigLayer7RuleRequest self = new ConfigLayer7RuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigLayer7RuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ConfigLayer7RuleRequest setResourceGroupId(String resourceGroupId) {
@@ -65,20 +57,20 @@ public class ConfigLayer7RuleRequest extends TeaModel {
         return this.proxyTypeList;
     }
 
-    public ConfigLayer7RuleRequest setRsType(Integer rsType) {
-        this.rsType = rsType;
-        return this;
-    }
-    public Integer getRsType() {
-        return this.rsType;
-    }
-
     public ConfigLayer7RuleRequest setProxyTypes(java.util.List<String> proxyTypes) {
         this.proxyTypes = proxyTypes;
         return this;
     }
     public java.util.List<String> getProxyTypes() {
         return this.proxyTypes;
+    }
+
+    public ConfigLayer7RuleRequest setRsType(Integer rsType) {
+        this.rsType = rsType;
+        return this;
+    }
+    public Integer getRsType() {
+        return this.rsType;
     }
 
     public ConfigLayer7RuleRequest setRealServers(java.util.List<String> realServers) {

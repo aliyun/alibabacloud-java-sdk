@@ -17,9 +17,11 @@ public class DescribeDomainsRequest extends TeaModel {
     public String queryDomainPattern;
 
     @NameInMap("Offset")
+    @Validation(required = true)
     public Integer offset;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public String pageSize;
 
     @NameInMap("InstanceIds")

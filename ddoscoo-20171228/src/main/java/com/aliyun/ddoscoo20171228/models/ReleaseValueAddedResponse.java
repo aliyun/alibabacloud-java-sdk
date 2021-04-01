@@ -4,33 +4,21 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ReleaseValueAddedResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public ReleaseValueAddedResponseBody body;
+    public String requestId;
 
     public static ReleaseValueAddedResponse build(java.util.Map<String, ?> map) throws Exception {
         ReleaseValueAddedResponse self = new ReleaseValueAddedResponse();
         return TeaModel.build(map, self);
     }
 
-    public ReleaseValueAddedResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ReleaseValueAddedResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public ReleaseValueAddedResponse setBody(ReleaseValueAddedResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public ReleaseValueAddedResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

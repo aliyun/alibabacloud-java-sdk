@@ -14,6 +14,7 @@ public class DescribeDomainSlsStatusRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Domain")
+    @Validation(required = true)
     public String domain;
 
     public static DescribeDomainSlsStatusRequest build(java.util.Map<String, ?> map) throws Exception {

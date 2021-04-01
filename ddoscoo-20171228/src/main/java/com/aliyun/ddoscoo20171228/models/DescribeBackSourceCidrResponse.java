@@ -4,33 +4,33 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackSourceCidrResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("CidrList")
     @Validation(required = true)
-    public DescribeBackSourceCidrResponseBody body;
+    public java.util.List<String> cidrList;
 
     public static DescribeBackSourceCidrResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackSourceCidrResponse self = new DescribeBackSourceCidrResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackSourceCidrResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeBackSourceCidrResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeBackSourceCidrResponse setBody(DescribeBackSourceCidrResponseBody body) {
-        this.body = body;
+    public DescribeBackSourceCidrResponse setCidrList(java.util.List<String> cidrList) {
+        this.cidrList = cidrList;
         return this;
     }
-    public DescribeBackSourceCidrResponseBody getBody() {
-        return this.body;
+    public java.util.List<String> getCidrList() {
+        return this.cidrList;
     }
 
 }

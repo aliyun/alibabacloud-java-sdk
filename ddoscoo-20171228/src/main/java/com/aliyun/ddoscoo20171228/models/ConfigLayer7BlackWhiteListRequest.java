@@ -4,13 +4,11 @@ package com.aliyun.ddoscoo20171228.models;
 import com.aliyun.tea.*;
 
 public class ConfigLayer7BlackWhiteListRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("Domain")
+    @Validation(required = true)
     public String domain;
 
     @NameInMap("BlackList")
@@ -22,14 +20,6 @@ public class ConfigLayer7BlackWhiteListRequest extends TeaModel {
     public static ConfigLayer7BlackWhiteListRequest build(java.util.Map<String, ?> map) throws Exception {
         ConfigLayer7BlackWhiteListRequest self = new ConfigLayer7BlackWhiteListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ConfigLayer7BlackWhiteListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ConfigLayer7BlackWhiteListRequest setResourceGroupId(String resourceGroupId) {
