@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteFromMetaCategoryRequest extends TeaModel {
     @NameInMap("CategoryId")
+    @Validation(required = true)
     public Long categoryId;
 
     @NameInMap("TableGuid")
+    @Validation(required = true)
     public String tableGuid;
 
     public static DeleteFromMetaCategoryRequest build(java.util.Map<String, ?> map) throws Exception {

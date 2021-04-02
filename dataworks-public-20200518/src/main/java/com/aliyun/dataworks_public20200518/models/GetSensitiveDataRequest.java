@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetSensitiveDataRequest extends TeaModel {
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNo")
+    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     public static GetSensitiveDataRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -17,6 +17,7 @@ public class UpdateConnectionRequest extends TeaModel {
     public String status;
 
     @NameInMap("ConnectionId")
+    @Validation(required = true)
     public Long connectionId;
 
     public static UpdateConnectionRequest build(java.util.Map<String, ?> map) throws Exception {

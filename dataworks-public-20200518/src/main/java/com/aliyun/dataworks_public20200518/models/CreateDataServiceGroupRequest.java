@@ -5,15 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceGroupRequest extends TeaModel {
     @NameInMap("TenantId")
+    @Validation(required = true)
     public Long tenantId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("ApiGatewayGroupId")
+    @Validation(required = true)
     public String apiGatewayGroupId;
 
     @NameInMap("GroupName")
+    @Validation(required = true)
     public String groupName;
 
     @NameInMap("Description")

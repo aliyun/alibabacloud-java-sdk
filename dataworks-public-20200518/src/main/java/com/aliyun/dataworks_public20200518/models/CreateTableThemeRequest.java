@@ -8,9 +8,11 @@ public class CreateTableThemeRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("Level")
+    @Validation(required = true)
     public Integer level;
 
     @NameInMap("Name")
+    @Validation(required = true)
     public String name;
 
     @NameInMap("ParentId")

@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeleteQualityFollowerRequest extends TeaModel {
     @NameInMap("ProjectName")
+    @Validation(required = true)
     public String projectName;
 
     @NameInMap("FollowerId")
+    @Validation(required = true)
     public Long followerId;
 
     public static DeleteQualityFollowerRequest build(java.util.Map<String, ?> map) throws Exception {

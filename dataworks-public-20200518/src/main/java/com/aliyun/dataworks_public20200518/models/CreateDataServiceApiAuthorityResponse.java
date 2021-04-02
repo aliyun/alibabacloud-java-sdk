@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateDataServiceApiAuthorityResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("Success")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public Boolean success;
 
-    @NameInMap("body")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public CreateDataServiceApiAuthorityResponseBody body;
+    public String requestId;
 
     public static CreateDataServiceApiAuthorityResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDataServiceApiAuthorityResponse self = new CreateDataServiceApiAuthorityResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDataServiceApiAuthorityResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateDataServiceApiAuthorityResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
-    public CreateDataServiceApiAuthorityResponse setBody(CreateDataServiceApiAuthorityResponseBody body) {
-        this.body = body;
+    public CreateDataServiceApiAuthorityResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public CreateDataServiceApiAuthorityResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

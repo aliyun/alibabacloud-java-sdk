@@ -4,6 +4,10 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CreateTableRequest extends TeaModel {
+    @NameInMap("Columns")
+    @Validation(required = true)
+    public java.util.List<CreateTableRequestColumns> columns;
+
     @NameInMap("IsView")
     public Integer isView;
 
@@ -32,6 +36,7 @@ public class CreateTableRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("TableName")
+    @Validation(required = true)
     public String tableName;
 
     @NameInMap("Endpoint")
@@ -39,6 +44,9 @@ public class CreateTableRequest extends TeaModel {
 
     @NameInMap("EnvType")
     public Integer envType;
+
+    @NameInMap("Themes")
+    public java.util.List<CreateTableRequestThemes> themes;
 
     @NameInMap("AppGuid")
     public String appGuid;
@@ -55,15 +63,17 @@ public class CreateTableRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
-    @NameInMap("Columns")
-    public java.util.List<CreateTableRequestColumns> columns;
-
-    @NameInMap("Themes")
-    public java.util.List<CreateTableRequestThemes> themes;
-
     public static CreateTableRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTableRequest self = new CreateTableRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTableRequest setColumns(java.util.List<CreateTableRequestColumns> columns) {
+        this.columns = columns;
+        return this;
+    }
+    public java.util.List<CreateTableRequestColumns> getColumns() {
+        return this.columns;
     }
 
     public CreateTableRequest setIsView(Integer isView) {
@@ -162,6 +172,14 @@ public class CreateTableRequest extends TeaModel {
         return this.envType;
     }
 
+    public CreateTableRequest setThemes(java.util.List<CreateTableRequestThemes> themes) {
+        this.themes = themes;
+        return this;
+    }
+    public java.util.List<CreateTableRequestThemes> getThemes() {
+        return this.themes;
+    }
+
     public CreateTableRequest setAppGuid(String appGuid) {
         this.appGuid = appGuid;
         return this;
@@ -202,33 +220,16 @@ public class CreateTableRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateTableRequest setColumns(java.util.List<CreateTableRequestColumns> columns) {
-        this.columns = columns;
-        return this;
-    }
-    public java.util.List<CreateTableRequestColumns> getColumns() {
-        return this.columns;
-    }
-
-    public CreateTableRequest setThemes(java.util.List<CreateTableRequestThemes> themes) {
-        this.themes = themes;
-        return this;
-    }
-    public java.util.List<CreateTableRequestThemes> getThemes() {
-        return this.themes;
-    }
-
     public static class CreateTableRequestColumns extends TeaModel {
+        @NameInMap("ColumnName")
+        @Validation(required = true)
+        public String columnName;
+
         @NameInMap("ColumnNameCn")
         public String columnNameCn;
 
-        @NameInMap("ColumnName")
-        public String columnName;
-
-        @NameInMap("Comment")
-        public String comment;
-
         @NameInMap("ColumnType")
+        @Validation(required = true)
         public String columnType;
 
         @NameInMap("SeqNumber")
@@ -240,17 +241,12 @@ public class CreateTableRequest extends TeaModel {
         @NameInMap("IsPartitionCol")
         public Boolean isPartitionCol;
 
+        @NameInMap("Comment")
+        public String comment;
+
         public static CreateTableRequestColumns build(java.util.Map<String, ?> map) throws Exception {
             CreateTableRequestColumns self = new CreateTableRequestColumns();
             return TeaModel.build(map, self);
-        }
-
-        public CreateTableRequestColumns setColumnNameCn(String columnNameCn) {
-            this.columnNameCn = columnNameCn;
-            return this;
-        }
-        public String getColumnNameCn() {
-            return this.columnNameCn;
         }
 
         public CreateTableRequestColumns setColumnName(String columnName) {
@@ -261,12 +257,12 @@ public class CreateTableRequest extends TeaModel {
             return this.columnName;
         }
 
-        public CreateTableRequestColumns setComment(String comment) {
-            this.comment = comment;
+        public CreateTableRequestColumns setColumnNameCn(String columnNameCn) {
+            this.columnNameCn = columnNameCn;
             return this;
         }
-        public String getComment() {
-            return this.comment;
+        public String getColumnNameCn() {
+            return this.columnNameCn;
         }
 
         public CreateTableRequestColumns setColumnType(String columnType) {
@@ -299,6 +295,14 @@ public class CreateTableRequest extends TeaModel {
         }
         public Boolean getIsPartitionCol() {
             return this.isPartitionCol;
+        }
+
+        public CreateTableRequestColumns setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
     }

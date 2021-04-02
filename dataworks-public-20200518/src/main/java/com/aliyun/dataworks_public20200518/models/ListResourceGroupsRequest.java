@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupsRequest extends TeaModel {
     @NameInMap("ResourceGroupType")
+    @Validation(required = true)
     public Integer resourceGroupType;
 
     @NameInMap("Keyword")
     public String keyword;
+
+    @NameInMap("BizExtKey")
+    public String bizExtKey;
 
     public static ListResourceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceGroupsRequest self = new ListResourceGroupsRequest();
@@ -29,6 +33,14 @@ public class ListResourceGroupsRequest extends TeaModel {
     }
     public String getKeyword() {
         return this.keyword;
+    }
+
+    public ListResourceGroupsRequest setBizExtKey(String bizExtKey) {
+        this.bizExtKey = bizExtKey;
+        return this;
+    }
+    public String getBizExtKey() {
+        return this.bizExtKey;
     }
 
 }

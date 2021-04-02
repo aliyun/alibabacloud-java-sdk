@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFileVersionsRequest extends TeaModel {
     @NameInMap("FileId")
+    @Validation(required = true)
     public Long fileId;
 
     @NameInMap("ProjectId")

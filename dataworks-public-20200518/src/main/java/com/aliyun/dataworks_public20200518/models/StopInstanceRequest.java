@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class StopInstanceRequest extends TeaModel {
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public Long instanceId;
 
     @NameInMap("ProjectEnv")
+    @Validation(required = true)
     public String projectEnv;
 
     public static StopInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

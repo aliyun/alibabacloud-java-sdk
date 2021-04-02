@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateRemindRequest extends TeaModel {
     @NameInMap("RemindName")
+    @Validation(required = true)
     public String remindName;
 
     @NameInMap("DndEnd")
     public String dndEnd;
 
     @NameInMap("RemindUnit")
+    @Validation(required = true)
     public String remindUnit;
 
     @NameInMap("NodeIds")
@@ -26,6 +28,7 @@ public class CreateRemindRequest extends TeaModel {
     public String bizProcessIds;
 
     @NameInMap("RemindType")
+    @Validation(required = true)
     public String remindType;
 
     @NameInMap("MaxAlertTimes")
@@ -38,6 +41,7 @@ public class CreateRemindRequest extends TeaModel {
     public String detail;
 
     @NameInMap("AlertUnit")
+    @Validation(required = true)
     public String alertUnit;
 
     @NameInMap("AlertMethods")

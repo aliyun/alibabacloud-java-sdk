@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DesensitizeDataRequest extends TeaModel {
     @NameInMap("Data")
+    @Validation(required = true)
     public String data;
 
     @NameInMap("SceneCode")
+    @Validation(required = true)
     public String sceneCode;
 
     public static DesensitizeDataRequest build(java.util.Map<String, ?> map) throws Exception {
