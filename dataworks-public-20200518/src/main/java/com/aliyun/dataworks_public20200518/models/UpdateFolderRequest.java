@@ -11,9 +11,11 @@ public class UpdateFolderRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("FolderId")
+    @Validation(required = true)
     public String folderId;
 
     @NameInMap("FolderName")
+    @Validation(required = true)
     public String folderName;
 
     public static UpdateFolderRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFileVersionRequest extends TeaModel {
     @NameInMap("FileId")
+    @Validation(required = true)
     public Long fileId;
 
     @NameInMap("ProjectId")
@@ -14,6 +15,7 @@ public class GetFileVersionRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("FileVersion")
+    @Validation(required = true)
     public Integer fileVersion;
 
     public static GetFileVersionRequest build(java.util.Map<String, ?> map) throws Exception {

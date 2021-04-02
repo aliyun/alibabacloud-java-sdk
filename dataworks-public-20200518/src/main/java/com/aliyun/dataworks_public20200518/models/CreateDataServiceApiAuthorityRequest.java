@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateDataServiceApiAuthorityRequest extends TeaModel {
     @NameInMap("TenantId")
+    @Validation(required = true)
     public Long tenantId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("ApiId")
+    @Validation(required = true)
     public Long apiId;
 
     @NameInMap("AuthorizedProjectId")
+    @Validation(required = true)
     public Long authorizedProjectId;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     public static CreateDataServiceApiAuthorityRequest build(java.util.Map<String, ?> map) throws Exception {

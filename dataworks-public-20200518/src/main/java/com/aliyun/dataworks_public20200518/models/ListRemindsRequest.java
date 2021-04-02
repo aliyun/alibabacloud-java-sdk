@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListRemindsRequest extends TeaModel {
     @NameInMap("PageNumber")
+    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Founder")

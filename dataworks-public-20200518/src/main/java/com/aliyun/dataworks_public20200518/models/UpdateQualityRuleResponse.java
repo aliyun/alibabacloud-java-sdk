@@ -4,33 +4,81 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateQualityRuleResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("ErrorCode")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String errorCode;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public UpdateQualityRuleResponseBody body;
+    public Boolean data;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
+
+    @NameInMap("ErrorMessage")
+    @Validation(required = true)
+    public String errorMessage;
+
+    @NameInMap("HttpStatusCode")
+    @Validation(required = true)
+    public Integer httpStatusCode;
+
+    @NameInMap("RequestId")
+    @Validation(required = true)
+    public String requestId;
 
     public static UpdateQualityRuleResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateQualityRuleResponse self = new UpdateQualityRuleResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateQualityRuleResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateQualityRuleResponse setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
-    public UpdateQualityRuleResponse setBody(UpdateQualityRuleResponseBody body) {
-        this.body = body;
+    public UpdateQualityRuleResponse setData(Boolean data) {
+        this.data = data;
         return this;
     }
-    public UpdateQualityRuleResponseBody getBody() {
-        return this.body;
+    public Boolean getData() {
+        return this.data;
+    }
+
+    public UpdateQualityRuleResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public UpdateQualityRuleResponse setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
+    }
+
+    public UpdateQualityRuleResponse setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public UpdateQualityRuleResponse setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

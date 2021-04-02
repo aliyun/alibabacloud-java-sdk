@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetQualityRuleRequest extends TeaModel {
     @NameInMap("RuleId")
+    @Validation(required = true)
     public Long ruleId;
 
     @NameInMap("ProjectName")
+    @Validation(required = true)
     public String projectName;
 
     public static GetQualityRuleRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class GetQualityEntityRequest extends TeaModel {
     @NameInMap("ProjectName")
+    @Validation(required = true)
     public String projectName;
 
     @NameInMap("TableName")
+    @Validation(required = true)
     public String tableName;
 
     @NameInMap("EnvType")
+    @Validation(required = true)
     public String envType;
 
     @NameInMap("MatchExpression")

@@ -11,6 +11,7 @@ public class CreateFolderRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("FolderPath")
+    @Validation(required = true)
     public String folderPath;
 
     public static CreateFolderRequest build(java.util.Map<String, ?> map) throws Exception {

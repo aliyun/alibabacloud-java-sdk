@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateProjectMemberRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("UserId")
+    @Validation(required = true)
     public String userId;
 
     @NameInMap("ClientToken")
