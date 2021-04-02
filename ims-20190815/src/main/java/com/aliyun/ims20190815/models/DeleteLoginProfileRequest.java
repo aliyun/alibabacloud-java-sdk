@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteLoginProfileRequest extends TeaModel {
     @NameInMap("UserPrincipalName")
+    @Validation(required = true)
     public String userPrincipalName;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     public static DeleteLoginProfileRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLoginProfileRequest self = new DeleteLoginProfileRequest();
@@ -21,14 +19,6 @@ public class DeleteLoginProfileRequest extends TeaModel {
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
-    }
-
-    public DeleteLoginProfileRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

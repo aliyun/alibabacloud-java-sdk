@@ -4,33 +4,33 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetAccountMFAInfoResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("IsMFAEnable")
     @Validation(required = true)
-    public GetAccountMFAInfoResponseBody body;
+    public Boolean isMFAEnable;
 
     public static GetAccountMFAInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAccountMFAInfoResponse self = new GetAccountMFAInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAccountMFAInfoResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetAccountMFAInfoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetAccountMFAInfoResponse setBody(GetAccountMFAInfoResponseBody body) {
-        this.body = body;
+    public GetAccountMFAInfoResponse setIsMFAEnable(Boolean isMFAEnable) {
+        this.isMFAEnable = isMFAEnable;
         return this;
     }
-    public GetAccountMFAInfoResponseBody getBody() {
-        return this.body;
+    public Boolean getIsMFAEnable() {
+        return this.isMFAEnable;
     }
 
 }

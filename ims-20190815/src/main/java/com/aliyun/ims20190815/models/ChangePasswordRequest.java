@@ -5,13 +5,12 @@ import com.aliyun.tea.*;
 
 public class ChangePasswordRequest extends TeaModel {
     @NameInMap("OldPassword")
+    @Validation(required = true)
     public String oldPassword;
 
     @NameInMap("NewPassword")
+    @Validation(required = true)
     public String newPassword;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     public static ChangePasswordRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangePasswordRequest self = new ChangePasswordRequest();
@@ -32,14 +31,6 @@ public class ChangePasswordRequest extends TeaModel {
     }
     public String getNewPassword() {
         return this.newPassword;
-    }
-
-    public ChangePasswordRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

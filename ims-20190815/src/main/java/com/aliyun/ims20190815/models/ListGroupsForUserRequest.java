@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForUserRequest extends TeaModel {
     @NameInMap("UserPrincipalName")
+    @Validation(required = true)
     public String userPrincipalName;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     public static ListGroupsForUserRequest build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsForUserRequest self = new ListGroupsForUserRequest();
@@ -21,14 +19,6 @@ public class ListGroupsForUserRequest extends TeaModel {
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
-    }
-
-    public ListGroupsForUserRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

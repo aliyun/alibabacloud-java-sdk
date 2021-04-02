@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSAMLProviderRequest extends TeaModel {
     @NameInMap("SAMLProviderName")
+    @Validation(required = true)
     public String SAMLProviderName;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     public static DeleteSAMLProviderRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSAMLProviderRequest self = new DeleteSAMLProviderRequest();
@@ -21,14 +19,6 @@ public class DeleteSAMLProviderRequest extends TeaModel {
     }
     public String getSAMLProviderName() {
         return this.SAMLProviderName;
-    }
-
-    public DeleteSAMLProviderRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

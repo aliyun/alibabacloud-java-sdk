@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableVirtualMFARequest extends TeaModel {
     @NameInMap("UserPrincipalName")
+    @Validation(required = true)
     public String userPrincipalName;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     public static DisableVirtualMFARequest build(java.util.Map<String, ?> map) throws Exception {
         DisableVirtualMFARequest self = new DisableVirtualMFARequest();
@@ -21,14 +19,6 @@ public class DisableVirtualMFARequest extends TeaModel {
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
-    }
-
-    public DisableVirtualMFARequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

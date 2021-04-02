@@ -13,9 +13,6 @@ public class GetUserRequest extends TeaModel {
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
-
     public static GetUserRequest build(java.util.Map<String, ?> map) throws Exception {
         GetUserRequest self = new GetUserRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class GetUserRequest extends TeaModel {
     }
     public String getUserAccessKeyId() {
         return this.userAccessKeyId;
-    }
-
-    public GetUserRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

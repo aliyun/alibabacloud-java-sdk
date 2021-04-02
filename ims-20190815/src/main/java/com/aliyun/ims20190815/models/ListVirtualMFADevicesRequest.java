@@ -10,9 +10,6 @@ public class ListVirtualMFADevicesRequest extends TeaModel {
     @NameInMap("MaxItems")
     public Integer maxItems;
 
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
-
     public static ListVirtualMFADevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVirtualMFADevicesRequest self = new ListVirtualMFADevicesRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class ListVirtualMFADevicesRequest extends TeaModel {
     }
     public Integer getMaxItems() {
         return this.maxItems;
-    }
-
-    public ListVirtualMFADevicesRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

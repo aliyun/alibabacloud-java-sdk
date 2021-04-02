@@ -4,33 +4,113 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class UpdateGroupResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Group")
     @Validation(required = true)
-    public UpdateGroupResponseBody body;
+    public UpdateGroupResponseGroup group;
 
     public static UpdateGroupResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateGroupResponse self = new UpdateGroupResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateGroupResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateGroupResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateGroupResponse setBody(UpdateGroupResponseBody body) {
-        this.body = body;
+    public UpdateGroupResponse setGroup(UpdateGroupResponseGroup group) {
+        this.group = group;
         return this;
     }
-    public UpdateGroupResponseBody getBody() {
-        return this.body;
+    public UpdateGroupResponseGroup getGroup() {
+        return this.group;
+    }
+
+    public static class UpdateGroupResponseGroup extends TeaModel {
+        @NameInMap("GroupName")
+        @Validation(required = true)
+        public String groupName;
+
+        @NameInMap("UpdateDate")
+        @Validation(required = true)
+        public String updateDate;
+
+        @NameInMap("Comments")
+        @Validation(required = true)
+        public String comments;
+
+        @NameInMap("DisplayName")
+        @Validation(required = true)
+        public String displayName;
+
+        @NameInMap("CreateDate")
+        @Validation(required = true)
+        public String createDate;
+
+        @NameInMap("GroupId")
+        @Validation(required = true)
+        public String groupId;
+
+        public static UpdateGroupResponseGroup build(java.util.Map<String, ?> map) throws Exception {
+            UpdateGroupResponseGroup self = new UpdateGroupResponseGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateGroupResponseGroup setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public UpdateGroupResponseGroup setUpdateDate(String updateDate) {
+            this.updateDate = updateDate;
+            return this;
+        }
+        public String getUpdateDate() {
+            return this.updateDate;
+        }
+
+        public UpdateGroupResponseGroup setComments(String comments) {
+            this.comments = comments;
+            return this;
+        }
+        public String getComments() {
+            return this.comments;
+        }
+
+        public UpdateGroupResponseGroup setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public UpdateGroupResponseGroup setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
+        public UpdateGroupResponseGroup setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
     }
 
 }

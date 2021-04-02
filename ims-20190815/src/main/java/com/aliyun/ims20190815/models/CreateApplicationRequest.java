@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     @NameInMap("DisplayName")
+    @Validation(required = true)
     public String displayName;
 
-    @NameInMap("AppPrincipalName")
-    public String appPrincipalName;
-
     @NameInMap("AppType")
+    @Validation(required = true)
     public String appType;
 
     @NameInMap("RedirectUris")
@@ -31,9 +30,6 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("IsMultiTenant")
     public Boolean isMultiTenant;
 
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
-
     @NameInMap("AppName")
     public String appName;
 
@@ -48,14 +44,6 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getDisplayName() {
         return this.displayName;
-    }
-
-    public CreateApplicationRequest setAppPrincipalName(String appPrincipalName) {
-        this.appPrincipalName = appPrincipalName;
-        return this;
-    }
-    public String getAppPrincipalName() {
-        return this.appPrincipalName;
     }
 
     public CreateApplicationRequest setAppType(String appType) {
@@ -112,14 +100,6 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public Boolean getIsMultiTenant() {
         return this.isMultiTenant;
-    }
-
-    public CreateApplicationRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
     public CreateApplicationRequest setAppName(String appName) {

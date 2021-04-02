@@ -4,33 +4,121 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class ListGroupsForUserResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Groups")
     @Validation(required = true)
-    public ListGroupsForUserResponseBody body;
+    public ListGroupsForUserResponseGroups groups;
 
     public static ListGroupsForUserResponse build(java.util.Map<String, ?> map) throws Exception {
         ListGroupsForUserResponse self = new ListGroupsForUserResponse();
         return TeaModel.build(map, self);
     }
 
-    public ListGroupsForUserResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ListGroupsForUserResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ListGroupsForUserResponse setBody(ListGroupsForUserResponseBody body) {
-        this.body = body;
+    public ListGroupsForUserResponse setGroups(ListGroupsForUserResponseGroups groups) {
+        this.groups = groups;
         return this;
     }
-    public ListGroupsForUserResponseBody getBody() {
-        return this.body;
+    public ListGroupsForUserResponseGroups getGroups() {
+        return this.groups;
+    }
+
+    public static class ListGroupsForUserResponseGroupsGroup extends TeaModel {
+        @NameInMap("GroupName")
+        @Validation(required = true)
+        public String groupName;
+
+        @NameInMap("Comments")
+        @Validation(required = true)
+        public String comments;
+
+        @NameInMap("DisplayName")
+        @Validation(required = true)
+        public String displayName;
+
+        @NameInMap("JoinDate")
+        @Validation(required = true)
+        public String joinDate;
+
+        @NameInMap("GroupId")
+        @Validation(required = true)
+        public String groupId;
+
+        public static ListGroupsForUserResponseGroupsGroup build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupsForUserResponseGroupsGroup self = new ListGroupsForUserResponseGroupsGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGroupsForUserResponseGroupsGroup setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public ListGroupsForUserResponseGroupsGroup setComments(String comments) {
+            this.comments = comments;
+            return this;
+        }
+        public String getComments() {
+            return this.comments;
+        }
+
+        public ListGroupsForUserResponseGroupsGroup setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public ListGroupsForUserResponseGroupsGroup setJoinDate(String joinDate) {
+            this.joinDate = joinDate;
+            return this;
+        }
+        public String getJoinDate() {
+            return this.joinDate;
+        }
+
+        public ListGroupsForUserResponseGroupsGroup setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+    }
+
+    public static class ListGroupsForUserResponseGroups extends TeaModel {
+        @NameInMap("Group")
+        @Validation(required = true)
+        public java.util.List<ListGroupsForUserResponseGroupsGroup> group;
+
+        public static ListGroupsForUserResponseGroups build(java.util.Map<String, ?> map) throws Exception {
+            ListGroupsForUserResponseGroups self = new ListGroupsForUserResponseGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGroupsForUserResponseGroups setGroup(java.util.List<ListGroupsForUserResponseGroupsGroup> group) {
+            this.group = group;
+            return this;
+        }
+        public java.util.List<ListGroupsForUserResponseGroupsGroup> getGroup() {
+            return this.group;
+        }
+
     }
 
 }

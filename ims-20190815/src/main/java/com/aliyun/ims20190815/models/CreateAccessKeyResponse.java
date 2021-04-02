@@ -4,33 +4,89 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessKeyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("AccessKey")
     @Validation(required = true)
-    public CreateAccessKeyResponseBody body;
+    public CreateAccessKeyResponseAccessKey accessKey;
 
     public static CreateAccessKeyResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateAccessKeyResponse self = new CreateAccessKeyResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateAccessKeyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateAccessKeyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateAccessKeyResponse setBody(CreateAccessKeyResponseBody body) {
-        this.body = body;
+    public CreateAccessKeyResponse setAccessKey(CreateAccessKeyResponseAccessKey accessKey) {
+        this.accessKey = accessKey;
         return this;
     }
-    public CreateAccessKeyResponseBody getBody() {
-        return this.body;
+    public CreateAccessKeyResponseAccessKey getAccessKey() {
+        return this.accessKey;
+    }
+
+    public static class CreateAccessKeyResponseAccessKey extends TeaModel {
+        @NameInMap("Status")
+        @Validation(required = true)
+        public String status;
+
+        @NameInMap("AccessKeyId")
+        @Validation(required = true)
+        public String accessKeyId;
+
+        @NameInMap("AccessKeySecret")
+        @Validation(required = true)
+        public String accessKeySecret;
+
+        @NameInMap("CreateDate")
+        @Validation(required = true)
+        public String createDate;
+
+        public static CreateAccessKeyResponseAccessKey build(java.util.Map<String, ?> map) throws Exception {
+            CreateAccessKeyResponseAccessKey self = new CreateAccessKeyResponseAccessKey();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAccessKeyResponseAccessKey setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public CreateAccessKeyResponseAccessKey setAccessKeyId(String accessKeyId) {
+            this.accessKeyId = accessKeyId;
+            return this;
+        }
+        public String getAccessKeyId() {
+            return this.accessKeyId;
+        }
+
+        public CreateAccessKeyResponseAccessKey setAccessKeySecret(String accessKeySecret) {
+            this.accessKeySecret = accessKeySecret;
+            return this;
+        }
+        public String getAccessKeySecret() {
+            return this.accessKeySecret;
+        }
+
+        public CreateAccessKeyResponseAccessKey setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
     }
 
 }
