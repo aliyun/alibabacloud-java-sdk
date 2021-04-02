@@ -4,33 +4,89 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetAppSecretResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("AppSecret")
     @Validation(required = true)
-    public GetAppSecretResponseBody body;
+    public GetAppSecretResponseAppSecret appSecret;
 
     public static GetAppSecretResponse build(java.util.Map<String, ?> map) throws Exception {
         GetAppSecretResponse self = new GetAppSecretResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetAppSecretResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetAppSecretResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetAppSecretResponse setBody(GetAppSecretResponseBody body) {
-        this.body = body;
+    public GetAppSecretResponse setAppSecret(GetAppSecretResponseAppSecret appSecret) {
+        this.appSecret = appSecret;
         return this;
     }
-    public GetAppSecretResponseBody getBody() {
-        return this.body;
+    public GetAppSecretResponseAppSecret getAppSecret() {
+        return this.appSecret;
+    }
+
+    public static class GetAppSecretResponseAppSecret extends TeaModel {
+        @NameInMap("AppId")
+        @Validation(required = true)
+        public String appId;
+
+        @NameInMap("AppSecretValue")
+        @Validation(required = true)
+        public String appSecretValue;
+
+        @NameInMap("AppSecretId")
+        @Validation(required = true)
+        public String appSecretId;
+
+        @NameInMap("CreateDate")
+        @Validation(required = true)
+        public String createDate;
+
+        public static GetAppSecretResponseAppSecret build(java.util.Map<String, ?> map) throws Exception {
+            GetAppSecretResponseAppSecret self = new GetAppSecretResponseAppSecret();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAppSecretResponseAppSecret setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public GetAppSecretResponseAppSecret setAppSecretValue(String appSecretValue) {
+            this.appSecretValue = appSecretValue;
+            return this;
+        }
+        public String getAppSecretValue() {
+            return this.appSecretValue;
+        }
+
+        public GetAppSecretResponseAppSecret setAppSecretId(String appSecretId) {
+            this.appSecretId = appSecretId;
+            return this;
+        }
+        public String getAppSecretId() {
+            return this.appSecretId;
+        }
+
+        public GetAppSecretResponseAppSecret setCreateDate(String createDate) {
+            this.createDate = createDate;
+            return this;
+        }
+        public String getCreateDate() {
+            return this.createDate;
+        }
+
     }
 
 }

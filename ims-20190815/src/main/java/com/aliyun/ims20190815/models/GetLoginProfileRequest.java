@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetLoginProfileRequest extends TeaModel {
     @NameInMap("UserPrincipalName")
+    @Validation(required = true)
     public String userPrincipalName;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     public static GetLoginProfileRequest build(java.util.Map<String, ?> map) throws Exception {
         GetLoginProfileRequest self = new GetLoginProfileRequest();
@@ -21,14 +19,6 @@ public class GetLoginProfileRequest extends TeaModel {
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
-    }
-
-    public GetLoginProfileRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

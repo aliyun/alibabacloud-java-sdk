@@ -4,17 +4,11 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class CreateGroupRequest extends TeaModel {
-    @NameInMap("GroupPrincipalName")
-    public String groupPrincipalName;
-
     @NameInMap("DisplayName")
     public String displayName;
 
     @NameInMap("Comments")
     public String comments;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     @NameInMap("GroupName")
     public String groupName;
@@ -22,14 +16,6 @@ public class CreateGroupRequest extends TeaModel {
     public static CreateGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateGroupRequest self = new CreateGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateGroupRequest setGroupPrincipalName(String groupPrincipalName) {
-        this.groupPrincipalName = groupPrincipalName;
-        return this;
-    }
-    public String getGroupPrincipalName() {
-        return this.groupPrincipalName;
     }
 
     public CreateGroupRequest setDisplayName(String displayName) {
@@ -46,14 +32,6 @@ public class CreateGroupRequest extends TeaModel {
     }
     public String getComments() {
         return this.comments;
-    }
-
-    public CreateGroupRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
     public CreateGroupRequest setGroupName(String groupName) {

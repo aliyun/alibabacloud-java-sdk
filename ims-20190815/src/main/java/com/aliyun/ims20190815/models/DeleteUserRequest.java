@@ -10,9 +10,6 @@ public class DeleteUserRequest extends TeaModel {
     @NameInMap("UserId")
     public String userId;
 
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
-
     public static DeleteUserRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteUserRequest self = new DeleteUserRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DeleteUserRequest extends TeaModel {
     }
     public String getUserId() {
         return this.userId;
-    }
-
-    public DeleteUserRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

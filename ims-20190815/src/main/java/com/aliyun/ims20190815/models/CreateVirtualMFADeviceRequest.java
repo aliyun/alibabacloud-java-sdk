@@ -5,10 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualMFADeviceRequest extends TeaModel {
     @NameInMap("VirtualMFADeviceName")
+    @Validation(required = true)
     public String virtualMFADeviceName;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     public static CreateVirtualMFADeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVirtualMFADeviceRequest self = new CreateVirtualMFADeviceRequest();
@@ -21,14 +19,6 @@ public class CreateVirtualMFADeviceRequest extends TeaModel {
     }
     public String getVirtualMFADeviceName() {
         return this.virtualMFADeviceName;
-    }
-
-    public CreateVirtualMFADeviceRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

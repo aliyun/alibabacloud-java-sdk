@@ -5,13 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteAppSecretRequest extends TeaModel {
     @NameInMap("AppId")
+    @Validation(required = true)
     public String appId;
 
     @NameInMap("AppSecretId")
+    @Validation(required = true)
     public String appSecretId;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     public static DeleteAppSecretRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteAppSecretRequest self = new DeleteAppSecretRequest();
@@ -32,14 +31,6 @@ public class DeleteAppSecretRequest extends TeaModel {
     }
     public String getAppSecretId() {
         return this.appSecretId;
-    }
-
-    public DeleteAppSecretRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

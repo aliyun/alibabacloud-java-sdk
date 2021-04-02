@@ -4,14 +4,9 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class AddUserToGroupRequest extends TeaModel {
-    @NameInMap("GroupPrincipalName")
-    public String groupPrincipalName;
-
     @NameInMap("UserPrincipalName")
+    @Validation(required = true)
     public String userPrincipalName;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     @NameInMap("GroupName")
     public String groupName;
@@ -21,28 +16,12 @@ public class AddUserToGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public AddUserToGroupRequest setGroupPrincipalName(String groupPrincipalName) {
-        this.groupPrincipalName = groupPrincipalName;
-        return this;
-    }
-    public String getGroupPrincipalName() {
-        return this.groupPrincipalName;
-    }
-
     public AddUserToGroupRequest setUserPrincipalName(String userPrincipalName) {
         this.userPrincipalName = userPrincipalName;
         return this;
     }
     public String getUserPrincipalName() {
         return this.userPrincipalName;
-    }
-
-    public AddUserToGroupRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
     public AddUserToGroupRequest setGroupName(String groupName) {

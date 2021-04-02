@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateUserRequest extends TeaModel {
     @NameInMap("UserPrincipalName")
+    @Validation(required = true)
     public String userPrincipalName;
 
     @NameInMap("DisplayName")
+    @Validation(required = true)
     public String displayName;
 
     @NameInMap("MobilePhone")
@@ -18,9 +20,6 @@ public class CreateUserRequest extends TeaModel {
 
     @NameInMap("Comments")
     public String comments;
-
-    @NameInMap("AkProxySuffix")
-    public String akProxySuffix;
 
     public static CreateUserRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateUserRequest self = new CreateUserRequest();
@@ -65,14 +64,6 @@ public class CreateUserRequest extends TeaModel {
     }
     public String getComments() {
         return this.comments;
-    }
-
-    public CreateUserRequest setAkProxySuffix(String akProxySuffix) {
-        this.akProxySuffix = akProxySuffix;
-        return this;
-    }
-    public String getAkProxySuffix() {
-        return this.akProxySuffix;
     }
 
 }

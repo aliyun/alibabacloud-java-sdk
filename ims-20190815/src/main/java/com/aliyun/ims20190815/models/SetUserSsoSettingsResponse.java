@@ -4,33 +4,77 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class SetUserSsoSettingsResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("UserSsoSettings")
     @Validation(required = true)
-    public SetUserSsoSettingsResponseBody body;
+    public SetUserSsoSettingsResponseUserSsoSettings userSsoSettings;
 
     public static SetUserSsoSettingsResponse build(java.util.Map<String, ?> map) throws Exception {
         SetUserSsoSettingsResponse self = new SetUserSsoSettingsResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetUserSsoSettingsResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SetUserSsoSettingsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SetUserSsoSettingsResponse setBody(SetUserSsoSettingsResponseBody body) {
-        this.body = body;
+    public SetUserSsoSettingsResponse setUserSsoSettings(SetUserSsoSettingsResponseUserSsoSettings userSsoSettings) {
+        this.userSsoSettings = userSsoSettings;
         return this;
     }
-    public SetUserSsoSettingsResponseBody getBody() {
-        return this.body;
+    public SetUserSsoSettingsResponseUserSsoSettings getUserSsoSettings() {
+        return this.userSsoSettings;
+    }
+
+    public static class SetUserSsoSettingsResponseUserSsoSettings extends TeaModel {
+        @NameInMap("MetadataDocument")
+        @Validation(required = true)
+        public String metadataDocument;
+
+        @NameInMap("SsoEnabled")
+        @Validation(required = true)
+        public Boolean ssoEnabled;
+
+        @NameInMap("AuxiliaryDomain")
+        @Validation(required = true)
+        public String auxiliaryDomain;
+
+        public static SetUserSsoSettingsResponseUserSsoSettings build(java.util.Map<String, ?> map) throws Exception {
+            SetUserSsoSettingsResponseUserSsoSettings self = new SetUserSsoSettingsResponseUserSsoSettings();
+            return TeaModel.build(map, self);
+        }
+
+        public SetUserSsoSettingsResponseUserSsoSettings setMetadataDocument(String metadataDocument) {
+            this.metadataDocument = metadataDocument;
+            return this;
+        }
+        public String getMetadataDocument() {
+            return this.metadataDocument;
+        }
+
+        public SetUserSsoSettingsResponseUserSsoSettings setSsoEnabled(Boolean ssoEnabled) {
+            this.ssoEnabled = ssoEnabled;
+            return this;
+        }
+        public Boolean getSsoEnabled() {
+            return this.ssoEnabled;
+        }
+
+        public SetUserSsoSettingsResponseUserSsoSettings setAuxiliaryDomain(String auxiliaryDomain) {
+            this.auxiliaryDomain = auxiliaryDomain;
+            return this;
+        }
+        public String getAuxiliaryDomain() {
+            return this.auxiliaryDomain;
+        }
+
     }
 
 }

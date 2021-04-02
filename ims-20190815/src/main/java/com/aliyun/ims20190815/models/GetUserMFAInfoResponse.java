@@ -4,33 +4,77 @@ package com.aliyun.ims20190815.models;
 import com.aliyun.tea.*;
 
 public class GetUserMFAInfoResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("IsMFAEnable")
     @Validation(required = true)
-    public GetUserMFAInfoResponseBody body;
+    public Boolean isMFAEnable;
+
+    @NameInMap("MFADevice")
+    @Validation(required = true)
+    public GetUserMFAInfoResponseMFADevice MFADevice;
 
     public static GetUserMFAInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         GetUserMFAInfoResponse self = new GetUserMFAInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetUserMFAInfoResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public GetUserMFAInfoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public GetUserMFAInfoResponse setBody(GetUserMFAInfoResponseBody body) {
-        this.body = body;
+    public GetUserMFAInfoResponse setIsMFAEnable(Boolean isMFAEnable) {
+        this.isMFAEnable = isMFAEnable;
         return this;
     }
-    public GetUserMFAInfoResponseBody getBody() {
-        return this.body;
+    public Boolean getIsMFAEnable() {
+        return this.isMFAEnable;
+    }
+
+    public GetUserMFAInfoResponse setMFADevice(GetUserMFAInfoResponseMFADevice MFADevice) {
+        this.MFADevice = MFADevice;
+        return this;
+    }
+    public GetUserMFAInfoResponseMFADevice getMFADevice() {
+        return this.MFADevice;
+    }
+
+    public static class GetUserMFAInfoResponseMFADevice extends TeaModel {
+        @NameInMap("Type")
+        @Validation(required = true)
+        public String type;
+
+        @NameInMap("SerialNumber")
+        @Validation(required = true)
+        public String serialNumber;
+
+        public static GetUserMFAInfoResponseMFADevice build(java.util.Map<String, ?> map) throws Exception {
+            GetUserMFAInfoResponseMFADevice self = new GetUserMFAInfoResponseMFADevice();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserMFAInfoResponseMFADevice setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public GetUserMFAInfoResponseMFADevice setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
     }
 
 }
