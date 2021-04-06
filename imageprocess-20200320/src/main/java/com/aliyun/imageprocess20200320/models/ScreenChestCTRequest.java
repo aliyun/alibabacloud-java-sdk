@@ -4,9 +4,6 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class ScreenChestCTRequest extends TeaModel {
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("DataFormat")
     public String dataFormat;
 
@@ -22,14 +19,6 @@ public class ScreenChestCTRequest extends TeaModel {
     public static ScreenChestCTRequest build(java.util.Map<String, ?> map) throws Exception {
         ScreenChestCTRequest self = new ScreenChestCTRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ScreenChestCTRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public ScreenChestCTRequest setDataFormat(String dataFormat) {

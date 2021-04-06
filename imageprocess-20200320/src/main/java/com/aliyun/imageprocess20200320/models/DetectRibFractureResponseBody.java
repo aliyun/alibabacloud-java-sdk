@@ -47,6 +47,12 @@ public class DetectRibFractureResponseBody extends TeaModel {
         @NameInMap("FractureCategory")
         public String fractureCategory;
 
+        @NameInMap("FractureLocation")
+        public String fractureLocation;
+
+        @NameInMap("FractureSegment")
+        public Long fractureSegment;
+
         public static DetectRibFractureResponseBodyDataDetections build(java.util.Map<String, ?> map) throws Exception {
             DetectRibFractureResponseBodyDataDetections self = new DetectRibFractureResponseBodyDataDetections();
             return TeaModel.build(map, self);
@@ -90,6 +96,22 @@ public class DetectRibFractureResponseBody extends TeaModel {
         }
         public String getFractureCategory() {
             return this.fractureCategory;
+        }
+
+        public DetectRibFractureResponseBodyDataDetections setFractureLocation(String fractureLocation) {
+            this.fractureLocation = fractureLocation;
+            return this;
+        }
+        public String getFractureLocation() {
+            return this.fractureLocation;
+        }
+
+        public DetectRibFractureResponseBodyDataDetections setFractureSegment(Long fractureSegment) {
+            this.fractureSegment = fractureSegment;
+            return this;
+        }
+        public Long getFractureSegment() {
+            return this.fractureSegment;
         }
 
     }

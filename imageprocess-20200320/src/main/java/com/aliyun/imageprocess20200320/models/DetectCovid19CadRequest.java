@@ -4,9 +4,6 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectCovid19CadRequest extends TeaModel {
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("DataFormat")
     public String dataFormat;
 
@@ -22,14 +19,6 @@ public class DetectCovid19CadRequest extends TeaModel {
     public static DetectCovid19CadRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectCovid19CadRequest self = new DetectCovid19CadRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DetectCovid19CadRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public DetectCovid19CadRequest setDataFormat(String dataFormat) {
