@@ -4,9 +4,6 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectLungNoduleRequest extends TeaModel {
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("DataFormat")
     public String dataFormat;
 
@@ -25,14 +22,6 @@ public class DetectLungNoduleRequest extends TeaModel {
     public static DetectLungNoduleRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectLungNoduleRequest self = new DetectLungNoduleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DetectLungNoduleRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public DetectLungNoduleRequest setDataFormat(String dataFormat) {

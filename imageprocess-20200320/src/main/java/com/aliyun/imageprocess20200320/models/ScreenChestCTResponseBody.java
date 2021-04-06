@@ -384,6 +384,12 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("CoordinateImage")
         public java.util.List<Long> coordinateImage;
 
+        @NameInMap("FractureLocation")
+        public String fractureLocation;
+
+        @NameInMap("FractureSegment")
+        public Long fractureSegment;
+
         public static ScreenChestCTResponseBodyDataDetectRibFractureDetections build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyDataDetectRibFractureDetections self = new ScreenChestCTResponseBodyDataDetectRibFractureDetections();
             return TeaModel.build(map, self);
@@ -427,6 +433,22 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public java.util.List<Long> getCoordinateImage() {
             return this.coordinateImage;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFractureDetections setFractureLocation(String fractureLocation) {
+            this.fractureLocation = fractureLocation;
+            return this;
+        }
+        public String getFractureLocation() {
+            return this.fractureLocation;
+        }
+
+        public ScreenChestCTResponseBodyDataDetectRibFractureDetections setFractureSegment(Long fractureSegment) {
+            this.fractureSegment = fractureSegment;
+            return this;
+        }
+        public Long getFractureSegment() {
+            return this.fractureSegment;
         }
 
     }

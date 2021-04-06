@@ -4,9 +4,6 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectRibFractureRequest extends TeaModel {
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("DataFormat")
     public String dataFormat;
 
@@ -25,14 +22,6 @@ public class DetectRibFractureRequest extends TeaModel {
     public static DetectRibFractureRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectRibFractureRequest self = new DetectRibFractureRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DetectRibFractureRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public DetectRibFractureRequest setDataFormat(String dataFormat) {

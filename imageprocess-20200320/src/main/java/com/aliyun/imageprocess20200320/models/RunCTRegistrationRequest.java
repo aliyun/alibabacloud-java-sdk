@@ -4,9 +4,6 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class RunCTRegistrationRequest extends TeaModel {
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("DataFormat")
     public String dataFormat;
 
@@ -28,14 +25,6 @@ public class RunCTRegistrationRequest extends TeaModel {
     public static RunCTRegistrationRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCTRegistrationRequest self = new RunCTRegistrationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RunCTRegistrationRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public RunCTRegistrationRequest setDataFormat(String dataFormat) {
