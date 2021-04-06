@@ -4,9 +4,6 @@ package com.aliyun.facebody20191230.models;
 import com.aliyun.tea.*;
 
 public class DetectIPCPedestrianRequest extends TeaModel {
-    @NameInMap("ContinueOnError")
-    public Boolean continueOnError;
-
     @NameInMap("ImageData")
     public String imageData;
 
@@ -19,20 +16,9 @@ public class DetectIPCPedestrianRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
-    @NameInMap("DataId")
-    public String dataId;
-
     public static DetectIPCPedestrianRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectIPCPedestrianRequest self = new DetectIPCPedestrianRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DetectIPCPedestrianRequest setContinueOnError(Boolean continueOnError) {
-        this.continueOnError = continueOnError;
-        return this;
-    }
-    public Boolean getContinueOnError() {
-        return this.continueOnError;
     }
 
     public DetectIPCPedestrianRequest setImageData(String imageData) {
@@ -65,14 +51,6 @@ public class DetectIPCPedestrianRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
-    }
-
-    public DetectIPCPedestrianRequest setDataId(String dataId) {
-        this.dataId = dataId;
-        return this;
-    }
-    public String getDataId() {
-        return this.dataId;
     }
 
 }

@@ -8,9 +8,6 @@ public class CompareFaceRequest extends TeaModel {
     @NameInMap("QualityScoreThreshold")
     public Float qualityScoreThreshold;
 
-    @NameInMap("ImageType")
-    public Integer imageType;
-
     @NameInMap("ImageURLA")
     public String imageURLA;
 
@@ -34,14 +31,6 @@ public class CompareFaceRequest extends TeaModel {
     }
     public Float getQualityScoreThreshold() {
         return this.qualityScoreThreshold;
-    }
-
-    public CompareFaceRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
-        return this;
-    }
-    public Integer getImageType() {
-        return this.imageType;
     }
 
     public CompareFaceRequest setImageURLA(String imageURLA) {

@@ -10,9 +10,6 @@ public class CompareFaceResponseBody extends TeaModel {
     @NameInMap("Data")
     public CompareFaceResponseBodyData data;
 
-    @NameInMap("Code")
-    public String code;
-
     public static CompareFaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CompareFaceResponseBody self = new CompareFaceResponseBody();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class CompareFaceResponseBody extends TeaModel {
     }
     public CompareFaceResponseBodyData getData() {
         return this.data;
-    }
-
-    public CompareFaceResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public static class CompareFaceResponseBodyData extends TeaModel {

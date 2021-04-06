@@ -24,6 +24,9 @@ public class RecognizePublicFaceRequest extends TeaModel {
         @NameInMap("ImageURL")
         public String imageURL;
 
+        @NameInMap("ImageData")
+        public byte[] imageData;
+
         public static RecognizePublicFaceRequestTask build(java.util.Map<String, ?> map) throws Exception {
             RecognizePublicFaceRequestTask self = new RecognizePublicFaceRequestTask();
             return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class RecognizePublicFaceRequest extends TeaModel {
         }
         public String getImageURL() {
             return this.imageURL;
+        }
+
+        public RecognizePublicFaceRequestTask setImageData(byte[] imageData) {
+            this.imageData = imageData;
+            return this;
+        }
+        public byte[] getImageData() {
+            return this.imageData;
         }
 
     }

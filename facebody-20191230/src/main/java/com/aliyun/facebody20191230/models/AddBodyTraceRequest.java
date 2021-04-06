@@ -62,6 +62,9 @@ public class AddBodyTraceRequest extends TeaModel {
         @NameInMap("ImageURL")
         public String imageURL;
 
+        @NameInMap("ImageData")
+        public byte[] imageData;
+
         public static AddBodyTraceRequestImages build(java.util.Map<String, ?> map) throws Exception {
             AddBodyTraceRequestImages self = new AddBodyTraceRequestImages();
             return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class AddBodyTraceRequest extends TeaModel {
         }
         public String getImageURL() {
             return this.imageURL;
+        }
+
+        public AddBodyTraceRequestImages setImageData(byte[] imageData) {
+            this.imageData = imageData;
+            return this;
+        }
+        public byte[] getImageData() {
+            return this.imageData;
         }
 
     }

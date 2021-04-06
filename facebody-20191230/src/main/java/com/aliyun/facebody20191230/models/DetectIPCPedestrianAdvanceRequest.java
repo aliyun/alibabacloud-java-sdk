@@ -8,9 +8,6 @@ public class DetectIPCPedestrianAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("ContinueOnError")
-    public Boolean continueOnError;
-
     @NameInMap("ImageData")
     public String imageData;
 
@@ -19,9 +16,6 @@ public class DetectIPCPedestrianAdvanceRequest extends TeaModel {
 
     @NameInMap("Height")
     public Integer height;
-
-    @NameInMap("DataId")
-    public String dataId;
 
     public static DetectIPCPedestrianAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectIPCPedestrianAdvanceRequest self = new DetectIPCPedestrianAdvanceRequest();
@@ -34,14 +28,6 @@ public class DetectIPCPedestrianAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
-    }
-
-    public DetectIPCPedestrianAdvanceRequest setContinueOnError(Boolean continueOnError) {
-        this.continueOnError = continueOnError;
-        return this;
-    }
-    public Boolean getContinueOnError() {
-        return this.continueOnError;
     }
 
     public DetectIPCPedestrianAdvanceRequest setImageData(String imageData) {
@@ -66,14 +52,6 @@ public class DetectIPCPedestrianAdvanceRequest extends TeaModel {
     }
     public Integer getHeight() {
         return this.height;
-    }
-
-    public DetectIPCPedestrianAdvanceRequest setDataId(String dataId) {
-        this.dataId = dataId;
-        return this;
-    }
-    public String getDataId() {
-        return this.dataId;
     }
 
 }
