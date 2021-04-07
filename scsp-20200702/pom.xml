@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>scsp20200702</artifactId>
-  <version>1.9.2</version>
+  <version>1.9.3</version>
   <packaging>jar</packaging>
   <name>scsp20200702</name>
   <description>Alibaba Cloud scsp (20200702) SDK for Java
