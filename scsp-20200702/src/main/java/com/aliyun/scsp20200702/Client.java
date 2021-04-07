@@ -629,6 +629,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOutbounNumListWithOptions(request, runtime);
     }
 
+    public CreateTicketWithBizDataResponse createTicketWithBizDataWithOptions(CreateTicketWithBizDataRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("createTicketWithBizData", "2020-07-02", "HTTPS", "POST", "AK", "json", req, runtime), new CreateTicketWithBizDataResponse());
+    }
+
+    public CreateTicketWithBizDataResponse createTicketWithBizData(CreateTicketWithBizDataRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createTicketWithBizDataWithOptions(request, runtime);
+    }
+
     public SearchTicketByPhoneResponse searchTicketByPhoneWithOptions(SearchTicketByPhoneRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));

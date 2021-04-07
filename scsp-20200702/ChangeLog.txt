@@ -1,3 +1,6 @@
+2021-04-07 Version: 1.9.2
+- Add new API createTicketWithBizData.
+
 2021-03-30 Version: 1.9.1
 - Bug fix.
 
