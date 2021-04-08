@@ -3,16 +3,16 @@ package com.aliyun.lvwangwatermark20210104.models;
 
 import com.aliyun.tea.*;
 
-public class GetVideoAddRequest extends TeaModel {
+public class GetQueryTraceFileRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
-    public static GetVideoAddRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetVideoAddRequest self = new GetVideoAddRequest();
+    public static GetQueryTraceFileRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetQueryTraceFileRequest self = new GetQueryTraceFileRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetVideoAddRequest setTaskId(String taskId) {
+    public GetQueryTraceFileRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }

@@ -4,9 +4,6 @@ package com.aliyun.lvwangwatermark20210104.models;
 import com.aliyun.tea.*;
 
 public class GetVideoTraceRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("AppName")
     public String appName;
 
@@ -16,17 +13,12 @@ public class GetVideoTraceRequest extends TeaModel {
     @NameInMap("userInfoList")
     public String userInfoList;
 
+    @NameInMap("FileType")
+    public String fileType;
+
     public static GetVideoTraceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetVideoTraceRequest self = new GetVideoTraceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetVideoTraceRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public GetVideoTraceRequest setAppName(String appName) {
@@ -51,6 +43,14 @@ public class GetVideoTraceRequest extends TeaModel {
     }
     public String getUserInfoList() {
         return this.userInfoList;
+    }
+
+    public GetVideoTraceRequest setFileType(String fileType) {
+        this.fileType = fileType;
+        return this;
+    }
+    public String getFileType() {
+        return this.fileType;
     }
 
 }

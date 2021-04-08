@@ -4,9 +4,6 @@ package com.aliyun.lvwangwatermark20210104.models;
 import com.aliyun.tea.*;
 
 public class GetAudioAsyncRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("AppName")
     public String appName;
 
@@ -19,14 +16,6 @@ public class GetAudioAsyncRequest extends TeaModel {
     public static GetAudioAsyncRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAudioAsyncRequest self = new GetAudioAsyncRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetAudioAsyncRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public GetAudioAsyncRequest setAppName(String appName) {

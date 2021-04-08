@@ -32,15 +32,29 @@ public class GetVideoTraceResponseBody extends TeaModel {
     }
 
     public static class GetVideoTraceResponseBodyData extends TeaModel {
+        @NameInMap("TaskUid")
+        public String taskUid;
+
         @NameInMap("ResultUrl")
         public String resultUrl;
 
         @NameInMap("UserInfo")
         public String userInfo;
 
+        @NameInMap("FileUid")
+        public String fileUid;
+
         public static GetVideoTraceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetVideoTraceResponseBodyData self = new GetVideoTraceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetVideoTraceResponseBodyData setTaskUid(String taskUid) {
+            this.taskUid = taskUid;
+            return this;
+        }
+        public String getTaskUid() {
+            return this.taskUid;
         }
 
         public GetVideoTraceResponseBodyData setResultUrl(String resultUrl) {
@@ -57,6 +71,14 @@ public class GetVideoTraceResponseBody extends TeaModel {
         }
         public String getUserInfo() {
             return this.userInfo;
+        }
+
+        public GetVideoTraceResponseBodyData setFileUid(String fileUid) {
+            this.fileUid = fileUid;
+            return this;
+        }
+        public String getFileUid() {
+            return this.fileUid;
         }
 
     }
