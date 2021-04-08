@@ -317,6 +317,9 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
         @NameInMap("ModifyUserId")
         public String modifyUserId;
 
+        @NameInMap("SceneKey")
+        public String sceneKey;
+
         // 示例问法、正负例句、正负关键字
         @NameInMap("SimilarQuestions")
         public java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions> similarQuestions;
@@ -392,6 +395,14 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
         }
         public String getModifyUserId() {
             return this.modifyUserId;
+        }
+
+        public ListSubscribedPackageKnowledgesResponseBodyKnowledges setSceneKey(String sceneKey) {
+            this.sceneKey = sceneKey;
+            return this;
+        }
+        public String getSceneKey() {
+            return this.sceneKey;
         }
 
         public ListSubscribedPackageKnowledgesResponseBodyKnowledges setSimilarQuestions(java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions> similarQuestions) {
