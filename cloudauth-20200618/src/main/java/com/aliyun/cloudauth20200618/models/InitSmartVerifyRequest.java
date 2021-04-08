@@ -58,6 +58,12 @@ public class InitSmartVerifyRequest extends TeaModel {
     @NameInMap("OssObjectName")
     public String ossObjectName;
 
+    @NameInMap("IdNo")
+    public String idNo;
+
+    @NameInMap("IdName")
+    public String idName;
+
     public static InitSmartVerifyRequest build(java.util.Map<String, ?> map) throws Exception {
         InitSmartVerifyRequest self = new InitSmartVerifyRequest();
         return TeaModel.build(map, self);
@@ -205,6 +211,22 @@ public class InitSmartVerifyRequest extends TeaModel {
     }
     public String getOssObjectName() {
         return this.ossObjectName;
+    }
+
+    public InitSmartVerifyRequest setIdNo(String idNo) {
+        this.idNo = idNo;
+        return this;
+    }
+    public String getIdNo() {
+        return this.idNo;
+    }
+
+    public InitSmartVerifyRequest setIdName(String idName) {
+        this.idName = idName;
+        return this;
+    }
+    public String getIdName() {
+        return this.idName;
     }
 
 }
