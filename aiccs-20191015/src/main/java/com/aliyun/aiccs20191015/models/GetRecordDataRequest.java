@@ -10,9 +10,6 @@ public class GetRecordDataRequest extends TeaModel {
     @NameInMap("Acid")
     public String acid;
 
-    @NameInMap("SecLevel")
-    public Integer secLevel;
-
     public static GetRecordDataRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRecordDataRequest self = new GetRecordDataRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class GetRecordDataRequest extends TeaModel {
     }
     public String getAcid() {
         return this.acid;
-    }
-
-    public GetRecordDataRequest setSecLevel(Integer secLevel) {
-        this.secLevel = secLevel;
-        return this;
-    }
-    public Integer getSecLevel() {
-        return this.secLevel;
     }
 
 }

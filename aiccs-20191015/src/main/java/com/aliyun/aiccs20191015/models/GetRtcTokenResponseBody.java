@@ -20,9 +20,9 @@ public class GetRtcTokenResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
-    // token信息
+    // data
     @NameInMap("Data")
-    public String data;
+    public GetRtcTokenResponseBodyData data;
 
     public static GetRtcTokenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetRtcTokenResponseBody self = new GetRtcTokenResponseBody();
@@ -61,12 +61,56 @@ public class GetRtcTokenResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetRtcTokenResponseBody setData(String data) {
+    public GetRtcTokenResponseBody setData(GetRtcTokenResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public String getData() {
+    public GetRtcTokenResponseBodyData getData() {
         return this.data;
+    }
+
+    public static class GetRtcTokenResponseBodyData extends TeaModel {
+        // token信息
+        @NameInMap("Token")
+        public String token;
+
+        // rtcId
+        @NameInMap("RtcId")
+        public String rtcId;
+
+        // 账号名
+        @NameInMap("AccountName")
+        public String accountName;
+
+        public static GetRtcTokenResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetRtcTokenResponseBodyData self = new GetRtcTokenResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRtcTokenResponseBodyData setToken(String token) {
+            this.token = token;
+            return this;
+        }
+        public String getToken() {
+            return this.token;
+        }
+
+        public GetRtcTokenResponseBodyData setRtcId(String rtcId) {
+            this.rtcId = rtcId;
+            return this;
+        }
+        public String getRtcId() {
+            return this.rtcId;
+        }
+
+        public GetRtcTokenResponseBodyData setAccountName(String accountName) {
+            this.accountName = accountName;
+            return this;
+        }
+        public String getAccountName() {
+            return this.accountName;
+        }
+
     }
 
 }
