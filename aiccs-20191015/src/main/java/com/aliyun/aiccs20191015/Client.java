@@ -231,6 +231,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createOutboundTaskWithOptions(request, runtime);
     }
 
+    public GetHotlineRuntimeInfoResponse getHotlineRuntimeInfoWithOptions(GetHotlineRuntimeInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetHotlineRuntimeInfo", "2019-10-15", "HTTPS", "GET", "AK", "json", req, runtime), new GetHotlineRuntimeInfoResponse());
+    }
+
+    public GetHotlineRuntimeInfoResponse getHotlineRuntimeInfo(GetHotlineRuntimeInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getHotlineRuntimeInfoWithOptions(request, runtime);
+    }
+
     public MakeDoubleCallResponse makeDoubleCallWithOptions(MakeDoubleCallRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
