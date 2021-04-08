@@ -149,6 +149,10 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
         @NameInMap("Frames")
         public java.util.List<DetectVideoIPCObjectResponseBodyDataFrames> frames;
 
+        // 输入文件信息
+        @NameInMap("InputFile")
+        public String inputFile;
+
         public static DetectVideoIPCObjectResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DetectVideoIPCObjectResponseBodyData self = new DetectVideoIPCObjectResponseBodyData();
             return TeaModel.build(map, self);
@@ -176,6 +180,14 @@ public class DetectVideoIPCObjectResponseBody extends TeaModel {
         }
         public java.util.List<DetectVideoIPCObjectResponseBodyDataFrames> getFrames() {
             return this.frames;
+        }
+
+        public DetectVideoIPCObjectResponseBodyData setInputFile(String inputFile) {
+            this.inputFile = inputFile;
+            return this;
+        }
+        public String getInputFile() {
+            return this.inputFile;
         }
 
     }
