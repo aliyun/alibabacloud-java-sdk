@@ -22,6 +22,9 @@ public class GetQualityProjectListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("checkFreqType")
+    public Long checkFreqType;
+
     public static GetQualityProjectListRequest build(java.util.Map<String, ?> map) throws Exception {
         GetQualityProjectListRequest self = new GetQualityProjectListRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class GetQualityProjectListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public GetQualityProjectListRequest setCheckFreqType(Long checkFreqType) {
+        this.checkFreqType = checkFreqType;
+        return this;
+    }
+    public Long getCheckFreqType() {
+        return this.checkFreqType;
     }
 
 }
