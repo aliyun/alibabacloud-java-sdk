@@ -8,7 +8,7 @@ public class GetQueryTraceFileResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public GetQueryTraceFileResponseBodyData data;
+    public java.util.List<GetQueryTraceFileResponseBodyData> data;
 
     public static GetQueryTraceFileResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetQueryTraceFileResponseBody self = new GetQueryTraceFileResponseBody();
@@ -23,11 +23,11 @@ public class GetQueryTraceFileResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetQueryTraceFileResponseBody setData(GetQueryTraceFileResponseBodyData data) {
+    public GetQueryTraceFileResponseBody setData(java.util.List<GetQueryTraceFileResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public GetQueryTraceFileResponseBodyData getData() {
+    public java.util.List<GetQueryTraceFileResponseBodyData> getData() {
         return this.data;
     }
 

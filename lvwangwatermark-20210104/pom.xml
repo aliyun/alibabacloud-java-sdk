@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>lvwangwatermark20210104</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>lvwangwatermark20210104</name>
   <description>Alibaba Cloud LvwangWatermark (20210104) SDK for Java

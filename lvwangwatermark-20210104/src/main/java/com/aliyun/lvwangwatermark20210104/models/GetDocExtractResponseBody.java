@@ -3,19 +3,19 @@ package com.aliyun.lvwangwatermark20210104.models;
 
 import com.aliyun.tea.*;
 
-public class GetAudioExtractResponseBody extends TeaModel {
+public class GetDocExtractResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Data")
-    public java.util.List<GetAudioExtractResponseBodyData> data;
+    public java.util.List<GetDocExtractResponseBodyData> data;
 
-    public static GetAudioExtractResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetAudioExtractResponseBody self = new GetAudioExtractResponseBody();
+    public static GetDocExtractResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetDocExtractResponseBody self = new GetDocExtractResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetAudioExtractResponseBody setRequestId(String requestId) {
+    public GetDocExtractResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -23,15 +23,15 @@ public class GetAudioExtractResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAudioExtractResponseBody setData(java.util.List<GetAudioExtractResponseBodyData> data) {
+    public GetDocExtractResponseBody setData(java.util.List<GetDocExtractResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public java.util.List<GetAudioExtractResponseBodyData> getData() {
+    public java.util.List<GetDocExtractResponseBodyData> getData() {
         return this.data;
     }
 
-    public static class GetAudioExtractResponseBodyData extends TeaModel {
+    public static class GetDocExtractResponseBodyData extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -74,12 +74,12 @@ public class GetAudioExtractResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
-        public static GetAudioExtractResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetAudioExtractResponseBodyData self = new GetAudioExtractResponseBodyData();
+        public static GetDocExtractResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetDocExtractResponseBodyData self = new GetDocExtractResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetAudioExtractResponseBodyData setStatus(String status) {
+        public GetDocExtractResponseBodyData setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -87,7 +87,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.status;
         }
 
-        public GetAudioExtractResponseBodyData setSourceUrl(String sourceUrl) {
+        public GetDocExtractResponseBodyData setSourceUrl(String sourceUrl) {
             this.sourceUrl = sourceUrl;
             return this;
         }
@@ -95,7 +95,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.sourceUrl;
         }
 
-        public GetAudioExtractResponseBodyData setWaterMarkId(String waterMarkId) {
+        public GetDocExtractResponseBodyData setWaterMarkId(String waterMarkId) {
             this.waterMarkId = waterMarkId;
             return this;
         }
@@ -103,7 +103,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.waterMarkId;
         }
 
-        public GetAudioExtractResponseBodyData setResultUrl(String resultUrl) {
+        public GetDocExtractResponseBodyData setResultUrl(String resultUrl) {
             this.resultUrl = resultUrl;
             return this;
         }
@@ -111,7 +111,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.resultUrl;
         }
 
-        public GetAudioExtractResponseBodyData setDataId(String dataId) {
+        public GetDocExtractResponseBodyData setDataId(String dataId) {
             this.dataId = dataId;
             return this;
         }
@@ -119,7 +119,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.dataId;
         }
 
-        public GetAudioExtractResponseBodyData setGmtModified(Long gmtModified) {
+        public GetDocExtractResponseBodyData setGmtModified(Long gmtModified) {
             this.gmtModified = gmtModified;
             return this;
         }
@@ -127,7 +127,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        public GetAudioExtractResponseBodyData setMediaType(String mediaType) {
+        public GetDocExtractResponseBodyData setMediaType(String mediaType) {
             this.mediaType = mediaType;
             return this;
         }
@@ -135,7 +135,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.mediaType;
         }
 
-        public GetAudioExtractResponseBodyData setMsg(String msg) {
+        public GetDocExtractResponseBodyData setMsg(String msg) {
             this.msg = msg;
             return this;
         }
@@ -143,7 +143,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.msg;
         }
 
-        public GetAudioExtractResponseBodyData setTaskUid(String taskUid) {
+        public GetDocExtractResponseBodyData setTaskUid(String taskUid) {
             this.taskUid = taskUid;
             return this;
         }
@@ -151,7 +151,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.taskUid;
         }
 
-        public GetAudioExtractResponseBodyData setAppId(Long appId) {
+        public GetDocExtractResponseBodyData setAppId(Long appId) {
             this.appId = appId;
             return this;
         }
@@ -159,7 +159,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.appId;
         }
 
-        public GetAudioExtractResponseBodyData setGmtCreate(Long gmtCreate) {
+        public GetDocExtractResponseBodyData setGmtCreate(Long gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
         }
@@ -167,7 +167,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
-        public GetAudioExtractResponseBodyData setOptType(String optType) {
+        public GetDocExtractResponseBodyData setOptType(String optType) {
             this.optType = optType;
             return this;
         }
@@ -175,7 +175,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.optType;
         }
 
-        public GetAudioExtractResponseBodyData setFinishedTime(Long finishedTime) {
+        public GetDocExtractResponseBodyData setFinishedTime(Long finishedTime) {
             this.finishedTime = finishedTime;
             return this;
         }
@@ -183,7 +183,7 @@ public class GetAudioExtractResponseBody extends TeaModel {
             return this.finishedTime;
         }
 
-        public GetAudioExtractResponseBodyData setId(Long id) {
+        public GetDocExtractResponseBodyData setId(Long id) {
             this.id = id;
             return this;
         }
