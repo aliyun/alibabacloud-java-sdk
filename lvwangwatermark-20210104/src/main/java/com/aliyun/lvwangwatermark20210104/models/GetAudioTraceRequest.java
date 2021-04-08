@@ -4,9 +4,6 @@ package com.aliyun.lvwangwatermark20210104.models;
 import com.aliyun.tea.*;
 
 public class GetAudioTraceRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("AppName")
     public String appName;
 
@@ -19,14 +16,6 @@ public class GetAudioTraceRequest extends TeaModel {
     public static GetAudioTraceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetAudioTraceRequest self = new GetAudioTraceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetAudioTraceRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public GetAudioTraceRequest setAppName(String appName) {

@@ -4,9 +4,6 @@ package com.aliyun.lvwangwatermark20210104.models;
 import com.aliyun.tea.*;
 
 public class GetImageAsyncRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("AppName")
     public Long appName;
 
@@ -16,14 +13,6 @@ public class GetImageAsyncRequest extends TeaModel {
     public static GetImageAsyncRequest build(java.util.Map<String, ?> map) throws Exception {
         GetImageAsyncRequest self = new GetImageAsyncRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetImageAsyncRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public GetImageAsyncRequest setAppName(Long appName) {

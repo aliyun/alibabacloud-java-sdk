@@ -4,9 +4,6 @@ package com.aliyun.lvwangwatermark20210104.models;
 import com.aliyun.tea.*;
 
 public class GetVideoAsyncRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("AppName")
     public String appName;
 
@@ -22,14 +19,6 @@ public class GetVideoAsyncRequest extends TeaModel {
     public static GetVideoAsyncRequest build(java.util.Map<String, ?> map) throws Exception {
         GetVideoAsyncRequest self = new GetVideoAsyncRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetVideoAsyncRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public GetVideoAsyncRequest setAppName(String appName) {

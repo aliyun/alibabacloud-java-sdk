@@ -161,6 +161,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getImageSyncWithOptions(request, runtime);
     }
 
+    public GetQueryTraceFileResponse getQueryTraceFileWithOptions(GetQueryTraceFileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetQueryTraceFile", "2021-01-04", "HTTPS", "POST", "AK", "json", req, runtime), new GetQueryTraceFileResponse());
+    }
+
+    public GetQueryTraceFileResponse getQueryTraceFile(GetQueryTraceFileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getQueryTraceFileWithOptions(request, runtime);
+    }
+
     public GetVideoAddResponse getVideoAddWithOptions(GetVideoAddRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
