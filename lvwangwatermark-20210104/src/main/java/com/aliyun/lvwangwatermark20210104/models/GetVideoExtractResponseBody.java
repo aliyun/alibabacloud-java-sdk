@@ -8,7 +8,7 @@ public class GetVideoExtractResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public GetVideoExtractResponseBodyData data;
+    public java.util.List<GetVideoExtractResponseBodyData> data;
 
     public static GetVideoExtractResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetVideoExtractResponseBody self = new GetVideoExtractResponseBody();
@@ -23,11 +23,11 @@ public class GetVideoExtractResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetVideoExtractResponseBody setData(GetVideoExtractResponseBodyData data) {
+    public GetVideoExtractResponseBody setData(java.util.List<GetVideoExtractResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public GetVideoExtractResponseBodyData getData() {
+    public java.util.List<GetVideoExtractResponseBodyData> getData() {
         return this.data;
     }
 

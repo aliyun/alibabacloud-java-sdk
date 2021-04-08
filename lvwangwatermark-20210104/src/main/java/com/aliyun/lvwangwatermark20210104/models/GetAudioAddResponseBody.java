@@ -8,7 +8,7 @@ public class GetAudioAddResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Data")
-    public GetAudioAddResponseBodyData data;
+    public java.util.List<GetAudioAddResponseBodyData> data;
 
     public static GetAudioAddResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAudioAddResponseBody self = new GetAudioAddResponseBody();
@@ -23,11 +23,11 @@ public class GetAudioAddResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetAudioAddResponseBody setData(GetAudioAddResponseBodyData data) {
+    public GetAudioAddResponseBody setData(java.util.List<GetAudioAddResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public GetAudioAddResponseBodyData getData() {
+    public java.util.List<GetAudioAddResponseBodyData> getData() {
         return this.data;
     }
 

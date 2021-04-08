@@ -44,6 +44,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addAudioAsyncWithOptions(request, runtime);
     }
 
+    public AddDocAsyncResponse addDocAsyncWithOptions(AddDocAsyncRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddDocAsync", "2021-01-04", "HTTPS", "POST", "AK", "json", req, runtime), new AddDocAsyncResponse());
+    }
+
+    public AddDocAsyncResponse addDocAsync(AddDocAsyncRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addDocAsyncWithOptions(request, runtime);
+    }
+
     public AddImageAsyncResponse addImageAsyncWithOptions(AddImageAsyncRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -133,6 +146,45 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAudioTraceResponse getAudioTrace(GetAudioTraceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getAudioTraceWithOptions(request, runtime);
+    }
+
+    public GetDocAddResponse getDocAddWithOptions(GetDocAddRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDocAdd", "2021-01-04", "HTTPS", "POST", "AK", "json", req, runtime), new GetDocAddResponse());
+    }
+
+    public GetDocAddResponse getDocAdd(GetDocAddRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDocAddWithOptions(request, runtime);
+    }
+
+    public GetDocAsyncResponse getDocAsyncWithOptions(GetDocAsyncRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDocAsync", "2021-01-04", "HTTPS", "POST", "AK", "json", req, runtime), new GetDocAsyncResponse());
+    }
+
+    public GetDocAsyncResponse getDocAsync(GetDocAsyncRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDocAsyncWithOptions(request, runtime);
+    }
+
+    public GetDocExtractResponse getDocExtractWithOptions(GetDocExtractRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDocExtract", "2021-01-04", "HTTPS", "POST", "AK", "json", req, runtime), new GetDocExtractResponse());
+    }
+
+    public GetDocExtractResponse getDocExtract(GetDocExtractRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDocExtractWithOptions(request, runtime);
     }
 
     public GetImageAsyncResponse getImageAsyncWithOptions(GetImageAsyncRequest request, RuntimeOptions runtime) throws Exception {
