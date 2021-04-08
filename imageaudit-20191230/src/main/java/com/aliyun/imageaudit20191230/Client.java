@@ -36,7 +36,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ScanImage", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime), new ScanImageResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ScanImage"),
+            new TeaPair("version", "2019-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ScanImageResponse());
     }
 
     public ScanImageResponse scanImage(ScanImageRequest request) throws Exception {
@@ -49,7 +60,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("ScanText", "2019-12-30", "HTTPS", "POST", "AK", "json", req, runtime), new ScanTextResponse());
+        Params params = Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ScanText"),
+            new TeaPair("version", "2019-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ScanTextResponse());
     }
 
     public ScanTextResponse scanText(ScanTextRequest request) throws Exception {
