@@ -28,6 +28,80 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public VerifyBankElementResponse verifyBankElement(VerifyBankElementRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("VerifyBankElement", "HTTPS", "POST", "2020-06-18", "AK", null, TeaModel.buildMap(request), runtime), new VerifyBankElementResponse());
+    }
+
+    public VerifyBankElementResponse verifyBankElementSimply(VerifyBankElementRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyBankElement(request, runtime);
+    }
+
+    public VerifyBankElementResponse verifyBankElementAdvance(VerifyBankElementAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        // Step 0: init client
+        String accessKeyId = _credential.getAccessKeyId();
+        String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
+        com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("endpoint", openPlatformEndpoint),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
+        AuthorizeFileUploadRequest authRequest = AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
+            new TeaPair("product", "Cloudauth"),
+            new TeaPair("regionId", _regionId)
+        ));
+        AuthorizeFileUploadResponse authResponse = new AuthorizeFileUploadResponse();
+        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeySecret", accessKeySecret),
+            new TeaPair("type", "access_key"),
+            new TeaPair("protocol", _protocol),
+            new TeaPair("regionId", _regionId)
+        ));
+        com.aliyun.oss.Client ossClient = null;
+        FileField fileObj = new FileField();
+        PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
+        PostObjectRequest uploadRequest = new PostObjectRequest();
+        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
+        VerifyBankElementRequest verifyBankElementReq = new VerifyBankElementRequest();
+        com.aliyun.common.Common.convert(request, verifyBankElementReq);
+        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+        ossConfig.accessKeyId = authResponse.accessKeyId;
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossClient = new com.aliyun.oss.Client(ossConfig);
+        fileObj = FileField.build(TeaConverter.buildMap(
+            new TeaPair("filename", authResponse.objectKey),
+            new TeaPair("content", request.bankCardFileObject),
+            new TeaPair("contentType", "")
+        ));
+        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", authResponse.accessKeyId),
+            new TeaPair("policy", authResponse.encodedPolicy),
+            new TeaPair("signature", authResponse.signature),
+            new TeaPair("key", authResponse.objectKey),
+            new TeaPair("file", fileObj),
+            new TeaPair("successActionStatus", "201")
+        ));
+        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+            new TeaPair("bucketName", authResponse.bucket),
+            new TeaPair("header", ossHeader)
+        ));
+        ossClient.postObject(uploadRequest, ossRuntime);
+        verifyBankElementReq.bankCardFile = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        VerifyBankElementResponse verifyBankElementResp = this.verifyBankElement(verifyBankElementReq, runtime);
+        return verifyBankElementResp;
+    }
+
     public ContrastSmartVerifyResponse contrastSmartVerify(ContrastSmartVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ContrastSmartVerify", "HTTPS", "POST", "2020-06-18", "AK", null, TeaModel.buildMap(request), runtime), new ContrastSmartVerifyResponse());
@@ -42,11 +116,16 @@ public class Client extends com.aliyun.tearpc.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -111,11 +190,16 @@ public class Client extends com.aliyun.tearpc.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
