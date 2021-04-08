@@ -136,6 +136,154 @@ public class ListPackageKnowledgesResponseBody extends TeaModel {
 
     }
 
+    public static class ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions extends TeaModel {
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 答案id
+        @NameInMap("SolutionId")
+        public Long solutionId;
+
+        // 约束类型
+        @NameInMap("ConditionType")
+        public String conditionType;
+
+        // 约束值
+        @NameInMap("ConditionValue")
+        public String conditionValue;
+
+        public static ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions build(java.util.Map<String, ?> map) throws Exception {
+            ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions self = new ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions setSolutionId(Long solutionId) {
+            this.solutionId = solutionId;
+            return this;
+        }
+        public Long getSolutionId() {
+            return this.solutionId;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions setConditionType(String conditionType) {
+            this.conditionType = conditionType;
+            return this;
+        }
+        public String getConditionType() {
+            return this.conditionType;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions setConditionValue(String conditionValue) {
+            this.conditionValue = conditionValue;
+            return this;
+        }
+        public String getConditionValue() {
+            return this.conditionValue;
+        }
+
+    }
+
+    public static class ListPackageKnowledgesResponseBodyKnowledgesSolutions extends TeaModel {
+        // 答案id
+        @NameInMap("SolutionId")
+        public Long solutionId;
+
+        // 知识id
+        @NameInMap("KnowledgeId")
+        public Long knowledgeId;
+
+        // 答案类型
+        @NameInMap("SolutionType")
+        public String solutionType;
+
+        // 答案来源
+        @NameInMap("SolutionSource")
+        public String solutionSource;
+
+        // 答案文本
+        @NameInMap("SolutionContent")
+        public String solutionContent;
+
+        // 答案扩展文本
+        @NameInMap("ExtraContent")
+        public String extraContent;
+
+        // 约束
+        @NameInMap("Conditions")
+        public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions> conditions;
+
+        public static ListPackageKnowledgesResponseBodyKnowledgesSolutions build(java.util.Map<String, ?> map) throws Exception {
+            ListPackageKnowledgesResponseBodyKnowledgesSolutions self = new ListPackageKnowledgesResponseBodyKnowledgesSolutions();
+            return TeaModel.build(map, self);
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionId(Long solutionId) {
+            this.solutionId = solutionId;
+            return this;
+        }
+        public Long getSolutionId() {
+            return this.solutionId;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutions setKnowledgeId(Long knowledgeId) {
+            this.knowledgeId = knowledgeId;
+            return this;
+        }
+        public Long getKnowledgeId() {
+            return this.knowledgeId;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionType(String solutionType) {
+            this.solutionType = solutionType;
+            return this;
+        }
+        public String getSolutionType() {
+            return this.solutionType;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionSource(String solutionSource) {
+            this.solutionSource = solutionSource;
+            return this;
+        }
+        public String getSolutionSource() {
+            return this.solutionSource;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutions setSolutionContent(String solutionContent) {
+            this.solutionContent = solutionContent;
+            return this;
+        }
+        public String getSolutionContent() {
+            return this.solutionContent;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutions setExtraContent(String extraContent) {
+            this.extraContent = extraContent;
+            return this;
+        }
+        public String getExtraContent() {
+            return this.extraContent;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledgesSolutions setConditions(java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions> conditions) {
+            this.conditions = conditions;
+            return this;
+        }
+        public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSolutionsConditions> getConditions() {
+            return this.conditions;
+        }
+
+    }
+
     public static class ListPackageKnowledgesResponseBodyKnowledges extends TeaModel {
         // 知识id
         @NameInMap("KnowledgeId")
@@ -176,6 +324,10 @@ public class ListPackageKnowledgesResponseBody extends TeaModel {
         // 示例问法、正负例句、正负关键字
         @NameInMap("SimilarQuestions")
         public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSimilarQuestions> similarQuestions;
+
+        // 答案
+        @NameInMap("Solutions")
+        public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSolutions> solutions;
 
         public static ListPackageKnowledgesResponseBodyKnowledges build(java.util.Map<String, ?> map) throws Exception {
             ListPackageKnowledgesResponseBodyKnowledges self = new ListPackageKnowledgesResponseBodyKnowledges();
@@ -260,6 +412,14 @@ public class ListPackageKnowledgesResponseBody extends TeaModel {
         }
         public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSimilarQuestions> getSimilarQuestions() {
             return this.similarQuestions;
+        }
+
+        public ListPackageKnowledgesResponseBodyKnowledges setSolutions(java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSolutions> solutions) {
+            this.solutions = solutions;
+            return this;
+        }
+        public java.util.List<ListPackageKnowledgesResponseBodyKnowledgesSolutions> getSolutions() {
+            return this.solutions;
         }
 
     }

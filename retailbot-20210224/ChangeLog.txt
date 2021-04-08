@@ -1,3 +1,6 @@
+2021-04-08 Version: 1.8.3
+- Retailbot knoweldge and robot sdk.
+
 2021-03-31 Version: 1.8.2
 - Retailbot knoweldge and robot sdk.
 
