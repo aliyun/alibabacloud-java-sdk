@@ -54,6 +54,56 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public GetMetaTableThemeLevelResponse getMetaTableThemeLevel(GetMetaTableThemeLevelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetMetaTableThemeLevel", "HTTPS", "GET", "2020-05-18", "AK", TeaModel.buildMap(request), null, runtime), new GetMetaTableThemeLevelResponse());
+    }
+
+    public GetMetaTableThemeLevelResponse getMetaTableThemeLevelSimply(GetMetaTableThemeLevelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMetaTableThemeLevel(request, runtime);
+    }
+
+    public GetPermissionApplyOrderDetailResponse getPermissionApplyOrderDetail(GetPermissionApplyOrderDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetPermissionApplyOrderDetail", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new GetPermissionApplyOrderDetailResponse());
+    }
+
+    public GetPermissionApplyOrderDetailResponse getPermissionApplyOrderDetailSimply(GetPermissionApplyOrderDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getPermissionApplyOrderDetail(request, runtime);
+    }
+
+    public ListPermissionApplyOrdersResponse listPermissionApplyOrders(ListPermissionApplyOrdersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListPermissionApplyOrders", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListPermissionApplyOrdersResponse());
+    }
+
+    public ListPermissionApplyOrdersResponse listPermissionApplyOrdersSimply(ListPermissionApplyOrdersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPermissionApplyOrders(request, runtime);
+    }
+
+    public CreatePermissionApplyOrderResponse createPermissionApplyOrder(CreatePermissionApplyOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreatePermissionApplyOrder", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new CreatePermissionApplyOrderResponse());
+    }
+
+    public CreatePermissionApplyOrderResponse createPermissionApplyOrderSimply(CreatePermissionApplyOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPermissionApplyOrder(request, runtime);
+    }
+
+    public ApprovePermissionApplyOrderResponse approvePermissionApplyOrder(ApprovePermissionApplyOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ApprovePermissionApplyOrder", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ApprovePermissionApplyOrderResponse());
+    }
+
+    public ApprovePermissionApplyOrderResponse approvePermissionApplyOrderSimply(ApprovePermissionApplyOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.approvePermissionApplyOrder(request, runtime);
+    }
+
     public ListSuccessInstanceAmountResponse listSuccessInstanceAmount(ListSuccessInstanceAmountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ListSuccessInstanceAmount", "HTTPS", "POST", "2020-05-18", "AK", null, TeaModel.buildMap(request), runtime), new ListSuccessInstanceAmountResponse());
