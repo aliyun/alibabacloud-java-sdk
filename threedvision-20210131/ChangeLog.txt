@@ -1,3 +1,6 @@
+2021-04-09 Version: 1.0.2
+- Release ReconstructThreeDMultiView.
+
 2021-02-07 Version: 1.0.1
 - Update Threedvision.
 
