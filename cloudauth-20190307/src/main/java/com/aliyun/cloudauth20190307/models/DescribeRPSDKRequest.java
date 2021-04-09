@@ -11,6 +11,7 @@ public class DescribeRPSDKRequest extends TeaModel {
     public String lang;
 
     @NameInMap("TaskId")
+    @Validation(required = true)
     public String taskId;
 
     public static DescribeRPSDKRequest build(java.util.Map<String, ?> map) throws Exception {

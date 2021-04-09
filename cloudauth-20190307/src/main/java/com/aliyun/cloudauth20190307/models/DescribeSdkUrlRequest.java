@@ -4,10 +4,8 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeSdkUrlRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Id")
+    @Validation(required = true)
     public Long id;
 
     @NameInMap("Debug")
@@ -16,14 +14,6 @@ public class DescribeSdkUrlRequest extends TeaModel {
     public static DescribeSdkUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSdkUrlRequest self = new DescribeSdkUrlRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSdkUrlRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeSdkUrlRequest setId(Long id) {

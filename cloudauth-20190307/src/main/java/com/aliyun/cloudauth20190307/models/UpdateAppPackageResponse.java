@@ -4,33 +4,33 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class UpdateAppPackageResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("TaskId")
     @Validation(required = true)
-    public UpdateAppPackageResponseBody body;
+    public String taskId;
 
     public static UpdateAppPackageResponse build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppPackageResponse self = new UpdateAppPackageResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAppPackageResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UpdateAppPackageResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UpdateAppPackageResponse setBody(UpdateAppPackageResponseBody body) {
-        this.body = body;
+    public UpdateAppPackageResponse setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public UpdateAppPackageResponseBody getBody() {
-        return this.body;
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

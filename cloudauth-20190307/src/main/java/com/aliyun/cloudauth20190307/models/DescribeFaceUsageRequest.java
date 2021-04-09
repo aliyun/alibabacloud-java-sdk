@@ -4,26 +4,17 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeFaceUsageRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("StartDate")
+    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
+    @Validation(required = true)
     public String endDate;
 
     public static DescribeFaceUsageRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeFaceUsageRequest self = new DescribeFaceUsageRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFaceUsageRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeFaceUsageRequest setStartDate(String startDate) {

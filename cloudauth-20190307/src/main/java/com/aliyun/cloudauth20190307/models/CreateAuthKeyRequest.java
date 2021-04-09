@@ -4,12 +4,6 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateAuthKeyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("BizType")
     public String bizType;
 
@@ -25,22 +19,6 @@ public class CreateAuthKeyRequest extends TeaModel {
     public static CreateAuthKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAuthKeyRequest self = new CreateAuthKeyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAuthKeyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public CreateAuthKeyRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public CreateAuthKeyRequest setBizType(String bizType) {

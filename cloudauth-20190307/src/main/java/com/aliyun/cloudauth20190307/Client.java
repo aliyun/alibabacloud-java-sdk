@@ -5,24 +5,22 @@ import com.aliyun.tea.*;
 import com.aliyun.cloudauth20190307.models.*;
 import com.aliyun.teautil.*;
 import com.aliyun.teautil.models.*;
-import com.aliyun.oss.*;
-import com.aliyun.oss.models.*;
+import com.aliyun.common.*;
 import com.aliyun.tearpc.*;
 import com.aliyun.tearpc.models.*;
+import com.aliyun.endpointutil.*;
+import com.aliyun.oss.*;
+import com.aliyun.oss.models.*;
 import com.aliyun.openplatform20191219.*;
 import com.aliyun.openplatform20191219.models.*;
 import com.aliyun.ossutil.*;
 import com.aliyun.ossutil.models.*;
 import com.aliyun.fileform.*;
 import com.aliyun.fileform.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
-public class Client extends com.aliyun.teaopenapi.Client {
+public class Client extends com.aliyun.tearpc.Client {
 
-    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
+    public Client(com.aliyun.tearpc.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "central";
         this.checkConfig(config);
@@ -30,66 +28,150 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
 
-    public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
-        if (!com.aliyun.teautil.Common.empty(endpoint)) {
-            return endpoint;
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
-            return endpointMap.get(regionId);
-        }
-
-        return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
-    }
-
-    public CompareFacesResponse compareFacesWithOptions(CompareFacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeWhitelistResponse describeWhitelist(DescribeWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CompareFaces", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new CompareFacesResponse());
+        return TeaModel.toModel(this.doRequest("DescribeWhitelist", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeWhitelistResponse());
     }
 
-    public CompareFacesResponse compareFaces(CompareFacesRequest request) throws Exception {
+    public DescribeWhitelistResponse describeWhitelistSimply(DescribeWhitelistRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.compareFacesWithOptions(request, runtime);
+        return this.describeWhitelist(request, runtime);
     }
 
-    public CompareFaceVerifyResponse compareFaceVerifyWithOptions(CompareFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteWhitelistResponse deleteWhitelist(DeleteWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CompareFaceVerify", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new CompareFaceVerifyResponse());
+        return TeaModel.toModel(this.doRequest("DeleteWhitelist", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DeleteWhitelistResponse());
     }
 
-    public CompareFaceVerifyResponse compareFaceVerify(CompareFaceVerifyRequest request) throws Exception {
+    public DeleteWhitelistResponse deleteWhitelistSimply(DeleteWhitelistRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.compareFaceVerifyWithOptions(request, runtime);
+        return this.deleteWhitelist(request, runtime);
     }
 
-    public ContrastFaceVerifyResponse contrastFaceVerifyWithOptions(ContrastFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateWhitelistResponse createWhitelist(CreateWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ContrastFaceVerify", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new ContrastFaceVerifyResponse());
+        return TeaModel.toModel(this.doRequest("CreateWhitelist", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new CreateWhitelistResponse());
     }
 
-    public ContrastFaceVerifyResponse contrastFaceVerify(ContrastFaceVerifyRequest request) throws Exception {
+    public CreateWhitelistResponse createWhitelistSimply(CreateWhitelistRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.contrastFaceVerifyWithOptions(request, runtime);
+        return this.createWhitelist(request, runtime);
+    }
+
+    public DescribeFaceConfigResponse describeFaceConfig(DescribeFaceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeFaceConfig", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeFaceConfigResponse());
+    }
+
+    public DescribeFaceConfigResponse describeFaceConfigSimply(DescribeFaceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFaceConfig(request, runtime);
+    }
+
+    public UpdateFaceConfigResponse updateFaceConfig(UpdateFaceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("UpdateFaceConfig", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new UpdateFaceConfigResponse());
+    }
+
+    public UpdateFaceConfigResponse updateFaceConfigSimply(UpdateFaceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateFaceConfig(request, runtime);
+    }
+
+    public CreateFaceConfigResponse createFaceConfig(CreateFaceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateFaceConfig", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new CreateFaceConfigResponse());
+    }
+
+    public CreateFaceConfigResponse createFaceConfigSimply(CreateFaceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createFaceConfig(request, runtime);
+    }
+
+    public LivenessFaceVerifyResponse livenessFaceVerify(LivenessFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("LivenessFaceVerify", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new LivenessFaceVerifyResponse());
+    }
+
+    public LivenessFaceVerifyResponse livenessFaceVerifySimply(LivenessFaceVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.livenessFaceVerify(request, runtime);
+    }
+
+    public CompareFaceVerifyResponse compareFaceVerify(CompareFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CompareFaceVerify", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new CompareFaceVerifyResponse());
+    }
+
+    public CompareFaceVerifyResponse compareFaceVerifySimply(CompareFaceVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.compareFaceVerify(request, runtime);
+    }
+
+    public DescribeSdkUrlResponse describeSdkUrl(DescribeSdkUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeSdkUrl", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeSdkUrlResponse());
+    }
+
+    public DescribeSdkUrlResponse describeSdkUrlSimply(DescribeSdkUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSdkUrl(request, runtime);
+    }
+
+    public DescribeUpdatePackageResultResponse describeUpdatePackageResult(DescribeUpdatePackageResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeUpdatePackageResult", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeUpdatePackageResultResponse());
+    }
+
+    public DescribeUpdatePackageResultResponse describeUpdatePackageResultSimply(DescribeUpdatePackageResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUpdatePackageResult(request, runtime);
+    }
+
+    public UpdateAppPackageResponse updateAppPackage(UpdateAppPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("UpdateAppPackage", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new UpdateAppPackageResponse());
+    }
+
+    public UpdateAppPackageResponse updateAppPackageSimply(UpdateAppPackageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAppPackage(request, runtime);
+    }
+
+    public DescribeAppInfoResponse describeAppInfo(DescribeAppInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeAppInfo", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeAppInfoResponse());
+    }
+
+    public DescribeAppInfoResponse describeAppInfoSimply(DescribeAppInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAppInfo(request, runtime);
+    }
+
+    public ContrastFaceVerifyResponse contrastFaceVerify(ContrastFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ContrastFaceVerify", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new ContrastFaceVerifyResponse());
+    }
+
+    public ContrastFaceVerifyResponse contrastFaceVerifySimply(ContrastFaceVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.contrastFaceVerify(request, runtime);
     }
 
     public ContrastFaceVerifyResponse contrastFaceVerifyAdvance(ContrastFaceVerifyAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -110,12 +192,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
         PostObjectRequest.PostObjectRequestHeader ossHeader = new PostObjectRequest.PostObjectRequestHeader();
         PostObjectRequest uploadRequest = new PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
+        com.aliyun.common.Common.convert(runtime, ossRuntime);
         ContrastFaceVerifyRequest contrastFaceVerifyReq = new ContrastFaceVerifyRequest();
-        com.aliyun.openapiutil.Client.convert(request, contrastFaceVerifyReq);
+        com.aliyun.common.Common.convert(request, contrastFaceVerifyReq);
         authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
         ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+        ossConfig.endpoint = com.aliyun.common.Common.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
         ossClient = new com.aliyun.oss.Client(ossConfig);
         fileObj = FileField.build(TeaConverter.buildMap(
             new TeaPair("filename", authResponse.objectKey),
@@ -136,462 +218,269 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         ossClient.postObject(uploadRequest, ossRuntime);
         contrastFaceVerifyReq.faceContrastFile = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        ContrastFaceVerifyResponse contrastFaceVerifyResp = this.contrastFaceVerifyWithOptions(contrastFaceVerifyReq, runtime);
+        ContrastFaceVerifyResponse contrastFaceVerifyResp = this.contrastFaceVerify(contrastFaceVerifyReq, runtime);
         return contrastFaceVerifyResp;
     }
 
-    public CreateAuthKeyResponse createAuthKeyWithOptions(CreateAuthKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public InitDeviceResponse initDevice(InitDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateAuthKey", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new CreateAuthKeyResponse());
+        return TeaModel.toModel(this.doRequest("InitDevice", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new InitDeviceResponse());
     }
 
-    public CreateAuthKeyResponse createAuthKey(CreateAuthKeyRequest request) throws Exception {
+    public InitDeviceResponse initDeviceSimply(InitDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createAuthKeyWithOptions(request, runtime);
+        return this.initDevice(request, runtime);
     }
 
-    public CreateFaceConfigResponse createFaceConfigWithOptions(CreateFaceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public InitFaceVerifyResponse initFaceVerify(InitFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateFaceConfig", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new CreateFaceConfigResponse());
+        return TeaModel.toModel(this.doRequest("InitFaceVerify", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new InitFaceVerifyResponse());
     }
 
-    public CreateFaceConfigResponse createFaceConfig(CreateFaceConfigRequest request) throws Exception {
+    public InitFaceVerifyResponse initFaceVerifySimply(InitFaceVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createFaceConfigWithOptions(request, runtime);
+        return this.initFaceVerify(request, runtime);
     }
 
-    public CreateRPSDKResponse createRPSDKWithOptions(CreateRPSDKRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeFaceVerifyResponse describeFaceVerify(DescribeFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateRPSDK", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new CreateRPSDKResponse());
+        return TeaModel.toModel(this.doRequest("DescribeFaceVerify", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeFaceVerifyResponse());
     }
 
-    public CreateRPSDKResponse createRPSDK(CreateRPSDKRequest request) throws Exception {
+    public DescribeFaceVerifyResponse describeFaceVerifySimply(DescribeFaceVerifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createRPSDKWithOptions(request, runtime);
+        return this.describeFaceVerify(request, runtime);
     }
 
-    public CreateVerifySDKResponse createVerifySDKWithOptions(CreateVerifySDKRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public VerifyDeviceResponse verifyDevice(VerifyDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateVerifySDK", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new CreateVerifySDKResponse());
+        return TeaModel.toModel(this.doRequest("VerifyDevice", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new VerifyDeviceResponse());
     }
 
-    public CreateVerifySDKResponse createVerifySDK(CreateVerifySDKRequest request) throws Exception {
+    public VerifyDeviceResponse verifyDeviceSimply(VerifyDeviceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createVerifySDKWithOptions(request, runtime);
+        return this.verifyDevice(request, runtime);
     }
 
-    public CreateVerifySettingResponse createVerifySettingWithOptions(CreateVerifySettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ModifyDeviceInfoResponse modifyDeviceInfo(ModifyDeviceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateVerifySetting", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new CreateVerifySettingResponse());
+        return TeaModel.toModel(this.doRequest("ModifyDeviceInfo", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new ModifyDeviceInfoResponse());
     }
 
-    public CreateVerifySettingResponse createVerifySetting(CreateVerifySettingRequest request) throws Exception {
+    public ModifyDeviceInfoResponse modifyDeviceInfoSimply(ModifyDeviceInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createVerifySettingWithOptions(request, runtime);
+        return this.modifyDeviceInfo(request, runtime);
     }
 
-    public CreateWhitelistResponse createWhitelistWithOptions(CreateWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeVerifySDKResponse describeVerifySDK(DescribeVerifySDKRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateWhitelist", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new CreateWhitelistResponse());
+        return TeaModel.toModel(this.doRequest("DescribeVerifySDK", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeVerifySDKResponse());
     }
 
-    public CreateWhitelistResponse createWhitelist(CreateWhitelistRequest request) throws Exception {
+    public DescribeVerifySDKResponse describeVerifySDKSimply(DescribeVerifySDKRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createWhitelistWithOptions(request, runtime);
+        return this.describeVerifySDK(request, runtime);
     }
 
-    public DeleteWhitelistResponse deleteWhitelistWithOptions(DeleteWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeDeviceInfoResponse describeDeviceInfo(DescribeDeviceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteWhitelist", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteWhitelistResponse());
+        return TeaModel.toModel(this.doRequest("DescribeDeviceInfo", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeDeviceInfoResponse());
     }
 
-    public DeleteWhitelistResponse deleteWhitelist(DeleteWhitelistRequest request) throws Exception {
+    public DescribeDeviceInfoResponse describeDeviceInfoSimply(DescribeDeviceInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteWhitelistWithOptions(request, runtime);
+        return this.describeDeviceInfo(request, runtime);
     }
 
-    public DescribeAppInfoResponse describeAppInfoWithOptions(DescribeAppInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateVerifySDKResponse createVerifySDK(CreateVerifySDKRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeAppInfo", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeAppInfoResponse());
+        return TeaModel.toModel(this.doRequest("CreateVerifySDK", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new CreateVerifySDKResponse());
     }
 
-    public DescribeAppInfoResponse describeAppInfo(DescribeAppInfoRequest request) throws Exception {
+    public CreateVerifySDKResponse createVerifySDKSimply(CreateVerifySDKRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeAppInfoWithOptions(request, runtime);
+        return this.createVerifySDK(request, runtime);
     }
 
-    public DescribeDeviceInfoResponse describeDeviceInfoWithOptions(DescribeDeviceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateAuthKeyResponse createAuthKey(CreateAuthKeyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeDeviceInfo", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeDeviceInfoResponse());
+        return TeaModel.toModel(this.doRequest("CreateAuthKey", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new CreateAuthKeyResponse());
     }
 
-    public DescribeDeviceInfoResponse describeDeviceInfo(DescribeDeviceInfoRequest request) throws Exception {
+    public CreateAuthKeyResponse createAuthKeySimply(CreateAuthKeyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeDeviceInfoWithOptions(request, runtime);
+        return this.createAuthKey(request, runtime);
     }
 
-    public DescribeFaceConfigResponse describeFaceConfigWithOptions(DescribeFaceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DetectFaceAttributesResponse detectFaceAttributes(DetectFaceAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeFaceConfig", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeFaceConfigResponse());
+        return TeaModel.toModel(this.doRequest("DetectFaceAttributes", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DetectFaceAttributesResponse());
     }
 
-    public DescribeFaceConfigResponse describeFaceConfig(DescribeFaceConfigRequest request) throws Exception {
+    public DetectFaceAttributesResponse detectFaceAttributesSimply(DetectFaceAttributesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeFaceConfigWithOptions(request, runtime);
+        return this.detectFaceAttributes(request, runtime);
     }
 
-    public DescribeFaceUsageResponse describeFaceUsageWithOptions(DescribeFaceUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CompareFacesResponse compareFaces(CompareFacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeFaceUsage", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeFaceUsageResponse());
+        return TeaModel.toModel(this.doRequest("CompareFaces", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new CompareFacesResponse());
     }
 
-    public DescribeFaceUsageResponse describeFaceUsage(DescribeFaceUsageRequest request) throws Exception {
+    public CompareFacesResponse compareFacesSimply(CompareFacesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeFaceUsageWithOptions(request, runtime);
+        return this.compareFaces(request, runtime);
     }
 
-    public DescribeFaceVerifyResponse describeFaceVerifyWithOptions(DescribeFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeFaceUsageResponse describeFaceUsage(DescribeFaceUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeFaceVerify", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeFaceVerifyResponse());
+        return TeaModel.toModel(this.doRequest("DescribeFaceUsage", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeFaceUsageResponse());
     }
 
-    public DescribeFaceVerifyResponse describeFaceVerify(DescribeFaceVerifyRequest request) throws Exception {
+    public DescribeFaceUsageResponse describeFaceUsageSimply(DescribeFaceUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeFaceVerifyWithOptions(request, runtime);
+        return this.describeFaceUsage(request, runtime);
     }
 
-    public DescribeOssUploadTokenResponse describeOssUploadTokenWithOptions(DescribeOssUploadTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeVerifyRecordsResponse describeVerifyRecords(DescribeVerifyRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeOssUploadToken", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeOssUploadTokenResponse());
+        return TeaModel.toModel(this.doRequest("DescribeVerifyRecords", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeVerifyRecordsResponse());
     }
 
-    public DescribeOssUploadTokenResponse describeOssUploadToken(DescribeOssUploadTokenRequest request) throws Exception {
+    public DescribeVerifyRecordsResponse describeVerifyRecordsSimply(DescribeVerifyRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeOssUploadTokenWithOptions(request, runtime);
+        return this.describeVerifyRecords(request, runtime);
     }
 
-    public DescribeRPSDKResponse describeRPSDKWithOptions(DescribeRPSDKRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateVerifySettingResponse updateVerifySetting(UpdateVerifySettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeRPSDK", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeRPSDKResponse());
+        return TeaModel.toModel(this.doRequest("UpdateVerifySetting", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new UpdateVerifySettingResponse());
     }
 
-    public DescribeRPSDKResponse describeRPSDK(DescribeRPSDKRequest request) throws Exception {
+    public UpdateVerifySettingResponse updateVerifySettingSimply(UpdateVerifySettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeRPSDKWithOptions(request, runtime);
+        return this.updateVerifySetting(request, runtime);
     }
 
-    public DescribeSdkUrlResponse describeSdkUrlWithOptions(DescribeSdkUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateVerifySettingResponse createVerifySetting(CreateVerifySettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeSdkUrl", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeSdkUrlResponse());
+        return TeaModel.toModel(this.doRequest("CreateVerifySetting", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new CreateVerifySettingResponse());
     }
 
-    public DescribeSdkUrlResponse describeSdkUrl(DescribeSdkUrlRequest request) throws Exception {
+    public CreateVerifySettingResponse createVerifySettingSimply(CreateVerifySettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeSdkUrlWithOptions(request, runtime);
+        return this.createVerifySetting(request, runtime);
     }
 
-    public DescribeUpdatePackageResultResponse describeUpdatePackageResultWithOptions(DescribeUpdatePackageResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeVerifySettingResponse describeVerifySetting(DescribeVerifySettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeUpdatePackageResult", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUpdatePackageResultResponse());
+        return TeaModel.toModel(this.doRequest("DescribeVerifySetting", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeVerifySettingResponse());
     }
 
-    public DescribeUpdatePackageResultResponse describeUpdatePackageResult(DescribeUpdatePackageResultRequest request) throws Exception {
+    public DescribeVerifySettingResponse describeVerifySettingSimply(DescribeVerifySettingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeUpdatePackageResultWithOptions(request, runtime);
+        return this.describeVerifySetting(request, runtime);
     }
 
-    public DescribeUploadInfoResponse describeUploadInfoWithOptions(DescribeUploadInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeVerifyUsageResponse describeVerifyUsage(DescribeVerifyUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeUploadInfo", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUploadInfoResponse());
+        return TeaModel.toModel(this.doRequest("DescribeVerifyUsage", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeVerifyUsageResponse());
     }
 
-    public DescribeUploadInfoResponse describeUploadInfo(DescribeUploadInfoRequest request) throws Exception {
+    public DescribeVerifyUsageResponse describeVerifyUsageSimply(DescribeVerifyUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeUploadInfoWithOptions(request, runtime);
+        return this.describeVerifyUsage(request, runtime);
     }
 
-    public DescribeUserStatusResponse describeUserStatusWithOptions(DescribeUserStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeUserStatusResponse describeUserStatus(DescribeUserStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeUserStatus", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeUserStatusResponse());
+        return TeaModel.toModel(this.doRequest("DescribeUserStatus", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeUserStatusResponse());
     }
 
-    public DescribeUserStatusResponse describeUserStatus(DescribeUserStatusRequest request) throws Exception {
+    public DescribeUserStatusResponse describeUserStatusSimply(DescribeUserStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeUserStatusWithOptions(request, runtime);
+        return this.describeUserStatus(request, runtime);
     }
 
-    public DescribeVerifyRecordsResponse describeVerifyRecordsWithOptions(DescribeVerifyRecordsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeUploadInfoResponse describeUploadInfo(DescribeUploadInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeVerifyRecords", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeVerifyRecordsResponse());
+        return TeaModel.toModel(this.doRequest("DescribeUploadInfo", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeUploadInfoResponse());
     }
 
-    public DescribeVerifyRecordsResponse describeVerifyRecords(DescribeVerifyRecordsRequest request) throws Exception {
+    public DescribeUploadInfoResponse describeUploadInfoSimply(DescribeUploadInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVerifyRecordsWithOptions(request, runtime);
+        return this.describeUploadInfo(request, runtime);
     }
 
-    public DescribeVerifyResultResponse describeVerifyResultWithOptions(DescribeVerifyResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeRPSDKResponse describeRPSDK(DescribeRPSDKRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeVerifyResult", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeVerifyResultResponse());
+        return TeaModel.toModel(this.doRequest("DescribeRPSDK", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeRPSDKResponse());
     }
 
-    public DescribeVerifyResultResponse describeVerifyResult(DescribeVerifyResultRequest request) throws Exception {
+    public DescribeRPSDKResponse describeRPSDKSimply(DescribeRPSDKRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVerifyResultWithOptions(request, runtime);
+        return this.describeRPSDK(request, runtime);
     }
 
-    public DescribeVerifySDKResponse describeVerifySDKWithOptions(DescribeVerifySDKRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CreateRPSDKResponse createRPSDK(CreateRPSDKRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeVerifySDK", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeVerifySDKResponse());
+        return TeaModel.toModel(this.doRequest("CreateRPSDK", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new CreateRPSDKResponse());
     }
 
-    public DescribeVerifySDKResponse describeVerifySDK(DescribeVerifySDKRequest request) throws Exception {
+    public CreateRPSDKResponse createRPSDKSimply(CreateRPSDKRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVerifySDKWithOptions(request, runtime);
+        return this.createRPSDK(request, runtime);
     }
 
-    public DescribeVerifySettingResponse describeVerifySettingWithOptions(DescribeVerifySettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public VerifyMaterialResponse verifyMaterial(VerifyMaterialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeVerifySetting", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeVerifySettingResponse());
+        return TeaModel.toModel(this.doRequest("VerifyMaterial", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new VerifyMaterialResponse());
     }
 
-    public DescribeVerifySettingResponse describeVerifySetting(DescribeVerifySettingRequest request) throws Exception {
+    public VerifyMaterialResponse verifyMaterialSimply(VerifyMaterialRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVerifySettingWithOptions(request, runtime);
+        return this.verifyMaterial(request, runtime);
     }
 
-    public DescribeVerifyTokenResponse describeVerifyTokenWithOptions(DescribeVerifyTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeVerifyResultResponse describeVerifyResult(DescribeVerifyResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeVerifyToken", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeVerifyTokenResponse());
+        return TeaModel.toModel(this.doRequest("DescribeVerifyResult", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeVerifyResultResponse());
     }
 
-    public DescribeVerifyTokenResponse describeVerifyToken(DescribeVerifyTokenRequest request) throws Exception {
+    public DescribeVerifyResultResponse describeVerifyResultSimply(DescribeVerifyResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVerifyTokenWithOptions(request, runtime);
+        return this.describeVerifyResult(request, runtime);
     }
 
-    public DescribeVerifyUsageResponse describeVerifyUsageWithOptions(DescribeVerifyUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeOssUploadTokenResponse describeOssUploadToken(DescribeOssUploadTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeVerifyUsage", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeVerifyUsageResponse());
+        return TeaModel.toModel(this.doRequest("DescribeOssUploadToken", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeOssUploadTokenResponse());
     }
 
-    public DescribeVerifyUsageResponse describeVerifyUsage(DescribeVerifyUsageRequest request) throws Exception {
+    public DescribeOssUploadTokenResponse describeOssUploadTokenSimply(DescribeOssUploadTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeVerifyUsageWithOptions(request, runtime);
+        return this.describeOssUploadToken(request, runtime);
     }
 
-    public DescribeWhitelistResponse describeWhitelistWithOptions(DescribeWhitelistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeVerifyTokenResponse describeVerifyToken(DescribeVerifyTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DescribeWhitelist", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeWhitelistResponse());
+        return TeaModel.toModel(this.doRequest("DescribeVerifyToken", "HTTPS", "POST", "2019-03-07", "AK", null, TeaModel.buildMap(request), runtime), new DescribeVerifyTokenResponse());
     }
 
-    public DescribeWhitelistResponse describeWhitelist(DescribeWhitelistRequest request) throws Exception {
+    public DescribeVerifyTokenResponse describeVerifyTokenSimply(DescribeVerifyTokenRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.describeWhitelistWithOptions(request, runtime);
+        return this.describeVerifyToken(request, runtime);
     }
 
-    public DetectFaceAttributesResponse detectFaceAttributesWithOptions(DetectFaceAttributesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DetectFaceAttributes", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new DetectFaceAttributesResponse());
-    }
+    public String getEndpoint(String productId, String regionId, String endpointRule, String network, String suffix, java.util.Map<String, String> endpointMap, String endpoint) throws Exception {
+        if (!com.aliyun.teautil.Common.empty(endpoint)) {
+            return endpoint;
+        }
 
-    public DetectFaceAttributesResponse detectFaceAttributes(DetectFaceAttributesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectFaceAttributesWithOptions(request, runtime);
-    }
+        if (!com.aliyun.teautil.Common.isUnset(endpointMap) && !com.aliyun.teautil.Common.empty(endpointMap.get(regionId))) {
+            return endpointMap.get(regionId);
+        }
 
-    public InitDeviceResponse initDeviceWithOptions(InitDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("InitDevice", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new InitDeviceResponse());
-    }
-
-    public InitDeviceResponse initDevice(InitDeviceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.initDeviceWithOptions(request, runtime);
-    }
-
-    public InitFaceVerifyResponse initFaceVerifyWithOptions(InitFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("InitFaceVerify", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new InitFaceVerifyResponse());
-    }
-
-    public InitFaceVerifyResponse initFaceVerify(InitFaceVerifyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.initFaceVerifyWithOptions(request, runtime);
-    }
-
-    public LivenessFaceVerifyResponse livenessFaceVerifyWithOptions(LivenessFaceVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("LivenessFaceVerify", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new LivenessFaceVerifyResponse());
-    }
-
-    public LivenessFaceVerifyResponse livenessFaceVerify(LivenessFaceVerifyRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.livenessFaceVerifyWithOptions(request, runtime);
-    }
-
-    public ModifyDeviceInfoResponse modifyDeviceInfoWithOptions(ModifyDeviceInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ModifyDeviceInfo", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyDeviceInfoResponse());
-    }
-
-    public ModifyDeviceInfoResponse modifyDeviceInfo(ModifyDeviceInfoRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.modifyDeviceInfoWithOptions(request, runtime);
-    }
-
-    public UpdateAppPackageResponse updateAppPackageWithOptions(UpdateAppPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateAppPackage", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateAppPackageResponse());
-    }
-
-    public UpdateAppPackageResponse updateAppPackage(UpdateAppPackageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateAppPackageWithOptions(request, runtime);
-    }
-
-    public UpdateFaceConfigResponse updateFaceConfigWithOptions(UpdateFaceConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateFaceConfig", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateFaceConfigResponse());
-    }
-
-    public UpdateFaceConfigResponse updateFaceConfig(UpdateFaceConfigRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateFaceConfigWithOptions(request, runtime);
-    }
-
-    public UpdateVerifySettingResponse updateVerifySettingWithOptions(UpdateVerifySettingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("UpdateVerifySetting", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateVerifySettingResponse());
-    }
-
-    public UpdateVerifySettingResponse updateVerifySetting(UpdateVerifySettingRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.updateVerifySettingWithOptions(request, runtime);
-    }
-
-    public VerifyDeviceResponse verifyDeviceWithOptions(VerifyDeviceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("VerifyDevice", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new VerifyDeviceResponse());
-    }
-
-    public VerifyDeviceResponse verifyDevice(VerifyDeviceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.verifyDeviceWithOptions(request, runtime);
-    }
-
-    public VerifyMaterialResponse verifyMaterialWithOptions(VerifyMaterialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("VerifyMaterial", "2019-03-07", "HTTPS", "POST", "AK", "json", req, runtime), new VerifyMaterialResponse());
-    }
-
-    public VerifyMaterialResponse verifyMaterial(VerifyMaterialRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.verifyMaterialWithOptions(request, runtime);
+        return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 }
