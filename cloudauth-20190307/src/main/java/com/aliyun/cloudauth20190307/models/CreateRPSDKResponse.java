@@ -4,33 +4,33 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CreateRPSDKResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("TaskId")
     @Validation(required = true)
-    public CreateRPSDKResponseBody body;
+    public String taskId;
 
     public static CreateRPSDKResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateRPSDKResponse self = new CreateRPSDKResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateRPSDKResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateRPSDKResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateRPSDKResponse setBody(CreateRPSDKResponseBody body) {
-        this.body = body;
+    public CreateRPSDKResponse setTaskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
-    public CreateRPSDKResponseBody getBody() {
-        return this.body;
+    public String getTaskId() {
+        return this.taskId;
     }
 
 }

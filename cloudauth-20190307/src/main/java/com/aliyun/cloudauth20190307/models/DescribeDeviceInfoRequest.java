@@ -4,15 +4,6 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeDeviceInfoRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -37,30 +28,6 @@ public class DescribeDeviceInfoRequest extends TeaModel {
     public static DescribeDeviceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDeviceInfoRequest self = new DescribeDeviceInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDeviceInfoRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeDeviceInfoRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
-    public DescribeDeviceInfoRequest setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDeviceInfoRequest setPageSize(Integer pageSize) {

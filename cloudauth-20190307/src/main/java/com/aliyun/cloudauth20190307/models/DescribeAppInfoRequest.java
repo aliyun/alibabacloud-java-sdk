@@ -4,9 +4,6 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppInfoRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,14 +16,6 @@ public class DescribeAppInfoRequest extends TeaModel {
     public static DescribeAppInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAppInfoRequest self = new DescribeAppInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAppInfoRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeAppInfoRequest setPageSize(Integer pageSize) {

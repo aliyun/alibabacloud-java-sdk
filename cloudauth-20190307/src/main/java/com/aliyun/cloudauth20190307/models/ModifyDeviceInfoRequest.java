@@ -4,13 +4,8 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class ModifyDeviceInfoRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("DeviceId")
+    @Validation(required = true)
     public String deviceId;
 
     @NameInMap("UserDeviceId")
@@ -28,22 +23,6 @@ public class ModifyDeviceInfoRequest extends TeaModel {
     public static ModifyDeviceInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDeviceInfoRequest self = new ModifyDeviceInfoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDeviceInfoRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyDeviceInfoRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ModifyDeviceInfoRequest setDeviceId(String deviceId) {
