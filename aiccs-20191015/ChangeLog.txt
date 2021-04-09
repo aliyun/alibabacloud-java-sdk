@@ -1,3 +1,6 @@
+2021-04-09 Version: 1.2.3
+- Support double call.
+
 2021-04-08 Version: 1.2.2
 - Support double call.
 
