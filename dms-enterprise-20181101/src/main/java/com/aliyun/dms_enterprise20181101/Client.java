@@ -314,6 +314,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.searchDatabaseWithOptions(request, runtime);
     }
 
+    public GetDBTopologyResponse getDBTopologyWithOptions(GetDBTopologyRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDBTopology", "2018-11-01", "HTTPS", "POST", "AK", "json", req, runtime), new GetDBTopologyResponse());
+    }
+
+    public GetDBTopologyResponse getDBTopology(GetDBTopologyRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDBTopologyWithOptions(request, runtime);
+    }
+
     public SyncDatabaseMetaResponse syncDatabaseMetaWithOptions(SyncDatabaseMetaRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
