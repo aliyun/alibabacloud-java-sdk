@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.9</version>
+      <version>0.2.11</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.8</version>
+      <version>0.0.14</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

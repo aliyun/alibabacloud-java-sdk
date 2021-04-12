@@ -44,17 +44,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.checkImageWithOptions(request, runtime);
     }
 
-    public CreateMaterialResponse createMaterialWithOptions(CreateMaterialRequest request, RuntimeOptions runtime) throws Exception {
+    public DeleteQRCodeResponse deleteQRCodeWithOptions(DeleteQRCodeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("CreateMaterial", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new CreateMaterialResponse());
+        return TeaModel.toModel(this.doRPCRequest("DeleteQRCode", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteQRCodeResponse());
     }
 
-    public CreateMaterialResponse createMaterial(CreateMaterialRequest request) throws Exception {
+    public DeleteQRCodeResponse deleteQRCode(DeleteQRCodeRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.createMaterialWithOptions(request, runtime);
+        return this.deleteQRCodeWithOptions(request, runtime);
+    }
+
+    public PublishRealResponse publishRealWithOptions(PublishRealRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("PublishReal", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new PublishRealResponse());
+    }
+
+    public PublishRealResponse publishReal(PublishRealRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.publishRealWithOptions(request, runtime);
+    }
+
+    public ProduceExpoNoticeResponse produceExpoNoticeWithOptions(ProduceExpoNoticeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ProduceExpoNotice", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new ProduceExpoNoticeResponse());
+    }
+
+    public ProduceExpoNoticeResponse produceExpoNotice(ProduceExpoNoticeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.produceExpoNoticeWithOptions(request, runtime);
     }
 
     public PublishGalleryResponse publishGalleryWithOptions(PublishGalleryRequest request, RuntimeOptions runtime) throws Exception {
@@ -68,6 +94,97 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public PublishGalleryResponse publishGallery(PublishGalleryRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.publishGalleryWithOptions(request, runtime);
+    }
+
+    public GetTokenResponse getTokenWithOptions(GetTokenRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetToken", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new GetTokenResponse());
+    }
+
+    public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getTokenWithOptions(request, runtime);
+    }
+
+    public DeleteMaterialResponse deleteMaterialWithOptions(DeleteMaterialRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteMaterial", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteMaterialResponse());
+    }
+
+    public DeleteMaterialResponse deleteMaterial(DeleteMaterialRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteMaterialWithOptions(request, runtime);
+    }
+
+    public AddQRCodeResponse addQRCodeWithOptions(AddQRCodeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddQRCode", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new AddQRCodeResponse());
+    }
+
+    public AddQRCodeResponse addQRCode(AddQRCodeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addQRCodeWithOptions(request, runtime);
+    }
+
+    public CommonRequestResponse commonRequestWithOptions(CommonRequestRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CommonRequest", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new CommonRequestResponse());
+    }
+
+    public CommonRequestResponse commonRequest(CommonRequestRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.commonRequestWithOptions(request, runtime);
+    }
+
+    public TransTextToAudioResponse transTextToAudioWithOptions(TransTextToAudioRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("TransTextToAudio", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new TransTextToAudioResponse());
+    }
+
+    public TransTextToAudioResponse transTextToAudio(TransTextToAudioRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.transTextToAudioWithOptions(request, runtime);
+    }
+
+    public CreateMaterialResponse createMaterialWithOptions(CreateMaterialRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateMaterial", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new CreateMaterialResponse());
+    }
+
+    public CreateMaterialResponse createMaterial(CreateMaterialRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createMaterialWithOptions(request, runtime);
+    }
+
+    public QueryQRCodeInfoResponse queryQRCodeInfoWithOptions(QueryQRCodeInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryQRCodeInfo", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new QueryQRCodeInfoResponse());
+    }
+
+    public QueryQRCodeInfoResponse queryQRCodeInfo(QueryQRCodeInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryQRCodeInfoWithOptions(request, runtime);
     }
 
     public GetTemplateListResponse getTemplateListWithOptions(GetTemplateListRequest request, RuntimeOptions runtime) throws Exception {
@@ -109,29 +226,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.produceNoticeWithOptions(request, runtime);
     }
 
-    public GetTokenResponse getTokenWithOptions(GetTokenRequest request, RuntimeOptions runtime) throws Exception {
+    public QueryAccountLabelResponse queryAccountLabelWithOptions(QueryAccountLabelRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("GetToken", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new GetTokenResponse());
+        return TeaModel.toModel(this.doRPCRequest("QueryAccountLabel", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new QueryAccountLabelResponse());
     }
 
-    public GetTokenResponse getToken(GetTokenRequest request) throws Exception {
+    public QueryAccountLabelResponse queryAccountLabel(QueryAccountLabelRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
-        return this.getTokenWithOptions(request, runtime);
-    }
-
-    public DeleteMaterialResponse deleteMaterialWithOptions(DeleteMaterialRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteMaterial", "2020-07-30", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteMaterialResponse());
-    }
-
-    public DeleteMaterialResponse deleteMaterial(DeleteMaterialRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteMaterialWithOptions(request, runtime);
+        return this.queryAccountLabelWithOptions(request, runtime);
     }
 }
