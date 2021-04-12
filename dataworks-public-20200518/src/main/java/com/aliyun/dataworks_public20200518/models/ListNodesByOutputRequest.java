@@ -12,9 +12,6 @@ public class ListNodesByOutputRequest extends TeaModel {
     @Validation(required = true)
     public String outputs;
 
-    @NameInMap("OutputNodeListAsMap")
-    public Boolean outputNodeListAsMap;
-
     public static ListNodesByOutputRequest build(java.util.Map<String, ?> map) throws Exception {
         ListNodesByOutputRequest self = new ListNodesByOutputRequest();
         return TeaModel.build(map, self);
@@ -34,14 +31,6 @@ public class ListNodesByOutputRequest extends TeaModel {
     }
     public String getOutputs() {
         return this.outputs;
-    }
-
-    public ListNodesByOutputRequest setOutputNodeListAsMap(Boolean outputNodeListAsMap) {
-        this.outputNodeListAsMap = outputNodeListAsMap;
-        return this;
-    }
-    public Boolean getOutputNodeListAsMap() {
-        return this.outputNodeListAsMap;
     }
 
 }
