@@ -12,6 +12,18 @@ public class RecognizeMessageResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeMessageResponseBodyData data;
 
+    // 是否成功
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     public static RecognizeMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         RecognizeMessageResponseBody self = new RecognizeMessageResponseBody();
         return TeaModel.build(map, self);
@@ -31,6 +43,30 @@ public class RecognizeMessageResponseBody extends TeaModel {
     }
     public RecognizeMessageResponseBodyData getData() {
         return this.data;
+    }
+
+    public RecognizeMessageResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public RecognizeMessageResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public RecognizeMessageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class RecognizeMessageResponseBodyDataSceneSceneDTOs extends TeaModel {

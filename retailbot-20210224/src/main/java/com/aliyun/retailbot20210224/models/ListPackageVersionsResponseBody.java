@@ -12,6 +12,18 @@ public class ListPackageVersionsResponseBody extends TeaModel {
     @NameInMap("Packages")
     public java.util.List<ListPackageVersionsResponseBodyPackages> packages;
 
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
+
     public static ListPackageVersionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPackageVersionsResponseBody self = new ListPackageVersionsResponseBody();
         return TeaModel.build(map, self);
@@ -31,6 +43,30 @@ public class ListPackageVersionsResponseBody extends TeaModel {
     }
     public java.util.List<ListPackageVersionsResponseBodyPackages> getPackages() {
         return this.packages;
+    }
+
+    public ListPackageVersionsResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListPackageVersionsResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListPackageVersionsResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class ListPackageVersionsResponseBodyPackagesPackageDetails extends TeaModel {

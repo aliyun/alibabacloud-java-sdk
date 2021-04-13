@@ -12,6 +12,18 @@ public class ListCategoriesResponseBody extends TeaModel {
     @NameInMap("Categories")
     public java.util.List<ListCategoriesResponseBodyCategories> categories;
 
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
+
     public static ListCategoriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListCategoriesResponseBody self = new ListCategoriesResponseBody();
         return TeaModel.build(map, self);
@@ -31,6 +43,30 @@ public class ListCategoriesResponseBody extends TeaModel {
     }
     public java.util.List<ListCategoriesResponseBodyCategories> getCategories() {
         return this.categories;
+    }
+
+    public ListCategoriesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListCategoriesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListCategoriesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class ListCategoriesResponseBodyCategoriesChildren extends TeaModel {

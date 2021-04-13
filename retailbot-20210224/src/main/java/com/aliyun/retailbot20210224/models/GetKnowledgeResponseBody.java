@@ -12,6 +12,18 @@ public class GetKnowledgeResponseBody extends TeaModel {
     @NameInMap("Knowledge")
     public GetKnowledgeResponseBodyKnowledge knowledge;
 
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
+
     public static GetKnowledgeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetKnowledgeResponseBody self = new GetKnowledgeResponseBody();
         return TeaModel.build(map, self);
@@ -31,6 +43,30 @@ public class GetKnowledgeResponseBody extends TeaModel {
     }
     public GetKnowledgeResponseBodyKnowledge getKnowledge() {
         return this.knowledge;
+    }
+
+    public GetKnowledgeResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetKnowledgeResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetKnowledgeResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class GetKnowledgeResponseBodyKnowledgeSimilarQuestions extends TeaModel {

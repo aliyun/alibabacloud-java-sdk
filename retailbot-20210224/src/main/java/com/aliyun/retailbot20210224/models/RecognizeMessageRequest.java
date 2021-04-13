@@ -84,6 +84,10 @@ public class RecognizeMessageRequest extends TeaModel {
     @NameInMap("ClientInfo")
     public RecognizeMessageRequestClientInfo clientInfo;
 
+    // 是否压测流量
+    @NameInMap("StressTesting")
+    public Boolean stressTesting;
+
     public static RecognizeMessageRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeMessageRequest self = new RecognizeMessageRequest();
         return TeaModel.build(map, self);
@@ -247,6 +251,14 @@ public class RecognizeMessageRequest extends TeaModel {
     }
     public RecognizeMessageRequestClientInfo getClientInfo() {
         return this.clientInfo;
+    }
+
+    public RecognizeMessageRequest setStressTesting(Boolean stressTesting) {
+        this.stressTesting = stressTesting;
+        return this;
+    }
+    public Boolean getStressTesting() {
+        return this.stressTesting;
     }
 
     public static class RecognizeMessageRequestOrders extends TeaModel {
