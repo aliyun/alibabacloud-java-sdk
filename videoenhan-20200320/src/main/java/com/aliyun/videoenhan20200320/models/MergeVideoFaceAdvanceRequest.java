@@ -8,9 +8,6 @@ public class MergeVideoFaceAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoURLObject;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("PostURL")
     public String postURL;
 
@@ -28,14 +25,6 @@ public class MergeVideoFaceAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoURLObject() {
         return this.videoURLObject;
-    }
-
-    public MergeVideoFaceAdvanceRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public MergeVideoFaceAdvanceRequest setPostURL(String postURL) {

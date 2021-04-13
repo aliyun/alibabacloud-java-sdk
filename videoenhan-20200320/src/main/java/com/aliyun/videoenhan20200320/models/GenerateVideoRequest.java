@@ -4,9 +4,6 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class GenerateVideoRequest extends TeaModel {
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Scene")
     public String scene;
 
@@ -43,14 +40,6 @@ public class GenerateVideoRequest extends TeaModel {
     public static GenerateVideoRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateVideoRequest self = new GenerateVideoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GenerateVideoRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public GenerateVideoRequest setScene(String scene) {

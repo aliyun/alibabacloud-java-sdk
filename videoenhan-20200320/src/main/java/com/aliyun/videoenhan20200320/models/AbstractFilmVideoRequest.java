@@ -7,9 +7,6 @@ public class AbstractFilmVideoRequest extends TeaModel {
     @NameInMap("VideoUrl")
     public String videoUrl;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Length")
     public Integer length;
 
@@ -24,14 +21,6 @@ public class AbstractFilmVideoRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
-    }
-
-    public AbstractFilmVideoRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public AbstractFilmVideoRequest setLength(Integer length) {
