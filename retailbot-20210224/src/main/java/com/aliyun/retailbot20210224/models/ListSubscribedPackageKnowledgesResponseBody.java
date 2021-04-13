@@ -8,8 +8,21 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
     @NameInMap("Knowledges")
     public java.util.List<ListSubscribedPackageKnowledgesResponseBodyKnowledges> knowledges;
 
+    // 请求id
     @NameInMap("RequestId")
     public String requestId;
+
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
 
     public static ListSubscribedPackageKnowledgesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSubscribedPackageKnowledgesResponseBody self = new ListSubscribedPackageKnowledgesResponseBody();
@@ -30,6 +43,30 @@ public class ListSubscribedPackageKnowledgesResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListSubscribedPackageKnowledgesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListSubscribedPackageKnowledgesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListSubscribedPackageKnowledgesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class ListSubscribedPackageKnowledgesResponseBodyKnowledgesSimilarQuestions extends TeaModel {

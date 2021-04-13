@@ -12,6 +12,18 @@ public class AddSolutionResponseBody extends TeaModel {
     @NameInMap("SolutionId")
     public Long solutionId;
 
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
+
     public static AddSolutionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddSolutionResponseBody self = new AddSolutionResponseBody();
         return TeaModel.build(map, self);
@@ -31,6 +43,30 @@ public class AddSolutionResponseBody extends TeaModel {
     }
     public Long getSolutionId() {
         return this.solutionId;
+    }
+
+    public AddSolutionResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public AddSolutionResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public AddSolutionResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

@@ -11,6 +11,18 @@ public class ListSubscriptionByRobotResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListSubscriptionByRobotResponseBodyData> data;
 
+    // 是否成功
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     public static ListSubscriptionByRobotResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSubscriptionByRobotResponseBody self = new ListSubscriptionByRobotResponseBody();
         return TeaModel.build(map, self);
@@ -30,6 +42,30 @@ public class ListSubscriptionByRobotResponseBody extends TeaModel {
     }
     public java.util.List<ListSubscriptionByRobotResponseBodyData> getData() {
         return this.data;
+    }
+
+    public ListSubscriptionByRobotResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListSubscriptionByRobotResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListSubscriptionByRobotResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class ListSubscriptionByRobotResponseBodyData extends TeaModel {

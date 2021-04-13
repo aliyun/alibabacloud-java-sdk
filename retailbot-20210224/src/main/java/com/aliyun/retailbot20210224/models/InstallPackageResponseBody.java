@@ -10,7 +10,19 @@ public class InstallPackageResponseBody extends TeaModel {
 
     // 成功和失败的行业包code
     @NameInMap("Data")
-    public InstallPackageResponseBodyData data;
+    public java.util.Map<String, ?> data;
+
+    // 是否成功
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
 
     public static InstallPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         InstallPackageResponseBody self = new InstallPackageResponseBody();
@@ -25,44 +37,36 @@ public class InstallPackageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InstallPackageResponseBody setData(InstallPackageResponseBodyData data) {
+    public InstallPackageResponseBody setData(java.util.Map<String, ?> data) {
         this.data = data;
         return this;
     }
-    public InstallPackageResponseBodyData getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
-    public static class InstallPackageResponseBodyData extends TeaModel {
-        // 成功的行业包code
-        @NameInMap("SuccessPackageCodes")
-        public java.util.List<String> successPackageCodes;
+    public InstallPackageResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
-        // 失败的行业包code
-        @NameInMap("FailedPackageCodes")
-        public java.util.List<String> failedPackageCodes;
+    public InstallPackageResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
 
-        public static InstallPackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            InstallPackageResponseBodyData self = new InstallPackageResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public InstallPackageResponseBodyData setSuccessPackageCodes(java.util.List<String> successPackageCodes) {
-            this.successPackageCodes = successPackageCodes;
-            return this;
-        }
-        public java.util.List<String> getSuccessPackageCodes() {
-            return this.successPackageCodes;
-        }
-
-        public InstallPackageResponseBodyData setFailedPackageCodes(java.util.List<String> failedPackageCodes) {
-            this.failedPackageCodes = failedPackageCodes;
-            return this;
-        }
-        public java.util.List<String> getFailedPackageCodes() {
-            return this.failedPackageCodes;
-        }
-
+    public InstallPackageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

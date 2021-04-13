@@ -84,6 +84,10 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
     @NameInMap("ClientInfo")
     public String clientInfoShrink;
 
+    // 是否压测流量
+    @NameInMap("StressTesting")
+    public Boolean stressTesting;
+
     public static RecognizeMessageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeMessageShrinkRequest self = new RecognizeMessageShrinkRequest();
         return TeaModel.build(map, self);
@@ -247,6 +251,14 @@ public class RecognizeMessageShrinkRequest extends TeaModel {
     }
     public String getClientInfoShrink() {
         return this.clientInfoShrink;
+    }
+
+    public RecognizeMessageShrinkRequest setStressTesting(Boolean stressTesting) {
+        this.stressTesting = stressTesting;
+        return this;
+    }
+    public Boolean getStressTesting() {
+        return this.stressTesting;
     }
 
 }

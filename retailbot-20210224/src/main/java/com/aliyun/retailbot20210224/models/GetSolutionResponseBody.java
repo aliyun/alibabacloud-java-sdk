@@ -12,6 +12,18 @@ public class GetSolutionResponseBody extends TeaModel {
     @NameInMap("Solution")
     public GetSolutionResponseBodySolution solution;
 
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
+
     public static GetSolutionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSolutionResponseBody self = new GetSolutionResponseBody();
         return TeaModel.build(map, self);
@@ -31,6 +43,30 @@ public class GetSolutionResponseBody extends TeaModel {
     }
     public GetSolutionResponseBodySolution getSolution() {
         return this.solution;
+    }
+
+    public GetSolutionResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public GetSolutionResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public GetSolutionResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class GetSolutionResponseBodySolutionConditions extends TeaModel {

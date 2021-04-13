@@ -10,7 +10,19 @@ public class UninstallPackageResponseBody extends TeaModel {
 
     // 成功和失败的行业包code
     @NameInMap("Data")
-    public UninstallPackageResponseBodyData data;
+    public java.util.Map<String, ?> data;
+
+    // 是否成功
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
 
     public static UninstallPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UninstallPackageResponseBody self = new UninstallPackageResponseBody();
@@ -25,44 +37,36 @@ public class UninstallPackageResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UninstallPackageResponseBody setData(UninstallPackageResponseBodyData data) {
+    public UninstallPackageResponseBody setData(java.util.Map<String, ?> data) {
         this.data = data;
         return this;
     }
-    public UninstallPackageResponseBodyData getData() {
+    public java.util.Map<String, ?> getData() {
         return this.data;
     }
 
-    public static class UninstallPackageResponseBodyData extends TeaModel {
-        // 成功的行业包code
-        @NameInMap("SuccessPackageCodes")
-        public java.util.List<String> successPackageCodes;
+    public UninstallPackageResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
 
-        // 失败的行业包code
-        @NameInMap("FailedPackageCodes")
-        public java.util.List<String> failedPackageCodes;
+    public UninstallPackageResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
 
-        public static UninstallPackageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            UninstallPackageResponseBodyData self = new UninstallPackageResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public UninstallPackageResponseBodyData setSuccessPackageCodes(java.util.List<String> successPackageCodes) {
-            this.successPackageCodes = successPackageCodes;
-            return this;
-        }
-        public java.util.List<String> getSuccessPackageCodes() {
-            return this.successPackageCodes;
-        }
-
-        public UninstallPackageResponseBodyData setFailedPackageCodes(java.util.List<String> failedPackageCodes) {
-            this.failedPackageCodes = failedPackageCodes;
-            return this;
-        }
-        public java.util.List<String> getFailedPackageCodes() {
-            return this.failedPackageCodes;
-        }
-
+    public UninstallPackageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

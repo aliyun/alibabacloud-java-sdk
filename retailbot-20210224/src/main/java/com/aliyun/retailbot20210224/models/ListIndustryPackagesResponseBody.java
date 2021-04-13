@@ -11,6 +11,18 @@ public class ListIndustryPackagesResponseBody extends TeaModel {
     @NameInMap("PackagePage")
     public ListIndustryPackagesResponseBodyPackagePage packagePage;
 
+    // 是否成功标示
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
+
     public static ListIndustryPackagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListIndustryPackagesResponseBody self = new ListIndustryPackagesResponseBody();
         return TeaModel.build(map, self);
@@ -30,6 +42,30 @@ public class ListIndustryPackagesResponseBody extends TeaModel {
     }
     public ListIndustryPackagesResponseBodyPackagePage getPackagePage() {
         return this.packagePage;
+    }
+
+    public ListIndustryPackagesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListIndustryPackagesResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListIndustryPackagesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class ListIndustryPackagesResponseBodyPackagePagePackages extends TeaModel {

@@ -8,8 +8,17 @@ public class DisableSceneResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 是否成功标示
     @NameInMap("Success")
     public Boolean success;
+
+    // 返回code
+    @NameInMap("Code")
+    public String code;
+
+    // 返回信息
+    @NameInMap("Message")
+    public String message;
 
     public static DisableSceneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DisableSceneResponseBody self = new DisableSceneResponseBody();
@@ -30,6 +39,22 @@ public class DisableSceneResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public DisableSceneResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public DisableSceneResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
 }

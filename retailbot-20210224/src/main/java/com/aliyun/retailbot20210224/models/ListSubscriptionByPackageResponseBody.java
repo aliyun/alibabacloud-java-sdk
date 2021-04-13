@@ -11,6 +11,18 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    // 是否成功
+    @NameInMap("Success")
+    public Boolean success;
+
+    // 错误码
+    @NameInMap("Code")
+    public String code;
+
+    // 错误信息
+    @NameInMap("Message")
+    public String message;
+
     public static ListSubscriptionByPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSubscriptionByPackageResponseBody self = new ListSubscriptionByPackageResponseBody();
         return TeaModel.build(map, self);
@@ -30,6 +42,30 @@ public class ListSubscriptionByPackageResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ListSubscriptionByPackageResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public ListSubscriptionByPackageResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public ListSubscriptionByPackageResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class ListSubscriptionByPackageResponseBodyPageDataData extends TeaModel {
