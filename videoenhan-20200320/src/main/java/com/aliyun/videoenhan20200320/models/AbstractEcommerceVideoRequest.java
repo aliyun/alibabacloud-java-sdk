@@ -7,9 +7,6 @@ public class AbstractEcommerceVideoRequest extends TeaModel {
     @NameInMap("VideoUrl")
     public String videoUrl;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Duration")
     public Float duration;
 
@@ -30,14 +27,6 @@ public class AbstractEcommerceVideoRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
-    }
-
-    public AbstractEcommerceVideoRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public AbstractEcommerceVideoRequest setDuration(Float duration) {

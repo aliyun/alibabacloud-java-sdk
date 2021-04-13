@@ -7,9 +7,6 @@ public class ChangeVideoSizeRequest extends TeaModel {
     @NameInMap("VideoUrl")
     public String videoUrl;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Width")
     public Integer width;
 
@@ -45,14 +42,6 @@ public class ChangeVideoSizeRequest extends TeaModel {
     }
     public String getVideoUrl() {
         return this.videoUrl;
-    }
-
-    public ChangeVideoSizeRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public ChangeVideoSizeRequest setWidth(Integer width) {

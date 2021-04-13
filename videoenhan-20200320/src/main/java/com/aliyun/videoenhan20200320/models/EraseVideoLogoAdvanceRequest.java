@@ -8,9 +8,6 @@ public class EraseVideoLogoAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoUrlObject;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Boxes")
     public java.util.List<EraseVideoLogoAdvanceRequestBoxes> boxes;
 
@@ -25,14 +22,6 @@ public class EraseVideoLogoAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoUrlObject() {
         return this.videoUrlObject;
-    }
-
-    public EraseVideoLogoAdvanceRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public EraseVideoLogoAdvanceRequest setBoxes(java.util.List<EraseVideoLogoAdvanceRequestBoxes> boxes) {

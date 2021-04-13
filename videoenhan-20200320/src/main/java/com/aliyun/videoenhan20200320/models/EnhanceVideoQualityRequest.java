@@ -7,9 +7,6 @@ public class EnhanceVideoQualityRequest extends TeaModel {
     @NameInMap("VideoURL")
     public String videoURL;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("OutPutWidth")
     public Integer outPutWidth;
 
@@ -39,14 +36,6 @@ public class EnhanceVideoQualityRequest extends TeaModel {
     }
     public String getVideoURL() {
         return this.videoURL;
-    }
-
-    public EnhanceVideoQualityRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public EnhanceVideoQualityRequest setOutPutWidth(Integer outPutWidth) {

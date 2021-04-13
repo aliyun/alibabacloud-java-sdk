@@ -7,11 +7,8 @@ public class AdjustVideoColorRequest extends TeaModel {
     @NameInMap("VideoUrl")
     public String videoUrl;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("VideoBitrate")
-    public String videoBitrate;
+    public Long videoBitrate;
 
     @NameInMap("VideoCodec")
     public String videoCodec;
@@ -35,19 +32,11 @@ public class AdjustVideoColorRequest extends TeaModel {
         return this.videoUrl;
     }
 
-    public AdjustVideoColorRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
-    }
-
-    public AdjustVideoColorRequest setVideoBitrate(String videoBitrate) {
+    public AdjustVideoColorRequest setVideoBitrate(Long videoBitrate) {
         this.videoBitrate = videoBitrate;
         return this;
     }
-    public String getVideoBitrate() {
+    public Long getVideoBitrate() {
         return this.videoBitrate;
     }
 

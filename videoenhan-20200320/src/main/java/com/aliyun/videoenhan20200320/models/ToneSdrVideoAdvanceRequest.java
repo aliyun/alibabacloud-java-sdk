@@ -8,9 +8,6 @@ public class ToneSdrVideoAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream videoURLObject;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("Bitrate")
     public Integer bitrate;
 
@@ -28,14 +25,6 @@ public class ToneSdrVideoAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getVideoURLObject() {
         return this.videoURLObject;
-    }
-
-    public ToneSdrVideoAdvanceRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public ToneSdrVideoAdvanceRequest setBitrate(Integer bitrate) {
