@@ -16,6 +16,9 @@ public class UpdateTicketResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static UpdateTicketResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UpdateTicketResponseBody self = new UpdateTicketResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class UpdateTicketResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public UpdateTicketResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }

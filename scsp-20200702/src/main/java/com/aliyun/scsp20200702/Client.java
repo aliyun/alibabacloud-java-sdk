@@ -409,7 +409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteAgent", "2020-07-02", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteAgentResponse());
+        return TeaModel.toModel(this.doRPCRequest("DeleteAgent", "2020-07-02", "HTTPS", "DELETE", "AK", "json", req, runtime), new DeleteAgentResponse());
     }
 
     public DeleteAgentResponse deleteAgent(DeleteAgentRequest request) throws Exception {
