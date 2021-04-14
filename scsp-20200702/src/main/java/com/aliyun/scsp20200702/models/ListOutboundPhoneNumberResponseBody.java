@@ -19,6 +19,9 @@ public class ListOutboundPhoneNumberResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static ListOutboundPhoneNumberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListOutboundPhoneNumberResponseBody self = new ListOutboundPhoneNumberResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class ListOutboundPhoneNumberResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public ListOutboundPhoneNumberResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }

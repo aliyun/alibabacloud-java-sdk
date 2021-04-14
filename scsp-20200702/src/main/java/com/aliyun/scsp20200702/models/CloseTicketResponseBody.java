@@ -16,6 +16,9 @@ public class CloseTicketResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static CloseTicketResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CloseTicketResponseBody self = new CloseTicketResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class CloseTicketResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public CloseTicketResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }
