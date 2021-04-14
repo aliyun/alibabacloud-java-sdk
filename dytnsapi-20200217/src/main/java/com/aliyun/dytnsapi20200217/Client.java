@@ -13,7 +13,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(Config config) throws Exception {
         super(config);
-        this._endpointRule = "";
+        this._endpointRule = "central";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("dytnsapi", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
     }
@@ -55,6 +55,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePhoneNumberStatusResponse describePhoneNumberStatus(DescribePhoneNumberStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describePhoneNumberStatusWithOptions(request, runtime);
+    }
+
+    public PvrCallbackFCUResponse pvrCallbackFCUWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("PvrCallbackFCU", "2020-02-17", "HTTPS", "POST", "AK", "none", req, runtime), new PvrCallbackFCUResponse());
+    }
+
+    public PvrCallbackFCUResponse pvrCallbackFCU() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.pvrCallbackFCUWithOptions(runtime);
     }
 
     public QueryPhoneNumberAttributeResponse queryPhoneNumberAttributeWithOptions(QueryPhoneNumberAttributeRequest request, RuntimeOptions runtime) throws Exception {
