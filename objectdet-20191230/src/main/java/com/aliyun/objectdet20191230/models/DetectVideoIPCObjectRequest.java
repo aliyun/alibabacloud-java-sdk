@@ -8,6 +8,10 @@ public class DetectVideoIPCObjectRequest extends TeaModel {
     @NameInMap("VideoURL")
     public String videoURL;
 
+    // 视频的开始时间戳(秒)，即UTC时间，默认为0
+    @NameInMap("StartTimestamp")
+    public Long startTimestamp;
+
     public static DetectVideoIPCObjectRequest build(java.util.Map<String, ?> map) throws Exception {
         DetectVideoIPCObjectRequest self = new DetectVideoIPCObjectRequest();
         return TeaModel.build(map, self);
@@ -19,6 +23,14 @@ public class DetectVideoIPCObjectRequest extends TeaModel {
     }
     public String getVideoURL() {
         return this.videoURL;
+    }
+
+    public DetectVideoIPCObjectRequest setStartTimestamp(Long startTimestamp) {
+        this.startTimestamp = startTimestamp;
+        return this;
+    }
+    public Long getStartTimestamp() {
+        return this.startTimestamp;
     }
 
 }
