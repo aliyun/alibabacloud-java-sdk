@@ -20,6 +20,9 @@ public class CreateImportMigrationRequest extends TeaModel {
     @Validation(required = true)
     public String packageFile;
 
+    @NameInMap("ResourceGroupMap")
+    public String resourceGroupMap;
+
     @NameInMap("WorkspaceMap")
     public String workspaceMap;
 
@@ -67,6 +70,14 @@ public class CreateImportMigrationRequest extends TeaModel {
     }
     public String getPackageFile() {
         return this.packageFile;
+    }
+
+    public CreateImportMigrationRequest setResourceGroupMap(String resourceGroupMap) {
+        this.resourceGroupMap = resourceGroupMap;
+        return this;
+    }
+    public String getResourceGroupMap() {
+        return this.resourceGroupMap;
     }
 
     public CreateImportMigrationRequest setWorkspaceMap(String workspaceMap) {
