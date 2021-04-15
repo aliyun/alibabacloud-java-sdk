@@ -1,0 +1,196 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mse20190531.models;
+
+import com.aliyun.tea.*;
+
+public class ListEngineNamespacesResponseBody extends TeaModel {
+    @NameInMap("HttpCode")
+    public String httpCode;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("Data")
+    public java.util.List<ListEngineNamespacesResponseBodyData> data;
+
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static ListEngineNamespacesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListEngineNamespacesResponseBody self = new ListEngineNamespacesResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public ListEngineNamespacesResponseBody setHttpCode(String httpCode) {
+        this.httpCode = httpCode;
+        return this;
+    }
+    public String getHttpCode() {
+        return this.httpCode;
+    }
+
+    public ListEngineNamespacesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public ListEngineNamespacesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public ListEngineNamespacesResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+    public ListEngineNamespacesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListEngineNamespacesResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListEngineNamespacesResponseBody setData(java.util.List<ListEngineNamespacesResponseBodyData> data) {
+        this.data = data;
+        return this;
+    }
+    public java.util.List<ListEngineNamespacesResponseBodyData> getData() {
+        return this.data;
+    }
+
+    public ListEngineNamespacesResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public ListEngineNamespacesResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public static class ListEngineNamespacesResponseBodyData extends TeaModel {
+        @NameInMap("Type")
+        public Integer type;
+
+        @NameInMap("NamespaceShowName")
+        public String namespaceShowName;
+
+        @NameInMap("Quota")
+        public Integer quota;
+
+        @NameInMap("Namespace")
+        public String namespace;
+
+        @NameInMap("NamespaceDesc")
+        public String namespaceDesc;
+
+        @NameInMap("ConfigCount")
+        public Integer configCount;
+
+        @NameInMap("ServiceCount")
+        public String serviceCount;
+
+        public static ListEngineNamespacesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            ListEngineNamespacesResponseBodyData self = new ListEngineNamespacesResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEngineNamespacesResponseBodyData setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+        public ListEngineNamespacesResponseBodyData setNamespaceShowName(String namespaceShowName) {
+            this.namespaceShowName = namespaceShowName;
+            return this;
+        }
+        public String getNamespaceShowName() {
+            return this.namespaceShowName;
+        }
+
+        public ListEngineNamespacesResponseBodyData setQuota(Integer quota) {
+            this.quota = quota;
+            return this;
+        }
+        public Integer getQuota() {
+            return this.quota;
+        }
+
+        public ListEngineNamespacesResponseBodyData setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public ListEngineNamespacesResponseBodyData setNamespaceDesc(String namespaceDesc) {
+            this.namespaceDesc = namespaceDesc;
+            return this;
+        }
+        public String getNamespaceDesc() {
+            return this.namespaceDesc;
+        }
+
+        public ListEngineNamespacesResponseBodyData setConfigCount(Integer configCount) {
+            this.configCount = configCount;
+            return this;
+        }
+        public Integer getConfigCount() {
+            return this.configCount;
+        }
+
+        public ListEngineNamespacesResponseBodyData setServiceCount(String serviceCount) {
+            this.serviceCount = serviceCount;
+            return this;
+        }
+        public String getServiceCount() {
+            return this.serviceCount;
+        }
+
+    }
+
+}
