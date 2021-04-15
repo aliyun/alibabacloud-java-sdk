@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mse20190531.models;
+
+import com.aliyun.tea.*;
+
+public class CloneNacosConfigResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CloneNacosConfigResponseBody body;
+
+    public static CloneNacosConfigResponse build(java.util.Map<String, ?> map) throws Exception {
+        CloneNacosConfigResponse self = new CloneNacosConfigResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public CloneNacosConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CloneNacosConfigResponse setBody(CloneNacosConfigResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CloneNacosConfigResponseBody getBody() {
+        return this.body;
+    }
+
+}

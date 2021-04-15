@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mse20190531.models;
+
+import com.aliyun.tea.*;
+
+public class QueryClusterDiskSpecificationResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public QueryClusterDiskSpecificationResponseBody body;
+
+    public static QueryClusterDiskSpecificationResponse build(java.util.Map<String, ?> map) throws Exception {
+        QueryClusterDiskSpecificationResponse self = new QueryClusterDiskSpecificationResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public QueryClusterDiskSpecificationResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public QueryClusterDiskSpecificationResponse setBody(QueryClusterDiskSpecificationResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public QueryClusterDiskSpecificationResponseBody getBody() {
+        return this.body;
+    }
+
+}
