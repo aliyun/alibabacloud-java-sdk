@@ -31,6 +31,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    public DescribeAppsResponse describeAppsWithOptions(DescribeAppsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeApps", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeAppsResponse());
+    }
+
+    public DescribeAppsResponse describeApps(DescribeAppsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAppsWithOptions(request, runtime);
+    }
+
+    public SetAppCallbackUrlResponse setAppCallbackUrlWithOptions(SetAppCallbackUrlRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SetAppCallbackUrl", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new SetAppCallbackUrlResponse());
+    }
+
+    public SetAppCallbackUrlResponse setAppCallbackUrl(SetAppCallbackUrlRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setAppCallbackUrlWithOptions(request, runtime);
+    }
+
     public SetAppNameResponse setAppNameWithOptions(SetAppNameRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -42,6 +68,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetAppNameResponse setAppName(SetAppNameRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.setAppNameWithOptions(request, runtime);
+    }
+
+    public DescribeWhiteBoardsResponse describeWhiteBoardsWithOptions(DescribeWhiteBoardsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeWhiteBoards", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeWhiteBoardsResponse());
+    }
+
+    public DescribeWhiteBoardsResponse describeWhiteBoards(DescribeWhiteBoardsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeWhiteBoardsWithOptions(request, runtime);
     }
 
     public SetAppDomainNamesResponse setAppDomainNamesWithOptions(SetAppDomainNamesRequest request, RuntimeOptions runtime) throws Exception {
@@ -94,19 +133,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAppResponse createApp(CreateAppRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createAppWithOptions(request, runtime);
-    }
-
-    public SetAppCallbackUrlResponse setAppCallbackUrlWithOptions(SetAppCallbackUrlRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("SetAppCallbackUrl", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new SetAppCallbackUrlResponse());
-    }
-
-    public SetAppCallbackUrlResponse setAppCallbackUrl(SetAppCallbackUrlRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.setAppCallbackUrlWithOptions(request, runtime);
     }
 
     public CreateWhiteBoardResponse createWhiteBoardWithOptions(CreateWhiteBoardRequest request, RuntimeOptions runtime) throws Exception {
