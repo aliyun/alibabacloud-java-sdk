@@ -136,6 +136,10 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         @NameInMap("DeletedTime")
         public String deletedTime;
 
+        // 雪碧图
+        @NameInMap("SpriteImages")
+        public String spriteImages;
+
         public static ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo self = new ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo();
             return TeaModel.build(map, self);
@@ -275,6 +279,14 @@ public class ListMediaBasicInfosResponseBody extends TeaModel {
         }
         public String getDeletedTime() {
             return this.deletedTime;
+        }
+
+        public ListMediaBasicInfosResponseBodyMediaInfosMediaBasicInfo setSpriteImages(String spriteImages) {
+            this.spriteImages = spriteImages;
+            return this;
+        }
+        public String getSpriteImages() {
+            return this.spriteImages;
         }
 
     }
