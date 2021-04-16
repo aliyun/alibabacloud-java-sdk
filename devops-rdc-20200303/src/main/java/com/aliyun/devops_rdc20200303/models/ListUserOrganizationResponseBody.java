@@ -8,7 +8,7 @@ public class ListUserOrganizationResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Object")
-    public String object;
+    public java.util.List<ListUserOrganizationResponseBodyObject> object;
 
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -32,11 +32,11 @@ public class ListUserOrganizationResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListUserOrganizationResponseBody setObject(String object) {
+    public ListUserOrganizationResponseBody setObject(java.util.List<ListUserOrganizationResponseBodyObject> object) {
         this.object = object;
         return this;
     }
-    public String getObject() {
+    public java.util.List<ListUserOrganizationResponseBodyObject> getObject() {
         return this.object;
     }
 
@@ -62,6 +62,36 @@ public class ListUserOrganizationResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class ListUserOrganizationResponseBodyObject extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Id")
+        public String id;
+
+        public static ListUserOrganizationResponseBodyObject build(java.util.Map<String, ?> map) throws Exception {
+            ListUserOrganizationResponseBodyObject self = new ListUserOrganizationResponseBodyObject();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUserOrganizationResponseBodyObject setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListUserOrganizationResponseBodyObject setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
     }
 
 }
