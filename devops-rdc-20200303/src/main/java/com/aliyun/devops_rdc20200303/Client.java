@@ -343,6 +343,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDevopsProjectTaskInfoWithOptions(request, runtime);
     }
 
+    public GetLastWorkspaceResponse getLastWorkspaceWithOptions(GetLastWorkspaceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetLastWorkspace", "2020-03-03", "HTTPS", "POST", "AK", "json", req, runtime), new GetLastWorkspaceResponse());
+    }
+
+    public GetLastWorkspaceResponse getLastWorkspace(GetLastWorkspaceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getLastWorkspaceWithOptions(request, runtime);
+    }
+
     public GetPipelineInstanceBuildNumberStatusResponse getPipelineInstanceBuildNumberStatusWithOptions(GetPipelineInstanceBuildNumberStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
