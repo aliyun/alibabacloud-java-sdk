@@ -3,7 +3,8 @@ package com.aliyun.ice20201109.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitASRJobRequest extends TeaModel {
+public class SubmitH2VJobRequest extends TeaModel {
+    // 输入文件
     @NameInMap("InputFile")
     public String inputFile;
 
@@ -16,20 +17,20 @@ public class SubmitASRJobRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    // 开始时间
-    @NameInMap("StartTime")
-    public String startTime;
+    // 输出bucket
+    @NameInMap("OutputConfig")
+    public String outputConfig;
 
-    // 持续时间
-    @NameInMap("Duration")
-    public String duration;
+    // 输入文件类型
+    @NameInMap("InputType")
+    public String inputType;
 
-    public static SubmitASRJobRequest build(java.util.Map<String, ?> map) throws Exception {
-        SubmitASRJobRequest self = new SubmitASRJobRequest();
+    public static SubmitH2VJobRequest build(java.util.Map<String, ?> map) throws Exception {
+        SubmitH2VJobRequest self = new SubmitH2VJobRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitASRJobRequest setInputFile(String inputFile) {
+    public SubmitH2VJobRequest setInputFile(String inputFile) {
         this.inputFile = inputFile;
         return this;
     }
@@ -37,7 +38,7 @@ public class SubmitASRJobRequest extends TeaModel {
         return this.inputFile;
     }
 
-    public SubmitASRJobRequest setUserData(String userData) {
+    public SubmitH2VJobRequest setUserData(String userData) {
         this.userData = userData;
         return this;
     }
@@ -45,7 +46,7 @@ public class SubmitASRJobRequest extends TeaModel {
         return this.userData;
     }
 
-    public SubmitASRJobRequest setTitle(String title) {
+    public SubmitH2VJobRequest setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -53,7 +54,7 @@ public class SubmitASRJobRequest extends TeaModel {
         return this.title;
     }
 
-    public SubmitASRJobRequest setDescription(String description) {
+    public SubmitH2VJobRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -61,20 +62,20 @@ public class SubmitASRJobRequest extends TeaModel {
         return this.description;
     }
 
-    public SubmitASRJobRequest setStartTime(String startTime) {
-        this.startTime = startTime;
+    public SubmitH2VJobRequest setOutputConfig(String outputConfig) {
+        this.outputConfig = outputConfig;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public String getOutputConfig() {
+        return this.outputConfig;
     }
 
-    public SubmitASRJobRequest setDuration(String duration) {
-        this.duration = duration;
+    public SubmitH2VJobRequest setInputType(String inputType) {
+        this.inputType = inputType;
         return this;
     }
-    public String getDuration() {
-        return this.duration;
+    public String getInputType() {
+        return this.inputType;
     }
 
 }

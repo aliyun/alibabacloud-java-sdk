@@ -52,6 +52,10 @@ public class RegisterMediaInfoRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 注册媒资的配置
+    @NameInMap("RegisterConfig")
+    public String registerConfig;
+
     public static RegisterMediaInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         RegisterMediaInfoRequest self = new RegisterMediaInfoRequest();
         return TeaModel.build(map, self);
@@ -151,6 +155,14 @@ public class RegisterMediaInfoRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public RegisterMediaInfoRequest setRegisterConfig(String registerConfig) {
+        this.registerConfig = registerConfig;
+        return this;
+    }
+    public String getRegisterConfig() {
+        return this.registerConfig;
     }
 
 }

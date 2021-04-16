@@ -17,6 +17,9 @@ public class DescribeRelatedAuthorizationStatusResponseBody extends TeaModel {
     @NameInMap("MNSAuthorized")
     public Boolean MNSAuthorized;
 
+    @NameInMap("Authorized")
+    public Boolean authorized;
+
     public static DescribeRelatedAuthorizationStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRelatedAuthorizationStatusResponseBody self = new DescribeRelatedAuthorizationStatusResponseBody();
         return TeaModel.build(map, self);
@@ -52,6 +55,14 @@ public class DescribeRelatedAuthorizationStatusResponseBody extends TeaModel {
     }
     public Boolean getMNSAuthorized() {
         return this.MNSAuthorized;
+    }
+
+    public DescribeRelatedAuthorizationStatusResponseBody setAuthorized(Boolean authorized) {
+        this.authorized = authorized;
+        return this;
+    }
+    public Boolean getAuthorized() {
+        return this.authorized;
     }
 
 }
