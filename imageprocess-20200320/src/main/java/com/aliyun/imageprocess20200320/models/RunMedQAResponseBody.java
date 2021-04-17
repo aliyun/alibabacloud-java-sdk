@@ -32,31 +32,75 @@ public class RunMedQAResponseBody extends TeaModel {
     }
 
     public static class RunMedQAResponseBodyData extends TeaModel {
-        @NameInMap("Answer")
-        public String answer;
+        @NameInMap("SessionId")
+        public String sessionId;
 
-        @NameInMap("SimilarQuestion")
-        public java.util.List<String> similarQuestion;
+        @NameInMap("QuestionType")
+        public String questionType;
+
+        @NameInMap("Question")
+        public String question;
+
+        @NameInMap("AnswerType")
+        public String answerType;
+
+        @NameInMap("Options")
+        public java.util.List<String> options;
+
+        @NameInMap("Reports")
+        public java.util.Map<String, String> reports;
 
         public static RunMedQAResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RunMedQAResponseBodyData self = new RunMedQAResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public RunMedQAResponseBodyData setAnswer(String answer) {
-            this.answer = answer;
+        public RunMedQAResponseBodyData setSessionId(String sessionId) {
+            this.sessionId = sessionId;
             return this;
         }
-        public String getAnswer() {
-            return this.answer;
+        public String getSessionId() {
+            return this.sessionId;
         }
 
-        public RunMedQAResponseBodyData setSimilarQuestion(java.util.List<String> similarQuestion) {
-            this.similarQuestion = similarQuestion;
+        public RunMedQAResponseBodyData setQuestionType(String questionType) {
+            this.questionType = questionType;
             return this;
         }
-        public java.util.List<String> getSimilarQuestion() {
-            return this.similarQuestion;
+        public String getQuestionType() {
+            return this.questionType;
+        }
+
+        public RunMedQAResponseBodyData setQuestion(String question) {
+            this.question = question;
+            return this;
+        }
+        public String getQuestion() {
+            return this.question;
+        }
+
+        public RunMedQAResponseBodyData setAnswerType(String answerType) {
+            this.answerType = answerType;
+            return this;
+        }
+        public String getAnswerType() {
+            return this.answerType;
+        }
+
+        public RunMedQAResponseBodyData setOptions(java.util.List<String> options) {
+            this.options = options;
+            return this;
+        }
+        public java.util.List<String> getOptions() {
+            return this.options;
+        }
+
+        public RunMedQAResponseBodyData setReports(java.util.Map<String, String> reports) {
+            this.reports = reports;
+            return this;
+        }
+        public java.util.Map<String, String> getReports() {
+            return this.reports;
         }
 
     }

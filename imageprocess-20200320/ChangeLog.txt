@@ -1,3 +1,6 @@
+2021-04-17 Version: 2.0.3
+- Update RunMedQA.
+
 2021-04-06 Version: 2.0.2
 - Update ScreenChestCT DetectRibFracture.
 
