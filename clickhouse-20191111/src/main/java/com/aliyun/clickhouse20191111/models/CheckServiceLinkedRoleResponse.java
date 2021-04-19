@@ -4,33 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CheckServiceLinkedRoleResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("HasServiceLinkedRole")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean hasServiceLinkedRole;
+    public CheckServiceLinkedRoleResponseBody body;
 
     public static CheckServiceLinkedRoleResponse build(java.util.Map<String, ?> map) throws Exception {
         CheckServiceLinkedRoleResponse self = new CheckServiceLinkedRoleResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckServiceLinkedRoleResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CheckServiceLinkedRoleResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CheckServiceLinkedRoleResponse setHasServiceLinkedRole(Boolean hasServiceLinkedRole) {
-        this.hasServiceLinkedRole = hasServiceLinkedRole;
+    public CheckServiceLinkedRoleResponse setBody(CheckServiceLinkedRoleResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getHasServiceLinkedRole() {
-        return this.hasServiceLinkedRole;
+    public CheckServiceLinkedRoleResponseBody getBody() {
+        return this.body;
     }
 
 }

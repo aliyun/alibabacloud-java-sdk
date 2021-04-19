@@ -4,21 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ResetAccountPasswordResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ResetAccountPasswordResponseBody body;
 
     public static ResetAccountPasswordResponse build(java.util.Map<String, ?> map) throws Exception {
         ResetAccountPasswordResponse self = new ResetAccountPasswordResponse();
         return TeaModel.build(map, self);
     }
 
-    public ResetAccountPasswordResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ResetAccountPasswordResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ResetAccountPasswordResponse setBody(ResetAccountPasswordResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ResetAccountPasswordResponseBody getBody() {
+        return this.body;
     }
 
 }

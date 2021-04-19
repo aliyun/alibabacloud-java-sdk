@@ -4,33 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeLorneTasksMCountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public Float data;
+    public DescribeLorneTasksMCountResponseBody body;
 
     public static DescribeLorneTasksMCountResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeLorneTasksMCountResponse self = new DescribeLorneTasksMCountResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLorneTasksMCountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLorneTasksMCountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeLorneTasksMCountResponse setData(Float data) {
-        this.data = data;
+    public DescribeLorneTasksMCountResponse setBody(DescribeLorneTasksMCountResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Float getData() {
-        return this.data;
+    public DescribeLorneTasksMCountResponseBody getBody() {
+        return this.body;
     }
 
 }

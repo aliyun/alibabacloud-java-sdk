@@ -1,0 +1,94 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.clickhouse20191111.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeDBClusterAccessWhiteListResponseBody extends TeaModel {
+    @NameInMap("DBClusterAccessWhiteList")
+    public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteList DBClusterAccessWhiteList;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static DescribeDBClusterAccessWhiteListResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBClusterAccessWhiteListResponseBody self = new DescribeDBClusterAccessWhiteListResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClusterAccessWhiteListResponseBody setDBClusterAccessWhiteList(DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteList DBClusterAccessWhiteList) {
+        this.DBClusterAccessWhiteList = DBClusterAccessWhiteList;
+        return this;
+    }
+    public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteList getDBClusterAccessWhiteList() {
+        return this.DBClusterAccessWhiteList;
+    }
+
+    public DescribeDBClusterAccessWhiteListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray extends TeaModel {
+        @NameInMap("DBClusterIPArrayAttribute")
+        public String DBClusterIPArrayAttribute;
+
+        @NameInMap("SecurityIPList")
+        public String securityIPList;
+
+        @NameInMap("DBClusterIPArrayName")
+        public String DBClusterIPArrayName;
+
+        public static DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray self = new DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray setDBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
+            this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
+            return this;
+        }
+        public String getDBClusterIPArrayAttribute() {
+            return this.DBClusterIPArrayAttribute;
+        }
+
+        public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray setSecurityIPList(String securityIPList) {
+            this.securityIPList = securityIPList;
+            return this;
+        }
+        public String getSecurityIPList() {
+            return this.securityIPList;
+        }
+
+        public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray setDBClusterIPArrayName(String DBClusterIPArrayName) {
+            this.DBClusterIPArrayName = DBClusterIPArrayName;
+            return this;
+        }
+        public String getDBClusterIPArrayName() {
+            return this.DBClusterIPArrayName;
+        }
+
+    }
+
+    public static class DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteList extends TeaModel {
+        @NameInMap("IPArray")
+        public java.util.List<DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray> IPArray;
+
+        public static DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteList self = new DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteList setIPArray(java.util.List<DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray> IPArray) {
+            this.IPArray = IPArray;
+            return this;
+        }
+        public java.util.List<DescribeDBClusterAccessWhiteListResponseBodyDBClusterAccessWhiteListIPArray> getIPArray() {
+            return this.IPArray;
+        }
+
+    }
+
+}
