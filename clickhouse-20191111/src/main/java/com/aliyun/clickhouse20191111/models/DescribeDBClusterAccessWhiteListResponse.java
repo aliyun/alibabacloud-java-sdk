@@ -4,97 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBClusterAccessWhiteListResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DBClusterAccessWhiteList")
+    @NameInMap("body")
     @Validation(required = true)
-    public DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteList DBClusterAccessWhiteList;
+    public DescribeDBClusterAccessWhiteListResponseBody body;
 
     public static DescribeDBClusterAccessWhiteListResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBClusterAccessWhiteListResponse self = new DescribeDBClusterAccessWhiteListResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBClusterAccessWhiteListResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBClusterAccessWhiteListResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDBClusterAccessWhiteListResponse setDBClusterAccessWhiteList(DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteList DBClusterAccessWhiteList) {
-        this.DBClusterAccessWhiteList = DBClusterAccessWhiteList;
+    public DescribeDBClusterAccessWhiteListResponse setBody(DescribeDBClusterAccessWhiteListResponseBody body) {
+        this.body = body;
         return this;
     }
-    public DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteList getDBClusterAccessWhiteList() {
-        return this.DBClusterAccessWhiteList;
-    }
-
-    public static class DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray extends TeaModel {
-        @NameInMap("DBClusterIPArrayName")
-        @Validation(required = true)
-        public String DBClusterIPArrayName;
-
-        @NameInMap("SecurityIPList")
-        @Validation(required = true)
-        public String securityIPList;
-
-        @NameInMap("DBClusterIPArrayAttribute")
-        @Validation(required = true)
-        public String DBClusterIPArrayAttribute;
-
-        public static DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray self = new DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray setDBClusterIPArrayName(String DBClusterIPArrayName) {
-            this.DBClusterIPArrayName = DBClusterIPArrayName;
-            return this;
-        }
-        public String getDBClusterIPArrayName() {
-            return this.DBClusterIPArrayName;
-        }
-
-        public DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray setSecurityIPList(String securityIPList) {
-            this.securityIPList = securityIPList;
-            return this;
-        }
-        public String getSecurityIPList() {
-            return this.securityIPList;
-        }
-
-        public DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray setDBClusterIPArrayAttribute(String DBClusterIPArrayAttribute) {
-            this.DBClusterIPArrayAttribute = DBClusterIPArrayAttribute;
-            return this;
-        }
-        public String getDBClusterIPArrayAttribute() {
-            return this.DBClusterIPArrayAttribute;
-        }
-
-    }
-
-    public static class DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteList extends TeaModel {
-        @NameInMap("IPArray")
-        @Validation(required = true)
-        public java.util.List<DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray> IPArray;
-
-        public static DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteList self = new DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteList();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteList setIPArray(java.util.List<DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray> IPArray) {
-            this.IPArray = IPArray;
-            return this;
-        }
-        public java.util.List<DescribeDBClusterAccessWhiteListResponseDBClusterAccessWhiteListIPArray> getIPArray() {
-            return this.IPArray;
-        }
-
+    public DescribeDBClusterAccessWhiteListResponseBody getBody() {
+        return this.body;
     }
 
 }

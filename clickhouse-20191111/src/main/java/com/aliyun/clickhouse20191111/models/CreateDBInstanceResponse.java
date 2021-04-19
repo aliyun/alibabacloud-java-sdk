@@ -4,45 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DBClusterId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String DBClusterId;
-
-    @NameInMap("OrderId")
-    @Validation(required = true)
-    public String orderId;
+    public CreateDBInstanceResponseBody body;
 
     public static CreateDBInstanceResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceResponse self = new CreateDBInstanceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateDBInstanceResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateDBInstanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateDBInstanceResponse setDBClusterId(String DBClusterId) {
-        this.DBClusterId = DBClusterId;
+    public CreateDBInstanceResponse setBody(CreateDBInstanceResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getDBClusterId() {
-        return this.DBClusterId;
-    }
-
-    public CreateDBInstanceResponse setOrderId(String orderId) {
-        this.orderId = orderId;
-        return this;
-    }
-    public String getOrderId() {
-        return this.orderId;
+    public CreateDBInstanceResponseBody getBody() {
+        return this.body;
     }
 
 }

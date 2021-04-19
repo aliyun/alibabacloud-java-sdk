@@ -4,21 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DeleteAccountResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DeleteAccountResponseBody body;
 
     public static DeleteAccountResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteAccountResponse self = new DeleteAccountResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteAccountResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteAccountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DeleteAccountResponse setBody(DeleteAccountResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DeleteAccountResponseBody getBody() {
+        return this.body;
     }
 
 }

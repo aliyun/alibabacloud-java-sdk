@@ -4,15 +4,25 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeLorneTasksMCountRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("DBClusterId")
-    @Validation(required = true)
     public String DBClusterId;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public String taskId;
 
     @NameInMap("StartTime")
@@ -22,12 +32,43 @@ public class DescribeLorneTasksMCountRequest extends TeaModel {
     public String endTime;
 
     @NameInMap("MetricName")
-    @Validation(required = true)
     public String metricName;
 
     public static DescribeLorneTasksMCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLorneTasksMCountRequest self = new DescribeLorneTasksMCountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLorneTasksMCountRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DescribeLorneTasksMCountRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DescribeLorneTasksMCountRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DescribeLorneTasksMCountRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DescribeLorneTasksMCountRequest setRegionId(String regionId) {

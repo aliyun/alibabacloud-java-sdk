@@ -4,42 +4,46 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
     public String zoneId;
 
     @NameInMap("DBClusterVersion")
-    @Validation(required = true)
     public String DBClusterVersion;
 
     @NameInMap("DBClusterCategory")
-    @Validation(required = true)
     public String DBClusterCategory;
 
     @NameInMap("DBClusterClass")
-    @Validation(required = true)
     public String DBClusterClass;
 
     @NameInMap("DBNodeGroupCount")
-    @Validation(required = true)
     public String DBNodeGroupCount;
 
     @NameInMap("DBNodeStorage")
-    @Validation(required = true)
     public String DBNodeStorage;
 
     @NameInMap("DBClusterNetworkType")
-    @Validation(required = true)
     public String DBClusterNetworkType;
 
     @NameInMap("DBClusterDescription")
     public String DBClusterDescription;
 
     @NameInMap("PayType")
-    @Validation(required = true)
     public String payType;
 
     @NameInMap("Period")
@@ -58,12 +62,49 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("DbNodeStorageType")
-    @Validation(required = true)
     public String dbNodeStorageType;
+
+    @NameInMap("EncryptionKey")
+    public String encryptionKey;
+
+    @NameInMap("EncryptionType")
+    public String encryptionType;
 
     public static CreateDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDBInstanceRequest self = new CreateDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateDBInstanceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateDBInstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateDBInstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public CreateDBInstanceRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public CreateDBInstanceRequest setRegionId(String regionId) {
@@ -192,6 +233,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getDbNodeStorageType() {
         return this.dbNodeStorageType;
+    }
+
+    public CreateDBInstanceRequest setEncryptionKey(String encryptionKey) {
+        this.encryptionKey = encryptionKey;
+        return this;
+    }
+    public String getEncryptionKey() {
+        return this.encryptionKey;
+    }
+
+    public CreateDBInstanceRequest setEncryptionType(String encryptionType) {
+        this.encryptionType = encryptionType;
+        return this;
+    }
+    public String getEncryptionType() {
+        return this.encryptionType;
     }
 
 }

@@ -4,60 +4,56 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class OperateLogHubRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("Create")
-    @Validation(required = true)
     public Boolean create;
 
     @NameInMap("DBClusterId")
-    @Validation(required = true)
     public String DBClusterId;
 
     @NameInMap("ProjectName")
-    @Validation(required = true)
     public String projectName;
 
     @NameInMap("LogStoreName")
-    @Validation(required = true)
     public String logStoreName;
 
     @NameInMap("DeliverName")
-    @Validation(required = true)
     public String deliverName;
 
     @NameInMap("DeliverTime")
-    @Validation(required = true)
     public String deliverTime;
 
     @NameInMap("Description")
-    @Validation(required = true)
     public String description;
 
     @NameInMap("DomainUrl")
-    @Validation(required = true)
     public String domainUrl;
 
     @NameInMap("SchemaName")
-    @Validation(required = true)
     public String schemaName;
 
     @NameInMap("TableName")
-    @Validation(required = true)
     public String tableName;
 
     @NameInMap("UserName")
-    @Validation(required = true)
     public String userName;
 
     @NameInMap("Password")
-    @Validation(required = true)
     public String password;
 
     @NameInMap("FilterDirtyData")
     public Boolean filterDirtyData;
-
-    @NameInMap("LogHubStores")
-    @Validation(required = true)
-    public java.util.List<OperateLogHubRequestLogHubStores> logHubStores;
 
     @NameInMap("AccessKey")
     public String accessKey;
@@ -71,9 +67,44 @@ public class OperateLogHubRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("LogHubStores")
+    public java.util.List<OperateLogHubRequestLogHubStores> logHubStores;
+
     public static OperateLogHubRequest build(java.util.Map<String, ?> map) throws Exception {
         OperateLogHubRequest self = new OperateLogHubRequest();
         return TeaModel.build(map, self);
+    }
+
+    public OperateLogHubRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public OperateLogHubRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public OperateLogHubRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public OperateLogHubRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public OperateLogHubRequest setCreate(Boolean create) {
@@ -180,14 +211,6 @@ public class OperateLogHubRequest extends TeaModel {
         return this.filterDirtyData;
     }
 
-    public OperateLogHubRequest setLogHubStores(java.util.List<OperateLogHubRequestLogHubStores> logHubStores) {
-        this.logHubStores = logHubStores;
-        return this;
-    }
-    public java.util.List<OperateLogHubRequestLogHubStores> getLogHubStores() {
-        return this.logHubStores;
-    }
-
     public OperateLogHubRequest setAccessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
@@ -220,22 +243,35 @@ public class OperateLogHubRequest extends TeaModel {
         return this.taskId;
     }
 
+    public OperateLogHubRequest setLogHubStores(java.util.List<OperateLogHubRequestLogHubStores> logHubStores) {
+        this.logHubStores = logHubStores;
+        return this;
+    }
+    public java.util.List<OperateLogHubRequestLogHubStores> getLogHubStores() {
+        return this.logHubStores;
+    }
+
     public static class OperateLogHubRequestLogHubStores extends TeaModel {
+        @NameInMap("Type")
+        public String type;
+
         @NameInMap("LogKey")
-        @Validation(required = true)
         public String logKey;
 
         @NameInMap("FieldKey")
-        @Validation(required = true)
         public String fieldKey;
-
-        @NameInMap("Type")
-        @Validation(required = true)
-        public String type;
 
         public static OperateLogHubRequestLogHubStores build(java.util.Map<String, ?> map) throws Exception {
             OperateLogHubRequestLogHubStores self = new OperateLogHubRequestLogHubStores();
             return TeaModel.build(map, self);
+        }
+
+        public OperateLogHubRequestLogHubStores setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
         }
 
         public OperateLogHubRequestLogHubStores setLogKey(String logKey) {
@@ -252,14 +288,6 @@ public class OperateLogHubRequest extends TeaModel {
         }
         public String getFieldKey() {
             return this.fieldKey;
-        }
-
-        public OperateLogHubRequestLogHubStores setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
         }
 
     }

@@ -4,20 +4,62 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterConfigRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("DBClusterId")
-    @Validation(required = true)
     public String DBClusterId;
 
     @NameInMap("UserConfig")
-    @Validation(required = true)
     public String userConfig;
 
     public static ModifyDBClusterConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterConfigRequest self = new ModifyDBClusterConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDBClusterConfigRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyDBClusterConfigRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyDBClusterConfigRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyDBClusterConfigRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyDBClusterConfigRequest setRegionId(String regionId) {

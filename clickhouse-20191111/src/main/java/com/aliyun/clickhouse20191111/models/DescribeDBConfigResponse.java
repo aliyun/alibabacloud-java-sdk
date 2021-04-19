@@ -4,33 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBConfigResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Config")
+    @NameInMap("body")
     @Validation(required = true)
-    public String config;
+    public DescribeDBConfigResponseBody body;
 
     public static DescribeDBConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDBConfigResponse self = new DescribeDBConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDBConfigResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDBConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeDBConfigResponse setConfig(String config) {
-        this.config = config;
+    public DescribeDBConfigResponse setBody(DescribeDBConfigResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getConfig() {
-        return this.config;
+    public DescribeDBConfigResponseBody getBody() {
+        return this.body;
     }
 
 }

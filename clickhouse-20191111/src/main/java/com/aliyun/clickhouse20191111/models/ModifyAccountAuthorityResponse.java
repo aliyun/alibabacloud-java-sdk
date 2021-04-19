@@ -4,21 +4,33 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountAuthorityResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ModifyAccountAuthorityResponseBody body;
 
     public static ModifyAccountAuthorityResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyAccountAuthorityResponse self = new ModifyAccountAuthorityResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAccountAuthorityResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ModifyAccountAuthorityResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ModifyAccountAuthorityResponse setBody(ModifyAccountAuthorityResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ModifyAccountAuthorityResponseBody getBody() {
+        return this.body;
     }
 
 }

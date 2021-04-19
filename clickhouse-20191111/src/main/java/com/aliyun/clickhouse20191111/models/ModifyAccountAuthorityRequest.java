@@ -4,44 +4,80 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class ModifyAccountAuthorityRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("DBClusterId")
-    @Validation(required = true)
     public String DBClusterId;
 
     @NameInMap("AccountName")
-    @Validation(required = true)
     public String accountName;
 
     @NameInMap("DmlAuthority")
-    @Validation(required = true)
     public String dmlAuthority;
 
     @NameInMap("DdlAuthority")
-    @Validation(required = true)
     public Boolean ddlAuthority;
 
     @NameInMap("AllowDatabases")
-    @Validation(required = true)
     public String allowDatabases;
 
     @NameInMap("TotalDatabases")
-    @Validation(required = true)
     public String totalDatabases;
 
     @NameInMap("AllowDictionaries")
-    @Validation(required = true)
     public String allowDictionaries;
 
     @NameInMap("TotalDictionaries")
-    @Validation(required = true)
     public String totalDictionaries;
 
     public static ModifyAccountAuthorityRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAccountAuthorityRequest self = new ModifyAccountAuthorityRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAccountAuthorityRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyAccountAuthorityRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyAccountAuthorityRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public ModifyAccountAuthorityRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public ModifyAccountAuthorityRequest setRegionId(String regionId) {

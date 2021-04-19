@@ -4,21 +4,62 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DeleteLorneTaskRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("OwnerAccount")
+    public String ownerAccount;
+
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DBClusterId")
-    @Validation(required = true)
     public String DBClusterId;
 
     @NameInMap("TaskId")
-    @Validation(required = true)
     public String taskId;
 
     public static DeleteLorneTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLorneTaskRequest self = new DeleteLorneTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteLorneTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteLorneTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteLorneTaskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DeleteLorneTaskRequest setOwnerAccount(String ownerAccount) {
+        this.ownerAccount = ownerAccount;
+        return this;
+    }
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     public DeleteLorneTaskRequest setRegionId(String regionId) {
