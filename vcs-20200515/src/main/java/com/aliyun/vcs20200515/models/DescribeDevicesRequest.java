@@ -13,6 +13,9 @@ public class DescribeDevicesRequest extends TeaModel {
     @NameInMap("CorpIdList")
     public String corpIdList;
 
+    @NameInMap("DeviceIdList")
+    public String deviceIdList;
+
     public static DescribeDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDevicesRequest self = new DescribeDevicesRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DescribeDevicesRequest extends TeaModel {
     }
     public String getCorpIdList() {
         return this.corpIdList;
+    }
+
+    public DescribeDevicesRequest setDeviceIdList(String deviceIdList) {
+        this.deviceIdList = deviceIdList;
+        return this;
+    }
+    public String getDeviceIdList() {
+        return this.deviceIdList;
     }
 
 }

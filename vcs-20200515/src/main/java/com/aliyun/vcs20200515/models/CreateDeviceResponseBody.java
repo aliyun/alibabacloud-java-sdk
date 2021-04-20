@@ -14,7 +14,7 @@ public class CreateDeviceResponseBody extends TeaModel {
     public String message;
 
     @NameInMap("Data")
-    public java.util.List<CreateDeviceResponseBodyData> data;
+    public CreateDeviceResponseBodyData data;
 
     public static CreateDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDeviceResponseBody self = new CreateDeviceResponseBody();
@@ -45,20 +45,26 @@ public class CreateDeviceResponseBody extends TeaModel {
         return this.message;
     }
 
-    public CreateDeviceResponseBody setData(java.util.List<CreateDeviceResponseBodyData> data) {
+    public CreateDeviceResponseBody setData(CreateDeviceResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<CreateDeviceResponseBodyData> getData() {
+    public CreateDeviceResponseBodyData getData() {
         return this.data;
     }
 
     public static class CreateDeviceResponseBodyDataSubDeviceSipInfo extends TeaModel {
-        @NameInMap("ChannelGbId")
-        public String channelGbId;
+        @NameInMap("SundayCaptureStrategy")
+        public String sundayCaptureStrategy;
 
         @NameInMap("MondayCaptureStrategy")
         public String mondayCaptureStrategy;
+
+        @NameInMap("ChannelGbId")
+        public String channelGbId;
+
+        @NameInMap("FridayCaptureStrategy")
+        public String fridayCaptureStrategy;
 
         @NameInMap("TuesdayCaptureStrategy")
         public String tuesdayCaptureStrategy;
@@ -69,18 +75,28 @@ public class CreateDeviceResponseBody extends TeaModel {
         @NameInMap("ThursdayCaptureStrategy")
         public String thursdayCaptureStrategy;
 
-        @NameInMap("FridayCaptureStrategy")
-        public String fridayCaptureStrategy;
-
         @NameInMap("SaturdayCaptureStrategy")
         public String saturdayCaptureStrategy;
-
-        @NameInMap("SundayCaptureStrategy")
-        public String sundayCaptureStrategy;
 
         public static CreateDeviceResponseBodyDataSubDeviceSipInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateDeviceResponseBodyDataSubDeviceSipInfo self = new CreateDeviceResponseBodyDataSubDeviceSipInfo();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDeviceResponseBodyDataSubDeviceSipInfo setSundayCaptureStrategy(String sundayCaptureStrategy) {
+            this.sundayCaptureStrategy = sundayCaptureStrategy;
+            return this;
+        }
+        public String getSundayCaptureStrategy() {
+            return this.sundayCaptureStrategy;
+        }
+
+        public CreateDeviceResponseBodyDataSubDeviceSipInfo setMondayCaptureStrategy(String mondayCaptureStrategy) {
+            this.mondayCaptureStrategy = mondayCaptureStrategy;
+            return this;
+        }
+        public String getMondayCaptureStrategy() {
+            return this.mondayCaptureStrategy;
         }
 
         public CreateDeviceResponseBodyDataSubDeviceSipInfo setChannelGbId(String channelGbId) {
@@ -91,12 +107,12 @@ public class CreateDeviceResponseBody extends TeaModel {
             return this.channelGbId;
         }
 
-        public CreateDeviceResponseBodyDataSubDeviceSipInfo setMondayCaptureStrategy(String mondayCaptureStrategy) {
-            this.mondayCaptureStrategy = mondayCaptureStrategy;
+        public CreateDeviceResponseBodyDataSubDeviceSipInfo setFridayCaptureStrategy(String fridayCaptureStrategy) {
+            this.fridayCaptureStrategy = fridayCaptureStrategy;
             return this;
         }
-        public String getMondayCaptureStrategy() {
-            return this.mondayCaptureStrategy;
+        public String getFridayCaptureStrategy() {
+            return this.fridayCaptureStrategy;
         }
 
         public CreateDeviceResponseBodyDataSubDeviceSipInfo setTuesdayCaptureStrategy(String tuesdayCaptureStrategy) {
@@ -123,14 +139,6 @@ public class CreateDeviceResponseBody extends TeaModel {
             return this.thursdayCaptureStrategy;
         }
 
-        public CreateDeviceResponseBodyDataSubDeviceSipInfo setFridayCaptureStrategy(String fridayCaptureStrategy) {
-            this.fridayCaptureStrategy = fridayCaptureStrategy;
-            return this;
-        }
-        public String getFridayCaptureStrategy() {
-            return this.fridayCaptureStrategy;
-        }
-
         public CreateDeviceResponseBodyDataSubDeviceSipInfo setSaturdayCaptureStrategy(String saturdayCaptureStrategy) {
             this.saturdayCaptureStrategy = saturdayCaptureStrategy;
             return this;
@@ -139,28 +147,20 @@ public class CreateDeviceResponseBody extends TeaModel {
             return this.saturdayCaptureStrategy;
         }
 
-        public CreateDeviceResponseBodyDataSubDeviceSipInfo setSundayCaptureStrategy(String sundayCaptureStrategy) {
-            this.sundayCaptureStrategy = sundayCaptureStrategy;
-            return this;
-        }
-        public String getSundayCaptureStrategy() {
-            return this.sundayCaptureStrategy;
-        }
-
     }
 
     public static class CreateDeviceResponseBodyData extends TeaModel {
-        @NameInMap("SipIp")
-        public String sipIp;
-
         @NameInMap("SipReaml")
         public String sipReaml;
+
+        @NameInMap("SipIp")
+        public String sipIp;
 
         @NameInMap("SipDeviceGbId")
         public String sipDeviceGbId;
 
-        @NameInMap("SipPassword")
-        public String sipPassword;
+        @NameInMap("DeviceCode")
+        public String deviceCode;
 
         @NameInMap("SipPort")
         public String sipPort;
@@ -168,23 +168,15 @@ public class CreateDeviceResponseBody extends TeaModel {
         @NameInMap("SipGbId")
         public String sipGbId;
 
+        @NameInMap("SipPassword")
+        public String sipPassword;
+
         @NameInMap("SubDeviceSipInfo")
         public java.util.List<CreateDeviceResponseBodyDataSubDeviceSipInfo> subDeviceSipInfo;
-
-        @NameInMap("DeviceCode")
-        public String deviceCode;
 
         public static CreateDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             CreateDeviceResponseBodyData self = new CreateDeviceResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public CreateDeviceResponseBodyData setSipIp(String sipIp) {
-            this.sipIp = sipIp;
-            return this;
-        }
-        public String getSipIp() {
-            return this.sipIp;
         }
 
         public CreateDeviceResponseBodyData setSipReaml(String sipReaml) {
@@ -195,6 +187,14 @@ public class CreateDeviceResponseBody extends TeaModel {
             return this.sipReaml;
         }
 
+        public CreateDeviceResponseBodyData setSipIp(String sipIp) {
+            this.sipIp = sipIp;
+            return this;
+        }
+        public String getSipIp() {
+            return this.sipIp;
+        }
+
         public CreateDeviceResponseBodyData setSipDeviceGbId(String sipDeviceGbId) {
             this.sipDeviceGbId = sipDeviceGbId;
             return this;
@@ -203,12 +203,12 @@ public class CreateDeviceResponseBody extends TeaModel {
             return this.sipDeviceGbId;
         }
 
-        public CreateDeviceResponseBodyData setSipPassword(String sipPassword) {
-            this.sipPassword = sipPassword;
+        public CreateDeviceResponseBodyData setDeviceCode(String deviceCode) {
+            this.deviceCode = deviceCode;
             return this;
         }
-        public String getSipPassword() {
-            return this.sipPassword;
+        public String getDeviceCode() {
+            return this.deviceCode;
         }
 
         public CreateDeviceResponseBodyData setSipPort(String sipPort) {
@@ -227,20 +227,20 @@ public class CreateDeviceResponseBody extends TeaModel {
             return this.sipGbId;
         }
 
+        public CreateDeviceResponseBodyData setSipPassword(String sipPassword) {
+            this.sipPassword = sipPassword;
+            return this;
+        }
+        public String getSipPassword() {
+            return this.sipPassword;
+        }
+
         public CreateDeviceResponseBodyData setSubDeviceSipInfo(java.util.List<CreateDeviceResponseBodyDataSubDeviceSipInfo> subDeviceSipInfo) {
             this.subDeviceSipInfo = subDeviceSipInfo;
             return this;
         }
         public java.util.List<CreateDeviceResponseBodyDataSubDeviceSipInfo> getSubDeviceSipInfo() {
             return this.subDeviceSipInfo;
-        }
-
-        public CreateDeviceResponseBodyData setDeviceCode(String deviceCode) {
-            this.deviceCode = deviceCode;
-            return this;
-        }
-        public String getDeviceCode() {
-            return this.deviceCode;
         }
 
     }
