@@ -66,6 +66,10 @@ public class CompareFaceVerifyResponse extends TeaModel {
         @Validation(required = true)
         public Float verifyScore;
 
+        @NameInMap("CertifyId")
+        @Validation(required = true)
+        public String certifyId;
+
         public static CompareFaceVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
             CompareFaceVerifyResponseResultObject self = new CompareFaceVerifyResponseResultObject();
             return TeaModel.build(map, self);
@@ -85,6 +89,14 @@ public class CompareFaceVerifyResponse extends TeaModel {
         }
         public Float getVerifyScore() {
             return this.verifyScore;
+        }
+
+        public CompareFaceVerifyResponseResultObject setCertifyId(String certifyId) {
+            this.certifyId = certifyId;
+            return this;
+        }
+        public String getCertifyId() {
+            return this.certifyId;
         }
 
     }

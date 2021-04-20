@@ -74,6 +74,10 @@ public class ContrastFaceVerifyResponse extends TeaModel {
         @Validation(required = true)
         public String subCode;
 
+        @NameInMap("CertifyId")
+        @Validation(required = true)
+        public String certifyId;
+
         public static ContrastFaceVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
             ContrastFaceVerifyResponseResultObject self = new ContrastFaceVerifyResponseResultObject();
             return TeaModel.build(map, self);
@@ -109,6 +113,14 @@ public class ContrastFaceVerifyResponse extends TeaModel {
         }
         public String getSubCode() {
             return this.subCode;
+        }
+
+        public ContrastFaceVerifyResponseResultObject setCertifyId(String certifyId) {
+            this.certifyId = certifyId;
+            return this;
+        }
+        public String getCertifyId() {
+            return this.certifyId;
         }
 
     }
