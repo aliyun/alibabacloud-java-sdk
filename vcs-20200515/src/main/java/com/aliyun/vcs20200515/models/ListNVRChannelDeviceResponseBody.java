@@ -17,6 +17,9 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListNVRChannelDeviceResponseBodyData> data;
 
+    @NameInMap("Message")
+    public String message;
+
     public static ListNVRChannelDeviceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListNVRChannelDeviceResponseBody self = new ListNVRChannelDeviceResponseBody();
         return TeaModel.build(map, self);
@@ -54,6 +57,14 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
         return this.data;
     }
 
+    public ListNVRChannelDeviceResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public static class ListNVRChannelDeviceResponseBodyData extends TeaModel {
         @NameInMap("DeviceCode")
         public String deviceCode;
@@ -87,6 +98,12 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
 
         @NameInMap("CorpId")
         public String corpId;
+
+        @NameInMap("Vap")
+        public String vap;
+
+        @NameInMap("ProjectName")
+        public String projectName;
 
         public static ListNVRChannelDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListNVRChannelDeviceResponseBodyData self = new ListNVRChannelDeviceResponseBodyData();
@@ -179,6 +196,22 @@ public class ListNVRChannelDeviceResponseBody extends TeaModel {
         }
         public String getCorpId() {
             return this.corpId;
+        }
+
+        public ListNVRChannelDeviceResponseBodyData setVap(String vap) {
+            this.vap = vap;
+            return this;
+        }
+        public String getVap() {
+            return this.vap;
+        }
+
+        public ListNVRChannelDeviceResponseBodyData setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
         }
 
     }

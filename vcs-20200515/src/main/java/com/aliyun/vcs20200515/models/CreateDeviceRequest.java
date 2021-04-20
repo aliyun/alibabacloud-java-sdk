@@ -37,6 +37,15 @@ public class CreateDeviceRequest extends TeaModel {
     @NameInMap("SubDeviceCount")
     public Long subDeviceCount;
 
+    @NameInMap("DeviceModel")
+    public String deviceModel;
+
+    @NameInMap("GbId")
+    public String gbId;
+
+    @NameInMap("FilePath")
+    public String filePath;
+
     public static CreateDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDeviceRequest self = new CreateDeviceRequest();
         return TeaModel.build(map, self);
@@ -128,6 +137,30 @@ public class CreateDeviceRequest extends TeaModel {
     }
     public Long getSubDeviceCount() {
         return this.subDeviceCount;
+    }
+
+    public CreateDeviceRequest setDeviceModel(String deviceModel) {
+        this.deviceModel = deviceModel;
+        return this;
+    }
+    public String getDeviceModel() {
+        return this.deviceModel;
+    }
+
+    public CreateDeviceRequest setGbId(String gbId) {
+        this.gbId = gbId;
+        return this;
+    }
+    public String getGbId() {
+        return this.gbId;
+    }
+
+    public CreateDeviceRequest setFilePath(String filePath) {
+        this.filePath = filePath;
+        return this;
+    }
+    public String getFilePath() {
+        return this.filePath;
     }
 
 }
