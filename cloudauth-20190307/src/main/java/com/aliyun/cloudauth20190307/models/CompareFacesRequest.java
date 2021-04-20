@@ -16,9 +16,6 @@ public class CompareFacesRequest extends TeaModel {
     @NameInMap("TargetImageValue")
     public String targetImageValue;
 
-    @NameInMap("BizType")
-    public String bizType;
-
     public static CompareFacesRequest build(java.util.Map<String, ?> map) throws Exception {
         CompareFacesRequest self = new CompareFacesRequest();
         return TeaModel.build(map, self);
@@ -54,14 +51,6 @@ public class CompareFacesRequest extends TeaModel {
     }
     public String getTargetImageValue() {
         return this.targetImageValue;
-    }
-
-    public CompareFacesRequest setBizType(String bizType) {
-        this.bizType = bizType;
-        return this;
-    }
-    public String getBizType() {
-        return this.bizType;
     }
 
 }

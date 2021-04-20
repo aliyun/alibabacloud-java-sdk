@@ -70,6 +70,10 @@ public class LivenessFaceVerifyResponse extends TeaModel {
         @Validation(required = true)
         public String subCode;
 
+        @NameInMap("CertifyId")
+        @Validation(required = true)
+        public String certifyId;
+
         public static LivenessFaceVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
             LivenessFaceVerifyResponseResultObject self = new LivenessFaceVerifyResponseResultObject();
             return TeaModel.build(map, self);
@@ -97,6 +101,14 @@ public class LivenessFaceVerifyResponse extends TeaModel {
         }
         public String getSubCode() {
             return this.subCode;
+        }
+
+        public LivenessFaceVerifyResponseResultObject setCertifyId(String certifyId) {
+            this.certifyId = certifyId;
+            return this;
+        }
+        public String getCertifyId() {
+            return this.certifyId;
         }
 
     }
