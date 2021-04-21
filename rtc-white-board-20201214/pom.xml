@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>rtc_white_board20201214</artifactId>
-  <version>2.0.2</version>
+  <version>2.0.3</version>
   <packaging>jar</packaging>
   <name>rtc_white_board20201214</name>
   <description>Alibaba Cloud rtc-white-board (20201214) SDK for Java
