@@ -135,6 +135,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createAppWithOptions(request, runtime);
     }
 
+    public SetUsersPermissionsResponse setUsersPermissionsWithOptions(SetUsersPermissionsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SetUsersPermissions", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new SetUsersPermissionsResponse());
+    }
+
+    public SetUsersPermissionsResponse setUsersPermissions(SetUsersPermissionsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setUsersPermissionsWithOptions(request, runtime);
+    }
+
     public CreateWhiteBoardResponse createWhiteBoardWithOptions(CreateWhiteBoardRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
