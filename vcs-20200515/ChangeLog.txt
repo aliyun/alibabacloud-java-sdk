@@ -1,3 +1,8 @@
+2021-04-21 Version: 3.0.3
+- Suppored CreateComputeInstance.
+- Suppored ListInstance.
+- Suppored BatchDeleteInstance.
+
 2021-04-20 Version: 3.0.2
 - Suppored CreateComputeInstance.
 - Suppored ListInstance.
