@@ -7,11 +7,11 @@ public class DescribeCasterRtcInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("CasterId")
-    public String casterId;
-
     @NameInMap("AuthToken")
     public String authToken;
+
+    @NameInMap("CasterId")
+    public String casterId;
 
     public static DescribeCasterRtcInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterRtcInfoResponseBody self = new DescribeCasterRtcInfoResponseBody();
@@ -26,20 +26,20 @@ public class DescribeCasterRtcInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCasterRtcInfoResponseBody setCasterId(String casterId) {
-        this.casterId = casterId;
-        return this;
-    }
-    public String getCasterId() {
-        return this.casterId;
-    }
-
     public DescribeCasterRtcInfoResponseBody setAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
     }
     public String getAuthToken() {
         return this.authToken;
+    }
+
+    public DescribeCasterRtcInfoResponseBody setCasterId(String casterId) {
+        this.casterId = casterId;
+        return this;
+    }
+    public String getCasterId() {
+        return this.casterId;
     }
 
 }

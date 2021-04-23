@@ -100,7 +100,7 @@ public class ModifyCasterLayoutRequest extends TeaModel {
         public String positionRefer;
 
         @NameInMap("PositionNormalized")
-        public java.util.List<Integer> positionNormalized;
+        public java.util.List<Number> positionNormalized;
 
         @NameInMap("WidthNormalized")
         public Float widthNormalized;
@@ -142,11 +142,11 @@ public class ModifyCasterLayoutRequest extends TeaModel {
             return this.positionRefer;
         }
 
-        public ModifyCasterLayoutRequestVideoLayer setPositionNormalized(java.util.List<Integer> positionNormalized) {
+        public ModifyCasterLayoutRequestVideoLayer setPositionNormalized(java.util.List<Number> positionNormalized) {
             this.positionNormalized = positionNormalized;
             return this;
         }
-        public java.util.List<Integer> getPositionNormalized() {
+        public java.util.List<Number> getPositionNormalized() {
             return this.positionNormalized;
         }
 

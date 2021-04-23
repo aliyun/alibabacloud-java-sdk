@@ -22,18 +22,6 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     @NameInMap("PullProtocol")
     public String pullProtocol;
 
-    @NameInMap("PullAuthType")
-    public String pullAuthType;
-
-    @NameInMap("PullAuthKey")
-    public String pullAuthKey;
-
-    @NameInMap("PullArgs")
-    public String pullArgs;
-
-    @NameInMap("LiveapiRequestFrom")
-    public String liveapiRequestFrom;
-
     public static SetLiveLazyPullStreamInfoConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLiveLazyPullStreamInfoConfigRequest self = new SetLiveLazyPullStreamInfoConfigRequest();
         return TeaModel.build(map, self);
@@ -85,38 +73,6 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends TeaModel {
     }
     public String getPullProtocol() {
         return this.pullProtocol;
-    }
-
-    public SetLiveLazyPullStreamInfoConfigRequest setPullAuthType(String pullAuthType) {
-        this.pullAuthType = pullAuthType;
-        return this;
-    }
-    public String getPullAuthType() {
-        return this.pullAuthType;
-    }
-
-    public SetLiveLazyPullStreamInfoConfigRequest setPullAuthKey(String pullAuthKey) {
-        this.pullAuthKey = pullAuthKey;
-        return this;
-    }
-    public String getPullAuthKey() {
-        return this.pullAuthKey;
-    }
-
-    public SetLiveLazyPullStreamInfoConfigRequest setPullArgs(String pullArgs) {
-        this.pullArgs = pullArgs;
-        return this;
-    }
-    public String getPullArgs() {
-        return this.pullArgs;
-    }
-
-    public SetLiveLazyPullStreamInfoConfigRequest setLiveapiRequestFrom(String liveapiRequestFrom) {
-        this.liveapiRequestFrom = liveapiRequestFrom;
-        return this;
-    }
-    public String getLiveapiRequestFrom() {
-        return this.liveapiRequestFrom;
     }
 
 }

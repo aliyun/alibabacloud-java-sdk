@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("TimeShiftData")
     public DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftData timeShiftData;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveDomainTimeShiftDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainTimeShiftDataResponseBody self = new DescribeLiveDomainTimeShiftDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveDomainTimeShiftDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveDomainTimeShiftDataResponseBody setTimeShiftData(DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftData timeShiftData) {
@@ -31,27 +23,35 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
         return this.timeShiftData;
     }
 
+    public DescribeLiveDomainTimeShiftDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
+        @NameInMap("Type")
+        public String type;
 
         @NameInMap("Size")
         public String size;
 
-        @NameInMap("Type")
-        public String type;
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule self = new DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
+        public DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule setType(String type) {
+            this.type = type;
             return this;
         }
-        public String getTimeStamp() {
-            return this.timeStamp;
+        public String getType() {
+            return this.type;
         }
 
         public DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule setSize(String size) {
@@ -62,12 +62,12 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
             return this.size;
         }
 
-        public DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule setType(String type) {
-            this.type = type;
+        public DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
             return this;
         }
-        public String getType() {
-            return this.type;
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

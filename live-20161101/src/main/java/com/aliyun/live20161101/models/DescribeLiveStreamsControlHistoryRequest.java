@@ -19,12 +19,6 @@ public class DescribeLiveStreamsControlHistoryRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("Page")
-    public Integer page;
-
-    @NameInMap("Rows")
-    public Integer rows;
-
     public static DescribeLiveStreamsControlHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamsControlHistoryRequest self = new DescribeLiveStreamsControlHistoryRequest();
         return TeaModel.build(map, self);
@@ -68,22 +62,6 @@ public class DescribeLiveStreamsControlHistoryRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeLiveStreamsControlHistoryRequest setPage(Integer page) {
-        this.page = page;
-        return this;
-    }
-    public Integer getPage() {
-        return this.page;
-    }
-
-    public DescribeLiveStreamsControlHistoryRequest setRows(Integer rows) {
-        this.rows = rows;
-        return this;
-    }
-    public Integer getRows() {
-        return this.rows;
     }
 
 }

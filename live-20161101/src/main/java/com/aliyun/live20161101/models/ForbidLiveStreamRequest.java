@@ -22,9 +22,6 @@ public class ForbidLiveStreamRequest extends TeaModel {
     @NameInMap("Oneshot")
     public String oneshot;
 
-    @NameInMap("ControlStreamAction")
-    public String controlStreamAction;
-
     @NameInMap("ResumeTime")
     public String resumeTime;
 
@@ -79,14 +76,6 @@ public class ForbidLiveStreamRequest extends TeaModel {
     }
     public String getOneshot() {
         return this.oneshot;
-    }
-
-    public ForbidLiveStreamRequest setControlStreamAction(String controlStreamAction) {
-        this.controlStreamAction = controlStreamAction;
-        return this;
-    }
-    public String getControlStreamAction() {
-        return this.controlStreamAction;
     }
 
     public ForbidLiveStreamRequest setResumeTime(String resumeTime) {

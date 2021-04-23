@@ -43,37 +43,21 @@ public class SetCasterSyncGroupRequest extends TeaModel {
     }
 
     public static class SetCasterSyncGroupRequestSyncGroup extends TeaModel {
-        @NameInMap("Mode")
-        public Integer mode;
-
-        @NameInMap("SyncDelayThreshold")
-        public Long syncDelayThreshold;
-
         @NameInMap("HostResourceId")
         public String hostResourceId;
 
         @NameInMap("ResourceIds")
         public java.util.List<String> resourceIds;
 
+        @NameInMap("SyncDelayThreshold")
+        public Long syncDelayThreshold;
+
+        @NameInMap("Mode")
+        public Integer mode;
+
         public static SetCasterSyncGroupRequestSyncGroup build(java.util.Map<String, ?> map) throws Exception {
             SetCasterSyncGroupRequestSyncGroup self = new SetCasterSyncGroupRequestSyncGroup();
             return TeaModel.build(map, self);
-        }
-
-        public SetCasterSyncGroupRequestSyncGroup setMode(Integer mode) {
-            this.mode = mode;
-            return this;
-        }
-        public Integer getMode() {
-            return this.mode;
-        }
-
-        public SetCasterSyncGroupRequestSyncGroup setSyncDelayThreshold(Long syncDelayThreshold) {
-            this.syncDelayThreshold = syncDelayThreshold;
-            return this;
-        }
-        public Long getSyncDelayThreshold() {
-            return this.syncDelayThreshold;
         }
 
         public SetCasterSyncGroupRequestSyncGroup setHostResourceId(String hostResourceId) {
@@ -90,6 +74,22 @@ public class SetCasterSyncGroupRequest extends TeaModel {
         }
         public java.util.List<String> getResourceIds() {
             return this.resourceIds;
+        }
+
+        public SetCasterSyncGroupRequestSyncGroup setSyncDelayThreshold(Long syncDelayThreshold) {
+            this.syncDelayThreshold = syncDelayThreshold;
+            return this;
+        }
+        public Long getSyncDelayThreshold() {
+            return this.syncDelayThreshold;
+        }
+
+        public SetCasterSyncGroupRequestSyncGroup setMode(Integer mode) {
+            this.mode = mode;
+            return this;
+        }
+        public Integer getMode() {
+            return this.mode;
         }
 
     }

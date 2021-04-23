@@ -32,35 +32,27 @@ public class DescribeHtmlResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeHtmlResourceResponseBodyHtmlResource extends TeaModel {
-        @NameInMap("HtmlResourceId")
-        public String htmlResourceId;
-
         @NameInMap("HtmlUrl")
         public String htmlUrl;
-
-        @NameInMap("HtmlContent")
-        public String htmlContent;
 
         @NameInMap("CasterId")
         public String casterId;
 
+        @NameInMap("StreamId")
+        public String streamId;
+
         @NameInMap("Config")
         public String config;
 
-        @NameInMap("StreamId")
-        public String streamId;
+        @NameInMap("HtmlResourceId")
+        public String htmlResourceId;
+
+        @NameInMap("HtmlContent")
+        public String htmlContent;
 
         public static DescribeHtmlResourceResponseBodyHtmlResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeHtmlResourceResponseBodyHtmlResource self = new DescribeHtmlResourceResponseBodyHtmlResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeHtmlResourceResponseBodyHtmlResource setHtmlResourceId(String htmlResourceId) {
-            this.htmlResourceId = htmlResourceId;
-            return this;
-        }
-        public String getHtmlResourceId() {
-            return this.htmlResourceId;
         }
 
         public DescribeHtmlResourceResponseBodyHtmlResource setHtmlUrl(String htmlUrl) {
@@ -71,20 +63,20 @@ public class DescribeHtmlResourceResponseBody extends TeaModel {
             return this.htmlUrl;
         }
 
-        public DescribeHtmlResourceResponseBodyHtmlResource setHtmlContent(String htmlContent) {
-            this.htmlContent = htmlContent;
-            return this;
-        }
-        public String getHtmlContent() {
-            return this.htmlContent;
-        }
-
         public DescribeHtmlResourceResponseBodyHtmlResource setCasterId(String casterId) {
             this.casterId = casterId;
             return this;
         }
         public String getCasterId() {
             return this.casterId;
+        }
+
+        public DescribeHtmlResourceResponseBodyHtmlResource setStreamId(String streamId) {
+            this.streamId = streamId;
+            return this;
+        }
+        public String getStreamId() {
+            return this.streamId;
         }
 
         public DescribeHtmlResourceResponseBodyHtmlResource setConfig(String config) {
@@ -95,12 +87,20 @@ public class DescribeHtmlResourceResponseBody extends TeaModel {
             return this.config;
         }
 
-        public DescribeHtmlResourceResponseBodyHtmlResource setStreamId(String streamId) {
-            this.streamId = streamId;
+        public DescribeHtmlResourceResponseBodyHtmlResource setHtmlResourceId(String htmlResourceId) {
+            this.htmlResourceId = htmlResourceId;
             return this;
         }
-        public String getStreamId() {
-            return this.streamId;
+        public String getHtmlResourceId() {
+            return this.htmlResourceId;
+        }
+
+        public DescribeHtmlResourceResponseBodyHtmlResource setHtmlContent(String htmlContent) {
+            this.htmlContent = htmlContent;
+            return this;
+        }
+        public String getHtmlContent() {
+            return this.htmlContent;
         }
 
     }

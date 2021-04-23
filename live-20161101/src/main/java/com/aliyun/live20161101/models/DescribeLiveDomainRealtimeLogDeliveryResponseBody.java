@@ -4,32 +4,32 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRealtimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Status")
+    public String status;
 
     @NameInMap("Project")
     public String project;
 
-    @NameInMap("Region")
-    public String region;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Logstore")
     public String logstore;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("Region")
+    public String region;
 
     public static DescribeLiveDomainRealtimeLogDeliveryResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainRealtimeLogDeliveryResponseBody self = new DescribeLiveDomainRealtimeLogDeliveryResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLiveDomainRealtimeLogDeliveryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLiveDomainRealtimeLogDeliveryResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getStatus() {
+        return this.status;
     }
 
     public DescribeLiveDomainRealtimeLogDeliveryResponseBody setProject(String project) {
@@ -40,12 +40,12 @@ public class DescribeLiveDomainRealtimeLogDeliveryResponseBody extends TeaModel 
         return this.project;
     }
 
-    public DescribeLiveDomainRealtimeLogDeliveryResponseBody setRegion(String region) {
-        this.region = region;
+    public DescribeLiveDomainRealtimeLogDeliveryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getRegion() {
-        return this.region;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeLiveDomainRealtimeLogDeliveryResponseBody setLogstore(String logstore) {
@@ -56,12 +56,12 @@ public class DescribeLiveDomainRealtimeLogDeliveryResponseBody extends TeaModel 
         return this.logstore;
     }
 
-    public DescribeLiveDomainRealtimeLogDeliveryResponseBody setStatus(String status) {
-        this.status = status;
+    public DescribeLiveDomainRealtimeLogDeliveryResponseBody setRegion(String region) {
+        this.region = region;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getRegion() {
+        return this.region;
     }
 
 }

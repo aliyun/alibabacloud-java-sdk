@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -12,9 +15,6 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -25,6 +25,14 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
     public static DescribeLiveDomainPushBpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainPushBpsDataResponseBody self = new DescribeLiveDomainPushBpsDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainPushBpsDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeLiveDomainPushBpsDataResponseBody setRequestId(String requestId) {
@@ -51,14 +59,6 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeLiveDomainPushBpsDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
     public DescribeLiveDomainPushBpsDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
@@ -76,23 +76,15 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("BpsValue")
         public String bpsValue;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule self = new DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule setBpsValue(String bpsValue) {
@@ -101,6 +93,14 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
         }
         public String getBpsValue() {
             return this.bpsValue;
+        }
+
+        public DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

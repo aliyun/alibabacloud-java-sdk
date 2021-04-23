@@ -25,17 +25,8 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
     @NameInMap("StreamType")
     public String streamType;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
-
     @NameInMap("QueryType")
     public String queryType;
-
-    @NameInMap("OrderBy")
-    public String orderBy;
 
     public static DescribeLiveStreamsOnlineListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamsOnlineListRequest self = new DescribeLiveStreamsOnlineListRequest();
@@ -98,36 +89,12 @@ public class DescribeLiveStreamsOnlineListRequest extends TeaModel {
         return this.streamType;
     }
 
-    public DescribeLiveStreamsOnlineListRequest setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeLiveStreamsOnlineListRequest setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
     public DescribeLiveStreamsOnlineListRequest setQueryType(String queryType) {
         this.queryType = queryType;
         return this;
     }
     public String getQueryType() {
         return this.queryType;
-    }
-
-    public DescribeLiveStreamsOnlineListRequest setOrderBy(String orderBy) {
-        this.orderBy = orderBy;
-        return this;
-    }
-    public String getOrderBy() {
-        return this.orderBy;
     }
 
 }

@@ -32,23 +32,15 @@ public class ListLiveRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
     }
 
     public static class ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains extends TeaModel {
-        @NameInMap("DomainName")
-        public String domainName;
-
         @NameInMap("Status")
         public String status;
+
+        @NameInMap("DomainName")
+        public String domainName;
 
         public static ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains self = new ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains();
             return TeaModel.build(map, self);
-        }
-
-        public ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
         public ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains setStatus(String status) {
@@ -57,6 +49,14 @@ public class ListLiveRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
     }

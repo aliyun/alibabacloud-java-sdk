@@ -4,67 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("TopDomains")
+    public DescribeLiveTopDomainsByFlowResponseBodyTopDomains topDomains;
 
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("DomainCount")
-    public Long domainCount;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("DomainOnlineCount")
     public Long domainOnlineCount;
 
-    @NameInMap("TopDomains")
-    public DescribeLiveTopDomainsByFlowResponseBodyTopDomains topDomains;
+    @NameInMap("StartTime")
+    public String startTime;
+
+    @NameInMap("DomainCount")
+    public Long domainCount;
 
     public static DescribeLiveTopDomainsByFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveTopDomainsByFlowResponseBody self = new DescribeLiveTopDomainsByFlowResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveTopDomainsByFlowResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeLiveTopDomainsByFlowResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public DescribeLiveTopDomainsByFlowResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
-    public DescribeLiveTopDomainsByFlowResponseBody setDomainCount(Long domainCount) {
-        this.domainCount = domainCount;
-        return this;
-    }
-    public Long getDomainCount() {
-        return this.domainCount;
-    }
-
-    public DescribeLiveTopDomainsByFlowResponseBody setDomainOnlineCount(Long domainOnlineCount) {
-        this.domainOnlineCount = domainOnlineCount;
-        return this;
-    }
-    public Long getDomainOnlineCount() {
-        return this.domainOnlineCount;
     }
 
     public DescribeLiveTopDomainsByFlowResponseBody setTopDomains(DescribeLiveTopDomainsByFlowResponseBodyTopDomains topDomains) {
@@ -75,63 +35,71 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         return this.topDomains;
     }
 
+    public DescribeLiveTopDomainsByFlowResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeLiveTopDomainsByFlowResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLiveTopDomainsByFlowResponseBody setDomainOnlineCount(Long domainOnlineCount) {
+        this.domainOnlineCount = domainOnlineCount;
+        return this;
+    }
+    public Long getDomainOnlineCount() {
+        return this.domainOnlineCount;
+    }
+
+    public DescribeLiveTopDomainsByFlowResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    public DescribeLiveTopDomainsByFlowResponseBody setDomainCount(Long domainCount) {
+        this.domainCount = domainCount;
+        return this;
+    }
+    public Long getDomainCount() {
+        return this.domainCount;
+    }
+
     public static class DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain extends TeaModel {
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("MaxBps")
+        public Long maxBps;
 
         @NameInMap("Rank")
         public Long rank;
 
-        @NameInMap("TotalTraffic")
-        public String totalTraffic;
+        @NameInMap("TotalAccess")
+        public Long totalAccess;
 
         @NameInMap("TrafficPercent")
         public String trafficPercent;
 
-        @NameInMap("MaxBps")
-        public Long maxBps;
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("TotalTraffic")
+        public String totalTraffic;
 
         @NameInMap("MaxBpsTime")
         public String maxBpsTime;
 
-        @NameInMap("TotalAccess")
-        public Long totalAccess;
-
         public static DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain self = new DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
-        }
-
-        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setRank(Long rank) {
-            this.rank = rank;
-            return this;
-        }
-        public Long getRank() {
-            return this.rank;
-        }
-
-        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setTotalTraffic(String totalTraffic) {
-            this.totalTraffic = totalTraffic;
-            return this;
-        }
-        public String getTotalTraffic() {
-            return this.totalTraffic;
-        }
-
-        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setTrafficPercent(String trafficPercent) {
-            this.trafficPercent = trafficPercent;
-            return this;
-        }
-        public String getTrafficPercent() {
-            return this.trafficPercent;
         }
 
         public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setMaxBps(Long maxBps) {
@@ -142,12 +110,12 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             return this.maxBps;
         }
 
-        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setMaxBpsTime(String maxBpsTime) {
-            this.maxBpsTime = maxBpsTime;
+        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setRank(Long rank) {
+            this.rank = rank;
             return this;
         }
-        public String getMaxBpsTime() {
-            return this.maxBpsTime;
+        public Long getRank() {
+            return this.rank;
         }
 
         public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setTotalAccess(Long totalAccess) {
@@ -156,6 +124,38 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         }
         public Long getTotalAccess() {
             return this.totalAccess;
+        }
+
+        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setTrafficPercent(String trafficPercent) {
+            this.trafficPercent = trafficPercent;
+            return this;
+        }
+        public String getTrafficPercent() {
+            return this.trafficPercent;
+        }
+
+        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setTotalTraffic(String totalTraffic) {
+            this.totalTraffic = totalTraffic;
+            return this;
+        }
+        public String getTotalTraffic() {
+            return this.totalTraffic;
+        }
+
+        public DescribeLiveTopDomainsByFlowResponseBodyTopDomainsTopDomain setMaxBpsTime(String maxBpsTime) {
+            this.maxBpsTime = maxBpsTime;
+            return this;
+        }
+        public String getMaxBpsTime() {
+            return this.maxBpsTime;
         }
 
     }

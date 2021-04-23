@@ -32,59 +32,35 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
     }
 
     public static class ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo extends TeaModel {
-        @NameInMap("Project")
-        public String project;
-
-        @NameInMap("Logstore")
-        public String logstore;
-
-        @NameInMap("Region")
-        public String region;
-
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("Status")
+        public String status;
 
         @NameInMap("DmId")
         public Integer dmId;
 
-        @NameInMap("Status")
-        public String status;
+        @NameInMap("Region")
+        public String region;
+
+        @NameInMap("Logstore")
+        public String logstore;
+
+        @NameInMap("Project")
+        public String project;
+
+        @NameInMap("DomainName")
+        public String domainName;
 
         public static ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo self = new ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo();
             return TeaModel.build(map, self);
         }
 
-        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setProject(String project) {
-            this.project = project;
+        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setStatus(String status) {
+            this.status = status;
             return this;
         }
-        public String getProject() {
-            return this.project;
-        }
-
-        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setLogstore(String logstore) {
-            this.logstore = logstore;
-            return this;
-        }
-        public String getLogstore() {
-            return this.logstore;
-        }
-
-        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setRegion(String region) {
-            this.region = region;
-            return this;
-        }
-        public String getRegion() {
-            return this.region;
-        }
-
-        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
+        public String getStatus() {
+            return this.status;
         }
 
         public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setDmId(Integer dmId) {
@@ -95,12 +71,36 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
             return this.dmId;
         }
 
-        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setStatus(String status) {
-            this.status = status;
+        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getStatus() {
-            return this.status;
+        public String getRegion() {
+            return this.region;
+        }
+
+        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setLogstore(String logstore) {
+            this.logstore = logstore;
+            return this;
+        }
+        public String getLogstore() {
+            return this.logstore;
+        }
+
+        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
+        public ListLiveRealtimeLogDeliveryResponseBodyContentRealtimeLogDeliveryInfo setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
         }
 
     }

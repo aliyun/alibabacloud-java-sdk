@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainBpsDataByTimeStampResponseBody extends TeaModel {
+    @NameInMap("BpsDataList")
+    public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -13,12 +16,17 @@ public class DescribeLiveDomainBpsDataByTimeStampResponseBody extends TeaModel {
     @NameInMap("TimeStamp")
     public String timeStamp;
 
-    @NameInMap("BpsDataList")
-    public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList;
-
     public static DescribeLiveDomainBpsDataByTimeStampResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainBpsDataByTimeStampResponseBody self = new DescribeLiveDomainBpsDataByTimeStampResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainBpsDataByTimeStampResponseBody setBpsDataList(DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList) {
+        this.bpsDataList = bpsDataList;
+        return this;
+    }
+    public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataList getBpsDataList() {
+        return this.bpsDataList;
     }
 
     public DescribeLiveDomainBpsDataByTimeStampResponseBody setRequestId(String requestId) {
@@ -45,20 +53,12 @@ public class DescribeLiveDomainBpsDataByTimeStampResponseBody extends TeaModel {
         return this.timeStamp;
     }
 
-    public DescribeLiveDomainBpsDataByTimeStampResponseBody setBpsDataList(DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataList bpsDataList) {
-        this.bpsDataList = bpsDataList;
-        return this;
-    }
-    public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataList getBpsDataList() {
-        return this.bpsDataList;
-    }
-
     public static class DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("LocationName")
         public String locationName;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         @NameInMap("IspName")
         public String ispName;
@@ -71,20 +71,20 @@ public class DescribeLiveDomainBpsDataByTimeStampResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
-        }
-
         public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setLocationName(String locationName) {
             this.locationName = locationName;
             return this;
         }
         public String getLocationName() {
             return this.locationName;
+        }
+
+        public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
         public DescribeLiveDomainBpsDataByTimeStampResponseBodyBpsDataListBpsDataModel setIspName(String ispName) {

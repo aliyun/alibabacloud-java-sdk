@@ -22,9 +22,6 @@ public class SetCasterChannelRequest extends TeaModel {
     @NameInMap("PlayStatus")
     public Integer playStatus;
 
-    @NameInMap("ReloadFlag")
-    public Integer reloadFlag;
-
     public static SetCasterChannelRequest build(java.util.Map<String, ?> map) throws Exception {
         SetCasterChannelRequest self = new SetCasterChannelRequest();
         return TeaModel.build(map, self);
@@ -76,14 +73,6 @@ public class SetCasterChannelRequest extends TeaModel {
     }
     public Integer getPlayStatus() {
         return this.playStatus;
-    }
-
-    public SetCasterChannelRequest setReloadFlag(Integer reloadFlag) {
-        this.reloadFlag = reloadFlag;
-        return this;
-    }
-    public Integer getReloadFlag() {
-        return this.reloadFlag;
     }
 
 }

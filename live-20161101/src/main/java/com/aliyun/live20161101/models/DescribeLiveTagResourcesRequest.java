@@ -7,17 +7,14 @@ public class DescribeLiveTagResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
-
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
+
     @NameInMap("Tag")
     public java.util.List<DescribeLiveTagResourcesRequestTag> tag;
-
-    @NameInMap("Scope")
-    public String scope;
 
     public static DescribeLiveTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveTagResourcesRequest self = new DescribeLiveTagResourcesRequest();
@@ -32,14 +29,6 @@ public class DescribeLiveTagResourcesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public DescribeLiveTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
-    }
-
     public DescribeLiveTagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -48,20 +37,20 @@ public class DescribeLiveTagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
+    public DescribeLiveTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
+    }
+
     public DescribeLiveTagResourcesRequest setTag(java.util.List<DescribeLiveTagResourcesRequestTag> tag) {
         this.tag = tag;
         return this;
     }
     public java.util.List<DescribeLiveTagResourcesRequestTag> getTag() {
         return this.tag;
-    }
-
-    public DescribeLiveTagResourcesRequest setScope(String scope) {
-        this.scope = scope;
-        return this;
-    }
-    public String getScope() {
-        return this.scope;
     }
 
     public static class DescribeLiveTagResourcesRequestTag extends TeaModel {

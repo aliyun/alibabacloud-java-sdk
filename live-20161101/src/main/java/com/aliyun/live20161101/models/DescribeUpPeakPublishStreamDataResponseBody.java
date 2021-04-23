@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("DescribeUpPeakPublishStreamDatas")
     public DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatas describeUpPeakPublishStreamDatas;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeUpPeakPublishStreamDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUpPeakPublishStreamDataResponseBody self = new DescribeUpPeakPublishStreamDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUpPeakPublishStreamDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeUpPeakPublishStreamDataResponseBody setDescribeUpPeakPublishStreamDatas(DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatas describeUpPeakPublishStreamDatas) {
@@ -31,41 +23,33 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
         return this.describeUpPeakPublishStreamDatas;
     }
 
+    public DescribeUpPeakPublishStreamDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData extends TeaModel {
-        @NameInMap("PublishStreamNum")
-        public Integer publishStreamNum;
-
-        @NameInMap("PeakTime")
-        public String peakTime;
-
         @NameInMap("QueryTime")
         public String queryTime;
 
         @NameInMap("StatName")
         public String statName;
 
+        @NameInMap("PeakTime")
+        public String peakTime;
+
         @NameInMap("BandWidth")
         public String bandWidth;
+
+        @NameInMap("PublishStreamNum")
+        public Integer publishStreamNum;
 
         public static DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData build(java.util.Map<String, ?> map) throws Exception {
             DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData self = new DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData setPublishStreamNum(Integer publishStreamNum) {
-            this.publishStreamNum = publishStreamNum;
-            return this;
-        }
-        public Integer getPublishStreamNum() {
-            return this.publishStreamNum;
-        }
-
-        public DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData setPeakTime(String peakTime) {
-            this.peakTime = peakTime;
-            return this;
-        }
-        public String getPeakTime() {
-            return this.peakTime;
         }
 
         public DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData setQueryTime(String queryTime) {
@@ -84,12 +68,28 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
             return this.statName;
         }
 
+        public DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData setPeakTime(String peakTime) {
+            this.peakTime = peakTime;
+            return this;
+        }
+        public String getPeakTime() {
+            return this.peakTime;
+        }
+
         public DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData setBandWidth(String bandWidth) {
             this.bandWidth = bandWidth;
             return this;
         }
         public String getBandWidth() {
             return this.bandWidth;
+        }
+
+        public DescribeUpPeakPublishStreamDataResponseBodyDescribeUpPeakPublishStreamDatasDescribeUpPeakPublishStreamData setPublishStreamNum(Integer publishStreamNum) {
+            this.publishStreamNum = publishStreamNum;
+            return this;
+        }
+        public Integer getPublishStreamNum() {
+            return this.publishStreamNum;
         }
 
     }

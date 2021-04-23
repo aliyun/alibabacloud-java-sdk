@@ -10,9 +10,6 @@ public class DescribeLivePullStreamConfigRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("LiveapiRequestFrom")
-    public String liveapiRequestFrom;
-
     public static DescribeLivePullStreamConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLivePullStreamConfigRequest self = new DescribeLivePullStreamConfigRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class DescribeLivePullStreamConfigRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeLivePullStreamConfigRequest setLiveapiRequestFrom(String liveapiRequestFrom) {
-        this.liveapiRequestFrom = liveapiRequestFrom;
-        return this;
-    }
-    public String getLiveapiRequestFrom() {
-        return this.liveapiRequestFrom;
     }
 
 }

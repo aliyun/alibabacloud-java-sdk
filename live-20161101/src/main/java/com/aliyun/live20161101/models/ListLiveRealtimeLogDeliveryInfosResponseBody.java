@@ -32,26 +32,26 @@ public class ListLiveRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     }
 
     public static class ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos extends TeaModel {
-        @NameInMap("Project")
-        public String project;
+        @NameInMap("Region")
+        public String region;
 
         @NameInMap("Logstore")
         public String logstore;
 
-        @NameInMap("Region")
-        public String region;
+        @NameInMap("Project")
+        public String project;
 
         public static ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos build(java.util.Map<String, ?> map) throws Exception {
             ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos self = new ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos();
             return TeaModel.build(map, self);
         }
 
-        public ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setProject(String project) {
-            this.project = project;
+        public ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setRegion(String region) {
+            this.region = region;
             return this;
         }
-        public String getProject() {
-            return this.project;
+        public String getRegion() {
+            return this.region;
         }
 
         public ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setLogstore(String logstore) {
@@ -62,12 +62,12 @@ public class ListLiveRealtimeLogDeliveryInfosResponseBody extends TeaModel {
             return this.logstore;
         }
 
-        public ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setRegion(String region) {
-            this.region = region;
+        public ListLiveRealtimeLogDeliveryInfosResponseBodyContentRealtimeLogDeliveryInfos setProject(String project) {
+            this.project = project;
             return this;
         }
-        public String getRegion() {
-            return this.region;
+        public String getProject() {
+            return this.project;
         }
 
     }
