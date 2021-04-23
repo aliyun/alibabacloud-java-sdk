@@ -3,7 +3,11 @@ package com.aliyun.videosearch20200225.models;
 
 import com.aliyun.tea.*;
 
-public class AddSearchVideoTaskRequest extends TeaModel {
+public class AddSearchVideoTaskAdvanceRequest extends TeaModel {
+    @NameInMap("VideoFileObject")
+    @Validation(required = true)
+    public java.io.InputStream videoFileObject;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -41,21 +45,26 @@ public class AddSearchVideoTaskRequest extends TeaModel {
     @NameInMap("SearchType")
     public Integer searchType;
 
-    @NameInMap("VideoFile")
-    public String videoFile;
-
     @NameInMap("Sort")
     public Integer sort;
 
     @NameInMap("NeedFeatureFile")
     public Integer needFeatureFile;
 
-    public static AddSearchVideoTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        AddSearchVideoTaskRequest self = new AddSearchVideoTaskRequest();
+    public static AddSearchVideoTaskAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        AddSearchVideoTaskAdvanceRequest self = new AddSearchVideoTaskAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddSearchVideoTaskRequest setClientToken(String clientToken) {
+    public AddSearchVideoTaskAdvanceRequest setVideoFileObject(java.io.InputStream videoFileObject) {
+        this.videoFileObject = videoFileObject;
+        return this;
+    }
+    public java.io.InputStream getVideoFileObject() {
+        return this.videoFileObject;
+    }
+
+    public AddSearchVideoTaskAdvanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -63,7 +72,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public AddSearchVideoTaskRequest setVideoUrl(String videoUrl) {
+    public AddSearchVideoTaskAdvanceRequest setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
         return this;
     }
@@ -71,7 +80,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.videoUrl;
     }
 
-    public AddSearchVideoTaskRequest setVideoId(String videoId) {
+    public AddSearchVideoTaskAdvanceRequest setVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
@@ -79,7 +88,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.videoId;
     }
 
-    public AddSearchVideoTaskRequest setVideoTags(String videoTags) {
+    public AddSearchVideoTaskAdvanceRequest setVideoTags(String videoTags) {
         this.videoTags = videoTags;
         return this;
     }
@@ -87,7 +96,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.videoTags;
     }
 
-    public AddSearchVideoTaskRequest setReturnVideoNumber(Integer returnVideoNumber) {
+    public AddSearchVideoTaskAdvanceRequest setReturnVideoNumber(Integer returnVideoNumber) {
         this.returnVideoNumber = returnVideoNumber;
         return this;
     }
@@ -95,7 +104,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.returnVideoNumber;
     }
 
-    public AddSearchVideoTaskRequest setQueryTags(String queryTags) {
+    public AddSearchVideoTaskAdvanceRequest setQueryTags(String queryTags) {
         this.queryTags = queryTags;
         return this;
     }
@@ -103,7 +112,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.queryTags;
     }
 
-    public AddSearchVideoTaskRequest setStorageType(Integer storageType) {
+    public AddSearchVideoTaskAdvanceRequest setStorageType(Integer storageType) {
         this.storageType = storageType;
         return this;
     }
@@ -111,7 +120,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.storageType;
     }
 
-    public AddSearchVideoTaskRequest setCallbackUrl(String callbackUrl) {
+    public AddSearchVideoTaskAdvanceRequest setCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }
@@ -119,7 +128,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.callbackUrl;
     }
 
-    public AddSearchVideoTaskRequest setReplaceStorageThreshold(Float replaceStorageThreshold) {
+    public AddSearchVideoTaskAdvanceRequest setReplaceStorageThreshold(Float replaceStorageThreshold) {
         this.replaceStorageThreshold = replaceStorageThreshold;
         return this;
     }
@@ -127,7 +136,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.replaceStorageThreshold;
     }
 
-    public AddSearchVideoTaskRequest setInstanceId(String instanceId) {
+    public AddSearchVideoTaskAdvanceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -135,7 +144,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public AddSearchVideoTaskRequest setDescription(String description) {
+    public AddSearchVideoTaskAdvanceRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -143,7 +152,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.description;
     }
 
-    public AddSearchVideoTaskRequest setSearchType(Integer searchType) {
+    public AddSearchVideoTaskAdvanceRequest setSearchType(Integer searchType) {
         this.searchType = searchType;
         return this;
     }
@@ -151,15 +160,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.searchType;
     }
 
-    public AddSearchVideoTaskRequest setVideoFile(String videoFile) {
-        this.videoFile = videoFile;
-        return this;
-    }
-    public String getVideoFile() {
-        return this.videoFile;
-    }
-
-    public AddSearchVideoTaskRequest setSort(Integer sort) {
+    public AddSearchVideoTaskAdvanceRequest setSort(Integer sort) {
         this.sort = sort;
         return this;
     }
@@ -167,7 +168,7 @@ public class AddSearchVideoTaskRequest extends TeaModel {
         return this.sort;
     }
 
-    public AddSearchVideoTaskRequest setNeedFeatureFile(Integer needFeatureFile) {
+    public AddSearchVideoTaskAdvanceRequest setNeedFeatureFile(Integer needFeatureFile) {
         this.needFeatureFile = needFeatureFile;
         return this;
     }

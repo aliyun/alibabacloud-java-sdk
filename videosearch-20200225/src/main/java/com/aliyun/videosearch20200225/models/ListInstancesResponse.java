@@ -80,7 +80,7 @@ public class ListInstancesResponse extends TeaModel {
 
         @NameInMap("CreateTime")
         @Validation(required = true)
-        public Long createTime;
+        public String createTime;
 
         @NameInMap("ExpiredTime")
         @Validation(required = true)
@@ -119,11 +119,11 @@ public class ListInstancesResponse extends TeaModel {
             return this.instanceStatus;
         }
 
-        public ListInstancesResponseDataList setCreateTime(Long createTime) {
+        public ListInstancesResponseDataList setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
-        public Long getCreateTime() {
+        public String getCreateTime() {
             return this.createTime;
         }
 

@@ -13,9 +13,6 @@ public class ListSearchVideoTasksRequest extends TeaModel {
     @NameInMap("VideoName")
     public String videoName;
 
-    @NameInMap("VideoId")
-    public String videoId;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -34,6 +31,12 @@ public class ListSearchVideoTasksRequest extends TeaModel {
 
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("SortList")
+    public String sortList;
+
+    @NameInMap("VideoId")
+    public String videoId;
 
     public static ListSearchVideoTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSearchVideoTasksRequest self = new ListSearchVideoTasksRequest();
@@ -62,14 +65,6 @@ public class ListSearchVideoTasksRequest extends TeaModel {
     }
     public String getVideoName() {
         return this.videoName;
-    }
-
-    public ListSearchVideoTasksRequest setVideoId(String videoId) {
-        this.videoId = videoId;
-        return this;
-    }
-    public String getVideoId() {
-        return this.videoId;
     }
 
     public ListSearchVideoTasksRequest setPageNumber(Integer pageNumber) {
@@ -118,6 +113,22 @@ public class ListSearchVideoTasksRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ListSearchVideoTasksRequest setSortList(String sortList) {
+        this.sortList = sortList;
+        return this;
+    }
+    public String getSortList() {
+        return this.sortList;
+    }
+
+    public ListSearchVideoTasksRequest setVideoId(String videoId) {
+        this.videoId = videoId;
+        return this;
+    }
+    public String getVideoId() {
+        return this.videoId;
     }
 
 }

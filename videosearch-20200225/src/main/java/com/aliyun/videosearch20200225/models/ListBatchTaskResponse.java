@@ -36,7 +36,7 @@ public class ListBatchTaskResponse extends TeaModel {
     public static class ListBatchTaskResponseDataList extends TeaModel {
         @NameInMap("TaskId")
         @Validation(required = true)
-        public Long taskId;
+        public String taskId;
 
         @NameInMap("Status")
         @Validation(required = true)
@@ -70,16 +70,24 @@ public class ListBatchTaskResponse extends TeaModel {
         @Validation(required = true)
         public String processMessage;
 
+        @NameInMap("SubTaskDetail")
+        @Validation(required = true)
+        public String subTaskDetail;
+
+        @NameInMap("Arn")
+        @Validation(required = true)
+        public String arn;
+
         public static ListBatchTaskResponseDataList build(java.util.Map<String, ?> map) throws Exception {
             ListBatchTaskResponseDataList self = new ListBatchTaskResponseDataList();
             return TeaModel.build(map, self);
         }
 
-        public ListBatchTaskResponseDataList setTaskId(Long taskId) {
+        public ListBatchTaskResponseDataList setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
-        public Long getTaskId() {
+        public String getTaskId() {
             return this.taskId;
         }
 
@@ -145,6 +153,22 @@ public class ListBatchTaskResponse extends TeaModel {
         }
         public String getProcessMessage() {
             return this.processMessage;
+        }
+
+        public ListBatchTaskResponseDataList setSubTaskDetail(String subTaskDetail) {
+            this.subTaskDetail = subTaskDetail;
+            return this;
+        }
+        public String getSubTaskDetail() {
+            return this.subTaskDetail;
+        }
+
+        public ListBatchTaskResponseDataList setArn(String arn) {
+            this.arn = arn;
+            return this;
+        }
+        public String getArn() {
+            return this.arn;
         }
 
     }
