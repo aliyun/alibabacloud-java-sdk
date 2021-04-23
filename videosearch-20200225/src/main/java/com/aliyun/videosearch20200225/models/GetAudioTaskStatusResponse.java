@@ -3,7 +3,7 @@ package com.aliyun.videosearch20200225.models;
 
 import com.aliyun.tea.*;
 
-public class GetTaskStatusResponse extends TeaModel {
+public class GetAudioTaskStatusResponse extends TeaModel {
     @NameInMap("RequestId")
     @Validation(required = true)
     public String requestId;
@@ -14,14 +14,14 @@ public class GetTaskStatusResponse extends TeaModel {
 
     @NameInMap("TaskInfo")
     @Validation(required = true)
-    public GetTaskStatusResponseTaskInfo taskInfo;
+    public GetAudioTaskStatusResponseTaskInfo taskInfo;
 
-    public static GetTaskStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetTaskStatusResponse self = new GetTaskStatusResponse();
+    public static GetAudioTaskStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetAudioTaskStatusResponse self = new GetAudioTaskStatusResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetTaskStatusResponse setRequestId(String requestId) {
+    public GetAudioTaskStatusResponse setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -29,7 +29,7 @@ public class GetTaskStatusResponse extends TeaModel {
         return this.requestId;
     }
 
-    public GetTaskStatusResponse setData(Integer data) {
+    public GetAudioTaskStatusResponse setData(Integer data) {
         this.data = data;
         return this;
     }
@@ -37,15 +37,15 @@ public class GetTaskStatusResponse extends TeaModel {
         return this.data;
     }
 
-    public GetTaskStatusResponse setTaskInfo(GetTaskStatusResponseTaskInfo taskInfo) {
+    public GetAudioTaskStatusResponse setTaskInfo(GetAudioTaskStatusResponseTaskInfo taskInfo) {
         this.taskInfo = taskInfo;
         return this;
     }
-    public GetTaskStatusResponseTaskInfo getTaskInfo() {
+    public GetAudioTaskStatusResponseTaskInfo getTaskInfo() {
         return this.taskInfo;
     }
 
-    public static class GetTaskStatusResponseTaskInfo extends TeaModel {
+    public static class GetAudioTaskStatusResponseTaskInfo extends TeaModel {
         @NameInMap("AnalysisUseTime")
         @Validation(required = true)
         public Long analysisUseTime;
@@ -57,10 +57,6 @@ public class GetTaskStatusResponse extends TeaModel {
         @NameInMap("ProcessResultOss")
         @Validation(required = true)
         public String processResultOss;
-
-        @NameInMap("Resolution")
-        @Validation(required = true)
-        public String resolution;
 
         @NameInMap("Status")
         @Validation(required = true)
@@ -90,17 +86,17 @@ public class GetTaskStatusResponse extends TeaModel {
         @Validation(required = true)
         public String description;
 
-        @NameInMap("VideoId")
+        @NameInMap("AudioId")
         @Validation(required = true)
-        public String videoId;
+        public String audioId;
 
-        @NameInMap("VideoTags")
+        @NameInMap("AudioTags")
         @Validation(required = true)
-        public String videoTags;
+        public String audioTags;
 
-        @NameInMap("VideoUrl")
+        @NameInMap("AudioUrl")
         @Validation(required = true)
-        public String videoUrl;
+        public String audioUrl;
 
         @NameInMap("QueryTags")
         @Validation(required = true)
@@ -114,16 +110,12 @@ public class GetTaskStatusResponse extends TeaModel {
         @Validation(required = true)
         public String replaceStorageThreshold;
 
-        @NameInMap("StorageType")
-        @Validation(required = true)
-        public Integer storageType;
-
-        public static GetTaskStatusResponseTaskInfo build(java.util.Map<String, ?> map) throws Exception {
-            GetTaskStatusResponseTaskInfo self = new GetTaskStatusResponseTaskInfo();
+        public static GetAudioTaskStatusResponseTaskInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetAudioTaskStatusResponseTaskInfo self = new GetAudioTaskStatusResponseTaskInfo();
             return TeaModel.build(map, self);
         }
 
-        public GetTaskStatusResponseTaskInfo setAnalysisUseTime(Long analysisUseTime) {
+        public GetAudioTaskStatusResponseTaskInfo setAnalysisUseTime(Long analysisUseTime) {
             this.analysisUseTime = analysisUseTime;
             return this;
         }
@@ -131,7 +123,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.analysisUseTime;
         }
 
-        public GetTaskStatusResponseTaskInfo setDuration(Float duration) {
+        public GetAudioTaskStatusResponseTaskInfo setDuration(Float duration) {
             this.duration = duration;
             return this;
         }
@@ -139,7 +131,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.duration;
         }
 
-        public GetTaskStatusResponseTaskInfo setProcessResultOss(String processResultOss) {
+        public GetAudioTaskStatusResponseTaskInfo setProcessResultOss(String processResultOss) {
             this.processResultOss = processResultOss;
             return this;
         }
@@ -147,15 +139,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.processResultOss;
         }
 
-        public GetTaskStatusResponseTaskInfo setResolution(String resolution) {
-            this.resolution = resolution;
-            return this;
-        }
-        public String getResolution() {
-            return this.resolution;
-        }
-
-        public GetTaskStatusResponseTaskInfo setStatus(Integer status) {
+        public GetAudioTaskStatusResponseTaskInfo setStatus(Integer status) {
             this.status = status;
             return this;
         }
@@ -163,7 +147,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.status;
         }
 
-        public GetTaskStatusResponseTaskInfo setSubmitTime(Long submitTime) {
+        public GetAudioTaskStatusResponseTaskInfo setSubmitTime(Long submitTime) {
             this.submitTime = submitTime;
             return this;
         }
@@ -171,7 +155,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.submitTime;
         }
 
-        public GetTaskStatusResponseTaskInfo setFinishTime(Long finishTime) {
+        public GetAudioTaskStatusResponseTaskInfo setFinishTime(Long finishTime) {
             this.finishTime = finishTime;
             return this;
         }
@@ -179,7 +163,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.finishTime;
         }
 
-        public GetTaskStatusResponseTaskInfo setTaskId(Long taskId) {
+        public GetAudioTaskStatusResponseTaskInfo setTaskId(Long taskId) {
             this.taskId = taskId;
             return this;
         }
@@ -187,7 +171,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.taskId;
         }
 
-        public GetTaskStatusResponseTaskInfo setErrorInfo(String errorInfo) {
+        public GetAudioTaskStatusResponseTaskInfo setErrorInfo(String errorInfo) {
             this.errorInfo = errorInfo;
             return this;
         }
@@ -195,7 +179,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.errorInfo;
         }
 
-        public GetTaskStatusResponseTaskInfo setStorageInfo(Integer storageInfo) {
+        public GetAudioTaskStatusResponseTaskInfo setStorageInfo(Integer storageInfo) {
             this.storageInfo = storageInfo;
             return this;
         }
@@ -203,7 +187,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.storageInfo;
         }
 
-        public GetTaskStatusResponseTaskInfo setDescription(String description) {
+        public GetAudioTaskStatusResponseTaskInfo setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -211,31 +195,31 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.description;
         }
 
-        public GetTaskStatusResponseTaskInfo setVideoId(String videoId) {
-            this.videoId = videoId;
+        public GetAudioTaskStatusResponseTaskInfo setAudioId(String audioId) {
+            this.audioId = audioId;
             return this;
         }
-        public String getVideoId() {
-            return this.videoId;
+        public String getAudioId() {
+            return this.audioId;
         }
 
-        public GetTaskStatusResponseTaskInfo setVideoTags(String videoTags) {
-            this.videoTags = videoTags;
+        public GetAudioTaskStatusResponseTaskInfo setAudioTags(String audioTags) {
+            this.audioTags = audioTags;
             return this;
         }
-        public String getVideoTags() {
-            return this.videoTags;
+        public String getAudioTags() {
+            return this.audioTags;
         }
 
-        public GetTaskStatusResponseTaskInfo setVideoUrl(String videoUrl) {
-            this.videoUrl = videoUrl;
+        public GetAudioTaskStatusResponseTaskInfo setAudioUrl(String audioUrl) {
+            this.audioUrl = audioUrl;
             return this;
         }
-        public String getVideoUrl() {
-            return this.videoUrl;
+        public String getAudioUrl() {
+            return this.audioUrl;
         }
 
-        public GetTaskStatusResponseTaskInfo setQueryTags(String queryTags) {
+        public GetAudioTaskStatusResponseTaskInfo setQueryTags(String queryTags) {
             this.queryTags = queryTags;
             return this;
         }
@@ -243,7 +227,7 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.queryTags;
         }
 
-        public GetTaskStatusResponseTaskInfo setResourceType(String resourceType) {
+        public GetAudioTaskStatusResponseTaskInfo setResourceType(String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
@@ -251,20 +235,12 @@ public class GetTaskStatusResponse extends TeaModel {
             return this.resourceType;
         }
 
-        public GetTaskStatusResponseTaskInfo setReplaceStorageThreshold(String replaceStorageThreshold) {
+        public GetAudioTaskStatusResponseTaskInfo setReplaceStorageThreshold(String replaceStorageThreshold) {
             this.replaceStorageThreshold = replaceStorageThreshold;
             return this;
         }
         public String getReplaceStorageThreshold() {
             return this.replaceStorageThreshold;
-        }
-
-        public GetTaskStatusResponseTaskInfo setStorageType(Integer storageType) {
-            this.storageType = storageType;
-            return this;
-        }
-        public Integer getStorageType() {
-            return this.storageType;
         }
 
     }

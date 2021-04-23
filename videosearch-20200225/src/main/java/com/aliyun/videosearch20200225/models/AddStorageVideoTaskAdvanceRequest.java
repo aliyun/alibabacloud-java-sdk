@@ -3,7 +3,11 @@ package com.aliyun.videosearch20200225.models;
 
 import com.aliyun.tea.*;
 
-public class AddStorageVideoTaskRequest extends TeaModel {
+public class AddStorageVideoTaskAdvanceRequest extends TeaModel {
+    @NameInMap("VideoFileObject")
+    @Validation(required = true)
+    public java.io.InputStream videoFileObject;
+
     @NameInMap("InstanceId")
     @Validation(required = true)
     public String instanceId;
@@ -33,15 +37,20 @@ public class AddStorageVideoTaskRequest extends TeaModel {
     @NameInMap("Sort")
     public Integer sort;
 
-    @NameInMap("VideoFile")
-    public String videoFile;
-
-    public static AddStorageVideoTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        AddStorageVideoTaskRequest self = new AddStorageVideoTaskRequest();
+    public static AddStorageVideoTaskAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        AddStorageVideoTaskAdvanceRequest self = new AddStorageVideoTaskAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddStorageVideoTaskRequest setInstanceId(String instanceId) {
+    public AddStorageVideoTaskAdvanceRequest setVideoFileObject(java.io.InputStream videoFileObject) {
+        this.videoFileObject = videoFileObject;
+        return this;
+    }
+    public java.io.InputStream getVideoFileObject() {
+        return this.videoFileObject;
+    }
+
+    public AddStorageVideoTaskAdvanceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -49,7 +58,7 @@ public class AddStorageVideoTaskRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public AddStorageVideoTaskRequest setVideoUrl(String videoUrl) {
+    public AddStorageVideoTaskAdvanceRequest setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
         return this;
     }
@@ -57,7 +66,7 @@ public class AddStorageVideoTaskRequest extends TeaModel {
         return this.videoUrl;
     }
 
-    public AddStorageVideoTaskRequest setVideoId(String videoId) {
+    public AddStorageVideoTaskAdvanceRequest setVideoId(String videoId) {
         this.videoId = videoId;
         return this;
     }
@@ -65,7 +74,7 @@ public class AddStorageVideoTaskRequest extends TeaModel {
         return this.videoId;
     }
 
-    public AddStorageVideoTaskRequest setVideoTags(String videoTags) {
+    public AddStorageVideoTaskAdvanceRequest setVideoTags(String videoTags) {
         this.videoTags = videoTags;
         return this;
     }
@@ -73,7 +82,7 @@ public class AddStorageVideoTaskRequest extends TeaModel {
         return this.videoTags;
     }
 
-    public AddStorageVideoTaskRequest setCallbackUrl(String callbackUrl) {
+    public AddStorageVideoTaskAdvanceRequest setCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }
@@ -81,7 +90,7 @@ public class AddStorageVideoTaskRequest extends TeaModel {
         return this.callbackUrl;
     }
 
-    public AddStorageVideoTaskRequest setDescription(String description) {
+    public AddStorageVideoTaskAdvanceRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -89,7 +98,7 @@ public class AddStorageVideoTaskRequest extends TeaModel {
         return this.description;
     }
 
-    public AddStorageVideoTaskRequest setStorageInfo(Integer storageInfo) {
+    public AddStorageVideoTaskAdvanceRequest setStorageInfo(Integer storageInfo) {
         this.storageInfo = storageInfo;
         return this;
     }
@@ -97,7 +106,7 @@ public class AddStorageVideoTaskRequest extends TeaModel {
         return this.storageInfo;
     }
 
-    public AddStorageVideoTaskRequest setClientToken(String clientToken) {
+    public AddStorageVideoTaskAdvanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -105,20 +114,12 @@ public class AddStorageVideoTaskRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public AddStorageVideoTaskRequest setSort(Integer sort) {
+    public AddStorageVideoTaskAdvanceRequest setSort(Integer sort) {
         this.sort = sort;
         return this;
     }
     public Integer getSort() {
         return this.sort;
-    }
-
-    public AddStorageVideoTaskRequest setVideoFile(String videoFile) {
-        this.videoFile = videoFile;
-        return this;
-    }
-    public String getVideoFile() {
-        return this.videoFile;
     }
 
 }

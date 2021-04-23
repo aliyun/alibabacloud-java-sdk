@@ -3,18 +3,15 @@ package com.aliyun.videosearch20200225.models;
 
 import com.aliyun.tea.*;
 
-public class ListStorageVideoTasksRequest extends TeaModel {
+public class ListStorageAudioTasksRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("TaskId")
     public String taskId;
 
-    @NameInMap("VideoName")
-    public String videoName;
-
-    @NameInMap("VideoId")
-    public String videoId;
+    @NameInMap("AudioId")
+    public String audioId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -38,12 +35,12 @@ public class ListStorageVideoTasksRequest extends TeaModel {
     @NameInMap("SortList")
     public String sortList;
 
-    public static ListStorageVideoTasksRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListStorageVideoTasksRequest self = new ListStorageVideoTasksRequest();
+    public static ListStorageAudioTasksRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListStorageAudioTasksRequest self = new ListStorageAudioTasksRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListStorageVideoTasksRequest setClientToken(String clientToken) {
+    public ListStorageAudioTasksRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -51,7 +48,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ListStorageVideoTasksRequest setTaskId(String taskId) {
+    public ListStorageAudioTasksRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
@@ -59,23 +56,15 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.taskId;
     }
 
-    public ListStorageVideoTasksRequest setVideoName(String videoName) {
-        this.videoName = videoName;
+    public ListStorageAudioTasksRequest setAudioId(String audioId) {
+        this.audioId = audioId;
         return this;
     }
-    public String getVideoName() {
-        return this.videoName;
+    public String getAudioId() {
+        return this.audioId;
     }
 
-    public ListStorageVideoTasksRequest setVideoId(String videoId) {
-        this.videoId = videoId;
-        return this;
-    }
-    public String getVideoId() {
-        return this.videoId;
-    }
-
-    public ListStorageVideoTasksRequest setPageNumber(Integer pageNumber) {
+    public ListStorageAudioTasksRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -83,7 +72,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListStorageVideoTasksRequest setPageSize(Integer pageSize) {
+    public ListStorageAudioTasksRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -91,7 +80,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListStorageVideoTasksRequest setInstanceId(String instanceId) {
+    public ListStorageAudioTasksRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -99,7 +88,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListStorageVideoTasksRequest setStatusList(String statusList) {
+    public ListStorageAudioTasksRequest setStatusList(String statusList) {
         this.statusList = statusList;
         return this;
     }
@@ -107,7 +96,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.statusList;
     }
 
-    public ListStorageVideoTasksRequest setDescription(String description) {
+    public ListStorageAudioTasksRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -115,7 +104,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.description;
     }
 
-    public ListStorageVideoTasksRequest setStorageInfoList(String storageInfoList) {
+    public ListStorageAudioTasksRequest setStorageInfoList(String storageInfoList) {
         this.storageInfoList = storageInfoList;
         return this;
     }
@@ -123,7 +112,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.storageInfoList;
     }
 
-    public ListStorageVideoTasksRequest setSortList(String sortList) {
+    public ListStorageAudioTasksRequest setSortList(String sortList) {
         this.sortList = sortList;
         return this;
     }

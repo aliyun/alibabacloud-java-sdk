@@ -3,7 +3,11 @@ package com.aliyun.videosearch20200225.models;
 
 import com.aliyun.tea.*;
 
-public class CreateBatchTaskRequest extends TeaModel {
+public class CreateBatchTaskAdvanceRequest extends TeaModel {
+    @NameInMap("FileUrlObject")
+    @Validation(required = true)
+    public java.io.InputStream fileUrlObject;
+
     @NameInMap("BatchTaskType")
     public Integer batchTaskType;
 
@@ -15,9 +19,6 @@ public class CreateBatchTaskRequest extends TeaModel {
 
     @NameInMap("OssMetaFile")
     public String ossMetaFile;
-
-    @NameInMap("FileUrl")
-    public String fileUrl;
 
     @NameInMap("RoleArn")
     public String roleArn;
@@ -31,12 +32,20 @@ public class CreateBatchTaskRequest extends TeaModel {
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
-    public static CreateBatchTaskRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateBatchTaskRequest self = new CreateBatchTaskRequest();
+    public static CreateBatchTaskAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateBatchTaskAdvanceRequest self = new CreateBatchTaskAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateBatchTaskRequest setBatchTaskType(Integer batchTaskType) {
+    public CreateBatchTaskAdvanceRequest setFileUrlObject(java.io.InputStream fileUrlObject) {
+        this.fileUrlObject = fileUrlObject;
+        return this;
+    }
+    public java.io.InputStream getFileUrlObject() {
+        return this.fileUrlObject;
+    }
+
+    public CreateBatchTaskAdvanceRequest setBatchTaskType(Integer batchTaskType) {
         this.batchTaskType = batchTaskType;
         return this;
     }
@@ -44,7 +53,7 @@ public class CreateBatchTaskRequest extends TeaModel {
         return this.batchTaskType;
     }
 
-    public CreateBatchTaskRequest setOssBucketName(String ossBucketName) {
+    public CreateBatchTaskAdvanceRequest setOssBucketName(String ossBucketName) {
         this.ossBucketName = ossBucketName;
         return this;
     }
@@ -52,7 +61,7 @@ public class CreateBatchTaskRequest extends TeaModel {
         return this.ossBucketName;
     }
 
-    public CreateBatchTaskRequest setOssDataPath(String ossDataPath) {
+    public CreateBatchTaskAdvanceRequest setOssDataPath(String ossDataPath) {
         this.ossDataPath = ossDataPath;
         return this;
     }
@@ -60,7 +69,7 @@ public class CreateBatchTaskRequest extends TeaModel {
         return this.ossDataPath;
     }
 
-    public CreateBatchTaskRequest setOssMetaFile(String ossMetaFile) {
+    public CreateBatchTaskAdvanceRequest setOssMetaFile(String ossMetaFile) {
         this.ossMetaFile = ossMetaFile;
         return this;
     }
@@ -68,15 +77,7 @@ public class CreateBatchTaskRequest extends TeaModel {
         return this.ossMetaFile;
     }
 
-    public CreateBatchTaskRequest setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
-        return this;
-    }
-    public String getFileUrl() {
-        return this.fileUrl;
-    }
-
-    public CreateBatchTaskRequest setRoleArn(String roleArn) {
+    public CreateBatchTaskAdvanceRequest setRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
@@ -84,7 +85,7 @@ public class CreateBatchTaskRequest extends TeaModel {
         return this.roleArn;
     }
 
-    public CreateBatchTaskRequest setInstanceId(String instanceId) {
+    public CreateBatchTaskAdvanceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -92,7 +93,7 @@ public class CreateBatchTaskRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateBatchTaskRequest setClientToken(String clientToken) {
+    public CreateBatchTaskAdvanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -100,7 +101,7 @@ public class CreateBatchTaskRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateBatchTaskRequest setCallbackUrl(String callbackUrl) {
+    public CreateBatchTaskAdvanceRequest setCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }

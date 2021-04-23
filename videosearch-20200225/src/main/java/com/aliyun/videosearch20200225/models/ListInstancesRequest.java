@@ -22,6 +22,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("InstanceType")
+    public Integer instanceType;
+
     public static ListInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListInstancesRequest self = new ListInstancesRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public ListInstancesRequest setInstanceType(Integer instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public Integer getInstanceType() {
+        return this.instanceType;
     }
 
 }

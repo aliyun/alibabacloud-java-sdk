@@ -102,6 +102,10 @@ public class ListSearchVideoTasksResponse extends TeaModel {
         @Validation(required = true)
         public String description;
 
+        @NameInMap("Sort")
+        @Validation(required = true)
+        public Integer sort;
+
         public static ListSearchVideoTasksResponseDataTaskList build(java.util.Map<String, ?> map) throws Exception {
             ListSearchVideoTasksResponseDataTaskList self = new ListSearchVideoTasksResponseDataTaskList();
             return TeaModel.build(map, self);
@@ -241,6 +245,14 @@ public class ListSearchVideoTasksResponse extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListSearchVideoTasksResponseDataTaskList setSort(Integer sort) {
+            this.sort = sort;
+            return this;
+        }
+        public Integer getSort() {
+            return this.sort;
         }
 
     }

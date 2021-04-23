@@ -3,18 +3,12 @@ package com.aliyun.videosearch20200225.models;
 
 import com.aliyun.tea.*;
 
-public class ListStorageVideoTasksRequest extends TeaModel {
+public class ListSearchAudioTasksRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
     @NameInMap("TaskId")
     public String taskId;
-
-    @NameInMap("VideoName")
-    public String videoName;
-
-    @NameInMap("VideoId")
-    public String videoId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -32,18 +26,15 @@ public class ListStorageVideoTasksRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
-    @NameInMap("StorageInfoList")
-    public String storageInfoList;
-
     @NameInMap("SortList")
     public String sortList;
 
-    public static ListStorageVideoTasksRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListStorageVideoTasksRequest self = new ListStorageVideoTasksRequest();
+    public static ListSearchAudioTasksRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListSearchAudioTasksRequest self = new ListSearchAudioTasksRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListStorageVideoTasksRequest setClientToken(String clientToken) {
+    public ListSearchAudioTasksRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -51,7 +42,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ListStorageVideoTasksRequest setTaskId(String taskId) {
+    public ListSearchAudioTasksRequest setTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
@@ -59,23 +50,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.taskId;
     }
 
-    public ListStorageVideoTasksRequest setVideoName(String videoName) {
-        this.videoName = videoName;
-        return this;
-    }
-    public String getVideoName() {
-        return this.videoName;
-    }
-
-    public ListStorageVideoTasksRequest setVideoId(String videoId) {
-        this.videoId = videoId;
-        return this;
-    }
-    public String getVideoId() {
-        return this.videoId;
-    }
-
-    public ListStorageVideoTasksRequest setPageNumber(Integer pageNumber) {
+    public ListSearchAudioTasksRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -83,7 +58,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public ListStorageVideoTasksRequest setPageSize(Integer pageSize) {
+    public ListSearchAudioTasksRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -91,7 +66,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListStorageVideoTasksRequest setInstanceId(String instanceId) {
+    public ListSearchAudioTasksRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -99,7 +74,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ListStorageVideoTasksRequest setStatusList(String statusList) {
+    public ListSearchAudioTasksRequest setStatusList(String statusList) {
         this.statusList = statusList;
         return this;
     }
@@ -107,7 +82,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.statusList;
     }
 
-    public ListStorageVideoTasksRequest setDescription(String description) {
+    public ListSearchAudioTasksRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -115,15 +90,7 @@ public class ListStorageVideoTasksRequest extends TeaModel {
         return this.description;
     }
 
-    public ListStorageVideoTasksRequest setStorageInfoList(String storageInfoList) {
-        this.storageInfoList = storageInfoList;
-        return this;
-    }
-    public String getStorageInfoList() {
-        return this.storageInfoList;
-    }
-
-    public ListStorageVideoTasksRequest setSortList(String sortList) {
+    public ListSearchAudioTasksRequest setSortList(String sortList) {
         this.sortList = sortList;
         return this;
     }
