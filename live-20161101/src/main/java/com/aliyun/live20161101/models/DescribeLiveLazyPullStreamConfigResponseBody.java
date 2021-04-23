@@ -32,14 +32,8 @@ public class DescribeLiveLazyPullStreamConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig extends TeaModel {
-        @NameInMap("DomainName")
-        public String domainName;
-
         @NameInMap("AppName")
         public String appName;
-
-        @NameInMap("PullDomainName")
-        public String pullDomainName;
 
         @NameInMap("PullAppName")
         public String pullAppName;
@@ -47,26 +41,15 @@ public class DescribeLiveLazyPullStreamConfigResponseBody extends TeaModel {
         @NameInMap("PullProtocol")
         public String pullProtocol;
 
-        @NameInMap("PullAuthType")
-        public String pullAuthType;
+        @NameInMap("PullDomainName")
+        public String pullDomainName;
 
-        @NameInMap("PullAuthKey")
-        public String pullAuthKey;
-
-        @NameInMap("PullArgs")
-        public String pullArgs;
+        @NameInMap("DomainName")
+        public String domainName;
 
         public static DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig self = new DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
         public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setAppName(String appName) {
@@ -75,14 +58,6 @@ public class DescribeLiveLazyPullStreamConfigResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
-        }
-
-        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullDomainName(String pullDomainName) {
-            this.pullDomainName = pullDomainName;
-            return this;
-        }
-        public String getPullDomainName() {
-            return this.pullDomainName;
         }
 
         public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullAppName(String pullAppName) {
@@ -101,28 +76,20 @@ public class DescribeLiveLazyPullStreamConfigResponseBody extends TeaModel {
             return this.pullProtocol;
         }
 
-        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullAuthType(String pullAuthType) {
-            this.pullAuthType = pullAuthType;
+        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullDomainName(String pullDomainName) {
+            this.pullDomainName = pullDomainName;
             return this;
         }
-        public String getPullAuthType() {
-            return this.pullAuthType;
+        public String getPullDomainName() {
+            return this.pullDomainName;
         }
 
-        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullAuthKey(String pullAuthKey) {
-            this.pullAuthKey = pullAuthKey;
+        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public String getPullAuthKey() {
-            return this.pullAuthKey;
-        }
-
-        public DescribeLiveLazyPullStreamConfigResponseBodyLiveLazyPullConfigListLiveLazyPullConfig setPullArgs(String pullArgs) {
-            this.pullArgs = pullArgs;
-            return this;
-        }
-        public String getPullArgs() {
-            return this.pullArgs;
+        public String getDomainName() {
+            return this.domainName;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveRealtimeDeliveryAccResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("RealTimeDeliveryAccData")
     public DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccData realTimeDeliveryAccData;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeLiveRealtimeDeliveryAccResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveRealtimeDeliveryAccResponseBody self = new DescribeLiveRealtimeDeliveryAccResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLiveRealtimeDeliveryAccResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeLiveRealtimeDeliveryAccResponseBody setRealTimeDeliveryAccData(DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccData realTimeDeliveryAccData) {
@@ -31,19 +23,35 @@ public class DescribeLiveRealtimeDeliveryAccResponseBody extends TeaModel {
         return this.realTimeDeliveryAccData;
     }
 
+    public DescribeLiveRealtimeDeliveryAccResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
     public static class DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData extends TeaModel {
+        @NameInMap("FailedNum")
+        public Integer failedNum;
+
         @NameInMap("TimeStamp")
         public String timeStamp;
 
         @NameInMap("SuccessNum")
         public Integer successNum;
 
-        @NameInMap("FailedNum")
-        public Integer failedNum;
-
         public static DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData self = new DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData setFailedNum(Integer failedNum) {
+            this.failedNum = failedNum;
+            return this;
+        }
+        public Integer getFailedNum() {
+            return this.failedNum;
         }
 
         public DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData setTimeStamp(String timeStamp) {
@@ -60,14 +68,6 @@ public class DescribeLiveRealtimeDeliveryAccResponseBody extends TeaModel {
         }
         public Integer getSuccessNum() {
             return this.successNum;
-        }
-
-        public DescribeLiveRealtimeDeliveryAccResponseBodyRealTimeDeliveryAccDataAccData setFailedNum(Integer failedNum) {
-            this.failedNum = failedNum;
-            return this;
-        }
-        public Integer getFailedNum() {
-            return this.failedNum;
         }
 
     }

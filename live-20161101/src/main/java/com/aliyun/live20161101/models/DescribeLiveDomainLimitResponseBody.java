@@ -32,26 +32,26 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit extends TeaModel {
-        @NameInMap("DomainName")
-        public String domainName;
+        @NameInMap("LimitTranscodeNum")
+        public Integer limitTranscodeNum;
 
         @NameInMap("LimitNum")
         public Integer limitNum;
 
-        @NameInMap("LimitTranscodeNum")
-        public Integer limitTranscodeNum;
+        @NameInMap("DomainName")
+        public String domainName;
 
         public static DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit self = new DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit();
             return TeaModel.build(map, self);
         }
 
-        public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setDomainName(String domainName) {
-            this.domainName = domainName;
+        public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setLimitTranscodeNum(Integer limitTranscodeNum) {
+            this.limitTranscodeNum = limitTranscodeNum;
             return this;
         }
-        public String getDomainName() {
-            return this.domainName;
+        public Integer getLimitTranscodeNum() {
+            return this.limitTranscodeNum;
         }
 
         public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setLimitNum(Integer limitNum) {
@@ -62,12 +62,12 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
             return this.limitNum;
         }
 
-        public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setLimitTranscodeNum(Integer limitTranscodeNum) {
-            this.limitTranscodeNum = limitTranscodeNum;
+        public DescribeLiveDomainLimitResponseBodyLiveDomainLimitListLiveDomainLimit setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public Integer getLimitTranscodeNum() {
-            return this.limitTranscodeNum;
+        public String getDomainName() {
+            return this.domainName;
         }
 
     }

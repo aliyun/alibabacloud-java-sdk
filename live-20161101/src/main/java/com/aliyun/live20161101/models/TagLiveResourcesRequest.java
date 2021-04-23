@@ -7,11 +7,11 @@ public class TagLiveResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    @NameInMap("ResourceId")
-    public java.util.List<String> resourceId;
-
     @NameInMap("ResourceType")
     public String resourceType;
+
+    @NameInMap("ResourceId")
+    public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
     public java.util.List<TagLiveResourcesRequestTag> tag;
@@ -29,20 +29,20 @@ public class TagLiveResourcesRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public TagLiveResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
-    }
-
     public TagLiveResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public TagLiveResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public TagLiveResourcesRequest setTag(java.util.List<TagLiveResourcesRequestTag> tag) {

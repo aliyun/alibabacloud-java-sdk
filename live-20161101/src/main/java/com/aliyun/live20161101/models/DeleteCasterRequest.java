@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCasterRequest extends TeaModel {
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -16,14 +13,6 @@ public class DeleteCasterRequest extends TeaModel {
     public static DeleteCasterRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteCasterRequest self = new DeleteCasterRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteCasterRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
     public DeleteCasterRequest setOwnerId(Long ownerId) {

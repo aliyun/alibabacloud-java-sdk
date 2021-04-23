@@ -4,9 +4,6 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveTopLevelDomainRequest extends TeaModel {
-    @NameInMap("OwnerId")
-    public Long ownerId;
-
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -19,14 +16,6 @@ public class UpdateLiveTopLevelDomainRequest extends TeaModel {
     public static UpdateLiveTopLevelDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateLiveTopLevelDomainRequest self = new UpdateLiveTopLevelDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateLiveTopLevelDomainRequest setOwnerId(Long ownerId) {
-        this.ownerId = ownerId;
-        return this;
-    }
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     public UpdateLiveTopLevelDomainRequest setSecurityToken(String securityToken) {

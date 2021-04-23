@@ -13,9 +13,6 @@ public class DescribeLiveLazyPullStreamConfigRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
-    @NameInMap("LiveapiRequestFrom")
-    public String liveapiRequestFrom;
-
     public static DescribeLiveLazyPullStreamConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveLazyPullStreamConfigRequest self = new DescribeLiveLazyPullStreamConfigRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class DescribeLiveLazyPullStreamConfigRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
-    }
-
-    public DescribeLiveLazyPullStreamConfigRequest setLiveapiRequestFrom(String liveapiRequestFrom) {
-        this.liveapiRequestFrom = liveapiRequestFrom;
-        return this;
-    }
-    public String getLiveapiRequestFrom() {
-        return this.liveapiRequestFrom;
     }
 
 }

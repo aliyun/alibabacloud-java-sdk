@@ -13,15 +13,6 @@ public class SetLiveStreamsNotifyUrlConfigRequest extends TeaModel {
     @NameInMap("NotifyUrl")
     public String notifyUrl;
 
-    @NameInMap("NotifyType")
-    public String notifyType;
-
-    @NameInMap("AuthType")
-    public String authType;
-
-    @NameInMap("AuthKey")
-    public String authKey;
-
     public static SetLiveStreamsNotifyUrlConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLiveStreamsNotifyUrlConfigRequest self = new SetLiveStreamsNotifyUrlConfigRequest();
         return TeaModel.build(map, self);
@@ -49,30 +40,6 @@ public class SetLiveStreamsNotifyUrlConfigRequest extends TeaModel {
     }
     public String getNotifyUrl() {
         return this.notifyUrl;
-    }
-
-    public SetLiveStreamsNotifyUrlConfigRequest setNotifyType(String notifyType) {
-        this.notifyType = notifyType;
-        return this;
-    }
-    public String getNotifyType() {
-        return this.notifyType;
-    }
-
-    public SetLiveStreamsNotifyUrlConfigRequest setAuthType(String authType) {
-        this.authType = authType;
-        return this;
-    }
-    public String getAuthType() {
-        return this.authType;
-    }
-
-    public SetLiveStreamsNotifyUrlConfigRequest setAuthKey(String authKey) {
-        this.authKey = authKey;
-        return this;
-    }
-    public String getAuthKey() {
-        return this.authKey;
     }
 
 }

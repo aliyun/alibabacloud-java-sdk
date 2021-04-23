@@ -32,14 +32,20 @@ public class DescribeLiveAsrConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList extends TeaModel {
-        @NameInMap("DomainName")
-        public Integer domainName;
-
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("MnsRegion")
+        public String mnsRegion;
+
         @NameInMap("StreamName")
         public String streamName;
+
+        @NameInMap("HttpCallbackURL")
+        public String httpCallbackURL;
+
+        @NameInMap("DomainName")
+        public Integer domainName;
 
         @NameInMap("Period")
         public Integer period;
@@ -47,23 +53,9 @@ public class DescribeLiveAsrConfigResponseBody extends TeaModel {
         @NameInMap("MnsTopic")
         public String mnsTopic;
 
-        @NameInMap("MnsRegion")
-        public String mnsRegion;
-
-        @NameInMap("HttpCallbackURL")
-        public String httpCallbackURL;
-
         public static DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList self = new DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList setDomainName(Integer domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public Integer getDomainName() {
-            return this.domainName;
         }
 
         public DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList setAppName(String appName) {
@@ -74,12 +66,36 @@ public class DescribeLiveAsrConfigResponseBody extends TeaModel {
             return this.appName;
         }
 
+        public DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList setMnsRegion(String mnsRegion) {
+            this.mnsRegion = mnsRegion;
+            return this;
+        }
+        public String getMnsRegion() {
+            return this.mnsRegion;
+        }
+
         public DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList setStreamName(String streamName) {
             this.streamName = streamName;
             return this;
         }
         public String getStreamName() {
             return this.streamName;
+        }
+
+        public DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList setHttpCallbackURL(String httpCallbackURL) {
+            this.httpCallbackURL = httpCallbackURL;
+            return this;
+        }
+        public String getHttpCallbackURL() {
+            return this.httpCallbackURL;
+        }
+
+        public DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList setDomainName(Integer domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public Integer getDomainName() {
+            return this.domainName;
         }
 
         public DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList setPeriod(Integer period) {
@@ -96,22 +112,6 @@ public class DescribeLiveAsrConfigResponseBody extends TeaModel {
         }
         public String getMnsTopic() {
             return this.mnsTopic;
-        }
-
-        public DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList setMnsRegion(String mnsRegion) {
-            this.mnsRegion = mnsRegion;
-            return this;
-        }
-        public String getMnsRegion() {
-            return this.mnsRegion;
-        }
-
-        public DescribeLiveAsrConfigResponseBodyLiveAsrConfigLiveAsrConfigList setHttpCallbackURL(String httpCallbackURL) {
-            this.httpCallbackURL = httpCallbackURL;
-            return this;
-        }
-        public String getHttpCallbackURL() {
-            return this.httpCallbackURL;
         }
 
     }

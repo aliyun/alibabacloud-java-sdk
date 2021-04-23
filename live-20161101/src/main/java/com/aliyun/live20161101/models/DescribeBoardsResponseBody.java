@@ -35,14 +35,14 @@ public class DescribeBoardsResponseBody extends TeaModel {
         @NameInMap("BoardId")
         public String boardId;
 
-        @NameInMap("Topic")
-        public String topic;
-
         @NameInMap("State")
         public Integer state;
 
         @NameInMap("UserId")
         public String userId;
+
+        @NameInMap("Topic")
+        public String topic;
 
         public static DescribeBoardsResponseBodyBoards build(java.util.Map<String, ?> map) throws Exception {
             DescribeBoardsResponseBodyBoards self = new DescribeBoardsResponseBodyBoards();
@@ -55,14 +55,6 @@ public class DescribeBoardsResponseBody extends TeaModel {
         }
         public String getBoardId() {
             return this.boardId;
-        }
-
-        public DescribeBoardsResponseBodyBoards setTopic(String topic) {
-            this.topic = topic;
-            return this;
-        }
-        public String getTopic() {
-            return this.topic;
         }
 
         public DescribeBoardsResponseBodyBoards setState(Integer state) {
@@ -79,6 +71,14 @@ public class DescribeBoardsResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public DescribeBoardsResponseBodyBoards setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
         }
 
     }

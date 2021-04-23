@@ -4,14 +4,14 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class JoinBoardResponseBody extends TeaModel {
+    @NameInMap("BoardId")
+    public String boardId;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("Token")
     public String token;
-
-    @NameInMap("BoardId")
-    public String boardId;
 
     @NameInMap("TopicId")
     public String topicId;
@@ -25,6 +25,14 @@ public class JoinBoardResponseBody extends TeaModel {
     public static JoinBoardResponseBody build(java.util.Map<String, ?> map) throws Exception {
         JoinBoardResponseBody self = new JoinBoardResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public JoinBoardResponseBody setBoardId(String boardId) {
+        this.boardId = boardId;
+        return this;
+    }
+    public String getBoardId() {
+        return this.boardId;
     }
 
     public JoinBoardResponseBody setRequestId(String requestId) {
@@ -41,14 +49,6 @@ public class JoinBoardResponseBody extends TeaModel {
     }
     public String getToken() {
         return this.token;
-    }
-
-    public JoinBoardResponseBody setBoardId(String boardId) {
-        this.boardId = boardId;
-        return this;
-    }
-    public String getBoardId() {
-        return this.boardId;
     }
 
     public JoinBoardResponseBody setTopicId(String topicId) {

@@ -7,11 +7,11 @@ public class DescribeCasterSyncGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("CasterId")
-    public String casterId;
-
     @NameInMap("SyncGroups")
     public DescribeCasterSyncGroupResponseBodySyncGroups syncGroups;
+
+    @NameInMap("CasterId")
+    public String casterId;
 
     public static DescribeCasterSyncGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterSyncGroupResponseBody self = new DescribeCasterSyncGroupResponseBody();
@@ -26,20 +26,20 @@ public class DescribeCasterSyncGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeCasterSyncGroupResponseBody setCasterId(String casterId) {
-        this.casterId = casterId;
-        return this;
-    }
-    public String getCasterId() {
-        return this.casterId;
-    }
-
     public DescribeCasterSyncGroupResponseBody setSyncGroups(DescribeCasterSyncGroupResponseBodySyncGroups syncGroups) {
         this.syncGroups = syncGroups;
         return this;
     }
     public DescribeCasterSyncGroupResponseBodySyncGroups getSyncGroups() {
         return this.syncGroups;
+    }
+
+    public DescribeCasterSyncGroupResponseBody setCasterId(String casterId) {
+        this.casterId = casterId;
+        return this;
+    }
+    public String getCasterId() {
+        return this.casterId;
     }
 
     public static class DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroupResourceIds extends TeaModel {
@@ -62,26 +62,18 @@ public class DescribeCasterSyncGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroup extends TeaModel {
-        @NameInMap("Mode")
-        public Integer mode;
-
         @NameInMap("HostResourceId")
         public String hostResourceId;
 
         @NameInMap("ResourceIds")
         public DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroupResourceIds resourceIds;
 
+        @NameInMap("Mode")
+        public Integer mode;
+
         public static DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroup self = new DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroup();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroup setMode(Integer mode) {
-            this.mode = mode;
-            return this;
-        }
-        public Integer getMode() {
-            return this.mode;
         }
 
         public DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroup setHostResourceId(String hostResourceId) {
@@ -98,6 +90,14 @@ public class DescribeCasterSyncGroupResponseBody extends TeaModel {
         }
         public DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroupResourceIds getResourceIds() {
             return this.resourceIds;
+        }
+
+        public DescribeCasterSyncGroupResponseBodySyncGroupsSyncGroup setMode(Integer mode) {
+            this.mode = mode;
+            return this;
+        }
+        public Integer getMode() {
+            return this.mode;
         }
 
     }

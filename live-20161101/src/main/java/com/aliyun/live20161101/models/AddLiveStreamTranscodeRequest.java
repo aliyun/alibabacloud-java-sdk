@@ -22,18 +22,6 @@ public class AddLiveStreamTranscodeRequest extends TeaModel {
     @NameInMap("Lazy")
     public String lazy;
 
-    @NameInMap("Watermark")
-    public String watermark;
-
-    @NameInMap("Mix")
-    public String mix;
-
-    @NameInMap("OnlyAudio")
-    public String onlyAudio;
-
-    @NameInMap("WaterPattern")
-    public String waterPattern;
-
     public static AddLiveStreamTranscodeRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLiveStreamTranscodeRequest self = new AddLiveStreamTranscodeRequest();
         return TeaModel.build(map, self);
@@ -85,38 +73,6 @@ public class AddLiveStreamTranscodeRequest extends TeaModel {
     }
     public String getLazy() {
         return this.lazy;
-    }
-
-    public AddLiveStreamTranscodeRequest setWatermark(String watermark) {
-        this.watermark = watermark;
-        return this;
-    }
-    public String getWatermark() {
-        return this.watermark;
-    }
-
-    public AddLiveStreamTranscodeRequest setMix(String mix) {
-        this.mix = mix;
-        return this;
-    }
-    public String getMix() {
-        return this.mix;
-    }
-
-    public AddLiveStreamTranscodeRequest setOnlyAudio(String onlyAudio) {
-        this.onlyAudio = onlyAudio;
-        return this;
-    }
-    public String getOnlyAudio() {
-        return this.onlyAudio;
-    }
-
-    public AddLiveStreamTranscodeRequest setWaterPattern(String waterPattern) {
-        this.waterPattern = waterPattern;
-        return this;
-    }
-    public String getWaterPattern() {
-        return this.waterPattern;
     }
 
 }

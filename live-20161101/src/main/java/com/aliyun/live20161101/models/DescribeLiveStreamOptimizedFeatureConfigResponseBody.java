@@ -32,29 +32,21 @@ public class DescribeLiveStreamOptimizedFeatureConfigResponseBody extends TeaMod
     }
 
     public static class DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig extends TeaModel {
-        @NameInMap("DomainName")
-        public String domainName;
-
         @NameInMap("ConfigName")
         public String configName;
-
-        @NameInMap("ConfigStatus")
-        public String configStatus;
 
         @NameInMap("ConfigValue")
         public String configValue;
 
+        @NameInMap("ConfigStatus")
+        public String configStatus;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
         public static DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig self = new DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
         public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setConfigName(String configName) {
@@ -65,6 +57,14 @@ public class DescribeLiveStreamOptimizedFeatureConfigResponseBody extends TeaMod
             return this.configName;
         }
 
+        public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setConfigValue(String configValue) {
+            this.configValue = configValue;
+            return this;
+        }
+        public String getConfigValue() {
+            return this.configValue;
+        }
+
         public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setConfigStatus(String configStatus) {
             this.configStatus = configStatus;
             return this;
@@ -73,12 +73,12 @@ public class DescribeLiveStreamOptimizedFeatureConfigResponseBody extends TeaMod
             return this.configStatus;
         }
 
-        public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setConfigValue(String configValue) {
-            this.configValue = configValue;
+        public DescribeLiveStreamOptimizedFeatureConfigResponseBodyLiveStreamOptimizedFeatureConfigListLiveStreamOptimizedFeatureConfig setDomainName(String domainName) {
+            this.domainName = domainName;
             return this;
         }
-        public String getConfigValue() {
-            return this.configValue;
+        public String getDomainName() {
+            return this.domainName;
         }
 
     }

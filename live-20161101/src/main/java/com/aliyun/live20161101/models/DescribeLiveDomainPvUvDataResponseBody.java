@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -12,9 +15,6 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
 
     @NameInMap("StartTime")
     public String startTime;
-
-    @NameInMap("EndTime")
-    public String endTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -25,6 +25,14 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
     public static DescribeLiveDomainPvUvDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainPvUvDataResponseBody self = new DescribeLiveDomainPvUvDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainPvUvDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeLiveDomainPvUvDataResponseBody setRequestId(String requestId) {
@@ -51,14 +59,6 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         return this.startTime;
     }
 
-    public DescribeLiveDomainPvUvDataResponseBody setEndTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-    public String getEndTime() {
-        return this.endTime;
-    }
-
     public DescribeLiveDomainPvUvDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
@@ -79,11 +79,11 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         @NameInMap("PV")
         public String PV;
 
-        @NameInMap("UV")
-        public String UV;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("UV")
+        public String UV;
 
         public static DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo self = new DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo();
@@ -98,20 +98,20 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
             return this.PV;
         }
 
-        public DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo setUV(String UV) {
-            this.UV = UV;
-            return this;
-        }
-        public String getUV() {
-            return this.UV;
-        }
-
         public DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo setUV(String UV) {
+            this.UV = UV;
+            return this;
+        }
+        public String getUV() {
+            return this.UV;
         }
 
     }

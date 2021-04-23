@@ -35,14 +35,14 @@ public class DescribeBoardEventsResponseBody extends TeaModel {
         @NameInMap("EventId")
         public Long eventId;
 
+        @NameInMap("Data")
+        public String data;
+
         @NameInMap("EventType")
         public Integer eventType;
 
         @NameInMap("UserId")
         public Integer userId;
-
-        @NameInMap("Data")
-        public String data;
 
         @NameInMap("Timestamp")
         public Long timestamp;
@@ -60,6 +60,14 @@ public class DescribeBoardEventsResponseBody extends TeaModel {
             return this.eventId;
         }
 
+        public DescribeBoardEventsResponseBodyEvents setData(String data) {
+            this.data = data;
+            return this;
+        }
+        public String getData() {
+            return this.data;
+        }
+
         public DescribeBoardEventsResponseBodyEvents setEventType(Integer eventType) {
             this.eventType = eventType;
             return this;
@@ -74,14 +82,6 @@ public class DescribeBoardEventsResponseBody extends TeaModel {
         }
         public Integer getUserId() {
             return this.userId;
-        }
-
-        public DescribeBoardEventsResponseBodyEvents setData(String data) {
-            this.data = data;
-            return this;
-        }
-        public String getData() {
-            return this.data;
         }
 
         public DescribeBoardEventsResponseBodyEvents setTimestamp(Long timestamp) {

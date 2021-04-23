@@ -32,32 +32,32 @@ public class DescribeRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeRecordsResponseBodyRecords extends TeaModel {
-        @NameInMap("RecordId")
-        public String recordId;
-
-        @NameInMap("AppId")
-        public String appId;
-
-        @NameInMap("BoardId")
-        public Integer boardId;
-
-        @NameInMap("RecordStartTime")
-        public Long recordStartTime;
+        @NameInMap("EndTime")
+        public Long endTime;
 
         @NameInMap("StartTime")
         public Long startTime;
 
-        @NameInMap("EndTime")
-        public Long endTime;
+        @NameInMap("BoardId")
+        public Integer boardId;
 
         @NameInMap("State")
         public Integer state;
 
-        @NameInMap("OssPath")
-        public String ossPath;
+        @NameInMap("AppId")
+        public String appId;
+
+        @NameInMap("RecordId")
+        public String recordId;
 
         @NameInMap("OssBucket")
         public String ossBucket;
+
+        @NameInMap("RecordStartTime")
+        public Long recordStartTime;
+
+        @NameInMap("OssPath")
+        public String ossPath;
 
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
@@ -65,46 +65,6 @@ public class DescribeRecordsResponseBody extends TeaModel {
         public static DescribeRecordsResponseBodyRecords build(java.util.Map<String, ?> map) throws Exception {
             DescribeRecordsResponseBodyRecords self = new DescribeRecordsResponseBodyRecords();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeRecordsResponseBodyRecords setRecordId(String recordId) {
-            this.recordId = recordId;
-            return this;
-        }
-        public String getRecordId() {
-            return this.recordId;
-        }
-
-        public DescribeRecordsResponseBodyRecords setAppId(String appId) {
-            this.appId = appId;
-            return this;
-        }
-        public String getAppId() {
-            return this.appId;
-        }
-
-        public DescribeRecordsResponseBodyRecords setBoardId(Integer boardId) {
-            this.boardId = boardId;
-            return this;
-        }
-        public Integer getBoardId() {
-            return this.boardId;
-        }
-
-        public DescribeRecordsResponseBodyRecords setRecordStartTime(Long recordStartTime) {
-            this.recordStartTime = recordStartTime;
-            return this;
-        }
-        public Long getRecordStartTime() {
-            return this.recordStartTime;
-        }
-
-        public DescribeRecordsResponseBodyRecords setStartTime(Long startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public Long getStartTime() {
-            return this.startTime;
         }
 
         public DescribeRecordsResponseBodyRecords setEndTime(Long endTime) {
@@ -115,6 +75,22 @@ public class DescribeRecordsResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public DescribeRecordsResponseBodyRecords setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public DescribeRecordsResponseBodyRecords setBoardId(Integer boardId) {
+            this.boardId = boardId;
+            return this;
+        }
+        public Integer getBoardId() {
+            return this.boardId;
+        }
+
         public DescribeRecordsResponseBodyRecords setState(Integer state) {
             this.state = state;
             return this;
@@ -123,12 +99,20 @@ public class DescribeRecordsResponseBody extends TeaModel {
             return this.state;
         }
 
-        public DescribeRecordsResponseBodyRecords setOssPath(String ossPath) {
-            this.ossPath = ossPath;
+        public DescribeRecordsResponseBodyRecords setAppId(String appId) {
+            this.appId = appId;
             return this;
         }
-        public String getOssPath() {
-            return this.ossPath;
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public DescribeRecordsResponseBodyRecords setRecordId(String recordId) {
+            this.recordId = recordId;
+            return this;
+        }
+        public String getRecordId() {
+            return this.recordId;
         }
 
         public DescribeRecordsResponseBodyRecords setOssBucket(String ossBucket) {
@@ -137,6 +121,22 @@ public class DescribeRecordsResponseBody extends TeaModel {
         }
         public String getOssBucket() {
             return this.ossBucket;
+        }
+
+        public DescribeRecordsResponseBodyRecords setRecordStartTime(Long recordStartTime) {
+            this.recordStartTime = recordStartTime;
+            return this;
+        }
+        public Long getRecordStartTime() {
+            return this.recordStartTime;
+        }
+
+        public DescribeRecordsResponseBodyRecords setOssPath(String ossPath) {
+            this.ossPath = ossPath;
+            return this;
+        }
+        public String getOssPath() {
+            return this.ossPath;
         }
 
         public DescribeRecordsResponseBodyRecords setOssEndpoint(String ossEndpoint) {

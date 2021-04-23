@@ -25,9 +25,6 @@ public class AddLivePullStreamInfoConfigRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("PullAlways")
-    public String pullAlways;
-
     public static AddLivePullStreamInfoConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         AddLivePullStreamInfoConfigRequest self = new AddLivePullStreamInfoConfigRequest();
         return TeaModel.build(map, self);
@@ -87,14 +84,6 @@ public class AddLivePullStreamInfoConfigRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public AddLivePullStreamInfoConfigRequest setPullAlways(String pullAlways) {
-        this.pullAlways = pullAlways;
-        return this;
-    }
-    public String getPullAlways() {
-        return this.pullAlways;
     }
 
 }
