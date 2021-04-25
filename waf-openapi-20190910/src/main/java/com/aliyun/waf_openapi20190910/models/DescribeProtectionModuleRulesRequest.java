@@ -4,9 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeProtectionModuleRulesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -34,14 +31,6 @@ public class DescribeProtectionModuleRulesRequest extends TeaModel {
     public static DescribeProtectionModuleRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeProtectionModuleRulesRequest self = new DescribeProtectionModuleRulesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeProtectionModuleRulesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeProtectionModuleRulesRequest setPageSize(Integer pageSize) {

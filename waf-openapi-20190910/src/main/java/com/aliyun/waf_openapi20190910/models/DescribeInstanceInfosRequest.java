@@ -4,12 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceInfosRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("InstanceSource")
     public String instanceSource;
 
@@ -22,22 +16,6 @@ public class DescribeInstanceInfosRequest extends TeaModel {
     public static DescribeInstanceInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceInfosRequest self = new DescribeInstanceInfosRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceInfosRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeInstanceInfosRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DescribeInstanceInfosRequest setInstanceSource(String instanceSource) {

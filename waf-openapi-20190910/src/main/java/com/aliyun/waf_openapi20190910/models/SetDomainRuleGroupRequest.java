@@ -4,12 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class SetDomainRuleGroupRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Domains")
     public String domains;
 
@@ -28,22 +22,6 @@ public class SetDomainRuleGroupRequest extends TeaModel {
     public static SetDomainRuleGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainRuleGroupRequest self = new SetDomainRuleGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public SetDomainRuleGroupRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public SetDomainRuleGroupRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public SetDomainRuleGroupRequest setDomains(String domains) {

@@ -173,6 +173,12 @@ public class DescribeDomainResponseBody extends TeaModel {
         @NameInMap("IsAccessProduct")
         public Integer isAccessProduct;
 
+        @NameInMap("AccessHeaders")
+        public java.util.List<String> accessHeaders;
+
+        @NameInMap("AccessHeaderMode")
+        public Integer accessHeaderMode;
+
         @NameInMap("HttpsRedirect")
         public Integer httpsRedirect;
 
@@ -191,11 +197,11 @@ public class DescribeDomainResponseBody extends TeaModel {
         @NameInMap("ClusterType")
         public Integer clusterType;
 
-        @NameInMap("WriteTime")
-        public Integer writeTime;
-
         @NameInMap("ReadTime")
         public Integer readTime;
+
+        @NameInMap("WriteTime")
+        public Integer writeTime;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -265,6 +271,22 @@ public class DescribeDomainResponseBody extends TeaModel {
             return this.isAccessProduct;
         }
 
+        public DescribeDomainResponseBodyDomain setAccessHeaders(java.util.List<String> accessHeaders) {
+            this.accessHeaders = accessHeaders;
+            return this;
+        }
+        public java.util.List<String> getAccessHeaders() {
+            return this.accessHeaders;
+        }
+
+        public DescribeDomainResponseBodyDomain setAccessHeaderMode(Integer accessHeaderMode) {
+            this.accessHeaderMode = accessHeaderMode;
+            return this;
+        }
+        public Integer getAccessHeaderMode() {
+            return this.accessHeaderMode;
+        }
+
         public DescribeDomainResponseBodyDomain setHttpsRedirect(Integer httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
@@ -313,20 +335,20 @@ public class DescribeDomainResponseBody extends TeaModel {
             return this.clusterType;
         }
 
-        public DescribeDomainResponseBodyDomain setWriteTime(Integer writeTime) {
-            this.writeTime = writeTime;
-            return this;
-        }
-        public Integer getWriteTime() {
-            return this.writeTime;
-        }
-
         public DescribeDomainResponseBodyDomain setReadTime(Integer readTime) {
             this.readTime = readTime;
             return this;
         }
         public Integer getReadTime() {
             return this.readTime;
+        }
+
+        public DescribeDomainResponseBodyDomain setWriteTime(Integer writeTime) {
+            this.writeTime = writeTime;
+            return this;
+        }
+        public Integer getWriteTime() {
+            return this.writeTime;
         }
 
         public DescribeDomainResponseBodyDomain setResourceGroupId(String resourceGroupId) {

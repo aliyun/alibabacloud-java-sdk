@@ -4,12 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class CreateCertificateRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Domain")
     public String domain;
 
@@ -28,22 +22,6 @@ public class CreateCertificateRequest extends TeaModel {
     public static CreateCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCertificateRequest self = new CreateCertificateRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateCertificateRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public CreateCertificateRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public CreateCertificateRequest setDomain(String domain) {

@@ -4,12 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class ModifyProtectionRuleStatusRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Domain")
     public String domain;
 
@@ -31,22 +25,6 @@ public class ModifyProtectionRuleStatusRequest extends TeaModel {
     public static ModifyProtectionRuleStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyProtectionRuleStatusRequest self = new ModifyProtectionRuleStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyProtectionRuleStatusRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyProtectionRuleStatusRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ModifyProtectionRuleStatusRequest setDomain(String domain) {
