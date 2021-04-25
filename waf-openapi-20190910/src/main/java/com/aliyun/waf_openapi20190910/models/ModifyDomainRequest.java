@@ -4,12 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class ModifyDomainRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -40,17 +34,8 @@ public class ModifyDomainRequest extends TeaModel {
     @NameInMap("IsAccessProduct")
     public Integer isAccessProduct;
 
-    @NameInMap("XffHeaderMode")
-    public Integer xffHeaderMode;
-
-    @NameInMap("XffHeaders")
-    public String xffHeaders;
-
     @NameInMap("LogHeaders")
     public String logHeaders;
-
-    @NameInMap("BindingIpv6")
-    public Integer bindingIpv6;
 
     @NameInMap("ClusterType")
     public Integer clusterType;
@@ -76,22 +61,6 @@ public class ModifyDomainRequest extends TeaModel {
     public static ModifyDomainRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDomainRequest self = new ModifyDomainRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyDomainRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyDomainRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ModifyDomainRequest setInstanceId(String instanceId) {
@@ -174,36 +143,12 @@ public class ModifyDomainRequest extends TeaModel {
         return this.isAccessProduct;
     }
 
-    public ModifyDomainRequest setXffHeaderMode(Integer xffHeaderMode) {
-        this.xffHeaderMode = xffHeaderMode;
-        return this;
-    }
-    public Integer getXffHeaderMode() {
-        return this.xffHeaderMode;
-    }
-
-    public ModifyDomainRequest setXffHeaders(String xffHeaders) {
-        this.xffHeaders = xffHeaders;
-        return this;
-    }
-    public String getXffHeaders() {
-        return this.xffHeaders;
-    }
-
     public ModifyDomainRequest setLogHeaders(String logHeaders) {
         this.logHeaders = logHeaders;
         return this;
     }
     public String getLogHeaders() {
         return this.logHeaders;
-    }
-
-    public ModifyDomainRequest setBindingIpv6(Integer bindingIpv6) {
-        this.bindingIpv6 = bindingIpv6;
-        return this;
-    }
-    public Integer getBindingIpv6() {
-        return this.bindingIpv6;
     }
 
     public ModifyDomainRequest setClusterType(Integer clusterType) {

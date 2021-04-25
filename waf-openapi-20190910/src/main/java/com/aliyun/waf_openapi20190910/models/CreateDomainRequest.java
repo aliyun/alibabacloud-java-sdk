@@ -4,12 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -21,6 +15,12 @@ public class CreateDomainRequest extends TeaModel {
 
     @NameInMap("IsAccessProduct")
     public Integer isAccessProduct;
+
+    @NameInMap("AccessHeaderMode")
+    public Integer accessHeaderMode;
+
+    @NameInMap("AccessHeaders")
+    public String accessHeaders;
 
     @NameInMap("LoadBalancing")
     public Integer loadBalancing;
@@ -72,22 +72,6 @@ public class CreateDomainRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateDomainRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public CreateDomainRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
-    }
-
     public CreateDomainRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -118,6 +102,22 @@ public class CreateDomainRequest extends TeaModel {
     }
     public Integer getIsAccessProduct() {
         return this.isAccessProduct;
+    }
+
+    public CreateDomainRequest setAccessHeaderMode(Integer accessHeaderMode) {
+        this.accessHeaderMode = accessHeaderMode;
+        return this;
+    }
+    public Integer getAccessHeaderMode() {
+        return this.accessHeaderMode;
+    }
+
+    public CreateDomainRequest setAccessHeaders(String accessHeaders) {
+        this.accessHeaders = accessHeaders;
+        return this;
+    }
+    public String getAccessHeaders() {
+        return this.accessHeaders;
     }
 
     public CreateDomainRequest setLoadBalancing(Integer loadBalancing) {

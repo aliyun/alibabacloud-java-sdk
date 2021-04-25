@@ -4,9 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogServiceStatusRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -28,14 +25,6 @@ public class DescribeLogServiceStatusRequest extends TeaModel {
     public static DescribeLogServiceStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLogServiceStatusRequest self = new DescribeLogServiceStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLogServiceStatusRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeLogServiceStatusRequest setInstanceId(String instanceId) {

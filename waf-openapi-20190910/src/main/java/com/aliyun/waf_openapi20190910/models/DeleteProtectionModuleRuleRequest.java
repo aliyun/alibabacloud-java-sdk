@@ -4,12 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DeleteProtectionModuleRuleRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Domain")
     public String domain;
 
@@ -25,22 +19,6 @@ public class DeleteProtectionModuleRuleRequest extends TeaModel {
     public static DeleteProtectionModuleRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteProtectionModuleRuleRequest self = new DeleteProtectionModuleRuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteProtectionModuleRuleRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DeleteProtectionModuleRuleRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DeleteProtectionModuleRuleRequest setDomain(String domain) {

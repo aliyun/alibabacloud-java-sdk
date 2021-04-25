@@ -4,12 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeProtectionModuleStatusRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Domain")
     public String domain;
 
@@ -22,22 +16,6 @@ public class DescribeProtectionModuleStatusRequest extends TeaModel {
     public static DescribeProtectionModuleStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeProtectionModuleStatusRequest self = new DescribeProtectionModuleStatusRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeProtectionModuleStatusRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeProtectionModuleStatusRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DescribeProtectionModuleStatusRequest setDomain(String domain) {

@@ -4,9 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainListRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -31,14 +28,6 @@ public class DescribeDomainListRequest extends TeaModel {
     public static DescribeDomainListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainListRequest self = new DescribeDomainListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDomainListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeDomainListRequest setResourceGroupId(String resourceGroupId) {

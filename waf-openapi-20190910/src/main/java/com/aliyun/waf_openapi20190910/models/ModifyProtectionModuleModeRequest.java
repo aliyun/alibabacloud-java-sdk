@@ -4,12 +4,6 @@ package com.aliyun.waf_openapi20190910.models;
 import com.aliyun.tea.*;
 
 public class ModifyProtectionModuleModeRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("Domain")
     public String domain;
 
@@ -25,22 +19,6 @@ public class ModifyProtectionModuleModeRequest extends TeaModel {
     public static ModifyProtectionModuleModeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyProtectionModuleModeRequest self = new ModifyProtectionModuleModeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ModifyProtectionModuleModeRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public ModifyProtectionModuleModeRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public ModifyProtectionModuleModeRequest setDomain(String domain) {
