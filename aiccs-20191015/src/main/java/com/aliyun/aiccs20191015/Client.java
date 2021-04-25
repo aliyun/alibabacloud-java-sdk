@@ -205,6 +205,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listHotlineRecordDetailWithOptions(request, runtime);
     }
 
+    public GetHotlineMessageLogResponse getHotlineMessageLogWithOptions(GetHotlineMessageLogRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetHotlineMessageLog", "2019-10-15", "HTTPS", "GET", "AK", "json", req, runtime), new GetHotlineMessageLogResponse());
+    }
+
+    public GetHotlineMessageLogResponse getHotlineMessageLog(GetHotlineMessageLogRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getHotlineMessageLogWithOptions(request, runtime);
+    }
+
     public GetQualityProjectListResponse getQualityProjectListWithOptions(GetQualityProjectListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -425,6 +439,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetHotlineGroupDetailReportResponse getHotlineGroupDetailReport(GetHotlineGroupDetailReportRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getHotlineGroupDetailReportWithOptions(request, runtime);
+    }
+
+    public EncryptPhoneNumResponse encryptPhoneNumWithOptions(EncryptPhoneNumRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("EncryptPhoneNum", "2019-10-15", "HTTPS", "GET", "AK", "json", req, runtime), new EncryptPhoneNumResponse());
+    }
+
+    public EncryptPhoneNumResponse encryptPhoneNum(EncryptPhoneNumRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.encryptPhoneNumWithOptions(request, runtime);
     }
 
     public GetInstanceListResponse getInstanceListWithOptions(GetInstanceListRequest request, RuntimeOptions runtime) throws Exception {
