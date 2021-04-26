@@ -7,6 +7,9 @@ public class ExecuteDeviceRiskResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("Umid")
+    public String umid;
+
     @NameInMap("SubCode")
     public String subCode;
 
@@ -27,6 +30,14 @@ public class ExecuteDeviceRiskResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public ExecuteDeviceRiskResponseBody setUmid(String umid) {
+        this.umid = umid;
+        return this;
+    }
+    public String getUmid() {
+        return this.umid;
     }
 
     public ExecuteDeviceRiskResponseBody setSubCode(String subCode) {
