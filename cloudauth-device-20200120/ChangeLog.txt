@@ -1,3 +1,6 @@
+2021-04-26 Version: 1.0.1
+ -  Add Umid Field.
+
 2021-04-22 Version: 1.0.0
  -  Add Cloudauth Decision API.
 
