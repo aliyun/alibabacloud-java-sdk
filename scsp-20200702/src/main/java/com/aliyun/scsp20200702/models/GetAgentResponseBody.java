@@ -16,6 +16,12 @@ public class GetAgentResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
     public static GetAgentResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAgentResponseBody self = new GetAgentResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +57,22 @@ public class GetAgentResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetAgentResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetAgentResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public static class GetAgentResponseBodyDataGroupList extends TeaModel {

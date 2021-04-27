@@ -3,31 +3,37 @@ package com.aliyun.scsp20200702.models;
 
 import com.aliyun.tea.*;
 
-public class GenerateWebSocketSignResponseBody extends TeaModel {
+public class StartChatWorkResponseBody extends TeaModel {
+    // message
     @NameInMap("Message")
     public String message;
 
+    // requestId
     @NameInMap("RequestId")
     public String requestId;
 
+    // httpStatusCode
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    // data
     @NameInMap("Data")
     public String data;
 
+    // code
     @NameInMap("Code")
     public String code;
 
+    // success
     @NameInMap("Success")
     public Boolean success;
 
-    @NameInMap("HttpStatusCode")
-    public Long httpStatusCode;
-
-    public static GenerateWebSocketSignResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GenerateWebSocketSignResponseBody self = new GenerateWebSocketSignResponseBody();
+    public static StartChatWorkResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        StartChatWorkResponseBody self = new StartChatWorkResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GenerateWebSocketSignResponseBody setMessage(String message) {
+    public StartChatWorkResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -35,7 +41,7 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GenerateWebSocketSignResponseBody setRequestId(String requestId) {
+    public StartChatWorkResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -43,7 +49,15 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GenerateWebSocketSignResponseBody setData(String data) {
+    public StartChatWorkResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public StartChatWorkResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -51,7 +65,7 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         return this.data;
     }
 
-    public GenerateWebSocketSignResponseBody setCode(String code) {
+    public StartChatWorkResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -59,20 +73,12 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GenerateWebSocketSignResponseBody setSuccess(Boolean success) {
+    public StartChatWorkResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public GenerateWebSocketSignResponseBody setHttpStatusCode(Long httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
-        return this;
-    }
-    public Long getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
 }
