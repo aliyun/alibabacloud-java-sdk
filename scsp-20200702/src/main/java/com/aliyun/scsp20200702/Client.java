@@ -195,6 +195,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryHotlineSessionWithOptions(request, runtime);
     }
 
+    public StartChatWorkResponse startChatWorkWithOptions(StartChatWorkRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StartChatWork", "2020-07-02", "HTTPS", "POST", "AK", "json", req, runtime), new StartChatWorkResponse());
+    }
+
+    public StartChatWorkResponse startChatWork(StartChatWorkRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startChatWorkWithOptions(request, runtime);
+    }
+
     public HangupThirdCallResponse hangupThirdCallWithOptions(HangupThirdCallRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -298,6 +311,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateAgentResponse updateAgent(UpdateAgentRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateAgentWithOptions(request, runtime);
+    }
+
+    public ChangeChatAgentStatusResponse changeChatAgentStatusWithOptions(ChangeChatAgentStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ChangeChatAgentStatus", "2020-07-02", "HTTPS", "POST", "AK", "json", req, runtime), new ChangeChatAgentStatusResponse());
+    }
+
+    public ChangeChatAgentStatusResponse changeChatAgentStatus(ChangeChatAgentStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.changeChatAgentStatusWithOptions(request, runtime);
     }
 
     public GenerateWebSocketSignResponse generateWebSocketSignWithOptions(GenerateWebSocketSignRequest request, RuntimeOptions runtime) throws Exception {

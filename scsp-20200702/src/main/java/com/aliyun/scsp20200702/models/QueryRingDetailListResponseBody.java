@@ -19,6 +19,9 @@ public class QueryRingDetailListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static QueryRingDetailListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QueryRingDetailListResponseBody self = new QueryRingDetailListResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class QueryRingDetailListResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public QueryRingDetailListResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }
