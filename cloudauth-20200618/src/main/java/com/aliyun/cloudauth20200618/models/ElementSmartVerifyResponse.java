@@ -4,113 +4,33 @@ package com.aliyun.cloudauth20200618.models;
 import com.aliyun.tea.*;
 
 public class ElementSmartVerifyResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Message")
+    @NameInMap("body")
     @Validation(required = true)
-    public String message;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public String code;
-
-    @NameInMap("ResultObject")
-    @Validation(required = true)
-    public ElementSmartVerifyResponseResultObject resultObject;
+    public ElementSmartVerifyResponseBody body;
 
     public static ElementSmartVerifyResponse build(java.util.Map<String, ?> map) throws Exception {
         ElementSmartVerifyResponse self = new ElementSmartVerifyResponse();
         return TeaModel.build(map, self);
     }
 
-    public ElementSmartVerifyResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ElementSmartVerifyResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ElementSmartVerifyResponse setMessage(String message) {
-        this.message = message;
+    public ElementSmartVerifyResponse setBody(ElementSmartVerifyResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getMessage() {
-        return this.message;
-    }
-
-    public ElementSmartVerifyResponse setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
-    }
-
-    public ElementSmartVerifyResponse setResultObject(ElementSmartVerifyResponseResultObject resultObject) {
-        this.resultObject = resultObject;
-        return this;
-    }
-    public ElementSmartVerifyResponseResultObject getResultObject() {
-        return this.resultObject;
-    }
-
-    public static class ElementSmartVerifyResponseResultObject extends TeaModel {
-        @NameInMap("Passed")
-        @Validation(required = true)
-        public String passed;
-
-        @NameInMap("SubCode")
-        @Validation(required = true)
-        public String subCode;
-
-        @NameInMap("MaterialInfo")
-        @Validation(required = true)
-        public String materialInfo;
-
-        @NameInMap("CertifyId")
-        @Validation(required = true)
-        public String certifyId;
-
-        public static ElementSmartVerifyResponseResultObject build(java.util.Map<String, ?> map) throws Exception {
-            ElementSmartVerifyResponseResultObject self = new ElementSmartVerifyResponseResultObject();
-            return TeaModel.build(map, self);
-        }
-
-        public ElementSmartVerifyResponseResultObject setPassed(String passed) {
-            this.passed = passed;
-            return this;
-        }
-        public String getPassed() {
-            return this.passed;
-        }
-
-        public ElementSmartVerifyResponseResultObject setSubCode(String subCode) {
-            this.subCode = subCode;
-            return this;
-        }
-        public String getSubCode() {
-            return this.subCode;
-        }
-
-        public ElementSmartVerifyResponseResultObject setMaterialInfo(String materialInfo) {
-            this.materialInfo = materialInfo;
-            return this;
-        }
-        public String getMaterialInfo() {
-            return this.materialInfo;
-        }
-
-        public ElementSmartVerifyResponseResultObject setCertifyId(String certifyId) {
-            this.certifyId = certifyId;
-            return this;
-        }
-        public String getCertifyId() {
-            return this.certifyId;
-        }
-
+    public ElementSmartVerifyResponseBody getBody() {
+        return this.body;
     }
 
 }
