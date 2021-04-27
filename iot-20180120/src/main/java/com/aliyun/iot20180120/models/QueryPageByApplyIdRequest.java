@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryPageByApplyIdRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -22,31 +16,9 @@ public class QueryPageByApplyIdRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
-    @NameInMap("RealTenantId")
-    public String realTenantId;
-
-    @NameInMap("RealTripartiteKey")
-    public String realTripartiteKey;
-
     public static QueryPageByApplyIdRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryPageByApplyIdRequest self = new QueryPageByApplyIdRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryPageByApplyIdRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryPageByApplyIdRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryPageByApplyIdRequest setIotInstanceId(String iotInstanceId) {
@@ -79,22 +51,6 @@ public class QueryPageByApplyIdRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
-    }
-
-    public QueryPageByApplyIdRequest setRealTenantId(String realTenantId) {
-        this.realTenantId = realTenantId;
-        return this;
-    }
-    public String getRealTenantId() {
-        return this.realTenantId;
-    }
-
-    public QueryPageByApplyIdRequest setRealTripartiteKey(String realTripartiteKey) {
-        this.realTripartiteKey = realTripartiteKey;
-        return this;
-    }
-    public String getRealTripartiteKey() {
-        return this.realTripartiteKey;
     }
 
 }

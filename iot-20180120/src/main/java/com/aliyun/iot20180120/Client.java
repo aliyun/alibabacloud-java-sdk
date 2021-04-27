@@ -16,12 +16,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
-            new TeaPair("ap-northeast-2-pop", "iot.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-south-1", "iot.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-2", "iot.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-3", "iot.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-5", "iot.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("cn-beijing", "iot.aliyuncs.com"),
+            new TeaPair("ap-northeast-2-pop", "iot.aliyuncs.com"),
+            new TeaPair("ap-south-1", "iot.aliyuncs.com"),
+            new TeaPair("ap-southeast-2", "iot.aliyuncs.com"),
+            new TeaPair("ap-southeast-3", "iot.aliyuncs.com"),
+            new TeaPair("ap-southeast-5", "iot.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "iot.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-pop", "iot.aliyuncs.com"),
             new TeaPair("cn-beijing-gov-1", "iot.aliyuncs.com"),
@@ -40,7 +39,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-hongkong", "iot.aliyuncs.com"),
             new TeaPair("cn-hongkong-finance-pop", "iot.aliyuncs.com"),
             new TeaPair("cn-huhehaote", "iot.aliyuncs.com"),
-            new TeaPair("cn-north-2-gov-1", "iot.aliyuncs.com"),
+            new TeaPair("cn-huhehaote-nebula-1", "iot.aliyuncs.com"),
             new TeaPair("cn-qingdao", "iot.aliyuncs.com"),
             new TeaPair("cn-qingdao-nebula", "iot.aliyuncs.com"),
             new TeaPair("cn-shanghai-et15-b01", "iot.aliyuncs.com"),
@@ -48,21 +47,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shanghai-finance-1", "iot.aliyuncs.com"),
             new TeaPair("cn-shanghai-inner", "iot.aliyuncs.com"),
             new TeaPair("cn-shanghai-internal-test-1", "iot.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "iot.aliyuncs.com"),
             new TeaPair("cn-shenzhen-finance-1", "iot.aliyuncs.com"),
             new TeaPair("cn-shenzhen-inner", "iot.aliyuncs.com"),
             new TeaPair("cn-shenzhen-st4-d01", "iot.aliyuncs.com"),
             new TeaPair("cn-shenzhen-su18-b01", "iot.aliyuncs.com"),
             new TeaPair("cn-wuhan", "iot.aliyuncs.com"),
+            new TeaPair("cn-wulanchabu", "iot.aliyuncs.com"),
             new TeaPair("cn-yushanfang", "iot.aliyuncs.com"),
+            new TeaPair("cn-zhangbei", "iot.aliyuncs.com"),
             new TeaPair("cn-zhangbei-na61-b01", "iot.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou", "iot.aliyuncs.com"),
             new TeaPair("cn-zhangjiakou-na62-a01", "iot.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "iot.aliyuncs.com"),
-            new TeaPair("eu-west-1", "iot.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "iot.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("me-east-1", "iot.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "iot.ap-northeast-1.aliyuncs.com")
+            new TeaPair("eu-west-1", "iot.aliyuncs.com"),
+            new TeaPair("eu-west-1-oxs", "iot.aliyuncs.com"),
+            new TeaPair("me-east-1", "iot.aliyuncs.com"),
+            new TeaPair("rus-west-1-pop", "iot.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("iot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -718,6 +718,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createEdgeInstanceDeploymentWithOptions(request, runtime);
     }
 
+    public CreateEdgeInstanceMessageRoutingResponse createEdgeInstanceMessageRoutingWithOptions(CreateEdgeInstanceMessageRoutingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateEdgeInstanceMessageRouting", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new CreateEdgeInstanceMessageRoutingResponse());
+    }
+
+    public CreateEdgeInstanceMessageRoutingResponse createEdgeInstanceMessageRouting(CreateEdgeInstanceMessageRoutingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createEdgeInstanceMessageRoutingWithOptions(request, runtime);
+    }
+
     public CreateEdgeOssPreSignedAddressResponse createEdgeOssPreSignedAddressWithOptions(CreateEdgeOssPreSignedAddressRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1108,6 +1121,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteEdgeInstanceWithOptions(request, runtime);
     }
 
+    public DeleteEdgeInstanceMessageRoutingResponse deleteEdgeInstanceMessageRoutingWithOptions(DeleteEdgeInstanceMessageRoutingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteEdgeInstanceMessageRouting", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteEdgeInstanceMessageRoutingResponse());
+    }
+
+    public DeleteEdgeInstanceMessageRoutingResponse deleteEdgeInstanceMessageRouting(DeleteEdgeInstanceMessageRoutingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteEdgeInstanceMessageRoutingWithOptions(request, runtime);
+    }
+
     public DeleteJobResponse deleteJobWithOptions(DeleteJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1264,6 +1290,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteTopicRouteTableWithOptions(request, runtime);
     }
 
+    public DisableDeviceTunnelResponse disableDeviceTunnelWithOptions(DisableDeviceTunnelRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DisableDeviceTunnel", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new DisableDeviceTunnelResponse());
+    }
+
+    public DisableDeviceTunnelResponse disableDeviceTunnel(DisableDeviceTunnelRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.disableDeviceTunnelWithOptions(request, runtime);
+    }
+
+    public DisableDeviceTunnelShareResponse disableDeviceTunnelShareWithOptions(DisableDeviceTunnelShareRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DisableDeviceTunnelShare", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new DisableDeviceTunnelShareResponse());
+    }
+
+    public DisableDeviceTunnelShareResponse disableDeviceTunnelShare(DisableDeviceTunnelShareRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.disableDeviceTunnelShareWithOptions(request, runtime);
+    }
+
     public DisableSceneRuleResponse disableSceneRuleWithOptions(DisableSceneRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1288,6 +1340,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableThingResponse disableThing(DisableThingRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.disableThingWithOptions(request, runtime);
+    }
+
+    public EnableDeviceTunnelResponse enableDeviceTunnelWithOptions(EnableDeviceTunnelRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("EnableDeviceTunnel", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new EnableDeviceTunnelResponse());
+    }
+
+    public EnableDeviceTunnelResponse enableDeviceTunnel(EnableDeviceTunnelRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.enableDeviceTunnelWithOptions(request, runtime);
+    }
+
+    public EnableDeviceTunnelShareResponse enableDeviceTunnelShareWithOptions(EnableDeviceTunnelShareRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("EnableDeviceTunnelShare", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new EnableDeviceTunnelShareResponse());
+    }
+
+    public EnableDeviceTunnelShareResponse enableDeviceTunnelShare(EnableDeviceTunnelShareRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.enableDeviceTunnelShareWithOptions(request, runtime);
     }
 
     public EnableSceneRuleResponse enableSceneRuleWithOptions(EnableSceneRuleRequest request, RuntimeOptions runtime) throws Exception {
@@ -1394,6 +1472,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getDeviceStatusWithOptions(request, runtime);
     }
 
+    public GetDeviceTunnelShareStatusResponse getDeviceTunnelShareStatusWithOptions(GetDeviceTunnelShareStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDeviceTunnelShareStatus", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new GetDeviceTunnelShareStatusResponse());
+    }
+
+    public GetDeviceTunnelShareStatusResponse getDeviceTunnelShareStatus(GetDeviceTunnelShareStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDeviceTunnelShareStatusWithOptions(request, runtime);
+    }
+
+    public GetDeviceTunnelStatusResponse getDeviceTunnelStatusWithOptions(GetDeviceTunnelStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDeviceTunnelStatus", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new GetDeviceTunnelStatusResponse());
+    }
+
+    public GetDeviceTunnelStatusResponse getDeviceTunnelStatus(GetDeviceTunnelStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDeviceTunnelStatusWithOptions(request, runtime);
+    }
+
     public GetEdgeDriverVersionResponse getEdgeDriverVersionWithOptions(GetEdgeDriverVersionRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1431,6 +1535,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetEdgeInstanceDeploymentResponse getEdgeInstanceDeployment(GetEdgeInstanceDeploymentRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getEdgeInstanceDeploymentWithOptions(request, runtime);
+    }
+
+    public GetEdgeInstanceMessageRoutingResponse getEdgeInstanceMessageRoutingWithOptions(GetEdgeInstanceMessageRoutingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetEdgeInstanceMessageRouting", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new GetEdgeInstanceMessageRoutingResponse());
+    }
+
+    public GetEdgeInstanceMessageRoutingResponse getEdgeInstanceMessageRouting(GetEdgeInstanceMessageRoutingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getEdgeInstanceMessageRoutingWithOptions(request, runtime);
     }
 
     public GetGatewayBySubDeviceResponse getGatewayBySubDeviceWithOptions(GetGatewayBySubDeviceRequest request, RuntimeOptions runtime) throws Exception {
@@ -1900,6 +2017,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OpenIotServiceResponse openIotService(OpenIotServiceRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.openIotServiceWithOptions(request, runtime);
+    }
+
+    public PrintByTemplateResponse printByTemplateWithOptions(PrintByTemplateRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("PrintByTemplate", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new PrintByTemplateResponse());
+    }
+
+    public PrintByTemplateResponse printByTemplate(PrintByTemplateRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.printByTemplateWithOptions(request, runtime);
     }
 
     public PubResponse pubWithOptions(PubRequest request, RuntimeOptions runtime) throws Exception {
@@ -2513,6 +2643,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryEdgeInstanceHistoricDeploymentWithOptions(request, runtime);
     }
 
+    public QueryEdgeInstanceMessageRoutingResponse queryEdgeInstanceMessageRoutingWithOptions(QueryEdgeInstanceMessageRoutingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryEdgeInstanceMessageRouting", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new QueryEdgeInstanceMessageRoutingResponse());
+    }
+
+    public QueryEdgeInstanceMessageRoutingResponse queryEdgeInstanceMessageRouting(QueryEdgeInstanceMessageRoutingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryEdgeInstanceMessageRoutingWithOptions(request, runtime);
+    }
+
     public QueryEdgeInstanceSceneRuleResponse queryEdgeInstanceSceneRuleWithOptions(QueryEdgeInstanceSceneRuleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -2798,6 +2941,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryTopicRouteTableResponse queryTopicRouteTable(QueryTopicRouteTableRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryTopicRouteTableWithOptions(request, runtime);
+    }
+
+    public RefreshDeviceTunnelSharePasswordResponse refreshDeviceTunnelSharePasswordWithOptions(RefreshDeviceTunnelSharePasswordRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("RefreshDeviceTunnelSharePassword", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new RefreshDeviceTunnelSharePasswordResponse());
+    }
+
+    public RefreshDeviceTunnelSharePasswordResponse refreshDeviceTunnelSharePassword(RefreshDeviceTunnelSharePasswordRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.refreshDeviceTunnelSharePasswordWithOptions(request, runtime);
     }
 
     public RegisterDeviceResponse registerDeviceWithOptions(RegisterDeviceRequest request, RuntimeOptions runtime) throws Exception {
@@ -3188,6 +3344,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateEdgeInstanceChannelResponse updateEdgeInstanceChannel(UpdateEdgeInstanceChannelRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.updateEdgeInstanceChannelWithOptions(request, runtime);
+    }
+
+    public UpdateEdgeInstanceMessageRoutingResponse updateEdgeInstanceMessageRoutingWithOptions(UpdateEdgeInstanceMessageRoutingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateEdgeInstanceMessageRouting", "2018-01-20", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateEdgeInstanceMessageRoutingResponse());
+    }
+
+    public UpdateEdgeInstanceMessageRoutingResponse updateEdgeInstanceMessageRouting(UpdateEdgeInstanceMessageRoutingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateEdgeInstanceMessageRoutingWithOptions(request, runtime);
     }
 
     public UpdateJobResponse updateJobWithOptions(UpdateJobRequest request, RuntimeOptions runtime) throws Exception {

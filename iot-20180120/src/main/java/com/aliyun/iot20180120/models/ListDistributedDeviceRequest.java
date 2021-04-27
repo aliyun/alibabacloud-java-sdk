@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class ListDistributedDeviceRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -28,28 +22,9 @@ public class ListDistributedDeviceRequest extends TeaModel {
     @NameInMap("SourceInstanceId")
     public String sourceInstanceId;
 
-    @NameInMap("TargetInstanceId")
-    public String targetInstanceId;
-
     public static ListDistributedDeviceRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDistributedDeviceRequest self = new ListDistributedDeviceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListDistributedDeviceRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public ListDistributedDeviceRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public ListDistributedDeviceRequest setPageSize(Integer pageSize) {
@@ -98,14 +73,6 @@ public class ListDistributedDeviceRequest extends TeaModel {
     }
     public String getSourceInstanceId() {
         return this.sourceInstanceId;
-    }
-
-    public ListDistributedDeviceRequest setTargetInstanceId(String targetInstanceId) {
-        this.targetInstanceId = targetInstanceId;
-        return this;
-    }
-    public String getTargetInstanceId() {
-        return this.targetInstanceId;
     }
 
 }

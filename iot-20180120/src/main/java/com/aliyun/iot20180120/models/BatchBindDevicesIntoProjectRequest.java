@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchBindDevicesIntoProjectRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -22,22 +16,6 @@ public class BatchBindDevicesIntoProjectRequest extends TeaModel {
     public static BatchBindDevicesIntoProjectRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchBindDevicesIntoProjectRequest self = new BatchBindDevicesIntoProjectRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchBindDevicesIntoProjectRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public BatchBindDevicesIntoProjectRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public BatchBindDevicesIntoProjectRequest setIotInstanceId(String iotInstanceId) {

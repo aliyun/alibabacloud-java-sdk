@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceEventDataRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -40,31 +34,9 @@ public class QueryDeviceEventDataRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
-    @NameInMap("RealTenantId")
-    public String realTenantId;
-
-    @NameInMap("RealTripartiteKey")
-    public String realTripartiteKey;
-
     public static QueryDeviceEventDataRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceEventDataRequest self = new QueryDeviceEventDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceEventDataRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryDeviceEventDataRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryDeviceEventDataRequest setIotInstanceId(String iotInstanceId) {
@@ -145,22 +117,6 @@ public class QueryDeviceEventDataRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
-    }
-
-    public QueryDeviceEventDataRequest setRealTenantId(String realTenantId) {
-        this.realTenantId = realTenantId;
-        return this;
-    }
-    public String getRealTenantId() {
-        return this.realTenantId;
-    }
-
-    public QueryDeviceEventDataRequest setRealTripartiteKey(String realTripartiteKey) {
-        this.realTripartiteKey = realTripartiteKey;
-        return this;
-    }
-    public String getRealTripartiteKey() {
-        return this.realTripartiteKey;
     }
 
 }

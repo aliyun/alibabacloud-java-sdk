@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateDataAPIServiceRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("DisplayName")
     public String displayName;
 
@@ -37,22 +31,6 @@ public class CreateDataAPIServiceRequest extends TeaModel {
     public static CreateDataAPIServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDataAPIServiceRequest self = new CreateDataAPIServiceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateDataAPIServiceRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateDataAPIServiceRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateDataAPIServiceRequest setDisplayName(String displayName) {
