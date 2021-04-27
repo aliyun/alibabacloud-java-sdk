@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class GetEdgeInstanceDeploymentRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -22,22 +16,6 @@ public class GetEdgeInstanceDeploymentRequest extends TeaModel {
     public static GetEdgeInstanceDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
         GetEdgeInstanceDeploymentRequest self = new GetEdgeInstanceDeploymentRequest();
         return TeaModel.build(map, self);
-    }
-
-    public GetEdgeInstanceDeploymentRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public GetEdgeInstanceDeploymentRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public GetEdgeInstanceDeploymentRequest setIotInstanceId(String iotInstanceId) {

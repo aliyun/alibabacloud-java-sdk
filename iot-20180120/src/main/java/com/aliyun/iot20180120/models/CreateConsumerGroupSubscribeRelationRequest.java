@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateConsumerGroupSubscribeRelationRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("ConsumerGroupId")
     public String consumerGroupId;
 
@@ -22,22 +16,6 @@ public class CreateConsumerGroupSubscribeRelationRequest extends TeaModel {
     public static CreateConsumerGroupSubscribeRelationRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateConsumerGroupSubscribeRelationRequest self = new CreateConsumerGroupSubscribeRelationRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateConsumerGroupSubscribeRelationRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateConsumerGroupSubscribeRelationRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateConsumerGroupSubscribeRelationRequest setConsumerGroupId(String consumerGroupId) {

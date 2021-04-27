@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDeviceByTagsRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -25,22 +19,6 @@ public class QueryDeviceByTagsRequest extends TeaModel {
     public static QueryDeviceByTagsRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDeviceByTagsRequest self = new QueryDeviceByTagsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDeviceByTagsRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryDeviceByTagsRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryDeviceByTagsRequest setIotInstanceId(String iotInstanceId) {

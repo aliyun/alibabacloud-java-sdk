@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class CreateLoRaNodesTaskRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -22,22 +16,6 @@ public class CreateLoRaNodesTaskRequest extends TeaModel {
     public static CreateLoRaNodesTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoRaNodesTaskRequest self = new CreateLoRaNodesTaskRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateLoRaNodesTaskRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public CreateLoRaNodesTaskRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public CreateLoRaNodesTaskRequest setIotInstanceId(String iotInstanceId) {

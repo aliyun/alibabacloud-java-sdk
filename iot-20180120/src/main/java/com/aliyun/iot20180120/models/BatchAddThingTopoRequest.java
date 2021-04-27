@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchAddThingTopoRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -19,31 +13,12 @@ public class BatchAddThingTopoRequest extends TeaModel {
     @NameInMap("GwProductKey")
     public String gwProductKey;
 
-    @NameInMap("Ext")
-    public String ext;
-
     @NameInMap("GwDeviceName")
     public String gwDeviceName;
 
     public static BatchAddThingTopoRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchAddThingTopoRequest self = new BatchAddThingTopoRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchAddThingTopoRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public BatchAddThingTopoRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public BatchAddThingTopoRequest setIotInstanceId(String iotInstanceId) {
@@ -68,14 +43,6 @@ public class BatchAddThingTopoRequest extends TeaModel {
     }
     public String getGwProductKey() {
         return this.gwProductKey;
-    }
-
-    public BatchAddThingTopoRequest setExt(String ext) {
-        this.ext = ext;
-        return this;
-    }
-    public String getExt() {
-        return this.ext;
     }
 
     public BatchAddThingTopoRequest setGwDeviceName(String gwDeviceName) {

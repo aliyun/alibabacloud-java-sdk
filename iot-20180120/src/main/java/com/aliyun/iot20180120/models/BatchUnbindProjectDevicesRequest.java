@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BatchUnbindProjectDevicesRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("Devices")
     public java.util.List<BatchUnbindProjectDevicesRequestDevices> devices;
 
@@ -22,22 +16,6 @@ public class BatchUnbindProjectDevicesRequest extends TeaModel {
     public static BatchUnbindProjectDevicesRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchUnbindProjectDevicesRequest self = new BatchUnbindProjectDevicesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BatchUnbindProjectDevicesRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public BatchUnbindProjectDevicesRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public BatchUnbindProjectDevicesRequest setDevices(java.util.List<BatchUnbindProjectDevicesRequestDevices> devices) {

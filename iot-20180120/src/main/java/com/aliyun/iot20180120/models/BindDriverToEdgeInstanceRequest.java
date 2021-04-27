@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class BindDriverToEdgeInstanceRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -28,22 +22,6 @@ public class BindDriverToEdgeInstanceRequest extends TeaModel {
     public static BindDriverToEdgeInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         BindDriverToEdgeInstanceRequest self = new BindDriverToEdgeInstanceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public BindDriverToEdgeInstanceRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public BindDriverToEdgeInstanceRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public BindDriverToEdgeInstanceRequest setIotInstanceId(String iotInstanceId) {

@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class UpdateOTAModuleRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("AliasName")
     public String aliasName;
 
@@ -28,22 +22,6 @@ public class UpdateOTAModuleRequest extends TeaModel {
     public static UpdateOTAModuleRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateOTAModuleRequest self = new UpdateOTAModuleRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateOTAModuleRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public UpdateOTAModuleRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public UpdateOTAModuleRequest setAliasName(String aliasName) {

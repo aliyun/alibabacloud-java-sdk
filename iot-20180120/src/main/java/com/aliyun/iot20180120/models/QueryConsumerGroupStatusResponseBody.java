@@ -25,6 +25,12 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("AccumulatedConsumeCountPerMinute")
+    public Integer accumulatedConsumeCountPerMinute;
+
+    @NameInMap("RealTimeConsumeCountPerMinute")
+    public Integer realTimeConsumeCountPerMinute;
+
     @NameInMap("ClientConnectionStatusList")
     public QueryConsumerGroupStatusResponseBodyClientConnectionStatusList clientConnectionStatusList;
 
@@ -89,6 +95,22 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         return this.code;
     }
 
+    public QueryConsumerGroupStatusResponseBody setAccumulatedConsumeCountPerMinute(Integer accumulatedConsumeCountPerMinute) {
+        this.accumulatedConsumeCountPerMinute = accumulatedConsumeCountPerMinute;
+        return this;
+    }
+    public Integer getAccumulatedConsumeCountPerMinute() {
+        return this.accumulatedConsumeCountPerMinute;
+    }
+
+    public QueryConsumerGroupStatusResponseBody setRealTimeConsumeCountPerMinute(Integer realTimeConsumeCountPerMinute) {
+        this.realTimeConsumeCountPerMinute = realTimeConsumeCountPerMinute;
+        return this;
+    }
+    public Integer getRealTimeConsumeCountPerMinute() {
+        return this.realTimeConsumeCountPerMinute;
+    }
+
     public QueryConsumerGroupStatusResponseBody setClientConnectionStatusList(QueryConsumerGroupStatusResponseBodyClientConnectionStatusList clientConnectionStatusList) {
         this.clientConnectionStatusList = clientConnectionStatusList;
         return this;
@@ -106,6 +128,12 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
 
         @NameInMap("OnlineTime")
         public Long onlineTime;
+
+        @NameInMap("RealTimeConsumeCountPerMinute")
+        public Integer realTimeConsumeCountPerMinute;
+
+        @NameInMap("AccumulatedConsumeCountPerMinute")
+        public Integer accumulatedConsumeCountPerMinute;
 
         public static QueryConsumerGroupStatusResponseBodyClientConnectionStatusListConsumerGroupClientConnectionInfo build(java.util.Map<String, ?> map) throws Exception {
             QueryConsumerGroupStatusResponseBodyClientConnectionStatusListConsumerGroupClientConnectionInfo self = new QueryConsumerGroupStatusResponseBodyClientConnectionStatusListConsumerGroupClientConnectionInfo();
@@ -134,6 +162,22 @@ public class QueryConsumerGroupStatusResponseBody extends TeaModel {
         }
         public Long getOnlineTime() {
             return this.onlineTime;
+        }
+
+        public QueryConsumerGroupStatusResponseBodyClientConnectionStatusListConsumerGroupClientConnectionInfo setRealTimeConsumeCountPerMinute(Integer realTimeConsumeCountPerMinute) {
+            this.realTimeConsumeCountPerMinute = realTimeConsumeCountPerMinute;
+            return this;
+        }
+        public Integer getRealTimeConsumeCountPerMinute() {
+            return this.realTimeConsumeCountPerMinute;
+        }
+
+        public QueryConsumerGroupStatusResponseBodyClientConnectionStatusListConsumerGroupClientConnectionInfo setAccumulatedConsumeCountPerMinute(Integer accumulatedConsumeCountPerMinute) {
+            this.accumulatedConsumeCountPerMinute = accumulatedConsumeCountPerMinute;
+            return this;
+        }
+        public Integer getAccumulatedConsumeCountPerMinute() {
+            return this.accumulatedConsumeCountPerMinute;
         }
 
     }

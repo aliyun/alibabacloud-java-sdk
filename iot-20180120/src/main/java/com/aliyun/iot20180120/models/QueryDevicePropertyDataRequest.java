@@ -4,12 +4,6 @@ package com.aliyun.iot20180120.models;
 import com.aliyun.tea.*;
 
 public class QueryDevicePropertyDataRequest extends TeaModel {
-    @NameInMap("ApiProduct")
-    public String apiProduct;
-
-    @NameInMap("ApiRevision")
-    public String apiRevision;
-
     @NameInMap("IotInstanceId")
     public String iotInstanceId;
 
@@ -37,31 +31,9 @@ public class QueryDevicePropertyDataRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
-    @NameInMap("RealTenantId")
-    public String realTenantId;
-
-    @NameInMap("RealTripartiteKey")
-    public String realTripartiteKey;
-
     public static QueryDevicePropertyDataRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryDevicePropertyDataRequest self = new QueryDevicePropertyDataRequest();
         return TeaModel.build(map, self);
-    }
-
-    public QueryDevicePropertyDataRequest setApiProduct(String apiProduct) {
-        this.apiProduct = apiProduct;
-        return this;
-    }
-    public String getApiProduct() {
-        return this.apiProduct;
-    }
-
-    public QueryDevicePropertyDataRequest setApiRevision(String apiRevision) {
-        this.apiRevision = apiRevision;
-        return this;
-    }
-    public String getApiRevision() {
-        return this.apiRevision;
     }
 
     public QueryDevicePropertyDataRequest setIotInstanceId(String iotInstanceId) {
@@ -134,22 +106,6 @@ public class QueryDevicePropertyDataRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
-    }
-
-    public QueryDevicePropertyDataRequest setRealTenantId(String realTenantId) {
-        this.realTenantId = realTenantId;
-        return this;
-    }
-    public String getRealTenantId() {
-        return this.realTenantId;
-    }
-
-    public QueryDevicePropertyDataRequest setRealTripartiteKey(String realTripartiteKey) {
-        this.realTripartiteKey = realTripartiteKey;
-        return this;
-    }
-    public String getRealTripartiteKey() {
-        return this.realTripartiteKey;
     }
 
 }
