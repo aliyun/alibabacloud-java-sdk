@@ -64,15 +64,45 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QuerySavingsPlansInstanceResponseBodyDataItemsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static QuerySavingsPlansInstanceResponseBodyDataItemsTags build(java.util.Map<String, ?> map) throws Exception {
+            QuerySavingsPlansInstanceResponseBodyDataItemsTags self = new QuerySavingsPlansInstanceResponseBodyDataItemsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItemsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItemsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class QuerySavingsPlansInstanceResponseBodyDataItems extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        @NameInMap("Share")
-        public Boolean share;
-
         @NameInMap("SavingsType")
         public String savingsType;
+
+        @NameInMap("Tags")
+        public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> tags;
 
         @NameInMap("PrepayFee")
         public String prepayFee;
@@ -94,6 +124,9 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
         @NameInMap("InstanceFamily")
         public String instanceFamily;
+
+        @NameInMap("AllocationStatus")
+        public String allocationStatus;
 
         @NameInMap("Region")
         public String region;
@@ -120,20 +153,20 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
             return this.status;
         }
 
-        public QuerySavingsPlansInstanceResponseBodyDataItems setShare(Boolean share) {
-            this.share = share;
-            return this;
-        }
-        public Boolean getShare() {
-            return this.share;
-        }
-
         public QuerySavingsPlansInstanceResponseBodyDataItems setSavingsType(String savingsType) {
             this.savingsType = savingsType;
             return this;
         }
         public String getSavingsType() {
             return this.savingsType;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setTags(java.util.List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<QuerySavingsPlansInstanceResponseBodyDataItemsTags> getTags() {
+            return this.tags;
         }
 
         public QuerySavingsPlansInstanceResponseBodyDataItems setPrepayFee(String prepayFee) {
@@ -190,6 +223,14 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
         }
         public String getInstanceFamily() {
             return this.instanceFamily;
+        }
+
+        public QuerySavingsPlansInstanceResponseBodyDataItems setAllocationStatus(String allocationStatus) {
+            this.allocationStatus = allocationStatus;
+            return this;
+        }
+        public String getAllocationStatus() {
+            return this.allocationStatus;
         }
 
         public QuerySavingsPlansInstanceResponseBodyDataItems setRegion(String region) {
