@@ -22,6 +22,9 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("Tag")
+    public java.util.List<QuerySavingsPlansInstanceRequestTag> tag;
+
     public static QuerySavingsPlansInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         QuerySavingsPlansInstanceRequest self = new QuerySavingsPlansInstanceRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,44 @@ public class QuerySavingsPlansInstanceRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public QuerySavingsPlansInstanceRequest setTag(java.util.List<QuerySavingsPlansInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<QuerySavingsPlansInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class QuerySavingsPlansInstanceRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static QuerySavingsPlansInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            QuerySavingsPlansInstanceRequestTag self = new QuerySavingsPlansInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public QuerySavingsPlansInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public QuerySavingsPlansInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
