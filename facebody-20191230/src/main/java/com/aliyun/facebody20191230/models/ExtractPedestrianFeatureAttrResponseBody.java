@@ -86,6 +86,12 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
         @NameInMap("UpperColorScore")
         public Float upperColorScore;
 
+        @NameInMap("Orientation")
+        public String orientation;
+
+        @NameInMap("OrientationScore")
+        public Float orientationScore;
+
         public static ExtractPedestrianFeatureAttrResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ExtractPedestrianFeatureAttrResponseBodyData self = new ExtractPedestrianFeatureAttrResponseBodyData();
             return TeaModel.build(map, self);
@@ -233,6 +239,22 @@ public class ExtractPedestrianFeatureAttrResponseBody extends TeaModel {
         }
         public Float getUpperColorScore() {
             return this.upperColorScore;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setOrientation(String orientation) {
+            this.orientation = orientation;
+            return this;
+        }
+        public String getOrientation() {
+            return this.orientation;
+        }
+
+        public ExtractPedestrianFeatureAttrResponseBodyData setOrientationScore(Float orientationScore) {
+            this.orientationScore = orientationScore;
+            return this;
+        }
+        public Float getOrientationScore() {
+            return this.orientationScore;
         }
 
     }

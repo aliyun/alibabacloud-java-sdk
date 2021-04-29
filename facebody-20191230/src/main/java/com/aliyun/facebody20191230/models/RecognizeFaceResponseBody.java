@@ -152,8 +152,8 @@ public class RecognizeFaceResponseBody extends TeaModel {
         @NameInMap("Qualities")
         public RecognizeFaceResponseBodyDataQualities qualities;
 
-        @NameInMap("BeuatyList")
-        public java.util.List<Float> beuatyList;
+        @NameInMap("BeautyList")
+        public java.util.List<Float> beautyList;
 
         @NameInMap("HatList")
         public java.util.List<Integer> hatList;
@@ -175,6 +175,9 @@ public class RecognizeFaceResponseBody extends TeaModel {
 
         @NameInMap("DenseFeatureLength")
         public Integer denseFeatureLength;
+
+        @NameInMap("Masks")
+        public java.util.List<Long> masks;
 
         public static RecognizeFaceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RecognizeFaceResponseBodyData self = new RecognizeFaceResponseBodyData();
@@ -245,12 +248,12 @@ public class RecognizeFaceResponseBody extends TeaModel {
             return this.qualities;
         }
 
-        public RecognizeFaceResponseBodyData setBeuatyList(java.util.List<Float> beuatyList) {
-            this.beuatyList = beuatyList;
+        public RecognizeFaceResponseBodyData setBeautyList(java.util.List<Float> beautyList) {
+            this.beautyList = beautyList;
             return this;
         }
-        public java.util.List<Float> getBeuatyList() {
-            return this.beuatyList;
+        public java.util.List<Float> getBeautyList() {
+            return this.beautyList;
         }
 
         public RecognizeFaceResponseBodyData setHatList(java.util.List<Integer> hatList) {
@@ -307,6 +310,14 @@ public class RecognizeFaceResponseBody extends TeaModel {
         }
         public Integer getDenseFeatureLength() {
             return this.denseFeatureLength;
+        }
+
+        public RecognizeFaceResponseBodyData setMasks(java.util.List<Long> masks) {
+            this.masks = masks;
+            return this;
+        }
+        public java.util.List<Long> getMasks() {
+            return this.masks;
         }
 
     }
