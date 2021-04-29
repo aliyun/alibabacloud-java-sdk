@@ -19,9 +19,6 @@ public class RecolorHDImageRequest extends TeaModel {
     @NameInMap("Degree")
     public String degree;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     @NameInMap("ColorTemplate")
     public java.util.List<RecolorHDImageRequestColorTemplate> colorTemplate;
 
@@ -68,14 +65,6 @@ public class RecolorHDImageRequest extends TeaModel {
     }
     public String getDegree() {
         return this.degree;
-    }
-
-    public RecolorHDImageRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
     public RecolorHDImageRequest setColorTemplate(java.util.List<RecolorHDImageRequestColorTemplate> colorTemplate) {
