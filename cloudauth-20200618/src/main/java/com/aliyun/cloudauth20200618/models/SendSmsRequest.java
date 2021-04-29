@@ -1,0 +1,70 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cloudauth20200618.models;
+
+import com.aliyun.tea.*;
+
+public class SendSmsRequest extends TeaModel {
+    @NameInMap("Mobile")
+    @Validation(required = true)
+    public String mobile;
+
+    @NameInMap("SignName")
+    @Validation(required = true)
+    public String signName;
+
+    @NameInMap("TemplateCode")
+    @Validation(required = true)
+    public String templateCode;
+
+    @NameInMap("TemplateParam")
+    public String templateParam;
+
+    @NameInMap("OuterOrderNo")
+    public String outerOrderNo;
+
+    public static SendSmsRequest build(java.util.Map<String, ?> map) throws Exception {
+        SendSmsRequest self = new SendSmsRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public SendSmsRequest setMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+    public String getMobile() {
+        return this.mobile;
+    }
+
+    public SendSmsRequest setSignName(String signName) {
+        this.signName = signName;
+        return this;
+    }
+    public String getSignName() {
+        return this.signName;
+    }
+
+    public SendSmsRequest setTemplateCode(String templateCode) {
+        this.templateCode = templateCode;
+        return this;
+    }
+    public String getTemplateCode() {
+        return this.templateCode;
+    }
+
+    public SendSmsRequest setTemplateParam(String templateParam) {
+        this.templateParam = templateParam;
+        return this;
+    }
+    public String getTemplateParam() {
+        return this.templateParam;
+    }
+
+    public SendSmsRequest setOuterOrderNo(String outerOrderNo) {
+        this.outerOrderNo = outerOrderNo;
+        return this;
+    }
+    public String getOuterOrderNo() {
+        return this.outerOrderNo;
+    }
+
+}

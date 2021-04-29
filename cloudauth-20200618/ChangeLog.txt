@@ -1,3 +1,6 @@
+2021-04-29 Version: 1.0.6
+- Generated java 2020-06-18 for Cloudauth.
+
 2021-04-27 Version: 2.0.2
 - Generated java 2020-06-18 for Cloudauth.
 
