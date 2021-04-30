@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.alb20200616.models;
+
+import com.aliyun.tea.*;
+
+public class ListAclRelationsResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public ListAclRelationsResponseBody body;
+
+    public static ListAclRelationsResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListAclRelationsResponse self = new ListAclRelationsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public ListAclRelationsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public ListAclRelationsResponse setBody(ListAclRelationsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public ListAclRelationsResponseBody getBody() {
+        return this.body;
+    }
+
+}
