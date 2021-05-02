@@ -68,6 +68,12 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
         @NameInMap("TargetInstanceId")
         public String targetInstanceId;
 
+        @NameInMap("TargetRegion")
+        public String targetRegion;
+
+        @NameInMap("TargetInstanceName")
+        public String targetInstanceName;
+
         public static ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs build(java.util.Map<String, ?> map) throws Exception {
             ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs self = new ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs();
             return TeaModel.build(map, self);
@@ -79,6 +85,22 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
         }
         public String getTargetInstanceId() {
             return this.targetInstanceId;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs setTargetRegion(String targetRegion) {
+            this.targetRegion = targetRegion;
+            return this;
+        }
+        public String getTargetRegion() {
+            return this.targetRegion;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigsTargetInstanceConfigs setTargetInstanceName(String targetInstanceName) {
+            this.targetInstanceName = targetInstanceName;
+            return this;
+        }
+        public String getTargetInstanceName() {
+            return this.targetInstanceName;
         }
 
     }
@@ -129,6 +151,12 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
 
         @NameInMap("Strategy")
         public Integer strategy;
+
+        @NameInMap("SourceRegion")
+        public String sourceRegion;
+
+        @NameInMap("SourceInstanceName")
+        public String sourceInstanceName;
 
         @NameInMap("TargetInstanceConfigs")
         public ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigs targetInstanceConfigs;
@@ -208,6 +236,22 @@ public class ListDeviceDistributeJobResponseBody extends TeaModel {
         }
         public Integer getStrategy() {
             return this.strategy;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceRegion(String sourceRegion) {
+            this.sourceRegion = sourceRegion;
+            return this;
+        }
+        public String getSourceRegion() {
+            return this.sourceRegion;
+        }
+
+        public ListDeviceDistributeJobResponseBodyDataJobInfoItems setSourceInstanceName(String sourceInstanceName) {
+            this.sourceInstanceName = sourceInstanceName;
+            return this;
+        }
+        public String getSourceInstanceName() {
+            return this.sourceInstanceName;
         }
 
         public ListDeviceDistributeJobResponseBodyDataJobInfoItems setTargetInstanceConfigs(ListDeviceDistributeJobResponseBodyDataJobInfoItemsTargetInstanceConfigs targetInstanceConfigs) {

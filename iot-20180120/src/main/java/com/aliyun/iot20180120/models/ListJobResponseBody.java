@@ -119,6 +119,9 @@ public class ListJobResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("ScheduledTime")
+        public Long scheduledTime;
+
         public static ListJobResponseBodyDataData build(java.util.Map<String, ?> map) throws Exception {
             ListJobResponseBodyDataData self = new ListJobResponseBodyDataData();
             return TeaModel.build(map, self);
@@ -178,6 +181,14 @@ public class ListJobResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public ListJobResponseBodyDataData setScheduledTime(Long scheduledTime) {
+            this.scheduledTime = scheduledTime;
+            return this;
+        }
+        public Long getScheduledTime() {
+            return this.scheduledTime;
         }
 
     }

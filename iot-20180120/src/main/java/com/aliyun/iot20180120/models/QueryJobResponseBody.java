@@ -269,6 +269,9 @@ public class QueryJobResponseBody extends TeaModel {
         @NameInMap("UtcModified")
         public String utcModified;
 
+        @NameInMap("ScheduledTime")
+        public Long scheduledTime;
+
         @NameInMap("RolloutConfig")
         public QueryJobResponseBodyDataRolloutConfig rolloutConfig;
 
@@ -348,6 +351,14 @@ public class QueryJobResponseBody extends TeaModel {
         }
         public String getUtcModified() {
             return this.utcModified;
+        }
+
+        public QueryJobResponseBodyData setScheduledTime(Long scheduledTime) {
+            this.scheduledTime = scheduledTime;
+            return this;
+        }
+        public Long getScheduledTime() {
+            return this.scheduledTime;
         }
 
         public QueryJobResponseBodyData setRolloutConfig(QueryJobResponseBodyDataRolloutConfig rolloutConfig) {

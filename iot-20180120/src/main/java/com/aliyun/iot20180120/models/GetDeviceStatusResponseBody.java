@@ -68,6 +68,9 @@ public class GetDeviceStatusResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Timestamp")
+        public Long timestamp;
+
         public static GetDeviceStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetDeviceStatusResponseBodyData self = new GetDeviceStatusResponseBodyData();
             return TeaModel.build(map, self);
@@ -79,6 +82,14 @@ public class GetDeviceStatusResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetDeviceStatusResponseBodyData setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
         }
 
     }

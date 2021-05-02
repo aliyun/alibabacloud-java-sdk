@@ -16,6 +16,9 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("JobId")
+    public String jobId;
+
     public static ListDeviceDistributeJobRequest build(java.util.Map<String, ?> map) throws Exception {
         ListDeviceDistributeJobRequest self = new ListDeviceDistributeJobRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ListDeviceDistributeJobRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public ListDeviceDistributeJobRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
 }
