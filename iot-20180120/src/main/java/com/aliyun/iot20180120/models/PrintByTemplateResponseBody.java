@@ -80,6 +80,9 @@ public class PrintByTemplateResponseBody extends TeaModel {
         @NameInMap("RetryCount")
         public Integer retryCount;
 
+        @NameInMap("MaxRetryCount")
+        public Integer maxRetryCount;
+
         public static PrintByTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             PrintByTemplateResponseBodyData self = new PrintByTemplateResponseBodyData();
             return TeaModel.build(map, self);
@@ -123,6 +126,14 @@ public class PrintByTemplateResponseBody extends TeaModel {
         }
         public Integer getRetryCount() {
             return this.retryCount;
+        }
+
+        public PrintByTemplateResponseBodyData setMaxRetryCount(Integer maxRetryCount) {
+            this.maxRetryCount = maxRetryCount;
+            return this;
+        }
+        public Integer getMaxRetryCount() {
+            return this.maxRetryCount;
         }
 
     }

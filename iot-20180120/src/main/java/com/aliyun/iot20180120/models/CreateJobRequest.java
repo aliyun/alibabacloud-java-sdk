@@ -31,6 +31,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("TargetConfig")
     public String targetConfig;
 
+    @NameInMap("ScheduledTime")
+    public Long scheduledTime;
+
     public static CreateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateJobRequest self = new CreateJobRequest();
         return TeaModel.build(map, self);
@@ -106,6 +109,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getTargetConfig() {
         return this.targetConfig;
+    }
+
+    public CreateJobRequest setScheduledTime(Long scheduledTime) {
+        this.scheduledTime = scheduledTime;
+        return this;
+    }
+    public Long getScheduledTime() {
+        return this.scheduledTime;
     }
 
 }

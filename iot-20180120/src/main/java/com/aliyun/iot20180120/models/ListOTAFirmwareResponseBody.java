@@ -139,9 +139,6 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         @NameInMap("FirmwareSize")
         public Integer firmwareSize;
 
-        @NameInMap("FirmwareUrl")
-        public String firmwareUrl;
-
         @NameInMap("ProductKey")
         public String productKey;
 
@@ -240,14 +237,6 @@ public class ListOTAFirmwareResponseBody extends TeaModel {
         }
         public Integer getFirmwareSize() {
             return this.firmwareSize;
-        }
-
-        public ListOTAFirmwareResponseBodyFirmwareInfoSimpleFirmwareInfo setFirmwareUrl(String firmwareUrl) {
-            this.firmwareUrl = firmwareUrl;
-            return this;
-        }
-        public String getFirmwareUrl() {
-            return this.firmwareUrl;
         }
 
         public ListOTAFirmwareResponseBodyFirmwareInfoSimpleFirmwareInfo setProductKey(String productKey) {

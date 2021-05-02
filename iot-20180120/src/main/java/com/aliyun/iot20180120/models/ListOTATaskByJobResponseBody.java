@@ -151,6 +151,9 @@ public class ListOTATaskByJobResponseBody extends TeaModel {
         @NameInMap("UtcCreate")
         public String utcCreate;
 
+        @NameInMap("Timeout")
+        public String timeout;
+
         public static ListOTATaskByJobResponseBodyDataSimpleOTATaskInfo build(java.util.Map<String, ?> map) throws Exception {
             ListOTATaskByJobResponseBodyDataSimpleOTATaskInfo self = new ListOTATaskByJobResponseBodyDataSimpleOTATaskInfo();
             return TeaModel.build(map, self);
@@ -266,6 +269,14 @@ public class ListOTATaskByJobResponseBody extends TeaModel {
         }
         public String getUtcCreate() {
             return this.utcCreate;
+        }
+
+        public ListOTATaskByJobResponseBodyDataSimpleOTATaskInfo setTimeout(String timeout) {
+            this.timeout = timeout;
+            return this;
+        }
+        public String getTimeout() {
+            return this.timeout;
         }
 
     }

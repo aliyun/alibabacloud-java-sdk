@@ -60,6 +60,18 @@ public class SpeechByCombinationResponseBody extends TeaModel {
         @NameInMap("RetryCount")
         public Integer retryCount;
 
+        @NameInMap("Success")
+        public Boolean success;
+
+        @NameInMap("MaxRetryCount")
+        public Integer maxRetryCount;
+
+        @NameInMap("DeviceErrorCode")
+        public String deviceErrorCode;
+
+        @NameInMap("DeviceErrorMessage")
+        public String deviceErrorMessage;
+
         public static SyncSpeechByCombinationResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             SyncSpeechByCombinationResponseBodyData self = new SyncSpeechByCombinationResponseBodyData();
             return TeaModel.build(map, self);
@@ -79,6 +91,38 @@ public class SpeechByCombinationResponseBody extends TeaModel {
         }
         public Integer getRetryCount() {
             return this.retryCount;
+        }
+
+        public SyncSpeechByCombinationResponseBodyData setSuccess(Boolean success) {
+            this.success = success;
+            return this;
+        }
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        public SyncSpeechByCombinationResponseBodyData setMaxRetryCount(Integer maxRetryCount) {
+            this.maxRetryCount = maxRetryCount;
+            return this;
+        }
+        public Integer getMaxRetryCount() {
+            return this.maxRetryCount;
+        }
+
+        public SyncSpeechByCombinationResponseBodyData setDeviceErrorCode(String deviceErrorCode) {
+            this.deviceErrorCode = deviceErrorCode;
+            return this;
+        }
+        public String getDeviceErrorCode() {
+            return this.deviceErrorCode;
+        }
+
+        public SyncSpeechByCombinationResponseBodyData setDeviceErrorMessage(String deviceErrorMessage) {
+            this.deviceErrorMessage = deviceErrorMessage;
+            return this;
+        }
+        public String getDeviceErrorMessage() {
+            return this.deviceErrorMessage;
         }
 
     }
