@@ -4,33 +4,69 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourcePackStatisticsResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("AvailablePackNum")
     @Validation(required = true)
-    public DescribeResourcePackStatisticsResponseBody body;
+    public Integer availablePackNum;
+
+    @NameInMap("TotalCurrCapacity")
+    @Validation(required = true)
+    public Long totalCurrCapacity;
+
+    @NameInMap("TotalUsedCapacity")
+    @Validation(required = true)
+    public Long totalUsedCapacity;
+
+    @NameInMap("TotalInitCapacity")
+    @Validation(required = true)
+    public Long totalInitCapacity;
 
     public static DescribeResourcePackStatisticsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourcePackStatisticsResponse self = new DescribeResourcePackStatisticsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeResourcePackStatisticsResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeResourcePackStatisticsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeResourcePackStatisticsResponse setBody(DescribeResourcePackStatisticsResponseBody body) {
-        this.body = body;
+    public DescribeResourcePackStatisticsResponse setAvailablePackNum(Integer availablePackNum) {
+        this.availablePackNum = availablePackNum;
         return this;
     }
-    public DescribeResourcePackStatisticsResponseBody getBody() {
-        return this.body;
+    public Integer getAvailablePackNum() {
+        return this.availablePackNum;
+    }
+
+    public DescribeResourcePackStatisticsResponse setTotalCurrCapacity(Long totalCurrCapacity) {
+        this.totalCurrCapacity = totalCurrCapacity;
+        return this;
+    }
+    public Long getTotalCurrCapacity() {
+        return this.totalCurrCapacity;
+    }
+
+    public DescribeResourcePackStatisticsResponse setTotalUsedCapacity(Long totalUsedCapacity) {
+        this.totalUsedCapacity = totalUsedCapacity;
+        return this;
+    }
+    public Long getTotalUsedCapacity() {
+        return this.totalUsedCapacity;
+    }
+
+    public DescribeResourcePackStatisticsResponse setTotalInitCapacity(Long totalInitCapacity) {
+        this.totalInitCapacity = totalInitCapacity;
+        return this;
+    }
+    public Long getTotalInitCapacity() {
+        return this.totalInitCapacity;
     }
 
 }

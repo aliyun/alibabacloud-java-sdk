@@ -4,33 +4,33 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class CheckGrantResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Status")
     @Validation(required = true)
-    public CheckGrantResponseBody body;
+    public Integer status;
 
     public static CheckGrantResponse build(java.util.Map<String, ?> map) throws Exception {
         CheckGrantResponse self = new CheckGrantResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckGrantResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CheckGrantResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CheckGrantResponse setBody(CheckGrantResponseBody body) {
-        this.body = body;
+    public CheckGrantResponse setStatus(Integer status) {
+        this.status = status;
         return this;
     }
-    public CheckGrantResponseBody getBody() {
-        return this.body;
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

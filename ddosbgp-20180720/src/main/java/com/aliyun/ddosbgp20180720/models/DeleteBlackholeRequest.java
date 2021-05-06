@@ -4,13 +4,12 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DeleteBlackholeRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Ip")
+    @Validation(required = true)
     public String ip;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ResourceGroupId")
@@ -22,14 +21,6 @@ public class DeleteBlackholeRequest extends TeaModel {
     public static DeleteBlackholeRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteBlackholeRequest self = new DeleteBlackholeRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteBlackholeRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DeleteBlackholeRequest setIp(String ip) {

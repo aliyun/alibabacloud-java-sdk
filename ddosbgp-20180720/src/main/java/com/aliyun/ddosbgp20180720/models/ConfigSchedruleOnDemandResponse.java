@@ -4,33 +4,21 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class ConfigSchedruleOnDemandResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
-
-    @NameInMap("body")
-    @Validation(required = true)
-    public ConfigSchedruleOnDemandResponseBody body;
+    public String requestId;
 
     public static ConfigSchedruleOnDemandResponse build(java.util.Map<String, ?> map) throws Exception {
         ConfigSchedruleOnDemandResponse self = new ConfigSchedruleOnDemandResponse();
         return TeaModel.build(map, self);
     }
 
-    public ConfigSchedruleOnDemandResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ConfigSchedruleOnDemandResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
-    }
-
-    public ConfigSchedruleOnDemandResponse setBody(ConfigSchedruleOnDemandResponseBody body) {
-        this.body = body;
-        return this;
-    }
-    public ConfigSchedruleOnDemandResponseBody getBody() {
-        return this.body;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

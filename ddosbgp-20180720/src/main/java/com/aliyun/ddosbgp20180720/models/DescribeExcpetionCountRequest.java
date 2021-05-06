@@ -4,9 +4,6 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeExcpetionCountRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -16,14 +13,6 @@ public class DescribeExcpetionCountRequest extends TeaModel {
     public static DescribeExcpetionCountRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeExcpetionCountRequest self = new DescribeExcpetionCountRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeExcpetionCountRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeExcpetionCountRequest setResourceGroupId(String resourceGroupId) {

@@ -4,29 +4,16 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
-    @NameInMap("TagOwnerUid")
-    public String tagOwnerUid;
-
-    @NameInMap("TagOwnerBid")
-    public String tagOwnerBid;
-
     @NameInMap("ResourceType")
+    @Validation(required = true)
     public String resourceType;
-
-    @NameInMap("Scope")
-    public String scope;
-
-    @NameInMap("NextToken")
-    public String nextToken;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -34,17 +21,12 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTagResourcesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public ListTagResourcesRequest setResourceGroupId(String resourceGroupId) {
@@ -63,44 +45,12 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ListTagResourcesRequest setTagOwnerUid(String tagOwnerUid) {
-        this.tagOwnerUid = tagOwnerUid;
-        return this;
-    }
-    public String getTagOwnerUid() {
-        return this.tagOwnerUid;
-    }
-
-    public ListTagResourcesRequest setTagOwnerBid(String tagOwnerBid) {
-        this.tagOwnerBid = tagOwnerBid;
-        return this;
-    }
-    public String getTagOwnerBid() {
-        return this.tagOwnerBid;
-    }
-
     public ListTagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public ListTagResourcesRequest setScope(String scope) {
-        this.scope = scope;
-        return this;
-    }
-    public String getScope() {
-        return this.scope;
-    }
-
-    public ListTagResourcesRequest setNextToken(String nextToken) {
-        this.nextToken = nextToken;
-        return this;
-    }
-    public String getNextToken() {
-        return this.nextToken;
     }
 
     public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
@@ -117,6 +67,14 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public java.util.List<ListTagResourcesRequestTag> getTag() {
         return this.tag;
+    }
+
+    public ListTagResourcesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

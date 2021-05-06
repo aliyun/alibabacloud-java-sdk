@@ -4,9 +4,6 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeTrafficRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -17,6 +14,7 @@ public class DescribeTrafficRequest extends TeaModel {
     public String ip;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Integer startTime;
 
     @NameInMap("EndTime")
@@ -24,6 +22,9 @@ public class DescribeTrafficRequest extends TeaModel {
 
     @NameInMap("Interval")
     public Integer interval;
+
+    @NameInMap("FlowType")
+    public String flowType;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -34,14 +35,6 @@ public class DescribeTrafficRequest extends TeaModel {
     public static DescribeTrafficRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeTrafficRequest self = new DescribeTrafficRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTrafficRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeTrafficRequest setInstanceId(String instanceId) {
@@ -90,6 +83,14 @@ public class DescribeTrafficRequest extends TeaModel {
     }
     public Integer getInterval() {
         return this.interval;
+    }
+
+    public DescribeTrafficRequest setFlowType(String flowType) {
+        this.flowType = flowType;
+        return this;
+    }
+    public String getFlowType() {
+        return this.flowType;
     }
 
     public DescribeTrafficRequest setResourceGroupId(String resourceGroupId) {

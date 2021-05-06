@@ -4,28 +4,19 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
-    @NameInMap("TagOwnerUid")
-    public String tagOwnerUid;
-
-    @NameInMap("TagOwnerBid")
-    public String tagOwnerBid;
-
     @NameInMap("ResourceType")
+    @Validation(required = true)
     public String resourceType;
 
-    @NameInMap("Scope")
-    public String scope;
-
     @NameInMap("ResourceId")
+    @Validation(required = true)
     public java.util.List<String> resourceId;
 
     @NameInMap("Tag")
@@ -34,14 +25,6 @@ public class TagResourcesRequest extends TeaModel {
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesRequest self = new TagResourcesRequest();
         return TeaModel.build(map, self);
-    }
-
-    public TagResourcesRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public TagResourcesRequest setResourceGroupId(String resourceGroupId) {
@@ -60,36 +43,12 @@ public class TagResourcesRequest extends TeaModel {
         return this.regionId;
     }
 
-    public TagResourcesRequest setTagOwnerUid(String tagOwnerUid) {
-        this.tagOwnerUid = tagOwnerUid;
-        return this;
-    }
-    public String getTagOwnerUid() {
-        return this.tagOwnerUid;
-    }
-
-    public TagResourcesRequest setTagOwnerBid(String tagOwnerBid) {
-        this.tagOwnerBid = tagOwnerBid;
-        return this;
-    }
-    public String getTagOwnerBid() {
-        return this.tagOwnerBid;
-    }
-
     public TagResourcesRequest setResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public TagResourcesRequest setScope(String scope) {
-        this.scope = scope;
-        return this;
-    }
-    public String getScope() {
-        return this.scope;
     }
 
     public TagResourcesRequest setResourceId(java.util.List<String> resourceId) {

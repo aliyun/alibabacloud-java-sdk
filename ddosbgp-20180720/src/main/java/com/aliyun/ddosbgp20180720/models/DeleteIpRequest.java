@@ -4,13 +4,12 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("IpList")
+    @Validation(required = true)
     public String ipList;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("ResourceGroupId")
@@ -22,14 +21,6 @@ public class DeleteIpRequest extends TeaModel {
     public static DeleteIpRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteIpRequest self = new DeleteIpRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteIpRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DeleteIpRequest setIpList(String ipList) {
