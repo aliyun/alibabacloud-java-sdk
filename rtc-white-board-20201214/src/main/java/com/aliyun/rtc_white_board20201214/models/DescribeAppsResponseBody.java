@@ -94,6 +94,10 @@ public class DescribeAppsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        // 白板应用回调类型
+        @NameInMap("CallbackType")
+        public String callbackType;
+
         public static DescribeAppsResponseBodyResultAppList build(java.util.Map<String, ?> map) throws Exception {
             DescribeAppsResponseBodyResultAppList self = new DescribeAppsResponseBodyResultAppList();
             return TeaModel.build(map, self);
@@ -145,6 +149,14 @@ public class DescribeAppsResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeAppsResponseBodyResultAppList setCallbackType(String callbackType) {
+            this.callbackType = callbackType;
+            return this;
+        }
+        public String getCallbackType() {
+            return this.callbackType;
         }
 
     }

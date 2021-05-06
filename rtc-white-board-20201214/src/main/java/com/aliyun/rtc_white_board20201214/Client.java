@@ -122,6 +122,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.refreshUsersPermissionsWithOptions(request, runtime);
     }
 
+    public SetAppCallbackTypeResponse setAppCallbackTypeWithOptions(SetAppCallbackTypeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SetAppCallbackType", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new SetAppCallbackTypeResponse());
+    }
+
+    public SetAppCallbackTypeResponse setAppCallbackType(SetAppCallbackTypeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setAppCallbackTypeWithOptions(request, runtime);
+    }
+
     public CreateAppResponse createAppWithOptions(CreateAppRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
