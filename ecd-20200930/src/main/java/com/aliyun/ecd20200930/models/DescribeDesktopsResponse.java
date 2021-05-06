@@ -158,9 +158,17 @@ public class DescribeDesktopsResponse extends TeaModel {
         @Validation(required = true)
         public String directoryId;
 
+        @NameInMap("OfficeSiteId")
+        @Validation(required = true)
+        public String officeSiteId;
+
         @NameInMap("DirectoryType")
         @Validation(required = true)
         public String directoryType;
+
+        @NameInMap("OfficeSiteType")
+        @Validation(required = true)
+        public String officeSiteType;
 
         @NameInMap("CreationTime")
         @Validation(required = true)
@@ -210,6 +218,10 @@ public class DescribeDesktopsResponse extends TeaModel {
         @Validation(required = true)
         public String policyGroupId;
 
+        @NameInMap("PolicyGroupName")
+        @Validation(required = true)
+        public String policyGroupName;
+
         @NameInMap("Cpu")
         @Validation(required = true)
         public Integer cpu;
@@ -250,6 +262,10 @@ public class DescribeDesktopsResponse extends TeaModel {
         @Validation(required = true)
         public String osType;
 
+        @NameInMap("ManagementFlag")
+        @Validation(required = true)
+        public String managementFlag;
+
         @NameInMap("Disks")
         @Validation(required = true)
         public java.util.List<DescribeDesktopsResponseDesktopsDisks> disks;
@@ -279,12 +295,28 @@ public class DescribeDesktopsResponse extends TeaModel {
             return this.directoryId;
         }
 
+        public DescribeDesktopsResponseDesktops setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
         public DescribeDesktopsResponseDesktops setDirectoryType(String directoryType) {
             this.directoryType = directoryType;
             return this;
         }
         public String getDirectoryType() {
             return this.directoryType;
+        }
+
+        public DescribeDesktopsResponseDesktops setOfficeSiteType(String officeSiteType) {
+            this.officeSiteType = officeSiteType;
+            return this;
+        }
+        public String getOfficeSiteType() {
+            return this.officeSiteType;
         }
 
         public DescribeDesktopsResponseDesktops setCreationTime(String creationTime) {
@@ -383,6 +415,14 @@ public class DescribeDesktopsResponse extends TeaModel {
             return this.policyGroupId;
         }
 
+        public DescribeDesktopsResponseDesktops setPolicyGroupName(String policyGroupName) {
+            this.policyGroupName = policyGroupName;
+            return this;
+        }
+        public String getPolicyGroupName() {
+            return this.policyGroupName;
+        }
+
         public DescribeDesktopsResponseDesktops setCpu(Integer cpu) {
             this.cpu = cpu;
             return this;
@@ -461,6 +501,14 @@ public class DescribeDesktopsResponse extends TeaModel {
         }
         public String getOsType() {
             return this.osType;
+        }
+
+        public DescribeDesktopsResponseDesktops setManagementFlag(String managementFlag) {
+            this.managementFlag = managementFlag;
+            return this;
+        }
+        public String getManagementFlag() {
+            return this.managementFlag;
         }
 
         public DescribeDesktopsResponseDesktops setDisks(java.util.List<DescribeDesktopsResponseDesktopsDisks> disks) {

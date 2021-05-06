@@ -9,8 +9,10 @@ public class SetIdpMetadataRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DirectoryId")
-    @Validation(required = true)
     public String directoryId;
+
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
 
     @NameInMap("IdpMetadata")
     @Validation(required = true)
@@ -35,6 +37,14 @@ public class SetIdpMetadataRequest extends TeaModel {
     }
     public String getDirectoryId() {
         return this.directoryId;
+    }
+
+    public SetIdpMetadataRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public SetIdpMetadataRequest setIdpMetadata(String idpMetadata) {

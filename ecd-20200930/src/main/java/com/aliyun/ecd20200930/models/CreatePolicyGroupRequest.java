@@ -32,6 +32,15 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("WatermarkTransparency")
     public String watermarkTransparency;
 
+    @NameInMap("PreemptLogin")
+    public String preemptLogin;
+
+    @NameInMap("PreemptLoginUser")
+    public java.util.List<String> preemptLoginUser;
+
+    @NameInMap("AuthorizeSecurityPolicyRule")
+    public java.util.List<CreatePolicyGroupRequestAuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
+
     public static CreatePolicyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePolicyGroupRequest self = new CreatePolicyGroupRequest();
         return TeaModel.build(map, self);
@@ -107,6 +116,115 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public String getWatermarkTransparency() {
         return this.watermarkTransparency;
+    }
+
+    public CreatePolicyGroupRequest setPreemptLogin(String preemptLogin) {
+        this.preemptLogin = preemptLogin;
+        return this;
+    }
+    public String getPreemptLogin() {
+        return this.preemptLogin;
+    }
+
+    public CreatePolicyGroupRequest setPreemptLoginUser(java.util.List<String> preemptLoginUser) {
+        this.preemptLoginUser = preemptLoginUser;
+        return this;
+    }
+    public java.util.List<String> getPreemptLoginUser() {
+        return this.preemptLoginUser;
+    }
+
+    public CreatePolicyGroupRequest setAuthorizeSecurityPolicyRule(java.util.List<CreatePolicyGroupRequestAuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule) {
+        this.authorizeSecurityPolicyRule = authorizeSecurityPolicyRule;
+        return this;
+    }
+    public java.util.List<CreatePolicyGroupRequestAuthorizeSecurityPolicyRule> getAuthorizeSecurityPolicyRule() {
+        return this.authorizeSecurityPolicyRule;
+    }
+
+    public static class CreatePolicyGroupRequestAuthorizeSecurityPolicyRule extends TeaModel {
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("IpProtocol")
+        public String ipProtocol;
+
+        @NameInMap("PortRange")
+        public String portRange;
+
+        @NameInMap("CidrIp")
+        public String cidrIp;
+
+        @NameInMap("Policy")
+        public String policy;
+
+        @NameInMap("Priority")
+        public String priority;
+
+        @NameInMap("Description")
+        public String description;
+
+        public static CreatePolicyGroupRequestAuthorizeSecurityPolicyRule build(java.util.Map<String, ?> map) throws Exception {
+            CreatePolicyGroupRequestAuthorizeSecurityPolicyRule self = new CreatePolicyGroupRequestAuthorizeSecurityPolicyRule();
+            return TeaModel.build(map, self);
+        }
+
+        public CreatePolicyGroupRequestAuthorizeSecurityPolicyRule setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public CreatePolicyGroupRequestAuthorizeSecurityPolicyRule setIpProtocol(String ipProtocol) {
+            this.ipProtocol = ipProtocol;
+            return this;
+        }
+        public String getIpProtocol() {
+            return this.ipProtocol;
+        }
+
+        public CreatePolicyGroupRequestAuthorizeSecurityPolicyRule setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
+        }
+
+        public CreatePolicyGroupRequestAuthorizeSecurityPolicyRule setCidrIp(String cidrIp) {
+            this.cidrIp = cidrIp;
+            return this;
+        }
+        public String getCidrIp() {
+            return this.cidrIp;
+        }
+
+        public CreatePolicyGroupRequestAuthorizeSecurityPolicyRule setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public CreatePolicyGroupRequestAuthorizeSecurityPolicyRule setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
+        }
+
+        public CreatePolicyGroupRequestAuthorizeSecurityPolicyRule setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
     }
 
 }

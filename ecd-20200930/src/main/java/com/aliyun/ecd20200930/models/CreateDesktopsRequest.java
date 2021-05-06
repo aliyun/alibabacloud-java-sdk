@@ -30,6 +30,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
     @NameInMap("EndUserId")
     @Validation(required = true)
     public java.util.List<String> endUserId;
@@ -55,6 +58,9 @@ public class CreateDesktopsRequest extends TeaModel {
 
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
+
+    @NameInMap("PromotionId")
+    public String promotionId;
 
     public static CreateDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDesktopsRequest self = new CreateDesktopsRequest();
@@ -125,6 +131,14 @@ public class CreateDesktopsRequest extends TeaModel {
         return this.directoryId;
     }
 
+    public CreateDesktopsRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
     public CreateDesktopsRequest setEndUserId(java.util.List<String> endUserId) {
         this.endUserId = endUserId;
         return this;
@@ -187,6 +201,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateDesktopsRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     public static class CreateDesktopsRequestTag extends TeaModel {

@@ -29,6 +29,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
@@ -37,6 +40,12 @@ public class DescribeDesktopsRequest extends TeaModel {
 
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
+
+    @NameInMap("ChargeType")
+    public String chargeType;
+
+    @NameInMap("ExpiredTime")
+    public String expiredTime;
 
     public static DescribeDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDesktopsRequest self = new DescribeDesktopsRequest();
@@ -107,6 +116,14 @@ public class DescribeDesktopsRequest extends TeaModel {
         return this.directoryId;
     }
 
+    public DescribeDesktopsRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
+    }
+
     public DescribeDesktopsRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
@@ -129,6 +146,22 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public java.util.List<String> getEndUserId() {
         return this.endUserId;
+    }
+
+    public DescribeDesktopsRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
+    }
+
+    public DescribeDesktopsRequest setExpiredTime(String expiredTime) {
+        this.expiredTime = expiredTime;
+        return this;
+    }
+    public String getExpiredTime() {
+        return this.expiredTime;
     }
 
 }
