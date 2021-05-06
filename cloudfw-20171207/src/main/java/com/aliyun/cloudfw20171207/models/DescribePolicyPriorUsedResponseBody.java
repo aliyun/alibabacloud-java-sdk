@@ -4,26 +4,26 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribePolicyPriorUsedResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("End")
+    public Integer end;
 
     @NameInMap("Start")
     public Integer start;
 
-    @NameInMap("End")
-    public Integer end;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribePolicyPriorUsedResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePolicyPriorUsedResponseBody self = new DescribePolicyPriorUsedResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribePolicyPriorUsedResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribePolicyPriorUsedResponseBody setEnd(Integer end) {
+        this.end = end;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getEnd() {
+        return this.end;
     }
 
     public DescribePolicyPriorUsedResponseBody setStart(Integer start) {
@@ -34,12 +34,12 @@ public class DescribePolicyPriorUsedResponseBody extends TeaModel {
         return this.start;
     }
 
-    public DescribePolicyPriorUsedResponseBody setEnd(Integer end) {
-        this.end = end;
+    public DescribePolicyPriorUsedResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getEnd() {
-        return this.end;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

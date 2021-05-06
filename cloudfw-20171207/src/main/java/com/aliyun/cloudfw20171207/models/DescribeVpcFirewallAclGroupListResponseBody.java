@@ -4,11 +4,11 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("AclGroupList")
     public java.util.List<DescribeVpcFirewallAclGroupListResponseBodyAclGroupList> aclGroupList;
@@ -18,20 +18,20 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpcFirewallAclGroupListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeVpcFirewallAclGroupListResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
+    }
+
+    public DescribeVpcFirewallAclGroupListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeVpcFirewallAclGroupListResponseBody setAclGroupList(java.util.List<DescribeVpcFirewallAclGroupListResponseBodyAclGroupList> aclGroupList) {

@@ -61,6 +61,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.addControlPolicyWithOptions(request, runtime);
     }
 
+    public AddInstanceMembersResponse addInstanceMembersWithOptions(AddInstanceMembersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("AddInstanceMembers", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new AddInstanceMembersResponse());
+    }
+
+    public AddInstanceMembersResponse addInstanceMembers(AddInstanceMembersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addInstanceMembersWithOptions(request, runtime);
+    }
+
     public CreateVpcFirewallControlPolicyResponse createVpcFirewallControlPolicyWithOptions(CreateVpcFirewallControlPolicyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -100,6 +113,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.deleteControlPolicyWithOptions(request, runtime);
     }
 
+    public DeleteInstanceMembersResponse deleteInstanceMembersWithOptions(DeleteInstanceMembersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteInstanceMembers", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteInstanceMembersResponse());
+    }
+
+    public DeleteInstanceMembersResponse deleteInstanceMembers(DeleteInstanceMembersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteInstanceMembersWithOptions(request, runtime);
+    }
+
     public DeleteVpcFirewallControlPolicyResponse deleteVpcFirewallControlPolicyWithOptions(DeleteVpcFirewallControlPolicyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -126,6 +152,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAddressBookWithOptions(request, runtime);
     }
 
+    public DescribeAssetListResponse describeAssetListWithOptions(DescribeAssetListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeAssetList", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeAssetListResponse());
+    }
+
+    public DescribeAssetListResponse describeAssetList(DescribeAssetListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAssetListWithOptions(request, runtime);
+    }
+
     public DescribeControlPolicyResponse describeControlPolicyWithOptions(DescribeControlPolicyRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -150,6 +189,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDomainResolveResponse describeDomainResolve(DescribeDomainResolveRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeDomainResolveWithOptions(request, runtime);
+    }
+
+    public DescribeInstanceMembersResponse describeInstanceMembersWithOptions(DescribeInstanceMembersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeInstanceMembers", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeInstanceMembersResponse());
+    }
+
+    public DescribeInstanceMembersResponse describeInstanceMembers(DescribeInstanceMembersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeInstanceMembersWithOptions(request, runtime);
+    }
+
+    public DescribeInstanceRdAccountsResponse describeInstanceRdAccountsWithOptions(DescribeInstanceRdAccountsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeInstanceRdAccounts", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeInstanceRdAccountsResponse());
+    }
+
+    public DescribeInstanceRdAccountsResponse describeInstanceRdAccounts(DescribeInstanceRdAccountsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeInstanceRdAccountsWithOptions(request, runtime);
     }
 
     public DescribePolicyAdvancedConfigResponse describePolicyAdvancedConfigWithOptions(DescribePolicyAdvancedConfigRequest request, RuntimeOptions runtime) throws Exception {
@@ -254,6 +319,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyControlPolicyPositionResponse modifyControlPolicyPosition(ModifyControlPolicyPositionRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyControlPolicyPositionWithOptions(request, runtime);
+    }
+
+    public ModifyControlPolicyPriorityResponse modifyControlPolicyPriorityWithOptions(ModifyControlPolicyPriorityRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ModifyControlPolicyPriority", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyControlPolicyPriorityResponse());
+    }
+
+    public ModifyControlPolicyPriorityResponse modifyControlPolicyPriority(ModifyControlPolicyPriorityRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyControlPolicyPriorityWithOptions(request, runtime);
+    }
+
+    public ModifyInstanceMemberAttributesResponse modifyInstanceMemberAttributesWithOptions(ModifyInstanceMemberAttributesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ModifyInstanceMemberAttributes", "2017-12-07", "HTTPS", "POST", "AK", "json", req, runtime), new ModifyInstanceMemberAttributesResponse());
+    }
+
+    public ModifyInstanceMemberAttributesResponse modifyInstanceMemberAttributes(ModifyInstanceMemberAttributesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyInstanceMemberAttributesWithOptions(request, runtime);
     }
 
     public ModifyPolicyAdvancedConfigResponse modifyPolicyAdvancedConfigWithOptions(ModifyPolicyAdvancedConfigRequest request, RuntimeOptions runtime) throws Exception {

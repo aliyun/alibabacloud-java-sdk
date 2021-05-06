@@ -13,6 +13,9 @@ public class DescribeDomainResolveRequest extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     public static DescribeDomainResolveRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainResolveRequest self = new DescribeDomainResolveRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DescribeDomainResolveRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public DescribeDomainResolveRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
 }

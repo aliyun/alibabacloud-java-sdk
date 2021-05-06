@@ -4,26 +4,26 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("End")
+    public Integer end;
 
     @NameInMap("Start")
     public Integer start;
 
-    @NameInMap("End")
-    public Integer end;
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeVpcFirewallPolicyPriorUsedResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcFirewallPolicyPriorUsedResponseBody self = new DescribeVpcFirewallPolicyPriorUsedResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeVpcFirewallPolicyPriorUsedResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeVpcFirewallPolicyPriorUsedResponseBody setEnd(Integer end) {
+        this.end = end;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public Integer getEnd() {
+        return this.end;
     }
 
     public DescribeVpcFirewallPolicyPriorUsedResponseBody setStart(Integer start) {
@@ -34,12 +34,12 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         return this.start;
     }
 
-    public DescribeVpcFirewallPolicyPriorUsedResponseBody setEnd(Integer end) {
-        this.end = end;
+    public DescribeVpcFirewallPolicyPriorUsedResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public Integer getEnd() {
-        return this.end;
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
