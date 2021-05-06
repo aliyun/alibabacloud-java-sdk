@@ -167,23 +167,4 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getPartnerInfoByDingOrgIdWithOptions(request, runtime);
     }
-
-    public ListProductsWithAttrValueResponse listProductsWithAttrValueWithOptions(ListProductsWithAttrValueRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        ListProductsWithAttrValueShrinkRequest request = new ListProductsWithAttrValueShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.productIds)) {
-            request.productIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.productIds, "productIds", "simple");
-        }
-
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("ListProductsWithAttrValue", "2021-03-24", "HTTPS", "POST", "AK", "json", req, runtime), new ListProductsWithAttrValueResponse());
-    }
-
-    public ListProductsWithAttrValueResponse listProductsWithAttrValue(ListProductsWithAttrValueRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.listProductsWithAttrValueWithOptions(request, runtime);
-    }
 }
