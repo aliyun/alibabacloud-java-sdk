@@ -3,10 +3,15 @@ package com.aliyun.ddosbgp20171120;
 
 import com.aliyun.tea.*;
 import com.aliyun.ddosbgp20171120.models.*;
+import com.aliyun.teautil.*;
+import com.aliyun.teautil.models.*;
+import com.aliyun.tearpc.*;
+import com.aliyun.tearpc.models.*;
+import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.tearpc.Client {
 
-    public Client(com.aliyun.tearpc.models.Config config) throws Exception {
+    public Client(Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
@@ -36,193 +41,193 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
-    public DescribeOnDemandInstanceResponse describeOnDemandInstanceWithOptions(DescribeOnDemandInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeOnDemandInstanceResponse describeOnDemandInstanceWithOptions(DescribeOnDemandInstanceRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeOnDemandInstance", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribeOnDemandInstanceResponse());
     }
 
     public DescribeOnDemandInstanceResponse describeOnDemandInstance(DescribeOnDemandInstanceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describeOnDemandInstanceWithOptions(request, runtime);
     }
 
-    public ModifyOnDemaondDefenseStatusResponse modifyOnDemaondDefenseStatusWithOptions(ModifyOnDemaondDefenseStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public ModifyOnDemaondDefenseStatusResponse modifyOnDemaondDefenseStatusWithOptions(ModifyOnDemaondDefenseStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("ModifyOnDemaondDefenseStatus", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new ModifyOnDemaondDefenseStatusResponse());
     }
 
     public ModifyOnDemaondDefenseStatusResponse modifyOnDemaondDefenseStatus(ModifyOnDemaondDefenseStatusRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.modifyOnDemaondDefenseStatusWithOptions(request, runtime);
     }
 
-    public DescribeOpEntitiesResponse describeOpEntitiesWithOptions(DescribeOpEntitiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeOpEntitiesResponse describeOpEntitiesWithOptions(DescribeOpEntitiesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeOpEntities", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribeOpEntitiesResponse());
     }
 
     public DescribeOpEntitiesResponse describeOpEntities(DescribeOpEntitiesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describeOpEntitiesWithOptions(request, runtime);
     }
 
-    public DescribePackPaidTrafficResponse describePackPaidTrafficWithOptions(DescribePackPaidTrafficRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribePackPaidTrafficResponse describePackPaidTrafficWithOptions(DescribePackPaidTrafficRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribePackPaidTraffic", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribePackPaidTrafficResponse());
     }
 
     public DescribePackPaidTrafficResponse describePackPaidTraffic(DescribePackPaidTrafficRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describePackPaidTrafficWithOptions(request, runtime);
     }
 
-    public DescribeResourcePackUsageResponse describeResourcePackUsageWithOptions(DescribeResourcePackUsageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeResourcePackUsageResponse describeResourcePackUsageWithOptions(DescribeResourcePackUsageRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeResourcePackUsage", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribeResourcePackUsageResponse());
     }
 
     public DescribeResourcePackUsageResponse describeResourcePackUsage(DescribeResourcePackUsageRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describeResourcePackUsageWithOptions(request, runtime);
     }
 
-    public DescribeResourcePackStatisticsResponse describeResourcePackStatisticsWithOptions(DescribeResourcePackStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeResourcePackStatisticsResponse describeResourcePackStatisticsWithOptions(DescribeResourcePackStatisticsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeResourcePackStatistics", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribeResourcePackStatisticsResponse());
     }
 
     public DescribeResourcePackStatisticsResponse describeResourcePackStatistics(DescribeResourcePackStatisticsRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describeResourcePackStatisticsWithOptions(request, runtime);
     }
 
-    public DescribeResourcePackInstancesResponse describeResourcePackInstancesWithOptions(DescribeResourcePackInstancesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeResourcePackInstancesResponse describeResourcePackInstancesWithOptions(DescribeResourcePackInstancesRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeResourcePackInstances", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribeResourcePackInstancesResponse());
     }
 
     public DescribeResourcePackInstancesResponse describeResourcePackInstances(DescribeResourcePackInstancesRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describeResourcePackInstancesWithOptions(request, runtime);
     }
 
-    public DeleteBlackholeResponse deleteBlackholeWithOptions(DeleteBlackholeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteBlackholeResponse deleteBlackholeWithOptions(DeleteBlackholeRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteBlackhole", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DeleteBlackholeResponse());
     }
 
     public DeleteBlackholeResponse deleteBlackhole(DeleteBlackholeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteBlackholeWithOptions(request, runtime);
     }
 
-    public CheckGrantResponse checkGrantWithOptions(CheckGrantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public CheckGrantResponse checkGrantWithOptions(CheckGrantRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CheckGrant", "HTTPS", "GET", "2017-11-20", "AK", TeaModel.buildMap(request), null, runtime), new CheckGrantResponse());
     }
 
     public CheckGrantResponse checkGrant(CheckGrantRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.checkGrantWithOptions(request, runtime);
     }
 
-    public DeleteProductResponse deleteProductWithOptions(DeleteProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteProductResponse deleteProductWithOptions(DeleteProductRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteProduct", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DeleteProductResponse());
     }
 
     public DeleteProductResponse deleteProduct(DeleteProductRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteProductWithOptions(request, runtime);
     }
 
-    public AddProductResponse addProductWithOptions(AddProductRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public AddProductResponse addProductWithOptions(AddProductRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("AddProduct", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new AddProductResponse());
     }
 
     public AddProductResponse addProduct(AddProductRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.addProductWithOptions(request, runtime);
     }
 
-    public AddIpResponse addIpWithOptions(AddIpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public AddIpResponse addIpWithOptions(AddIpRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("AddIp", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new AddIpResponse());
     }
 
     public AddIpResponse addIp(AddIpRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.addIpWithOptions(request, runtime);
     }
 
-    public DescribeInstanceListResponse describeInstanceListWithOptions(DescribeInstanceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeInstanceListResponse describeInstanceListWithOptions(DescribeInstanceListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeInstanceList", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribeInstanceListResponse());
     }
 
     public DescribeInstanceListResponse describeInstanceList(DescribeInstanceListRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describeInstanceListWithOptions(request, runtime);
     }
 
-    public DescribeTopTrafficResponse describeTopTrafficWithOptions(DescribeTopTrafficRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeTopTrafficResponse describeTopTrafficWithOptions(DescribeTopTrafficRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeTopTraffic", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribeTopTrafficResponse());
     }
 
     public DescribeTopTrafficResponse describeTopTraffic(DescribeTopTrafficRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describeTopTrafficWithOptions(request, runtime);
     }
 
-    public DescribeDdosEventResponse describeDdosEventWithOptions(DescribeDdosEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeDdosEventResponse describeDdosEventWithOptions(DescribeDdosEventRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeDdosEvent", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribeDdosEventResponse());
     }
 
     public DescribeDdosEventResponse describeDdosEvent(DescribeDdosEventRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describeDdosEventWithOptions(request, runtime);
     }
 
-    public DescribeTrafficResponse describeTrafficWithOptions(DescribeTrafficRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribeTrafficResponse describeTrafficWithOptions(DescribeTrafficRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribeTraffic", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribeTrafficResponse());
     }
 
     public DescribeTrafficResponse describeTraffic(DescribeTrafficRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describeTrafficWithOptions(request, runtime);
     }
 
-    public DeleteIpResponse deleteIpWithOptions(DeleteIpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteIpResponse deleteIpWithOptions(DeleteIpRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DeleteIp", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DeleteIpResponse());
     }
 
     public DeleteIpResponse deleteIp(DeleteIpRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.deleteIpWithOptions(request, runtime);
     }
 
-    public DescribePackResponse describePackWithOptions(DescribePackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribePackResponse describePackWithOptions(DescribePackRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribePack", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribePackResponse());
     }
 
     public DescribePackResponse describePack(DescribePackRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describePackWithOptions(request, runtime);
     }
 
-    public DescribePackListResponse describePackListWithOptions(DescribePackListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DescribePackListResponse describePackListWithOptions(DescribePackListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("DescribePackList", "HTTPS", "POST", "2017-11-20", "AK", null, TeaModel.buildMap(request), runtime), new DescribePackListResponse());
     }
 
     public DescribePackListResponse describePackList(DescribePackListRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        RuntimeOptions runtime = new RuntimeOptions();
         return this.describePackListWithOptions(request, runtime);
     }
 
