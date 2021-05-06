@@ -40,6 +40,9 @@ public class DescribeControlPolicyRequest extends TeaModel {
     @NameInMap("AclUuid")
     public String aclUuid;
 
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     public static DescribeControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeControlPolicyRequest self = new DescribeControlPolicyRequest();
         return TeaModel.build(map, self);
@@ -139,6 +142,14 @@ public class DescribeControlPolicyRequest extends TeaModel {
     }
     public String getAclUuid() {
         return this.aclUuid;
+    }
+
+    public DescribeControlPolicyRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
 }

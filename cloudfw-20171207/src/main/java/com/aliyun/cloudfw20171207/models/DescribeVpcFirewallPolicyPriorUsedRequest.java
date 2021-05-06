@@ -4,9 +4,6 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallPolicyPriorUsedRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Lang")
     public String lang;
 
@@ -16,14 +13,6 @@ public class DescribeVpcFirewallPolicyPriorUsedRequest extends TeaModel {
     public static DescribeVpcFirewallPolicyPriorUsedRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeVpcFirewallPolicyPriorUsedRequest self = new DescribeVpcFirewallPolicyPriorUsedRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeVpcFirewallPolicyPriorUsedRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribeVpcFirewallPolicyPriorUsedRequest setLang(String lang) {

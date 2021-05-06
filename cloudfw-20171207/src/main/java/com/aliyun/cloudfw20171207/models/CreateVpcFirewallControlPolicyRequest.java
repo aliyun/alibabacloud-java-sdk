@@ -4,9 +4,6 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("Lang")
     public String lang;
 
@@ -52,14 +49,6 @@ public class CreateVpcFirewallControlPolicyRequest extends TeaModel {
     public static CreateVpcFirewallControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateVpcFirewallControlPolicyRequest self = new CreateVpcFirewallControlPolicyRequest();
         return TeaModel.build(map, self);
-    }
-
-    public CreateVpcFirewallControlPolicyRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public CreateVpcFirewallControlPolicyRequest setLang(String lang) {

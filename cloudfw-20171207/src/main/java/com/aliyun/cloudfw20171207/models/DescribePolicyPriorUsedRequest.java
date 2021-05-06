@@ -13,6 +13,9 @@ public class DescribePolicyPriorUsedRequest extends TeaModel {
     @NameInMap("Direction")
     public String direction;
 
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     public static DescribePolicyPriorUsedRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePolicyPriorUsedRequest self = new DescribePolicyPriorUsedRequest();
         return TeaModel.build(map, self);
@@ -40,6 +43,14 @@ public class DescribePolicyPriorUsedRequest extends TeaModel {
     }
     public String getDirection() {
         return this.direction;
+    }
+
+    public DescribePolicyPriorUsedRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
 }

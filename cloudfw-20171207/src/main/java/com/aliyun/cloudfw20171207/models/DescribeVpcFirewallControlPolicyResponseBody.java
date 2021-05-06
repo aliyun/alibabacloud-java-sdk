@@ -52,20 +52,17 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("Order")
         public Integer order;
 
-        @NameInMap("ApplicationName")
-        public String applicationName;
+        @NameInMap("DestPortGroup")
+        public String destPortGroup;
 
         @NameInMap("SourceType")
         public String sourceType;
 
-        @NameInMap("DestPortGroup")
-        public String destPortGroup;
+        @NameInMap("ApplicationName")
+        public String applicationName;
 
         @NameInMap("AclUuid")
         public String aclUuid;
-
-        @NameInMap("DestPortGroupPorts")
-        public java.util.List<String> destPortGroupPorts;
 
         @NameInMap("DestPortType")
         public String destPortType;
@@ -79,14 +76,8 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @NameInMap("HitTimes")
         public Integer hitTimes;
 
-        @NameInMap("SourceGroupCidrs")
-        public java.util.List<String> sourceGroupCidrs;
-
         @NameInMap("DestPort")
         public String destPort;
-
-        @NameInMap("DestinationGroupCidrs")
-        public java.util.List<String> destinationGroupCidrs;
 
         @NameInMap("Description")
         public String description;
@@ -99,6 +90,15 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
 
         @NameInMap("Proto")
         public String proto;
+
+        @NameInMap("DestinationGroupCidrs")
+        public java.util.List<String> destinationGroupCidrs;
+
+        @NameInMap("DestPortGroupPorts")
+        public java.util.List<String> destPortGroupPorts;
+
+        @NameInMap("SourceGroupCidrs")
+        public java.util.List<String> sourceGroupCidrs;
 
         public static DescribeVpcFirewallControlPolicyResponseBodyPolicys build(java.util.Map<String, ?> map) throws Exception {
             DescribeVpcFirewallControlPolicyResponseBodyPolicys self = new DescribeVpcFirewallControlPolicyResponseBodyPolicys();
@@ -129,12 +129,12 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             return this.order;
         }
 
-        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setApplicationName(String applicationName) {
-            this.applicationName = applicationName;
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestPortGroup(String destPortGroup) {
+            this.destPortGroup = destPortGroup;
             return this;
         }
-        public String getApplicationName() {
-            return this.applicationName;
+        public String getDestPortGroup() {
+            return this.destPortGroup;
         }
 
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setSourceType(String sourceType) {
@@ -145,12 +145,12 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             return this.sourceType;
         }
 
-        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestPortGroup(String destPortGroup) {
-            this.destPortGroup = destPortGroup;
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setApplicationName(String applicationName) {
+            this.applicationName = applicationName;
             return this;
         }
-        public String getDestPortGroup() {
-            return this.destPortGroup;
+        public String getApplicationName() {
+            return this.applicationName;
         }
 
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setAclUuid(String aclUuid) {
@@ -159,14 +159,6 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
         public String getAclUuid() {
             return this.aclUuid;
-        }
-
-        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestPortGroupPorts(java.util.List<String> destPortGroupPorts) {
-            this.destPortGroupPorts = destPortGroupPorts;
-            return this;
-        }
-        public java.util.List<String> getDestPortGroupPorts() {
-            return this.destPortGroupPorts;
         }
 
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestPortType(String destPortType) {
@@ -201,28 +193,12 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             return this.hitTimes;
         }
 
-        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setSourceGroupCidrs(java.util.List<String> sourceGroupCidrs) {
-            this.sourceGroupCidrs = sourceGroupCidrs;
-            return this;
-        }
-        public java.util.List<String> getSourceGroupCidrs() {
-            return this.sourceGroupCidrs;
-        }
-
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestPort(String destPort) {
             this.destPort = destPort;
             return this;
         }
         public String getDestPort() {
             return this.destPort;
-        }
-
-        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestinationGroupCidrs(java.util.List<String> destinationGroupCidrs) {
-            this.destinationGroupCidrs = destinationGroupCidrs;
-            return this;
-        }
-        public java.util.List<String> getDestinationGroupCidrs() {
-            return this.destinationGroupCidrs;
         }
 
         public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDescription(String description) {
@@ -255,6 +231,30 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         }
         public String getProto() {
             return this.proto;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestinationGroupCidrs(java.util.List<String> destinationGroupCidrs) {
+            this.destinationGroupCidrs = destinationGroupCidrs;
+            return this;
+        }
+        public java.util.List<String> getDestinationGroupCidrs() {
+            return this.destinationGroupCidrs;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setDestPortGroupPorts(java.util.List<String> destPortGroupPorts) {
+            this.destPortGroupPorts = destPortGroupPorts;
+            return this;
+        }
+        public java.util.List<String> getDestPortGroupPorts() {
+            return this.destPortGroupPorts;
+        }
+
+        public DescribeVpcFirewallControlPolicyResponseBodyPolicys setSourceGroupCidrs(java.util.List<String> sourceGroupCidrs) {
+            this.sourceGroupCidrs = sourceGroupCidrs;
+            return this;
+        }
+        public java.util.List<String> getSourceGroupCidrs() {
+            return this.sourceGroupCidrs;
         }
 
     }

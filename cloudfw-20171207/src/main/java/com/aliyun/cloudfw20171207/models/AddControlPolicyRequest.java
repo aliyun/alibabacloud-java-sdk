@@ -52,6 +52,9 @@ public class AddControlPolicyRequest extends TeaModel {
     @NameInMap("Release")
     public String release;
 
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     public static AddControlPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         AddControlPolicyRequest self = new AddControlPolicyRequest();
         return TeaModel.build(map, self);
@@ -183,6 +186,14 @@ public class AddControlPolicyRequest extends TeaModel {
     }
     public String getRelease() {
         return this.release;
+    }
+
+    public AddControlPolicyRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
 }
