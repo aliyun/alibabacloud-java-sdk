@@ -11,15 +11,19 @@ public class DescribePackPaidTrafficRequest extends TeaModel {
     public String instanceId;
 
     @NameInMap("CurrentPage")
+    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("ResourceGroupId")

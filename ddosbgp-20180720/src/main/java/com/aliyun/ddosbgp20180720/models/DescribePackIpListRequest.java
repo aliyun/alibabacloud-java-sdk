@@ -4,16 +4,16 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribePackIpListRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
     @NameInMap("PageNo")
+    @Validation(required = true)
     public Integer pageNo;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("InstanceId")
+    @Validation(required = true)
     public String instanceId;
 
     @NameInMap("Ip")
@@ -31,14 +31,6 @@ public class DescribePackIpListRequest extends TeaModel {
     public static DescribePackIpListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribePackIpListRequest self = new DescribePackIpListRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePackIpListRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
     }
 
     public DescribePackIpListRequest setPageNo(Integer pageNo) {

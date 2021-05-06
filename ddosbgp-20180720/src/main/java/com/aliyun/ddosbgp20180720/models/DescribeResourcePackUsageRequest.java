@@ -8,9 +8,11 @@ public class DescribeResourcePackUsageRequest extends TeaModel {
     public String sourceIp;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public Long endTime;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public Long startTime;
 
     @NameInMap("InstanceId")

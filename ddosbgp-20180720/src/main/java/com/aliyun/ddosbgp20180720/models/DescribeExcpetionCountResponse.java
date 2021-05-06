@@ -4,33 +4,45 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeExcpetionCountResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("ExceptionIpCount")
     @Validation(required = true)
-    public DescribeExcpetionCountResponseBody body;
+    public Integer exceptionIpCount;
+
+    @NameInMap("ExpireTimeCount")
+    @Validation(required = true)
+    public Integer expireTimeCount;
 
     public static DescribeExcpetionCountResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeExcpetionCountResponse self = new DescribeExcpetionCountResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeExcpetionCountResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeExcpetionCountResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeExcpetionCountResponse setBody(DescribeExcpetionCountResponseBody body) {
-        this.body = body;
+    public DescribeExcpetionCountResponse setExceptionIpCount(Integer exceptionIpCount) {
+        this.exceptionIpCount = exceptionIpCount;
         return this;
     }
-    public DescribeExcpetionCountResponseBody getBody() {
-        return this.body;
+    public Integer getExceptionIpCount() {
+        return this.exceptionIpCount;
+    }
+
+    public DescribeExcpetionCountResponse setExpireTimeCount(Integer expireTimeCount) {
+        this.expireTimeCount = expireTimeCount;
+        return this;
+    }
+    public Integer getExpireTimeCount() {
+        return this.expireTimeCount;
     }
 
 }

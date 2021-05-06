@@ -4,13 +4,8 @@ package com.aliyun.ddosbgp20180720.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSpecsRequest extends TeaModel {
-    @NameInMap("SourceIp")
-    public String sourceIp;
-
-    @NameInMap("Lang")
-    public String lang;
-
     @NameInMap("InstanceIdList")
+    @Validation(required = true)
     public String instanceIdList;
 
     @NameInMap("RegionId")
@@ -22,22 +17,6 @@ public class DescribeInstanceSpecsRequest extends TeaModel {
     public static DescribeInstanceSpecsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceSpecsRequest self = new DescribeInstanceSpecsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeInstanceSpecsRequest setSourceIp(String sourceIp) {
-        this.sourceIp = sourceIp;
-        return this;
-    }
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
-    public DescribeInstanceSpecsRequest setLang(String lang) {
-        this.lang = lang;
-        return this;
-    }
-    public String getLang() {
-        return this.lang;
     }
 
     public DescribeInstanceSpecsRequest setInstanceIdList(String instanceIdList) {
