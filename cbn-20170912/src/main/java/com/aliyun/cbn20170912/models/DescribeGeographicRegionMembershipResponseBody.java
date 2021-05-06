@@ -4,32 +4,24 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("RegionIds")
-    public java.util.List<DescribeGeographicRegionMembershipResponseBodyRegionIds> regionIds;
-
     @NameInMap("PageNumber")
     public Integer pageNumber;
+
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("RegionIds")
+    public DescribeGeographicRegionMembershipResponseBodyRegionIds regionIds;
 
     public static DescribeGeographicRegionMembershipResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGeographicRegionMembershipResponseBody self = new DescribeGeographicRegionMembershipResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeGeographicRegionMembershipResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeGeographicRegionMembershipResponseBody setPageSize(Integer pageSize) {
@@ -48,14 +40,6 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeGeographicRegionMembershipResponseBody setRegionIds(java.util.List<DescribeGeographicRegionMembershipResponseBodyRegionIds> regionIds) {
-        this.regionIds = regionIds;
-        return this;
-    }
-    public java.util.List<DescribeGeographicRegionMembershipResponseBodyRegionIds> getRegionIds() {
-        return this.regionIds;
-    }
-
     public DescribeGeographicRegionMembershipResponseBody setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -64,20 +48,55 @@ public class DescribeGeographicRegionMembershipResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public static class DescribeGeographicRegionMembershipResponseBodyRegionIds extends TeaModel {
+    public DescribeGeographicRegionMembershipResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeGeographicRegionMembershipResponseBody setRegionIds(DescribeGeographicRegionMembershipResponseBodyRegionIds regionIds) {
+        this.regionIds = regionIds;
+        return this;
+    }
+    public DescribeGeographicRegionMembershipResponseBodyRegionIds getRegionIds() {
+        return this.regionIds;
+    }
+
+    public static class DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
+
+        public static DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId self = new DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+    }
+
+    public static class DescribeGeographicRegionMembershipResponseBodyRegionIds extends TeaModel {
+        @NameInMap("RegionId")
+        public java.util.List<DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId> regionId;
 
         public static DescribeGeographicRegionMembershipResponseBodyRegionIds build(java.util.Map<String, ?> map) throws Exception {
             DescribeGeographicRegionMembershipResponseBodyRegionIds self = new DescribeGeographicRegionMembershipResponseBodyRegionIds();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGeographicRegionMembershipResponseBodyRegionIds setRegionId(String regionId) {
+        public DescribeGeographicRegionMembershipResponseBodyRegionIds setRegionId(java.util.List<DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId> regionId) {
             this.regionId = regionId;
             return this;
         }
-        public String getRegionId() {
+        public java.util.List<DescribeGeographicRegionMembershipResponseBodyRegionIdsRegionId> getRegionId() {
             return this.regionId;
         }
 

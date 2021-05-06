@@ -10,26 +10,26 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    @NameInMap("ChildInstanceRegionId")
+    public String childInstanceRegionId;
+
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("CenId")
-    public String cenId;
-
-    @NameInMap("ChildInstanceAttachTime")
-    public String childInstanceAttachTime;
 
     @NameInMap("ChildInstanceOwnerId")
     public Long childInstanceOwnerId;
 
-    @NameInMap("ChildInstanceName")
-    public String childInstanceName;
-
     @NameInMap("ChildInstanceId")
     public String childInstanceId;
 
-    @NameInMap("ChildInstanceRegionId")
-    public String childInstanceRegionId;
+    @NameInMap("CenId")
+    public String cenId;
+
+    @NameInMap("ChildInstanceName")
+    public String childInstanceName;
+
+    @NameInMap("ChildInstanceAttachTime")
+    public String childInstanceAttachTime;
 
     public static DescribeCenAttachedChildInstanceAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenAttachedChildInstanceAttributeResponseBody self = new DescribeCenAttachedChildInstanceAttributeResponseBody();
@@ -52,28 +52,20 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         return this.childInstanceType;
     }
 
+    public DescribeCenAttachedChildInstanceAttributeResponseBody setChildInstanceRegionId(String childInstanceRegionId) {
+        this.childInstanceRegionId = childInstanceRegionId;
+        return this;
+    }
+    public String getChildInstanceRegionId() {
+        return this.childInstanceRegionId;
+    }
+
     public DescribeCenAttachedChildInstanceAttributeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public DescribeCenAttachedChildInstanceAttributeResponseBody setCenId(String cenId) {
-        this.cenId = cenId;
-        return this;
-    }
-    public String getCenId() {
-        return this.cenId;
-    }
-
-    public DescribeCenAttachedChildInstanceAttributeResponseBody setChildInstanceAttachTime(String childInstanceAttachTime) {
-        this.childInstanceAttachTime = childInstanceAttachTime;
-        return this;
-    }
-    public String getChildInstanceAttachTime() {
-        return this.childInstanceAttachTime;
     }
 
     public DescribeCenAttachedChildInstanceAttributeResponseBody setChildInstanceOwnerId(Long childInstanceOwnerId) {
@@ -84,14 +76,6 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         return this.childInstanceOwnerId;
     }
 
-    public DescribeCenAttachedChildInstanceAttributeResponseBody setChildInstanceName(String childInstanceName) {
-        this.childInstanceName = childInstanceName;
-        return this;
-    }
-    public String getChildInstanceName() {
-        return this.childInstanceName;
-    }
-
     public DescribeCenAttachedChildInstanceAttributeResponseBody setChildInstanceId(String childInstanceId) {
         this.childInstanceId = childInstanceId;
         return this;
@@ -100,12 +84,28 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         return this.childInstanceId;
     }
 
-    public DescribeCenAttachedChildInstanceAttributeResponseBody setChildInstanceRegionId(String childInstanceRegionId) {
-        this.childInstanceRegionId = childInstanceRegionId;
+    public DescribeCenAttachedChildInstanceAttributeResponseBody setCenId(String cenId) {
+        this.cenId = cenId;
         return this;
     }
-    public String getChildInstanceRegionId() {
-        return this.childInstanceRegionId;
+    public String getCenId() {
+        return this.cenId;
+    }
+
+    public DescribeCenAttachedChildInstanceAttributeResponseBody setChildInstanceName(String childInstanceName) {
+        this.childInstanceName = childInstanceName;
+        return this;
+    }
+    public String getChildInstanceName() {
+        return this.childInstanceName;
+    }
+
+    public DescribeCenAttachedChildInstanceAttributeResponseBody setChildInstanceAttachTime(String childInstanceAttachTime) {
+        this.childInstanceAttachTime = childInstanceAttachTime;
+        return this;
+    }
+    public String getChildInstanceAttachTime() {
+        return this.childInstanceAttachTime;
     }
 
 }

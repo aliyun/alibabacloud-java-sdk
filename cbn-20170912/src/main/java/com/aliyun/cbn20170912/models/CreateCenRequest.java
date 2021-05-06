@@ -28,9 +28,6 @@ public class CreateCenRequest extends TeaModel {
     @NameInMap("ProtectionLevel")
     public String protectionLevel;
 
-    @NameInMap("Ipv6Level")
-    public String ipv6Level;
-
     public static CreateCenRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCenRequest self = new CreateCenRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class CreateCenRequest extends TeaModel {
     }
     public String getProtectionLevel() {
         return this.protectionLevel;
-    }
-
-    public CreateCenRequest setIpv6Level(String ipv6Level) {
-        this.ipv6Level = ipv6Level;
-        return this;
-    }
-    public String getIpv6Level() {
-        return this.ipv6Level;
     }
 
 }

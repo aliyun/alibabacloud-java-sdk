@@ -4,43 +4,27 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeFlowlogsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
-
-    @NameInMap("FlowLogs")
-    public java.util.List<DescribeFlowlogsResponseBodyFlowLogs> flowLogs;
-
     @NameInMap("PageSize")
     public String pageSize;
-
-    @NameInMap("RequestId")
-    public String requestId;
 
     @NameInMap("PageNumber")
     public String pageNumber;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("TotalCount")
+    public String totalCount;
+
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("FlowLogs")
+    public DescribeFlowlogsResponseBodyFlowLogs flowLogs;
 
     public static DescribeFlowlogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeFlowlogsResponseBody self = new DescribeFlowlogsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeFlowlogsResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public String getTotalCount() {
-        return this.totalCount;
-    }
-
-    public DescribeFlowlogsResponseBody setFlowLogs(java.util.List<DescribeFlowlogsResponseBodyFlowLogs> flowLogs) {
-        this.flowLogs = flowLogs;
-        return this;
-    }
-    public java.util.List<DescribeFlowlogsResponseBodyFlowLogs> getFlowLogs() {
-        return this.flowLogs;
     }
 
     public DescribeFlowlogsResponseBody setPageSize(String pageSize) {
@@ -51,6 +35,14 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
+    public DescribeFlowlogsResponseBody setPageNumber(String pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public String getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeFlowlogsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -59,12 +51,12 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeFlowlogsResponseBody setPageNumber(String pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeFlowlogsResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public String getPageNumber() {
-        return this.pageNumber;
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeFlowlogsResponseBody setSuccess(String success) {
@@ -75,7 +67,15 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class DescribeFlowlogsResponseBodyFlowLogs extends TeaModel {
+    public DescribeFlowlogsResponseBody setFlowLogs(DescribeFlowlogsResponseBodyFlowLogs flowLogs) {
+        this.flowLogs = flowLogs;
+        return this;
+    }
+    public DescribeFlowlogsResponseBodyFlowLogs getFlowLogs() {
+        return this.flowLogs;
+    }
+
+    public static class DescribeFlowlogsResponseBodyFlowLogsFlowLog extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -103,12 +103,12 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         @NameInMap("FlowLogId")
         public String flowLogId;
 
-        public static DescribeFlowlogsResponseBodyFlowLogs build(java.util.Map<String, ?> map) throws Exception {
-            DescribeFlowlogsResponseBodyFlowLogs self = new DescribeFlowlogsResponseBodyFlowLogs();
+        public static DescribeFlowlogsResponseBodyFlowLogsFlowLog build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowlogsResponseBodyFlowLogsFlowLog self = new DescribeFlowlogsResponseBodyFlowLogsFlowLog();
             return TeaModel.build(map, self);
         }
 
-        public DescribeFlowlogsResponseBodyFlowLogs setStatus(String status) {
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -116,7 +116,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeFlowlogsResponseBodyFlowLogs setCreationTime(String creationTime) {
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -124,7 +124,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeFlowlogsResponseBodyFlowLogs setFlowLogName(String flowLogName) {
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setFlowLogName(String flowLogName) {
             this.flowLogName = flowLogName;
             return this;
         }
@@ -132,7 +132,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.flowLogName;
         }
 
-        public DescribeFlowlogsResponseBodyFlowLogs setDescription(String description) {
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -140,7 +140,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeFlowlogsResponseBodyFlowLogs setProjectName(String projectName) {
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setProjectName(String projectName) {
             this.projectName = projectName;
             return this;
         }
@@ -148,7 +148,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.projectName;
         }
 
-        public DescribeFlowlogsResponseBodyFlowLogs setCenId(String cenId) {
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setCenId(String cenId) {
             this.cenId = cenId;
             return this;
         }
@@ -156,7 +156,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.cenId;
         }
 
-        public DescribeFlowlogsResponseBodyFlowLogs setLogStoreName(String logStoreName) {
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setLogStoreName(String logStoreName) {
             this.logStoreName = logStoreName;
             return this;
         }
@@ -164,7 +164,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.logStoreName;
         }
 
-        public DescribeFlowlogsResponseBodyFlowLogs setRegionId(String regionId) {
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -172,12 +172,31 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeFlowlogsResponseBodyFlowLogs setFlowLogId(String flowLogId) {
+        public DescribeFlowlogsResponseBodyFlowLogsFlowLog setFlowLogId(String flowLogId) {
             this.flowLogId = flowLogId;
             return this;
         }
         public String getFlowLogId() {
             return this.flowLogId;
+        }
+
+    }
+
+    public static class DescribeFlowlogsResponseBodyFlowLogs extends TeaModel {
+        @NameInMap("FlowLog")
+        public java.util.List<DescribeFlowlogsResponseBodyFlowLogsFlowLog> flowLog;
+
+        public static DescribeFlowlogsResponseBodyFlowLogs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeFlowlogsResponseBodyFlowLogs self = new DescribeFlowlogsResponseBodyFlowLogs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeFlowlogsResponseBodyFlowLogs setFlowLog(java.util.List<DescribeFlowlogsResponseBodyFlowLogsFlowLog> flowLog) {
+            this.flowLog = flowLog;
+            return this;
+        }
+        public java.util.List<DescribeFlowlogsResponseBodyFlowLogsFlowLog> getFlowLog() {
+            return this.flowLog;
         }
 
     }

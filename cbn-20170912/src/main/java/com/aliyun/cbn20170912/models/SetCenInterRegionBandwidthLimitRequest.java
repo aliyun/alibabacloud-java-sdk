@@ -28,9 +28,6 @@ public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
     @NameInMap("BandwidthLimit")
     public Long bandwidthLimit;
 
-    @NameInMap("BandwidthPackageId")
-    public String bandwidthPackageId;
-
     public static SetCenInterRegionBandwidthLimitRequest build(java.util.Map<String, ?> map) throws Exception {
         SetCenInterRegionBandwidthLimitRequest self = new SetCenInterRegionBandwidthLimitRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class SetCenInterRegionBandwidthLimitRequest extends TeaModel {
     }
     public Long getBandwidthLimit() {
         return this.bandwidthLimit;
-    }
-
-    public SetCenInterRegionBandwidthLimitRequest setBandwidthPackageId(String bandwidthPackageId) {
-        this.bandwidthPackageId = bandwidthPackageId;
-        return this;
-    }
-    public String getBandwidthPackageId() {
-        return this.bandwidthPackageId;
     }
 
 }

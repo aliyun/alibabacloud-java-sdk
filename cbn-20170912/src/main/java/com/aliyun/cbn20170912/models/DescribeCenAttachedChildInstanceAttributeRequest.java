@@ -28,9 +28,6 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends TeaModel {
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
-    @NameInMap("IncludeRouteTable")
-    public Boolean includeRouteTable;
-
     public static DescribeCenAttachedChildInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenAttachedChildInstanceAttributeRequest self = new DescribeCenAttachedChildInstanceAttributeRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class DescribeCenAttachedChildInstanceAttributeRequest extends TeaModel {
     }
     public String getChildInstanceRegionId() {
         return this.childInstanceRegionId;
-    }
-
-    public DescribeCenAttachedChildInstanceAttributeRequest setIncludeRouteTable(Boolean includeRouteTable) {
-        this.includeRouteTable = includeRouteTable;
-        return this;
-    }
-    public Boolean getIncludeRouteTable() {
-        return this.includeRouteTable;
     }
 
 }

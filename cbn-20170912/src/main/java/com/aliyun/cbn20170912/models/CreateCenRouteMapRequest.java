@@ -58,15 +58,6 @@ public class CreateCenRouteMapRequest extends TeaModel {
     @NameInMap("DestinationInstanceIdsReverseMatch")
     public Boolean destinationInstanceIdsReverseMatch;
 
-    @NameInMap("GatewayZoneId")
-    public String gatewayZoneId;
-
-    @NameInMap("SystemPolicy")
-    public Boolean systemPolicy;
-
-    @NameInMap("MatchAddressType")
-    public String matchAddressType;
-
     @NameInMap("SourceInstanceIds")
     public java.util.List<String> sourceInstanceIds;
 
@@ -105,15 +96,6 @@ public class CreateCenRouteMapRequest extends TeaModel {
 
     @NameInMap("PrependAsPath")
     public java.util.List<Integer> prependAsPath;
-
-    @NameInMap("DestinationRegionIds")
-    public java.util.List<String> destinationRegionIds;
-
-    @NameInMap("SourceZoneIds")
-    public java.util.List<String> sourceZoneIds;
-
-    @NameInMap("OriginalRouteTableIds")
-    public java.util.List<String> originalRouteTableIds;
 
     public static CreateCenRouteMapRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCenRouteMapRequest self = new CreateCenRouteMapRequest();
@@ -264,30 +246,6 @@ public class CreateCenRouteMapRequest extends TeaModel {
         return this.destinationInstanceIdsReverseMatch;
     }
 
-    public CreateCenRouteMapRequest setGatewayZoneId(String gatewayZoneId) {
-        this.gatewayZoneId = gatewayZoneId;
-        return this;
-    }
-    public String getGatewayZoneId() {
-        return this.gatewayZoneId;
-    }
-
-    public CreateCenRouteMapRequest setSystemPolicy(Boolean systemPolicy) {
-        this.systemPolicy = systemPolicy;
-        return this;
-    }
-    public Boolean getSystemPolicy() {
-        return this.systemPolicy;
-    }
-
-    public CreateCenRouteMapRequest setMatchAddressType(String matchAddressType) {
-        this.matchAddressType = matchAddressType;
-        return this;
-    }
-    public String getMatchAddressType() {
-        return this.matchAddressType;
-    }
-
     public CreateCenRouteMapRequest setSourceInstanceIds(java.util.List<String> sourceInstanceIds) {
         this.sourceInstanceIds = sourceInstanceIds;
         return this;
@@ -390,30 +348,6 @@ public class CreateCenRouteMapRequest extends TeaModel {
     }
     public java.util.List<Integer> getPrependAsPath() {
         return this.prependAsPath;
-    }
-
-    public CreateCenRouteMapRequest setDestinationRegionIds(java.util.List<String> destinationRegionIds) {
-        this.destinationRegionIds = destinationRegionIds;
-        return this;
-    }
-    public java.util.List<String> getDestinationRegionIds() {
-        return this.destinationRegionIds;
-    }
-
-    public CreateCenRouteMapRequest setSourceZoneIds(java.util.List<String> sourceZoneIds) {
-        this.sourceZoneIds = sourceZoneIds;
-        return this;
-    }
-    public java.util.List<String> getSourceZoneIds() {
-        return this.sourceZoneIds;
-    }
-
-    public CreateCenRouteMapRequest setOriginalRouteTableIds(java.util.List<String> originalRouteTableIds) {
-        this.originalRouteTableIds = originalRouteTableIds;
-        return this;
-    }
-    public java.util.List<String> getOriginalRouteTableIds() {
-        return this.originalRouteTableIds;
     }
 
 }

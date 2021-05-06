@@ -7,11 +7,11 @@ public class CreateFlowlogResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("FlowLogId")
-    public String flowLogId;
-
     @NameInMap("Success")
     public String success;
+
+    @NameInMap("FlowLogId")
+    public String flowLogId;
 
     public static CreateFlowlogResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateFlowlogResponseBody self = new CreateFlowlogResponseBody();
@@ -26,20 +26,20 @@ public class CreateFlowlogResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateFlowlogResponseBody setFlowLogId(String flowLogId) {
-        this.flowLogId = flowLogId;
-        return this;
-    }
-    public String getFlowLogId() {
-        return this.flowLogId;
-    }
-
     public CreateFlowlogResponseBody setSuccess(String success) {
         this.success = success;
         return this;
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public CreateFlowlogResponseBody setFlowLogId(String flowLogId) {
+        this.flowLogId = flowLogId;
+        return this;
+    }
+    public String getFlowLogId() {
+        return this.flowLogId;
     }
 
 }

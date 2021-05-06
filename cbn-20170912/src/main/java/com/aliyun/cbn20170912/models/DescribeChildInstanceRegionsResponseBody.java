@@ -8,7 +8,7 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("Regions")
-    public java.util.List<DescribeChildInstanceRegionsResponseBodyRegions> regions;
+    public DescribeChildInstanceRegionsResponseBodyRegions regions;
 
     public static DescribeChildInstanceRegionsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeChildInstanceRegionsResponseBody self = new DescribeChildInstanceRegionsResponseBody();
@@ -23,27 +23,27 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeChildInstanceRegionsResponseBody setRegions(java.util.List<DescribeChildInstanceRegionsResponseBodyRegions> regions) {
+    public DescribeChildInstanceRegionsResponseBody setRegions(DescribeChildInstanceRegionsResponseBodyRegions regions) {
         this.regions = regions;
         return this;
     }
-    public java.util.List<DescribeChildInstanceRegionsResponseBodyRegions> getRegions() {
+    public DescribeChildInstanceRegionsResponseBodyRegions getRegions() {
         return this.regions;
     }
 
-    public static class DescribeChildInstanceRegionsResponseBodyRegions extends TeaModel {
+    public static class DescribeChildInstanceRegionsResponseBodyRegionsRegion extends TeaModel {
         @NameInMap("LocalName")
         public String localName;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeChildInstanceRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeChildInstanceRegionsResponseBodyRegions self = new DescribeChildInstanceRegionsResponseBodyRegions();
+        public static DescribeChildInstanceRegionsResponseBodyRegionsRegion build(java.util.Map<String, ?> map) throws Exception {
+            DescribeChildInstanceRegionsResponseBodyRegionsRegion self = new DescribeChildInstanceRegionsResponseBodyRegionsRegion();
             return TeaModel.build(map, self);
         }
 
-        public DescribeChildInstanceRegionsResponseBodyRegions setLocalName(String localName) {
+        public DescribeChildInstanceRegionsResponseBodyRegionsRegion setLocalName(String localName) {
             this.localName = localName;
             return this;
         }
@@ -51,12 +51,31 @@ public class DescribeChildInstanceRegionsResponseBody extends TeaModel {
             return this.localName;
         }
 
-        public DescribeChildInstanceRegionsResponseBodyRegions setRegionId(String regionId) {
+        public DescribeChildInstanceRegionsResponseBodyRegionsRegion setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class DescribeChildInstanceRegionsResponseBodyRegions extends TeaModel {
+        @NameInMap("Region")
+        public java.util.List<DescribeChildInstanceRegionsResponseBodyRegionsRegion> region;
+
+        public static DescribeChildInstanceRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeChildInstanceRegionsResponseBodyRegions self = new DescribeChildInstanceRegionsResponseBodyRegions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeChildInstanceRegionsResponseBodyRegions setRegion(java.util.List<DescribeChildInstanceRegionsResponseBodyRegionsRegion> region) {
+            this.region = region;
+            return this;
+        }
+        public java.util.List<DescribeChildInstanceRegionsResponseBodyRegionsRegion> getRegion() {
+            return this.region;
         }
 
     }

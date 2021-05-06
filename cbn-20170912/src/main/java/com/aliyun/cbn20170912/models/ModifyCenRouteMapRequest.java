@@ -58,12 +58,6 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     @NameInMap("DestinationInstanceIdsReverseMatch")
     public Boolean destinationInstanceIdsReverseMatch;
 
-    @NameInMap("GatewayZoneId")
-    public String gatewayZoneId;
-
-    @NameInMap("MatchAddressType")
-    public String matchAddressType;
-
     @NameInMap("SourceInstanceIds")
     public java.util.List<String> sourceInstanceIds;
 
@@ -102,15 +96,6 @@ public class ModifyCenRouteMapRequest extends TeaModel {
 
     @NameInMap("PrependAsPath")
     public java.util.List<Integer> prependAsPath;
-
-    @NameInMap("DestinationRegionIds")
-    public java.util.List<String> destinationRegionIds;
-
-    @NameInMap("SourceZoneIds")
-    public java.util.List<String> sourceZoneIds;
-
-    @NameInMap("OriginalRouteTableIds")
-    public java.util.List<String> originalRouteTableIds;
 
     public static ModifyCenRouteMapRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCenRouteMapRequest self = new ModifyCenRouteMapRequest();
@@ -261,22 +246,6 @@ public class ModifyCenRouteMapRequest extends TeaModel {
         return this.destinationInstanceIdsReverseMatch;
     }
 
-    public ModifyCenRouteMapRequest setGatewayZoneId(String gatewayZoneId) {
-        this.gatewayZoneId = gatewayZoneId;
-        return this;
-    }
-    public String getGatewayZoneId() {
-        return this.gatewayZoneId;
-    }
-
-    public ModifyCenRouteMapRequest setMatchAddressType(String matchAddressType) {
-        this.matchAddressType = matchAddressType;
-        return this;
-    }
-    public String getMatchAddressType() {
-        return this.matchAddressType;
-    }
-
     public ModifyCenRouteMapRequest setSourceInstanceIds(java.util.List<String> sourceInstanceIds) {
         this.sourceInstanceIds = sourceInstanceIds;
         return this;
@@ -379,30 +348,6 @@ public class ModifyCenRouteMapRequest extends TeaModel {
     }
     public java.util.List<Integer> getPrependAsPath() {
         return this.prependAsPath;
-    }
-
-    public ModifyCenRouteMapRequest setDestinationRegionIds(java.util.List<String> destinationRegionIds) {
-        this.destinationRegionIds = destinationRegionIds;
-        return this;
-    }
-    public java.util.List<String> getDestinationRegionIds() {
-        return this.destinationRegionIds;
-    }
-
-    public ModifyCenRouteMapRequest setSourceZoneIds(java.util.List<String> sourceZoneIds) {
-        this.sourceZoneIds = sourceZoneIds;
-        return this;
-    }
-    public java.util.List<String> getSourceZoneIds() {
-        return this.sourceZoneIds;
-    }
-
-    public ModifyCenRouteMapRequest setOriginalRouteTableIds(java.util.List<String> originalRouteTableIds) {
-        this.originalRouteTableIds = originalRouteTableIds;
-        return this;
-    }
-    public java.util.List<String> getOriginalRouteTableIds() {
-        return this.originalRouteTableIds;
     }
 
 }

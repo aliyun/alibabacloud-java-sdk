@@ -4,26 +4,18 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class CreateCenBandwidthPackageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("CenBandwidthPackageId")
     public String cenBandwidthPackageId;
 
     @NameInMap("CenBandwidthPackageOrderId")
     public String cenBandwidthPackageOrderId;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
     public static CreateCenBandwidthPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateCenBandwidthPackageResponseBody self = new CreateCenBandwidthPackageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateCenBandwidthPackageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateCenBandwidthPackageResponseBody setCenBandwidthPackageId(String cenBandwidthPackageId) {
@@ -40,6 +32,14 @@ public class CreateCenBandwidthPackageResponseBody extends TeaModel {
     }
     public String getCenBandwidthPackageOrderId() {
         return this.cenBandwidthPackageOrderId;
+    }
+
+    public CreateCenBandwidthPackageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
