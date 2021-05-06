@@ -8,7 +8,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
     public String requestId;
 
     @NameInMap("GrantRules")
-    public java.util.List<DescribeGrantRulesToCenResponseBodyGrantRules> grantRules;
+    public DescribeGrantRulesToCenResponseBodyGrantRules grantRules;
 
     public static DescribeGrantRulesToCenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGrantRulesToCenResponseBody self = new DescribeGrantRulesToCenResponseBody();
@@ -23,15 +23,15 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeGrantRulesToCenResponseBody setGrantRules(java.util.List<DescribeGrantRulesToCenResponseBodyGrantRules> grantRules) {
+    public DescribeGrantRulesToCenResponseBody setGrantRules(DescribeGrantRulesToCenResponseBodyGrantRules grantRules) {
         this.grantRules = grantRules;
         return this;
     }
-    public java.util.List<DescribeGrantRulesToCenResponseBodyGrantRules> getGrantRules() {
+    public DescribeGrantRulesToCenResponseBodyGrantRules getGrantRules() {
         return this.grantRules;
     }
 
-    public static class DescribeGrantRulesToCenResponseBodyGrantRules extends TeaModel {
+    public static class DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule extends TeaModel {
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
@@ -47,12 +47,12 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         @NameInMap("CenId")
         public String cenId;
 
-        public static DescribeGrantRulesToCenResponseBodyGrantRules build(java.util.Map<String, ?> map) throws Exception {
-            DescribeGrantRulesToCenResponseBodyGrantRules self = new DescribeGrantRulesToCenResponseBodyGrantRules();
+        public static DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule self = new DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule();
             return TeaModel.build(map, self);
         }
 
-        public DescribeGrantRulesToCenResponseBodyGrantRules setChildInstanceType(String childInstanceType) {
+        public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setChildInstanceType(String childInstanceType) {
             this.childInstanceType = childInstanceType;
             return this;
         }
@@ -60,7 +60,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             return this.childInstanceType;
         }
 
-        public DescribeGrantRulesToCenResponseBodyGrantRules setChildInstanceRegionId(String childInstanceRegionId) {
+        public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setChildInstanceRegionId(String childInstanceRegionId) {
             this.childInstanceRegionId = childInstanceRegionId;
             return this;
         }
@@ -68,7 +68,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             return this.childInstanceRegionId;
         }
 
-        public DescribeGrantRulesToCenResponseBodyGrantRules setChildInstanceOwnerId(Long childInstanceOwnerId) {
+        public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setChildInstanceOwnerId(Long childInstanceOwnerId) {
             this.childInstanceOwnerId = childInstanceOwnerId;
             return this;
         }
@@ -76,7 +76,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             return this.childInstanceOwnerId;
         }
 
-        public DescribeGrantRulesToCenResponseBodyGrantRules setChildInstanceId(String childInstanceId) {
+        public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setChildInstanceId(String childInstanceId) {
             this.childInstanceId = childInstanceId;
             return this;
         }
@@ -84,12 +84,31 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             return this.childInstanceId;
         }
 
-        public DescribeGrantRulesToCenResponseBodyGrantRules setCenId(String cenId) {
+        public DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule setCenId(String cenId) {
             this.cenId = cenId;
             return this;
         }
         public String getCenId() {
             return this.cenId;
+        }
+
+    }
+
+    public static class DescribeGrantRulesToCenResponseBodyGrantRules extends TeaModel {
+        @NameInMap("GrantRule")
+        public java.util.List<DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule> grantRule;
+
+        public static DescribeGrantRulesToCenResponseBodyGrantRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGrantRulesToCenResponseBodyGrantRules self = new DescribeGrantRulesToCenResponseBodyGrantRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGrantRulesToCenResponseBodyGrantRules setGrantRule(java.util.List<DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule> grantRule) {
+            this.grantRule = grantRule;
+            return this;
+        }
+        public java.util.List<DescribeGrantRulesToCenResponseBodyGrantRulesGrantRule> getGrantRule() {
+            return this.grantRule;
         }
 
     }

@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenGeographicSpansResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("GeographicSpanModels")
-    public java.util.List<DescribeCenGeographicSpansResponseBodyGeographicSpanModels> geographicSpanModels;
+    public DescribeCenGeographicSpansResponseBodyGeographicSpanModels geographicSpanModels;
 
     public static DescribeCenGeographicSpansResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenGeographicSpansResponseBody self = new DescribeCenGeographicSpansResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCenGeographicSpansResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeCenGeographicSpansResponseBody setPageSize(Integer pageSize) {
@@ -56,30 +48,46 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeCenGeographicSpansResponseBody setGeographicSpanModels(java.util.List<DescribeCenGeographicSpansResponseBodyGeographicSpanModels> geographicSpanModels) {
+    public DescribeCenGeographicSpansResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeCenGeographicSpansResponseBody setGeographicSpanModels(DescribeCenGeographicSpansResponseBodyGeographicSpanModels geographicSpanModels) {
         this.geographicSpanModels = geographicSpanModels;
         return this;
     }
-    public java.util.List<DescribeCenGeographicSpansResponseBodyGeographicSpanModels> getGeographicSpanModels() {
+    public DescribeCenGeographicSpansResponseBodyGeographicSpanModels getGeographicSpanModels() {
         return this.geographicSpanModels;
     }
 
-    public static class DescribeCenGeographicSpansResponseBodyGeographicSpanModels extends TeaModel {
+    public static class DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel extends TeaModel {
+        @NameInMap("LocalGeoRegionId")
+        public String localGeoRegionId;
+
         @NameInMap("GeographicSpanId")
         public String geographicSpanId;
 
         @NameInMap("OppositeGeoRegionId")
         public String oppositeGeoRegionId;
 
-        @NameInMap("LocalGeoRegionId")
-        public String localGeoRegionId;
-
-        public static DescribeCenGeographicSpansResponseBodyGeographicSpanModels build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenGeographicSpansResponseBodyGeographicSpanModels self = new DescribeCenGeographicSpansResponseBodyGeographicSpanModels();
+        public static DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel self = new DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenGeographicSpansResponseBodyGeographicSpanModels setGeographicSpanId(String geographicSpanId) {
+        public DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel setLocalGeoRegionId(String localGeoRegionId) {
+            this.localGeoRegionId = localGeoRegionId;
+            return this;
+        }
+        public String getLocalGeoRegionId() {
+            return this.localGeoRegionId;
+        }
+
+        public DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel setGeographicSpanId(String geographicSpanId) {
             this.geographicSpanId = geographicSpanId;
             return this;
         }
@@ -87,7 +95,7 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             return this.geographicSpanId;
         }
 
-        public DescribeCenGeographicSpansResponseBodyGeographicSpanModels setOppositeGeoRegionId(String oppositeGeoRegionId) {
+        public DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel setOppositeGeoRegionId(String oppositeGeoRegionId) {
             this.oppositeGeoRegionId = oppositeGeoRegionId;
             return this;
         }
@@ -95,12 +103,23 @@ public class DescribeCenGeographicSpansResponseBody extends TeaModel {
             return this.oppositeGeoRegionId;
         }
 
-        public DescribeCenGeographicSpansResponseBodyGeographicSpanModels setLocalGeoRegionId(String localGeoRegionId) {
-            this.localGeoRegionId = localGeoRegionId;
+    }
+
+    public static class DescribeCenGeographicSpansResponseBodyGeographicSpanModels extends TeaModel {
+        @NameInMap("GeographicSpanModel")
+        public java.util.List<DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel> geographicSpanModel;
+
+        public static DescribeCenGeographicSpansResponseBodyGeographicSpanModels build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenGeographicSpansResponseBodyGeographicSpanModels self = new DescribeCenGeographicSpansResponseBodyGeographicSpanModels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenGeographicSpansResponseBodyGeographicSpanModels setGeographicSpanModel(java.util.List<DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel> geographicSpanModel) {
+            this.geographicSpanModel = geographicSpanModel;
             return this;
         }
-        public String getLocalGeoRegionId() {
-            return this.localGeoRegionId;
+        public java.util.List<DescribeCenGeographicSpansResponseBodyGeographicSpanModelsGeographicSpanModel> getGeographicSpanModel() {
+            return this.geographicSpanModel;
         }
 
     }

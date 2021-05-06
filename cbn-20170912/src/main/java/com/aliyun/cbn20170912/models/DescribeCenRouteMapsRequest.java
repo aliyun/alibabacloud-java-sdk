@@ -34,9 +34,6 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     @NameInMap("TransmitDirection")
     public String transmitDirection;
 
-    @NameInMap("Filter")
-    public java.util.List<DescribeCenRouteMapsRequestFilter> filter;
-
     public static DescribeCenRouteMapsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenRouteMapsRequest self = new DescribeCenRouteMapsRequest();
         return TeaModel.build(map, self);
@@ -120,22 +117,6 @@ public class DescribeCenRouteMapsRequest extends TeaModel {
     }
     public String getTransmitDirection() {
         return this.transmitDirection;
-    }
-
-    public DescribeCenRouteMapsRequest setFilter(java.util.List<DescribeCenRouteMapsRequestFilter> filter) {
-        this.filter = filter;
-        return this;
-    }
-    public java.util.List<DescribeCenRouteMapsRequestFilter> getFilter() {
-        return this.filter;
-    }
-
-    public static class DescribeCenRouteMapsRequestFilter extends TeaModel {
-        public static DescribeCenRouteMapsRequestFilter build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRouteMapsRequestFilter self = new DescribeCenRouteMapsRequestFilter();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("ChildInstances")
-    public java.util.List<DescribeCenAttachedChildInstancesResponseBodyChildInstances> childInstances;
+    public DescribeCenAttachedChildInstancesResponseBodyChildInstances childInstances;
 
     public static DescribeCenAttachedChildInstancesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenAttachedChildInstancesResponseBody self = new DescribeCenAttachedChildInstancesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCenAttachedChildInstancesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeCenAttachedChildInstancesResponseBody setPageSize(Integer pageSize) {
@@ -56,15 +48,23 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeCenAttachedChildInstancesResponseBody setChildInstances(java.util.List<DescribeCenAttachedChildInstancesResponseBodyChildInstances> childInstances) {
+    public DescribeCenAttachedChildInstancesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeCenAttachedChildInstancesResponseBody setChildInstances(DescribeCenAttachedChildInstancesResponseBodyChildInstances childInstances) {
         this.childInstances = childInstances;
         return this;
     }
-    public java.util.List<DescribeCenAttachedChildInstancesResponseBodyChildInstances> getChildInstances() {
+    public DescribeCenAttachedChildInstancesResponseBodyChildInstances getChildInstances() {
         return this.childInstances;
     }
 
-    public static class DescribeCenAttachedChildInstancesResponseBodyChildInstances extends TeaModel {
+    public static class DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance extends TeaModel {
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
@@ -86,12 +86,12 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         @NameInMap("ChildInstanceAttachTime")
         public String childInstanceAttachTime;
 
-        public static DescribeCenAttachedChildInstancesResponseBodyChildInstances build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenAttachedChildInstancesResponseBodyChildInstances self = new DescribeCenAttachedChildInstancesResponseBodyChildInstances();
+        public static DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance self = new DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenAttachedChildInstancesResponseBodyChildInstances setChildInstanceType(String childInstanceType) {
+        public DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance setChildInstanceType(String childInstanceType) {
             this.childInstanceType = childInstanceType;
             return this;
         }
@@ -99,7 +99,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             return this.childInstanceType;
         }
 
-        public DescribeCenAttachedChildInstancesResponseBodyChildInstances setStatus(String status) {
+        public DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -107,7 +107,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeCenAttachedChildInstancesResponseBodyChildInstances setChildInstanceRegionId(String childInstanceRegionId) {
+        public DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance setChildInstanceRegionId(String childInstanceRegionId) {
             this.childInstanceRegionId = childInstanceRegionId;
             return this;
         }
@@ -115,7 +115,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             return this.childInstanceRegionId;
         }
 
-        public DescribeCenAttachedChildInstancesResponseBodyChildInstances setChildInstanceOwnerId(Long childInstanceOwnerId) {
+        public DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance setChildInstanceOwnerId(Long childInstanceOwnerId) {
             this.childInstanceOwnerId = childInstanceOwnerId;
             return this;
         }
@@ -123,7 +123,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             return this.childInstanceOwnerId;
         }
 
-        public DescribeCenAttachedChildInstancesResponseBodyChildInstances setChildInstanceId(String childInstanceId) {
+        public DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance setChildInstanceId(String childInstanceId) {
             this.childInstanceId = childInstanceId;
             return this;
         }
@@ -131,7 +131,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             return this.childInstanceId;
         }
 
-        public DescribeCenAttachedChildInstancesResponseBodyChildInstances setCenId(String cenId) {
+        public DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance setCenId(String cenId) {
             this.cenId = cenId;
             return this;
         }
@@ -139,12 +139,31 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             return this.cenId;
         }
 
-        public DescribeCenAttachedChildInstancesResponseBodyChildInstances setChildInstanceAttachTime(String childInstanceAttachTime) {
+        public DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance setChildInstanceAttachTime(String childInstanceAttachTime) {
             this.childInstanceAttachTime = childInstanceAttachTime;
             return this;
         }
         public String getChildInstanceAttachTime() {
             return this.childInstanceAttachTime;
+        }
+
+    }
+
+    public static class DescribeCenAttachedChildInstancesResponseBodyChildInstances extends TeaModel {
+        @NameInMap("ChildInstance")
+        public java.util.List<DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance> childInstance;
+
+        public static DescribeCenAttachedChildInstancesResponseBodyChildInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenAttachedChildInstancesResponseBodyChildInstances self = new DescribeCenAttachedChildInstancesResponseBodyChildInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenAttachedChildInstancesResponseBodyChildInstances setChildInstance(java.util.List<DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance> childInstance) {
+            this.childInstance = childInstance;
+            return this;
+        }
+        public java.util.List<DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance> getChildInstance() {
+            return this.childInstance;
         }
 
     }

@@ -28,9 +28,6 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     @NameInMap("HostRegionId")
     public String hostRegionId;
 
-    @NameInMap("UpdateInterval")
-    public Long updateInterval;
-
     @NameInMap("HostVpcId")
     public String hostVpcId;
 
@@ -107,14 +104,6 @@ public class ResolveAndRouteServiceInCenRequest extends TeaModel {
     }
     public String getHostRegionId() {
         return this.hostRegionId;
-    }
-
-    public ResolveAndRouteServiceInCenRequest setUpdateInterval(Long updateInterval) {
-        this.updateInterval = updateInterval;
-        return this;
-    }
-    public Long getUpdateInterval() {
-        return this.updateInterval;
     }
 
     public ResolveAndRouteServiceInCenRequest setHostVpcId(String hostVpcId) {

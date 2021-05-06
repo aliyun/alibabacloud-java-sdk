@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCensResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeCensResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("Cens")
-    public java.util.List<DescribeCensResponseBodyCens> cens;
+    public DescribeCensResponseBodyCens cens;
 
     public static DescribeCensResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCensResponseBody self = new DescribeCensResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCensResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeCensResponseBody setPageSize(Integer pageSize) {
@@ -56,27 +48,35 @@ public class DescribeCensResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeCensResponseBody setCens(java.util.List<DescribeCensResponseBodyCens> cens) {
+    public DescribeCensResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeCensResponseBody setCens(DescribeCensResponseBodyCens cens) {
         this.cens = cens;
         return this;
     }
-    public java.util.List<DescribeCensResponseBodyCens> getCens() {
+    public DescribeCensResponseBodyCens getCens() {
         return this.cens;
     }
 
-    public static class DescribeCensResponseBodyCensTags extends TeaModel {
+    public static class DescribeCensResponseBodyCensCenTagsTag extends TeaModel {
         @NameInMap("Key")
         public String key;
 
         @NameInMap("Value")
         public String value;
 
-        public static DescribeCensResponseBodyCensTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCensResponseBodyCensTags self = new DescribeCensResponseBodyCensTags();
+        public static DescribeCensResponseBodyCensCenTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCensResponseBodyCensCenTagsTag self = new DescribeCensResponseBodyCensCenTagsTag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCensResponseBodyCensTags setKey(String key) {
+        public DescribeCensResponseBodyCensCenTagsTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -84,7 +84,7 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeCensResponseBodyCensTags setValue(String value) {
+        public DescribeCensResponseBodyCensCenTagsTag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -94,15 +94,50 @@ public class DescribeCensResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCensResponseBodyCens extends TeaModel {
+    public static class DescribeCensResponseBodyCensCenTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeCensResponseBodyCensCenTagsTag> tag;
+
+        public static DescribeCensResponseBodyCensCenTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCensResponseBodyCensCenTags self = new DescribeCensResponseBodyCensCenTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCensResponseBodyCensCenTags setTag(java.util.List<DescribeCensResponseBodyCensCenTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeCensResponseBodyCensCenTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
+    public static class DescribeCensResponseBodyCensCenCenBandwidthPackageIds extends TeaModel {
+        @NameInMap("CenBandwidthPackageId")
+        public java.util.List<String> cenBandwidthPackageId;
+
+        public static DescribeCensResponseBodyCensCenCenBandwidthPackageIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCensResponseBodyCensCenCenBandwidthPackageIds self = new DescribeCensResponseBodyCensCenCenBandwidthPackageIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCensResponseBodyCensCenCenBandwidthPackageIds setCenBandwidthPackageId(java.util.List<String> cenBandwidthPackageId) {
+            this.cenBandwidthPackageId = cenBandwidthPackageId;
+            return this;
+        }
+        public java.util.List<String> getCenBandwidthPackageId() {
+            return this.cenBandwidthPackageId;
+        }
+
+    }
+
+    public static class DescribeCensResponseBodyCensCen extends TeaModel {
         @NameInMap("Status")
         public String status;
 
         @NameInMap("CreationTime")
         public String creationTime;
-
-        @NameInMap("CenBandwidthPackageIds")
-        public java.util.List<String> cenBandwidthPackageIds;
 
         @NameInMap("Description")
         public String description;
@@ -113,18 +148,21 @@ public class DescribeCensResponseBody extends TeaModel {
         @NameInMap("ProtectionLevel")
         public String protectionLevel;
 
-        @NameInMap("Tags")
-        public java.util.List<DescribeCensResponseBodyCensTags> tags;
-
         @NameInMap("Name")
         public String name;
 
-        public static DescribeCensResponseBodyCens build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCensResponseBodyCens self = new DescribeCensResponseBodyCens();
+        @NameInMap("Tags")
+        public DescribeCensResponseBodyCensCenTags tags;
+
+        @NameInMap("CenBandwidthPackageIds")
+        public DescribeCensResponseBodyCensCenCenBandwidthPackageIds cenBandwidthPackageIds;
+
+        public static DescribeCensResponseBodyCensCen build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCensResponseBodyCensCen self = new DescribeCensResponseBodyCensCen();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCensResponseBodyCens setStatus(String status) {
+        public DescribeCensResponseBodyCensCen setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -132,7 +170,7 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeCensResponseBodyCens setCreationTime(String creationTime) {
+        public DescribeCensResponseBodyCensCen setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -140,15 +178,7 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeCensResponseBodyCens setCenBandwidthPackageIds(java.util.List<String> cenBandwidthPackageIds) {
-            this.cenBandwidthPackageIds = cenBandwidthPackageIds;
-            return this;
-        }
-        public java.util.List<String> getCenBandwidthPackageIds() {
-            return this.cenBandwidthPackageIds;
-        }
-
-        public DescribeCensResponseBodyCens setDescription(String description) {
+        public DescribeCensResponseBodyCensCen setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -156,7 +186,7 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeCensResponseBodyCens setCenId(String cenId) {
+        public DescribeCensResponseBodyCensCen setCenId(String cenId) {
             this.cenId = cenId;
             return this;
         }
@@ -164,7 +194,7 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.cenId;
         }
 
-        public DescribeCensResponseBodyCens setProtectionLevel(String protectionLevel) {
+        public DescribeCensResponseBodyCensCen setProtectionLevel(String protectionLevel) {
             this.protectionLevel = protectionLevel;
             return this;
         }
@@ -172,20 +202,47 @@ public class DescribeCensResponseBody extends TeaModel {
             return this.protectionLevel;
         }
 
-        public DescribeCensResponseBodyCens setTags(java.util.List<DescribeCensResponseBodyCensTags> tags) {
-            this.tags = tags;
-            return this;
-        }
-        public java.util.List<DescribeCensResponseBodyCensTags> getTags() {
-            return this.tags;
-        }
-
-        public DescribeCensResponseBodyCens setName(String name) {
+        public DescribeCensResponseBodyCensCen setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public DescribeCensResponseBodyCensCen setTags(DescribeCensResponseBodyCensCenTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeCensResponseBodyCensCenTags getTags() {
+            return this.tags;
+        }
+
+        public DescribeCensResponseBodyCensCen setCenBandwidthPackageIds(DescribeCensResponseBodyCensCenCenBandwidthPackageIds cenBandwidthPackageIds) {
+            this.cenBandwidthPackageIds = cenBandwidthPackageIds;
+            return this;
+        }
+        public DescribeCensResponseBodyCensCenCenBandwidthPackageIds getCenBandwidthPackageIds() {
+            return this.cenBandwidthPackageIds;
+        }
+
+    }
+
+    public static class DescribeCensResponseBodyCens extends TeaModel {
+        @NameInMap("Cen")
+        public java.util.List<DescribeCensResponseBodyCensCen> cen;
+
+        public static DescribeCensResponseBodyCens build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCensResponseBodyCens self = new DescribeCensResponseBodyCens();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCensResponseBodyCens setCen(java.util.List<DescribeCensResponseBodyCensCen> cen) {
+            this.cen = cen;
+            return this;
+        }
+        public java.util.List<DescribeCensResponseBodyCensCen> getCen() {
+            return this.cen;
         }
 
     }

@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("CenRouteEntries")
-    public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries> cenRouteEntries;
+    public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries cenRouteEntries;
 
     public static DescribeCenRegionDomainRouteEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenRegionDomainRouteEntriesResponseBody self = new DescribeCenRegionDomainRouteEntriesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCenRegionDomainRouteEntriesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeCenRegionDomainRouteEntriesResponseBody setPageSize(Integer pageSize) {
@@ -56,27 +48,35 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeCenRegionDomainRouteEntriesResponseBody setCenRouteEntries(java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries> cenRouteEntries) {
+    public DescribeCenRegionDomainRouteEntriesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeCenRegionDomainRouteEntriesResponseBody setCenRouteEntries(DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries cenRouteEntries) {
         this.cenRouteEntries = cenRouteEntries;
         return this;
     }
-    public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries> getCenRouteEntries() {
+    public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries getCenRouteEntries() {
         return this.cenRouteEntries;
     }
 
-    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords extends TeaModel {
+    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord extends TeaModel {
         @NameInMap("RouteMapId")
         public String routeMapId;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords();
+        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords setRouteMapId(String routeMapId) {
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord setRouteMapId(String routeMapId) {
             this.routeMapId = routeMapId;
             return this;
         }
@@ -84,7 +84,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             return this.routeMapId;
         }
 
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords setRegionId(String regionId) {
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -94,19 +94,38 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords extends TeaModel {
+    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords extends TeaModel {
+        @NameInMap("CenRouteMapRecord")
+        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord> cenRouteMapRecord;
+
+        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords setCenRouteMapRecord(java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord> cenRouteMapRecord) {
+            this.cenRouteMapRecord = cenRouteMapRecord;
+            return this;
+        }
+        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecordsCenRouteMapRecord> getCenRouteMapRecord() {
+            return this.cenRouteMapRecord;
+        }
+
+    }
+
+    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord extends TeaModel {
         @NameInMap("RouteMapId")
         public String routeMapId;
 
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords();
+        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords setRouteMapId(String routeMapId) {
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord setRouteMapId(String routeMapId) {
             this.routeMapId = routeMapId;
             return this;
         }
@@ -114,7 +133,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             return this.routeMapId;
         }
 
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords setRegionId(String regionId) {
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -124,15 +143,72 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries extends TeaModel {
+    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords extends TeaModel {
+        @NameInMap("CenOutRouteMapRecord")
+        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord> cenOutRouteMapRecord;
+
+        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords setCenOutRouteMapRecord(java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord> cenOutRouteMapRecord) {
+            this.cenOutRouteMapRecord = cenOutRouteMapRecord;
+            return this;
+        }
+        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecordsCenOutRouteMapRecord> getCenOutRouteMapRecord() {
+            return this.cenOutRouteMapRecord;
+        }
+
+    }
+
+    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities extends TeaModel {
+        @NameInMap("Community")
+        public java.util.List<String> community;
+
+        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities setCommunity(java.util.List<String> community) {
+            this.community = community;
+            return this;
+        }
+        public java.util.List<String> getCommunity() {
+            return this.community;
+        }
+
+    }
+
+    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths extends TeaModel {
+        @NameInMap("AsPath")
+        public java.util.List<String> asPath;
+
+        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths setAsPath(java.util.List<String> asPath) {
+            this.asPath = asPath;
+            return this;
+        }
+        public java.util.List<String> getAsPath() {
+            return this.asPath;
+        }
+
+    }
+
+    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry extends TeaModel {
+        @NameInMap("ToOtherRegionStatus")
+        public String toOtherRegionStatus;
+
         @NameInMap("Type")
         public String type;
 
         @NameInMap("Status")
         public String status;
-
-        @NameInMap("CenOutRouteMapRecords")
-        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords> cenOutRouteMapRecords;
 
         @NameInMap("NextHopType")
         public String nextHopType;
@@ -143,15 +219,6 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHopRegionId")
         public String nextHopRegionId;
 
-        @NameInMap("AsPaths")
-        public java.util.List<String> asPaths;
-
-        @NameInMap("ToOtherRegionStatus")
-        public String toOtherRegionStatus;
-
-        @NameInMap("Communities")
-        public java.util.List<String> communities;
-
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
@@ -159,70 +226,23 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         public Integer preference;
 
         @NameInMap("CenRouteMapRecords")
-        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords> cenRouteMapRecords;
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords cenRouteMapRecords;
 
-        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries();
+        @NameInMap("CenOutRouteMapRecords")
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords cenOutRouteMapRecords;
+
+        @NameInMap("Communities")
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities communities;
+
+        @NameInMap("AsPaths")
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths asPaths;
+
+        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setStatus(String status) {
-            this.status = status;
-            return this;
-        }
-        public String getStatus() {
-            return this.status;
-        }
-
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setCenOutRouteMapRecords(java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords> cenOutRouteMapRecords) {
-            this.cenOutRouteMapRecords = cenOutRouteMapRecords;
-            return this;
-        }
-        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenOutRouteMapRecords> getCenOutRouteMapRecords() {
-            return this.cenOutRouteMapRecords;
-        }
-
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setNextHopType(String nextHopType) {
-            this.nextHopType = nextHopType;
-            return this;
-        }
-        public String getNextHopType() {
-            return this.nextHopType;
-        }
-
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setNextHopInstanceId(String nextHopInstanceId) {
-            this.nextHopInstanceId = nextHopInstanceId;
-            return this;
-        }
-        public String getNextHopInstanceId() {
-            return this.nextHopInstanceId;
-        }
-
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setNextHopRegionId(String nextHopRegionId) {
-            this.nextHopRegionId = nextHopRegionId;
-            return this;
-        }
-        public String getNextHopRegionId() {
-            return this.nextHopRegionId;
-        }
-
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setAsPaths(java.util.List<String> asPaths) {
-            this.asPaths = asPaths;
-            return this;
-        }
-        public java.util.List<String> getAsPaths() {
-            return this.asPaths;
-        }
-
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setToOtherRegionStatus(String toOtherRegionStatus) {
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setToOtherRegionStatus(String toOtherRegionStatus) {
             this.toOtherRegionStatus = toOtherRegionStatus;
             return this;
         }
@@ -230,15 +250,47 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             return this.toOtherRegionStatus;
         }
 
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setCommunities(java.util.List<String> communities) {
-            this.communities = communities;
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setType(String type) {
+            this.type = type;
             return this;
         }
-        public java.util.List<String> getCommunities() {
-            return this.communities;
+        public String getType() {
+            return this.type;
         }
 
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setDestinationCidrBlock(String destinationCidrBlock) {
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setNextHopType(String nextHopType) {
+            this.nextHopType = nextHopType;
+            return this;
+        }
+        public String getNextHopType() {
+            return this.nextHopType;
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setNextHopInstanceId(String nextHopInstanceId) {
+            this.nextHopInstanceId = nextHopInstanceId;
+            return this;
+        }
+        public String getNextHopInstanceId() {
+            return this.nextHopInstanceId;
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setNextHopRegionId(String nextHopRegionId) {
+            this.nextHopRegionId = nextHopRegionId;
+            return this;
+        }
+        public String getNextHopRegionId() {
+            return this.nextHopRegionId;
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setDestinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
@@ -246,7 +298,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             return this.destinationCidrBlock;
         }
 
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setPreference(Integer preference) {
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setPreference(Integer preference) {
             this.preference = preference;
             return this;
         }
@@ -254,12 +306,55 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             return this.preference;
         }
 
-        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setCenRouteMapRecords(java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords> cenRouteMapRecords) {
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setCenRouteMapRecords(DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords cenRouteMapRecords) {
             this.cenRouteMapRecords = cenRouteMapRecords;
             return this;
         }
-        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteMapRecords> getCenRouteMapRecords() {
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenRouteMapRecords getCenRouteMapRecords() {
             return this.cenRouteMapRecords;
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setCenOutRouteMapRecords(DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords cenOutRouteMapRecords) {
+            this.cenOutRouteMapRecords = cenOutRouteMapRecords;
+            return this;
+        }
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCenOutRouteMapRecords getCenOutRouteMapRecords() {
+            return this.cenOutRouteMapRecords;
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setCommunities(DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities communities) {
+            this.communities = communities;
+            return this;
+        }
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryCommunities getCommunities() {
+            return this.communities;
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry setAsPaths(DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths asPaths) {
+            this.asPaths = asPaths;
+            return this;
+        }
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntryAsPaths getAsPaths() {
+            return this.asPaths;
+        }
+
+    }
+
+    public static class DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries extends TeaModel {
+        @NameInMap("CenRouteEntry")
+        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry> cenRouteEntry;
+
+        public static DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries self = new DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntries setCenRouteEntry(java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry> cenRouteEntry) {
+            this.cenRouteEntry = cenRouteEntry;
+            return this;
+        }
+        public java.util.List<DescribeCenRegionDomainRouteEntriesResponseBodyCenRouteEntriesCenRouteEntry> getCenRouteEntry() {
+            return this.cenRouteEntry;
         }
 
     }

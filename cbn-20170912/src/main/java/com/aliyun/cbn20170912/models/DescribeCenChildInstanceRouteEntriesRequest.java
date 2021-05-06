@@ -37,12 +37,6 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     @NameInMap("ChildInstanceRegionId")
     public String childInstanceRegionId;
 
-    @NameInMap("ChildInstanceRouteTableId")
-    public String childInstanceRouteTableId;
-
-    @NameInMap("DestinationCidrBlock")
-    public String destinationCidrBlock;
-
     public static DescribeCenChildInstanceRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenChildInstanceRouteEntriesRequest self = new DescribeCenChildInstanceRouteEntriesRequest();
         return TeaModel.build(map, self);
@@ -134,22 +128,6 @@ public class DescribeCenChildInstanceRouteEntriesRequest extends TeaModel {
     }
     public String getChildInstanceRegionId() {
         return this.childInstanceRegionId;
-    }
-
-    public DescribeCenChildInstanceRouteEntriesRequest setChildInstanceRouteTableId(String childInstanceRouteTableId) {
-        this.childInstanceRouteTableId = childInstanceRouteTableId;
-        return this;
-    }
-    public String getChildInstanceRouteTableId() {
-        return this.childInstanceRouteTableId;
-    }
-
-    public DescribeCenChildInstanceRouteEntriesRequest setDestinationCidrBlock(String destinationCidrBlock) {
-        this.destinationCidrBlock = destinationCidrBlock;
-        return this;
-    }
-    public String getDestinationCidrBlock() {
-        return this.destinationCidrBlock;
     }
 
 }

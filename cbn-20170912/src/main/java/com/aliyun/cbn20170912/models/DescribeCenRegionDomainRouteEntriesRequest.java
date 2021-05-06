@@ -31,9 +31,6 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
-    @NameInMap("DestinationCidrBlock")
-    public String destinationCidrBlock;
-
     public static DescribeCenRegionDomainRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenRegionDomainRouteEntriesRequest self = new DescribeCenRegionDomainRouteEntriesRequest();
         return TeaModel.build(map, self);
@@ -109,14 +106,6 @@ public class DescribeCenRegionDomainRouteEntriesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
-    }
-
-    public DescribeCenRegionDomainRouteEntriesRequest setDestinationCidrBlock(String destinationCidrBlock) {
-        this.destinationCidrBlock = destinationCidrBlock;
-        return this;
-    }
-    public String getDestinationCidrBlock() {
-        return this.destinationCidrBlock;
     }
 
 }

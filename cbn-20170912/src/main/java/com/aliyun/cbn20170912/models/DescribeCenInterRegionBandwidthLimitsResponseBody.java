@@ -4,12 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel {
-    @NameInMap("CenInterRegionBandwidthLimits")
-    public java.util.List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits> cenInterRegionBandwidthLimits;
-
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -19,25 +13,15 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
+    @NameInMap("CenInterRegionBandwidthLimits")
+    public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits cenInterRegionBandwidthLimits;
+
     public static DescribeCenInterRegionBandwidthLimitsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCenInterRegionBandwidthLimitsResponseBody self = new DescribeCenInterRegionBandwidthLimitsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeCenInterRegionBandwidthLimitsResponseBody setCenInterRegionBandwidthLimits(java.util.List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits> cenInterRegionBandwidthLimits) {
-        this.cenInterRegionBandwidthLimits = cenInterRegionBandwidthLimits;
-        return this;
-    }
-    public java.util.List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits> getCenInterRegionBandwidthLimits() {
-        return this.cenInterRegionBandwidthLimits;
-    }
-
-    public DescribeCenInterRegionBandwidthLimitsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeCenInterRegionBandwidthLimitsResponseBody setPageSize(Integer pageSize) {
@@ -64,7 +48,23 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         return this.pageNumber;
     }
 
-    public static class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits extends TeaModel {
+    public DescribeCenInterRegionBandwidthLimitsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeCenInterRegionBandwidthLimitsResponseBody setCenInterRegionBandwidthLimits(DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits cenInterRegionBandwidthLimits) {
+        this.cenInterRegionBandwidthLimits = cenInterRegionBandwidthLimits;
+        return this;
+    }
+    public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits getCenInterRegionBandwidthLimits() {
+        return this.cenInterRegionBandwidthLimits;
+    }
+
+    public static class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -86,12 +86,12 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
         @NameInMap("BandwidthLimit")
         public Long bandwidthLimit;
 
-        public static DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits self = new DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits();
+        public static DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit self = new DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits setStatus(String status) {
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -99,7 +99,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             return this.status;
         }
 
-        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits setBandwidthPackageId(String bandwidthPackageId) {
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit setBandwidthPackageId(String bandwidthPackageId) {
             this.bandwidthPackageId = bandwidthPackageId;
             return this;
         }
@@ -107,7 +107,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             return this.bandwidthPackageId;
         }
 
-        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits setOppositeRegionId(String oppositeRegionId) {
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit setOppositeRegionId(String oppositeRegionId) {
             this.oppositeRegionId = oppositeRegionId;
             return this;
         }
@@ -115,7 +115,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             return this.oppositeRegionId;
         }
 
-        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits setGeographicSpanId(String geographicSpanId) {
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit setGeographicSpanId(String geographicSpanId) {
             this.geographicSpanId = geographicSpanId;
             return this;
         }
@@ -123,7 +123,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             return this.geographicSpanId;
         }
 
-        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits setCenId(String cenId) {
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit setCenId(String cenId) {
             this.cenId = cenId;
             return this;
         }
@@ -131,7 +131,7 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             return this.cenId;
         }
 
-        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits setLocalRegionId(String localRegionId) {
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit setLocalRegionId(String localRegionId) {
             this.localRegionId = localRegionId;
             return this;
         }
@@ -139,12 +139,31 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             return this.localRegionId;
         }
 
-        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits setBandwidthLimit(Long bandwidthLimit) {
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit setBandwidthLimit(Long bandwidthLimit) {
             this.bandwidthLimit = bandwidthLimit;
             return this;
         }
         public Long getBandwidthLimit() {
             return this.bandwidthLimit;
+        }
+
+    }
+
+    public static class DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits extends TeaModel {
+        @NameInMap("CenInterRegionBandwidthLimit")
+        public java.util.List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit;
+
+        public static DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits self = new DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimits setCenInterRegionBandwidthLimit(java.util.List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit> cenInterRegionBandwidthLimit) {
+            this.cenInterRegionBandwidthLimit = cenInterRegionBandwidthLimit;
+            return this;
+        }
+        public java.util.List<DescribeCenInterRegionBandwidthLimitsResponseBodyCenInterRegionBandwidthLimitsCenInterRegionBandwidthLimit> getCenInterRegionBandwidthLimit() {
+            return this.cenInterRegionBandwidthLimit;
         }
 
     }

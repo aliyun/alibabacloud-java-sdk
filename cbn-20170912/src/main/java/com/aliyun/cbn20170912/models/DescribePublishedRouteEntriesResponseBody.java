@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("PublishedRouteEntries")
-    public java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries> publishedRouteEntries;
+    public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries publishedRouteEntries;
 
     public static DescribePublishedRouteEntriesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribePublishedRouteEntriesResponseBody self = new DescribePublishedRouteEntriesResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribePublishedRouteEntriesResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribePublishedRouteEntriesResponseBody setPageSize(Integer pageSize) {
@@ -56,15 +48,23 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribePublishedRouteEntriesResponseBody setPublishedRouteEntries(java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries> publishedRouteEntries) {
+    public DescribePublishedRouteEntriesResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribePublishedRouteEntriesResponseBody setPublishedRouteEntries(DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries publishedRouteEntries) {
         this.publishedRouteEntries = publishedRouteEntries;
         return this;
     }
-    public java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries> getPublishedRouteEntries() {
+    public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries getPublishedRouteEntries() {
         return this.publishedRouteEntries;
     }
 
-    public static class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts extends TeaModel {
+    public static class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -80,12 +80,12 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts build(java.util.Map<String, ?> map) throws Exception {
-            DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts self = new DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts();
+        public static DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict build(java.util.Map<String, ?> map) throws Exception {
+            DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict self = new DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict();
             return TeaModel.build(map, self);
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts setStatus(String status) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -93,7 +93,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts setDestinationCidrBlock(String destinationCidrBlock) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict setDestinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
@@ -101,7 +101,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.destinationCidrBlock;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts setInstanceId(String instanceId) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -109,7 +109,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.instanceId;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts setInstanceType(String instanceType) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -117,7 +117,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts setRegionId(String regionId) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -127,12 +127,28 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries extends TeaModel {
+    public static class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts extends TeaModel {
+        @NameInMap("Conflict")
+        public java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict> conflict;
+
+        public static DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts build(java.util.Map<String, ?> map) throws Exception {
+            DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts self = new DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts setConflict(java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict> conflict) {
+            this.conflict = conflict;
+            return this;
+        }
+        public java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflictsConflict> getConflict() {
+            return this.conflict;
+        }
+
+    }
+
+    public static class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry extends TeaModel {
         @NameInMap("NextHopId")
         public String nextHopId;
-
-        @NameInMap("Conflicts")
-        public java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts> conflicts;
 
         @NameInMap("PublishStatus")
         public String publishStatus;
@@ -152,12 +168,15 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
         @NameInMap("RouteType")
         public String routeType;
 
-        public static DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries build(java.util.Map<String, ?> map) throws Exception {
-            DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries self = new DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries();
+        @NameInMap("Conflicts")
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts conflicts;
+
+        public static DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry build(java.util.Map<String, ?> map) throws Exception {
+            DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry self = new DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry();
             return TeaModel.build(map, self);
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries setNextHopId(String nextHopId) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry setNextHopId(String nextHopId) {
             this.nextHopId = nextHopId;
             return this;
         }
@@ -165,15 +184,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.nextHopId;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries setConflicts(java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts> conflicts) {
-            this.conflicts = conflicts;
-            return this;
-        }
-        public java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesConflicts> getConflicts() {
-            return this.conflicts;
-        }
-
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries setPublishStatus(String publishStatus) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry setPublishStatus(String publishStatus) {
             this.publishStatus = publishStatus;
             return this;
         }
@@ -181,7 +192,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.publishStatus;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries setChildInstanceRouteTableId(String childInstanceRouteTableId) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry setChildInstanceRouteTableId(String childInstanceRouteTableId) {
             this.childInstanceRouteTableId = childInstanceRouteTableId;
             return this;
         }
@@ -189,7 +200,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.childInstanceRouteTableId;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries setNextHopType(String nextHopType) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry setNextHopType(String nextHopType) {
             this.nextHopType = nextHopType;
             return this;
         }
@@ -197,7 +208,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.nextHopType;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries setOperationalMode(Boolean operationalMode) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry setOperationalMode(Boolean operationalMode) {
             this.operationalMode = operationalMode;
             return this;
         }
@@ -205,7 +216,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.operationalMode;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries setDestinationCidrBlock(String destinationCidrBlock) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry setDestinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
@@ -213,12 +224,39 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
             return this.destinationCidrBlock;
         }
 
-        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries setRouteType(String routeType) {
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry setRouteType(String routeType) {
             this.routeType = routeType;
             return this;
         }
         public String getRouteType() {
             return this.routeType;
+        }
+
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry setConflicts(DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts conflicts) {
+            this.conflicts = conflicts;
+            return this;
+        }
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntryConflicts getConflicts() {
+            return this.conflicts;
+        }
+
+    }
+
+    public static class DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries extends TeaModel {
+        @NameInMap("PublishedRouteEntry")
+        public java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry> publishedRouteEntry;
+
+        public static DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries build(java.util.Map<String, ?> map) throws Exception {
+            DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries self = new DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePublishedRouteEntriesResponseBodyPublishedRouteEntries setPublishedRouteEntry(java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry> publishedRouteEntry) {
+            this.publishedRouteEntry = publishedRouteEntry;
+            return this;
+        }
+        public java.util.List<DescribePublishedRouteEntriesResponseBodyPublishedRouteEntriesPublishedRouteEntry> getPublishedRouteEntry() {
+            return this.publishedRouteEntry;
         }
 
     }

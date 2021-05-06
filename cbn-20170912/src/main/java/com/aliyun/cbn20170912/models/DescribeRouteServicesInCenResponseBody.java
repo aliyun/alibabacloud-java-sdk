@@ -4,9 +4,6 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class DescribeRouteServicesInCenResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -16,20 +13,15 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("RouteServiceEntries")
-    public java.util.List<DescribeRouteServicesInCenResponseBodyRouteServiceEntries> routeServiceEntries;
+    public DescribeRouteServicesInCenResponseBodyRouteServiceEntries routeServiceEntries;
 
     public static DescribeRouteServicesInCenResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteServicesInCenResponseBody self = new DescribeRouteServicesInCenResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeRouteServicesInCenResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeRouteServicesInCenResponseBody setPageSize(Integer pageSize) {
@@ -56,15 +48,42 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
-    public DescribeRouteServicesInCenResponseBody setRouteServiceEntries(java.util.List<DescribeRouteServicesInCenResponseBodyRouteServiceEntries> routeServiceEntries) {
+    public DescribeRouteServicesInCenResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeRouteServicesInCenResponseBody setRouteServiceEntries(DescribeRouteServicesInCenResponseBodyRouteServiceEntries routeServiceEntries) {
         this.routeServiceEntries = routeServiceEntries;
         return this;
     }
-    public java.util.List<DescribeRouteServicesInCenResponseBodyRouteServiceEntries> getRouteServiceEntries() {
+    public DescribeRouteServicesInCenResponseBodyRouteServiceEntries getRouteServiceEntries() {
         return this.routeServiceEntries;
     }
 
-    public static class DescribeRouteServicesInCenResponseBodyRouteServiceEntries extends TeaModel {
+    public static class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs extends TeaModel {
+        @NameInMap("Cidr")
+        public java.util.List<String> cidr;
+
+        public static DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs self = new DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs setCidr(java.util.List<String> cidr) {
+            this.cidr = cidr;
+            return this;
+        }
+        public java.util.List<String> getCidr() {
+            return this.cidr;
+        }
+
+    }
+
+    public static class DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry extends TeaModel {
         @NameInMap("Status")
         public String status;
 
@@ -76,9 +95,6 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
 
         @NameInMap("HostVpcId")
         public String hostVpcId;
-
-        @NameInMap("Cidrs")
-        public java.util.List<String> cidrs;
 
         @NameInMap("CenId")
         public String cenId;
@@ -92,12 +108,15 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
         @NameInMap("UpdateInterval")
         public String updateInterval;
 
-        public static DescribeRouteServicesInCenResponseBodyRouteServiceEntries build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRouteServicesInCenResponseBodyRouteServiceEntries self = new DescribeRouteServicesInCenResponseBodyRouteServiceEntries();
+        @NameInMap("Cidrs")
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs cidrs;
+
+        public static DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry self = new DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setStatus(String status) {
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -105,7 +124,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setHost(String host) {
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setHost(String host) {
             this.host = host;
             return this;
         }
@@ -113,7 +132,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             return this.host;
         }
 
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setDescription(String description) {
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setDescription(String description) {
             this.description = description;
             return this;
         }
@@ -121,7 +140,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             return this.description;
         }
 
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setHostVpcId(String hostVpcId) {
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setHostVpcId(String hostVpcId) {
             this.hostVpcId = hostVpcId;
             return this;
         }
@@ -129,15 +148,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             return this.hostVpcId;
         }
 
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setCidrs(java.util.List<String> cidrs) {
-            this.cidrs = cidrs;
-            return this;
-        }
-        public java.util.List<String> getCidrs() {
-            return this.cidrs;
-        }
-
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setCenId(String cenId) {
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setCenId(String cenId) {
             this.cenId = cenId;
             return this;
         }
@@ -145,7 +156,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             return this.cenId;
         }
 
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setAccessRegionId(String accessRegionId) {
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setAccessRegionId(String accessRegionId) {
             this.accessRegionId = accessRegionId;
             return this;
         }
@@ -153,7 +164,7 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             return this.accessRegionId;
         }
 
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setHostRegionId(String hostRegionId) {
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setHostRegionId(String hostRegionId) {
             this.hostRegionId = hostRegionId;
             return this;
         }
@@ -161,12 +172,39 @@ public class DescribeRouteServicesInCenResponseBody extends TeaModel {
             return this.hostRegionId;
         }
 
-        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setUpdateInterval(String updateInterval) {
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setUpdateInterval(String updateInterval) {
             this.updateInterval = updateInterval;
             return this;
         }
         public String getUpdateInterval() {
             return this.updateInterval;
+        }
+
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry setCidrs(DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs cidrs) {
+            this.cidrs = cidrs;
+            return this;
+        }
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntryCidrs getCidrs() {
+            return this.cidrs;
+        }
+
+    }
+
+    public static class DescribeRouteServicesInCenResponseBodyRouteServiceEntries extends TeaModel {
+        @NameInMap("RouteServiceEntry")
+        public java.util.List<DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry> routeServiceEntry;
+
+        public static DescribeRouteServicesInCenResponseBodyRouteServiceEntries build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRouteServicesInCenResponseBodyRouteServiceEntries self = new DescribeRouteServicesInCenResponseBodyRouteServiceEntries();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRouteServicesInCenResponseBodyRouteServiceEntries setRouteServiceEntry(java.util.List<DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry> routeServiceEntry) {
+            this.routeServiceEntry = routeServiceEntry;
+            return this;
+        }
+        public java.util.List<DescribeRouteServicesInCenResponseBodyRouteServiceEntriesRouteServiceEntry> getRouteServiceEntry() {
+            return this.routeServiceEntry;
         }
 
     }
