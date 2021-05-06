@@ -158,6 +158,10 @@ public class DescribeBundlesResponse extends TeaModel {
         @Validation(required = true)
         public String desktopType;
 
+        @NameInMap("OsType")
+        @Validation(required = true)
+        public String osType;
+
         @NameInMap("Disks")
         @Validation(required = true)
         public java.util.List<DescribeBundlesResponseBundlesDisks> disks;
@@ -217,6 +221,14 @@ public class DescribeBundlesResponse extends TeaModel {
         }
         public String getDesktopType() {
             return this.desktopType;
+        }
+
+        public DescribeBundlesResponseBundles setOsType(String osType) {
+            this.osType = osType;
+            return this;
+        }
+        public String getOsType() {
+            return this.osType;
         }
 
         public DescribeBundlesResponseBundles setDisks(java.util.List<DescribeBundlesResponseBundlesDisks> disks) {

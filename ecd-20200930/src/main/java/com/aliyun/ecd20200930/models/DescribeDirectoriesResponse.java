@@ -254,6 +254,10 @@ public class DescribeDirectoriesResponse extends TeaModel {
         @Validation(required = true)
         public java.util.List<String> vSwitchIds;
 
+        @NameInMap("FileSystemIds")
+        @Validation(required = true)
+        public java.util.List<String> fileSystemIds;
+
         public static DescribeDirectoriesResponseDirectories build(java.util.Map<String, ?> map) throws Exception {
             DescribeDirectoriesResponseDirectories self = new DescribeDirectoriesResponseDirectories();
             return TeaModel.build(map, self);
@@ -449,6 +453,14 @@ public class DescribeDirectoriesResponse extends TeaModel {
         }
         public java.util.List<String> getVSwitchIds() {
             return this.vSwitchIds;
+        }
+
+        public DescribeDirectoriesResponseDirectories setFileSystemIds(java.util.List<String> fileSystemIds) {
+            this.fileSystemIds = fileSystemIds;
+            return this;
+        }
+        public java.util.List<String> getFileSystemIds() {
+            return this.fileSystemIds;
         }
 
     }

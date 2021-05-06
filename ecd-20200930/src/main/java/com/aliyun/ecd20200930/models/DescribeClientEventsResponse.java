@@ -82,9 +82,17 @@ public class DescribeClientEventsResponse extends TeaModel {
         @Validation(required = true)
         public String directoryId;
 
+        @NameInMap("OfficeSiteId")
+        @Validation(required = true)
+        public String officeSiteId;
+
         @NameInMap("DirectoryType")
         @Validation(required = true)
         public String directoryType;
+
+        @NameInMap("OfficeSiteType")
+        @Validation(required = true)
+        public String officeSiteType;
 
         @NameInMap("ClientOS")
         @Validation(required = true)
@@ -187,12 +195,28 @@ public class DescribeClientEventsResponse extends TeaModel {
             return this.directoryId;
         }
 
+        public DescribeClientEventsResponseEvents setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
+        }
+
         public DescribeClientEventsResponseEvents setDirectoryType(String directoryType) {
             this.directoryType = directoryType;
             return this;
         }
         public String getDirectoryType() {
             return this.directoryType;
+        }
+
+        public DescribeClientEventsResponseEvents setOfficeSiteType(String officeSiteType) {
+            this.officeSiteType = officeSiteType;
+            return this;
+        }
+        public String getOfficeSiteType() {
+            return this.officeSiteType;
         }
 
         public DescribeClientEventsResponseEvents setClientOS(String clientOS) {

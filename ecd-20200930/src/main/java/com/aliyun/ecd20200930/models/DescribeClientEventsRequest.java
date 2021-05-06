@@ -20,6 +20,9 @@ public class DescribeClientEventsRequest extends TeaModel {
     @NameInMap("DirectoryId")
     public String directoryId;
 
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
     @NameInMap("EventType")
     public String eventType;
 
@@ -78,6 +81,14 @@ public class DescribeClientEventsRequest extends TeaModel {
     }
     public String getDirectoryId() {
         return this.directoryId;
+    }
+
+    public DescribeClientEventsRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public DescribeClientEventsRequest setEventType(String eventType) {

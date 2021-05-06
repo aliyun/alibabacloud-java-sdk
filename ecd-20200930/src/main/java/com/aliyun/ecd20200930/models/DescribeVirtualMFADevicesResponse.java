@@ -50,6 +50,10 @@ public class DescribeVirtualMFADevicesResponse extends TeaModel {
         @Validation(required = true)
         public String directoryId;
 
+        @NameInMap("OfficeSiteId")
+        @Validation(required = true)
+        public String officeSiteId;
+
         @NameInMap("EndUserId")
         @Validation(required = true)
         public String endUserId;
@@ -85,6 +89,14 @@ public class DescribeVirtualMFADevicesResponse extends TeaModel {
         }
         public String getDirectoryId() {
             return this.directoryId;
+        }
+
+        public DescribeVirtualMFADevicesResponseVirtualMFADevices setOfficeSiteId(String officeSiteId) {
+            this.officeSiteId = officeSiteId;
+            return this;
+        }
+        public String getOfficeSiteId() {
+            return this.officeSiteId;
         }
 
         public DescribeVirtualMFADevicesResponseVirtualMFADevices setEndUserId(String endUserId) {

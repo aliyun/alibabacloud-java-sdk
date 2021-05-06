@@ -19,6 +19,436 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public CheckUserInSecurityCenterWhiteListResponse checkUserInSecurityCenterWhiteListWithOptions(CheckUserInSecurityCenterWhiteListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CheckUserInSecurityCenterWhiteList", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new CheckUserInSecurityCenterWhiteListResponse());
+    }
+
+    public CheckUserInSecurityCenterWhiteListResponse checkUserInSecurityCenterWhiteList(CheckUserInSecurityCenterWhiteListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.checkUserInSecurityCenterWhiteListWithOptions(request, runtime);
+    }
+
+    public AddUserToSecurityCenterWhiteListResponse addUserToSecurityCenterWhiteListWithOptions(AddUserToSecurityCenterWhiteListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("AddUserToSecurityCenterWhiteList", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new AddUserToSecurityCenterWhiteListResponse());
+    }
+
+    public AddUserToSecurityCenterWhiteListResponse addUserToSecurityCenterWhiteList(AddUserToSecurityCenterWhiteListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addUserToSecurityCenterWhiteListWithOptions(request, runtime);
+    }
+
+    public DescribeVulOverviewResponse describeVulOverviewWithOptions(DescribeVulOverviewRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeVulOverview", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeVulOverviewResponse());
+    }
+
+    public DescribeVulOverviewResponse describeVulOverview(DescribeVulOverviewRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeVulOverviewWithOptions(request, runtime);
+    }
+
+    public DescribeSuspEventOverviewResponse describeSuspEventOverviewWithOptions(DescribeSuspEventOverviewRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeSuspEventOverview", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeSuspEventOverviewResponse());
+    }
+
+    public DescribeSuspEventOverviewResponse describeSuspEventOverview(DescribeSuspEventOverviewRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSuspEventOverviewWithOptions(request, runtime);
+    }
+
+    public ModifyOfficeSiteMfaEnabledResponse modifyOfficeSiteMfaEnabledWithOptions(ModifyOfficeSiteMfaEnabledRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyOfficeSiteMfaEnabled", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ModifyOfficeSiteMfaEnabledResponse());
+    }
+
+    public ModifyOfficeSiteMfaEnabledResponse modifyOfficeSiteMfaEnabled(ModifyOfficeSiteMfaEnabledRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyOfficeSiteMfaEnabledWithOptions(request, runtime);
+    }
+
+    public DeleteNASFileSystemsResponse deleteNASFileSystemsWithOptions(DeleteNASFileSystemsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DeleteNASFileSystems", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DeleteNASFileSystemsResponse());
+    }
+
+    public DeleteNASFileSystemsResponse deleteNASFileSystems(DeleteNASFileSystemsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteNASFileSystemsWithOptions(request, runtime);
+    }
+
+    public ModifyNASDefaultMountTargetResponse modifyNASDefaultMountTargetWithOptions(ModifyNASDefaultMountTargetRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyNASDefaultMountTarget", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ModifyNASDefaultMountTargetResponse());
+    }
+
+    public ModifyNASDefaultMountTargetResponse modifyNASDefaultMountTarget(ModifyNASDefaultMountTargetRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyNASDefaultMountTargetWithOptions(request, runtime);
+    }
+
+    public CreateNASFileSystemResponse createNASFileSystemWithOptions(CreateNASFileSystemRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateNASFileSystem", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new CreateNASFileSystemResponse());
+    }
+
+    public CreateNASFileSystemResponse createNASFileSystem(CreateNASFileSystemRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createNASFileSystemWithOptions(request, runtime);
+    }
+
+    public DescribeNASFileSystemsResponse describeNASFileSystemsWithOptions(DescribeNASFileSystemsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeNASFileSystems", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeNASFileSystemsResponse());
+    }
+
+    public DescribeNASFileSystemsResponse describeNASFileSystems(DescribeNASFileSystemsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeNASFileSystemsWithOptions(request, runtime);
+    }
+
+    public StartVirusScanTaskResponse startVirusScanTaskWithOptions(StartVirusScanTaskRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("StartVirusScanTask", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new StartVirusScanTaskResponse());
+    }
+
+    public StartVirusScanTaskResponse startVirusScanTask(StartVirusScanTaskRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startVirusScanTaskWithOptions(request, runtime);
+    }
+
+    public ModifyADConnectorOfficeSiteResponse modifyADConnectorOfficeSiteWithOptions(ModifyADConnectorOfficeSiteRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyADConnectorOfficeSite", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ModifyADConnectorOfficeSiteResponse());
+    }
+
+    public ModifyADConnectorOfficeSiteResponse modifyADConnectorOfficeSite(ModifyADConnectorOfficeSiteRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyADConnectorOfficeSiteWithOptions(request, runtime);
+    }
+
+    public DescribeFrontVulPatchListResponse describeFrontVulPatchListWithOptions(DescribeFrontVulPatchListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeFrontVulPatchList", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeFrontVulPatchListResponse());
+    }
+
+    public DescribeFrontVulPatchListResponse describeFrontVulPatchList(DescribeFrontVulPatchListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeFrontVulPatchListWithOptions(request, runtime);
+    }
+
+    public DescribeVulDetailsResponse describeVulDetailsWithOptions(DescribeVulDetailsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeVulDetails", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeVulDetailsResponse());
+    }
+
+    public DescribeVulDetailsResponse describeVulDetails(DescribeVulDetailsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeVulDetailsWithOptions(request, runtime);
+    }
+
+    public DescribeSuspEventQuaraFilesResponse describeSuspEventQuaraFilesWithOptions(DescribeSuspEventQuaraFilesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeSuspEventQuaraFiles", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeSuspEventQuaraFilesResponse());
+    }
+
+    public DescribeSuspEventQuaraFilesResponse describeSuspEventQuaraFiles(DescribeSuspEventQuaraFilesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSuspEventQuaraFilesWithOptions(request, runtime);
+    }
+
+    public ModifyOperateVulResponse modifyOperateVulWithOptions(ModifyOperateVulRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyOperateVul", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ModifyOperateVulResponse());
+    }
+
+    public ModifyOperateVulResponse modifyOperateVul(ModifyOperateVulRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyOperateVulWithOptions(request, runtime);
+    }
+
+    public AttachCenResponse attachCenWithOptions(AttachCenRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("AttachCen", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new AttachCenResponse());
+    }
+
+    public AttachCenResponse attachCen(AttachCenRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.attachCenWithOptions(request, runtime);
+    }
+
+    public DescribeVulListResponse describeVulListWithOptions(DescribeVulListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeVulList", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeVulListResponse());
+    }
+
+    public DescribeVulListResponse describeVulList(DescribeVulListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeVulListWithOptions(request, runtime);
+    }
+
+    public DescribeOfficeSitesResponse describeOfficeSitesWithOptions(DescribeOfficeSitesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeOfficeSites", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeOfficeSitesResponse());
+    }
+
+    public DescribeOfficeSitesResponse describeOfficeSites(DescribeOfficeSitesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeOfficeSitesWithOptions(request, runtime);
+    }
+
+    public CreateSimpleOfficeSiteResponse createSimpleOfficeSiteWithOptions(CreateSimpleOfficeSiteRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateSimpleOfficeSite", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new CreateSimpleOfficeSiteResponse());
+    }
+
+    public CreateSimpleOfficeSiteResponse createSimpleOfficeSite(CreateSimpleOfficeSiteRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createSimpleOfficeSiteWithOptions(request, runtime);
+    }
+
+    public OperateVulsResponse operateVulsWithOptions(OperateVulsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("OperateVuls", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new OperateVulsResponse());
+    }
+
+    public OperateVulsResponse operateVuls(OperateVulsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.operateVulsWithOptions(request, runtime);
+    }
+
+    public DescribeScanTaskProgressResponse describeScanTaskProgressWithOptions(DescribeScanTaskProgressRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeScanTaskProgress", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeScanTaskProgressResponse());
+    }
+
+    public DescribeScanTaskProgressResponse describeScanTaskProgress(DescribeScanTaskProgressRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeScanTaskProgressWithOptions(request, runtime);
+    }
+
+    public DetachCenResponse detachCenWithOptions(DetachCenRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DetachCen", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DetachCenResponse());
+    }
+
+    public DetachCenResponse detachCen(DetachCenRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.detachCenWithOptions(request, runtime);
+    }
+
+    public DescribeSecurityEventOperationStatusResponse describeSecurityEventOperationStatusWithOptions(DescribeSecurityEventOperationStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeSecurityEventOperationStatus", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeSecurityEventOperationStatusResponse());
+    }
+
+    public DescribeSecurityEventOperationStatusResponse describeSecurityEventOperationStatus(DescribeSecurityEventOperationStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSecurityEventOperationStatusWithOptions(request, runtime);
+    }
+
+    public DescribeAlarmEventStackInfoResponse describeAlarmEventStackInfoWithOptions(DescribeAlarmEventStackInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeAlarmEventStackInfo", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeAlarmEventStackInfoResponse());
+    }
+
+    public DescribeAlarmEventStackInfoResponse describeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeAlarmEventStackInfoWithOptions(request, runtime);
+    }
+
+    public ListOfficeSiteUsersResponse listOfficeSiteUsersWithOptions(ListOfficeSiteUsersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListOfficeSiteUsers", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ListOfficeSiteUsersResponse());
+    }
+
+    public ListOfficeSiteUsersResponse listOfficeSiteUsers(ListOfficeSiteUsersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listOfficeSiteUsersWithOptions(request, runtime);
+    }
+
+    public DescribeSuspEventsResponse describeSuspEventsWithOptions(DescribeSuspEventsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeSuspEvents", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeSuspEventsResponse());
+    }
+
+    public DescribeSuspEventsResponse describeSuspEvents(DescribeSuspEventsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSuspEventsWithOptions(request, runtime);
+    }
+
+    public DescribeModificationPriceResponse describeModificationPriceWithOptions(DescribeModificationPriceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeModificationPrice", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeModificationPriceResponse());
+    }
+
+    public DescribeModificationPriceResponse describeModificationPrice(DescribeModificationPriceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeModificationPriceWithOptions(request, runtime);
+    }
+
+    public DeleteOfficeSitesResponse deleteOfficeSitesWithOptions(DeleteOfficeSitesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DeleteOfficeSites", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DeleteOfficeSitesResponse());
+    }
+
+    public DeleteOfficeSitesResponse deleteOfficeSites(DeleteOfficeSitesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteOfficeSitesWithOptions(request, runtime);
+    }
+
+    public DescribeDesktopIdsByVulNamesResponse describeDesktopIdsByVulNamesWithOptions(DescribeDesktopIdsByVulNamesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeDesktopIdsByVulNames", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeDesktopIdsByVulNamesResponse());
+    }
+
+    public DescribeDesktopIdsByVulNamesResponse describeDesktopIdsByVulNames(DescribeDesktopIdsByVulNamesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeDesktopIdsByVulNamesWithOptions(request, runtime);
+    }
+
+    public GetOfficeSiteSsoStatusResponse getOfficeSiteSsoStatusWithOptions(GetOfficeSiteSsoStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetOfficeSiteSsoStatus", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new GetOfficeSiteSsoStatusResponse());
+    }
+
+    public GetOfficeSiteSsoStatusResponse getOfficeSiteSsoStatus(GetOfficeSiteSsoStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getOfficeSiteSsoStatusWithOptions(request, runtime);
+    }
+
+    public DescribeSecurityEventOperationsResponse describeSecurityEventOperationsWithOptions(DescribeSecurityEventOperationsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeSecurityEventOperations", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeSecurityEventOperationsResponse());
+    }
+
+    public DescribeSecurityEventOperationsResponse describeSecurityEventOperations(DescribeSecurityEventOperationsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeSecurityEventOperationsWithOptions(request, runtime);
+    }
+
+    public CreateNetworkPackageResponse createNetworkPackageWithOptions(CreateNetworkPackageRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateNetworkPackage", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new CreateNetworkPackageResponse());
+    }
+
+    public CreateNetworkPackageResponse createNetworkPackage(CreateNetworkPackageRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createNetworkPackageWithOptions(request, runtime);
+    }
+
+    public CreateADConnectorOfficeSiteResponse createADConnectorOfficeSiteWithOptions(CreateADConnectorOfficeSiteRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("CreateADConnectorOfficeSite", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new CreateADConnectorOfficeSiteResponse());
+    }
+
+    public CreateADConnectorOfficeSiteResponse createADConnectorOfficeSite(CreateADConnectorOfficeSiteRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createADConnectorOfficeSiteWithOptions(request, runtime);
+    }
+
+    public DeleteNetworkPackagesResponse deleteNetworkPackagesWithOptions(DeleteNetworkPackagesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DeleteNetworkPackages", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DeleteNetworkPackagesResponse());
+    }
+
+    public DeleteNetworkPackagesResponse deleteNetworkPackages(DeleteNetworkPackagesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteNetworkPackagesWithOptions(request, runtime);
+    }
+
+    public SetOfficeSiteSsoStatusResponse setOfficeSiteSsoStatusWithOptions(SetOfficeSiteSsoStatusRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("SetOfficeSiteSsoStatus", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new SetOfficeSiteSsoStatusResponse());
+    }
+
+    public SetOfficeSiteSsoStatusResponse setOfficeSiteSsoStatus(SetOfficeSiteSsoStatusRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setOfficeSiteSsoStatusWithOptions(request, runtime);
+    }
+
+    public HandleSecurityEventsResponse handleSecurityEventsWithOptions(HandleSecurityEventsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("HandleSecurityEvents", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new HandleSecurityEventsResponse());
+    }
+
+    public HandleSecurityEventsResponse handleSecurityEvents(HandleSecurityEventsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.handleSecurityEventsWithOptions(request, runtime);
+    }
+
+    public ModifyNetworkPackageResponse modifyNetworkPackageWithOptions(ModifyNetworkPackageRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyNetworkPackage", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ModifyNetworkPackageResponse());
+    }
+
+    public ModifyNetworkPackageResponse modifyNetworkPackage(ModifyNetworkPackageRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyNetworkPackageWithOptions(request, runtime);
+    }
+
+    public DescribeNetworkPackagesResponse describeNetworkPackagesWithOptions(DescribeNetworkPackagesRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeNetworkPackages", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeNetworkPackagesResponse());
+    }
+
+    public DescribeNetworkPackagesResponse describeNetworkPackages(DescribeNetworkPackagesRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeNetworkPackagesWithOptions(request, runtime);
+    }
+
+    public DescribeGroupedVulResponse describeGroupedVulWithOptions(DescribeGroupedVulRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeGroupedVul", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeGroupedVulResponse());
+    }
+
+    public DescribeGroupedVulResponse describeGroupedVul(DescribeGroupedVulRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeGroupedVulWithOptions(request, runtime);
+    }
+
+    public RollbackSuspEventQuaraFileResponse rollbackSuspEventQuaraFileWithOptions(RollbackSuspEventQuaraFileRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("RollbackSuspEventQuaraFile", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new RollbackSuspEventQuaraFileResponse());
+    }
+
+    public RollbackSuspEventQuaraFileResponse rollbackSuspEventQuaraFile(RollbackSuspEventQuaraFileRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.rollbackSuspEventQuaraFileWithOptions(request, runtime);
+    }
+
+    public DescribePriceResponse describePriceWithOptions(DescribePriceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribePrice", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribePriceResponse());
+    }
+
+    public DescribePriceResponse describePrice(DescribePriceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describePriceWithOptions(request, runtime);
+    }
+
+    public ModifyDesktopSpecResponse modifyDesktopSpecWithOptions(ModifyDesktopSpecRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyDesktopSpec", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ModifyDesktopSpecResponse());
+    }
+
+    public ModifyDesktopSpecResponse modifyDesktopSpec(ModifyDesktopSpecRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyDesktopSpecWithOptions(request, runtime);
+    }
+
+    public ListOfficeSiteOverviewResponse listOfficeSiteOverviewWithOptions(ListOfficeSiteOverviewRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ListOfficeSiteOverview", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ListOfficeSiteOverviewResponse());
+    }
+
+    public ListOfficeSiteOverviewResponse listOfficeSiteOverview(ListOfficeSiteOverviewRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.listOfficeSiteOverviewWithOptions(request, runtime);
+    }
+
     public GetDirectorySsoStatusResponse getDirectorySsoStatusWithOptions(GetDirectorySsoStatusRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetDirectorySsoStatus", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new GetDirectorySsoStatusResponse());

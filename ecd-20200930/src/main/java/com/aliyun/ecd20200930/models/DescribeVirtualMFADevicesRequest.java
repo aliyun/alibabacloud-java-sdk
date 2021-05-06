@@ -15,8 +15,10 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     public String nextToken;
 
     @NameInMap("DirectoryId")
-    @Validation(required = true)
     public String directoryId;
+
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
 
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
@@ -56,6 +58,14 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     }
     public String getDirectoryId() {
         return this.directoryId;
+    }
+
+    public DescribeVirtualMFADevicesRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public DescribeVirtualMFADevicesRequest setEndUserId(java.util.List<String> endUserId) {

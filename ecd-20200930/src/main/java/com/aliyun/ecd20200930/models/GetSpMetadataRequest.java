@@ -9,8 +9,10 @@ public class GetSpMetadataRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DirectoryId")
-    @Validation(required = true)
     public String directoryId;
+
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
 
     public static GetSpMetadataRequest build(java.util.Map<String, ?> map) throws Exception {
         GetSpMetadataRequest self = new GetSpMetadataRequest();
@@ -31,6 +33,14 @@ public class GetSpMetadataRequest extends TeaModel {
     }
     public String getDirectoryId() {
         return this.directoryId;
+    }
+
+    public GetSpMetadataRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
 }

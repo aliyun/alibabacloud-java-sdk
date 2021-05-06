@@ -45,6 +45,98 @@ public class DescribePolicyGroupsResponse extends TeaModel {
         return this.describePolicyGroups;
     }
 
+    public static class DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules extends TeaModel {
+        @NameInMap("Type")
+        @Validation(required = true)
+        public String type;
+
+        @NameInMap("IpProtocol")
+        @Validation(required = true)
+        public String ipProtocol;
+
+        @NameInMap("PortRange")
+        @Validation(required = true)
+        public String portRange;
+
+        @NameInMap("CidrIp")
+        @Validation(required = true)
+        public String cidrIp;
+
+        @NameInMap("Policy")
+        @Validation(required = true)
+        public String policy;
+
+        @NameInMap("Priority")
+        @Validation(required = true)
+        public String priority;
+
+        @NameInMap("Description")
+        @Validation(required = true)
+        public String description;
+
+        public static DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules self = new DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules setIpProtocol(String ipProtocol) {
+            this.ipProtocol = ipProtocol;
+            return this;
+        }
+        public String getIpProtocol() {
+            return this.ipProtocol;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules setPortRange(String portRange) {
+            this.portRange = portRange;
+            return this;
+        }
+        public String getPortRange() {
+            return this.portRange;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules setCidrIp(String cidrIp) {
+            this.cidrIp = cidrIp;
+            return this;
+        }
+        public String getCidrIp() {
+            return this.cidrIp;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules setPolicy(String policy) {
+            this.policy = policy;
+            return this;
+        }
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules setPriority(String priority) {
+            this.priority = priority;
+            return this;
+        }
+        public String getPriority() {
+            return this.priority;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+    }
+
     public static class DescribePolicyGroupsResponseDescribePolicyGroups extends TeaModel {
         @NameInMap("PolicyGroupId")
         @Validation(required = true)
@@ -93,6 +185,18 @@ public class DescribePolicyGroupsResponse extends TeaModel {
         @NameInMap("EdsCount")
         @Validation(required = true)
         public Integer edsCount;
+
+        @NameInMap("PreemptLogin")
+        @Validation(required = true)
+        public String preemptLogin;
+
+        @NameInMap("AuthorizeSecurityPolicyRules")
+        @Validation(required = true)
+        public java.util.List<DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
+
+        @NameInMap("PreemptLoginUsers")
+        @Validation(required = true)
+        public java.util.List<String> preemptLoginUsers;
 
         public static DescribePolicyGroupsResponseDescribePolicyGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribePolicyGroupsResponseDescribePolicyGroups self = new DescribePolicyGroupsResponseDescribePolicyGroups();
@@ -193,6 +297,30 @@ public class DescribePolicyGroupsResponse extends TeaModel {
         }
         public Integer getEdsCount() {
             return this.edsCount;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroups setPreemptLogin(String preemptLogin) {
+            this.preemptLogin = preemptLogin;
+            return this;
+        }
+        public String getPreemptLogin() {
+            return this.preemptLogin;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroups setAuthorizeSecurityPolicyRules(java.util.List<DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules) {
+            this.authorizeSecurityPolicyRules = authorizeSecurityPolicyRules;
+            return this;
+        }
+        public java.util.List<DescribePolicyGroupsResponseDescribePolicyGroupsAuthorizeSecurityPolicyRules> getAuthorizeSecurityPolicyRules() {
+            return this.authorizeSecurityPolicyRules;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroups setPreemptLoginUsers(java.util.List<String> preemptLoginUsers) {
+            this.preemptLoginUsers = preemptLoginUsers;
+            return this;
+        }
+        public java.util.List<String> getPreemptLoginUsers() {
+            return this.preemptLoginUsers;
         }
 
     }

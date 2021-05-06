@@ -9,6 +9,7 @@ public class ModifyDesktopsPolicyGroupRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("PolicyGroupId")
+    @Validation(required = true)
     public String policyGroupId;
 
     @NameInMap("DesktopId")
