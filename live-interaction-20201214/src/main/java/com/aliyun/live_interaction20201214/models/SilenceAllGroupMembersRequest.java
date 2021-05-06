@@ -32,38 +32,6 @@ public class SilenceAllGroupMembersRequest extends TeaModel {
         return this.requestParams;
     }
 
-    public static class SilenceAllGroupMembersRequestRequestParams extends TeaModel {
-        // 会话ID
-        @NameInMap("AppCid")
-        public String appCid;
-
-        // 操作者uid
-        @NameInMap("OperatorAppUid")
-        public String operatorAppUid;
-
-        public static SilenceAllGroupMembersRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
-            SilenceAllGroupMembersRequestRequestParams self = new SilenceAllGroupMembersRequestRequestParams();
-            return TeaModel.build(map, self);
-        }
-
-        public SilenceAllGroupMembersRequestRequestParams setAppCid(String appCid) {
-            this.appCid = appCid;
-            return this;
-        }
-        public String getAppCid() {
-            return this.appCid;
-        }
-
-        public SilenceAllGroupMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
-            this.operatorAppUid = operatorAppUid;
-            return this;
-        }
-        public String getOperatorAppUid() {
-            return this.operatorAppUid;
-        }
-
-    }
-
     public static class CancelSilenceAllGroupMembersRequestRequestParams extends TeaModel {
         // 会话ID
         @NameInMap("AppCid")
@@ -87,6 +55,38 @@ public class SilenceAllGroupMembersRequest extends TeaModel {
         }
 
         public CancelSilenceAllGroupMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
+            this.operatorAppUid = operatorAppUid;
+            return this;
+        }
+        public String getOperatorAppUid() {
+            return this.operatorAppUid;
+        }
+
+    }
+
+    public static class SilenceAllGroupMembersRequestRequestParams extends TeaModel {
+        // 会话ID
+        @NameInMap("AppCid")
+        public String appCid;
+
+        // 操作者uid
+        @NameInMap("OperatorAppUid")
+        public String operatorAppUid;
+
+        public static SilenceAllGroupMembersRequestRequestParams build(java.util.Map<String, ?> map) throws Exception {
+            SilenceAllGroupMembersRequestRequestParams self = new SilenceAllGroupMembersRequestRequestParams();
+            return TeaModel.build(map, self);
+        }
+
+        public SilenceAllGroupMembersRequestRequestParams setAppCid(String appCid) {
+            this.appCid = appCid;
+            return this;
+        }
+        public String getAppCid() {
+            return this.appCid;
+        }
+
+        public SilenceAllGroupMembersRequestRequestParams setOperatorAppUid(String operatorAppUid) {
             this.operatorAppUid = operatorAppUid;
             return this;
         }
