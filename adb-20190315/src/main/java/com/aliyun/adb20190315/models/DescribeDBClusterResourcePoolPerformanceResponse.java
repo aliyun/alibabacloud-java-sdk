@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.adb20190315.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeDBClusterResourcePoolPerformanceResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeDBClusterResourcePoolPerformanceResponseBody body;
+
+    public static DescribeDBClusterResourcePoolPerformanceResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeDBClusterResourcePoolPerformanceResponse self = new DescribeDBClusterResourcePoolPerformanceResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeDBClusterResourcePoolPerformanceResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeDBClusterResourcePoolPerformanceResponse setBody(DescribeDBClusterResourcePoolPerformanceResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeDBClusterResourcePoolPerformanceResponseBody getBody() {
+        return this.body;
+    }
+
+}
