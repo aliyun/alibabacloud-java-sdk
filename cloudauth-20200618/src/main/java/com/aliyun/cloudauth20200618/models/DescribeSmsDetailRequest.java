@@ -8,7 +8,6 @@ public class DescribeSmsDetailRequest extends TeaModel {
     public String mobile;
 
     @NameInMap("SendDate")
-    @Validation(required = true)
     public String sendDate;
 
     @NameInMap("ErrorCode")
@@ -27,11 +26,9 @@ public class DescribeSmsDetailRequest extends TeaModel {
     public String templateCode;
 
     @NameInMap("CurrentPage")
-    @Validation(required = true)
     public Integer currentPage;
 
     @NameInMap("PageSize")
-    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("BizId")
