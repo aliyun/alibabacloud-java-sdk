@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class SendSmsRequest extends TeaModel {
     @NameInMap("Mobile")
-    @Validation(required = true)
     public String mobile;
 
     @NameInMap("SignName")
-    @Validation(required = true)
     public String signName;
 
     @NameInMap("TemplateCode")
-    @Validation(required = true)
     public String templateCode;
 
     @NameInMap("TemplateParam")
