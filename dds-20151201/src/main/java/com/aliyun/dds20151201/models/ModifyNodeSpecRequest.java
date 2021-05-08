@@ -43,11 +43,20 @@ public class ModifyNodeSpecRequest extends TeaModel {
     @NameInMap("EffectiveTime")
     public String effectiveTime;
 
+    @NameInMap("SwitchTime")
+    public String switchTime;
+
     @NameInMap("OrderType")
     public String orderType;
 
     @NameInMap("ReadonlyReplicas")
     public Integer readonlyReplicas;
+
+    @NameInMap("BusinessInfo")
+    public String businessInfo;
+
+    @NameInMap("CouponNo")
+    public String couponNo;
 
     public static ModifyNodeSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyNodeSpecRequest self = new ModifyNodeSpecRequest();
@@ -158,6 +167,14 @@ public class ModifyNodeSpecRequest extends TeaModel {
         return this.effectiveTime;
     }
 
+    public ModifyNodeSpecRequest setSwitchTime(String switchTime) {
+        this.switchTime = switchTime;
+        return this;
+    }
+    public String getSwitchTime() {
+        return this.switchTime;
+    }
+
     public ModifyNodeSpecRequest setOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -172,6 +189,22 @@ public class ModifyNodeSpecRequest extends TeaModel {
     }
     public Integer getReadonlyReplicas() {
         return this.readonlyReplicas;
+    }
+
+    public ModifyNodeSpecRequest setBusinessInfo(String businessInfo) {
+        this.businessInfo = businessInfo;
+        return this;
+    }
+    public String getBusinessInfo() {
+        return this.businessInfo;
+    }
+
+    public ModifyNodeSpecRequest setCouponNo(String couponNo) {
+        this.couponNo = couponNo;
+        return this;
+    }
+    public String getCouponNo() {
+        return this.couponNo;
     }
 
 }

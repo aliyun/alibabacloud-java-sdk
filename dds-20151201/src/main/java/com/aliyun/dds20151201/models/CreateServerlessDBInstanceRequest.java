@@ -43,14 +43,8 @@ public class CreateServerlessDBInstanceRequest extends TeaModel {
     @NameInMap("AccountPassword")
     public String accountPassword;
 
-    @NameInMap("ChargeType")
-    public String chargeType;
-
     @NameInMap("Period")
     public Integer period;
-
-    @NameInMap("NetworkType")
-    public String networkType;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -182,28 +176,12 @@ public class CreateServerlessDBInstanceRequest extends TeaModel {
         return this.accountPassword;
     }
 
-    public CreateServerlessDBInstanceRequest setChargeType(String chargeType) {
-        this.chargeType = chargeType;
-        return this;
-    }
-    public String getChargeType() {
-        return this.chargeType;
-    }
-
     public CreateServerlessDBInstanceRequest setPeriod(Integer period) {
         this.period = period;
         return this;
     }
     public Integer getPeriod() {
         return this.period;
-    }
-
-    public CreateServerlessDBInstanceRequest setNetworkType(String networkType) {
-        this.networkType = networkType;
-        return this;
-    }
-    public String getNetworkType() {
-        return this.networkType;
     }
 
     public CreateServerlessDBInstanceRequest setVpcId(String vpcId) {

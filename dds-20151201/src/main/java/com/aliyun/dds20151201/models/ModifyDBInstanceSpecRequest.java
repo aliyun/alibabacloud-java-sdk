@@ -34,9 +34,6 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
-    @NameInMap("FromApp")
-    public String fromApp;
-
     @NameInMap("BusinessInfo")
     public String businessInfo;
 
@@ -135,14 +132,6 @@ public class ModifyDBInstanceSpecRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
-    }
-
-    public ModifyDBInstanceSpecRequest setFromApp(String fromApp) {
-        this.fromApp = fromApp;
-        return this;
-    }
-    public String getFromApp() {
-        return this.fromApp;
     }
 
     public ModifyDBInstanceSpecRequest setBusinessInfo(String businessInfo) {
