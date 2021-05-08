@@ -22,9 +22,6 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("Region")
-    public String region;
-
     @NameInMap("ZoneId")
     public String zoneId;
 
@@ -106,14 +103,6 @@ public class DescribeDedicatedClusterInstanceListRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DescribeDedicatedClusterInstanceListRequest setRegion(String region) {
-        this.region = region;
-        return this;
-    }
-    public String getRegion() {
-        return this.region;
     }
 
     public DescribeDedicatedClusterInstanceListRequest setZoneId(String zoneId) {

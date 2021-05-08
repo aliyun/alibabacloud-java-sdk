@@ -4,6 +4,9 @@ package com.aliyun.dds20151201.models;
 import com.aliyun.tea.*;
 
 public class CreateShardingDBInstanceRequest extends TeaModel {
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -82,6 +85,14 @@ public class CreateShardingDBInstanceRequest extends TeaModel {
     public static CreateShardingDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateShardingDBInstanceRequest self = new CreateShardingDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateShardingDBInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateShardingDBInstanceRequest setSecurityToken(String securityToken) {

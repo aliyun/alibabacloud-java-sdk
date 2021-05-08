@@ -19,6 +19,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -140,6 +143,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
+    }
+
+    public CreateDBInstanceRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public CreateDBInstanceRequest setClientToken(String clientToken) {
