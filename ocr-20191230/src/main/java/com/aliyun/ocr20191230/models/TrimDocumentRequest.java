@@ -13,9 +13,6 @@ public class TrimDocumentRequest extends TeaModel {
     @NameInMap("OutputType")
     public String outputType;
 
-    @NameInMap("Async")
-    public Boolean async;
-
     public static TrimDocumentRequest build(java.util.Map<String, ?> map) throws Exception {
         TrimDocumentRequest self = new TrimDocumentRequest();
         return TeaModel.build(map, self);
@@ -43,14 +40,6 @@ public class TrimDocumentRequest extends TeaModel {
     }
     public String getOutputType() {
         return this.outputType;
-    }
-
-    public TrimDocumentRequest setAsync(Boolean async) {
-        this.async = async;
-        return this;
-    }
-    public Boolean getAsync() {
-        return this.async;
     }
 
 }

@@ -8,9 +8,6 @@ public class RecognizeVINCodeAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("ImageType")
-    public Integer imageType;
-
     public static RecognizeVINCodeAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeVINCodeAdvanceRequest self = new RecognizeVINCodeAdvanceRequest();
         return TeaModel.build(map, self);
@@ -22,14 +19,6 @@ public class RecognizeVINCodeAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
-    }
-
-    public RecognizeVINCodeAdvanceRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
-        return this;
-    }
-    public Integer getImageType() {
-        return this.imageType;
     }
 
 }

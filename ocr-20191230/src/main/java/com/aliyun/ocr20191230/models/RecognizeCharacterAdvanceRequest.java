@@ -8,9 +8,6 @@ public class RecognizeCharacterAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("ImageType")
-    public Integer imageType;
-
     @NameInMap("MinHeight")
     public Integer minHeight;
 
@@ -28,14 +25,6 @@ public class RecognizeCharacterAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
-    }
-
-    public RecognizeCharacterAdvanceRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
-        return this;
-    }
-    public Integer getImageType() {
-        return this.imageType;
     }
 
     public RecognizeCharacterAdvanceRequest setMinHeight(Integer minHeight) {

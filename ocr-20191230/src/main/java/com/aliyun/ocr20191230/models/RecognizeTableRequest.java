@@ -4,9 +4,6 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeTableRequest extends TeaModel {
-    @NameInMap("ImageType")
-    public Integer imageType;
-
     @NameInMap("ImageURL")
     public String imageURL;
 
@@ -28,14 +25,6 @@ public class RecognizeTableRequest extends TeaModel {
     public static RecognizeTableRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeTableRequest self = new RecognizeTableRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeTableRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
-        return this;
-    }
-    public Integer getImageType() {
-        return this.imageType;
     }
 
     public RecognizeTableRequest setImageURL(String imageURL) {

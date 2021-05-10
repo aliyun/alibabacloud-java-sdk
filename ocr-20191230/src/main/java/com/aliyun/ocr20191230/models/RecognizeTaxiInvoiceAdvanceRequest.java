@@ -8,9 +8,6 @@ public class RecognizeTaxiInvoiceAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("ImageType")
-    public Integer imageType;
-
     public static RecognizeTaxiInvoiceAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeTaxiInvoiceAdvanceRequest self = new RecognizeTaxiInvoiceAdvanceRequest();
         return TeaModel.build(map, self);
@@ -22,14 +19,6 @@ public class RecognizeTaxiInvoiceAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
-    }
-
-    public RecognizeTaxiInvoiceAdvanceRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
-        return this;
-    }
-    public Integer getImageType() {
-        return this.imageType;
     }
 
 }

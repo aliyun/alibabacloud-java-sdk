@@ -59,11 +59,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -87,29 +92,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeDrivingLicenseRequest recognizeDrivingLicenseReq = new RecognizeDrivingLicenseRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeDrivingLicenseReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeDrivingLicenseReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeDrivingLicenseReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeDrivingLicenseResponse recognizeDrivingLicenseResp = this.recognizeDrivingLicenseWithOptions(recognizeDrivingLicenseReq, runtime);
         return recognizeDrivingLicenseResp;
     }
@@ -131,11 +139,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -159,29 +172,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeChinapassportRequest recognizeChinapassportReq = new RecognizeChinapassportRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeChinapassportReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeChinapassportReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeChinapassportReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeChinapassportResponse recognizeChinapassportResp = this.recognizeChinapassportWithOptions(recognizeChinapassportReq, runtime);
         return recognizeChinapassportResp;
     }
@@ -203,11 +219,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -231,29 +252,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         TrimDocumentRequest trimDocumentReq = new TrimDocumentRequest();
         com.aliyun.openapiutil.Client.convert(request, trimDocumentReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.fileURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        trimDocumentReq.fileURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.fileURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.fileURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            trimDocumentReq.fileURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         TrimDocumentResponse trimDocumentResp = this.trimDocumentWithOptions(trimDocumentReq, runtime);
         return trimDocumentResp;
     }
@@ -275,11 +299,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -303,29 +332,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeTableRequest recognizeTableReq = new RecognizeTableRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeTableReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeTableReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeTableReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeTableResponse recognizeTableResp = this.recognizeTableWithOptions(recognizeTableReq, runtime);
         return recognizeTableResp;
     }
@@ -347,11 +379,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -375,29 +412,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeIdentityCardRequest recognizeIdentityCardReq = new RecognizeIdentityCardRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeIdentityCardReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeIdentityCardReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeIdentityCardReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeIdentityCardResponse recognizeIdentityCardResp = this.recognizeIdentityCardWithOptions(recognizeIdentityCardReq, runtime);
         return recognizeIdentityCardResp;
     }
@@ -419,11 +459,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -447,29 +492,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeBusinessLicenseRequest recognizeBusinessLicenseReq = new RecognizeBusinessLicenseRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeBusinessLicenseReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeBusinessLicenseReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeBusinessLicenseReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeBusinessLicenseResponse recognizeBusinessLicenseResp = this.recognizeBusinessLicenseWithOptions(recognizeBusinessLicenseReq, runtime);
         return recognizeBusinessLicenseResp;
     }
@@ -491,11 +539,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -519,29 +572,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeBankCardRequest recognizeBankCardReq = new RecognizeBankCardRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeBankCardReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeBankCardReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeBankCardReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeBankCardResponse recognizeBankCardResp = this.recognizeBankCardWithOptions(recognizeBankCardReq, runtime);
         return recognizeBankCardResp;
     }
@@ -563,11 +619,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -591,29 +652,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeVerificationcodeRequest recognizeVerificationcodeReq = new RecognizeVerificationcodeRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeVerificationcodeReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeVerificationcodeReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeVerificationcodeReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeVerificationcodeResponse recognizeVerificationcodeResp = this.recognizeVerificationcodeWithOptions(recognizeVerificationcodeReq, runtime);
         return recognizeVerificationcodeResp;
     }
@@ -635,11 +699,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -663,29 +732,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeAccountPageRequest recognizeAccountPageReq = new RecognizeAccountPageRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeAccountPageReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeAccountPageReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeAccountPageReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeAccountPageResponse recognizeAccountPageResp = this.recognizeAccountPageWithOptions(recognizeAccountPageReq, runtime);
         return recognizeAccountPageResp;
     }
@@ -707,11 +779,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -735,29 +812,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeCharacterRequest recognizeCharacterReq = new RecognizeCharacterRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeCharacterReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeCharacterReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeCharacterReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeCharacterResponse recognizeCharacterResp = this.recognizeCharacterWithOptions(recognizeCharacterReq, runtime);
         return recognizeCharacterResp;
     }
@@ -792,11 +872,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -820,29 +905,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeTakeoutOrderRequest recognizeTakeoutOrderReq = new RecognizeTakeoutOrderRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeTakeoutOrderReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeTakeoutOrderReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeTakeoutOrderReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeTakeoutOrderResponse recognizeTakeoutOrderResp = this.recognizeTakeoutOrderWithOptions(recognizeTakeoutOrderReq, runtime);
         return recognizeTakeoutOrderResp;
     }
@@ -864,11 +952,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -892,29 +985,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeBusinessCardRequest recognizeBusinessCardReq = new RecognizeBusinessCardRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeBusinessCardReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeBusinessCardReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeBusinessCardReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeBusinessCardResponse recognizeBusinessCardResp = this.recognizeBusinessCardWithOptions(recognizeBusinessCardReq, runtime);
         return recognizeBusinessCardResp;
     }
@@ -936,11 +1032,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -964,29 +1065,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         DetectCardScreenshotRequest detectCardScreenshotReq = new DetectCardScreenshotRequest();
         com.aliyun.openapiutil.Client.convert(request, detectCardScreenshotReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        detectCardScreenshotReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            detectCardScreenshotReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         DetectCardScreenshotResponse detectCardScreenshotResp = this.detectCardScreenshotWithOptions(detectCardScreenshotReq, runtime);
         return detectCardScreenshotResp;
     }
@@ -1008,11 +1112,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -1036,29 +1145,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeDriverLicenseRequest recognizeDriverLicenseReq = new RecognizeDriverLicenseRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeDriverLicenseReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeDriverLicenseReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeDriverLicenseReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeDriverLicenseResponse recognizeDriverLicenseResp = this.recognizeDriverLicenseWithOptions(recognizeDriverLicenseReq, runtime);
         return recognizeDriverLicenseResp;
     }
@@ -1080,11 +1192,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -1108,29 +1225,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeLicensePlateRequest recognizeLicensePlateReq = new RecognizeLicensePlateRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeLicensePlateReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeLicensePlateReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeLicensePlateReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeLicensePlateResponse recognizeLicensePlateResp = this.recognizeLicensePlateWithOptions(recognizeLicensePlateReq, runtime);
         return recognizeLicensePlateResp;
     }
@@ -1152,11 +1272,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -1180,29 +1305,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeStampRequest recognizeStampReq = new RecognizeStampRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeStampReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeStampReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeStampReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeStampResponse recognizeStampResp = this.recognizeStampWithOptions(recognizeStampReq, runtime);
         return recognizeStampResp;
     }
@@ -1224,11 +1352,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -1252,29 +1385,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeTaxiInvoiceRequest recognizeTaxiInvoiceReq = new RecognizeTaxiInvoiceRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeTaxiInvoiceReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeTaxiInvoiceReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeTaxiInvoiceReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeTaxiInvoiceResponse recognizeTaxiInvoiceResp = this.recognizeTaxiInvoiceWithOptions(recognizeTaxiInvoiceReq, runtime);
         return recognizeTaxiInvoiceResp;
     }
@@ -1296,11 +1432,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -1324,29 +1465,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeVATInvoiceRequest recognizeVATInvoiceReq = new RecognizeVATInvoiceRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeVATInvoiceReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.fileURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeVATInvoiceReq.fileURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.fileURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.fileURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeVATInvoiceReq.fileURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeVATInvoiceResponse recognizeVATInvoiceResp = this.recognizeVATInvoiceWithOptions(recognizeVATInvoiceReq, runtime);
         return recognizeVATInvoiceResp;
     }
@@ -1368,11 +1512,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -1396,29 +1545,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizePassportMRZRequest recognizePassportMRZReq = new RecognizePassportMRZRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizePassportMRZReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizePassportMRZReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizePassportMRZReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizePassportMRZResponse recognizePassportMRZResp = this.recognizePassportMRZWithOptions(recognizePassportMRZReq, runtime);
         return recognizePassportMRZResp;
     }
@@ -1440,11 +1592,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -1468,29 +1625,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeTrainTicketRequest recognizeTrainTicketReq = new RecognizeTrainTicketRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeTrainTicketReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeTrainTicketReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeTrainTicketReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeTrainTicketResponse recognizeTrainTicketResp = this.recognizeTrainTicketWithOptions(recognizeTrainTicketReq, runtime);
         return recognizeTrainTicketResp;
     }
@@ -1512,11 +1672,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -1540,29 +1705,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizePoiNameRequest recognizePoiNameReq = new RecognizePoiNameRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizePoiNameReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizePoiNameReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizePoiNameReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizePoiNameResponse recognizePoiNameResp = this.recognizePoiNameWithOptions(recognizePoiNameReq, runtime);
         return recognizePoiNameResp;
     }
@@ -1597,11 +1765,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -1625,29 +1798,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         RecognizeVINCodeRequest recognizeVINCodeReq = new RecognizeVINCodeRequest();
         com.aliyun.openapiutil.Client.convert(request, recognizeVINCodeReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        recognizeVINCodeReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            recognizeVINCodeReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         RecognizeVINCodeResponse recognizeVINCodeResp = this.recognizeVINCodeWithOptions(recognizeVINCodeReq, runtime);
         return recognizeVINCodeResp;
     }
