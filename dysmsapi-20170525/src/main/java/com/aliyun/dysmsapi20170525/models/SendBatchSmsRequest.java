@@ -22,7 +22,7 @@ public class SendBatchSmsRequest extends TeaModel {
     @NameInMap("TemplateCode")
     public String templateCode;
 
-    @NameInMap("templateParamJson")
+    @NameInMap("TemplateParamJson")
     public String templateParamJson;
 
     @NameInMap("SmsUpExtendCodeJson")

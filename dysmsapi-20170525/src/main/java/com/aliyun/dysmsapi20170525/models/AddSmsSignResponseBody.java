@@ -4,14 +4,14 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddSmsSignResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
     @NameInMap("Message")
     public String message;
 
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("Code")
-    public String code;
 
     @NameInMap("SignName")
     public String signName;
@@ -19,6 +19,14 @@ public class AddSmsSignResponseBody extends TeaModel {
     public static AddSmsSignResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddSmsSignResponseBody self = new AddSmsSignResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddSmsSignResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public AddSmsSignResponseBody setMessage(String message) {
@@ -35,14 +43,6 @@ public class AddSmsSignResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public AddSmsSignResponseBody setCode(String code) {
-        this.code = code;
-        return this;
-    }
-    public String getCode() {
-        return this.code;
     }
 
     public AddSmsSignResponseBody setSignName(String signName) {

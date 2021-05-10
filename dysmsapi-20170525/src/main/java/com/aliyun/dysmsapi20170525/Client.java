@@ -48,19 +48,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public AddShortUrlResponse addShortUrlWithOptions(AddShortUrlRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("AddShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new AddShortUrlResponse());
-    }
-
-    public AddShortUrlResponse addShortUrl(AddShortUrlRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.addShortUrlWithOptions(request, runtime);
-    }
-
     public AddSmsSignResponse addSmsSignWithOptions(AddSmsSignRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -85,32 +72,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddSmsTemplateResponse addSmsTemplate(AddSmsTemplateRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.addSmsTemplateWithOptions(request, runtime);
-    }
-
-    public CreateShortParamResponse createShortParamWithOptions(CreateShortParamRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateShortParam", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new CreateShortParamResponse());
-    }
-
-    public CreateShortParamResponse createShortParam(CreateShortParamRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createShortParamWithOptions(request, runtime);
-    }
-
-    public DeleteShortUrlResponse deleteShortUrlWithOptions(DeleteShortUrlRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("DeleteShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteShortUrlResponse());
-    }
-
-    public DeleteShortUrlResponse deleteShortUrl(DeleteShortUrlRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.deleteShortUrlWithOptions(request, runtime);
     }
 
     public DeleteSmsSignResponse deleteSmsSignWithOptions(DeleteSmsSignRequest request, RuntimeOptions runtime) throws Exception {
@@ -178,19 +139,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.querySendDetailsWithOptions(request, runtime);
     }
 
-    public QueryShortUrlResponse queryShortUrlWithOptions(QueryShortUrlRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("QueryShortUrl", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new QueryShortUrlResponse());
-    }
-
-    public QueryShortUrlResponse queryShortUrl(QueryShortUrlRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryShortUrlWithOptions(request, runtime);
-    }
-
     public QuerySmsSignResponse querySmsSignWithOptions(QuerySmsSignRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -228,6 +176,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendBatchSmsResponse sendBatchSms(SendBatchSmsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.sendBatchSmsWithOptions(request, runtime);
+    }
+
+    public SendMessageToGlobeResponse sendMessageToGlobeWithOptions(SendMessageToGlobeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SendMessageToGlobe", "2017-05-25", "HTTPS", "POST", "AK", "json", req, runtime), new SendMessageToGlobeResponse());
+    }
+
+    public SendMessageToGlobeResponse sendMessageToGlobe(SendMessageToGlobeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.sendMessageToGlobeWithOptions(request, runtime);
     }
 
     public SendSmsResponse sendSmsWithOptions(SendSmsRequest request, RuntimeOptions runtime) throws Exception {

@@ -4,8 +4,8 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySendDetailsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public String totalCount;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,8 +13,8 @@ public class QuerySendDetailsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("TotalCount")
+    public String totalCount;
 
     @NameInMap("SmsSendDetailDTOs")
     public QuerySendDetailsResponseBodySmsSendDetailDTOs smsSendDetailDTOs;
@@ -24,12 +24,12 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public QuerySendDetailsResponseBody setTotalCount(String totalCount) {
-        this.totalCount = totalCount;
+    public QuerySendDetailsResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getTotalCount() {
-        return this.totalCount;
+    public String getCode() {
+        return this.code;
     }
 
     public QuerySendDetailsResponseBody setMessage(String message) {
@@ -48,12 +48,12 @@ public class QuerySendDetailsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QuerySendDetailsResponseBody setCode(String code) {
-        this.code = code;
+    public QuerySendDetailsResponseBody setTotalCount(String totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getTotalCount() {
+        return this.totalCount;
     }
 
     public QuerySendDetailsResponseBody setSmsSendDetailDTOs(QuerySendDetailsResponseBodySmsSendDetailDTOs smsSendDetailDTOs) {
