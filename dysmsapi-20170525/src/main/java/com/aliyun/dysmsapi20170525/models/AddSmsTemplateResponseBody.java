@@ -4,8 +4,8 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class AddSmsTemplateResponseBody extends TeaModel {
-    @NameInMap("TemplateCode")
-    public String templateCode;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("Message")
     public String message;
@@ -13,20 +13,20 @@ public class AddSmsTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("TemplateCode")
+    public String templateCode;
 
     public static AddSmsTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddSmsTemplateResponseBody self = new AddSmsTemplateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public AddSmsTemplateResponseBody setTemplateCode(String templateCode) {
-        this.templateCode = templateCode;
+    public AddSmsTemplateResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public String getTemplateCode() {
-        return this.templateCode;
+    public String getCode() {
+        return this.code;
     }
 
     public AddSmsTemplateResponseBody setMessage(String message) {
@@ -45,12 +45,12 @@ public class AddSmsTemplateResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public AddSmsTemplateResponseBody setCode(String code) {
-        this.code = code;
+    public AddSmsTemplateResponseBody setTemplateCode(String templateCode) {
+        this.templateCode = templateCode;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getTemplateCode() {
+        return this.templateCode;
     }
 
 }

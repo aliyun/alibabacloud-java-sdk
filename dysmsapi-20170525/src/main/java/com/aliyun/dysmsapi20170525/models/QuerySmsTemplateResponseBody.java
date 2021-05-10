@@ -4,26 +4,29 @@ package com.aliyun.dysmsapi20170525.models;
 import com.aliyun.tea.*;
 
 public class QuerySmsTemplateResponseBody extends TeaModel {
-    @NameInMap("TemplateCode")
-    public String templateCode;
+    @NameInMap("TemplateContent")
+    public String templateContent;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Message")
-    public String message;
+    @NameInMap("TemplateCode")
+    public String templateCode;
 
-    @NameInMap("TemplateContent")
-    public String templateContent;
+    @NameInMap("TemplateStatus")
+    public Integer templateStatus;
 
-    @NameInMap("TemplateName")
-    public String templateName;
+    @NameInMap("Code")
+    public String code;
 
     @NameInMap("TemplateType")
     public Integer templateType;
 
-    @NameInMap("Code")
-    public String code;
+    @NameInMap("Message")
+    public String message;
+
+    @NameInMap("TemplateName")
+    public String templateName;
 
     @NameInMap("CreateDate")
     public String createDate;
@@ -31,36 +34,9 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
     @NameInMap("Reason")
     public String reason;
 
-    @NameInMap("TemplateStatus")
-    public Integer templateStatus;
-
     public static QuerySmsTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         QuerySmsTemplateResponseBody self = new QuerySmsTemplateResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public QuerySmsTemplateResponseBody setTemplateCode(String templateCode) {
-        this.templateCode = templateCode;
-        return this;
-    }
-    public String getTemplateCode() {
-        return this.templateCode;
-    }
-
-    public QuerySmsTemplateResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public QuerySmsTemplateResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
     }
 
     public QuerySmsTemplateResponseBody setTemplateContent(String templateContent) {
@@ -71,12 +47,36 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         return this.templateContent;
     }
 
-    public QuerySmsTemplateResponseBody setTemplateName(String templateName) {
-        this.templateName = templateName;
+    public QuerySmsTemplateResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public String getTemplateName() {
-        return this.templateName;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public QuerySmsTemplateResponseBody setTemplateCode(String templateCode) {
+        this.templateCode = templateCode;
+        return this;
+    }
+    public String getTemplateCode() {
+        return this.templateCode;
+    }
+
+    public QuerySmsTemplateResponseBody setTemplateStatus(Integer templateStatus) {
+        this.templateStatus = templateStatus;
+        return this;
+    }
+    public Integer getTemplateStatus() {
+        return this.templateStatus;
+    }
+
+    public QuerySmsTemplateResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
     }
 
     public QuerySmsTemplateResponseBody setTemplateType(Integer templateType) {
@@ -87,12 +87,20 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         return this.templateType;
     }
 
-    public QuerySmsTemplateResponseBody setCode(String code) {
-        this.code = code;
+    public QuerySmsTemplateResponseBody setMessage(String message) {
+        this.message = message;
         return this;
     }
-    public String getCode() {
-        return this.code;
+    public String getMessage() {
+        return this.message;
+    }
+
+    public QuerySmsTemplateResponseBody setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     public QuerySmsTemplateResponseBody setCreateDate(String createDate) {
@@ -109,14 +117,6 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
     }
     public String getReason() {
         return this.reason;
-    }
-
-    public QuerySmsTemplateResponseBody setTemplateStatus(Integer templateStatus) {
-        this.templateStatus = templateStatus;
-        return this;
-    }
-    public Integer getTemplateStatus() {
-        return this.templateStatus;
     }
 
 }

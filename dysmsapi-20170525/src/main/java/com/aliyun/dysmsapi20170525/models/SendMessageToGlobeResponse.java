@@ -3,21 +3,21 @@ package com.aliyun.dysmsapi20170525.models;
 
 import com.aliyun.tea.*;
 
-public class AddShortUrlResponse extends TeaModel {
+public class SendMessageToGlobeResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public AddShortUrlResponseBody body;
+    public SendMessageToGlobeResponseBody body;
 
-    public static AddShortUrlResponse build(java.util.Map<String, ?> map) throws Exception {
-        AddShortUrlResponse self = new AddShortUrlResponse();
+    public static SendMessageToGlobeResponse build(java.util.Map<String, ?> map) throws Exception {
+        SendMessageToGlobeResponse self = new SendMessageToGlobeResponse();
         return TeaModel.build(map, self);
     }
 
-    public AddShortUrlResponse setHeaders(java.util.Map<String, String> headers) {
+    public SendMessageToGlobeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class AddShortUrlResponse extends TeaModel {
         return this.headers;
     }
 
-    public AddShortUrlResponse setBody(AddShortUrlResponseBody body) {
+    public SendMessageToGlobeResponse setBody(SendMessageToGlobeResponseBody body) {
         this.body = body;
         return this;
     }
-    public AddShortUrlResponseBody getBody() {
+    public SendMessageToGlobeResponseBody getBody() {
         return this.body;
     }
 

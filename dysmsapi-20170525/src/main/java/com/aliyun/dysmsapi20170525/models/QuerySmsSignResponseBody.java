@@ -7,14 +7,14 @@ public class QuerySmsSignResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("Message")
-    public String message;
-
     @NameInMap("SignStatus")
     public Integer signStatus;
 
     @NameInMap("Code")
     public String code;
+
+    @NameInMap("Message")
+    public String message;
 
     @NameInMap("CreateDate")
     public String createDate;
@@ -38,14 +38,6 @@ public class QuerySmsSignResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public QuerySmsSignResponseBody setMessage(String message) {
-        this.message = message;
-        return this;
-    }
-    public String getMessage() {
-        return this.message;
-    }
-
     public QuerySmsSignResponseBody setSignStatus(Integer signStatus) {
         this.signStatus = signStatus;
         return this;
@@ -60,6 +52,14 @@ public class QuerySmsSignResponseBody extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public QuerySmsSignResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public QuerySmsSignResponseBody setCreateDate(String createDate) {
