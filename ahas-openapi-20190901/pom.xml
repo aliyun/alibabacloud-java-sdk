@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ahas_openapi20190901</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>ahas_openapi20190901</name>
   <description>Alibaba Cloud ahas-openapi (20190901) SDK for Java
@@ -41,12 +41,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.9</version>
+      <version>0.2.11</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.7</version>
+      <version>0.0.16</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
