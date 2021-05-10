@@ -4,9 +4,6 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizeIdentityCardRequest extends TeaModel {
-    @NameInMap("ImageType")
-    public Integer imageType;
-
     @NameInMap("ImageURL")
     public String imageURL;
 
@@ -16,14 +13,6 @@ public class RecognizeIdentityCardRequest extends TeaModel {
     public static RecognizeIdentityCardRequest build(java.util.Map<String, ?> map) throws Exception {
         RecognizeIdentityCardRequest self = new RecognizeIdentityCardRequest();
         return TeaModel.build(map, self);
-    }
-
-    public RecognizeIdentityCardRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
-        return this;
-    }
-    public Integer getImageType() {
-        return this.imageType;
     }
 
     public RecognizeIdentityCardRequest setImageURL(String imageURL) {

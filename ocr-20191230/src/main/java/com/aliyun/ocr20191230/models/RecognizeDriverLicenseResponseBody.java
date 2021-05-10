@@ -35,6 +35,15 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         @NameInMap("ArchiveNumber")
         public String archiveNumber;
 
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("CardNumber")
+        public String cardNumber;
+
+        @NameInMap("Record")
+        public String record;
+
         public static RecognizeDriverLicenseResponseBodyDataBackResult build(java.util.Map<String, ?> map) throws Exception {
             RecognizeDriverLicenseResponseBodyDataBackResult self = new RecognizeDriverLicenseResponseBodyDataBackResult();
             return TeaModel.build(map, self);
@@ -46,6 +55,30 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         }
         public String getArchiveNumber() {
             return this.archiveNumber;
+        }
+
+        public RecognizeDriverLicenseResponseBodyDataBackResult setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public RecognizeDriverLicenseResponseBodyDataBackResult setCardNumber(String cardNumber) {
+            this.cardNumber = cardNumber;
+            return this;
+        }
+        public String getCardNumber() {
+            return this.cardNumber;
+        }
+
+        public RecognizeDriverLicenseResponseBodyDataBackResult setRecord(String record) {
+            this.record = record;
+            return this;
+        }
+        public String getRecord() {
+            return this.record;
         }
 
     }
@@ -74,6 +107,9 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
 
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("IssueUnit")
+        public String issueUnit;
 
         public static RecognizeDriverLicenseResponseBodyDataFaceResult build(java.util.Map<String, ?> map) throws Exception {
             RecognizeDriverLicenseResponseBodyDataFaceResult self = new RecognizeDriverLicenseResponseBodyDataFaceResult();
@@ -142,6 +178,14 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public RecognizeDriverLicenseResponseBodyDataFaceResult setIssueUnit(String issueUnit) {
+            this.issueUnit = issueUnit;
+            return this;
+        }
+        public String getIssueUnit() {
+            return this.issueUnit;
         }
 
     }

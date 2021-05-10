@@ -8,9 +8,6 @@ public class RecognizeDriverLicenseAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
-    @NameInMap("ImageType")
-    public Integer imageType;
-
     @NameInMap("Side")
     public String side;
 
@@ -25,14 +22,6 @@ public class RecognizeDriverLicenseAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
-    }
-
-    public RecognizeDriverLicenseAdvanceRequest setImageType(Integer imageType) {
-        this.imageType = imageType;
-        return this;
-    }
-    public Integer getImageType() {
-        return this.imageType;
     }
 
     public RecognizeDriverLicenseAdvanceRequest setSide(String side) {

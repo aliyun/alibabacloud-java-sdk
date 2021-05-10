@@ -83,6 +83,36 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
 
     }
 
+    public static class RecognizeLicensePlateResponseBodyDataPlatesPositions extends TeaModel {
+        @NameInMap("X")
+        public Long x;
+
+        @NameInMap("Y")
+        public Long y;
+
+        public static RecognizeLicensePlateResponseBodyDataPlatesPositions build(java.util.Map<String, ?> map) throws Exception {
+            RecognizeLicensePlateResponseBodyDataPlatesPositions self = new RecognizeLicensePlateResponseBodyDataPlatesPositions();
+            return TeaModel.build(map, self);
+        }
+
+        public RecognizeLicensePlateResponseBodyDataPlatesPositions setX(Long x) {
+            this.x = x;
+            return this;
+        }
+        public Long getX() {
+            return this.x;
+        }
+
+        public RecognizeLicensePlateResponseBodyDataPlatesPositions setY(Long y) {
+            this.y = y;
+            return this;
+        }
+        public Long getY() {
+            return this.y;
+        }
+
+    }
+
     public static class RecognizeLicensePlateResponseBodyDataPlates extends TeaModel {
         @NameInMap("PlateTypeConfidence")
         public Float plateTypeConfidence;
@@ -98,6 +128,9 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
 
         @NameInMap("Roi")
         public RecognizeLicensePlateResponseBodyDataPlatesRoi roi;
+
+        @NameInMap("Positions")
+        public java.util.List<RecognizeLicensePlateResponseBodyDataPlatesPositions> positions;
 
         public static RecognizeLicensePlateResponseBodyDataPlates build(java.util.Map<String, ?> map) throws Exception {
             RecognizeLicensePlateResponseBodyDataPlates self = new RecognizeLicensePlateResponseBodyDataPlates();
@@ -142,6 +175,14 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
         }
         public RecognizeLicensePlateResponseBodyDataPlatesRoi getRoi() {
             return this.roi;
+        }
+
+        public RecognizeLicensePlateResponseBodyDataPlates setPositions(java.util.List<RecognizeLicensePlateResponseBodyDataPlatesPositions> positions) {
+            this.positions = positions;
+            return this;
+        }
+        public java.util.List<RecognizeLicensePlateResponseBodyDataPlatesPositions> getPositions() {
+            return this.positions;
         }
 
     }
