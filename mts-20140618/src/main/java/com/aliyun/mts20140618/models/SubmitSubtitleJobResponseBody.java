@@ -32,21 +32,40 @@ public class SubmitSubtitleJobResponseBody extends TeaModel {
     }
 
     public static class SubmitSubtitleJobResponseBodySubtitleJob extends TeaModel {
-        @NameInMap("JobId")
-        public String jobId;
-
-        @NameInMap("InputConfig")
-        public String inputConfig;
-
-        @NameInMap("UserData")
-        public String userData;
+        @NameInMap("OutputConfig")
+        public String outputConfig;
 
         @NameInMap("State")
         public String state;
 
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("UserData")
+        public String userData;
+
+        @NameInMap("InputConfig")
+        public String inputConfig;
+
         public static SubmitSubtitleJobResponseBodySubtitleJob build(java.util.Map<String, ?> map) throws Exception {
             SubmitSubtitleJobResponseBodySubtitleJob self = new SubmitSubtitleJobResponseBodySubtitleJob();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitSubtitleJobResponseBodySubtitleJob setOutputConfig(String outputConfig) {
+            this.outputConfig = outputConfig;
+            return this;
+        }
+        public String getOutputConfig() {
+            return this.outputConfig;
+        }
+
+        public SubmitSubtitleJobResponseBodySubtitleJob setState(String state) {
+            this.state = state;
+            return this;
+        }
+        public String getState() {
+            return this.state;
         }
 
         public SubmitSubtitleJobResponseBodySubtitleJob setJobId(String jobId) {
@@ -57,14 +76,6 @@ public class SubmitSubtitleJobResponseBody extends TeaModel {
             return this.jobId;
         }
 
-        public SubmitSubtitleJobResponseBodySubtitleJob setInputConfig(String inputConfig) {
-            this.inputConfig = inputConfig;
-            return this;
-        }
-        public String getInputConfig() {
-            return this.inputConfig;
-        }
-
         public SubmitSubtitleJobResponseBodySubtitleJob setUserData(String userData) {
             this.userData = userData;
             return this;
@@ -73,12 +84,12 @@ public class SubmitSubtitleJobResponseBody extends TeaModel {
             return this.userData;
         }
 
-        public SubmitSubtitleJobResponseBodySubtitleJob setState(String state) {
-            this.state = state;
+        public SubmitSubtitleJobResponseBodySubtitleJob setInputConfig(String inputConfig) {
+            this.inputConfig = inputConfig;
             return this;
         }
-        public String getState() {
-            return this.state;
+        public String getInputConfig() {
+            return this.inputConfig;
         }
 
     }

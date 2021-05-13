@@ -69,6 +69,9 @@ public class ListInferenceJobResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        @NameInMap("JobTime")
+        public Long jobTime;
+
         public static ListInferenceJobResponseBodyJobs build(java.util.Map<String, ?> map) throws Exception {
             ListInferenceJobResponseBodyJobs self = new ListInferenceJobResponseBodyJobs();
             return TeaModel.build(map, self);
@@ -112,6 +115,14 @@ public class ListInferenceJobResponseBody extends TeaModel {
         }
         public String getMessage() {
             return this.message;
+        }
+
+        public ListInferenceJobResponseBodyJobs setJobTime(Long jobTime) {
+            this.jobTime = jobTime;
+            return this;
+        }
+        public Long getJobTime() {
+            return this.jobTime;
         }
 
     }

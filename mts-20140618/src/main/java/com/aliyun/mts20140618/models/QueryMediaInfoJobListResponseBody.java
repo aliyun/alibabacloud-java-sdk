@@ -257,6 +257,15 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("ColorRange")
+        public String colorRange;
+
+        @NameInMap("ColorTransfer")
+        public String colorTransfer;
+
+        @NameInMap("ColorPrimaries")
+        public String colorPrimaries;
+
         public static QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream build(java.util.Map<String, ?> map) throws Exception {
             QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream self = new QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream();
             return TeaModel.build(map, self);
@@ -452,6 +461,30 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorRange(String colorRange) {
+            this.colorRange = colorRange;
+            return this;
+        }
+        public String getColorRange() {
+            return this.colorRange;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorTransfer(String colorTransfer) {
+            this.colorTransfer = colorTransfer;
+            return this;
+        }
+        public String getColorTransfer() {
+            return this.colorTransfer;
+        }
+
+        public QueryMediaInfoJobListResponseBodyMediaInfoJobListMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorPrimaries(String colorPrimaries) {
+            this.colorPrimaries = colorPrimaries;
+            return this;
+        }
+        public String getColorPrimaries() {
+            return this.colorPrimaries;
         }
 
     }

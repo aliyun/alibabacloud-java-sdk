@@ -7,26 +7,14 @@ public class SubmitInferenceJobRequest extends TeaModel {
     @NameInMap("UserId")
     public Long userId;
 
-    @NameInMap("TestId")
-    public String testId;
+    @NameInMap("ServerName")
+    public String serverName;
 
     @NameInMap("ModelType")
     public String modelType;
 
-    @NameInMap("ModelPath")
-    public String modelPath;
-
     @NameInMap("Input")
     public String input;
-
-    @NameInMap("PipelineId")
-    public String pipelineId;
-
-    @NameInMap("UserData")
-    public String userData;
-
-    @NameInMap("NotifyUrl")
-    public String notifyUrl;
 
     public static SubmitInferenceJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitInferenceJobRequest self = new SubmitInferenceJobRequest();
@@ -41,12 +29,12 @@ public class SubmitInferenceJobRequest extends TeaModel {
         return this.userId;
     }
 
-    public SubmitInferenceJobRequest setTestId(String testId) {
-        this.testId = testId;
+    public SubmitInferenceJobRequest setServerName(String serverName) {
+        this.serverName = serverName;
         return this;
     }
-    public String getTestId() {
-        return this.testId;
+    public String getServerName() {
+        return this.serverName;
     }
 
     public SubmitInferenceJobRequest setModelType(String modelType) {
@@ -57,44 +45,12 @@ public class SubmitInferenceJobRequest extends TeaModel {
         return this.modelType;
     }
 
-    public SubmitInferenceJobRequest setModelPath(String modelPath) {
-        this.modelPath = modelPath;
-        return this;
-    }
-    public String getModelPath() {
-        return this.modelPath;
-    }
-
     public SubmitInferenceJobRequest setInput(String input) {
         this.input = input;
         return this;
     }
     public String getInput() {
         return this.input;
-    }
-
-    public SubmitInferenceJobRequest setPipelineId(String pipelineId) {
-        this.pipelineId = pipelineId;
-        return this;
-    }
-    public String getPipelineId() {
-        return this.pipelineId;
-    }
-
-    public SubmitInferenceJobRequest setUserData(String userData) {
-        this.userData = userData;
-        return this;
-    }
-    public String getUserData() {
-        return this.userData;
-    }
-
-    public SubmitInferenceJobRequest setNotifyUrl(String notifyUrl) {
-        this.notifyUrl = notifyUrl;
-        return this;
-    }
-    public String getNotifyUrl() {
-        return this.notifyUrl;
     }
 
 }
