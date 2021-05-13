@@ -4,26 +4,24 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
-    @NameInMap("Permissions")
-    public DescribeSecurityGroupAttributeResponseBodyPermissions permissions;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    @NameInMap("SecurityGroupName")
+    public String securityGroupName;
+
+    @NameInMap("Permissions")
+    public DescribeSecurityGroupAttributeResponseBodyPermissions permissions;
+
     public static DescribeSecurityGroupAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupAttributeResponseBody self = new DescribeSecurityGroupAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeSecurityGroupAttributeResponseBody setPermissions(DescribeSecurityGroupAttributeResponseBodyPermissions permissions) {
-        this.permissions = permissions;
-        return this;
-    }
-    public DescribeSecurityGroupAttributeResponseBodyPermissions getPermissions() {
-        return this.permissions;
     }
 
     public DescribeSecurityGroupAttributeResponseBody setRequestId(String requestId) {
@@ -34,6 +32,14 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeSecurityGroupAttributeResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
     public DescribeSecurityGroupAttributeResponseBody setSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
@@ -42,18 +48,28 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         return this.securityGroupId;
     }
 
+    public DescribeSecurityGroupAttributeResponseBody setSecurityGroupName(String securityGroupName) {
+        this.securityGroupName = securityGroupName;
+        return this;
+    }
+    public String getSecurityGroupName() {
+        return this.securityGroupName;
+    }
+
+    public DescribeSecurityGroupAttributeResponseBody setPermissions(DescribeSecurityGroupAttributeResponseBodyPermissions permissions) {
+        this.permissions = permissions;
+        return this;
+    }
+    public DescribeSecurityGroupAttributeResponseBodyPermissions getPermissions() {
+        return this.permissions;
+    }
+
     public static class DescribeSecurityGroupAttributeResponseBodyPermissionsPermission extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
-        @NameInMap("DestCidrIp")
-        public String destCidrIp;
-
         @NameInMap("Direction")
         public String direction;
-
-        @NameInMap("IpProtocol")
-        public String ipProtocol;
 
         @NameInMap("Policy")
         public String policy;
@@ -61,11 +77,17 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         @NameInMap("PortRange")
         public String portRange;
 
-        @NameInMap("Priority")
-        public Integer priority;
-
         @NameInMap("SourceCidrIp")
         public String sourceCidrIp;
+
+        @NameInMap("IpProtocol")
+        public String ipProtocol;
+
+        @NameInMap("DestCidrIp")
+        public String destCidrIp;
+
+        @NameInMap("Priority")
+        public Integer priority;
 
         @NameInMap("SourcePortRange")
         public String sourcePortRange;
@@ -83,28 +105,12 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setDestCidrIp(String destCidrIp) {
-            this.destCidrIp = destCidrIp;
-            return this;
-        }
-        public String getDestCidrIp() {
-            return this.destCidrIp;
-        }
-
         public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setDirection(String direction) {
             this.direction = direction;
             return this;
         }
         public String getDirection() {
             return this.direction;
-        }
-
-        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setIpProtocol(String ipProtocol) {
-            this.ipProtocol = ipProtocol;
-            return this;
-        }
-        public String getIpProtocol() {
-            return this.ipProtocol;
         }
 
         public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setPolicy(String policy) {
@@ -123,20 +129,36 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             return this.portRange;
         }
 
-        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setPriority(Integer priority) {
-            this.priority = priority;
-            return this;
-        }
-        public Integer getPriority() {
-            return this.priority;
-        }
-
         public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setSourceCidrIp(String sourceCidrIp) {
             this.sourceCidrIp = sourceCidrIp;
             return this;
         }
         public String getSourceCidrIp() {
             return this.sourceCidrIp;
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setIpProtocol(String ipProtocol) {
+            this.ipProtocol = ipProtocol;
+            return this;
+        }
+        public String getIpProtocol() {
+            return this.ipProtocol;
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setDestCidrIp(String destCidrIp) {
+            this.destCidrIp = destCidrIp;
+            return this;
+        }
+        public String getDestCidrIp() {
+            return this.destCidrIp;
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setSourcePortRange(String sourcePortRange) {
