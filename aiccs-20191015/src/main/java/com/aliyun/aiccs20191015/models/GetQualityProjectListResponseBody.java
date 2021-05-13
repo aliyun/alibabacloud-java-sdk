@@ -4,18 +4,23 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityProjectListResponseBody extends TeaModel {
+    // Message
     @NameInMap("Message")
     public String message;
 
+    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
+    // Data
     @NameInMap("Data")
     public GetQualityProjectListResponseBodyData data;
 
+    // Code
     @NameInMap("Code")
     public String code;
 
+    // Success
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,39 +70,51 @@ public class GetQualityProjectListResponseBody extends TeaModel {
     }
 
     public static class GetQualityProjectListResponseBodyDataQualityProjectList extends TeaModel {
+        // 质检任务状态
         @NameInMap("Status")
         public Integer status;
 
+        // 质检任务类型
         @NameInMap("QualityType")
         public Integer qualityType;
 
+        // 质检规则列表
         @NameInMap("QualityRuleIds")
         public java.util.List<Long> qualityRuleIds;
 
+        // CreateTime
         @NameInMap("CreateTime")
         public String createTime;
 
+        // 质检任务名称
         @NameInMap("ProjectName")
         public String projectName;
 
+        // 质检任务频率
         @NameInMap("CheckFreqType")
         public Integer checkFreqType;
 
+        // 技能组分组列表
         @NameInMap("DepList")
         public java.util.List<Long> depList;
 
+        // 坐席列表
         @NameInMap("ServicerList")
         public java.util.List<Long> servicerList;
 
+        // 版本
         @NameInMap("Version")
         public Integer version;
 
+        // 技能组列表
         @NameInMap("GroupList")
         public java.util.List<Long> groupList;
 
+        // 质检任务Id
         @NameInMap("Id")
         public Long id;
 
+        // 修改时间
         @NameInMap("ModifyTime")
         public String modifyTime;
 
@@ -205,15 +222,19 @@ public class GetQualityProjectListResponseBody extends TeaModel {
     }
 
     public static class GetQualityProjectListResponseBodyData extends TeaModel {
+        // 质检项列表
         @NameInMap("QualityProjectList")
         public java.util.List<GetQualityProjectListResponseBodyDataQualityProjectList> qualityProjectList;
 
+        // PageNo
         @NameInMap("PageNo")
         public Integer pageNo;
 
+        // PageSize
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        // Total
         @NameInMap("Total")
         public Long total;
 

@@ -4,6 +4,7 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetAgentRequest extends TeaModel {
+    // js sdk中自动生成的鉴权token
     @NameInMap("ClientToken")
     public String clientToken;
 
