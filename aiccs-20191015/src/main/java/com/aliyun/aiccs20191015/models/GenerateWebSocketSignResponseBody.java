@@ -19,6 +19,9 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static GenerateWebSocketSignResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GenerateWebSocketSignResponseBody self = new GenerateWebSocketSignResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class GenerateWebSocketSignResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GenerateWebSocketSignResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }

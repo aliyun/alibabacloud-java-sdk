@@ -889,6 +889,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getMcuLvsIpWithOptions(request, runtime);
     }
 
+    public GetDepGroupTreeDataResponse getDepGroupTreeDataWithOptions(GetDepGroupTreeDataRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetDepGroupTreeData", "2019-10-15", "HTTPS", "GET", "AK", "json", req, runtime), new GetDepGroupTreeDataResponse());
+    }
+
+    public GetDepGroupTreeDataResponse getDepGroupTreeData(GetDepGroupTreeDataRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDepGroupTreeDataWithOptions(request, runtime);
+    }
+
     public DeleteAgentResponse deleteAgentWithOptions(DeleteAgentRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

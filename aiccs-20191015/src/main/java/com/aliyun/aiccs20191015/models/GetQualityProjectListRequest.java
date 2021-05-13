@@ -4,24 +4,31 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityProjectListRequest extends TeaModel {
+    // 实例ID
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 质检项ID
     @NameInMap("ProjectId")
     public Long projectId;
 
+    // 质检项名称
     @NameInMap("ProjectName")
     public String projectName;
 
+    // 质检项状态
     @NameInMap("Status")
     public Integer status;
 
+    // PageNo
     @NameInMap("PageNo")
     public Integer pageNo;
 
+    // PageSize
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    // 质检频率
     @NameInMap("checkFreqType")
     public Long checkFreqType;
 

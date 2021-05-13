@@ -4,18 +4,23 @@ package com.aliyun.aiccs20191015.models;
 import com.aliyun.tea.*;
 
 public class GetQualityProjectDetailResponseBody extends TeaModel {
+    // Message
     @NameInMap("Message")
     public String message;
 
+    // RequestId
     @NameInMap("RequestId")
     public String requestId;
 
+    // Data
     @NameInMap("Data")
     public GetQualityProjectDetailResponseBodyData data;
 
+    // Code
     @NameInMap("Code")
     public String code;
 
+    // Success
     @NameInMap("Success")
     public String success;
 
@@ -65,39 +70,51 @@ public class GetQualityProjectDetailResponseBody extends TeaModel {
     }
 
     public static class GetQualityProjectDetailResponseBodyData extends TeaModel {
+        // 质检任务状态
         @NameInMap("Status")
         public Integer status;
 
+        // 质检类型
         @NameInMap("QualityType")
         public Integer qualityType;
 
+        // 质检规则ID
         @NameInMap("QualityRuleIds")
         public java.util.List<Long> qualityRuleIds;
 
+        // 创建时间
         @NameInMap("CreateTime")
         public String createTime;
 
+        // 质检任务名称
         @NameInMap("ProjectName")
         public String projectName;
 
+        // 质检周期
         @NameInMap("CheckFreqType")
         public Integer checkFreqType;
 
+        // 技能组分组
         @NameInMap("DepList")
         public java.util.List<Long> depList;
 
+        // 坐席列表
         @NameInMap("ServicerList")
         public java.util.List<Long> servicerList;
 
+        // Version
         @NameInMap("Version")
         public Integer version;
 
+        // 技能组列表
         @NameInMap("GroupList")
         public java.util.List<Long> groupList;
 
+        // 质检任务ID
         @NameInMap("Id")
         public Long id;
 
+        // 修改时间
         @NameInMap("ModifyTime")
         public String modifyTime;
 

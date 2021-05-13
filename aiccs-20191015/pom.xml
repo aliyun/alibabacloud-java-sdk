@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aiccs20191015</artifactId>
-  <version>1.2.4</version>
+  <version>1.2.5</version>
   <packaging>jar</packaging>
   <name>aiccs20191015</name>
   <description>Alibaba Cloud aiccs (20191015) SDK for Java
@@ -46,12 +46,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.15</version>
+      <version>0.0.16</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.1.5</version>
+      <version>0.1.6</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
