@@ -16,6 +16,9 @@ public class DescribeVSwitchesRequest extends TeaModel {
     @NameInMap("VSwitchName")
     public String vSwitchName;
 
+    @NameInMap("NetworkId")
+    public String networkId;
+
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
@@ -60,6 +63,14 @@ public class DescribeVSwitchesRequest extends TeaModel {
     }
     public String getVSwitchName() {
         return this.vSwitchName;
+    }
+
+    public DescribeVSwitchesRequest setNetworkId(String networkId) {
+        this.networkId = networkId;
+        return this;
+    }
+    public String getNetworkId() {
+        return this.networkId;
     }
 
     public DescribeVSwitchesRequest setPageNumber(Integer pageNumber) {

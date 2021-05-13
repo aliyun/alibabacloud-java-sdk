@@ -10,6 +10,9 @@ public class CreateSecurityGroupRequest extends TeaModel {
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
+    @NameInMap("Description")
+    public String description;
+
     public static CreateSecurityGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSecurityGroupRequest self = new CreateSecurityGroupRequest();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class CreateSecurityGroupRequest extends TeaModel {
     }
     public String getSecurityGroupName() {
         return this.securityGroupName;
+    }
+
+    public CreateSecurityGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
 }
