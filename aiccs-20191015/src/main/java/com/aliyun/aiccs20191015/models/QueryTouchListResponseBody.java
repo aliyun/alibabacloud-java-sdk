@@ -85,15 +85,15 @@ public class QueryTouchListResponseBody extends TeaModel {
 
         // 外呼为主叫号码
         @NameInMap("OutCallRouteNumber")
-        public Integer outCallRouteNumber;
+        public String outCallRouteNumber;
 
         // 外呼为被叫号码,入呼为被叫号码
         @NameInMap("Dnis")
-        public Integer dnis;
+        public String dnis;
 
         // 入呼为主叫号码
         @NameInMap("Ani")
-        public Integer ani;
+        public String ani;
 
         public static QueryTouchListResponseBodyResultDataDataExtAttrs build(java.util.Map<String, ?> map) throws Exception {
             QueryTouchListResponseBodyResultDataDataExtAttrs self = new QueryTouchListResponseBodyResultDataDataExtAttrs();
@@ -148,27 +148,27 @@ public class QueryTouchListResponseBody extends TeaModel {
             return this.evaluationStatus;
         }
 
-        public QueryTouchListResponseBodyResultDataDataExtAttrs setOutCallRouteNumber(Integer outCallRouteNumber) {
+        public QueryTouchListResponseBodyResultDataDataExtAttrs setOutCallRouteNumber(String outCallRouteNumber) {
             this.outCallRouteNumber = outCallRouteNumber;
             return this;
         }
-        public Integer getOutCallRouteNumber() {
+        public String getOutCallRouteNumber() {
             return this.outCallRouteNumber;
         }
 
-        public QueryTouchListResponseBodyResultDataDataExtAttrs setDnis(Integer dnis) {
+        public QueryTouchListResponseBodyResultDataDataExtAttrs setDnis(String dnis) {
             this.dnis = dnis;
             return this;
         }
-        public Integer getDnis() {
+        public String getDnis() {
             return this.dnis;
         }
 
-        public QueryTouchListResponseBodyResultDataDataExtAttrs setAni(Integer ani) {
+        public QueryTouchListResponseBodyResultDataDataExtAttrs setAni(String ani) {
             this.ani = ani;
             return this;
         }
-        public Integer getAni() {
+        public String getAni() {
             return this.ani;
         }
 
