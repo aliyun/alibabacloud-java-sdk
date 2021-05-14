@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sas20181203.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeBackupRestoreCountResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeBackupRestoreCountResponseBody body;
+
+    public static DescribeBackupRestoreCountResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeBackupRestoreCountResponse self = new DescribeBackupRestoreCountResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeBackupRestoreCountResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeBackupRestoreCountResponse setBody(DescribeBackupRestoreCountResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeBackupRestoreCountResponseBody getBody() {
+        return this.body;
+    }
+
+}
