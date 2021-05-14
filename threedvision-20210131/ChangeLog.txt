@@ -1,3 +1,6 @@
+2021-05-14 Version: 1.0.4
+- Release EstimateMonocularVideoDepth.
+
 2021-04-23 Version: 1.0.3
 - Release EstimateStereoVideoDepth.
 
