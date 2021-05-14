@@ -5,15 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpgradeHiStoreInstanceRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("RegionId")
     public String regionId;
 
-    @NameInMap("DrdsPassword")
-    public String drdsPassword;
-
     @NameInMap("HistoreInstanceId")
+    @Validation(required = true)
     public String historeInstanceId;
 
     public static UpgradeHiStoreInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -35,14 +34,6 @@ public class UpgradeHiStoreInstanceRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public UpgradeHiStoreInstanceRequest setDrdsPassword(String drdsPassword) {
-        this.drdsPassword = drdsPassword;
-        return this;
-    }
-    public String getDrdsPassword() {
-        return this.drdsPassword;
     }
 
     public UpgradeHiStoreInstanceRequest setHistoreInstanceId(String historeInstanceId) {

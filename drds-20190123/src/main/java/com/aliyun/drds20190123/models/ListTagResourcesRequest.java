@@ -4,27 +4,34 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
+    @NameInMap("Tag")
+    public java.util.List<ListTagResourcesRequestTag> tag;
+
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ResourceType")
+    @Validation(required = true)
     public String resourceType;
-
-    @NameInMap("NoRole")
-    public Boolean noRole;
-
-    @NameInMap("NextToken")
-    public String nextToken;
-
-    @NameInMap("Tag")
-    public java.util.List<ListTagResourcesRequestTag> tag;
 
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListTagResourcesRequestTag> getTag() {
+        return this.tag;
     }
 
     public ListTagResourcesRequest setRegionId(String regionId) {
@@ -43,12 +50,12 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public ListTagResourcesRequest setNoRole(Boolean noRole) {
-        this.noRole = noRole;
+    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
-    public Boolean getNoRole() {
-        return this.noRole;
+    public java.util.List<String> getResourceId() {
+        return this.resourceId;
     }
 
     public ListTagResourcesRequest setNextToken(String nextToken) {
@@ -57,22 +64,6 @@ public class ListTagResourcesRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
-    }
-
-    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<ListTagResourcesRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public ListTagResourcesRequest setResourceId(java.util.List<String> resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-    public java.util.List<String> getResourceId() {
-        return this.resourceId;
     }
 
     public static class ListTagResourcesRequestTag extends TeaModel {

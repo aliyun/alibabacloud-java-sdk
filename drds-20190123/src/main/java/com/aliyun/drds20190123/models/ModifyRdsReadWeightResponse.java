@@ -4,33 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ModifyRdsReadWeightResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public ModifyRdsReadWeightResponseBody body;
+    public Boolean success;
 
     public static ModifyRdsReadWeightResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyRdsReadWeightResponse self = new ModifyRdsReadWeightResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyRdsReadWeightResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ModifyRdsReadWeightResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ModifyRdsReadWeightResponse setBody(ModifyRdsReadWeightResponseBody body) {
-        this.body = body;
+    public ModifyRdsReadWeightResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public ModifyRdsReadWeightResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

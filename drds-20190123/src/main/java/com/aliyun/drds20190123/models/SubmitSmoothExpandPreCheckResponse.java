@@ -4,33 +4,57 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmoothExpandPreCheckResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public SubmitSmoothExpandPreCheckResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Msg")
+    @Validation(required = true)
+    public String msg;
+
+    @NameInMap("TaskId")
+    @Validation(required = true)
+    public Long taskId;
 
     public static SubmitSmoothExpandPreCheckResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmoothExpandPreCheckResponse self = new SubmitSmoothExpandPreCheckResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitSmoothExpandPreCheckResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SubmitSmoothExpandPreCheckResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SubmitSmoothExpandPreCheckResponse setBody(SubmitSmoothExpandPreCheckResponseBody body) {
-        this.body = body;
+    public SubmitSmoothExpandPreCheckResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SubmitSmoothExpandPreCheckResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SubmitSmoothExpandPreCheckResponse setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
+    }
+
+    public SubmitSmoothExpandPreCheckResponse setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

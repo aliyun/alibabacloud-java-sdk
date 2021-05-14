@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDrdsDBsRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("PageNumber")
@@ -12,6 +13,9 @@ public class DescribeDrdsDBsRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeDrdsDBsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsDBsRequest self = new DescribeDrdsDBsRequest();
@@ -40,6 +44,14 @@ public class DescribeDrdsDBsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDrdsDBsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

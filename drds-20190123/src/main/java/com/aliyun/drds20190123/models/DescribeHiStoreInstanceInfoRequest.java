@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeHiStoreInstanceInfoRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("HistoreInstanceId")
+    @Validation(required = true)
     public String historeInstanceId;
 
     public static DescribeHiStoreInstanceInfoRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifyDrdsIpWhiteListRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
+    @Validation(required = true)
     public String dbName;
 
     @NameInMap("IpWhiteList")
+    @Validation(required = true)
     public String ipWhiteList;
 
     @NameInMap("Mode")

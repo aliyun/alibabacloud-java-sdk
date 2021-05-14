@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class RemoveInstanceAccountRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("AccountName")
+    @Validation(required = true)
     public String accountName;
 
     public static RemoveInstanceAccountRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,33 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ModifyDrdsIpWhiteListResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public ModifyDrdsIpWhiteListResponseBody body;
+    public Boolean success;
 
     public static ModifyDrdsIpWhiteListResponse build(java.util.Map<String, ?> map) throws Exception {
         ModifyDrdsIpWhiteListResponse self = new ModifyDrdsIpWhiteListResponse();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDrdsIpWhiteListResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public ModifyDrdsIpWhiteListResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public ModifyDrdsIpWhiteListResponse setBody(ModifyDrdsIpWhiteListResponseBody body) {
-        this.body = body;
+    public ModifyDrdsIpWhiteListResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public ModifyDrdsIpWhiteListResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

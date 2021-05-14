@@ -8,15 +8,19 @@ public class SetupBroadcastTablesRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
+    @Validation(required = true)
     public String dbName;
 
     @NameInMap("Active")
+    @Validation(required = true)
     public Boolean active;
 
     @NameInMap("TableName")
+    @Validation(required = true)
     public java.util.List<String> tableName;
 
     public static SetupBroadcastTablesRequest build(java.util.Map<String, ?> map) throws Exception {

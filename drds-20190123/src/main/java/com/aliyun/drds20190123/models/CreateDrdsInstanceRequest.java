@@ -5,30 +5,38 @@ import com.aliyun.tea.*;
 
 public class CreateDrdsInstanceRequest extends TeaModel {
     @NameInMap("Description")
+    @Validation(required = true)
     public String description;
 
     @NameInMap("RegionId")
+    @Validation(required = true)
     public String regionId;
 
     @NameInMap("ZoneId")
+    @Validation(required = true)
     public String zoneId;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     @NameInMap("Quantity")
+    @Validation(required = true)
     public Integer quantity;
 
     @NameInMap("InstanceSeries")
     public String instanceSeries;
 
     @NameInMap("Specification")
+    @Validation(required = true)
     public String specification;
 
     @NameInMap("ClientToken")
+    @Validation(required = true)
     public String clientToken;
 
     @NameInMap("PayType")
+    @Validation(required = true)
     public String payType;
 
     @NameInMap("VpcId")

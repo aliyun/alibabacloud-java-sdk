@@ -4,33 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class UntagResourcesResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public UntagResourcesResponseBody body;
+    public Boolean success;
 
     public static UntagResourcesResponse build(java.util.Map<String, ?> map) throws Exception {
         UntagResourcesResponse self = new UntagResourcesResponse();
         return TeaModel.build(map, self);
     }
 
-    public UntagResourcesResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public UntagResourcesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public UntagResourcesResponse setBody(UntagResourcesResponseBody body) {
-        this.body = body;
+    public UntagResourcesResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public UntagResourcesResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

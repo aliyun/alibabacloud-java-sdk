@@ -4,33 +4,45 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SetupTableResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public SetupTableResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public Boolean data;
 
     public static SetupTableResponse build(java.util.Map<String, ?> map) throws Exception {
         SetupTableResponse self = new SetupTableResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetupTableResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SetupTableResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SetupTableResponse setBody(SetupTableResponseBody body) {
-        this.body = body;
+    public SetupTableResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SetupTableResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SetupTableResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
 }

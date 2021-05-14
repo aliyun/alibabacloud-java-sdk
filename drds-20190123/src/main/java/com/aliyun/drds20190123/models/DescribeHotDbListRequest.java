@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeHotDbListRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
+    @Validation(required = true)
     public String dbName;
 
     public static DescribeHotDbListRequest build(java.util.Map<String, ?> map) throws Exception {

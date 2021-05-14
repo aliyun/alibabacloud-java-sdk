@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDrdsSqlAuditStatusRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     public static DescribeDrdsSqlAuditStatusRequest build(java.util.Map<String, ?> map) throws Exception {

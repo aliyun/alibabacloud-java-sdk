@@ -4,33 +4,57 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceInternetAddressResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public CreateInstanceInternetAddressResponseBody body;
+    public Boolean data;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
+
+    @NameInMap("Code")
+    @Validation(required = true)
+    public Integer code;
 
     public static CreateInstanceInternetAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceInternetAddressResponse self = new CreateInstanceInternetAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceInternetAddressResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CreateInstanceInternetAddressResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CreateInstanceInternetAddressResponse setBody(CreateInstanceInternetAddressResponseBody body) {
-        this.body = body;
+    public CreateInstanceInternetAddressResponse setData(Boolean data) {
+        this.data = data;
         return this;
     }
-    public CreateInstanceInternetAddressResponseBody getBody() {
-        return this.body;
+    public Boolean getData() {
+        return this.data;
+    }
+
+    public CreateInstanceInternetAddressResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CreateInstanceInternetAddressResponse setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
 }

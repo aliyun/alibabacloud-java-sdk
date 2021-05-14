@@ -4,33 +4,57 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmoothExpandPreCheckTaskResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public SubmitSmoothExpandPreCheckTaskResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Msg")
+    @Validation(required = true)
+    public String msg;
+
+    @NameInMap("TaskId")
+    @Validation(required = true)
+    public Long taskId;
 
     public static SubmitSmoothExpandPreCheckTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmoothExpandPreCheckTaskResponse self = new SubmitSmoothExpandPreCheckTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitSmoothExpandPreCheckTaskResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SubmitSmoothExpandPreCheckTaskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SubmitSmoothExpandPreCheckTaskResponse setBody(SubmitSmoothExpandPreCheckTaskResponseBody body) {
-        this.body = body;
+    public SubmitSmoothExpandPreCheckTaskResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SubmitSmoothExpandPreCheckTaskResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SubmitSmoothExpandPreCheckTaskResponse setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
+    }
+
+    public SubmitSmoothExpandPreCheckTaskResponse setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

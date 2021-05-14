@@ -5,13 +5,11 @@ import com.aliyun.tea.*;
 
 public class ReleaseInstanceInternetAddressRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("RegionId")
     public String regionId;
-
-    @NameInMap("DrdsPassword")
-    public String drdsPassword;
 
     public static ReleaseInstanceInternetAddressRequest build(java.util.Map<String, ?> map) throws Exception {
         ReleaseInstanceInternetAddressRequest self = new ReleaseInstanceInternetAddressRequest();
@@ -32,14 +30,6 @@ public class ReleaseInstanceInternetAddressRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public ReleaseInstanceInternetAddressRequest setDrdsPassword(String drdsPassword) {
-        this.drdsPassword = drdsPassword;
-        return this;
-    }
-    public String getDrdsPassword() {
-        return this.drdsPassword;
     }
 
 }

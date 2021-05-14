@@ -5,19 +5,22 @@ import com.aliyun.tea.*;
 
 public class SubmitSmoothExpandTaskRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
+    @Validation(required = true)
     public String dbName;
 
-    @NameInMap("DbInstanceIsCreating")
-    public Boolean dbInstanceIsCreating;
-
     @NameInMap("TransferTaskInfos")
+    @Validation(required = true)
     public java.util.List<SubmitSmoothExpandTaskRequestTransferTaskInfos> transferTaskInfos;
 
     @NameInMap("RdsSuperInstances")
     public java.util.List<SubmitSmoothExpandTaskRequestRdsSuperInstances> rdsSuperInstances;
+
+    @NameInMap("DbInstanceIsCreating")
+    public Boolean dbInstanceIsCreating;
 
     public static SubmitSmoothExpandTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmoothExpandTaskRequest self = new SubmitSmoothExpandTaskRequest();
@@ -40,14 +43,6 @@ public class SubmitSmoothExpandTaskRequest extends TeaModel {
         return this.dbName;
     }
 
-    public SubmitSmoothExpandTaskRequest setDbInstanceIsCreating(Boolean dbInstanceIsCreating) {
-        this.dbInstanceIsCreating = dbInstanceIsCreating;
-        return this;
-    }
-    public Boolean getDbInstanceIsCreating() {
-        return this.dbInstanceIsCreating;
-    }
-
     public SubmitSmoothExpandTaskRequest setTransferTaskInfos(java.util.List<SubmitSmoothExpandTaskRequestTransferTaskInfos> transferTaskInfos) {
         this.transferTaskInfos = transferTaskInfos;
         return this;
@@ -64,22 +59,46 @@ public class SubmitSmoothExpandTaskRequest extends TeaModel {
         return this.rdsSuperInstances;
     }
 
+    public SubmitSmoothExpandTaskRequest setDbInstanceIsCreating(Boolean dbInstanceIsCreating) {
+        this.dbInstanceIsCreating = dbInstanceIsCreating;
+        return this;
+    }
+    public Boolean getDbInstanceIsCreating() {
+        return this.dbInstanceIsCreating;
+    }
+
     public static class SubmitSmoothExpandTaskRequestTransferTaskInfos extends TeaModel {
+        @NameInMap("SrcInstanceName")
+        public String srcInstanceName;
+
+        @NameInMap("DstInstanceName")
+        public String dstInstanceName;
+
         @NameInMap("DbName")
         public String dbName;
 
         @NameInMap("InstanceType")
         public String instanceType;
 
-        @NameInMap("DstInstanceName")
-        public String dstInstanceName;
-
-        @NameInMap("SrcInstanceName")
-        public String srcInstanceName;
-
         public static SubmitSmoothExpandTaskRequestTransferTaskInfos build(java.util.Map<String, ?> map) throws Exception {
             SubmitSmoothExpandTaskRequestTransferTaskInfos self = new SubmitSmoothExpandTaskRequestTransferTaskInfos();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitSmoothExpandTaskRequestTransferTaskInfos setSrcInstanceName(String srcInstanceName) {
+            this.srcInstanceName = srcInstanceName;
+            return this;
+        }
+        public String getSrcInstanceName() {
+            return this.srcInstanceName;
+        }
+
+        public SubmitSmoothExpandTaskRequestTransferTaskInfos setDstInstanceName(String dstInstanceName) {
+            this.dstInstanceName = dstInstanceName;
+            return this;
+        }
+        public String getDstInstanceName() {
+            return this.dstInstanceName;
         }
 
         public SubmitSmoothExpandTaskRequestTransferTaskInfos setDbName(String dbName) {
@@ -98,45 +117,21 @@ public class SubmitSmoothExpandTaskRequest extends TeaModel {
             return this.instanceType;
         }
 
-        public SubmitSmoothExpandTaskRequestTransferTaskInfos setDstInstanceName(String dstInstanceName) {
-            this.dstInstanceName = dstInstanceName;
-            return this;
-        }
-        public String getDstInstanceName() {
-            return this.dstInstanceName;
-        }
-
-        public SubmitSmoothExpandTaskRequestTransferTaskInfos setSrcInstanceName(String srcInstanceName) {
-            this.srcInstanceName = srcInstanceName;
-            return this;
-        }
-        public String getSrcInstanceName() {
-            return this.srcInstanceName;
-        }
-
     }
 
     public static class SubmitSmoothExpandTaskRequestRdsSuperInstances extends TeaModel {
-        @NameInMap("Password")
-        public String password;
-
         @NameInMap("RdsName")
         public String rdsName;
 
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("Password")
+        public String password;
+
         public static SubmitSmoothExpandTaskRequestRdsSuperInstances build(java.util.Map<String, ?> map) throws Exception {
             SubmitSmoothExpandTaskRequestRdsSuperInstances self = new SubmitSmoothExpandTaskRequestRdsSuperInstances();
             return TeaModel.build(map, self);
-        }
-
-        public SubmitSmoothExpandTaskRequestRdsSuperInstances setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
         }
 
         public SubmitSmoothExpandTaskRequestRdsSuperInstances setRdsName(String rdsName) {
@@ -153,6 +148,14 @@ public class SubmitSmoothExpandTaskRequest extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public SubmitSmoothExpandTaskRequestRdsSuperInstances setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
         }
 
     }

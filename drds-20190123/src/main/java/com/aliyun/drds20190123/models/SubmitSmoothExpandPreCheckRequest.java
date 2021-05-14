@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class SubmitSmoothExpandPreCheckRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
+    @Validation(required = true)
     public String dbName;
 
     @NameInMap("DbInstType")
+    @Validation(required = true)
     public String dbInstType;
 
     public static SubmitSmoothExpandPreCheckRequest build(java.util.Map<String, ?> map) throws Exception {

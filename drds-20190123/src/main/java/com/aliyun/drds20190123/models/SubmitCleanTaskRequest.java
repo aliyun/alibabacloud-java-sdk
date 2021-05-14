@@ -5,18 +5,23 @@ import com.aliyun.tea.*;
 
 public class SubmitCleanTaskRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
+    @Validation(required = true)
     public String dbName;
 
     @NameInMap("ParentJobId")
+    @Validation(required = true)
     public String parentJobId;
 
     @NameInMap("JobId")
+    @Validation(required = true)
     public String jobId;
 
     @NameInMap("ExpandType")
+    @Validation(required = true)
     public String expandType;
 
     public static SubmitCleanTaskRequest build(java.util.Map<String, ?> map) throws Exception {

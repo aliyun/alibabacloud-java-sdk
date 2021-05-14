@@ -4,33 +4,45 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceMenuSwitchResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public DescribeInstanceMenuSwitchResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Config")
+    @Validation(required = true)
+    public java.util.Map<String, ?> config;
 
     public static DescribeInstanceMenuSwitchResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceMenuSwitchResponse self = new DescribeInstanceMenuSwitchResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceMenuSwitchResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeInstanceMenuSwitchResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeInstanceMenuSwitchResponse setBody(DescribeInstanceMenuSwitchResponseBody body) {
-        this.body = body;
+    public DescribeInstanceMenuSwitchResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeInstanceMenuSwitchResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeInstanceMenuSwitchResponse setConfig(java.util.Map<String, ?> config) {
+        this.config = config;
+        return this;
+    }
+    public java.util.Map<String, ?> getConfig() {
+        return this.config;
     }
 
 }
