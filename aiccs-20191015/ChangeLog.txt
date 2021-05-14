@@ -1,3 +1,6 @@
+2021-05-14 Version: 1.2.7
+- Fix phone field type.
+
 2021-05-14 Version: 1.2.6
 - Optimize interface output fields.
 
