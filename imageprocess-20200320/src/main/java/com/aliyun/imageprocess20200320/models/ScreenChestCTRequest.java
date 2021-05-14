@@ -16,6 +16,9 @@ public class ScreenChestCTRequest extends TeaModel {
     @NameInMap("URLList")
     public java.util.List<ScreenChestCTRequestURLList> URLList;
 
+    @NameInMap("Mask")
+    public Long mask;
+
     public static ScreenChestCTRequest build(java.util.Map<String, ?> map) throws Exception {
         ScreenChestCTRequest self = new ScreenChestCTRequest();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class ScreenChestCTRequest extends TeaModel {
     }
     public java.util.List<ScreenChestCTRequestURLList> getURLList() {
         return this.URLList;
+    }
+
+    public ScreenChestCTRequest setMask(Long mask) {
+        this.mask = mask;
+        return this;
+    }
+    public Long getMask() {
+        return this.mask;
     }
 
     public static class ScreenChestCTRequestURLList extends TeaModel {
