@@ -65,8 +65,8 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
     }
 
     public static class GetRealPersonVerificationResultResponseBodyData extends TeaModel {
-        @NameInMap("Pass")
-        public Boolean pass;
+        @NameInMap("Passed")
+        public Boolean passed;
 
         @NameInMap("IdentityInfo")
         public String identityInfo;
@@ -79,12 +79,12 @@ public class GetRealPersonVerificationResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public GetRealPersonVerificationResultResponseBodyData setPass(Boolean pass) {
-            this.pass = pass;
+        public GetRealPersonVerificationResultResponseBodyData setPassed(Boolean passed) {
+            this.passed = passed;
             return this;
         }
-        public Boolean getPass() {
-            return this.pass;
+        public Boolean getPassed() {
+            return this.passed;
         }
 
         public GetRealPersonVerificationResultResponseBodyData setIdentityInfo(String identityInfo) {
