@@ -8,6 +8,9 @@ public class GenerateHumanSketchStyleAdvanceRequest extends TeaModel {
     @Validation(required = true)
     public java.io.InputStream imageURLObject;
 
+    @NameInMap("ReturnType")
+    public String returnType;
+
     public static GenerateHumanSketchStyleAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateHumanSketchStyleAdvanceRequest self = new GenerateHumanSketchStyleAdvanceRequest();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class GenerateHumanSketchStyleAdvanceRequest extends TeaModel {
     }
     public java.io.InputStream getImageURLObject() {
         return this.imageURLObject;
+    }
+
+    public GenerateHumanSketchStyleAdvanceRequest setReturnType(String returnType) {
+        this.returnType = returnType;
+        return this;
+    }
+    public String getReturnType() {
+        return this.returnType;
     }
 
 }

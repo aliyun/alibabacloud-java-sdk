@@ -8,6 +8,9 @@ public class GenerateHumanSketchStyleRequest extends TeaModel {
     @NameInMap("ImageURL")
     public String imageURL;
 
+    @NameInMap("ReturnType")
+    public String returnType;
+
     public static GenerateHumanSketchStyleRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateHumanSketchStyleRequest self = new GenerateHumanSketchStyleRequest();
         return TeaModel.build(map, self);
@@ -19,6 +22,14 @@ public class GenerateHumanSketchStyleRequest extends TeaModel {
     }
     public String getImageURL() {
         return this.imageURL;
+    }
+
+    public GenerateHumanSketchStyleRequest setReturnType(String returnType) {
+        this.returnType = returnType;
+        return this;
+    }
+    public String getReturnType() {
+        return this.returnType;
     }
 
 }
