@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDrdsDBRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     public static DescribeDrdsDBRequest build(java.util.Map<String, ?> map) throws Exception {

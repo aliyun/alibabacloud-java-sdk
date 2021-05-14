@@ -4,45 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class EnableSqlAuditResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Result")
-    @Validation(required = true)
-    public Boolean result;
+    public EnableSqlAuditResponseBody body;
 
     public static EnableSqlAuditResponse build(java.util.Map<String, ?> map) throws Exception {
         EnableSqlAuditResponse self = new EnableSqlAuditResponse();
         return TeaModel.build(map, self);
     }
 
-    public EnableSqlAuditResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public EnableSqlAuditResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public EnableSqlAuditResponse setSuccess(Boolean success) {
-        this.success = success;
+    public EnableSqlAuditResponse setBody(EnableSqlAuditResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public EnableSqlAuditResponse setResult(Boolean result) {
-        this.result = result;
-        return this;
-    }
-    public Boolean getResult() {
-        return this.result;
+    public EnableSqlAuditResponseBody getBody() {
+        return this.body;
     }
 
 }

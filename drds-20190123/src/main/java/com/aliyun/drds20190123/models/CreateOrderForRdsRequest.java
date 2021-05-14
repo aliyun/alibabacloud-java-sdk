@@ -8,7 +8,6 @@ public class CreateOrderForRdsRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("Params")
-    @Validation(required = true)
     public String params;
 
     public static CreateOrderForRdsRequest build(java.util.Map<String, ?> map) throws Exception {

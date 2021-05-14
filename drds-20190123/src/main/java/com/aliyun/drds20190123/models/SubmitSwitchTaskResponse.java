@@ -4,33 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitSwitchTaskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
+    public SubmitSwitchTaskResponseBody body;
 
     public static SubmitSwitchTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitSwitchTaskResponse self = new SubmitSwitchTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitSwitchTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubmitSwitchTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SubmitSwitchTaskResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SubmitSwitchTaskResponse setBody(SubmitSwitchTaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public SubmitSwitchTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

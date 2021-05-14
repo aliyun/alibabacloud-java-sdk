@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceMenuSwitchRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     public static DescribeInstanceMenuSwitchRequest build(java.util.Map<String, ?> map) throws Exception {

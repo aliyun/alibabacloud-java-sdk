@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateResourceGroupAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("NewResourceGroupId")
-    @Validation(required = true)
     public String newResourceGroupId;
 
     public static UpdateResourceGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {

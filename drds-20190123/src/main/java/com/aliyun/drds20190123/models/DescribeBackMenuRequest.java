@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeBackMenuRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     public static DescribeBackMenuRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateDrdsDBRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
@@ -17,26 +16,26 @@ public class CreateDrdsDBRequest extends TeaModel {
     @NameInMap("Password")
     public String password;
 
-    @NameInMap("RdsInstance")
-    public java.util.List<String> rdsInstance;
-
     @NameInMap("Type")
     public String type;
 
     @NameInMap("DbInstType")
     public String dbInstType;
 
-    @NameInMap("RdsSuperAccount")
-    public java.util.List<CreateDrdsDBRequestRdsSuperAccount> rdsSuperAccount;
-
-    @NameInMap("InstDbName")
-    public java.util.List<CreateDrdsDBRequestInstDbName> instDbName;
-
     @NameInMap("DbInstanceIsCreating")
     public Boolean dbInstanceIsCreating;
 
     @NameInMap("AccountName")
     public String accountName;
+
+    @NameInMap("RdsInstance")
+    public java.util.List<String> rdsInstance;
+
+    @NameInMap("RdsSuperAccount")
+    public java.util.List<CreateDrdsDBRequestRdsSuperAccount> rdsSuperAccount;
+
+    @NameInMap("InstDbName")
+    public java.util.List<CreateDrdsDBRequestInstDbName> instDbName;
 
     public static CreateDrdsDBRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDrdsDBRequest self = new CreateDrdsDBRequest();
@@ -75,14 +74,6 @@ public class CreateDrdsDBRequest extends TeaModel {
         return this.password;
     }
 
-    public CreateDrdsDBRequest setRdsInstance(java.util.List<String> rdsInstance) {
-        this.rdsInstance = rdsInstance;
-        return this;
-    }
-    public java.util.List<String> getRdsInstance() {
-        return this.rdsInstance;
-    }
-
     public CreateDrdsDBRequest setType(String type) {
         this.type = type;
         return this;
@@ -97,22 +88,6 @@ public class CreateDrdsDBRequest extends TeaModel {
     }
     public String getDbInstType() {
         return this.dbInstType;
-    }
-
-    public CreateDrdsDBRequest setRdsSuperAccount(java.util.List<CreateDrdsDBRequestRdsSuperAccount> rdsSuperAccount) {
-        this.rdsSuperAccount = rdsSuperAccount;
-        return this;
-    }
-    public java.util.List<CreateDrdsDBRequestRdsSuperAccount> getRdsSuperAccount() {
-        return this.rdsSuperAccount;
-    }
-
-    public CreateDrdsDBRequest setInstDbName(java.util.List<CreateDrdsDBRequestInstDbName> instDbName) {
-        this.instDbName = instDbName;
-        return this;
-    }
-    public java.util.List<CreateDrdsDBRequestInstDbName> getInstDbName() {
-        return this.instDbName;
     }
 
     public CreateDrdsDBRequest setDbInstanceIsCreating(Boolean dbInstanceIsCreating) {
@@ -131,19 +106,51 @@ public class CreateDrdsDBRequest extends TeaModel {
         return this.accountName;
     }
 
+    public CreateDrdsDBRequest setRdsInstance(java.util.List<String> rdsInstance) {
+        this.rdsInstance = rdsInstance;
+        return this;
+    }
+    public java.util.List<String> getRdsInstance() {
+        return this.rdsInstance;
+    }
+
+    public CreateDrdsDBRequest setRdsSuperAccount(java.util.List<CreateDrdsDBRequestRdsSuperAccount> rdsSuperAccount) {
+        this.rdsSuperAccount = rdsSuperAccount;
+        return this;
+    }
+    public java.util.List<CreateDrdsDBRequestRdsSuperAccount> getRdsSuperAccount() {
+        return this.rdsSuperAccount;
+    }
+
+    public CreateDrdsDBRequest setInstDbName(java.util.List<CreateDrdsDBRequestInstDbName> instDbName) {
+        this.instDbName = instDbName;
+        return this;
+    }
+    public java.util.List<CreateDrdsDBRequestInstDbName> getInstDbName() {
+        return this.instDbName;
+    }
+
     public static class CreateDrdsDBRequestRdsSuperAccount extends TeaModel {
+        @NameInMap("Password")
+        public String password;
+
         @NameInMap("DbInstanceId")
         public String dbInstanceId;
 
         @NameInMap("AccountName")
         public String accountName;
 
-        @NameInMap("Password")
-        public String password;
-
         public static CreateDrdsDBRequestRdsSuperAccount build(java.util.Map<String, ?> map) throws Exception {
             CreateDrdsDBRequestRdsSuperAccount self = new CreateDrdsDBRequestRdsSuperAccount();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDrdsDBRequestRdsSuperAccount setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
         }
 
         public CreateDrdsDBRequestRdsSuperAccount setDbInstanceId(String dbInstanceId) {
@@ -160,14 +167,6 @@ public class CreateDrdsDBRequest extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
-        }
-
-        public CreateDrdsDBRequestRdsSuperAccount setPassword(String password) {
-            this.password = password;
-            return this;
-        }
-        public String getPassword() {
-            return this.password;
         }
 
     }

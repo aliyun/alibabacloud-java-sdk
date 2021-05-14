@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTablesRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("Query")
@@ -22,7 +20,6 @@ public class DescribeTablesRequest extends TeaModel {
     public Integer currentPage;
 
     @NameInMap("RegionId")
-    @Validation(required = true)
     public String regionId;
 
     public static DescribeTablesRequest build(java.util.Map<String, ?> map) throws Exception {

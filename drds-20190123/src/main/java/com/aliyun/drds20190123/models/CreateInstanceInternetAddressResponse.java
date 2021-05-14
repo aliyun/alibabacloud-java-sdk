@@ -4,57 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CreateInstanceInternetAddressResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Data")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean data;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Code")
-    @Validation(required = true)
-    public Integer code;
+    public CreateInstanceInternetAddressResponseBody body;
 
     public static CreateInstanceInternetAddressResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateInstanceInternetAddressResponse self = new CreateInstanceInternetAddressResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateInstanceInternetAddressResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateInstanceInternetAddressResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateInstanceInternetAddressResponse setData(Boolean data) {
-        this.data = data;
+    public CreateInstanceInternetAddressResponse setBody(CreateInstanceInternetAddressResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getData() {
-        return this.data;
-    }
-
-    public CreateInstanceInternetAddressResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateInstanceInternetAddressResponse setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
+    public CreateInstanceInternetAddressResponseBody getBody() {
+        return this.body;
     }
 
 }

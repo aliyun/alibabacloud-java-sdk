@@ -4,33 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class RemoveDrdsDbResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
+    public RemoveDrdsDbResponseBody body;
 
     public static RemoveDrdsDbResponse build(java.util.Map<String, ?> map) throws Exception {
         RemoveDrdsDbResponse self = new RemoveDrdsDbResponse();
         return TeaModel.build(map, self);
     }
 
-    public RemoveDrdsDbResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RemoveDrdsDbResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RemoveDrdsDbResponse setSuccess(Boolean success) {
-        this.success = success;
+    public RemoveDrdsDbResponse setBody(RemoveDrdsDbResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public RemoveDrdsDbResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -4,33 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitCleanTaskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
+    public SubmitCleanTaskResponseBody body;
 
     public static SubmitCleanTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitCleanTaskResponse self = new SubmitCleanTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitCleanTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubmitCleanTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SubmitCleanTaskResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SubmitCleanTaskResponse setBody(SubmitCleanTaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
+    public SubmitCleanTaskResponseBody getBody() {
+        return this.body;
     }
 
 }
