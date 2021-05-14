@@ -3,7 +3,7 @@ package com.aliyun.threedvision20210131.models;
 
 import com.aliyun.tea.*;
 
-public class EstimateStereoVideoDepthAdvanceRequest extends TeaModel {
+public class EstimateMonocularVideoDepthAdvanceRequest extends TeaModel {
     @NameInMap("VideoURLObject")
     @Validation(required = true)
     public java.io.InputStream videoURLObject;
@@ -11,12 +11,12 @@ public class EstimateStereoVideoDepthAdvanceRequest extends TeaModel {
     @NameInMap("SampleRate")
     public String sampleRate;
 
-    public static EstimateStereoVideoDepthAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        EstimateStereoVideoDepthAdvanceRequest self = new EstimateStereoVideoDepthAdvanceRequest();
+    public static EstimateMonocularVideoDepthAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        EstimateMonocularVideoDepthAdvanceRequest self = new EstimateMonocularVideoDepthAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public EstimateStereoVideoDepthAdvanceRequest setVideoURLObject(java.io.InputStream videoURLObject) {
+    public EstimateMonocularVideoDepthAdvanceRequest setVideoURLObject(java.io.InputStream videoURLObject) {
         this.videoURLObject = videoURLObject;
         return this;
     }
@@ -24,7 +24,7 @@ public class EstimateStereoVideoDepthAdvanceRequest extends TeaModel {
         return this.videoURLObject;
     }
 
-    public EstimateStereoVideoDepthAdvanceRequest setSampleRate(String sampleRate) {
+    public EstimateMonocularVideoDepthAdvanceRequest setSampleRate(String sampleRate) {
         this.sampleRate = sampleRate;
         return this;
     }

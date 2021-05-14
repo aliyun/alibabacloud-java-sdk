@@ -92,29 +92,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         ReconstructBodyBySingleImageRequest reconstructBodyBySingleImageReq = new ReconstructBodyBySingleImageRequest();
         com.aliyun.openapiutil.Client.convert(request, reconstructBodyBySingleImageReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        reconstructBodyBySingleImageReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            reconstructBodyBySingleImageReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         ReconstructBodyBySingleImageResponse reconstructBodyBySingleImageResp = this.reconstructBodyBySingleImageWithOptions(reconstructBodyBySingleImageReq, runtime);
         return reconstructBodyBySingleImageResp;
     }
@@ -169,29 +172,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         ReconstructThreeDMultiViewRequest reconstructThreeDMultiViewReq = new ReconstructThreeDMultiViewRequest();
         com.aliyun.openapiutil.Client.convert(request, reconstructThreeDMultiViewReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.zipFileUrlObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        reconstructThreeDMultiViewReq.zipFileUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.zipFileUrlObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.zipFileUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            reconstructThreeDMultiViewReq.zipFileUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         ReconstructThreeDMultiViewResponse reconstructThreeDMultiViewResp = this.reconstructThreeDMultiViewWithOptions(reconstructThreeDMultiViewReq, runtime);
         return reconstructThreeDMultiViewResp;
     }
@@ -207,6 +213,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAsyncJobResultResponse getAsyncJobResult(GetAsyncJobResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAsyncJobResultWithOptions(request, runtime);
+    }
+
+    public EstimateStereoImageDepthResponse estimateStereoImageDepthWithOptions(EstimateStereoImageDepthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("EstimateStereoImageDepth", "2021-01-31", "HTTPS", "POST", "AK", "json", req, runtime), new EstimateStereoImageDepthResponse());
+    }
+
+    public EstimateStereoImageDepthResponse estimateStereoImageDepth(EstimateStereoImageDepthRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.estimateStereoImageDepthWithOptions(request, runtime);
     }
 
     public EstimateMonocularImageDepthResponse estimateMonocularImageDepthWithOptions(EstimateMonocularImageDepthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -259,60 +278,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         EstimateMonocularImageDepthRequest estimateMonocularImageDepthReq = new EstimateMonocularImageDepthRequest();
         com.aliyun.openapiutil.Client.convert(request, estimateMonocularImageDepthReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        estimateMonocularImageDepthReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            estimateMonocularImageDepthReq.imageURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         EstimateMonocularImageDepthResponse estimateMonocularImageDepthResp = this.estimateMonocularImageDepthWithOptions(estimateMonocularImageDepthReq, runtime);
         return estimateMonocularImageDepthResp;
     }
 
-    public EstimateStereoImageDepthResponse estimateStereoImageDepthWithOptions(EstimateStereoImageDepthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public EstimateMonocularVideoDepthResponse estimateMonocularVideoDepthWithOptions(EstimateMonocularVideoDepthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("EstimateStereoImageDepth", "2021-01-31", "HTTPS", "POST", "AK", "json", req, runtime), new EstimateStereoImageDepthResponse());
+        return TeaModel.toModel(this.doRPCRequest("EstimateMonocularVideoDepth", "2021-01-31", "HTTPS", "POST", "AK", "json", req, runtime), new EstimateMonocularVideoDepthResponse());
     }
 
-    public EstimateStereoImageDepthResponse estimateStereoImageDepth(EstimateStereoImageDepthRequest request) throws Exception {
+    public EstimateMonocularVideoDepthResponse estimateMonocularVideoDepth(EstimateMonocularVideoDepthRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.estimateStereoImageDepthWithOptions(request, runtime);
+        return this.estimateMonocularVideoDepthWithOptions(request, runtime);
     }
 
-    public EstimateStereoVideoDepthResponse estimateStereoVideoDepthWithOptions(EstimateStereoVideoDepthRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("EstimateStereoVideoDepth", "2021-01-31", "HTTPS", "POST", "AK", "json", req, runtime), new EstimateStereoVideoDepthResponse());
-    }
-
-    public EstimateStereoVideoDepthResponse estimateStereoVideoDepth(EstimateStereoVideoDepthRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.estimateStereoVideoDepthWithOptions(request, runtime);
-    }
-
-    public EstimateStereoVideoDepthResponse estimateStereoVideoDepthAdvance(EstimateStereoVideoDepthAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public EstimateMonocularVideoDepthResponse estimateMonocularVideoDepthAdvance(EstimateMonocularVideoDepthAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
@@ -347,32 +356,35 @@ public class Client extends com.aliyun.teaopenapi.Client {
         PostObjectRequest uploadRequest = new PostObjectRequest();
         com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        EstimateStereoVideoDepthRequest estimateStereoVideoDepthReq = new EstimateStereoVideoDepthRequest();
-        com.aliyun.openapiutil.Client.convert(request, estimateStereoVideoDepthReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.videoURLObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        estimateStereoVideoDepthReq.videoURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
-        EstimateStereoVideoDepthResponse estimateStereoVideoDepthResp = this.estimateStereoVideoDepthWithOptions(estimateStereoVideoDepthReq, runtime);
-        return estimateStereoVideoDepthResp;
+        EstimateMonocularVideoDepthRequest estimateMonocularVideoDepthReq = new EstimateMonocularVideoDepthRequest();
+        com.aliyun.openapiutil.Client.convert(request, estimateMonocularVideoDepthReq);
+        if (!com.aliyun.teautil.Common.isUnset(request.videoURLObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.videoURLObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            estimateMonocularVideoDepthReq.videoURL = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
+        EstimateMonocularVideoDepthResponse estimateMonocularVideoDepthResp = this.estimateMonocularVideoDepthWithOptions(estimateMonocularVideoDepthReq, runtime);
+        return estimateMonocularVideoDepthResp;
     }
 }
