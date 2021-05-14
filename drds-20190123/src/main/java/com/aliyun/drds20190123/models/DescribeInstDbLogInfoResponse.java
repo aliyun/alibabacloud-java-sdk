@@ -4,33 +4,77 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstDbLogInfoResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public DescribeInstDbLogInfoResponseBody body;
+    public Boolean success;
+
+    @NameInMap("LogTimeRange")
+    @Validation(required = true)
+    public DescribeInstDbLogInfoResponseLogTimeRange logTimeRange;
 
     public static DescribeInstDbLogInfoResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstDbLogInfoResponse self = new DescribeInstDbLogInfoResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstDbLogInfoResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeInstDbLogInfoResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeInstDbLogInfoResponse setBody(DescribeInstDbLogInfoResponseBody body) {
-        this.body = body;
+    public DescribeInstDbLogInfoResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeInstDbLogInfoResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeInstDbLogInfoResponse setLogTimeRange(DescribeInstDbLogInfoResponseLogTimeRange logTimeRange) {
+        this.logTimeRange = logTimeRange;
+        return this;
+    }
+    public DescribeInstDbLogInfoResponseLogTimeRange getLogTimeRange() {
+        return this.logTimeRange;
+    }
+
+    public static class DescribeInstDbLogInfoResponseLogTimeRange extends TeaModel {
+        @NameInMap("SupportOldestTime")
+        @Validation(required = true)
+        public Long supportOldestTime;
+
+        @NameInMap("SupportLatestTime")
+        @Validation(required = true)
+        public Long supportLatestTime;
+
+        public static DescribeInstDbLogInfoResponseLogTimeRange build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstDbLogInfoResponseLogTimeRange self = new DescribeInstDbLogInfoResponseLogTimeRange();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstDbLogInfoResponseLogTimeRange setSupportOldestTime(Long supportOldestTime) {
+            this.supportOldestTime = supportOldestTime;
+            return this;
+        }
+        public Long getSupportOldestTime() {
+            return this.supportOldestTime;
+        }
+
+        public DescribeInstDbLogInfoResponseLogTimeRange setSupportLatestTime(Long supportLatestTime) {
+            this.supportLatestTime = supportLatestTime;
+            return this;
+        }
+        public Long getSupportLatestTime() {
+            return this.supportLatestTime;
+        }
+
     }
 
 }

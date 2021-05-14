@@ -4,33 +4,65 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupDbsResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public DescribeBackupDbsResponseBody body;
+    public Boolean success;
+
+    @NameInMap("DbNames")
+    @Validation(required = true)
+    public DescribeBackupDbsResponseDbNames dbNames;
 
     public static DescribeBackupDbsResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupDbsResponse self = new DescribeBackupDbsResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupDbsResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeBackupDbsResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeBackupDbsResponse setBody(DescribeBackupDbsResponseBody body) {
-        this.body = body;
+    public DescribeBackupDbsResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeBackupDbsResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeBackupDbsResponse setDbNames(DescribeBackupDbsResponseDbNames dbNames) {
+        this.dbNames = dbNames;
+        return this;
+    }
+    public DescribeBackupDbsResponseDbNames getDbNames() {
+        return this.dbNames;
+    }
+
+    public static class DescribeBackupDbsResponseDbNames extends TeaModel {
+        @NameInMap("dbName")
+        @Validation(required = true)
+        public java.util.List<String> dbName;
+
+        public static DescribeBackupDbsResponseDbNames build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupDbsResponseDbNames self = new DescribeBackupDbsResponseDbNames();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupDbsResponseDbNames setDbName(java.util.List<String> dbName) {
+            this.dbName = dbName;
+            return this;
+        }
+        public java.util.List<String> getDbName() {
+            return this.dbName;
+        }
+
     }
 
 }

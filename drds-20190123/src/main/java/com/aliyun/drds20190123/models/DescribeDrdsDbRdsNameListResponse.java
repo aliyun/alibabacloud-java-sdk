@@ -4,33 +4,65 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeDrdsDbRdsNameListResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public DescribeDrdsDbRdsNameListResponseBody body;
+    public Boolean success;
+
+    @NameInMap("InstanceNameList")
+    @Validation(required = true)
+    public DescribeDrdsDbRdsNameListResponseInstanceNameList instanceNameList;
 
     public static DescribeDrdsDbRdsNameListResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeDrdsDbRdsNameListResponse self = new DescribeDrdsDbRdsNameListResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDrdsDbRdsNameListResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeDrdsDbRdsNameListResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeDrdsDbRdsNameListResponse setBody(DescribeDrdsDbRdsNameListResponseBody body) {
-        this.body = body;
+    public DescribeDrdsDbRdsNameListResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeDrdsDbRdsNameListResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeDrdsDbRdsNameListResponse setInstanceNameList(DescribeDrdsDbRdsNameListResponseInstanceNameList instanceNameList) {
+        this.instanceNameList = instanceNameList;
+        return this;
+    }
+    public DescribeDrdsDbRdsNameListResponseInstanceNameList getInstanceNameList() {
+        return this.instanceNameList;
+    }
+
+    public static class DescribeDrdsDbRdsNameListResponseInstanceNameList extends TeaModel {
+        @NameInMap("InstanceName")
+        @Validation(required = true)
+        public java.util.List<String> instanceName;
+
+        public static DescribeDrdsDbRdsNameListResponseInstanceNameList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDrdsDbRdsNameListResponseInstanceNameList self = new DescribeDrdsDbRdsNameListResponseInstanceNameList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDrdsDbRdsNameListResponseInstanceNameList setInstanceName(java.util.List<String> instanceName) {
+            this.instanceName = instanceName;
+            return this;
+        }
+        public java.util.List<String> getInstanceName() {
+            return this.instanceName;
+        }
+
     }
 
 }

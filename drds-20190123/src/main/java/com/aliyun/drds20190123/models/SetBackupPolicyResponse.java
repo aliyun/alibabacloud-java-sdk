@@ -4,33 +4,45 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SetBackupPolicyResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Result")
     @Validation(required = true)
-    public SetBackupPolicyResponseBody body;
+    public String result;
+
+    @NameInMap("Success")
+    @Validation(required = true)
+    public Boolean success;
 
     public static SetBackupPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
         SetBackupPolicyResponse self = new SetBackupPolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetBackupPolicyResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SetBackupPolicyResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SetBackupPolicyResponse setBody(SetBackupPolicyResponseBody body) {
-        this.body = body;
+    public SetBackupPolicyResponse setResult(String result) {
+        this.result = result;
         return this;
     }
-    public SetBackupPolicyResponseBody getBody() {
-        return this.body;
+    public String getResult() {
+        return this.result;
+    }
+
+    public SetBackupPolicyResponse setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

@@ -4,33 +4,45 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SwitchGlobalBroadcastTypeResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public SwitchGlobalBroadcastTypeResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public Boolean data;
 
     public static SwitchGlobalBroadcastTypeResponse build(java.util.Map<String, ?> map) throws Exception {
         SwitchGlobalBroadcastTypeResponse self = new SwitchGlobalBroadcastTypeResponse();
         return TeaModel.build(map, self);
     }
 
-    public SwitchGlobalBroadcastTypeResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SwitchGlobalBroadcastTypeResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SwitchGlobalBroadcastTypeResponse setBody(SwitchGlobalBroadcastTypeResponseBody body) {
-        this.body = body;
+    public SwitchGlobalBroadcastTypeResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SwitchGlobalBroadcastTypeResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SwitchGlobalBroadcastTypeResponse setData(Boolean data) {
+        this.data = data;
+        return this;
+    }
+    public Boolean getData() {
+        return this.data;
     }
 
 }

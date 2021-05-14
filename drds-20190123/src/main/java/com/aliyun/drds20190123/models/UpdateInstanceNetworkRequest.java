@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateInstanceNetworkRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("SrcInstanceNetworkType")
+    @Validation(required = true)
     public String srcInstanceNetworkType;
 
     @NameInMap("RetainClassic")

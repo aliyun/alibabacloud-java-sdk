@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupSetsRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("StartTime")
+    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
+    @Validation(required = true)
     public String endTime;
 
     public static DescribeBackupSetsRequest build(java.util.Map<String, ?> map) throws Exception {

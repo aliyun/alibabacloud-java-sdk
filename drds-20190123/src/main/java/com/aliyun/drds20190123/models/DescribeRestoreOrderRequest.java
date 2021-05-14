@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreOrderRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("PreferredBackupTime")

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDrdsInstanceLevelTasksRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     public static DescribeDrdsInstanceLevelTasksRequest build(java.util.Map<String, ?> map) throws Exception {

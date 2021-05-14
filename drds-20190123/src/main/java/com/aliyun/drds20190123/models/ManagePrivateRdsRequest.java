@@ -8,12 +8,15 @@ public class ManagePrivateRdsRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DBInstanceId")
+    @Validation(required = true)
     public String DBInstanceId;
 
     @NameInMap("RdsAction")
+    @Validation(required = true)
     public String rdsAction;
 
     @NameInMap("Params")

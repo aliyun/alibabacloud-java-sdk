@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceSwitchAzoneRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     public static DescribeInstanceSwitchAzoneRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -8,9 +8,11 @@ public class DescribeRdsPerformanceSummaryRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("RdsInstanceId")
+    @Validation(required = true)
     public java.util.List<String> rdsInstanceId;
 
     public static DescribeRdsPerformanceSummaryRequest build(java.util.Map<String, ?> map) throws Exception {

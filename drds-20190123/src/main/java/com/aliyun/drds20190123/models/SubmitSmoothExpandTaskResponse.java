@@ -4,33 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmoothExpandTaskResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public SubmitSmoothExpandTaskResponseBody body;
+    public Boolean success;
 
     public static SubmitSmoothExpandTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmoothExpandTaskResponse self = new SubmitSmoothExpandTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitSmoothExpandTaskResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SubmitSmoothExpandTaskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SubmitSmoothExpandTaskResponse setBody(SubmitSmoothExpandTaskResponseBody body) {
-        this.body = body;
+    public SubmitSmoothExpandTaskResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SubmitSmoothExpandTaskResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
 }

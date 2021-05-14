@@ -8,12 +8,15 @@ public class DescribeTableRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
+    @Validation(required = true)
     public String dbName;
 
     @NameInMap("TableName")
+    @Validation(required = true)
     public String tableName;
 
     public static DescribeTableRequest build(java.util.Map<String, ?> map) throws Exception {

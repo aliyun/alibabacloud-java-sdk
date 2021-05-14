@@ -8,15 +8,19 @@ public class DescribeShardTaskInfoRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
+    @Validation(required = true)
     public String dbName;
 
     @NameInMap("SourceTableName")
+    @Validation(required = true)
     public String sourceTableName;
 
     @NameInMap("TargetTableName")
+    @Validation(required = true)
     public String targetTableName;
 
     public static DescribeShardTaskInfoRequest build(java.util.Map<String, ?> map) throws Exception {

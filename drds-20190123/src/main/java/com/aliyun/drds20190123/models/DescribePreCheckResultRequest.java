@@ -8,9 +8,11 @@ public class DescribePreCheckResultRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
+    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("TaskId")
+    @Validation(required = true)
     public String taskId;
 
     public static DescribePreCheckResultRequest build(java.util.Map<String, ?> map) throws Exception {

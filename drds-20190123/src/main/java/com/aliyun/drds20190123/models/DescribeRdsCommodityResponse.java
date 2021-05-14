@@ -4,33 +4,45 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsCommodityResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public DescribeRdsCommodityResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Data")
+    @Validation(required = true)
+    public String data;
 
     public static DescribeRdsCommodityResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeRdsCommodityResponse self = new DescribeRdsCommodityResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRdsCommodityResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeRdsCommodityResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeRdsCommodityResponse setBody(DescribeRdsCommodityResponseBody body) {
-        this.body = body;
+    public DescribeRdsCommodityResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public DescribeRdsCommodityResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public DescribeRdsCommodityResponse setData(String data) {
+        this.data = data;
+        return this;
+    }
+    public String getData() {
+        return this.data;
     }
 
 }

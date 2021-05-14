@@ -4,33 +4,45 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitSqlFlashbackTaskResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public SubmitSqlFlashbackTaskResponseBody body;
+    public Boolean success;
+
+    @NameInMap("TaskId")
+    @Validation(required = true)
+    public Long taskId;
 
     public static SubmitSqlFlashbackTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitSqlFlashbackTaskResponse self = new SubmitSqlFlashbackTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitSqlFlashbackTaskResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public SubmitSqlFlashbackTaskResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public SubmitSqlFlashbackTaskResponse setBody(SubmitSqlFlashbackTaskResponseBody body) {
-        this.body = body;
+    public SubmitSqlFlashbackTaskResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public SubmitSqlFlashbackTaskResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public SubmitSqlFlashbackTaskResponse setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
     }
 
 }

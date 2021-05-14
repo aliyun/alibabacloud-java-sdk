@@ -4,33 +4,53 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeRdsSuperAccountInstancesResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("DbInstances")
     @Validation(required = true)
-    public DescribeRdsSuperAccountInstancesResponseBody body;
+    public DescribeRdsSuperAccountInstancesResponseDbInstances dbInstances;
 
     public static DescribeRdsSuperAccountInstancesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeRdsSuperAccountInstancesResponse self = new DescribeRdsSuperAccountInstancesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeRdsSuperAccountInstancesResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DescribeRdsSuperAccountInstancesResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DescribeRdsSuperAccountInstancesResponse setBody(DescribeRdsSuperAccountInstancesResponseBody body) {
-        this.body = body;
+    public DescribeRdsSuperAccountInstancesResponse setDbInstances(DescribeRdsSuperAccountInstancesResponseDbInstances dbInstances) {
+        this.dbInstances = dbInstances;
         return this;
     }
-    public DescribeRdsSuperAccountInstancesResponseBody getBody() {
-        return this.body;
+    public DescribeRdsSuperAccountInstancesResponseDbInstances getDbInstances() {
+        return this.dbInstances;
+    }
+
+    public static class DescribeRdsSuperAccountInstancesResponseDbInstances extends TeaModel {
+        @NameInMap("DbInstance")
+        @Validation(required = true)
+        public java.util.List<String> dbInstance;
+
+        public static DescribeRdsSuperAccountInstancesResponseDbInstances build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRdsSuperAccountInstancesResponseDbInstances self = new DescribeRdsSuperAccountInstancesResponseDbInstances();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRdsSuperAccountInstancesResponseDbInstances setDbInstance(java.util.List<String> dbInstance) {
+            this.dbInstance = dbInstance;
+            return this;
+        }
+        public java.util.List<String> getDbInstance() {
+            return this.dbInstance;
+        }
+
     }
 
 }

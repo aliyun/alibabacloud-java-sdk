@@ -4,33 +4,45 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class CheckDrdsDbNameResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Success")
     @Validation(required = true)
-    public CheckDrdsDbNameResponseBody body;
+    public Boolean success;
+
+    @NameInMap("Result")
+    @Validation(required = true)
+    public Boolean result;
 
     public static CheckDrdsDbNameResponse build(java.util.Map<String, ?> map) throws Exception {
         CheckDrdsDbNameResponse self = new CheckDrdsDbNameResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckDrdsDbNameResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CheckDrdsDbNameResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CheckDrdsDbNameResponse setBody(CheckDrdsDbNameResponseBody body) {
-        this.body = body;
+    public CheckDrdsDbNameResponse setSuccess(Boolean success) {
+        this.success = success;
         return this;
     }
-    public CheckDrdsDbNameResponseBody getBody() {
-        return this.body;
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+    public CheckDrdsDbNameResponse setResult(Boolean result) {
+        this.result = result;
+        return this;
+    }
+    public Boolean getResult() {
+        return this.result;
     }
 
 }
