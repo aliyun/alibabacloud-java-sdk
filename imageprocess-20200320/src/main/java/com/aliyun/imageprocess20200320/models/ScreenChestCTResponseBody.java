@@ -518,6 +518,9 @@ public class ScreenChestCTResponseBody extends TeaModel {
         @NameInMap("DetectRibFracture")
         public ScreenChestCTResponseBodyDataDetectRibFracture detectRibFracture;
 
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
         public static ScreenChestCTResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ScreenChestCTResponseBodyData self = new ScreenChestCTResponseBodyData();
             return TeaModel.build(map, self);
@@ -553,6 +556,14 @@ public class ScreenChestCTResponseBody extends TeaModel {
         }
         public ScreenChestCTResponseBodyDataDetectRibFracture getDetectRibFracture() {
             return this.detectRibFracture;
+        }
+
+        public ScreenChestCTResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
     }
