@@ -8,11 +8,9 @@ public class DescribeShardTaskListRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("Query")
@@ -25,7 +23,6 @@ public class DescribeShardTaskListRequest extends TeaModel {
     public Integer currentPage;
 
     @NameInMap("TaskType")
-    @Validation(required = true)
     public String taskType;
 
     public static DescribeShardTaskListRequest build(java.util.Map<String, ?> map) throws Exception {

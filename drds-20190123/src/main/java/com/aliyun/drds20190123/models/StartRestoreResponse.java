@@ -4,45 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class StartRestoreResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Result")
+    @NameInMap("body")
     @Validation(required = true)
-    public String result;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    public StartRestoreResponseBody body;
 
     public static StartRestoreResponse build(java.util.Map<String, ?> map) throws Exception {
         StartRestoreResponse self = new StartRestoreResponse();
         return TeaModel.build(map, self);
     }
 
-    public StartRestoreResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public StartRestoreResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public StartRestoreResponse setResult(String result) {
-        this.result = result;
+    public StartRestoreResponse setBody(StartRestoreResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getResult() {
-        return this.result;
-    }
-
-    public StartRestoreResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public StartRestoreResponseBody getBody() {
+        return this.body;
     }
 
 }

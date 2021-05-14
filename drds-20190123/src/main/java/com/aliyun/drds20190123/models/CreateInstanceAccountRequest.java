@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateInstanceAccountRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("AccountName")
-    @Validation(required = true)
     public String accountName;
 
     @NameInMap("Password")
-    @Validation(required = true)
     public String password;
 
     @NameInMap("DbPrivilege")
-    @Validation(required = true)
     public java.util.List<CreateInstanceAccountRequestDbPrivilege> dbPrivilege;
 
     public static CreateInstanceAccountRequest build(java.util.Map<String, ?> map) throws Exception {

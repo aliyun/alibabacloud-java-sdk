@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeDbInstanceDbsRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbInstanceId")
-    @Validation(required = true)
     public String dbInstanceId;
 
     @NameInMap("AccountName")

@@ -4,57 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmoothExpandPreCheckTaskResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("Msg")
-    @Validation(required = true)
-    public String msg;
-
-    @NameInMap("TaskId")
-    @Validation(required = true)
-    public Long taskId;
+    public SubmitSmoothExpandPreCheckTaskResponseBody body;
 
     public static SubmitSmoothExpandPreCheckTaskResponse build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmoothExpandPreCheckTaskResponse self = new SubmitSmoothExpandPreCheckTaskResponse();
         return TeaModel.build(map, self);
     }
 
-    public SubmitSmoothExpandPreCheckTaskResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SubmitSmoothExpandPreCheckTaskResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SubmitSmoothExpandPreCheckTaskResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SubmitSmoothExpandPreCheckTaskResponse setBody(SubmitSmoothExpandPreCheckTaskResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public SubmitSmoothExpandPreCheckTaskResponse setMsg(String msg) {
-        this.msg = msg;
-        return this;
-    }
-    public String getMsg() {
-        return this.msg;
-    }
-
-    public SubmitSmoothExpandPreCheckTaskResponse setTaskId(Long taskId) {
-        this.taskId = taskId;
-        return this;
-    }
-    public Long getTaskId() {
-        return this.taskId;
+    public SubmitSmoothExpandPreCheckTaskResponseBody getBody() {
+        return this.body;
     }
 
 }

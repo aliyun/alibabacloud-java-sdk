@@ -8,15 +8,12 @@ public class SetupDrdsParamsRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("ParamLevel")
-    @Validation(required = true)
     public String paramLevel;
 
     @NameInMap("Data")
-    @Validation(required = true)
     public java.util.List<SetupDrdsParamsRequestData> data;
 
     public static SetupDrdsParamsRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -57,17 +54,17 @@ public class SetupDrdsParamsRequest extends TeaModel {
     }
 
     public static class SetupDrdsParamsRequestData extends TeaModel {
-        @NameInMap("ParamVariableName")
-        public String paramVariableName;
-
-        @NameInMap("ParamValue")
-        public String paramValue;
-
         @NameInMap("DbName")
         public String dbName;
 
         @NameInMap("ParamType")
         public String paramType;
+
+        @NameInMap("ParamValue")
+        public String paramValue;
+
+        @NameInMap("ParamVariableName")
+        public String paramVariableName;
 
         @NameInMap("ParamRanges")
         public String paramRanges;
@@ -75,22 +72,6 @@ public class SetupDrdsParamsRequest extends TeaModel {
         public static SetupDrdsParamsRequestData build(java.util.Map<String, ?> map) throws Exception {
             SetupDrdsParamsRequestData self = new SetupDrdsParamsRequestData();
             return TeaModel.build(map, self);
-        }
-
-        public SetupDrdsParamsRequestData setParamVariableName(String paramVariableName) {
-            this.paramVariableName = paramVariableName;
-            return this;
-        }
-        public String getParamVariableName() {
-            return this.paramVariableName;
-        }
-
-        public SetupDrdsParamsRequestData setParamValue(String paramValue) {
-            this.paramValue = paramValue;
-            return this;
-        }
-        public String getParamValue() {
-            return this.paramValue;
         }
 
         public SetupDrdsParamsRequestData setDbName(String dbName) {
@@ -107,6 +88,22 @@ public class SetupDrdsParamsRequest extends TeaModel {
         }
         public String getParamType() {
             return this.paramType;
+        }
+
+        public SetupDrdsParamsRequestData setParamValue(String paramValue) {
+            this.paramValue = paramValue;
+            return this;
+        }
+        public String getParamValue() {
+            return this.paramValue;
+        }
+
+        public SetupDrdsParamsRequestData setParamVariableName(String paramVariableName) {
+            this.paramVariableName = paramVariableName;
+            return this;
+        }
+        public String getParamVariableName() {
+            return this.paramVariableName;
         }
 
         public SetupDrdsParamsRequestData setParamRanges(String paramRanges) {

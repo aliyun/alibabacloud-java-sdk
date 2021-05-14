@@ -8,11 +8,9 @@ public class UpdatePrivateRdsClassRequest extends TeaModel {
     public String rdsClass;
 
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DBInstanceId")
-    @Validation(required = true)
     public String DBInstanceId;
 
     @NameInMap("Storage")

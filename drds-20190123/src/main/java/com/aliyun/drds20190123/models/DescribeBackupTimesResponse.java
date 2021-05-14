@@ -4,77 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupTimesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("RestoreTime")
-    @Validation(required = true)
-    public DescribeBackupTimesResponseRestoreTime restoreTime;
+    public DescribeBackupTimesResponseBody body;
 
     public static DescribeBackupTimesResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupTimesResponse self = new DescribeBackupTimesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeBackupTimesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeBackupTimesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DescribeBackupTimesResponse setSuccess(Boolean success) {
-        this.success = success;
+    public DescribeBackupTimesResponse setBody(DescribeBackupTimesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public DescribeBackupTimesResponse setRestoreTime(DescribeBackupTimesResponseRestoreTime restoreTime) {
-        this.restoreTime = restoreTime;
-        return this;
-    }
-    public DescribeBackupTimesResponseRestoreTime getRestoreTime() {
-        return this.restoreTime;
-    }
-
-    public static class DescribeBackupTimesResponseRestoreTime extends TeaModel {
-        @NameInMap("StartTime")
-        @Validation(required = true)
-        public String startTime;
-
-        @NameInMap("EndTime")
-        @Validation(required = true)
-        public String endTime;
-
-        public static DescribeBackupTimesResponseRestoreTime build(java.util.Map<String, ?> map) throws Exception {
-            DescribeBackupTimesResponseRestoreTime self = new DescribeBackupTimesResponseRestoreTime();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeBackupTimesResponseRestoreTime setStartTime(String startTime) {
-            this.startTime = startTime;
-            return this;
-        }
-        public String getStartTime() {
-            return this.startTime;
-        }
-
-        public DescribeBackupTimesResponseRestoreTime setEndTime(String endTime) {
-            this.endTime = endTime;
-            return this;
-        }
-        public String getEndTime() {
-            return this.endTime;
-        }
-
+    public DescribeBackupTimesResponseBody getBody() {
+        return this.body;
     }
 
 }

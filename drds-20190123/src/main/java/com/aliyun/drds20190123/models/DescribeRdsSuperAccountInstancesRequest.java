@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeRdsSuperAccountInstancesRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbInstType")
     public String dbInstType;
 
     @NameInMap("RdsInstance")
-    @Validation(required = true)
     public java.util.List<String> rdsInstance;
 
     public static DescribeRdsSuperAccountInstancesRequest build(java.util.Map<String, ?> map) throws Exception {

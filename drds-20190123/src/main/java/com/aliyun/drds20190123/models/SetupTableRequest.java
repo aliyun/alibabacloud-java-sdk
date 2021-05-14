@@ -8,19 +8,15 @@ public class SetupTableRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("AllowFullTableScan")
-    @Validation(required = true)
     public Boolean allowFullTableScan;
 
     @NameInMap("TableName")
-    @Validation(required = true)
     public java.util.List<String> tableName;
 
     public static SetupTableRequest build(java.util.Map<String, ?> map) throws Exception {

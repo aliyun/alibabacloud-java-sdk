@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("DbName")
-    @Validation(required = true)
     public String dbName;
 
     @NameInMap("StartTime")
-    @Validation(required = true)
     public String startTime;
 
     @NameInMap("EndTime")
-    @Validation(required = true)
     public String endTime;
 
     @NameInMap("TraceId")
@@ -36,7 +32,6 @@ public class SubmitSqlFlashbackTaskRequest extends TeaModel {
     public Integer recallType;
 
     @NameInMap("RecallRestoreType")
-    @Validation(required = true)
     public Integer recallRestoreType;
 
     public static SubmitSqlFlashbackTaskRequest build(java.util.Map<String, ?> map) throws Exception {

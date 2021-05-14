@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupTimesRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     public static DescribeBackupTimesRequest build(java.util.Map<String, ?> map) throws Exception {

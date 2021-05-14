@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpgradeHiStoreInstanceRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("RegionId")
     public String regionId;
 
     @NameInMap("HistoreInstanceId")
-    @Validation(required = true)
     public String historeInstanceId;
 
     public static UpgradeHiStoreInstanceRequest build(java.util.Map<String, ?> map) throws Exception {

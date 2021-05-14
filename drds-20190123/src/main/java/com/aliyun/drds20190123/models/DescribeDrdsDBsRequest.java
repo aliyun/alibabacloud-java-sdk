@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class DescribeDrdsDBsRequest extends TeaModel {
     @NameInMap("DrdsInstanceId")
-    @Validation(required = true)
     public String drdsInstanceId;
 
     @NameInMap("PageNumber")

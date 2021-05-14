@@ -4,45 +4,33 @@ package com.aliyun.drds20190123.models;
 import com.aliyun.tea.*;
 
 public class ManagePrivateRdsResponse extends TeaModel {
-    @NameInMap("Data")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String data;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("RequestId")
+    @NameInMap("body")
     @Validation(required = true)
-    public String requestId;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
+    public ManagePrivateRdsResponseBody body;
 
     public static ManagePrivateRdsResponse build(java.util.Map<String, ?> map) throws Exception {
         ManagePrivateRdsResponse self = new ManagePrivateRdsResponse();
         return TeaModel.build(map, self);
     }
 
-    public ManagePrivateRdsResponse setData(String data) {
-        this.data = data;
+    public ManagePrivateRdsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getData() {
-        return this.data;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public ManagePrivateRdsResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public ManagePrivateRdsResponse setBody(ManagePrivateRdsResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public ManagePrivateRdsResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
+    public ManagePrivateRdsResponseBody getBody() {
+        return this.body;
     }
 
 }
