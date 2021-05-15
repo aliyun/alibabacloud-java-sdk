@@ -76,6 +76,98 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public QueryItemInSubBizsResponse queryItemInSubBizsWithOptions(QueryItemInSubBizsRequest tmp, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        QueryItemInSubBizsShrinkRequest request = new QueryItemInSubBizsShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.subBizIds)) {
+            request.subBizIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.subBizIds);
+        }
+
+        return TeaModel.toModel(this.doRequest("QueryItemInSubBizs", "HTTPS", "GET", "2018-01-16", "AK", TeaModel.buildMap(request), null, runtime), new QueryItemInSubBizsResponse());
+    }
+
+    public QueryItemInSubBizsResponse queryItemInSubBizs(QueryItemInSubBizsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryItemInSubBizsWithOptions(request, runtime);
+    }
+
+    public QueryInventoryOfItemsInBizItemGroupResponse queryInventoryOfItemsInBizItemGroupWithOptions(QueryInventoryOfItemsInBizItemGroupRequest tmp, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        QueryInventoryOfItemsInBizItemGroupShrinkRequest request = new QueryInventoryOfItemsInBizItemGroupShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.itemIds)) {
+            request.itemIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.itemIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmp.lmItemIds)) {
+            request.lmItemIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.lmItemIds);
+        }
+
+        return TeaModel.toModel(this.doRequest("QueryInventoryOfItemsInBizItemGroup", "HTTPS", "GET", "2018-01-16", "AK", TeaModel.buildMap(request), null, runtime), new QueryInventoryOfItemsInBizItemGroupResponse());
+    }
+
+    public QueryInventoryOfItemsInBizItemGroupResponse queryInventoryOfItemsInBizItemGroup(QueryInventoryOfItemsInBizItemGroupRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryInventoryOfItemsInBizItemGroupWithOptions(request, runtime);
+    }
+
+    public AddItemToSubBizsResponse addItemToSubBizsWithOptions(AddItemToSubBizsRequest tmp, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmp);
+        AddItemToSubBizsShrinkRequest request = new AddItemToSubBizsShrinkRequest();
+        com.aliyun.common.Common.convert(tmp, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmp.subBizIds)) {
+            request.subBizIdsShrink = com.aliyun.teautil.Common.toJSONString(tmp.subBizIds);
+        }
+
+        return TeaModel.toModel(this.doRequest("AddItemToSubBizs", "HTTPS", "POST", "2018-01-16", "AK", null, TeaModel.buildMap(request), runtime), new AddItemToSubBizsResponse());
+    }
+
+    public AddItemToSubBizsResponse addItemToSubBizs(AddItemToSubBizsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.addItemToSubBizsWithOptions(request, runtime);
+    }
+
+    public QueryMediaSettleInfoResponse queryMediaSettleInfoWithOptions(QueryMediaSettleInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("QueryMediaSettleInfo", "HTTPS", "POST", "2018-01-16", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new QueryMediaSettleInfoResponse());
+    }
+
+    public QueryMediaSettleInfoResponse queryMediaSettleInfo(QueryMediaSettleInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryMediaSettleInfoWithOptions(request, runtime);
+    }
+
+    public QueryAdvertisementSettleInfoResponse queryAdvertisementSettleInfoWithOptions(QueryAdvertisementSettleInfoRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("QueryAdvertisementSettleInfo", "HTTPS", "POST", "2018-01-16", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new QueryAdvertisementSettleInfoResponse());
+    }
+
+    public QueryAdvertisementSettleInfoResponse queryAdvertisementSettleInfo(QueryAdvertisementSettleInfoRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryAdvertisementSettleInfoWithOptions(request, runtime);
+    }
+
+    public ExecuteNodeResponse executeNodeWithOptions(ExecuteNodeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ExecuteNode", "HTTPS", "POST", "2018-01-16", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new ExecuteNodeResponse());
+    }
+
+    public ExecuteNodeResponse executeNode(ExecuteNodeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.executeNodeWithOptions(request, runtime);
+    }
+
+    public QueryStatementsResponse queryStatementsWithOptions(QueryStatementsRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("QueryStatements", "HTTPS", "POST", "2018-01-16", "AK,APP,PrivateKey", null, TeaModel.buildMap(request), runtime), new QueryStatementsResponse());
+    }
+
+    public QueryStatementsResponse queryStatements(QueryStatementsRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryStatementsWithOptions(request, runtime);
+    }
+
     public QueryBizItemsWithActivityResponse queryBizItemsWithActivityWithOptions(QueryBizItemsWithActivityRequest tmp, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmp);
         QueryBizItemsWithActivityShrinkRequest request = new QueryBizItemsWithActivityShrinkRequest();

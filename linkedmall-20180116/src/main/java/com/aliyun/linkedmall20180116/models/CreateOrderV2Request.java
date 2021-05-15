@@ -49,6 +49,9 @@ public class CreateOrderV2Request extends TeaModel {
     @NameInMap("LmItemId")
     public String lmItemId;
 
+    @NameInMap("BuyerMessageMap")
+    public String buyerMessageMap;
+
     public static CreateOrderV2Request build(java.util.Map<String, ?> map) throws Exception {
         CreateOrderV2Request self = new CreateOrderV2Request();
         return TeaModel.build(map, self);
@@ -164,6 +167,14 @@ public class CreateOrderV2Request extends TeaModel {
     }
     public String getLmItemId() {
         return this.lmItemId;
+    }
+
+    public CreateOrderV2Request setBuyerMessageMap(String buyerMessageMap) {
+        this.buyerMessageMap = buyerMessageMap;
+        return this;
+    }
+    public String getBuyerMessageMap() {
+        return this.buyerMessageMap;
     }
 
     public static class CreateOrderV2RequestItemList extends TeaModel {

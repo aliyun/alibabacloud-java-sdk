@@ -368,6 +368,10 @@ public class QueryBizItemListResponse extends TeaModel {
         @Validation(required = true)
         public java.util.Map<String, ?> customizedAttributeMap;
 
+        @NameInMap("TaoBaoCurrentPrice")
+        @Validation(required = true)
+        public Long taoBaoCurrentPrice;
+
         @NameInMap("GradePriceModels")
         @Validation(required = true)
         public QueryBizItemListResponseItemListItemSkuListSkuGradePriceModels gradePriceModels;
@@ -451,6 +455,14 @@ public class QueryBizItemListResponse extends TeaModel {
         }
         public java.util.Map<String, ?> getCustomizedAttributeMap() {
             return this.customizedAttributeMap;
+        }
+
+        public QueryBizItemListResponseItemListItemSkuListSku setTaoBaoCurrentPrice(Long taoBaoCurrentPrice) {
+            this.taoBaoCurrentPrice = taoBaoCurrentPrice;
+            return this;
+        }
+        public Long getTaoBaoCurrentPrice() {
+            return this.taoBaoCurrentPrice;
         }
 
         public QueryBizItemListResponseItemListItemSkuListSku setGradePriceModels(QueryBizItemListResponseItemListItemSkuListSkuGradePriceModels gradePriceModels) {
