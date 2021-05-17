@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstallCaptchaResponseBody extends TeaModel {
     @NameInMap("Deadline")
-    public Integer deadline;
+    public String deadline;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -18,11 +18,11 @@ public class DescribeInstallCaptchaResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstallCaptchaResponseBody setDeadline(Integer deadline) {
+    public DescribeInstallCaptchaResponseBody setDeadline(String deadline) {
         this.deadline = deadline;
         return this;
     }
-    public Integer getDeadline() {
+    public String getDeadline() {
         return this.deadline;
     }
 
