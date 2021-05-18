@@ -4,6 +4,9 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetImageTranslateTaskResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetImageTranslateTaskResponseBodyData data;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static GetImageTranslateTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetImageTranslateTaskResponseBody self = new GetImageTranslateTaskResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetImageTranslateTaskResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetImageTranslateTaskResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetImageTranslateTaskResponseBody extends TeaModel {
     }
     public GetImageTranslateTaskResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetImageTranslateTaskResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public static class GetImageTranslateTaskResponseBodyData extends TeaModel {
