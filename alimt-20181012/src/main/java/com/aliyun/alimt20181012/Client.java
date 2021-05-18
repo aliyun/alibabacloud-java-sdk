@@ -115,11 +115,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -143,29 +148,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         CreateDocTranslateTaskRequest createDocTranslateTaskReq = new CreateDocTranslateTaskRequest();
         com.aliyun.openapiutil.Client.convert(request, createDocTranslateTaskReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.fileUrlObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        createDocTranslateTaskReq.fileUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrlObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.fileUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            createDocTranslateTaskReq.fileUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         CreateDocTranslateTaskResponse createDocTranslateTaskResp = this.createDocTranslateTaskWithOptions(createDocTranslateTaskReq, runtime);
         return createDocTranslateTaskResp;
     }
@@ -181,6 +189,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateImageTranslateTaskResponse createImageTranslateTask(CreateImageTranslateTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createImageTranslateTaskWithOptions(request, runtime);
+    }
+
+    public GetBatchTranslateResponse getBatchTranslateWithOptions(GetBatchTranslateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetBatchTranslate", "2018-10-12", "HTTPS", "POST", "AK", "json", req, runtime), new GetBatchTranslateResponse());
+    }
+
+    public GetBatchTranslateResponse getBatchTranslate(GetBatchTranslateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBatchTranslateWithOptions(request, runtime);
     }
 
     public GetDetectLanguageResponse getDetectLanguageWithOptions(GetDetectLanguageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
@@ -288,6 +309,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTitleIntelligenceWithOptions(request, runtime);
     }
 
+    public GetTranslateReportResponse getTranslateReportWithOptions(GetTranslateReportRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetTranslateReport", "2018-10-12", "HTTPS", "POST", "AK", "json", req, runtime), new GetTranslateReportResponse());
+    }
+
+    public GetTranslateReportResponse getTranslateReport(GetTranslateReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTranslateReportWithOptions(request, runtime);
+    }
+
+    public GetUserResponse getUserWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("GetUser", "2018-10-12", "HTTPS", "POST", "AK", "json", req, runtime), new GetUserResponse());
+    }
+
+    public GetUserResponse getUser() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserWithOptions(runtime);
+    }
+
     public OpenAlimtServiceResponse openAlimtServiceWithOptions(OpenAlimtServiceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -331,11 +375,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         // Step 0: init client
         String accessKeyId = _credential.getAccessKeyId();
         String accessKeySecret = _credential.getAccessKeySecret();
+        String openPlatformEndpoint = _openPlatformEndpoint;
+        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+            openPlatformEndpoint = "openplatform.aliyuncs.com";
+        }
+
         com.aliyun.tearpc.models.Config authConfig = com.aliyun.tearpc.models.Config.build(TeaConverter.buildMap(
             new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
-            new TeaPair("endpoint", "openplatform.aliyuncs.com"),
+            new TeaPair("endpoint", openPlatformEndpoint),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
@@ -359,29 +408,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
         TranslateCertificateRequest translateCertificateReq = new TranslateCertificateRequest();
         com.aliyun.openapiutil.Client.convert(request, translateCertificateReq);
-        authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-        ossConfig.accessKeyId = authResponse.accessKeyId;
-        ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
-        ossClient = new com.aliyun.oss.Client(ossConfig);
-        fileObj = FileField.build(TeaConverter.buildMap(
-            new TeaPair("filename", authResponse.objectKey),
-            new TeaPair("content", request.imageUrlObject),
-            new TeaPair("contentType", "")
-        ));
-        ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", authResponse.accessKeyId),
-            new TeaPair("policy", authResponse.encodedPolicy),
-            new TeaPair("signature", authResponse.signature),
-            new TeaPair("key", authResponse.objectKey),
-            new TeaPair("file", fileObj),
-            new TeaPair("successActionStatus", "201")
-        ));
-        uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
-            new TeaPair("bucketName", authResponse.bucket),
-            new TeaPair("header", ossHeader)
-        ));
-        ossClient.postObject(uploadRequest, ossRuntime);
-        translateCertificateReq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrlObject)) {
+            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
+            ossConfig.accessKeyId = authResponse.accessKeyId;
+            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.endpoint, authResponse.useAccelerate, _endpointType);
+            ossClient = new com.aliyun.oss.Client(ossConfig);
+            fileObj = FileField.build(TeaConverter.buildMap(
+                new TeaPair("filename", authResponse.objectKey),
+                new TeaPair("content", request.imageUrlObject),
+                new TeaPair("contentType", "")
+            ));
+            ossHeader = PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
+                new TeaPair("accessKeyId", authResponse.accessKeyId),
+                new TeaPair("policy", authResponse.encodedPolicy),
+                new TeaPair("signature", authResponse.signature),
+                new TeaPair("key", authResponse.objectKey),
+                new TeaPair("file", fileObj),
+                new TeaPair("successActionStatus", "201")
+            ));
+            uploadRequest = PostObjectRequest.build(TeaConverter.buildMap(
+                new TeaPair("bucketName", authResponse.bucket),
+                new TeaPair("header", ossHeader)
+            ));
+            ossClient.postObject(uploadRequest, ossRuntime);
+            translateCertificateReq.imageUrl = "http://" + authResponse.bucket + "." + authResponse.endpoint + "/" + authResponse.objectKey + "";
+        }
+
         TranslateCertificateResponse translateCertificateResp = this.translateCertificateWithOptions(translateCertificateReq, runtime);
         return translateCertificateResp;
     }

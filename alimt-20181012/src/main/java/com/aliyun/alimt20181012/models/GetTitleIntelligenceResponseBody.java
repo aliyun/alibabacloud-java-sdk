@@ -4,6 +4,9 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTitleIntelligenceResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class GetTitleIntelligenceResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetTitleIntelligenceResponseBodyData data;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static GetTitleIntelligenceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTitleIntelligenceResponseBody self = new GetTitleIntelligenceResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTitleIntelligenceResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetTitleIntelligenceResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetTitleIntelligenceResponseBody extends TeaModel {
     }
     public GetTitleIntelligenceResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetTitleIntelligenceResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public static class GetTitleIntelligenceResponseBodyData extends TeaModel {

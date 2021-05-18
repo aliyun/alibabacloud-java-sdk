@@ -4,6 +4,9 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class TranslateResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class TranslateResponseBody extends TeaModel {
     @NameInMap("Data")
     public TranslateResponseBodyData data;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static TranslateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TranslateResponseBody self = new TranslateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public TranslateResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public TranslateResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class TranslateResponseBody extends TeaModel {
     }
     public TranslateResponseBodyData getData() {
         return this.data;
-    }
-
-    public TranslateResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public static class GetImageTranslateResponseBodyData extends TeaModel {
@@ -95,23 +95,15 @@ public class TranslateResponseBody extends TeaModel {
     }
 
     public static class TranslateResponseBodyData extends TeaModel {
-        @NameInMap("WordCount")
-        public String wordCount;
-
         @NameInMap("Translated")
         public String translated;
+
+        @NameInMap("WordCount")
+        public String wordCount;
 
         public static TranslateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TranslateResponseBodyData self = new TranslateResponseBodyData();
             return TeaModel.build(map, self);
-        }
-
-        public TranslateResponseBodyData setWordCount(String wordCount) {
-            this.wordCount = wordCount;
-            return this;
-        }
-        public String getWordCount() {
-            return this.wordCount;
         }
 
         public TranslateResponseBodyData setTranslated(String translated) {
@@ -120,6 +112,14 @@ public class TranslateResponseBody extends TeaModel {
         }
         public String getTranslated() {
             return this.translated;
+        }
+
+        public TranslateResponseBodyData setWordCount(String wordCount) {
+            this.wordCount = wordCount;
+            return this;
+        }
+        public String getWordCount() {
+            return this.wordCount;
         }
 
     }

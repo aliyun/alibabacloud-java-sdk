@@ -4,6 +4,9 @@ package com.aliyun.alimt20181012.models;
 import com.aliyun.tea.*;
 
 public class GetTitleDiagnoseResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public Integer code;
+
     @NameInMap("Message")
     public String message;
 
@@ -13,12 +16,17 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetTitleDiagnoseResponseBodyData data;
 
-    @NameInMap("Code")
-    public Integer code;
-
     public static GetTitleDiagnoseResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetTitleDiagnoseResponseBody self = new GetTitleDiagnoseResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetTitleDiagnoseResponseBody setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+    public Integer getCode() {
+        return this.code;
     }
 
     public GetTitleDiagnoseResponseBody setMessage(String message) {
@@ -43,14 +51,6 @@ public class GetTitleDiagnoseResponseBody extends TeaModel {
     }
     public GetTitleDiagnoseResponseBodyData getData() {
         return this.data;
-    }
-
-    public GetTitleDiagnoseResponseBody setCode(Integer code) {
-        this.code = code;
-        return this;
-    }
-    public Integer getCode() {
-        return this.code;
     }
 
     public static class GetTitleDiagnoseResponseBodyData extends TeaModel {

@@ -32,6 +32,9 @@ public class TranslateCertificateResponseBody extends TeaModel {
     }
 
     public static class TranslateCertificateResponseBodyDataTranslatedValues extends TeaModel {
+        @NameInMap("KeyTranslation")
+        public String keyTranslation;
+
         @NameInMap("Key")
         public String key;
 
@@ -41,12 +44,17 @@ public class TranslateCertificateResponseBody extends TeaModel {
         @NameInMap("ValueTranslation")
         public String valueTranslation;
 
-        @NameInMap("KeyTranslation")
-        public String keyTranslation;
-
         public static TranslateCertificateResponseBodyDataTranslatedValues build(java.util.Map<String, ?> map) throws Exception {
             TranslateCertificateResponseBodyDataTranslatedValues self = new TranslateCertificateResponseBodyDataTranslatedValues();
             return TeaModel.build(map, self);
+        }
+
+        public TranslateCertificateResponseBodyDataTranslatedValues setKeyTranslation(String keyTranslation) {
+            this.keyTranslation = keyTranslation;
+            return this;
+        }
+        public String getKeyTranslation() {
+            return this.keyTranslation;
         }
 
         public TranslateCertificateResponseBodyDataTranslatedValues setKey(String key) {
@@ -71,14 +79,6 @@ public class TranslateCertificateResponseBody extends TeaModel {
         }
         public String getValueTranslation() {
             return this.valueTranslation;
-        }
-
-        public TranslateCertificateResponseBodyDataTranslatedValues setKeyTranslation(String keyTranslation) {
-            this.keyTranslation = keyTranslation;
-            return this;
-        }
-        public String getKeyTranslation() {
-            return this.keyTranslation;
         }
 
     }
