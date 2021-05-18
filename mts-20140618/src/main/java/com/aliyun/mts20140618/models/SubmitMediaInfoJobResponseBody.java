@@ -227,6 +227,15 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         @NameInMap("Level")
         public String level;
 
+        @NameInMap("ColorRange")
+        public String colorRange;
+
+        @NameInMap("ColorTransfer")
+        public String colorTransfer;
+
+        @NameInMap("ColorPrimaries")
+        public String colorPrimaries;
+
         public static SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsVideoStreamListVideoStream build(java.util.Map<String, ?> map) throws Exception {
             SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsVideoStreamListVideoStream self = new SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsVideoStreamListVideoStream();
             return TeaModel.build(map, self);
@@ -422,6 +431,30 @@ public class SubmitMediaInfoJobResponseBody extends TeaModel {
         }
         public String getLevel() {
             return this.level;
+        }
+
+        public SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorRange(String colorRange) {
+            this.colorRange = colorRange;
+            return this;
+        }
+        public String getColorRange() {
+            return this.colorRange;
+        }
+
+        public SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorTransfer(String colorTransfer) {
+            this.colorTransfer = colorTransfer;
+            return this;
+        }
+        public String getColorTransfer() {
+            return this.colorTransfer;
+        }
+
+        public SubmitMediaInfoJobResponseBodyMediaInfoJobPropertiesStreamsVideoStreamListVideoStream setColorPrimaries(String colorPrimaries) {
+            this.colorPrimaries = colorPrimaries;
+            return this;
+        }
+        public String getColorPrimaries() {
+            return this.colorPrimaries;
         }
 
     }
