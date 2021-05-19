@@ -114,20 +114,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getTagListWithOptions(request, runtime);
     }
 
-    public GetDeploymentArchiveResponse getDeploymentArchiveWithOptions(GetDeploymentArchiveRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetDeploymentArchive", "2020-07-02", "HTTPS", "GET", "AK", "json", req, runtime), new GetDeploymentArchiveResponse());
-    }
-
-    public GetDeploymentArchiveResponse getDeploymentArchive(GetDeploymentArchiveRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getDeploymentArchiveWithOptions(request, runtime);
-    }
-
     public UpdateTicketResponse updateTicketWithOptions(UpdateTicketRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -483,33 +469,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.suspendHotlineServiceWithOptions(request, runtime);
     }
 
-    public QueryDeploymentArchiveResponse queryDeploymentArchiveWithOptions(QueryDeploymentArchiveRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("QueryDeploymentArchive", "2020-07-02", "HTTPS", "GET", "AK", "json", req, runtime), new QueryDeploymentArchiveResponse());
-    }
-
-    public QueryDeploymentArchiveResponse queryDeploymentArchive(QueryDeploymentArchiveRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryDeploymentArchiveWithOptions(request, runtime);
-    }
-
-    public GetOrgAccountResponse getOrgAccountWithOptions(GetOrgAccountRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetOrgAccount", "2020-07-02", "HTTPS", "POST", "AK", "json", req, runtime), new GetOrgAccountResponse());
-    }
-
-    public GetOrgAccountResponse getOrgAccount(GetOrgAccountRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getOrgAccountWithOptions(request, runtime);
-    }
-
     public GetCallsPerDayResponse getCallsPerDayWithOptions(GetCallsPerDayRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -680,6 +639,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchTicketByPhoneResponse searchTicketByPhone(SearchTicketByPhoneRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.searchTicketByPhoneWithOptions(request, runtime);
+    }
+
+    public CreateThirdSsoAgentResponse createThirdSsoAgentWithOptions(CreateThirdSsoAgentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateThirdSsoAgent", "2020-07-02", "HTTPS", "POST", "AK", "json", req, runtime), new CreateThirdSsoAgentResponse());
+    }
+
+    public CreateThirdSsoAgentResponse createThirdSsoAgent(CreateThirdSsoAgentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createThirdSsoAgentWithOptions(request, runtime);
     }
 
     public CreateEntityIvrRouteResponse createEntityIvrRouteWithOptions(CreateEntityIvrRouteRequest request, RuntimeOptions runtime) throws Exception {
@@ -864,20 +836,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.transferCallToPhoneWithOptions(request, runtime);
     }
 
-    public QueryAppResValueResponse queryAppResValueWithOptions(QueryAppResValueRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("QueryAppResValue", "2020-07-02", "HTTPS", "GET", "AK", "json", req, runtime), new QueryAppResValueResponse());
-    }
-
-    public QueryAppResValueResponse queryAppResValue(QueryAppResValueRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryAppResValueWithOptions(request, runtime);
-    }
-
     public QuerySkillGroupsResponse querySkillGroupsWithOptions(QuerySkillGroupsRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -996,26 +954,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getOuterCallCenterDataListWithOptions(request, runtime);
     }
 
-    public CreateDeploymentTaskResponse createDeploymentTaskWithOptions(CreateDeploymentTaskRequest tmpReq, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(tmpReq);
-        CreateDeploymentTaskShrinkRequest request = new CreateDeploymentTaskShrinkRequest();
-        com.aliyun.openapiutil.Client.convert(tmpReq, request);
-        if (!com.aliyun.teautil.Common.isUnset(tmpReq.appArchiveIds)) {
-            request.appArchiveIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.appArchiveIds, "AppArchiveIds", "simple");
-        }
-
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CreateDeploymentTask", "2020-07-02", "HTTPS", "GET", "AK", "json", req, runtime), new CreateDeploymentTaskResponse());
-    }
-
-    public CreateDeploymentTaskResponse createDeploymentTask(CreateDeploymentTaskRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.createDeploymentTaskWithOptions(request, runtime);
-    }
-
     public QueryTicketsResponse queryTicketsWithOptions(QueryTicketsRequest tmpReq, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         QueryTicketsShrinkRequest request = new QueryTicketsShrinkRequest();
@@ -1087,20 +1025,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.joinThirdCallWithOptions(request, runtime);
     }
 
-    public CollectDeploymentArchiveResponse collectDeploymentArchiveWithOptions(CollectDeploymentArchiveRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("CollectDeploymentArchive", "2020-07-02", "HTTPS", "GET", "AK", "json", req, runtime), new CollectDeploymentArchiveResponse());
-    }
-
-    public CollectDeploymentArchiveResponse collectDeploymentArchive(CollectDeploymentArchiveRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.collectDeploymentArchiveWithOptions(request, runtime);
-    }
-
     public ExecuteActivityResponse executeActivityWithOptions(ExecuteActivityRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -1142,20 +1066,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listHotlineRecordWithOptions(request, runtime);
     }
 
-    public GetAppArchivesResponse getAppArchivesWithOptions(GetAppArchivesRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetAppArchives", "2020-07-02", "HTTPS", "GET", "AK", "json", req, runtime), new GetAppArchivesResponse());
-    }
-
-    public GetAppArchivesResponse getAppArchives(GetAppArchivesRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getAppArchivesWithOptions(request, runtime);
-    }
-
     public GetNumLocationResponse getNumLocationWithOptions(GetNumLocationRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1168,20 +1078,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNumLocationResponse getNumLocation(GetNumLocationRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getNumLocationWithOptions(request, runtime);
-    }
-
-    public QueryAppResDiffResponse queryAppResDiffWithOptions(QueryAppResDiffRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("QueryAppResDiff", "2020-07-02", "HTTPS", "GET", "AK", "json", req, runtime), new QueryAppResDiffResponse());
-    }
-
-    public QueryAppResDiffResponse queryAppResDiff(QueryAppResDiffRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.queryAppResDiffWithOptions(request, runtime);
     }
 
     public CreateSkillGroupResponse createSkillGroupWithOptions(CreateSkillGroupRequest request, RuntimeOptions runtime) throws Exception {
@@ -1208,19 +1104,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCustomerResponse createCustomer(CreateCustomerRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createCustomerWithOptions(request, runtime);
-    }
-
-    public GetAppTasksResponse getAppTasksWithOptions(GetAppTasksRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", query)
-        ));
-        return TeaModel.toModel(this.doRPCRequest("GetAppTasks", "2020-07-02", "HTTPS", "GET", "AK", "json", req, runtime), new GetAppTasksResponse());
-    }
-
-    public GetAppTasksResponse getAppTasks(GetAppTasksRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.getAppTasksWithOptions(request, runtime);
     }
 }

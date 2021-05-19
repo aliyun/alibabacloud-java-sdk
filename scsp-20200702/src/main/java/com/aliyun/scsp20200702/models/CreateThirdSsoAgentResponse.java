@@ -3,21 +3,21 @@ package com.aliyun.scsp20200702.models;
 
 import com.aliyun.tea.*;
 
-public class CollectDeploymentArchiveResponse extends TeaModel {
+public class CreateThirdSsoAgentResponse extends TeaModel {
     @NameInMap("headers")
     @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    public CollectDeploymentArchiveResponseBody body;
+    public CreateThirdSsoAgentResponseBody body;
 
-    public static CollectDeploymentArchiveResponse build(java.util.Map<String, ?> map) throws Exception {
-        CollectDeploymentArchiveResponse self = new CollectDeploymentArchiveResponse();
+    public static CreateThirdSsoAgentResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateThirdSsoAgentResponse self = new CreateThirdSsoAgentResponse();
         return TeaModel.build(map, self);
     }
 
-    public CollectDeploymentArchiveResponse setHeaders(java.util.Map<String, String> headers) {
+    public CreateThirdSsoAgentResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -25,11 +25,11 @@ public class CollectDeploymentArchiveResponse extends TeaModel {
         return this.headers;
     }
 
-    public CollectDeploymentArchiveResponse setBody(CollectDeploymentArchiveResponseBody body) {
+    public CreateThirdSsoAgentResponse setBody(CreateThirdSsoAgentResponseBody body) {
         this.body = body;
         return this;
     }
-    public CollectDeploymentArchiveResponseBody getBody() {
+    public CreateThirdSsoAgentResponseBody getBody() {
         return this.body;
     }
 

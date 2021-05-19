@@ -3,7 +3,7 @@ package com.aliyun.scsp20200702.models;
 
 import com.aliyun.tea.*;
 
-public class GetDeploymentArchiveResponseBody extends TeaModel {
+public class CreateThirdSsoAgentResponseBody extends TeaModel {
     // message
     @NameInMap("Message")
     public String message;
@@ -14,11 +14,11 @@ public class GetDeploymentArchiveResponseBody extends TeaModel {
 
     // httpStatusCode
     @NameInMap("HttpStatusCode")
-    public Integer httpStatusCode;
+    public Long httpStatusCode;
 
-    // 部署快照
+    // 新创建的坐席id
     @NameInMap("Data")
-    public DDeploymentArchive data;
+    public Long data;
 
     // code
     @NameInMap("Code")
@@ -28,12 +28,12 @@ public class GetDeploymentArchiveResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static GetDeploymentArchiveResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetDeploymentArchiveResponseBody self = new GetDeploymentArchiveResponseBody();
+    public static CreateThirdSsoAgentResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateThirdSsoAgentResponseBody self = new CreateThirdSsoAgentResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetDeploymentArchiveResponseBody setMessage(String message) {
+    public CreateThirdSsoAgentResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -41,7 +41,7 @@ public class GetDeploymentArchiveResponseBody extends TeaModel {
         return this.message;
     }
 
-    public GetDeploymentArchiveResponseBody setRequestId(String requestId) {
+    public CreateThirdSsoAgentResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -49,23 +49,23 @@ public class GetDeploymentArchiveResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetDeploymentArchiveResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public CreateThirdSsoAgentResponseBody setHttpStatusCode(Long httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
-    public Integer getHttpStatusCode() {
+    public Long getHttpStatusCode() {
         return this.httpStatusCode;
     }
 
-    public GetDeploymentArchiveResponseBody setData(DDeploymentArchive data) {
+    public CreateThirdSsoAgentResponseBody setData(Long data) {
         this.data = data;
         return this;
     }
-    public DDeploymentArchive getData() {
+    public Long getData() {
         return this.data;
     }
 
-    public GetDeploymentArchiveResponseBody setCode(String code) {
+    public CreateThirdSsoAgentResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -73,7 +73,7 @@ public class GetDeploymentArchiveResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetDeploymentArchiveResponseBody setSuccess(Boolean success) {
+    public CreateThirdSsoAgentResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

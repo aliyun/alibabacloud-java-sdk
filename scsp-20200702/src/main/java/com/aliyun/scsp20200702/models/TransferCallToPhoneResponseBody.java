@@ -16,6 +16,9 @@ public class TransferCallToPhoneResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static TransferCallToPhoneResponseBody build(java.util.Map<String, ?> map) throws Exception {
         TransferCallToPhoneResponseBody self = new TransferCallToPhoneResponseBody();
         return TeaModel.build(map, self);
@@ -51,6 +54,14 @@ public class TransferCallToPhoneResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public TransferCallToPhoneResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }
