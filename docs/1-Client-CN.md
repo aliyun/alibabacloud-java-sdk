@@ -43,6 +43,8 @@ public class Main {
     }
 }
 ```
+其他鉴权方式参考[链接 →](https://github.com/aliyun/credentials-java/blob/master/README-CN.md#%E5%87%AD%E8%AF%81%E7%B1%BB%E5%9E%8B)
+
 ### 使用默认凭证提供链
 
 默认凭证提供程序链查找可用的凭证，寻找顺序如下：
