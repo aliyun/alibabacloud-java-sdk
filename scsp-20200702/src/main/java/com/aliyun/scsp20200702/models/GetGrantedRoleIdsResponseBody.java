@@ -19,6 +19,9 @@ public class GetGrantedRoleIdsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static GetGrantedRoleIdsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetGrantedRoleIdsResponseBody self = new GetGrantedRoleIdsResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class GetGrantedRoleIdsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public GetGrantedRoleIdsResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
 }

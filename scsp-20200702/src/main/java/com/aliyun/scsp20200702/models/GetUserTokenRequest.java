@@ -4,15 +4,19 @@ package com.aliyun.scsp20200702.models;
 import com.aliyun.tea.*;
 
 public class GetUserTokenRequest extends TeaModel {
+    // 实例id
     @NameInMap("InstanceId")
     public String instanceId;
 
+    // 用户id
     @NameInMap("UserId")
     public String userId;
 
+    // 昵称
     @NameInMap("Nick")
     public String nick;
 
+    // appKey
     @NameInMap("AppKey")
     public String appKey;
 

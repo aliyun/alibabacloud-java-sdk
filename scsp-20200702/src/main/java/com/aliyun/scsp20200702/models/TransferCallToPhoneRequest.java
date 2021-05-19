@@ -37,6 +37,12 @@ public class TransferCallToPhoneRequest extends TeaModel {
     @NameInMap("IsSingleTransfer")
     public Boolean isSingleTransfer;
 
+    @NameInMap("callerPhone")
+    public String callerPhone;
+
+    @NameInMap("calleePhone")
+    public String calleePhone;
+
     public static TransferCallToPhoneRequest build(java.util.Map<String, ?> map) throws Exception {
         TransferCallToPhoneRequest self = new TransferCallToPhoneRequest();
         return TeaModel.build(map, self);
@@ -128,6 +134,22 @@ public class TransferCallToPhoneRequest extends TeaModel {
     }
     public Boolean getIsSingleTransfer() {
         return this.isSingleTransfer;
+    }
+
+    public TransferCallToPhoneRequest setCallerPhone(String callerPhone) {
+        this.callerPhone = callerPhone;
+        return this;
+    }
+    public String getCallerPhone() {
+        return this.callerPhone;
+    }
+
+    public TransferCallToPhoneRequest setCalleePhone(String calleePhone) {
+        this.calleePhone = calleePhone;
+        return this;
+    }
+    public String getCalleePhone() {
+        return this.calleePhone;
     }
 
 }
