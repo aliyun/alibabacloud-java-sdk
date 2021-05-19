@@ -44,6 +44,7 @@ public class Main {
     }
 }
 ```
+Usage for Other Credential type, please refer to [usage](https://github.com/aliyun/credentials-java#credential-type).
 
 ### Use the default credential provider chain
 
