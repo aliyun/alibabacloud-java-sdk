@@ -5,21 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListQualityResultsByRuleRequest extends TeaModel {
     @NameInMap("RuleId")
+    @Validation(required = true)
     public Integer ruleId;
 
     @NameInMap("StartDate")
+    @Validation(required = true)
     public String startDate;
 
     @NameInMap("EndDate")
+    @Validation(required = true)
     public String endDate;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("PageNumber")
+    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("ProjectName")
+    @Validation(required = true)
     public String projectName;
 
     public static ListQualityResultsByRuleRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RevokeTablePermissionResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("RevokeSuccess")
     @Validation(required = true)
-    public RevokeTablePermissionResponseBody body;
+    public Boolean revokeSuccess;
 
     public static RevokeTablePermissionResponse build(java.util.Map<String, ?> map) throws Exception {
         RevokeTablePermissionResponse self = new RevokeTablePermissionResponse();
         return TeaModel.build(map, self);
     }
 
-    public RevokeTablePermissionResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public RevokeTablePermissionResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public RevokeTablePermissionResponse setBody(RevokeTablePermissionResponseBody body) {
-        this.body = body;
+    public RevokeTablePermissionResponse setRevokeSuccess(Boolean revokeSuccess) {
+        this.revokeSuccess = revokeSuccess;
         return this;
     }
-    public RevokeTablePermissionResponseBody getBody() {
-        return this.body;
+    public Boolean getRevokeSuccess() {
+        return this.revokeSuccess;
     }
 
 }

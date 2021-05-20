@@ -20,6 +20,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String expectValue;
 
     @NameInMap("Id")
+    @Validation(required = true)
     public Long id;
 
     @NameInMap("Trend")
@@ -32,6 +33,7 @@ public class UpdateQualityRuleRequest extends TeaModel {
     public String operator;
 
     @NameInMap("ProjectName")
+    @Validation(required = true)
     public String projectName;
 
     @NameInMap("Property")

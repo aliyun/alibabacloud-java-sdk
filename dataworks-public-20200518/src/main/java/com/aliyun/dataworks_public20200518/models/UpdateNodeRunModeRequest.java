@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateNodeRunModeRequest extends TeaModel {
     @NameInMap("ProjectEnv")
+    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("NodeId")
+    @Validation(required = true)
     public Long nodeId;
 
     @NameInMap("SchedulerType")
+    @Validation(required = true)
     public Integer schedulerType;
 
     public static UpdateNodeRunModeRequest build(java.util.Map<String, ?> map) throws Exception {

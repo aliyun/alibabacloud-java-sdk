@@ -11,9 +11,11 @@ public class ListDataServiceApplicationsRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("ProjectIdList")
+    @Validation(required = true)
     public String projectIdList;
 
     @NameInMap("TenantId")
+    @Validation(required = true)
     public Long tenantId;
 
     public static ListDataServiceApplicationsRequest build(java.util.Map<String, ?> map) throws Exception {

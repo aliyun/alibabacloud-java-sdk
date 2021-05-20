@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSuccessInstanceAmountRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     public static ListSuccessInstanceAmountRequest build(java.util.Map<String, ?> map) throws Exception {

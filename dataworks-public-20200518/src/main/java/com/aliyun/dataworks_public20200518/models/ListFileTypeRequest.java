@@ -11,9 +11,11 @@ public class ListFileTypeRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("PageNumber")
+    @Validation(required = true)
     public Integer pageNumber;
 
     @NameInMap("PageSize")
+    @Validation(required = true)
     public Integer pageSize;
 
     @NameInMap("Keyword")

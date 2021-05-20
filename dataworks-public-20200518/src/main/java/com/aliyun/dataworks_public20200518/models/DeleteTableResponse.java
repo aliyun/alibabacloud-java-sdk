@@ -4,33 +4,89 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteTableResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("TaskInfo")
     @Validation(required = true)
-    public DeleteTableResponseBody body;
+    public DeleteTableResponseTaskInfo taskInfo;
 
     public static DeleteTableResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteTableResponse self = new DeleteTableResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteTableResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public DeleteTableResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public DeleteTableResponse setBody(DeleteTableResponseBody body) {
-        this.body = body;
+    public DeleteTableResponse setTaskInfo(DeleteTableResponseTaskInfo taskInfo) {
+        this.taskInfo = taskInfo;
         return this;
     }
-    public DeleteTableResponseBody getBody() {
-        return this.body;
+    public DeleteTableResponseTaskInfo getTaskInfo() {
+        return this.taskInfo;
+    }
+
+    public static class DeleteTableResponseTaskInfo extends TeaModel {
+        @NameInMap("TaskId")
+        @Validation(required = true)
+        public String taskId;
+
+        @NameInMap("Content")
+        @Validation(required = true)
+        public String content;
+
+        @NameInMap("Status")
+        @Validation(required = true)
+        public String status;
+
+        @NameInMap("NextTaskId")
+        @Validation(required = true)
+        public String nextTaskId;
+
+        public static DeleteTableResponseTaskInfo build(java.util.Map<String, ?> map) throws Exception {
+            DeleteTableResponseTaskInfo self = new DeleteTableResponseTaskInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteTableResponseTaskInfo setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
+        }
+
+        public DeleteTableResponseTaskInfo setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public DeleteTableResponseTaskInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DeleteTableResponseTaskInfo setNextTaskId(String nextTaskId) {
+            this.nextTaskId = nextTaskId;
+            return this;
+        }
+        public String getNextTaskId() {
+            return this.nextTaskId;
+        }
+
     }
 
 }

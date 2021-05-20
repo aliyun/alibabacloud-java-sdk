@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class CheckFileDeploymentRequest extends TeaModel {
     @NameInMap("CheckerInstanceId")
+    @Validation(required = true)
     public String checkerInstanceId;
 
     @NameInMap("Status")
+    @Validation(required = true)
     public String status;
 
     @NameInMap("CheckDetailUrl")
