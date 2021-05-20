@@ -26,9 +26,6 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
     @NameInMap("Start")
     public Integer start;
 
-    @NameInMap("Type")
-    public String type;
-
     @NameInMap("Filter")
     public String filter;
 
@@ -91,14 +88,6 @@ public class SearchImageByPicAdvanceRequest extends TeaModel {
     }
     public Integer getStart() {
         return this.start;
-    }
-
-    public SearchImageByPicAdvanceRequest setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
     }
 
     public SearchImageByPicAdvanceRequest setFilter(String filter) {
