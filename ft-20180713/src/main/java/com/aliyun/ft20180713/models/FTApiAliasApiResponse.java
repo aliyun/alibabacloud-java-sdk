@@ -4,33 +4,33 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FTApiAliasApiResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Name")
+    @NameInMap("body")
     @Validation(required = true)
-    public String name;
+    public FTApiAliasApiResponseBody body;
 
     public static FTApiAliasApiResponse build(java.util.Map<String, ?> map) throws Exception {
         FTApiAliasApiResponse self = new FTApiAliasApiResponse();
         return TeaModel.build(map, self);
     }
 
-    public FTApiAliasApiResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public FTApiAliasApiResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public FTApiAliasApiResponse setName(String name) {
-        this.name = name;
+    public FTApiAliasApiResponse setBody(FTApiAliasApiResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public FTApiAliasApiResponseBody getBody() {
+        return this.body;
     }
 
 }

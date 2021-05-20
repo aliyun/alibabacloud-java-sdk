@@ -4,45 +4,33 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtDynamicAddressDubboResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("StringValue")
+    @NameInMap("body")
     @Validation(required = true)
-    public String stringValue;
-
-    @NameInMap("IntValue")
-    @Validation(required = true)
-    public Integer intValue;
+    public FtDynamicAddressDubboResponseBody body;
 
     public static FtDynamicAddressDubboResponse build(java.util.Map<String, ?> map) throws Exception {
         FtDynamicAddressDubboResponse self = new FtDynamicAddressDubboResponse();
         return TeaModel.build(map, self);
     }
 
-    public FtDynamicAddressDubboResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public FtDynamicAddressDubboResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public FtDynamicAddressDubboResponse setStringValue(String stringValue) {
-        this.stringValue = stringValue;
+    public FtDynamicAddressDubboResponse setBody(FtDynamicAddressDubboResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getStringValue() {
-        return this.stringValue;
-    }
-
-    public FtDynamicAddressDubboResponse setIntValue(Integer intValue) {
-        this.intValue = intValue;
-        return this;
-    }
-    public Integer getIntValue() {
-        return this.intValue;
+    public FtDynamicAddressDubboResponseBody getBody() {
+        return this.body;
     }
 
 }

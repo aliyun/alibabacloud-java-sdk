@@ -32,23 +32,15 @@ public class FtParamListRequest extends TeaModel {
     }
 
     public static class FtParamListRequestDisk extends TeaModel {
-        @NameInMap("Size")
-        public java.util.List<String> size;
-
         @NameInMap("Type")
         public java.util.List<String> type;
+
+        @NameInMap("Size")
+        public java.util.List<String> size;
 
         public static FtParamListRequestDisk build(java.util.Map<String, ?> map) throws Exception {
             FtParamListRequestDisk self = new FtParamListRequestDisk();
             return TeaModel.build(map, self);
-        }
-
-        public FtParamListRequestDisk setSize(java.util.List<String> size) {
-            this.size = size;
-            return this;
-        }
-        public java.util.List<String> getSize() {
-            return this.size;
         }
 
         public FtParamListRequestDisk setType(java.util.List<String> type) {
@@ -57,6 +49,14 @@ public class FtParamListRequest extends TeaModel {
         }
         public java.util.List<String> getType() {
             return this.type;
+        }
+
+        public FtParamListRequestDisk setSize(java.util.List<String> size) {
+            this.size = size;
+            return this;
+        }
+        public java.util.List<String> getSize() {
+            return this.size;
         }
 
     }
