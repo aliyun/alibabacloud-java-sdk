@@ -5,22 +5,18 @@ import com.aliyun.tea.*;
 
 public class CreatePermissionApplyOrderRequest extends TeaModel {
     @NameInMap("ApplyUserIds")
-    @Validation(required = true)
     public String applyUserIds;
 
     @NameInMap("Deadline")
     public Long deadline;
 
     @NameInMap("ApplyReason")
-    @Validation(required = true)
     public String applyReason;
 
     @NameInMap("MaxComputeProjectName")
-    @Validation(required = true)
     public String maxComputeProjectName;
 
     @NameInMap("WorkspaceId")
-    @Validation(required = true)
     public Integer workspaceId;
 
     @NameInMap("OrderType")
@@ -30,7 +26,6 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public String engineType;
 
     @NameInMap("ApplyObject")
-    @Validation(required = true)
     public java.util.List<CreatePermissionApplyOrderRequestApplyObject> applyObject;
 
     public static CreatePermissionApplyOrderRequest build(java.util.Map<String, ?> map) throws Exception {
@@ -104,7 +99,6 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
     public static class CreatePermissionApplyOrderRequestApplyObjectColumnMetaList extends TeaModel {
         @NameInMap("Name")
-        @Validation(required = true)
         public String name;
 
         public static CreatePermissionApplyOrderRequestApplyObjectColumnMetaList build(java.util.Map<String, ?> map) throws Exception {
@@ -123,29 +117,26 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     }
 
     public static class CreatePermissionApplyOrderRequestApplyObject extends TeaModel {
-        @NameInMap("Name")
-        @Validation(required = true)
-        public String name;
+        @NameInMap("Actions")
+        public String actions;
 
         @NameInMap("ColumnMetaList")
-        @Validation(required = true)
         public java.util.List<CreatePermissionApplyOrderRequestApplyObjectColumnMetaList> columnMetaList;
 
-        @NameInMap("Actions")
-        @Validation(required = true)
-        public String actions;
+        @NameInMap("Name")
+        public String name;
 
         public static CreatePermissionApplyOrderRequestApplyObject build(java.util.Map<String, ?> map) throws Exception {
             CreatePermissionApplyOrderRequestApplyObject self = new CreatePermissionApplyOrderRequestApplyObject();
             return TeaModel.build(map, self);
         }
 
-        public CreatePermissionApplyOrderRequestApplyObject setName(String name) {
-            this.name = name;
+        public CreatePermissionApplyOrderRequestApplyObject setActions(String actions) {
+            this.actions = actions;
             return this;
         }
-        public String getName() {
-            return this.name;
+        public String getActions() {
+            return this.actions;
         }
 
         public CreatePermissionApplyOrderRequestApplyObject setColumnMetaList(java.util.List<CreatePermissionApplyOrderRequestApplyObjectColumnMetaList> columnMetaList) {
@@ -156,12 +147,12 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
             return this.columnMetaList;
         }
 
-        public CreatePermissionApplyOrderRequestApplyObject setActions(String actions) {
-            this.actions = actions;
+        public CreatePermissionApplyOrderRequestApplyObject setName(String name) {
+            this.name = name;
             return this;
         }
-        public String getActions() {
-            return this.actions;
+        public String getName() {
+            return this.name;
         }
 
     }

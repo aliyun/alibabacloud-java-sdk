@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiAuthoritiesRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("PageNumber")
@@ -15,7 +14,6 @@ public class ListDataServiceApiAuthoritiesRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("TenantId")
-    @Validation(required = true)
     public Long tenantId;
 
     @NameInMap("ApiNameKeyword")

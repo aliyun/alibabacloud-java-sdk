@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class GetSensitiveDataResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SensitiveData")
+    @NameInMap("body")
     @Validation(required = true)
-    public java.util.Map<String, ?> sensitiveData;
+    public GetSensitiveDataResponseBody body;
 
     public static GetSensitiveDataResponse build(java.util.Map<String, ?> map) throws Exception {
         GetSensitiveDataResponse self = new GetSensitiveDataResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetSensitiveDataResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetSensitiveDataResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetSensitiveDataResponse setSensitiveData(java.util.Map<String, ?> sensitiveData) {
-        this.sensitiveData = sensitiveData;
+    public GetSensitiveDataResponse setBody(GetSensitiveDataResponseBody body) {
+        this.body = body;
         return this;
     }
-    public java.util.Map<String, ?> getSensitiveData() {
-        return this.sensitiveData;
+    public GetSensitiveDataResponseBody getBody() {
+        return this.body;
     }
 
 }

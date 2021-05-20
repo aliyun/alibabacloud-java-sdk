@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListProjectRolesRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     public static ListProjectRolesRequest build(java.util.Map<String, ?> map) throws Exception {

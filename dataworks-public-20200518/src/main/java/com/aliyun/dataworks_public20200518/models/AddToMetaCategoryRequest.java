@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddToMetaCategoryRequest extends TeaModel {
     @NameInMap("CategoryId")
-    @Validation(required = true)
     public Long categoryId;
 
     @NameInMap("TableGuid")
-    @Validation(required = true)
     public String tableGuid;
 
     public static AddToMetaCategoryRequest build(java.util.Map<String, ?> map) throws Exception {

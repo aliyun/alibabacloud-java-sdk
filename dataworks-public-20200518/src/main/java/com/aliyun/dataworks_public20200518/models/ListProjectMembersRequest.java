@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ListProjectMembersRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("PageNumber")

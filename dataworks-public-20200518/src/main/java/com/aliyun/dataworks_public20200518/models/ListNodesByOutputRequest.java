@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListNodesByOutputRequest extends TeaModel {
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("Outputs")
-    @Validation(required = true)
     public String outputs;
 
     public static ListNodesByOutputRequest build(java.util.Map<String, ?> map) throws Exception {

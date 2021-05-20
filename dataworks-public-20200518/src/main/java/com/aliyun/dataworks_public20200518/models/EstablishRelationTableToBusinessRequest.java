@@ -11,11 +11,9 @@ public class EstablishRelationTableToBusinessRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("BusinessId")
-    @Validation(required = true)
     public String businessId;
 
     @NameInMap("TableGuid")
-    @Validation(required = true)
     public String tableGuid;
 
     @NameInMap("FolderId")

@@ -11,7 +11,6 @@ public class GetMetaTableChangeLogRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("TableGuid")
-    @Validation(required = true)
     public String tableGuid;
 
     @NameInMap("ChangeType")

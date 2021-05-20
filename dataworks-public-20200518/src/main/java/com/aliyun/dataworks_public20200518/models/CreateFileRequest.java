@@ -11,14 +11,12 @@ public class CreateFileRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("FileName")
-    @Validation(required = true)
     public String fileName;
 
     @NameInMap("FileDescription")
     public String fileDescription;
 
     @NameInMap("FileType")
-    @Validation(required = true)
     public Integer fileType;
 
     @NameInMap("Owner")
@@ -61,7 +59,6 @@ public class CreateFileRequest extends TeaModel {
     public String dependentNodeIdList;
 
     @NameInMap("InputList")
-    @Validation(required = true)
     public String inputList;
 
     @NameInMap("ProjectIdentifier")
@@ -75,6 +72,9 @@ public class CreateFileRequest extends TeaModel {
 
     @NameInMap("ConnectionName")
     public String connectionName;
+
+    @NameInMap("AutoParsing")
+    public Boolean autoParsing;
 
     public static CreateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateFileRequest self = new CreateFileRequest();
@@ -263,6 +263,14 @@ public class CreateFileRequest extends TeaModel {
     }
     public String getConnectionName() {
         return this.connectionName;
+    }
+
+    public CreateFileRequest setAutoParsing(Boolean autoParsing) {
+        this.autoParsing = autoParsing;
+        return this;
+    }
+    public Boolean getAutoParsing() {
+        return this.autoParsing;
     }
 
 }

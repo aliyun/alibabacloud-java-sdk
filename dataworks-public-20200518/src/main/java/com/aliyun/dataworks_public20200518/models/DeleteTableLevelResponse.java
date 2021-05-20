@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class DeleteTableLevelResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DeleteResult")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean deleteResult;
+    public DeleteTableLevelResponseBody body;
 
     public static DeleteTableLevelResponse build(java.util.Map<String, ?> map) throws Exception {
         DeleteTableLevelResponse self = new DeleteTableLevelResponse();
         return TeaModel.build(map, self);
     }
 
-    public DeleteTableLevelResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DeleteTableLevelResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public DeleteTableLevelResponse setDeleteResult(Boolean deleteResult) {
-        this.deleteResult = deleteResult;
+    public DeleteTableLevelResponse setBody(DeleteTableLevelResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getDeleteResult() {
-        return this.deleteResult;
+    public DeleteTableLevelResponseBody getBody() {
+        return this.body;
     }
 
 }
