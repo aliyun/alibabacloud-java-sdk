@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class RemoveProjectMemberFromRoleRequest extends TeaModel {
     @NameInMap("ProjectId")
-    @Validation(required = true)
     public Long projectId;
 
     @NameInMap("UserId")
-    @Validation(required = true)
     public String userId;
 
     @NameInMap("RoleCode")
-    @Validation(required = true)
     public String roleCode;
 
     public static RemoveProjectMemberFromRoleRequest build(java.util.Map<String, ?> map) throws Exception {

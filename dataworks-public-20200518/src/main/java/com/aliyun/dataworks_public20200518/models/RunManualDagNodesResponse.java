@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class RunManualDagNodesResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("DagId")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long dagId;
+    public RunManualDagNodesResponseBody body;
 
     public static RunManualDagNodesResponse build(java.util.Map<String, ?> map) throws Exception {
         RunManualDagNodesResponse self = new RunManualDagNodesResponse();
         return TeaModel.build(map, self);
     }
 
-    public RunManualDagNodesResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public RunManualDagNodesResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public RunManualDagNodesResponse setDagId(Long dagId) {
-        this.dagId = dagId;
+    public RunManualDagNodesResponse setBody(RunManualDagNodesResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getDagId() {
-        return this.dagId;
+    public RunManualDagNodesResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -59,7 +59,6 @@ public class UpdateFileRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("FileId")
-    @Validation(required = true)
     public Long fileId;
 
     @NameInMap("OutputList")
@@ -73,6 +72,9 @@ public class UpdateFileRequest extends TeaModel {
 
     @NameInMap("Owner")
     public String owner;
+
+    @NameInMap("AutoParsing")
+    public Boolean autoParsing;
 
     public static UpdateFileRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateFileRequest self = new UpdateFileRequest();
@@ -261,6 +263,14 @@ public class UpdateFileRequest extends TeaModel {
     }
     public String getOwner() {
         return this.owner;
+    }
+
+    public UpdateFileRequest setAutoParsing(Boolean autoParsing) {
+        this.autoParsing = autoParsing;
+        return this;
+    }
+    public Boolean getAutoParsing() {
+        return this.autoParsing;
     }
 
 }

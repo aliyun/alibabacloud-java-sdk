@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class ScanSensitiveDataRequest extends TeaModel {
     @NameInMap("Data")
-    @Validation(required = true)
     public String data;
 
     public static ScanSensitiveDataRequest build(java.util.Map<String, ?> map) throws Exception {

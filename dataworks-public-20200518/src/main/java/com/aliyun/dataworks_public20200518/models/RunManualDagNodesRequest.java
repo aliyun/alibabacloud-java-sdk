@@ -5,19 +5,15 @@ import com.aliyun.tea.*;
 
 public class RunManualDagNodesRequest extends TeaModel {
     @NameInMap("ProjectEnv")
-    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("ProjectName")
-    @Validation(required = true)
     public String projectName;
 
     @NameInMap("FlowName")
-    @Validation(required = true)
     public String flowName;
 
     @NameInMap("BizDate")
-    @Validation(required = true)
     public String bizDate;
 
     @NameInMap("NodeParameters")

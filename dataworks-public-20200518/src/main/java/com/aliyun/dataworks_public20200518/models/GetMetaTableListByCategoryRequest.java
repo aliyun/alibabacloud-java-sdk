@@ -11,7 +11,6 @@ public class GetMetaTableListByCategoryRequest extends TeaModel {
     public Integer pageSize;
 
     @NameInMap("CategoryId")
-    @Validation(required = true)
     public Long categoryId;
 
     public static GetMetaTableListByCategoryRequest build(java.util.Map<String, ?> map) throws Exception {

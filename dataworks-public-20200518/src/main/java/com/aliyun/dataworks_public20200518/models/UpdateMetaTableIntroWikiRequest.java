@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateMetaTableIntroWikiRequest extends TeaModel {
     @NameInMap("TableGuid")
-    @Validation(required = true)
     public String tableGuid;
 
     @NameInMap("Content")
-    @Validation(required = true)
     public String content;
 
     public static UpdateMetaTableIntroWikiRequest build(java.util.Map<String, ?> map) throws Exception {
