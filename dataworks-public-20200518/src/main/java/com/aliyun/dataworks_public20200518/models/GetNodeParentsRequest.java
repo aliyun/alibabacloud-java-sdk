@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetNodeParentsRequest extends TeaModel {
     @NameInMap("ProjectEnv")
+    @Validation(required = true)
     public String projectEnv;
 
     @NameInMap("NodeId")
+    @Validation(required = true)
     public Long nodeId;
 
     public static GetNodeParentsRequest build(java.util.Map<String, ?> map) throws Exception {

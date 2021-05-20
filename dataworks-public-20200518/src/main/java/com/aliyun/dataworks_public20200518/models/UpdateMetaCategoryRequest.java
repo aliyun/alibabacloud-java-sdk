@@ -11,6 +11,7 @@ public class UpdateMetaCategoryRequest extends TeaModel {
     public String comment;
 
     @NameInMap("CategoryId")
+    @Validation(required = true)
     public Long categoryId;
 
     public static UpdateMetaCategoryRequest build(java.util.Map<String, ?> map) throws Exception {

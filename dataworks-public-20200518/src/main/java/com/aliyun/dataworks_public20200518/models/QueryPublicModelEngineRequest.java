@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class QueryPublicModelEngineRequest extends TeaModel {
     @NameInMap("Text")
+    @Validation(required = true)
     public String text;
 
     @NameInMap("TenantId")
+    @Validation(required = true)
     public String tenantId;
 
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public String projectId;
 
     public static QueryPublicModelEngineRequest build(java.util.Map<String, ?> map) throws Exception {

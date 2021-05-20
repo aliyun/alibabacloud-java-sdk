@@ -4,33 +4,33 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class CheckMetaTableResponse extends TeaModel {
-    @NameInMap("headers")
+    @NameInMap("RequestId")
     @Validation(required = true)
-    public java.util.Map<String, String> headers;
+    public String requestId;
 
-    @NameInMap("body")
+    @NameInMap("Data")
     @Validation(required = true)
-    public CheckMetaTableResponseBody body;
+    public Boolean data;
 
     public static CheckMetaTableResponse build(java.util.Map<String, ?> map) throws Exception {
         CheckMetaTableResponse self = new CheckMetaTableResponse();
         return TeaModel.build(map, self);
     }
 
-    public CheckMetaTableResponse setHeaders(java.util.Map<String, String> headers) {
-        this.headers = headers;
+    public CheckMetaTableResponse setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.Map<String, String> getHeaders() {
-        return this.headers;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public CheckMetaTableResponse setBody(CheckMetaTableResponseBody body) {
-        this.body = body;
+    public CheckMetaTableResponse setData(Boolean data) {
+        this.data = data;
         return this;
     }
-    public CheckMetaTableResponseBody getBody() {
-        return this.body;
+    public Boolean getData() {
+        return this.data;
     }
 
 }

@@ -11,12 +11,14 @@ public class CreateFileRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("FileName")
+    @Validation(required = true)
     public String fileName;
 
     @NameInMap("FileDescription")
     public String fileDescription;
 
     @NameInMap("FileType")
+    @Validation(required = true)
     public Integer fileType;
 
     @NameInMap("Owner")
@@ -59,6 +61,7 @@ public class CreateFileRequest extends TeaModel {
     public String dependentNodeIdList;
 
     @NameInMap("InputList")
+    @Validation(required = true)
     public String inputList;
 
     @NameInMap("ProjectIdentifier")

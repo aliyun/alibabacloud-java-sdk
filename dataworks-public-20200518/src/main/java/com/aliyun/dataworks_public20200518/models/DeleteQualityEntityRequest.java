@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteQualityEntityRequest extends TeaModel {
     @NameInMap("EntityId")
+    @Validation(required = true)
     public Long entityId;
 
     @NameInMap("ProjectName")
+    @Validation(required = true)
     public String projectName;
 
     @NameInMap("EnvType")
+    @Validation(required = true)
     public String envType;
 
     public static DeleteQualityEntityRequest build(java.util.Map<String, ?> map) throws Exception {

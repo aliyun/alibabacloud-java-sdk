@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceErrorRankRequest extends TeaModel {
     @NameInMap("ProjectId")
+    @Validation(required = true)
     public Long projectId;
 
     public static GetInstanceErrorRankRequest build(java.util.Map<String, ?> map) throws Exception {

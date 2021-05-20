@@ -11,12 +11,15 @@ public class UpdateUdfFileRequest extends TeaModel {
     public Long projectId;
 
     @NameInMap("FunctionType")
+    @Validation(required = true)
     public String functionType;
 
     @NameInMap("ClassName")
+    @Validation(required = true)
     public String className;
 
     @NameInMap("Resources")
+    @Validation(required = true)
     public String resources;
 
     @NameInMap("UdfDescription")
@@ -38,6 +41,7 @@ public class UpdateUdfFileRequest extends TeaModel {
     public String projectIdentifier;
 
     @NameInMap("FileId")
+    @Validation(required = true)
     public String fileId;
 
     public static UpdateUdfFileRequest build(java.util.Map<String, ?> map) throws Exception {

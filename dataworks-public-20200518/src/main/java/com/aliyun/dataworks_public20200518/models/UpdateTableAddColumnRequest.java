@@ -4,23 +4,17 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class UpdateTableAddColumnRequest extends TeaModel {
-    @NameInMap("TableGuid")
-    public String tableGuid;
-
     @NameInMap("Column")
+    @Validation(required = true)
     public java.util.List<UpdateTableAddColumnRequestColumn> column;
+
+    @NameInMap("TableGuid")
+    @Validation(required = true)
+    public String tableGuid;
 
     public static UpdateTableAddColumnRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTableAddColumnRequest self = new UpdateTableAddColumnRequest();
         return TeaModel.build(map, self);
-    }
-
-    public UpdateTableAddColumnRequest setTableGuid(String tableGuid) {
-        this.tableGuid = tableGuid;
-        return this;
-    }
-    public String getTableGuid() {
-        return this.tableGuid;
     }
 
     public UpdateTableAddColumnRequest setColumn(java.util.List<UpdateTableAddColumnRequestColumn> column) {
@@ -31,30 +25,32 @@ public class UpdateTableAddColumnRequest extends TeaModel {
         return this.column;
     }
 
+    public UpdateTableAddColumnRequest setTableGuid(String tableGuid) {
+        this.tableGuid = tableGuid;
+        return this;
+    }
+    public String getTableGuid() {
+        return this.tableGuid;
+    }
+
     public static class UpdateTableAddColumnRequestColumn extends TeaModel {
+        @NameInMap("ColumnName")
+        @Validation(required = true)
+        public String columnName;
+
         @NameInMap("ColumnNameCn")
         public String columnNameCn;
 
-        @NameInMap("ColumnName")
-        public String columnName;
+        @NameInMap("ColumnType")
+        @Validation(required = true)
+        public String columnType;
 
         @NameInMap("Comment")
         public String comment;
 
-        @NameInMap("ColumnType")
-        public String columnType;
-
         public static UpdateTableAddColumnRequestColumn build(java.util.Map<String, ?> map) throws Exception {
             UpdateTableAddColumnRequestColumn self = new UpdateTableAddColumnRequestColumn();
             return TeaModel.build(map, self);
-        }
-
-        public UpdateTableAddColumnRequestColumn setColumnNameCn(String columnNameCn) {
-            this.columnNameCn = columnNameCn;
-            return this;
-        }
-        public String getColumnNameCn() {
-            return this.columnNameCn;
         }
 
         public UpdateTableAddColumnRequestColumn setColumnName(String columnName) {
@@ -65,12 +61,12 @@ public class UpdateTableAddColumnRequest extends TeaModel {
             return this.columnName;
         }
 
-        public UpdateTableAddColumnRequestColumn setComment(String comment) {
-            this.comment = comment;
+        public UpdateTableAddColumnRequestColumn setColumnNameCn(String columnNameCn) {
+            this.columnNameCn = columnNameCn;
             return this;
         }
-        public String getComment() {
-            return this.comment;
+        public String getColumnNameCn() {
+            return this.columnNameCn;
         }
 
         public UpdateTableAddColumnRequestColumn setColumnType(String columnType) {
@@ -79,6 +75,14 @@ public class UpdateTableAddColumnRequest extends TeaModel {
         }
         public String getColumnType() {
             return this.columnType;
+        }
+
+        public UpdateTableAddColumnRequestColumn setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
         }
 
     }

@@ -8,6 +8,7 @@ public class GetMetaColumnLineageRequest extends TeaModel {
     public String columnGuid;
 
     @NameInMap("Direction")
+    @Validation(required = true)
     public String direction;
 
     @NameInMap("PageNum")
