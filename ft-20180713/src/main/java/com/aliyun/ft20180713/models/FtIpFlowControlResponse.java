@@ -4,33 +4,33 @@ package com.aliyun.ft20180713.models;
 import com.aliyun.tea.*;
 
 public class FtIpFlowControlResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Name")
+    @NameInMap("body")
     @Validation(required = true)
-    public String name;
+    public FtIpFlowControlResponseBody body;
 
     public static FtIpFlowControlResponse build(java.util.Map<String, ?> map) throws Exception {
         FtIpFlowControlResponse self = new FtIpFlowControlResponse();
         return TeaModel.build(map, self);
     }
 
-    public FtIpFlowControlResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public FtIpFlowControlResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public FtIpFlowControlResponse setName(String name) {
-        this.name = name;
+    public FtIpFlowControlResponse setBody(FtIpFlowControlResponseBody body) {
+        this.body = body;
         return this;
     }
-    public String getName() {
-        return this.name;
+    public FtIpFlowControlResponseBody getBody() {
+        return this.body;
     }
 
 }

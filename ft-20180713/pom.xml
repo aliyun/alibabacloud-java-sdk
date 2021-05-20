@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ft20180713</artifactId>
-  <version>3.0.3</version>
+  <version>3.1.0</version>
   <packaging>jar</packaging>
   <name>ft20180713</name>
   <description>Alibaba Cloud Ft (20180713) SDK for Java
@@ -41,7 +41,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.10</version>
+      <version>0.2.12</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -72,12 +72,12 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.0.7</version>
+      <version>0.0.17</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.0.8</version>
+      <version>0.1.6</version>
     </dependency>
   </dependencies>
   <build>
