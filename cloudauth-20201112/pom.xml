@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>cloudauth20201112</artifactId>
-  <version>2.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>cloudauth20201112</name>
   <description>Alibaba Cloud ID Verification (20201112) SDK for Java
@@ -25,11 +25,11 @@
   <distributionManagement>
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
       <id>sonatype-nexus-staging</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
   <scm>
@@ -66,7 +66,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
-      <version>0.2.10</version>
+      <version>0.2.12</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
