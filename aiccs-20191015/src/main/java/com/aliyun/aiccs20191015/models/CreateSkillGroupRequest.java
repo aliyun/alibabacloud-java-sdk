@@ -22,6 +22,10 @@ public class CreateSkillGroupRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    // 部门ID
+    @NameInMap("DepartmentId")
+    public Long departmentId;
+
     public static CreateSkillGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSkillGroupRequest self = new CreateSkillGroupRequest();
         return TeaModel.build(map, self);
@@ -73,6 +77,14 @@ public class CreateSkillGroupRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public CreateSkillGroupRequest setDepartmentId(Long departmentId) {
+        this.departmentId = departmentId;
+        return this;
+    }
+    public Long getDepartmentId() {
+        return this.departmentId;
     }
 
 }
