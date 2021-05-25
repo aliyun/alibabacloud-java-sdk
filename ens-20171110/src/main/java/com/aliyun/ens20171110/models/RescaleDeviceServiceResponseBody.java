@@ -51,6 +51,9 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Mac")
+        public String mac;
+
         public static RescaleDeviceServiceResponseBodyResourceDetailInfos build(java.util.Map<String, ?> map) throws Exception {
             RescaleDeviceServiceResponseBodyResourceDetailInfos self = new RescaleDeviceServiceResponseBodyResourceDetailInfos();
             return TeaModel.build(map, self);
@@ -102,6 +105,14 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public RescaleDeviceServiceResponseBodyResourceDetailInfos setMac(String mac) {
+            this.mac = mac;
+            return this;
+        }
+        public String getMac() {
+            return this.mac;
         }
 
     }

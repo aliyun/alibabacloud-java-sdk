@@ -1,0 +1,24 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ens20171110.models;
+
+import com.aliyun.tea.*;
+
+public class CreateLoadBalancerTCPListenerResponseBody extends TeaModel {
+    // Id of the request
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static CreateLoadBalancerTCPListenerResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        CreateLoadBalancerTCPListenerResponseBody self = new CreateLoadBalancerTCPListenerResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateLoadBalancerTCPListenerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}

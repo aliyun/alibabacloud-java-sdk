@@ -51,6 +51,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("Mac")
+        public String mac;
+
         public static DescribeDeviceServiceResponseBodyResourceDetailInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeviceServiceResponseBodyResourceDetailInfos self = new DescribeDeviceServiceResponseBodyResourceDetailInfos();
             return TeaModel.build(map, self);
@@ -102,6 +105,14 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public DescribeDeviceServiceResponseBodyResourceDetailInfos setMac(String mac) {
+            this.mac = mac;
+            return this;
+        }
+        public String getMac() {
+            return this.mac;
         }
 
     }
