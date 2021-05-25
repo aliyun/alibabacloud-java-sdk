@@ -67,6 +67,15 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     @NameInMap("IncludeIPRanges")
     public String includeIPRanges;
 
+    @NameInMap("ExcludeIPRanges")
+    public String excludeIPRanges;
+
+    @NameInMap("ExcludeOutboundPorts")
+    public String excludeOutboundPorts;
+
+    @NameInMap("ExcludeInboundPorts")
+    public String excludeInboundPorts;
+
     @NameInMap("EnableNamespacesByDefault")
     public Boolean enableNamespacesByDefault;
 
@@ -129,6 +138,33 @@ public class UpdateMeshFeatureRequest extends TeaModel {
 
     @NameInMap("DNSProxyingEnabled")
     public Boolean DNSProxyingEnabled;
+
+    @NameInMap("DubboFilterEnabled")
+    public Boolean dubboFilterEnabled;
+
+    @NameInMap("FilterGatewayClusterConfig")
+    public Boolean filterGatewayClusterConfig;
+
+    @NameInMap("EnableSDSServer")
+    public Boolean enableSDSServer;
+
+    @NameInMap("AccessLogServiceEnabled")
+    public Boolean accessLogServiceEnabled;
+
+    @NameInMap("AccessLogServiceHost")
+    public String accessLogServiceHost;
+
+    @NameInMap("AccessLogServicePort")
+    public Integer accessLogServicePort;
+
+    @NameInMap("GatewayAPIEnabled")
+    public Boolean gatewayAPIEnabled;
+
+    @NameInMap("ConfigSourceEnabled")
+    public Boolean configSourceEnabled;
+
+    @NameInMap("ConfigSourceNacosID")
+    public String configSourceNacosID;
 
     public static UpdateMeshFeatureRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateMeshFeatureRequest self = new UpdateMeshFeatureRequest();
@@ -303,6 +339,30 @@ public class UpdateMeshFeatureRequest extends TeaModel {
         return this.includeIPRanges;
     }
 
+    public UpdateMeshFeatureRequest setExcludeIPRanges(String excludeIPRanges) {
+        this.excludeIPRanges = excludeIPRanges;
+        return this;
+    }
+    public String getExcludeIPRanges() {
+        return this.excludeIPRanges;
+    }
+
+    public UpdateMeshFeatureRequest setExcludeOutboundPorts(String excludeOutboundPorts) {
+        this.excludeOutboundPorts = excludeOutboundPorts;
+        return this;
+    }
+    public String getExcludeOutboundPorts() {
+        return this.excludeOutboundPorts;
+    }
+
+    public UpdateMeshFeatureRequest setExcludeInboundPorts(String excludeInboundPorts) {
+        this.excludeInboundPorts = excludeInboundPorts;
+        return this;
+    }
+    public String getExcludeInboundPorts() {
+        return this.excludeInboundPorts;
+    }
+
     public UpdateMeshFeatureRequest setEnableNamespacesByDefault(Boolean enableNamespacesByDefault) {
         this.enableNamespacesByDefault = enableNamespacesByDefault;
         return this;
@@ -469,6 +529,78 @@ public class UpdateMeshFeatureRequest extends TeaModel {
     }
     public Boolean getDNSProxyingEnabled() {
         return this.DNSProxyingEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setDubboFilterEnabled(Boolean dubboFilterEnabled) {
+        this.dubboFilterEnabled = dubboFilterEnabled;
+        return this;
+    }
+    public Boolean getDubboFilterEnabled() {
+        return this.dubboFilterEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setFilterGatewayClusterConfig(Boolean filterGatewayClusterConfig) {
+        this.filterGatewayClusterConfig = filterGatewayClusterConfig;
+        return this;
+    }
+    public Boolean getFilterGatewayClusterConfig() {
+        return this.filterGatewayClusterConfig;
+    }
+
+    public UpdateMeshFeatureRequest setEnableSDSServer(Boolean enableSDSServer) {
+        this.enableSDSServer = enableSDSServer;
+        return this;
+    }
+    public Boolean getEnableSDSServer() {
+        return this.enableSDSServer;
+    }
+
+    public UpdateMeshFeatureRequest setAccessLogServiceEnabled(Boolean accessLogServiceEnabled) {
+        this.accessLogServiceEnabled = accessLogServiceEnabled;
+        return this;
+    }
+    public Boolean getAccessLogServiceEnabled() {
+        return this.accessLogServiceEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setAccessLogServiceHost(String accessLogServiceHost) {
+        this.accessLogServiceHost = accessLogServiceHost;
+        return this;
+    }
+    public String getAccessLogServiceHost() {
+        return this.accessLogServiceHost;
+    }
+
+    public UpdateMeshFeatureRequest setAccessLogServicePort(Integer accessLogServicePort) {
+        this.accessLogServicePort = accessLogServicePort;
+        return this;
+    }
+    public Integer getAccessLogServicePort() {
+        return this.accessLogServicePort;
+    }
+
+    public UpdateMeshFeatureRequest setGatewayAPIEnabled(Boolean gatewayAPIEnabled) {
+        this.gatewayAPIEnabled = gatewayAPIEnabled;
+        return this;
+    }
+    public Boolean getGatewayAPIEnabled() {
+        return this.gatewayAPIEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setConfigSourceEnabled(Boolean configSourceEnabled) {
+        this.configSourceEnabled = configSourceEnabled;
+        return this;
+    }
+    public Boolean getConfigSourceEnabled() {
+        return this.configSourceEnabled;
+    }
+
+    public UpdateMeshFeatureRequest setConfigSourceNacosID(String configSourceNacosID) {
+        this.configSourceNacosID = configSourceNacosID;
+        return this;
+    }
+    public String getConfigSourceNacosID() {
+        return this.configSourceNacosID;
     }
 
 }
