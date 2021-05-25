@@ -406,12 +406,45 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature extends TeaModel {
+        @NameInMap("FilterGatewayClusterConfig")
+        public Boolean filterGatewayClusterConfig;
+
+        @NameInMap("EnableSDSServer")
+        public Boolean enableSDSServer;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature setFilterGatewayClusterConfig(Boolean filterGatewayClusterConfig) {
+            this.filterGatewayClusterConfig = filterGatewayClusterConfig;
+            return this;
+        }
+        public Boolean getFilterGatewayClusterConfig() {
+            return this.filterGatewayClusterConfig;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature setEnableSDSServer(Boolean enableSDSServer) {
+            this.enableSDSServer = enableSDSServer;
+            return this;
+        }
+        public Boolean getEnableSDSServer() {
+            return this.enableSDSServer;
+        }
+
+    }
+
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot extends TeaModel {
         @NameInMap("Http10Enabled")
         public Boolean http10Enabled;
 
         @NameInMap("TraceSampling")
         public Float traceSampling;
+
+        @NameInMap("Feature")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature feature;
 
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot();
@@ -432,6 +465,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public Float getTraceSampling() {
             return this.traceSampling;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilot setFeature(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature feature) {
+            this.feature = feature;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigPilotFeature getFeature() {
+            return this.feature;
         }
 
     }
@@ -591,6 +632,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("ThriftFilterEnabled")
         public Boolean thriftFilterEnabled;
 
+        @NameInMap("DubboFilterEnabled")
+        public Boolean dubboFilterEnabled;
+
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport();
             return TeaModel.build(map, self);
@@ -618,6 +662,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public Boolean getThriftFilterEnabled() {
             return this.thriftFilterEnabled;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProtocolSupport setDubboFilterEnabled(Boolean dubboFilterEnabled) {
+            this.dubboFilterEnabled = dubboFilterEnabled;
+            return this;
+        }
+        public Boolean getDubboFilterEnabled() {
+            return this.dubboFilterEnabled;
         }
 
     }
@@ -720,6 +772,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("LimitCPU")
         public String limitCPU;
 
+        @NameInMap("AccessLogServiceEnabled")
+        public Boolean accessLogServiceEnabled;
+
+        @NameInMap("AccessLogServiceHost")
+        public String accessLogServiceHost;
+
+        @NameInMap("AccessLogServicePort")
+        public Integer accessLogServicePort;
+
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy();
             return TeaModel.build(map, self);
@@ -773,6 +834,49 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
             return this.limitCPU;
         }
 
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy setAccessLogServiceEnabled(Boolean accessLogServiceEnabled) {
+            this.accessLogServiceEnabled = accessLogServiceEnabled;
+            return this;
+        }
+        public Boolean getAccessLogServiceEnabled() {
+            return this.accessLogServiceEnabled;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy setAccessLogServiceHost(String accessLogServiceHost) {
+            this.accessLogServiceHost = accessLogServiceHost;
+            return this;
+        }
+        public String getAccessLogServiceHost() {
+            return this.accessLogServiceHost;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy setAccessLogServicePort(Integer accessLogServicePort) {
+            this.accessLogServicePort = accessLogServicePort;
+            return this;
+        }
+        public Integer getAccessLogServicePort() {
+            return this.accessLogServicePort;
+        }
+
+    }
+
+    public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport extends TeaModel {
+        @NameInMap("GatewayAPIEnabled")
+        public Boolean gatewayAPIEnabled;
+
+        public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport build(java.util.Map<String, ?> map) throws Exception {
+            DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport setGatewayAPIEnabled(Boolean gatewayAPIEnabled) {
+            this.gatewayAPIEnabled = gatewayAPIEnabled;
+            return this;
+        }
+        public Boolean getGatewayAPIEnabled() {
+            return this.gatewayAPIEnabled;
+        }
+
     }
 
     public static class DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig extends TeaModel {
@@ -799,6 +903,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         @NameInMap("IncludeIPRanges")
         public String includeIPRanges;
+
+        @NameInMap("ExcludeIPRanges")
+        public String excludeIPRanges;
+
+        @NameInMap("ExcludeOutboundPorts")
+        public String excludeOutboundPorts;
+
+        @NameInMap("ExcludeInboundPorts")
+        public String excludeInboundPorts;
 
         @NameInMap("Telemetry")
         public Boolean telemetry;
@@ -829,6 +942,9 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         @NameInMap("Proxy")
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy proxy;
+
+        @NameInMap("K8sNewAPIsSupport")
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport k8sNewAPIsSupport;
 
         public static DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig self = new DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig();
@@ -897,6 +1013,30 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public String getIncludeIPRanges() {
             return this.includeIPRanges;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig setExcludeIPRanges(String excludeIPRanges) {
+            this.excludeIPRanges = excludeIPRanges;
+            return this;
+        }
+        public String getExcludeIPRanges() {
+            return this.excludeIPRanges;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig setExcludeOutboundPorts(String excludeOutboundPorts) {
+            this.excludeOutboundPorts = excludeOutboundPorts;
+            return this;
+        }
+        public String getExcludeOutboundPorts() {
+            return this.excludeOutboundPorts;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig setExcludeInboundPorts(String excludeInboundPorts) {
+            this.excludeInboundPorts = excludeInboundPorts;
+            return this;
+        }
+        public String getExcludeInboundPorts() {
+            return this.excludeInboundPorts;
         }
 
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig setTelemetry(Boolean telemetry) {
@@ -977,6 +1117,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
         public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigProxy getProxy() {
             return this.proxy;
+        }
+
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfig setK8sNewAPIsSupport(DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport k8sNewAPIsSupport) {
+            this.k8sNewAPIsSupport = k8sNewAPIsSupport;
+            return this;
+        }
+        public DescribeServiceMeshDetailResponseBodyServiceMeshSpecMeshConfigK8sNewAPIsSupport getK8sNewAPIsSupport() {
+            return this.k8sNewAPIsSupport;
         }
 
     }

@@ -121,6 +121,33 @@ public class CreateServiceMeshRequest extends TeaModel {
     @NameInMap("Edition")
     public String edition;
 
+    @NameInMap("ConfigSourceEnabled")
+    public Boolean configSourceEnabled;
+
+    @NameInMap("ConfigSourceNacosID")
+    public String configSourceNacosID;
+
+    @NameInMap("DubboFilterEnabled")
+    public Boolean dubboFilterEnabled;
+
+    @NameInMap("FilterGatewayClusterConfig")
+    public Boolean filterGatewayClusterConfig;
+
+    @NameInMap("EnableSDSServer")
+    public Boolean enableSDSServer;
+
+    @NameInMap("AccessLogServiceEnabled")
+    public Boolean accessLogServiceEnabled;
+
+    @NameInMap("AccessLogServiceHost")
+    public String accessLogServiceHost;
+
+    @NameInMap("AccessLogServicePort")
+    public Integer accessLogServicePort;
+
+    @NameInMap("GatewayAPIEnabled")
+    public Boolean gatewayAPIEnabled;
+
     public static CreateServiceMeshRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateServiceMeshRequest self = new CreateServiceMeshRequest();
         return TeaModel.build(map, self);
@@ -436,6 +463,78 @@ public class CreateServiceMeshRequest extends TeaModel {
     }
     public String getEdition() {
         return this.edition;
+    }
+
+    public CreateServiceMeshRequest setConfigSourceEnabled(Boolean configSourceEnabled) {
+        this.configSourceEnabled = configSourceEnabled;
+        return this;
+    }
+    public Boolean getConfigSourceEnabled() {
+        return this.configSourceEnabled;
+    }
+
+    public CreateServiceMeshRequest setConfigSourceNacosID(String configSourceNacosID) {
+        this.configSourceNacosID = configSourceNacosID;
+        return this;
+    }
+    public String getConfigSourceNacosID() {
+        return this.configSourceNacosID;
+    }
+
+    public CreateServiceMeshRequest setDubboFilterEnabled(Boolean dubboFilterEnabled) {
+        this.dubboFilterEnabled = dubboFilterEnabled;
+        return this;
+    }
+    public Boolean getDubboFilterEnabled() {
+        return this.dubboFilterEnabled;
+    }
+
+    public CreateServiceMeshRequest setFilterGatewayClusterConfig(Boolean filterGatewayClusterConfig) {
+        this.filterGatewayClusterConfig = filterGatewayClusterConfig;
+        return this;
+    }
+    public Boolean getFilterGatewayClusterConfig() {
+        return this.filterGatewayClusterConfig;
+    }
+
+    public CreateServiceMeshRequest setEnableSDSServer(Boolean enableSDSServer) {
+        this.enableSDSServer = enableSDSServer;
+        return this;
+    }
+    public Boolean getEnableSDSServer() {
+        return this.enableSDSServer;
+    }
+
+    public CreateServiceMeshRequest setAccessLogServiceEnabled(Boolean accessLogServiceEnabled) {
+        this.accessLogServiceEnabled = accessLogServiceEnabled;
+        return this;
+    }
+    public Boolean getAccessLogServiceEnabled() {
+        return this.accessLogServiceEnabled;
+    }
+
+    public CreateServiceMeshRequest setAccessLogServiceHost(String accessLogServiceHost) {
+        this.accessLogServiceHost = accessLogServiceHost;
+        return this;
+    }
+    public String getAccessLogServiceHost() {
+        return this.accessLogServiceHost;
+    }
+
+    public CreateServiceMeshRequest setAccessLogServicePort(Integer accessLogServicePort) {
+        this.accessLogServicePort = accessLogServicePort;
+        return this;
+    }
+    public Integer getAccessLogServicePort() {
+        return this.accessLogServicePort;
+    }
+
+    public CreateServiceMeshRequest setGatewayAPIEnabled(Boolean gatewayAPIEnabled) {
+        this.gatewayAPIEnabled = gatewayAPIEnabled;
+        return this;
+    }
+    public Boolean getGatewayAPIEnabled() {
+        return this.gatewayAPIEnabled;
     }
 
 }
