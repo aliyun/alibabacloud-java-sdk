@@ -63,4 +63,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createRoomWithOptions(request, runtime);
     }
+
+    public DestroyRoomResponse destroyRoomWithOptions(DestroyRoomRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DestroyRoom", "2021-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DestroyRoomResponse());
+    }
+
+    public DestroyRoomResponse destroyRoom(DestroyRoomRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.destroyRoomWithOptions(request, runtime);
+    }
+
+    public CreateInstanceResponse createInstanceWithOptions(CreateInstanceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateInstance", "2021-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new CreateInstanceResponse());
+    }
+
+    public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createInstanceWithOptions(request, runtime);
+    }
 }
