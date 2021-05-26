@@ -7,14 +7,14 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("MasterSlaveServerGroupId")
-    public String masterSlaveServerGroupId;
-
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
     @NameInMap("MasterSlaveServerGroupName")
     public String masterSlaveServerGroupName;
+
+    @NameInMap("MasterSlaveServerGroupId")
+    public String masterSlaveServerGroupId;
 
     @NameInMap("MasterSlaveBackendServers")
     public DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
@@ -32,14 +32,6 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
         return this.requestId;
     }
 
-    public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
-        this.masterSlaveServerGroupId = masterSlaveServerGroupId;
-        return this;
-    }
-    public String getMasterSlaveServerGroupId() {
-        return this.masterSlaveServerGroupId;
-    }
-
     public DescribeMasterSlaveServerGroupAttributeResponseBody setLoadBalancerId(String loadBalancerId) {
         this.loadBalancerId = loadBalancerId;
         return this;
@@ -54,6 +46,14 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     }
     public String getMasterSlaveServerGroupName() {
         return this.masterSlaveServerGroupName;
+    }
+
+    public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
+        this.masterSlaveServerGroupId = masterSlaveServerGroupId;
+        return this;
+    }
+    public String getMasterSlaveServerGroupId() {
+        return this.masterSlaveServerGroupId;
     }
 
     public DescribeMasterSlaveServerGroupAttributeResponseBody setMasterSlaveBackendServers(DescribeMasterSlaveServerGroupAttributeResponseBodyMasterSlaveBackendServers masterSlaveBackendServers) {

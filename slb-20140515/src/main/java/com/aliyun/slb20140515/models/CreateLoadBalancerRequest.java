@@ -46,15 +46,6 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("SlaveZoneId")
     public String slaveZoneId;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
-    @NameInMap("EnableVpcVipFlow")
-    public String enableVpcVipFlow;
-
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
@@ -79,17 +70,8 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("Address")
     public String address;
 
-    @NameInMap("Ratio")
-    public Integer ratio;
-
     @NameInMap("DeleteProtection")
     public String deleteProtection;
-
-    @NameInMap("CloudType")
-    public String cloudType;
-
-    @NameInMap("SupportPrivateLink")
-    public Boolean supportPrivateLink;
 
     @NameInMap("ModificationProtectionStatus")
     public String modificationProtectionStatus;
@@ -214,30 +196,6 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.slaveZoneId;
     }
 
-    public CreateLoadBalancerRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public CreateLoadBalancerRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
-    }
-
-    public CreateLoadBalancerRequest setEnableVpcVipFlow(String enableVpcVipFlow) {
-        this.enableVpcVipFlow = enableVpcVipFlow;
-        return this;
-    }
-    public String getEnableVpcVipFlow() {
-        return this.enableVpcVipFlow;
-    }
-
     public CreateLoadBalancerRequest setLoadBalancerSpec(String loadBalancerSpec) {
         this.loadBalancerSpec = loadBalancerSpec;
         return this;
@@ -302,36 +260,12 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return this.address;
     }
 
-    public CreateLoadBalancerRequest setRatio(Integer ratio) {
-        this.ratio = ratio;
-        return this;
-    }
-    public Integer getRatio() {
-        return this.ratio;
-    }
-
     public CreateLoadBalancerRequest setDeleteProtection(String deleteProtection) {
         this.deleteProtection = deleteProtection;
         return this;
     }
     public String getDeleteProtection() {
         return this.deleteProtection;
-    }
-
-    public CreateLoadBalancerRequest setCloudType(String cloudType) {
-        this.cloudType = cloudType;
-        return this;
-    }
-    public String getCloudType() {
-        return this.cloudType;
-    }
-
-    public CreateLoadBalancerRequest setSupportPrivateLink(Boolean supportPrivateLink) {
-        this.supportPrivateLink = supportPrivateLink;
-        return this;
-    }
-    public Boolean getSupportPrivateLink() {
-        return this.supportPrivateLink;
     }
 
     public CreateLoadBalancerRequest setModificationProtectionStatus(String modificationProtectionStatus) {

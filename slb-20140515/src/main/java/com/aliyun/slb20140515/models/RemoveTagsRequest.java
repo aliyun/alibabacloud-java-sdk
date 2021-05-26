@@ -16,9 +16,6 @@ public class RemoveTagsRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -63,14 +60,6 @@ public class RemoveTagsRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public RemoveTagsRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
     public RemoveTagsRequest setRegionId(String regionId) {

@@ -25,9 +25,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     @NameInMap("Bandwidth")
     public Integer bandwidth;
 
-    @NameInMap("BackendProtocol")
-    public String backendProtocol;
-
     @NameInMap("XForwardedFor")
     public String XForwardedFor;
 
@@ -48,12 +45,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
 
     @NameInMap("HealthCheck")
     public String healthCheck;
-
-    @NameInMap("HealthCheckType")
-    public String healthCheckType;
-
-    @NameInMap("HealthCheckMethod")
-    public String healthCheckMethod;
 
     @NameInMap("HealthCheckDomain")
     public String healthCheckDomain;
@@ -79,14 +70,8 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
 
-    @NameInMap("MaxConnection")
-    public Integer maxConnection;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
-
-    @NameInMap("access_key_id")
-    public String accessKeyId;
 
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
@@ -99,9 +84,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
 
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
-
-    @NameInMap("Tags")
-    public String tags;
 
     @NameInMap("XForwardedFor_SLBIP")
     public String XForwardedFor_SLBIP;
@@ -124,9 +106,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     @NameInMap("AclStatus")
     public String aclStatus;
 
-    @NameInMap("VpcIds")
-    public String vpcIds;
-
     @NameInMap("IdleTimeout")
     public Integer idleTimeout;
 
@@ -141,39 +120,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
 
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("XForwardedFor_SLBPORT")
-    public String XForwardedFor_SLBPORT;
-
-    @NameInMap("XForwardedFor_ClientSrcPort")
-    public String XForwardedFor_ClientSrcPort;
-
-    @NameInMap("XForwardedFor_ClientCertSubjectDN")
-    public String XForwardedFor_ClientCertSubjectDN;
-
-    @NameInMap("XForwardedFor_ClientCertIssuerDN")
-    public String XForwardedFor_ClientCertIssuerDN;
-
-    @NameInMap("XForwardedFor_ClientCertFingerprint")
-    public String XForwardedFor_ClientCertFingerprint;
-
-    @NameInMap("XForwardedFor_ClientCertClientVerify")
-    public String XForwardedFor_ClientCertClientVerify;
-
-    @NameInMap("XForwardedFor_ClientCertSubjectDNAlias")
-    public String XForwardedFor_ClientCertSubjectDNAlias;
-
-    @NameInMap("XForwardedFor_ClientCertIssuerDNAlias")
-    public String XForwardedFor_ClientCertIssuerDNAlias;
-
-    @NameInMap("XForwardedFor_ClientCertFingerprintAlias")
-    public String XForwardedFor_ClientCertFingerprintAlias;
-
-    @NameInMap("XForwardedFor_ClientCertClientVerifyAlias")
-    public String XForwardedFor_ClientCertClientVerifyAlias;
-
-    @NameInMap("ServerCertificate")
-    public java.util.List<SetLoadBalancerHTTPSListenerAttributeRequestServerCertificate> serverCertificate;
 
     public static SetLoadBalancerHTTPSListenerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLoadBalancerHTTPSListenerAttributeRequest self = new SetLoadBalancerHTTPSListenerAttributeRequest();
@@ -236,14 +182,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
         return this.bandwidth;
     }
 
-    public SetLoadBalancerHTTPSListenerAttributeRequest setBackendProtocol(String backendProtocol) {
-        this.backendProtocol = backendProtocol;
-        return this;
-    }
-    public String getBackendProtocol() {
-        return this.backendProtocol;
-    }
-
     public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor(String XForwardedFor) {
         this.XForwardedFor = XForwardedFor;
         return this;
@@ -298,22 +236,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     }
     public String getHealthCheck() {
         return this.healthCheck;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckType(String healthCheckType) {
-        this.healthCheckType = healthCheckType;
-        return this;
-    }
-    public String getHealthCheckType() {
-        return this.healthCheckType;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckMethod(String healthCheckMethod) {
-        this.healthCheckMethod = healthCheckMethod;
-        return this;
-    }
-    public String getHealthCheckMethod() {
-        return this.healthCheckMethod;
     }
 
     public SetLoadBalancerHTTPSListenerAttributeRequest setHealthCheckDomain(String healthCheckDomain) {
@@ -380,28 +302,12 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
         return this.healthCheckHttpCode;
     }
 
-    public SetLoadBalancerHTTPSListenerAttributeRequest setMaxConnection(Integer maxConnection) {
-        this.maxConnection = maxConnection;
-        return this;
-    }
-    public Integer getMaxConnection() {
-        return this.maxConnection;
-    }
-
     public SetLoadBalancerHTTPSListenerAttributeRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
     public SetLoadBalancerHTTPSListenerAttributeRequest setServerCertificateId(String serverCertificateId) {
@@ -434,14 +340,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     }
     public String getVServerGroupId() {
         return this.VServerGroupId;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_SLBIP(String XForwardedFor_SLBIP) {
@@ -500,14 +398,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
         return this.aclStatus;
     }
 
-    public SetLoadBalancerHTTPSListenerAttributeRequest setVpcIds(String vpcIds) {
-        this.vpcIds = vpcIds;
-        return this;
-    }
-    public String getVpcIds() {
-        return this.vpcIds;
-    }
-
     public SetLoadBalancerHTTPSListenerAttributeRequest setIdleTimeout(Integer idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
@@ -546,102 +436,6 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_SLBPORT(String XForwardedFor_SLBPORT) {
-        this.XForwardedFor_SLBPORT = XForwardedFor_SLBPORT;
-        return this;
-    }
-    public String getXForwardedFor_SLBPORT() {
-        return this.XForwardedFor_SLBPORT;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_ClientSrcPort(String XForwardedFor_ClientSrcPort) {
-        this.XForwardedFor_ClientSrcPort = XForwardedFor_ClientSrcPort;
-        return this;
-    }
-    public String getXForwardedFor_ClientSrcPort() {
-        return this.XForwardedFor_ClientSrcPort;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_ClientCertSubjectDN(String XForwardedFor_ClientCertSubjectDN) {
-        this.XForwardedFor_ClientCertSubjectDN = XForwardedFor_ClientCertSubjectDN;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertSubjectDN() {
-        return this.XForwardedFor_ClientCertSubjectDN;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_ClientCertIssuerDN(String XForwardedFor_ClientCertIssuerDN) {
-        this.XForwardedFor_ClientCertIssuerDN = XForwardedFor_ClientCertIssuerDN;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertIssuerDN() {
-        return this.XForwardedFor_ClientCertIssuerDN;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_ClientCertFingerprint(String XForwardedFor_ClientCertFingerprint) {
-        this.XForwardedFor_ClientCertFingerprint = XForwardedFor_ClientCertFingerprint;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertFingerprint() {
-        return this.XForwardedFor_ClientCertFingerprint;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_ClientCertClientVerify(String XForwardedFor_ClientCertClientVerify) {
-        this.XForwardedFor_ClientCertClientVerify = XForwardedFor_ClientCertClientVerify;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertClientVerify() {
-        return this.XForwardedFor_ClientCertClientVerify;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_ClientCertSubjectDNAlias(String XForwardedFor_ClientCertSubjectDNAlias) {
-        this.XForwardedFor_ClientCertSubjectDNAlias = XForwardedFor_ClientCertSubjectDNAlias;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertSubjectDNAlias() {
-        return this.XForwardedFor_ClientCertSubjectDNAlias;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_ClientCertIssuerDNAlias(String XForwardedFor_ClientCertIssuerDNAlias) {
-        this.XForwardedFor_ClientCertIssuerDNAlias = XForwardedFor_ClientCertIssuerDNAlias;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertIssuerDNAlias() {
-        return this.XForwardedFor_ClientCertIssuerDNAlias;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_ClientCertFingerprintAlias(String XForwardedFor_ClientCertFingerprintAlias) {
-        this.XForwardedFor_ClientCertFingerprintAlias = XForwardedFor_ClientCertFingerprintAlias;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertFingerprintAlias() {
-        return this.XForwardedFor_ClientCertFingerprintAlias;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setXForwardedFor_ClientCertClientVerifyAlias(String XForwardedFor_ClientCertClientVerifyAlias) {
-        this.XForwardedFor_ClientCertClientVerifyAlias = XForwardedFor_ClientCertClientVerifyAlias;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertClientVerifyAlias() {
-        return this.XForwardedFor_ClientCertClientVerifyAlias;
-    }
-
-    public SetLoadBalancerHTTPSListenerAttributeRequest setServerCertificate(java.util.List<SetLoadBalancerHTTPSListenerAttributeRequestServerCertificate> serverCertificate) {
-        this.serverCertificate = serverCertificate;
-        return this;
-    }
-    public java.util.List<SetLoadBalancerHTTPSListenerAttributeRequestServerCertificate> getServerCertificate() {
-        return this.serverCertificate;
-    }
-
-    public static class SetLoadBalancerHTTPSListenerAttributeRequestServerCertificate extends TeaModel {
-        public static SetLoadBalancerHTTPSListenerAttributeRequestServerCertificate build(java.util.Map<String, ?> map) throws Exception {
-            SetLoadBalancerHTTPSListenerAttributeRequestServerCertificate self = new SetLoadBalancerHTTPSListenerAttributeRequestServerCertificate();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

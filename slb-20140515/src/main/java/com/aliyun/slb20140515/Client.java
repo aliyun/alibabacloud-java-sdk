@@ -557,6 +557,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeLoadBalancerHTTPSListenerAttributeWithOptions(request, runtime);
     }
 
+    public DescribeLoadBalancerListenersResponse describeLoadBalancerListenersWithOptions(DescribeLoadBalancerListenersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DescribeLoadBalancerListeners", "2014-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new DescribeLoadBalancerListenersResponse());
+    }
+
+    public DescribeLoadBalancerListenersResponse describeLoadBalancerListeners(DescribeLoadBalancerListenersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeLoadBalancerListenersWithOptions(request, runtime);
+    }
+
     public DescribeLoadBalancersResponse describeLoadBalancersWithOptions(DescribeLoadBalancersRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

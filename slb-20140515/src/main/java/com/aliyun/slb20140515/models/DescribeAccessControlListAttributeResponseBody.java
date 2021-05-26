@@ -4,54 +4,30 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
-    @NameInMap("AclEntrys")
-    public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
-
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("ResourceGroupId")
-    public String resourceGroupId;
-
     @NameInMap("AclId")
     public String aclId;
 
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
-    @NameInMap("RelatedListeners")
-    public DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("AclName")
     public String aclName;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    @NameInMap("AclEntrys")
+    public DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys;
+
+    @NameInMap("RelatedListeners")
+    public DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners;
+
     public static DescribeAccessControlListAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessControlListAttributeResponseBody self = new DescribeAccessControlListAttributeResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeAccessControlListAttributeResponseBody setAclEntrys(DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys) {
-        this.aclEntrys = aclEntrys;
-        return this;
-    }
-    public DescribeAccessControlListAttributeResponseBodyAclEntrys getAclEntrys() {
-        return this.aclEntrys;
-    }
-
-    public DescribeAccessControlListAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeAccessControlListAttributeResponseBody setResourceGroupId(String resourceGroupId) {
-        this.resourceGroupId = resourceGroupId;
-        return this;
-    }
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     public DescribeAccessControlListAttributeResponseBody setAclId(String aclId) {
@@ -70,12 +46,12 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         return this.addressIPVersion;
     }
 
-    public DescribeAccessControlListAttributeResponseBody setRelatedListeners(DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners) {
-        this.relatedListeners = relatedListeners;
+    public DescribeAccessControlListAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeAccessControlListAttributeResponseBodyRelatedListeners getRelatedListeners() {
-        return this.relatedListeners;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeAccessControlListAttributeResponseBody setAclName(String aclName) {
@@ -84,6 +60,30 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
     public String getAclName() {
         return this.aclName;
+    }
+
+    public DescribeAccessControlListAttributeResponseBody setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    public DescribeAccessControlListAttributeResponseBody setAclEntrys(DescribeAccessControlListAttributeResponseBodyAclEntrys aclEntrys) {
+        this.aclEntrys = aclEntrys;
+        return this;
+    }
+    public DescribeAccessControlListAttributeResponseBodyAclEntrys getAclEntrys() {
+        return this.aclEntrys;
+    }
+
+    public DescribeAccessControlListAttributeResponseBody setRelatedListeners(DescribeAccessControlListAttributeResponseBodyRelatedListeners relatedListeners) {
+        this.relatedListeners = relatedListeners;
+        return this;
+    }
+    public DescribeAccessControlListAttributeResponseBodyRelatedListeners getRelatedListeners() {
+        return this.relatedListeners;
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry extends TeaModel {
@@ -136,6 +136,9 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener extends TeaModel {
+        @NameInMap("ListenerPort")
+        public Integer listenerPort;
+
         @NameInMap("AclType")
         public String aclType;
 
@@ -145,12 +148,17 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         @NameInMap("LoadBalancerId")
         public String loadBalancerId;
 
-        @NameInMap("ListenerPort")
-        public Integer listenerPort;
-
         public static DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener self = new DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener setListenerPort(Integer listenerPort) {
+            this.listenerPort = listenerPort;
+            return this;
+        }
+        public Integer getListenerPort() {
+            return this.listenerPort;
         }
 
         public DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener setAclType(String aclType) {
@@ -175,14 +183,6 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
         public String getLoadBalancerId() {
             return this.loadBalancerId;
-        }
-
-        public DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener setListenerPort(Integer listenerPort) {
-            this.listenerPort = listenerPort;
-            return this;
-        }
-        public Integer getListenerPort() {
-            return this.listenerPort;
         }
 
     }

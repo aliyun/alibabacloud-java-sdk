@@ -49,15 +49,6 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     @NameInMap("HealthCheck")
     public String healthCheck;
 
-    @NameInMap("HealthCheckType")
-    public String healthCheckType;
-
-    @NameInMap("HealthCheckMethod")
-    public String healthCheckMethod;
-
-    @NameInMap("HealthCheckHttpVersion")
-    public String healthCheckHttpVersion;
-
     @NameInMap("HealthCheckDomain")
     public String healthCheckDomain;
 
@@ -82,20 +73,11 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
 
-    @NameInMap("MaxConnection")
-    public Integer maxConnection;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
-
-    @NameInMap("Tags")
-    public String tags;
 
     @NameInMap("XForwardedFor_SLBIP")
     public String XForwardedFor_SLBIP;
@@ -118,9 +100,6 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     @NameInMap("AclStatus")
     public String aclStatus;
 
-    @NameInMap("VpcIds")
-    public String vpcIds;
-
     @NameInMap("Description")
     public String description;
 
@@ -135,15 +114,6 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
 
     @NameInMap("RequestTimeout")
     public Integer requestTimeout;
-
-    @NameInMap("XForwardedFor_SLBPORT")
-    public String XForwardedFor_SLBPORT;
-
-    @NameInMap("XForwardedFor_ClientSrcPort")
-    public String XForwardedFor_ClientSrcPort;
-
-    @NameInMap("ForwardCode")
-    public Integer forwardCode;
 
     public static CreateLoadBalancerHTTPListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerHTTPListenerRequest self = new CreateLoadBalancerHTTPListenerRequest();
@@ -270,30 +240,6 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
         return this.healthCheck;
     }
 
-    public CreateLoadBalancerHTTPListenerRequest setHealthCheckType(String healthCheckType) {
-        this.healthCheckType = healthCheckType;
-        return this;
-    }
-    public String getHealthCheckType() {
-        return this.healthCheckType;
-    }
-
-    public CreateLoadBalancerHTTPListenerRequest setHealthCheckMethod(String healthCheckMethod) {
-        this.healthCheckMethod = healthCheckMethod;
-        return this;
-    }
-    public String getHealthCheckMethod() {
-        return this.healthCheckMethod;
-    }
-
-    public CreateLoadBalancerHTTPListenerRequest setHealthCheckHttpVersion(String healthCheckHttpVersion) {
-        this.healthCheckHttpVersion = healthCheckHttpVersion;
-        return this;
-    }
-    public String getHealthCheckHttpVersion() {
-        return this.healthCheckHttpVersion;
-    }
-
     public CreateLoadBalancerHTTPListenerRequest setHealthCheckDomain(String healthCheckDomain) {
         this.healthCheckDomain = healthCheckDomain;
         return this;
@@ -358,14 +304,6 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
         return this.healthCheckHttpCode;
     }
 
-    public CreateLoadBalancerHTTPListenerRequest setMaxConnection(Integer maxConnection) {
-        this.maxConnection = maxConnection;
-        return this;
-    }
-    public Integer getMaxConnection() {
-        return this.maxConnection;
-    }
-
     public CreateLoadBalancerHTTPListenerRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -374,28 +312,12 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateLoadBalancerHTTPListenerRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
     public CreateLoadBalancerHTTPListenerRequest setVServerGroupId(String VServerGroupId) {
         this.VServerGroupId = VServerGroupId;
         return this;
     }
     public String getVServerGroupId() {
         return this.VServerGroupId;
-    }
-
-    public CreateLoadBalancerHTTPListenerRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public CreateLoadBalancerHTTPListenerRequest setXForwardedFor_SLBIP(String XForwardedFor_SLBIP) {
@@ -454,14 +376,6 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
         return this.aclStatus;
     }
 
-    public CreateLoadBalancerHTTPListenerRequest setVpcIds(String vpcIds) {
-        this.vpcIds = vpcIds;
-        return this;
-    }
-    public String getVpcIds() {
-        return this.vpcIds;
-    }
-
     public CreateLoadBalancerHTTPListenerRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -500,30 +414,6 @@ public class CreateLoadBalancerHTTPListenerRequest extends TeaModel {
     }
     public Integer getRequestTimeout() {
         return this.requestTimeout;
-    }
-
-    public CreateLoadBalancerHTTPListenerRequest setXForwardedFor_SLBPORT(String XForwardedFor_SLBPORT) {
-        this.XForwardedFor_SLBPORT = XForwardedFor_SLBPORT;
-        return this;
-    }
-    public String getXForwardedFor_SLBPORT() {
-        return this.XForwardedFor_SLBPORT;
-    }
-
-    public CreateLoadBalancerHTTPListenerRequest setXForwardedFor_ClientSrcPort(String XForwardedFor_ClientSrcPort) {
-        this.XForwardedFor_ClientSrcPort = XForwardedFor_ClientSrcPort;
-        return this;
-    }
-    public String getXForwardedFor_ClientSrcPort() {
-        return this.XForwardedFor_ClientSrcPort;
-    }
-
-    public CreateLoadBalancerHTTPListenerRequest setForwardCode(Integer forwardCode) {
-        this.forwardCode = forwardCode;
-        return this;
-    }
-    public Integer getForwardCode() {
-        return this.forwardCode;
     }
 
 }

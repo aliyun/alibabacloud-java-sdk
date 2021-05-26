@@ -16,9 +16,6 @@ public class UploadCACertificateRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -30,9 +27,6 @@ public class UploadCACertificateRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("StandardType")
-    public String standardType;
 
     public static UploadCACertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadCACertificateRequest self = new UploadCACertificateRequest();
@@ -71,14 +65,6 @@ public class UploadCACertificateRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public UploadCACertificateRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
     public UploadCACertificateRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -109,14 +95,6 @@ public class UploadCACertificateRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public UploadCACertificateRequest setStandardType(String standardType) {
-        this.standardType = standardType;
-        return this;
-    }
-    public String getStandardType() {
-        return this.standardType;
     }
 
 }

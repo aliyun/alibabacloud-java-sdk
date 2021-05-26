@@ -19,12 +19,6 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -74,22 +68,6 @@ public class DescribeMasterSlaveServerGroupsRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeMasterSlaveServerGroupsRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DescribeMasterSlaveServerGroupsRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public DescribeMasterSlaveServerGroupsRequest setLoadBalancerId(String loadBalancerId) {

@@ -7,11 +7,11 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("VServerGroupName")
     public String VServerGroupName;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
@@ -32,20 +32,20 @@ public class DescribeVServerGroupAttributeResponseBody extends TeaModel {
         return this.VServerGroupId;
     }
 
-    public DescribeVServerGroupAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeVServerGroupAttributeResponseBody setVServerGroupName(String VServerGroupName) {
         this.VServerGroupName = VServerGroupName;
         return this;
     }
     public String getVServerGroupName() {
         return this.VServerGroupName;
+    }
+
+    public DescribeVServerGroupAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeVServerGroupAttributeResponseBody setLoadBalancerId(String loadBalancerId) {

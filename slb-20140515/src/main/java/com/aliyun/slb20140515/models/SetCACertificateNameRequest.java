@@ -16,9 +16,6 @@ public class SetCACertificateNameRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -63,14 +60,6 @@ public class SetCACertificateNameRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public SetCACertificateNameRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
     public SetCACertificateNameRequest setRegionId(String regionId) {

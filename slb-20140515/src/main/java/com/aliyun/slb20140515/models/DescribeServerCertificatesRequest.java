@@ -22,17 +22,8 @@ public class DescribeServerCertificatesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeServerCertificatesRequestTag> tag;
 
     public static DescribeServerCertificatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeServerCertificatesRequest self = new DescribeServerCertificatesRequest();
@@ -87,44 +78,12 @@ public class DescribeServerCertificatesRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeServerCertificatesRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DescribeServerCertificatesRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
-    }
-
     public DescribeServerCertificatesRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeServerCertificatesRequest setTag(java.util.List<DescribeServerCertificatesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeServerCertificatesRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public static class DescribeServerCertificatesRequestTag extends TeaModel {
-        public static DescribeServerCertificatesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeServerCertificatesRequestTag self = new DescribeServerCertificatesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

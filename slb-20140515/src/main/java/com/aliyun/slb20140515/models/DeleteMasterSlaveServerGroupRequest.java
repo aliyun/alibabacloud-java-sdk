@@ -19,12 +19,6 @@ public class DeleteMasterSlaveServerGroupRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
 
@@ -71,22 +65,6 @@ public class DeleteMasterSlaveServerGroupRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DeleteMasterSlaveServerGroupRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DeleteMasterSlaveServerGroupRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public DeleteMasterSlaveServerGroupRequest setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {

@@ -32,12 +32,6 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeHealthStatusResponseBodyBackendServersBackendServer extends TeaModel {
-        @NameInMap("Type")
-        public String type;
-
-        @NameInMap("EniHost")
-        public String eniHost;
-
         @NameInMap("Protocol")
         public String protocol;
 
@@ -59,22 +53,6 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         public static DescribeHealthStatusResponseBodyBackendServersBackendServer build(java.util.Map<String, ?> map) throws Exception {
             DescribeHealthStatusResponseBodyBackendServersBackendServer self = new DescribeHealthStatusResponseBodyBackendServersBackendServer();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeHealthStatusResponseBodyBackendServersBackendServer setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-        public DescribeHealthStatusResponseBodyBackendServersBackendServer setEniHost(String eniHost) {
-            this.eniHost = eniHost;
-            return this;
-        }
-        public String getEniHost() {
-            return this.eniHost;
         }
 
         public DescribeHealthStatusResponseBodyBackendServersBackendServer setProtocol(String protocol) {

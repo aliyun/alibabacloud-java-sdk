@@ -61,29 +61,17 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     @NameInMap("HealthCheckHttpCode")
     public String healthCheckHttpCode;
 
-    @NameInMap("HealthCheckMethod")
-    public String healthCheckMethod;
-
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
-    @NameInMap("MaxConnection")
-    public Integer maxConnection;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
-
-    @NameInMap("access_key_id")
-    public String accessKeyId;
 
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
-
-    @NameInMap("Tags")
-    public String tags;
 
     @NameInMap("AclId")
     public String aclId;
@@ -94,9 +82,6 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     @NameInMap("AclStatus")
     public String aclStatus;
 
-    @NameInMap("VpcIds")
-    public String vpcIds;
-
     @NameInMap("Description")
     public String description;
 
@@ -105,9 +90,6 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
 
     @NameInMap("ConnectionDrainTimeout")
     public Integer connectionDrainTimeout;
-
-    @NameInMap("PortRange")
-    public java.util.List<CreateLoadBalancerTCPListenerRequestPortRange> portRange;
 
     public static CreateLoadBalancerTCPListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerTCPListenerRequest self = new CreateLoadBalancerTCPListenerRequest();
@@ -266,14 +248,6 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
         return this.healthCheckHttpCode;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setHealthCheckMethod(String healthCheckMethod) {
-        this.healthCheckMethod = healthCheckMethod;
-        return this;
-    }
-    public String getHealthCheckMethod() {
-        return this.healthCheckMethod;
-    }
-
     public CreateLoadBalancerTCPListenerRequest setHealthCheckType(String healthCheckType) {
         this.healthCheckType = healthCheckType;
         return this;
@@ -282,28 +256,12 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
         return this.healthCheckType;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setMaxConnection(Integer maxConnection) {
-        this.maxConnection = maxConnection;
-        return this;
-    }
-    public Integer getMaxConnection() {
-        return this.maxConnection;
-    }
-
     public CreateLoadBalancerTCPListenerRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public CreateLoadBalancerTCPListenerRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
     public CreateLoadBalancerTCPListenerRequest setVServerGroupId(String VServerGroupId) {
@@ -320,14 +278,6 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     }
     public String getMasterSlaveServerGroupId() {
         return this.masterSlaveServerGroupId;
-    }
-
-    public CreateLoadBalancerTCPListenerRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public CreateLoadBalancerTCPListenerRequest setAclId(String aclId) {
@@ -354,14 +304,6 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
         return this.aclStatus;
     }
 
-    public CreateLoadBalancerTCPListenerRequest setVpcIds(String vpcIds) {
-        this.vpcIds = vpcIds;
-        return this;
-    }
-    public String getVpcIds() {
-        return this.vpcIds;
-    }
-
     public CreateLoadBalancerTCPListenerRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -384,22 +326,6 @@ public class CreateLoadBalancerTCPListenerRequest extends TeaModel {
     }
     public Integer getConnectionDrainTimeout() {
         return this.connectionDrainTimeout;
-    }
-
-    public CreateLoadBalancerTCPListenerRequest setPortRange(java.util.List<CreateLoadBalancerTCPListenerRequestPortRange> portRange) {
-        this.portRange = portRange;
-        return this;
-    }
-    public java.util.List<CreateLoadBalancerTCPListenerRequestPortRange> getPortRange() {
-        return this.portRange;
-    }
-
-    public static class CreateLoadBalancerTCPListenerRequestPortRange extends TeaModel {
-        public static CreateLoadBalancerTCPListenerRequestPortRange build(java.util.Map<String, ?> map) throws Exception {
-            CreateLoadBalancerTCPListenerRequestPortRange self = new CreateLoadBalancerTCPListenerRequestPortRange();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

@@ -32,23 +32,15 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener extends TeaModel {
-        @NameInMap("Protocol")
-        public String protocol;
-
         @NameInMap("Port")
         public Integer port;
+
+        @NameInMap("Protocol")
+        public String protocol;
 
         public static DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener build(java.util.Map<String, ?> map) throws Exception {
             DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener self = new DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener setProtocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-        public String getProtocol() {
-            return this.protocol;
         }
 
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener setPort(Integer port) {
@@ -57,6 +49,14 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsListenersListener setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }
@@ -81,11 +81,11 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule extends TeaModel {
-        @NameInMap("Domain")
-        public String domain;
-
         @NameInMap("Url")
         public String url;
+
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("RuleName")
         public String ruleName;
@@ -98,20 +98,20 @@ public class DescribeVServerGroupsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setUrl(String url) {
             this.url = url;
             return this;
         }
         public String getUrl() {
             return this.url;
+        }
+
+        public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeVServerGroupsResponseBodyVServerGroupsVServerGroupAssociatedObjectsRulesRule setRuleName(String ruleName) {

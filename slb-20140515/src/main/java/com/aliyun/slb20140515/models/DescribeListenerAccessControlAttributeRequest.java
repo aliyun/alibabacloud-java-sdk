@@ -28,12 +28,6 @@ public class DescribeListenerAccessControlAttributeRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     public static DescribeListenerAccessControlAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeListenerAccessControlAttributeRequest self = new DescribeListenerAccessControlAttributeRequest();
         return TeaModel.build(map, self);
@@ -101,22 +95,6 @@ public class DescribeListenerAccessControlAttributeRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeListenerAccessControlAttributeRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DescribeListenerAccessControlAttributeRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
 }

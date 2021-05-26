@@ -16,9 +16,6 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -69,14 +66,6 @@ public class UntagResourcesRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public UntagResourcesRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
     public UntagResourcesRequest setRegionId(String regionId) {

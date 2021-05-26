@@ -4,14 +4,23 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerResponseBody extends TeaModel {
-    @NameInMap("LoadBalancerName")
-    public String loadBalancerName;
-
     @NameInMap("VpcId")
     public String vpcId;
 
+    @NameInMap("AddressIPVersion")
+    public String addressIPVersion;
+
+    @NameInMap("VSwitchId")
+    public String vSwitchId;
+
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("LoadBalancerName")
+    public String loadBalancerName;
+
+    @NameInMap("LoadBalancerId")
+    public String loadBalancerId;
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -22,29 +31,12 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     @NameInMap("NetworkType")
     public String networkType;
 
-    @NameInMap("AddressIPVersion")
-    public String addressIPVersion;
-
-    @NameInMap("VSwitchId")
-    public String vSwitchId;
-
-    @NameInMap("LoadBalancerId")
-    public String loadBalancerId;
-
     @NameInMap("OrderId")
     public Long orderId;
 
     public static CreateLoadBalancerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerResponseBody self = new CreateLoadBalancerResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateLoadBalancerResponseBody setLoadBalancerName(String loadBalancerName) {
-        this.loadBalancerName = loadBalancerName;
-        return this;
-    }
-    public String getLoadBalancerName() {
-        return this.loadBalancerName;
     }
 
     public CreateLoadBalancerResponseBody setVpcId(String vpcId) {
@@ -55,12 +47,44 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
         return this.vpcId;
     }
 
+    public CreateLoadBalancerResponseBody setAddressIPVersion(String addressIPVersion) {
+        this.addressIPVersion = addressIPVersion;
+        return this;
+    }
+    public String getAddressIPVersion() {
+        return this.addressIPVersion;
+    }
+
+    public CreateLoadBalancerResponseBody setVSwitchId(String vSwitchId) {
+        this.vSwitchId = vSwitchId;
+        return this;
+    }
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
     public CreateLoadBalancerResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateLoadBalancerResponseBody setLoadBalancerName(String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+        return this;
+    }
+    public String getLoadBalancerName() {
+        return this.loadBalancerName;
+    }
+
+    public CreateLoadBalancerResponseBody setLoadBalancerId(String loadBalancerId) {
+        this.loadBalancerId = loadBalancerId;
+        return this;
+    }
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
     }
 
     public CreateLoadBalancerResponseBody setResourceGroupId(String resourceGroupId) {
@@ -85,30 +109,6 @@ public class CreateLoadBalancerResponseBody extends TeaModel {
     }
     public String getNetworkType() {
         return this.networkType;
-    }
-
-    public CreateLoadBalancerResponseBody setAddressIPVersion(String addressIPVersion) {
-        this.addressIPVersion = addressIPVersion;
-        return this;
-    }
-    public String getAddressIPVersion() {
-        return this.addressIPVersion;
-    }
-
-    public CreateLoadBalancerResponseBody setVSwitchId(String vSwitchId) {
-        this.vSwitchId = vSwitchId;
-        return this;
-    }
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
-    public CreateLoadBalancerResponseBody setLoadBalancerId(String loadBalancerId) {
-        this.loadBalancerId = loadBalancerId;
-        return this;
-    }
-    public String getLoadBalancerId() {
-        return this.loadBalancerId;
     }
 
     public CreateLoadBalancerResponseBody setOrderId(Long orderId) {

@@ -28,9 +28,6 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     @NameInMap("Scheduler")
     public String scheduler;
 
-    @NameInMap("PersistenceTimeout")
-    public Integer persistenceTimeout;
-
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
@@ -52,17 +49,8 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     @NameInMap("healthCheckExp")
     public String healthCheckExp;
 
-    @NameInMap("MaxConnection")
-    public Integer maxConnection;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
-
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
 
     @NameInMap("VServerGroup")
     public String VServerGroup;
@@ -85,20 +73,8 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     @NameInMap("AclStatus")
     public String aclStatus;
 
-    @NameInMap("VpcIds")
-    public String vpcIds;
-
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("ConnectionDrain")
-    public String connectionDrain;
-
-    @NameInMap("ConnectionDrainTimeout")
-    public Integer connectionDrainTimeout;
-
-    @NameInMap("PortRange")
-    public java.util.List<SetLoadBalancerUDPListenerAttributeRequestPortRange> portRange;
 
     public static SetLoadBalancerUDPListenerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLoadBalancerUDPListenerAttributeRequest self = new SetLoadBalancerUDPListenerAttributeRequest();
@@ -169,14 +145,6 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
         return this.scheduler;
     }
 
-    public SetLoadBalancerUDPListenerAttributeRequest setPersistenceTimeout(Integer persistenceTimeout) {
-        this.persistenceTimeout = persistenceTimeout;
-        return this;
-    }
-    public Integer getPersistenceTimeout() {
-        return this.persistenceTimeout;
-    }
-
     public SetLoadBalancerUDPListenerAttributeRequest setHealthyThreshold(Integer healthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         return this;
@@ -233,36 +201,12 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
         return this.healthCheckExp;
     }
 
-    public SetLoadBalancerUDPListenerAttributeRequest setMaxConnection(Integer maxConnection) {
-        this.maxConnection = maxConnection;
-        return this;
-    }
-    public Integer getMaxConnection() {
-        return this.maxConnection;
-    }
-
     public SetLoadBalancerUDPListenerAttributeRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public SetLoadBalancerUDPListenerAttributeRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public SetLoadBalancerUDPListenerAttributeRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public SetLoadBalancerUDPListenerAttributeRequest setVServerGroup(String VServerGroup) {
@@ -321,52 +265,12 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
         return this.aclStatus;
     }
 
-    public SetLoadBalancerUDPListenerAttributeRequest setVpcIds(String vpcIds) {
-        this.vpcIds = vpcIds;
-        return this;
-    }
-    public String getVpcIds() {
-        return this.vpcIds;
-    }
-
     public SetLoadBalancerUDPListenerAttributeRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public SetLoadBalancerUDPListenerAttributeRequest setConnectionDrain(String connectionDrain) {
-        this.connectionDrain = connectionDrain;
-        return this;
-    }
-    public String getConnectionDrain() {
-        return this.connectionDrain;
-    }
-
-    public SetLoadBalancerUDPListenerAttributeRequest setConnectionDrainTimeout(Integer connectionDrainTimeout) {
-        this.connectionDrainTimeout = connectionDrainTimeout;
-        return this;
-    }
-    public Integer getConnectionDrainTimeout() {
-        return this.connectionDrainTimeout;
-    }
-
-    public SetLoadBalancerUDPListenerAttributeRequest setPortRange(java.util.List<SetLoadBalancerUDPListenerAttributeRequestPortRange> portRange) {
-        this.portRange = portRange;
-        return this;
-    }
-    public java.util.List<SetLoadBalancerUDPListenerAttributeRequestPortRange> getPortRange() {
-        return this.portRange;
-    }
-
-    public static class SetLoadBalancerUDPListenerAttributeRequestPortRange extends TeaModel {
-        public static SetLoadBalancerUDPListenerAttributeRequestPortRange build(java.util.Map<String, ?> map) throws Exception {
-            SetLoadBalancerUDPListenerAttributeRequestPortRange self = new SetLoadBalancerUDPListenerAttributeRequestPortRange();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

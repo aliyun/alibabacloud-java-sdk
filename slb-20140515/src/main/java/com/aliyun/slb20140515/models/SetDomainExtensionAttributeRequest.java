@@ -19,23 +19,11 @@ public class SetDomainExtensionAttributeRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
 
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
-
-    @NameInMap("CertificateId")
-    public java.util.List<String> certificateId;
-
-    @NameInMap("ServerCertificate")
-    public java.util.List<SetDomainExtensionAttributeRequestServerCertificate> serverCertificate;
 
     public static SetDomainExtensionAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         SetDomainExtensionAttributeRequest self = new SetDomainExtensionAttributeRequest();
@@ -82,22 +70,6 @@ public class SetDomainExtensionAttributeRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public SetDomainExtensionAttributeRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public SetDomainExtensionAttributeRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
-    }
-
     public SetDomainExtensionAttributeRequest setDomainExtensionId(String domainExtensionId) {
         this.domainExtensionId = domainExtensionId;
         return this;
@@ -112,30 +84,6 @@ public class SetDomainExtensionAttributeRequest extends TeaModel {
     }
     public String getServerCertificateId() {
         return this.serverCertificateId;
-    }
-
-    public SetDomainExtensionAttributeRequest setCertificateId(java.util.List<String> certificateId) {
-        this.certificateId = certificateId;
-        return this;
-    }
-    public java.util.List<String> getCertificateId() {
-        return this.certificateId;
-    }
-
-    public SetDomainExtensionAttributeRequest setServerCertificate(java.util.List<SetDomainExtensionAttributeRequestServerCertificate> serverCertificate) {
-        this.serverCertificate = serverCertificate;
-        return this;
-    }
-    public java.util.List<SetDomainExtensionAttributeRequestServerCertificate> getServerCertificate() {
-        return this.serverCertificate;
-    }
-
-    public static class SetDomainExtensionAttributeRequestServerCertificate extends TeaModel {
-        public static SetDomainExtensionAttributeRequestServerCertificate build(java.util.Map<String, ?> map) throws Exception {
-            SetDomainExtensionAttributeRequestServerCertificate self = new SetDomainExtensionAttributeRequestServerCertificate();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

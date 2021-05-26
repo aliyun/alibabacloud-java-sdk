@@ -22,12 +22,6 @@ public class DeleteServerCertificateRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     public static DeleteServerCertificateRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteServerCertificateRequest self = new DeleteServerCertificateRequest();
         return TeaModel.build(map, self);
@@ -79,22 +73,6 @@ public class DeleteServerCertificateRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DeleteServerCertificateRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DeleteServerCertificateRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
 }

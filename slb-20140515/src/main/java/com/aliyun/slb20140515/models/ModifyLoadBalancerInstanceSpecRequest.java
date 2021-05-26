@@ -22,12 +22,6 @@ public class ModifyLoadBalancerInstanceSpecRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
@@ -85,22 +79,6 @@ public class ModifyLoadBalancerInstanceSpecRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public ModifyLoadBalancerInstanceSpecRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public ModifyLoadBalancerInstanceSpecRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public ModifyLoadBalancerInstanceSpecRequest setLoadBalancerSpec(String loadBalancerSpec) {
