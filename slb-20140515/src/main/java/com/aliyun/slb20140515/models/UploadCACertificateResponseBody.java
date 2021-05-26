@@ -4,14 +4,29 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class UploadCACertificateResponseBody extends TeaModel {
-    @NameInMap("Fingerprint")
-    public String fingerprint;
+    @NameInMap("CreateTimeStamp")
+    public Long createTimeStamp;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ExpireTime")
+    public String expireTime;
+
+    @NameInMap("Fingerprint")
+    public String fingerprint;
+
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    @NameInMap("CommonName")
+    public String commonName;
+
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
+
+    @NameInMap("CACertificateName")
+    public String CACertificateName;
 
     @NameInMap("ExpireTimeStamp")
     public Long expireTimeStamp;
@@ -19,32 +34,17 @@ public class UploadCACertificateResponseBody extends TeaModel {
     @NameInMap("CACertificateId")
     public String CACertificateId;
 
-    @NameInMap("CreateTime")
-    public String createTime;
-
-    @NameInMap("CACertificateName")
-    public String CACertificateName;
-
-    @NameInMap("ExpireTime")
-    public String expireTime;
-
-    @NameInMap("CreateTimeStamp")
-    public Long createTimeStamp;
-
-    @NameInMap("CommonName")
-    public String commonName;
-
     public static UploadCACertificateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         UploadCACertificateResponseBody self = new UploadCACertificateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UploadCACertificateResponseBody setFingerprint(String fingerprint) {
-        this.fingerprint = fingerprint;
+    public UploadCACertificateResponseBody setCreateTimeStamp(Long createTimeStamp) {
+        this.createTimeStamp = createTimeStamp;
         return this;
     }
-    public String getFingerprint() {
-        return this.fingerprint;
+    public Long getCreateTimeStamp() {
+        return this.createTimeStamp;
     }
 
     public UploadCACertificateResponseBody setRequestId(String requestId) {
@@ -55,12 +55,52 @@ public class UploadCACertificateResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public UploadCACertificateResponseBody setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+    public String getExpireTime() {
+        return this.expireTime;
+    }
+
+    public UploadCACertificateResponseBody setFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+        return this;
+    }
+    public String getFingerprint() {
+        return this.fingerprint;
+    }
+
+    public UploadCACertificateResponseBody setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public UploadCACertificateResponseBody setCommonName(String commonName) {
+        this.commonName = commonName;
+        return this;
+    }
+    public String getCommonName() {
+        return this.commonName;
+    }
+
     public UploadCACertificateResponseBody setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public UploadCACertificateResponseBody setCACertificateName(String CACertificateName) {
+        this.CACertificateName = CACertificateName;
+        return this;
+    }
+    public String getCACertificateName() {
+        return this.CACertificateName;
     }
 
     public UploadCACertificateResponseBody setExpireTimeStamp(Long expireTimeStamp) {
@@ -77,46 +117,6 @@ public class UploadCACertificateResponseBody extends TeaModel {
     }
     public String getCACertificateId() {
         return this.CACertificateId;
-    }
-
-    public UploadCACertificateResponseBody setCreateTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    public UploadCACertificateResponseBody setCACertificateName(String CACertificateName) {
-        this.CACertificateName = CACertificateName;
-        return this;
-    }
-    public String getCACertificateName() {
-        return this.CACertificateName;
-    }
-
-    public UploadCACertificateResponseBody setExpireTime(String expireTime) {
-        this.expireTime = expireTime;
-        return this;
-    }
-    public String getExpireTime() {
-        return this.expireTime;
-    }
-
-    public UploadCACertificateResponseBody setCreateTimeStamp(Long createTimeStamp) {
-        this.createTimeStamp = createTimeStamp;
-        return this;
-    }
-    public Long getCreateTimeStamp() {
-        return this.createTimeStamp;
-    }
-
-    public UploadCACertificateResponseBody setCommonName(String commonName) {
-        this.commonName = commonName;
-        return this;
-    }
-    public String getCommonName() {
-        return this.commonName;
     }
 
 }

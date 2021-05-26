@@ -32,11 +32,11 @@ public class DescribeRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeRulesResponseBodyRulesRule extends TeaModel {
-        @NameInMap("VServerGroupId")
-        public String VServerGroupId;
-
         @NameInMap("HealthCheckHttpCode")
         public String healthCheckHttpCode;
+
+        @NameInMap("VServerGroupId")
+        public String VServerGroupId;
 
         @NameInMap("Domain")
         public String domain;
@@ -44,29 +44,29 @@ public class DescribeRulesResponseBody extends TeaModel {
         @NameInMap("Cookie")
         public String cookie;
 
-        @NameInMap("Url")
-        public String url;
-
         @NameInMap("HealthCheckInterval")
         public Integer healthCheckInterval;
+
+        @NameInMap("Url")
+        public String url;
 
         @NameInMap("HealthCheckURI")
         public String healthCheckURI;
 
-        @NameInMap("RuleId")
-        public String ruleId;
+        @NameInMap("StickySessionType")
+        public String stickySessionType;
 
         @NameInMap("RuleName")
         public String ruleName;
 
-        @NameInMap("StickySessionType")
-        public String stickySessionType;
-
-        @NameInMap("Scheduler")
-        public String scheduler;
+        @NameInMap("RuleId")
+        public String ruleId;
 
         @NameInMap("HealthCheckConnectPort")
         public Integer healthCheckConnectPort;
+
+        @NameInMap("Scheduler")
+        public String scheduler;
 
         @NameInMap("HealthCheckTimeout")
         public Integer healthCheckTimeout;
@@ -97,20 +97,20 @@ public class DescribeRulesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeRulesResponseBodyRulesRule setVServerGroupId(String VServerGroupId) {
-            this.VServerGroupId = VServerGroupId;
-            return this;
-        }
-        public String getVServerGroupId() {
-            return this.VServerGroupId;
-        }
-
         public DescribeRulesResponseBodyRulesRule setHealthCheckHttpCode(String healthCheckHttpCode) {
             this.healthCheckHttpCode = healthCheckHttpCode;
             return this;
         }
         public String getHealthCheckHttpCode() {
             return this.healthCheckHttpCode;
+        }
+
+        public DescribeRulesResponseBodyRulesRule setVServerGroupId(String VServerGroupId) {
+            this.VServerGroupId = VServerGroupId;
+            return this;
+        }
+        public String getVServerGroupId() {
+            return this.VServerGroupId;
         }
 
         public DescribeRulesResponseBodyRulesRule setDomain(String domain) {
@@ -129,20 +129,20 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.cookie;
         }
 
-        public DescribeRulesResponseBodyRulesRule setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
-        }
-
         public DescribeRulesResponseBodyRulesRule setHealthCheckInterval(Integer healthCheckInterval) {
             this.healthCheckInterval = healthCheckInterval;
             return this;
         }
         public Integer getHealthCheckInterval() {
             return this.healthCheckInterval;
+        }
+
+        public DescribeRulesResponseBodyRulesRule setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
         public DescribeRulesResponseBodyRulesRule setHealthCheckURI(String healthCheckURI) {
@@ -153,12 +153,12 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.healthCheckURI;
         }
 
-        public DescribeRulesResponseBodyRulesRule setRuleId(String ruleId) {
-            this.ruleId = ruleId;
+        public DescribeRulesResponseBodyRulesRule setStickySessionType(String stickySessionType) {
+            this.stickySessionType = stickySessionType;
             return this;
         }
-        public String getRuleId() {
-            return this.ruleId;
+        public String getStickySessionType() {
+            return this.stickySessionType;
         }
 
         public DescribeRulesResponseBodyRulesRule setRuleName(String ruleName) {
@@ -169,20 +169,12 @@ public class DescribeRulesResponseBody extends TeaModel {
             return this.ruleName;
         }
 
-        public DescribeRulesResponseBodyRulesRule setStickySessionType(String stickySessionType) {
-            this.stickySessionType = stickySessionType;
+        public DescribeRulesResponseBodyRulesRule setRuleId(String ruleId) {
+            this.ruleId = ruleId;
             return this;
         }
-        public String getStickySessionType() {
-            return this.stickySessionType;
-        }
-
-        public DescribeRulesResponseBodyRulesRule setScheduler(String scheduler) {
-            this.scheduler = scheduler;
-            return this;
-        }
-        public String getScheduler() {
-            return this.scheduler;
+        public String getRuleId() {
+            return this.ruleId;
         }
 
         public DescribeRulesResponseBodyRulesRule setHealthCheckConnectPort(Integer healthCheckConnectPort) {
@@ -191,6 +183,14 @@ public class DescribeRulesResponseBody extends TeaModel {
         }
         public Integer getHealthCheckConnectPort() {
             return this.healthCheckConnectPort;
+        }
+
+        public DescribeRulesResponseBodyRulesRule setScheduler(String scheduler) {
+            this.scheduler = scheduler;
+            return this;
+        }
+        public String getScheduler() {
+            return this.scheduler;
         }
 
         public DescribeRulesResponseBodyRulesRule setHealthCheckTimeout(Integer healthCheckTimeout) {

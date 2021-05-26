@@ -4,17 +4,17 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancersResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("LoadBalancers")
     public DescribeLoadBalancersResponseBodyLoadBalancers loadBalancers;
@@ -22,14 +22,6 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     public static DescribeLoadBalancersResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancersResponseBody self = new DescribeLoadBalancersResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeLoadBalancersResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeLoadBalancersResponseBody setRequestId(String requestId) {
@@ -40,6 +32,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeLoadBalancersResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeLoadBalancersResponseBody setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -48,12 +48,12 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeLoadBalancersResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeLoadBalancersResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeLoadBalancersResponseBody setLoadBalancers(DescribeLoadBalancersResponseBodyLoadBalancers loadBalancers) {
@@ -86,6 +86,30 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         @NameInMap("NetworkType")
         public String networkType;
 
+        @NameInMap("AddressIPVersion")
+        public String addressIPVersion;
+
+        @NameInMap("LoadBalancerName")
+        public String loadBalancerName;
+
+        @NameInMap("Bandwidth")
+        public Integer bandwidth;
+
+        @NameInMap("Address")
+        public String address;
+
+        @NameInMap("SlaveZoneId")
+        public String slaveZoneId;
+
+        @NameInMap("MasterZoneId")
+        public String masterZoneId;
+
+        @NameInMap("InternetChargeTypeAlias")
+        public String internetChargeTypeAlias;
+
+        @NameInMap("LoadBalancerSpec")
+        public String loadBalancerSpec;
+
         @NameInMap("RegionId")
         public String regionId;
 
@@ -95,17 +119,11 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         @NameInMap("ModificationProtectionStatus")
         public String modificationProtectionStatus;
 
-        @NameInMap("AddressIPVersion")
-        public String addressIPVersion;
-
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         @NameInMap("LoadBalancerStatus")
         public String loadBalancerStatus;
-
-        @NameInMap("LoadBalancerName")
-        public String loadBalancerName;
 
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
@@ -113,17 +131,11 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
-        @NameInMap("Address")
-        public String address;
-
-        @NameInMap("SlaveZoneId")
-        public String slaveZoneId;
+        @NameInMap("DeleteProtection")
+        public String deleteProtection;
 
         @NameInMap("RegionIdAlias")
         public String regionIdAlias;
-
-        @NameInMap("MasterZoneId")
-        public String masterZoneId;
 
         public static DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer build(java.util.Map<String, ?> map) throws Exception {
             DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer self = new DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer();
@@ -186,6 +198,70 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.networkType;
         }
 
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setAddressIPVersion(String addressIPVersion) {
+            this.addressIPVersion = addressIPVersion;
+            return this;
+        }
+        public String getAddressIPVersion() {
+            return this.addressIPVersion;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setLoadBalancerName(String loadBalancerName) {
+            this.loadBalancerName = loadBalancerName;
+            return this;
+        }
+        public String getLoadBalancerName() {
+            return this.loadBalancerName;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setBandwidth(Integer bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Integer getBandwidth() {
+            return this.bandwidth;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setSlaveZoneId(String slaveZoneId) {
+            this.slaveZoneId = slaveZoneId;
+            return this;
+        }
+        public String getSlaveZoneId() {
+            return this.slaveZoneId;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setMasterZoneId(String masterZoneId) {
+            this.masterZoneId = masterZoneId;
+            return this;
+        }
+        public String getMasterZoneId() {
+            return this.masterZoneId;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setInternetChargeTypeAlias(String internetChargeTypeAlias) {
+            this.internetChargeTypeAlias = internetChargeTypeAlias;
+            return this;
+        }
+        public String getInternetChargeTypeAlias() {
+            return this.internetChargeTypeAlias;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setLoadBalancerSpec(String loadBalancerSpec) {
+            this.loadBalancerSpec = loadBalancerSpec;
+            return this;
+        }
+        public String getLoadBalancerSpec() {
+            return this.loadBalancerSpec;
+        }
+
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -210,14 +286,6 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.modificationProtectionStatus;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setAddressIPVersion(String addressIPVersion) {
-            this.addressIPVersion = addressIPVersion;
-            return this;
-        }
-        public String getAddressIPVersion() {
-            return this.addressIPVersion;
-        }
-
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
@@ -232,14 +300,6 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
         public String getLoadBalancerStatus() {
             return this.loadBalancerStatus;
-        }
-
-        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setLoadBalancerName(String loadBalancerName) {
-            this.loadBalancerName = loadBalancerName;
-            return this;
-        }
-        public String getLoadBalancerName() {
-            return this.loadBalancerName;
         }
 
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setResourceGroupId(String resourceGroupId) {
@@ -258,20 +318,12 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.internetChargeType;
         }
 
-        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setAddress(String address) {
-            this.address = address;
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setDeleteProtection(String deleteProtection) {
+            this.deleteProtection = deleteProtection;
             return this;
         }
-        public String getAddress() {
-            return this.address;
-        }
-
-        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setSlaveZoneId(String slaveZoneId) {
-            this.slaveZoneId = slaveZoneId;
-            return this;
-        }
-        public String getSlaveZoneId() {
-            return this.slaveZoneId;
+        public String getDeleteProtection() {
+            return this.deleteProtection;
         }
 
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setRegionIdAlias(String regionIdAlias) {
@@ -280,14 +332,6 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
         public String getRegionIdAlias() {
             return this.regionIdAlias;
-        }
-
-        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setMasterZoneId(String masterZoneId) {
-            this.masterZoneId = masterZoneId;
-            return this;
-        }
-        public String getMasterZoneId() {
-            return this.masterZoneId;
         }
 
     }

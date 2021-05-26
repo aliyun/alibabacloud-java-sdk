@@ -7,11 +7,11 @@ public class CreateDomainExtensionResponseBody extends TeaModel {
     @NameInMap("ListenerPort")
     public Integer listenerPort;
 
-    @NameInMap("DomainExtensionId")
-    public String domainExtensionId;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("DomainExtensionId")
+    public String domainExtensionId;
 
     public static CreateDomainExtensionResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateDomainExtensionResponseBody self = new CreateDomainExtensionResponseBody();
@@ -26,20 +26,20 @@ public class CreateDomainExtensionResponseBody extends TeaModel {
         return this.listenerPort;
     }
 
-    public CreateDomainExtensionResponseBody setDomainExtensionId(String domainExtensionId) {
-        this.domainExtensionId = domainExtensionId;
-        return this;
-    }
-    public String getDomainExtensionId() {
-        return this.domainExtensionId;
-    }
-
     public CreateDomainExtensionResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public CreateDomainExtensionResponseBody setDomainExtensionId(String domainExtensionId) {
+        this.domainExtensionId = domainExtensionId;
+        return this;
+    }
+    public String getDomainExtensionId() {
+        return this.domainExtensionId;
     }
 
 }

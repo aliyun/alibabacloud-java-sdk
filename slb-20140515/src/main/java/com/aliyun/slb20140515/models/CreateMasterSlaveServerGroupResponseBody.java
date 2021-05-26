@@ -4,11 +4,11 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("MasterSlaveBackendServers")
     public CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServers masterSlaveBackendServers;
@@ -18,20 +18,20 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateMasterSlaveServerGroupResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public CreateMasterSlaveServerGroupResponseBody setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
         this.masterSlaveServerGroupId = masterSlaveServerGroupId;
         return this;
     }
     public String getMasterSlaveServerGroupId() {
         return this.masterSlaveServerGroupId;
+    }
+
+    public CreateMasterSlaveServerGroupResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public CreateMasterSlaveServerGroupResponseBody setMasterSlaveBackendServers(CreateMasterSlaveServerGroupResponseBodyMasterSlaveBackendServers masterSlaveBackendServers) {

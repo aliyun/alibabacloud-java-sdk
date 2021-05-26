@@ -4,9 +4,6 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
 
@@ -16,20 +13,15 @@ public class DescribeTagsResponseBody extends TeaModel {
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    @NameInMap("TotalCount")
+    public Integer totalCount;
+
     @NameInMap("TagSets")
     public DescribeTagsResponseBodyTagSets tagSets;
 
     public static DescribeTagsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeTagsResponseBody self = new DescribeTagsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeTagsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Integer getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeTagsResponseBody setRequestId(String requestId) {
@@ -56,6 +48,14 @@ public class DescribeTagsResponseBody extends TeaModel {
         return this.pageNumber;
     }
 
+    public DescribeTagsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public DescribeTagsResponseBody setTagSets(DescribeTagsResponseBodyTagSets tagSets) {
         this.tagSets = tagSets;
         return this;
@@ -65,11 +65,11 @@ public class DescribeTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsResponseBodyTagSetsTagSet extends TeaModel {
-        @NameInMap("InstanceCount")
-        public Integer instanceCount;
-
         @NameInMap("TagValue")
         public String tagValue;
+
+        @NameInMap("InstanceCount")
+        public Integer instanceCount;
 
         @NameInMap("TagKey")
         public String tagKey;
@@ -79,20 +79,20 @@ public class DescribeTagsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeTagsResponseBodyTagSetsTagSet setInstanceCount(Integer instanceCount) {
-            this.instanceCount = instanceCount;
-            return this;
-        }
-        public Integer getInstanceCount() {
-            return this.instanceCount;
-        }
-
         public DescribeTagsResponseBodyTagSetsTagSet setTagValue(String tagValue) {
             this.tagValue = tagValue;
             return this;
         }
         public String getTagValue() {
             return this.tagValue;
+        }
+
+        public DescribeTagsResponseBodyTagSetsTagSet setInstanceCount(Integer instanceCount) {
+            this.instanceCount = instanceCount;
+            return this;
+        }
+        public Integer getInstanceCount() {
+            return this.instanceCount;
         }
 
         public DescribeTagsResponseBodyTagSetsTagSet setTagKey(String tagKey) {

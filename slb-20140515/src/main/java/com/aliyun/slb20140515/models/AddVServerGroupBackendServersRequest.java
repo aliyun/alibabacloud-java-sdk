@@ -19,12 +19,6 @@ public class AddVServerGroupBackendServersRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
@@ -74,22 +68,6 @@ public class AddVServerGroupBackendServersRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public AddVServerGroupBackendServersRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public AddVServerGroupBackendServersRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public AddVServerGroupBackendServersRequest setVServerGroupId(String VServerGroupId) {

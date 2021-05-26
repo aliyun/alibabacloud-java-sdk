@@ -32,23 +32,15 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone extends TeaModel {
-        @NameInMap("LocalName")
-        public String localName;
-
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("LocalName")
+        public String localName;
 
         public static DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone build(java.util.Map<String, ?> map) throws Exception {
             DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone self = new DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
         }
 
         public DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone setZoneId(String zoneId) {
@@ -57,6 +49,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
         }
 
     }
@@ -81,11 +81,11 @@ public class DescribeZonesResponseBody extends TeaModel {
     }
 
     public static class DescribeZonesResponseBodyZonesZone extends TeaModel {
-        @NameInMap("LocalName")
-        public String localName;
-
         @NameInMap("ZoneId")
         public String zoneId;
+
+        @NameInMap("LocalName")
+        public String localName;
 
         @NameInMap("SlaveZones")
         public DescribeZonesResponseBodyZonesZoneSlaveZones slaveZones;
@@ -95,20 +95,20 @@ public class DescribeZonesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeZonesResponseBodyZonesZone setLocalName(String localName) {
-            this.localName = localName;
-            return this;
-        }
-        public String getLocalName() {
-            return this.localName;
-        }
-
         public DescribeZonesResponseBodyZonesZone setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public DescribeZonesResponseBodyZonesZone setLocalName(String localName) {
+            this.localName = localName;
+            return this;
+        }
+        public String getLocalName() {
+            return this.localName;
         }
 
         public DescribeZonesResponseBodyZonesZone setSlaveZones(DescribeZonesResponseBodyZonesZoneSlaveZones slaveZones) {

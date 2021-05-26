@@ -4,20 +4,44 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaModel {
-    @NameInMap("UnhealthyThreshold")
-    public Integer unhealthyThreshold;
+    @NameInMap("AclType")
+    public String aclType;
 
-    @NameInMap("HealthCheckURI")
-    public String healthCheckURI;
+    @NameInMap("XForwardedFor_ClientCertClientVerify")
+    public String XForwardedFor_ClientCertClientVerify;
 
-    @NameInMap("HealthCheck")
-    public String healthCheck;
+    @NameInMap("CACertificateId")
+    public String CACertificateId;
 
-    @NameInMap("DomainExtensions")
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions domainExtensions;
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("HealthCheckConnectPort")
+    public Integer healthCheckConnectPort;
 
     @NameInMap("BackendServerPort")
     public Integer backendServerPort;
+
+    @NameInMap("CookieTimeout")
+    public Integer cookieTimeout;
+
+    @NameInMap("HealthCheckDomain")
+    public String healthCheckDomain;
+
+    @NameInMap("XForwardedFor")
+    public String XForwardedFor;
+
+    @NameInMap("XForwardedFor_ClientCertFingerprint")
+    public String XForwardedFor_ClientCertFingerprint;
+
+    @NameInMap("IdleTimeout")
+    public Integer idleTimeout;
+
+    @NameInMap("ListenerPort")
+    public Integer listenerPort;
+
+    @NameInMap("HealthCheckURI")
+    public String healthCheckURI;
 
     @NameInMap("XForwardedFor_SLBPORT")
     public String XForwardedFor_SLBPORT;
@@ -25,26 +49,38 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     @NameInMap("StickySessionType")
     public String stickySessionType;
 
-    @NameInMap("Status")
-    public String status;
+    @NameInMap("Scheduler")
+    public String scheduler;
 
-    @NameInMap("Cookie")
-    public String cookie;
-
-    @NameInMap("RequestTimeout")
-    public Integer requestTimeout;
+    @NameInMap("XForwardedFor_proto")
+    public String XForwardedFor_proto;
 
     @NameInMap("TLSCipherPolicy")
     public String TLSCipherPolicy;
 
-    @NameInMap("HealthCheckInterval")
-    public Integer healthCheckInterval;
+    @NameInMap("Status")
+    public String status;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("VServerGroupId")
+    public String VServerGroupId;
 
-    @NameInMap("CACertificateId")
-    public String CACertificateId;
+    @NameInMap("XForwardedFor_ClientSrcPort")
+    public String XForwardedFor_ClientSrcPort;
+
+    @NameInMap("Cookie")
+    public String cookie;
+
+    @NameInMap("Gzip")
+    public String gzip;
+
+    @NameInMap("EnableHttp2")
+    public String enableHttp2;
+
+    @NameInMap("Bandwidth")
+    public Integer bandwidth;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("HealthCheckTimeout")
     public Integer healthCheckTimeout;
@@ -52,125 +88,97 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     @NameInMap("AclStatus")
     public String aclStatus;
 
-    @NameInMap("HealthyThreshold")
-    public Integer healthyThreshold;
-
-    @NameInMap("HealthCheckDomain")
-    public String healthCheckDomain;
-
-    @NameInMap("AclType")
-    public String aclType;
-
-    @NameInMap("XForwardedFor_proto")
-    public String XForwardedFor_proto;
-
-    @NameInMap("EnableHttp2")
-    public String enableHttp2;
-
-    @NameInMap("CookieTimeout")
-    public Integer cookieTimeout;
-
-    @NameInMap("VServerGroupId")
-    public String VServerGroupId;
-
-    @NameInMap("Description")
-    public String description;
-
-    @NameInMap("Scheduler")
-    public String scheduler;
-
-    @NameInMap("IdleTimeout")
-    public Integer idleTimeout;
+    @NameInMap("UnhealthyThreshold")
+    public Integer unhealthyThreshold;
 
     @NameInMap("XForwardedFor_SLBID")
     public String XForwardedFor_SLBID;
 
-    @NameInMap("HealthCheckConnectPort")
-    public Integer healthCheckConnectPort;
-
-    @NameInMap("Bandwidth")
-    public Integer bandwidth;
+    @NameInMap("XForwardedFor_ClientCertSubjectDN")
+    public String XForwardedFor_ClientCertSubjectDN;
 
     @NameInMap("SecurityStatus")
     public String securityStatus;
 
-    @NameInMap("Gzip")
-    public String gzip;
+    @NameInMap("HealthCheckHttpCode")
+    public String healthCheckHttpCode;
+
+    @NameInMap("RequestTimeout")
+    public Integer requestTimeout;
+
+    @NameInMap("HealthCheckInterval")
+    public Integer healthCheckInterval;
 
     @NameInMap("ServerCertificateId")
     public String serverCertificateId;
 
-    @NameInMap("XForwardedFor_SLBIP")
-    public String XForwardedFor_SLBIP;
-
-    @NameInMap("HealthCheckHttpCode")
-    public String healthCheckHttpCode;
-
-    @NameInMap("ListenerPort")
-    public Integer listenerPort;
-
-    @NameInMap("XForwardedFor_ClientCertSubjectDN")
-    public String XForwardedFor_ClientCertSubjectDN;
-
     @NameInMap("AclId")
     public String aclId;
-
-    @NameInMap("Rules")
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules rules;
 
     @NameInMap("XForwardedFor_ClientCertIssuerDN")
     public String XForwardedFor_ClientCertIssuerDN;
 
+    @NameInMap("HealthyThreshold")
+    public Integer healthyThreshold;
+
+    @NameInMap("XForwardedFor_SLBIP")
+    public String XForwardedFor_SLBIP;
+
     @NameInMap("StickySession")
     public String stickySession;
 
-    @NameInMap("XForwardedFor")
-    public String XForwardedFor;
+    @NameInMap("HealthCheck")
+    public String healthCheck;
 
-    @NameInMap("XForwardedFor_ClientSrcPort")
-    public String XForwardedFor_ClientSrcPort;
+    @NameInMap("Rules")
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules rules;
 
-    @NameInMap("XForwardedFor_ClientCertClientVerify")
-    public String XForwardedFor_ClientCertClientVerify;
-
-    @NameInMap("XForwardedFor_ClientCertFingerprint")
-    public String XForwardedFor_ClientCertFingerprint;
+    @NameInMap("DomainExtensions")
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions domainExtensions;
 
     public static DescribeLoadBalancerHTTPSListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerHTTPSListenerAttributeResponseBody self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setUnhealthyThreshold(Integer unhealthyThreshold) {
-        this.unhealthyThreshold = unhealthyThreshold;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setAclType(String aclType) {
+        this.aclType = aclType;
         return this;
     }
-    public Integer getUnhealthyThreshold() {
-        return this.unhealthyThreshold;
+    public String getAclType() {
+        return this.aclType;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckURI(String healthCheckURI) {
-        this.healthCheckURI = healthCheckURI;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_ClientCertClientVerify(String XForwardedFor_ClientCertClientVerify) {
+        this.XForwardedFor_ClientCertClientVerify = XForwardedFor_ClientCertClientVerify;
         return this;
     }
-    public String getHealthCheckURI() {
-        return this.healthCheckURI;
+    public String getXForwardedFor_ClientCertClientVerify() {
+        return this.XForwardedFor_ClientCertClientVerify;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheck(String healthCheck) {
-        this.healthCheck = healthCheck;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setCACertificateId(String CACertificateId) {
+        this.CACertificateId = CACertificateId;
         return this;
     }
-    public String getHealthCheck() {
-        return this.healthCheck;
+    public String getCACertificateId() {
+        return this.CACertificateId;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setDomainExtensions(DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions domainExtensions) {
-        this.domainExtensions = domainExtensions;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions getDomainExtensions() {
-        return this.domainExtensions;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
+        this.healthCheckConnectPort = healthCheckConnectPort;
+        return this;
+    }
+    public Integer getHealthCheckConnectPort() {
+        return this.healthCheckConnectPort;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setBackendServerPort(Integer backendServerPort) {
@@ -179,6 +187,62 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     }
     public Integer getBackendServerPort() {
         return this.backendServerPort;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setCookieTimeout(Integer cookieTimeout) {
+        this.cookieTimeout = cookieTimeout;
+        return this;
+    }
+    public Integer getCookieTimeout() {
+        return this.cookieTimeout;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckDomain(String healthCheckDomain) {
+        this.healthCheckDomain = healthCheckDomain;
+        return this;
+    }
+    public String getHealthCheckDomain() {
+        return this.healthCheckDomain;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor(String XForwardedFor) {
+        this.XForwardedFor = XForwardedFor;
+        return this;
+    }
+    public String getXForwardedFor() {
+        return this.XForwardedFor;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_ClientCertFingerprint(String XForwardedFor_ClientCertFingerprint) {
+        this.XForwardedFor_ClientCertFingerprint = XForwardedFor_ClientCertFingerprint;
+        return this;
+    }
+    public String getXForwardedFor_ClientCertFingerprint() {
+        return this.XForwardedFor_ClientCertFingerprint;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setIdleTimeout(Integer idleTimeout) {
+        this.idleTimeout = idleTimeout;
+        return this;
+    }
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setListenerPort(Integer listenerPort) {
+        this.listenerPort = listenerPort;
+        return this;
+    }
+    public Integer getListenerPort() {
+        return this.listenerPort;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckURI(String healthCheckURI) {
+        this.healthCheckURI = healthCheckURI;
+        return this;
+    }
+    public String getHealthCheckURI() {
+        return this.healthCheckURI;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_SLBPORT(String XForwardedFor_SLBPORT) {
@@ -197,28 +261,20 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.stickySessionType;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setStatus(String status) {
-        this.status = status;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setScheduler(String scheduler) {
+        this.scheduler = scheduler;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getScheduler() {
+        return this.scheduler;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setCookie(String cookie) {
-        this.cookie = cookie;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_proto(String XForwardedFor_proto) {
+        this.XForwardedFor_proto = XForwardedFor_proto;
         return this;
     }
-    public String getCookie() {
-        return this.cookie;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setRequestTimeout(Integer requestTimeout) {
-        this.requestTimeout = requestTimeout;
-        return this;
-    }
-    public Integer getRequestTimeout() {
-        return this.requestTimeout;
+    public String getXForwardedFor_proto() {
+        return this.XForwardedFor_proto;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setTLSCipherPolicy(String TLSCipherPolicy) {
@@ -229,28 +285,68 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.TLSCipherPolicy;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckInterval(Integer healthCheckInterval) {
-        this.healthCheckInterval = healthCheckInterval;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setStatus(String status) {
+        this.status = status;
         return this;
     }
-    public Integer getHealthCheckInterval() {
-        return this.healthCheckInterval;
+    public String getStatus() {
+        return this.status;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setVServerGroupId(String VServerGroupId) {
+        this.VServerGroupId = VServerGroupId;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public String getVServerGroupId() {
+        return this.VServerGroupId;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setCACertificateId(String CACertificateId) {
-        this.CACertificateId = CACertificateId;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_ClientSrcPort(String XForwardedFor_ClientSrcPort) {
+        this.XForwardedFor_ClientSrcPort = XForwardedFor_ClientSrcPort;
         return this;
     }
-    public String getCACertificateId() {
-        return this.CACertificateId;
+    public String getXForwardedFor_ClientSrcPort() {
+        return this.XForwardedFor_ClientSrcPort;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setCookie(String cookie) {
+        this.cookie = cookie;
+        return this;
+    }
+    public String getCookie() {
+        return this.cookie;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setGzip(String gzip) {
+        this.gzip = gzip;
+        return this;
+    }
+    public String getGzip() {
+        return this.gzip;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setEnableHttp2(String enableHttp2) {
+        this.enableHttp2 = enableHttp2;
+        return this;
+    }
+    public String getEnableHttp2() {
+        return this.enableHttp2;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setBandwidth(Integer bandwidth) {
+        this.bandwidth = bandwidth;
+        return this;
+    }
+    public Integer getBandwidth() {
+        return this.bandwidth;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckTimeout(Integer healthCheckTimeout) {
@@ -269,84 +365,12 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.aclStatus;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthyThreshold(Integer healthyThreshold) {
-        this.healthyThreshold = healthyThreshold;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setUnhealthyThreshold(Integer unhealthyThreshold) {
+        this.unhealthyThreshold = unhealthyThreshold;
         return this;
     }
-    public Integer getHealthyThreshold() {
-        return this.healthyThreshold;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckDomain(String healthCheckDomain) {
-        this.healthCheckDomain = healthCheckDomain;
-        return this;
-    }
-    public String getHealthCheckDomain() {
-        return this.healthCheckDomain;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setAclType(String aclType) {
-        this.aclType = aclType;
-        return this;
-    }
-    public String getAclType() {
-        return this.aclType;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_proto(String XForwardedFor_proto) {
-        this.XForwardedFor_proto = XForwardedFor_proto;
-        return this;
-    }
-    public String getXForwardedFor_proto() {
-        return this.XForwardedFor_proto;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setEnableHttp2(String enableHttp2) {
-        this.enableHttp2 = enableHttp2;
-        return this;
-    }
-    public String getEnableHttp2() {
-        return this.enableHttp2;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setCookieTimeout(Integer cookieTimeout) {
-        this.cookieTimeout = cookieTimeout;
-        return this;
-    }
-    public Integer getCookieTimeout() {
-        return this.cookieTimeout;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setVServerGroupId(String VServerGroupId) {
-        this.VServerGroupId = VServerGroupId;
-        return this;
-    }
-    public String getVServerGroupId() {
-        return this.VServerGroupId;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setDescription(String description) {
-        this.description = description;
-        return this;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setScheduler(String scheduler) {
-        this.scheduler = scheduler;
-        return this;
-    }
-    public String getScheduler() {
-        return this.scheduler;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setIdleTimeout(Integer idleTimeout) {
-        this.idleTimeout = idleTimeout;
-        return this;
-    }
-    public Integer getIdleTimeout() {
-        return this.idleTimeout;
+    public Integer getUnhealthyThreshold() {
+        return this.unhealthyThreshold;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_SLBID(String XForwardedFor_SLBID) {
@@ -357,20 +381,12 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.XForwardedFor_SLBID;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckConnectPort(Integer healthCheckConnectPort) {
-        this.healthCheckConnectPort = healthCheckConnectPort;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_ClientCertSubjectDN(String XForwardedFor_ClientCertSubjectDN) {
+        this.XForwardedFor_ClientCertSubjectDN = XForwardedFor_ClientCertSubjectDN;
         return this;
     }
-    public Integer getHealthCheckConnectPort() {
-        return this.healthCheckConnectPort;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setBandwidth(Integer bandwidth) {
-        this.bandwidth = bandwidth;
-        return this;
-    }
-    public Integer getBandwidth() {
-        return this.bandwidth;
+    public String getXForwardedFor_ClientCertSubjectDN() {
+        return this.XForwardedFor_ClientCertSubjectDN;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setSecurityStatus(String securityStatus) {
@@ -381,12 +397,28 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.securityStatus;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setGzip(String gzip) {
-        this.gzip = gzip;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckHttpCode(String healthCheckHttpCode) {
+        this.healthCheckHttpCode = healthCheckHttpCode;
         return this;
     }
-    public String getGzip() {
-        return this.gzip;
+    public String getHealthCheckHttpCode() {
+        return this.healthCheckHttpCode;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setRequestTimeout(Integer requestTimeout) {
+        this.requestTimeout = requestTimeout;
+        return this;
+    }
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckInterval(Integer healthCheckInterval) {
+        this.healthCheckInterval = healthCheckInterval;
+        return this;
+    }
+    public Integer getHealthCheckInterval() {
+        return this.healthCheckInterval;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setServerCertificateId(String serverCertificateId) {
@@ -397,52 +429,12 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.serverCertificateId;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_SLBIP(String XForwardedFor_SLBIP) {
-        this.XForwardedFor_SLBIP = XForwardedFor_SLBIP;
-        return this;
-    }
-    public String getXForwardedFor_SLBIP() {
-        return this.XForwardedFor_SLBIP;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheckHttpCode(String healthCheckHttpCode) {
-        this.healthCheckHttpCode = healthCheckHttpCode;
-        return this;
-    }
-    public String getHealthCheckHttpCode() {
-        return this.healthCheckHttpCode;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setListenerPort(Integer listenerPort) {
-        this.listenerPort = listenerPort;
-        return this;
-    }
-    public Integer getListenerPort() {
-        return this.listenerPort;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_ClientCertSubjectDN(String XForwardedFor_ClientCertSubjectDN) {
-        this.XForwardedFor_ClientCertSubjectDN = XForwardedFor_ClientCertSubjectDN;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertSubjectDN() {
-        return this.XForwardedFor_ClientCertSubjectDN;
-    }
-
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setAclId(String aclId) {
         this.aclId = aclId;
         return this;
     }
     public String getAclId() {
         return this.aclId;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setRules(DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules rules) {
-        this.rules = rules;
-        return this;
-    }
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules getRules() {
-        return this.rules;
     }
 
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_ClientCertIssuerDN(String XForwardedFor_ClientCertIssuerDN) {
@@ -453,6 +445,22 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.XForwardedFor_ClientCertIssuerDN;
     }
 
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthyThreshold(Integer healthyThreshold) {
+        this.healthyThreshold = healthyThreshold;
+        return this;
+    }
+    public Integer getHealthyThreshold() {
+        return this.healthyThreshold;
+    }
+
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_SLBIP(String XForwardedFor_SLBIP) {
+        this.XForwardedFor_SLBIP = XForwardedFor_SLBIP;
+        return this;
+    }
+    public String getXForwardedFor_SLBIP() {
+        return this.XForwardedFor_SLBIP;
+    }
+
     public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setStickySession(String stickySession) {
         this.stickySession = stickySession;
         return this;
@@ -461,107 +469,39 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         return this.stickySession;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor(String XForwardedFor) {
-        this.XForwardedFor = XForwardedFor;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setHealthCheck(String healthCheck) {
+        this.healthCheck = healthCheck;
         return this;
     }
-    public String getXForwardedFor() {
-        return this.XForwardedFor;
+    public String getHealthCheck() {
+        return this.healthCheck;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_ClientSrcPort(String XForwardedFor_ClientSrcPort) {
-        this.XForwardedFor_ClientSrcPort = XForwardedFor_ClientSrcPort;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setRules(DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules rules) {
+        this.rules = rules;
         return this;
     }
-    public String getXForwardedFor_ClientSrcPort() {
-        return this.XForwardedFor_ClientSrcPort;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRules getRules() {
+        return this.rules;
     }
 
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_ClientCertClientVerify(String XForwardedFor_ClientCertClientVerify) {
-        this.XForwardedFor_ClientCertClientVerify = XForwardedFor_ClientCertClientVerify;
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setDomainExtensions(DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions domainExtensions) {
+        this.domainExtensions = domainExtensions;
         return this;
     }
-    public String getXForwardedFor_ClientCertClientVerify() {
-        return this.XForwardedFor_ClientCertClientVerify;
-    }
-
-    public DescribeLoadBalancerHTTPSListenerAttributeResponseBody setXForwardedFor_ClientCertFingerprint(String XForwardedFor_ClientCertFingerprint) {
-        this.XForwardedFor_ClientCertFingerprint = XForwardedFor_ClientCertFingerprint;
-        return this;
-    }
-    public String getXForwardedFor_ClientCertFingerprint() {
-        return this.XForwardedFor_ClientCertFingerprint;
-    }
-
-    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension extends TeaModel {
-        @NameInMap("Domain")
-        public String domain;
-
-        @NameInMap("ServerCertificateId")
-        public String serverCertificateId;
-
-        @NameInMap("DomainExtensionId")
-        public String domainExtensionId;
-
-        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension setServerCertificateId(String serverCertificateId) {
-            this.serverCertificateId = serverCertificateId;
-            return this;
-        }
-        public String getServerCertificateId() {
-            return this.serverCertificateId;
-        }
-
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension setDomainExtensionId(String domainExtensionId) {
-            this.domainExtensionId = domainExtensionId;
-            return this;
-        }
-        public String getDomainExtensionId() {
-            return this.domainExtensionId;
-        }
-
-    }
-
-    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions extends TeaModel {
-        @NameInMap("DomainExtension")
-        public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> domainExtension;
-
-        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions setDomainExtension(java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> domainExtension) {
-            this.domainExtension = domainExtension;
-            return this;
-        }
-        public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> getDomainExtension() {
-            return this.domainExtension;
-        }
-
+    public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions getDomainExtensions() {
+        return this.domainExtensions;
     }
 
     public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule extends TeaModel {
         @NameInMap("VServerGroupId")
         public String VServerGroupId;
 
-        @NameInMap("Domain")
-        public String domain;
-
         @NameInMap("Url")
         public String url;
+
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("RuleName")
         public String ruleName;
@@ -582,20 +522,20 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
             return this.VServerGroupId;
         }
 
-        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
         public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule setUrl(String url) {
             this.url = url;
             return this;
         }
         public String getUrl() {
             return this.url;
+        }
+
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule setRuleName(String ruleName) {
@@ -631,6 +571,66 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
         public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyRulesRule> getRule() {
             return this.rule;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension extends TeaModel {
+        @NameInMap("ServerCertificateId")
+        public String serverCertificateId;
+
+        @NameInMap("Domain")
+        public String domain;
+
+        @NameInMap("DomainExtensionId")
+        public String domainExtensionId;
+
+        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension setServerCertificateId(String serverCertificateId) {
+            this.serverCertificateId = serverCertificateId;
+            return this;
+        }
+        public String getServerCertificateId() {
+            return this.serverCertificateId;
+        }
+
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension setDomainExtensionId(String domainExtensionId) {
+            this.domainExtensionId = domainExtensionId;
+            return this;
+        }
+        public String getDomainExtensionId() {
+            return this.domainExtensionId;
+        }
+
+    }
+
+    public static class DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions extends TeaModel {
+        @NameInMap("DomainExtension")
+        public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> domainExtension;
+
+        public static DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions self = new DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensions setDomainExtension(java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> domainExtension) {
+            this.domainExtension = domainExtension;
+            return this;
+        }
+        public java.util.List<DescribeLoadBalancerHTTPSListenerAttributeResponseBodyDomainExtensionsDomainExtension> getDomainExtension() {
+            return this.domainExtension;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateTLSCipherPolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("TLSCipherPolicyId")
     public String TLSCipherPolicyId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateTLSCipherPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateTLSCipherPolicyResponseBody self = new CreateTLSCipherPolicyResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateTLSCipherPolicyResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateTLSCipherPolicyResponseBody setTLSCipherPolicyId(String TLSCipherPolicyId) {
@@ -29,6 +21,14 @@ public class CreateTLSCipherPolicyResponseBody extends TeaModel {
     }
     public String getTLSCipherPolicyId() {
         return this.TLSCipherPolicyId;
+    }
+
+    public CreateTLSCipherPolicyResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -16,9 +16,6 @@ public class DescribeCACertificatesRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -27,9 +24,6 @@ public class DescribeCACertificatesRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeCACertificatesRequestTag> tag;
 
     public static DescribeCACertificatesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCACertificatesRequest self = new DescribeCACertificatesRequest();
@@ -68,14 +62,6 @@ public class DescribeCACertificatesRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeCACertificatesRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
     public DescribeCACertificatesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -98,22 +84,6 @@ public class DescribeCACertificatesRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeCACertificatesRequest setTag(java.util.List<DescribeCACertificatesRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeCACertificatesRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public static class DescribeCACertificatesRequestTag extends TeaModel {
-        public static DescribeCACertificatesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCACertificatesRequestTag self = new DescribeCACertificatesRequestTag();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

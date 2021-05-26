@@ -49,9 +49,6 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
         @NameInMap("Weight")
         public Integer weight;
 
-        @NameInMap("Description")
-        public String description;
-
         @NameInMap("Port")
         public Integer port;
 
@@ -77,14 +74,6 @@ public class RemoveVServerGroupBackendServersResponseBody extends TeaModel {
         }
         public Integer getWeight() {
             return this.weight;
-        }
-
-        public RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer setDescription(String description) {
-            this.description = description;
-            return this;
-        }
-        public String getDescription() {
-            return this.description;
         }
 
         public RemoveVServerGroupBackendServersResponseBodyBackendServersBackendServer setPort(Integer port) {

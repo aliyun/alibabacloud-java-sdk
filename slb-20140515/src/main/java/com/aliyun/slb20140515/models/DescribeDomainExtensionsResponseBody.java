@@ -32,11 +32,11 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension extends TeaModel {
-        @NameInMap("Domain")
-        public String domain;
-
         @NameInMap("ServerCertificateId")
         public String serverCertificateId;
+
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("DomainExtensionId")
         public String domainExtensionId;
@@ -46,20 +46,20 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
         public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setServerCertificateId(String serverCertificateId) {
             this.serverCertificateId = serverCertificateId;
             return this;
         }
         public String getServerCertificateId() {
             return this.serverCertificateId;
+        }
+
+        public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeDomainExtensionsResponseBodyDomainExtensionsDomainExtension setDomainExtensionId(String domainExtensionId) {

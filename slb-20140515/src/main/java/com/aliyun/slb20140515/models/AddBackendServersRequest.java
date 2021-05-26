@@ -25,12 +25,6 @@ public class AddBackendServersRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     public static AddBackendServersRequest build(java.util.Map<String, ?> map) throws Exception {
         AddBackendServersRequest self = new AddBackendServersRequest();
         return TeaModel.build(map, self);
@@ -90,22 +84,6 @@ public class AddBackendServersRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public AddBackendServersRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public AddBackendServersRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
 }

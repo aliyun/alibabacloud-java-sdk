@@ -31,9 +31,6 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     @NameInMap("Scheduler")
     public String scheduler;
 
-    @NameInMap("PersistenceTimeout")
-    public Integer persistenceTimeout;
-
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
@@ -55,23 +52,14 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     @NameInMap("healthCheckExp")
     public String healthCheckExp;
 
-    @NameInMap("MaxConnection")
-    public Integer maxConnection;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
-
-    @NameInMap("access_key_id")
-    public String accessKeyId;
 
     @NameInMap("VServerGroupId")
     public String VServerGroupId;
 
     @NameInMap("MasterSlaveServerGroupId")
     public String masterSlaveServerGroupId;
-
-    @NameInMap("Tags")
-    public String tags;
 
     @NameInMap("AclId")
     public String aclId;
@@ -82,20 +70,8 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     @NameInMap("AclStatus")
     public String aclStatus;
 
-    @NameInMap("VpcIds")
-    public String vpcIds;
-
     @NameInMap("Description")
     public String description;
-
-    @NameInMap("ConnectionDrain")
-    public String connectionDrain;
-
-    @NameInMap("ConnectionDrainTimeout")
-    public Integer connectionDrainTimeout;
-
-    @NameInMap("PortRange")
-    public java.util.List<CreateLoadBalancerUDPListenerRequestPortRange> portRange;
 
     public static CreateLoadBalancerUDPListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadBalancerUDPListenerRequest self = new CreateLoadBalancerUDPListenerRequest();
@@ -174,14 +150,6 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
         return this.scheduler;
     }
 
-    public CreateLoadBalancerUDPListenerRequest setPersistenceTimeout(Integer persistenceTimeout) {
-        this.persistenceTimeout = persistenceTimeout;
-        return this;
-    }
-    public Integer getPersistenceTimeout() {
-        return this.persistenceTimeout;
-    }
-
     public CreateLoadBalancerUDPListenerRequest setHealthyThreshold(Integer healthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         return this;
@@ -238,28 +206,12 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
         return this.healthCheckExp;
     }
 
-    public CreateLoadBalancerUDPListenerRequest setMaxConnection(Integer maxConnection) {
-        this.maxConnection = maxConnection;
-        return this;
-    }
-    public Integer getMaxConnection() {
-        return this.maxConnection;
-    }
-
     public CreateLoadBalancerUDPListenerRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public CreateLoadBalancerUDPListenerRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
     }
 
     public CreateLoadBalancerUDPListenerRequest setVServerGroupId(String VServerGroupId) {
@@ -276,14 +228,6 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
     }
     public String getMasterSlaveServerGroupId() {
         return this.masterSlaveServerGroupId;
-    }
-
-    public CreateLoadBalancerUDPListenerRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public CreateLoadBalancerUDPListenerRequest setAclId(String aclId) {
@@ -310,52 +254,12 @@ public class CreateLoadBalancerUDPListenerRequest extends TeaModel {
         return this.aclStatus;
     }
 
-    public CreateLoadBalancerUDPListenerRequest setVpcIds(String vpcIds) {
-        this.vpcIds = vpcIds;
-        return this;
-    }
-    public String getVpcIds() {
-        return this.vpcIds;
-    }
-
     public CreateLoadBalancerUDPListenerRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public CreateLoadBalancerUDPListenerRequest setConnectionDrain(String connectionDrain) {
-        this.connectionDrain = connectionDrain;
-        return this;
-    }
-    public String getConnectionDrain() {
-        return this.connectionDrain;
-    }
-
-    public CreateLoadBalancerUDPListenerRequest setConnectionDrainTimeout(Integer connectionDrainTimeout) {
-        this.connectionDrainTimeout = connectionDrainTimeout;
-        return this;
-    }
-    public Integer getConnectionDrainTimeout() {
-        return this.connectionDrainTimeout;
-    }
-
-    public CreateLoadBalancerUDPListenerRequest setPortRange(java.util.List<CreateLoadBalancerUDPListenerRequestPortRange> portRange) {
-        this.portRange = portRange;
-        return this;
-    }
-    public java.util.List<CreateLoadBalancerUDPListenerRequestPortRange> getPortRange() {
-        return this.portRange;
-    }
-
-    public static class CreateLoadBalancerUDPListenerRequestPortRange extends TeaModel {
-        public static CreateLoadBalancerUDPListenerRequestPortRange build(java.util.Map<String, ?> map) throws Exception {
-            CreateLoadBalancerUDPListenerRequestPortRange self = new CreateLoadBalancerUDPListenerRequestPortRange();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

@@ -61,23 +61,11 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     @NameInMap("HealthCheckType")
     public String healthCheckType;
 
-    @NameInMap("HealthCheckMethod")
-    public String healthCheckMethod;
-
     @NameInMap("SynProxy")
     public String synProxy;
 
-    @NameInMap("MaxConnection")
-    public Integer maxConnection;
-
     @NameInMap("OwnerAccount")
     public String ownerAccount;
-
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
 
     @NameInMap("VServerGroup")
     public String VServerGroup;
@@ -100,9 +88,6 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     @NameInMap("AclStatus")
     public String aclStatus;
 
-    @NameInMap("VpcIds")
-    public String vpcIds;
-
     @NameInMap("Description")
     public String description;
 
@@ -111,9 +96,6 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
 
     @NameInMap("ConnectionDrainTimeout")
     public Integer connectionDrainTimeout;
-
-    @NameInMap("PortRange")
-    public java.util.List<SetLoadBalancerTCPListenerAttributeRequestPortRange> portRange;
 
     public static SetLoadBalancerTCPListenerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         SetLoadBalancerTCPListenerAttributeRequest self = new SetLoadBalancerTCPListenerAttributeRequest();
@@ -272,14 +254,6 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
         return this.healthCheckType;
     }
 
-    public SetLoadBalancerTCPListenerAttributeRequest setHealthCheckMethod(String healthCheckMethod) {
-        this.healthCheckMethod = healthCheckMethod;
-        return this;
-    }
-    public String getHealthCheckMethod() {
-        return this.healthCheckMethod;
-    }
-
     public SetLoadBalancerTCPListenerAttributeRequest setSynProxy(String synProxy) {
         this.synProxy = synProxy;
         return this;
@@ -288,36 +262,12 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
         return this.synProxy;
     }
 
-    public SetLoadBalancerTCPListenerAttributeRequest setMaxConnection(Integer maxConnection) {
-        this.maxConnection = maxConnection;
-        return this;
-    }
-    public Integer getMaxConnection() {
-        return this.maxConnection;
-    }
-
     public SetLoadBalancerTCPListenerAttributeRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public SetLoadBalancerTCPListenerAttributeRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public SetLoadBalancerTCPListenerAttributeRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public SetLoadBalancerTCPListenerAttributeRequest setVServerGroup(String VServerGroup) {
@@ -376,14 +326,6 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
         return this.aclStatus;
     }
 
-    public SetLoadBalancerTCPListenerAttributeRequest setVpcIds(String vpcIds) {
-        this.vpcIds = vpcIds;
-        return this;
-    }
-    public String getVpcIds() {
-        return this.vpcIds;
-    }
-
     public SetLoadBalancerTCPListenerAttributeRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -406,22 +348,6 @@ public class SetLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     }
     public Integer getConnectionDrainTimeout() {
         return this.connectionDrainTimeout;
-    }
-
-    public SetLoadBalancerTCPListenerAttributeRequest setPortRange(java.util.List<SetLoadBalancerTCPListenerAttributeRequestPortRange> portRange) {
-        this.portRange = portRange;
-        return this;
-    }
-    public java.util.List<SetLoadBalancerTCPListenerAttributeRequestPortRange> getPortRange() {
-        return this.portRange;
-    }
-
-    public static class SetLoadBalancerTCPListenerAttributeRequestPortRange extends TeaModel {
-        public static SetLoadBalancerTCPListenerAttributeRequestPortRange build(java.util.Map<String, ?> map) throws Exception {
-            SetLoadBalancerTCPListenerAttributeRequestPortRange self = new SetLoadBalancerTCPListenerAttributeRequestPortRange();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

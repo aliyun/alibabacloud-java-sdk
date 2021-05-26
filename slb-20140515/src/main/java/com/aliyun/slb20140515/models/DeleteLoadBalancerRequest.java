@@ -22,12 +22,6 @@ public class DeleteLoadBalancerRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     public static DeleteLoadBalancerRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLoadBalancerRequest self = new DeleteLoadBalancerRequest();
         return TeaModel.build(map, self);
@@ -79,22 +73,6 @@ public class DeleteLoadBalancerRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DeleteLoadBalancerRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DeleteLoadBalancerRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
 }

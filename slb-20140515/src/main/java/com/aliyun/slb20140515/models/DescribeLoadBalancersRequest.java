@@ -61,9 +61,6 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("Tags")
     public String tags;
 
@@ -78,18 +75,6 @@ public class DescribeLoadBalancersRequest extends TeaModel {
 
     @NameInMap("PageSize")
     public Integer pageSize;
-
-    @NameInMap("SupportPrivateLink")
-    public Boolean supportPrivateLink;
-
-    @NameInMap("Fuzzy")
-    public String fuzzy;
-
-    @NameInMap("BusinessStatus")
-    public String businessStatus;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeLoadBalancersRequestTag> tag;
 
     public static DescribeLoadBalancersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancersRequest self = new DescribeLoadBalancersRequest();
@@ -248,14 +233,6 @@ public class DescribeLoadBalancersRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public DescribeLoadBalancersRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
     public DescribeLoadBalancersRequest setTags(String tags) {
         this.tags = tags;
         return this;
@@ -294,46 +271,6 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
-    }
-
-    public DescribeLoadBalancersRequest setSupportPrivateLink(Boolean supportPrivateLink) {
-        this.supportPrivateLink = supportPrivateLink;
-        return this;
-    }
-    public Boolean getSupportPrivateLink() {
-        return this.supportPrivateLink;
-    }
-
-    public DescribeLoadBalancersRequest setFuzzy(String fuzzy) {
-        this.fuzzy = fuzzy;
-        return this;
-    }
-    public String getFuzzy() {
-        return this.fuzzy;
-    }
-
-    public DescribeLoadBalancersRequest setBusinessStatus(String businessStatus) {
-        this.businessStatus = businessStatus;
-        return this;
-    }
-    public String getBusinessStatus() {
-        return this.businessStatus;
-    }
-
-    public DescribeLoadBalancersRequest setTag(java.util.List<DescribeLoadBalancersRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeLoadBalancersRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public static class DescribeLoadBalancersRequestTag extends TeaModel {
-        public static DescribeLoadBalancersRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeLoadBalancersRequestTag self = new DescribeLoadBalancersRequestTag();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

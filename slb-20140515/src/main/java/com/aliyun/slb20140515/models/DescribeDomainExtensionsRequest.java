@@ -19,12 +19,6 @@ public class DescribeDomainExtensionsRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
 
@@ -77,22 +71,6 @@ public class DescribeDomainExtensionsRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeDomainExtensionsRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DescribeDomainExtensionsRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public DescribeDomainExtensionsRequest setLoadBalancerId(String loadBalancerId) {

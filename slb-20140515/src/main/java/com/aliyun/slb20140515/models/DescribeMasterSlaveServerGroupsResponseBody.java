@@ -32,23 +32,15 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener extends TeaModel {
-        @NameInMap("Protocol")
-        public String protocol;
-
         @NameInMap("Port")
         public Integer port;
+
+        @NameInMap("Protocol")
+        public String protocol;
 
         public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener build(java.util.Map<String, ?> map) throws Exception {
             DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener setProtocol(String protocol) {
-            this.protocol = protocol;
-            return this;
-        }
-        public String getProtocol() {
-            return this.protocol;
         }
 
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener setPort(Integer port) {
@@ -57,6 +49,14 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         }
         public Integer getPort() {
             return this.port;
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjectsListenersListener setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }
@@ -100,18 +100,26 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup extends TeaModel {
+        @NameInMap("MasterSlaveServerGroupName")
+        public String masterSlaveServerGroupName;
+
         @NameInMap("MasterSlaveServerGroupId")
         public String masterSlaveServerGroupId;
 
         @NameInMap("AssociatedObjects")
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects associatedObjects;
 
-        @NameInMap("MasterSlaveServerGroupName")
-        public String masterSlaveServerGroupName;
-
         public static DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup self = new DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setMasterSlaveServerGroupName(String masterSlaveServerGroupName) {
+            this.masterSlaveServerGroupName = masterSlaveServerGroupName;
+            return this;
+        }
+        public String getMasterSlaveServerGroupName() {
+            return this.masterSlaveServerGroupName;
         }
 
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setMasterSlaveServerGroupId(String masterSlaveServerGroupId) {
@@ -128,14 +136,6 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
         }
         public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroupAssociatedObjects getAssociatedObjects() {
             return this.associatedObjects;
-        }
-
-        public DescribeMasterSlaveServerGroupsResponseBodyMasterSlaveServerGroupsMasterSlaveServerGroup setMasterSlaveServerGroupName(String masterSlaveServerGroupName) {
-            this.masterSlaveServerGroupName = masterSlaveServerGroupName;
-            return this;
-        }
-        public String getMasterSlaveServerGroupName() {
-            return this.masterSlaveServerGroupName;
         }
 
     }

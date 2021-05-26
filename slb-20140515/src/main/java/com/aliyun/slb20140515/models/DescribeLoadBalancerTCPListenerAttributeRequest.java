@@ -25,12 +25,6 @@ public class DescribeLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     public static DescribeLoadBalancerTCPListenerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerTCPListenerAttributeRequest self = new DescribeLoadBalancerTCPListenerAttributeRequest();
         return TeaModel.build(map, self);
@@ -90,22 +84,6 @@ public class DescribeLoadBalancerTCPListenerAttributeRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeLoadBalancerTCPListenerAttributeRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DescribeLoadBalancerTCPListenerAttributeRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
 }

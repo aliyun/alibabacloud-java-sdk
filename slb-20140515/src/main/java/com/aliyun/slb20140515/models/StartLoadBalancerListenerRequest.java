@@ -25,14 +25,8 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
     @NameInMap("ListenerProtocol")
     public String listenerProtocol;
-
-    @NameInMap("Tags")
-    public String tags;
 
     public static StartLoadBalancerListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         StartLoadBalancerListenerRequest self = new StartLoadBalancerListenerRequest();
@@ -95,28 +89,12 @@ public class StartLoadBalancerListenerRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public StartLoadBalancerListenerRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
     public StartLoadBalancerListenerRequest setListenerProtocol(String listenerProtocol) {
         this.listenerProtocol = listenerProtocol;
         return this;
     }
     public String getListenerProtocol() {
         return this.listenerProtocol;
-    }
-
-    public StartLoadBalancerListenerRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
 }

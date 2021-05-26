@@ -4,11 +4,11 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class SetBackendServersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("LoadBalancerId")
     public String loadBalancerId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("BackendServers")
     public SetBackendServersResponseBodyBackendServers backendServers;
@@ -18,20 +18,20 @@ public class SetBackendServersResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public SetBackendServersResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public SetBackendServersResponseBody setLoadBalancerId(String loadBalancerId) {
         this.loadBalancerId = loadBalancerId;
         return this;
     }
     public String getLoadBalancerId() {
         return this.loadBalancerId;
+    }
+
+    public SetBackendServersResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public SetBackendServersResponseBody setBackendServers(SetBackendServersResponseBodyBackendServers backendServers) {

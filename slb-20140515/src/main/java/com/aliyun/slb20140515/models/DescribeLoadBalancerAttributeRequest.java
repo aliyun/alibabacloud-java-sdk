@@ -22,15 +22,6 @@ public class DescribeLoadBalancerAttributeRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
-    @NameInMap("IncludeReservedData")
-    public Boolean includeReservedData;
-
     public static DescribeLoadBalancerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLoadBalancerAttributeRequest self = new DescribeLoadBalancerAttributeRequest();
         return TeaModel.build(map, self);
@@ -82,30 +73,6 @@ public class DescribeLoadBalancerAttributeRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeLoadBalancerAttributeRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DescribeLoadBalancerAttributeRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
-    }
-
-    public DescribeLoadBalancerAttributeRequest setIncludeReservedData(Boolean includeReservedData) {
-        this.includeReservedData = includeReservedData;
-        return this;
-    }
-    public Boolean getIncludeReservedData() {
-        return this.includeReservedData;
     }
 
 }

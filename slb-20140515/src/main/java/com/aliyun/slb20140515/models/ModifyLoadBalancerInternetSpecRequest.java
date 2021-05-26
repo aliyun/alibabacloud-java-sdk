@@ -28,17 +28,8 @@ public class ModifyLoadBalancerInternetSpecRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("AutoPay")
     public Boolean autoPay;
-
-    @NameInMap("Ratio")
-    public Integer ratio;
 
     public static ModifyLoadBalancerInternetSpecRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyLoadBalancerInternetSpecRequest self = new ModifyLoadBalancerInternetSpecRequest();
@@ -109,36 +100,12 @@ public class ModifyLoadBalancerInternetSpecRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ModifyLoadBalancerInternetSpecRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public ModifyLoadBalancerInternetSpecRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
-    }
-
     public ModifyLoadBalancerInternetSpecRequest setAutoPay(Boolean autoPay) {
         this.autoPay = autoPay;
         return this;
     }
     public Boolean getAutoPay() {
         return this.autoPay;
-    }
-
-    public ModifyLoadBalancerInternetSpecRequest setRatio(Integer ratio) {
-        this.ratio = ratio;
-        return this;
-    }
-    public Integer getRatio() {
-        return this.ratio;
     }
 
 }

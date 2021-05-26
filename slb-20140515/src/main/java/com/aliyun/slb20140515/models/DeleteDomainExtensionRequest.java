@@ -19,12 +19,6 @@ public class DeleteDomainExtensionRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("DomainExtensionId")
     public String domainExtensionId;
 
@@ -71,22 +65,6 @@ public class DeleteDomainExtensionRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DeleteDomainExtensionRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DeleteDomainExtensionRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public DeleteDomainExtensionRequest setDomainExtensionId(String domainExtensionId) {

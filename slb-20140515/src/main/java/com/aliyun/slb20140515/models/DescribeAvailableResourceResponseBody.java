@@ -32,23 +32,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     }
 
     public static class DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource extends TeaModel {
-        @NameInMap("AddressIPVersion")
-        public String addressIPVersion;
-
         @NameInMap("AddressType")
         public String addressType;
+
+        @NameInMap("AddressIPVersion")
+        public String addressIPVersion;
 
         public static DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource self = new DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource setAddressIPVersion(String addressIPVersion) {
-            this.addressIPVersion = addressIPVersion;
-            return this;
-        }
-        public String getAddressIPVersion() {
-            return this.addressIPVersion;
         }
 
         public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource setAddressType(String addressType) {
@@ -57,6 +49,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
         public String getAddressType() {
             return this.addressType;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResourcesSupportResource setAddressIPVersion(String addressIPVersion) {
+            this.addressIPVersion = addressIPVersion;
+            return this;
+        }
+        public String getAddressIPVersion() {
+            return this.addressIPVersion;
         }
 
     }
@@ -84,11 +84,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("SlaveZoneId")
         public String slaveZoneId;
 
-        @NameInMap("SupportResources")
-        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources supportResources;
-
         @NameInMap("MasterZoneId")
         public String masterZoneId;
+
+        @NameInMap("SupportResources")
+        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources supportResources;
 
         public static DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource build(java.util.Map<String, ?> map) throws Exception {
             DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource self = new DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource();
@@ -103,20 +103,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return this.slaveZoneId;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource setSupportResources(DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources supportResources) {
-            this.supportResources = supportResources;
-            return this;
-        }
-        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources getSupportResources() {
-            return this.supportResources;
-        }
-
         public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource setMasterZoneId(String masterZoneId) {
             this.masterZoneId = masterZoneId;
             return this;
         }
         public String getMasterZoneId() {
             return this.masterZoneId;
+        }
+
+        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResource setSupportResources(DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources supportResources) {
+            this.supportResources = supportResources;
+            return this;
+        }
+        public DescribeAvailableResourceResponseBodyAvailableResourcesAvailableResourceSupportResources getSupportResources() {
+            return this.supportResources;
         }
 
     }

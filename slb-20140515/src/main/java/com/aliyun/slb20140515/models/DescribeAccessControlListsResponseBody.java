@@ -4,8 +4,8 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class DescribeAccessControlListsResponseBody extends TeaModel {
-    @NameInMap("TotalCount")
-    public Integer totalCount;
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
 
     @NameInMap("PageSize")
     public Integer pageSize;
@@ -13,26 +13,26 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("PageNumber")
-    public Integer pageNumber;
-
-    @NameInMap("Acls")
-    public DescribeAccessControlListsResponseBodyAcls acls;
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     @NameInMap("Count")
     public Integer count;
+
+    @NameInMap("Acls")
+    public DescribeAccessControlListsResponseBodyAcls acls;
 
     public static DescribeAccessControlListsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessControlListsResponseBody self = new DescribeAccessControlListsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeAccessControlListsResponseBody setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public DescribeAccessControlListsResponseBody setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
-    public Integer getTotalCount() {
-        return this.totalCount;
+    public Integer getPageNumber() {
+        return this.pageNumber;
     }
 
     public DescribeAccessControlListsResponseBody setPageSize(Integer pageSize) {
@@ -51,20 +51,12 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeAccessControlListsResponseBody setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAccessControlListsResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public DescribeAccessControlListsResponseBody setAcls(DescribeAccessControlListsResponseBodyAcls acls) {
-        this.acls = acls;
-        return this;
-    }
-    public DescribeAccessControlListsResponseBodyAcls getAcls() {
-        return this.acls;
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public DescribeAccessControlListsResponseBody setCount(Integer count) {
@@ -75,6 +67,14 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         return this.count;
     }
 
+    public DescribeAccessControlListsResponseBody setAcls(DescribeAccessControlListsResponseBodyAcls acls) {
+        this.acls = acls;
+        return this;
+    }
+    public DescribeAccessControlListsResponseBodyAcls getAcls() {
+        return this.acls;
+    }
+
     public static class DescribeAccessControlListsResponseBodyAclsAcl extends TeaModel {
         @NameInMap("AclId")
         public String aclId;
@@ -82,11 +82,11 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
-
         @NameInMap("AclName")
         public String aclName;
+
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
 
         public static DescribeAccessControlListsResponseBodyAclsAcl build(java.util.Map<String, ?> map) throws Exception {
             DescribeAccessControlListsResponseBodyAclsAcl self = new DescribeAccessControlListsResponseBodyAclsAcl();
@@ -109,20 +109,20 @@ public class DescribeAccessControlListsResponseBody extends TeaModel {
             return this.addressIPVersion;
         }
 
-        public DescribeAccessControlListsResponseBodyAclsAcl setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
         public DescribeAccessControlListsResponseBodyAclsAcl setAclName(String aclName) {
             this.aclName = aclName;
             return this;
         }
         public String getAclName() {
             return this.aclName;
+        }
+
+        public DescribeAccessControlListsResponseBodyAclsAcl setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
     }

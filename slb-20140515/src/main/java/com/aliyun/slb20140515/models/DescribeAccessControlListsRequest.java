@@ -16,12 +16,6 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
-    @NameInMap("access_key_id")
-    public String accessKeyId;
-
-    @NameInMap("Tags")
-    public String tags;
-
     @NameInMap("RegionId")
     public String regionId;
 
@@ -39,9 +33,6 @@ public class DescribeAccessControlListsRequest extends TeaModel {
 
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
-
-    @NameInMap("Tag")
-    public java.util.List<DescribeAccessControlListsRequestTag> tag;
 
     public static DescribeAccessControlListsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAccessControlListsRequest self = new DescribeAccessControlListsRequest();
@@ -78,22 +69,6 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     }
     public String getOwnerAccount() {
         return this.ownerAccount;
-    }
-
-    public DescribeAccessControlListsRequest setAccessKeyId(String accessKeyId) {
-        this.accessKeyId = accessKeyId;
-        return this;
-    }
-    public String getAccessKeyId() {
-        return this.accessKeyId;
-    }
-
-    public DescribeAccessControlListsRequest setTags(String tags) {
-        this.tags = tags;
-        return this;
-    }
-    public String getTags() {
-        return this.tags;
     }
 
     public DescribeAccessControlListsRequest setRegionId(String regionId) {
@@ -142,22 +117,6 @@ public class DescribeAccessControlListsRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeAccessControlListsRequest setTag(java.util.List<DescribeAccessControlListsRequestTag> tag) {
-        this.tag = tag;
-        return this;
-    }
-    public java.util.List<DescribeAccessControlListsRequestTag> getTag() {
-        return this.tag;
-    }
-
-    public static class DescribeAccessControlListsRequestTag extends TeaModel {
-        public static DescribeAccessControlListsRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAccessControlListsRequestTag self = new DescribeAccessControlListsRequestTag();
-            return TeaModel.build(map, self);
-        }
-
     }
 
 }

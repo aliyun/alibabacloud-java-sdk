@@ -4,23 +4,15 @@ package com.aliyun.slb20140515.models;
 import com.aliyun.tea.*;
 
 public class CreateAccessControlListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("AclId")
     public String aclId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static CreateAccessControlListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateAccessControlListResponseBody self = new CreateAccessControlListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public CreateAccessControlListResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public CreateAccessControlListResponseBody setAclId(String aclId) {
@@ -29,6 +21,14 @@ public class CreateAccessControlListResponseBody extends TeaModel {
     }
     public String getAclId() {
         return this.aclId;
+    }
+
+    public CreateAccessControlListResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
