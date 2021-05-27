@@ -865,4 +865,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.queryAllCategoryWithOptions(request, runtime);
     }
+
+    public PageQueryTicketResponse pageQueryTicketWithOptions(PageQueryTicketRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("PageQueryTicket", "2019-12-27", "HTTPS", "GET", "AK", "json", req, runtime), new PageQueryTicketResponse());
+    }
+
+    public PageQueryTicketResponse pageQueryTicket(PageQueryTicketRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.pageQueryTicketWithOptions(request, runtime);
+    }
 }
