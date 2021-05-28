@@ -4,7 +4,7 @@ package com.aliyun.rtc_white_board20201214.models;
 import com.aliyun.tea.*;
 
 public class CreateWhiteBoardRequest extends TeaModel {
-    // 创建白板的用户ID（客户业务用户），由纯数字组成。
+    // 创建白板的用户ID（客户业务用户），由1~32位大小写字母、数字、下划线、短划线（-）组成
     @NameInMap("UserId")
     public String userId;
 

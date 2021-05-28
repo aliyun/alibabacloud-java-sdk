@@ -44,6 +44,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.describeAppsWithOptions(request, runtime);
     }
 
+    public PauseWhiteBoardRecordingResponse pauseWhiteBoardRecordingWithOptions(PauseWhiteBoardRecordingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("PauseWhiteBoardRecording", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new PauseWhiteBoardRecordingResponse());
+    }
+
+    public PauseWhiteBoardRecordingResponse pauseWhiteBoardRecording(PauseWhiteBoardRecordingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.pauseWhiteBoardRecordingWithOptions(request, runtime);
+    }
+
     public SetAppCallbackUrlResponse setAppCallbackUrlWithOptions(SetAppCallbackUrlRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -55,6 +68,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetAppCallbackUrlResponse setAppCallbackUrl(SetAppCallbackUrlRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.setAppCallbackUrlWithOptions(request, runtime);
+    }
+
+    public StartWhiteBoardRecordingResponse startWhiteBoardRecordingWithOptions(StartWhiteBoardRecordingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StartWhiteBoardRecording", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new StartWhiteBoardRecordingResponse());
+    }
+
+    public StartWhiteBoardRecordingResponse startWhiteBoardRecording(StartWhiteBoardRecordingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.startWhiteBoardRecordingWithOptions(request, runtime);
     }
 
     public SetAppNameResponse setAppNameWithOptions(SetAppNameRequest request, RuntimeOptions runtime) throws Exception {
@@ -81,6 +107,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeWhiteBoardsResponse describeWhiteBoards(DescribeWhiteBoardsRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.describeWhiteBoardsWithOptions(request, runtime);
+    }
+
+    public ResumeWhiteBoardRecordingResponse resumeWhiteBoardRecordingWithOptions(ResumeWhiteBoardRecordingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("ResumeWhiteBoardRecording", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new ResumeWhiteBoardRecordingResponse());
+    }
+
+    public ResumeWhiteBoardRecordingResponse resumeWhiteBoardRecording(ResumeWhiteBoardRecordingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.resumeWhiteBoardRecordingWithOptions(request, runtime);
     }
 
     public SetAppDomainNamesResponse setAppDomainNamesWithOptions(SetAppDomainNamesRequest request, RuntimeOptions runtime) throws Exception {
@@ -185,5 +224,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SetAppStatusResponse setAppStatus(SetAppStatusRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.setAppStatusWithOptions(request, runtime);
+    }
+
+    public StopWhiteBoardRecordingResponse stopWhiteBoardRecordingWithOptions(StopWhiteBoardRecordingRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("StopWhiteBoardRecording", "2020-12-14", "HTTPS", "POST", "AK", "json", req, runtime), new StopWhiteBoardRecordingResponse());
+    }
+
+    public StopWhiteBoardRecordingResponse stopWhiteBoardRecording(StopWhiteBoardRecordingRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.stopWhiteBoardRecordingWithOptions(request, runtime);
     }
 }
