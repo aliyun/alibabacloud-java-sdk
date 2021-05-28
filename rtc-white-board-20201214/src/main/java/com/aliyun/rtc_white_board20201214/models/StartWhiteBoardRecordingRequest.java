@@ -3,12 +3,12 @@ package com.aliyun.rtc_white_board20201214.models;
 
 import com.aliyun.tea.*;
 
-public class OpenWhiteBoardRequest extends TeaModel {
+public class StartWhiteBoardRecordingRequest extends TeaModel {
     // 白板应用唯一标识符
     @NameInMap("AppID")
     public String appID;
 
-    // 打开白板的用户ID（客户业务用户），由1~32位大小写字母、数字、下划线、短划线（-）组成
+    // 启动白板录制的用户ID（客户业务用户），由1~32位大小写字母、数字、下划线、短划线（-）组成
     @NameInMap("UserId")
     public String userId;
 
@@ -16,12 +16,12 @@ public class OpenWhiteBoardRequest extends TeaModel {
     @NameInMap("DocKey")
     public String docKey;
 
-    public static OpenWhiteBoardRequest build(java.util.Map<String, ?> map) throws Exception {
-        OpenWhiteBoardRequest self = new OpenWhiteBoardRequest();
+    public static StartWhiteBoardRecordingRequest build(java.util.Map<String, ?> map) throws Exception {
+        StartWhiteBoardRecordingRequest self = new StartWhiteBoardRecordingRequest();
         return TeaModel.build(map, self);
     }
 
-    public OpenWhiteBoardRequest setAppID(String appID) {
+    public StartWhiteBoardRecordingRequest setAppID(String appID) {
         this.appID = appID;
         return this;
     }
@@ -29,7 +29,7 @@ public class OpenWhiteBoardRequest extends TeaModel {
         return this.appID;
     }
 
-    public OpenWhiteBoardRequest setUserId(String userId) {
+    public StartWhiteBoardRecordingRequest setUserId(String userId) {
         this.userId = userId;
         return this;
     }
@@ -37,7 +37,7 @@ public class OpenWhiteBoardRequest extends TeaModel {
         return this.userId;
     }
 
-    public OpenWhiteBoardRequest setDocKey(String docKey) {
+    public StartWhiteBoardRecordingRequest setDocKey(String docKey) {
         this.docKey = docKey;
         return this;
     }
