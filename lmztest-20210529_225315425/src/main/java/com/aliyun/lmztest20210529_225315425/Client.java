@@ -36,7 +36,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
         ));
-        return TeaModel.toModel(this.doRPCRequest("BundleOpenAPi", "2021-05-29_22-53-15-425", "HTTP", "POST", "AK", "json", req, runtime), new BundleOpenAPiResponse());
+        return TeaModel.toModel(this.doRPCRequest("BundleOpenAPi", "2021-05-29_22-53-15-425", "HTTPS", "POST", "AK", "json", req, runtime), new BundleOpenAPiResponse());
     }
 
     public BundleOpenAPiResponse bundleOpenAPi(BundleOpenAPiRequest request) throws Exception {
