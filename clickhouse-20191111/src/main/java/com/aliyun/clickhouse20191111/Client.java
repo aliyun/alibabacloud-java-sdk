@@ -207,6 +207,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.modifyDBConfigWithOptions(request, runtime);
     }
 
+    public CreatePortsForClickHouseResponse createPortsForClickHouseWithOptions(CreatePortsForClickHouseRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreatePortsForClickHouse", "2019-11-11", "HTTPS", "POST", "AK", "json", req, runtime), new CreatePortsForClickHouseResponse());
+    }
+
+    public CreatePortsForClickHouseResponse createPortsForClickHouse(CreatePortsForClickHouseRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createPortsForClickHouseWithOptions(request, runtime);
+    }
+
     public DeleteDBClusterResponse deleteDBClusterWithOptions(DeleteDBClusterRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(

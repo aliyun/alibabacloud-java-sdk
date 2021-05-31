@@ -219,6 +219,18 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("Engine")
         public String engine;
 
+        @NameInMap("SupportMysqlPort")
+        public String supportMysqlPort;
+
+        @NameInMap("IsSupportMysqlPort")
+        public String isSupportMysqlPort;
+
+        @NameInMap("SupportHttpsPort")
+        public String supportHttpsPort;
+
+        @NameInMap("IsSupportHttpsPort")
+        public String isSupportHttpsPort;
+
         public static DescribeDBClusterAttributeResponseBodyDBCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterAttributeResponseBodyDBCluster self = new DescribeDBClusterAttributeResponseBodyDBCluster();
             return TeaModel.build(map, self);
@@ -510,6 +522,38 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getEngine() {
             return this.engine;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setSupportMysqlPort(String supportMysqlPort) {
+            this.supportMysqlPort = supportMysqlPort;
+            return this;
+        }
+        public String getSupportMysqlPort() {
+            return this.supportMysqlPort;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setIsSupportMysqlPort(String isSupportMysqlPort) {
+            this.isSupportMysqlPort = isSupportMysqlPort;
+            return this;
+        }
+        public String getIsSupportMysqlPort() {
+            return this.isSupportMysqlPort;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setSupportHttpsPort(String supportHttpsPort) {
+            this.supportHttpsPort = supportHttpsPort;
+            return this;
+        }
+        public String getSupportHttpsPort() {
+            return this.supportHttpsPort;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setIsSupportHttpsPort(String isSupportHttpsPort) {
+            this.isSupportHttpsPort = isSupportHttpsPort;
+            return this;
+        }
+        public String getIsSupportHttpsPort() {
+            return this.isSupportHttpsPort;
         }
 
     }

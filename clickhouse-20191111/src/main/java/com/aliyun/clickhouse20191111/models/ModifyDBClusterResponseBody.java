@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterResponseBody extends TeaModel {
     @NameInMap("DBCluster")
-    public String DBCluster;
+    public ModifyDBClusterResponseBodyDBCluster DBCluster;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -15,11 +15,11 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBClusterResponseBody setDBCluster(String DBCluster) {
+    public ModifyDBClusterResponseBody setDBCluster(ModifyDBClusterResponseBodyDBCluster DBCluster) {
         this.DBCluster = DBCluster;
         return this;
     }
-    public String getDBCluster() {
+    public ModifyDBClusterResponseBodyDBCluster getDBCluster() {
         return this.DBCluster;
     }
 
@@ -29,6 +29,36 @@ public class ModifyDBClusterResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class ModifyDBClusterResponseBodyDBCluster extends TeaModel {
+        @NameInMap("dbClusterId")
+        public String dbClusterId;
+
+        @NameInMap("orderId")
+        public String orderId;
+
+        public static ModifyDBClusterResponseBodyDBCluster build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDBClusterResponseBodyDBCluster self = new ModifyDBClusterResponseBodyDBCluster();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDBClusterResponseBodyDBCluster setDbClusterId(String dbClusterId) {
+            this.dbClusterId = dbClusterId;
+            return this;
+        }
+        public String getDbClusterId() {
+            return this.dbClusterId;
+        }
+
+        public ModifyDBClusterResponseBodyDBCluster setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
+        }
+
     }
 
 }
