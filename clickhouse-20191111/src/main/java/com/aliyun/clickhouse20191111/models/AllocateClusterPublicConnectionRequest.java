@@ -19,8 +19,8 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
-    @NameInMap("ConnectionStringPrefix")
-    public String connectionStringPrefix;
+    @NameInMap("PortType")
+    public String portType;
 
     public static AllocateClusterPublicConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AllocateClusterPublicConnectionRequest self = new AllocateClusterPublicConnectionRequest();
@@ -67,12 +67,12 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public AllocateClusterPublicConnectionRequest setConnectionStringPrefix(String connectionStringPrefix) {
-        this.connectionStringPrefix = connectionStringPrefix;
+    public AllocateClusterPublicConnectionRequest setPortType(String portType) {
+        this.portType = portType;
         return this;
     }
-    public String getConnectionStringPrefix() {
-        return this.connectionStringPrefix;
+    public String getPortType() {
+        return this.portType;
     }
 
 }
