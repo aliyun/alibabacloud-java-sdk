@@ -19,6 +19,9 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
     @NameInMap("Success")
     public String success;
 
+    @NameInMap("HttpStatusCode")
+    public Long httpStatusCode;
+
     public static GetHotlineAgentDetailReportResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetHotlineAgentDetailReportResponseBody self = new GetHotlineAgentDetailReportResponseBody();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class GetHotlineAgentDetailReportResponseBody extends TeaModel {
     }
     public String getSuccess() {
         return this.success;
+    }
+
+    public GetHotlineAgentDetailReportResponseBody setHttpStatusCode(Long httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Long getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     public static class GetHotlineAgentDetailReportResponseBodyDataColumns extends TeaModel {
