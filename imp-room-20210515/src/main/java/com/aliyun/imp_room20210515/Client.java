@@ -89,4 +89,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.createInstanceWithOptions(request, runtime);
     }
+
+    public GetRoomDetailResponse getRoomDetailWithOptions(GetRoomDetailRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetRoomDetail", "2021-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetRoomDetailResponse());
+    }
+
+    public GetRoomDetailResponse getRoomDetail(GetRoomDetailRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getRoomDetailWithOptions(request, runtime);
+    }
+
+    public GetRoomListResponse getRoomListWithOptions(GetRoomListRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetRoomList", "2021-05-15", "HTTPS", "POST", "AK", "json", req, runtime), new GetRoomListResponse());
+    }
+
+    public GetRoomListResponse getRoomList(GetRoomListRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getRoomListWithOptions(request, runtime);
+    }
 }
