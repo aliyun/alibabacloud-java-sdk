@@ -7,9 +7,6 @@ public class DescribeGeoipInstanceStatisticsRequest extends TeaModel {
     @NameInMap("Lang")
     public String lang;
 
-    @NameInMap("UserClientIp")
-    public String userClientIp;
-
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -30,14 +27,6 @@ public class DescribeGeoipInstanceStatisticsRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
-    }
-
-    public DescribeGeoipInstanceStatisticsRequest setUserClientIp(String userClientIp) {
-        this.userClientIp = userClientIp;
-        return this;
-    }
-    public String getUserClientIp() {
-        return this.userClientIp;
     }
 
     public DescribeGeoipInstanceStatisticsRequest setInstanceId(String instanceId) {
