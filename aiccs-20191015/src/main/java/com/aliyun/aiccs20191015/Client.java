@@ -609,6 +609,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.createTaskWithOptions(request, runtime);
     }
 
+    public CreateDepartmentResponse createDepartmentWithOptions(CreateDepartmentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("CreateDepartment", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new CreateDepartmentResponse());
+    }
+
+    public CreateDepartmentResponse createDepartment(CreateDepartmentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.createDepartmentWithOptions(request, runtime);
+    }
+
     public UpdateOuterAccountResponse updateOuterAccountWithOptions(UpdateOuterAccountRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -706,6 +719,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSkillGroupAndAgentStatusSummaryResponse getSkillGroupAndAgentStatusSummary(GetSkillGroupAndAgentStatusSummaryRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getSkillGroupAndAgentStatusSummaryWithOptions(request, runtime);
+    }
+
+    public DeleteDepartmentResponse deleteDepartmentWithOptions(DeleteDepartmentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("DeleteDepartment", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new DeleteDepartmentResponse());
+    }
+
+    public DeleteDepartmentResponse deleteDepartment(DeleteDepartmentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.deleteDepartmentWithOptions(request, runtime);
+    }
+
+    public UpdateDepartmentResponse updateDepartmentWithOptions(UpdateDepartmentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("UpdateDepartment", "2019-10-15", "HTTPS", "POST", "AK", "json", req, runtime), new UpdateDepartmentResponse());
+    }
+
+    public UpdateDepartmentResponse updateDepartment(UpdateDepartmentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.updateDepartmentWithOptions(request, runtime);
     }
 
     public GetRecordDataResponse getRecordDataWithOptions(GetRecordDataRequest request, RuntimeOptions runtime) throws Exception {
@@ -1448,6 +1487,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetHotlineAgentDetailResponse getHotlineAgentDetail(GetHotlineAgentDetailRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.getHotlineAgentDetailWithOptions(request, runtime);
+    }
+
+    public GetAllDepartmentResponse getAllDepartmentWithOptions(GetAllDepartmentRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("GetAllDepartment", "2019-10-15", "HTTPS", "GET", "AK", "json", req, runtime), new GetAllDepartmentResponse());
+    }
+
+    public GetAllDepartmentResponse getAllDepartment(GetAllDepartmentRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getAllDepartmentWithOptions(request, runtime);
     }
 
     public ListTaskDetailResponse listTaskDetailWithOptions(ListTaskDetailRequest request, RuntimeOptions runtime) throws Exception {
