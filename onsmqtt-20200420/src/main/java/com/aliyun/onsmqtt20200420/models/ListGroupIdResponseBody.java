@@ -35,6 +35,9 @@ public class ListGroupIdResponseBody extends TeaModel {
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         @NameInMap("IndependentNaming")
         public Boolean independentNaming;
 
@@ -43,9 +46,6 @@ public class ListGroupIdResponseBody extends TeaModel {
 
         @NameInMap("CreateTime")
         public Long createTime;
-
-        @NameInMap("InstanceId")
-        public String instanceId;
 
         public static ListGroupIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListGroupIdResponseBodyData self = new ListGroupIdResponseBodyData();
@@ -58,6 +58,14 @@ public class ListGroupIdResponseBody extends TeaModel {
         }
         public Long getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListGroupIdResponseBodyData setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public ListGroupIdResponseBodyData setIndependentNaming(Boolean independentNaming) {
@@ -82,14 +90,6 @@ public class ListGroupIdResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
-        }
-
-        public ListGroupIdResponseBodyData setInstanceId(String instanceId) {
-            this.instanceId = instanceId;
-            return this;
-        }
-        public String getInstanceId() {
-            return this.instanceId;
         }
 
     }

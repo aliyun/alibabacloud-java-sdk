@@ -109,6 +109,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.listGroupIdWithOptions(request, runtime);
     }
 
+    public QueryMqttTraceDeviceResponse queryMqttTraceDeviceWithOptions(QueryMqttTraceDeviceRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryMqttTraceDevice", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime), new QueryMqttTraceDeviceResponse());
+    }
+
+    public QueryMqttTraceDeviceResponse queryMqttTraceDevice(QueryMqttTraceDeviceRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryMqttTraceDeviceWithOptions(request, runtime);
+    }
+
+    public QueryMqttTraceMessageOfClientResponse queryMqttTraceMessageOfClientWithOptions(QueryMqttTraceMessageOfClientRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryMqttTraceMessageOfClient", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime), new QueryMqttTraceMessageOfClientResponse());
+    }
+
+    public QueryMqttTraceMessageOfClientResponse queryMqttTraceMessageOfClient(QueryMqttTraceMessageOfClientRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryMqttTraceMessageOfClientWithOptions(request, runtime);
+    }
+
+    public QueryMqttTraceMessagePublishResponse queryMqttTraceMessagePublishWithOptions(QueryMqttTraceMessagePublishRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryMqttTraceMessagePublish", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime), new QueryMqttTraceMessagePublishResponse());
+    }
+
+    public QueryMqttTraceMessagePublishResponse queryMqttTraceMessagePublish(QueryMqttTraceMessagePublishRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryMqttTraceMessagePublishWithOptions(request, runtime);
+    }
+
+    public QueryMqttTraceMessageSubscribeResponse queryMqttTraceMessageSubscribeWithOptions(QueryMqttTraceMessageSubscribeRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryMqttTraceMessageSubscribe", "2020-04-20", "HTTPS", "POST", "AK", "json", req, runtime), new QueryMqttTraceMessageSubscribeResponse());
+    }
+
+    public QueryMqttTraceMessageSubscribeResponse queryMqttTraceMessageSubscribe(QueryMqttTraceMessageSubscribeRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryMqttTraceMessageSubscribeWithOptions(request, runtime);
+    }
+
     public QuerySessionByClientIdResponse querySessionByClientIdWithOptions(QuerySessionByClientIdRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
