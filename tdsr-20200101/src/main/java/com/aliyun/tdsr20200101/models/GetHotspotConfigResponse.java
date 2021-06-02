@@ -4,69 +4,33 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class GetHotspotConfigResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrMessage")
-    @Validation(required = true)
-    public String errMessage;
-
-    @NameInMap("Data")
-    @Validation(required = true)
-    public String data;
-
-    @NameInMap("ObjectString")
-    @Validation(required = true)
-    public String objectString;
+    public GetHotspotConfigResponseBody body;
 
     public static GetHotspotConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         GetHotspotConfigResponse self = new GetHotspotConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetHotspotConfigResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public GetHotspotConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public GetHotspotConfigResponse setSuccess(Boolean success) {
-        this.success = success;
+    public GetHotspotConfigResponse setBody(GetHotspotConfigResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public GetHotspotConfigResponse setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
-    public GetHotspotConfigResponse setData(String data) {
-        this.data = data;
-        return this;
-    }
-    public String getData() {
-        return this.data;
-    }
-
-    public GetHotspotConfigResponse setObjectString(String objectString) {
-        this.objectString = objectString;
-        return this;
-    }
-    public String getObjectString() {
-        return this.objectString;
+    public GetHotspotConfigResponseBody getBody() {
+        return this.body;
     }
 
 }

@@ -5,38 +5,30 @@ import com.aliyun.tea.*;
 
 public class CheckResourceRequest extends TeaModel {
     @NameInMap("Country")
-    @Validation(required = true)
     public String country;
 
     @NameInMap("Interrupt")
     public Boolean interrupt;
 
     @NameInMap("Invoker")
-    @Validation(required = true)
     public String invoker;
 
     @NameInMap("Pk")
-    @Validation(required = true)
     public String pk;
 
     @NameInMap("Bid")
-    @Validation(required = true)
     public String bid;
 
     @NameInMap("Hid")
-    @Validation(required = true)
     public Long hid;
 
     @NameInMap("TaskIdentifier")
-    @Validation(required = true)
     public String taskIdentifier;
 
     @NameInMap("TaskExtraData")
-    @Validation(required = true)
     public String taskExtraData;
 
     @NameInMap("GmtWakeup")
-    @Validation(required = true)
     public String gmtWakeup;
 
     @NameInMap("Success")

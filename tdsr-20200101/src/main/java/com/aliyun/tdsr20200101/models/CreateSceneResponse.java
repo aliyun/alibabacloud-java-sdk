@@ -4,69 +4,33 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class CreateSceneResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("SceneId")
+    @NameInMap("body")
     @Validation(required = true)
-    public Long sceneId;
-
-    @NameInMap("Success")
-    @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrMessage")
-    @Validation(required = true)
-    public String errMessage;
-
-    @NameInMap("PreviewToken")
-    @Validation(required = true)
-    public String previewToken;
+    public CreateSceneResponseBody body;
 
     public static CreateSceneResponse build(java.util.Map<String, ?> map) throws Exception {
         CreateSceneResponse self = new CreateSceneResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateSceneResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public CreateSceneResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public CreateSceneResponse setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
+    public CreateSceneResponse setBody(CreateSceneResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Long getSceneId() {
-        return this.sceneId;
-    }
-
-    public CreateSceneResponse setSuccess(Boolean success) {
-        this.success = success;
-        return this;
-    }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public CreateSceneResponse setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
-    }
-
-    public CreateSceneResponse setPreviewToken(String previewToken) {
-        this.previewToken = previewToken;
-        return this;
-    }
-    public String getPreviewToken() {
-        return this.previewToken;
+    public CreateSceneResponseBody getBody() {
+        return this.body;
     }
 
 }

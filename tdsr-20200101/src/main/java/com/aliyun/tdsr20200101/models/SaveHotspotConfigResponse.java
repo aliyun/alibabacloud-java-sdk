@@ -4,45 +4,33 @@ package com.aliyun.tdsr20200101.models;
 import com.aliyun.tea.*;
 
 public class SaveHotspotConfigResponse extends TeaModel {
-    @NameInMap("RequestId")
+    @NameInMap("headers")
     @Validation(required = true)
-    public String requestId;
+    public java.util.Map<String, String> headers;
 
-    @NameInMap("Success")
+    @NameInMap("body")
     @Validation(required = true)
-    public Boolean success;
-
-    @NameInMap("ErrMessage")
-    @Validation(required = true)
-    public String errMessage;
+    public SaveHotspotConfigResponseBody body;
 
     public static SaveHotspotConfigResponse build(java.util.Map<String, ?> map) throws Exception {
         SaveHotspotConfigResponse self = new SaveHotspotConfigResponse();
         return TeaModel.build(map, self);
     }
 
-    public SaveHotspotConfigResponse setRequestId(String requestId) {
-        this.requestId = requestId;
+    public SaveHotspotConfigResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
     }
 
-    public SaveHotspotConfigResponse setSuccess(Boolean success) {
-        this.success = success;
+    public SaveHotspotConfigResponse setBody(SaveHotspotConfigResponseBody body) {
+        this.body = body;
         return this;
     }
-    public Boolean getSuccess() {
-        return this.success;
-    }
-
-    public SaveHotspotConfigResponse setErrMessage(String errMessage) {
-        this.errMessage = errMessage;
-        return this;
-    }
-    public String getErrMessage() {
-        return this.errMessage;
+    public SaveHotspotConfigResponseBody getBody() {
+        return this.body;
     }
 
 }
