@@ -4,23 +4,15 @@ package com.aliyun.onsmqtt20200420.models;
 import com.aliyun.tea.*;
 
 public class SendMessageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("MsgId")
     public String msgId;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static SendMessageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SendMessageResponseBody self = new SendMessageResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public SendMessageResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public SendMessageResponseBody setMsgId(String msgId) {
@@ -29,6 +21,14 @@ public class SendMessageResponseBody extends TeaModel {
     }
     public String getMsgId() {
         return this.msgId;
+    }
+
+    public SendMessageResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }
