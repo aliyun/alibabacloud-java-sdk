@@ -586,6 +586,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.queryServicerByPageWithOptions(request, runtime);
     }
 
+    public QueryListRobotResponse queryListRobotWithOptions(QueryListRobotRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", query)
+        ));
+        return TeaModel.toModel(this.doRPCRequest("QueryListRobot", "2019-12-27", "HTTPS", "GET", "AK", "json", req, runtime), new QueryListRobotResponse());
+    }
+
+    public QueryListRobotResponse queryListRobot(QueryListRobotRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.queryListRobotWithOptions(request, runtime);
+    }
+
     public CreateOrUpdateRoleResponse createOrUpdateRoleWithOptions(CreateOrUpdateRoleRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
