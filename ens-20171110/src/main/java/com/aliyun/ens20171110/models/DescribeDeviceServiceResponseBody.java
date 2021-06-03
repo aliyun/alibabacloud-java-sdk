@@ -54,6 +54,9 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         @NameInMap("Mac")
         public String mac;
 
+        @NameInMap("ISP")
+        public String ISP;
+
         public static DescribeDeviceServiceResponseBodyResourceDetailInfos build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeviceServiceResponseBodyResourceDetailInfos self = new DescribeDeviceServiceResponseBodyResourceDetailInfos();
             return TeaModel.build(map, self);
@@ -113,6 +116,14 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
         }
         public String getMac() {
             return this.mac;
+        }
+
+        public DescribeDeviceServiceResponseBodyResourceDetailInfos setISP(String ISP) {
+            this.ISP = ISP;
+            return this;
+        }
+        public String getISP() {
+            return this.ISP;
         }
 
     }

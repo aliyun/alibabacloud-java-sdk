@@ -4,9 +4,6 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class DescribeEnsRegionIdResourceRequest extends TeaModel {
-    @NameInMap("Version")
-    public String version;
-
     @NameInMap("StartTime")
     public String startTime;
 
@@ -28,14 +25,6 @@ public class DescribeEnsRegionIdResourceRequest extends TeaModel {
     public static DescribeEnsRegionIdResourceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeEnsRegionIdResourceRequest self = new DescribeEnsRegionIdResourceRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeEnsRegionIdResourceRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
     public DescribeEnsRegionIdResourceRequest setStartTime(String startTime) {
