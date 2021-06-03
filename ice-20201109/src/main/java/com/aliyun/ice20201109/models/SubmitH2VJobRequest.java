@@ -25,6 +25,10 @@ public class SubmitH2VJobRequest extends TeaModel {
     @NameInMap("InputType")
     public String inputType;
 
+    // 是否强制覆盖现有OSS文件
+    @NameInMap("Overwrite")
+    public Boolean overwrite;
+
     public static SubmitH2VJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitH2VJobRequest self = new SubmitH2VJobRequest();
         return TeaModel.build(map, self);
@@ -76,6 +80,14 @@ public class SubmitH2VJobRequest extends TeaModel {
     }
     public String getInputType() {
         return this.inputType;
+    }
+
+    public SubmitH2VJobRequest setOverwrite(Boolean overwrite) {
+        this.overwrite = overwrite;
+        return this;
+    }
+    public Boolean getOverwrite() {
+        return this.overwrite;
     }
 
 }

@@ -19,11 +19,14 @@ public class ListSmartJobsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
-    @NameInMap("Title")
-    public String title;
-
     @NameInMap("JobType")
     public String jobType;
+
+    @NameInMap("SortBy")
+    public String sortBy;
+
+    @NameInMap("JobState")
+    public String jobState;
 
     public static ListSmartJobsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSmartJobsRequest self = new ListSmartJobsRequest();
@@ -70,20 +73,28 @@ public class ListSmartJobsRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ListSmartJobsRequest setTitle(String title) {
-        this.title = title;
-        return this;
-    }
-    public String getTitle() {
-        return this.title;
-    }
-
     public ListSmartJobsRequest setJobType(String jobType) {
         this.jobType = jobType;
         return this;
     }
     public String getJobType() {
         return this.jobType;
+    }
+
+    public ListSmartJobsRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    public ListSmartJobsRequest setJobState(String jobState) {
+        this.jobState = jobState;
+        return this;
+    }
+    public String getJobState() {
+        return this.jobState;
     }
 
 }

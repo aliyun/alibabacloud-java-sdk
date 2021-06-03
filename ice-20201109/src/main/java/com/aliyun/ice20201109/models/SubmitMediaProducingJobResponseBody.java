@@ -16,6 +16,10 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    // 合成媒资Id
+    @NameInMap("MediaId")
+    public String mediaId;
+
     public static SubmitMediaProducingJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SubmitMediaProducingJobResponseBody self = new SubmitMediaProducingJobResponseBody();
         return TeaModel.build(map, self);
@@ -43,6 +47,14 @@ public class SubmitMediaProducingJobResponseBody extends TeaModel {
     }
     public String getJobId() {
         return this.jobId;
+    }
+
+    public SubmitMediaProducingJobResponseBody setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+        return this;
+    }
+    public String getMediaId() {
+        return this.mediaId;
     }
 
 }

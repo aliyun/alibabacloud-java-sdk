@@ -22,6 +22,9 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     @NameInMap("UserData")
     public String userData;
 
+    @NameInMap("Overwrite")
+    public Boolean overwrite;
+
     public static SubmitAudioProduceJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitAudioProduceJobRequest self = new SubmitAudioProduceJobRequest();
         return TeaModel.build(map, self);
@@ -73,6 +76,14 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     }
     public String getUserData() {
         return this.userData;
+    }
+
+    public SubmitAudioProduceJobRequest setOverwrite(Boolean overwrite) {
+        this.overwrite = overwrite;
+        return this;
+    }
+    public Boolean getOverwrite() {
+        return this.overwrite;
     }
 
 }

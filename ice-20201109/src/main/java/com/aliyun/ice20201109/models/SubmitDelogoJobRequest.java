@@ -25,6 +25,10 @@ public class SubmitDelogoJobRequest extends TeaModel {
     @NameInMap("InputType")
     public String inputType;
 
+    // 是否强制覆盖现有OSS文件
+    @NameInMap("Overwrite")
+    public Boolean overwrite;
+
     public static SubmitDelogoJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDelogoJobRequest self = new SubmitDelogoJobRequest();
         return TeaModel.build(map, self);
@@ -76,6 +80,14 @@ public class SubmitDelogoJobRequest extends TeaModel {
     }
     public String getInputType() {
         return this.inputType;
+    }
+
+    public SubmitDelogoJobRequest setOverwrite(Boolean overwrite) {
+        this.overwrite = overwrite;
+        return this;
+    }
+    public Boolean getOverwrite() {
+        return this.overwrite;
     }
 
 }
