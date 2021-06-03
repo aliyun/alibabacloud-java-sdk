@@ -25,6 +25,10 @@ public class SubmitMattingJobRequest extends TeaModel {
     @NameInMap("InputType")
     public String inputType;
 
+    // 是否强制覆盖现有OSS文件
+    @NameInMap("Overwrite")
+    public String overwrite;
+
     public static SubmitMattingJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitMattingJobRequest self = new SubmitMattingJobRequest();
         return TeaModel.build(map, self);
@@ -76,6 +80,14 @@ public class SubmitMattingJobRequest extends TeaModel {
     }
     public String getInputType() {
         return this.inputType;
+    }
+
+    public SubmitMattingJobRequest setOverwrite(String overwrite) {
+        this.overwrite = overwrite;
+        return this;
+    }
+    public String getOverwrite() {
+        return this.overwrite;
     }
 
 }

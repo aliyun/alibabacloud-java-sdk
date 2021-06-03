@@ -349,6 +349,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return this.getEditingProjectMaterialsWithOptions(request, runtime);
     }
 
+    public GetDefaultStorageLocationResponse getDefaultStorageLocationWithOptions(RuntimeOptions runtime) throws Exception {
+        OpenApiRequest req = new OpenApiRequest();
+        return TeaModel.toModel(this.doRPCRequest("GetDefaultStorageLocation", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new GetDefaultStorageLocationResponse());
+    }
+
+    public GetDefaultStorageLocationResponse getDefaultStorageLocation() throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDefaultStorageLocationWithOptions(runtime);
+    }
+
     public SubmitAudioProduceJobResponse submitAudioProduceJobWithOptions(SubmitAudioProduceJobRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
@@ -477,6 +487,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitCoverJobResponse submitCoverJob(SubmitCoverJobRequest request) throws Exception {
         RuntimeOptions runtime = new RuntimeOptions();
         return this.submitCoverJobWithOptions(request, runtime);
+    }
+
+    public SetDefaultStorageLocationResponse setDefaultStorageLocationWithOptions(SetDefaultStorageLocationRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        ));
+        return TeaModel.toModel(this.doRPCRequest("SetDefaultStorageLocation", "2020-11-09", "HTTPS", "POST", "AK", "json", req, runtime), new SetDefaultStorageLocationResponse());
+    }
+
+    public SetDefaultStorageLocationResponse setDefaultStorageLocation(SetDefaultStorageLocationRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.setDefaultStorageLocationWithOptions(request, runtime);
     }
 
     public UpdateMediaInfoResponse updateMediaInfoWithOptions(UpdateMediaInfoRequest request, RuntimeOptions runtime) throws Exception {
