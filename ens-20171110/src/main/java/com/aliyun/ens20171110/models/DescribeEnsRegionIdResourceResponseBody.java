@@ -84,7 +84,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
         public Integer instanceCount;
 
         @NameInMap("InternetBandwidth")
-        public Integer internetBandwidth;
+        public Long internetBandwidth;
 
         @NameInMap("Isp")
         public String isp;
@@ -145,11 +145,11 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
             return this.instanceCount;
         }
 
-        public DescribeEnsRegionIdResourceResponseBodyEnsRegionIdResourcesEnsRegionIdResource setInternetBandwidth(Integer internetBandwidth) {
+        public DescribeEnsRegionIdResourceResponseBodyEnsRegionIdResourcesEnsRegionIdResource setInternetBandwidth(Long internetBandwidth) {
             this.internetBandwidth = internetBandwidth;
             return this;
         }
-        public Integer getInternetBandwidth() {
+        public Long getInternetBandwidth() {
             return this.internetBandwidth;
         }
 
