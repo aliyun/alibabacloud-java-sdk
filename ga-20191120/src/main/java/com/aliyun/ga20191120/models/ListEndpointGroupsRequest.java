@@ -22,6 +22,12 @@ public class ListEndpointGroupsRequest extends TeaModel {
     @NameInMap("EndpointGroupType")
     public String endpointGroupType;
 
+    @NameInMap("AccessLogSwitch")
+    public String accessLogSwitch;
+
+    @NameInMap("EndpointGroupId")
+    public String endpointGroupId;
+
     public static ListEndpointGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEndpointGroupsRequest self = new ListEndpointGroupsRequest();
         return TeaModel.build(map, self);
@@ -73,6 +79,22 @@ public class ListEndpointGroupsRequest extends TeaModel {
     }
     public String getEndpointGroupType() {
         return this.endpointGroupType;
+    }
+
+    public ListEndpointGroupsRequest setAccessLogSwitch(String accessLogSwitch) {
+        this.accessLogSwitch = accessLogSwitch;
+        return this;
+    }
+    public String getAccessLogSwitch() {
+        return this.accessLogSwitch;
+    }
+
+    public ListEndpointGroupsRequest setEndpointGroupId(String endpointGroupId) {
+        this.endpointGroupId = endpointGroupId;
+        return this;
+    }
+    public String getEndpointGroupId() {
+        return this.endpointGroupId;
     }
 
 }

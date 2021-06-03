@@ -52,6 +52,9 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     @NameInMap("BillingType")
     public String billingType;
 
+    @NameInMap("Ratio")
+    public Integer ratio;
+
     public static DescribeBandwidthPackageResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeBandwidthPackageResponseBody self = new DescribeBandwidthPackageResponseBody();
         return TeaModel.build(map, self);
@@ -183,6 +186,14 @@ public class DescribeBandwidthPackageResponseBody extends TeaModel {
     }
     public String getBillingType() {
         return this.billingType;
+    }
+
+    public DescribeBandwidthPackageResponseBody setRatio(Integer ratio) {
+        this.ratio = ratio;
+        return this;
+    }
+    public Integer getRatio() {
+        return this.ratio;
     }
 
 }

@@ -34,10 +34,6 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("Certificates")
     public java.util.List<CreateListenerRequestCertificates> certificates;
 
-    // 转发端口迁移至终端节点组portoverride
-    @NameInMap("BackendPorts")
-    public java.util.List<CreateListenerRequestBackendPorts> backendPorts;
-
     public static CreateListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateListenerRequest self = new CreateListenerRequest();
         return TeaModel.build(map, self);
@@ -123,14 +119,6 @@ public class CreateListenerRequest extends TeaModel {
         return this.certificates;
     }
 
-    public CreateListenerRequest setBackendPorts(java.util.List<CreateListenerRequestBackendPorts> backendPorts) {
-        this.backendPorts = backendPorts;
-        return this;
-    }
-    public java.util.List<CreateListenerRequestBackendPorts> getBackendPorts() {
-        return this.backendPorts;
-    }
-
     public static class CreateListenerRequestPortRanges extends TeaModel {
         @NameInMap("FromPort")
         public Integer fromPort;
@@ -176,14 +164,6 @@ public class CreateListenerRequest extends TeaModel {
         }
         public String getId() {
             return this.id;
-        }
-
-    }
-
-    public static class CreateListenerRequestBackendPorts extends TeaModel {
-        public static CreateListenerRequestBackendPorts build(java.util.Map<String, ?> map) throws Exception {
-            CreateListenerRequestBackendPorts self = new CreateListenerRequestBackendPorts();
-            return TeaModel.build(map, self);
         }
 
     }

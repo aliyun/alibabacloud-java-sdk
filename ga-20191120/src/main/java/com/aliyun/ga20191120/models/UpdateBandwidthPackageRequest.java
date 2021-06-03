@@ -28,9 +28,6 @@ public class UpdateBandwidthPackageRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
-    @NameInMap("PromotionOptionNo")
-    public String promotionOptionNo;
-
     public static UpdateBandwidthPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateBandwidthPackageRequest self = new UpdateBandwidthPackageRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class UpdateBandwidthPackageRequest extends TeaModel {
     }
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
-    }
-
-    public UpdateBandwidthPackageRequest setPromotionOptionNo(String promotionOptionNo) {
-        this.promotionOptionNo = promotionOptionNo;
-        return this;
-    }
-    public String getPromotionOptionNo() {
-        return this.promotionOptionNo;
     }
 
 }

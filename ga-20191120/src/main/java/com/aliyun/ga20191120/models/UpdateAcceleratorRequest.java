@@ -28,9 +28,6 @@ public class UpdateAcceleratorRequest extends TeaModel {
     @NameInMap("AutoUseCoupon")
     public Boolean autoUseCoupon;
 
-    @NameInMap("PromotionOptionNo")
-    public String promotionOptionNo;
-
     public static UpdateAcceleratorRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAcceleratorRequest self = new UpdateAcceleratorRequest();
         return TeaModel.build(map, self);
@@ -98,14 +95,6 @@ public class UpdateAcceleratorRequest extends TeaModel {
     }
     public Boolean getAutoUseCoupon() {
         return this.autoUseCoupon;
-    }
-
-    public UpdateAcceleratorRequest setPromotionOptionNo(String promotionOptionNo) {
-        this.promotionOptionNo = promotionOptionNo;
-        return this;
-    }
-    public String getPromotionOptionNo() {
-        return this.promotionOptionNo;
     }
 
 }

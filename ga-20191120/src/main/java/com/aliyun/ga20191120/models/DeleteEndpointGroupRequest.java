@@ -4,9 +4,6 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DeleteEndpointGroupRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -19,14 +16,6 @@ public class DeleteEndpointGroupRequest extends TeaModel {
     public static DeleteEndpointGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteEndpointGroupRequest self = new DeleteEndpointGroupRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteEndpointGroupRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteEndpointGroupRequest setClientToken(String clientToken) {
