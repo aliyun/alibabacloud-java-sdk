@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.ga20191120.models;
+
+import com.aliyun.tea.*;
+
+public class GetAclResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public GetAclResponseBody body;
+
+    public static GetAclResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetAclResponse self = new GetAclResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public GetAclResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public GetAclResponse setBody(GetAclResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public GetAclResponseBody getBody() {
+        return this.body;
+    }
+
+}

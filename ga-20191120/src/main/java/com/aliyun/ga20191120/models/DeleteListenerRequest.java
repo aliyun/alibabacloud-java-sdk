@@ -4,9 +4,6 @@ package com.aliyun.ga20191120.models;
 import com.aliyun.tea.*;
 
 public class DeleteListenerRequest extends TeaModel {
-    @NameInMap("RegionId")
-    public String regionId;
-
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -19,14 +16,6 @@ public class DeleteListenerRequest extends TeaModel {
     public static DeleteListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteListenerRequest self = new DeleteListenerRequest();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteListenerRequest setRegionId(String regionId) {
-        this.regionId = regionId;
-        return this;
-    }
-    public String getRegionId() {
-        return this.regionId;
     }
 
     public DeleteListenerRequest setClientToken(String clientToken) {

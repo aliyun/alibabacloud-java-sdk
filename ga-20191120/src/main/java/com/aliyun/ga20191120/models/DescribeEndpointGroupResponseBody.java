@@ -58,8 +58,26 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
     @NameInMap("ForwardingRuleIds")
     public java.util.List<String> forwardingRuleIds;
 
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
+
     @NameInMap("ListenerId")
     public String listenerId;
+
+    @NameInMap("SlsRegion")
+    public String slsRegion;
+
+    @NameInMap("SlsProjectName")
+    public String slsProjectName;
+
+    @NameInMap("SlsLogStoreName")
+    public String slsLogStoreName;
+
+    @NameInMap("AccessLogSwitch")
+    public String accessLogSwitch;
+
+    @NameInMap("EnableAccessLog")
+    public Boolean enableAccessLog;
 
     public static DescribeEndpointGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeEndpointGroupResponseBody self = new DescribeEndpointGroupResponseBody();
@@ -210,12 +228,60 @@ public class DescribeEndpointGroupResponseBody extends TeaModel {
         return this.forwardingRuleIds;
     }
 
+    public DescribeEndpointGroupResponseBody setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
+        return this;
+    }
+    public String getAcceleratorId() {
+        return this.acceleratorId;
+    }
+
     public DescribeEndpointGroupResponseBody setListenerId(String listenerId) {
         this.listenerId = listenerId;
         return this;
     }
     public String getListenerId() {
         return this.listenerId;
+    }
+
+    public DescribeEndpointGroupResponseBody setSlsRegion(String slsRegion) {
+        this.slsRegion = slsRegion;
+        return this;
+    }
+    public String getSlsRegion() {
+        return this.slsRegion;
+    }
+
+    public DescribeEndpointGroupResponseBody setSlsProjectName(String slsProjectName) {
+        this.slsProjectName = slsProjectName;
+        return this;
+    }
+    public String getSlsProjectName() {
+        return this.slsProjectName;
+    }
+
+    public DescribeEndpointGroupResponseBody setSlsLogStoreName(String slsLogStoreName) {
+        this.slsLogStoreName = slsLogStoreName;
+        return this;
+    }
+    public String getSlsLogStoreName() {
+        return this.slsLogStoreName;
+    }
+
+    public DescribeEndpointGroupResponseBody setAccessLogSwitch(String accessLogSwitch) {
+        this.accessLogSwitch = accessLogSwitch;
+        return this;
+    }
+    public String getAccessLogSwitch() {
+        return this.accessLogSwitch;
+    }
+
+    public DescribeEndpointGroupResponseBody setEnableAccessLog(Boolean enableAccessLog) {
+        this.enableAccessLog = enableAccessLog;
+        return this;
+    }
+    public Boolean getEnableAccessLog() {
+        return this.enableAccessLog;
     }
 
     public static class DescribeEndpointGroupResponseBodyEndpointConfigurations extends TeaModel {

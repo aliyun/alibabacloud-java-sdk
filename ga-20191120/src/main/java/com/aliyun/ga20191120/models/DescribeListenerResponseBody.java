@@ -37,6 +37,18 @@ public class DescribeListenerResponseBody extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("RelatedAcls")
+    public java.util.List<DescribeListenerResponseBodyRelatedAcls> relatedAcls;
+
+    @NameInMap("AclType")
+    public String aclType;
+
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
+
+    @NameInMap("ProxyProtocol")
+    public Boolean proxyProtocol;
+
     public static DescribeListenerResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeListenerResponseBody self = new DescribeListenerResponseBody();
         return TeaModel.build(map, self);
@@ -130,6 +142,38 @@ public class DescribeListenerResponseBody extends TeaModel {
         return this.name;
     }
 
+    public DescribeListenerResponseBody setRelatedAcls(java.util.List<DescribeListenerResponseBodyRelatedAcls> relatedAcls) {
+        this.relatedAcls = relatedAcls;
+        return this;
+    }
+    public java.util.List<DescribeListenerResponseBodyRelatedAcls> getRelatedAcls() {
+        return this.relatedAcls;
+    }
+
+    public DescribeListenerResponseBody setAclType(String aclType) {
+        this.aclType = aclType;
+        return this;
+    }
+    public String getAclType() {
+        return this.aclType;
+    }
+
+    public DescribeListenerResponseBody setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
+        return this;
+    }
+    public String getAcceleratorId() {
+        return this.acceleratorId;
+    }
+
+    public DescribeListenerResponseBody setProxyProtocol(Boolean proxyProtocol) {
+        this.proxyProtocol = proxyProtocol;
+        return this;
+    }
+    public Boolean getProxyProtocol() {
+        return this.proxyProtocol;
+    }
+
     public static class DescribeListenerResponseBodyPortRanges extends TeaModel {
         @NameInMap("FromPort")
         public Integer fromPort;
@@ -216,6 +260,36 @@ public class DescribeListenerResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+    }
+
+    public static class DescribeListenerResponseBodyRelatedAcls extends TeaModel {
+        @NameInMap("AclId")
+        public String aclId;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeListenerResponseBodyRelatedAcls build(java.util.Map<String, ?> map) throws Exception {
+            DescribeListenerResponseBodyRelatedAcls self = new DescribeListenerResponseBodyRelatedAcls();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeListenerResponseBodyRelatedAcls setAclId(String aclId) {
+            this.aclId = aclId;
+            return this;
+        }
+        public String getAclId() {
+            return this.aclId;
+        }
+
+        public DescribeListenerResponseBodyRelatedAcls setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

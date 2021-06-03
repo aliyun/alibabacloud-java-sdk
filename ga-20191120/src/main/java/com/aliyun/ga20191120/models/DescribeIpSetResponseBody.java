@@ -25,6 +25,9 @@ public class DescribeIpSetResponseBody extends TeaModel {
     @NameInMap("AccelerateRegionId")
     public String accelerateRegionId;
 
+    @NameInMap("AcceleratorId")
+    public String acceleratorId;
+
     public static DescribeIpSetResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeIpSetResponseBody self = new DescribeIpSetResponseBody();
         return TeaModel.build(map, self);
@@ -84,6 +87,14 @@ public class DescribeIpSetResponseBody extends TeaModel {
     }
     public String getAccelerateRegionId() {
         return this.accelerateRegionId;
+    }
+
+    public DescribeIpSetResponseBody setAcceleratorId(String acceleratorId) {
+        this.acceleratorId = acceleratorId;
+        return this;
+    }
+    public String getAcceleratorId() {
+        return this.acceleratorId;
     }
 
 }

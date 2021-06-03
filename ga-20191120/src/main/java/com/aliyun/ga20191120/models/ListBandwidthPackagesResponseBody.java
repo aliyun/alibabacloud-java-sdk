@@ -110,6 +110,9 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("BillingType")
         public String billingType;
 
+        @NameInMap("Ratio")
+        public Integer ratio;
+
         public static ListBandwidthPackagesResponseBodyBandwidthPackages build(java.util.Map<String, ?> map) throws Exception {
             ListBandwidthPackagesResponseBodyBandwidthPackages self = new ListBandwidthPackagesResponseBodyBandwidthPackages();
             return TeaModel.build(map, self);
@@ -233,6 +236,14 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
         }
         public String getBillingType() {
             return this.billingType;
+        }
+
+        public ListBandwidthPackagesResponseBodyBandwidthPackages setRatio(Integer ratio) {
+            this.ratio = ratio;
+            return this;
+        }
+        public Integer getRatio() {
+            return this.ratio;
         }
 
     }

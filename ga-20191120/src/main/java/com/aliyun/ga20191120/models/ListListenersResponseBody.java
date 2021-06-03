@@ -188,6 +188,9 @@ public class ListListenersResponseBody extends TeaModel {
         @NameInMap("ProxyProtocol")
         public Boolean proxyProtocol;
 
+        @NameInMap("AcceleratorId")
+        public String acceleratorId;
+
         public static ListListenersResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersResponseBodyListeners self = new ListListenersResponseBodyListeners();
             return TeaModel.build(map, self);
@@ -279,6 +282,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public Boolean getProxyProtocol() {
             return this.proxyProtocol;
+        }
+
+        public ListListenersResponseBodyListeners setAcceleratorId(String acceleratorId) {
+            this.acceleratorId = acceleratorId;
+            return this;
+        }
+        public String getAcceleratorId() {
+            return this.acceleratorId;
         }
 
     }

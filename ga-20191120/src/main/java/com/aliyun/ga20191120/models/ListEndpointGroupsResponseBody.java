@@ -199,6 +199,9 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         @NameInMap("ListenerId")
         public String listenerId;
 
+        @NameInMap("AcceleratorId")
+        public String acceleratorId;
+
         @NameInMap("EndpointConfigurations")
         public java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations> endpointConfigurations;
 
@@ -306,6 +309,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
         }
         public String getListenerId() {
             return this.listenerId;
+        }
+
+        public ListEndpointGroupsResponseBodyEndpointGroups setAcceleratorId(String acceleratorId) {
+            this.acceleratorId = acceleratorId;
+            return this;
+        }
+        public String getAcceleratorId() {
+            return this.acceleratorId;
         }
 
         public ListEndpointGroupsResponseBodyEndpointGroups setEndpointConfigurations(java.util.List<ListEndpointGroupsResponseBodyEndpointGroupsEndpointConfigurations> endpointConfigurations) {

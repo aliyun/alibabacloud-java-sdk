@@ -46,9 +46,6 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     @NameInMap("CbnGeographicRegionIdB")
     public String cbnGeographicRegionIdB;
 
-    @NameInMap("PromotionOptionNo")
-    public String promotionOptionNo;
-
     public static CreateBandwidthPackageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateBandwidthPackageRequest self = new CreateBandwidthPackageRequest();
         return TeaModel.build(map, self);
@@ -164,14 +161,6 @@ public class CreateBandwidthPackageRequest extends TeaModel {
     }
     public String getCbnGeographicRegionIdB() {
         return this.cbnGeographicRegionIdB;
-    }
-
-    public CreateBandwidthPackageRequest setPromotionOptionNo(String promotionOptionNo) {
-        this.promotionOptionNo = promotionOptionNo;
-        return this;
-    }
-    public String getPromotionOptionNo() {
-        return this.promotionOptionNo;
     }
 
 }
