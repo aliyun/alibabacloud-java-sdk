@@ -91,9 +91,6 @@ public class SearchByUrlResponseBody extends TeaModel {
         @NameInMap("PromotionPrice")
         public String promotionPrice;
 
-        @NameInMap("PriceAfterCoupon")
-        public String priceAfterCoupon;
-
         @NameInMap("UserType")
         public Integer userType;
 
@@ -115,14 +112,8 @@ public class SearchByUrlResponseBody extends TeaModel {
         @NameInMap("CategoryName")
         public String categoryName;
 
-        @NameInMap("CouponActivityId")
-        public String couponActivityId;
-
         @NameInMap("CouponTotalCount")
         public String couponTotalCount;
-
-        @NameInMap("CouponSendCount")
-        public String couponSendCount;
 
         @NameInMap("CouponRemainCount")
         public Integer couponRemainCount;
@@ -142,17 +133,14 @@ public class SearchByUrlResponseBody extends TeaModel {
         @NameInMap("CouponSaleTextInfo")
         public String couponSaleTextInfo;
 
-        @NameInMap("CalTkRate")
-        public String calTkRate;
+        @NameInMap("CommissionRate")
+        public String commissionRate;
 
         @NameInMap("CouponShareUrl")
         public String couponShareUrl;
 
         @NameInMap("ClickUrl")
         public String clickUrl;
-
-        @NameInMap("ShortUrl")
-        public String shortUrl;
 
         public static SearchByUrlResponseBodyDataAuctionsResult build(java.util.Map<String, ?> map) throws Exception {
             SearchByUrlResponseBodyDataAuctionsResult self = new SearchByUrlResponseBodyDataAuctionsResult();
@@ -197,14 +185,6 @@ public class SearchByUrlResponseBody extends TeaModel {
         }
         public String getPromotionPrice() {
             return this.promotionPrice;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setPriceAfterCoupon(String priceAfterCoupon) {
-            this.priceAfterCoupon = priceAfterCoupon;
-            return this;
-        }
-        public String getPriceAfterCoupon() {
-            return this.priceAfterCoupon;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setUserType(Integer userType) {
@@ -263,28 +243,12 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.categoryName;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponActivityId(String couponActivityId) {
-            this.couponActivityId = couponActivityId;
-            return this;
-        }
-        public String getCouponActivityId() {
-            return this.couponActivityId;
-        }
-
         public SearchByUrlResponseBodyDataAuctionsResult setCouponTotalCount(String couponTotalCount) {
             this.couponTotalCount = couponTotalCount;
             return this;
         }
         public String getCouponTotalCount() {
             return this.couponTotalCount;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setCouponSendCount(String couponSendCount) {
-            this.couponSendCount = couponSendCount;
-            return this;
-        }
-        public String getCouponSendCount() {
-            return this.couponSendCount;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setCouponRemainCount(Integer couponRemainCount) {
@@ -335,12 +299,12 @@ public class SearchByUrlResponseBody extends TeaModel {
             return this.couponSaleTextInfo;
         }
 
-        public SearchByUrlResponseBodyDataAuctionsResult setCalTkRate(String calTkRate) {
-            this.calTkRate = calTkRate;
+        public SearchByUrlResponseBodyDataAuctionsResult setCommissionRate(String commissionRate) {
+            this.commissionRate = commissionRate;
             return this;
         }
-        public String getCalTkRate() {
-            return this.calTkRate;
+        public String getCommissionRate() {
+            return this.commissionRate;
         }
 
         public SearchByUrlResponseBodyDataAuctionsResult setCouponShareUrl(String couponShareUrl) {
@@ -357,14 +321,6 @@ public class SearchByUrlResponseBody extends TeaModel {
         }
         public String getClickUrl() {
             return this.clickUrl;
-        }
-
-        public SearchByUrlResponseBodyDataAuctionsResult setShortUrl(String shortUrl) {
-            this.shortUrl = shortUrl;
-            return this;
-        }
-        public String getShortUrl() {
-            return this.shortUrl;
         }
 
     }

@@ -91,9 +91,6 @@ public class SearchByPicResponseBody extends TeaModel {
         @NameInMap("PromotionPrice")
         public String promotionPrice;
 
-        @NameInMap("PriceAfterCoupon")
-        public String priceAfterCoupon;
-
         @NameInMap("UserType")
         public Integer userType;
 
@@ -115,14 +112,8 @@ public class SearchByPicResponseBody extends TeaModel {
         @NameInMap("CategoryName")
         public String categoryName;
 
-        @NameInMap("CouponActivityId")
-        public String couponActivityId;
-
         @NameInMap("CouponTotalCount")
         public String couponTotalCount;
-
-        @NameInMap("CouponSendCount")
-        public String couponSendCount;
 
         @NameInMap("CouponRemainCount")
         public Integer couponRemainCount;
@@ -142,17 +133,14 @@ public class SearchByPicResponseBody extends TeaModel {
         @NameInMap("CouponSaleTextInfo")
         public String couponSaleTextInfo;
 
-        @NameInMap("CalTkRate")
-        public String calTkRate;
+        @NameInMap("CommissionRate")
+        public String commissionRate;
 
         @NameInMap("CouponShareUrl")
         public String couponShareUrl;
 
         @NameInMap("ClickUrl")
         public String clickUrl;
-
-        @NameInMap("ShortUrl")
-        public String shortUrl;
 
         public static SearchByPicResponseBodyDataAuctionsResult build(java.util.Map<String, ?> map) throws Exception {
             SearchByPicResponseBodyDataAuctionsResult self = new SearchByPicResponseBodyDataAuctionsResult();
@@ -197,14 +185,6 @@ public class SearchByPicResponseBody extends TeaModel {
         }
         public String getPromotionPrice() {
             return this.promotionPrice;
-        }
-
-        public SearchByPicResponseBodyDataAuctionsResult setPriceAfterCoupon(String priceAfterCoupon) {
-            this.priceAfterCoupon = priceAfterCoupon;
-            return this;
-        }
-        public String getPriceAfterCoupon() {
-            return this.priceAfterCoupon;
         }
 
         public SearchByPicResponseBodyDataAuctionsResult setUserType(Integer userType) {
@@ -263,28 +243,12 @@ public class SearchByPicResponseBody extends TeaModel {
             return this.categoryName;
         }
 
-        public SearchByPicResponseBodyDataAuctionsResult setCouponActivityId(String couponActivityId) {
-            this.couponActivityId = couponActivityId;
-            return this;
-        }
-        public String getCouponActivityId() {
-            return this.couponActivityId;
-        }
-
         public SearchByPicResponseBodyDataAuctionsResult setCouponTotalCount(String couponTotalCount) {
             this.couponTotalCount = couponTotalCount;
             return this;
         }
         public String getCouponTotalCount() {
             return this.couponTotalCount;
-        }
-
-        public SearchByPicResponseBodyDataAuctionsResult setCouponSendCount(String couponSendCount) {
-            this.couponSendCount = couponSendCount;
-            return this;
-        }
-        public String getCouponSendCount() {
-            return this.couponSendCount;
         }
 
         public SearchByPicResponseBodyDataAuctionsResult setCouponRemainCount(Integer couponRemainCount) {
@@ -335,12 +299,12 @@ public class SearchByPicResponseBody extends TeaModel {
             return this.couponSaleTextInfo;
         }
 
-        public SearchByPicResponseBodyDataAuctionsResult setCalTkRate(String calTkRate) {
-            this.calTkRate = calTkRate;
+        public SearchByPicResponseBodyDataAuctionsResult setCommissionRate(String commissionRate) {
+            this.commissionRate = commissionRate;
             return this;
         }
-        public String getCalTkRate() {
-            return this.calTkRate;
+        public String getCommissionRate() {
+            return this.commissionRate;
         }
 
         public SearchByPicResponseBodyDataAuctionsResult setCouponShareUrl(String couponShareUrl) {
@@ -357,14 +321,6 @@ public class SearchByPicResponseBody extends TeaModel {
         }
         public String getClickUrl() {
             return this.clickUrl;
-        }
-
-        public SearchByPicResponseBodyDataAuctionsResult setShortUrl(String shortUrl) {
-            this.shortUrl = shortUrl;
-            return this;
-        }
-        public String getShortUrl() {
-            return this.shortUrl;
         }
 
     }
