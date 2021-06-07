@@ -13,7 +13,6 @@ public class ModifyEntitlementRequest extends TeaModel {
     public String desktopId;
 
     @NameInMap("EndUserId")
-    @Validation(required = true)
     public java.util.List<String> endUserId;
 
     public static ModifyEntitlementRequest build(java.util.Map<String, ?> map) throws Exception {

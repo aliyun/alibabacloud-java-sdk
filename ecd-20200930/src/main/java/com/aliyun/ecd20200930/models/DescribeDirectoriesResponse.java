@@ -194,6 +194,10 @@ public class DescribeDirectoriesResponse extends TeaModel {
         @Validation(required = true)
         public Boolean enableInternetAccess;
 
+        @NameInMap("EnableCrossDesktopAccess")
+        @Validation(required = true)
+        public Boolean enableCrossDesktopAccess;
+
         @NameInMap("EnableAdminAccess")
         @Validation(required = true)
         public Boolean enableAdminAccess;
@@ -333,6 +337,14 @@ public class DescribeDirectoriesResponse extends TeaModel {
         }
         public Boolean getEnableInternetAccess() {
             return this.enableInternetAccess;
+        }
+
+        public DescribeDirectoriesResponseDirectories setEnableCrossDesktopAccess(Boolean enableCrossDesktopAccess) {
+            this.enableCrossDesktopAccess = enableCrossDesktopAccess;
+            return this;
+        }
+        public Boolean getEnableCrossDesktopAccess() {
+            return this.enableCrossDesktopAccess;
         }
 
         public DescribeDirectoriesResponseDirectories setEnableAdminAccess(Boolean enableAdminAccess) {

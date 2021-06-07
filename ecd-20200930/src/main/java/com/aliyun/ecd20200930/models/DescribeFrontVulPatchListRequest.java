@@ -15,6 +15,7 @@ public class DescribeFrontVulPatchListRequest extends TeaModel {
     public String operateType;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     public static DescribeFrontVulPatchListRequest build(java.util.Map<String, ?> map) throws Exception {

@@ -3,21 +3,21 @@ package com.aliyun.ecd20200930.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteNASFileSystemsRequest extends TeaModel {
+public class ResetNASDefaultMountTargetRequest extends TeaModel {
     @NameInMap("RegionId")
     @Validation(required = true)
     public String regionId;
 
     @NameInMap("FileSystemId")
     @Validation(required = true)
-    public java.util.List<String> fileSystemId;
+    public String fileSystemId;
 
-    public static DeleteNASFileSystemsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteNASFileSystemsRequest self = new DeleteNASFileSystemsRequest();
+    public static ResetNASDefaultMountTargetRequest build(java.util.Map<String, ?> map) throws Exception {
+        ResetNASDefaultMountTargetRequest self = new ResetNASDefaultMountTargetRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteNASFileSystemsRequest setRegionId(String regionId) {
+    public ResetNASDefaultMountTargetRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -25,11 +25,11 @@ public class DeleteNASFileSystemsRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DeleteNASFileSystemsRequest setFileSystemId(java.util.List<String> fileSystemId) {
+    public ResetNASDefaultMountTargetRequest setFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
     }
-    public java.util.List<String> getFileSystemId() {
+    public String getFileSystemId() {
         return this.fileSystemId;
     }
 

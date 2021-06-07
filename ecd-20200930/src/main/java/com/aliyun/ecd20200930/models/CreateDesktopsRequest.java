@@ -62,6 +62,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("UserAssignMode")
+    public String userAssignMode;
+
     public static CreateDesktopsRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDesktopsRequest self = new CreateDesktopsRequest();
         return TeaModel.build(map, self);
@@ -209,6 +212,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public CreateDesktopsRequest setUserAssignMode(String userAssignMode) {
+        this.userAssignMode = userAssignMode;
+        return this;
+    }
+    public String getUserAssignMode() {
+        return this.userAssignMode;
     }
 
     public static class CreateDesktopsRequestTag extends TeaModel {
