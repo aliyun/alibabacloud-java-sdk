@@ -8,9 +8,9 @@ public class DescribeVulListResponse extends TeaModel {
     @Validation(required = true)
     public String requestId;
 
-    @NameInMap("NextToken")
+    @NameInMap("PageSize")
     @Validation(required = true)
-    public Integer nextToken;
+    public Integer pageSize;
 
     @NameInMap("CurrentPage")
     @Validation(required = true)
@@ -37,12 +37,12 @@ public class DescribeVulListResponse extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeVulListResponse setNextToken(Integer nextToken) {
-        this.nextToken = nextToken;
+    public DescribeVulListResponse setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
-    public Integer getNextToken() {
-        return this.nextToken;
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeVulListResponse setCurrentPage(Integer currentPage) {

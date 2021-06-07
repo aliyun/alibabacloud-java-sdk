@@ -46,10 +46,6 @@ public class DescribeVulDetailsResponse extends TeaModel {
         @Validation(required = true)
         public String cvssScore;
 
-        @NameInMap("CnvdId")
-        @Validation(required = true)
-        public String cnvdId;
-
         @NameInMap("Summary")
         @Validation(required = true)
         public String summary;
@@ -81,14 +77,6 @@ public class DescribeVulDetailsResponse extends TeaModel {
         }
         public String getCvssScore() {
             return this.cvssScore;
-        }
-
-        public DescribeVulDetailsResponseCves setCnvdId(String cnvdId) {
-            this.cnvdId = cnvdId;
-            return this;
-        }
-        public String getCnvdId() {
-            return this.cnvdId;
         }
 
         public DescribeVulDetailsResponseCves setSummary(String summary) {

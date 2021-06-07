@@ -158,6 +158,10 @@ public class DescribePolicyGroupsResponse extends TeaModel {
         @Validation(required = true)
         public String usbRedirect;
 
+        @NameInMap("VisualQuality")
+        @Validation(required = true)
+        public String visualQuality;
+
         @NameInMap("Watermark")
         @Validation(required = true)
         public String watermark;
@@ -241,6 +245,14 @@ public class DescribePolicyGroupsResponse extends TeaModel {
         }
         public String getUsbRedirect() {
             return this.usbRedirect;
+        }
+
+        public DescribePolicyGroupsResponseDescribePolicyGroups setVisualQuality(String visualQuality) {
+            this.visualQuality = visualQuality;
+            return this;
+        }
+        public String getVisualQuality() {
+            return this.visualQuality;
         }
 
         public DescribePolicyGroupsResponseDescribePolicyGroups setWatermark(String watermark) {

@@ -17,6 +17,9 @@ public class CreatePolicyGroupRequest extends TeaModel {
     @NameInMap("UsbRedirect")
     public String usbRedirect;
 
+    @NameInMap("VisualQuality")
+    public String visualQuality;
+
     @NameInMap("Watermark")
     public String watermark;
 
@@ -76,6 +79,14 @@ public class CreatePolicyGroupRequest extends TeaModel {
     }
     public String getUsbRedirect() {
         return this.usbRedirect;
+    }
+
+    public CreatePolicyGroupRequest setVisualQuality(String visualQuality) {
+        this.visualQuality = visualQuality;
+        return this;
+    }
+    public String getVisualQuality() {
+        return this.visualQuality;
     }
 
     public CreatePolicyGroupRequest setWatermark(String watermark) {

@@ -20,6 +20,9 @@ public class DescribeBundlesRequest extends TeaModel {
     @NameInMap("BundleType")
     public String bundleType;
 
+    @NameInMap("DesktopTypeFamily")
+    public String desktopTypeFamily;
+
     public static DescribeBundlesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBundlesRequest self = new DescribeBundlesRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class DescribeBundlesRequest extends TeaModel {
     }
     public String getBundleType() {
         return this.bundleType;
+    }
+
+    public DescribeBundlesRequest setDesktopTypeFamily(String desktopTypeFamily) {
+        this.desktopTypeFamily = desktopTypeFamily;
+        return this;
+    }
+    public String getDesktopTypeFamily() {
+        return this.desktopTypeFamily;
     }
 
 }

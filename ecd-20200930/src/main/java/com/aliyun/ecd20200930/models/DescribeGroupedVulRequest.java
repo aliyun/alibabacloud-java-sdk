@@ -12,6 +12,7 @@ public class DescribeGroupedVulRequest extends TeaModel {
     public String lang;
 
     @NameInMap("Type")
+    @Validation(required = true)
     public String type;
 
     @NameInMap("OfficeSiteId")

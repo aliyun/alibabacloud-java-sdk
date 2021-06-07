@@ -16,10 +16,6 @@ public class DescribeScanTaskProgressResponse extends TeaModel {
     @Validation(required = true)
     public String taskStatus;
 
-    @NameInMap("TargetInfo")
-    @Validation(required = true)
-    public String targetInfo;
-
     public static DescribeScanTaskProgressResponse build(java.util.Map<String, ?> map) throws Exception {
         DescribeScanTaskProgressResponse self = new DescribeScanTaskProgressResponse();
         return TeaModel.build(map, self);
@@ -47,14 +43,6 @@ public class DescribeScanTaskProgressResponse extends TeaModel {
     }
     public String getTaskStatus() {
         return this.taskStatus;
-    }
-
-    public DescribeScanTaskProgressResponse setTargetInfo(String targetInfo) {
-        this.targetInfo = targetInfo;
-        return this;
-    }
-    public String getTargetInfo() {
-        return this.targetInfo;
     }
 
 }

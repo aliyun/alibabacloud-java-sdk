@@ -19,6 +19,56 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public ModifyOfficeSiteCrossDesktopAccessResponse modifyOfficeSiteCrossDesktopAccessWithOptions(ModifyOfficeSiteCrossDesktopAccessRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyOfficeSiteCrossDesktopAccess", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ModifyOfficeSiteCrossDesktopAccessResponse());
+    }
+
+    public ModifyOfficeSiteCrossDesktopAccessResponse modifyOfficeSiteCrossDesktopAccess(ModifyOfficeSiteCrossDesktopAccessRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyOfficeSiteCrossDesktopAccessWithOptions(request, runtime);
+    }
+
+    public GetDesktopUsersResponse getDesktopUsersWithOptions(GetDesktopUsersRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetDesktopUsers", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new GetDesktopUsersResponse());
+    }
+
+    public GetDesktopUsersResponse getDesktopUsers(GetDesktopUsersRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getDesktopUsersWithOptions(request, runtime);
+    }
+
+    public ModifyNetworkPackageEnabledResponse modifyNetworkPackageEnabledWithOptions(ModifyNetworkPackageEnabledRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ModifyNetworkPackageEnabled", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ModifyNetworkPackageEnabledResponse());
+    }
+
+    public ModifyNetworkPackageEnabledResponse modifyNetworkPackageEnabled(ModifyNetworkPackageEnabledRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.modifyNetworkPackageEnabledWithOptions(request, runtime);
+    }
+
+    public ResetNASDefaultMountTargetResponse resetNASDefaultMountTargetWithOptions(ResetNASDefaultMountTargetRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("ResetNASDefaultMountTarget", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new ResetNASDefaultMountTargetResponse());
+    }
+
+    public ResetNASDefaultMountTargetResponse resetNASDefaultMountTarget(ResetNASDefaultMountTargetRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.resetNASDefaultMountTargetWithOptions(request, runtime);
+    }
+
+    public DescribeCensResponse describeCensWithOptions(DescribeCensRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("DescribeCens", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new DescribeCensResponse());
+    }
+
+    public DescribeCensResponse describeCens(DescribeCensRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.describeCensWithOptions(request, runtime);
+    }
+
     public CheckUserInSecurityCenterWhiteListResponse checkUserInSecurityCenterWhiteListWithOptions(CheckUserInSecurityCenterWhiteListRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("CheckUserInSecurityCenterWhiteList", "HTTPS", "POST", "2020-09-30", "AK", null, TeaModel.buildMap(request), runtime), new CheckUserInSecurityCenterWhiteListResponse());

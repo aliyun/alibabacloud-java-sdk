@@ -82,10 +82,6 @@ public class DescribeSuspEventsResponse extends TeaModel {
         @Validation(required = true)
         public String type;
 
-        @NameInMap("InfoType")
-        @Validation(required = true)
-        public String infoType;
-
         @NameInMap("Value")
         @Validation(required = true)
         public String value;
@@ -121,14 +117,6 @@ public class DescribeSuspEventsResponse extends TeaModel {
         }
         public String getType() {
             return this.type;
-        }
-
-        public DescribeSuspEventsResponseSuspEventsDetails setInfoType(String infoType) {
-            this.infoType = infoType;
-            return this;
-        }
-        public String getInfoType() {
-            return this.infoType;
         }
 
         public DescribeSuspEventsResponseSuspEventsDetails setValue(String value) {
