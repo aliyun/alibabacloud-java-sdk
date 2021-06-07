@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>lmztest20210531_172452318</artifactId>
-  <version>1.0.0</version>
+  <version>5.0.0</version>
   <packaging>jar</packaging>
   <name>lmztest20210531_172452318</name>
   <description>Alibaba Cloud LmzTest (20210531_172452318) SDK for Java
