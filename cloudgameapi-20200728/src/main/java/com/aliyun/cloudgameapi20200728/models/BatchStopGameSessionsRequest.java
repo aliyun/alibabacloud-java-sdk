@@ -20,6 +20,9 @@ public class BatchStopGameSessionsRequest extends TeaModel {
     @NameInMap("TrackInfo")
     public String trackInfo;
 
+    @NameInMap("Tags")
+    public String tags;
+
     public static BatchStopGameSessionsRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchStopGameSessionsRequest self = new BatchStopGameSessionsRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class BatchStopGameSessionsRequest extends TeaModel {
     }
     public String getTrackInfo() {
         return this.trackInfo;
+    }
+
+    public BatchStopGameSessionsRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }

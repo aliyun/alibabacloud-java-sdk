@@ -20,7 +20,6 @@ public class StopGameSessionRequest extends TeaModel {
     public String bizParam;
 
     @NameInMap("GameSession")
-    @Validation(required = true)
     public String gameSession;
 
     @NameInMap("Reason")

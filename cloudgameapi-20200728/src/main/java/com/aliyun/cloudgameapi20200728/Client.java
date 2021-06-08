@@ -19,6 +19,16 @@ public class Client extends com.aliyun.tearpc.Client {
     }
 
 
+    public GetGameStockResponse getGameStockWithOptions(GetGameStockRequest request, RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        return TeaModel.toModel(this.doRequest("GetGameStock", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new GetGameStockResponse());
+    }
+
+    public GetGameStockResponse getGameStock(GetGameStockRequest request) throws Exception {
+        RuntimeOptions runtime = new RuntimeOptions();
+        return this.getGameStockWithOptions(request, runtime);
+    }
+
     public GetOutAccountBindDetailResponse getOutAccountBindDetailWithOptions(GetOutAccountBindDetailRequest request, RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         return TeaModel.toModel(this.doRequest("GetOutAccountBindDetail", "HTTPS", "POST", "2020-07-28", "AK", null, TeaModel.buildMap(request), runtime), new GetOutAccountBindDetailResponse());
