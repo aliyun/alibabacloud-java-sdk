@@ -7,14 +7,14 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -35,6 +35,14 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeDcdnDomainWebsocketBpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDcdnDomainWebsocketBpsDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -49,14 +57,6 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDcdnDomainWebsocketBpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDcdnDomainWebsocketBpsDataResponseBody setDataInterval(String dataInterval) {
@@ -76,23 +76,15 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("WebsocketBps")
-        public Float websocketBps;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("WebsocketBps")
+        public Float websocketBps;
 
         public static DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerIntervalDataModule self = new DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerIntervalDataModule setWebsocketBps(Float websocketBps) {
-            this.websocketBps = websocketBps;
-            return this;
-        }
-        public Float getWebsocketBps() {
-            return this.websocketBps;
         }
 
         public DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerIntervalDataModule setTimeStamp(String timeStamp) {
@@ -101,6 +93,14 @@ public class DescribeDcdnDomainWebsocketBpsDataResponseBody extends TeaModel {
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeDcdnDomainWebsocketBpsDataResponseBodyBpsDataPerIntervalDataModule setWebsocketBps(Float websocketBps) {
+            this.websocketBps = websocketBps;
+            return this;
+        }
+        public Float getWebsocketBps() {
+            return this.websocketBps;
         }
 
     }

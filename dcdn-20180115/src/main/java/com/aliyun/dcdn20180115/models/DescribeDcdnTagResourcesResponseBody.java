@@ -62,23 +62,15 @@ public class DescribeDcdnTagResourcesResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnTagResourcesResponseBodyTagResources extends TeaModel {
-        @NameInMap("Tag")
-        public java.util.List<DescribeDcdnTagResourcesResponseBodyTagResourcesTag> tag;
-
         @NameInMap("ResourceId")
         public String resourceId;
+
+        @NameInMap("Tag")
+        public java.util.List<DescribeDcdnTagResourcesResponseBodyTagResourcesTag> tag;
 
         public static DescribeDcdnTagResourcesResponseBodyTagResources build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnTagResourcesResponseBodyTagResources self = new DescribeDcdnTagResourcesResponseBodyTagResources();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnTagResourcesResponseBodyTagResources setTag(java.util.List<DescribeDcdnTagResourcesResponseBodyTagResourcesTag> tag) {
-            this.tag = tag;
-            return this;
-        }
-        public java.util.List<DescribeDcdnTagResourcesResponseBodyTagResourcesTag> getTag() {
-            return this.tag;
         }
 
         public DescribeDcdnTagResourcesResponseBodyTagResources setResourceId(String resourceId) {
@@ -87,6 +79,14 @@ public class DescribeDcdnTagResourcesResponseBody extends TeaModel {
         }
         public String getResourceId() {
             return this.resourceId;
+        }
+
+        public DescribeDcdnTagResourcesResponseBodyTagResources setTag(java.util.List<DescribeDcdnTagResourcesResponseBodyTagResourcesTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeDcdnTagResourcesResponseBodyTagResourcesTag> getTag() {
+            return this.tag;
         }
 
     }

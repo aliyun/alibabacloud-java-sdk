@@ -32,11 +32,11 @@ public class DescribeDcdnOfflineLogDeliveryRegionsResponseBody extends TeaModel 
     }
 
     public static class DescribeDcdnOfflineLogDeliveryRegionsResponseBodyAreasRegionInfos extends TeaModel {
-        @NameInMap("RegionName")
-        public String regionName;
-
         @NameInMap("IsOverseas")
         public String isOverseas;
+
+        @NameInMap("RegionName")
+        public String regionName;
 
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
@@ -49,20 +49,20 @@ public class DescribeDcdnOfflineLogDeliveryRegionsResponseBody extends TeaModel 
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnOfflineLogDeliveryRegionsResponseBodyAreasRegionInfos setRegionName(String regionName) {
-            this.regionName = regionName;
-            return this;
-        }
-        public String getRegionName() {
-            return this.regionName;
-        }
-
         public DescribeDcdnOfflineLogDeliveryRegionsResponseBodyAreasRegionInfos setIsOverseas(String isOverseas) {
             this.isOverseas = isOverseas;
             return this;
         }
         public String getIsOverseas() {
             return this.isOverseas;
+        }
+
+        public DescribeDcdnOfflineLogDeliveryRegionsResponseBodyAreasRegionInfos setRegionName(String regionName) {
+            this.regionName = regionName;
+            return this;
+        }
+        public String getRegionName() {
+            return this.regionName;
         }
 
         public DescribeDcdnOfflineLogDeliveryRegionsResponseBodyAreasRegionInfos setOssEndpoint(String ossEndpoint) {

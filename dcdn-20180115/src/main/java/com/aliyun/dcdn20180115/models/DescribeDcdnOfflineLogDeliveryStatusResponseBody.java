@@ -4,23 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnOfflineLogDeliveryStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("OpenStatus")
     public String openStatus;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     public static DescribeDcdnOfflineLogDeliveryStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnOfflineLogDeliveryStatusResponseBody self = new DescribeDcdnOfflineLogDeliveryStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnOfflineLogDeliveryStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeDcdnOfflineLogDeliveryStatusResponseBody setOpenStatus(String openStatus) {
@@ -29,6 +21,14 @@ public class DescribeDcdnOfflineLogDeliveryStatusResponseBody extends TeaModel {
     }
     public String getOpenStatus() {
         return this.openStatus;
+    }
+
+    public DescribeDcdnOfflineLogDeliveryStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
 }

@@ -32,23 +32,15 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel extends TeaModel {
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         @NameInMap("Bps")
         public Float bps;
+
+        @NameInMap("TimeStamp")
+        public String timeStamp;
 
         public static DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel self = new DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
         public DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel setBps(Float bps) {
@@ -57,6 +49,14 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         }
         public Float getBps() {
             return this.bps;
+        }
+
+        public DescribeDcdnDomainRealTimeBpsDataResponseBodyDataBpsModel setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
     }

@@ -10,9 +10,6 @@ public class DescribeDcdnTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
-    @NameInMap("Scope")
-    public String scope;
-
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -38,14 +35,6 @@ public class DescribeDcdnTagResourcesRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
-    }
-
-    public DescribeDcdnTagResourcesRequest setScope(String scope) {
-        this.scope = scope;
-        return this;
-    }
-    public String getScope() {
-        return this.scope;
     }
 
     public DescribeDcdnTagResourcesRequest setResourceId(java.util.List<String> resourceId) {

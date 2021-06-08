@@ -4,23 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnOfflineLogDeliveryFieldResponseBody extends TeaModel {
-    @NameInMap("Fields")
-    public java.util.List<DescribeDcdnOfflineLogDeliveryFieldResponseBodyFields> fields;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Fields")
+    public java.util.List<DescribeDcdnOfflineLogDeliveryFieldResponseBodyFields> fields;
 
     public static DescribeDcdnOfflineLogDeliveryFieldResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnOfflineLogDeliveryFieldResponseBody self = new DescribeDcdnOfflineLogDeliveryFieldResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnOfflineLogDeliveryFieldResponseBody setFields(java.util.List<DescribeDcdnOfflineLogDeliveryFieldResponseBodyFields> fields) {
-        this.fields = fields;
-        return this;
-    }
-    public java.util.List<DescribeDcdnOfflineLogDeliveryFieldResponseBodyFields> getFields() {
-        return this.fields;
     }
 
     public DescribeDcdnOfflineLogDeliveryFieldResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeDcdnOfflineLogDeliveryFieldResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDcdnOfflineLogDeliveryFieldResponseBody setFields(java.util.List<DescribeDcdnOfflineLogDeliveryFieldResponseBodyFields> fields) {
+        this.fields = fields;
+        return this;
+    }
+    public java.util.List<DescribeDcdnOfflineLogDeliveryFieldResponseBodyFields> getFields() {
+        return this.fields;
     }
 
     public static class DescribeDcdnOfflineLogDeliveryFieldResponseBodyFields extends TeaModel {

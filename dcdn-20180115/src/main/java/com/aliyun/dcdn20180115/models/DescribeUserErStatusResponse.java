@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dcdn20180115.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeUserErStatusResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public DescribeUserErStatusResponseBody body;
+
+    public static DescribeUserErStatusResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeUserErStatusResponse self = new DescribeUserErStatusResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeUserErStatusResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeUserErStatusResponse setBody(DescribeUserErStatusResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeUserErStatusResponseBody getBody() {
+        return this.body;
+    }
+
+}

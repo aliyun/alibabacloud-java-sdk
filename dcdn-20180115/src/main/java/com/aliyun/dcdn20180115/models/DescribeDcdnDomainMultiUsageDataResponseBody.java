@@ -7,11 +7,11 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("RequestPerInterval")
     public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval;
@@ -32,20 +32,20 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeDcdnDomainMultiUsageDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDcdnDomainMultiUsageDataResponseBody setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeDcdnDomainMultiUsageDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDcdnDomainMultiUsageDataResponseBody setRequestPerInterval(DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerInterval requestPerInterval) {
@@ -68,11 +68,11 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        @NameInMap("Domain")
-        public String domain;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("Domain")
+        public String domain;
 
         @NameInMap("Request")
         public Long request;
@@ -90,20 +90,20 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule setDomain(String domain) {
-            this.domain = domain;
-            return this;
-        }
-        public String getDomain() {
-            return this.domain;
-        }
-
         public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule setTimeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
             return this;
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
         public DescribeDcdnDomainMultiUsageDataResponseBodyRequestPerIntervalRequestDataModule setRequest(Long request) {

@@ -10,9 +10,6 @@ public class RollbackDcdnStagingConfigRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("FunctionName")
-    public String functionName;
-
     public static RollbackDcdnStagingConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         RollbackDcdnStagingConfigRequest self = new RollbackDcdnStagingConfigRequest();
         return TeaModel.build(map, self);
@@ -32,14 +29,6 @@ public class RollbackDcdnStagingConfigRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public RollbackDcdnStagingConfigRequest setFunctionName(String functionName) {
-        this.functionName = functionName;
-        return this;
-    }
-    public String getFunctionName() {
-        return this.functionName;
     }
 
 }

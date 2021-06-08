@@ -1,0 +1,36 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dcdn20180115.models;
+
+import com.aliyun.tea.*;
+
+public class CreateRoutineResponse extends TeaModel {
+    @NameInMap("headers")
+    @Validation(required = true)
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    public CreateRoutineResponseBody body;
+
+    public static CreateRoutineResponse build(java.util.Map<String, ?> map) throws Exception {
+        CreateRoutineResponse self = new CreateRoutineResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public CreateRoutineResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public CreateRoutineResponse setBody(CreateRoutineResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public CreateRoutineResponseBody getBody() {
+        return this.body;
+    }
+
+}

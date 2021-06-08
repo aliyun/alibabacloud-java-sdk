@@ -4,14 +4,8 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
-    @NameInMap("Url500List")
-    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List url500List;
-
-    @NameInMap("Url200List")
-    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200List url200List;
-
-    @NameInMap("Url400List")
-    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List url400List;
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -19,42 +13,32 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
+    @NameInMap("AllUrlList")
+    public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList allUrlList;
+
+    @NameInMap("Url200List")
+    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200List url200List;
 
     @NameInMap("Url300List")
     public DescribeDcdnDomainTopUrlVisitResponseBodyUrl300List url300List;
 
-    @NameInMap("AllUrlList")
-    public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList allUrlList;
+    @NameInMap("Url400List")
+    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List url400List;
+
+    @NameInMap("Url500List")
+    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List url500List;
 
     public static DescribeDcdnDomainTopUrlVisitResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainTopUrlVisitResponseBody self = new DescribeDcdnDomainTopUrlVisitResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DescribeDcdnDomainTopUrlVisitResponseBody setUrl500List(DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List url500List) {
-        this.url500List = url500List;
+    public DescribeDcdnDomainTopUrlVisitResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
-    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List getUrl500List() {
-        return this.url500List;
-    }
-
-    public DescribeDcdnDomainTopUrlVisitResponseBody setUrl200List(DescribeDcdnDomainTopUrlVisitResponseBodyUrl200List url200List) {
-        this.url200List = url200List;
-        return this;
-    }
-    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200List getUrl200List() {
-        return this.url200List;
-    }
-
-    public DescribeDcdnDomainTopUrlVisitResponseBody setUrl400List(DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List url400List) {
-        this.url400List = url400List;
-        return this;
-    }
-    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List getUrl400List() {
-        return this.url400List;
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDcdnDomainTopUrlVisitResponseBody setRequestId(String requestId) {
@@ -73,12 +57,20 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainTopUrlVisitResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeDcdnDomainTopUrlVisitResponseBody setAllUrlList(DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList allUrlList) {
+        this.allUrlList = allUrlList;
         return this;
     }
-    public String getStartTime() {
-        return this.startTime;
+    public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList getAllUrlList() {
+        return this.allUrlList;
+    }
+
+    public DescribeDcdnDomainTopUrlVisitResponseBody setUrl200List(DescribeDcdnDomainTopUrlVisitResponseBodyUrl200List url200List) {
+        this.url200List = url200List;
+        return this;
+    }
+    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200List getUrl200List() {
+        return this.url200List;
     }
 
     public DescribeDcdnDomainTopUrlVisitResponseBody setUrl300List(DescribeDcdnDomainTopUrlVisitResponseBodyUrl300List url300List) {
@@ -89,17 +81,31 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         return this.url300List;
     }
 
-    public DescribeDcdnDomainTopUrlVisitResponseBody setAllUrlList(DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList allUrlList) {
-        this.allUrlList = allUrlList;
+    public DescribeDcdnDomainTopUrlVisitResponseBody setUrl400List(DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List url400List) {
+        this.url400List = url400List;
         return this;
     }
-    public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList getAllUrlList() {
-        return this.allUrlList;
+    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List getUrl400List() {
+        return this.url400List;
     }
 
-    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList extends TeaModel {
+    public DescribeDcdnDomainTopUrlVisitResponseBody setUrl500List(DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List url500List) {
+        this.url500List = url500List;
+        return this;
+    }
+    public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List getUrl500List() {
+        return this.url500List;
+    }
+
+    public static class DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList extends TeaModel {
+        @NameInMap("Flow")
+        public String flow;
+
         @NameInMap("UrlDetail")
         public String urlDetail;
+
+        @NameInMap("FlowProportion")
+        public Float flowProportion;
 
         @NameInMap("VisitData")
         public String visitData;
@@ -107,42 +113,12 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
-        @NameInMap("Flow")
-        public String flow;
-
-        @NameInMap("FlowProportion")
-        public Float flowProportion;
-
-        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList();
+        public static DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setUrlDetail(String urlDetail) {
-            this.urlDetail = urlDetail;
-            return this;
-        }
-        public String getUrlDetail() {
-            return this.urlDetail;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setVisitData(String visitData) {
-            this.visitData = visitData;
-            return this;
-        }
-        public String getVisitData() {
-            return this.visitData;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setVisitProportion(Float visitProportion) {
-            this.visitProportion = visitProportion;
-            return this;
-        }
-        public Float getVisitProportion() {
-            return this.visitProportion;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setFlow(String flow) {
+        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setFlow(String flow) {
             this.flow = flow;
             return this;
         }
@@ -150,7 +126,15 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setFlowProportion(Float flowProportion) {
+        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setUrlDetail(String urlDetail) {
+            this.urlDetail = urlDetail;
+            return this;
+        }
+        public String getUrlDetail() {
+            return this.urlDetail;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setFlowProportion(Float flowProportion) {
             this.flowProportion = flowProportion;
             return this;
         }
@@ -158,30 +142,52 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
             return this.flowProportion;
         }
 
+        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setVisitData(String visitData) {
+            this.visitData = visitData;
+            return this;
+        }
+        public String getVisitData() {
+            return this.visitData;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setVisitProportion(Float visitProportion) {
+            this.visitProportion = visitProportion;
+            return this;
+        }
+        public Float getVisitProportion() {
+            return this.visitProportion;
+        }
+
     }
 
-    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List extends TeaModel {
+    public static class DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList extends TeaModel {
         @NameInMap("UrlList")
-        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList> urlList;
+        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList> urlList;
 
-        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List();
+        public static DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List setUrlList(java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList> urlList) {
+        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList setUrlList(java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList> urlList) {
             this.urlList = urlList;
             return this;
         }
-        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList> getUrlList() {
+        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList> getUrlList() {
             return this.urlList;
         }
 
     }
 
     public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList extends TeaModel {
+        @NameInMap("Flow")
+        public String flow;
+
         @NameInMap("UrlDetail")
         public String urlDetail;
+
+        @NameInMap("FlowProportion")
+        public Float flowProportion;
 
         @NameInMap("VisitData")
         public String visitData;
@@ -189,15 +195,17 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
-        @NameInMap("Flow")
-        public String flow;
-
-        @NameInMap("FlowProportion")
-        public Float flowProportion;
-
         public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList setFlow(String flow) {
+            this.flow = flow;
+            return this;
+        }
+        public String getFlow() {
+            return this.flow;
         }
 
         public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList setUrlDetail(String urlDetail) {
@@ -206,6 +214,14 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         }
         public String getUrlDetail() {
             return this.urlDetail;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList setFlowProportion(Float flowProportion) {
+            this.flowProportion = flowProportion;
+            return this;
+        }
+        public Float getFlowProportion() {
+            return this.flowProportion;
         }
 
         public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList setVisitData(String visitData) {
@@ -222,22 +238,6 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         }
         public Float getVisitProportion() {
             return this.visitProportion;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList setFlow(String flow) {
-            this.flow = flow;
-            return this;
-        }
-        public String getFlow() {
-            return this.flow;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl200ListUrlList setFlowProportion(Float flowProportion) {
-            this.flowProportion = flowProportion;
-            return this;
-        }
-        public Float getFlowProportion() {
-            return this.flowProportion;
         }
 
     }
@@ -261,9 +261,15 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList extends TeaModel {
+    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList extends TeaModel {
+        @NameInMap("Flow")
+        public String flow;
+
         @NameInMap("UrlDetail")
         public String urlDetail;
+
+        @NameInMap("FlowProportion")
+        public Float flowProportion;
 
         @NameInMap("VisitData")
         public String visitData;
@@ -271,97 +277,17 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
-        @NameInMap("Flow")
-        public String flow;
-
-        @NameInMap("FlowProportion")
-        public Float flowProportion;
-
-        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList();
+        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setUrlDetail(String urlDetail) {
-            this.urlDetail = urlDetail;
-            return this;
-        }
-        public String getUrlDetail() {
-            return this.urlDetail;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setVisitData(String visitData) {
-            this.visitData = visitData;
-            return this;
-        }
-        public String getVisitData() {
-            return this.visitData;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setVisitProportion(Float visitProportion) {
-            this.visitProportion = visitProportion;
-            return this;
-        }
-        public Float getVisitProportion() {
-            return this.visitProportion;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setFlow(String flow) {
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList setFlow(String flow) {
             this.flow = flow;
             return this;
         }
         public String getFlow() {
             return this.flow;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setFlowProportion(Float flowProportion) {
-            this.flowProportion = flowProportion;
-            return this;
-        }
-        public Float getFlowProportion() {
-            return this.flowProportion;
-        }
-
-    }
-
-    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List extends TeaModel {
-        @NameInMap("UrlList")
-        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList> urlList;
-
-        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List();
-            return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List setUrlList(java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList> urlList) {
-            this.urlList = urlList;
-            return this;
-        }
-        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList> getUrlList() {
-            return this.urlList;
-        }
-
-    }
-
-    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList extends TeaModel {
-        @NameInMap("UrlDetail")
-        public String urlDetail;
-
-        @NameInMap("VisitData")
-        public String visitData;
-
-        @NameInMap("VisitProportion")
-        public Float visitProportion;
-
-        @NameInMap("Flow")
-        public String flow;
-
-        @NameInMap("FlowProportion")
-        public Float flowProportion;
-
-        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList();
-            return TeaModel.build(map, self);
         }
 
         public DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList setUrlDetail(String urlDetail) {
@@ -370,6 +296,14 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         }
         public String getUrlDetail() {
             return this.urlDetail;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList setFlowProportion(Float flowProportion) {
+            this.flowProportion = flowProportion;
+            return this;
+        }
+        public Float getFlowProportion() {
+            return this.flowProportion;
         }
 
         public DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList setVisitData(String visitData) {
@@ -386,22 +320,6 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         }
         public Float getVisitProportion() {
             return this.visitProportion;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList setFlow(String flow) {
-            this.flow = flow;
-            return this;
-        }
-        public String getFlow() {
-            return this.flow;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl300ListUrlList setFlowProportion(Float flowProportion) {
-            this.flowProportion = flowProportion;
-            return this;
-        }
-        public Float getFlowProportion() {
-            return this.flowProportion;
         }
 
     }
@@ -425,9 +343,15 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList extends TeaModel {
+    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList extends TeaModel {
+        @NameInMap("Flow")
+        public String flow;
+
         @NameInMap("UrlDetail")
         public String urlDetail;
+
+        @NameInMap("FlowProportion")
+        public Float flowProportion;
 
         @NameInMap("VisitData")
         public String visitData;
@@ -435,42 +359,12 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
         @NameInMap("VisitProportion")
         public Float visitProportion;
 
-        @NameInMap("Flow")
-        public String flow;
-
-        @NameInMap("FlowProportion")
-        public Float flowProportion;
-
-        public static DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList();
+        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setUrlDetail(String urlDetail) {
-            this.urlDetail = urlDetail;
-            return this;
-        }
-        public String getUrlDetail() {
-            return this.urlDetail;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setVisitData(String visitData) {
-            this.visitData = visitData;
-            return this;
-        }
-        public String getVisitData() {
-            return this.visitData;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setVisitProportion(Float visitProportion) {
-            this.visitProportion = visitProportion;
-            return this;
-        }
-        public Float getVisitProportion() {
-            return this.visitProportion;
-        }
-
-        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setFlow(String flow) {
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setFlow(String flow) {
             this.flow = flow;
             return this;
         }
@@ -478,7 +372,15 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
             return this.flow;
         }
 
-        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList setFlowProportion(Float flowProportion) {
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setUrlDetail(String urlDetail) {
+            this.urlDetail = urlDetail;
+            return this;
+        }
+        public String getUrlDetail() {
+            return this.urlDetail;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setFlowProportion(Float flowProportion) {
             this.flowProportion = flowProportion;
             return this;
         }
@@ -486,22 +388,120 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
             return this.flowProportion;
         }
 
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setVisitData(String visitData) {
+            this.visitData = visitData;
+            return this;
+        }
+        public String getVisitData() {
+            return this.visitData;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList setVisitProportion(Float visitProportion) {
+            this.visitProportion = visitProportion;
+            return this;
+        }
+        public Float getVisitProportion() {
+            return this.visitProportion;
+        }
+
     }
 
-    public static class DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList extends TeaModel {
+    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List extends TeaModel {
         @NameInMap("UrlList")
-        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList> urlList;
+        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList> urlList;
 
-        public static DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList();
+        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlList setUrlList(java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList> urlList) {
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl400List setUrlList(java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList> urlList) {
             this.urlList = urlList;
             return this;
         }
-        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyAllUrlListUrlList> getUrlList() {
+        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl400ListUrlList> getUrlList() {
+            return this.urlList;
+        }
+
+    }
+
+    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList extends TeaModel {
+        @NameInMap("Flow")
+        public String flow;
+
+        @NameInMap("UrlDetail")
+        public String urlDetail;
+
+        @NameInMap("FlowProportion")
+        public Float flowProportion;
+
+        @NameInMap("VisitData")
+        public String visitData;
+
+        @NameInMap("VisitProportion")
+        public Float visitProportion;
+
+        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setFlow(String flow) {
+            this.flow = flow;
+            return this;
+        }
+        public String getFlow() {
+            return this.flow;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setUrlDetail(String urlDetail) {
+            this.urlDetail = urlDetail;
+            return this;
+        }
+        public String getUrlDetail() {
+            return this.urlDetail;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setFlowProportion(Float flowProportion) {
+            this.flowProportion = flowProportion;
+            return this;
+        }
+        public Float getFlowProportion() {
+            return this.flowProportion;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setVisitData(String visitData) {
+            this.visitData = visitData;
+            return this;
+        }
+        public String getVisitData() {
+            return this.visitData;
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList setVisitProportion(Float visitProportion) {
+            this.visitProportion = visitProportion;
+            return this;
+        }
+        public Float getVisitProportion() {
+            return this.visitProportion;
+        }
+
+    }
+
+    public static class DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List extends TeaModel {
+        @NameInMap("UrlList")
+        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList> urlList;
+
+        public static DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List self = new DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnDomainTopUrlVisitResponseBodyUrl500List setUrlList(java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList> urlList) {
+            this.urlList = urlList;
+            return this;
+        }
+        public java.util.List<DescribeDcdnDomainTopUrlVisitResponseBodyUrl500ListUrlList> getUrlList() {
             return this.urlList;
         }
 

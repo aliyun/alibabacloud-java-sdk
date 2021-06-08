@@ -7,11 +7,11 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("BgpDataInterval")
     public java.util.List<DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval> bgpDataInterval;
@@ -29,20 +29,20 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeDcdnBgpBpsDataResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
     public DescribeDcdnBgpBpsDataResponseBody setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeDcdnBgpBpsDataResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDcdnBgpBpsDataResponseBody setBgpDataInterval(java.util.List<DescribeDcdnBgpBpsDataResponseBodyBgpDataInterval> bgpDataInterval) {

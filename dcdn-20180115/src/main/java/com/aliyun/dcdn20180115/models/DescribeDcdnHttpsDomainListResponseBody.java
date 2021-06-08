@@ -4,26 +4,18 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
-    @NameInMap("CertInfos")
-    public DescribeDcdnHttpsDomainListResponseBodyCertInfos certInfos;
-
     @NameInMap("TotalCount")
     public Integer totalCount;
 
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("CertInfos")
+    public DescribeDcdnHttpsDomainListResponseBodyCertInfos certInfos;
+
     public static DescribeDcdnHttpsDomainListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnHttpsDomainListResponseBody self = new DescribeDcdnHttpsDomainListResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnHttpsDomainListResponseBody setCertInfos(DescribeDcdnHttpsDomainListResponseBodyCertInfos certInfos) {
-        this.certInfos = certInfos;
-        return this;
-    }
-    public DescribeDcdnHttpsDomainListResponseBodyCertInfos getCertInfos() {
-        return this.certInfos;
     }
 
     public DescribeDcdnHttpsDomainListResponseBody setTotalCount(Integer totalCount) {
@@ -40,6 +32,14 @@ public class DescribeDcdnHttpsDomainListResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDcdnHttpsDomainListResponseBody setCertInfos(DescribeDcdnHttpsDomainListResponseBodyCertInfos certInfos) {
+        this.certInfos = certInfos;
+        return this;
+    }
+    public DescribeDcdnHttpsDomainListResponseBodyCertInfos getCertInfos() {
+        return this.certInfos;
     }
 
     public static class DescribeDcdnHttpsDomainListResponseBodyCertInfosCertInfo extends TeaModel {

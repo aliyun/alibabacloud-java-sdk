@@ -4,24 +4,48 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("PageNumber")
+    public Long pageNumber;
+
+    @NameInMap("PageSize")
+    public Long pageSize;
+
     @NameInMap("TotalCount")
     public Long totalCount;
 
     @NameInMap("Tasks")
     public DescribeDcdnRefreshTasksResponseBodyTasks tasks;
 
-    @NameInMap("RequestId")
-    public String requestId;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
-
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
     public static DescribeDcdnRefreshTasksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnRefreshTasksResponseBody self = new DescribeDcdnRefreshTasksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDcdnRefreshTasksResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnRefreshTasksResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeDcdnRefreshTasksResponseBody setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public DescribeDcdnRefreshTasksResponseBody setTotalCount(Long totalCount) {
@@ -38,30 +62,6 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
     }
     public DescribeDcdnRefreshTasksResponseBodyTasks getTasks() {
         return this.tasks;
-    }
-
-    public DescribeDcdnRefreshTasksResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDcdnRefreshTasksResponseBody setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
-    }
-
-    public DescribeDcdnRefreshTasksResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
     }
 
     public static class DescribeDcdnRefreshTasksResponseBodyTasksTask extends TeaModel {

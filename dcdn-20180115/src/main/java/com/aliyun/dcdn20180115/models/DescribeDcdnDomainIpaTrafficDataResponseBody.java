@@ -7,20 +7,20 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("TrafficDataPerInterval")
-    public DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("TrafficDataPerInterval")
+    public DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
     public static DescribeDcdnDomainIpaTrafficDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainIpaTrafficDataResponseBody self = new DescribeDcdnDomainIpaTrafficDataResponseBody();
@@ -33,6 +33,14 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDcdnDomainIpaTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDcdnDomainIpaTrafficDataResponseBody setRequestId(String requestId) {
@@ -51,28 +59,20 @@ public class DescribeDcdnDomainIpaTrafficDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainIpaTrafficDataResponseBody setTrafficDataPerInterval(DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval) {
-        this.trafficDataPerInterval = trafficDataPerInterval;
-        return this;
-    }
-    public DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerInterval getTrafficDataPerInterval() {
-        return this.trafficDataPerInterval;
-    }
-
-    public DescribeDcdnDomainIpaTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDcdnDomainIpaTrafficDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDcdnDomainIpaTrafficDataResponseBody setTrafficDataPerInterval(DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval) {
+        this.trafficDataPerInterval = trafficDataPerInterval;
+        return this;
+    }
+    public DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerInterval getTrafficDataPerInterval() {
+        return this.trafficDataPerInterval;
     }
 
     public static class DescribeDcdnDomainIpaTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {

@@ -4,11 +4,11 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
-    @NameInMap("QpsDataPerInterval")
-    public DescribeDcdnDomainQpsDataResponseBodyQpsDataPerInterval qpsDataPerInterval;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +16,15 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("QpsDataPerInterval")
+    public DescribeDcdnDomainQpsDataResponseBodyQpsDataPerInterval qpsDataPerInterval;
 
     public static DescribeDcdnDomainQpsDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainQpsDataResponseBody self = new DescribeDcdnDomainQpsDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainQpsDataResponseBody setQpsDataPerInterval(DescribeDcdnDomainQpsDataResponseBodyQpsDataPerInterval qpsDataPerInterval) {
-        this.qpsDataPerInterval = qpsDataPerInterval;
-        return this;
-    }
-    public DescribeDcdnDomainQpsDataResponseBodyQpsDataPerInterval getQpsDataPerInterval() {
-        return this.qpsDataPerInterval;
     }
 
     public DescribeDcdnDomainQpsDataResponseBody setEndTime(String endTime) {
@@ -41,6 +33,14 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDcdnDomainQpsDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDcdnDomainQpsDataResponseBody setRequestId(String requestId) {
@@ -59,20 +59,20 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainQpsDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDcdnDomainQpsDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDcdnDomainQpsDataResponseBody setQpsDataPerInterval(DescribeDcdnDomainQpsDataResponseBodyQpsDataPerInterval qpsDataPerInterval) {
+        this.qpsDataPerInterval = qpsDataPerInterval;
+        return this;
+    }
+    public DescribeDcdnDomainQpsDataResponseBodyQpsDataPerInterval getQpsDataPerInterval() {
+        return this.qpsDataPerInterval;
     }
 
     public static class DescribeDcdnDomainQpsDataResponseBodyQpsDataPerIntervalDataModule extends TeaModel {

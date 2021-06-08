@@ -7,20 +7,20 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("HitRatePerInterval")
-    public DescribeDcdnDomainHitRateDataResponseBodyHitRatePerInterval hitRatePerInterval;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("HitRatePerInterval")
+    public DescribeDcdnDomainHitRateDataResponseBodyHitRatePerInterval hitRatePerInterval;
 
     public static DescribeDcdnDomainHitRateDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainHitRateDataResponseBody self = new DescribeDcdnDomainHitRateDataResponseBody();
@@ -33,6 +33,14 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDcdnDomainHitRateDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDcdnDomainHitRateDataResponseBody setRequestId(String requestId) {
@@ -51,22 +59,6 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainHitRateDataResponseBody setHitRatePerInterval(DescribeDcdnDomainHitRateDataResponseBodyHitRatePerInterval hitRatePerInterval) {
-        this.hitRatePerInterval = hitRatePerInterval;
-        return this;
-    }
-    public DescribeDcdnDomainHitRateDataResponseBodyHitRatePerInterval getHitRatePerInterval() {
-        return this.hitRatePerInterval;
-    }
-
-    public DescribeDcdnDomainHitRateDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDcdnDomainHitRateDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
@@ -75,19 +67,35 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         return this.dataInterval;
     }
 
+    public DescribeDcdnDomainHitRateDataResponseBody setHitRatePerInterval(DescribeDcdnDomainHitRateDataResponseBodyHitRatePerInterval hitRatePerInterval) {
+        this.hitRatePerInterval = hitRatePerInterval;
+        return this;
+    }
+    public DescribeDcdnDomainHitRateDataResponseBodyHitRatePerInterval getHitRatePerInterval() {
+        return this.hitRatePerInterval;
+    }
+
     public static class DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule extends TeaModel {
+        @NameInMap("TimeStamp")
+        public String timeStamp;
+
         @NameInMap("ByteHitRate")
         public Float byteHitRate;
 
         @NameInMap("ReqHitRate")
         public Float reqHitRate;
 
-        @NameInMap("TimeStamp")
-        public String timeStamp;
-
         public static DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule self = new DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule setTimeStamp(String timeStamp) {
+            this.timeStamp = timeStamp;
+            return this;
+        }
+        public String getTimeStamp() {
+            return this.timeStamp;
         }
 
         public DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule setByteHitRate(Float byteHitRate) {
@@ -104,14 +112,6 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
         public Float getReqHitRate() {
             return this.reqHitRate;
-        }
-
-        public DescribeDcdnDomainHitRateDataResponseBodyHitRatePerIntervalDataModule setTimeStamp(String timeStamp) {
-            this.timeStamp = timeStamp;
-            return this;
-        }
-        public String getTimeStamp() {
-            return this.timeStamp;
         }
 
     }
