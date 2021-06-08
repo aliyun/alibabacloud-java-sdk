@@ -43,6 +43,9 @@ public class DispatchGameSlotRequest extends TeaModel {
     @NameInMap("Reconnect")
     public Boolean reconnect;
 
+    @NameInMap("Tags")
+    public String tags;
+
     public static DispatchGameSlotRequest build(java.util.Map<String, ?> map) throws Exception {
         DispatchGameSlotRequest self = new DispatchGameSlotRequest();
         return TeaModel.build(map, self);
@@ -142,6 +145,14 @@ public class DispatchGameSlotRequest extends TeaModel {
     }
     public Boolean getReconnect() {
         return this.reconnect;
+    }
+
+    public DispatchGameSlotRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }

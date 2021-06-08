@@ -1,3 +1,7 @@
+2021-06-08 Version: 1.4.5
+- Support dispatch tags.
+- Support stop games according to tags.
+
 2021-03-11 Version: 1.4.4
 - Add Out Account Query Support.
 
