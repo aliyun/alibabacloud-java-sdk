@@ -4,62 +4,30 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
-    @NameInMap("ChangingChargeType")
-    public String changingChargeType;
+    @NameInMap("ChangingAffectTime")
+    public String changingAffectTime;
 
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("InstanceId")
-    public String instanceId;
+    @NameInMap("ChangingChargeType")
+    public String changingChargeType;
 
     @NameInMap("OpeningTime")
     public String openingTime;
 
-    @NameInMap("ChangingAffectTime")
-    public String changingAffectTime;
+    @NameInMap("InternetChargeType")
+    public String internetChargeType;
+
+    @NameInMap("InstanceId")
+    public String instanceId;
 
     @NameInMap("OperationLocks")
     public DescribeDcdnIpaServiceResponseBodyOperationLocks operationLocks;
 
-    @NameInMap("InternetChargeType")
-    public String internetChargeType;
-
     public static DescribeDcdnIpaServiceResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnIpaServiceResponseBody self = new DescribeDcdnIpaServiceResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnIpaServiceResponseBody setChangingChargeType(String changingChargeType) {
-        this.changingChargeType = changingChargeType;
-        return this;
-    }
-    public String getChangingChargeType() {
-        return this.changingChargeType;
-    }
-
-    public DescribeDcdnIpaServiceResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
-    }
-
-    public DescribeDcdnIpaServiceResponseBody setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
-    }
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    public DescribeDcdnIpaServiceResponseBody setOpeningTime(String openingTime) {
-        this.openingTime = openingTime;
-        return this;
-    }
-    public String getOpeningTime() {
-        return this.openingTime;
     }
 
     public DescribeDcdnIpaServiceResponseBody setChangingAffectTime(String changingAffectTime) {
@@ -70,12 +38,28 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         return this.changingAffectTime;
     }
 
-    public DescribeDcdnIpaServiceResponseBody setOperationLocks(DescribeDcdnIpaServiceResponseBodyOperationLocks operationLocks) {
-        this.operationLocks = operationLocks;
+    public DescribeDcdnIpaServiceResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public DescribeDcdnIpaServiceResponseBodyOperationLocks getOperationLocks() {
-        return this.operationLocks;
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public DescribeDcdnIpaServiceResponseBody setChangingChargeType(String changingChargeType) {
+        this.changingChargeType = changingChargeType;
+        return this;
+    }
+    public String getChangingChargeType() {
+        return this.changingChargeType;
+    }
+
+    public DescribeDcdnIpaServiceResponseBody setOpeningTime(String openingTime) {
+        this.openingTime = openingTime;
+        return this;
+    }
+    public String getOpeningTime() {
+        return this.openingTime;
     }
 
     public DescribeDcdnIpaServiceResponseBody setInternetChargeType(String internetChargeType) {
@@ -84,6 +68,22 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
     }
     public String getInternetChargeType() {
         return this.internetChargeType;
+    }
+
+    public DescribeDcdnIpaServiceResponseBody setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public DescribeDcdnIpaServiceResponseBody setOperationLocks(DescribeDcdnIpaServiceResponseBodyOperationLocks operationLocks) {
+        this.operationLocks = operationLocks;
+        return this;
+    }
+    public DescribeDcdnIpaServiceResponseBodyOperationLocks getOperationLocks() {
+        return this.operationLocks;
     }
 
     public static class DescribeDcdnIpaServiceResponseBodyOperationLocksLockReason extends TeaModel {

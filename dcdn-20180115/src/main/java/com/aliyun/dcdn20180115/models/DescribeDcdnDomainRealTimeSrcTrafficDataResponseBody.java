@@ -7,14 +7,14 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -35,6 +35,14 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
         return this.endTime;
     }
 
+    public DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -49,14 +57,6 @@ public class DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody extends TeaMod
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDcdnDomainRealTimeSrcTrafficDataResponseBody setDataInterval(String dataInterval) {

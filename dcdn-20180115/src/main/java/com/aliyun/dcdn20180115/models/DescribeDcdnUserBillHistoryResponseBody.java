@@ -32,14 +32,11 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem extends TeaModel {
-        @NameInMap("Bandwidth")
-        public Float bandwidth;
-
-        @NameInMap("ChargeType")
-        public String chargeType;
-
         @NameInMap("Flow")
         public Float flow;
+
+        @NameInMap("Bandwidth")
+        public Float bandwidth;
 
         @NameInMap("Count")
         public Float count;
@@ -47,25 +44,12 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
         @NameInMap("CdnRegion")
         public String cdnRegion;
 
+        @NameInMap("ChargeType")
+        public String chargeType;
+
         public static DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem self = new DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setBandwidth(Float bandwidth) {
-            this.bandwidth = bandwidth;
-            return this;
-        }
-        public Float getBandwidth() {
-            return this.bandwidth;
-        }
-
-        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setChargeType(String chargeType) {
-            this.chargeType = chargeType;
-            return this;
-        }
-        public String getChargeType() {
-            return this.chargeType;
         }
 
         public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setFlow(Float flow) {
@@ -74,6 +58,14 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
         }
         public Float getFlow() {
             return this.flow;
+        }
+
+        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setBandwidth(Float bandwidth) {
+            this.bandwidth = bandwidth;
+            return this;
+        }
+        public Float getBandwidth() {
+            return this.bandwidth;
         }
 
         public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setCount(Float count) {
@@ -90,6 +82,14 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
         }
         public String getCdnRegion() {
             return this.cdnRegion;
+        }
+
+        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingDataBillingDataItem setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
     }
@@ -114,37 +114,21 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem extends TeaModel {
-        @NameInMap("BillingData")
-        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData;
+        @NameInMap("Dimension")
+        public String dimension;
 
         @NameInMap("BillType")
         public String billType;
 
-        @NameInMap("Dimension")
-        public String dimension;
-
         @NameInMap("BillTime")
         public String billTime;
+
+        @NameInMap("BillingData")
+        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData;
 
         public static DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem self = new DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setBillingData(DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData) {
-            this.billingData = billingData;
-            return this;
-        }
-        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData getBillingData() {
-            return this.billingData;
-        }
-
-        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setBillType(String billType) {
-            this.billType = billType;
-            return this;
-        }
-        public String getBillType() {
-            return this.billType;
         }
 
         public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setDimension(String dimension) {
@@ -155,12 +139,28 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             return this.dimension;
         }
 
+        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setBillType(String billType) {
+            this.billType = billType;
+            return this;
+        }
+        public String getBillType() {
+            return this.billType;
+        }
+
         public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setBillTime(String billTime) {
             this.billTime = billTime;
             return this;
         }
         public String getBillTime() {
             return this.billTime;
+        }
+
+        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItem setBillingData(DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData billingData) {
+            this.billingData = billingData;
+            return this;
+        }
+        public DescribeDcdnUserBillHistoryResponseBodyBillHistoryDataBillHistoryDataItemBillingData getBillingData() {
+            return this.billingData;
         }
 
     }

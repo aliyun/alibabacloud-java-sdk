@@ -7,8 +7,8 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    @NameInMap("ISP")
-    public String ISP;
+    @NameInMap("RegionEname")
+    public String regionEname;
 
     @NameInMap("Region")
     public String region;
@@ -16,11 +16,11 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
     @NameInMap("IspEname")
     public String ispEname;
 
-    @NameInMap("RegionEname")
-    public String regionEname;
-
     @NameInMap("DcdnIp")
     public String dcdnIp;
+
+    @NameInMap("ISP")
+    public String ISP;
 
     public static DescribeDcdnIpInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnIpInfoResponseBody self = new DescribeDcdnIpInfoResponseBody();
@@ -35,12 +35,12 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DescribeDcdnIpInfoResponseBody setISP(String ISP) {
-        this.ISP = ISP;
+    public DescribeDcdnIpInfoResponseBody setRegionEname(String regionEname) {
+        this.regionEname = regionEname;
         return this;
     }
-    public String getISP() {
-        return this.ISP;
+    public String getRegionEname() {
+        return this.regionEname;
     }
 
     public DescribeDcdnIpInfoResponseBody setRegion(String region) {
@@ -59,20 +59,20 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         return this.ispEname;
     }
 
-    public DescribeDcdnIpInfoResponseBody setRegionEname(String regionEname) {
-        this.regionEname = regionEname;
-        return this;
-    }
-    public String getRegionEname() {
-        return this.regionEname;
-    }
-
     public DescribeDcdnIpInfoResponseBody setDcdnIp(String dcdnIp) {
         this.dcdnIp = dcdnIp;
         return this;
     }
     public String getDcdnIp() {
         return this.dcdnIp;
+    }
+
+    public DescribeDcdnIpInfoResponseBody setISP(String ISP) {
+        this.ISP = ISP;
+        return this;
+    }
+    public String getISP() {
+        return this.ISP;
     }
 
 }

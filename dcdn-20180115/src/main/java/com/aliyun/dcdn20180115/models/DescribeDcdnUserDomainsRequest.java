@@ -31,12 +31,6 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
-    @NameInMap("FuncId")
-    public String funcId;
-
-    @NameInMap("FuncFilter")
-    public String funcFilter;
-
     @NameInMap("ChangeStartTime")
     public String changeStartTime;
 
@@ -121,22 +115,6 @@ public class DescribeDcdnUserDomainsRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
-    }
-
-    public DescribeDcdnUserDomainsRequest setFuncId(String funcId) {
-        this.funcId = funcId;
-        return this;
-    }
-    public String getFuncId() {
-        return this.funcId;
-    }
-
-    public DescribeDcdnUserDomainsRequest setFuncFilter(String funcFilter) {
-        this.funcFilter = funcFilter;
-        return this;
-    }
-    public String getFuncFilter() {
-        return this.funcFilter;
     }
 
     public DescribeDcdnUserDomainsRequest setChangeStartTime(String changeStartTime) {

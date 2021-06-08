@@ -7,20 +7,20 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("TrafficDataPerInterval")
-    public DescribeDcdnDomainWebsocketTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
-
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("TrafficDataPerInterval")
+    public DescribeDcdnDomainWebsocketTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
     public static DescribeDcdnDomainWebsocketTrafficDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainWebsocketTrafficDataResponseBody self = new DescribeDcdnDomainWebsocketTrafficDataResponseBody();
@@ -33,6 +33,14 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDcdnDomainWebsocketTrafficDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDcdnDomainWebsocketTrafficDataResponseBody setRequestId(String requestId) {
@@ -51,28 +59,20 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         return this.domainName;
     }
 
-    public DescribeDcdnDomainWebsocketTrafficDataResponseBody setTrafficDataPerInterval(DescribeDcdnDomainWebsocketTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval) {
-        this.trafficDataPerInterval = trafficDataPerInterval;
-        return this;
-    }
-    public DescribeDcdnDomainWebsocketTrafficDataResponseBodyTrafficDataPerInterval getTrafficDataPerInterval() {
-        return this.trafficDataPerInterval;
-    }
-
-    public DescribeDcdnDomainWebsocketTrafficDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDcdnDomainWebsocketTrafficDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDcdnDomainWebsocketTrafficDataResponseBody setTrafficDataPerInterval(DescribeDcdnDomainWebsocketTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval) {
+        this.trafficDataPerInterval = trafficDataPerInterval;
+        return this;
+    }
+    public DescribeDcdnDomainWebsocketTrafficDataResponseBodyTrafficDataPerInterval getTrafficDataPerInterval() {
+        return this.trafficDataPerInterval;
     }
 
     public static class DescribeDcdnDomainWebsocketTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {

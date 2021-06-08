@@ -43,6 +43,9 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnWafDomainResponseBodyOutPutDomains extends TeaModel {
+        @NameInMap("AclStatus")
+        public Integer aclStatus;
+
         @NameInMap("Status")
         public Integer status;
 
@@ -52,15 +55,20 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
         @NameInMap("CcStatus")
         public Integer ccStatus;
 
-        @NameInMap("AclStatus")
-        public Integer aclStatus;
-
         @NameInMap("WafStatus")
         public Integer wafStatus;
 
         public static DescribeDcdnWafDomainResponseBodyOutPutDomains build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnWafDomainResponseBodyOutPutDomains self = new DescribeDcdnWafDomainResponseBodyOutPutDomains();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDcdnWafDomainResponseBodyOutPutDomains setAclStatus(Integer aclStatus) {
+            this.aclStatus = aclStatus;
+            return this;
+        }
+        public Integer getAclStatus() {
+            return this.aclStatus;
         }
 
         public DescribeDcdnWafDomainResponseBodyOutPutDomains setStatus(Integer status) {
@@ -85,14 +93,6 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
         }
         public Integer getCcStatus() {
             return this.ccStatus;
-        }
-
-        public DescribeDcdnWafDomainResponseBodyOutPutDomains setAclStatus(Integer aclStatus) {
-            this.aclStatus = aclStatus;
-            return this;
-        }
-        public Integer getAclStatus() {
-            return this.aclStatus;
         }
 
         public DescribeDcdnWafDomainResponseBodyOutPutDomains setWafStatus(Integer wafStatus) {

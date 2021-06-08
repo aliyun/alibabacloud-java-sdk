@@ -4,14 +4,14 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnOfflineLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("Domains")
-    public java.util.List<DescribeDcdnOfflineLogDeliveryResponseBodyDomains> domains;
+    @NameInMap("RequestId")
+    public String requestId;
 
     @NameInMap("Fields")
     public java.util.List<String> fields;
 
-    @NameInMap("RequestId")
-    public String requestId;
+    @NameInMap("Domains")
+    public java.util.List<DescribeDcdnOfflineLogDeliveryResponseBodyDomains> domains;
 
     @NameInMap("Regions")
     public java.util.List<DescribeDcdnOfflineLogDeliveryResponseBodyRegions> regions;
@@ -21,12 +21,12 @@ public class DescribeDcdnOfflineLogDeliveryResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDcdnOfflineLogDeliveryResponseBody setDomains(java.util.List<DescribeDcdnOfflineLogDeliveryResponseBodyDomains> domains) {
-        this.domains = domains;
+    public DescribeDcdnOfflineLogDeliveryResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
         return this;
     }
-    public java.util.List<DescribeDcdnOfflineLogDeliveryResponseBodyDomains> getDomains() {
-        return this.domains;
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeDcdnOfflineLogDeliveryResponseBody setFields(java.util.List<String> fields) {
@@ -37,12 +37,12 @@ public class DescribeDcdnOfflineLogDeliveryResponseBody extends TeaModel {
         return this.fields;
     }
 
-    public DescribeDcdnOfflineLogDeliveryResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
+    public DescribeDcdnOfflineLogDeliveryResponseBody setDomains(java.util.List<DescribeDcdnOfflineLogDeliveryResponseBodyDomains> domains) {
+        this.domains = domains;
         return this;
     }
-    public String getRequestId() {
-        return this.requestId;
+    public java.util.List<DescribeDcdnOfflineLogDeliveryResponseBodyDomains> getDomains() {
+        return this.domains;
     }
 
     public DescribeDcdnOfflineLogDeliveryResponseBody setRegions(java.util.List<DescribeDcdnOfflineLogDeliveryResponseBodyRegions> regions) {
@@ -82,17 +82,17 @@ public class DescribeDcdnOfflineLogDeliveryResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("DlaTableName")
-        public String dlaTableName;
-
         @NameInMap("AreaName")
         public String areaName;
 
-        @NameInMap("DlaDbName")
-        public String dlaDbName;
+        @NameInMap("DlaTableName")
+        public String dlaTableName;
 
         @NameInMap("DlaVcName")
         public String dlaVcName;
+
+        @NameInMap("DlaDbName")
+        public String dlaDbName;
 
         @NameInMap("RegionName")
         public String regionName;
@@ -103,11 +103,11 @@ public class DescribeDcdnOfflineLogDeliveryResponseBody extends TeaModel {
         @NameInMap("IsOverseas")
         public String isOverseas;
 
-        @NameInMap("OssEndpoint")
-        public String ossEndpoint;
-
         @NameInMap("OssBucketName")
         public String ossBucketName;
+
+        @NameInMap("OssEndpoint")
+        public String ossEndpoint;
 
         public static DescribeDcdnOfflineLogDeliveryResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnOfflineLogDeliveryResponseBodyRegions self = new DescribeDcdnOfflineLogDeliveryResponseBodyRegions();
@@ -138,14 +138,6 @@ public class DescribeDcdnOfflineLogDeliveryResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setDlaTableName(String dlaTableName) {
-            this.dlaTableName = dlaTableName;
-            return this;
-        }
-        public String getDlaTableName() {
-            return this.dlaTableName;
-        }
-
         public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setAreaName(String areaName) {
             this.areaName = areaName;
             return this;
@@ -154,12 +146,12 @@ public class DescribeDcdnOfflineLogDeliveryResponseBody extends TeaModel {
             return this.areaName;
         }
 
-        public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setDlaDbName(String dlaDbName) {
-            this.dlaDbName = dlaDbName;
+        public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setDlaTableName(String dlaTableName) {
+            this.dlaTableName = dlaTableName;
             return this;
         }
-        public String getDlaDbName() {
-            return this.dlaDbName;
+        public String getDlaTableName() {
+            return this.dlaTableName;
         }
 
         public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setDlaVcName(String dlaVcName) {
@@ -168,6 +160,14 @@ public class DescribeDcdnOfflineLogDeliveryResponseBody extends TeaModel {
         }
         public String getDlaVcName() {
             return this.dlaVcName;
+        }
+
+        public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setDlaDbName(String dlaDbName) {
+            this.dlaDbName = dlaDbName;
+            return this;
+        }
+        public String getDlaDbName() {
+            return this.dlaDbName;
         }
 
         public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setRegionName(String regionName) {
@@ -194,20 +194,20 @@ public class DescribeDcdnOfflineLogDeliveryResponseBody extends TeaModel {
             return this.isOverseas;
         }
 
-        public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setOssEndpoint(String ossEndpoint) {
-            this.ossEndpoint = ossEndpoint;
-            return this;
-        }
-        public String getOssEndpoint() {
-            return this.ossEndpoint;
-        }
-
         public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setOssBucketName(String ossBucketName) {
             this.ossBucketName = ossBucketName;
             return this;
         }
         public String getOssBucketName() {
             return this.ossBucketName;
+        }
+
+        public DescribeDcdnOfflineLogDeliveryResponseBodyRegions setOssEndpoint(String ossEndpoint) {
+            this.ossEndpoint = ossEndpoint;
+            return this;
+        }
+        public String getOssEndpoint() {
+            return this.ossEndpoint;
         }
 
     }

@@ -4,23 +4,15 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
-    @NameInMap("DomainDetail")
-    public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail domainDetail;
-
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("DomainDetail")
+    public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail domainDetail;
 
     public static DescribeDcdnIpaDomainDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnIpaDomainDetailResponseBody self = new DescribeDcdnIpaDomainDetailResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnIpaDomainDetailResponseBody setDomainDetail(DescribeDcdnIpaDomainDetailResponseBodyDomainDetail domainDetail) {
-        this.domainDetail = domainDetail;
-        return this;
-    }
-    public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail getDomainDetail() {
-        return this.domainDetail;
     }
 
     public DescribeDcdnIpaDomainDetailResponseBody setRequestId(String requestId) {
@@ -29,6 +21,14 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeDcdnIpaDomainDetailResponseBody setDomainDetail(DescribeDcdnIpaDomainDetailResponseBodyDomainDetail domainDetail) {
+        this.domainDetail = domainDetail;
+        return this;
+    }
+    public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail getDomainDetail() {
+        return this.domainDetail;
     }
 
     public static class DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSourcesSource extends TeaModel {
@@ -125,20 +125,11 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDcdnIpaDomainDetailResponseBodyDomainDetail extends TeaModel {
-        @NameInMap("SSLPub")
-        public String SSLPub;
-
-        @NameInMap("Sources")
-        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSources sources;
-
-        @NameInMap("GmtModified")
-        public String gmtModified;
-
-        @NameInMap("DomainName")
-        public String domainName;
-
         @NameInMap("GmtCreated")
         public String gmtCreated;
+
+        @NameInMap("SSLPub")
+        public String SSLPub;
 
         @NameInMap("Description")
         public String description;
@@ -161,41 +152,18 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         @NameInMap("DomainStatus")
         public String domainStatus;
 
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
+        @NameInMap("DomainName")
+        public String domainName;
+
+        @NameInMap("Sources")
+        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSources sources;
+
         public static DescribeDcdnIpaDomainDetailResponseBodyDomainDetail build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnIpaDomainDetailResponseBodyDomainDetail self = new DescribeDcdnIpaDomainDetailResponseBodyDomainDetail();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setSSLPub(String SSLPub) {
-            this.SSLPub = SSLPub;
-            return this;
-        }
-        public String getSSLPub() {
-            return this.SSLPub;
-        }
-
-        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setSources(DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSources sources) {
-            this.sources = sources;
-            return this;
-        }
-        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSources getSources() {
-            return this.sources;
-        }
-
-        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setGmtModified(String gmtModified) {
-            this.gmtModified = gmtModified;
-            return this;
-        }
-        public String getGmtModified() {
-            return this.gmtModified;
-        }
-
-        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setDomainName(String domainName) {
-            this.domainName = domainName;
-            return this;
-        }
-        public String getDomainName() {
-            return this.domainName;
         }
 
         public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setGmtCreated(String gmtCreated) {
@@ -204,6 +172,14 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         }
         public String getGmtCreated() {
             return this.gmtCreated;
+        }
+
+        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setSSLPub(String SSLPub) {
+            this.SSLPub = SSLPub;
+            return this;
+        }
+        public String getSSLPub() {
+            return this.SSLPub;
         }
 
         public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setDescription(String description) {
@@ -260,6 +236,30 @@ public class DescribeDcdnIpaDomainDetailResponseBody extends TeaModel {
         }
         public String getDomainStatus() {
             return this.domainStatus;
+        }
+
+        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setDomainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetail setSources(DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSources sources) {
+            this.sources = sources;
+            return this;
+        }
+        public DescribeDcdnIpaDomainDetailResponseBodyDomainDetailSources getSources() {
+            return this.sources;
         }
 
     }

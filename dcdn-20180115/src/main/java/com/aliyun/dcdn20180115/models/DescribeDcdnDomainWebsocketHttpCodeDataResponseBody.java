@@ -7,14 +7,14 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("RequestId")
     public String requestId;
 
     @NameInMap("DomainName")
     public String domainName;
-
-    @NameInMap("StartTime")
-    public String startTime;
 
     @NameInMap("DataInterval")
     public String dataInterval;
@@ -35,6 +35,14 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         return this.endTime;
     }
 
+    public DescribeDcdnDomainWebsocketHttpCodeDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeDcdnDomainWebsocketHttpCodeDataResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -49,14 +57,6 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public DescribeDcdnDomainWebsocketHttpCodeDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
     }
 
     public DescribeDcdnDomainWebsocketHttpCodeDataResponseBody setDataInterval(String dataInterval) {
@@ -136,23 +136,15 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
     }
 
     public static class DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule extends TeaModel {
-        @NameInMap("WebsocketHttpCodeDataPerInterval")
-        public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval websocketHttpCodeDataPerInterval;
-
         @NameInMap("TimeStamp")
         public String timeStamp;
+
+        @NameInMap("WebsocketHttpCodeDataPerInterval")
+        public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval websocketHttpCodeDataPerInterval;
 
         public static DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule self = new DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule();
             return TeaModel.build(map, self);
-        }
-
-        public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule setWebsocketHttpCodeDataPerInterval(DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval websocketHttpCodeDataPerInterval) {
-            this.websocketHttpCodeDataPerInterval = websocketHttpCodeDataPerInterval;
-            return this;
-        }
-        public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval getWebsocketHttpCodeDataPerInterval() {
-            return this.websocketHttpCodeDataPerInterval;
         }
 
         public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule setTimeStamp(String timeStamp) {
@@ -161,6 +153,14 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
         public String getTimeStamp() {
             return this.timeStamp;
+        }
+
+        public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModule setWebsocketHttpCodeDataPerInterval(DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval websocketHttpCodeDataPerInterval) {
+            this.websocketHttpCodeDataPerInterval = websocketHttpCodeDataPerInterval;
+            return this;
+        }
+        public DescribeDcdnDomainWebsocketHttpCodeDataResponseBodyDataPerIntervalDataModuleWebsocketHttpCodeDataPerInterval getWebsocketHttpCodeDataPerInterval() {
+            return this.websocketHttpCodeDataPerInterval;
         }
 
     }

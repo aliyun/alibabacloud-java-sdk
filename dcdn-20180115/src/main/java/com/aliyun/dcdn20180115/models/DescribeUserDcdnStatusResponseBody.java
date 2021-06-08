@@ -4,32 +4,24 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserDcdnStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
-    public String requestId;
-
     @NameInMap("InDebt")
     public Boolean inDebt;
-
-    @NameInMap("Enabled")
-    public Boolean enabled;
-
-    @NameInMap("InDebtOverdue")
-    public Boolean inDebtOverdue;
 
     @NameInMap("OnService")
     public Boolean onService;
 
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("InDebtOverdue")
+    public Boolean inDebtOverdue;
+
+    @NameInMap("Enabled")
+    public Boolean enabled;
+
     public static DescribeUserDcdnStatusResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserDcdnStatusResponseBody self = new DescribeUserDcdnStatusResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeUserDcdnStatusResponseBody setRequestId(String requestId) {
-        this.requestId = requestId;
-        return this;
-    }
-    public String getRequestId() {
-        return this.requestId;
     }
 
     public DescribeUserDcdnStatusResponseBody setInDebt(Boolean inDebt) {
@@ -40,12 +32,20 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         return this.inDebt;
     }
 
-    public DescribeUserDcdnStatusResponseBody setEnabled(Boolean enabled) {
-        this.enabled = enabled;
+    public DescribeUserDcdnStatusResponseBody setOnService(Boolean onService) {
+        this.onService = onService;
         return this;
     }
-    public Boolean getEnabled() {
-        return this.enabled;
+    public Boolean getOnService() {
+        return this.onService;
+    }
+
+    public DescribeUserDcdnStatusResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
     }
 
     public DescribeUserDcdnStatusResponseBody setInDebtOverdue(Boolean inDebtOverdue) {
@@ -56,12 +56,12 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         return this.inDebtOverdue;
     }
 
-    public DescribeUserDcdnStatusResponseBody setOnService(Boolean onService) {
-        this.onService = onService;
+    public DescribeUserDcdnStatusResponseBody setEnabled(Boolean enabled) {
+        this.enabled = enabled;
         return this;
     }
-    public Boolean getOnService() {
-        return this.onService;
+    public Boolean getEnabled() {
+        return this.enabled;
     }
 
 }

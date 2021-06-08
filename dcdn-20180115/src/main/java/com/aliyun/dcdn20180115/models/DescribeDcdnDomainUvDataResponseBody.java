@@ -4,11 +4,11 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
-    @NameInMap("UvDataInterval")
-    public DescribeDcdnDomainUvDataResponseBodyUvDataInterval uvDataInterval;
-
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,23 +16,15 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    @NameInMap("StartTime")
-    public String startTime;
-
     @NameInMap("DataInterval")
     public String dataInterval;
+
+    @NameInMap("UvDataInterval")
+    public DescribeDcdnDomainUvDataResponseBodyUvDataInterval uvDataInterval;
 
     public static DescribeDcdnDomainUvDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnDomainUvDataResponseBody self = new DescribeDcdnDomainUvDataResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnDomainUvDataResponseBody setUvDataInterval(DescribeDcdnDomainUvDataResponseBodyUvDataInterval uvDataInterval) {
-        this.uvDataInterval = uvDataInterval;
-        return this;
-    }
-    public DescribeDcdnDomainUvDataResponseBodyUvDataInterval getUvDataInterval() {
-        return this.uvDataInterval;
     }
 
     public DescribeDcdnDomainUvDataResponseBody setEndTime(String endTime) {
@@ -41,6 +33,14 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDcdnDomainUvDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public DescribeDcdnDomainUvDataResponseBody setRequestId(String requestId) {
@@ -59,20 +59,20 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
         return this.domainName;
     }
 
-    public DescribeDcdnDomainUvDataResponseBody setStartTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-    public String getStartTime() {
-        return this.startTime;
-    }
-
     public DescribeDcdnDomainUvDataResponseBody setDataInterval(String dataInterval) {
         this.dataInterval = dataInterval;
         return this;
     }
     public String getDataInterval() {
         return this.dataInterval;
+    }
+
+    public DescribeDcdnDomainUvDataResponseBody setUvDataInterval(DescribeDcdnDomainUvDataResponseBodyUvDataInterval uvDataInterval) {
+        this.uvDataInterval = uvDataInterval;
+        return this;
+    }
+    public DescribeDcdnDomainUvDataResponseBodyUvDataInterval getUvDataInterval() {
+        return this.uvDataInterval;
     }
 
     public static class DescribeDcdnDomainUvDataResponseBodyUvDataIntervalUsageData extends TeaModel {

@@ -4,40 +4,24 @@ package com.aliyun.dcdn20180115.models;
 import com.aliyun.tea.*;
 
 public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
-    public DescribeDcdnUserDomainsResponseBodyDomains domains;
-
-    @NameInMap("TotalCount")
-    public Long totalCount;
-
     @NameInMap("RequestId")
     public String requestId;
-
-    @NameInMap("PageSize")
-    public Long pageSize;
 
     @NameInMap("PageNumber")
     public Long pageNumber;
 
+    @NameInMap("PageSize")
+    public Long pageSize;
+
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
+    @NameInMap("Domains")
+    public DescribeDcdnUserDomainsResponseBodyDomains domains;
+
     public static DescribeDcdnUserDomainsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDcdnUserDomainsResponseBody self = new DescribeDcdnUserDomainsResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DescribeDcdnUserDomainsResponseBody setDomains(DescribeDcdnUserDomainsResponseBodyDomains domains) {
-        this.domains = domains;
-        return this;
-    }
-    public DescribeDcdnUserDomainsResponseBodyDomains getDomains() {
-        return this.domains;
-    }
-
-    public DescribeDcdnUserDomainsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public DescribeDcdnUserDomainsResponseBody setRequestId(String requestId) {
@@ -48,6 +32,14 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeDcdnUserDomainsResponseBody setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
     public DescribeDcdnUserDomainsResponseBody setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -56,12 +48,20 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         return this.pageSize;
     }
 
-    public DescribeDcdnUserDomainsResponseBody setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeDcdnUserDomainsResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
-    public Long getPageNumber() {
-        return this.pageNumber;
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public DescribeDcdnUserDomainsResponseBody setDomains(DescribeDcdnUserDomainsResponseBodyDomains domains) {
+        this.domains = domains;
+        return this;
+    }
+    public DescribeDcdnUserDomainsResponseBodyDomains getDomains() {
+        return this.domains;
     }
 
     public static class DescribeDcdnUserDomainsResponseBodyDomainsPageDataSourcesSource extends TeaModel {
@@ -168,14 +168,14 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         @NameInMap("Cname")
         public String cname;
 
-        @NameInMap("Sources")
-        public DescribeDcdnUserDomainsResponseBodyDomainsPageDataSources sources;
-
         @NameInMap("GmtModified")
         public String gmtModified;
 
         @NameInMap("DomainName")
         public String domainName;
+
+        @NameInMap("Sources")
+        public DescribeDcdnUserDomainsResponseBodyDomainsPageDataSources sources;
 
         public static DescribeDcdnUserDomainsResponseBodyDomainsPageData build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnUserDomainsResponseBodyDomainsPageData self = new DescribeDcdnUserDomainsResponseBodyDomainsPageData();
@@ -238,14 +238,6 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             return this.cname;
         }
 
-        public DescribeDcdnUserDomainsResponseBodyDomainsPageData setSources(DescribeDcdnUserDomainsResponseBodyDomainsPageDataSources sources) {
-            this.sources = sources;
-            return this;
-        }
-        public DescribeDcdnUserDomainsResponseBodyDomainsPageDataSources getSources() {
-            return this.sources;
-        }
-
         public DescribeDcdnUserDomainsResponseBodyDomainsPageData setGmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
             return this;
@@ -260,6 +252,14 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeDcdnUserDomainsResponseBodyDomainsPageData setSources(DescribeDcdnUserDomainsResponseBodyDomainsPageDataSources sources) {
+            this.sources = sources;
+            return this;
+        }
+        public DescribeDcdnUserDomainsResponseBodyDomainsPageDataSources getSources() {
+            return this.sources;
         }
 
     }
